@@ -1,8 +1,8 @@
-// === Module 13860: copyGiftCode ===
+// === Module 13983: copyGiftCode ===
 
-// Module 13860 (copyGiftCode)
-import GiftCodeUtils from "GiftCodeUtils" /* 5664 */;
-import ClipboardUtils from "ClipboardUtils" /* 7412 */;
+// Module 13983 (copyGiftCode)
+import GiftCodeUtils from "GiftCodeUtils" /* 5759 */;
+import ClipboardUtils from "ClipboardUtils" /* 7507 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

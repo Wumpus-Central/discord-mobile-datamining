@@ -1,11 +1,14 @@
-// === Module 7557: EmbeddedAppCSPActionCreators ===
+// === Module 7652: EmbeddedAppCSPActionCreators ===
 
-// Module 7557 (EmbeddedAppCSPActionCreators)
+// Module 7652 (EmbeddedAppCSPActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_5 = async function _readPolicy(arg0) {
+function getEmbeddedAppCSPURL(applicationRouterOrigin) {
+  return "" + applicationRouterOrigin + "/.discord/csp.json";
+}
+let closure_6 = async function _readPolicy(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -16,7 +19,7 @@ let closure_5 = async function _readPolicy(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -36,9 +39,7 @@ let closure_5 = async function _readPolicy(arg0) {
           let body;
           c4 = 2;
           const HTTP = HTTPUtils.HTTP;
-          const obj5 = { url: null, rejectWithError: true };
-          const _HermesInternal = HermesInternal;
-          obj5.url = "" + closure_0 + "/.discord/csp.json";
+          const obj5 = { url: getEmbeddedAppCSPURL(closure_0), rejectWithError: true };
           c5 = 3;
           c6 = 1;
           const obj6 = { value: HTTP.get(obj5), done: false };
@@ -69,14 +70,14 @@ let closure_5 = async function _readPolicy(arg0) {
         c4 = 0;
         closure_130_4.delete(closure_129_0);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
-    } catch (tmp45) {
-      closure_3 = tmp45;
+    } catch (tmp46) {
+      closure_3 = tmp46;
       if (tmp5 === c4) {
         c6 = tmp3;
-        throw tmp45;
-      } else if (tmp2 === tmp47) {
+        throw tmp46;
+      } else if (tmp2 === tmp48) {
         c5 = tmp2;
       } else {
         c5 = tmp;
@@ -88,20 +89,24 @@ const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/csp/EmbeddedAppCSPActionCreators.tsx");
 
-export function fetchEmbeddedAppCSP(applicationRouterOrigin) {
-  value = map.get(applicationRouterOrigin);
+export { getEmbeddedAppCSPURL };
+export function isEmbeddedAppCSPReadInFlight(arg0) {
+  return map.has(arg0);
+}
+export function fetchEmbeddedAppCSP(arg0) {
+  value = map.get(arg0);
   if (null == value) {
     const tmp2 = (function readPolicy() {
       const self = this;
-      const apply = closure_1_5.apply;
+      const apply = closure_1_6.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(applicationRouterOrigin);
-    const result = map.set(applicationRouterOrigin, tmp2);
+    })(arg0);
+    const result = map.set(arg0, tmp2);
     value = tmp2;
   }
   return value;

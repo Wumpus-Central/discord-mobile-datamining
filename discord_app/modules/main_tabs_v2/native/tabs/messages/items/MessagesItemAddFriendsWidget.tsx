@@ -1,15 +1,15 @@
-// === Module 17659: MessagesItemAddFriendsWidget ===
+// === Module 17770: MessagesItemAddFriendsWidget ===
 
-// Module 17659 (MessagesItemAddFriendsWidget)
+// Module 17770 (MessagesItemAddFriendsWidget)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import RootNavigationRef from "RootNavigationRef" /* 5094 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import Pressables from "Pressables" /* 6026 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7686 */;
-import IconActionButtonDefault from "IconActionButton" /* 13892 */;
-import _modDef15086 from "module_15086" /* 15086 */;
-import _modDef17660 from "module_17660" /* 17660 */;
+import RootNavigationRef from "RootNavigationRef" /* 5189 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import Pressables from "Pressables" /* 6121 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7785 */;
+import IconActionButtonDefault from "IconActionButton" /* 14015 */;
+import _modDef15208 from "module_15208" /* 15208 */;
+import _modDef17771 from "module_17771" /* 17771 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ let closure_11 = async function _getFriendInviteCode() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_13 = async function _handleShare() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -148,7 +148,7 @@ let closure_13 = async function _handleShare() {
         const obj6 = { link: closure_129_1(closure_129_2[12])(closure_128_0) };
         obj5.handleOpenShareSheet(closure_128_0, null, intl.formatToPlainString(closure_129_0(closure_129_2[10]).t.PJf9P9, obj6), closure_129_6.ADD_FRIENDS_WIDGET);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp7) {
       c3 = tmp;
@@ -177,7 +177,7 @@ let closure_15 = async function _handleLink() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -210,7 +210,7 @@ let closure_15 = async function _handleLink() {
         closure_128_0 = value;
         closure_129_0(closure_129_2[11]).handleCopy(closure_128_0, null, closure_129_6.ADD_FRIENDS_WIDGET);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -222,8 +222,8 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1071).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const sum = fn(13892).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(4917);
+const sum = fn(14015).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5012);
 let obj = { container: { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, title: null, actions: null, actionIcon: null };
 let obj3 = { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
 obj.title = { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.md, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
@@ -260,12 +260,12 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj2.children = metroImportDefault(Text_Text.Text, obj3);
   items = [metroImportDefault(Pressables.PressableHighlight, obj2), ];
   const obj4 = { style: tmp.actions, children: null };
-  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef15086, onPress: handleShare, accessibilityLabel: null };
+  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef15208, onPress: handleShare, accessibilityLabel: null };
   const intl3 = util.intl;
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [metroImportDefault(IconActionButtonDefault, obj5), ];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef17660;
+  obj6.source = _modDef17771;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

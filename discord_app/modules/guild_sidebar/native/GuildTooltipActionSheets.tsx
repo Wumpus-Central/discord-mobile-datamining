@@ -1,28 +1,28 @@
-// === Module 17800: GuildTooltipActionSheets ===
+// === Module 17912: GuildTooltipActionSheets ===
 
-// Module 17800 (GuildTooltipActionSheets)
+// Module 17912 (GuildTooltipActionSheets)
 import _mod1706 from "module_1706" /* 1706 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import dismissible_content from "dismissible_content" /* 4750 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10930 */;
-import DismissibleActionSheet from "DismissibleActionSheet" /* 10931 */;
-import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 17810 */;
-import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 17811 */;
+import dismissible_content from "dismissible_content" /* 4845 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11029 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 11030 */;
+import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 17922 */;
+import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 17923 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(17801, dependencyMap.paths);
+  return asyncRequireImpl(17913, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(17803, dependencyMap.paths);
+  return asyncRequireImpl(17915, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(17806, dependencyMap.paths);
+  return asyncRequireImpl(17918, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(17808, dependencyMap.paths);
+  return asyncRequireImpl(17920, dependencyMap.paths);
 }
 class GuildTooltipActionSheets {
   constructor(arg0) {
@@ -71,7 +71,7 @@ class GuildTooltipActionSheets {
     return jsx(tmp4(tmp2[14]), obj1);
   }
 }
-const hasOwnProperty = fn(4763).DismissibleContentGroupName;
+const hasOwnProperty = fn(4858).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const GuildTooltipActionSheet = "GuildTooltipActionSheet";
 let closure_13 = { code: "(function GuildTooltipActionSheetsTsx1(){let[scheduleOnRN,setShouldRender]=this.__closure;return scheduleOnRN(setShouldRender,true);})" };

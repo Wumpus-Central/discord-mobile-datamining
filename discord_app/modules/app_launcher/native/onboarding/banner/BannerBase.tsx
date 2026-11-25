@@ -1,13 +1,13 @@
-// === Module 12848: BannerBase ===
+// === Module 12972: BannerBase ===
 
-// Module 12848 (BannerBase)
+// Module 12972 (BannerBase)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 const require = globalThis.__r;
 
@@ -17,9 +17,9 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 let closure_9 = { mass: 1, stiffness: 100, damping: 15 };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerTextContainerWithImage: null, bannerTextContainerWithoutImage: null, bannerText: null, bannerTextCentered: null };
-const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12837).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
+const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12961).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 obj2.banner = rect;
 obj2.bannerGradientColor = { backgroundColor: "#7eaaff" };
 const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
@@ -120,11 +120,11 @@ export default function BannerBase(children) {
   let tmp16Result = null != image;
   if (tmp16Result) {
     const obj8 = { style: tmp.imageContainer, children: null };
-    const obj9 = { style: tmp.trinketsLottie, source: tmp4(12849), autoPlay: !stateFromStores };
-    const items7 = [closure_7(tmp7(5502), obj9), image];
+    const obj9 = { style: tmp.trinketsLottie, source: tmp4(12973), autoPlay: !stateFromStores };
+    const items7 = [closure_7(tmp7(5597), obj9), image];
     obj8.children = items7;
     tmp16Result = closure_8(View, obj8);
-    const tmp7Result = tmp7(5502);
+    const tmp7Result = tmp7(5597);
   }
   items6[1] = tmp16Result;
   const items8 = [tmp.bannerTextContainer, ];

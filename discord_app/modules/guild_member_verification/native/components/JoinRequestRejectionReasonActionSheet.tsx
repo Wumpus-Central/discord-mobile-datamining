@@ -1,6 +1,6 @@
-// === Module 13459: JoinRequestRejectionReasonActionSheet ===
+// === Module 13582: JoinRequestRejectionReasonActionSheet ===
 
-// Module 13459 (JoinRequestRejectionReasonActionSheet)
+// Module 13582 (JoinRequestRejectionReasonActionSheet)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ class JoinRequestRejectionReasonActionSheet {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -139,7 +139,7 @@ class JoinRequestRejectionReasonActionSheet {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const React5 = createStyles.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestRejectionReasonActionSheet.tsx");

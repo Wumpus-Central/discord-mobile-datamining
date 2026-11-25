@@ -1,23 +1,23 @@
-// === Module 19160: LaunchPadWrapper ===
+// === Module 19271: LaunchPadWrapper ===
 
-// Module 19160 (LaunchPadWrapper)
+// Module 19271 (LaunchPadWrapper)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import HapticUtils from "HapticUtils" /* 5133 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19162 */;
+import HapticUtils from "HapticUtils" /* 5228 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19273 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6, TouchableOpacity: metroImportDefault, StyleSheet: closure_8 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(11811).LaunchPadTypes;
+const LaunchPadTypes = fn(11910).LaunchPadTypes;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { modalWrapper: null, a11yDismiss: null };
 let size = { height: "100%", width: "100%", paddingTop: nativeDefault.space.PX_8 };
 obj2.modalWrapper = size;

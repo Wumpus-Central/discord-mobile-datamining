@@ -1,6 +1,6 @@
-// === Module 9852: getApplicationIdsForGame ===
+// === Module 9951: getApplicationIdsForGame ===
 
-// Module 9852 (getApplicationIdsForGame)
+// Module 9951 (getApplicationIdsForGame)
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import GameStore from "GameStore" /* 2140 */;
 

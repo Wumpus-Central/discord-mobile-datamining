@@ -1,13 +1,13 @@
-// === Module 18336: startConjureScopeMigration ===
+// === Module 18448: startConjureScopeMigration ===
 
-// Module 18336 (startConjureScopeMigration)
+// Module 18448 (startConjureScopeMigration)
 import util from "util" /* 1112 */;
-import _modDef4192 from "module_4192" /* 4192 */;
-import createNonce from "createNonce" /* 9929 */;
-import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 13420 */;
-import conjureSendToProject from "conjureSendToProject" /* 18337 */;
+import _modDef4244 from "module_4244" /* 4244 */;
+import createNonce from "createNonce" /* 10028 */;
+import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 13543 */;
+import conjureSendToProject from "conjureSendToProject" /* 18449 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7576 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7675 */;
 
 require = fn;
 let closure_7 = async function _sendMigrationMessage(arg0) {
@@ -21,7 +21,7 @@ let closure_7 = async function _sendMigrationMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -117,7 +117,7 @@ let closure_7 = async function _sendMigrationMessage(arg0) {
   }
 };
 const logger = new fn(4).Logger("startConjureScopeMigration");
-let obj = { added: _modDef4192.YXmrDJ, removed: _modDef4192.OYaecm };
+let obj = { added: _modDef4244.YXmrDJ, removed: _modDef4244.OYaecm };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/server_share/startConjureScopeMigration.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 14600: GuildBoostingMarketingOverview ===
+// === Module 14722: GuildBoostingMarketingOverview ===
 
-// Module 14600 (GuildBoostingMarketingOverview)
+// Module 14722 (GuildBoostingMarketingOverview)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 14601 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 14723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import GuildStore from "GuildStore" /* 4883 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");

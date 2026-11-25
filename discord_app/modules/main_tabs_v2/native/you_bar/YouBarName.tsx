@@ -1,21 +1,21 @@
-// === Module 18009: YouBarName ===
+// === Module 18121: YouBarName ===
 
-// Module 18009 (YouBarName)
+// Module 18121 (YouBarName)
 import nativeDefault from "native" /* 575 */;
-import GuildTagDefault from "GuildTag" /* 8581 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9667 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9675 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11220 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11221 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 18010 */;
+import GuildTagDefault from "GuildTag" /* 8680 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9766 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9774 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11319 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11320 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 18122 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import PresenceStore from "PresenceStore" /* 5888 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 7528 */;
-import VoiceStateStore from "VoiceStateStore" /* 5565 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import PresenceStore from "PresenceStore" /* 5983 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 7623 */;
+import VoiceStateStore from "VoiceStateStore" /* 5660 */;
 
 require = fn;
 function Username(userId) {
@@ -29,7 +29,7 @@ function Username(userId) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, statusRow: { flexDirection: "row", gap: nativeDefault.space.PX_4 }, statusEmoji: { width: 16, height: 16 }, usernameRow: { flexDirection: "row", alignItems: "center", overflow: "visible", gap: 2 }, username: { flexShrink: 1 }, guildTag: { marginLeft: 2, flexShrink: 0 }, statusText: { flexShrink: 1 } };
 let closure_14 = createStyles.createStyles(obj);
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_4 };
@@ -42,14 +42,14 @@ export default noop.memo(function YouName(username) {
   items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(9347).useCustomStatusActivity();
-  let obj2 = userId(9347);
+  const customStatusActivity = userId(9446).useCustomStatusActivity();
+  let obj2 = userId(9446);
   state = undefined;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(9387).useGameMentionsAsPlainText(state);
-  let obj3 = userId(9387);
+  const gameMentionsAsPlainText = userId(9486).useGameMentionsAsPlainText(state);
+  let obj3 = userId(9486);
   const items1 = [PresenceStore, ApplicationStreamingStore, RelationshipStore, ChannelStore, PermissionStore, VoiceStateStore];
   let obj4 = { style: tmp.userText, children: null };
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => {
@@ -65,7 +65,7 @@ export default noop.memo(function YouName(username) {
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_11(stateFromStores(11218), obj6);
+    let tmp9Result = closure_11(stateFromStores(11317), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -74,18 +74,18 @@ export default noop.memo(function YouName(username) {
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_11(stateFromStores(11236), obj7);
+      tmp11Result2 = closure_11(stateFromStores(11335), obj7);
     }
     const items3 = [tmp11Result2, ];
     const obj8 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {
-      humanizeStatusResult = tmp2(4973).humanizeStatus(stateFromStores);
-      const tmp2Result2 = tmp2(4973);
+      humanizeStatusResult = tmp2(5068).humanizeStatus(stateFromStores);
+      const tmp2Result2 = tmp2(5068);
     }
     const obj9 = { children: null };
     obj8.children = humanizeStatusResult;
-    items3[1] = closure_11(tmp2(5508).Text, obj8);
+    items3[1] = closure_11(tmp2(5603).Text, obj8);
     obj9.children = items3;
     tmp9Result = closure_12(closure_13, obj9);
   }

@@ -1,24 +1,24 @@
-// === Module 12347: ClassificationMessageEvidence ===
+// === Module 12511: ClassificationMessageEvidence ===
 
-// Module 12347 (ClassificationMessageEvidence)
-import RowGeneratorDefault from "RowGenerator" /* 8082 */;
-import openMediaModal from "openMediaModal" /* 8663 */;
+// Module 12511 (ClassificationMessageEvidence)
+import RowGeneratorDefault from "RowGenerator" /* 8181 */;
+import openMediaModal from "openMediaModal" /* 8762 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 import UserStore from "UserStore" /* 1386 */;
-import SafetyHubStore from "SafetyHubStore" /* 7779 */;
+import SafetyHubStore from "SafetyHubStore" /* 7878 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, findNodeHandle: closure_6, Image: metroImportDefault, ActivityIndicator: closure_8 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7753);
+const SafetyHubConstants = fn(7852);
 ({ DEFAULT_MEDIA_MAX_WIDTH: closure_12, DEFAULT_MEDIA_MAX_HEIGHT: map1, VIDEO_PLACEHOLDER_WIDTH: closure_14, VIDEO_PLACEHOLDER_HEIGHT: closure_15, VIDEO_PLACEHOLDER_FILENAME: closure_16 } = SafetyHubConstants);
 const MessageTypes = fn(1071).MessageTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_21 = createStyles.createStyles({ dummyVideoAttachments: { width: 0, height: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationMessageEvidence.tsx");
@@ -38,11 +38,11 @@ export default function ClassificationEvidence(arg0) {
   let tmp5 = first1;
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
-  if (obj3.useStateFromStores(items1, () => ref(4924).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(12348));
+  if (obj3.useStateFromStores(items1, () => ref(5019).isThemeLight(id.theme))) {
+    let assetSource = resolveAssetSource(tmp11(12512));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(12349));
+    assetSource = resolveAssetSource(tmp11(12513));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -64,10 +64,10 @@ export default function ClassificationEvidence(arg0) {
         str = "";
       }
       obj.filename = str;
-      obj.flags = ref(7752).getSpoilerFlagsForAttachment(filename);
+      obj.flags = ref(7851).getSpoilerFlagsForAttachment(filename);
       obj.size = 0;
       obj.proxy_url = filename.url;
-      const obj2 = ref(7752);
+      const obj2 = ref(7851);
       if (obj3.isImageFile(filename.filename)) {
         const obj4 = {};
         const merged1 = Object.assign(obj);
@@ -99,7 +99,7 @@ export default function ClassificationEvidence(arg0) {
           obj5.filename = filename;
           tmp4 = obj5;
         }
-        tmp2Result = ref(6277);
+        tmp2Result = ref(6372);
       }
       return tmp4;
     });
@@ -193,10 +193,10 @@ export default function ClassificationEvidence(arg0) {
     const items8 = [closure_18(closure_8, {}), ];
     let obj5 = { style: attachments.dummyVideoAttachments, children: null };
     attachments = first2.attachments;
-    first2 = attachments.filter((filename) => ref(6277).isVideoFile(filename.filename));
+    first2 = attachments.filter((filename) => ref(6372).isVideoFile(filename.filename));
     obj5.children = first2.map((uri, index) => {
       closure_0 = uri;
-      return closure_1_18(first(8740), {
+      return closure_1_18(first(8839), {
         source: { uri: uri.url },
         onLoad(arg0) {
           closure_0 = arg0;
@@ -219,12 +219,12 @@ export default function ClassificationEvidence(arg0) {
     let obj10 = obj4;
   } else {
     const obj6 = { ref, onTapImage: callback, inverted: false };
-    const items9 = [closure_18(tmp13(12350), obj6), ];
+    const items9 = [closure_18(tmp13(12514), obj6), ];
     const obj7 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
-    const tmp13Result = tmp13(8939);
+    const tmp13Result = tmp13(9038);
     const obj8 = { id: first2.id, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
     const _Date = Date;
-    const tmpResult2 = tmp(6267);
+    const tmpResult2 = tmp(6362);
     const date = new Date(tmp13(11).extractTimestamp(first2.id));
     obj8.timestamp = date.toUTCString();
     obj8.type = MessageTypes.DEFAULT;

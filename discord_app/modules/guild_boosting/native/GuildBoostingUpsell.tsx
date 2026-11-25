@@ -1,40 +1,40 @@
-// === Module 13809: GuildBoostingUpsell ===
+// === Module 13932: GuildBoostingUpsell ===
 
-// Module 13809 (GuildBoostingUpsell)
+// Module 13932 (GuildBoostingUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import shared from "shared" /* 4924 */;
-import useThemeDefault from "useTheme" /* 5126 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8415 */;
-import _modDef9189 from "module_9189" /* 9189 */;
-import _modDef9198 from "module_9198" /* 9198 */;
-import _modDef9199 from "module_9199" /* 9199 */;
-import BoostGemIcon from "BoostGemIcon" /* 9224 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 9235 */;
-import UploadIcon from "UploadIcon" /* 9561 */;
-import ReactionIcon from "ReactionIcon" /* 9563 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9576 */;
-import StarIcon from "StarIcon" /* 9626 */;
-import StickerIcon from "StickerIcon" /* 10497 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 13342 */;
-import _modDef13788 from "module_13788" /* 13788 */;
-import _modDef13810 from "module_13810" /* 13810 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 13811 */;
-import _modDef13813 from "module_13813" /* 13813 */;
-import _modDef13814 from "module_13814" /* 13814 */;
-import _modDef13815 from "module_13815" /* 13815 */;
-import _modDef13816 from "module_13816" /* 13816 */;
-import _modDef13817 from "module_13817" /* 13817 */;
-import _modDef13818 from "module_13818" /* 13818 */;
-import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 13819 */;
-import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 13823 */;
-import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 13824 */;
-import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 13825 */;
+import shared from "shared" /* 5019 */;
+import useThemeDefault from "useTheme" /* 5221 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8514 */;
+import _modDef9288 from "module_9288" /* 9288 */;
+import _modDef9297 from "module_9297" /* 9297 */;
+import _modDef9298 from "module_9298" /* 9298 */;
+import BoostGemIcon from "BoostGemIcon" /* 9323 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 9334 */;
+import UploadIcon from "UploadIcon" /* 9660 */;
+import ReactionIcon from "ReactionIcon" /* 9662 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9675 */;
+import StarIcon from "StarIcon" /* 9725 */;
+import StickerIcon from "StickerIcon" /* 10596 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 13465 */;
+import _modDef13911 from "module_13911" /* 13911 */;
+import _modDef13933 from "module_13933" /* 13933 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13934 */;
+import _modDef13936 from "module_13936" /* 13936 */;
+import _modDef13937 from "module_13937" /* 13937 */;
+import _modDef13938 from "module_13938" /* 13938 */;
+import _modDef13939 from "module_13939" /* 13939 */;
+import _modDef13940 from "module_13940" /* 13940 */;
+import _modDef13941 from "module_13941" /* 13941 */;
+import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 13942 */;
+import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 13946 */;
+import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 13947 */;
+import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 13948 */;
 import noop from "module_19" /* 19 */;
-import SortedGuildStore from "SortedGuildStore" /* 6038 */;
+import SortedGuildStore from "SortedGuildStore" /* 6133 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -42,7 +42,7 @@ get_ActivityIndicator = fn(17);
 const FractionalPremiumStates = fn(1388).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { root: { paddingHorizontal: 16, paddingVertical: 32 }, title: { marginTop: 16 }, features: { marginTop: 16 }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" }, guildList: { marginTop: 16 }, logoPremiumGuild: { resizeMode: "contain", width: "100%", height: 34, maxWidth: 320, marginTop: 16 }, imgPremiumGuild: { width: 95, height: 65 }, imgNoGuilds: { width: 178, height: 112, marginTop: 32 }, header: { alignItems: "center" }, upsell: { marginTop: 32, paddingTop: 16, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, subscriptionUpsell: { marginTop: 32 } };
 let closure_8 = createStyles.createStyles(obj2);
 class FEATURES_PREMIUM_GUILD_USER {
@@ -94,15 +94,15 @@ export default function GuildBoostingUpsell(arg0) {
   const obj5 = { style: tmp.header, children: null };
   const obj6 = { style: tmp.imgPremiumGuild, source: null };
   const tmp8 = useThemeDefault();
-  obj6.source = _modDef9189;
+  obj6.source = _modDef9288;
   const items1 = [timestampProducer(FastImageDefault, obj6), , , ];
   const obj7 = { style: tmp.logoPremiumGuild, source: null };
   const tmp7Result = FastImageDefault;
   const tmp7Result5 = FastImageDefault;
   if (tmp2Result.isThemeDark(tmp8)) {
-    let tmp7Result6 = _modDef9198;
+    let tmp7Result6 = _modDef9297;
   } else {
-    tmp7Result6 = _modDef9199;
+    tmp7Result6 = _modDef9298;
   }
   obj7.source = tmp7Result6;
   items1[1] = timestampProducer(tmp7Result5, obj7);
@@ -131,30 +131,30 @@ export default function GuildBoostingUpsell(arg0) {
   const obj13 = { style: tmp.features, features: null };
   const obj14 = { icon: null, label: null, IconComponent: null, color: null };
   const tmp7Result7 = PremiumFeatureListDefault;
-  obj14.icon = _modDef13814;
+  obj14.icon = _modDef13937;
   const intl5 = util.intl;
   obj14.label = intl5.string(util.t.Ts7BVI);
   obj14.IconComponent = ReactionIcon.ReactionIcon;
   obj14.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
   const items3 = [obj14, , , , ];
-  const obj15 = { icon: _modDef13815, label: null, IconComponent: null, color: null };
+  const obj15 = { icon: _modDef13938, label: null, IconComponent: null, color: null };
   const intl6 = util.intl;
   obj15.label = intl6.string(util.t.QcJbt6);
   obj15.IconComponent = StickerIcon.StickerIcon;
   obj15.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
   items3[1] = obj15;
-  const obj16 = { icon: _modDef13816, label: null, color: "#4173da", IconComponent: null };
+  const obj16 = { icon: _modDef13939, label: null, color: "#4173da", IconComponent: null };
   const intl7 = util.intl;
   obj16.label = intl7.string(util.t.rFNkf5);
   obj16.IconComponent = HeadphonesIcon.HeadphonesIcon;
   items3[2] = obj16;
-  const obj17 = { icon: _modDef13817, label: null, IconComponent: null, color: null };
+  const obj17 = { icon: _modDef13940, label: null, IconComponent: null, color: null };
   const intl8 = util.intl;
   obj17.label = intl8.string(util.t["BpjjS/"]);
   obj17.IconComponent = UploadIcon.UploadIcon;
   obj17.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
   items3[3] = obj17;
-  const obj18 = { icon: _modDef13818, label: null, IconComponent: null, color: null };
+  const obj18 = { icon: _modDef13941, label: null, IconComponent: null, color: null };
   const intl9 = util.intl;
   obj18.label = intl9.string(util.t["9g5Lgb"]);
   obj18.IconComponent = StarIcon.StarIcon;

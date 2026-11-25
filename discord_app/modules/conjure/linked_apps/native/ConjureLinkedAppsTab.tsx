@@ -1,11 +1,11 @@
-// === Module 18372: ConjureLinkedAppsTab ===
+// === Module 18484: ConjureLinkedAppsTab ===
 
-// Module 18372 (ConjureLinkedAppsTab)
+// Module 18484 (ConjureLinkedAppsTab)
 import util from "util" /* 1112 */;
-import _modDef4192 from "module_4192" /* 4192 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5131 */;
-import AlertModal from "AlertModal" /* 5926 */;
-import ConjureLinkedAppBuildSheetDefault from "ConjureLinkedAppBuildSheet" /* 18373 */;
+import _modDef4244 from "module_4244" /* 4244 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5226 */;
+import AlertModal from "AlertModal" /* 6021 */;
+import ConjureLinkedAppBuildSheetDefault from "ConjureLinkedAppBuildSheet" /* 18485 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ function SettingRow(onBuildChange) {
   };
   return closure_4(require("TableRow").TableRow, obj);
 }
-const canPublishProject = fn(6808).canPublishProject;
+const canPublishProject = fn(6903).canPublishProject;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ConjureLinkedAppSheet = "ConjureLinkedAppSheet";
@@ -64,9 +64,9 @@ export default function ConjureLinkedAppsTab(linkedApps) {
     let obj3 = { variant: "body-xs/semibold", color: "text-muted", accessibilityRole: "header", children: null };
     let intl = tmp2(1112).intl;
     let obj4 = { name: linkedApps.name };
-    obj3.children = intl.formatToPlainString(tmp4(4192).uLPdNT, obj4);
+    obj3.children = intl.formatToPlainString(tmp4(4244).uLPdNT, obj4);
     items = [
-      c4(tmp2(5508).Text, obj3),
+      c4(tmp2(5603).Text, obj3),
       callers.map((project_id) => {
           project_id = project_id.project_id;
           const name = tmp;
@@ -116,11 +116,11 @@ export default function ConjureLinkedAppsTab(linkedApps) {
             closure_0 = project_id;
             const obj2 = { key: "ConjureRemoveLinkedApp-" + project_id, title: null, content: null, confirmText: null, variant: "destructive", onConfirm: null };
             const intl = util.intl;
-            obj2.title = intl.formatToPlainString(_modDef4192.zSfIvv, { name });
+            obj2.title = intl.formatToPlainString(_modDef4244.zSfIvv, { name });
             const intl2 = util.intl;
-            obj2.content = intl2.formatToPlainString(_modDef4192["7TX+mR"], { name });
+            obj2.content = intl2.formatToPlainString(_modDef4244["7TX+mR"], { name });
             const intl3 = util.intl;
-            obj2.confirmText = intl3.string(_modDef4192.vDZEGQ);
+            obj2.confirmText = intl3.string(_modDef4244.vDZEGQ);
             obj2.onConfirm = function onConfirm() {
               return _undefined2(closure_0);
             };
@@ -144,7 +144,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
         })
     ];
     obj2.children = items;
-    tmpResult = tmp(tmp2(5989).Stack, obj2);
+    tmpResult = tmp(tmp2(6084).Stack, obj2);
   }
   let items1 = [tmpResult, , ];
   let tmpResult2 = null;
@@ -153,9 +153,9 @@ export default function ConjureLinkedAppsTab(linkedApps) {
     let obj6 = { variant: "body-xs/semibold", color: "text-muted", accessibilityRole: "header", children: null };
     let intl2 = tmp2(1112).intl;
     let obj7 = { name: linkedApps.name };
-    obj6.children = intl2.formatToPlainString(tmp4(4192).L3Bf1s, obj7);
+    obj6.children = intl2.formatToPlainString(tmp4(4244).L3Bf1s, obj7);
     const items2 = [
-      c4(tmp2(5508).Text, obj6),
+      c4(tmp2(5603).Text, obj6),
       targets.map((project_id) => {
           project_id = project_id.project_id;
           const linkedAppTargetSidesResult = linkedApps(_undefined[12]).linkedAppTargetSides(project_id, project_id);
@@ -206,14 +206,14 @@ export default function ConjureLinkedAppsTab(linkedApps) {
         })
     ];
     obj5.children = items2;
-    tmpResult2 = tmp(tmp2(5989).Stack, obj5);
+    tmpResult2 = tmp(tmp2(6084).Stack, obj5);
   }
   items1[1] = tmpResult2;
   if (!failed) {
     if (!linkedApps.saved) {
       items1[2] = null;
       obj.children = items1;
-      return tmp(linkedApps(5989).Stack, obj);
+      return tmp(linkedApps(6084).Stack, obj);
     }
   }
   let str = "text-muted";
@@ -232,7 +232,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
   }
   obj8.accessibilityLiveRegion = str3;
   let intl3 = tmp2(1112).intl;
-  const tmp4Result = onOpenSettings(4192);
+  const tmp4Result = onOpenSettings(4244);
   obj8.children = intl3.string(failed ? tmp4Result.dIEOrl : tmp4Result["/d6saK"]);
-  c4(linkedApps(5508).Text, obj8);
+  c4(linkedApps(5603).Text, obj8);
 };

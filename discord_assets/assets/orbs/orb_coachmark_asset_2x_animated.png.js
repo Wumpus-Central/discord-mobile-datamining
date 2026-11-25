@@ -1,6 +1,6 @@
-// === Module 17361: ? ===
+// === Module 17472: ? ===
 
-// Module 17361
+// Module 17472
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js");

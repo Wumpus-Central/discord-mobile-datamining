@@ -1,6 +1,6 @@
-// === Module 15049: ProgramCurrentState ===
+// === Module 15171: ProgramCurrentState ===
 
-// Module 15049 (ProgramCurrentState)
+// Module 15171 (ProgramCurrentState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProgramCurrentState.tsx");

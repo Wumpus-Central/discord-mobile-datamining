@@ -1,11 +1,11 @@
-// === Module 11751: PinotMemberNoticeHeaderArrow ===
+// === Module 11850: PinotMemberNoticeHeaderArrow ===
 
-// Module 11751 (PinotMemberNoticeHeaderArrow)
+// Module 11850 (PinotMemberNoticeHeaderArrow)
 import nativeDefault from "native" /* 575 */;
-import PinotMemberNoticeCaret from "PinotMemberNoticeCaret" /* 11750 */;
+import PinotMemberNoticeCaret from "PinotMemberNoticeCaret" /* 11849 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 const require = globalThis.__r;
 
@@ -14,8 +14,8 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let closure_10 = 10 + fn(11750).PINOT_MEMBER_NOTICE_BORDER_WIDTH / 2;
-const createStyles = fn(4917);
+let closure_10 = 10 + fn(11849).PINOT_MEMBER_NOTICE_BORDER_WIDTH / 2;
+const createStyles = fn(5012);
 let closure_11 = createStyles.createStyles((height) => {
   const obj = { anchor: { position: "absolute", top: 0, right: 0, bottom: 0, left: 0, zIndex: 1, overflow: "visible" }, dividerUnderlay: null, outline: null };
   const rect = { position: "absolute", bottom: 0, left: 0, right: 0, height: PinotMemberNoticeCaret.PINOT_MEMBER_NOTICE_BORDER_WIDTH, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

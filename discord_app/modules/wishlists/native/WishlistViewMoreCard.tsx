@@ -1,10 +1,10 @@
-// === Module 11523: WishlistViewMoreCard ===
+// === Module 11622: WishlistViewMoreCard ===
 
-// Module 11523 (WishlistViewMoreCard)
+// Module 11622 (WishlistViewMoreCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import WishlistItemCardDefault from "WishlistItemCard" /* 11518 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import WishlistItemCardDefault from "WishlistItemCard" /* 11617 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { moreOverlay: null };
   const obj2 = {};

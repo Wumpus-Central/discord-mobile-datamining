@@ -1,20 +1,20 @@
-// === Module 16603: QuestDockContentExpanded ===
+// === Module 16724: QuestDockContentExpanded ===
 
-// Module 16603 (QuestDockContentExpanded)
+// Module 16724 (QuestDockContentExpanded)
 import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11661 */;
-import QuestDockUtils from "QuestDockUtils" /* 16507 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 16509 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11760 */;
+import QuestDockUtils from "QuestDockUtils" /* 16628 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 16630 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
 
 require = fn;
-const QuestDockMode = fn(6745).QuestDockMode;
-let closure_5 = fn(16508).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6840).QuestDockMode;
+let closure_5 = fn(16629).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const obj = { wrapper: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

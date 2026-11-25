@@ -1,6 +1,6 @@
-// === Module 9363: scaleProfileFrame ===
+// === Module 9462: scaleProfileFrame ===
 
-// Module 9363 (scaleProfileFrame)
+// Module 9462 (scaleProfileFrame)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/collectibles/profile_frames/scaleProfileFrame.tsx");

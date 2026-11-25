@@ -1,7 +1,7 @@
-// === Module 13420: openConjureProjectInBuilder ===
+// === Module 13543: openConjureProjectInBuilder ===
 
-// Module 13420 (openConjureProjectInBuilder)
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11341 */;
+// Module 13543 (openConjureProjectInBuilder)
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11440 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/projects/openConjureProjectInBuilder.native.tsx");

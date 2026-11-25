@@ -1,7 +1,7 @@
-// === Module 10926: useVerifyMentionResults ===
+// === Module 11025: useVerifyMentionResults ===
 
-// Module 10926 (useVerifyMentionResults)
-import useGuildMemberVerificationDefault from "useGuildMemberVerification" /* 10927 */;
+// Module 11025 (useVerifyMentionResults)
+import useGuildMemberVerificationDefault from "useGuildMemberVerification" /* 11026 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

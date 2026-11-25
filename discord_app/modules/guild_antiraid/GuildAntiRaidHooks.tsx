@@ -1,17 +1,17 @@
-// === Module 10485: GuildAntiRaidHooks ===
+// === Module 10584: GuildAntiRaidHooks ===
 
-// Module 10485 (GuildAntiRaidHooks)
+// Module 10584 (GuildAntiRaidHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4854 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 10452 */;
-import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 10486 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4949 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 10551 */;
+import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 10585 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
 import UserStore from "UserStore" /* 1386 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10451 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10550 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ function getFirstGuildIncidentId(guildId) {
   }
   return null;
 }
-let closure_10 = fn(10453).IncidentAlertModeratorPermissions;
+let closure_10 = fn(10552).IncidentAlertModeratorPermissions;
 const Constants = fn(1071);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_11, GuildFeatures: closure_12 } = Constants);
 const size = fn(2);
@@ -78,7 +78,7 @@ export function useFirstGuildIncidentId() {
       let tmp16 = tmp15;
       if (null != tmp15) {
         let tmp18 = stateFromStores1;
-        let obj8 = stateFromStores1(10452);
+        let obj8 = stateFromStores1(10551);
         if (obj8.hasDetectedActivity(tmp16)) {
           let obj5 = BigFlagUtilsAll;
           let obj6 = PermissionUtilsAll;
@@ -89,7 +89,7 @@ export function useFirstGuildIncidentId() {
             return nextResult.id;
           }
         } else {
-          let tmp18Result = tmp18(10452);
+          let tmp18Result = tmp18(10551);
         }
       }
     }
@@ -126,8 +126,8 @@ export function useGuildIncidentsState(id) {
   const obj3 = { shouldShowIncidentActions: stateFromStores, incidentData: stateFromStores1, isUnderLockdown: null };
   let isUnderLockdownResult = null != stateFromStores1;
   if (isUnderLockdownResult) {
-    isUnderLockdownResult = tmp(10452).isUnderLockdown(stateFromStores1);
-    const tmpResult = tmp(10452);
+    isUnderLockdownResult = tmp(10551).isUnderLockdown(stateFromStores1);
+    const tmpResult = tmp(10551);
   }
   obj3.isUnderLockdown = isUnderLockdownResult;
   return obj3;

@@ -1,9 +1,9 @@
-// === Module 6811: FramesConstants ===
+// === Module 6906: FramesConstants ===
 
-// Module 6811 (FramesConstants)
+// Module 6906 (FramesConstants)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1071 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5561 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5656 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
@@ -32,20 +32,20 @@ export function getFrameIntentForSurface(type) {
     return obj3.INLINE;
   }
 }
-export function makeFrameId(arg0, type) {
+export function makeFrameId(applicationId, type) {
   type = type.type;
   if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
     const _HermesInternal4 = HermesInternal;
-    return "main:" + arg0;
+    return "main:" + applicationId;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL === type) {
     const _HermesInternal3 = HermesInternal;
-    return "app-channel:" + arg0 + ":" + type.channelId;
+    return "app-channel:" + applicationId + ":" + type.channelId;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL === type) {
     const _HermesInternal2 = HermesInternal;
-    return "voice-channel:" + arg0 + ":" + type.channelId;
+    return "voice-channel:" + applicationId + ":" + type.channelId;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY === type) {
     const _HermesInternal = HermesInternal;
-    return "overlay:" + arg0;
+    return "overlay:" + applicationId;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.INTERACTION_MODAL === type) {
     _modDef38(false, "A Frame cannot be launched at an INTERACTION_MODAL surface");
   }

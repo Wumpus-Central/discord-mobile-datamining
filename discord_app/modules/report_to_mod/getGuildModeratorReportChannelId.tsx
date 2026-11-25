@@ -1,6 +1,6 @@
-// === Module 8152: getGuildModeratorReportChannelId ===
+// === Module 8251: getGuildModeratorReportChannelId ===
 
-// Module 8152 (getGuildModeratorReportChannelId)
+// Module 8251 (getGuildModeratorReportChannelId)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");

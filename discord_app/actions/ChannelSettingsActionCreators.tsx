@@ -1,12 +1,12 @@
-// === Module 7971: ChannelSettingsActionCreators ===
+// === Module 8070: ChannelSettingsActionCreators ===
 
-// Module 7971 (ChannelSettingsActionCreators)
+// Module 8070 (ChannelSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import RootNavigationRef from "RootNavigationRef" /* 5094 */;
+import RootNavigationRef from "RootNavigationRef" /* 5189 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 7972 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 8071 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 require = fn;
 function init(channelId, location, subsection) {
@@ -61,7 +61,7 @@ let closure_9 = async function _saveChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -200,8 +200,8 @@ let closure_9 = async function _saveChannel(arg0) {
             tmp5 = isThreadResult;
           }
           if (!tmp5) {
-            const result = closure_1(7731).checkGuildTemplateDirty(guildId);
-            const tmpResult = closure_1(7731);
+            const result = closure_1(7830).checkGuildTemplateDirty(guildId);
+            const tmpResult = closure_1(7830);
           }
           return arg0;
         }, (body) => {
@@ -238,7 +238,7 @@ let closure_10 = async function _deleteChannel(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -292,7 +292,7 @@ let closure_10 = async function _deleteChannel(arg0) {
         }
         closure_130_8();
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp22) {
       c4 = tmp;

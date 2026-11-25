@@ -1,21 +1,21 @@
-// === Module 9589: EmojiPickerListComponents ===
+// === Module 9688: EmojiPickerListComponents ===
 
-// Module 9589 (EmojiPickerListComponents)
+// Module 9688 (EmojiPickerListComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9587 */;
-import _modDef9590 from "module_9590" /* 9590 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9686 */;
+import _modDef9689 from "module_9689" /* 9689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerListConstants = fn(9399);
+const EmojiPickerListConstants = fn(9498);
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { section: { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING }, nsfwContainer: null, nsfwText: null };
 let obj3 = { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING };
 obj.nsfwContainer = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
@@ -25,7 +25,7 @@ const obj4 = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "cente
 const memoResult = noop.memo(function EmojiPickerListNSFWRow() {
   const tmp = closure_6();
   const obj = { style: tmp.nsfwContainer, children: null };
-  items = [React4(native.Icon, { source: _modDef9590, size: native.Icon.Sizes.SMALL }), ];
+  items = [React4(native.Icon, { source: _modDef9689, size: native.Icon.Sizes.SMALL }), ];
   const obj3 = { style: tmp.nsfwText, variant: "body-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.SLzV5z);

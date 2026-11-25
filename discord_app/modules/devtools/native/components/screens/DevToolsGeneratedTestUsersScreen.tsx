@@ -1,17 +1,17 @@
-// === Module 17042: DevToolsGeneratedTestUsersScreen ===
+// === Module 17161: DevToolsGeneratedTestUsersScreen ===
 
-// Module 17042 (DevToolsGeneratedTestUsersScreen)
+// Module 17161 (DevToolsGeneratedTestUsersScreen)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5492 */;
-import components_Button_Button from "components/Button/Button" /* 5515 */;
-import Stack_Stack from "Stack/Stack" /* 5989 */;
-import TextInput from "TextInput" /* 7148 */;
-import GeneratedTestUserActionCreators from "GeneratedTestUserActionCreators" /* 17066 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5587 */;
+import components_Button_Button from "components/Button/Button" /* 5610 */;
+import Stack_Stack from "Stack/Stack" /* 6084 */;
+import TextInput from "TextInput" /* 7243 */;
+import GeneratedTestUserActionCreators from "GeneratedTestUserActionCreators" /* 17185 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GeneratedTestUsersStore from "GeneratedTestUsersStore" /* 17043 */;
+import GeneratedTestUsersStore from "GeneratedTestUsersStore" /* 17162 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -38,7 +38,7 @@ function PoolIdInput(onSubmit) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -115,17 +115,17 @@ function UserActionSheet(pool) {
     ActionSheetActionCreatorsDefault.hideActionSheet("generated-test-users");
     GeneratedTestUserActionCreators.loginAsGeneratedUser(pool.id, arg0);
   }, items);
-  let obj = { header: closure_10(pool(7381).BottomSheetTitleHeader, { title: pool.summary, subtitle: "" + usersForPool.length + " users" }), children: null };
+  let obj = { header: closure_10(pool(7476).BottomSheetTitleHeader, { title: pool.summary, subtitle: "" + usersForPool.length + " users" }), children: null };
   const obj3 = { style: null, children: null };
   const obj2 = { title: pool.summary, subtitle: "" + usersForPool.length + " users" };
   obj3.style = { paddingHorizontal: usersForPool(575).space.PX_12 };
   const obj4 = { paddingHorizontal: usersForPool(575).space.PX_12 };
-  obj3.children = closure_10(pool(6014).TableRowGroup, {
+  obj3.children = closure_10(pool(6109).TableRowGroup, {
     title: "Select User to Login As",
     hasIcons: true,
     children: usersForPool.map((id, index) => {
       const obj = {
-        icon: closure_1_10(pool(12259).UserIcon, { size: "md" }),
+        icon: closure_1_10(pool(12359).UserIcon, { size: "md" }),
         label: null,
         subLabel: null,
         onPress() {
@@ -139,16 +139,16 @@ function UserActionSheet(pool) {
       ({ username: obj.label, email: obj.subLabel } = id);
       let tmp2Result;
       if (id.id === dependencyMap) {
-        tmp2Result = closure_1_10(pool(7060).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
+        tmp2Result = closure_1_10(pool(7155).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
       }
       obj.trailing = tmp2Result;
       obj.start = 0 === index;
       obj.end = index === usersForPool.length - 1;
-      return closure_1_10(pool(6018).TableRow, obj, id.id);
+      return closure_1_10(pool(6113).TableRow, obj, id.id);
     })
   });
   obj.children = closure_10(closure_6, obj3);
-  return closure_10(pool(5145).BottomSheet, obj);
+  return closure_10(pool(5240).BottomSheet, obj);
 }
 function PoolUsers(pool) {
   pool = pool.pool;
@@ -159,14 +159,14 @@ function PoolUsers(pool) {
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: UserActionSheet }), "generated-test-users", { pool });
   }, items);
-  return closure_10(pool(6018).TableRow, { icon: closure_10(items[Number(undefined, id) % items.length], { size: "md", color: length[Number(undefined, id) % length.length] }), label: pool.summary, subLabel: "" + usersForPool.length + " users", arrow: true, onPress: callback, start, end });
+  return closure_10(pool(6113).TableRow, { icon: closure_10(items[Number(undefined, id) % items.length], { size: "md", color: length[Number(undefined, id) % length.length] }), label: pool.summary, subLabel: "" + usersForPool.length + " users", arrow: true, onPress: callback, start, end });
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-let items = [fn(12259).UserIcon, fn(9937).ShieldIcon, fn(11162).GiftIcon, fn(17044).AchievementsIcon, fn(12384).PiggyBankIcon, fn(17046).TreehouseIcon, fn(10234).SpeedometerIcon, fn(17048).CompassIcon, fn(14910).SignPostIcon, fn(17050).CarIcon, fn(17052).TrainIcon, fn(17054).TeacupIcon, fn(17056).InventoryIcon, fn(9641).FoodIcon, fn(17058).BurgerIcon, fn(17060).MagicDoorIcon, fn(17062).PawPrintIcon, fn(17064).RecordPlayerIcon, fn(10310).SettingsIcon];
-const createStyles = fn(4917);
+let items = [fn(12359).UserIcon, fn(10036).ShieldIcon, fn(11261).GiftIcon, fn(17163).AchievementsIcon, fn(12548).PiggyBankIcon, fn(17165).TreehouseIcon, fn(10333).SpeedometerIcon, fn(17167).CompassIcon, fn(15032).SignPostIcon, fn(17169).CarIcon, fn(17171).TrainIcon, fn(17173).TeacupIcon, fn(17175).InventoryIcon, fn(9740).FoodIcon, fn(17177).BurgerIcon, fn(17179).MagicDoorIcon, fn(17181).PawPrintIcon, fn(17183).RecordPlayerIcon, fn(10409).SettingsIcon];
+const createStyles = fn(5012);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, inputContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -197,7 +197,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -225,7 +225,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp9) {
         c2 = tmp;
@@ -253,15 +253,15 @@ export default function DevToolsGeneratedTestUsersScreen() {
   const items2 = [closure_10(PoolIdInput, { onSubmit: callback }), ];
   let tmp5Result = 0 === stateFromStoresArray.length;
   if (tmp5Result) {
-    tmp5Result = closure_10(stateFromStoresArray(6018).TableRow, { label: "No pools available." });
+    tmp5Result = closure_10(stateFromStoresArray(6113).TableRow, { label: "No pools available." });
   }
   let obj5 = { spacing: 16, children: null };
   const obj6 = { title: "Generated Test User Pools", hasIcons: true, children: null };
   const items3 = [tmp5Result, stateFromStoresArray.map((pool, index) => refs(PoolUsers, { pool, start: 0 === index, end: index === stateFromStoresArray.length - 1 }, pool.id))];
   obj6.children = items3;
-  items2[1] = closure_11(stateFromStoresArray(6014).TableRowGroup, obj6);
+  items2[1] = closure_11(stateFromStoresArray(6109).TableRowGroup, obj6);
   obj5.children = items2;
-  obj3.children = closure_11(stateFromStoresArray(5989).Stack, obj5);
+  obj3.children = closure_11(stateFromStoresArray(6084).Stack, obj5);
   obj2.children = closure_10(closure_7, obj3);
   return closure_10(closure_6, obj2);
 };

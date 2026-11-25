@@ -1,19 +1,19 @@
-// === Module 9264: MarketingPageBannerTile ===
+// === Module 9363: MarketingPageBannerTile ===
 
-// Module 9264 (MarketingPageBannerTile)
+// Module 9363 (MarketingPageBannerTile)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5596 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 5990 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6253 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9495 */;
+import LinkingDefault from "Linking" /* 5691 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6085 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6348 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9594 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { width: "100%" }, card: { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT, overflow: "hidden" }, image: null, bodyText: null, ctaButton: null };
 let size = { width: "100%", maxWidth: 317, height: 144, borderRadius: nativeDefault.radii.md, marginBottom: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_8, alignSelf: "center" };
 obj2.image = size;
@@ -62,17 +62,17 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj2.analyticsPage = analyticsPage;
   obj2.onPaymentSuccess = onPaymentSuccess;
   obj2.onPaymentDismiss = onPaymentDismiss;
-  const obj = helpArticleLinkProps(9265);
+  const obj = helpArticleLinkProps(9364);
   const obj3 = { type: null, name: null, properties: null };
-  const buttonActionHandler = helpArticleLinkProps(9265).getButtonActionHandler(obj2);
+  const buttonActionHandler = helpArticleLinkProps(9364).getButtonActionHandler(obj2);
   obj3.type = helpArticleLinkProps(1263).ImpressionTypes.VIEW;
   obj3.name = helpArticleLinkProps(1263).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   obj3.properties = { component_type: componentType, component_id: componentId, promotion_id: promotionId };
   useTrackImpressionDefault(obj3);
   const tmp2Result = useTrackImpressionDefault;
-  const formatStringWithCommonPremiumParams = helpArticleLinkProps(13696).useFormatStringWithCommonPremiumParams(bannerFields.body);
-  const tmp4Result = helpArticleLinkProps(13696);
-  helpArticleLinkProps = helpArticleLinkProps(13696).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
+  const formatStringWithCommonPremiumParams = helpArticleLinkProps(13819).useFormatStringWithCommonPremiumParams(bannerFields.body);
+  const tmp4Result = helpArticleLinkProps(13819);
+  helpArticleLinkProps = helpArticleLinkProps(13819).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj4 = { style: null, children: null };
   items = [tmp.container, style];
   obj4.style = items;
@@ -87,7 +87,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     obj6.style = tmp.image;
     tmp14Result = closure_4(FastImageDefault, obj6);
   }
-  const items2 = [tmp14Result, closure_4(helpArticleLinkProps(5508).Text, { color: "mobile-text-heading-primary", variant: "body-lg/semibold", children: bannerFields.header }), , ];
+  const items2 = [tmp14Result, closure_4(helpArticleLinkProps(5603).Text, { color: "mobile-text-heading-primary", variant: "body-lg/semibold", children: bannerFields.header }), , ];
   const obj9 = { color: "mobile-text-heading-primary", variant: "body-sm/medium", style: tmp.bodyText, children: null };
   const items3 = [formatStringWithCommonPremiumParams, " ", ];
   let tmp14Result3 = null != helpArticleLinkProps;
@@ -101,11 +101,11 @@ export default function MarketingPageBannerTile(bannerFields) {
         },
       children: helpArticleLinkProps.linkText
     };
-    tmp14Result3 = closure_4(tmp4(5508).Text, obj10);
+    tmp14Result3 = closure_4(tmp4(5603).Text, obj10);
   }
   items3[2] = tmp14Result3;
   obj9.children = items3;
-  items2[2] = closure_5(helpArticleLinkProps(5508).Text, obj9);
+  items2[2] = closure_5(helpArticleLinkProps(5603).Text, obj9);
   let tmp14Result4 = null != bannerFields.button;
   if (tmp14Result4) {
     const obj11 = { style: tmp.ctaButton, children: null };

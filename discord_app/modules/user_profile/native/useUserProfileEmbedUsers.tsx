@@ -1,13 +1,14 @@
-// === Module 11824: useUserProfileEmbedUsers ===
+// === Module 11923: useUserProfileEmbedUsers ===
 
-// Module 11824 (useUserProfileEmbedUsers)
-import UserProfileEmbedUsers from "UserProfileEmbedUsers" /* 11825 */;
+// Module 11923 (useUserProfileEmbedUsers)
+import UserProfileEmbedUsers from "UserProfileEmbedUsers" /* 11924 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 import UserStore from "UserStore" /* 1386 */;
-import UserProfileStore from "UserProfileStore" /* 6037 */;
+import UserProfileStore from "UserProfileStore" /* 6132 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +22,7 @@ export default function useUserProfileEmbedUsers(arg0, arg1, arg2) {
   noop = arg2;
   items = [arg0];
   const memo = noop.useMemo(() => UserProfileEmbedUsers.collectUserProfileEmbedUserIds(closure_0), items);
-  const items1 = [require("ApexExperiment").ApexExperimentStore, UserStore, UserProfileStore, GuildMemberStore, memo, RelationshipStore];
+  const items1 = [require("ApexExperiment").ApexExperimentStore, UserStore, UserProfileStore, GuildMemberStore, ChannelStore, RelationshipStore, memo];
   const items2 = [memo, arg1, arg2];
   return require("initialize").useStateFromStores(items1, () => {
     if (memo.length > 0) {

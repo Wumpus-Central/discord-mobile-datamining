@@ -1,6 +1,6 @@
-// === Module 10634: ForegroundServiceManagerTypes ===
+// === Module 10733: ForegroundServiceManagerTypes ===
 
-// Module 10634 (ForegroundServiceManagerTypes)
+// Module 10733 (ForegroundServiceManagerTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManagerTypes.tsx");

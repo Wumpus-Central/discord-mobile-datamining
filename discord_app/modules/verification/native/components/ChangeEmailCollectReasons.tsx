@@ -1,22 +1,22 @@
-// === Module 7123: ChangeEmailCollectReasons ===
+// === Module 7218: ChangeEmailCollectReasons ===
 
-// Module 7123 (ChangeEmailCollectReasons)
+// Module 7218 (ChangeEmailCollectReasons)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import TableRadioGroup from "TableRadioGroup" /* 7125 */;
+import TableRadioGroup from "TableRadioGroup" /* 7220 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const VerificationConstants = fn(7124);
+const VerificationConstants = fn(7219);
 ({ CHANGE_EMAIL_REASONS_ORDER: metroImportDefault, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = VerificationConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, radioGroup: null, title: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };

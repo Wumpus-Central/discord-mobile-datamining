@@ -1,14 +1,14 @@
-// === Module 18851: useSearchMessagesLoadingState ===
+// === Module 18962: useSearchMessagesLoadingState ===
 
-// Module 18851 (useSearchMessagesLoadingState)
+// Module 18962 (useSearchMessagesLoadingState)
 import initialize from "initialize" /* 504 */;
-import SearchUtils from "SearchUtils" /* 13118 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18782 */;
-import SearchMessageStore from "SearchMessageStore" /* 6827 */;
-import SearchQueryStore from "SearchQueryStore" /* 13125 */;
+import SearchUtils from "SearchUtils" /* 13241 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18893 */;
+import SearchMessageStore from "SearchMessageStore" /* 6922 */;
+import SearchQueryStore from "SearchQueryStore" /* 13248 */;
 
 require = fn;
-let closure_4 = fn(8878).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+let closure_4 = fn(8977).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 12629: CheckpointCharacterDataBinding ===
+// === Module 12793: CheckpointCharacterDataBinding ===
 
-// Module 12629 (CheckpointCharacterDataBinding)
-import CheckpointNavigation from "CheckpointNavigation" /* 6641 */;
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 12463 */;
-import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits" /* 12630 */;
+// Module 12793 (CheckpointCharacterDataBinding)
+import CheckpointNavigation from "CheckpointNavigation" /* 6736 */;
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 12627 */;
+import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits" /* 12794 */;
 import size from "module_2" /* 2 */;
 
 let items = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"];

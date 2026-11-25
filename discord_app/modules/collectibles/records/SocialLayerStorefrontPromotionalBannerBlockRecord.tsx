@@ -1,7 +1,7 @@
-// === Module 6226: SocialLayerStorefrontPromotionalBannerBlockRecord ===
+// === Module 6321: SocialLayerStorefrontPromotionalBannerBlockRecord ===
 
-// Module 6226 (SocialLayerStorefrontPromotionalBannerBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 5575 */;
+// Module 6321 (SocialLayerStorefrontPromotionalBannerBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 5670 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function SocialLayerStorefrontPromotionalBannerBlockRecord(arg0) {

@@ -1,9 +1,9 @@
-// === Module 5602: FriendsIcon ===
+// === Module 5697: FriendsIcon ===
 
-// Module 5602 (FriendsIcon)
+// Module 5697 (FriendsIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod5606 from "module_5606" /* 5606 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod5701 from "module_5701" /* 5701 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function FriendsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5606, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5701, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

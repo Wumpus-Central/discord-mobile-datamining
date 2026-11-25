@@ -1,6 +1,6 @@
-// === Module 9235: useSubscriptionPlansLoaded ===
+// === Module 9334: useSubscriptionPlansLoaded ===
 
-// Module 9235 (useSubscriptionPlansLoaded)
+// Module 9334 (useSubscriptionPlansLoaded)
 import LoggerDefault from "Logger" /* 3 */;
 import PaymentSourceStore from "PaymentSourceStore" /* 2175 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2177 */;

@@ -1,25 +1,25 @@
-// === Module 17847: WaterwheelsPostCard ===
+// === Module 17959: WaterwheelsPostCard ===
 
-// Module 17847 (WaterwheelsPostCard)
+// Module 17959 (WaterwheelsPostCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1412 */;
-import themes from "themes" /* 4939 */;
-import native from "native" /* 4978 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import components_Button_Button from "components/Button/Button" /* 5515 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import LinkIcon from "LinkIcon" /* 5613 */;
-import PlatformsDefault from "Platforms" /* 6052 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8791 */;
-import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 17848 */;
+import themes from "themes" /* 5034 */;
+import native from "native" /* 5073 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import components_Button_Button from "components/Button/Button" /* 5610 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import LinkIcon from "LinkIcon" /* 5708 */;
+import PlatformsDefault from "Platforms" /* 6147 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8890 */;
+import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 17960 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { content: { gap: nativeDefault.space.PX_12 }, standardContent: null, header: null, copy: null, icon: null, sectionIcon: null, connectionCard: null, connectionArt: null, connectionArtImage: null, connectionProviderArt: null, connectionCopy: null, connectionText: null, fallback: null, media: null, postAction: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.standardContent = { gap: nativeDefault.space.PX_8 };

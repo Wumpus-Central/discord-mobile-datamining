@@ -1,13 +1,13 @@
-// === Module 11855: loadConjureSharedProject ===
+// === Module 11954: loadConjureSharedProject ===
 
-// Module 11855 (loadConjureSharedProject)
-import conjureProjectLink from "conjureProjectLink" /* 5661 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7541 */;
+// Module 11954 (loadConjureSharedProject)
+import conjureProjectLink from "conjureProjectLink" /* 5756 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6940 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11847 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11946 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -49,7 +49,7 @@ let closure_11 = async function _load(arg0, arg1, arg2) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -190,7 +190,7 @@ let closure_12 = async function _resolveStatus(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

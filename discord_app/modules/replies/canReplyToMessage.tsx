@@ -1,11 +1,11 @@
-// === Module 12057: canReplyToMessage ===
+// === Module 12156: canReplyToMessage ===
 
-// Module 12057 (canReplyToMessage)
+// Module 12156 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1087 */;
-import ThreadHooks from "ThreadHooks" /* 7502 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8686 */;
+import ThreadHooks from "ThreadHooks" /* 7597 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8785 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;

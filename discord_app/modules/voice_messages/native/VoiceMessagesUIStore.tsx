@@ -1,11 +1,11 @@
-// === Module 12742: VoiceMessagesUIStore ===
+// === Module 12906: VoiceMessagesUIStore ===
 
-// Module 12742 (VoiceMessagesUIStore)
+// Module 12906 (VoiceMessagesUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import springPresets from "springPresets" /* 5519 */;
-import VoiceMessageConstants from "VoiceMessageConstants" /* 12743 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import springPresets from "springPresets" /* 5614 */;
+import VoiceMessageConstants from "VoiceMessageConstants" /* 12907 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -65,9 +65,9 @@ export function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(5518);
+    obj = waveformVersion(5613);
     const result = arg0 / closure_3;
-    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5519).Reanimated3DefaultSpringConfig));
+    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5614).Reanimated3DefaultSpringConfig));
   }
   items = [arg0, waveformVersion];
   waveform.push(items);

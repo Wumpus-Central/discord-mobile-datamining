@@ -1,11 +1,11 @@
-// === Module 13094: GuildDirectoryAddAlert ===
+// === Module 13217: GuildDirectoryAddAlert ===
 
-// Module 13094 (GuildDirectoryAddAlert)
+// Module 13217 (GuildDirectoryAddAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import common_AlertDefault from "common/Alert" /* 5992 */;
-import GuildIcon from "GuildIcon" /* 6926 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import common_AlertDefault from "common/Alert" /* 6087 */;
+import GuildIcon from "GuildIcon" /* 7021 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { guildIcon: { marginBottom: 16, borderRadius: nativeDefault.radii.sm }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, container: { alignItems: "center", justifyContent: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

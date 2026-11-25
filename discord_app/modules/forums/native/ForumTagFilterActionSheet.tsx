@@ -1,13 +1,13 @@
-// === Module 13629: ForumTagFilterActionSheet ===
+// === Module 13752: ForumTagFilterActionSheet ===
 
-// Module 13629 (ForumTagFilterActionSheet)
+// Module 13752 (ForumTagFilterActionSheet)
 import initialize from "initialize" /* 504 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import EmojiDefault from "Emoji" /* 7362 */;
-import Tracking from "Tracking" /* 7975 */;
+import EmojiDefault from "Emoji" /* 7457 */;
+import Tracking from "Tracking" /* 8074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6757 */;
+import EmojiStore from "EmojiStore" /* 6852 */;
 
 require = fn;
 function EmojiIcon(arg0) {
@@ -36,12 +36,12 @@ function EmojiIcon(arg0) {
   obj2.name = emojiName;
   return jsx(EmojiDefault, { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
 }
-const ForumChannelStore = fn(12787);
+const ForumChannelStore = fn(12389);
 ({ useForumChannelStore: closure_6, useForumChannelStoreApi: metroImportDefault } = ForumChannelStore);
 const Constants = fn(1071);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: closure_10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_12 = createStyles.createStyles({ emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" }, imageEmoji: { height: 18, width: 18 }, textEmoji: { fontSize: 14, lineHeight: 20 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/ForumTagFilterActionSheet.tsx");

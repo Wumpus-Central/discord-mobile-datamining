@@ -1,17 +1,17 @@
-// === Module 5485: VisualEffectView ===
+// === Module 5580: VisualEffectView ===
 
-// Module 5485 (VisualEffectView)
+// Module 5580 (VisualEffectView)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5481 */;
-import VisualEffectViewIOS from "VisualEffectViewIOS" /* 5487 */;
-import VisualEffectViewAndroid from "VisualEffectViewAndroid" /* 5490 */;
+import useToken from "useToken" /* 5576 */;
+import VisualEffectViewIOS from "VisualEffectViewIOS" /* 5582 */;
+import VisualEffectViewAndroid from "VisualEffectViewAndroid" /* 5585 */;
 import noop from "module_19" /* 19 */;
 
 const VisualEffectViewAndroidDefault = VisualEffectViewAndroid;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(5486).useVisualEffectViewOverrides;
+let closure_4 = fn(5581).useVisualEffectViewOverrides;
 const ThemeTypes = fn(1071).ThemeTypes;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1378);

@@ -1,13 +1,13 @@
-// === Module 12305: GuildRaidResolveActionSheet ===
+// === Module 12471: GuildRaidResolveActionSheet ===
 
-// Module 12305 (GuildRaidResolveActionSheet)
+// Module 12471 (GuildRaidResolveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import components_Button_Button from "components/Button/Button" /* 5515 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 6922 */;
-import ActionSheet from "ActionSheet" /* 7420 */;
-import AutomodFeedback from "AutomodFeedback" /* 8100 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import components_Button_Button from "components/Button/Button" /* 5610 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7017 */;
+import ActionSheet from "ActionSheet" /* 7515 */;
+import AutomodFeedback from "AutomodFeedback" /* 8199 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,10 +17,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const SafetyToastType = fn(7707).SafetyToastType;
+const SafetyToastType = fn(7806).SafetyToastType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { paddingVertical: 24, paddingHorizontal: 16, display: "flex", flexDirection: "column", alignItems: "center" }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { marginBottom: 16, textAlign: "center" }, optionContainer: { borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "column", marginBottom: 14, width: "100%" }, option: { width: "100%" }, textInputContainer: { paddingLeft: 54, paddingRight: 16, paddingBottom: 16 }, textInput: null };
 let obj3 = { borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "column", marginBottom: 14, width: "100%" };
 obj2.textInput = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, width: "100%", padding: 8, borderRadius: nativeDefault.radii.xs };
@@ -53,7 +53,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

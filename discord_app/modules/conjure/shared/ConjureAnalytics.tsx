@@ -1,11 +1,11 @@
-// === Module 7582: ConjureAnalytics ===
+// === Module 7681: ConjureAnalytics ===
 
-// Module 7582 (ConjureAnalytics)
+// Module 7681 (ConjureAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5887 */;
-import ConjureUtils from "ConjureUtils" /* 7476 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
+import ConjureUtils from "ConjureUtils" /* 7571 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
 
 require = fn;
 function projectFields(project_id) {
@@ -86,7 +86,7 @@ function conjureLocation(project_id, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
-const isProjectOwner = fn(6808).isProjectOwner;
+const isProjectOwner = fn(6903).isProjectOwner;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
@@ -181,7 +181,7 @@ export function trackConjureErrored(projectId, turnId) {
 }
 export function trackConjurePublishActionClicked(project_id, arg1) {
   ({ publishState, installScope } = arg1);
-  ({ entryPoint, surface, action } = arg1);
+  ({ entryPoint, surface } = arg1);
   const project = ConjureProjectStore.getProject(project_id);
   const obj2 = { project_id, application_id: null };
   application_id = undefined;
@@ -217,7 +217,7 @@ export function trackConjurePublishActionClicked(project_id, arg1) {
   obj2.publish_state = tmp5;
   obj2.surface = surface;
   obj2.install_scope = installScope;
-  obj2.action = action;
+  obj2.action = "publish";
   AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_PUBLISH_ACTION_CLICKED, obj2);
 }
 export function trackConjureBuilderOpened(project_id, entry_point) {

@@ -1,22 +1,22 @@
-// === Module 9953: PlaintextResolvers ===
+// === Module 10052: PlaintextResolvers ===
 
-// Module 9953 (PlaintextResolvers)
+// Module 10052 (PlaintextResolvers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4863 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4867 */;
-import useChannelName from "useChannelName" /* 5533 */;
-import getGuildOrPackEmojiByNameDefault from "getGuildOrPackEmojiByName" /* 8206 */;
-import SlateUtils from "SlateUtils" /* 8208 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4958 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4962 */;
+import useChannelName from "useChannelName" /* 5628 */;
+import getGuildOrPackEmojiByNameDefault from "getGuildOrPackEmojiByName" /* 8305 */;
+import SlateUtils from "SlateUtils" /* 8307 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 6757 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6805 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildChannelStore from "GuildChannelStore" /* 4847 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import GuildRoleStore from "GuildRoleStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import EmojiStore from "EmojiStore" /* 6852 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6900 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildChannelStore from "GuildChannelStore" /* 4942 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import GuildRoleStore from "GuildRoleStore" /* 4918 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -187,7 +187,7 @@ function matchesUser(arg0, arg1, username) {
   }
   return tmp;
 }
-let closure_8 = fn(4847).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_8 = fn(4942).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1071).Permissions;
 const EmojiIntention = fn(1389).EmojiIntention;
 const size = fn(2);

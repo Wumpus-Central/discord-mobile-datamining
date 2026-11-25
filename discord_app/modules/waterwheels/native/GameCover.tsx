@@ -1,9 +1,9 @@
-// === Module 17860: GameCover ===
+// === Module 17972: GameCover ===
 
-// Module 17860 (GameCover)
+// Module 17972 (GameCover)
 import nativeDefault from "native" /* 575 */;
-import useCoverColor from "useCoverColor" /* 17862 */;
-import InterestPickerPerformance from "InterestPickerPerformance" /* 17864 */;
+import useCoverColor from "useCoverColor" /* 17974 */;
+import InterestPickerPerformance from "InterestPickerPerformance" /* 17976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,7 +41,7 @@ function NoCover(arg0) {
   const tmp10 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp10[1];
   let tmp11 = null != iconURL && iconURL !== tmp10[0];
-  const tmp12 = tmp4(17862)(gameId, iconURL1);
+  const tmp12 = tmp4(17974)(gameId, iconURL1);
   let tmp13 = !compact;
   if (!compact) {
     tmp13 = tmp11;
@@ -71,7 +71,7 @@ function NoCover(arg0) {
     const obj3 = { uri: iconURL };
     obj2.source = obj3;
     obj2.style = tmp6.texture;
-    tmp19 = React5(tmp4(5604), obj2);
+    tmp19 = React5(tmp4(5699), obj2);
   }
   const items1 = [tmp19, , , ];
   let tmp21 = tmp13;
@@ -86,7 +86,7 @@ function NoCover(arg0) {
     obj5.onError = function onError() {
       return closure_1(iconURL);
     };
-    obj4.children = React5(tmp4(5604), obj5);
+    obj4.children = React5(tmp4(5699), obj5);
     tmp21 = React5(timestampProducer, obj4);
   }
   items1[1] = tmp21;
@@ -102,7 +102,7 @@ function NoCover(arg0) {
     obj7.onError = function onError() {
       return closure_1(iconURL);
     };
-    tmp11 = React5(tmp4(5604), obj7);
+    tmp11 = React5(tmp4(5699), obj7);
   }
   items1[2] = tmp11;
   let tmp25Result = !compact;
@@ -125,9 +125,9 @@ function NoCover(arg0) {
       num3 = 2;
     }
     obj10.maxLines = num3;
-    obj9.children = React5(tmp4(17863), obj10);
+    obj9.children = React5(tmp4(17975), obj10);
     tmp25Result = React5(timestampProducer, obj9);
-    const tmp4Result = tmp4(17863);
+    const tmp4Result = tmp4(17975);
   }
   items1[3] = tmp25Result;
   obj.children = items1;
@@ -263,12 +263,12 @@ function GameCoverImage(gameId) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const TILE_ASPECT_RATIO = fn(17861).TILE_ASPECT_RATIO;
+const TILE_ASPECT_RATIO = fn(17973).TILE_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 const PX_8 = nativeDefault.space.PX_8;
-const TextVariantsFlat = fn(5509).TextVariantsFlat;
+const TextVariantsFlat = fn(5604).TextVariantsFlat;
 const found = TextVariantsFlat.find((name) => "body-xs/semibold" === name.name);
 let num;
 if (found != null) {
@@ -278,7 +278,7 @@ if (num == null) {
   num = 16;
 }
 const sum = 2 * num + PX_6 + PX_8;
-let createStyles = fn(4917);
+let createStyles = fn(5012);
 let obj2 = { cover: null, image: null, fallback: null, titleOnly: null, icon: null, texture: null, art: null, banner: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -292,14 +292,14 @@ let obj4 = { flex: 1, justifyContent: "center", alignItems: "center", gap: nativ
 obj2.icon = { borderRadius: nativeDefault.radii.xs };
 let obj6 = {};
 let merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.opacity = fn(17862).COVER_TEXTURE_OPACITY;
+obj6.opacity = fn(17974).COVER_TEXTURE_OPACITY;
 obj2.texture = obj6;
 const rect = { position: "absolute", top: 0, left: 0, right: 0, overflow: "hidden", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.art = rect;
 const rect1 = { position: "absolute", left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, paddingTop: PX_6, paddingBottom: PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_ACCENT };
 obj2.banner = rect1;
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(4917);
+createStyles = fn(5012);
 let closure_12 = createStyles.createStyles((height, width, minHeight, backgroundColor) => {
   if (null == backgroundColor) {
     let obj = {};

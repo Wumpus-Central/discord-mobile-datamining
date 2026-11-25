@@ -1,7 +1,7 @@
-// === Module 11314: ConjureInstallTarget ===
+// === Module 11413: ConjureInstallTarget ===
 
-// Module 11314 (ConjureInstallTarget)
-import ConjureActionCreators from "ConjureActionCreators" /* 7541 */;
+// Module 11413 (ConjureInstallTarget)
+import ConjureActionCreators from "ConjureActionCreators" /* 7636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -20,7 +20,7 @@ let closure_3 = async function _repairConjureGuildHints(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -65,7 +65,7 @@ let closure_3 = async function _repairConjureGuildHints(arg0) {
           return obj;
         }
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp10) {
         c2 = tmp;
         throw tmp10;

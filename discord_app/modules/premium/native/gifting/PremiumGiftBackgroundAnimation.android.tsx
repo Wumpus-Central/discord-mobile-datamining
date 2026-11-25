@@ -1,17 +1,17 @@
-// === Module 11173: PremiumGiftBackgroundAnimation ===
+// === Module 11272: PremiumGiftBackgroundAnimation ===
 
-// Module 11173 (PremiumGiftBackgroundAnimation)
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 11174 */;
-import GiftAnimationData from "GiftAnimationData" /* 11175 */;
+// Module 11272 (PremiumGiftBackgroundAnimation)
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 11273 */;
+import GiftAnimationData from "GiftAnimationData" /* 11274 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_9 = createStyles.createStyles({ container: { display: "flex", alignItems: "flex-end", justifyContent: "center", flexDirection: "row" }, consistentHeight: { height: 300 }, animation: { maxWidth: 375, width: "100%", height: "auto" }, baseAnimation: { position: "absolute", bottom: 0 }, lottie: { height: 275 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundAnimation.android.tsx");

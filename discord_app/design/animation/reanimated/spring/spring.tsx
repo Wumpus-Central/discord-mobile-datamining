@@ -1,9 +1,9 @@
-// === Module 5518: spring/spring ===
+// === Module 5613: spring/spring ===
 
-// Module 5518 (spring/spring)
+// Module 5613 (spring/spring)
 import _mod1653 from "module_1653" /* 1653 */;
-import ReanimatedConstants from "ReanimatedConstants" /* 5128 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5129 */;
+import ReanimatedConstants from "ReanimatedConstants" /* 5223 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5224 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function withSpring_springTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){let[accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE,ReduceMotion,REAwithSpring]=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithSpring(toValue,configForRea,callback);})" }, reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, ReanimatedConstants.CONFIG_NEVER_ANIMATE, _mod1653.ReduceMotion, _mod1653.withSpring];

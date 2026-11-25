@@ -1,6 +1,6 @@
-// === Module 15457: qos_token ===
+// === Module 15579: qos_token ===
 
-// Module 15457 (qos_token)
+// Module 15579 (qos_token)
 import _mod1196 from "module_1196" /* 1196 */;
 import _slicedToArray from "module_32" /* 32 */;
 

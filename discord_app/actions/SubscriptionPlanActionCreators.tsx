@@ -1,8 +1,8 @@
-// === Module 7488: SubscriptionPlanActionCreators ===
+// === Module 7583: SubscriptionPlanActionCreators ===
 
-// Module 7488 (SubscriptionPlanActionCreators)
+// Module 7583 (SubscriptionPlanActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5680 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5775 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import BillingInfoStore from "BillingInfoStore" /* 2174 */;
 
@@ -32,7 +32,7 @@ let closure_9 = async function _fetchSubscriptionPlansForSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -77,22 +77,22 @@ let closure_9 = async function _fetchSubscriptionPlansForSKU() {
             if (!ipCountryCodeLoaded.ipCountryCodeLoaded) {
               c10 = 2;
               c11 = 1;
-              const obj11 = { value: actions_BillingActionCreators.fetchIpCountryCode(), done: false };
-              return obj11;
+              const obj8 = { value: actions_BillingActionCreators.fetchIpCountryCode(), done: false };
+              return obj8;
             }
           }
         } else if (1 === tmp7) {
           c9 = 0;
           closure_134_4 = closure_8;
-          const obj12 = { type: "SUBSCRIPTION_PLANS_FETCH_FAILURE", skuId: closure_134_0 };
-          closure_135_1(closure_135_2[4]).dispatch(obj12);
-          const tmp29 = new closure_135_1(closure_135_2[7])(closure_134_4);
-          closure_134_3 = tmp29;
-          const obj6 = closure_135_1(closure_135_2[4]);
-          if (!obj8.isExpectedHttpClientError(closure_134_3)) {
-            const result = closure_135_0(closure_135_2[8]).captureBillingException(closure_134_4);
-            const obj9 = closure_135_0(closure_135_2[8]);
-          }
+          const obj9 = { type: "SUBSCRIPTION_PLANS_FETCH_FAILURE", skuId: closure_134_0 };
+          closure_135_1(closure_135_2[4]).dispatch(obj9);
+          const ClientBillingError = closure_135_0(closure_135_2[7]).ClientBillingError;
+          const obj11 = { site: "subscription_plans_fetch", extra: null };
+          const obj12 = { skuId: closure_134_0 };
+          obj11.extra = obj12;
+          ClientBillingError.report(obj11, closure_134_4);
+          const tmp34 = new closure_135_1(closure_135_2[8])(closure_134_4);
+          closure_134_3 = tmp34;
           const _HermesInternal = HermesInternal;
           closure_134_3.message = "Failed to fetch subscription plans for SKU " + closure_134_0;
           throw closure_134_3;
@@ -128,11 +128,11 @@ let closure_9 = async function _fetchSubscriptionPlansForSKU() {
         c11 = 1;
         const obj18 = { value: HTTP.get(closure_134_1), done: false };
         return obj18;
-      } catch (tmp52) {
-        closure_8 = tmp52;
+      } catch (tmp47) {
+        closure_8 = tmp47;
         if (tmp4 === c9) {
           c11 = tmp2;
-          throw tmp52;
+          throw tmp47;
         } else {
           c10 = tmp;
         }
@@ -144,7 +144,7 @@ const Endpoints = fn(1071).Endpoints;
 const PremiumConstants = fn(1388);
 ({ ACTIVE_PREMIUM_SKUS: closure_6, PremiumSubscriptionSKUs: metroImportDefault } = PremiumConstants);
 const size = fn(2);
-let result = size.fileFinishedImporting("actions/SubscriptionPlanActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/SubscriptionPlanActionCreators.tsx");
 
 export { fetchSubscriptionPlansForSKU };
 export function fetchSubscriptionPlansBySKUs(fetchedSKUIDs, country, APPLE_ADVANCED_COMMERCE) {

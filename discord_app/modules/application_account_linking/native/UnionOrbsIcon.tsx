@@ -1,17 +1,17 @@
-// === Module 19143: UnionOrbsIcon ===
+// === Module 19254: UnionOrbsIcon ===
 
-// Module 19143 (UnionOrbsIcon)
+// Module 19254 (UnionOrbsIcon)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import Stack_Stack from "Stack/Stack" /* 5989 */;
-import _modDef17360 from "module_17360" /* 17360 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import Stack_Stack from "Stack/Stack" /* 6084 */;
+import _modDef17471 from "module_17471" /* 17471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const obj2 = { container: { width: "auto" }, dot: null, orb: null };
 let size = { width: 5, height: 5, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.ICON_SUBTLE };
 obj2.dot = size;
@@ -26,7 +26,7 @@ export function UnionOrbsIcon() {
   const obj = { direction: "horizontal", align: "center", spacing: 4, style: tmp.container, children: null };
   items = [React4(View, { style: tmp.dot }), , ];
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef17360 };
+  const obj4 = { uri: _modDef17471 };
   obj3.source = obj4;
   obj3.style = tmp.orb;
   items[1] = React4(FastImageDefault, obj3);

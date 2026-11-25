@@ -1,9 +1,9 @@
-// === Module 9947: AppLauncherStore ===
+// === Module 10046: AppLauncherStore ===
 
-// Module 9947 (AppLauncherStore)
+// Module 10046 (AppLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9948 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10047 */;
 
 require = fn;
 function handleDismissWithDismissed() {
@@ -28,7 +28,7 @@ function handleSetActiveCommand() {
   obj.initialState = undefined;
   obj.activeChannelId = null;
 }
-const obj = { show: false, entrypoint: fn(9948).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(9948).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(9948).AppLauncherCloseReason.DISMISSED, initialState: "__workletHash" };
+const obj = { show: false, entrypoint: fn(10047).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(10047).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(10047).AppLauncherCloseReason.DISMISSED, initialState: "channel_id" };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {
 }

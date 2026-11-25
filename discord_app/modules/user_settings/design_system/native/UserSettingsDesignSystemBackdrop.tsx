@@ -1,15 +1,15 @@
-// === Module 17283: UserSettingsDesignSystemBackdrop ===
+// === Module 17396: UserSettingsDesignSystemBackdrop ===
 
-// Module 17283 (UserSettingsDesignSystemBackdrop)
+// Module 17396 (UserSettingsDesignSystemBackdrop)
 import _mod1653 from "module_1653" /* 1653 */;
-import Backdrop from "Backdrop" /* 5483 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import components_Button_Button from "components/Button/Button" /* 5515 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import springPresets from "springPresets" /* 5519 */;
-import Dialog from "Dialog" /* 5979 */;
-import Stack_Stack from "Stack/Stack" /* 5989 */;
-import Card from "Card" /* 6019 */;
+import Backdrop from "Backdrop" /* 5578 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import components_Button_Button from "components/Button/Button" /* 5610 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import springPresets from "springPresets" /* 5614 */;
+import Dialog from "Dialog" /* 6074 */;
+import Stack_Stack from "Stack/Stack" /* 6084 */;
+import Card from "Card" /* 6114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

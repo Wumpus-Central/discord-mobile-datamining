@@ -1,23 +1,23 @@
-// === Module 12993: useCreatePollFormData ===
+// === Module 13116: useCreatePollFormData ===
 
-// Module 12993 (useCreatePollFormData)
+// Module 13116 (useCreatePollFormData)
 import util from "util" /* 1112 */;
-import PollsActionCreatorsDefault from "PollsActionCreators" /* 12078 */;
-import PollsUtils from "PollsUtils" /* 12082 */;
-import useRequestDefault from "useRequest" /* 12994 */;
-import PollUploadAttachmentActionCreatorsAll from "PollUploadAttachmentActionCreators" /* 12995 */;
-import PollAttachmentUtils from "PollAttachmentUtils" /* 12996 */;
-import PollTypes from "PollTypes" /* 12997 */;
+import PollsActionCreatorsDefault from "PollsActionCreators" /* 12177 */;
+import PollsUtils from "PollsUtils" /* 12181 */;
+import useRequestDefault from "useRequest" /* 13117 */;
+import PollUploadAttachmentActionCreatorsAll from "PollUploadAttachmentActionCreators" /* 13118 */;
+import PollAttachmentUtils from "PollAttachmentUtils" /* 13119 */;
+import PollTypes from "PollTypes" /* 13120 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function createPollCreationImageForMedia(mediaURL, status) {
-  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "Array", stickerId: "analyticsLocations" };
+  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "Array", stickerId: "isArray" };
   return obj;
 }
-const PollsConstants = fn(12084);
+const PollsConstants = fn(12183);
 ({ MAX_NUMBER_OF_ANSWERS_PER_POLL: metroImportDefault, MIN_NUMBER_OF_ANSWERS_PER_POLL: closure_8, PollDurations: closure_9 } = PollsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/polls/useCreatePollFormData.tsx");
@@ -153,7 +153,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -214,17 +214,17 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
   const callback5 = obj.useCallback((arg0, arg1, arg2) => {
     const objectURL = URL.createObjectURL(arg2);
     callback3(arg0, arg1);
-    const obj = { mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL }, emoji: "Array", stickerId: "analyticsLocations" };
+    const obj = { mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL }, emoji: "Array", stickerId: "isArray" };
     callback2(obj, arg1);
     const obj2 = { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL };
     const result = PollUploadAttachmentActionCreatorsAll.handlePollMediaAttachmentAdd(arg0, first[arg1].localCreationAnswerId, arg2);
-    const obj4 = { mediaAttachmentState: null, emoji: "Array", stickerId: "analyticsLocations" };
+    const obj4 = { mediaAttachmentState: null, emoji: "Array", stickerId: "isArray" };
     obj4.mediaAttachmentState = { status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL };
     callback2(obj4, arg1);
   }, items2);
   const callback6 = obj.useCallback((emoji, arg1) => {
     callback3(id, arg1);
-    callback2({ emoji, stickerId: "Array", mediaAttachmentState: "analyticsLocations" }, arg1);
+    callback2({ emoji, stickerId: "Array", mediaAttachmentState: "isArray" }, arg1);
   }, items3);
   const items4 = [answers.length < first1];
   const callback7 = obj.useCallback((arg0) => {
@@ -276,7 +276,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
       let intl = util.intl;
       obj.question = intl.string(util.t.gPX3oI);
     }
-    if (first.filter((item) => c0(12082).isAnswerFilled(item)).length < React5) {
+    if (first.filter((item) => c0(12181).isAnswerFilled(item)).length < React5) {
       c0 = false;
       let _HermesInternal = HermesInternal;
       let combined = "answer-" + first[0].localCreationAnswerId;
@@ -284,7 +284,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
       obj[combined] = intl2.string(util.t.fYvzEX);
     }
     const item = first.forEach((localCreationAnswerId) => {
-      obj = closure_0(12082);
+      obj = closure_0(12181);
       if (obj.isIncompleteAnswer(localCreationAnswerId)) {
         c0 = false;
         const _HermesInternal = HermesInternal;
@@ -309,7 +309,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -338,7 +338,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
           return obj;
         } else {
           channel = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp5) {
         channel = tmp;

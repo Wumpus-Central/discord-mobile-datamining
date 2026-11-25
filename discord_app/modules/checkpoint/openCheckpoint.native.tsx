@@ -1,9 +1,9 @@
-// === Module 12412: openCheckpoint ===
+// === Module 12576: openCheckpoint ===
 
-// Module 12412 (openCheckpoint)
+// Module 12576 (openCheckpoint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
-import CheckpointStore from "CheckpointStore" /* 12407 */;
+import CheckpointStore from "CheckpointStore" /* 12571 */;
 
 const require = fn;
 let closure_10 = async function _openCheckpoint(arg0) {
@@ -17,7 +17,7 @@ let closure_10 = async function _openCheckpoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -101,8 +101,8 @@ let closure_10 = async function _openCheckpoint(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(12407).CheckpointFetchStates;
-const CheckpointModalConstants = fn(12413);
+const CheckpointFetchStates = fn(12571).CheckpointFetchStates;
+const CheckpointModalConstants = fn(12577);
 ({ CHECKPOINT_MODAL_KEY: metroImportDefault, CHECKPOINT_UNAVAILABLE_MODAL_KEY: closure_8 } = CheckpointModalConstants);
 const AppStates = fn(1071).AppStates;
 const size = fn(2);

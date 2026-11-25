@@ -1,9 +1,9 @@
-// === Module 9922: imagePreConvert ===
+// === Module 10021: imagePreConvert ===
 
-// Module 9922 (imagePreConvert)
+// Module 10021 (imagePreConvert)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import UploadPlatform from "UploadPlatform" /* 7986 */;
-import imageFilename from "imageFilename" /* 8014 */;
+import UploadPlatform from "UploadPlatform" /* 8085 */;
+import imageFilename from "imageFilename" /* 8113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -46,7 +46,7 @@ let closure_5 = async function _maybePreConvertImageItem() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

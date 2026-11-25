@@ -1,10 +1,10 @@
-// === Module 13402: GuildPowerupsBoostButton ===
+// === Module 13525: GuildPowerupsBoostButton ===
 
-// Module 13402 (GuildPowerupsBoostButton)
+// Module 13525 (GuildPowerupsBoostButton)
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import GuildStore from "GuildStore" /* 4883 */;
 import UserStore from "UserStore" /* 1386 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10223 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10322 */;
 
 const require = fn;
 const AnalyticsSections = fn(1071).AnalyticsSections;
@@ -22,7 +22,7 @@ export function GuildPowerupsBoostButton(guildId) {
   const stateFromStores1 = guildId(504).useStateFromStores(items1, () => boostSlots.boostSlots);
   let obj2 = guildId(504);
   const tmp5 = stateFromStores1;
-  const tmp6 = stateFromStores1(6232)({ forceFetch: true });
+  const tmp6 = stateFromStores1(6327)({ forceFetch: true });
   const items2 = [UserStore];
   const stateFromStores2 = guildId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   if (null != stateFromStores2) {
@@ -38,7 +38,7 @@ export function GuildPowerupsBoostButton(guildId) {
   let tmp10 = null;
   if (null != stateFromStores) {
     const obj4 = { guild: stateFromStores, previousGuildSubscriptionSlot: memo, analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR, fractionalPremiumState: tmp6.fractionalState, onAvailableSlotPress: tmp9, premiumGroupRole: UNSPECIFIED };
-    tmp10 = jsx(tmp5(13403), { guild: stateFromStores, previousGuildSubscriptionSlot: memo, analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR, fractionalPremiumState: tmp6.fractionalState, onAvailableSlotPress: tmp9, premiumGroupRole: UNSPECIFIED });
+    tmp10 = jsx(tmp5(13526), { guild: stateFromStores, previousGuildSubscriptionSlot: memo, analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR, fractionalPremiumState: tmp6.fractionalState, onAvailableSlotPress: tmp9, premiumGroupRole: UNSPECIFIED });
   }
   return tmp10;
 }

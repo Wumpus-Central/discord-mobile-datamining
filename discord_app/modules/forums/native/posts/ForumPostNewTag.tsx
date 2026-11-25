@@ -1,13 +1,13 @@
-// === Module 12801: ForumPostNewTag ===
+// === Module 12403: ForumPostNewTag ===
 
-// Module 12801 (ForumPostNewTag)
+// Module 12403 (ForumPostNewTag)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const obj2 = { container: { paddingVertical: 1, backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);

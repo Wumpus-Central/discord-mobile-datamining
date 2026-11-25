@@ -1,25 +1,25 @@
-// === Module 19645: NewUserUtils ===
+// === Module 19746: NewUserUtils ===
 
-// Module 19645 (NewUserUtils)
+// Module 19746 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1098 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import Link from "Link" /* 1501 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6004 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7746 */;
-import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 8780 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10284 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13502 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13610 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 17549 */;
-import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 17866 */;
-import InterestPickerExperiment from "InterestPickerExperiment" /* 17872 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 19644 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7845 */;
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 8879 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10383 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13625 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13733 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 17660 */;
+import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 17978 */;
+import InterestPickerExperiment from "InterestPickerExperiment" /* 17984 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 19745 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 17501 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7336 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 17612 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7431 */;
 import UserStore from "UserStore" /* 1386 */;
-import NewUserStore from "NewUserStore" /* 5722 */;
+import NewUserStore from "NewUserStore" /* 5817 */;
 
 const require = globalThis.__r;
 
@@ -38,7 +38,7 @@ let closure_17 = async function _shouldSkipContactSyncStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -127,7 +127,7 @@ let closure_23 = async function _getNextOnboardingStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -249,13 +249,13 @@ let closure_23 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NewUserTypes = fn(13525).NewUserTypes;
-const NotificationPermissionConstants = fn(13207);
+const NewUserTypes = fn(13648).NewUserTypes;
+const NotificationPermissionConstants = fn(13330);
 ({ EventActionLocation: closure_9, EventActionType: closure_10 } = NotificationPermissionConstants);
 const Constants = fn(1071);
 ({ PlatformTypes: closure_11, Routes: closure_12 } = Constants);
-const ContactPermissions = fn(13497).ContactPermissions;
-let closure_14 = fn(7739).NotificationAuthorizationStatus;
+const ContactPermissions = fn(13620).ContactPermissions;
+let closure_14 = fn(7838).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_18 = asyncGeneratorStep(async () => {
@@ -269,7 +269,7 @@ let closure_18 = asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -349,7 +349,7 @@ let closure_18 = asyncGeneratorStep(async () => {
             } else {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
         } else if (arg0 === 1) {
@@ -398,7 +398,7 @@ let closure_19 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -508,7 +508,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(10284).hasDeferredInvite,
+    shouldShowStep: fn(10383).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

@@ -1,8 +1,8 @@
-// === Module 14344: socialLayerStorefrontEmbedColors ===
+// === Module 14467: socialLayerStorefrontEmbedColors ===
 
-// Module 14344 (socialLayerStorefrontEmbedColors)
+// Module 14467 (socialLayerStorefrontEmbedColors)
 import nativeDefault from "native" /* 575 */;
-import createStyles from "createStyles" /* 4917 */;
+import createStyles from "createStyles" /* 5012 */;
 import size from "module_2" /* 2 */;
 
 const nativeStyleProperties = createStyles.createNativeStyleProperties({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overlayTextColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT });

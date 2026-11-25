@@ -1,6 +1,6 @@
-// === Module 4946: QuestHomeHeroFeatures ===
+// === Module 5041: QuestHomeHeroFeatures ===
 
-// Module 4946 (QuestHomeHeroFeatures)
+// Module 5041 (QuestHomeHeroFeatures)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestHomeHeroFeatures.tsx");

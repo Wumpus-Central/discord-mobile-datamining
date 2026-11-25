@@ -1,10 +1,10 @@
-// === Module 5636: InviteStore ===
+// === Module 5731: InviteStore ===
 
-// Module 5636 (InviteStore)
+// Module 5731 (InviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5637 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5732 */;
 import size from "module_2" /* 2 */;
 
 function updateInvite(code, fn) {

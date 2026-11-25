@@ -1,14 +1,14 @@
-// === Module 12267: GuildAntiRaidActionCreators ===
+// === Module 12434: GuildAntiRaidActionCreators ===
 
-// Module 12267 (GuildAntiRaidActionCreators)
+// Module 12434 (GuildAntiRaidActionCreators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5887 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8432 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10487 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8531 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10586 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 require = fn;
 let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
@@ -27,7 +27,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -71,7 +71,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -137,7 +137,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -186,7 +186,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(10453).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(10552).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, Endpoints: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);

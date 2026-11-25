@@ -1,10 +1,10 @@
-// === Module 11108: CollectiblesSequencedOfferPromotionUtils ===
+// === Module 11207: CollectiblesSequencedOfferPromotionUtils ===
 
-// Module 11108 (CollectiblesSequencedOfferPromotionUtils)
-import StorefrontTypes from "StorefrontTypes" /* 7469 */;
-import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 11106 */;
-import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 11109 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 10982 */;
+// Module 11207 (CollectiblesSequencedOfferPromotionUtils)
+import StorefrontTypes from "StorefrontTypes" /* 7564 */;
+import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 11205 */;
+import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils" /* 11208 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 11081 */;
 import size from "module_2" /* 2 */;
 
 function isSequencedOfferRewardAvailable(rewardStatus) {
@@ -100,4 +100,43 @@ export function getActiveSequencedOfferPromotion(arr, arg1, arg2) {
     found = null;
   }
   return found;
+}
+export function getNextSequencedOfferPromotion(arg0, has) {
+  items = arg0;
+  let tmp = null;
+  if (arg0 == null) {
+    items = [];
+  }
+  for (const item10010 of items) {
+    let endsAt = item10010.endsAt;
+    let time;
+    if (endsAt != null) {
+      time = endsAt.getTime();
+    }
+    let tmp5 = null != time;
+    let tmp4 = time;
+    if (tmp5) {
+      tmp5 = null != React3(item10010);
+    }
+    if (tmp5) {
+      tmp5 = !arg1.has(item10010.id);
+    }
+    if (tmp5) {
+      let endsAt1;
+      if (tmp != null) {
+        endsAt1 = tmp.endsAt;
+      }
+      let tmp11 = null == endsAt1;
+      if (!tmp11) {
+        let endsAt2 = tmp.endsAt;
+        tmp11 = tmp4 < endsAt2.getTime();
+      }
+      tmp5 = tmp11;
+    }
+    if (tmp5) {
+      tmp = item10010;
+    }
+    continue;
+  }
+  return tmp;
 }

@@ -3,8 +3,8 @@
 // Module 2139 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SocialSdkGameResolver from "SocialSdkGameResolver" /* 14589 */;
-import OverlayTypes from "OverlayTypes" /* 15310 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 14711 */;
+import OverlayTypes from "OverlayTypes" /* 15432 */;
 import GameStore from "GameStore" /* 2140 */;
 import DetectableGameStore from "DetectableGameStore" /* 2158 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2162 */;

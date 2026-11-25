@@ -1,12 +1,12 @@
-// === Module 18185: ReactActionSheet ===
+// === Module 18297: ReactActionSheet ===
 
-// Module 18185 (ReactActionSheet)
+// Module 18297 (ReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5499 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8782 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9396 */;
-import ICYMIContext from "ICYMIContext" /* 18133 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5594 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8881 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9495 */;
+import ICYMIContext from "ICYMIContext" /* 18245 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -75,7 +75,7 @@ function ReactActionSheetBase(content) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -90,10 +90,10 @@ function ReactActionSheetBase(content) {
               return obj3;
             } else {
               closure_5(true);
-              v1(8782).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8782);
+              v1(8881).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(8881);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8782).feedItemActioned(obj4);
+              v1(8881).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };
@@ -110,7 +110,7 @@ function ReactActionSheetBase(content) {
             closure_128_5(false);
             closure_128_8("");
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -133,7 +133,7 @@ function ReactActionSheetBase(content) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -167,7 +167,7 @@ function ReactActionSheetBase(content) {
             } else {
               closure_1_5(false);
               c3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp9) {
             c3 = tmp;
@@ -322,11 +322,11 @@ function ReactActionSheetBase(content) {
   tmp2 = loading;
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5146).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5241).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1389).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, base: { position: "relative" }, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.contentContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

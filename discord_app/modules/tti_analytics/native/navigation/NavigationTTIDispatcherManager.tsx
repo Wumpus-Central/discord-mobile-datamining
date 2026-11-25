@@ -1,13 +1,13 @@
-// === Module 20178: NavigationTTIDispatcherManager ===
+// === Module 20283: NavigationTTIDispatcherManager ===
 
-// Module 20178 (NavigationTTIDispatcherManager)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12353 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12737 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 18210 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import MessageStore from "MessageStore" /* 6265 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+// Module 20283 (NavigationTTIDispatcherManager)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12517 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12901 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 18322 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import MessageStore from "MessageStore" /* 6360 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 require = fn;
 function handleChannelSelect(arg0) {

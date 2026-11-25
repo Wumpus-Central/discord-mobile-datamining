@@ -1,7 +1,7 @@
-// === Module 14730: shouldShowActivityTimeBar ===
+// === Module 14852: shouldShowActivityTimeBar ===
 
-// Module 14730 (shouldShowActivityTimeBar)
-import ActivityTypes from "ActivityTypes" /* 5889 */;
+// Module 14852 (shouldShowActivityTimeBar)
+import ActivityTypes from "ActivityTypes" /* 5984 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");

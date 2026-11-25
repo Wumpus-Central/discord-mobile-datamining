@@ -1,8 +1,8 @@
-// === Module 8017: GuildProductAttachmentUploadTarget ===
+// === Module 8116: GuildProductAttachmentUploadTarget ===
 
-// Module 8017 (GuildProductAttachmentUploadTarget)
+// Module 8116 (GuildProductAttachmentUploadTarget)
 import Constants from "Constants" /* 1071 */;
-import GuildProductConstants from "GuildProductConstants" /* 8018 */;
+import GuildProductConstants from "GuildProductConstants" /* 8117 */;
 import size from "module_2" /* 2 */;
 
 ({ MAX_ATTACHMENT_UPLOAD_COUNT: closure_0, MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES: closure_1, MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES: c2 } = GuildProductConstants);

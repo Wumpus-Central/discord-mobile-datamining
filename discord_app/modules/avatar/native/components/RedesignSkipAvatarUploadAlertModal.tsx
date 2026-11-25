@@ -1,8 +1,8 @@
-// === Module 19647: RedesignSkipAvatarUploadAlertModal ===
+// === Module 19748: RedesignSkipAvatarUploadAlertModal ===
 
-// Module 19647 (RedesignSkipAvatarUploadAlertModal)
+// Module 19748 (RedesignSkipAvatarUploadAlertModal)
 import util from "util" /* 1112 */;
-import AlertModal from "AlertModal" /* 5926 */;
+import AlertModal from "AlertModal" /* 6021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

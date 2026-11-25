@@ -1,16 +1,16 @@
-// === Module 9380: HeaderAvatar ===
+// === Module 9479: HeaderAvatar ===
 
-// Module 9380 (HeaderAvatar)
+// Module 9479 (HeaderAvatar)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import PresenceStore from "PresenceStore" /* 5888 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import PresenceStore from "PresenceStore" /* 5983 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -50,7 +50,7 @@ export default function HeaderAvatar(animate) {
   });
   const obj4 = guildId(504);
   const tmp9 = id;
-  const tmp10 = id(9381);
+  const tmp10 = id(9480);
   const obj6 = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
@@ -65,25 +65,25 @@ export default function HeaderAvatar(animate) {
   obj6.guildId = guildId;
   let obj7 = { isMobileOnline, isVROnline, size, status: null, statusStyle: null, streaming: null, animate: null, avatarDecoration: null };
   let tmp14 = null;
-  const obj5 = guildId(6249);
+  const obj5 = guildId(6344);
   if (!disableStatus) {
     tmp14 = status;
   }
   obj7.status = tmp14;
   const items4 = [tmp4.avatarStatusStyle, statusStyle];
   obj7.statusStyle = items4;
-  obj7.streaming = tmp9(9382)(activities);
+  obj7.streaming = tmp9(9481)(activities);
   if (flag) {
     flag = !stateFromStores;
   }
   obj7.animate = flag;
-  obj7.avatarDecoration = tmp10(guildId(6249).getProfilePreviewValue(obj6));
+  obj7.avatarDecoration = tmp10(guildId(6344).getProfilePreviewValue(obj6));
   if (null != onPress) {
     const obj8 = { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" };
     const merged1 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj9 = { source: null };
-      obj = obj(9370);
+      obj = obj(9469);
       avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       obj9.source = avatarSource;
       obj7 = Object.assign(obj7);
@@ -93,13 +93,13 @@ export default function HeaderAvatar(animate) {
       const merged2 = Object.assign(obj7);
     }
     obj8.children = jsx(obj(1186).Avatar, obj10);
-    jsx(obj(6026).PressableOpacity, { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
+    jsx(obj(6121).PressableOpacity, { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
   } else {
     const obj11 = { ref, style, accessibilityRole: "image", accessible: true };
     const merged3 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj12 = { source: null };
-      const objResult = obj(9370);
+      const objResult = obj(9469);
       obj12.source = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       const merged4 = Object.assign(obj7);
       let obj13 = obj12;
@@ -110,5 +110,5 @@ export default function HeaderAvatar(animate) {
     obj11.children = jsx(obj(1186).Avatar, obj13);
     return <View ref={ref} style={style} accessibilityRole="image" accessible />;
   }
-  const tmp10Result = tmp10(guildId(6249).getProfilePreviewValue(obj6));
+  const tmp10Result = tmp10(guildId(6344).getProfilePreviewValue(obj6));
 };

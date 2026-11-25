@@ -1,21 +1,21 @@
-// === Module 15757: soundboard ===
+// === Module 15878: soundboard ===
 
-// Module 15757 (soundboard)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10077 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 10262 */;
+// Module 15878 (soundboard)
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10176 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 10361 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 6797 */;
+import SoundboardStore from "SoundboardStore" /* 6892 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
-let Constants = fn(5671);
+let Constants = fn(5766);
 ({ RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = Constants);
 Constants = fn(1082);
 ({ RPCCommands, RPCErrors: closure_6 } = Constants);
 let obj = {};
 let obj2 = { scope: null, handler: null };
 let obj3 = {};
-let items = [fn(5655).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
+let items = [fn(5750).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
 obj3[RPC_SCOPE_CONFIG.ANY] = items;
 obj2.scope = obj3;
 obj2.handler = function handler() {
@@ -32,7 +32,7 @@ obj2.handler = function handler() {
 obj[RPCCommands.GET_SOUNDBOARD_SOUNDS] = obj2;
 let obj4 = { scope: null, validation: null, handler: null };
 let obj5 = {};
-const items1 = [fn(5655).OAuth2Scopes.RPC, fn(5655).OAuth2Scopes.RPC_VOICE_WRITE];
+const items1 = [fn(5750).OAuth2Scopes.RPC, fn(5750).OAuth2Scopes.RPC_VOICE_WRITE];
 obj5[RPC_SCOPE_CONFIG.ALL] = items1;
 obj4.scope = obj5;
 obj4.validation = function validation(string) {
@@ -53,7 +53,7 @@ obj4.handler = function handler(args) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ obj4.handler = function handler(args) {
             closure_128_3 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(10262).maybeFetchSoundboardSounds(), done: false };
+            const obj5 = { value: tmp2(10361).maybeFetchSoundboardSounds(), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -86,37 +86,37 @@ obj4.handler = function handler(args) {
         } else {
           currentUser2 = currentUser.getCurrentUser();
           sound2 = sound.getSound(closure_129_0, closure_129_1);
-          closure_128_2 = tmp5(10267)();
+          closure_128_2 = tmp5(10366)();
           let result = null != sound2;
           if (result) {
             result = null != currentUser2;
           }
           if (result) {
-            result = tmp2(10260).canUseSoundboardSound(currentUser2, sound2, closure_128_2);
-            const obj = tmp2(10260);
+            result = tmp2(10359).canUseSoundboardSound(currentUser2, sound2, closure_128_2);
+            const obj = tmp2(10359);
           }
           closure_128_3 = result;
           if (null == closure_128_2) {
             const obj8 = { errorCode: constants.INVALID_CHANNEL };
-            const tmp52 = new tmp5(7518)(obj8, "Invalid Channel.");
+            const tmp52 = new tmp5(7613)(obj8, "Invalid Channel.");
             throw tmp52;
           } else if (closure_128_3) {
-            if (tmp5(10269)(closure_128_2)) {
+            if (tmp5(10368)(closure_128_2)) {
               if (null != sound2) {
-                items = [tmp5(6254).RPC];
-                tmp2(10260).playSound(sound2, closure_128_2.id, items);
-                const obj4 = tmp2(10260);
+                items = [tmp5(6349).RPC];
+                tmp2(10359).playSound(sound2, closure_128_2.id, items);
+                const obj4 = tmp2(10359);
               }
               c3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               const obj9 = { errorCode: constants.INVALID_PERMISSIONS };
-              const tmp32 = new tmp5(7518)(obj9, "Invalid Permissions.");
+              const tmp32 = new tmp5(7613)(obj9, "Invalid Permissions.");
               throw tmp32;
             }
           } else {
             const obj10 = { errorCode: constants.INVALID_SOUND };
-            const tmp22 = new tmp5(7518)(obj10, "Invalid Sound.");
+            const tmp22 = new tmp5(7613)(obj10, "Invalid Sound.");
             throw tmp22;
           }
         }

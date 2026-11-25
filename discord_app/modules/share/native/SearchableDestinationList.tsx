@@ -1,13 +1,13 @@
-// === Module 11378: SearchableDestinationList ===
+// === Module 11477: SearchableDestinationList ===
 
-// Module 11378 (SearchableDestinationList)
+// Module 11477 (SearchableDestinationList)
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7268 */;
-import UserSearchUtils from "UserSearchUtils" /* 8183 */;
-import formatResults from "formatResults" /* 8804 */;
-import sortByMatchScore from "sortByMatchScore" /* 8806 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11389 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7363 */;
+import UserSearchUtils from "UserSearchUtils" /* 8282 */;
+import formatResults from "formatResults" /* 8903 */;
+import sortByMatchScore from "sortByMatchScore" /* 8905 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11488 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,10 +15,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: closure_6 } = get_ActivityIndicator);
 const NOOP = fn(1071).NOOP;
-const UserRowModes = fn(8803).UserRowModes;
+const UserRowModes = fn(8902).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, noResults: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

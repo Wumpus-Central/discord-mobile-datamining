@@ -1,19 +1,19 @@
-// === Module 18646: ConjureIdeaCards ===
+// === Module 18757: ConjureIdeaCards ===
 
-// Module 18646 (ConjureIdeaCards)
+// Module 18757 (ConjureIdeaCards)
 import util from "util" /* 1112 */;
-import _modDef4192 from "module_4192" /* 4192 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import Stack_Stack from "Stack/Stack" /* 5989 */;
-import Card from "Card" /* 6019 */;
+import _modDef4244 from "module_4244" /* 4244 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import Stack_Stack from "Stack/Stack" /* 6084 */;
+import Card from "Card" /* 6114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
-let obj2 = { ideaCards: { gap: fn(18511).BLOCK_GAP } };
+const createStyles = fn(5012);
+let obj2 = { ideaCards: { gap: fn(18622).BLOCK_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureIdeaCards.tsx");
@@ -23,7 +23,7 @@ export default function ConjureIdeaCards(arg0) {
   let obj = { style: closure_6().ideaCards, children: null };
   const obj2 = { variant: "body-sm/semibold", color: "text-muted", children: null };
   let intl = util.intl;
-  obj2.children = intl.string(_modDef4192["wx/o8Y"]);
+  obj2.children = intl.string(_modDef4244["wx/o8Y"]);
   items = [
     closure_4(Text_Text.Text, obj2),
     ideas.map((title) => {
@@ -42,7 +42,7 @@ export default function ConjureIdeaCards(arg0) {
       };
       let tmpResult = null;
       const intl = util.intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef4192.H8G39M, { title: title.title });
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef4244.H8G39M, { title: title.title });
       items = [closure_1_4(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", children: title.title }), ];
       if ("" !== title.value) {
         const obj4 = { variant: "body-sm/normal", color: "text-muted", children: title.value };

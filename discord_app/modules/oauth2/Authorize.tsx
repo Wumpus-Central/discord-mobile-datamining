@@ -1,14 +1,14 @@
-// === Module 5653: Authorize ===
+// === Module 5748: Authorize ===
 
-// Module 5653 (Authorize)
+// Module 5748 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4854 */;
-import QueryStringUtils from "QueryStringUtils" /* 5638 */;
-import scopes from "scopes" /* 5654 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 5655 */;
-import keysSorter from "keysSorter" /* 5656 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4949 */;
+import QueryStringUtils from "QueryStringUtils" /* 5733 */;
+import scopes from "scopes" /* 5749 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 5750 */;
+import keysSorter from "keysSorter" /* 5751 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
 
 require = fn;
 const Constants = fn(1071);

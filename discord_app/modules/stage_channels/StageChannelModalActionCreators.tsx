@@ -1,14 +1,14 @@
-// === Module 7701: StageChannelModalActionCreators ===
+// === Module 7800: StageChannelModalActionCreators ===
 
-// Module 7701 (StageChannelModalActionCreators)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6671 */;
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 7702 */;
+// Module 7800 (StageChannelModalActionCreators)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6766 */;
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 7801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
 
 const require = fn;
 let closure_10 = async function _connectOrLurkStage(arg0) {
@@ -22,7 +22,7 @@ let closure_10 = async function _connectOrLurkStage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -199,15 +199,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(7702).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(7801).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(7702);
+    const obj2 = flag2(7801);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(7702).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(7702);
+      flag2(7801).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(7801);
     }
   }
 }

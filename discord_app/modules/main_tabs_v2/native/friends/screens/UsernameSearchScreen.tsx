@@ -1,6 +1,6 @@
-// === Module 18923: UsernameSearchScreen ===
+// === Module 19034: UsernameSearchScreen ===
 
-// Module 18923 (UsernameSearchScreen)
+// Module 19034 (UsernameSearchScreen)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, AnalyticsSections: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.content = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -33,14 +33,14 @@ export default function UsernameSearchScreen(navigation) {
   const effect = noop.useEffect(() => {
     ref(1255).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL });
   }, []);
-  const insets = ref(5492)().insets;
+  const insets = ref(5587)().insets;
   ref = noop.useRef(null);
   items = [navigation];
   const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     let closing = data.data.closing;
     if (!closing) {
-      closing = navigation(5147).getIsScreenReaderEnabled();
-      const obj = navigation(5147);
+      closing = navigation(5242).getIsScreenReaderEnabled();
+      const obj = navigation(5242);
     }
     if (!closing) {
       const current = ref.current;
@@ -49,8 +49,8 @@ export default function UsernameSearchScreen(navigation) {
       }
     }
   }), items);
-  const clientThemesOverride = navigation(8872).useClientThemesOverride();
-  let obj = navigation(8872);
+  const clientThemesOverride = navigation(8971).useClientThemesOverride();
+  let obj = navigation(8971);
   let prop = null;
   if (obj2.isIOS()) {
     prop = null;
@@ -66,10 +66,10 @@ export default function UsernameSearchScreen(navigation) {
   const items1 = [tmp.content, clientThemesOverride];
   obj4.style = items1;
   obj2 = navigation(1378);
-  const items2 = [closure_8(ref(10447), { absolute: true }), ];
+  const items2 = [closure_8(ref(10546), { absolute: true }), ];
   const obj5 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, ];
-  const tmp3Result = ref(6922);
+  const tmp3Result = ref(7017);
   items3[2] = { paddingBottom: insets.bottom + ref(575).space.PX_16 };
   obj5.contentContainerStyle = items3;
   const obj7 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
@@ -78,7 +78,7 @@ export default function UsernameSearchScreen(navigation) {
   obj7.headerText = intl.string(navigation(1112).t.YEOwDM);
   obj7.headerTextStyle = tmp.headerText;
   obj7.ref = ref;
-  obj5.children = closure_8(ref(15087), obj7);
+  obj5.children = closure_8(ref(15209), obj7);
   items2[1] = closure_8(closure_4, obj5);
   obj4.children = items2;
   obj3.children = closure_9(tmp3Result, obj4);

@@ -1,6 +1,6 @@
-// === Module 9779: QuestHomeHeroSharedAdRefreshExperiment ===
+// === Module 9878: QuestHomeHeroSharedAdRefreshExperiment ===
 
-// Module 9779 (QuestHomeHeroSharedAdRefreshExperiment)
+// Module 9878 (QuestHomeHeroSharedAdRefreshExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

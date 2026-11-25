@@ -1,7 +1,7 @@
-// === Module 10636: getPreCompressionFileSize ===
+// === Module 10735: getPreCompressionFileSize ===
 
-// Module 10636 (getPreCompressionFileSize)
-import utils_UploadUtils from "utils/UploadUtils" /* 7995 */;
+// Module 10735 (getPreCompressionFileSize)
+import utils_UploadUtils from "utils/UploadUtils" /* 8094 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_3 = async function _getPreCompressionFileSize(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

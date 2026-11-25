@@ -1,20 +1,20 @@
-// === Module 16690: OutputVolumeSetting ===
+// === Module 16811: OutputVolumeSetting ===
 
-// Module 16690 (OutputVolumeSetting)
+// Module 16811 (OutputVolumeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5870 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10250 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5965 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10349 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
 
 require = fn;
-const SettingBuilders = fn(11815);
+const SettingBuilders = fn(11914);
 const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xPHVBs);
   },
-  parent: fn(9414).MobileUserSettings.VOICE,
+  parent: fn(9513).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useOutputVolumeSettingValue() {
     items = [MediaEngineStore];

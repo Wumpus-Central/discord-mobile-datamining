@@ -1,6 +1,6 @@
-// === Module 5499: MessageReactionsTypes ===
+// === Module 5594: MessageReactionsTypes ===
 
-// Module 5499 (MessageReactionsTypes)
+// Module 5594 (MessageReactionsTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { NORMAL: 0, [0]: "NORMAL", BURST: 1, [1]: "BURST", VOTE: 2, [2]: "VOTE", SOUND: 3, [3]: "SOUND" };

@@ -1,13 +1,13 @@
-// === Module 6656: ChannelMessages ===
+// === Module 6751: ChannelMessages ===
 
-// Module 6656 (ChannelMessages)
+// Module 6751 (ChannelMessages)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6267 */;
-import EnsureReceivedMessagesAddedInOrderExperimentDefault from "EnsureReceivedMessagesAddedInOrderExperiment" /* 6657 */;
-import Client from "Client" /* 6658 */;
-import SortedArrayUtilsAll from "SortedArrayUtils" /* 6660 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6362 */;
+import EnsureReceivedMessagesAddedInOrderExperimentDefault from "EnsureReceivedMessagesAddedInOrderExperiment" /* 6752 */;
+import Client from "Client" /* 6753 */;
+import SortedArrayUtilsAll from "SortedArrayUtils" /* 6755 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
@@ -1056,8 +1056,8 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(6267).createMessageRecord(item));
-    const combined = found.concat(mapped, items1.map((item) => set(6267).createMessageRecord(item)));
+    const mapped = items.map((item) => set(6362).createMessageRecord(item));
+    const combined = found.concat(mapped, items1.map((item) => set(6362).createMessageRecord(item)));
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
 };
@@ -1435,7 +1435,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = id(6658).JumpType.ANIMATED;
+        jumpType = id(6753).JumpType.ANIMATED;
       }
       let obj2 = { ready: true, loadingMore: false, jumpType, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
       let flag8;
@@ -1602,7 +1602,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  const result = reversed(6659).requireSortedDescending(messages);
+  const result = reversed(6754).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
@@ -1615,7 +1615,7 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   if (!stale) {
     cached = self.cached;
   }
-  const obj = reversed(6659);
+  const obj = reversed(6754);
   const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {

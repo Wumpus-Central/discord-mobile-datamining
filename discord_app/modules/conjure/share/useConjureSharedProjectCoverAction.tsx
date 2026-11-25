@@ -1,7 +1,7 @@
-// === Module 12227: useConjureSharedProjectCoverAction ===
+// === Module 12326: useConjureSharedProjectCoverAction ===
 
-// Module 12227 (useConjureSharedProjectCoverAction)
-import openFrameDefault from "openFrame" /* 9962 */;
+// Module 12326 (useConjureSharedProjectCoverAction)
+import openFrameDefault from "openFrame" /* 10061 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

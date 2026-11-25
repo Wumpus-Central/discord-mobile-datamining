@@ -1,10 +1,10 @@
-// === Module 11125: openProductDetailsActionSheet ===
+// === Module 11224: openProductDetailsActionSheet ===
 
-// Module 11125 (openProductDetailsActionSheet)
+// Module 11224 (openProductDetailsActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6184 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6196 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6279 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6291 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "Shop Product Preview";
@@ -32,12 +32,12 @@ export function openProductDetailsActionSheet(arg0, stack) {
   }
   CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmpResult = CollectiblesActionCreators;
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11126, dependencyMap.paths), c3, { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext }, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11225, dependencyMap.paths), c3, { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext }, stack);
   const obj2 = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
 }
 export function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
   ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile } = skuId);
   CollectiblesActionCreators.productDetailsOpened(skuId);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11126, dependencyMap.paths), c3, { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile }, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11225, dependencyMap.paths), c3, { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile }, stack);
 }

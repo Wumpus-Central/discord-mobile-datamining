@@ -1,6 +1,6 @@
-// === Module 15222: GameProfilesServerPreviewExperiment ===
+// === Module 15344: GameProfilesServerPreviewExperiment ===
 
-// Module 15222 (GameProfilesServerPreviewExperiment)
+// Module 15344 (GameProfilesServerPreviewExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

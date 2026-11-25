@@ -1,6 +1,6 @@
-// === Module 7711: GuildTiVPlatformUtils ===
+// === Module 7810: GuildTiVPlatformUtils ===
 
-// Module 7711 (GuildTiVPlatformUtils)
+// Module 7810 (GuildTiVPlatformUtils)
 import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;
 

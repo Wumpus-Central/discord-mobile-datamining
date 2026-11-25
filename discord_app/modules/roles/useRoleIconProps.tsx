@@ -1,10 +1,10 @@
-// === Module 7410: useRoleIconProps ===
+// === Module 7505: useRoleIconProps ===
 
-// Module 7410 (useRoleIconProps)
-import RoleIconUtils from "RoleIconUtils" /* 7411 */;
+// Module 7505 (useRoleIconProps)
+import RoleIconUtils from "RoleIconUtils" /* 7506 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import GuildRoleStore from "GuildRoleStore" /* 4918 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 const require = globalThis.__r;
 

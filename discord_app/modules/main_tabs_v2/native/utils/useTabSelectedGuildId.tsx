@@ -1,9 +1,9 @@
-// === Module 15866: useTabSelectedGuildId ===
+// === Module 15987: useTabSelectedGuildId ===
 
-// Module 15866 (useTabSelectedGuildId)
+// Module 15987 (useTabSelectedGuildId)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
-import SortedGuildStore from "SortedGuildStore" /* 6038 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import SortedGuildStore from "SortedGuildStore" /* 6133 */;
 
 require = fn;
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 15736: logs ===
+// === Module 15857: logs ===
 
-// Module 15736 (logs)
+// Module 15857 (logs)
 import LoggerDefault from "Logger" /* 3 */;
-import RPCHelpers from "RPCHelpers" /* 10080 */;
+import RPCHelpers from "RPCHelpers" /* 10179 */;
 import Constants from "Constants" /* 1071 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15701 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15822 */;
 import size from "module_2" /* 2 */;
 
 ({ RPCCommands, RPC_APPLICATION_LOGGING_CATEGORY } = Constants);

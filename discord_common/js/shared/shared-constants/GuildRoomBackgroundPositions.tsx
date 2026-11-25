@@ -1,6 +1,6 @@
-// === Module 8291: GuildRoomBackgroundPositions ===
+// === Module 8390: GuildRoomBackgroundPositions ===
 
-// Module 8291 (GuildRoomBackgroundPositions)
+// Module 8390 (GuildRoomBackgroundPositions)
 import size from "module_2" /* 2 */;
 
 const obj = { 0: null, 1: null };

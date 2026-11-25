@@ -1,14 +1,14 @@
-// === Module 5907: SpatialAudioSessionStats ===
+// === Module 6002: SpatialAudioSessionStats ===
 
-// Module 5907 (SpatialAudioSessionStats)
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5873 */;
-import classifyOutputDeviceDefault from "classifyOutputDevice" /* 5908 */;
+// Module 6002 (SpatialAudioSessionStats)
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5968 */;
+import classifyOutputDeviceDefault from "classifyOutputDevice" /* 6003 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import SpatialAudioStore from "SpatialAudioStore" /* 5871 */;
+import SpatialAudioStore from "SpatialAudioStore" /* 5966 */;
 
 const require = fn;
 function requestNativeStats() {
@@ -40,7 +40,7 @@ let closure_20 = async function _readNativeStats() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -150,12 +150,12 @@ function takeSnapshot(isSpatial, arg1) {
     OFF_UNSUPPORTED = obj.OFF_UNSUPPORTED;
   }
 }
-const React6 = fn(5872).SpatialAudioOverrideSource;
-const Constants = fn(5729);
+const React6 = fn(5967).SpatialAudioOverrideSource;
+const Constants = fn(5824);
 ({ DEFAULT_DEVICE_ID: closure_10, Features: closure_11, SpatialAudioStatus: closure_12 } = Constants);
 let obj = { OFF_UNSUPPORTED: "off_unsupported", OFF_EXPERIMENT: "off_experiment", OFF_USER: "off_user", OFF_OVERRIDE: "off_override", IDLE: "idle", ACTIVE: "active", ACTIVE_MONO: "active_mono", FAILED_INIT: "failed_init", FAILED_HRTF: "failed_hrtf" };
 let closure_14 = { [obj.OFF_UNSUPPORTED]: "duration_off_unsupported_ms", [obj.OFF_EXPERIMENT]: "duration_off_experiment_ms", [obj.OFF_USER]: "duration_off_user_ms", [obj.OFF_OVERRIDE]: "duration_off_override_ms", [obj.IDLE]: "duration_idle_ms", [obj.ACTIVE]: "duration_active_ms", [obj.ACTIVE_MONO]: "duration_active_mono_ms", [obj.FAILED_INIT]: "duration_failed_init_ms", [obj.FAILED_HRTF]: "duration_failed_hrtf_ms" };
-const dependencyMap = Object.values(fn(5908).OutputDeviceClass);
+const dependencyMap = Object.values(fn(6003).OutputDeviceClass);
 let closure_16 = { mixUs: "mix_us", positioningUs: "positioning_us", renderUs: "render_us", reflectionsSimUs: "reflections_sim_us" };
 let closure_17 = ["mean", "p75", "p95", "p99", "max"];
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 12713: useLastMoreTabOption ===
+// === Module 12877: useLastMoreTabOption ===
 
-// Module 12713 (useLastMoreTabOption)
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6639 */;
+// Module 12877 (useLastMoreTabOption)
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6734 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

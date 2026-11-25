@@ -1,17 +1,17 @@
-// === Module 12755: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 12916: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 12755 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 12916 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 575 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4747 */;
-import dismissible_content from "dismissible_content" /* 4750 */;
-import openUserSettings from "openUserSettings" /* 7968 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4842 */;
+import dismissible_content from "dismissible_content" /* 4845 */;
+import openUserSettings from "openUserSettings" /* 8067 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1071).UserSettingsSections;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = { launch: null, new_presets: null };
@@ -19,7 +19,7 @@ let items = [fn(1399).TypingSuggestion.UNSPECIFIED, fn(1399).TypingSuggestion.YA
 obj.launch = items;
 let items1 = [fn(1399).TypingSuggestion.CHIRPING, fn(1399).TypingSuggestion.KEYSMASHING, fn(1399).TypingSuggestion.PURRING];
 obj.new_presets = items1;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_11 = createStyles.createStyles(() => {
   obj = { content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, examples: null, newBadge: null, title: null, body: null, actions: null, row: null, outerRow: null, innerRow: null, outerStack: null, innerStack: null };
   const obj2 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };

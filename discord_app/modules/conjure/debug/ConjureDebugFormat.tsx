@@ -1,6 +1,6 @@
-// === Module 18719: ConjureDebugFormat ===
+// === Module 18830: ConjureDebugFormat ===
 
-// Module 18719 (ConjureDebugFormat)
+// Module 18830 (ConjureDebugFormat)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugFormat.tsx");

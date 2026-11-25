@@ -1,19 +1,19 @@
-// === Module 14706: BumpingFistsSpotIllustration ===
+// === Module 14828: BumpingFistsSpotIllustration ===
 
-// Module 14706 (BumpingFistsSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef14707 from "module_14707" /* 14707 */;
-import _modDef14708 from "module_14708" /* 14708 */;
-import _modDef14709 from "module_14709" /* 14709 */;
+// Module 14828 (BumpingFistsSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7230 */;
+import _modDef14829 from "module_14829" /* 14829 */;
+import _modDef14830 from "module_14830" /* 14830 */;
+import _modDef14831 from "module_14831" /* 14831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14707 }, 3: null };
-let obj2 = { uri: _modDef14707 };
-obj[2] = { uri: _modDef14708 };
-const obj3 = { uri: _modDef14708 };
-obj[3] = { uri: _modDef14709 };
+let obj = { 1: null, 2: { uri: _modDef14829 }, 3: null };
+let obj2 = { uri: _modDef14829 };
+obj[2] = { uri: _modDef14830 };
+const obj3 = { uri: _modDef14830 };
+obj[3] = { uri: _modDef14831 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx");
 

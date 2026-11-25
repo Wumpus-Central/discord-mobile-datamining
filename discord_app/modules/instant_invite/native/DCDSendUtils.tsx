@@ -1,7 +1,7 @@
-// === Module 8272: DCDSendUtils ===
+// === Module 8371: DCDSendUtils ===
 
-// Module 8272 (DCDSendUtils)
-import NativeIntentsModuleDefault from "NativeIntentsModule" /* 8273 */;
+// Module 8371 (DCDSendUtils)
+import NativeIntentsModuleDefault from "NativeIntentsModule" /* 8372 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ let closure_5 = async function _sendSMS(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -121,7 +121,7 @@ let closure_6 = async function _sendMail(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

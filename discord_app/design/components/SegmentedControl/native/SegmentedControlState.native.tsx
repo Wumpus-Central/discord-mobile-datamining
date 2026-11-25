@@ -1,7 +1,7 @@
-// === Module 8475: SegmentedControlState ===
+// === Module 8574: SegmentedControlState ===
 
-// Module 8475 (SegmentedControlState)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5147 */;
+// Module 8574 (SegmentedControlState)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5242 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,7 +1,7 @@
-// === Module 10416: StageChannelListStore ===
+// === Module 10515: StageChannelListStore ===
 
-// Module 10416 (StageChannelListStore)
-import _mod4832 from "module_4832" /* 4832 */;
+// Module 10515 (StageChannelListStore)
+import _mod4927 from "module_4927" /* 4927 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ export function useActiveSpeakerPillScrollHandler() {
     items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, _mod4832.shallow), 2);
+  }, _mod4927.shallow), 2);
   const first = tmp[0];
   closure_1 = tmp3;
   items = [tmp[1]];
@@ -51,5 +51,5 @@ export function useActiveSpeakerPillState() {
     items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, _mod4832.shallow);
+  }, _mod4927.shallow);
 }

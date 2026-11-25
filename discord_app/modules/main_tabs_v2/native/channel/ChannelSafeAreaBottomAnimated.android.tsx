@@ -1,11 +1,11 @@
-// === Module 13469: ChannelSafeAreaBottomAnimated ===
+// === Module 13592: ChannelSafeAreaBottomAnimated ===
 
-// Module 13469 (ChannelSafeAreaBottomAnimated)
+// Module 13592 (ChannelSafeAreaBottomAnimated)
 import _mod1653 from "module_1653" /* 1653 */;
-import useChannelSafeAreaHeightSharedValue from "useChannelSafeAreaHeightSharedValue" /* 11656 */;
-import useIsChannelFullyOpenDefault from "useIsChannelFullyOpen" /* 11664 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11666 */;
-import MobileRTCV2Experiment from "MobileRTCV2Experiment" /* 12746 */;
+import useChannelSafeAreaHeightSharedValue from "useChannelSafeAreaHeightSharedValue" /* 11755 */;
+import useIsChannelFullyOpenDefault from "useIsChannelFullyOpen" /* 11763 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11765 */;
+import MobileRTCV2Experiment from "MobileRTCV2Experiment" /* 12910 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;

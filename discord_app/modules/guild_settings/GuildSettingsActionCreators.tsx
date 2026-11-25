@@ -1,19 +1,19 @@
-// === Module 8432: GuildSettingsActionCreators ===
+// === Module 8531: GuildSettingsActionCreators ===
 
-// Module 8432 (GuildSettingsActionCreators)
+// Module 8531 (GuildSettingsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6009 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7731 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6104 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7830 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 4822 */;
-import LurkingStore from "LurkingStore" /* 4850 */;
+import ImpersonateStore from "ImpersonateStore" /* 4917 */;
+import LurkingStore from "LurkingStore" /* 4945 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8433 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8532 */;
 
 require = fn;
 const Constants = fn(1071);
@@ -39,7 +39,7 @@ let body = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -72,7 +72,7 @@ let body = {
             const obj5 = { type: "GUILD_SETTINGS_OPEN", guildId, section: SAFETY, subsection };
             SAFETY(closure_1_2[9]).dispatch(obj5);
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp25) {
           c0 = tmp;
@@ -205,7 +205,7 @@ let body = {
     obj(572).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(572);
-    const obj6 = obj(7213);
+    const obj6 = obj(7308);
     const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
     const HTTP = require("HTTPUtils").HTTP;
     const request = { url: closure_10.GUILD(id), query: { for_discovery: obj.isForDiscovery }, body: obj2, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
@@ -289,7 +289,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -321,7 +321,7 @@ let body = {
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                          const AccessibilityAnnouncer = closure_1_0(4925).AccessibilityAnnouncer;
+                          const AccessibilityAnnouncer = closure_1_0(5020).AccessibilityAnnouncer;
                           const intl = closure_1_0(1112).intl;
                           AccessibilityAnnouncer.announce(intl.string(closure_1_0(1112).t["7iPyVW"]));
                         }),
@@ -347,7 +347,7 @@ let body = {
               const obj = tmp2(1098);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp21) {
           c3 = tmp;
@@ -373,7 +373,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -442,9 +442,9 @@ let body = {
     request.body = body;
     return HTTP.post(request);
   },
-  disableIntegration(id, id2) {
+  disableIntegration(guildId, id) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: refs.GUILD_INTEGRATION(id, id2), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: refs.GUILD_INTEGRATION(guildId, id), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(obj);
   },
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
@@ -472,7 +472,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -502,7 +502,7 @@ let body = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -524,7 +524,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -554,7 +554,7 @@ let body = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -577,7 +577,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -618,7 +618,7 @@ let body = {
               return obj;
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
           if (closure_128_2) {
             c1 = 2;

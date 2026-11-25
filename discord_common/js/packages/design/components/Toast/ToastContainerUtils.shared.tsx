@@ -1,14 +1,14 @@
-// === Module 15299: DEFAULT_TOAST_POSITION ===
+// === Module 15421: DEFAULT_TOAST_POSITION ===
 
-// Module 15299 (DEFAULT_TOAST_POSITION)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4926 */;
+// Module 15421 (DEFAULT_TOAST_POSITION)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5021 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const top = "top";
-const module_4928 = fn(4928);
-let closure_5 = module_4928.create(() => {
+const module_5023 = fn(5023);
+let closure_5 = module_5023.create(() => {
   const obj = { containerIdsBySurface: new Map() };
   return obj;
 });

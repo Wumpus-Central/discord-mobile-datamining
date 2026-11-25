@@ -1,8 +1,8 @@
-// === Module 15987: SpinAnimation ===
+// === Module 16108: SpinAnimation ===
 
-// Module 15987 (SpinAnimation)
+// Module 16108 (SpinAnimation)
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5127 */;
+import timing_timing from "timing/timing" /* 5222 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,10 +1,10 @@
-// === Module 8997: useTrialOffer ===
+// === Module 9096: useTrialOffer ===
 
-// Module 8997 (useTrialOffer)
+// Module 9096 (useTrialOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
-import UserOfferStore from "UserOfferStore" /* 8998 */;
+import UserOfferStore from "UserOfferStore" /* 9097 */;
 
 const require = globalThis.__r;
 
@@ -102,7 +102,7 @@ export function useTrialOffer(React3) {
                             num = time - Date.now();
                           }
                           if (closure_1_0 != null) {
-                            closure_1_0.start(num, /* F137300 */ function() { ... });
+                            closure_1_0.start(num, /* F137718 */ function() { ... });
                           }
                         }
                       });

@@ -1,15 +1,15 @@
-// === Module 17877: useInterestGameSearch ===
+// === Module 17989: useInterestGameSearch ===
 
-// Module 17877 (useInterestGameSearch)
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 7049 */;
+// Module 17989 (useInterestGameSearch)
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 7144 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 7048 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 7143 */;
 
 require = fn;
 let closure_6 = [];
-const DEFAULT = fn(8815).GameSearchFilterGroup.DEFAULT;
+const DEFAULT = fn(8914).GameSearchFilterGroup.DEFAULT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestGameSearch.tsx");
 
@@ -45,7 +45,7 @@ export default function useInterestGameSearch(name) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -71,7 +71,7 @@ export default function useInterestGameSearch(name) {
                 } else if (query.signal.aborted) {
                   c4 = 0;
                   c6 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const results = GameAutocompleteStore.getResults(query, DEFAULT);
                   query = results;

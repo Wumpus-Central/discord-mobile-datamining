@@ -1,22 +1,22 @@
-// === Module 17442: ActivityPrivacyDefaultSharingSetting ===
+// === Module 17553: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 17442 (ActivityPrivacyDefaultSharingSetting)
+// Module 17553 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import UserSettings from "UserSettings" /* 4742 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16186 */;
+import UserSettings from "UserSettings" /* 4837 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16307 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11815);
+const SettingBuilders = fn(11914);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(9414).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9513).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions() {
     return noop.useMemo(() => {
       const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
@@ -55,7 +55,7 @@ const radio = SettingBuilders.createRadio({
       const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17443, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17554, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
     }
   }
 });

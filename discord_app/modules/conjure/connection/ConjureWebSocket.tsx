@@ -1,6 +1,6 @@
-// === Module 14583: ConjureWebSocket ===
+// === Module 14705: ConjureWebSocket ===
 
-// Module 14583 (ConjureWebSocket)
+// Module 14705 (ConjureWebSocket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/connection/ConjureWebSocket.tsx");

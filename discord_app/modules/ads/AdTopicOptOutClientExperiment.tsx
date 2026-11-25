@@ -1,6 +1,6 @@
-// === Module 17389: AdTopicOptOutClientExperiment ===
+// === Module 17500: AdTopicOptOutClientExperiment ===
 
-// Module 17389 (AdTopicOptOutClientExperiment)
+// Module 17500 (AdTopicOptOutClientExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

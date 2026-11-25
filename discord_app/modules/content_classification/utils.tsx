@@ -1,8 +1,8 @@
-// === Module 5546: utils ===
+// === Module 5641: utils ===
 
-// Module 5546 (utils)
-import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5547 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5549 */;
+// Module 5641 (utils)
+import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5642 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5644 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/content_classification/utils.tsx");

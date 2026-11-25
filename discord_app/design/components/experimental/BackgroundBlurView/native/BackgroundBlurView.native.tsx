@@ -1,14 +1,14 @@
-// === Module 7950: BackgroundBlurView ===
+// === Module 8049: BackgroundBlurView ===
 
-// Module 7950 (BackgroundBlurView)
-import BackgroundBlurFill from "BackgroundBlurFill" /* 7951 */;
+// Module 8049 (BackgroundBlurView)
+import BackgroundBlurFill from "BackgroundBlurFill" /* 8050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_5 = createStyles.createStyles({ container: { position: "relative", overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/BackgroundBlurView/native/BackgroundBlurView.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 11113: useRedeemVirtualCurrency ===
+// === Module 11212: useRedeemVirtualCurrency ===
 
-// Module 11113 (useRedeemVirtualCurrency)
+// Module 11212 (useRedeemVirtualCurrency)
 import util from "util" /* 1112 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -57,7 +57,7 @@ export function useRedeemVirtualCurrency(onSignFailure) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

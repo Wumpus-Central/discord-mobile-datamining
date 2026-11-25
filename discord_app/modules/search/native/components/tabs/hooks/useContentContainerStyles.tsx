@@ -1,8 +1,8 @@
-// === Module 18843: useContentContainerStyles ===
+// === Module 18954: useContentContainerStyles ===
 
-// Module 18843 (useContentContainerStyles)
-import SearchConstants from "SearchConstants" /* 8878 */;
-import createStyles from "createStyles" /* 4917 */;
+// Module 18954 (useContentContainerStyles)
+import SearchConstants from "SearchConstants" /* 8977 */;
+import createStyles from "createStyles" /* 5012 */;
 import size from "module_2" /* 2 */;
 
 ({ SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);

@@ -1,12 +1,12 @@
-// === Module 7989: clipPayloadUtils ===
+// === Module 8088: clipPayloadUtils ===
 
-// Module 7989 (clipPayloadUtils)
+// Module 8088 (clipPayloadUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
-const ClipsConstants = fn(7990);
+const ClipsConstants = fn(8089);
 ({ CLIPS_MAX_PARTICIPANTS: c3, CLIPS_MAX_TIMELINE_EVENTS: closure_4, ClipSignalTypes: hasOwnProperty, GameEventType: closure_6, CLIP_RUNTIME: metroImportDefault } = ClipsConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const SpeakingFlags = fn(5729).SpeakingFlags;
+const SpeakingFlags = fn(5824).SpeakingFlags;
 const ServerClipGameEventType = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
 const obj2 = { UNKNOWN: 0, [0]: "UNKNOWN", LAUGHTER: 1, [1]: "LAUGHTER", SHOUTING: 2, [2]: "SHOUTING" };
 const size = fn(2);

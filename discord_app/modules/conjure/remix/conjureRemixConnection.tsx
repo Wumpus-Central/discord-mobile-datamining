@@ -1,9 +1,9 @@
-// === Module 11308: conjureRemixConnection ===
+// === Module 11407: conjureRemixConnection ===
 
-// Module 11308 (conjureRemixConnection)
+// Module 11407 (conjureRemixConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 7547 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7548 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7642 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7643 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -19,7 +19,7 @@ let closure_5 = async function _acceptRemix(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

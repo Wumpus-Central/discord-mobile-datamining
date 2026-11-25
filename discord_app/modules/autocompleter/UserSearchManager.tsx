@@ -1,21 +1,21 @@
-// === Module 8809: UserSearchManager ===
+// === Module 8908: UserSearchManager ===
 
-// Module 8809 (UserSearchManager)
+// Module 8908 (UserSearchManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import Constants from "Constants" /* 1071 */;
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import FlagUtilsAll from "FlagUtils" /* 1404 */;
-import ChannelRecord from "ChannelRecord" /* 4770 */;
-import UserUtilsDefault from "UserUtils" /* 4973 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 8810 */;
+import ChannelRecord from "ChannelRecord" /* 4865 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 8909 */;
 import UserRecord from "UserRecord" /* 1405 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 import UserStore from "UserStore" /* 1386 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 import size from "module_2" /* 2 */;
 
 function getTransformedUser(user) {

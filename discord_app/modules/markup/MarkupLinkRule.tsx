@@ -1,15 +1,15 @@
-// === Module 6949: MarkupLinkRule ===
+// === Module 7044: MarkupLinkRule ===
 
-// Module 6949 (MarkupLinkRule)
+// Module 7044 (MarkupLinkRule)
 import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import URLUtilsDefault from "URLUtils" /* 1379 */;
 import privDefault from "priv" /* 1454 */;
 import _modDef2068 from "module_2068" /* 2068 */;
-import findCodedLinks from "findCodedLinks" /* 5635 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5662 */;
-import MarkupTypes from "MarkupTypes" /* 5994 */;
-import errorDefault from "error" /* 6950 */;
+import findCodedLinks from "findCodedLinks" /* 5730 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5757 */;
+import MarkupTypes from "MarkupTypes" /* 6089 */;
+import errorDefault from "error" /* 7045 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const findCodedLinksDefault = findCodedLinks;
@@ -186,11 +186,11 @@ function punycodeLink(assetURL) {
 }
 let closure_4 = new privDefault({ max: 50 });
 let items = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"];
-let items1 = [fn(5994).AST_KEY.TEXT, fn(5994).AST_KEY.UNDERLINE, fn(5994).AST_KEY.STRONG, fn(5994).AST_KEY.ITALICS, fn(5994).AST_KEY.STRIKETHROUGH, fn(5994).AST_KEY.INLINE_CODE, fn(5994).AST_KEY.SPOILER, fn(5994).AST_KEY.LINE_BREAK, fn(5994).AST_KEY.TIMESTAMP];
-let items2 = [...items1, fn(5994).AST_KEY.EMOJI, fn(5994).AST_KEY.CUSTOM_EMOJI];
-let items3 = [fn(5994).AST_KEY.LIST, fn(5994).AST_KEY.HEADING, fn(5994).AST_KEY.BLOCK_QUOTE, fn(5994).AST_KEY.SUBTEXT];
-const items4 = [fn(5994).AST_KEY.TEXT];
-const items5 = [fn(5994).AST_KEY.UNDERLINE, fn(5994).AST_KEY.STRONG, fn(5994).AST_KEY.ITALICS, fn(5994).AST_KEY.STRIKETHROUGH, fn(5994).AST_KEY.INLINE_CODE, fn(5994).AST_KEY.SPOILER, fn(5994).AST_KEY.LINE_BREAK, fn(5994).AST_KEY.TIMESTAMP, fn(5994).AST_KEY.EMOJI, fn(5994).AST_KEY.CUSTOM_EMOJI, fn(5994).AST_KEY.LIST, fn(5994).AST_KEY.HEADING, fn(5994).AST_KEY.BLOCK_QUOTE, fn(5994).AST_KEY.SUBTEXT];
+let items1 = [fn(6089).AST_KEY.TEXT, fn(6089).AST_KEY.UNDERLINE, fn(6089).AST_KEY.STRONG, fn(6089).AST_KEY.ITALICS, fn(6089).AST_KEY.STRIKETHROUGH, fn(6089).AST_KEY.INLINE_CODE, fn(6089).AST_KEY.SPOILER, fn(6089).AST_KEY.LINE_BREAK, fn(6089).AST_KEY.TIMESTAMP];
+let items2 = [...items1, fn(6089).AST_KEY.EMOJI, fn(6089).AST_KEY.CUSTOM_EMOJI];
+let items3 = [fn(6089).AST_KEY.LIST, fn(6089).AST_KEY.HEADING, fn(6089).AST_KEY.BLOCK_QUOTE, fn(6089).AST_KEY.SUBTEXT];
+const items4 = [fn(6089).AST_KEY.TEXT];
+const items5 = [fn(6089).AST_KEY.UNDERLINE, fn(6089).AST_KEY.STRONG, fn(6089).AST_KEY.ITALICS, fn(6089).AST_KEY.STRIKETHROUGH, fn(6089).AST_KEY.INLINE_CODE, fn(6089).AST_KEY.SPOILER, fn(6089).AST_KEY.LINE_BREAK, fn(6089).AST_KEY.TIMESTAMP, fn(6089).AST_KEY.EMOJI, fn(6089).AST_KEY.CUSTOM_EMOJI, fn(6089).AST_KEY.LIST, fn(6089).AST_KEY.HEADING, fn(6089).AST_KEY.BLOCK_QUOTE, fn(6089).AST_KEY.SUBTEXT];
 let obj = {};
 let merged = Object.assign(_modDef2068.defaultRules.link);
 obj.match = function match(arr, allowLinks, arg2) {

@@ -1,13 +1,13 @@
-// === Module 14102: ConjureWorkingWand ===
+// === Module 14225: ConjureWorkingWand ===
 
-// Module 14102 (ConjureWorkingWand)
+// Module 14225 (ConjureWorkingWand)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import inlineStyles from "inlineStyles" /* 7813 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import inlineStyles from "inlineStyles" /* 7912 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 const require = globalThis.__r;
 const inlineStylesDefault = inlineStyles;
@@ -108,8 +108,8 @@ let obj4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PURPLE_30);
 let result4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PINK_40).set("oklch.l", "*0.95");
 let result5 = result4.set("oklch.c", "*0.8");
 const fill = result5.hex();
-let closure_15 = module_1653.createAnimatedComponent(fn(7813).Rect);
-const createStyles = fn(4917);
+let closure_15 = module_1653.createAnimatedComponent(fn(7912).Rect);
+const createStyles = fn(5012);
 let closure_16 = createStyles.createStyles((width) => ({ root: { width, height: width }, sparkleSmall: { transformOrigin: "33.6% 18.6%" }, sparkleLarge: { transformOrigin: "75% 75%" } }));
 let items = [{ code: "(function twinkle_ConjureWorkingWandTsx1(peak){return{opacity:0.35+0.65*peak,transform:[{scale:0.55+0.7*peak},{rotate:45*peak+\"deg\"}]};})" }];
 [tmp4] = items;

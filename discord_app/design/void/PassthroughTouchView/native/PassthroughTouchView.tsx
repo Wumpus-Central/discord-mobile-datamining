@@ -1,7 +1,7 @@
-// === Module 15237: PassthroughTouchView ===
+// === Module 15359: PassthroughTouchView ===
 
-// Module 15237 (PassthroughTouchView)
-import PassthroughTouchNativeComponentDefault from "PassthroughTouchNativeComponent" /* 15238 */;
+// Module 15359 (PassthroughTouchView)
+import PassthroughTouchNativeComponentDefault from "PassthroughTouchNativeComponent" /* 15360 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

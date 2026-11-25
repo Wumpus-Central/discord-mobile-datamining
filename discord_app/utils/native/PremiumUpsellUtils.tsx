@@ -1,20 +1,20 @@
-// === Module 9445: PremiumUpsellUtils ===
+// === Module 9544: PremiumUpsellUtils ===
 
-// Module 9445 (PremiumUpsellUtils)
+// Module 9544 (PremiumUpsellUtils)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
 import PremiumUtils from "PremiumUtils" /* 2173 */;
-import ChatInputUtils from "ChatInputUtils" /* 5102 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8960 */;
-import _modDef9446 from "module_9446" /* 9446 */;
-import _modDef9447 from "module_9447" /* 9447 */;
-import _modDef9448 from "module_9448" /* 9448 */;
-import _modDef9449 from "module_9449" /* 9449 */;
-import _modDef9450 from "module_9450" /* 9450 */;
-import _modDef9451 from "module_9451" /* 9451 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9554 */;
+import ChatInputUtils from "ChatInputUtils" /* 5197 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9059 */;
+import _modDef9545 from "module_9545" /* 9545 */;
+import _modDef9546 from "module_9546" /* 9546 */;
+import _modDef9547 from "module_9547" /* 9547 */;
+import _modDef9548 from "module_9548" /* 9548 */;
+import _modDef9549 from "module_9549" /* 9549 */;
+import _modDef9550 from "module_9550" /* 9550 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9653 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -209,7 +209,7 @@ export default {
       if (!analyticsLocation(analyticsLocations[13])(initialUpsellKey)) {
         let obj = {
           importer() {
-                return asyncRequireImpl(9516, dependencyMap.paths).then((result) => {
+                return asyncRequireImpl(9615, dependencyMap.paths).then((result) => {
                   closure_0 = result.default;
                   return (arg0) => {
                     const obj = {};
@@ -237,7 +237,7 @@ export default {
   usePremiumUpsellConfig
 };
 export function getUpsellItems() {
-  const obj = { key: constants3.GLOBAL_EMOJI, image: _modDef9446, activeTitle: null, passiveTitle: null, description: null };
+  const obj = { key: constants3.GLOBAL_EMOJI, image: _modDef9545, activeTitle: null, passiveTitle: null, description: null };
   const intl = util.intl;
   obj.activeTitle = intl.string(util.t.gKtr8N);
   const intl2 = util.intl;
@@ -245,7 +245,7 @@ export function getUpsellItems() {
   const intl3 = util.intl;
   obj.description = intl3.format(util.t.rf7Ixp, {});
   items = [obj, , , , , ];
-  const obj2 = { key: constants3.ANIMATED_EMOJI, image: _modDef9447, activeTitle: null, passiveTitle: null, description: null };
+  const obj2 = { key: constants3.ANIMATED_EMOJI, image: _modDef9546, activeTitle: null, passiveTitle: null, description: null };
   const intl4 = util.intl;
   obj2.activeTitle = intl4.string(util.t.F6rmyq);
   const intl5 = util.intl;
@@ -253,7 +253,7 @@ export function getUpsellItems() {
   const intl6 = util.intl;
   obj2.description = intl6.format(util.t.JxTzzb, {});
   items[1] = obj2;
-  const obj3 = { key: constants3.ANIMATED_AVATAR, image: _modDef9448, activeTitle: null, passiveTitle: null, description: null };
+  const obj3 = { key: constants3.ANIMATED_AVATAR, image: _modDef9547, activeTitle: null, passiveTitle: null, description: null };
   const intl7 = util.intl;
   obj3.activeTitle = intl7.string(util.t["tQh+gF"]);
   const intl8 = util.intl;
@@ -261,7 +261,7 @@ export function getUpsellItems() {
   const intl9 = util.intl;
   obj3.description = intl9.format(util.t["Tso/Fn"], {});
   items[2] = obj3;
-  const obj4 = { key: constants3.UPLOAD, image: _modDef9449, activeTitle: null, passiveTitle: null, description: null };
+  const obj4 = { key: constants3.UPLOAD, image: _modDef9548, activeTitle: null, passiveTitle: null, description: null };
   const intl10 = util.intl;
   obj4.activeTitle = intl10.string(util.t["1EOZqw"]);
   const intl11 = util.intl;
@@ -273,7 +273,7 @@ export function getUpsellItems() {
   obj5.maxUploadPremium = PremiumUtils.getMaxFileSizeForPremiumType(React6.TIER_2);
   obj4.description = intl12.format(util.t.DUT5IC, obj5);
   items[3] = obj4;
-  const obj7 = { key: constants3.BADGE, image: _modDef9450, activeTitle: null, passiveTitle: null, description: null };
+  const obj7 = { key: constants3.BADGE, image: _modDef9549, activeTitle: null, passiveTitle: null, description: null };
   const intl14 = util.intl;
   obj7.activeTitle = intl14.string(util.t["602BK4"]);
   const intl15 = util.intl;
@@ -281,7 +281,7 @@ export function getUpsellItems() {
   const intl16 = util.intl;
   obj7.description = intl16.format(util.t["p7i+li"], {});
   items[4] = obj7;
-  const obj8 = { key: constants3.APP_ICONS, image: _modDef9451, activeTitle: null, passiveTitle: null, description: null };
+  const obj8 = { key: constants3.APP_ICONS, image: _modDef9550, activeTitle: null, passiveTitle: null, description: null };
   const intl17 = util.intl;
   obj8.activeTitle = intl17.string(util.t["1B1Cyn"]);
   const intl18 = util.intl;

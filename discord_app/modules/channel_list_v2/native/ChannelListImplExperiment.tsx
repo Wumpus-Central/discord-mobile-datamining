@@ -1,6 +1,6 @@
-// === Module 17733: ChannelListImplExperiment ===
+// === Module 17844: ChannelListImplExperiment ===
 
-// Module 17733 (ChannelListImplExperiment)
+// Module 17844 (ChannelListImplExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

@@ -1,17 +1,17 @@
-// === Module 20079: AllChannelsSwitch ===
+// === Module 20184: AllChannelsSwitch ===
 
-// Module 20079 (AllChannelsSwitch)
+// Module 20184 (AllChannelsSwitch)
 import util from "util" /* 1112 */;
-import TableRow from "TableRow" /* 6018 */;
-import TableRadioGroup from "TableRadioGroup" /* 7125 */;
-import TableRadioRow from "TableRadioRow" /* 7127 */;
-import _modDef20080 from "module_20080" /* 20080 */;
-import _modDef20081 from "module_20081" /* 20081 */;
+import TableRow from "TableRow" /* 6113 */;
+import TableRadioGroup from "TableRadioGroup" /* 7220 */;
+import TableRadioRow from "TableRadioRow" /* 7222 */;
+import _modDef20185 from "module_20185" /* 20185 */;
+import _modDef20186 from "module_20186" /* 20186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(16665).AllChannelAccessOptions;
+const AllChannelAccessOptions = fn(16786).AllChannelAccessOptions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const size = fn(2);
@@ -34,14 +34,14 @@ export default function AllChannelsSwitch(channelAccessFormat) {
     },
     children: null
   };
-  const obj3 = { value: AllChannelAccessOptions.SOME_CHANNELS_ACCESS, icon: hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef20080 }), label: null, disabled: null };
+  const obj3 = { value: AllChannelAccessOptions.SOME_CHANNELS_ACCESS, icon: hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef20185 }), label: null, disabled: null };
   const intl = util.intl;
   obj3.label = intl.string(util.t["vs2T+B"]);
   obj3.disabled = disabled;
   items = [hasOwnProperty(TableRadioRow.TableRadioRow, obj3), ];
   const obj5 = { value: AllChannelAccessOptions.ALL_CHANNELS_ACCESS, icon: null, label: null, disabled: null };
-  const obj4 = { source: _modDef20080 };
-  obj5.icon = hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef20081 });
+  const obj4 = { source: _modDef20185 };
+  obj5.icon = hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef20186 });
   const intl2 = util.intl;
   obj5.label = intl2.string(util.t.l4Tr7X);
   obj5.disabled = disabled;

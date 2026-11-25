@@ -1,20 +1,20 @@
-// === Module 18787: DMRow ===
+// === Module 18898: DMRow ===
 
-// Module 18787 (DMRow)
+// Module 18898 (DMRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import UserUtils from "UserUtils" /* 4973 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import _modDef8417 from "module_8417" /* 8417 */;
-import BotTagDefault from "BotTag" /* 8491 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11218 */;
-import _modDef13788 from "module_13788" /* 13788 */;
+import UserUtils from "UserUtils" /* 5068 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import _modDef8516 from "module_8516" /* 8516 */;
+import BotTagDefault from "BotTag" /* 8590 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11317 */;
+import _modDef13911 from "module_13911" /* 13911 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
-import PresenceStore from "PresenceStore" /* 5888 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import PresenceStore from "PresenceStore" /* 5983 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 
 const UserUtilsDefault = UserUtils;
 
@@ -39,7 +39,7 @@ const Constants = fn(1071);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { activityStatusIcon: { width: 14, height: 14 }, activityStatusText: { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" }, tag: { marginLeft: 4 }, title: { flexDirection: "row" } };
 let closure_15 = createStyles.createStyles(obj);
 let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" };
@@ -91,7 +91,7 @@ export default noop.memo(function DMRow(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -130,7 +130,7 @@ export default noop.memo(function DMRow(user) {
           c3 = 0;
           closure_128_8(false);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp23) {
         closure_2 = tmp23;
@@ -163,7 +163,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8417, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8516, disableColor: true };
         obj4.children = state(native.Icon, obj5);
         tmp4Result = state(timestampProducer, obj4);
       }
@@ -171,7 +171,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13788, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13911, disableColor: true };
         obj6.children = state(native.Icon, obj7);
         tmp4Result3 = state(timestampProducer, obj6);
       }

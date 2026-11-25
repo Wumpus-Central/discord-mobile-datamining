@@ -1,13 +1,13 @@
-// === Module 18909: GroupDMRecipientLimitTitle ===
+// === Module 19020: GroupDMRecipientLimitTitle ===
 
-// Module 18909 (GroupDMRecipientLimitTitle)
+// Module 19020 (GroupDMRecipientLimitTitle)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import useToken from "useToken" /* 5481 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9496 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11952 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12979 */;
+import useToken from "useToken" /* 5576 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9595 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 12051 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 13102 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const MAX_GROUP_DM_PARTICIPANTS = fn(1071).MAX_GROUP_DM_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { title: { textAlign: "center", fontSize: 18 }, subtitleRow: { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, subtitle: { textAlign: "center" }, nitroWheelIcon: null };
 const PlatformUtils = fn(1378);
 let tmp5;

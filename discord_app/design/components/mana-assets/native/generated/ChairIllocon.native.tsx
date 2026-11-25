@@ -1,20 +1,20 @@
-// === Module 13560: ChairIllocon ===
+// === Module 13683: ChairIllocon ===
 
-// Module 13560 (ChairIllocon)
-import FastImageDefault from "FastImage" /* 5604 */;
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef13561 from "module_13561" /* 13561 */;
-import _modDef13562 from "module_13562" /* 13562 */;
-import _modDef13563 from "module_13563" /* 13563 */;
+// Module 13683 (ChairIllocon)
+import FastImageDefault from "FastImage" /* 5699 */;
+import assetHelpers from "assetHelpers" /* 7230 */;
+import _modDef13684 from "module_13684" /* 13684 */;
+import _modDef13685 from "module_13685" /* 13685 */;
+import _modDef13686 from "module_13686" /* 13686 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13561 }, 3: null };
-const obj2 = { uri: _modDef13561 };
-obj[2] = { uri: _modDef13562 };
-const obj3 = { uri: _modDef13562 };
-obj[3] = { uri: _modDef13563 };
+let obj = { 1: null, 2: { uri: _modDef13684 }, 3: null };
+const obj2 = { uri: _modDef13684 };
+obj[2] = { uri: _modDef13685 };
+const obj3 = { uri: _modDef13685 };
+obj[3] = { uri: _modDef13686 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ChairIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function ChairIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7135).getAssetSource(obj);
+  obj.source = num(7230).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

@@ -1,14 +1,14 @@
-// === Module 19334: ActivityShelfItemSummary ===
+// === Module 19445: ActivityShelfItemSummary ===
 
-// Module 19334 (ActivityShelfItemSummary)
+// Module 19445 (ActivityShelfItemSummary)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import ButtonPill from "ButtonPill" /* 5526 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5528 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10425 */;
-import useActivityUsersDefault from "useActivityUsers" /* 19335 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import ButtonPill from "ButtonPill" /* 5621 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5623 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10524 */;
+import useActivityUsersDefault from "useActivityUsers" /* 19446 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,10 +25,10 @@ function ParticipantsSummary(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
 let obj3 = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: nativeDefault.radii.round, backgroundColor: null, marginBottom: 8 };
-const ColorUtils = fn(4914);
+const ColorUtils = fn(5009);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 obj2.overlayActivityName = obj3;
 obj2.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

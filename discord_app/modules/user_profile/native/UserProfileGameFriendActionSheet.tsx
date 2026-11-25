@@ -1,13 +1,13 @@
-// === Module 14794: UserProfileGameFriendActionSheet ===
+// === Module 14916: UserProfileGameFriendActionSheet ===
 
-// Module 14794 (UserProfileGameFriendActionSheet)
+// Module 14916 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13443 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13566 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 
 require = fn;
 function GameFriendApplicationRow(application) {
@@ -41,7 +41,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 }, gameIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.gameIcon = size;
@@ -87,7 +87,7 @@ export default function UserProfileGameFriendActionSheet(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

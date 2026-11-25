@@ -1,23 +1,23 @@
-// === Module 15727: links ===
+// === Module 15848: links ===
 
-// Module 15727 (links)
+// Module 15848 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4838 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4923 */;
-import RPCErrorDefault from "RPCError" /* 7518 */;
-import openUserSettings from "openUserSettings" /* 7968 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10077 */;
-import RPCHelpers from "RPCHelpers" /* 10080 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15694 */;
-import createSocketGateDefault from "createSocketGate" /* 15717 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15728 */;
-import internalDeepLinks from "internalDeepLinks" /* 15729 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15730 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15732 */;
-import getFrameChannelIdDefault from "getFrameChannelId" /* 15735 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4933 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5018 */;
+import RPCErrorDefault from "RPCError" /* 7613 */;
+import openUserSettings from "openUserSettings" /* 8067 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10176 */;
+import RPCHelpers from "RPCHelpers" /* 10179 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15815 */;
+import createSocketGateDefault from "createSocketGate" /* 15838 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15849 */;
+import internalDeepLinks from "internalDeepLinks" /* 15850 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15851 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15853 */;
+import getFrameChannelIdDefault from "getFrameChannelId" /* 15856 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4765 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 
 require = fn;
@@ -58,7 +58,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -163,7 +163,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5592)(href);
+                  closure_1(5687)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -226,7 +226,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(5671);
+let Constants = fn(5766);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1071);
 ({ RPCCommands, RPCErrors: closure_6, UserSettingsSections: metroImportDefault, AnalyticEvents: closure_8 } = Constants);
@@ -236,7 +236,7 @@ const items = [, ];
 const set = new Set(items);
 let closure_10 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15701);
+let CONTEXT_MENU_ICON_NAMES = fn(15822);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -283,16 +283,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15701);
+CONTEXT_MENU_ICON_NAMES = fn(15822);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(10080).validatePostMessageTransport(socket.transport);
-    let obj = socket(10080);
+    let result = socket(10179).validatePostMessageTransport(socket.transport);
+    let obj = socket(10179);
     let tmp = socket;
-    const validateApplicationResult = socket(10080).validateApplication(socket.application);
+    const validateApplicationResult = socket(10179).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -325,7 +325,7 @@ let obj6 = {
       }
       tmpResult = tmp(2150);
     }
-    let obj2 = socket(10080);
+    let obj2 = socket(10179);
   }
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

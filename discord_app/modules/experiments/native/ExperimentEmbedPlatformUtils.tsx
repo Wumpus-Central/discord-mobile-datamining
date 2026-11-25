@@ -1,12 +1,12 @@
-// === Module 12234: ExperimentEmbedPlatformUtils ===
+// === Module 12333: ExperimentEmbedPlatformUtils ===
 
-// Module 12234 (ExperimentEmbedPlatformUtils)
+// Module 12333 (ExperimentEmbedPlatformUtils)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 5641 */;
-import ExperimentManager from "ExperimentManager" /* 5642 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11829 */;
-import useApexExperiments from "useApexExperiments" /* 11830 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 5736 */;
+import ExperimentManager from "ExperimentManager" /* 5737 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11928 */;
+import useApexExperiments from "useApexExperiments" /* 11929 */;
 import size from "module_2" /* 2 */;
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
@@ -49,6 +49,6 @@ export function handleCodedLinkExperimentEmbedTap(experimentFromEmbedURL, experi
       }
     }
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12235, dependencyMap.paths), "ExperimentOverrideSheet", { id: experimentFromEmbedURL });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12334, dependencyMap.paths), "ExperimentOverrideSheet", { id: experimentFromEmbedURL });
   const obj3 = { id: experimentFromEmbedURL };
 }

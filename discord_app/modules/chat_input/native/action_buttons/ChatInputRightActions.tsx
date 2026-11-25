@@ -1,12 +1,12 @@
-// === Module 13228: ChatInputRightActions ===
+// === Module 13351: ChatInputRightActions ===
 
-// Module 13228 (ChatInputRightActions)
+// Module 13351 (ChatInputRightActions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import native from "native" /* 4978 */;
-import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 13023 */;
-import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 13024 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 13025 */;
+import native from "native" /* 5073 */;
+import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 13146 */;
+import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 13147 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 13148 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -99,14 +99,14 @@ function LeftSlot(state) {
   obj2.style = items;
   const tmp = useChatInputFloatingBounceDefault({ visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs, onExitComplete: cleanup });
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj2.children = metroImportDefault(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "Path", shouldShowThread: "ox" });
+  obj2.children = metroImportDefault(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "Path", shouldShowThread: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH" });
   return metroImportDefault(_modDef1653.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12744).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12908).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const React6 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP }, leftSlot: { alignItems: "center", justifyContent: "center" } };
   return obj;

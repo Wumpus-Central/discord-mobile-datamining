@@ -1,17 +1,17 @@
-// === Module 11906: LeaveConnectionRoleActionSheet ===
+// === Module 12005: LeaveConnectionRoleActionSheet ===
 
-// Module 11906 (LeaveConnectionRoleActionSheet)
+// Module 12005 (LeaveConnectionRoleActionSheet)
 import util from "util" /* 1112 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5145 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import components_Button_Button from "components/Button/Button" /* 5515 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5240 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import components_Button_Button from "components/Button/Button" /* 5610 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_5 = createStyles.createStyles({ container: { padding: 12 }, marginTop: { marginTop: 8 }, button: { marginTop: 8, marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");

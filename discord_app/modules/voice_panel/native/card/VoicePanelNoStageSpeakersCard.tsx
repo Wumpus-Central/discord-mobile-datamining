@@ -1,16 +1,16 @@
-// === Module 19326: VoicePanelNoStageSpeakersCard ===
+// === Module 19437: VoicePanelNoStageSpeakersCard ===
 
-// Module 19326 (VoicePanelNoStageSpeakersCard)
+// Module 19437 (VoicePanelNoStageSpeakersCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4322 from "module_4322" /* 4322 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import NativeViewDefault from "NativeView" /* 6929 */;
+import _modDef4374 from "module_4374" /* 4374 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import NativeViewDefault from "NativeView" /* 7024 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: null, label: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.container = size;
@@ -24,7 +24,7 @@ export default noop.memo(function VoicePanelNoStageSpeakersCard() {
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.label, variant: "heading-sm/semibold", color: "text-overlay-light", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef4322["P63Z/o"]);
+  obj2.children = intl.string(_modDef4374["P63Z/o"]);
   obj.children = jsx(Text_Text.Heading, { style: tmp.label, variant: "heading-sm/semibold", color: "text-overlay-light", children: null });
   return jsx(NativeViewDefault, { style: tmp.container, children: null });
 });

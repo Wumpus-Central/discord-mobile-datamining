@@ -1,25 +1,25 @@
-// === Module 18025: VoicePanelDock ===
+// === Module 18137: VoicePanelDock ===
 
-// Module 18025 (VoicePanelDock)
+// Module 18137 (VoicePanelDock)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import HapticUtils from "HapticUtils" /* 5133 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5177 */;
-import ExternalPipDefault from "ExternalPip" /* 5826 */;
-import ContextMenu from "ContextMenu" /* 8926 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 8927 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11634 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11639 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11665 */;
-import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 18024 */;
-import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 18026 */;
-import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 18048 */;
-import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 18054 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import HapticUtils from "HapticUtils" /* 5228 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
+import ExternalPipDefault from "ExternalPip" /* 5921 */;
+import ContextMenu from "ContextMenu" /* 9025 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9026 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11738 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11764 */;
+import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 18136 */;
+import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 18138 */;
+import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 18160 */;
+import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 18166 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 const require = globalThis.__r;
 const _modDef1653 = _mod1653;
@@ -77,14 +77,14 @@ function DockPressTargetGuard(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11635).VoicePanelModes;
-const VoicePanelDockConstants = fn(11658);
+const VoicePanelModes = fn(11734).VoicePanelModes;
+const VoicePanelDockConstants = fn(11757);
 ({ DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_8, DOCK_PULL_SNAP_DISTANCE: closure_9, DOCK_PULL_SNAP_GIVE: closure_10, DOCK_TAP_MAX_MOVEMENT: closure_11, getDockInset: closure_12, DOCK_DRAG_HANDLE_TOP, DOCK_DRAG_HANDLE_WIDTH, DOCK_GAP, DOCK_PADDING_TOP, DOCK_ROW_HEIGHT } = VoicePanelDockConstants);
-const GestureConstants = fn(11659);
+const GestureConstants = fn(11758);
 ({ FLING_MIN_DISTANCE: map1, FLING_MIN_VELOCITY: closure_14, PULL_GESTURE_ACTIVATION_DISTANCE: closure_15, PULL_GESTURE_RESISTANCE: closure_16, PULL_GESTURE_SNAP_TIMING: closure_17, PULL_GESTURE_UNSNAP_TIMING: closure_18 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { dock: { position: "absolute", top: 0, left: 0, paddingTop: DOCK_PADDING_TOP, zIndex: 10 }, pressTarget: { position: "absolute", top: 0, left: 0, right: 0 }, contextMenuAnchor: { position: "absolute", top: 0, alignSelf: "center", width: 220, height: 0 }, dragHandle: null, row: null, identity: null };
 let size = { position: "absolute", top: DOCK_DRAG_HANDLE_TOP, alignSelf: "center", width: DOCK_DRAG_HANDLE_WIDTH, height: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj.dragHandle = size;

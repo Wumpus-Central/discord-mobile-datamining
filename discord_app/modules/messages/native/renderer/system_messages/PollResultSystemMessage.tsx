@@ -1,16 +1,16 @@
-// === Module 14241: PollResultSystemMessage ===
+// === Module 14364: PollResultSystemMessage ===
 
-// Module 14241 (PollResultSystemMessage)
+// Module 14364 (PollResultSystemMessage)
 import EmojiConstants from "EmojiConstants" /* 1389 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 11853 */;
-import PollTextUtils from "PollTextUtils" /* 12081 */;
-import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 14249 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 11952 */;
+import PollTextUtils from "PollTextUtils" /* 12180 */;
+import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 14372 */;
 import size from "module_2" /* 2 */;
 
 const AvatarUtilsDefault = getEmojiURL(1412);
-const UnicodeEmojisDefault = getEmojiURL(4863);
-const formatUsernameOnClickDefault = getEmojiURL(14197);
-const createCommonMessageDefault = getEmojiURL(14198);
+const UnicodeEmojisDefault = getEmojiURL(4958);
+const formatUsernameOnClickDefault = getEmojiURL(14320);
+const createCommonMessageDefault = getEmojiURL(14321);
 const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
 
@@ -51,7 +51,7 @@ export function createPollResultSystemMessage(message) {
           items = [];
           let id = tmp.victorEmoji;
           if (null == id) {
-            const parsePollMarkupResult = v9dPxsm(14242).parsePollMarkup(tmp.victorAnswerText, false);
+            const parsePollMarkupResult = v9dPxsm(14365).parsePollMarkup(tmp.victorAnswerText, false);
             if (null != parsePollMarkupResult) {
               const push = items.push;
               const _Array = Array;
@@ -71,7 +71,7 @@ export function createPollResultSystemMessage(message) {
             obj7.answerHook = () => obj8;
             obj7.percentage = messageAuthorWithProcessedColor;
             formatToPartsResult = intl.formatToParts(v9dPxsm(1112).t.zFwIxC, obj7);
-            const v9dPxsmResult = v9dPxsm(14242);
+            const v9dPxsmResult = v9dPxsm(14365);
           } else {
             if (null != id.id) {
               const obj10 = { id: null, type: "customEmoji", alt: null, src: null, frozenSrc: null };

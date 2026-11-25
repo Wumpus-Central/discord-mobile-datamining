@@ -1,18 +1,18 @@
-// === Module 15401: ShinyButton/ShinyButton ===
+// === Module 15523: ShinyButton/ShinyButton ===
 
-// Module 15401 (ShinyButton/ShinyButton)
+// Module 15523 (ShinyButton/ShinyButton)
 import Button_ButtonDefault from "Button/Button" /* 1189 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let AppState = fn(17).AppState;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { shinyButton: { overflow: "hidden" }, shineContainer: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, shine: null, shineInner: { width: 16, height: "100%", backgroundColor: "rgba(255,255,255,0.1)" } };
 let size = { width: 56, height: "500%", transform: null, backgroundColor: "rgba(255,255,255,0.1)", top: "-100%", alignItems: "center" };
 let items = [{ rotate: "30deg" }];

@@ -1,9 +1,9 @@
-// === Module 8117: isReadableChannel ===
+// === Module 8216: isReadableChannel ===
 
-// Module 8117 (isReadableChannel)
-import ChannelRecord from "ChannelRecord" /* 4770 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
+// Module 8216 (isReadableChannel)
+import ChannelRecord from "ChannelRecord" /* 4865 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

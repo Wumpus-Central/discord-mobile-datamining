@@ -1,9 +1,9 @@
-// === Module 17221: switchToPhoenix ===
+// === Module 17334: switchToPhoenix ===
 
-// Module 17221 (switchToPhoenix)
+// Module 17334 (switchToPhoenix)
 import LoggerDefault from "Logger" /* 3 */;
-import PhoenixLaunchState from "PhoenixLaunchState" /* 17215 */;
-import LaunchClient from "LaunchClient" /* 17217 */;
+import PhoenixLaunchState from "PhoenixLaunchState" /* 17329 */;
+import LaunchClient from "LaunchClient" /* 17331 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_6 = async function _switchToPhoenix() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

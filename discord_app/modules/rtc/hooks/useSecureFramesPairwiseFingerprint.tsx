@@ -1,11 +1,11 @@
-// === Module 8545: useSecureFramesPairwiseFingerprint ===
+// === Module 8644: useSecureFramesPairwiseFingerprint ===
 
-// Module 8545 (useSecureFramesPairwiseFingerprint)
-import SecureFramesBoundPairwiseFingerprint from "SecureFramesBoundPairwiseFingerprint" /* 8546 */;
+// Module 8644 (useSecureFramesPairwiseFingerprint)
+import SecureFramesBoundPairwiseFingerprint from "SecureFramesBoundPairwiseFingerprint" /* 8645 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
 
 require = fn;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };

@@ -1,24 +1,24 @@
-// === Module 9416: BurstReactionToggle ===
+// === Module 9515: BurstReactionToggle ===
 
-// Module 9416 (BurstReactionToggle)
+// Module 9515 (BurstReactionToggle)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import spring_spring from "spring/spring" /* 5518 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import spring_spring from "spring/spring" /* 5613 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let obj = { duration: 100, easing: null };
 const Easing = fn(1653).Easing;
 obj.easing = Easing.out(fn(1653).Easing.quad);
 let closure_9 = { stiffness: 750, mass: 2.5, damping: 70 };
 let closure_10 = { code: "(function BurstReactionToggleTsx1(){let[reducedMotion,targetBackgroundColor,backgroundColor,rotation]=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};})" };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj3 = { container: null };
 let size = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
 obj3.container = size;
@@ -40,7 +40,7 @@ export default function BurstReactionToggle(arg0) {
     tmp7 = tmp2;
   }
   const ref = noop.useRef(null);
-  importDefault = tmp7(9417)(ref);
+  importDefault = tmp7(9516)(ref);
   closure_129_0 = undefined;
   closure_129_1 = undefined;
   closure_129_2 = undefined;

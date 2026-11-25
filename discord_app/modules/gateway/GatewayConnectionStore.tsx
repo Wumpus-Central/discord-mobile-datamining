@@ -1,29 +1,29 @@
-// === Module 5723: GatewayConnectionStore ===
+// === Module 5818: GatewayConnectionStore ===
 
-// Module 5723 (GatewayConnectionStore)
+// Module 5818 (GatewayConnectionStore)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6836 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 14931 */;
-import ConnectionStateDefault from "ConnectionState" /* 14945 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 14966 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 14974 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6931 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 15053 */;
+import ConnectionStateDefault from "ConnectionState" /* 15067 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15088 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 15096 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PassTheControllerStore from "PassTheControllerStore" /* 5724 */;
+import PassTheControllerStore from "PassTheControllerStore" /* 5819 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5903 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5998 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6814 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import CallStore from "CallStore" /* 6909 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
-import RTCRegionStore from "RTCRegionStore" /* 5816 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 7528 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8262 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
+import RTCRegionStore from "RTCRegionStore" /* 5911 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 7623 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8361 */;
 
 require = fn;
 let closure_27 = async function _handleConnectionOpen(arg0) {
@@ -41,7 +41,7 @@ let closure_27 = async function _handleConnectionOpen(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -187,7 +187,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1071);
 ({ RTCConnectionStates: closure_17, AppStates: closure_18 } = Constants);
 const UserSettingsTypes = fn(1081).UserSettingsTypes;
-fn(14931).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(15053).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_21 = new LoggerDefault("ConnectionStore");
 let closure_22 = 0;
 let c23 = null;
@@ -518,13 +518,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(6690).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6785).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(14931).socket;
+          const socket = closure_0(15053).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(14931).socket;
+            const socket2 = closure_0(15053).socket;
             socket2.streamDelete(item);
           }
         });

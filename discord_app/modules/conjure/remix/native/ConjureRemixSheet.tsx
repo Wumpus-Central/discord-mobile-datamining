@@ -1,16 +1,16 @@
-// === Module 11305: ConjureRemixSheet ===
+// === Module 11404: ConjureRemixSheet ===
 
-// Module 11305 (ConjureRemixSheet)
+// Module 11404 (ConjureRemixSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5131 */;
-import TableRowIcon from "TableRowIcon" /* 6029 */;
-import AppsIcon from "AppsIcon" /* 7046 */;
-import ConjureRemix from "ConjureRemix" /* 11307 */;
-import ConjureServerPickerSheetDefault from "ConjureServerPickerSheet" /* 11309 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5226 */;
+import TableRowIcon from "TableRowIcon" /* 6124 */;
+import AppsIcon from "AppsIcon" /* 7141 */;
+import ConjureRemix from "ConjureRemix" /* 11406 */;
+import ConjureServerPickerSheetDefault from "ConjureServerPickerSheet" /* 11408 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureRemixSheet = "ConjureRemixSheet";
 const ConjureRemixServerSheet = "ConjureRemixServerSheet";
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { list: { gap: nativeDefault.space.PX_24, paddingBottom: arg0 + nativeDefault.space.PX_24 }, footer: null, footerBody: null };
   const obj2 = { gap: nativeDefault.space.PX_24, paddingBottom: arg0 + nativeDefault.space.PX_24 };
@@ -130,7 +130,7 @@ export default function ConjureRemixSheet(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

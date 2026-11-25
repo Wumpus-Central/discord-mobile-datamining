@@ -1,24 +1,24 @@
-// === Module 7532: ConjureRichPresenceStore ===
+// === Module 7627: ConjureRichPresenceStore ===
 
-// Module 7532 (ConjureRichPresenceStore)
+// Module 7627 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActivityTypes from "ActivityTypes" /* 5889 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6843 */;
-import conjureServerProject from "conjureServerProject" /* 7449 */;
-import conjureChatTurns from "conjureChatTurns" /* 7534 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 7540 */;
+import ActivityTypes from "ActivityTypes" /* 5984 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6938 */;
+import conjureServerProject from "conjureServerProject" /* 7544 */;
+import conjureChatTurns from "conjureChatTurns" /* 7629 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 7635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 6670 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
-import ConjureChatStore from "ConjureChatStore" /* 7533 */;
-import ConjurePagesStore from "ConjurePagesStore" /* 7539 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import IdleStore from "IdleStore" /* 6765 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import ConjureChatStore from "ConjureChatStore" /* 7628 */;
+import ConjurePagesStore from "ConjurePagesStore" /* 7634 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -303,7 +303,7 @@ function updateActivity(withGracePeriod) {
                       let merged = Object.assign(closure_1_16);
                       details = closure_1_16.details;
                       let prop = closure_1_0(closure_1_1[11]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                      let found = prop.filter(/* F91114 */ function() { ... });
+                      let found = prop.filter(/* F91474 */ function() { ... });
                       let _Math = Math;
                       let _Math2 = Math;
                       obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -314,7 +314,7 @@ function updateActivity(withGracePeriod) {
                         timeout = null;
                       }
                       let _setTimeout = setTimeout;
-                      timeout = setTimeout(/* F91115 */ function() { ... }, closure_1_14);
+                      timeout = setTimeout(/* F91475 */ function() { ... }, closure_1_14);
                       closure_1_24.emitChange();
                     }
                   }, closure_1_14);
@@ -352,7 +352,7 @@ let closure_22 = async function _fetchOwnedProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -467,7 +467,7 @@ let closure_23 = async function _resumeRunningProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -534,7 +534,7 @@ let closure_23 = async function _resumeRunningProjects() {
   }
 };
 let closure_2 = ["party"];
-const StaticChannelRoute = fn(4773).StaticChannelRoute;
+const StaticChannelRoute = fn(4868).StaticChannelRoute;
 let c14 = 300000;
 let c15 = null;
 let c16 = null;

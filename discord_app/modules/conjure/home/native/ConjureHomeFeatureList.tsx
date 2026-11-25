@@ -1,15 +1,15 @@
-// === Module 18686: ConjureHomeFeatureList ===
+// === Module 18797: ConjureHomeFeatureList ===
 
-// Module 18686 (ConjureHomeFeatureList)
+// Module 18797 (ConjureHomeFeatureList)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1112 */;
-import _modDef4192 from "module_4192" /* 4192 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7399 */;
-import ShieldIcon from "ShieldIcon" /* 9937 */;
-import RobotIcon from "RobotIcon" /* 12121 */;
+import _modDef4244 from "module_4244" /* 4244 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7494 */;
+import ShieldIcon from "ShieldIcon" /* 10036 */;
+import RobotIcon from "RobotIcon" /* 12220 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { list: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, card: null, visual: null, caption: null, window: null, line: null, lineTitle: null, lineName: null, lineShort: null, lineMedium: null, lineLong: null, windowBar: null, windowDot: null, pollOption: null, pollFill: null, pollFillWinner: null, pollLabel: null, pollLabelWinner: null, gameCanvas: null, cloud: null, pipe: null, player: null, pill: null, joinRow: null, joinArrow: null, message: null, messageBody: null, messageHeader: null, avatar: null, avatarBrand: null, botTag: null, profile: null, profileBanner: null, profileBody: null, profileAvatar: null, statsWidget: null, stats: null, stat: null, statValue: null, statLabel: null, chart: null, chartBar: null, chartBarDown: null, scene: null, sceneHills: null, sceneScrim: null, crosshair: null, overlayPanel: null, overlayMember: null, overlayAvatar: null, speaking: null, overlayName: null, overlayTimer: null, overlayTimerValue: null, redacted: null, blockedNotice: null, blockedText: null, lineCritical: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.card = { gap: nativeDefault.space.PX_24, padding: nativeDefault.space.PX_24, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg };
@@ -206,7 +206,7 @@ let closure_14 = {
     items3[1] = { left: nativeDefault.space.PX_6 };
     obj5.style = items3;
     const obj6 = { left: nativeDefault.space.PX_6 };
-    const items4 = [closure_5(styles(8658).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }), closure_5(styles(5508).Text, { variant: "footnote/semibold", color: "text-overlay-light", children: 128 })];
+    const items4 = [closure_5(styles(8757).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }), closure_5(styles(5603).Text, { variant: "footnote/semibold", color: "text-overlay-light", children: 128 })];
     obj5.children = items4;
     items1[4] = closure_6(closure_4, obj5);
     const obj8 = { style: null, children: null };
@@ -215,11 +215,11 @@ let closure_14 = {
     items5[1] = { right: nativeDefault.space.PX_6 };
     obj8.style = items5;
     const obj9 = { right: nativeDefault.space.PX_6 };
-    const items6 = [closure_5(styles(9647).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }), , ];
+    const items6 = [closure_5(styles(9746).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }), , ];
     const obj10 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[1] = closure_5(styles(9647).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
+    items6[1] = closure_5(styles(9746).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
     const obj11 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[2] = closure_5(styles(9647).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
+    items6[2] = closure_5(styles(9746).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
     obj8.children = items6;
     items1[5] = closure_6(closure_4, obj8);
     obj.children = items1;
@@ -244,7 +244,7 @@ let closure_14 = {
     const obj11 = { style: styles.botTag, children: null };
     const obj12 = { variant: "footnote/semibold", color: "text-overlay-light", children: null };
     const intl = util.intl;
-    obj12.children = intl.string(_modDef4192.VlgiLf);
+    obj12.children = intl.string(_modDef4244.VlgiLf);
     obj11.children = hasOwnProperty(Text_Text.Text, obj12);
     items4[1] = hasOwnProperty(React4, obj11);
     obj9.children = items4;
@@ -259,7 +259,7 @@ let closure_14 = {
   "profile-widgets": function ProfileWidgetsVisual(styles) {
     styles = styles.styles;
     let token;
-    token = styles(5481).useToken(token(575).colors.BACKGROUND_BRAND);
+    token = styles(5576).useToken(token(575).colors.BACKGROUND_BRAND);
     items = [token];
     const obj2 = { style: null, children: null };
     items1 = [, ];
@@ -269,7 +269,7 @@ let closure_14 = {
       items = [token, nativeDefault.unsafe_rawColors.ILLO_PINK_40];
       return items;
     }, items);
-    items2 = [closure_5(token(5472), { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } }), ];
+    items2 = [closure_5(token(5567), { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } }), ];
     const obj4 = { style: styles.profileBody, children: null };
     const obj5 = { style: null };
     items3 = [, ];
@@ -286,7 +286,7 @@ let closure_14 = {
       return timestampProducer(React4, obj, item);
     });
     const items6 = [closure_5(closure_4, obj8), ];
-    let obj = styles(5481);
+    let obj = styles(5576);
     const obj3 = { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } };
     const obj6 = { style: styles.lineName };
     items6[1] = closure_5(closure_4, {
@@ -335,7 +335,7 @@ let closure_14 = {
     const obj3 = { style: styles.sceneScrim };
     const obj4 = { style: styles.crosshair };
     const tmp = LinearGradientDefault;
-    items3 = [closure_5(styles(5626).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }), closure_5(Line, { style: styles.overlayTimerValue })];
+    items3 = [closure_5(styles(5721).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }), closure_5(Line, { style: styles.overlayTimerValue })];
     obj6.children = items3;
     items[4] = closure_6(closure_4, obj6);
     obj.children = items;

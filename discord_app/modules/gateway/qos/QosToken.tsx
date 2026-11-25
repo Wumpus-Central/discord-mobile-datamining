@@ -3,7 +3,7 @@
 // Module 500 (QosToken)
 import LoggerDefault from "Logger" /* 3 */;
 import ProtoUtils from "ProtoUtils" /* 1233 */;
-import qos_token from "qos_token" /* 15457 */;
+import qos_token from "qos_token" /* 15579 */;
 import DerivedQosDataStore from "DerivedQosDataStore" /* 501 */;
 
 require = fn;

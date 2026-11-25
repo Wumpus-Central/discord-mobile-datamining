@@ -1,8 +1,8 @@
-// === Module 6843: ConjureGuildExperiment ===
+// === Module 6938: ConjureGuildExperiment ===
 
-// Module 6843 (ConjureGuildExperiment)
-import ConjureUserExperiment from "ConjureUserExperiment" /* 6844 */;
-import GuildStore from "GuildStore" /* 4788 */;
+// Module 6938 (ConjureGuildExperiment)
+import ConjureUserExperiment from "ConjureUserExperiment" /* 6939 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 const require = globalThis.__r;
 
@@ -39,13 +39,13 @@ function hasConjureGuild(arg0, DMAppChannel) {
   }
   return false;
 }
-function isConjureGuildEnabledWithoutExposure(id, location) {
-  const config = closure_4.getConfig({ guildId: id, location }, { autoTrackExposure: false });
+function isConjureGuildEnabledWithoutExposure(id, ConjureServerApplicationIds) {
+  const config = closure_4.getConfig({ guildId: id, location: ConjureServerApplicationIds }, { autoTrackExposure: false });
   ({ enabled, requiresUserExperiment } = config);
   if (enabled) {
     let isConjureUserEnabledResult = !requiresUserExperiment;
     if (requiresUserExperiment) {
-      const obj3 = { location };
+      const obj3 = { location: ConjureServerApplicationIds };
       const obj4 = { autoTrackExposure: false };
       isConjureUserEnabledResult = ConjureUserExperiment.isConjureUserEnabled(obj3, obj4);
     }

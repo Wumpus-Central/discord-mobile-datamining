@@ -1,6 +1,6 @@
-// === Module 11147: ? ===
+// === Module 11246: ? ===
 
-// Module 11147
+// Module 11246
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/fn_pdp_preview_header.png.js");

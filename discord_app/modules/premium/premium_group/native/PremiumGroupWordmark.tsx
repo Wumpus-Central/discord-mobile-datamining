@@ -1,9 +1,9 @@
-// === Module 9568: PremiumGroupWordmark ===
+// === Module 9667: PremiumGroupWordmark ===
 
-// Module 9568 (PremiumGroupWordmark)
+// Module 9667 (PremiumGroupWordmark)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5481 */;
-import inlineStyles from "inlineStyles" /* 7813 */;
+import useToken from "useToken" /* 5576 */;
+import inlineStyles from "inlineStyles" /* 7912 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

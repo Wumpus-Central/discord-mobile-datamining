@@ -1,12 +1,12 @@
-// === Module 17608: useMessagesReconnectToCallsEffect ===
+// === Module 17719: useMessagesReconnectToCallsEffect ===
 
-// Module 17608 (useMessagesReconnectToCallsEffect)
+// Module 17719 (useMessagesReconnectToCallsEffect)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7452 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5818 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7547 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");

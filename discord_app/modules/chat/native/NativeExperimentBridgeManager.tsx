@@ -1,17 +1,17 @@
-// === Module 20136: NativeExperimentBridgeManager ===
+// === Module 20241: NativeExperimentBridgeManager ===
 
-// Module 20136 (NativeExperimentBridgeManager)
+// Module 20241 (NativeExperimentBridgeManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 8197 */;
-import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 11608 */;
-import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 20137 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 8296 */;
+import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 11707 */;
+import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 20242 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaPlaybackExperiment_mod from "MediaPlaybackExperiment" /* 8741 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import MediaPlaybackExperiment_mod from "MediaPlaybackExperiment" /* 8840 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 import size from "module_2" /* 2 */;
 
 function syncYYTextReplacementExperiment() {

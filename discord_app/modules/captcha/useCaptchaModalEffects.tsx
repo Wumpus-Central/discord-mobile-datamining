@@ -1,6 +1,6 @@
-// === Module 19452: useCaptchaModalEffects ===
+// === Module 19563: useCaptchaModalEffects ===
 
-// Module 19452 (useCaptchaModalEffects)
+// Module 19563 (useCaptchaModalEffects)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ export default function useCaptchaModalEffects(arg0) {
     analyticsType = "Guild Join Captcha";
   }
   dependencyMap = noop.useRef(true);
-  analyticsType(5478)(() => () => {
+  analyticsType(5573)(() => () => {
     if (ref.current) {
       if (closure_1_0 != null) {
         tmp(require("SharedCaptchaUtils").CaptchaError.CANCEL);

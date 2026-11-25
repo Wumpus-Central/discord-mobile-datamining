@@ -1,20 +1,20 @@
-// === Module 18572: ButterflyIllocon ===
+// === Module 18683: ButterflyIllocon ===
 
-// Module 18572 (ButterflyIllocon)
-import FastImageDefault from "FastImage" /* 5604 */;
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef18573 from "module_18573" /* 18573 */;
-import _modDef18574 from "module_18574" /* 18574 */;
-import _modDef18575 from "module_18575" /* 18575 */;
+// Module 18683 (ButterflyIllocon)
+import FastImageDefault from "FastImage" /* 5699 */;
+import assetHelpers from "assetHelpers" /* 7230 */;
+import _modDef18684 from "module_18684" /* 18684 */;
+import _modDef18685 from "module_18685" /* 18685 */;
+import _modDef18686 from "module_18686" /* 18686 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18573 }, 3: null };
-const obj2 = { uri: _modDef18573 };
-obj[2] = { uri: _modDef18574 };
-const obj3 = { uri: _modDef18574 };
-obj[3] = { uri: _modDef18575 };
+let obj = { 1: null, 2: { uri: _modDef18684 }, 3: null };
+const obj2 = { uri: _modDef18684 };
+obj[2] = { uri: _modDef18685 };
+const obj3 = { uri: _modDef18685 };
+obj[3] = { uri: _modDef18686 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function ButterflyIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7135).getAssetSource(obj);
+  obj.source = num(7230).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

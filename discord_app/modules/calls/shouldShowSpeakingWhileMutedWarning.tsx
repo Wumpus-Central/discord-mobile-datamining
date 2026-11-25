@@ -1,7 +1,7 @@
-// === Module 19263: shouldShowSpeakingWhileMutedWarning ===
+// === Module 19374: shouldShowSpeakingWhileMutedWarning ===
 
-// Module 19263 (shouldShowSpeakingWhileMutedWarning)
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6677 */;
+// Module 19374 (shouldShowSpeakingWhileMutedWarning)
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6772 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/calls/shouldShowSpeakingWhileMutedWarning.tsx");

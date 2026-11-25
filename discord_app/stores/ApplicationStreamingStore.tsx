@@ -1,26 +1,26 @@
-// === Module 6687: ApplicationStreamingStore ===
+// === Module 6782: ApplicationStreamingStore ===
 
-// Module 6687 (ApplicationStreamingStore)
+// Module 6782 (ApplicationStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4923 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6690 */;
-import windowSourceMatchesDefault from "windowSourceMatches" /* 6691 */;
-import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 6692 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6697 */;
-import canSpectateDefault from "canSpectate" /* 6725 */;
-import GameConsoleStore from "GameConsoleStore" /* 5726 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5018 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6785 */;
+import windowSourceMatchesDefault from "windowSourceMatches" /* 6786 */;
+import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 6787 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6792 */;
+import canSpectateDefault from "canSpectate" /* 6820 */;
+import GameConsoleStore from "GameConsoleStore" /* 5821 */;
 import RunningGameStore from "RunningGameStore" /* 2139 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildStore from "GuildStore" /* 4883 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
-import VoiceStateStore from "VoiceStateStore" /* 5565 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import VoiceStateStore from "VoiceStateStore" /* 5660 */;
 
 require = fn;
 function reset() {
@@ -50,7 +50,7 @@ function handleStreamUpdate(streamKey) {
 }
 const Constants = fn(1071);
 ({ ApplicationStreamStates: closure_18, RTCConnectionStates: closure_19, ApplicationStreamDeleteReasons: closure_20, NULL_STRING_GUILD_ID: closure_21, BasicPermissions: closure_22 } = Constants);
-const StreamTypes = fn(6688).StreamTypes;
+const StreamTypes = fn(6783).StreamTypes;
 const selfStreamParticipantsHidden = {};
 let intent = null;
 let closure_27 = 10 * DurationsDefault.Millis.SECOND;
@@ -674,7 +674,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    const obj = sourceId(6690);
+    const obj = sourceId(6785);
     const encodeStreamKeyResult = obj.encodeStreamKey({ streamType, guildId, channelId, ownerId: AuthenticationStore.getId() });
     let startsWithResult;
     if (sourceId != null) {
@@ -775,11 +775,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(6693, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(6788, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(6693, dependencyMap.paths);
+        const promise = asyncRequireImpl(6788, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

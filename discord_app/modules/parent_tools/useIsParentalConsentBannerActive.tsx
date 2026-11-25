@@ -1,8 +1,8 @@
-// === Module 16200: useIsParentalConsentBannerActive ===
+// === Module 16321: useIsParentalConsentBannerActive ===
 
-// Module 16200 (useIsParentalConsentBannerActive)
-import useParentalConsentWarning from "useParentalConsentWarning" /* 16201 */;
-import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 16203 */;
+// Module 16321 (useIsParentalConsentBannerActive)
+import useParentalConsentWarning from "useParentalConsentWarning" /* 16322 */;
+import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 16324 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");

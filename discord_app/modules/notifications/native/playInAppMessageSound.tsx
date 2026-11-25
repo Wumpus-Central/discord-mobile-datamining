@@ -1,12 +1,12 @@
-// === Module 10488: playInAppMessageSound ===
+// === Module 10587: playInAppMessageSound ===
 
-// Module 10488 (playInAppMessageSound)
+// Module 10587 (playInAppMessageSound)
 import MetaQuestUtils from "MetaQuestUtils" /* 1625 */;
-import SoundUtils from "SoundUtils" /* 10157 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10455 */;
+import SoundUtils from "SoundUtils" /* 10256 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10554 */;
 
 require = fn;
-let closure_3 = fn(10489).isInAppMessageSoundsEnabled;
+let closure_3 = fn(10588).isInAppMessageSoundsEnabled;
 const InAppNotificationTypes = fn(1071).InAppNotificationTypes;
 const message1 = "message1";
 let timestamp = 0;

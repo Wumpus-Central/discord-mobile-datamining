@@ -1,9 +1,9 @@
-// === Module 15918: useHexagonCampaignDisplayNameStyleToggle ===
+// === Module 16039: useHexagonCampaignDisplayNameStyleToggle ===
 
-// Module 15918 (useHexagonCampaignDisplayNameStyleToggle)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4945 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6645 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11799 */;
+// Module 16039 (useHexagonCampaignDisplayNameStyleToggle)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5040 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6740 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11898 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1386 */;
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(4942);
+const HexagonCampaignConstants = fn(5037);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES: metroImportDefault, HexagonCampaignPerk: closure_8 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/useHexagonCampaignDisplayNameStyleToggle.tsx");
@@ -23,8 +23,8 @@ export function useHexagonCampaignDisplayNameStyleToggle(user, showEnrollmentErr
   const tmp3 = useDisplayNameStylesDefault({ userId: user.id, pendingDisplayNameStyles: require("ProfileCustomizationUtils").useGuildMemberOrUserPendingDisplayNameStyles(user).pendingDisplayNameStyles, ignoreDisabledStylesSetting: true });
   let result = null != tmp3;
   if (result) {
-    result = tmp(4945).isHexagonCampaignDisplayNameStyle(tmp3);
-    const tmpResult = tmp(4945);
+    result = tmp(5040).isHexagonCampaignDisplayNameStyle(tmp3);
+    const tmpResult = tmp(5040);
   }
   let obj2 = { userId: user.id, pendingDisplayNameStyles: require("ProfileCustomizationUtils").useGuildMemberOrUserPendingDisplayNameStyles(user).pendingDisplayNameStyles, ignoreDisabledStylesSetting: true };
   [tmp6, importDefault] = noop.useState(false);
@@ -66,7 +66,7 @@ export function useHexagonCampaignDisplayNameStyleToggle(user, showEnrollmentErr
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

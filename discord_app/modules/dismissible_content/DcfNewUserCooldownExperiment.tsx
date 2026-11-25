@@ -1,6 +1,6 @@
-// === Module 4972: DcfNewUserCooldownExperiment ===
+// === Module 5067: DcfNewUserCooldownExperiment ===
 
-// Module 4972 (DcfNewUserCooldownExperiment)
+// Module 5067 (DcfNewUserCooldownExperiment)
 import DurationsDefault from "Durations" /* 1088 */;
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;

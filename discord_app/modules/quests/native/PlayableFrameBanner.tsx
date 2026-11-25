@@ -1,18 +1,18 @@
-// === Module 19258: PlayableFrameBanner ===
+// === Module 19369: PlayableFrameBanner ===
 
-// Module 19258 (PlayableFrameBanner)
+// Module 19369 (PlayableFrameBanner)
 import nativeDefault from "native" /* 575 */;
-import QuestTypes from "QuestTypes" /* 6748 */;
-import AdCreativeType from "AdCreativeType" /* 6752 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8251 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9789 */;
+import QuestTypes from "QuestTypes" /* 6843 */;
+import AdCreativeType from "AdCreativeType" /* 6847 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8350 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9888 */;
 import noop from "module_19" /* 19 */;
-import PlayableStore from "PlayableStore" /* 16503 */;
+import PlayableStore from "PlayableStore" /* 16624 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { banner: { bottom: Math.max(arg0, PX_32), paddingBottom: nativeDefault.space.PX_0, paddingHorizontal: nativeDefault.space.PX_24 } };
   return obj;

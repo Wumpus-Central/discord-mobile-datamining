@@ -1,14 +1,14 @@
-// === Module 16620: useQuestDockAcceptQuest ===
+// === Module 16741: useQuestDockAcceptQuest ===
 
-// Module 16620 (useQuestDockAcceptQuest)
+// Module 16741 (useQuestDockAcceptQuest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 8224 */;
+import QuestStore from "QuestStore" /* 8323 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const QuestDockMode = fn(6745).QuestDockMode;
+const QuestDockMode = fn(6840).QuestDockMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useQuestDockAcceptQuest.tsx");
 

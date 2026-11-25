@@ -1,8 +1,8 @@
-// === Module 13845: GiftedSubscriptionUtils ===
+// === Module 13968: GiftedSubscriptionUtils ===
 
-// Module 13845 (GiftedSubscriptionUtils)
+// Module 13968 (GiftedSubscriptionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GiftSubscriptionConstants from "GiftSubscriptionConstants" /* 13846 */;
+import GiftSubscriptionConstants from "GiftSubscriptionConstants" /* 13969 */;
 import PremiumConstants from "PremiumConstants" /* 1388 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;

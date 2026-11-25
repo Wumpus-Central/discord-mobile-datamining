@@ -1,6 +1,6 @@
-// === Module 7969: UserSettingsAccountStore ===
+// === Module 8068: UserSettingsAccountStore ===
 
-// Module 7969 (UserSettingsAccountStore)
+// Module 8068 (UserSettingsAccountStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserStore from "UserStore" /* 1386 */;

@@ -1,23 +1,23 @@
-// === Module 18297: useConjurePublishReview ===
+// === Module 18409: useConjurePublishReview ===
 
-// Module 18297 (useConjurePublishReview)
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8385 */;
-import conjurePublishReview from "conjurePublishReview" /* 18293 */;
-import useConjureAppIdentityDraftDefault from "useConjureAppIdentityDraft" /* 18298 */;
-import useConjurePreviewDevicePermissionsDefault from "useConjurePreviewDevicePermissions" /* 18301 */;
-import useConjurePublishRemixDefault from "useConjurePublishRemix" /* 18302 */;
+// Module 18409 (useConjurePublishReview)
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8484 */;
+import conjurePublishReview from "conjurePublishReview" /* 18405 */;
+import useConjureAppIdentityDraftDefault from "useConjureAppIdentityDraft" /* 18410 */;
+import useConjurePreviewDevicePermissionsDefault from "useConjurePreviewDevicePermissions" /* 18413 */;
+import useConjurePublishRemixDefault from "useConjurePublishRemix" /* 18414 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7576 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7675 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let isProjectOwner = fn(6808).isProjectOwner;
+let isProjectOwner = fn(6903).isProjectOwner;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_11, Permissions: closure_12 } = Constants);
 const size = fn(2);
@@ -37,7 +37,7 @@ export default function useConjurePublishReview(id, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -147,8 +147,8 @@ export default function useConjurePublishReview(id, arg1) {
   const trimmed = str.trim();
   let result = null;
   if (tmp14) {
-    result = tmp3(18307).conjureProjectNameError(trimmed);
-    const tmp3Result = tmp3(18307);
+    result = tmp3(18419).conjureProjectNameError(trimmed);
+    const tmp3Result = tmp3(18419);
   }
   isProjectOwner = result;
   const tmp11 = stateFromStores(saving.useState(false), 2);

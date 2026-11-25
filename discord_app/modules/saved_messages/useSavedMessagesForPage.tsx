@@ -1,13 +1,13 @@
-// === Module 11572: useSavedMessagesForPage ===
+// === Module 11671: useSavedMessagesForPage ===
 
-// Module 11572 (useSavedMessagesForPage)
+// Module 11671 (useSavedMessagesForPage)
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 11567 */;
-import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 11573 */;
-import useBookmarksPaginationDefault from "useBookmarksPagination" /* 11575 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11666 */;
+import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 11672 */;
+import useBookmarksPaginationDefault from "useBookmarksPagination" /* 11674 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11571 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11670 */;
 
 require = fn;
 function getSavedMessagesForType(arg0) {
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/useSavedMessag
 export default function useSavedMessagesForPage() {
   let ALL = arg0;
   if (arg0 === undefined) {
-    ALL = ALL(11567).SavedMessageSortTypes.ALL;
+    ALL = ALL(11666).SavedMessageSortTypes.ALL;
   }
   importDefault = undefined;
   dependencyMap = undefined;
@@ -102,7 +102,7 @@ export default function useSavedMessagesForPage() {
     return messageBookmarks.map((saveData) => saveData.saveData);
   }), 2);
   const obj = { savedMessages: null };
-  const tmp6Result = useBookmarksPaginationDefault(ALL !== ALL(11567).SavedMessageSortTypes.REMINDER);
+  const tmp6Result = useBookmarksPaginationDefault(ALL !== ALL(11666).SavedMessageSortTypes.REMINDER);
   const items1 = [SavedMessagesStore];
   obj.savedMessages = ALL(504).useStateFromStoresArray(items1, () => {
     const mapped = _undefined.map((channelId) => savedMessage.getSavedMessage(channelId.channelId, channelId.messageId));

@@ -1,12 +1,12 @@
-// === Module 8869: shared_components/Badge ===
+// === Module 8968: shared_components/Badge ===
 
-// Module 8869 (shared_components/Badge)
+// Module 8968 (shared_components/Badge)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, badgeClassic: null, mask: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.badgeClassic = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };

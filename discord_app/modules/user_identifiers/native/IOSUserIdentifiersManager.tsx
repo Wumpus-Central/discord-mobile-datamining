@@ -1,11 +1,11 @@
-// === Module 19590: IOSUserIdentifiersManager ===
+// === Module 19691: IOSUserIdentifiersManager ===
 
-// Module 19590 (IOSUserIdentifiersManager)
+// Module 19691 (IOSUserIdentifiersManager)
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1386 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 let require = fn;
 const NativeModules = fn(17).NativeModules;
@@ -39,7 +39,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -82,7 +82,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           return obj;
         }
         v3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp9) {
         v3 = tmp;
         throw tmp9;
@@ -103,7 +103,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

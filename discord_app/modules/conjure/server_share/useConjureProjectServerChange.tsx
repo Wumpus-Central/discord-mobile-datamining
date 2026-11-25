@@ -1,13 +1,13 @@
-// === Module 18333: useConjureProjectServerChange ===
+// === Module 18445: useConjureProjectServerChange ===
 
-// Module 18333 (useConjureProjectServerChange)
-import conjureServerProject from "conjureServerProject" /* 7449 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7541 */;
-import conjureChangeRows from "conjureChangeRows" /* 18335 */;
+// Module 18445 (useConjureProjectServerChange)
+import conjureServerProject from "conjureServerProject" /* 7544 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7636 */;
+import conjureChangeRows from "conjureChangeRows" /* 18447 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
 
 const require = globalThis.__r;
 
@@ -117,7 +117,7 @@ export default function useConjureProjectServerChange(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

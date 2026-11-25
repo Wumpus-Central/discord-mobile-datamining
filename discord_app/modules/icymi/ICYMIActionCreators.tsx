@@ -1,13 +1,13 @@
-// === Module 8782: ICYMIActionCreators ===
+// === Module 8881: ICYMIActionCreators ===
 
-// Module 8782 (ICYMIActionCreators)
+// Module 8881 (ICYMIActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import UserSettings from "UserSettings" /* 4742 */;
-import DiscoverRequestState from "DiscoverRequestState" /* 8779 */;
-import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 8780 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 8785 */;
+import UserSettings from "UserSettings" /* 4837 */;
+import DiscoverRequestState from "DiscoverRequestState" /* 8878 */;
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 8879 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 8884 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 8783 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 8882 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1386 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
@@ -21,14 +21,14 @@ function notifyDiscoverRequestListeners() {
 }
 function setDiscoverUser(arg0) {
   if (id !== arg0) {
-    c15 = null;
+    c16 = null;
     closure_14 = {};
     c11 = 0;
     c12 = 0;
     if (_null != null) {
       _null.abort();
     }
-    closure_18 = {};
+    closure_19 = {};
     const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
     discoverRequestGuard.resetSession();
     id = arg0;
@@ -42,21 +42,21 @@ function setDiscoverAuthSessionIdHash(arg0) {
       tmp2 = authSessionIdHash !== arg0;
     }
     if (tmp2) {
-      c15 = null;
+      c16 = null;
       closure_14 = {};
       c11 = 0;
       c12 = 0;
       if (_null != null) {
         _null.abort();
       }
-      closure_18 = {};
+      closure_19 = {};
       const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
       discoverRequestGuard.resetSession();
     }
     authSessionIdHash = arg0;
   }
 }
-let closure_22 = async function _dispatchDiscoverPickerCommit() {
+let closure_23 = async function _dispatchDiscoverPickerCommit() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
@@ -89,7 +89,7 @@ function fetchDiscoverDehydrated(arg0) {
   closure_10 = undefined;
   closure_14 = undefined;
   function isSameUser() {
-    let isAuthenticatedResult = closure_6 === closure_18;
+    let isAuthenticatedResult = closure_6 === closure_19;
     if (isAuthenticatedResult) {
       isAuthenticatedResult = null != id;
     }
@@ -150,7 +150,7 @@ function fetchDiscoverDehydrated(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -170,8 +170,10 @@ function fetchDiscoverDehydrated(arg0) {
             closure_132_1 = undefined;
             closure_132_2 = undefined;
             closure_132_3 = undefined;
-            let signal;
+            closure_132_4 = undefined;
             closure_132_5 = undefined;
+            let signal2;
+            closure_132_7 = undefined;
             c8 = 1;
             c9 = 1;
             const obj7 = { value, done: false };
@@ -191,14 +193,14 @@ function fetchDiscoverDehydrated(arg0) {
                 if (closure_133_2) {
                   closure_0 = closure_133_4;
                   if (closure_133_4 == null) {
-                    closure_0 = c15;
+                    closure_0 = c16;
                   }
                   closure_132_0 = closure_0;
                   if (closure_133_13()) {
                     const obj11 = { type: "DISCOVER_REQUEST_STARTED", identity: closure_133_7 };
                     c8 = 2;
                     c9 = 1;
-                    const obj14 = { value: dependencyMap(572).dispatch(obj11), done: false };
+                    const obj14 = { value: picks2(572).dispatch(obj11), done: false };
                     return obj14;
                   }
                 }
@@ -208,13 +210,13 @@ function fetchDiscoverDehydrated(arg0) {
               if (c9 === closure_133_10) {
                 c9 = null;
               }
-              let tmp27 = closure_133_1;
+              let tmp30 = closure_133_1;
               if (closure_133_1) {
-                tmp27 = closure_133_11();
+                tmp30 = closure_133_11();
               }
-              if (tmp27) {
-                dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-                const obj2 = dependencyMap(572);
+              if (tmp30) {
+                picks2(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+                const obj2 = picks2(572);
               }
               c9 = 3;
               const obj16 = { value, done: true };
@@ -236,19 +238,19 @@ function fetchDiscoverDehydrated(arg0) {
             if (c9 === closure_133_10) {
               c9 = null;
             }
-            let tmp84 = closure_133_1;
+            let tmp87 = closure_133_1;
             if (closure_133_1) {
-              tmp84 = closure_133_11();
+              tmp87 = closure_133_11();
             }
-            if (tmp84) {
-              dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-              const obj10 = dependencyMap(572);
+            if (tmp87) {
+              picks2(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+              const obj10 = picks2(572);
             }
-            throw closure_6;
+            throw signal;
           } else if (4 === tmp8) {
             c7 = 1;
             dependencyMap.return();
-            throw closure_6;
+            throw signal;
           } else if (5 === tmp8) {
             if (arg0 === 1) {
               c9 = 3;
@@ -258,34 +260,34 @@ function fetchDiscoverDehydrated(arg0) {
               if (c9 === closure_133_10) {
                 c9 = null;
               }
-              let tmp70 = closure_133_1;
+              let tmp73 = closure_133_1;
               if (closure_133_1) {
-                tmp70 = closure_133_11();
+                tmp73 = closure_133_11();
               }
-              if (tmp70) {
-                dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-                const obj8 = dependencyMap(572);
+              if (tmp73) {
+                picks2(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+                const obj8 = picks2(572);
               }
               c9 = 3;
               const obj18 = { value, done: true };
               return obj18;
             } else {
-              closure_132_5 = value;
+              closure_132_7 = value;
               if (closure_133_13()) {
-                if ("broker_error" !== closure_132_5.body.error_code) {
-                  const obj19 = { type: "LOAD_ICYMI_DEHYDRATED", items: closure_132_5.body.items, loadId: closure_132_5.body.load_id, startTime: closure_132_3, isReloading: closure_133_1, isInitialLoad: null, discoverRequest: null };
-                  let tmp59 = null != closure_132_0;
-                  if (!tmp59) {
-                    tmp59 = closure_133_0;
+                if ("broker_error" !== closure_132_7.body.error_code) {
+                  const obj19 = { type: "LOAD_ICYMI_DEHYDRATED", items: closure_132_7.body.items, loadId: closure_132_7.body.load_id, startTime: closure_132_5, isReloading: closure_133_1, isInitialLoad: null, discoverRequest: null };
+                  let tmp62 = null != closure_132_0;
+                  if (!tmp62) {
+                    tmp62 = closure_133_0;
                   }
-                  obj19.isInitialLoad = tmp59;
+                  obj19.isInitialLoad = tmp62;
                   obj19.discoverRequest = closure_133_7;
                   c8 = 6;
                   c9 = 1;
-                  const obj20 = { value: dependencyMap(572).dispatch(obj19), done: false };
+                  const obj20 = { value: picks2(572).dispatch(obj19), done: false };
                   return obj20;
                 }
-                if (0 === closure_132_5.body.items.length) {
+                if (0 === closure_132_7.body.items.length) {
                   const _Error = Error;
                   const error = new Error("Discover feed failed");
                   throw error;
@@ -295,46 +297,51 @@ function fetchDiscoverDehydrated(arg0) {
                 if (c9 === closure_133_10) {
                   c9 = null;
                 }
-                let tmp36 = closure_133_1;
+                let tmp39 = closure_133_1;
                 if (closure_133_1) {
-                  tmp36 = closure_133_11();
+                  tmp39 = closure_133_11();
                 }
-                if (tmp36) {
-                  dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-                  const obj4 = dependencyMap(572);
+                if (tmp39) {
+                  picks2(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+                  const obj4 = picks2(572);
                 }
                 c9 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
           } else if (arg0 === 1) {
             c9 = 3;
             throw value;
           } else if (arg0 !== 2) {
-            let tmp13 = closure_133_13();
-            if (tmp13) {
-              tmp13 = c15 === closure_132_0;
+            let tmp11 = closure_133_13();
+            if (tmp11) {
+              tmp11 = null == closure_132_7.body.error_code;
             }
-            if (tmp13) {
-              c15 = null;
+            if (tmp11) {
+              if (closure_132_4) {
+                c15 = true;
+              }
+              if (c16 === closure_132_0) {
+                c16 = null;
+              }
             }
             c7 = 0;
             if (c9 === closure_133_10) {
               c9 = null;
             }
-            let tmp18 = closure_133_1;
+            let tmp21 = closure_133_1;
             if (closure_133_1) {
-              tmp18 = closure_133_11();
+              tmp21 = closure_133_11();
             }
-            if (tmp18) {
-              dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-              const obj = dependencyMap(572);
+            if (tmp21) {
+              picks2(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+              const obj = picks2(572);
             }
           }
           if (closure_133_12()) {
             if (closure_133_1) {
-              dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: true });
-              const obj12 = dependencyMap(572);
+              picks2(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: true });
+              const obj12 = picks2(572);
             }
             c7 = 1;
             const _Date = Date;
@@ -351,37 +358,47 @@ function fetchDiscoverDehydrated(arg0) {
               if (closure_132_0 != null) {
                 picks = closure_132_0.picks;
               }
-              dependencyMap = picks;
+              picks2 = picks;
               if (picks == null) {
-                dependencyMap = picks.getPicks();
+                picks2 = picks.getPicks();
               }
-              closure_3 = dependencyMap;
-              closure_3 = dependencyMap;
-              dependencyMap = dependencyMap[Symbol.iterator]();
+              closure_132_2 = picks2;
+              closure_3 = closure_132_2;
+              closure_3 = closure_132_2;
+              dependencyMap = closure_132_2[Symbol.iterator]();
               while (dependencyMap !== undefined) {
                 c7 = 2;
-                closure_132_2 = tmp121;
-                let appendResult = closure_132_1.append("game_ids", closure_132_2);
+                closure_132_3 = tmp126;
+                let appendResult = closure_132_1.append("game_ids", closure_132_3);
                 c7 = 1;
                 continue;
               }
-              if (null != closure_132_0) {
+              let tmp133 = null != closure_132_0;
+              if (!tmp133) {
+                let tmp136 = !c15;
+                if (!c15) {
+                  tmp136 = closure_132_2.length > 0;
+                }
+                tmp133 = tmp136;
+              }
+              closure_132_4 = tmp133;
+              if (closure_132_4) {
                 closure_132_1.append("refresh", "true");
               }
               const _Date2 = Date;
-              closure_132_3 = Date.now();
-              closure_11 = closure_132_3;
+              closure_132_5 = Date.now();
+              closure_11 = closure_132_5;
               const _AbortController = AbortController;
               const abortController = new AbortController();
               closure_133_10 = abortController;
               c9 = closure_133_10;
-              signal = closure_133_10.signal;
+              signal2 = closure_133_10.signal;
               c8 = 5;
               c9 = 1;
               const obj21 = {
-                value: closure_0(8784).withDiscoverRequestDeadline(closure_133_10, () => {
+                value: closure_0(8883).withDiscoverRequestDeadline(closure_133_10, () => {
                             const HTTP = closure_0(1284).HTTP;
-                            const request = { url: constants.GRAVITY_ITEMS_DEHYDRATED, query: dependencyMap.toString(), rejectWithError: false, failImmediatelyWhenRateLimited: true, signal, timeout: { deadline: closure_0(8784).DISCOVER_REQUEST_DEADLINE_MS } };
+                            const request = { url: constants.GRAVITY_ITEMS_DEHYDRATED, query: closure_1_1.toString(), rejectWithError: false, failImmediatelyWhenRateLimited: true, signal, timeout: { deadline: closure_0(8883).DISCOVER_REQUEST_DEADLINE_MS } };
                             return HTTP.get(request);
                           }),
                 done: false
@@ -390,12 +407,12 @@ function fetchDiscoverDehydrated(arg0) {
             }
           }
         }
-      } catch (tmp153) {
-        closure_6 = tmp153;
+      } catch (tmp165) {
+        signal = tmp165;
         if (tmp4 === c7) {
           c9 = tmp2;
-          throw tmp153;
-        } else if (tmp === tmp155) {
+          throw tmp165;
+        } else if (tmp === tmp167) {
           c8 = tmp2;
         } else {
           c8 = tmp5;
@@ -414,7 +431,7 @@ function fetchDiscoverDehydrated(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -561,11 +578,11 @@ function fetchDiscoverDehydrated(arg0) {
   }
   let tmp3 = null;
   if (isDiscoverPickerCommit) {
-    tmp3 = closure_15;
+    tmp3 = closure_16;
   }
   closure_4 = tmp3;
   AuthenticationStore = closure_14;
-  UserStore = closure_18;
+  UserStore = closure_19;
   let discoverRequestGuard = require("DiscoverRequestState").discoverRequestGuard;
   discoverRequestGuard.observeGate(require("WaterwheelsDiscoverExperiment").getWaterwheelsDiscoverEnabled("fetchDehydrated"));
   let discoverRequestGuard2 = require("DiscoverRequestState").discoverRequestGuard;
@@ -604,7 +621,8 @@ let c11 = 0;
 let c12 = 0;
 const set = new Set();
 let closure_14 = {};
-let c15 = null;
+let c15 = false;
+let c16 = null;
 let tmp3 = null;
 if (AuthenticationStore.isAuthenticated()) {
   let id = AuthenticationStore.getId();
@@ -623,21 +641,21 @@ if (null != tmp3) {
   tmp5 = authSessionIdHash;
 }
 function resetDiscoverAccount() {
-  c15 = null;
+  c16 = null;
   closure_14 = {};
   c11 = 0;
   c12 = 0;
   if (_null != null) {
     _null.abort();
   }
-  closure_18 = {};
+  closure_19 = {};
   const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
   discoverRequestGuard.resetSession();
   id = null;
   authSessionIdHash = null;
 }
 authSessionIdHash = tmp5;
-let closure_18 = {};
+let closure_19 = {};
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", resetDiscoverAccount);
 let Dispatcher = Dispatcher_mod;
@@ -645,14 +663,14 @@ const subscription1 = Dispatcher.subscribe("LOGIN_SUCCESS", resetDiscoverAccount
 let Dispatcher = Dispatcher_mod;
 const subscription2 = Dispatcher.subscribe("LOGIN_RESET", (isMultiAccount) => {
   if (!isMultiAccount.isMultiAccount) {
-    c15 = null;
+    c16 = null;
     closure_14 = {};
     c11 = 0;
     c12 = 0;
     if (_null != null) {
       _null.abort();
     }
-    closure_18 = {};
+    closure_19 = {};
     const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
     discoverRequestGuard.resetSession();
     id = null;
@@ -666,14 +684,14 @@ const subscription4 = Dispatcher.subscribe("CLOSE_SUSPENDED_USER", resetDiscover
 let Dispatcher = Dispatcher_mod;
 const subscription5 = Dispatcher.subscribe("CONNECTION_CLOSED", (code) => {
   if (4004 === code.code) {
-    c15 = null;
+    c16 = null;
     closure_14 = {};
     c11 = 0;
     c12 = 0;
     if (_null != null) {
       _null.abort();
     }
-    closure_18 = {};
+    closure_19 = {};
     const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
     discoverRequestGuard.resetSession();
     id = null;
@@ -685,14 +703,14 @@ const subscription6 = Dispatcher.subscribe("CONNECTION_OPEN", (authSessionIdHash
   authSessionIdHash = authSessionIdHash.authSessionIdHash;
   id = authSessionIdHash.user.id;
   if (id !== id) {
-    c15 = null;
+    c16 = null;
     closure_14 = {};
     c11 = 0;
     c12 = 0;
     if (_null != null) {
       _null.abort();
     }
-    closure_18 = {};
+    closure_19 = {};
     const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
     discoverRequestGuard.resetSession();
     authSessionIdHash = null;
@@ -703,14 +721,14 @@ const subscription6 = Dispatcher.subscribe("CONNECTION_OPEN", (authSessionIdHash
       tmp7 = authSessionIdHash !== authSessionIdHash;
     }
     if (tmp7) {
-      c15 = null;
+      c16 = null;
       closure_14 = {};
       c11 = 0;
       c12 = 0;
       if (_null != null) {
         _null.abort();
       }
-      closure_18 = {};
+      closure_19 = {};
       const discoverRequestGuard2 = DiscoverRequestState.discoverRequestGuard;
       discoverRequestGuard2.resetSession();
     }
@@ -725,14 +743,14 @@ const subscription7 = Dispatcher.subscribe("AUTH_SESSION_CHANGE", (authSessionId
       tmp2 = authSessionIdHash !== authSessionIdHash;
     }
     if (tmp2) {
-      c15 = null;
+      c16 = null;
       closure_14 = {};
       c11 = 0;
       c12 = 0;
       if (_null != null) {
         _null.abort();
       }
-      closure_18 = {};
+      closure_19 = {};
       const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
       discoverRequestGuard.resetSession();
     }
@@ -756,7 +774,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -841,7 +859,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -875,7 +893,7 @@ export default {
               setDiscoverAuthSessionIdHash(tmp48.getAuthSessionIdHash());
               let isDiscoverPickerCommit = tmp66.isDiscoverPickerCommit;
               if (isDiscoverPickerCommit) {
-                isDiscoverPickerCommit = null != closure_1_16;
+                isDiscoverPickerCommit = null != closure_1_17;
               }
               if (isDiscoverPickerCommit) {
                 if (closure_1_9 != null) {
@@ -883,11 +901,11 @@ export default {
                 }
                 closure_14 = {};
                 { picks: null }.picks = tmp3.getPicks();
-                const discoverRequestGuard = _null(8779).discoverRequestGuard;
-                discoverRequestGuard.observeGate(_null(8780).getWaterwheelsDiscoverEnabled("fetchDehydrated"));
-                const discoverRequestGuard2 = _null(8779).discoverRequestGuard;
+                const discoverRequestGuard = _null(8878).discoverRequestGuard;
+                discoverRequestGuard.observeGate(_null(8879).getWaterwheelsDiscoverEnabled("fetchDehydrated"));
+                const discoverRequestGuard2 = _null(8878).discoverRequestGuard;
                 discoverRequestGuard2.commitPicker();
-                const discoverRequestGuard3 = _null(8779).discoverRequestGuard;
+                const discoverRequestGuard3 = _null(8878).discoverRequestGuard;
                 authSessionIdHash = tmp48.getAuthSessionIdHash();
                 let _null2 = authSessionIdHash;
                 if (authSessionIdHash == null) {
@@ -896,27 +914,27 @@ export default {
                 const clearDiscoverSnapshot = tmp66.clearDiscoverSnapshot;
                 dependencyMap = clearDiscoverSnapshot;
                 const obj7 = { picks: null };
-                const obj8 = _null(8780);
+                const obj8 = _null(8879);
                 if (clearDiscoverSnapshot == null) {
                   dependencyMap = false;
                 }
                 (function dispatchDiscoverPickerCommit() {
                   const self = this;
-                  const apply = closure_1_22.apply;
+                  const apply = closure_1_23.apply;
                   if (typeof apply === "unknown") {
                     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                   } else {
                     applyArgumentsResult = apply(self, arguments);
                   }
                   return applyArgumentsResult;
-                })(discoverRequestGuard3.capture(closure_1_16, _null2), dependencyMap);
-                const captureResult = discoverRequestGuard3.capture(closure_1_16, _null2);
+                })(discoverRequestGuard3.capture(closure_1_17, _null2), dependencyMap);
+                const captureResult = discoverRequestGuard3.capture(closure_1_17, _null2);
               }
               if (obj9.icymiEnabled("fetchDehydrated")) {
                 if (tmp38Result.getWaterwheelsDiscoverEnabled("fetchDehydrated")) {
                   if (tmp66.isDiscoverBackground) {
                     c8 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                   c8 = 3;
                   const obj10 = { value: fetchDiscoverDehydrated(tmp66), done: true };
@@ -938,9 +956,9 @@ export default {
                   const obj13 = { value: HTTP.get(request), done: false };
                   return obj13;
                 }
-                tmp38Result = tmp38(8780);
+                tmp38Result = tmp38(8879);
               }
-              obj9 = _null(8785);
+              obj9 = _null(8884);
             }
           } else {
             if (1 === tmp8) {
@@ -1001,7 +1019,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1031,7 +1049,7 @@ export default {
                 }
               }
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -1077,7 +1095,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1137,7 +1155,7 @@ export default {
             }
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
           c5 = 3;
         } catch (tmp26) {
@@ -1173,7 +1191,7 @@ export default {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1267,7 +1285,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1341,7 +1359,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1415,7 +1433,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

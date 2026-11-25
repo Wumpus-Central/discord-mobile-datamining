@@ -1,18 +1,18 @@
-// === Module 8055: InAppReportModal ===
+// === Module 8154: InAppReportModal ===
 
-// Module 8055 (InAppReportModal)
+// Module 8154 (InAppReportModal)
 import util from "util" /* 1112 */;
-import Navigator from "Navigator" /* 7229 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 7618 */;
-import showReportModal from "showReportModal" /* 8052 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8054 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8077 */;
+import Navigator from "Navigator" /* 7324 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 7717 */;
+import showReportModal from "showReportModal" /* 8151 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8153 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8176 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8056).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8155).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -56,7 +56,7 @@ export default function InAppReportModal(arg0) {
   [c12, c13] = noop.useState([]);
   const tmp4 = _slicedToArray(noop.useState([]), 2);
   [c14, c15] = noop.useState([]);
-  menu(5478)(() => {
+  menu(5573)(() => {
     const orFetchLinkedUsers = FamilyCenterUtils.getOrFetchLinkedUsers();
   });
   items = [closeModal, first];
@@ -72,7 +72,7 @@ export default function InAppReportModal(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -123,7 +123,7 @@ export default function InAppReportModal(arg0) {
               addOnCloseCallback(closure_2);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp32) {
           c4 = tmp;
@@ -177,7 +177,7 @@ export default function InAppReportModal(arg0) {
       const obj6 = {};
       const obj7 = {
         headerRight() {
-            const obj = { source: menu(7619), onPress, accessibilityLabel: null };
+            const obj = { source: menu(7718), onPress, accessibilityLabel: null };
             const intl = util.intl;
             obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
             return addOnCloseCallback(HeaderActionButton2.HeaderActionButton, obj);

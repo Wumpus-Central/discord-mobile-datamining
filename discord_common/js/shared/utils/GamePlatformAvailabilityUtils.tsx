@@ -1,7 +1,7 @@
-// === Module 13184: GamePlatformAvailabilityUtils ===
+// === Module 13307: GamePlatformAvailabilityUtils ===
 
-// Module 13184 (GamePlatformAvailabilityUtils)
-import GamePlatformAvailability from "GamePlatformAvailability" /* 13180 */;
+// Module 13307 (GamePlatformAvailabilityUtils)
+import GamePlatformAvailability from "GamePlatformAvailability" /* 13303 */;
 import size from "module_2" /* 2 */;
 
 const items = [GamePlatformAvailability.GamePlatformAvailability.DESKTOP, GamePlatformAvailability.GamePlatformAvailability.MOBILE, GamePlatformAvailability.GamePlatformAvailability.CONSOLE, GamePlatformAvailability.GamePlatformAvailability.ROBLOX];

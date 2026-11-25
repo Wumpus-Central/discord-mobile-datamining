@@ -1,11 +1,11 @@
-// === Module 10353: InviteQueue ===
+// === Module 10452: InviteQueue ===
 
-// Module 10353 (InviteQueue)
+// Module 10452 (InviteQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8103 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import Queue from "Queue" /* 6665 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8202 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import Queue from "Queue" /* 6760 */;
 
 const sum = DurationsDefault.Millis.SECOND + 10;
 let c3 = sum;
@@ -31,8 +31,8 @@ function drain(location, sum) {
   if (self.GROUP_DM !== type) {
     if (tmp.CHANNEL !== type) {
       if (tmp.USER === type) {
-        const obj = inviteAnalyticsMetadata(7714);
-        inviteAnalyticsMetadata(7714).ensurePrivateChannel(location.user.id).then((result) => {
+        const obj = inviteAnalyticsMetadata(7813);
+        inviteAnalyticsMetadata(7813).ensurePrivateChannel(location.user.id).then((result) => {
           const channel = ChannelStore.getChannel(result);
           if (null != channel) {
             self._sendInvite(channel, _location.inviteKey, _location, inviteAnalyticsMetadata, sum);
@@ -40,7 +40,7 @@ function drain(location, sum) {
             sum(null, false);
           }
         }, () => sum(null, false));
-        const ensurePrivateChannelResult = inviteAnalyticsMetadata(7714).ensurePrivateChannel(location.user.id);
+        const ensurePrivateChannelResult = inviteAnalyticsMetadata(7813).ensurePrivateChannel(location.user.id);
       }
     }
   }

@@ -1,12 +1,12 @@
-// === Module 9958: ApplicationInstallUtils ===
+// === Module 10057: ApplicationInstallUtils ===
 
-// Module 9958 (ApplicationInstallUtils)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5532 */;
-import isConjureApplicationDefault from "isConjureApplication" /* 6819 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9906 */;
+// Module 10057 (ApplicationInstallUtils)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5627 */;
+import isConjureApplicationDefault from "isConjureApplication" /* 6914 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10005 */;
 
 require = fn;
-const BuiltInSectionId = fn(6947).BuiltInSectionId;
+const BuiltInSectionId = fn(7042).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 

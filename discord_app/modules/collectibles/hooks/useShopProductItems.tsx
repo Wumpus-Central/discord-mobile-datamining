@@ -1,6 +1,6 @@
-// === Module 9290: useShopProductItems ===
+// === Module 9389: useShopProductItems ===
 
-// Module 9290 (useShopProductItems)
+// Module 9389 (useShopProductItems)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

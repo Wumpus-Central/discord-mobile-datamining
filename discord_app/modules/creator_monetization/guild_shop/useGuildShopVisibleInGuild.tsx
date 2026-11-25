@@ -1,11 +1,11 @@
-// === Module 7493: useGuildShopVisibleInGuild ===
+// === Module 7588: useGuildShopVisibleInGuild ===
 
-// Module 7493 (useGuildShopVisibleInGuild)
+// Module 7588 (useGuildShopVisibleInGuild)
 import Constants from "Constants" /* 1071 */;
-import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 7481 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7484 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 7489 */;
-import useGuildShopPreviewVisible from "useGuildShopPreviewVisible" /* 7494 */;
+import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 7576 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7579 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 7584 */;
+import useGuildShopPreviewVisible from "useGuildShopPreviewVisible" /* 7589 */;
 import size from "module_2" /* 2 */;
 
 const GuildFeatures = Constants.GuildFeatures;

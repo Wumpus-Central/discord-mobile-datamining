@@ -1,24 +1,24 @@
-// === Module 7717: RelationshipActionCreators ===
+// === Module 7816: RelationshipActionCreators ===
 
-// Module 7717 (RelationshipActionCreators)
+// Module 7816 (RelationshipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import shared from "shared" /* 4924 */;
-import UserUtilsDefault from "UserUtils" /* 4973 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5920 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6867 */;
-import ContextMenuActionCreators from "ContextMenuActionCreators" /* 6891 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7712 */;
-import SafetyToastsUtils from "SafetyToastsUtils" /* 7713 */;
-import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7719 */;
-import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7720 */;
-import FriendsUtils from "FriendsUtils" /* 7721 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 7722 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 7729 */;
+import shared from "shared" /* 5019 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6015 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6962 */;
+import ContextMenuActionCreators from "ContextMenuActionCreators" /* 6986 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7811 */;
+import SafetyToastsUtils from "SafetyToastsUtils" /* 7812 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7818 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7819 */;
+import FriendsUtils from "FriendsUtils" /* 7820 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 7821 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 7828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -100,8 +100,8 @@ function fireFriendRequestSurveyAction(arg0) {
 }
 const Constants = fn(1071);
 ({ Endpoints: closure_8, AbortCodes: closure_9, RelationshipTypes: closure_10 } = Constants);
-const ClearFriendRequestFilters = fn(7718).ClearFriendRequestFilters;
-const SafetyToastType = fn(7707).SafetyToastType;
+const ClearFriendRequestFilters = fn(7817).ClearFriendRequestFilters;
+const SafetyToastType = fn(7806).SafetyToastType;
 const RelationshipErrorUXConfig = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 let obj2 = {
   sendRequest(arg0) {
@@ -120,7 +120,7 @@ let obj2 = {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -283,7 +283,7 @@ let obj2 = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = closure_0(4924).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_0(5019).AccessibilityAnnouncer;
       const intl = closure_0(1112).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1112).t.n6Jo3E));
     });
@@ -348,8 +348,8 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.IGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(7712).showFailedToast();
-      const AccessibilityAnnouncer = userId(4924).AccessibilityAnnouncer;
+      channelId(7811).showFailedToast();
+      const AccessibilityAnnouncer = userId(5019).AccessibilityAnnouncer;
       const intl = userId(1112).intl;
       AccessibilityAnnouncer.announce(intl.string(userId(1112).t.n6Jo3E));
     });
@@ -368,8 +368,8 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(7712).showFailedToast();
-      const AccessibilityAnnouncer = userId(4924).AccessibilityAnnouncer;
+      channelId(7811).showFailedToast();
+      const AccessibilityAnnouncer = userId(5019).AccessibilityAnnouncer;
       const intl = userId(1112).intl;
       AccessibilityAnnouncer.announce(intl.string(userId(1112).t.n6Jo3E));
     });

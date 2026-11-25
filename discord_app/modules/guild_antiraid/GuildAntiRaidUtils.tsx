@@ -1,10 +1,10 @@
-// === Module 10452: GuildAntiRaidUtils ===
+// === Module 10551: GuildAntiRaidUtils ===
 
-// Module 10452 (GuildAntiRaidUtils)
+// Module 10551 (GuildAntiRaidUtils)
 import util from "util" /* 1112 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 10454 */;
-import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 10453 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 10553 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 10552 */;
 import size from "module_2" /* 2 */;
 
 ({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: closure_4, getTimeframes: hasOwnProperty } = GuildAntiRaidConstants);

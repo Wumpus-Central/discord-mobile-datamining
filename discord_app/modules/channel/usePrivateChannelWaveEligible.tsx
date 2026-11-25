@@ -1,13 +1,13 @@
-// === Module 17598: usePrivateChannelWaveEligible ===
+// === Module 17709: usePrivateChannelWaveEligible ===
 
-// Module 17598 (usePrivateChannelWaveEligible)
-import MessageStore from "MessageStore" /* 6265 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+// Module 17709 (usePrivateChannelWaveEligible)
+import MessageStore from "MessageStore" /* 6360 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(4773).ChannelFlags;
+const ChannelFlags = fn(4868).ChannelFlags;
 const MessageTypes = fn(1071).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");

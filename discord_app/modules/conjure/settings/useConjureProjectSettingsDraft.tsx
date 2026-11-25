@@ -1,10 +1,10 @@
-// === Module 18325: useConjureProjectSettingsDraft ===
+// === Module 18437: useConjureProjectSettingsDraft ===
 
-// Module 18325 (useConjureProjectSettingsDraft)
+// Module 18437 (useConjureProjectSettingsDraft)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
 
 const require = globalThis.__r;
 
@@ -312,7 +312,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -447,7 +447,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -548,7 +548,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

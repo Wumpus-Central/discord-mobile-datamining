@@ -1,8 +1,8 @@
-// === Module 4816: ChannelReader ===
+// === Module 4911: ChannelReader ===
 
-// Module 4816 (ChannelReader)
+// Module 4911 (ChannelReader)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4795 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4890 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const logger = new LoggerDefault("ChannelReader");
@@ -47,7 +47,7 @@ prototype["getGuildIds"] = function getGuildIds() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 9300: VirtualCurrencyStore ===
+// === Module 9399: VirtualCurrencyStore ===
 
-// Module 9300 (VirtualCurrencyStore)
+// Module 9399 (VirtualCurrencyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

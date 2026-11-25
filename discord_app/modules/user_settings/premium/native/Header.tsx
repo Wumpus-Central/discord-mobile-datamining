@@ -1,19 +1,19 @@
-// === Module 13749: premium/Header ===
+// === Module 13872: premium/Header ===
 
-// Module 13749 (premium/Header)
+// Module 13872 (premium/Header)
 import util from "util" /* 1112 */;
-import useThemeDefault from "useTheme" /* 5126 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import _modDef13750 from "module_13750" /* 13750 */;
-import _modDef13751 from "module_13751" /* 13751 */;
+import useThemeDefault from "useTheme" /* 5221 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import _modDef13873 from "module_13873" /* 13873 */;
+import _modDef13874 from "module_13874" /* 13874 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
@@ -29,9 +29,9 @@ export default function Header(style) {
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef13750;
+    let tmp2Result = _modDef13873;
   } else {
-    tmp2Result = _modDef13751;
+    tmp2Result = _modDef13874;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2), ];

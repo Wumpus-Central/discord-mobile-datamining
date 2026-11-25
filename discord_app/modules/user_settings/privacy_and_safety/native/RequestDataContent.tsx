@@ -1,9 +1,9 @@
-// === Module 16197: RequestDataContent ===
+// === Module 16318: RequestDataContent ===
 
-// Module 16197 (RequestDataContent)
+// Module 16318 (RequestDataContent)
 import util from "util" /* 1112 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5920 */;
-import DataHarvestActionCreators from "DataHarvestActionCreators" /* 16198 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6015 */;
+import DataHarvestActionCreators from "DataHarvestActionCreators" /* 16319 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const constants = { USERS: "Account", MESSAGES: "Messages", GUILDS: "Servers", ANALYTICS: "Analytics", ACTIVITIES: "Activities", ADS: "Ads", ZENDESK: "Zendesk" };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_11 = createStyles.createStyles({ content: { padding: 16 }, header: { marginBottom: 8 }, title: { marginBottom: 8 }, description: { marginBottom: 0 }, checkboxContainer: { marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataContent.tsx");
@@ -149,8 +149,8 @@ export default noop.memo(function RequestDataContent() {
         const intl2 = closure_1_0(1112).intl;
         obj2.title = intl2.string(closure_1_0(1112).t.OjbtDm);
         obj2.body = message;
-        closure_1_1(5920).show(obj2);
-        const obj = closure_1_1(5920);
+        closure_1_1(6015).show(obj2);
+        const obj = closure_1_1(6015);
       }).finally(() => closure_1_1(false));
       const nextPromise = dataHarvest.then((body) => {
         if (null != body) {
@@ -195,8 +195,8 @@ export default noop.memo(function RequestDataContent() {
         const intl2 = closure_1_0(1112).intl;
         obj2.title = intl2.string(closure_1_0(1112).t.OjbtDm);
         obj2.body = message;
-        closure_1_1(5920).show(obj2);
-        const obj = closure_1_1(5920);
+        closure_1_1(6015).show(obj2);
+        const obj = closure_1_1(6015);
       });
     } else {
       let obj3 = { title: null, body: null };

@@ -1,13 +1,13 @@
-// === Module 16408: BountiesModalEndCard ===
+// === Module 16529: BountiesModalEndCard ===
 
-// Module 16408 (BountiesModalEndCard)
+// Module 16529 (BountiesModalEndCard)
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import timingPresets from "timingPresets" /* 5130 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import timingPresets from "timingPresets" /* 5225 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4917 */;
+import createStyles from "createStyles" /* 5012 */;
 import size from "module_2" /* 2 */;
 
 const _modDef1653 = _mod1653;

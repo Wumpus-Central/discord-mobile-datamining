@@ -1,24 +1,24 @@
-// === Module 20064: GuildRoleSubscriptionTierBenefitsModal ===
+// === Module 20169: GuildRoleSubscriptionTierBenefitsModal ===
 
-// Module 20064 (GuildRoleSubscriptionTierBenefitsModal)
+// Module 20169 (GuildRoleSubscriptionTierBenefitsModal)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import TableRowGroup from "TableRowGroup" /* 6014 */;
-import TableRow from "TableRow" /* 6018 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 12919 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16664 */;
-import useRoleSubscriptionFormatDefault from "useRoleSubscriptionFormat" /* 20042 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20053 */;
-import EmojiAliasDefault from "EmojiAlias" /* 20065 */;
-import useRoleSubscriptionEmojisDefault from "useRoleSubscriptionEmojis" /* 20069 */;
-import GuildRoleSubscriptionsModalActionCreatorsAll from "GuildRoleSubscriptionsModalActionCreators" /* 20070 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import TableRowGroup from "TableRowGroup" /* 6109 */;
+import TableRow from "TableRow" /* 6113 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 13043 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16785 */;
+import useRoleSubscriptionFormatDefault from "useRoleSubscriptionFormat" /* 20147 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20158 */;
+import EmojiAliasDefault from "EmojiAlias" /* 20170 */;
+import useRoleSubscriptionEmojisDefault from "useRoleSubscriptionEmojis" /* 20174 */;
+import GuildRoleSubscriptionsModalActionCreatorsAll from "GuildRoleSubscriptionsModalActionCreators" /* 20175 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const AllChannelsSwitchDefault = tmp10(20079);
+const AllChannelsSwitchDefault = tmp10(20184);
 require = fn;
 function AddBenefitRow(disabled) {
   let flag = disabled.disabled;
@@ -54,7 +54,7 @@ function ListFooterSection(onChangeTrialInterval) {
   onChangeTrialInterval = onChangeTrialInterval.onChangeTrialInterval;
   let options;
   ({ interval, trialActiveUserLimit, onChangeTrialActiveUserLimit } = onChangeTrialInterval);
-  const tmp4 = options(16669)(interval);
+  const tmp4 = options(16790)(interval);
   options = tmp4.options;
   const selectedOption = tmp4.selectedOption;
   items = [onChangeTrialInterval, options];
@@ -68,7 +68,7 @@ function ListFooterSection(onChangeTrialInterval) {
     onChangeTrialInterval(value);
   }, items);
   const tmp = closure_14();
-  const roleSubscriptionSettingsDisabled = onChangeTrialInterval(20046).useRoleSubscriptionSettingsDisabled();
+  const roleSubscriptionSettingsDisabled = onChangeTrialInterval(20151).useRoleSubscriptionSettingsDisabled();
   let tmp9 = !tmp6;
   if (null != selectedOption) {
     tmp9 = roleSubscriptionSettingsDisabled;
@@ -85,9 +85,9 @@ function ListFooterSection(onChangeTrialInterval) {
   obj4.value = null != selectedOption;
   obj4.onValueChange = callback;
   obj4.disabled = roleSubscriptionSettingsDisabled;
-  const items1 = [closure_12(onChangeTrialInterval(7423).TableSwitchRow, obj4), closure_12(options(20066), { interval: selectedOption, onChange: onChangeTrialInterval, trialIntervalOptions: options, disabled: tmp9 }), closure_12(options(20067), { activeTrialUserlimit: trialActiveUserLimit, onChange: onChangeTrialActiveUserLimit, disabled: tmp9 })];
+  const items1 = [closure_12(onChangeTrialInterval(7518).TableSwitchRow, obj4), closure_12(options(20171), { interval: selectedOption, onChange: onChangeTrialInterval, trialIntervalOptions: options, disabled: tmp9 }), closure_12(options(20172), { activeTrialUserlimit: trialActiveUserLimit, onChange: onChangeTrialActiveUserLimit, disabled: tmp9 })];
   obj3.children = items1;
-  obj2.children = closure_13(onChangeTrialInterval(6014).TableRowGroup, obj3);
+  obj2.children = closure_13(onChangeTrialInterval(6109).TableRowGroup, obj3);
   return closure_12(closure_7, obj2);
 }
 function Content(arg0) {
@@ -217,9 +217,9 @@ function Content(arg0) {
                 onDelete() {
                   ref_type = closure_1;
                   if (ref_type.ref_type === constants.CHANNEL) {
-                    closure_2_8((arr) => arr.filter(/* F141971 */ function() { ... }));
+                    closure_2_8((arr) => arr.filter(/* F142412 */ function() { ... }));
                   } else {
-                    closure_2_10((arr) => arr.filter(/* F141972 */ function() { ... }));
+                    closure_2_10((arr) => arr.filter(/* F142413 */ function() { ... }));
                   }
                 },
                 onSave(ref_type) {
@@ -241,7 +241,7 @@ function Content(arg0) {
             },
           disabled: roleSubscriptionSettingsDisabled
         };
-        tmp3Result = closure_12(closure_1(20078), obj);
+        tmp3Result = closure_12(closure_1(20183), obj);
       }
       return tmp3Result;
     },
@@ -322,13 +322,13 @@ class GuildRoleSubscriptionTierBenefitsTab {
 }
 get_ActivityIndicator = fn(17);
 ({ SectionList: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-let AllChannelAccessOptions = fn(16665).AllChannelAccessOptions;
-const useGroupIsFullGateState = fn(20050).useGroupIsFullGateState;
-const GuildRoleSubscriptionsConstants = fn(16644);
+let AllChannelAccessOptions = fn(16786).AllChannelAccessOptions;
+const useGroupIsFullGateState = fn(20155).useGroupIsFullGateState;
+const GuildRoleSubscriptionsConstants = fn(16765);
 ({ GuildRoleSubscriptionBenefitTypes: closure_10, GuildRoleSubscriptionsTierScenes: closure_11 } = GuildRoleSubscriptionsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { listContainer: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, paddingBottom: 16 }, sectionTitle: null, listFooterContainer: null, allChannelsSwitch: null, emojiImage: null, addBenefitRowAfterBenefits: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, paddingBottom: 16 };
 obj2.sectionTitle = { marginTop: nativeDefault.space.PX_24 };

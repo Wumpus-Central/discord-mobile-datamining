@@ -1,14 +1,14 @@
-// === Module 9222: LinkButton ===
+// === Module 9321: LinkButton ===
 
-// Module 9222 (LinkButton)
-import Text_Text from "Text/Text" /* 5508 */;
-import Pressables from "Pressables" /* 6026 */;
+// Module 9321 (LinkButton)
+import Text_Text from "Text/Text" /* 5603 */;
+import Pressables from "Pressables" /* 6121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_4 = createStyles.createStyles({ defaultContainerStyle: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }, disabledContainerStyle: { opacity: 0.5 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/components/LinkButton.tsx");

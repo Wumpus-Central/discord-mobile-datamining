@@ -1,20 +1,20 @@
-// === Module 19227: ActivityPanelPIPView ===
+// === Module 19338: ActivityPanelPIPView ===
 
-// Module 19227 (ActivityPanelPIPView)
+// Module 19338 (ActivityPanelPIPView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10059 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11639 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19225 */;
-import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19230 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10158 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11738 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19336 */;
+import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19341 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10116 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4765 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10215 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
 
 require = fn;
 class BaseActivityPanelPIPView {
@@ -323,18 +323,18 @@ class BaseActivityPanelPIPView {
   }
 }
 const View = fn(17).View;
-const ActivityPanelConstants = fn(5543);
+const ActivityPanelConstants = fn(5638);
 const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: closure_10, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_11, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1 } = ActivityPanelConstants);
-let closure_14 = fn(19078).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_14 = fn(19189).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 let ThemeTypes = fn(1071).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11636).PIP_WINDOW_OFFSET;
-const ActivityLayoutMode = fn(10050).ActivityLayoutMode;
+const PIP_WINDOW_OFFSET = fn(11735).PIP_WINDOW_OFFSET;
+const ActivityLayoutMode = fn(10149).ActivityLayoutMode;
 let jsx = fn(21).jsx;
 let closure_19 = { duration: 300 };
 const native = fn(1186);
 const boxShadowStyle = native.generateBoxShadowStyle(fn(1186).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);

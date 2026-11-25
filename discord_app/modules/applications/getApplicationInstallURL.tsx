@@ -1,6 +1,6 @@
-// === Module 12916: getApplicationInstallURL ===
+// === Module 13040: getApplicationInstallURL ===
 
-// Module 12916 (getApplicationInstallURL)
+// Module 13040 (getApplicationInstallURL)
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

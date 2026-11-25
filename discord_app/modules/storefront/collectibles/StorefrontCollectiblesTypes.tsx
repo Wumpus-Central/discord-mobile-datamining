@@ -1,7 +1,7 @@
-// === Module 10983: StorefrontCollectiblesTypes ===
+// === Module 11082: StorefrontCollectiblesTypes ===
 
-// Module 10983 (StorefrontCollectiblesTypes)
-import CollectiblesPromotionIcon from "CollectiblesPromotionIcon" /* 10984 */;
+// Module 11082 (StorefrontCollectiblesTypes)
+import CollectiblesPromotionIcon from "CollectiblesPromotionIcon" /* 11083 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/storefront/collectibles/StorefrontCollectiblesTypes.tsx");

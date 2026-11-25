@@ -1,13 +1,13 @@
-// === Module 14737: getActivityHeader ===
+// === Module 14859: getActivityHeader ===
 
-// Module 14737 (getActivityHeader)
+// Module 14859 (getActivityHeader)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import ActivityTypes from "ActivityTypes" /* 5889 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11233 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 14738 */;
-import getActivityPlatformDefault from "getActivityPlatform" /* 14739 */;
-import getActivityPlatformDisplayNameDefault from "getActivityPlatformDisplayName" /* 14742 */;
+import ActivityTypes from "ActivityTypes" /* 5984 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11332 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 14860 */;
+import getActivityPlatformDefault from "getActivityPlatform" /* 14861 */;
+import getActivityPlatformDisplayNameDefault from "getActivityPlatformDisplayName" /* 14864 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;

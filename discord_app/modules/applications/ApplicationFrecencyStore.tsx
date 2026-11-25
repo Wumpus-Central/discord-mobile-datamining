@@ -1,11 +1,11 @@
-// === Module 9907: ApplicationFrecencyStore ===
+// === Module 10006: ApplicationFrecencyStore ===
 
-// Module 9907 (ApplicationFrecencyStore)
+// Module 10006 (ApplicationFrecencyStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5733 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4765 */;
+import FrecencyDefault from "Frecency" /* 5828 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 
 function handleUserSettingsProtoStoreChange() {

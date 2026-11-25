@@ -1,6 +1,6 @@
-// === Module 16533: ? ===
+// === Module 16654: ? ===
 
-// Module 16533
+// Module 16654
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WumpusCouchSpotIllustration-3x.png.js");

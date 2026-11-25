@@ -1,6 +1,6 @@
-// === Module 11740: PinotChannelLabelAnchor ===
+// === Module 11839: PinotChannelLabelAnchor ===
 
-// Module 11740 (PinotChannelLabelAnchor)
+// Module 11839 (PinotChannelLabelAnchor)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 17538: NativeAuthenticationModule ===
+// === Module 17649: NativeAuthenticationModule ===
 
-// Module 17538 (NativeAuthenticationModule)
+// Module 17649 (NativeAuthenticationModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

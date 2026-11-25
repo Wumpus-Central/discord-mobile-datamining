@@ -1,11 +1,11 @@
-// === Module 6941: MarkupUtils ===
+// === Module 7036: MarkupUtils ===
 
-// Module 6941 (MarkupUtils)
-import MarkupReactRules from "MarkupReactRules" /* 5995 */;
-import reactParserFor2 from "reactParserFor" /* 6942 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6945 */;
-import MarkupRulesDefault from "MarkupRules" /* 6946 */;
-import markup_MarkupParserAll from "markup/MarkupParser" /* 7053 */;
+// Module 7036 (MarkupUtils)
+import MarkupReactRules from "MarkupReactRules" /* 6090 */;
+import reactParserFor2 from "reactParserFor" /* 7037 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 7040 */;
+import MarkupRulesDefault from "MarkupRules" /* 7041 */;
+import markup_MarkupParserAll from "markup/MarkupParser" /* 7148 */;
 import apply_mod from "apply" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;

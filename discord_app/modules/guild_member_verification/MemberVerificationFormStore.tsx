@@ -1,10 +1,10 @@
-// === Module 6909: MemberVerificationFormStore ===
+// === Module 7004: MemberVerificationFormStore ===
 
-// Module 6909 (MemberVerificationFormStore)
+// Module 7004 (MemberVerificationFormStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4953 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
 
 require = fn;
 const NO_MEMBER_VERIFICATION_FORM = { version: "", description: "", formFields: [] };

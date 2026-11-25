@@ -1,6 +1,6 @@
-// === Module 12775: ChatInputNativeComponent ===
+// === Module 12936: ChatInputNativeComponent ===
 
-// Module 12775 (ChatInputNativeComponent)
+// Module 12936 (ChatInputNativeComponent)
 import _mod26 from "module_26" /* 26 */;
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;

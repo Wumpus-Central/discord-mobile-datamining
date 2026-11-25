@@ -1,13 +1,13 @@
-// === Module 15738: providers ===
+// === Module 15859: providers ===
 
-// Module 15738 (providers)
+// Module 15859 (providers)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7406 */;
-import RPCErrorDefault from "RPCError" /* 7518 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10077 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7501 */;
+import RPCErrorDefault from "RPCError" /* 7613 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10176 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7336 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7431 */;
 
 require = fn;
 let closure_10 = async function _refreshProviderAccessToken() {
@@ -20,7 +20,7 @@ let closure_10 = async function _refreshProviderAccessToken() {
   }
   return { access_token: closure_130_0 };
 };
-let Constants = fn(5671);
+let Constants = fn(5766);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1071);
 ({ AnalyticsLocations: hasOwnProperty, ComponentActions: closure_6, PlatformTypes: metroImportDefault } = Constants);
@@ -161,7 +161,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

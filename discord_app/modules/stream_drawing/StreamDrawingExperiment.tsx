@@ -1,9 +1,9 @@
-// === Module 14973: StreamDrawingExperiment ===
+// === Module 15095: StreamDrawingExperiment ===
 
-// Module 14973 (StreamDrawingExperiment)
-import StreamDrawingChannel from "StreamDrawingChannel" /* 14972 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildStore from "GuildStore" /* 4788 */;
+// Module 15095 (StreamDrawingExperiment)
+import StreamDrawingChannel from "StreamDrawingChannel" /* 15094 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 const require = globalThis.__r;
 

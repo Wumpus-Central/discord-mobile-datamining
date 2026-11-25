@@ -1,12 +1,12 @@
-// === Module 12716: useFetchCheckpointGames ===
+// === Module 12880: useFetchCheckpointGames ===
 
-// Module 12716 (useFetchCheckpointGames)
-import GameActionCreators from "GameActionCreators" /* 8579 */;
+// Module 12880 (useFetchCheckpointGames)
+import GameActionCreators from "GameActionCreators" /* 8678 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12407 */;
+import CheckpointStore from "CheckpointStore" /* 12571 */;
 
 require = fn;
-let closure_4 = fn(6270).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
+let closure_4 = fn(6365).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/useFetchCheckpointGames.tsx");
 

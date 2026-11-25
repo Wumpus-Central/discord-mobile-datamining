@@ -1,12 +1,12 @@
-// === Module 5892: UserSettingsActionCreators ===
+// === Module 5987: UserSettingsActionCreators ===
 
-// Module 5892 (UserSettingsActionCreators)
+// Module 5987 (UserSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import wrappers from "wrappers" /* 1226 */;
-import UserSettings from "UserSettings" /* 4742 */;
+import UserSettings from "UserSettings" /* 4837 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4941 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5036 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
@@ -64,7 +64,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -79,7 +79,7 @@ export default {
               return obj4;
             } else if (tmp3) {
               dependencyMap = 1;
-              const PreloadedUserSettingsActionCreators = tmp3(4747).PreloadedUserSettingsActionCreators;
+              const PreloadedUserSettingsActionCreators = tmp3(4842).PreloadedUserSettingsActionCreators;
               v2 = 2;
               c3 = 1;
               const obj5 = {
@@ -107,7 +107,7 @@ export default {
                           if (gradientPreset != null) {
                             id = gradientPreset.id;
                           }
-                          const ClientThemeSettings = tmp4(4742).ClientThemeSettings;
+                          const ClientThemeSettings = tmp4(4837).ClientThemeSettings;
                           const setting = ClientThemeSettings.getSetting();
                           let prop;
                           if (setting != null) {
@@ -128,7 +128,7 @@ export default {
                           }
                           obj6.customUserThemeSettings = tmp17;
                           arg0.clientThemeSettings = obj6;
-                        }, tmp3(4747).UserSettingsDelay.INFREQUENT_USER_ACTION),
+                        }, tmp3(4842).UserSettingsDelay.INFREQUENT_USER_ACTION),
                 done: false
               };
               return obj5;
@@ -136,7 +136,7 @@ export default {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -159,10 +159,10 @@ export default {
               id = gradientPreset.id;
             }
             const obj8 = { backgroundGradientPresetId: id, customUserThemeSettings: null };
-            let ClientThemeSettings = tmp3(4742).ClientThemeSettings;
+            let ClientThemeSettings = tmp3(4837).ClientThemeSettings;
             obj8.customUserThemeSettings = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj7.clientThemeSettings = obj8;
-            const DeveloperMode = tmp3(4742).DeveloperMode;
+            const DeveloperMode = tmp3(4837).DeveloperMode;
             obj7.developerMode = DeveloperMode.getSetting();
           }
           const obj9 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };

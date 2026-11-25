@@ -1,6 +1,6 @@
-// === Module 17639: EmojiSourceUtils ===
+// === Module 17750: EmojiSourceUtils ===
 
-// Module 17639 (EmojiSourceUtils)
+// Module 17750 (EmojiSourceUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _getEmojiSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

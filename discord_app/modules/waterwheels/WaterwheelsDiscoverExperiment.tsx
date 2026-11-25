@@ -1,6 +1,6 @@
-// === Module 8780: WaterwheelsDiscoverExperiment ===
+// === Module 8879: WaterwheelsDiscoverExperiment ===
 
-// Module 8780 (WaterwheelsDiscoverExperiment)
+// Module 8879 (WaterwheelsDiscoverExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1386 */;

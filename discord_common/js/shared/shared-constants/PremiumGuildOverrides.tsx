@@ -1,6 +1,6 @@
-// === Module 10224: PremiumGuildOverrides ===
+// === Module 10323: PremiumGuildOverrides ===
 
-// Module 10224 (PremiumGuildOverrides)
+// Module 10323 (PremiumGuildOverrides)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx");

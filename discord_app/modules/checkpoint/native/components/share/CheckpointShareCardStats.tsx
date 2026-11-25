@@ -1,17 +1,17 @@
-// === Module 12444: CheckpointShareCardStats ===
+// === Module 12608: CheckpointShareCardStats ===
 
-// Module 12444 (CheckpointShareCardStats)
+// Module 12608 (CheckpointShareCardStats)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2022 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import ChatIcon from "ChatIcon" /* 7011 */;
-import GameControllerIcon from "GameControllerIcon" /* 7623 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 7925 */;
-import ReactionIcon from "ReactionIcon" /* 9563 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 10360 */;
-import ServerIcon from "ServerIcon" /* 11300 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import ChatIcon from "ChatIcon" /* 7106 */;
+import GameControllerIcon from "GameControllerIcon" /* 7722 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8024 */;
+import ReactionIcon from "ReactionIcon" /* 9662 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 10459 */;
+import ServerIcon from "ServerIcon" /* 11399 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,7 +58,7 @@ function StatRow(stat) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { statRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4 }, statText: null, statImage: null, guildAcronym: null, unicodeEmoji: null };
 let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4 };
 obj2.statText = { flexShrink: 1, color: nativeDefault.colors.BLACK };

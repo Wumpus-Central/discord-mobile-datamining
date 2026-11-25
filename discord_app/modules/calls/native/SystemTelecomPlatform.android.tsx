@@ -1,6 +1,6 @@
-// === Module 15673: SystemTelecomPlatform ===
+// === Module 15794: SystemTelecomPlatform ===
 
-// Module 15673 (SystemTelecomPlatform)
+// Module 15794 (SystemTelecomPlatform)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/calls/native/SystemTelecomPlatform.android.tsx");

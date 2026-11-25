@@ -1,6 +1,6 @@
-// === Module 7555: EmbeddedAppCSPStore ===
+// === Module 7650: EmbeddedAppCSPStore ===
 
-// Module 7555 (EmbeddedAppCSPStore)
+// Module 7650 (EmbeddedAppCSPStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -8,8 +8,8 @@ const map = new Map();
 const Store = initializeDefault.Store;
 class EmbeddedAppCSPStore extends Store {
 }
-EmbeddedAppCSPStore.prototype["getPolicy"] = function getPolicy(applicationRouterOrigin) {
-  value = map.get(applicationRouterOrigin);
+EmbeddedAppCSPStore.prototype["getPolicy"] = function getPolicy(arg0) {
+  value = map.get(arg0);
   if (value == null) {
     value = null;
   }

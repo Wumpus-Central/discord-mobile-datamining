@@ -1,9 +1,9 @@
-// === Module 9066: announcement_modal_perk_card ===
+// === Module 9165: announcement_modal_perk_card ===
 
-// Module 9066 (announcement_modal_perk_card)
+// Module 9165 (announcement_modal_perk_card)
 import _mod1196 from "module_1196" /* 1196 */;
-import localized_string from "localized_string" /* 9028 */;
-import theme_aware_asset from "theme_aware_asset" /* 9032 */;
+import localized_string from "localized_string" /* 9127 */;
+import theme_aware_asset from "theme_aware_asset" /* 9131 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

@@ -1,14 +1,14 @@
-// === Module 19706: StageChannelRequestToSpeakMessageManager ===
+// === Module 19807: StageChannelRequestToSpeakMessageManager ===
 
-// Module 19706 (StageChannelRequestToSpeakMessageManager)
+// Module 19807 (StageChannelRequestToSpeakMessageManager)
 import MessageTypes from "MessageTypes" /* 1087 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import MessageStore from "MessageStore" /* 6265 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import MessageStore from "MessageStore" /* 6360 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
 import UserStore from "UserStore" /* 1386 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 require = fn;
 const MessageFlags = fn(1071).MessageFlags;
@@ -28,12 +28,12 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
       if (requestToSpeakTimestamp.suppress) {
         if (null != channelId) {
           if (userId !== id.getId()) {
-            if (closure_6.can(userId(4774).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
+            if (closure_6.can(userId(4869).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(19707).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
-                  const tmp11Result = userId(19707);
+                  const result = userId(19808).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const tmp11Result = userId(19808);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -48,8 +48,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  closure_1(8103).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = closure_1(8103);
+                  closure_1(8202).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = closure_1(8202);
                 }
               }
             }

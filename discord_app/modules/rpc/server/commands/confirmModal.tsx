@@ -1,11 +1,11 @@
-// === Module 15716: commands/confirmModal ===
+// === Module 15837: commands/confirmModal ===
 
-// Module 15716 (commands/confirmModal)
+// Module 15837 (commands/confirmModal)
 import Constants from "Constants" /* 1071 */;
-import Constants2 from "Constants" /* 5671 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15694 */;
-import createSocketGateDefault from "createSocketGate" /* 15717 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15701 */;
+import Constants2 from "Constants" /* 5766 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15815 */;
+import createSocketGateDefault from "createSocketGate" /* 15838 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15822 */;
 import size from "module_2" /* 2 */;
 
 const RPCCommands = Constants.RPCCommands;

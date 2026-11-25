@@ -1,7 +1,7 @@
-// === Module 5908: classifyOutputDevice ===
+// === Module 6003: classifyOutputDevice ===
 
-// Module 5908 (classifyOutputDevice)
-import Constants from "Constants" /* 5729 */;
+// Module 6003 (classifyOutputDevice)
+import Constants from "Constants" /* 5824 */;
 import size from "module_2" /* 2 */;
 
 const DEFAULT_DEVICE_ID = Constants.DEFAULT_DEVICE_ID;

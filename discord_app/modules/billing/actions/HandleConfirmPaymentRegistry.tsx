@@ -1,8 +1,8 @@
-// === Module 5700: HandleConfirmPaymentRegistry ===
+// === Module 5795: HandleConfirmPaymentRegistry ===
 
-// Module 5700 (HandleConfirmPaymentRegistry)
-import BillingSharedActionCreators from "BillingSharedActionCreators" /* 5681 */;
-import StripeUtilsAll from "StripeUtils" /* 5695 */;
+// Module 5795 (HandleConfirmPaymentRegistry)
+import BillingSharedActionCreators from "BillingSharedActionCreators" /* 5776 */;
+import StripeUtilsAll from "StripeUtils" /* 5790 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -29,47 +29,49 @@ let result = size.fileFinishedImporting("modules/billing/actions/HandleConfirmPa
 class StripePaymentConfirmationHandler extends PaymentConfirmationHandler {
   constructor(arg0, arg1) {
     if (null == global) {
-      tmp7 = closure_0;
-      tmp8 = closure_2;
+      tmp8 = closure_0;
+      tmp9 = closure_2;
       obj2 = closure_0(closure_2[3]);
-      str2 = "Payment source cannot be null on a redirect.";
-      throw obj2.dispatchConfirmationError("Payment source cannot be null on a redirect.");
+      str3 = "Payment source cannot be null on a redirect.";
+      str4 = "payment_confirmation";
+      throw obj2.failBillingConfirmation("payment_confirmation", "Payment source cannot be null on a redirect.");
     } else {
-      tmp9 = fn;
-      tmp10 = new.target;
-      tmp11 = StripePaymentConfirmationHandler;
-      tmp12 = new.target;
+      tmp10 = fn;
+      tmp11 = new.target;
+      tmp12 = StripePaymentConfirmationHandler;
       tmp13 = new.target;
-      tmp14 = global;
-      tmp15 = new StripePaymentConfirmationHandler(global, fn, global);
-      tmp16 = tmp15;
-      tmp17 = globalThis;
+      tmp14 = new.target;
+      tmp15 = global;
+      tmp16 = new StripePaymentConfirmationHandler(global, fn, tmp);
+      tmp17 = tmp16;
+      tmp18 = globalThis;
       _Map = Map;
-      tmp18 = new.target;
       tmp19 = new.target;
+      tmp20 = new.target;
       map = new Map();
-      tmp21 = map;
-      tmp15.stripeByMerchantAccountId = map;
-      paymentSourceType = tmp15.paymentSourceType;
-      tmp22 = closure_5;
+      tmp22 = map;
+      tmp16.stripeByMerchantAccountId = map;
+      paymentSourceType = tmp16.paymentSourceType;
+      tmp23 = closure_5;
       hasItem = closure_5.has(paymentSourceType);
       if (hasItem) {
-        tmp = closure_6;
+        tmp2 = closure_6;
         hasItem = paymentSourceType in closure_6;
       }
       if (hasItem) {
-        tmp6 = closure_6;
-        tmp15.handlerRegistry = closure_6[tmp15.paymentSourceType];
-      } else if (tmp15.paymentSourceType in closure_7) {
-        tmp15.handlerRegistry = tmp3[tmp15.paymentSourceType];
+        tmp7 = closure_6;
+        tmp16.handlerRegistry = closure_6[tmp16.paymentSourceType];
+      } else if (tmp16.paymentSourceType in closure_7) {
+        tmp16.handlerRegistry = tmp4[tmp16.paymentSourceType];
       } else {
-        tmp4 = closure_0;
-        tmp5 = closure_2;
+        tmp5 = closure_0;
+        tmp6 = closure_2;
         obj = closure_0(closure_2[3]);
         str = "Invalid Payment Source Type - redirect or direct confirmation handlers not found.";
-        throw obj.dispatchConfirmationError("Invalid Payment Source Type - redirect or direct confirmation handlers not found.");
+        str2 = "payment_confirmation";
+        throw obj.failBillingConfirmation("payment_confirmation", "Invalid Payment Source Type - redirect or direct confirmation handlers not found.");
       }
-      return tmp15;
+      return tmp16;
     }
   }
 }
@@ -78,23 +80,23 @@ prototype["getStripe"] = function getStripe(arg0) {
   closure_0 = arg0;
   const self = this;
   return (async () => {
-    let str2 = "";
+    let str3 = "";
     if (null != tmp5) {
-      str2 = "";
+      str3 = "";
       if ("" !== tmp5) {
-        str2 = tmp5;
+        str3 = tmp5;
       }
     }
-    closure_128_0 = str2;
+    closure_128_0 = str3;
     const stripeByMerchantAccountId2 = self.stripeByMerchantAccountId;
-    value = stripeByMerchantAccountId2.get(str2);
+    value = stripeByMerchantAccountId2.get(str3);
     if (null != value) {
       return value;
     }
-    await tmp2(5695).getStripe(tmp5);
+    await tmp2(5790).getStripe(tmp5);
     closure_128_1 = value;
     if (null == closure_128_1) {
-      throw tmp5(5681).dispatchConfirmationError("Stripe cannot be null on a redirect.");
+      throw tmp5(5776).failBillingConfirmation("payment_confirmation", "Stripe cannot be null on a redirect.");
     }
     const stripeByMerchantAccountId = closure_129_1.stripeByMerchantAccountId;
     const result = stripeByMerchantAccountId.set(closure_128_0, closure_128_1);
@@ -127,10 +129,10 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
     const paymentIntent = closure_129_4.paymentIntent;
     const error = closure_129_4.error;
     if (null != error) {
-      throw _var(5681).dispatchConfirmationError(error);
+      throw _var(5776).failBillingConfirmation("payment_confirmation", error);
     }
     if (null == paymentIntent) {
-      throw _var(5681).dispatchConfirmationError("paymentIntent not available with successful api call");
+      throw _var(5776).failBillingConfirmation("payment_confirmation", "paymentIntent not available with successful api call");
     }
     const next_action = paymentIntent.next_action;
     if (next_action != null) {
@@ -140,7 +142,7 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
       }
     }
     if (null == url) {
-      throw _var(5681).dispatchConfirmationError("confirm payment did not return a redirect url");
+      throw _var(5776).failBillingConfirmation("payment_confirmation", "confirm payment did not return a redirect url");
     }
     return paymentIntent.next_action.redirect_to_url.url;
   })();
@@ -159,7 +161,7 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -208,7 +210,7 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
           closure_128_1 = value;
           closure_129_3.performRedirect(closure_128_1);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp21) {
         c3 = tmp;
@@ -233,10 +235,10 @@ prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(ar
     const paymentIntent = closure_128_5.paymentIntent;
     const error = closure_128_5.error;
     if (null != error) {
-      throw tmp2(5681).dispatchConfirmationError(error);
+      throw tmp2(5776).failBillingConfirmation("payment_confirmation", error);
     }
     if (null == paymentIntent) {
-      throw tmp2(5681).dispatchConfirmationError("paymentIntent not available with successful stripe call");
+      throw tmp2(5776).failBillingConfirmation("payment_confirmation", "paymentIntent not available with successful stripe call");
     }
     value = { pendingCustomerAction: closure_128_4, customerActionCancelled: "requires_action" === paymentIntent.status };
     return value;
@@ -255,7 +257,7 @@ prototype["confirmPayment"] = function confirmPayment() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -294,7 +296,7 @@ prototype["confirmPayment"] = function confirmPayment() {
             paymentMethodId = closure_128_0.paymentMethodId;
             merchantAccountId = closure_128_0.merchantAccountId;
             if (null == paymentMethodId) {
-              throw tmp2(c2[3]).dispatchConfirmationError("payment method id cannot be null.");
+              throw tmp2(c2[3]).failBillingConfirmation("payment_confirmation", "payment method id cannot be null.");
             } else if ("stripe_redirect_confirmation" === closure_129_0.handlerRegistry.confirmationType) {
               const obj6 = { clientSecret, paymentMethodId, merchantAccountId };
               c2 = 2;
@@ -350,7 +352,8 @@ class AdyenPaymentConfirmationHandler extends PaymentConfirmationHandler {
       tmp10 = closure_2;
       obj = closure_0(closure_2[3]);
       str = "Payment source cannot be null on a redirect.";
-      throw obj.dispatchConfirmationError("Payment source cannot be null on a redirect.");
+      str2 = "payment_confirmation";
+      throw obj.failBillingConfirmation("payment_confirmation", "Payment source cannot be null on a redirect.");
     } else {
       tmp = fn;
       tmp2 = new.target;
@@ -369,7 +372,7 @@ prototype2["handleAdyenConfirmation"] = function handleAdyenConfirmation() {
   const self = this;
   const adyen_redirect_url = this.payment.adyen_redirect_url;
   if (null == adyen_redirect_url) {
-    throw BillingSharedActionCreators.dispatchConfirmationError("redirect url cannot be null on a redirect for adyen.");
+    throw BillingSharedActionCreators.failBillingConfirmation("payment_confirmation", "redirect url cannot be null on a redirect for adyen.");
   } else {
     if (set.has(self.paymentSource.type)) {
       self.performRedirect(adyen_redirect_url);

@@ -1,7 +1,7 @@
-// === Module 16481: useOrbsArcadePlayButtonLabel ===
+// === Module 16602: useOrbsArcadePlayButtonLabel ===
 
-// Module 16481 (useOrbsArcadePlayButtonLabel)
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16456 */;
+// Module 16602 (useOrbsArcadePlayButtonLabel)
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16577 */;
 
 const require = globalThis.__r;
 

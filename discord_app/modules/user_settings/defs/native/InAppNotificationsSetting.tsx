@@ -1,16 +1,16 @@
-// === Module 16929: InAppNotificationsSetting ===
+// === Module 17050: InAppNotificationsSetting ===
 
-// Module 16929 (InAppNotificationsSetting)
+// Module 17050 (InAppNotificationsSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _modDef3154 from "module_3154" /* 3154 */;
-import UserSettings from "UserSettings" /* 4742 */;
-import SettingsConstants from "SettingsConstants" /* 9414 */;
-import FocusModeUtils from "FocusModeUtils" /* 10473 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15681 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 16930 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11815 */;
+import _modDef3206 from "module_3206" /* 3206 */;
+import UserSettings from "UserSettings" /* 4837 */;
+import SettingsConstants from "SettingsConstants" /* 9513 */;
+import FocusModeUtils from "FocusModeUtils" /* 10572 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15802 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17051 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11914 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -57,16 +57,17 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef3154.sH5mu9);
+  return intl.string(_modDef3206.sH5mu9);
 };
 obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
   const intl = util.intl;
   const string = intl.string;
+  const tmp2 = _modDef3206;
   if (focusModeEnabled) {
-    let stringResult = string(util.t.cIRG0s);
+    let stringResult = string(tmp2.Zt0MV8);
   } else {
-    stringResult = string(_modDef3154["T/zMdV"]);
+    stringResult = string(tmp2["0r15Ud"]);
   }
   return stringResult;
 };

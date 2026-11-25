@@ -1,10 +1,10 @@
-// === Module 15296: ToastEntity ===
+// === Module 15418: ToastEntity ===
 
-// Module 15296 (ToastEntity)
+// Module 15418 (ToastEntity)
 import nativeDefault from "native" /* 575 */;
 import utils_StringUtils from "utils/StringUtils" /* 2153 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,7 +59,7 @@ function ToastEntityContent(arg0) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { entity: { flexShrink: 0, width: 24, height: 24, alignItems: "center", justifyContent: "center", overflow: "hidden" }, image: { width: 24, height: 24 }, glyph: { textAlign: "center" }, avatar: { borderRadius: nativeDefault.radii.round }, guild: null, guildAcronym: null };
 let obj3 = { borderRadius: nativeDefault.radii.round };
 obj2.guild = { borderRadius: nativeDefault.radii.sm };

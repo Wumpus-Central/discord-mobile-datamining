@@ -1,16 +1,16 @@
-// === Module 6925: MemberVerificationGuildHeader ===
+// === Module 7020: MemberVerificationGuildHeader ===
 
-// Module 6925 (MemberVerificationGuildHeader)
+// Module 7020 (MemberVerificationGuildHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import GuildIcon from "GuildIcon" /* 6926 */;
-import GuildBadgeDefault from "GuildBadge" /* 6930 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import GuildIcon from "GuildIcon" /* 7021 */;
+import GuildBadgeDefault from "GuildBadge" /* 7025 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -18,12 +18,12 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(6910);
+const MemberVerificationFormConstants = fn(7005);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 ({ useBannerHeight: hasOwnProperty, SHEET_RADIUS } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { header: { alignItems: "center", marginBottom: 12 }, headerContent: { alignItems: "center", marginTop: -48 + SHEET_RADIUS, paddingTop: 20, paddingBottom: 0, paddingHorizontal: 16 }, linearGradient: { position: "absolute", height: 140, top: 0, right: 0, left: 0 }, avatar: null, avatarContainer: null, featureIcon: null, headerTitle: null, headerDescription: null };
 let size = { borderRadius: nativeDefault.radii.lg, borderWidth: 0, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE, width: AVATAR_SIZE, margin: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj2.avatar = size;

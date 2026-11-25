@@ -1,9 +1,9 @@
-// === Module 14573: conjurePreviewAddBotPromptConnection ===
+// === Module 14695: conjurePreviewAddBotPromptConnection ===
 
-// Module 14573 (conjurePreviewAddBotPromptConnection)
+// Module 14695 (conjurePreviewAddBotPromptConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 7547 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7642 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
 
 require = fn;
 const size = fn(2);

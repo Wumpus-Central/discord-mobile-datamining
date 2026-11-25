@@ -1,10 +1,10 @@
-// === Module 19656: InterestPickedGames ===
+// === Module 19757: InterestPickedGames ===
 
-// Module 19656 (InterestPickedGames)
+// Module 19757 (InterestPickedGames)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import useGameRecordsDefault from "useGameRecords" /* 14393 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import useGameRecordsDefault from "useGameRecords" /* 14516 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_8 }, icon: null, fallback: null };
 let size = { width: PX_24, height: PX_24, borderRadius: nativeDefault.radii.sm };
 obj2.icon = size;
@@ -40,7 +40,7 @@ export default function InterestPickedGames(gameIds) {
     let obj3 = { games: null };
     const mapped = arr.map((name) => name.name);
     obj3.games = mapped.join(", ");
-    obj2["aria-label"] = intl.formatToPlainString(tmp2(2643).z5uqej, obj3);
+    obj2["aria-label"] = intl.formatToPlainString(tmp2(2654).z5uqej, obj3);
     obj2.shape = require("ClipView").CutoutShape.RoundedRect;
     obj2.size = PX_24;
     obj2.gap = tmp2(575).space.PX_4 / 2;

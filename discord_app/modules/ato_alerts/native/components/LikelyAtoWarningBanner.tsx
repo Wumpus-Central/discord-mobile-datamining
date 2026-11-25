@@ -1,17 +1,17 @@
-// === Module 11677: LikelyAtoWarningBanner ===
+// === Module 11776: LikelyAtoWarningBanner ===
 
-// Module 11677 (LikelyAtoWarningBanner)
+// Module 11776 (LikelyAtoWarningBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import LinkingDefault from "Linking" /* 5596 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6004 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7712 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 10526 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11679 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11680 */;
-import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11694 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import LinkingDefault from "Linking" /* 5691 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7811 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 10625 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11778 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11779 */;
+import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11793 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -73,10 +73,10 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11684, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11783, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
-        items = [closure_1_10(channelId(5508).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(5508).Text, { variant: "body-xs/medium", color: "text-subtle", children: children.description }, index)];
+        items = [closure_1_10(channelId(5603).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(5603).Text, { variant: "body-xs/medium", color: "text-subtle", children: children.description }, index)];
         obj.children = items;
         return closure_1_12(closure_1_11, obj);
       });
@@ -115,14 +115,14 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(11263).SafetyWarningTypes;
-const Constants = fn(11678);
+const SafetyWarningTypes = fn(11362).SafetyWarningTypes;
+const Constants = fn(11777);
 ({ getLikelyAtoMoreTips: hasOwnProperty, LIKELY_ATO_MORE_TIPS_MODAL_KEY: closure_6, LEARN_MORE_HC_ARTICLE: metroImportDefault } = Constants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const MuteUntilSeconds = fn(1081).MuteUntilSeconds;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 const state = createStyles.createStyles(obj2);
 const size = fn(2);

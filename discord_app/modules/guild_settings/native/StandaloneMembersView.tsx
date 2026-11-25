@@ -1,13 +1,13 @@
-// === Module 18255: StandaloneMembersView ===
+// === Module 18367: StandaloneMembersView ===
 
-// Module 18255 (StandaloneMembersView)
+// Module 18367 (StandaloneMembersView)
 import nativeDefault from "native" /* 575 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8432 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10447 */;
-import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 12272 */;
-import KickConfirmDefault from "KickConfirm" /* 12287 */;
-import BanConfirmDefault from "BanConfirm" /* 12294 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 18256 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8531 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10546 */;
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 12439 */;
+import KickConfirmDefault from "KickConfirm" /* 12453 */;
+import BanConfirmDefault from "BanConfirm" /* 12460 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 18368 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -34,7 +34,7 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { navigatorContainer: { overflow: "hidden" }, navigatorBackground: null, sceneBackground: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,6 +1,6 @@
-// === Module 8275: getStreamSourceMetadata ===
+// === Module 8374: getStreamSourceMetadata ===
 
-// Module 8275 (getStreamSourceMetadata)
+// Module 8374 (getStreamSourceMetadata)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/go_live/utils/getStreamSourceMetadata.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 12643: ? ===
+// === Module 12807: ? ===
 
-// Module 12643
+// Module 12807
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/voice-globe.png.js");

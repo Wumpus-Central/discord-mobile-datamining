@@ -1,6 +1,6 @@
-// === Module 8552: SharePreparingModalConstants ===
+// === Module 8651: SharePreparingModalConstants ===
 
-// Module 8552 (SharePreparingModalConstants)
+// Module 8651 (SharePreparingModalConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/share/native/SharePreparingModalConstants.tsx");

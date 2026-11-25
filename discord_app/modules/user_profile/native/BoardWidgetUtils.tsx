@@ -1,9 +1,9 @@
-// === Module 14502: BoardWidgetUtils ===
+// === Module 14625: BoardWidgetUtils ===
 
-// Module 14502 (BoardWidgetUtils)
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6045 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6048 */;
-import WidgetUtils from "WidgetUtils" /* 14395 */;
+// Module 14625 (BoardWidgetUtils)
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6140 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6143 */;
+import WidgetUtils from "WidgetUtils" /* 14518 */;
 import size from "module_2" /* 2 */;
 
 function isBoardWidget(widget) {

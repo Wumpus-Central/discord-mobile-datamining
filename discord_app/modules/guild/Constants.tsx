@@ -1,6 +1,6 @@
-// === Module 13476: Constants ===
+// === Module 13599: Constants ===
 
-// Module 13476 (Constants)
+// Module 13599 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild/Constants.tsx");

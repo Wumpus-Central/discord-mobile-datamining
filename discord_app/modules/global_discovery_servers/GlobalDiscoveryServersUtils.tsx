@@ -1,6 +1,6 @@
-// === Module 20145: GlobalDiscoveryServersUtils ===
+// === Module 20250: GlobalDiscoveryServersUtils ===
 
-// Module 20145 (GlobalDiscoveryServersUtils)
+// Module 20250 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import v1 from "v1" /* 1268 */;
@@ -20,7 +20,7 @@ let closure_13 = async function _navigateToGuild() {
   ({ loadId: closure_129_0, guildId: closure_129_1, index: closure_129_2, categoryId: closure_129_3, analyticsLocation: closure_129_4, options: closure_129_5 } = closure_0);
   return "Path";
 };
-const GlobalDiscoveryServersConstants = fn(8434);
+const GlobalDiscoveryServersConstants = fn(8533);
 ({ GlobalDiscoveryServerTab: closure_6, FEATURED_GUILDS_CACHE_DURATION: metroImportDefault, CategoryId: closure_8, DISCOVERY_ALL_CATEGORIES_ID: closure_9, getLanguageOptions: closure_10, HUBS_CATEGORY_ID: closure_11 } = GlobalDiscoveryServersConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
@@ -164,7 +164,7 @@ export function fromDiscoverableGuildServer(id) {
   return obj;
 }
 export function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "channel_id", discoverySplash: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003192370994897, emojis: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003106583617236562 };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "analyticsLocations", discoverySplash: "<string:4047568898>", emojis: "<string:16777503>" };
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, discovery_splash: obj.discoverySplash } = id);
   obj.emojis = [];
   return obj;

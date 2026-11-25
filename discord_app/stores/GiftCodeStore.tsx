@@ -1,12 +1,12 @@
-// === Module 11780: GiftCodeStore ===
+// === Module 11879: GiftCodeStore ===
 
-// Module 11780 (GiftCodeStore)
+// Module 11879 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5664 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11781 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10998 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5759 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11880 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 11097 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function updateGiftCode(giftCode) {
   } else {
     const result2 = map.set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4761).Timeout();
+      const timeout = new code(4856).Timeout();
       dependencyMap[code] = timeout;
       const value2 = map.get(code);
       if (null != value2) {
@@ -93,7 +93,7 @@ function updateGiftCode(giftCode) {
                                             closure_2_20.emitChange();
                                           } else if (null != closure_2_9[closure_1_0]) {
                                             let _Math = Math;
-                                            obj2.start(Math.min(closure_2_6, diff), /* F100435 */ function() { ... });
+                                            obj2.start(Math.min(closure_2_6, diff), /* F100800 */ function() { ... });
                                           }
                                           let obj3 = closure_2_1(closure_2_2[4])();
                                         }

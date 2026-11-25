@@ -1,6 +1,6 @@
-// === Module 11120: ImprovedMobileShopLoadingExperiment ===
+// === Module 11219: ImprovedMobileShopLoadingExperiment ===
 
-// Module 11120 (ImprovedMobileShopLoadingExperiment)
+// Module 11219 (ImprovedMobileShopLoadingExperiment)
 import noop from "module_19" /* 19 */;
 
 const ApexExperiment = fn(1450);

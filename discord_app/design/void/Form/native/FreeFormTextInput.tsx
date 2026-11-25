@@ -1,12 +1,12 @@
-// === Module 7176: FreeFormTextInput ===
+// === Module 7271: FreeFormTextInput ===
 
-// Module 7176 (FreeFormTextInput)
+// Module 7271 (FreeFormTextInput)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import Pressables from "Pressables" /* 6026 */;
-import _modDef7177 from "module_7177" /* 7177 */;
+import Pressables from "Pressables" /* 6121 */;
+import _modDef7272 from "module_7272" /* 7272 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,14 +17,14 @@ function ClearButton(onPress) {
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_9();
-  obj.children = metroImportDefault(native.Icon, { source: _modDef7177, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
+  obj.children = metroImportDefault(native.Icon, { source: _modDef7272, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
   return metroImportDefault(Pressables.PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" }, onPress: { flexDirection: "row" }, input: null, error: null, closeIcon: null, placeholder: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
 obj2.input = { flex: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

@@ -1,9 +1,9 @@
-// === Module 17869: openWaterwheelsInterestPicker ===
+// === Module 17981: openWaterwheelsInterestPicker ===
 
-// Module 17869 (openWaterwheelsInterestPicker)
+// Module 17981 (openWaterwheelsInterestPicker)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 8783 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 8882 */;
 
 const require = fn;
 let closure_7 = async function _openWaterwheelsInterestPicker() {
@@ -17,7 +17,7 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -43,8 +43,8 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
           closure_129_2 = undefined;
           closure_129_3 = function releaseOpenFlag() {
             if (dependencyMap === c6) {
-              const result = closure_0(17870).setInterestPickerOpen(false);
-              const obj = closure_0(17870);
+              const result = closure_0(17982).setInterestPickerOpen(false);
+              const obj = closure_0(17982);
             }
           };
           closure_129_4 = function cleanup() {
@@ -54,8 +54,8 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
           closure_129_5 = function handleAccountChange() {
             if (!assert.isValid()) {
               if (dependencyMap === c6) {
-                const result = closure_0(17870).setInterestPickerOpen(false);
-                const obj = closure_0(17870);
+                const result = closure_0(17982).setInterestPickerOpen(false);
+                const obj = closure_0(17982);
               }
               c4.removeChangeListener(closure_1_5);
               assert.dispose();

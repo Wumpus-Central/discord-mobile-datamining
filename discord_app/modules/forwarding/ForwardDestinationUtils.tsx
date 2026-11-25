@@ -1,22 +1,22 @@
-// === Module 8821: ForwardDestinationUtils ===
+// === Module 8920: ForwardDestinationUtils ===
 
-// Module 8821 (ForwardDestinationUtils)
+// Module 8920 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1092 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import StickersUtils from "StickersUtils" /* 6653 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 8210 */;
-import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 8822 */;
+import StickersUtils from "StickersUtils" /* 6748 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 8309 */;
+import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 8921 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6801 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import StickersStore from "StickersStore" /* 6896 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelRecord = fn(4770);
+const ChannelRecord = fn(4865);
 ({ ChannelRecordBase: hasOwnProperty, isGuildChannelType: closure_6, createChannelRecord: metroImportDefault } = ChannelRecord);
 const Constants = fn(1071);
 ({ MessageFlags: closure_12, Permissions: map1 } = Constants);
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(8804).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(8903).getChannelIdFromDestinationId);
   found = mapped.find(found(1254).isNotNullish);
   items = [ChannelStore];
   const items1 = [found];
@@ -64,7 +64,7 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
     if (null != channel) {
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp2) {
-          tmp12(6707);
+          tmp12(6802);
         }
         const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp12(1112).intl;
@@ -80,10 +80,10 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
           if (currentUser != null) {
             nsfwAllowed = currentUser.nsfwAllowed;
           }
-          let needsAgeVerificationResult = tmp12(6699).needsAgeVerification();
+          let needsAgeVerificationResult = tmp12(6794).needsAgeVerification();
           if (needsAgeVerificationResult) {
-            needsAgeVerificationResult = tmp12(5579).isFeatureAgeGated(tmp12(6704).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(5579);
+            needsAgeVerificationResult = tmp12(5674).isFeatureAgeGated(tmp12(6799).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(5674);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {
@@ -94,9 +94,9 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
             disableAgeRestrictedDestinations = ForwardAgeRestrictedDestinationsExperimentDefault.getConfig({ location: "getDestinationIsUnavailable" }).disableAgeRestrictedDestinations;
           }
           flag2 = disableAgeRestrictedDestinations;
-          const tmp12Result9 = tmp12(6699);
+          const tmp12Result9 = tmp12(6794);
         }
-        tmp12Result8 = tmp12(6707);
+        tmp12Result8 = tmp12(6802);
       }
       if (flag2) {
         const obj3 = { label: null, lineClamp: 2 };
@@ -123,9 +123,9 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
                 obj5.label = intl3.string(tmp12(1112).t.Wr4RIX);
                 return obj5;
               }
-              tmp12Result12 = tmp12(6651);
+              tmp12Result12 = tmp12(6746);
             }
-            tmp12Result11 = tmp12(6651);
+            tmp12Result11 = tmp12(6746);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -136,12 +136,12 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
               obj6.label = intl4.string(tmp12(1112).t.Wr4RIX);
               return obj6;
             }
-            tmp12Result13 = tmp12(6651);
+            tmp12Result13 = tmp12(6746);
           }
           items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp12Result14 = tmp12(6653);
-          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(6653).getMessageStickers(components), 0));
+          const tmp12Result14 = tmp12(6748);
+          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(6748).getMessageStickers(components), 0));
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
               if (items.some((id) => {
@@ -173,7 +173,7 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(6653).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(6748).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");
@@ -203,8 +203,8 @@ export function useSelectedDestinationNames(arg0) {
         if (null != user) {
           nickname = nickname.getNickname(user.id);
           if (nickname == null) {
-            nickname = closure_1_1(4973).getName(user);
-            const obj2 = closure_1_1(4973);
+            nickname = closure_1_1(5068).getName(user);
+            const obj2 = closure_1_1(5068);
           }
           tmp13 = nickname;
         }
@@ -213,7 +213,7 @@ export function useSelectedDestinationNames(arg0) {
         channel = channel.getChannel(id);
         let channelName = null;
         if (null != channel) {
-          const obj = closure_1_0(5533);
+          const obj = closure_1_0(5628);
           channelName = obj.computeChannelName(channel, user, nickname, true);
         }
         return channelName;

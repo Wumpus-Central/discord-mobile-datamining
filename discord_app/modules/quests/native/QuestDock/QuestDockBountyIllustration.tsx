@@ -1,15 +1,15 @@
-// === Module 16609: QuestDockBountyIllustration ===
+// === Module 16730: QuestDockBountyIllustration ===
 
-// Module 16609 (QuestDockBountyIllustration)
+// Module 16730 (QuestDockBountyIllustration)
 import initialize from "initialize" /* 504 */;
-import native from "native" /* 4978 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9757 */;
-import QuestDockHooks from "QuestDockHooks" /* 16505 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 16610 */;
-import _modDef16611 from "module_16611" /* 16611 */;
+import native from "native" /* 5073 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9856 */;
+import QuestDockHooks from "QuestDockHooks" /* 16626 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 16731 */;
+import _modDef16732 from "module_16732" /* 16732 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 require = fn;
 function useRivePlaybackGateRef() {
@@ -85,7 +85,7 @@ function QuestDock3DOrbsIllustration() {
   const obj3 = { source: null, style: null, resizeMode: "contain", enableAnimation: null, paused: null, accessible: false };
   const obj4 = { uri: null };
   obj2 = QuestDockHooks;
-  obj4.uri = _modDef16611;
+  obj4.uri = _modDef16732;
   obj3.source = obj4;
   obj3.style = tmp.fill;
   obj3.enableAnimation = !stateFromStores;
@@ -108,11 +108,11 @@ class QuestDockBountyOrbIllustration {
   }
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(6745).QuestsExperimentLocations;
-const QuestDockConstants = fn(16508);
+const QuestsExperimentLocations = fn(6840).QuestsExperimentLocations;
+const QuestDockConstants = fn(16629);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { frame: { marginRight: -QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT + 5 }, hands: null, orbs: null, fill: { flex: 1 } };
 let size = { width: 124, height: QUEST_DOCK_COLLAPSED_HEIGHT, transform: null };
 let items = [{ translateY: -2 }];

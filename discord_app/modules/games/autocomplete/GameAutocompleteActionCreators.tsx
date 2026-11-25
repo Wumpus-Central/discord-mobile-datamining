@@ -1,11 +1,11 @@
-// === Module 8813: GameAutocompleteActionCreators ===
+// === Module 8912: GameAutocompleteActionCreators ===
 
-// Module 8813 (GameAutocompleteActionCreators)
+// Module 8912 (GameAutocompleteActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 7049 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 7144 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 7048 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 7143 */;
 
 require = fn;
 let closure_6 = async function _fetchGameAutocomplete(arg0, arg1) {
@@ -25,7 +25,7 @@ let closure_6 = async function _fetchGameAutocomplete(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

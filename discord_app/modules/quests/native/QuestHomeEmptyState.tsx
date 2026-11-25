@@ -1,16 +1,16 @@
-// === Module 16409: QuestHomeEmptyState ===
+// === Module 16530: QuestHomeEmptyState ===
 
-// Module 16409 (QuestHomeEmptyState)
+// Module 16530 (QuestHomeEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import useChatLayoutDefault from "useChatLayout" /* 5096 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
-import useToken from "useToken" /* 5481 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7354 */;
-import _modDef16410 from "module_16410" /* 16410 */;
+import useChatLayoutDefault from "useChatLayout" /* 5191 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
+import useToken from "useToken" /* 5576 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7449 */;
+import _modDef16531 from "module_16531" /* 16531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const VerticalGradient = fn(1071).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { flex: 1 }, emptyStateContainer: { justifyContent: "center", alignItems: "center", flex: 1 }, emptyStateContainerBelowContent: { justifyContent: "flex-start", paddingTop: nativeDefault.space.PX_16 }, emptyStateContentContainer: null, emptyStateContentContainerScreenCentered: null, emptyStateContentTitle: null, emptyStateContentDescription: null, emptyImage: null, backgroundImage: null, gradient: null, actionWrapper: null };
 const obj3 = { justifyContent: "flex-start", paddingTop: nativeDefault.space.PX_16 };
 obj2.emptyStateContentContainer = { paddingHorizontal: nativeDefault.space.PX_32 };
@@ -86,7 +86,7 @@ export default function QuestHomeEmptyState(hasContentAbove) {
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
     const obj11 = { style: tmp5.emptyImage, children: null };
-    const obj12 = { style: tmp5.backgroundImage, source: _modDef16410, resizeMode: "cover" };
+    const obj12 = { style: tmp5.backgroundImage, source: _modDef16531, resizeMode: "cover" };
     obj11.children = hasOwnProperty(FastImageDefault, obj12);
     const items4 = [hasOwnProperty(React3, obj11), ];
     const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

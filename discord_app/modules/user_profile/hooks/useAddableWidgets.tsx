@@ -1,10 +1,10 @@
-// === Module 14824: useAddableWidgets ===
+// === Module 14946: useAddableWidgets ===
 
-// Module 14824 (useAddableWidgets)
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11326 */;
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 14474 */;
+// Module 14946 (useAddableWidgets)
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11425 */;
+import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 14597 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11327 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11426 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ function hasAddableApplicationWidgetSurfaces(arg0) {
   }
   return tmp3;
 }
-const WIDGET_SORT_ORDER = fn(6046).WIDGET_SORT_ORDER;
+const WIDGET_SORT_ORDER = fn(6141).WIDGET_SORT_ORDER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useAddableWidgets.tsx");
 
@@ -67,11 +67,11 @@ export default function useAddableWidgets() {
   }, items4);
   const items5 = [setting, stateFromStores1, stateFromStores2, stateFromStores3, tmp6Result, tmp13];
   return stateFromStores2.useMemo(() => {
-    let found = set1.filter((item) => item instanceof set(6048).ApplicationWidget);
+    let found = set1.filter((item) => item instanceof set(6143).ApplicationWidget);
     set = new Set(found.map((applicationId) => applicationId.applicationId));
     set1 = new Set(set1.map((type) => type.type));
     let found1 = WIDGET_SORT_ORDER.filter((item) => {
-      const ADDABLE_WIDGET_TYPES = set(14826).ADDABLE_WIDGET_TYPES;
+      const ADDABLE_WIDGET_TYPES = set(14948).ADDABLE_WIDGET_TYPES;
       return ADDABLE_WIDGET_TYPES.has(item);
     });
     return found1.flatMap((type) => {

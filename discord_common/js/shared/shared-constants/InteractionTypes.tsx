@@ -1,6 +1,6 @@
-// === Module 6274: InteractionTypes ===
+// === Module 6369: InteractionTypes ===
 
-// Module 6274 (InteractionTypes)
+// Module 6369 (InteractionTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { USER_SENDABLE: new Set([2, 3, 4, 5]), FOLLOWUP: null, SILENT: null };

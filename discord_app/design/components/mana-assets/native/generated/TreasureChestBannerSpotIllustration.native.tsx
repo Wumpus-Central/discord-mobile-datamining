@@ -1,19 +1,19 @@
-// === Module 13830: TreasureChestBannerSpotIllustration ===
+// === Module 13953: TreasureChestBannerSpotIllustration ===
 
-// Module 13830 (TreasureChestBannerSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef13831 from "module_13831" /* 13831 */;
-import _modDef13832 from "module_13832" /* 13832 */;
-import _modDef13833 from "module_13833" /* 13833 */;
+// Module 13953 (TreasureChestBannerSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7230 */;
+import _modDef13954 from "module_13954" /* 13954 */;
+import _modDef13955 from "module_13955" /* 13955 */;
+import _modDef13956 from "module_13956" /* 13956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13831 }, 3: null };
-let obj2 = { uri: _modDef13831 };
-obj[2] = { uri: _modDef13832 };
-const obj3 = { uri: _modDef13832 };
-obj[3] = { uri: _modDef13833 };
+let obj = { 1: null, 2: { uri: _modDef13954 }, 3: null };
+let obj2 = { uri: _modDef13954 };
+obj[2] = { uri: _modDef13955 };
+const obj3 = { uri: _modDef13955 };
+obj[3] = { uri: _modDef13956 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 18633: MaximizeIcon ===
+// === Module 18744: MaximizeIcon ===
 
-// Module 18633 (MaximizeIcon)
+// Module 18744 (MaximizeIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod12736 from "module_12736" /* 12736 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod12900 from "module_12900" /* 12900 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MaximizeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12736, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12900, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

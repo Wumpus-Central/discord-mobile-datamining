@@ -1,22 +1,22 @@
-// === Module 12343: AppealIngestionSpeedBump ===
+// === Module 12507: AppealIngestionSpeedBump ===
 
-// Module 12343 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12345 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12361 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12362 */;
+// Module 12507 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12509 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12525 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12526 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7779 */;
+import SafetyHubStore from "SafetyHubStore" /* 7878 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7753);
+const SafetyHubConstants = fn(7852);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: closure_6 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpeedBump.tsx");
@@ -104,7 +104,7 @@ export default function AppealIngestionSpeedBump(arg0) {
     const obj9 = { variant: "body-xs/normal", children: null };
     const intl6 = tmp2(1112).intl;
     obj9.children = intl6.format(tmp2(1112).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(5508).Text, obj9);
+    isDsaEligible = closure_8(tmp2(5603).Text, obj9);
   }
   const obj10 = { children: null };
   items2[5] = isDsaEligible;

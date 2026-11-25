@@ -1,12 +1,12 @@
-// === Module 11106: CollectiblesPromoPriceUtils ===
+// === Module 11205: CollectiblesPromoPriceUtils ===
 
-// Module 11106 (CollectiblesPromoPriceUtils)
+// Module 11205 (CollectiblesPromoPriceUtils)
 import DurationsDefault from "Durations" /* 1088 */;
-import StorefrontTypes from "StorefrontTypes" /* 7469 */;
+import StorefrontTypes from "StorefrontTypes" /* 7564 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SKUPricesStore from "SKUPricesStore" /* 7468 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 10981 */;
+import SKUPricesStore from "SKUPricesStore" /* 7563 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 11080 */;
 
 require = fn;
 function getListedPromotions(pricingPromotionIds, promotions) {
@@ -64,7 +64,7 @@ function getNextStorefrontPromotionBoundary(pricingPromotionIds) {
   }
   return tmp2;
 }
-let closure_6 = fn(10982).doesStorefrontPromotionCoverSku;
+let closure_6 = fn(11081).doesStorefrontPromotionCoverSku;
 const Constants = fn(1071);
 ({ COLLECTIBLES_APPLICATION_ID: metroImportDefault, CurrencyCodes: closure_8, PriceTypes: closure_9 } = Constants);
 const result = 10 * DurationsDefault.Millis.MINUTE;
@@ -214,8 +214,8 @@ export function areStorefrontPricingPromotionsActive(arg0) {
 export { getNextStorefrontPromotionBoundary };
 export function useCollectiblesStorefrontPrices(skuId, c7) {
   stateFromStores2 = skuId;
-  stateFromStores2(11107).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
-  const obj = stateFromStores2(11107);
+  stateFromStores2(11206).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
+  const obj = stateFromStores2(11206);
   items = [SKUPricesStore];
   const stateFromStores = stateFromStores2(504).useStateFromStores(items, () => {
     let pricesForSkuId;

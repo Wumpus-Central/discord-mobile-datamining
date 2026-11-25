@@ -1,13 +1,13 @@
-// === Module 12126: SpotifyUtils ===
+// === Module 12225: SpotifyUtils ===
 
-// Module 12126 (SpotifyUtils)
+// Module 12225 (SpotifyUtils)
 import DurationsDefault from "Durations" /* 1088 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 7507 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 12127 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 7602 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 12226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2139 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 7508 */;
-import SpotifyStore from "SpotifyStore" /* 7505 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 7603 */;
+import SpotifyStore from "SpotifyStore" /* 7600 */;
 
 require = fn;
 function asString(str) {
@@ -30,7 +30,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
     }
   }
 };
-const SpotifyConstants = fn(7506);
+const SpotifyConstants = fn(7601);
 ({ SPOTIFY_APP_PROTOCOL: metroImportDefault, SpotifyResourceTypes: closure_8, getSpotifyResourceType: closure_9 } = SpotifyConstants);
 const PlatformTypes = fn(1071).PlatformTypes;
 let closure_11 = 30 * DurationsDefault.Millis.SECOND;
@@ -132,7 +132,7 @@ export function ensureSpotifyPlayable() {
     if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(7507).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(7602).setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);
       }

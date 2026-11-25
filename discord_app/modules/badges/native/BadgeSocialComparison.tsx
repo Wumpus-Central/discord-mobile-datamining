@@ -1,19 +1,19 @@
-// === Module 13682: BadgeSocialComparison ===
+// === Module 13805: BadgeSocialComparison ===
 
-// Module 13682 (BadgeSocialComparison)
+// Module 13805 (BadgeSocialComparison)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;
 import StringUtils from "StringUtils" /* 2152 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import BadgeId from "BadgeId" /* 6012 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 9715 */;
-import BadgeUtils from "BadgeUtils" /* 9729 */;
-import BadgeUnit from "BadgeUnit" /* 13683 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import BadgeId from "BadgeId" /* 6107 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 9814 */;
+import BadgeUtils from "BadgeUtils" /* 9828 */;
+import BadgeUnit from "BadgeUnit" /* 13806 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6257 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6352 */;
 
 require = fn;
 function getActivityStatCount(badge) {
@@ -135,7 +135,7 @@ function EligibleBadgeSocialComparison(arg0) {
           tmp13Result = null;
         }
       }
-      tmp11 = badge_id === tmp2(6012).BadgeId.GAME_VARIETY || badge_id === tmp2(6012).BadgeId.STREAMING || badge_id === tmp2(6012).BadgeId.GAME_TIME;
+      tmp11 = badge_id === tmp2(6107).BadgeId.GAME_VARIETY || badge_id === tmp2(6107).BadgeId.STREAMING || badge_id === tmp2(6107).BadgeId.GAME_TIME;
     }
   }
   return tmp13Result;
@@ -143,7 +143,7 @@ function EligibleBadgeSocialComparison(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { wrapper: { marginBottom: -nativeDefault.space.PX_12 }, comparison: null, card: null, label: null, metric: null, user: null, username: null, avatar: null };
 let obj3 = { marginBottom: -nativeDefault.space.PX_12 };
 obj.comparison = { flexDirection: "row", gap: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_8 };

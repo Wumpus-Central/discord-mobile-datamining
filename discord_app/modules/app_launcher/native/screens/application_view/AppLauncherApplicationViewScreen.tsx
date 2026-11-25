@@ -1,10 +1,10 @@
-// === Module 12911: AppLauncherApplicationViewScreen ===
+// === Module 13035: AppLauncherApplicationViewScreen ===
 
-// Module 12911 (AppLauncherApplicationViewScreen)
+// Module 13035 (AppLauncherApplicationViewScreen)
 import KeyboardTypes from "KeyboardTypes" /* 1626 */;
-import AppLauncherContext from "AppLauncherContext" /* 11996 */;
+import AppLauncherContext from "AppLauncherContext" /* 12095 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9906 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10005 */;
 
 const require = globalThis.__r;
 
@@ -49,9 +49,9 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const AppLauncherNativeConstants = fn(1499);
 ({ AppLauncherRouteName: metroImportDefault, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
-const BuiltInSectionId = fn(6947).BuiltInSectionId;
+const BuiltInSectionId = fn(7042).BuiltInSectionId;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_10 = createStyles.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");

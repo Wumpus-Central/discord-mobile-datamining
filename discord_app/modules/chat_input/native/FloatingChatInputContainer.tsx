@@ -1,11 +1,11 @@
-// === Module 13204: FloatingChatInputContainer ===
+// === Module 13327: FloatingChatInputContainer ===
 
-// Module 13204 (FloatingChatInputContainer)
+// Module 13327 (FloatingChatInputContainer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5104 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import timingPresets from "timingPresets" /* 5130 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5199 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import timingPresets from "timingPresets" /* 5225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 12440: useCompositeImagesLoaded ===
+// === Module 12604: useCompositeImagesLoaded ===
 
-// Module 12440 (useCompositeImagesLoaded)
+// Module 12604 (useCompositeImagesLoaded)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-let closure_2 = fn(12431).CHECKPOINT_COMPOSITE_LOAD_DEADLINE_MS;
+let closure_2 = fn(12595).CHECKPOINT_COMPOSITE_LOAD_DEADLINE_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useCompositeImagesLoaded.tsx");
 

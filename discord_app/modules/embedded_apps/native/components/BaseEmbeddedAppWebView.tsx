@@ -1,17 +1,17 @@
-// === Module 10088: BaseEmbeddedAppWebView ===
+// === Module 10187: BaseEmbeddedAppWebView ===
 
-// Module 10088 (BaseEmbeddedAppWebView)
+// Module 10187 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import URLUtilsDefault from "URLUtils" /* 1379 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5920 */;
-import WebView from "WebView" /* 7763 */;
-import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10089 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6015 */;
+import WebView from "WebView" /* 7862 */;
+import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5560 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5655 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -299,7 +299,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -466,7 +466,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
 }
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_10 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_11 = new LoggerDefault("BaseEmbeddedAppWebView");
 const size = fn(2);

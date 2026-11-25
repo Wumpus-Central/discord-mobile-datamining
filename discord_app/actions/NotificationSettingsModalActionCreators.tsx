@@ -1,20 +1,20 @@
-// === Module 7350: NotificationSettingsModalActionCreators ===
+// === Module 7445: NotificationSettingsModalActionCreators ===
 
-// Module 7350 (NotificationSettingsModalActionCreators)
+// Module 7445 (NotificationSettingsModalActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import shared from "shared" /* 4924 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7345 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7347 */;
+import shared from "shared" /* 5019 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7440 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7442 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Endpoints = fn(1071).Endpoints;
-fn(4862).NotificationSettingsUpdateType;
+fn(4957).NotificationSettingsUpdateType;
 const constants = fn(1081).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
@@ -135,7 +135,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -190,7 +190,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp11) {
           c3 = tmp;

@@ -1,6 +1,6 @@
-// === Module 9353: FileManagerUtils ===
+// === Module 9452: FileManagerUtils ===
 
-// Module 9353 (FileManagerUtils)
+// Module 9452 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1148 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_5 = async function _readFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

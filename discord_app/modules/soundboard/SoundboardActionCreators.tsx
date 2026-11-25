@@ -1,12 +1,12 @@
-// === Module 10262: SoundboardActionCreators ===
+// === Module 10361: SoundboardActionCreators ===
 
-// Module 10262 (SoundboardActionCreators)
+// Module 10361 (SoundboardActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4747 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5920 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4842 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6015 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 6797 */;
+import SoundboardStore from "SoundboardStore" /* 6892 */;
 
 const require = globalThis.__r;
 
@@ -132,7 +132,7 @@ let closure_15 = async function _uploadSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -209,7 +209,7 @@ let closure_16 = async function _updateSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -286,7 +286,7 @@ let closure_17 = async function _deleteSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -316,7 +316,7 @@ let closure_17 = async function _deleteSound(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp5) {
       c2 = tmp;
@@ -335,7 +335,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -396,7 +396,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(6799).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6894).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1071);
 ({ Endpoints: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const UserSettingsConstants = fn(1081);

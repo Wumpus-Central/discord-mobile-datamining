@@ -1,7 +1,7 @@
-// === Module 13679: BadgeUnlockColorUtils ===
+// === Module 13802: BadgeUnlockColorUtils ===
 
-// Module 13679 (BadgeUnlockColorUtils)
-import ColorUtils from "ColorUtils" /* 4914 */;
+// Module 13802 (BadgeUnlockColorUtils)
+import ColorUtils from "ColorUtils" /* 5009 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/badges/BadgeUnlockColorUtils.tsx");

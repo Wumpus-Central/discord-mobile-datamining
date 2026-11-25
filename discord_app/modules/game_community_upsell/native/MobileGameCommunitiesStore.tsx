@@ -1,9 +1,9 @@
-// === Module 17075: MobileGameCommunitiesStore ===
+// === Module 17194: MobileGameCommunitiesStore ===
 
-// Module 17075 (MobileGameCommunitiesStore)
+// Module 17194 (MobileGameCommunitiesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 8794 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 8893 */;
 
 require = fn;
 let guildGameIds = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: new Set(), dismissedGuildIds: null, guildGameIds: null };

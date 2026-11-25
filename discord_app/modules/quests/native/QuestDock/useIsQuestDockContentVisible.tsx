@@ -1,13 +1,13 @@
-// === Module 16610: useIsQuestDockContentVisible ===
+// === Module 16731: useIsQuestDockContentVisible ===
 
-// Module 16610 (useIsQuestDockContentVisible)
+// Module 16731 (useIsQuestDockContentVisible)
 import initialize from "initialize" /* 504 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16598 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 16719 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16506 */;
+import QuestDockStore from "QuestDockStore" /* 16627 */;
 
 require = fn;
-const QuestDockMode = fn(6745).QuestDockMode;
+const QuestDockMode = fn(6840).QuestDockMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQuestDockContentVisible.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 8411: PinotExperiment ===
+// === Module 8510: PinotExperiment ===
 
-// Module 8411 (PinotExperiment)
+// Module 8510 (PinotExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 
 const require = globalThis.__r;

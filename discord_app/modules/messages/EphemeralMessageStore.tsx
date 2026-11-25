@@ -1,11 +1,11 @@
-// === Module 6266: EphemeralMessageStore ===
+// === Module 6361: EphemeralMessageStore ===
 
-// Module 6266 (EphemeralMessageStore)
+// Module 6361 (EphemeralMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6267 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6362 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 require = fn;
 function dropChannelIfEmpty(channelId, value) {

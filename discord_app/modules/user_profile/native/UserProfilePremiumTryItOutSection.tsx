@@ -1,20 +1,20 @@
-// === Module 15950: UserProfilePremiumTryItOutSection ===
+// === Module 16071: UserProfilePremiumTryItOutSection ===
 
-// Module 15950 (UserProfilePremiumTryItOutSection)
+// Module 16071 (UserProfilePremiumTryItOutSection)
 import nativeDefault from "native" /* 575 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6253 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8960 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9554 */;
-import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 15951 */;
-import UserProfileUpsellCardV2Default from "UserProfileUpsellCardV2" /* 15973 */;
-import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 15974 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6348 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9059 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9653 */;
+import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 16072 */;
+import UserProfileUpsellCardV2Default from "UserProfileUpsellCardV2" /* 16094 */;
+import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 16095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, cardInner: null, divider: null, dividerLine: null, lockCircle: null, lockIcon: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16 };
 obj2.cardInner = { paddingTop: nativeDefault.space.PX_24 };
@@ -51,7 +51,7 @@ export default function UserProfilePremiumTryItOutSection(arg0) {
   const obj4 = { style: tmp.lockCircle, children: null };
   const obj3 = { style: tmp.dividerLine };
   const tmp4 = UserProfileUpsellCardV2Default;
-  obj4.children = closure_5(analyticsLocations(7035).LockIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED, style: tmp.lockIcon });
+  obj4.children = closure_5(analyticsLocations(7130).LockIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED, style: tmp.lockIcon });
   items1[1] = closure_5(View, obj4);
   obj2.children = items1;
   const items2 = [closure_6(View, obj2), closure_5(UserProfileTryItOutFieldsDefault, { currentUser, mode: "entrypoint" })];

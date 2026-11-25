@@ -1,6 +1,6 @@
-// === Module 13479: WelcomeScreenStore ===
+// === Module 13602: WelcomeScreenStore ===
 
-// Module 13479 (WelcomeScreenStore)
+// Module 13602 (WelcomeScreenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

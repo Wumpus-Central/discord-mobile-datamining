@@ -1,10 +1,10 @@
-// === Module 12282: TransferOwnershipModal ===
+// === Module 12449: TransferOwnershipModal ===
 
-// Module 12282 (TransferOwnershipModal)
+// Module 12449 (TransferOwnershipModal)
 import util from "util" /* 1112 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
-import NavigatorHeader from "NavigatorHeader" /* 7065 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12281 */;
+import NavigatorHeader from "NavigatorHeader" /* 7160 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12448 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 function closeModal() {
   TransferOwnershipModalActionCreatorsDefault.close();
 }
-const TransferOwnershipConstants = fn(12283);
+const TransferOwnershipConstants = fn(12450);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: closure_6 } = TransferOwnershipConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -48,7 +48,7 @@ export default function TransferOwnershipModal(guild) {
         c2 = 0;
         c1 = 0;
         return (function*(arg0) {
-          yield toUser(8432).transferOwnership(id.id, id2.id, constants.EMAIL, id);
+          yield toUser(8531).transferOwnership(id.id, id2.id, constants.EMAIL, id);
           return value;
         })();
       });
@@ -63,11 +63,11 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        toUser(12281).close();
-        const obj = toUser(12281);
-        toUser(8432).close();
-        const obj2 = toUser(8432);
-        const result = closure_0(5598).showTransferOwnershipSuccess();
+        toUser(12448).close();
+        const obj = toUser(12448);
+        toUser(8531).close();
+        const obj2 = toUser(8531);
+        const result = closure_0(5693).showTransferOwnershipSuccess();
       };
       obj.onResend = closure_1_3(function*() {
         if (c0 === 2) {
@@ -80,7 +80,7 @@ export default function TransferOwnershipModal(guild) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -108,7 +108,7 @@ export default function TransferOwnershipModal(guild) {
               return obj;
             } else {
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp8) {
             c0 = tmp;
@@ -120,7 +120,7 @@ export default function TransferOwnershipModal(guild) {
       obj.headerText = intl.string(guild(1112).t.Z5s7PM);
       const intl2 = guild(1112).intl;
       obj.confirmButtonText = intl2.string(guild(1112).t.Z5s7PM);
-      return closure_1_7(toUser(7146), obj);
+      return closure_1_7(toUser(7241), obj);
     };
     obj2[constants.CONFIRM_EMAIL_CODE] = obj5;
     return obj2;
@@ -128,5 +128,5 @@ export default function TransferOwnershipModal(guild) {
   let obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
   let intl = guild(1112).intl;
   obj.headerBackTitle = intl.string(guild(1112).t["13/7kX"]);
-  return jsx(guild(7229).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
+  return jsx(guild(7324).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
 };

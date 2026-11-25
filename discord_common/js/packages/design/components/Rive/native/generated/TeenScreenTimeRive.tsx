@@ -1,9 +1,9 @@
-// === Module 5076: TeenScreenTimeRive ===
+// === Module 5171: TeenScreenTimeRive ===
 
-// Module 5076 (TeenScreenTimeRive)
-import BaseRive from "BaseRive" /* 4986 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5039 */;
-import _modDef5077 from "module_5077" /* 5077 */;
+// Module 5171 (TeenScreenTimeRive)
+import BaseRive from "BaseRive" /* 5081 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5134 */;
+import _modDef5172 from "module_5172" /* 5172 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ function TeenScreenTimeRiveInner(defaultViewModelInstance) {
   }
   const tmp2 = _objectWithoutProperties(defaultViewModelInstance, closure_3);
   const merged = Object.assign(tmp2);
-  return jsx(BaseRive.BaseRive, { ref: defaultViewModelInstance.ref, src: _modDef5077, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
+  return jsx(BaseRive.BaseRive, { ref: defaultViewModelInstance.ref, src: _modDef5172, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
 }
 let closure_3 = ["ref", "fallback", "artboard", "stateMachine", "defaultViewModelInstance"];
 const jsx = fn(21).jsx;

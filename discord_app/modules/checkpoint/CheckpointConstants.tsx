@@ -1,24 +1,24 @@
-// === Module 6270: CheckpointConstants ===
+// === Module 6365: CheckpointConstants ===
 
-// Module 6270 (CheckpointConstants)
-import _modDef3442 from "module_3442" /* 3442 */;
+// Module 6365 (CheckpointConstants)
+import _modDef3494 from "module_3494" /* 3494 */;
 
-const items = [{ list: "gamesByPlayers", label: _modDef3442.b4s18j }, , , ];
-const obj = { list: "gamesByPlayers", label: _modDef3442.b4s18j };
-items[1] = { list: "newGamesByPlayers", label: _modDef3442.DcxpNj };
-const obj2 = { list: "newGamesByPlayers", label: _modDef3442.DcxpNj };
-items[2] = { list: "indieGamesByPlayers", label: _modDef3442.OAUTki };
-const obj3 = { list: "indieGamesByPlayers", label: _modDef3442.OAUTki };
-items[3] = { list: "gamesByStreamWatchMinutes", label: _modDef3442.M1L00s };
+const items = [{ list: "gamesByPlayers", label: _modDef3494.b4s18j }, , , ];
+const obj = { list: "gamesByPlayers", label: _modDef3494.b4s18j };
+items[1] = { list: "newGamesByPlayers", label: _modDef3494.DcxpNj };
+const obj2 = { list: "newGamesByPlayers", label: _modDef3494.DcxpNj };
+items[2] = { list: "indieGamesByPlayers", label: _modDef3494.OAUTki };
+const obj3 = { list: "indieGamesByPlayers", label: _modDef3494.OAUTki };
+items[3] = { list: "gamesByStreamWatchMinutes", label: _modDef3494.M1L00s };
 const obj5 = {};
-obj5[fn(6271).CheckpointTraitRarity.DEFAULT] = _modDef3442.bP4GV1;
-obj5[fn(6271).CheckpointTraitRarity.COMMON] = _modDef3442.QwkKWr;
-obj5[fn(6271).CheckpointTraitRarity.RARE] = _modDef3442.KLmNgL;
-obj5[fn(6271).CheckpointTraitRarity.EPIC] = _modDef3442.hAmdLZ;
-obj5[fn(6271).CheckpointTraitRarity.ULTRA] = _modDef3442.Tv4xyf;
-obj5[fn(6271).CheckpointTraitRarity.NITRO] = _modDef3442["0ModIv"];
-const items1 = [fn(6271).CheckpointTraitRarity.ULTRA, fn(6271).CheckpointTraitRarity.EPIC, fn(6271).CheckpointTraitRarity.RARE, fn(6271).CheckpointTraitRarity.COMMON, fn(6271).CheckpointTraitRarity.DEFAULT, fn(6271).CheckpointTraitRarity.NITRO];
-const items2 = [fn(6271).CheckpointTraitRarity.DEFAULT, fn(6271).CheckpointTraitRarity.COMMON, fn(6271).CheckpointTraitRarity.RARE, fn(6271).CheckpointTraitRarity.EPIC, fn(6271).CheckpointTraitRarity.ULTRA, fn(6271).CheckpointTraitRarity.NITRO];
+obj5[fn(6366).CheckpointTraitRarity.DEFAULT] = _modDef3494.bP4GV1;
+obj5[fn(6366).CheckpointTraitRarity.COMMON] = _modDef3494.QwkKWr;
+obj5[fn(6366).CheckpointTraitRarity.RARE] = _modDef3494.KLmNgL;
+obj5[fn(6366).CheckpointTraitRarity.EPIC] = _modDef3494.hAmdLZ;
+obj5[fn(6366).CheckpointTraitRarity.ULTRA] = _modDef3494.Tv4xyf;
+obj5[fn(6366).CheckpointTraitRarity.NITRO] = _modDef3494["0ModIv"];
+const items1 = [fn(6366).CheckpointTraitRarity.ULTRA, fn(6366).CheckpointTraitRarity.EPIC, fn(6366).CheckpointTraitRarity.RARE, fn(6366).CheckpointTraitRarity.COMMON, fn(6366).CheckpointTraitRarity.DEFAULT, fn(6366).CheckpointTraitRarity.NITRO];
+const items2 = [fn(6366).CheckpointTraitRarity.DEFAULT, fn(6366).CheckpointTraitRarity.COMMON, fn(6366).CheckpointTraitRarity.RARE, fn(6366).CheckpointTraitRarity.EPIC, fn(6366).CheckpointTraitRarity.ULTRA, fn(6366).CheckpointTraitRarity.NITRO];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");
 
@@ -53,7 +53,7 @@ export const CHECKPOINT_INTRODUCTION_FADE_IN_DURATION_MS = 1000;
 export const CHECKPOINT_2026_POWER_BAR_UNITS = 6;
 export const CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS = 1;
 export const CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS = 5;
-export const CHECKPOINT_RARITY_TO_COLOR = { [fn(6271).CheckpointTraitRarity.DEFAULT]: "#FFE047", [fn(6271).CheckpointTraitRarity.COMMON]: "#35ED7E", [fn(6271).CheckpointTraitRarity.RARE]: "#EF3054", [fn(6271).CheckpointTraitRarity.EPIC]: "#7D53DE", [fn(6271).CheckpointTraitRarity.ULTRA]: "#FC7A1E", [fn(6271).CheckpointTraitRarity.NITRO]: "#ABACB2" };
+export const CHECKPOINT_RARITY_TO_COLOR = { [fn(6366).CheckpointTraitRarity.DEFAULT]: "#FFE047", [fn(6366).CheckpointTraitRarity.COMMON]: "#35ED7E", [fn(6366).CheckpointTraitRarity.RARE]: "#EF3054", [fn(6366).CheckpointTraitRarity.EPIC]: "#7D53DE", [fn(6366).CheckpointTraitRarity.ULTRA]: "#FC7A1E", [fn(6366).CheckpointTraitRarity.NITRO]: "#ABACB2" };
 export const CHECKPOINT_RARITY_TO_LABEL_MESSAGE = obj5;
 export const CHECKPOINT_RARITY_ORDER_MOBILE = items1;
 export const CHECKPOINT_RARITY_ORDER_WEB = items2;

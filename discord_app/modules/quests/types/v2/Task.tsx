@@ -1,10 +1,10 @@
-// === Module 8235: Task ===
+// === Module 8334: Task ===
 
-// Module 8235 (Task)
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6753 */;
-import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 8236 */;
-import v2_Video from "v2/Video" /* 8237 */;
-import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 8238 */;
+// Module 8334 (Task)
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6848 */;
+import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 8335 */;
+import v2_Video from "v2/Video" /* 8336 */;
+import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 8337 */;
 import size from "module_2" /* 2 */;
 
 function _firstPartyTasksFromServer(tasks) {

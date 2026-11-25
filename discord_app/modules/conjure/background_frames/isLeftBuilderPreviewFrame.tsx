@@ -1,9 +1,9 @@
-// === Module 15781: isLeftBuilderPreviewFrame ===
+// === Module 15902: isLeftBuilderPreviewFrame ===
 
-// Module 15781 (isLeftBuilderPreviewFrame)
-import isConjureApplicationDefault from "isConjureApplication" /* 6819 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 7551 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14565 */;
+// Module 15902 (isLeftBuilderPreviewFrame)
+import isConjureApplicationDefault from "isConjureApplication" /* 6914 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7646 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14687 */;
 
 require = fn;
 const size = fn(2);

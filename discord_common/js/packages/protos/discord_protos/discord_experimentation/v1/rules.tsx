@@ -1,6 +1,6 @@
-// === Module 5646: rules ===
+// === Module 5741: rules ===
 
-// Module 5646 (rules)
+// Module 5741 (rules)
 import _mod1196 from "module_1196" /* 1196 */;
 import wrappers from "wrappers" /* 1226 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -567,7 +567,7 @@ class Filter$Type extends MessageType3 {
 }
 const prototype3 = Filter$Type.prototype;
 prototype3["create"] = function create(partialSettings) {
-  obj = { filter: { oneofKind: "Array" }, negate: false };
+  obj = { filter: { oneofKind: "top" }, negate: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -1591,7 +1591,7 @@ class ClientLocation_Location$Type extends MessageType13 {
 }
 const prototype13 = ClientLocation_Location$Type.prototype;
 prototype13["create"] = function create(partialSettings) {
-  obj = { location: { oneofKind: "Array" } };
+  obj = { location: { oneofKind: "top" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {

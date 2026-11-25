@@ -1,10 +1,10 @@
-// === Module 13507: NewUserPermissionsOnboarding ===
+// === Module 13630: NewUserPermissionsOnboarding ===
 
-// Module 13507 (NewUserPermissionsOnboarding)
+// Module 13630 (NewUserPermissionsOnboarding)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import components_Button_Button from "components/Button/Button" /* 5515 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import components_Button_Button from "components/Button/Button" /* 5610 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
-let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(5471).NAV_BAR_HEIGHT }, alertContainerInsideCard: null, alert: null, alertInsideCard: null, alertContent: null, alertContentInsideCard: null, header: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
-let obj3 = { paddingTop: 80 + fn(5471).NAV_BAR_HEIGHT };
+const createStyles = fn(5012);
+let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(5566).NAV_BAR_HEIGHT }, alertContainerInsideCard: null, alert: null, alertInsideCard: null, alertContent: null, alertContentInsideCard: null, header: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
+let obj3 = { paddingTop: 80 + fn(5566).NAV_BAR_HEIGHT };
 obj2.alertContainerInsideCard = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: 0 };
 let obj4 = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: 0 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);

@@ -1,6 +1,6 @@
-// === Module 14664: ClientHeartbeatPiggyback ===
+// === Module 14786: ClientHeartbeatPiggyback ===
 
-// Module 14664 (ClientHeartbeatPiggyback)
+// Module 14786 (ClientHeartbeatPiggyback)
 import RunningGameStore from "RunningGameStore" /* 2139 */;
 
 const size = fn(2);

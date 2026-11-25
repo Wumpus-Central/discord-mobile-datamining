@@ -1,11 +1,11 @@
-// === Module 18215: StandaloneChannelScreen ===
+// === Module 18327: StandaloneChannelScreen ===
 
-// Module 18215 (StandaloneChannelScreen)
+// Module 18327 (StandaloneChannelScreen)
 import nativeDefault from "native" /* 575 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5093 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8865 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5188 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8964 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 require = fn;
 function Header(channelId) {
@@ -129,14 +129,14 @@ function Header(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const MainTabsV2Constants = fn(8864);
+const MainTabsV2Constants = fn(8963);
 ({ ONYX_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_6 } = MainTabsV2Constants);
 const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, EMPTY_STRING_SNOWFLAKE_ID: closure_8, ME: closure_9, ThemeTypes: closure_10 } = Constants);
-const StaticChannelRoute = fn(4773).StaticChannelRoute;
+const StaticChannelRoute = fn(4868).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: { flex: 1 }, onyxContainerBorder: { borderLeftWidth: ONYX_BORDER_WIDTH, borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopWidth: ONYX_BORDER_WIDTH, borderTopColor: "transparent" }, contentContainer: null, containerEmpty: null, headerWrapper: null, headerBottomBorder: null, headerWithFadingFrame: null, splitDividerTop: null, actions: null, spacer: null };
 let obj3 = { borderLeftWidth: ONYX_BORDER_WIDTH, borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopWidth: ONYX_BORDER_WIDTH, borderTopColor: "transparent" };
 obj.contentContainer = { flex: 1, backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };

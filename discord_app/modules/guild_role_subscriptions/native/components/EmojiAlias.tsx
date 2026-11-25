@@ -1,14 +1,14 @@
-// === Module 20065: EmojiAlias ===
+// === Module 20170: EmojiAlias ===
 
-// Module 20065 (EmojiAlias)
-import Text_Text from "Text/Text" /* 5508 */;
+// Module 20170 (EmojiAlias)
+import Text_Text from "Text/Text" /* 5603 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_5 = createStyles.createStyles({ emojiAlias: { alignItems: "center", flexDirection: "row" }, emojiColon: { width: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiAlias.tsx");

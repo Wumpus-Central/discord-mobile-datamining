@@ -1,10 +1,10 @@
-// === Module 6913: usePreviewDisabledGuild ===
+// === Module 7008: usePreviewDisabledGuild ===
 
-// Module 6913 (usePreviewDisabledGuild)
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6885 */;
+// Module 7008 (usePreviewDisabledGuild)
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6980 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6909 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7004 */;
 
 const require = globalThis.__r;
 
@@ -36,8 +36,8 @@ export default function usePreviewDisabledGuild(arg0) {
   if (stateFromStores == null) {
     let result = null;
     if (null != stateFromStores1) {
-      result = tmp(4780).fromVerificationGateGuild(stateFromStores1);
-      const tmpResult = tmp(4780);
+      result = tmp(4875).fromVerificationGateGuild(stateFromStores1);
+      const tmpResult = tmp(4875);
     }
     stateFromStores = result;
   }

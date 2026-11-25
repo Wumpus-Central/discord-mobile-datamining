@@ -1,13 +1,14 @@
-// === Module 16934: IOSNativePhoneIntegrationSetting ===
+// === Module 17055: IOSNativePhoneIntegrationSetting ===
 
-// Module 16934 (IOSNativePhoneIntegrationSetting)
+// Module 17055 (IOSNativePhoneIntegrationSetting)
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import UserSettings from "UserSettings" /* 4742 */;
-import SettingsConstants from "SettingsConstants" /* 9414 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 16930 */;
-import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 16935 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11815 */;
+import _modDef3206 from "module_3206" /* 3206 */;
+import UserSettings from "UserSettings" /* 4837 */;
+import SettingsConstants from "SettingsConstants" /* 9513 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17051 */;
+import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 17056 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11914 */;
 import size from "module_2" /* 2 */;
 
 let obj = {
@@ -36,6 +37,10 @@ const toggle = SettingBuilders.createToggle(obj2);
 let SettingBuilders = SettingBuilders_mod;
 const obj3 = {};
 const merged1 = Object.assign(obj);
+obj3.useTitle = function useTitle() {
+  const intl = util.intl;
+  return intl.string(_modDef3206["eled/j"]);
+};
 obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj3.usePredicate = function usePredicate() {
   let enabled = CallKitMetricCollectionExperimentDefault.useConfig({ location: "RedesignIOSNativePhoneIntegrationSetting" }).enabled;

@@ -1,8 +1,8 @@
-// === Module 8823: isStaffToNonStaffForward ===
+// === Module 8922: isStaffToNonStaffForward ===
 
-// Module 8823 (isStaffToNonStaffForward)
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildStore from "GuildStore" /* 4788 */;
+// Module 8922 (isStaffToNonStaffForward)
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildStore from "GuildStore" /* 4883 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const GuildFeatures = fn(1071).GuildFeatures;

@@ -1,6 +1,6 @@
-// === Module 7387: ApplicationAccountLinkingConstants ===
+// === Module 7482: ApplicationAccountLinkingConstants ===
 
-// Module 7387 (ApplicationAccountLinkingConstants)
+// Module 7482 (ApplicationAccountLinkingConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_account_linking/ApplicationAccountLinkingConstants.tsx");

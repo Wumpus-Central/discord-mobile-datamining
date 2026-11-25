@@ -1,8 +1,8 @@
-// === Module 12291: ConjureRemoveFromServerForm ===
+// === Module 12457: ConjureRemoveFromServerForm ===
 
-// Module 12291 (ConjureRemoveFromServerForm)
-import _modDef4192 from "module_4192" /* 4192 */;
-import useConjureRemoveFromServerDefault from "useConjureRemoveFromServer" /* 12292 */;
+// Module 12457 (ConjureRemoveFromServerForm)
+import _modDef4244 from "module_4244" /* 4244 */;
+import useConjureRemoveFromServerDefault from "useConjureRemoveFromServer" /* 12458 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -63,7 +63,7 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
             const obj = tmp5(dependencyMap[4]);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp18) {
         c3 = tmp;
@@ -73,17 +73,17 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
   };
   const tmp3 = useConjureRemoveFromServerDefault(onRemoved.target);
   ({ optionalItems, notes, pending, error, submit: c1 } = tmp3);
-  const children = [closure_4(onRemoved(5508).Text, { variant: "heading-sm/medium", color: "text-feedback-warning", children: tmp3.body }), , , , ];
+  const children = [closure_4(onRemoved(5603).Text, { variant: "heading-sm/medium", color: "text-feedback-warning", children: tmp3.body }), , , , ];
   let tmp6Result = null;
   if (optionalItems.length > 0) {
     let obj = { items: [], optionalItems };
-    tmp6Result = closure_4(tmp(12290), obj);
+    tmp6Result = closure_4(tmp(12456), obj);
   }
   children[1] = tmp6Result;
   children[2] = notes.map((children) => closure_1_4(onRemoved(dependencyMap[6]).Text, { variant: "body-sm/normal", color: "text-muted", children }, children));
   let obj2 = { variant: "destructive", text: null, onPress: null, loading: null, disabled: null };
   const intl = tmp5(1112).intl;
-  obj2.text = intl.string(_modDef4192.GqcQyH);
+  obj2.text = intl.string(_modDef4244.GqcQyH);
   obj2.onPress = function remove() {
     const self = this;
     const apply = closure_2.apply;
@@ -96,12 +96,12 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
   };
   obj2.loading = pending;
   obj2.disabled = pending;
-  children[3] = closure_4(onRemoved(5515).Button, obj2);
+  children[3] = closure_4(onRemoved(5610).Button, obj2);
   let tmp6Result2 = null;
   if (null != error) {
     let obj3 = { variant: "body-md/semibold", color: "input-text-error-default", children: error };
-    tmp6Result2 = closure_4(tmp5(5508).Text, obj3);
+    tmp6Result2 = closure_4(tmp5(5603).Text, obj3);
   }
   children[4] = tmp6Result2;
-  return closure_5(onRemoved(5989).Stack, { spacing: 16, children });
+  return closure_5(onRemoved(6084).Stack, { spacing: 16, children });
 };

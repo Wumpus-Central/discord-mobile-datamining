@@ -1,12 +1,12 @@
-// === Module 11002: createOrReuseGiftOrder ===
+// === Module 11101: createOrReuseGiftOrder ===
 
-// Module 11002 (createOrReuseGiftOrder)
+// Module 11101 (createOrReuseGiftOrder)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ItemPurchaseType = fn(5634).ItemPurchaseType;
+const ItemPurchaseType = fn(5729).ItemPurchaseType;
 const SubscriptionPlanInfo = fn(1388).SubscriptionPlanInfo;
 const PaymentGateways = fn(1082).PaymentGateways;
 let closure_8 = new LoggerDefault("createOrReuseGiftOrder");
@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/native/utils/createOrReuseGiftOrder.tsx");
 
 export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
-  mobileStoreFront = mobileStoreFront(9128).useMobileStoreFront();
+  mobileStoreFront = mobileStoreFront(9227).useMobileStoreFront();
   closure_0 = asyncGeneratorStep(async (_location) => {
     if (c6 === 2) {
       c6 = 3;
@@ -26,7 +26,7 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -110,10 +110,10 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
                 }
               }
               const obj8 = { skuId, paymentGateway: closure_129_5, recipientUserId: closure_129_1, purchaseType: constants.ONE_TIME, isGift: true, createdAfter: null, subscriptionPlanId: null, externalGatewayFacet: null, countryCode: null };
-              const obj9 = _location(8982);
+              const obj9 = _location(9081);
               const obj11 = mobileStoreFront(2168)();
               const utcResult = mobileStoreFront(2168)().utc();
-              obj8.createdAfter = mobileStoreFront(2168)().utc().subtract(_location(8982).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
+              obj8.createdAfter = mobileStoreFront(2168)().utc().subtract(_location(9081).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
               obj8.subscriptionPlanId = closure_129_0;
               obj8.externalGatewayFacet = closure_129_6;
               obj8.countryCode = closure_129_7;
@@ -133,7 +133,7 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
           const _HermesInternal = HermesInternal;
           obj14.source = "" + _location + "_createOrder";
           obj13.tags = obj14;
-          const result = _location(4730).captureBillingException(closure_129_8, obj13);
+          const result = _location(4825).captureBillingException(closure_129_8, obj13);
           throw closure_129_8;
         } else if (_location === 1) {
           c6 = 3;

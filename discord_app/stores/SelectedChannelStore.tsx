@@ -1,6 +1,6 @@
-// === Module 4820: SelectedChannelStore ===
+// === Module 4915: SelectedChannelStore ===
 
-// Module 4820 (SelectedChannelStore)
+// Module 4915 (SelectedChannelStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
@@ -8,16 +8,16 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
 import router_utils from "router_utils" /* 1098 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5093 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 5539 */;
-import GatedChannelStore from "GatedChannelStore" /* 4821 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5188 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 5634 */;
+import GatedChannelStore from "GatedChannelStore" /* 4916 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildChannelStore from "GuildChannelStore" /* 4847 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildChannelStore from "GuildChannelStore" /* 4942 */;
+import GuildStore from "GuildStore" /* 4883 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
 
 require = fn;
 function handleConnectionOpen(sessionId) {
@@ -311,11 +311,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(4770);
+const ChannelRecord = fn(4865);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
 const Constants = fn(1071);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(4773).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4868).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};

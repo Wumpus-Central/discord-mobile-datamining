@@ -1,6 +1,6 @@
-// === Module 14880: useShopUnpublishCountdown ===
+// === Module 15002: useShopUnpublishCountdown ===
 
-// Module 14880 (useShopUnpublishCountdown)
+// Module 15002 (useShopUnpublishCountdown)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ export default function useShopUnpublishCountdown(getTime) {
   items = [time, flag];
   const effect = noop.useEffect(() => {
     if (null != tick) {
-      const diff = tmp - c0(11022).SHOP_UNPUBLISH_LABEL_THRESHOLD_MS;
+      const diff = tmp - c0(11121).SHOP_UNPUBLISH_LABEL_THRESHOLD_MS;
       dependencyMap = diff;
       tick = function tick() {
         const timestamp = Date.now();
@@ -63,7 +63,7 @@ export default function useShopUnpublishCountdown(getTime) {
       return () => clearTimeout(closure_0);
     }
   }, items);
-  return flag(11022).getShopUnpublishCountdown(getTime);
+  return flag(11121).getShopUnpublishCountdown(getTime);
 };
 export function useHasShopUnpublishCountdown(memo1) {
   const nextFutureShopUnpublishedAt = require("WishlistShopUnpublishUtils").getNextFutureShopUnpublishedAt(memo1);
@@ -77,7 +77,7 @@ export function useHasShopUnpublishCountdown(memo1) {
   items = [time, false];
   const effect = noop.useEffect(() => {
     if (null != tick) {
-      const diff = tmp - c0(11022).SHOP_UNPUBLISH_LABEL_THRESHOLD_MS;
+      const diff = tmp - c0(11121).SHOP_UNPUBLISH_LABEL_THRESHOLD_MS;
       dependencyMap = diff;
       tick = function tick() {
         const timestamp = Date.now();

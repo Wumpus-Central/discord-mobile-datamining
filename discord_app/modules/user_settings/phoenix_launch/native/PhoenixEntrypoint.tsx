@@ -1,9 +1,9 @@
-// === Module 17214: PhoenixEntrypoint ===
+// === Module 17328: PhoenixEntrypoint ===
 
-// Module 17214 (PhoenixEntrypoint)
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16177 */;
-import PhoenixLaunchState from "PhoenixLaunchState" /* 17215 */;
-import PhoenixRolloutExperimentDefault from "PhoenixRolloutExperiment" /* 17218 */;
+// Module 17328 (PhoenixEntrypoint)
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16298 */;
+import PhoenixLaunchState from "PhoenixLaunchState" /* 17329 */;
+import PhoenixRolloutExperimentDefault from "PhoenixRolloutExperiment" /* 17332 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/phoenix_launch/native/PhoenixEntrypoint.tsx");

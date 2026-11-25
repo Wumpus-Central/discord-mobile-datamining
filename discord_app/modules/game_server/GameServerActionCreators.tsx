@@ -1,22 +1,22 @@
-// === Module 13294: GameServerActionCreators ===
+// === Module 13417: GameServerActionCreators ===
 
-// Module 13294 (GameServerActionCreators)
+// Module 13417 (GameServerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import StoreUtils from "StoreUtils" /* 5677 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 10231 */;
-import GameServerMocks from "GameServerMocks" /* 13296 */;
-import GameServerStatus from "GameServerStatus" /* 13297 */;
-import regionResponseToRegionDefault from "regionResponseToRegion" /* 13299 */;
+import StoreUtils from "StoreUtils" /* 5772 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 10330 */;
+import GameServerMocks from "GameServerMocks" /* 13419 */;
+import GameServerStatus from "GameServerStatus" /* 13420 */;
+import regionResponseToRegionDefault from "regionResponseToRegion" /* 13422 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
 import UserStore from "UserStore" /* 1386 */;
-import OwnedGameServersStore from "OwnedGameServersStore" /* 13295 */;
+import OwnedGameServersStore from "OwnedGameServersStore" /* 13418 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GAME_SERVER_COLLECTION_ID = fn(8157).GAME_SERVER_COLLECTION_ID;
+const GAME_SERVER_COLLECTION_ID = fn(8256).GAME_SERVER_COLLECTION_ID;
 const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);
@@ -228,7 +228,7 @@ export function optimisticallyMarkGameServerResizing(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "HOSTED_FIELDS_ATTRIBUTE_NOT_SUPPORTED" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "HOSTED_FIELDS_INVALID_FIELD_SELECTOR" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
@@ -243,7 +243,7 @@ export function updateMyGameServerName(arg0, name) {
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "HOSTED_FIELDS_ATTRIBUTE_NOT_SUPPORTED" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "HOSTED_FIELDS_INVALID_FIELD_SELECTOR" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -304,7 +304,7 @@ export function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "HOSTED_FIELDS_ATTRIBUTE_NOT_SUPPORTED" };
+    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "HOSTED_FIELDS_INVALID_FIELD_SELECTOR" };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -317,10 +317,10 @@ export function wakeMyGameServer(arg0) {
   return HTTP.post({ url: constants.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true }).then((body) => {
     body = body.body;
     let tmp3 = body;
-    if (body.status === closure_0(13297).GameServerStatus.SLEEPING) {
+    if (body.status === closure_0(13420).GameServerStatus.SLEEPING) {
       const obj2 = {};
       const merged = Object.assign(body);
-      obj2.status = closure_0(13297).GameServerStatus.STARTING;
+      obj2.status = closure_0(13420).GameServerStatus.STARTING;
       tmp3 = obj2;
     }
     const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

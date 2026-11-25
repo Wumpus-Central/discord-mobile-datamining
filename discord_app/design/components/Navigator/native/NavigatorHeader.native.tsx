@@ -1,15 +1,15 @@
-// === Module 7065: NavigatorHeader ===
+// === Module 7160: NavigatorHeader ===
 
-// Module 7065 (NavigatorHeader)
+// Module 7160 (NavigatorHeader)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import NavigatorConstants from "NavigatorConstants" /* 5471 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import useFontScale from "useFontScale" /* 5523 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7066 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7069 */;
-import _mod7072 from "module_7072" /* 7072 */;
-import XSmallIcon from "XSmallIcon" /* 7121 */;
+import NavigatorConstants from "NavigatorConstants" /* 5566 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import useFontScale from "useFontScale" /* 5618 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7161 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7164 */;
+import _mod7167 from "module_7167" /* 7167 */;
+import XSmallIcon from "XSmallIcon" /* 7216 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -51,12 +51,12 @@ function CloseButton(onPress) {
     return timestampProducer(XSmallIcon.XSmallIcon, obj);
   };
   obj2.accessibilityLabel = stringResult;
-  return closure_6(require("module_7072").HeaderBackButton, obj2);
+  return closure_6(require("module_7167").HeaderBackButton, obj2);
 }
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  onPress(7071).useNavigatorBackPressHandler(() => {
+  onPress(7166).useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
     }
@@ -69,7 +69,7 @@ function CustomHeaderBackButton(onPress) {
   obj2.backImage = function backImage() {
     return closure_1_6(HeaderBackImage, {});
   };
-  return closure_6(onPress(7072).HeaderBackButton, obj2);
+  return closure_6(onPress(7167).HeaderBackButton, obj2);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -91,16 +91,16 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj2.accessibilityLabel = tmp5;
-  return timestampProducer(_mod7072.HeaderBackButton, obj2);
+  return timestampProducer(_mod7167.HeaderBackButton, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" }, headerTitle: null, headerBackTitleStyle: null, navigatorHeaderTitleContainer: null, navigatorHeaderContainer: null, navigatorHeaderSubtitle: null, headerButtonIcon: null, submittingIndicator: null };
 let obj4 = {};
-let merged = Object.assign(fn(5508).TextStyleSheet["heading-md/semibold"]);
+let merged = Object.assign(fn(5603).TextStyleSheet["heading-md/semibold"]);
 obj4.color = nativeDefault.colors.TEXT_STRONG;
 obj2.headerTitle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
@@ -188,7 +188,7 @@ export function getHeaderConditionalBackButton(callback1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -221,7 +221,7 @@ export function getHeaderConditionalBackButton(callback1) {
               }
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           c2 = tmp;

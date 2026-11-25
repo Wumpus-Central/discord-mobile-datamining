@@ -1,12 +1,12 @@
-// === Module 11576: ForLaterMessageCard ===
+// === Module 11675: ForLaterMessageCard ===
 
-// Module 11576 (ForLaterMessageCard)
+// Module 11675 (ForLaterMessageCard)
 import nativeDefault from "native" /* 575 */;
-import _modDef5625 from "module_5625" /* 5625 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 11577 */;
+import _modDef5720 from "module_5720" /* 5720 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 11676 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
 
 require = fn;
 class ForLaterDeletedMessageCard {
@@ -63,7 +63,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, deletedCard: { flexDirection: "row", alignItems: "center", gap: 8 }, deletedText: { flex: 1 }, deletedActionButton: { marginLeft: "auto" } };
 const application_id = createStyles.createStyles(obj);
 let obj3 = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -88,7 +88,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -139,7 +139,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     } else {
                       c1 = 1;
                       c2 = 1;
-                      const obj5 = { value: v3(11581).savedMessageJumpToMessage(tmp4, c1), done: false };
+                      const obj5 = { value: v3(11680).savedMessageJumpToMessage(tmp4, c1), done: false };
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -150,8 +150,8 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     const obj6 = { value, done: true };
                     return obj6;
                   } else {
-                    v1(6004).pop();
-                    const arr = v1(6004);
+                    v1(6099).pop();
+                    const arr = v1(6099);
                     const obj8 = { channel_id: tmp4.saveData.channelId, message_id: tmp4.saveData.messageId, message_author_id: null, type: null, due_duration: null };
                     const message = tmp4.message;
                     let id;
@@ -160,9 +160,9 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     }
                     obj8.message_author_id = id;
                     if (null != tmp4.saveData.dueAt) {
-                      let BOOKMARK = v3(11567).SavedMessageSortTypes.REMINDER;
+                      let BOOKMARK = v3(11666).SavedMessageSortTypes.REMINDER;
                     } else {
-                      BOOKMARK = v3(11567).SavedMessageSortTypes.BOOKMARK;
+                      BOOKMARK = v3(11666).SavedMessageSortTypes.BOOKMARK;
                     }
                     obj8.type = BOOKMARK;
                     let diffResult;
@@ -173,7 +173,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     obj8.due_duration = diffResult;
                     v1(1255).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
                     c2 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } catch (tmp26) {
                   c2 = tmp;
@@ -197,7 +197,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp8) {
         c0 = tmp;
         throw tmp8;

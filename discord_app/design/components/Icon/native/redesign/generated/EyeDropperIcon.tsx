@@ -1,9 +1,9 @@
-// === Module 16791: EyeDropperIcon ===
+// === Module 16912: EyeDropperIcon ===
 
-// Module 16791 (EyeDropperIcon)
+// Module 16912 (EyeDropperIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod16792 from "module_16792" /* 16792 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod16913 from "module_16913" /* 16913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EyeDropperIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16792, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16913, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

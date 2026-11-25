@@ -1,7 +1,7 @@
-// === Module 9432: TooltipConstants ===
+// === Module 9531: TooltipConstants ===
 
-// Module 9432 (TooltipConstants)
-import spring_spring from "spring/spring" /* 5518 */;
+// Module 9531 (TooltipConstants)
+import spring_spring from "spring/spring" /* 5613 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5 };

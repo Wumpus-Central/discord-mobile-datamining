@@ -1,6 +1,6 @@
-// === Module 13122: isGuildLikeSearchContext ===
+// === Module 13245: isGuildLikeSearchContext ===
 
-// Module 13122 (isGuildLikeSearchContext)
+// Module 13245 (isGuildLikeSearchContext)
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

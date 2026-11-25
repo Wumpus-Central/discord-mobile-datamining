@@ -1,7 +1,7 @@
-// === Module 16176: StaffOnlyFindYourFriendsDeletionSetting ===
+// === Module 16297: StaffOnlyFindYourFriendsDeletionSetting ===
 
-// Module 16176 (StaffOnlyFindYourFriendsDeletionSetting)
-import _mod4832 from "module_4832" /* 4832 */;
+// Module 16297 (StaffOnlyFindYourFriendsDeletionSetting)
+import _mod4927 from "module_4927" /* 4927 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -20,7 +20,7 @@ let closure_8 = async function _onFindYourFriendsDeletionPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -96,14 +96,14 @@ const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
 const identity = fn(1257);
 let closure_6 = identity.createWithEqualityFn(() => ({ isLoading: false }));
-const SettingBuilders = fn(11815);
+const SettingBuilders = fn(11914);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(9414).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9513).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: function useIsFindYourFriendsDeletionDisabled() {
-    return closure_6((isLoading) => isLoading.isLoading, _mod4832.shallow);
+    return closure_6((isLoading) => isLoading.isLoading, _mod4927.shallow);
   },
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -115,10 +115,10 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16177).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16298).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
-    if (closure_6((isLoading) => isLoading.isLoading, _mod4832.shallow)) {
+    if (closure_6((isLoading) => isLoading.isLoading, _mod4927.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;

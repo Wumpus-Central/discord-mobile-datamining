@@ -1,16 +1,16 @@
-// === Module 20208: RestrictedHoursManager ===
+// === Module 20313: RestrictedHoursManager ===
 
-// Module 20208 (RestrictedHoursManager)
+// Module 20313 (RestrictedHoursManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import FamilyCenterModels from "FamilyCenterModels" /* 1410 */;
-import _modDef2824 from "module_2824" /* 2824 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10457 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19462 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10455 */;
+import _modDef2846 from "module_2846" /* 2846 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10556 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19573 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10554 */;
 import UserStore from "UserStore" /* 1386 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8071 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8170 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 require = fn;
 function scheduleUpcomingWarning() {
@@ -52,7 +52,7 @@ function scheduleUpcomingWarning() {
         const intl = util.intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        const stringResult = intl.string(_modDef2824["0JlDg0"]);
+        const stringResult = intl.string(_modDef2846["0JlDg0"]);
         items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const formatDaysResult = FamilyCenterRestrictedHoursUtils.formatDays(items);
         const _HermesInternal2 = HermesInternal;

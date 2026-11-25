@@ -1,14 +1,14 @@
-// === Module 17555: useChannelScreensFromNavigation ===
+// === Module 17666: useChannelScreensFromNavigation ===
 
-// Module 17555 (useChannelScreensFromNavigation)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5093 */;
-import RootNavigationRef from "RootNavigationRef" /* 5094 */;
-import useChatLayoutDefault from "useChatLayout" /* 5096 */;
+// Module 17666 (useChannelScreensFromNavigation)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5188 */;
+import RootNavigationRef from "RootNavigationRef" /* 5189 */;
+import useChatLayoutDefault from "useChatLayout" /* 5191 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
 
 require = fn;
 function getActiveTabsRoute(coerceTabsRouteResult) {
@@ -161,7 +161,7 @@ function resolveChannelScreens(state, isChatLockedOpen) {
   return tmp8;
 }
 const ME = fn(1071).ME;
-const isStaticChannelRoute = fn(4773).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4868).isStaticChannelRoute;
 const ChannelScreenType = { DEFAULT: 0, [0]: "DEFAULT", BACKGROUND_SAVED: 1, [1]: "BACKGROUND_SAVED", FALLBACK_RENDERED: 2, [2]: "FALLBACK_RENDERED" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx");
@@ -241,7 +241,7 @@ export default function useChannelScreensFromNavigation(arg0) {
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(5096).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(5191).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {

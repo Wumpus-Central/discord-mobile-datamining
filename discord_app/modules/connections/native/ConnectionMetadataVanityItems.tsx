@@ -1,15 +1,15 @@
-// === Module 11909: ConnectionMetadataVanityItems ===
+// === Module 12008: ConnectionMetadataVanityItems ===
 
-// Module 11909 (ConnectionMetadataVanityItems)
+// Module 12008 (ConnectionMetadataVanityItems)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import NumberUtils from "NumberUtils" /* 2025 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 6244 */;
-import _modDef11910 from "module_11910" /* 11910 */;
-import _modDef11911 from "module_11911" /* 11911 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 6339 */;
+import _modDef12009 from "module_12009" /* 12009 */;
+import _modDef12010 from "module_12010" /* 12010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -83,11 +83,11 @@ function VanityDate(arg0) {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-const Constants = fn(6245);
+const Constants = fn(6340);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 }, connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" }, connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 }, connectedAccountVanityMetadataTag: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 }, paypalVerifiedTag: null, paypalVerifiedTagText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
 obj2.paypalVerifiedTag = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
@@ -214,7 +214,7 @@ export function generateSteamMetadataItems(metadata) {
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11910;
+    obj2.imageSrc = _modDef12009;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(VanityItem, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -224,7 +224,7 @@ export function generateSteamMetadataItems(metadata) {
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11911;
+    obj4.imageSrc = _modDef12010;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(VanityItem, obj4, constants.STEAM_ITEM_COUNT_TF2));

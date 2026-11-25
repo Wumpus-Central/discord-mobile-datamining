@@ -1,11 +1,11 @@
-// === Module 19306: useCanConnect ===
+// === Module 19417: useCanConnect ===
 
-// Module 19306 (useCanConnect)
-import ChannelUtils from "ChannelUtils" /* 6675 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import VoiceStateStore from "VoiceStateStore" /* 5565 */;
+// Module 19417 (useCanConnect)
+import ChannelUtils from "ChannelUtils" /* 6770 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import VoiceStateStore from "VoiceStateStore" /* 5660 */;
 
 const require = globalThis.__r;
 

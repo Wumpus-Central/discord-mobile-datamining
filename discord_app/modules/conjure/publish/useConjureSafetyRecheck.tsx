@@ -1,9 +1,9 @@
-// === Module 18289: useConjureSafetyRecheck ===
+// === Module 18401: useConjureSafetyRecheck ===
 
-// Module 18289 (useConjureSafetyRecheck)
+// Module 18401 (useConjureSafetyRecheck)
 import util from "util" /* 1112 */;
-import _modDef4192 from "module_4192" /* 4192 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7576 */;
+import _modDef4244 from "module_4244" /* 4244 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7675 */;
 
 const require = globalThis.__r;
 
@@ -25,16 +25,16 @@ export function getConjureSafetyHoldCopy(status) {
   if ("cleared" === status) {
     const obj2 = { title: null, body: null };
     const intl3 = util.intl;
-    obj2.title = intl3.string(_modDef4192.vVnbEq);
+    obj2.title = intl3.string(_modDef4244.vVnbEq);
     const intl4 = util.intl;
-    obj2.body = intl4.string(_modDef4192["qY/RLI"]);
+    obj2.body = intl4.string(_modDef4244["qY/RLI"]);
     let obj = obj2;
   } else {
     obj = { title: null, body: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef4192.ebqlWe);
+    obj.title = intl.string(_modDef4244.ebqlWe);
     const intl2 = util.intl;
-    obj.body = intl2.string(_modDef4192.UOr0cK);
+    obj.body = intl2.string(_modDef4244.UOr0cK);
   }
   return obj;
 }
@@ -48,27 +48,27 @@ export function getConjureSafetyRecheckNotice(status) {
       if ("pending" === status) {
         const obj2 = { message: null, type: "info" };
         const intl4 = util.intl;
-        obj2.message = intl4.string(_modDef4192.HsOGKK);
+        obj2.message = intl4.string(_modDef4244.HsOGKK);
         return obj2;
       } else if ("held" === status) {
         const obj3 = { message: null, type: "critical" };
         const intl3 = util.intl;
         const obj4 = { reason: status.reason };
-        obj3.message = intl3.formatToPlainString(_modDef4192.t8GlRz, obj4);
+        obj3.message = intl3.formatToPlainString(_modDef4244.t8GlRz, obj4);
         return obj3;
       } else if ("limited" === status) {
         const intl2 = util.intl;
         if ("daily" === status.limit) {
-          let ikIoxj = _modDef4192["TtE+rz"];
+          let ikIoxj = _modDef4244["TtE+rz"];
         } else {
-          ikIoxj = _modDef4192.ikIoxj;
+          ikIoxj = _modDef4244.ikIoxj;
         }
         const obj5 = { message: intl2.string(ikIoxj), type: "warning" };
         return obj5;
       } else if ("unavailable" === status) {
         const obj = { message: null, type: "warning" };
         const intl = util.intl;
-        obj.message = intl.string(_modDef4192.FxilA2);
+        obj.message = intl.string(_modDef4244.FxilA2);
         return obj;
       }
     }

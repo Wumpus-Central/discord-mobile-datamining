@@ -1,9 +1,9 @@
-// === Module 17882: InterestGameTray ===
+// === Module 17994: InterestGameTray ===
 
-// Module 17882 (InterestGameTray)
+// Module 17994 (InterestGameTray)
 import nativeDefault from "native" /* 575 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import GameCoverDefault from "GameCover" /* 17860 */;
+import GameCoverDefault from "GameCover" /* 17972 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -138,7 +138,7 @@ function TrayCover(game) {
   return sharedValue2(_modDef1653.View, obj3);
 }
 const View = fn(17).View;
-const InterestGamePickerConstants = fn(17861);
+const InterestGamePickerConstants = fn(17973);
 const SELECTED_BORDER_WIDTH = InterestGamePickerConstants.SELECTED_BORDER_WIDTH;
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
@@ -147,7 +147,7 @@ const jsxProd = fn(21);
 let result = THUMBNAIL_WIDTH / THUMBNAIL_ASPECT_RATIO;
 let closure_10 = THUMBNAIL_WIDTH + FOOTER_THUMBNAIL_GAP;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { tray: { height: result, flex: 1 }, viewport: { position: "absolute", inset: -SELECTED_BORDER_WIDTH, right: 0, overflow: "hidden" }, content: { position: "absolute", inset: SELECTED_BORDER_WIDTH, right: 0 }, item: { position: "absolute", width: THUMBNAIL_WIDTH, height: result }, target: { flex: 1 }, art: { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, stroke: null };
 let obj3 = { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.stroke = { position: "absolute", inset: -SELECTED_BORDER_WIDTH, borderRadius: nativeDefault.radii.xs + SELECTED_BORDER_WIDTH, borderWidth: SELECTED_BORDER_WIDTH, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

@@ -1,6 +1,6 @@
-// === Module 19124: NitroFileUploadAnnouncementPromoSheet ===
+// === Module 19235: NitroFileUploadAnnouncementPromoSheet ===
 
-// Module 19124 (NitroFileUploadAnnouncementPromoSheet)
+// Module 19235 (NitroFileUploadAnnouncementPromoSheet)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -38,9 +38,9 @@ export default function NitroFileUploadAnnouncementPromoSheet(markAsDismissed) {
   const obj = markAsDismissed(callback[6]);
   obj2.illustration = <View style={tmp.illustration}>{jsx(markAsDismissed(callback[8]).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}</View>;
   const intl = markAsDismissed(callback[9]).intl;
-  obj2.title = intl.string(require("module_2926").IyCdAU);
+  obj2.title = intl.string(require("module_2948").IyCdAU);
   const intl2 = markAsDismissed(callback[9]).intl;
-  obj2.description = intl2.string(require("module_2926").LhfXZN);
+  obj2.description = intl2.string(require("module_2948").LhfXZN);
   obj2.onDismiss = callback1;
   const obj4 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = markAsDismissed(callback[9]).intl;

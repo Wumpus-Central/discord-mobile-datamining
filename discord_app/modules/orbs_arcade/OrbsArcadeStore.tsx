@@ -1,15 +1,15 @@
-// === Module 16456: OrbsArcadeStore ===
+// === Module 16577: OrbsArcadeStore ===
 
-// Module 16456 (OrbsArcadeStore)
+// Module 16577 (OrbsArcadeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16457 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16458 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16578 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16579 */;
 import _slicedToArray from "module_32" /* 32 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9300 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9399 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const orbs_arcade_game_state = tmp(16459);
+const orbs_arcade_game_state = tmp(16580);
 require = fn;
 function handleBalanceChange(balance) {
   balance = balance.balance;

@@ -1,21 +1,21 @@
-// === Module 16240: FamilyCenterActivityGiftRow ===
+// === Module 16361: FamilyCenterActivityGiftRow ===
 
-// Module 16240 (FamilyCenterActivityGiftRow)
+// Module 16361 (FamilyCenterActivityGiftRow)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 4973 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 14283 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 16228 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16237 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16238 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16239 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 14406 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 16349 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16358 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16359 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

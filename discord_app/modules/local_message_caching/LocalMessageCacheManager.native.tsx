@@ -1,21 +1,21 @@
-// === Module 15826: LocalMessageCacheManager ===
+// === Module 15947: LocalMessageCacheManager ===
 
-// Module 15826 (LocalMessageCacheManager)
+// Module 15947 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import DateUtils from "DateUtils" /* 4739 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8103 */;
-import createMessageDefault from "createMessage" /* 9955 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 12124 */;
+import DateUtils from "DateUtils" /* 4834 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8202 */;
+import createMessageDefault from "createMessage" /* 10054 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 12223 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4860 */;
+import MessageRecord from "MessageRecord" /* 4955 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import MessageStore from "MessageStore" /* 6265 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import MessageStore from "MessageStore" /* 6360 */;
 import LifecycleManager from "LifecycleManager" /* 2121 */;
 
 require = fn;
@@ -132,7 +132,7 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -261,10 +261,10 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
     }
   }
 };
-const SendMessageOptionsStore = fn(12065);
+const SendMessageOptionsStore = fn(12164);
 const Constants = fn(1071);
 ({ MessageStates: closure_9, MessageTypes: closure_10 } = Constants);
-const MutexUtils = fn(15827);
+const MutexUtils = fn(15948);
 let closure_11 = MutexUtils.createLock();
 let closure_12 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -341,7 +341,7 @@ class LocalMessageCacheManager extends tmp5 {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -388,7 +388,7 @@ class LocalMessageCacheManager extends tmp5 {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     } else {
                       try {
@@ -408,7 +408,7 @@ class LocalMessageCacheManager extends tmp5 {
                             }, 0);
                           }
                           c1 = 3;
-                          return { value: "HermesInternal", done: null };
+                          return { value: "HermesInternal", done: "HermesInternal" };
                         }
                       } catch (tmp9) {
                         c1 = tmp;
@@ -421,7 +421,7 @@ class LocalMessageCacheManager extends tmp5 {
                   applyArgumentsResult = values[Symbol.iterator]();
                   if (applyArgumentsResult === undefined) {
                     c10 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   } else {
                     c7 = 1;
                     closure_134_2 = tmp34;
@@ -663,7 +663,7 @@ class LocalMessageCacheManager extends tmp5 {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -704,7 +704,7 @@ class LocalMessageCacheManager extends tmp5 {
               return obj;
             }
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } catch (tmp9) {
             c1 = tmp;
             throw tmp9;
@@ -929,7 +929,7 @@ prototype["_initialize"] = function _initialize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {
@@ -980,12 +980,12 @@ prototype["_initialize"] = function _initialize() {
                 let obj4 = values(572);
                 let subscription1 = obj4.subscribe("CACHE_LOADED", closure_132_0.handleCacheLoaded);
                 c8 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6656);
+                let obj9 = values(6751);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

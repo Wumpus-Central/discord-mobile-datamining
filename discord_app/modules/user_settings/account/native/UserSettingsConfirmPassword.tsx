@@ -1,16 +1,16 @@
-// === Module 7223: UserSettingsConfirmPassword ===
+// === Module 7318: UserSettingsConfirmPassword ===
 
-// Module 7223 (UserSettingsConfirmPassword)
+// Module 7318 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import components_Button_Button from "components/Button/Button" /* 5515 */;
-import TextInput from "TextInput" /* 7148 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7178 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7224 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7225 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7227 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import components_Button_Button from "components/Button/Button" /* 5610 */;
+import TextInput from "TextInput" /* 7243 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7273 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7319 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7320 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7322 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { paddingVertical: 12, paddingHorizontal: 16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: { marginTop: 24 }, button: { marginTop: 16 }, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };
@@ -53,7 +53,7 @@ class UserSettingsConfirmPasswordInner {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

@@ -1,14 +1,14 @@
-// === Module 16670: GuildRoleSubscriptionTierTemplatesUtils ===
+// === Module 16791: GuildRoleSubscriptionTierTemplatesUtils ===
 
-// Module 16670 (GuildRoleSubscriptionTierTemplatesUtils)
+// Module 16791 (GuildRoleSubscriptionTierTemplatesUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtilsAll from "FlagUtils" /* 1404 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7491 */;
-import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15129 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7586 */;
+import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4842 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 16671 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4937 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 16792 */;
 
 const require = globalThis.__r;
 
@@ -55,7 +55,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -137,9 +137,9 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(16665).useEditStateStore;
+const useEditStateStore = fn(16786).useEditStateStore;
 const GuildFeatures = fn(1071).GuildFeatures;
-const ChannelFlags = fn(4773).ChannelFlags;
+const ChannelFlags = fn(4868).ChannelFlags;
 let closure_12 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx");

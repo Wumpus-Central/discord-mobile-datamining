@@ -1,6 +1,6 @@
-// === Module 17874: InterestPickerCompletion ===
+// === Module 17986: InterestPickerCompletion ===
 
-// Module 17874 (InterestPickerCompletion)
+// Module 17986 (InterestPickerCompletion)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/waterwheels/interest/InterestPickerCompletion.tsx");

@@ -1,8 +1,8 @@
-// === Module 8459: transitionToGuild ===
+// === Module 8558: transitionToGuild ===
 
-// Module 8459 (transitionToGuild)
+// Module 8558 (transitionToGuild)
 import router_utils from "router_utils" /* 1098 */;
-import getGuildTransitionRoute from "getGuildTransitionRoute" /* 7447 */;
+import getGuildTransitionRoute from "getGuildTransitionRoute" /* 7542 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

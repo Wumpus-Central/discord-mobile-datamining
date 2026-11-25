@@ -1,7 +1,7 @@
-// === Module 7499: GameServerExperiment ===
+// === Module 7594: GameServerExperiment ===
 
-// Module 7499 (GameServerExperiment)
-import createExperiment from "module_5918" /* 5918 */;
+// Module 7594 (GameServerExperiment)
+import createExperiment from "module_6013" /* 6013 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2025-08_portkey_enabled", label: "GameServer Enabled", defaultConfig: { enabled: false }, treatments: null };

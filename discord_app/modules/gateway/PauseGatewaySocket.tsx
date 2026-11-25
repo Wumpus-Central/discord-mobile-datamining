@@ -1,6 +1,6 @@
-// === Module 14966: PauseGatewaySocket ===
+// === Module 15088: PauseGatewaySocket ===
 
-// Module 14966 (PauseGatewaySocket)
+// Module 15088 (PauseGatewaySocket)
 import size from "module_2" /* 2 */;
 
 let global = false;

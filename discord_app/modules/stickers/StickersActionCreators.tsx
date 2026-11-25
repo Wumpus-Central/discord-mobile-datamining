@@ -1,16 +1,16 @@
-// === Module 10686: StickersActionCreators ===
+// === Module 10785: StickersActionCreators ===
 
-// Module 10686 (StickersActionCreators)
+// Module 10785 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5920 */;
-import InlineUploaderDefault from "InlineUploader" /* 7213 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6015 */;
+import InlineUploaderDefault from "InlineUploader" /* 7308 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5818 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6040 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6135 */;
 import UserStore from "UserStore" /* 1386 */;
-import StickersStore from "StickersStore" /* 6801 */;
+import StickersStore from "StickersStore" /* 6896 */;
 
 const require = globalThis.__r;
 
@@ -36,7 +36,7 @@ let closure_13 = async function _fetchStickerPacks() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -124,7 +124,7 @@ let closure_14 = async function _fetchSticker(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -197,7 +197,7 @@ let closure_15 = async function _fetchGuildStickersWithCreator(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -248,7 +248,7 @@ let closure_15 = async function _fetchGuildStickersWithCreator(arg0) {
           };
           closure_131_1(closure_131_2[10]).dispatch(obj7);
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp13) {
         c5 = tmp;
@@ -268,7 +268,7 @@ let closure_16 = async function _deleteGuildSticker(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -298,7 +298,7 @@ let closure_16 = async function _deleteGuildSticker(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp5) {
       c1 = tmp;

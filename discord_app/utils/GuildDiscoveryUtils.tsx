@@ -1,13 +1,13 @@
-// === Module 8794: GuildDiscoveryUtils ===
+// === Module 8893: GuildDiscoveryUtils ===
 
-// Module 8794 (GuildDiscoveryUtils)
+// Module 8893 (GuildDiscoveryUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import _modDef1488 from "module_1488" /* 1488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4850 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5538 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import LurkingStore from "LurkingStore" /* 4945 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5633 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
@@ -171,7 +171,7 @@ let closure_13 = async function _getDiscoverableGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -251,7 +251,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

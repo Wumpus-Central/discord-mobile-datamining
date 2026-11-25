@@ -1,16 +1,16 @@
-// === Module 11660: MainTabsNavigatorPanelContext ===
+// === Module 11759: MainTabsNavigatorPanelContext ===
 
-// Module 11660 (MainTabsNavigatorPanelContext)
+// Module 11759 (MainTabsNavigatorPanelContext)
 import noop from "module_19" /* 19 */;
 
 const obj = { gesture: null, disallowGesture: null, edgeSwipeOnly: null, translateX: null, isInMainTabs: false, isNavigatorPanelsBesideChannelList: false };
-const Gesture = fn(5177).Gesture;
+const Gesture = fn(5272).Gesture;
 obj.gesture = Gesture.Pan();
-let ReanimatedHelperTypes = fn(7303);
+let ReanimatedHelperTypes = fn(7398);
 obj.disallowGesture = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7303);
+ReanimatedHelperTypes = fn(7398);
 obj.edgeSwipeOnly = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7303);
+ReanimatedHelperTypes = fn(7398);
 obj.translateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext(obj);
 const context1 = noop.createContext(undefined);

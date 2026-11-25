@@ -1,15 +1,15 @@
-// === Module 10632: UploaderBase ===
+// === Module 10731: UploaderBase ===
 
-// Module 10632 (UploaderBase)
+// Module 10731 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 7993 */;
-import UploadTargets from "UploadTargets" /* 8016 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8092 */;
+import UploadTargets from "UploadTargets" /* 8115 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const AbortCodes = fn(1071).AbortCodes;
-const FileUploadErrorTypes = fn(4922).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(5017).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -78,7 +78,7 @@ class UploaderBase extends EventEmitter {
     };
     obj = closure_1(closure_2[5]);
     tmp3.id = obj.uniqueId("Uploader");
-    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "sa" };
+    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "analyticsLocations" };
     return tmp3;
   }
 }
@@ -114,7 +114,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -381,7 +381,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

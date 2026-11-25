@@ -1,13 +1,13 @@
-// === Module 20144: GlobalDiscoveryServersFeaturedSearchManager ===
+// === Module 20249: GlobalDiscoveryServersFeaturedSearchManager ===
 
-// Module 20144 (GlobalDiscoveryServersFeaturedSearchManager)
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15026 */;
+// Module 20249 (GlobalDiscoveryServersFeaturedSearchManager)
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15148 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 let require = fn;
 GlobalDiscoveryServersSearchResultsStoreDefault;
-let closure_6 = fn(8434).DISCOVERY_ALL_CATEGORIES_ID;
+let closure_6 = fn(8533).DISCOVERY_ALL_CATEGORIES_ID;
 const Endpoints = fn(1071).Endpoints;
 const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -43,7 +43,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

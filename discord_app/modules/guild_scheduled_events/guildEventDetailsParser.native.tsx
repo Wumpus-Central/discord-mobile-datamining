@@ -1,7 +1,7 @@
-// === Module 8450: guildEventDetailsParser ===
+// === Module 8549: guildEventDetailsParser ===
 
-// Module 8450 (guildEventDetailsParser)
-import MarkupUtils from "MarkupUtils" /* 6941 */;
+// Module 8549 (guildEventDetailsParser)
+import MarkupUtils from "MarkupUtils" /* 7036 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/guildEventDetailsParser.native.tsx");

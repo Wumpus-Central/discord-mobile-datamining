@@ -1,23 +1,23 @@
-// === Module 10685: StickersHooks ===
+// === Module 10784: StickersHooks ===
 
-// Module 10685 (StickersHooks)
+// Module 10784 (StickersHooks)
 import util from "util" /* 1112 */;
-import UserSettings from "UserSettings" /* 4742 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4854 */;
-import StickersUtils from "StickersUtils" /* 6653 */;
-import StickersTypes from "StickersTypes" /* 6654 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8330 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10668 */;
-import StickersActionCreators from "StickersActionCreators" /* 10686 */;
+import UserSettings from "UserSettings" /* 4837 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4949 */;
+import StickersUtils from "StickersUtils" /* 6748 */;
+import StickersTypes from "StickersTypes" /* 6749 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8429 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10767 */;
+import StickersActionCreators from "StickersActionCreators" /* 10785 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4950 */;
-import SortedGuildStore from "SortedGuildStore" /* 6038 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import SortedGuildStore from "SortedGuildStore" /* 6133 */;
 import UserStore from "UserStore" /* 1386 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6800 */;
-import StickersStore from "StickersStore" /* 6801 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6895 */;
+import StickersStore from "StickersStore" /* 6896 */;
 
 const require = globalThis.__r;
 
@@ -249,7 +249,7 @@ export function useStickersGrid(collapsedStickersCategories) {
         const guildId = flag.getGuildId();
         const tmpResult = collapsedStickersCategories(num[14]);
         let canCreateExpressions = null != guild;
-        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(6654).StickerCategoryTypes.FAVORITE);
+        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(6749).StickerCategoryTypes.FAVORITE);
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
         }
@@ -317,7 +317,7 @@ export function useStickersGrid(collapsedStickersCategories) {
           rowIndex = rowIndex + 1;
         }
         gridSectionIndex = gridSectionIndex + 1;
-        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(6654).StickerCategoryTypes.RECENT);
+        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(6749).StickerCategoryTypes.RECENT);
       }
       if (null == items) {
         const iter = stickersCategories[Symbol.iterator]();
@@ -371,7 +371,7 @@ export function useFavoriteStickerIds() {
   return stickerIds;
 }
 export function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10668).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10767).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -379,7 +379,7 @@ export function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10668);
+  const obj = stickerIds(10767);
   items = [StickersStore];
   const items1 = [stickerIds];
   return stickerIds(504).useStateFromStoresArray(items, () => {
@@ -423,7 +423,7 @@ export function useLatestFrecentStickerIds() {
   return keys;
 }
 export function useLatestFrecentStickers() {
-  const frecencySettings = keys(10668).useFrecencySettings();
+  const frecencySettings = keys(10767).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -442,7 +442,7 @@ export function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10668);
+  const obj = keys(10767);
   items = [StickersStore];
   const items1 = [keys];
   return keys(504).useStateFromStoresArray(items, () => {
@@ -470,8 +470,8 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
   const tmp5 = obj4(noop.useState(false), 2);
   let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
   if (!isGuildStickerResult) {
-    isGuildStickerResult = tmp(6653).isStandardSticker(renderableSticker);
-    const tmpResult = tmp(6653);
+    isGuildStickerResult = tmp(6748).isStandardSticker(renderableSticker);
+    const tmpResult = tmp(6748);
   }
   obj4 = { hasFetched: tmp6, isReturnable: isGuildStickerResult, renderableSticker, shouldFetch: tmp4[0], stickersStoreDefinition: stateFromStores };
   noop = obj2.useRef(obj4);
@@ -491,7 +491,7 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

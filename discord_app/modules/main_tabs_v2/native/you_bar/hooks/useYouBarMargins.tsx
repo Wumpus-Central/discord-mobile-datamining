@@ -1,13 +1,13 @@
-// === Module 16510: useYouBarMargins ===
+// === Module 16631: useYouBarMargins ===
 
-// Module 16510 (useYouBarMargins)
+// Module 16631 (useYouBarMargins)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import useChatLayoutDefault from "useChatLayout" /* 5096 */;
-import useToken from "useToken" /* 5481 */;
-import VoicePanelDockLayout from "VoicePanelDockLayout" /* 11657 */;
-import YouBarConstants from "YouBarConstants" /* 16511 */;
+import useChatLayoutDefault from "useChatLayout" /* 5191 */;
+import useToken from "useToken" /* 5576 */;
+import VoicePanelDockLayout from "VoicePanelDockLayout" /* 11756 */;
+import YouBarConstants from "YouBarConstants" /* 16632 */;
 import size from "module_2" /* 2 */;
 
 ({ YOU_BAR_MARGIN_IOS: c3, YOU_BAR_MARGIN: closure_4 } = YouBarConstants);

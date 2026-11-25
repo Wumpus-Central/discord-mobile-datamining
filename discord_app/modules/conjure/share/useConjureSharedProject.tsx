@@ -1,17 +1,17 @@
-// === Module 12226: useConjureSharedProject ===
+// === Module 12325: useConjureSharedProject ===
 
-// Module 12226 (useConjureSharedProject)
-import loadConjureSharedProjectDefault from "loadConjureSharedProject" /* 11855 */;
+// Module 12325 (useConjureSharedProject)
+import loadConjureSharedProjectDefault from "loadConjureSharedProject" /* 11954 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11847 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11946 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const canRemixProject = fn(6808).canRemixProject;
+const canRemixProject = fn(6903).canRemixProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/useConjureSharedProject.tsx");
 

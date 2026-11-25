@@ -1,32 +1,34 @@
-// === Module 5682: ClientBillingError ===
+// === Module 5777: ClientBillingError ===
 
-// Module 5682 (ClientBillingError)
+// Module 5777 (ClientBillingError)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import BillingUtils from "BillingUtils" /* 4730 */;
-import BillingErrorDefault from "BillingError" /* 5668 */;
+import BillingUtils from "BillingUtils" /* 4825 */;
+import BillingErrorDefault from "BillingError" /* 5763 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const PaymentSourceTypes = fn(1082).PaymentSourceTypes;
 const logger = new LoggerDefault("ClientBillingError");
 let closure_6 = "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL;
-const metroImportDefault = { payment_method_confirmation: "PaymentMethodConfirmation", submit_address_step: "SubmitAddressStep", payment_element_setup: "PaymentElementSetup", express_checkout_vault: "ExpressCheckoutAddPaymentMethod", express_checkout_load: "ExpressCheckoutLoad", payment_authentication: "PaymentAuthentication", braintree_tokenize: "BraintreeTokenize", gateway_sdk_init: "GatewaySdkInit", stripe_load: "StripeLoad" };
+const metroImportDefault = { payment_method_confirmation: "PaymentMethodConfirmation", payment_confirmation: "PaymentConfirmation", submit_address_step: "SubmitAddressStep", payment_element_setup: "PaymentElementSetup", express_checkout_vault: "ExpressCheckoutAddPaymentMethod", express_checkout_load: "ExpressCheckoutLoad", payment_authentication: "PaymentAuthentication", braintree_tokenize: "BraintreeTokenize", gateway_sdk_init: "GatewaySdkInit", stripe_load: "StripeLoad", order_create: "OrderCreate", order_sync: "OrderSync", order_sign: "OrderSign", order_fetch: "OrderFetch", order_signing_reopen_next_action: "OrderSigningReopenNextAction", subscription_plans_fetch: "SubscriptionPlansFetch" };
 const set = new Set(["card_error", "api_connection_error", "validation_error"]);
 const set1 = new Set(["setup_intent_authentication_failure", "payment_intent_authentication_failure"]);
 const set2 = new Set(["email_invalid", "tax_id_invalid"]);
-let closure_11 = ["google_pay.", "apple_pay."];
-const set3 = new Set(["BraintreeError", "AdyenCheckoutError"]);
-const re13 = /Failed to fetch|NetworkError|Load failed|Failed to load Stripe\.js/;
-const set4 = new Set(["PAYPAL_TOKENIZATION_REQUEST_ACTIVE"]);
-let items = [/authentication/gi, "verification"];
-let items1 = [items, , , ];
-const items2 = [/authoriz/gi, "approv"];
-items1[1] = items2;
-const items3 = [/token/gi, "tokn"];
-items1[2] = items3;
-const items4 = [/email/gi, "e_mail"];
-items1[3] = items4;
+let items = [BillingErrorDefault.Fields.CARD_NUMBER, BillingErrorDefault.Fields.CARD_CVC, BillingErrorDefault.Fields.CARD_EXPIRATION_DATE];
+const set3 = new Set(items);
+let closure_12 = ["google_pay.", "apple_pay."];
+const set4 = new Set(["BraintreeError", "AdyenCheckoutError"]);
+const re14 = /Failed to fetch|NetworkError|Load failed|Failed to load Stripe\.js/;
+const set5 = new Set(["PAYPAL_TOKENIZATION_REQUEST_ACTIVE"]);
+let items1 = [/authentication/gi, "verification"];
+const items2 = [items1, , , ];
+const items3 = [/authoriz/gi, "approv"];
+items2[1] = items3;
+const items4 = [/token/gi, "tokn"];
+items2[2] = items4;
+const items5 = [/email/gi, "e_mail"];
+items2[3] = items5;
 let ClientBillingError;
 class ClientBillingError extends Error {
   constructor(arg0, arg1) {
@@ -49,24 +51,20 @@ const prototype = ClientBillingError.prototype;
 ClientBillingError["report"] = function report(source, error, arg2) {
   if (typeof ClientBillingError === "function") {
     const classifyResult = ClientBillingError.classify(error);
-    const tmp10 = new tmp(ClientBillingError.getMessage(classifyResult), tmp7, tmp6, tmp5, tmp4, tmp3, tmp2);
-    tmp10.classification = classifyResult;
-    tmp10.source = source;
-    tmp10.key = ClientBillingError.getKeyFor(tmp10.classification);
-    tmp10.shouldReport = tmp10.getShouldReport();
+    const tmp8 = new tmp(ClientBillingError.getMessage(classifyResult), tmp5, tmp4, tmp3, tmp2, tmp, ClientBillingError);
+    tmp8.classification = classifyResult;
+    tmp8.source = source;
+    tmp8.key = ClientBillingError.getKeyFor(tmp8.classification);
+    tmp8.shouldReport = tmp8.getShouldReport();
     const _Error = Error;
-    let tmp16;
+    let tmp14;
     if (error instanceof Error) {
-      tmp16 = error;
+      tmp14 = error;
     }
-    tmp10.cause = tmp16;
+    tmp8.cause = tmp14;
     const _HermesInternal = HermesInternal;
-    tmp10.name = "" + dependencyMap[source.site] + "Error[" + tmp10.key + "]";
-    const sentryOptions = tmp10.getSentryOptions(arg2);
-    let str4 = "Skipping Sentry report:";
-    if (tmp10.shouldReport) {
-      str4 = "Reporting to Sentry:";
-    }
+    tmp8.name = "" + dependencyMap[source.site] + "Error[" + tmp8.key + "]";
+    const sentryOptions = tmp8.getSentryOptions(arg2);
     const obj2 = { fingerprint: null, tags: null };
     ({ fingerprint: obj3.fingerprint, tags: obj3.tags } = sentryOptions);
     if (closure_6) {
@@ -76,11 +74,13 @@ ClientBillingError["report"] = function report(source, error, arg2) {
       obj5 = {};
     }
     const merged = Object.assign(obj5);
-    logger.info(str4, tmp10.name, obj2);
-    if (tmp10.shouldReport) {
-      const result = BillingUtils.captureBillingException(tmp10, sentryOptions);
+    if (tmp8.shouldReport) {
+      logger.error("reporting error to Sentry:", tmp8.name, obj2);
+      const result = BillingUtils.captureBillingException(tmp8, sentryOptions);
+    } else {
+      logger.info("skipping Sentry report:", tmp8.name, obj2);
     }
-    return tmp10;
+    return tmp8;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -114,23 +114,87 @@ ClientBillingError["classify"] = function classify(error) {
       }
       code = tmp4;
       if (null != tmp4) {
-        if (closure_11.some((item) => code.startsWith(item))) {
+        if (closure_12.some((item) => code.startsWith(item))) {
           const obj6 = { shape: "stripe_wallet_exception", error };
           let obj9 = obj6;
         }
         return obj9;
       }
       if (null != tmp4) {
-        const _Error = Error;
-        if (error instanceof Error) {
-          if (set3.has(error.name)) {
+        const _Error2 = Error;
+        let tmp11 = error instanceof Error;
+        if (!tmp11) {
+          let tmp6 = null;
+          if (typeof error === "object") {
+            tmp6 = null;
+            if (null !== error) {
+              const name = error.name;
+              let tmp7 = null;
+              if (typeof name === "string") {
+                tmp7 = name;
+              }
+              tmp6 = tmp7;
+            }
+          }
+          let tmp8 = null != tmp6;
+          if (tmp8) {
+            let tmp9 = null;
+            if (typeof error === "object") {
+              tmp9 = null;
+              if (null !== error) {
+                const message = error.message;
+                let tmp10 = null;
+                if (typeof message === "string") {
+                  tmp10 = message;
+                }
+                tmp9 = tmp10;
+              }
+            }
+            tmp8 = null != tmp9;
+          }
+          tmp11 = tmp8;
+        }
+        if (tmp11) {
+          if (set4.has(error.name)) {
             const obj7 = { shape: "gateway_sdk_error", error };
             obj9 = obj7;
           }
         }
       }
-      const _Error2 = Error;
-      if (error instanceof Error) {
+      const _Error = Error;
+      let tmp14 = error instanceof Error;
+      if (!tmp14) {
+        let tmp15 = null;
+        if (typeof error === "object") {
+          tmp15 = null;
+          if (null !== error) {
+            const name2 = error.name;
+            let tmp16 = null;
+            if (typeof name2 === "string") {
+              tmp16 = name2;
+            }
+            tmp15 = tmp16;
+          }
+        }
+        let tmp17 = null != tmp15;
+        if (tmp17) {
+          let tmp18 = null;
+          if (typeof error === "object") {
+            tmp18 = null;
+            if (null !== error) {
+              const message2 = error.message;
+              let tmp19 = null;
+              if (typeof message2 === "string") {
+                tmp19 = message2;
+              }
+              tmp18 = tmp19;
+            }
+          }
+          tmp17 = null != tmp18;
+        }
+        tmp14 = tmp17;
+      }
+      if (tmp14) {
         const obj8 = { shape: "error", error };
         obj9 = obj8;
       } else {
@@ -207,18 +271,32 @@ ClientBillingError["getKeyFor"] = function getKeyFor(classification) {
     const billingErrorFieldNames = ClientBillingError.getBillingErrorFieldNames(error2);
     if (billingErrorFieldNames.length > 0) {
       const _HermesInternal5 = HermesInternal;
-      let str17 = "field_error:" + billingErrorFieldNames.join("+");
+      return "field_error:" + billingErrorFieldNames.join("+");
     } else if (error2.code > 0) {
       const _String = String;
-      str17 = String(error2.code);
+      return String(error2.code);
+    } else if (null != error2.status) {
+      const _HermesInternal4 = HermesInternal;
+      return "http_" + error2.status;
     } else {
-      str17 = "unknown";
-      if (null != error2.status) {
-        const _HermesInternal4 = HermesInternal;
-        str17 = "http_" + error2.status;
+      let tmp7 = null;
+      if (typeof error2 === "object") {
+        tmp7 = null;
+        if (null !== error2) {
+          const name = error2.name;
+          let tmp8 = null;
+          if (typeof name === "string") {
+            tmp8 = name;
+          }
+          tmp7 = tmp8;
+        }
       }
+      let str17 = "unknown";
+      if (null != tmp7) {
+        str17 = tmp7;
+      }
+      return str17;
     }
-    return str17;
   } else if ("stripe_error" === shape) {
     const error = classification.error;
     if (null == error.code) {
@@ -256,11 +334,12 @@ prototype["getShouldReport"] = function getShouldReport() {
     const error = classification.error;
     let tmp17 = error.code !== BillingErrorDefault.ErrorCodes.INVALID_PAYMENT_SOURCE;
     if (tmp17) {
-      let tmp19 = ClientBillingError.getBillingErrorFieldNames(error).length > 0;
-      if (!tmp19) {
-        tmp19 = !BillingUtils.isExpectedHttpClientError(error);
+      const billingErrorFieldNames = ClientBillingError.getBillingErrorFieldNames(error);
+      let someResult = billingErrorFieldNames.some((item) => !set.has(item));
+      if (!someResult) {
+        someResult = !BillingUtils.isExpectedHttpClientError(error);
       }
-      tmp17 = tmp19;
+      tmp17 = someResult;
     }
     return tmp17;
   } else if ("stripe_error" === shape) {
@@ -296,19 +375,19 @@ prototype["getShouldReport"] = function getShouldReport() {
   } else if ("stripe_wallet_exception" === shape) {
     return false;
   } else if ("error" === shape) {
-    return !re13.test(classification.error.message);
+    return !re14.test(classification.error.message);
   } else if ("gateway_sdk_error" === shape) {
-    return !set4.has(classification.error.code);
+    return !set5.has(classification.error.code);
   } else {
     return true;
   }
 };
 prototype["isStripeWalletSelected"] = function isStripeWalletSelected() {
-  let tmp = "express_checkout_vault" === this.source.site;
-  if (!tmp) {
-    tmp = this.source.selectedElementType === PaymentSourceTypes.PAYMENT_REQUEST;
+  let BooleanResult = Boolean(this.source.isStripeWallet);
+  if (!BooleanResult) {
+    BooleanResult = this.source.selectedElementType === PaymentSourceTypes.PAYMENT_REQUEST;
   }
-  return tmp;
+  return BooleanResult;
 };
 prototype["getErrorTags"] = function getErrorTags() {
   const classification = this.classification;
@@ -373,7 +452,7 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
       if (typeof arr === "string") {
         items = [
           tmp,
-          closure_1_15.reduce((acc, item) => {
+          items2.reduce((acc, item) => {
               [tmp, ] = item;
               return acc.replace(tmp, (str) => {
                 if (str === str.toUpperCase()) {
@@ -388,12 +467,12 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
         let tmp2 = items;
       } else {
         const _Array = Array;
-        items1 = [tmp, ];
+        const items1 = [tmp, ];
         if (Array.isArray(arr)) {
           items1[1] = arr.map((item) => {
             let reduced = item;
             if (typeof item === "string") {
-              reduced = closure_1_15.reduce((acc, item) => {
+              reduced = closure_1_16.reduce((acc, item) => {
                 [tmp, ] = item;
                 return acc.replace(tmp, (str) => {
                   if (str === str.toUpperCase()) {
@@ -427,7 +506,7 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
       if (typeof arr === "string") {
         items = [
           tmp,
-          closure_1_15.reduce((acc, item) => {
+          items2.reduce((acc, item) => {
               [tmp, ] = item;
               return acc.replace(tmp, (str) => {
                 if (str === str.toUpperCase()) {
@@ -442,12 +521,12 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
         let tmp2 = items;
       } else {
         const _Array = Array;
-        items1 = [tmp, ];
+        const items1 = [tmp, ];
         if (Array.isArray(arr)) {
           items1[1] = arr.map((item) => {
             let reduced = item;
             if (typeof item === "string") {
-              reduced = closure_1_15.reduce((acc, item) => {
+              reduced = closure_1_16.reduce((acc, item) => {
                 [tmp, ] = item;
                 return acc.replace(tmp, (str) => {
                   if (str === str.toUpperCase()) {
@@ -481,7 +560,7 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
       if (typeof arr === "string") {
         items = [
           tmp,
-          closure_1_15.reduce((acc, item) => {
+          items2.reduce((acc, item) => {
               [tmp, ] = item;
               return acc.replace(tmp, (str) => {
                 if (str === str.toUpperCase()) {
@@ -496,12 +575,12 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
         let tmp2 = items;
       } else {
         const _Array = Array;
-        items1 = [tmp, ];
+        const items1 = [tmp, ];
         if (Array.isArray(arr)) {
           items1[1] = arr.map((item) => {
             let reduced = item;
             if (typeof item === "string") {
-              reduced = closure_1_15.reduce((acc, item) => {
+              reduced = closure_1_16.reduce((acc, item) => {
                 [tmp, ] = item;
                 return acc.replace(tmp, (str) => {
                   if (str === str.toUpperCase()) {
@@ -535,7 +614,7 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
       if (typeof arr === "string") {
         items = [
           tmp,
-          closure_1_15.reduce((acc, item) => {
+          items2.reduce((acc, item) => {
               [tmp, ] = item;
               return acc.replace(tmp, (str) => {
                 if (str === str.toUpperCase()) {
@@ -550,12 +629,12 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
         let tmp2 = items;
       } else {
         const _Array = Array;
-        items1 = [tmp, ];
+        const items1 = [tmp, ];
         if (Array.isArray(arr)) {
           items1[1] = arr.map((item) => {
             let reduced = item;
             if (typeof item === "string") {
-              reduced = closure_1_15.reduce((acc, item) => {
+              reduced = closure_1_16.reduce((acc, item) => {
                 [tmp, ] = item;
                 return acc.replace(tmp, (str) => {
                   if (str === str.toUpperCase()) {
@@ -589,7 +668,7 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
       if (typeof arr === "string") {
         items = [
           tmp,
-          closure_1_15.reduce((acc, item) => {
+          items2.reduce((acc, item) => {
               [tmp, ] = item;
               return acc.replace(tmp, (str) => {
                 if (str === str.toUpperCase()) {
@@ -604,12 +683,12 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
         let tmp2 = items;
       } else {
         const _Array = Array;
-        items1 = [tmp, ];
+        const items1 = [tmp, ];
         if (Array.isArray(arr)) {
           items1[1] = arr.map((item) => {
             let reduced = item;
             if (typeof item === "string") {
-              reduced = closure_1_15.reduce((acc, item) => {
+              reduced = closure_1_16.reduce((acc, item) => {
                 [tmp, ] = item;
                 return acc.replace(tmp, (str) => {
                   if (str === str.toUpperCase()) {
@@ -643,7 +722,7 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
       if (typeof arr === "string") {
         items = [
           tmp,
-          closure_1_15.reduce((acc, item) => {
+          items2.reduce((acc, item) => {
               [tmp, ] = item;
               return acc.replace(tmp, (str) => {
                 if (str === str.toUpperCase()) {
@@ -658,12 +737,12 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
         let tmp2 = items;
       } else {
         const _Array = Array;
-        items1 = [tmp, ];
+        const items1 = [tmp, ];
         if (Array.isArray(arr)) {
           items1[1] = arr.map((item) => {
             let reduced = item;
             if (typeof item === "string") {
-              reduced = closure_1_15.reduce((acc, item) => {
+              reduced = closure_1_16.reduce((acc, item) => {
                 [tmp, ] = item;
                 return acc.replace(tmp, (str) => {
                   if (str === str.toUpperCase()) {
@@ -715,7 +794,7 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
         if (typeof arr === "string") {
           items = [
             tmp,
-            closure_1_15.reduce((acc, item) => {
+            items2.reduce((acc, item) => {
                 [tmp, ] = item;
                 return acc.replace(tmp, (str) => {
                   if (str === str.toUpperCase()) {
@@ -730,12 +809,12 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
           let tmp2 = items;
         } else {
           const _Array = Array;
-          items1 = [tmp, ];
+          const items1 = [tmp, ];
           if (Array.isArray(arr)) {
             items1[1] = arr.map((item) => {
               let reduced = item;
               if (typeof item === "string") {
-                reduced = closure_1_15.reduce((acc, item) => {
+                reduced = closure_1_16.reduce((acc, item) => {
                   [tmp, ] = item;
                   return acc.replace(tmp, (str) => {
                     if (str === str.toUpperCase()) {

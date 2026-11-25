@@ -1,18 +1,18 @@
-// === Module 11384: ChannelTabsActionCreators ===
+// === Module 11483: ChannelTabsActionCreators ===
 
-// Module 11384 (ChannelTabsActionCreators)
+// Module 11483 (ChannelTabsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1098 */;
-import FavoritesUtils from "FavoritesUtils" /* 4791 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5887 */;
-import transitionToChannel from "transitionToChannel" /* 6000 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import ChannelTabRoutes from "ChannelTabRoutes" /* 11382 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 11381 */;
+import FavoritesUtils from "FavoritesUtils" /* 4886 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5982 */;
+import transitionToChannel from "transitionToChannel" /* 6095 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6098 */;
+import ChannelTabRoutes from "ChannelTabRoutes" /* 11481 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import ReadStateStore from "ReadStateStore" /* 6901 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 11480 */;
 
 require = fn;
 function navigateToTabLocation(activeTab) {

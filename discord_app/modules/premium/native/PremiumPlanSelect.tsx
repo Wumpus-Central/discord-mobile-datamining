@@ -1,6 +1,6 @@
-// === Module 13828: PremiumPlanSelect ===
+// === Module 13951: PremiumPlanSelect ===
 
-// Module 13828 (PremiumPlanSelect)
+// Module 13951 (PremiumPlanSelect)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -8,33 +8,33 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
 import PremiumUtils from "PremiumUtils" /* 2173 */;
 import PremiumSubscription from "PremiumSubscription" /* 2184 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5680 */;
-import Stack_Stack from "Stack/Stack" /* 5989 */;
-import TextStylesDefault from "TextStyles" /* 6696 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7488 */;
-import premium_ProductIds from "premium/ProductIds" /* 8972 */;
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 9010 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9088 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 9118 */;
-import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 9200 */;
-import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 9201 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9496 */;
-import TreasureChestBannerSpotIllustration from "TreasureChestBannerSpotIllustration" /* 13830 */;
-import _modDef13834 from "module_13834" /* 13834 */;
-import _modDef13835 from "module_13835" /* 13835 */;
-import _modDef13836 from "module_13836" /* 13836 */;
-import _modDef13837 from "module_13837" /* 13837 */;
-import _modDef13838 from "module_13838" /* 13838 */;
-import _modDef13839 from "module_13839" /* 13839 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5775 */;
+import Stack_Stack from "Stack/Stack" /* 6084 */;
+import TextStylesDefault from "TextStyles" /* 6791 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7583 */;
+import premium_ProductIds from "premium/ProductIds" /* 9071 */;
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 9109 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9187 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 9217 */;
+import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 9299 */;
+import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 9300 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9595 */;
+import TreasureChestBannerSpotIllustration from "TreasureChestBannerSpotIllustration" /* 13953 */;
+import _modDef13957 from "module_13957" /* 13957 */;
+import _modDef13958 from "module_13958" /* 13958 */;
+import _modDef13959 from "module_13959" /* 13959 */;
+import _modDef13960 from "module_13960" /* 13960 */;
+import _modDef13961 from "module_13961" /* 13961 */;
+import _modDef13962 from "module_13962" /* 13962 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import GuildStore from "GuildStore" /* 4883 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2177 */;
 import SubscriptionStore from "SubscriptionStore" /* 2178 */;
-import IAPStore from "IAPStore" /* 8963 */;
+import IAPStore from "IAPStore" /* 9062 */;
 
 const require = globalThis.__r;
 const PremiumUtilsDefault = PremiumUtils;
@@ -181,21 +181,21 @@ function PlanRow(plan) {
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("module_13834");
+    let tmp7Result = require("module_13957");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_19.TIER_1) {
-      tmp7Result = require("module_13838");
+      tmp7Result = require("module_13961");
     } else {
-      tmp7Result = require("module_13839");
+      tmp7Result = require("module_13962");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_19.TIER_0 === premiumTier) {
-      tmp7Result = require("module_13835");
+      tmp7Result = require("module_13958");
     } else if (closure_19.TIER_1 === premiumTier) {
-      tmp7Result = require("module_13836");
+      tmp7Result = require("module_13959");
     } else if (closure_19.TIER_2 === premiumTier) {
-      tmp7Result = require("module_13837");
+      tmp7Result = require("module_13960");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -420,7 +420,7 @@ function PlanSection(showBoostOnlyLabels) {
                   importer() {
                               return shouldShowModernBoostFlow(recommendedBoostCount[51])(recommendedBoostCount[50], recommendedBoostCount.paths).then((result) => {
                                 closure_0 = result.default;
-                                return /* F141865 */ function() { ... };
+                                return /* F142306 */ function() { ... };
                               });
                             },
                   hideActionSheet: true,
@@ -440,7 +440,7 @@ function PlanSection(showBoostOnlyLabels) {
   }, plan.productId));
   if (shouldShowModernBoostFlow) {
     let obj2 = { title: showBoostOnlyLabels.label, hasIcons: true, children: mapped };
-    let tmp7Result = closure_30(shouldShowModernBoostFlow(6014).TableRowGroup, obj2);
+    let tmp7Result = closure_30(shouldShowModernBoostFlow(6109).TableRowGroup, obj2);
   } else {
     let obj3 = { children: mapped };
     tmp7Result = closure_30(closure_6, obj3);
@@ -678,26 +678,26 @@ function PlanSections(showCurrentPlan) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-let useNativeCheckoutStore = fn(8977).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(13829);
+let useNativeCheckoutStore = fn(9076).useNativeCheckoutStore;
+const PremiumPlanSelectStore = fn(13952);
 ({ setIsPurchasing: map1, usePremiumPlanSelectStore: closure_14 } = PremiumPlanSelectStore);
 const PremiumConstants = fn(1388);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, PRICE_PLACEHOLDER: closure_17, PremiumSubscriptionSKUs: closure_18, PremiumTypes: closure_19, SubscriptionIntervalTypes: closure_20, SubscriptionPlans: closure_21 } = PremiumConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_22, AnalyticsObjects: closure_23, AnalyticsObjectTypes: closure_24, Fonts, HorizontalGradient: closure_25, PaymentGateways: closure_26, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
-const ColorConstants = fn(8985);
+const ColorConstants = fn(9084);
 ({ getPremiumGradientColor: closure_27, Gradients: closure_28 } = ColorConstants);
-const ItemPurchaseType = fn(5634).ItemPurchaseType;
+const ItemPurchaseType = fn(5729).ItemPurchaseType;
 const jsxProd = fn(21);
 ({ jsx: closure_30, jsxs: closure_31, Fragment: closure_32 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { header: null, row: null, rowDisabled: null, imgWumpusNitro: null, imgBoost: null, imgWumpusNitroBoost: null, imgWumpusNitroClassic: null, imgWumpusNitroClassicBoost: null, imgWumpusNitroTier0: null, rowText: null, rowPlanDescription: null, rowPlanDescriptionSubtext: null, rowPrice: null, purchasingSpinner: null, container: null, currentPlanGradient: null, currentPlanRow: null, loadingSpinnerContainer: null, offPlatformSubscriptionMessage: null, premiumHeaderLabel: null, boostContainer: null, boostRowIcon: null, nitroBanner: null, nitroBannerText: null, recommendedText: null };
 let obj3 = {};
 let merged = Object.assign(TextStylesDefault(Fonts.DISPLAY_EXTRABOLD, undefined, 24));
 obj3.marginTop = 16;
-obj3.color = fn(6742).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(6837).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
-obj2.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(6742).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(6837).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
 obj2.rowDisabled = { opacity: 0.5 };
 obj2.imgWumpusNitro = { height: 40, width: 40 };
 obj2.imgBoost = { height: 40, width: 40 };
@@ -705,14 +705,14 @@ obj2.imgWumpusNitroBoost = { width: 32, height: 32 };
 obj2.imgWumpusNitroClassic = { width: 40, height: 40 };
 obj2.imgWumpusNitroClassicBoost = { width: 32, height: 32 };
 obj2.imgWumpusNitroTier0 = { width: 40, height: 40 };
-let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(6742).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-obj2.rowText = { fontSize: 16, color: fn(6742).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(6837).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.rowText = { fontSize: 16, color: fn(6837).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.rowPlanDescription = { marginLeft: 12, fontFamily: Fonts.PRIMARY_SEMIBOLD, lineHeight: 20 };
 obj2.rowPlanDescriptionSubtext = { fontSize: 12, marginLeft: 5, fontFamily: Fonts.PRIMARY_MEDIUM, fontWeight: "400" };
 obj2.rowPrice = { marginLeft: "auto" };
 obj2.purchasingSpinner = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" };
 obj2.container = { marginHorizontal: 14.5, paddingBottom: 10 };
-let obj5 = { fontSize: 16, color: fn(6742).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj5 = { fontSize: 16, color: fn(6837).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.currentPlanGradient = { marginTop: 20, borderRadius: nativeDefault.radii.sm };
 obj2.currentPlanRow = { marginTop: 0.5, marginRight: 0.5, marginLeft: 0.5, marginBottom: 0.5 };
 obj2.loadingSpinnerContainer = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
@@ -727,7 +727,7 @@ obj2.nitroBannerText = { textAlign: "center" };
 let obj8 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
 obj2.recommendedText = { color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 let closure_33 = createStyles.createStyles(obj2);
-let closure_36 = { [_modDef13837]: "imgWumpusNitro", [_modDef13839]: "imgWumpusNitroBoost", [_modDef13836]: "imgWumpusNitroClassic", [_modDef13838]: "imgWumpusNitroClassicBoost", [_modDef13835]: "imgWumpusNitroTier0", [_modDef13834]: "imgBoost" };
+let closure_36 = { [_modDef13960]: "imgWumpusNitro", [_modDef13962]: "imgWumpusNitroBoost", [_modDef13959]: "imgWumpusNitroClassic", [_modDef13961]: "imgWumpusNitroClassicBoost", [_modDef13958]: "imgWumpusNitroTier0", [_modDef13957]: "imgBoost" };
 let items = [
   {
     id: "premium",
@@ -869,7 +869,7 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -972,32 +972,32 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
           }
           obj13.orderId = id;
           obj13.onPurchaseComplete = function onPurchaseComplete(paymentGateway) {
-            closure_1(5921).close();
+            closure_1(6016).close();
             if (paymentGateway.paymentGateway === constants.APPLE_ADVANCED_COMMERCE) {
               premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
               if (null == premiumTypeSubscription) {
                 const _Error = Error;
                 const error = new Error("PremiumActivatedAlert: no premium subscription in store post-activation");
                 const obj2 = { tags: { source: "showPremiumActivatedAlert.nullSubscription" } };
-                const result = premiumTypeSubscription(4730).captureBillingException(error, obj2);
-                const obj4 = premiumTypeSubscription(4730);
-                closure_1(6004).popWithKey(premiumTypeSubscription(8961).PREMIUM_KEY);
+                const result = premiumTypeSubscription(4825).captureBillingException(error, obj2);
+                const obj4 = premiumTypeSubscription(4825);
+                closure_1(6099).popWithKey(premiumTypeSubscription(9060).PREMIUM_KEY);
                 if (navigation.canGoBack()) {
                   navigation.goBack();
                 }
-                const tmpResult = closure_1(6004);
+                const tmpResult = closure_1(6099);
               } else {
                 const obj3 = {
                   importer() {
-                        return premiumTypeSubscription(basePurchaseFlowAnalyticsFields[51])(basePurchaseFlowAnalyticsFields[58], basePurchaseFlowAnalyticsFields.paths).then(/* F142154 */ function() { ... });
+                        return premiumTypeSubscription(basePurchaseFlowAnalyticsFields[51])(basePurchaseFlowAnalyticsFields[58], basePurchaseFlowAnalyticsFields.paths).then(/* F142595 */ function() { ... });
                       },
                   isDismissable: false
                 };
-                closure_1(5921).openLazy(obj3);
-                const tmpResult2 = closure_1(5921);
+                closure_1(6016).openLazy(obj3);
+                const tmpResult2 = closure_1(6016);
               }
             }
-            let obj = closure_1(5921);
+            let obj = closure_1(6016);
           };
           v3 = 3;
           c7 = 1;

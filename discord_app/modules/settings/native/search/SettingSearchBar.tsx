@@ -1,17 +1,17 @@
-// === Module 16032: SettingSearchBar ===
+// === Module 16153: SettingSearchBar ===
 
-// Module 16032 (SettingSearchBar)
+// Module 16153 (SettingSearchBar)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2018 */;
-import Search_SearchBar from "Search/SearchBar" /* 7280 */;
-import Tracking from "Tracking" /* 16026 */;
+import Search_SearchBar from "Search/SearchBar" /* 7375 */;
+import Tracking from "Tracking" /* 16147 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16020 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16141 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const obj2 = { container: { marginTop: nativeDefault.modules.mobile.SETTINGS_PADDING_TOP } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

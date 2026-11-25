@@ -1,11 +1,11 @@
-// === Module 9067: announcement_modal_two_panel ===
+// === Module 9166: announcement_modal_two_panel ===
 
-// Module 9067 (announcement_modal_two_panel)
+// Module 9166 (announcement_modal_two_panel)
 import _mod1196 from "module_1196" /* 1196 */;
-import localized_string from "localized_string" /* 9028 */;
-import cta_button from "cta_button" /* 9030 */;
-import theme_aware_asset from "theme_aware_asset" /* 9032 */;
-import announcement_modal_perk_card from "announcement_modal_perk_card" /* 9066 */;
+import localized_string from "localized_string" /* 9127 */;
+import cta_button from "cta_button" /* 9129 */;
+import theme_aware_asset from "theme_aware_asset" /* 9131 */;
+import announcement_modal_perk_card from "announcement_modal_perk_card" /* 9165 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

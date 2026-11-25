@@ -1,6 +1,6 @@
-// === Module 5731: RTCConnection ===
+// === Module 5826: RTCConnection ===
 
-// Module 5731 (RTCConnection)
+// Module 5826 (RTCConnection)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import BackoffDefault from "Backoff" /* 559 */;
@@ -15,59 +15,59 @@ import URLUtilsDefault from "URLUtils" /* 1379 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1478 */;
 import RTCControlSocket from "RTCControlSocket" /* 2130 */;
-import DiscordNativeDefault from "DiscordNative" /* 4728 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4923 */;
-import TimeUtils from "TimeUtils" /* 5701 */;
-import flatRestDefault from "flatRest" /* 5789 */;
-import DaveJoinTimerDefault from "DaveJoinTimer" /* 5820 */;
-import DaveRecipientTrackerDefault from "DaveRecipientTracker" /* 5821 */;
-import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 5824 */;
-import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 5825 */;
-import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 5831 */;
-import setShouldRecordNextConnectionDefault from "setShouldRecordNextConnection" /* 5832 */;
-import RTCConnectionEvent from "RTCConnectionEvent" /* 5834 */;
-import DesktopGeneralPerfExperiment from "DesktopGeneralPerfExperiment" /* 5835 */;
-import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5836 */;
-import VoiceQualityScoringExperiment2 from "VoiceQualityScoringExperiment" /* 5837 */;
-import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 5838 */;
-import WebScreenShareAudioExperiment2 from "WebScreenShareAudioExperiment" /* 5839 */;
-import WebStreamingOptimizationsExperiment2 from "WebStreamingOptimizationsExperiment" /* 5840 */;
-import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 5841 */;
-import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 5842 */;
-import LinuxGpuDecodeExperiment from "LinuxGpuDecodeExperiment" /* 5843 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5844 */;
-import VoiceQuality from "VoiceQuality" /* 5847 */;
-import SystemResourcesDefault from "SystemResources" /* 5856 */;
-import SystemResponsivenessDefault from "SystemResponsiveness" /* 5860 */;
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5864 */;
-import ServerLadderExperiment2 from "ServerLadderExperiment" /* 5866 */;
-import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 5867 */;
-import NativeMuteManagerDefault from "NativeMuteManager" /* 5869 */;
-import VoiceDurationDefault from "VoiceDuration" /* 5906 */;
-import SpatialAudioSessionStatsDefault from "SpatialAudioSessionStats" /* 5907 */;
-import AVError from "AVError" /* 5909 */;
-import VideoQuality from "VideoQuality" /* 5911 */;
-import VideoHealthManager from "VideoHealthManager" /* 5913 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5915 */;
-import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 5917 */;
-import DaveMessageValidator from "DaveMessageValidator" /* 5919 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5920 */;
-import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 14915 */;
+import DiscordNativeDefault from "DiscordNative" /* 4823 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5018 */;
+import TimeUtils from "TimeUtils" /* 5796 */;
+import flatRestDefault from "flatRest" /* 5884 */;
+import DaveJoinTimerDefault from "DaveJoinTimer" /* 5915 */;
+import DaveRecipientTrackerDefault from "DaveRecipientTracker" /* 5916 */;
+import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 5919 */;
+import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 5920 */;
+import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 5926 */;
+import setShouldRecordNextConnectionDefault from "setShouldRecordNextConnection" /* 5927 */;
+import RTCConnectionEvent from "RTCConnectionEvent" /* 5929 */;
+import DesktopGeneralPerfExperiment from "DesktopGeneralPerfExperiment" /* 5930 */;
+import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5931 */;
+import VoiceQualityScoringExperiment2 from "VoiceQualityScoringExperiment" /* 5932 */;
+import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 5933 */;
+import WebScreenShareAudioExperiment2 from "WebScreenShareAudioExperiment" /* 5934 */;
+import WebStreamingOptimizationsExperiment2 from "WebStreamingOptimizationsExperiment" /* 5935 */;
+import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 5936 */;
+import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 5937 */;
+import LinuxGpuDecodeExperiment from "LinuxGpuDecodeExperiment" /* 5938 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5939 */;
+import VoiceQuality from "VoiceQuality" /* 5942 */;
+import SystemResourcesDefault from "SystemResources" /* 5951 */;
+import SystemResponsivenessDefault from "SystemResponsiveness" /* 5955 */;
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5959 */;
+import ServerLadderExperiment2 from "ServerLadderExperiment" /* 5961 */;
+import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 5962 */;
+import NativeMuteManagerDefault from "NativeMuteManager" /* 5964 */;
+import VoiceDurationDefault from "VoiceDuration" /* 6001 */;
+import SpatialAudioSessionStatsDefault from "SpatialAudioSessionStats" /* 6002 */;
+import AVError from "AVError" /* 6004 */;
+import VideoQuality from "VideoQuality" /* 6006 */;
+import VideoHealthManager from "VideoHealthManager" /* 6008 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 6010 */;
+import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 6012 */;
+import DaveMessageValidator from "DaveMessageValidator" /* 6014 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6015 */;
+import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 15037 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeviceFrecencyStore from "DeviceFrecencyStore" /* 5732 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5734 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5735 */;
-import AudioRouteStore from "AudioRouteStore" /* 5737 */;
+import DeviceFrecencyStore from "DeviceFrecencyStore" /* 5827 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5829 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5830 */;
+import AudioRouteStore from "AudioRouteStore" /* 5832 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildStore from "GuildStore" /* 4883 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
-import RTCDebugStore from "RTCDebugStore" /* 5740 */;
-import RTCRegionStore from "RTCRegionStore" /* 5816 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
+import RTCDebugStore from "RTCDebugStore" /* 5835 */;
+import RTCRegionStore from "RTCRegionStore" /* 5911 */;
 import UserStore from "UserStore" /* 1386 */;
-import VoiceStateStore from "VoiceStateStore" /* 5565 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5745 */;
+import VoiceStateStore from "VoiceStateStore" /* 5660 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5840 */;
 
 const RTCControlSocketDefault = RTCControlSocket;
 const VoiceQualityDefault = VoiceQuality;
@@ -116,13 +116,13 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5736).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5831).getSystemAnalyticsInfo;
 let Constants = fn(1071);
 ({ AnalyticEvents: closure_18, ChannelTypes: closure_19, RTCConnectionStates: closure_20, RTCConnectionQuality: closure_21, BoostedGuildTiers: closure_22 } = Constants);
-const StreamSettingsConstants = fn(5817);
+const StreamSettingsConstants = fn(5912);
 ({ ApplicationStreamFPS: closure_23, ApplicationStreamResolutions: closure_24 } = StreamSettingsConstants);
-let closure_25 = fn(5818).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5729);
+let closure_25 = fn(5913).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5824);
 ({ ExperimentFlags: closure_26, Features: closure_27, MediaEngineContextTypes: closure_28, ConnectionStates: closure_29, Codecs: closure_30, MediaTypes: closure_31, SpeakingFlags: closure_32, DISABLED_DEVICE_ID: items, VideoEncoderLatencyProfile: closure_34 } = Constants);
 let str = "ws:";
 if (obj.test("https:")) {
@@ -1460,7 +1460,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
     self._secureFramesLastExecutedTransitionId = undefined;
     const _daveJoinTimer = self._daveJoinTimer;
     _daveJoinTimer.socketLost();
-    const tmp49 = new self(5821)();
+    const tmp49 = new self(5916)();
     self._daveRecipientTracker = tmp49;
     self._daveRecipientsActive = false;
     if (null != self._connection) {
@@ -1741,7 +1741,7 @@ prototype["_trackSpatialAudioSessionEnded"] = function _trackSpatialAudioSession
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -2289,7 +2289,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -2325,7 +2325,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
             const obj = tmp2(dependencyMap[59]);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -4011,7 +4011,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5701).now();
+  const commitReceivedTime = _connection(5796).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;
@@ -4053,7 +4053,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5701).now();
+  const welcomeReceivedTime = _connection(5796).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;

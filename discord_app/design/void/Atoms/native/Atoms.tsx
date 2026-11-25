@@ -1,9 +1,9 @@
-// === Module 15438: Atoms ===
+// === Module 15560: Atoms ===
 
-// Module 15438 (Atoms)
+// Module 15560 (Atoms)
 import _mod17 from "module_17" /* 17 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 7964 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8063 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");

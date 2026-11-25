@@ -2,8 +2,8 @@
 
 // Module 2189 (IntlLoaderStore)
 import util from "util" /* 1112 */;
-import formatjs from "formatjs" /* 4667 */;
-import moment from "moment" /* 4698 */;
+import formatjs from "formatjs" /* 4762 */;
+import moment from "moment" /* 4793 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import module_2026 from "module_2026" /* 2026 */;
 
@@ -19,7 +19,7 @@ let closure_5 = async function _setAppLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -54,7 +54,7 @@ let closure_5 = async function _setAppLocale(arg0) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -97,7 +97,7 @@ let closure_5 = async function _setAppLocale(arg0) {
                   return obj;
                 } else {
                   c2 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } catch (tmp11) {
                 c2 = tmp;
@@ -156,7 +156,7 @@ let closure_5 = async function _setAppLocale(arg0) {
       } else {
         closure_129_1.setLoadingSucceeded(closure_129_0);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp10) {
       c3 = tmp;
@@ -175,7 +175,7 @@ let closure_6 = async function _loadDateFnsLocale() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -189,7 +189,7 @@ let closure_6 = async function _loadDateFnsLocale() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp4) {
       c0 = tmp;
@@ -208,7 +208,7 @@ let closure_7 = async function _loadFormatJsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -239,7 +239,7 @@ let closure_7 = async function _loadFormatJsLocale(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -257,7 +257,7 @@ let closure_8 = async function _setMomentLocale(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -308,7 +308,7 @@ let closure_8 = async function _setMomentLocale(arg0) {
       closure_129_1.push("en-US");
       closure_130_0(closure_130_1[8]).locale(closure_129_1);
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp26) {
       c4 = tmp;
       throw tmp26;
@@ -319,11 +319,11 @@ const identity = fn(1257);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  return {
+  let obj = {
     isLoading: false,
     inProgressLocale: "y",
-    error: "channel_id",
-    localeData: "application",
+    error: "sa",
+    localeData: "isArray",
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
@@ -342,6 +342,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
+  return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/IntlLoaderStore.tsx");

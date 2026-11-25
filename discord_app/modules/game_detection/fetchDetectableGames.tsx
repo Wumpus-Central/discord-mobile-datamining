@@ -1,10 +1,10 @@
-// === Module 12144: fetchDetectableGames ===
+// === Module 12243: fetchDetectableGames ===
 
-// Module 12144 (fetchDetectableGames)
+// Module 12243 (fetchDetectableGames)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6009 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6104 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DetectableGameStore from "DetectableGameStore" /* 2158 */;
 
@@ -20,7 +20,7 @@ let closure_6 = async function _fetchDetectableGames() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_6 = async function _fetchDetectableGames() {
     }
   }
 };
-let closure_5 = fn(12145).detectableGamesPayloadCdnUrl;
+let closure_5 = fn(12244).detectableGamesPayloadCdnUrl;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/fetchDetectableGames.tsx");
 

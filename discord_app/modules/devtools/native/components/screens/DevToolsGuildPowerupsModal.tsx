@@ -1,16 +1,16 @@
-// === Module 17167: DevToolsGuildPowerupsModal ===
+// === Module 17286: DevToolsGuildPowerupsModal ===
 
-// Module 17167 (DevToolsGuildPowerupsModal)
-import HeaderShared from "HeaderShared" /* 8863 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11273 */;
-import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 17168 */;
+// Module 17286 (DevToolsGuildPowerupsModal)
+import HeaderShared from "HeaderShared" /* 8962 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11372 */;
+import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 17287 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(8906);
+const NativeStackNavigator = fn(9005);
 let closure_4 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");

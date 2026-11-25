@@ -1,10 +1,10 @@
-// === Module 18889: useBackgroundConjureAppChannelIds ===
+// === Module 19000: useBackgroundConjureAppChannelIds ===
 
-// Module 18889 (useBackgroundConjureAppChannelIds)
+// Module 19000 (useBackgroundConjureAppChannelIds)
 import initialize from "initialize" /* 504 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6813 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 7551 */;
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 15780 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6908 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7646 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 15901 */;
 import size from "module_2" /* 2 */;
 
 function getChannelIds() {

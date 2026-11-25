@@ -1,11 +1,11 @@
-// === Module 12004: NsfwGateGuildAlert ===
+// === Module 12103: NsfwGateGuildAlert ===
 
-// Module 12004 (NsfwGateGuildAlert)
+// Module 12103 (NsfwGateGuildAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import useAlertStore from "useAlertStore" /* 5922 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7444 */;
+import useAlertStore from "useAlertStore" /* 6017 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7539 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -50,7 +50,7 @@ class NsfwGateGuildAlert {
     intl3 = guildId(closure_2[9]).intl;
     obj1.text = intl3.string(guildId(closure_2[9]).t.wi6hPV);
     obj1.onPress = function onPress() {
-      const obj = currentUser(5596);
+      const obj = currentUser(5691);
       return obj.openURL(currentUser(2187).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
     };
     items1 = [, ];
@@ -63,7 +63,7 @@ class NsfwGateGuildAlert {
     return jsx(guildId(closure_2[8]).AlertModal, obj);
   }
 }
-const NsfwGateSource = fn(7443).NsfwGateSource;
+const NsfwGateSource = fn(7538).NsfwGateSource;
 const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;

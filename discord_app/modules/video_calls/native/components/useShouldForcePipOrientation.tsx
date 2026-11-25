@@ -1,14 +1,14 @@
-// === Module 9884: useShouldForcePipOrientation ===
+// === Module 9983: useShouldForcePipOrientation ===
 
-// Module 9884 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6816 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9885 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4765 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
+// Module 9983 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6911 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9984 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6902 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const CallConstants = fn(5567);
+const CallConstants = fn(5662);
 ({ isStreamParticipant: closure_6, ParticipantTypes: metroImportDefault } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -77,17 +77,17 @@ export function useShouldForcePipOrientation(channel) {
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_6(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8769).OrientationType.LANDSCAPE;
+        return tmp2(8868).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === channel(2145).EmbeddedActivityOrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8769).OrientationType;
+    OrientationType = tmp2(8868).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp2(2145).EmbeddedActivityOrientationLockState.PORTRAIT) {
-      LANDSCAPE = tmp2(8769).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8868).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

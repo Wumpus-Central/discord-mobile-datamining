@@ -1,6 +1,6 @@
-// === Module 9261: passesTrialOfferGate ===
+// === Module 9360: passesTrialOfferGate ===
 
-// Module 9261 (passesTrialOfferGate)
+// Module 9360 (passesTrialOfferGate)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/promotions/utils/passesTrialOfferGate.tsx");

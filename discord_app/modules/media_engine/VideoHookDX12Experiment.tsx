@@ -1,6 +1,6 @@
-// === Module 15324: VideoHookDX12Experiment ===
+// === Module 15446: VideoHookDX12Experiment ===
 
-// Module 15324 (VideoHookDX12Experiment)
+// Module 15446 (VideoHookDX12Experiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

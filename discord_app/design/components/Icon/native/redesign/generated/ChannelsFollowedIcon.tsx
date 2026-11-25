@@ -1,9 +1,9 @@
-// === Module 19005: ChannelsFollowedIcon ===
+// === Module 19116: ChannelsFollowedIcon ===
 
-// Module 19005 (ChannelsFollowedIcon)
+// Module 19116 (ChannelsFollowedIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod19006 from "module_19006" /* 19006 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod19117 from "module_19117" /* 19117 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ChannelsFollowedIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19006, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19117, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

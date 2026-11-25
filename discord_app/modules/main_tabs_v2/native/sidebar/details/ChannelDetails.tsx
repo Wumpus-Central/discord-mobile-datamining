@@ -1,39 +1,39 @@
-// === Module 18752: ChannelDetails ===
+// === Module 18863: ChannelDetails ===
 
-// Module 18752 (ChannelDetails)
+// Module 18863 (ChannelDetails)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6253 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6254 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7183 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13111 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13142 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 13151 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6348 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7278 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13234 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13265 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 13274 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13125 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import SearchQueryStore from "SearchQueryStore" /* 13248 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 const require = globalThis.__r;
 
 const _modDef1653 = tmp7(1653);
-const ChannelDetailsSearchBarDefault = tmp7(18754);
-const SearchScreenLayoutDefault = tmp7(18764);
-const ChannelDetailsNavigationBarDefault = tmp7(18882);
-const ChannelNameHeaderDefault = tmp7(18884);
-const ChannelDetailsLinkedLobbyDefault = tmp7(18886);
-const ChannelDetailsTopicDefault = tmp7(18887);
+const ChannelDetailsSearchBarDefault = tmp7(18865);
+const SearchScreenLayoutDefault = tmp7(18875);
+const ChannelDetailsNavigationBarDefault = tmp7(18993);
+const ChannelNameHeaderDefault = tmp7(18995);
+const ChannelDetailsLinkedLobbyDefault = tmp7(18997);
+const ChannelDetailsTopicDefault = tmp7(18998);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(8876);
+const ChannelDetailsStore = fn(8975);
 ({ deleteChannelDetailsSearchState: metroImportDefault, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: closure_9 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(11264);
+const ChannelDetailsConstants = fn(11363);
 ({ SPRING_CHANNEL_HEADER: closure_10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { detailsContainer: null, information: null, linkedLobby: null, search: null, searchLocked: null, autocompleteSuggestions: null, newHeader: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -98,12 +98,12 @@ export default noop.memo(function ChannelDetails(channelId) {
     }
   }, items1);
   let obj2 = require("initialize");
-  const channelDetailsSearchContext = obj(13071).useChannelDetailsSearchContext(channelId, guild_id);
-  const objResult = obj(13071);
-  const searchSuggestionsGesture = obj(18753).useSearchSuggestionsGesture(channelDetailsSearchContext);
+  const channelDetailsSearchContext = obj(13194).useChannelDetailsSearchContext(channelId, guild_id);
+  const objResult = obj(13194);
+  const searchSuggestionsGesture = obj(18864).useSearchSuggestionsGesture(channelDetailsSearchContext);
   let tmp7 = importDefault;
   ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
-  const objResult6 = obj(18753);
+  const objResult6 = obj(18864);
   const tmp9 = nativeStackNavigation(channelId);
   closure_6 = tmp9;
   const tmp10 = ref(channelId);
@@ -111,9 +111,9 @@ export default noop.memo(function ChannelDetails(channelId) {
   ref = noop.useRef(null);
   const tmp8 = useAnalyticsLocationsDefault;
   nativeStackNavigation = obj(1500).useNativeStackNavigation();
-  context = noop.useContext(obj(13231).SwipeForMemberListContext);
+  context = noop.useContext(obj(13354).SwipeForMemberListContext);
   const objResult7 = obj(1500);
-  const isScreenReaderEnabled = obj(5147).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = obj(5242).useIsScreenReaderEnabled();
   let isAndroidResult = useIsWindowLargeDefault();
   top = useSafeAreaInsetsDefault().top;
   const items2 = [top, context];
@@ -150,7 +150,7 @@ export default noop.memo(function ChannelDetails(channelId) {
       }
     }
   }, items3);
-  const objResult8 = obj(5147);
+  const objResult8 = obj(5242);
   sharedValue = obj(1653).useSharedValue(undefined);
   const items4 = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
@@ -168,7 +168,7 @@ export default noop.memo(function ChannelDetails(channelId) {
     }
   }, items4);
   const objResult9 = obj(1653);
-  const items5 = [closure_15, sharedValue, tmp9, obj(5127).withTiming, obj(5130).timingFast, obj(5518).withSpring, context];
+  const items5 = [closure_15, sharedValue, tmp9, obj(5222).withTiming, obj(5225).timingFast, obj(5613).withSpring, context];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -233,10 +233,10 @@ export default noop.memo(function ChannelDetails(channelId) {
   }, items8);
   const items9 = [channelId, channelDetailsSearchContext];
   const effect4 = obj4.useEffect(() => () => {
-    const result = c1(13151).clearAllSearchMesssages();
+    const result = c1(13274).clearAllSearchMesssages();
     closure_7(_undefined);
-    const obj = c1(13151);
-    c1(13142).deleteSearchQuery(closure_1_5);
+    const obj = c1(13274);
+    c1(13265).deleteSearchQuery(closure_1_5);
   }, items9);
   const items10 = [channelId, nativeStackNavigation];
   const effect5 = obj4.useEffect(() => {
@@ -299,7 +299,7 @@ export default noop.memo(function ChannelDetails(channelId) {
       const obj14 = { channel: stateFromStores };
       const items14 = [tmp33(ChannelNameHeaderDefault, obj14), , , ];
       const obj15 = { channel: stateFromStores };
-      items14[1] = tmp33(obj(18885).PinotChannelDetailsLabel, obj15);
+      items14[1] = tmp33(obj(18996).PinotChannelDetailsLabel, obj15);
       const obj16 = { channel: stateFromStores, containerStyle: tmp.linkedLobby };
       items14[2] = tmp33(ChannelDetailsLinkedLobbyDefault, obj16);
       let tmp33Result5 = null;
@@ -318,15 +318,15 @@ export default noop.memo(function ChannelDetails(channelId) {
       const obj20 = { searchContext: channelDetailsSearchContext, width: componentWidth };
       obj19.children = tmp33(SearchScreenLayoutDefault, obj20);
       obj18.children = tmp33(tmp35, obj19);
-      items15[1] = tmp33(obj(5951).Freeze, obj18);
+      items15[1] = tmp33(obj(6046).Freeze, obj18);
       obj7.children = items15;
       tmp37 = obj7;
     }
     obj6.children = sharedValue(c4, tmp37);
-    obj6 = tmp33(obj(5177).GestureDetector, obj6);
+    obj6 = tmp33(obj(5272).GestureDetector, obj6);
     obj5.children = obj6;
-    obj5 = tmp33(obj(18753).SearchSuggestionsProvider, obj5);
+    obj5 = tmp33(obj(18864).SearchSuggestionsProvider, obj5);
     obj3.children = obj5;
-    top(obj(6253).AnalyticsLocationProvider, obj3);
+    top(obj(6348).AnalyticsLocationProvider, obj3);
   }
 });

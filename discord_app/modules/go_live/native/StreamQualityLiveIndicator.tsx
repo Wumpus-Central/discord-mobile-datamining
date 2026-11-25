@@ -1,10 +1,10 @@
-// === Module 10012: StreamQualityLiveIndicator ===
+// === Module 10111: StreamQualityLiveIndicator ===
 
-// Module 10012 (StreamQualityLiveIndicator)
+// Module 10111 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8960 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9554 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9059 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9653 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,10 +14,10 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const PremiumConstants = fn(1388);
 ({ PremiumTypes: closure_6, PremiumUpsellTypes: metroImportDefault } = PremiumConstants);
-const ResolutionTypes = fn(5729).ResolutionTypes;
+const ResolutionTypes = fn(5824).ResolutionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 }, liveTag: { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" }, qualityTag: null, qualityTagText: null, reducedQualityTagText: null, nitroWheel: null };
 let obj3 = { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" };
 obj2.qualityTag = { borderBottomLeftRadius: nativeDefault.radii.sm, borderTopLeftRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800, opacity: 0.8, paddingLeft: 8, paddingRight: 4, flexDirection: "row", alignItems: "center", height: 18 };

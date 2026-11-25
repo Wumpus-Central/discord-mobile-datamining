@@ -1,7 +1,7 @@
-// === Module 9081: selectActiveMarketingComponent ===
+// === Module 9180: selectActiveMarketingComponent ===
 
-// Module 9081 (selectActiveMarketingComponent)
-import filterActiveMarketingComponentsUnprioritizedDefault from "filterActiveMarketingComponentsUnprioritized" /* 9082 */;
+// Module 9180 (selectActiveMarketingComponent)
+import filterActiveMarketingComponentsUnprioritizedDefault from "filterActiveMarketingComponentsUnprioritized" /* 9181 */;
 import size from "module_2" /* 2 */;
 
 function comparePriorityDescending(promotionPriority, promotionPriority2) {

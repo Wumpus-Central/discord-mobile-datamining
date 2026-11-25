@@ -1,6 +1,6 @@
-// === Module 17217: LaunchClient ===
+// === Module 17331: LaunchClient ===
 
-// Module 17217 (LaunchClient)
+// Module 17331 (LaunchClient)
 import size from "module_2" /* 2 */;
 
 const LaunchClient = { PHOENIX: "phoenix", LEGACY: "legacy" };

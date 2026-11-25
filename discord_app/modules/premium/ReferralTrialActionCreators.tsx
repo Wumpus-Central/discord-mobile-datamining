@@ -1,13 +1,13 @@
-// === Module 9001: ReferralTrialActionCreators ===
+// === Module 9100: ReferralTrialActionCreators ===
 
-// Module 9001 (ReferralTrialActionCreators)
+// Module 9100 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 9002 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 9101 */;
 import UserRecord from "UserRecord" /* 1405 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
 import Backoff from "Backoff" /* 559 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -141,7 +141,7 @@ let closure_15 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {

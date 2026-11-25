@@ -1,6 +1,6 @@
-// === Module 8196: DidBackgroundAppNativeExperiment ===
+// === Module 8295: DidBackgroundAppNativeExperiment ===
 
-// Module 8196 (DidBackgroundAppNativeExperiment)
+// Module 8295 (DidBackgroundAppNativeExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

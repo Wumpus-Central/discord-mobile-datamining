@@ -1,7 +1,7 @@
-// === Module 12634: useCheckpointCharacterTextureManager ===
+// === Module 12798: useCheckpointCharacterTextureManager ===
 
-// Module 12634 (useCheckpointCharacterTextureManager)
-import DataBindByName from "DataBindByName" /* 4987 */;
+// Module 12798 (useCheckpointCharacterTextureManager)
+import DataBindByName from "DataBindByName" /* 5082 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,7 +27,7 @@ let closure_5 = async function _loadImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

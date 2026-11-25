@@ -1,6 +1,6 @@
-// === Module 9721: BadgeManagementExperiment ===
+// === Module 9820: BadgeManagementExperiment ===
 
-// Module 9721 (BadgeManagementExperiment)
+// Module 9820 (BadgeManagementExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 8621: useInAppBrowserReturn ===
+// === Module 8720: useInAppBrowserReturn ===
 
-// Module 8621 (useInAppBrowserReturn)
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8608 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8613 */;
+// Module 8720 (useInAppBrowserReturn)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8707 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8712 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 8610 */;
+import GameProfileStore from "GameProfileStore" /* 8709 */;
 
 require = fn;
 const size = fn(2);

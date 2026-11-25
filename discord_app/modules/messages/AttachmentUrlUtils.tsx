@@ -1,6 +1,6 @@
-// === Module 8856: AttachmentUrlUtils ===
+// === Module 8955: AttachmentUrlUtils ===
 
-// Module 8856 (AttachmentUrlUtils)
+// Module 8955 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import URLUtilsDefault from "URLUtils" /* 1379 */;
@@ -233,7 +233,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(6958).ATTACHMENT_PATH_PREFIXES;
+const ATTACHMENT_PATH_PREFIXES = fn(7053).ATTACHMENT_PATH_PREFIXES;
 const Endpoints = fn(1071).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];

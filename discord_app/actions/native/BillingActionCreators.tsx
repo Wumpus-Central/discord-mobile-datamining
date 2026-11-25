@@ -1,6 +1,6 @@
-// === Module 8970: BillingActionCreators ===
+// === Module 9069: BillingActionCreators ===
 
-// Module 8970 (BillingActionCreators)
+// Module 9069 (BillingActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -9,30 +9,30 @@ import MurmurHashV3Default from "MurmurHashV3" /* 1250 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import BillingUtils from "BillingUtils" /* 4730 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5666 */;
-import BillingError from "BillingError" /* 5668 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5921 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6009 */;
-import OrderActionCreators from "OrderActionCreators" /* 7474 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 8968 */;
-import premium_ProductIds from "premium/ProductIds" /* 8972 */;
-import showSpendingLimitReachedAlert from "showSpendingLimitReachedAlert" /* 9015 */;
-import ACOMExperiments from "ACOMExperiments" /* 9126 */;
-import IAPUtils from "IAPUtils" /* 9138 */;
-import _mod9140 from "module_9140" /* 9140 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 9163 */;
-import ErrorUtilsAll from "ErrorUtils" /* 9165 */;
-import purchaseExceptionAlerts from "purchaseExceptionAlerts" /* 9166 */;
-import APBRequestOperations from "APBRequestOperations" /* 9167 */;
-import ACRequestOperations from "ACRequestOperations" /* 9168 */;
+import BillingUtils from "BillingUtils" /* 4825 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5761 */;
+import BillingError from "BillingError" /* 5763 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6016 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6104 */;
+import OrderActionCreators from "OrderActionCreators" /* 7569 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 9067 */;
+import premium_ProductIds from "premium/ProductIds" /* 9071 */;
+import showSpendingLimitReachedAlert from "showSpendingLimitReachedAlert" /* 9114 */;
+import ACOMExperiments from "ACOMExperiments" /* 9225 */;
+import IAPUtils from "IAPUtils" /* 9237 */;
+import _mod9239 from "module_9239" /* 9239 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 9262 */;
+import ErrorUtilsAll from "ErrorUtils" /* 9264 */;
+import purchaseExceptionAlerts from "purchaseExceptionAlerts" /* 9265 */;
+import APBRequestOperations from "APBRequestOperations" /* 9266 */;
+import ACRequestOperations from "ACRequestOperations" /* 9267 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GiftPromotionStore from "GiftPromotionStore" /* 8973 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 9072 */;
 import UserStore from "UserStore" /* 1386 */;
 import SubscriptionStore from "SubscriptionStore" /* 2178 */;
-import IAPStore from "IAPStore" /* 8963 */;
+import IAPStore from "IAPStore" /* 9062 */;
 
 const IAPUtilsDefault = IAPUtils;
 
@@ -110,7 +110,7 @@ let closure_25 = async function _applyTransactionFromListener(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -147,9 +147,9 @@ let closure_25 = async function _applyTransactionFromListener(arg0) {
                       const transactionReason = parsed.transactionReason;
                       let tmp61 = "autoRenewable" === _require.productType;
                       if (tmp61) {
-                        let tmp58 = transactionReason === _mod9140.TransactionReason.PURCHASE;
+                        let tmp58 = transactionReason === _mod9239.TransactionReason.PURCHASE;
                         if (!tmp58) {
-                          tmp58 = transactionReason === _mod9140.TransactionReason.RENEWAL;
+                          tmp58 = transactionReason === _mod9239.TransactionReason.RENEWAL;
                         }
                         tmp61 = tmp58;
                       }
@@ -161,10 +161,10 @@ let closure_25 = async function _applyTransactionFromListener(arg0) {
                         }
                         const GiftACOMOrderExperiment = ACOMExperiments.GiftACOMOrderExperiment;
                         c6 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       } else if (!tmp61) {
                         c6 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                       const IAPTransactionApplyExperiment = ACOMExperiments.IAPTransactionApplyExperiment;
                       if (IAPTransactionApplyExperiment.getConfig({ location: "IAPTransactionListener" }).enabled) {
@@ -208,7 +208,7 @@ let closure_25 = async function _applyTransactionFromListener(arg0) {
       } else if (1 === tmp9) {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } else if (2 !== tmp9) {
         if (3 === tmp9) {
           c4 = 2;
@@ -325,7 +325,7 @@ function handlePurchaseException(code, purchase_type, arg2) {
     if (obj.isSpendingLimitError(orderSigningConstraintsError)) {
       const result = showSpendingLimitReachedAlert.showSpendingLimitReachedAlert();
       const tmpResult = showSpendingLimitReachedAlert;
-    } else if (code.code !== _mod9140.ErrorCode.E_DEFERRED_PAYMENT) {
+    } else if (code.code !== _mod9239.ErrorCode.E_DEFERRED_PAYMENT) {
       const message = code.message;
       const obj4 = {};
       const merged = Object.assign(code);
@@ -532,7 +532,7 @@ let closure_33 = async function _clearAndMakeIAPRequest() {
   closure_133_2 = closure_2;
   closure_133_3 = closure_3;
   closure_133_4 = closure_4;
-  await _mod9140.clearTransactionIOS();
+  await _mod9239.clearTransactionIOS();
   return closure_134_34(closure_133_0, closure_133_1, closure_133_2, closure_133_3, closure_133_4);
 };
 function makeTrackedIAPRequest(arg0, arg1, arg2, arg3, arg4) {
@@ -556,7 +556,7 @@ let closure_35 = async function _makeTrackedIAPRequest(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -807,7 +807,7 @@ let closure_39 = async function _updateAppleSubscription() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -855,7 +855,7 @@ let closure_39 = async function _updateAppleSubscription() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -906,7 +906,7 @@ let closure_41 = async function _cancelGenericSubscription(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1017,7 +1017,7 @@ let closure_44 = async function _createGenericSubscription(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1224,7 +1224,7 @@ let closure_45 = async function _modifyGenericSubscription(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1501,7 +1501,7 @@ let closure_46 = async function _resubscribeGenericSubscription(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1701,7 +1701,7 @@ let closure_47 = async function _retryPendingPurchases(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {
@@ -1878,7 +1878,7 @@ let closure_48 = async function _mobilePurchaseSKU(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2231,7 +2231,7 @@ let closure_49 = async function _migrateToACOM() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2321,8 +2321,8 @@ let closure_49 = async function _migrateToACOM() {
 let closure_4 = ["items", "country_code"];
 let closure_5 = ["subscription_items"];
 let closure_6 = ["sku_id", "country_code", "is_gift", "gift_info_options"];
-const GenericIAPStore = fn(8971);
-const PremiumPlanPurchasedStore = fn(8974);
+const GenericIAPStore = fn(9070);
+const PremiumPlanPurchasedStore = fn(9073);
 ({ setPaymentSuccess: closure_10, showOldPaymentFlowSuccess: closure_11 } = PremiumPlanPurchasedStore);
 const Constants = fn(1071);
 ({ SubscriptionTypes: closure_15, AnalyticEvents: closure_16, CurrencyCodes: closure_17, Endpoints: closure_18, StoreKitErrors } = Constants);
@@ -2332,9 +2332,9 @@ const localAppleReceiptHash = "localAppleReceiptHash";
 const BILLING = "BILLING";
 const logger = new LoggerDefault("BillingActionCreators.tsx");
 let tmp6 = new LoggerDefault("BillingActionCreators.tsx");
-let items = [fn(9140).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [fn(9239).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 const set = new Set(items);
-const items1 = [fn(9140).ErrorCode.E_UNKNOWN, fn(9140).ErrorCode.E_DEFERRED_PAYMENT];
+const items1 = [fn(9239).ErrorCode.E_UNKNOWN, fn(9239).ErrorCode.E_DEFERRED_PAYMENT];
 const set1 = new Set(items1);
 let obj2 = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 const size = fn(2);
@@ -2342,8 +2342,8 @@ let result = size.fileFinishedImporting("actions/native/BillingActionCreators.ts
 
 export default {
   applyAppleReceipt,
-  fetchMostRecentSubscription: fn(5680).fetchMostRecentSubscription,
-  fetchIpCountryCode: fn(5680).fetchIpCountryCode,
+  fetchMostRecentSubscription: fn(5775).fetchMostRecentSubscription,
+  fetchIpCountryCode: fn(5775).fetchIpCountryCode,
   init() {
     let obj = arg0;
     if (arg0 === undefined) {
@@ -2365,7 +2365,7 @@ export default {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2486,7 +2486,7 @@ export default {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2506,7 +2506,7 @@ export default {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              const obj4 = { value: _mod9140.initConnection(), done: false };
+              const obj4 = { value: _mod9239.initConnection(), done: false };
               return obj4;
             }
           } else if (1 === tmp7) {
@@ -2559,7 +2559,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2676,7 +2676,7 @@ export default {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2938,7 +2938,7 @@ export default {
                     importer() {
                       return transactionReceipt(paths[33])(paths[32], paths.paths).then((result) => {
                         closure_0 = result.default;
-                        return /* F142073 */ function() { ... };
+                        return /* F142514 */ function() { ... };
                       });
                     },
                     isDismissable: false
@@ -3028,7 +3028,7 @@ export default {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -3169,7 +3169,7 @@ export default {
                         str1 = str1.transactionIdentifier.toString();
                         let obj = skipDupCheck(dependencyMap[20]);
                         obj2 = { purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } };
-                        skipDupCheck(dependencyMap[20]).finishTransaction({ purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } }).then(/* F142074 */ function() { ... });
+                        skipDupCheck(dependencyMap[20]).finishTransaction({ purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } }).then(/* F142515 */ function() { ... });
                         if (null != result) {
                           const obj4 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key };
                           transactionReceipt(dependencyMap[22]).dispatch(obj4);
@@ -3210,8 +3210,8 @@ export default {
                     } else if (closure_134_3.length > 0) {
                       const item = closure_134_3.forEach((code) => {
                         if (!set.has(code.code)) {
-                          const result = closure_1_0(4730).captureBillingException(code);
-                          const obj = closure_1_0(4730);
+                          const result = closure_1_0(4825).captureBillingException(code);
+                          const obj = closure_1_0(4825);
                         }
                       });
                       const _Error = Error;

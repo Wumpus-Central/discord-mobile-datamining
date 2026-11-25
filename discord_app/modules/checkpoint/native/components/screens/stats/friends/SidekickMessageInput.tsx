@@ -1,12 +1,12 @@
-// === Module 12693: SidekickMessageInput ===
+// === Module 12857: SidekickMessageInput ===
 
-// Module 12693 (SidekickMessageInput)
+// Module 12857 (SidekickMessageInput)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5097 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6254 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10968 */;
-import Tracking from "Tracking" /* 12405 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5192 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 11067 */;
+import Tracking from "Tracking" /* 12569 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -14,13 +14,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6270);
+const CheckpointConstants = fn(6365);
 ({ CHECKPOINT_CONTROL_ICON_SIZE, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { messageInputContainer: null, messageInputContainerLarge: null, messageInput: null, messageInputActions: null, messageInputAction: null, giftAction: null, sendAction: null, messageInputIcon: null, disabled: null };
 let obj3 = { height: 104, padding: PX_12, paddingBottom: null, borderWidth: 2, borderColor: CHECKPOINT_PRIMARY, backgroundColor: nativeDefault.colors.BLACK };
 const sum = 18 + CHECKPOINT_CONTROL_ICON_SIZE;
@@ -54,7 +54,7 @@ export default function SidekickMessageInput(user) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

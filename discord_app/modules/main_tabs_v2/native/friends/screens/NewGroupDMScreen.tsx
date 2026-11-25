@@ -1,20 +1,20 @@
-// === Module 18910: NewGroupDMScreen ===
+// === Module 19021: NewGroupDMScreen ===
 
-// Module 18910 (NewGroupDMScreen)
+// Module 19021 (NewGroupDMScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import ToastUtils from "ToastUtils" /* 5598 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7714 */;
-import HeaderShared from "HeaderShared" /* 8863 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11956 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 18909 */;
+import ToastUtils from "ToastUtils" /* 5693 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7813 */;
+import HeaderShared from "HeaderShared" /* 8962 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 12055 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19020 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15073 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15195 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -55,7 +55,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -127,7 +127,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     } else {
                       try {
@@ -148,7 +148,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               const obj5 = { value: closure_1_20(length, closure_2_2), done: false };
                               return obj5;
                             } else {
-                              const obj6 = v3(7714);
+                              const obj6 = v3(7813);
                               v3 = 1;
                               dependencyMap = 1;
                               const obj7 = { value: obj6.addRecipients(id.id, length, undefined, closure_2_2), done: false };
@@ -182,21 +182,21 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             const obj = { value, done: true };
                             return obj;
                           } else {
-                            const tmp8 = v3(7716);
+                            const tmp8 = v3(7815);
                             const call = tmp8.call;
                             if (typeof call === "unknown") {
                               tmp8(false, true);
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(12149)(closure_128_3);
+                            v3(12248)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }
                           closure_128_3 = value;
                           v3 = 3;
                           dependencyMap = 1;
-                          const obj10 = { value: id(8308).monkeyPatchCall(), done: false };
+                          const obj10 = { value: id(8407).monkeyPatchCall(), done: false };
                           return obj10;
                         }
                       } catch (tmp26) {
@@ -278,12 +278,12 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const UserRowModes = fn(8803).UserRowModes;
+const UserRowModes = fn(8902).UserRowModes;
 const Constants = fn(1071);
 ({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { button: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }, container: { height: "100%", display: "flex" }, instantInviteView: null, nameInputContainer: null, nameInput: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.instantInviteView = { flexShrink: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -385,7 +385,7 @@ export default function NewGroupDMScreen(navigation) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -740,7 +740,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

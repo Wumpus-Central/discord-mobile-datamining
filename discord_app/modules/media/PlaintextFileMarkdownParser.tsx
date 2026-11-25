@@ -1,10 +1,10 @@
-// === Module 11928: PlaintextFileMarkdownParser ===
+// === Module 12027: PlaintextFileMarkdownParser ===
 
-// Module 11928 (PlaintextFileMarkdownParser)
-import findCodedLinks from "findCodedLinks" /* 5635 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5662 */;
-import MarkupLinkRule from "MarkupLinkRule" /* 6949 */;
-import _modDef11929 from "module_11929" /* 11929 */;
+// Module 12027 (PlaintextFileMarkdownParser)
+import findCodedLinks from "findCodedLinks" /* 5730 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5757 */;
+import MarkupLinkRule from "MarkupLinkRule" /* 7044 */;
+import _modDef12028 from "module_12028" /* 12028 */;
 
 require = fn;
 function createLinkNode(arr) {
@@ -356,7 +356,7 @@ function parseMarkdownTokens(children1, remaining) {
   }
   return items[0].children;
 }
-let closure_2 = new _modDef11929({ html: false, linkify: false, typographer: false }).use(fn(11934).dollarmathPlugin, { allow_space: false, allow_digits: false, allow_labels: false });
+let closure_2 = new _modDef12028({ html: false, linkify: false, typographer: false }).use(fn(12033).dollarmathPlugin, { allow_space: false, allow_digits: false, allow_labels: false });
 const set = new Set(["h1", "h2", "h3", "h4", "h5", "h6", "p", "ul", "ol", "li", "em", "strong", "s", "blockquote", "table", "thead", "tbody", "tr", "th", "td"]);
 const re4 = /(?:https?|steam):\/\/[^\s<]/i;
 const size = fn(2);

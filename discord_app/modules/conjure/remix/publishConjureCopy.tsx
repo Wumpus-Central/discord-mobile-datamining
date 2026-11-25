@@ -1,12 +1,12 @@
-// === Module 11310: publishConjureCopy ===
+// === Module 11409: publishConjureCopy ===
 
-// Module 11310 (publishConjureCopy)
+// Module 11409 (publishConjureCopy)
 import router_utils from "router_utils" /* 1098 */;
-import transitionToGuild from "transitionToGuild" /* 8459 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 11311 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11313 */;
+import transitionToGuild from "transitionToGuild" /* 8558 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 11410 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11412 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
 
 require = fn;
 function needsInstallConsent(arg0) {
@@ -51,7 +51,7 @@ let closure_7 = async function _publishConjureCopy(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -111,6 +111,10 @@ let closure_7 = async function _publishConjureCopy(arg0) {
           c8 = 3;
           const obj6 = { value, done: true };
           return obj6;
+        } else if ("approved" !== value) {
+          c5 = 0;
+          c8 = 3;
+          return { value: null, done: true };
         } else {
           c5 = 0;
           if (closure_132_6(closure_131_0)) {

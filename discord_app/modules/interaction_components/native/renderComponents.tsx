@@ -1,17 +1,18 @@
-// === Module 19577: renderComponents ===
+// === Module 12364: renderComponents ===
 
-// Module 19577 (renderComponents)
+// Module 12364 (renderComponents)
 import Server from "Server" /* 2117 */;
-import StringSelectActionComponentDefault from "StringSelectActionComponent" /* 17183 */;
-import SearchableSelectActionComponentDefault from "SearchableSelectActionComponent" /* 17186 */;
-import TextDisplayComponentDefault from "TextDisplayComponent" /* 17187 */;
-import ActionRowLayoutComponentDefault from "ActionRowLayoutComponent" /* 19578 */;
-import TextInputActionComponentDefault from "TextInputActionComponent" /* 19579 */;
-import LabelLayoutComponentDefault from "LabelLayoutComponent" /* 19580 */;
-import FileUploadActionComponentDefault from "FileUploadActionComponent" /* 19581 */;
-import RadioGroupActionComponentDefault from "RadioGroupActionComponent" /* 19583 */;
-import CheckboxGroupActionComponentDefault from "CheckboxGroupActionComponent" /* 19584 */;
-import CheckboxActionComponentDefault from "CheckboxActionComponent" /* 19585 */;
+import ActionRowLayoutComponentDefault from "ActionRowLayoutComponent" /* 12365 */;
+import StringSelectActionComponentDefault from "StringSelectActionComponent" /* 12366 */;
+import TextInputActionComponentDefault from "TextInputActionComponent" /* 12369 */;
+import SearchableSelectActionComponentDefault from "SearchableSelectActionComponent" /* 12372 */;
+import TextDisplayComponentDefault from "TextDisplayComponent" /* 12373 */;
+import LabelLayoutComponentDefault from "LabelLayoutComponent" /* 12375 */;
+import FileUploadActionComponentDefault from "FileUploadActionComponent" /* 12376 */;
+import RadioGroupActionComponentDefault from "RadioGroupActionComponent" /* 12422 */;
+import CheckboxGroupActionComponentDefault from "CheckboxGroupActionComponent" /* 12423 */;
+import CheckboxActionComponentDefault from "CheckboxActionComponent" /* 12424 */;
+import MenuActionItemComponentDefault from "MenuActionItemComponent" /* 12426 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,16 +61,20 @@ function renderComponent(component, key) {
               const merged7 = Object.assign(component);
               return jsx(CheckboxGroupActionComponentDefault, {}, key);
             } else if (Server.ComponentType.CHECKBOX === type) {
-              const obj = {};
+              const obj10 = {};
               const merged8 = Object.assign(component);
               return jsx(CheckboxActionComponentDefault, {}, key);
+            } else if (Server.ComponentType.MENU_ACTION_ITEM === type) {
+              const obj = {};
+              const merged9 = Object.assign(component);
+              return jsx(MenuActionItemComponentDefault, {}, key);
             }
           }
         }
       }
     }
-    const obj10 = {};
-    const merged9 = Object.assign(component);
+    const obj11 = {};
+    const merged10 = Object.assign(component);
     return jsx(SearchableSelectActionComponentDefault, {}, key);
   }
 }

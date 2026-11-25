@@ -1,14 +1,14 @@
-// === Module 11138: ProductDetailsActionSheetPreview ===
+// === Module 11237: ProductDetailsActionSheetPreview ===
 
-// Module 11138 (ProductDetailsActionSheetPreview)
+// Module 11237 (ProductDetailsActionSheetPreview)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8345 */;
-import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 11139 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 11141 */;
-import createStyles from "createStyles" /* 4917 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8444 */;
+import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 11238 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 11240 */;
+import createStyles from "createStyles" /* 5012 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

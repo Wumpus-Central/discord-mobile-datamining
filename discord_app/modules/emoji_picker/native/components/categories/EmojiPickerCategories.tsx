@@ -1,26 +1,26 @@
-// === Module 9634: EmojiPickerCategories ===
+// === Module 9733: EmojiPickerCategories ===
 
-// Module 9634 (EmojiPickerCategories)
+// Module 9733 (EmojiPickerCategories)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import HapticUtils from "HapticUtils" /* 5133 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5134 */;
-import FastestListDefault from "FastestList" /* 7285 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9635 */;
-import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 9651 */;
-import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 9652 */;
+import HapticUtils from "HapticUtils" /* 5228 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5229 */;
+import FastestListDefault from "FastestList" /* 7380 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9734 */;
+import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 9750 */;
+import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 9751 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const EmojiCategoryTypes = fn(6760).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6855).EmojiCategoryTypes;
 const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: closure_6, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 let ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, keyboardItem: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = { code: "(function EmojiPickerCategoriesTsx1(){let[categoryIndexActive]=this.__closure;return categoryIndexActive.get();})" };
@@ -321,7 +321,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   let tmp37Result = null;
   if (null != firstUnicodeCategory) {
     const obj7 = { blockRef: sharedValue, category: firstUnicodeCategory, categoryIndex: firstUnicodeCategoryIndex, onPress: callback4, style: tmp.item };
-    tmp37Result = tmp37(tmp34(9653), obj7);
+    tmp37Result = tmp37(tmp34(9752), obj7);
   }
   items18[1] = tmp37Result;
   let tmp37Result2 = null;
@@ -329,7 +329,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const obj8 = { style: null, iconStyle: null, onBackspace: null };
     ({ item: obj10.style, keyboardItem: obj10.iconStyle } = tmp);
     obj8.onBackspace = onBackspace;
-    tmp37Result2 = tmp37(tmp34(9655), obj8);
+    tmp37Result2 = tmp37(tmp34(9754), obj8);
   }
   items18[2] = tmp37Result2;
   obj4.children = ref(ref, { children: items18 });

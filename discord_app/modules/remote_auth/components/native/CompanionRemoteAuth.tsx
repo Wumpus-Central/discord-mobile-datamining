@@ -1,8 +1,8 @@
-// === Module 17532: CompanionRemoteAuth ===
+// === Module 17643: CompanionRemoteAuth ===
 
-// Module 17532 (CompanionRemoteAuth)
+// Module 17643 (CompanionRemoteAuth)
 import util from "util" /* 1112 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5921 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6016 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, LoginSuccessfulSources: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_10 = createStyles.createStyles({ statusContainer: { alignItems: "center", marginTop: 32 }, avatar: { marginBottom: 16 }, statusText: { textAlign: "center", marginTop: 16, marginBottom: 24, paddingHorizontal: 32 }, buttonContainer: { width: "100%", paddingHorizontal: 16, marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/remote_auth/components/native/CompanionRemoteAuth.tsx");

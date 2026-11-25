@@ -1,18 +1,18 @@
-// === Module 12288: conjureServerAppRemoval ===
+// === Module 12454: conjureServerAppRemoval ===
 
-// Module 12288 (conjureServerAppRemoval)
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6845 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6865 */;
-import ConjureUtils from "ConjureUtils" /* 7476 */;
-import conjureAppInServer from "conjureAppInServer" /* 7562 */;
+// Module 12454 (conjureServerAppRemoval)
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6940 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
+import ConjureUtils from "ConjureUtils" /* 7571 */;
+import conjureAppInServer from "conjureAppInServer" /* 7661 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import GuildChannelStore from "GuildChannelStore" /* 4847 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import GuildChannelStore from "GuildChannelStore" /* 4942 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -259,7 +259,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -293,14 +293,14 @@ let closure_22 = async function _loadMissingApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
     }
   }
 };
-let closure_7 = fn(4847).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4942).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1071).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 13190: useAutocompleteAnimatedHeightStyles ===
+// === Module 13313: useAutocompleteAnimatedHeightStyles ===
 
-// Module 13190 (useAutocompleteAnimatedHeightStyles)
+// Module 13313 (useAutocompleteAnimatedHeightStyles)
 import _mod1653 from "module_1653" /* 1653 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5103 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import timingPresets from "timingPresets" /* 5130 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5198 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import timingPresets from "timingPresets" /* 5225 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = { code: "(function useAutocompleteAnimatedHeightStylesTsx1(){let[withTiming,height,timingStandard,isFrozenSharedValue]=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};})" };

@@ -1,12 +1,12 @@
-// === Module 16308: SettingsClipsScreen ===
+// === Module 16429: SettingsClipsScreen ===
 
-// Module 16308 (SettingsClipsScreen)
-import SettingBuilders from "SettingBuilders" /* 11815 */;
-import SettingLayoutDefault from "SettingLayout" /* 16018 */;
+// Module 16429 (SettingsClipsScreen)
+import SettingBuilders from "SettingBuilders" /* 11914 */;
+import SettingLayoutDefault from "SettingLayout" /* 16139 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(9414).MobileUserSettings;
+const MobileUserSettings = fn(9513).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");

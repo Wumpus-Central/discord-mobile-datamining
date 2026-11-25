@@ -1,14 +1,14 @@
-// === Module 18004: YouBarBackground ===
+// === Module 18116: YouBarBackground ===
 
-// Module 18004 (YouBarBackground)
+// Module 18116 (YouBarBackground)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
-import useToken from "useToken" /* 5481 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import _modDef7105 from "module_7105" /* 7105 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 16600 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
+import useToken from "useToken" /* 5576 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import _modDef7200 from "module_7200" /* 7200 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 16721 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -31,7 +31,7 @@ function YouBarMaskedBackground(barWidth) {
   const size1 = { position: "absolute", top: YOU_BAR_HEIGHT / 2, width: 8, left: diff - 8, height: YOU_BAR_HEIGHT / 2 };
   obj5.style = size1;
   const obj4 = { style: { position: "absolute", top: YOU_BAR_HEIGHT / 2, left: diff - 1, right: 0, bottom: 0, backgroundColor: "black" } };
-  const tmp3 = _modDef7105;
+  const tmp3 = _modDef7200;
   const tmp4 = LinearGradientDefault;
   const obj9 = _modDef671("#000000");
   const items1 = [_modDef671("#000000").alpha(0).hex(), "#000000"];
@@ -96,12 +96,12 @@ function YouBarAnimatedBackground(arg0) {
   return timestampProducer(_modDef1653.View, obj3);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(16511);
+const YouBarConstants = fn(16632);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { youRowFloating: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS, borderTopLeftRadius: YOU_BAR_HEIGHT / 2, borderBottomLeftRadius: YOU_BAR_HEIGHT / 2 } };
 let closure_8 = createStyles.createStyles(obj);
 let closure_10 = { code: "(function YouBarBackgroundTsx1(){let[condensedReason,withSpring,questDockAnimatedBorderRadius,YOU_BAR_SPRING_CONFIG,questDockAnimatedBottomLeftRadius,borderRadius]=this.__closure;if(condensedReason==='quest-bar'){return{borderTopRightRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderTopLeftRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderBottomLeftRadius:withSpring(questDockAnimatedBottomLeftRadius.get(),YOU_BAR_SPRING_CONFIG)};}return{borderTopRightRadius:borderRadius,borderTopLeftRadius:borderRadius,borderBottomLeftRadius:borderRadius,borderBottomRightRadius:borderRadius};})" };

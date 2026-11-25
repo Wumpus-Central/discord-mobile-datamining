@@ -1,20 +1,20 @@
-// === Module 4854: PermissionUtils ===
+// === Module 4949: PermissionUtils ===
 
-// Module 4854 (PermissionUtils)
+// Module 4949 (PermissionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Server from "Server" /* 2117 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 4827 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4836 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4855 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4856 */;
-import ImpersonateStore from "ImpersonateStore" /* 4822 */;
-import LurkingStore from "LurkingStore" /* 4850 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4851 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 4922 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4931 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4950 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4951 */;
+import ImpersonateStore from "ImpersonateStore" /* 4917 */;
+import LurkingStore from "LurkingStore" /* 4945 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4946 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import GuildRoleStore from "GuildRoleStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import GuildRoleStore from "GuildRoleStore" /* 4918 */;
+import GuildStore from "GuildStore" /* 4883 */;
 import UserStore from "UserStore" /* 1386 */;
 import BigFlagUtils_mod from "BigFlagUtils" /* 1083 */;
 import apply from "apply" /* 12 */;
@@ -351,11 +351,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4770);
+const ChannelRecord = fn(4865);
 ({ THREAD_CHANNEL_TYPES: metroImportDefault, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(4784);
+const GuildRecord = fn(4879);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: closure_10 } = GuildRecord);
-const hasPermission = fn(4824).hasPermission;
+const hasPermission = fn(4919).hasPermission;
 const Constants = fn(1071);
 const Permissions = Constants.Permissions;
 ({ ElevatedPermissions: closure_19, MFALevels: closure_20, ChannelTypes: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22 } = Constants);
@@ -374,7 +374,7 @@ let BigFlagUtils = BigFlagUtils_mod;
 let closure_28 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY);
 let BigFlagUtils = BigFlagUtils_mod;
 let closure_29 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY, Permissions.CHANGE_NICKNAME);
-const items1 = [fn(4835).GuildMemberFlags.IS_GUEST, ...fn(4855).AUTOMOD_QUARANTINED_PROFILE_FLAGS];
+const items1 = [fn(4930).GuildMemberFlags.IS_GUEST, ...fn(4950).AUTOMOD_QUARANTINED_PROFILE_FLAGS];
 const reduced = items1.reduce((acc, item) => acc | item, 0);
 let BigFlagUtils = BigFlagUtils_mod;
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 8065: SensitiveMediaExplicitRedactionSettingsUtils ===
+// === Module 8164: SensitiveMediaExplicitRedactionSettingsUtils ===
 
-// Module 8065 (SensitiveMediaExplicitRedactionSettingsUtils)
+// Module 8164 (SensitiveMediaExplicitRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import UserSettings from "UserSettings" /* 4742 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5579 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5587 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6699 */;
-import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 8066 */;
+import UserSettings from "UserSettings" /* 4837 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5674 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5682 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6794 */;
+import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 8165 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -83,7 +83,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
   const ExplicitContentFilter2 = UserSettings.ExplicitContentFilter;
   const setting2 = ExplicitContentFilter2.getSetting();
 }
-const ExplicitContentFilterTypes = fn(4744).ExplicitContentFilterTypes;
+const ExplicitContentFilterTypes = fn(4839).ExplicitContentFilterTypes;
 let obj = {};
 const DISABLED = ExplicitContentFilterTypes.DISABLED;
 obj[DISABLED.valueOf()] = fn(1195).ExplicitContentRedaction.SHOW;

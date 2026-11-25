@@ -1,53 +1,53 @@
-// === Module 19283: VoicePanelUI ===
+// === Module 19394: VoicePanelUI ===
 
-// Module 19283 (VoicePanelUI)
+// Module 19394 (VoicePanelUI)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import HapticUtils from "HapticUtils" /* 5133 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5177 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5686 */;
-import ExternalPipDefault from "ExternalPip" /* 5826 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6253 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6254 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9654 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 10126 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11389 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11634 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11639 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 11644 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11665 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12820 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19208 */;
-import PanelSizeUtils from "PanelSizeUtils" /* 19269 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19285 */;
-import VoicePanelDockSheet from "VoicePanelDockSheet" /* 19286 */;
-import VoicePanelDockSheetLayersDefault from "VoicePanelDockSheetLayers" /* 19288 */;
-import voicePanelLayoutTransitionDefault from "voicePanelLayoutTransition" /* 19289 */;
+import HapticUtils from "HapticUtils" /* 5228 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5781 */;
+import ExternalPipDefault from "ExternalPip" /* 5921 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6348 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9753 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 10225 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11488 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11738 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 11743 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11764 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12944 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19319 */;
+import PanelSizeUtils from "PanelSizeUtils" /* 19380 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19396 */;
+import VoicePanelDockSheet from "VoicePanelDockSheet" /* 19397 */;
+import VoicePanelDockSheetLayersDefault from "VoicePanelDockSheetLayers" /* 19399 */;
+import voicePanelLayoutTransitionDefault from "voicePanelLayoutTransition" /* 19400 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
-import AppFreezeStore from "AppFreezeStore" /* 8730 */;
-import VoicePanelStore from "VoicePanelStore" /* 6839 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6902 */;
+import AppFreezeStore from "AppFreezeStore" /* 8829 */;
+import VoicePanelStore from "VoicePanelStore" /* 6934 */;
 
 const require = globalThis.__r;
 const module_1653 = _mod1653;
 
-const closeVoicePanelsDefault = tmp2(9856);
-const calculateVoicePanelHeaderSpecsDefault = tmp2(11640);
-const useControlsLockDefault = tmp2(19284);
-const useControlsHoverGestureDefault = tmp2(19290);
-const VoicePanelHeaderDefault = tmp2(19291);
-const VoicePanelCardViewDefault = tmp2(19313);
-const VoicePanelPreJoinContentDefault = tmp2(19347);
-const VoicePanelVoiceChannelAppDefault = tmp2(19351);
-const VoicePanelSystemUIManagerDefault = tmp2(19354);
-const VoicePanelAccessibilityViewDefault = tmp2(19355);
-const VoicePanelDismissableContentDefault = tmp2(19356);
-const VoicePanelControlsDefault = tmp2(19376);
+const closeVoicePanelsDefault = tmp2(9955);
+const calculateVoicePanelHeaderSpecsDefault = tmp2(11739);
+const useControlsLockDefault = tmp2(19395);
+const useControlsHoverGestureDefault = tmp2(19401);
+const VoicePanelHeaderDefault = tmp2(19402);
+const VoicePanelCardViewDefault = tmp2(19424);
+const VoicePanelPreJoinContentDefault = tmp2(19458);
+const VoicePanelVoiceChannelAppDefault = tmp2(19462);
+const VoicePanelSystemUIManagerDefault = tmp2(19465);
+const VoicePanelAccessibilityViewDefault = tmp2(19466);
+const VoicePanelDismissableContentDefault = tmp2(19467);
+const VoicePanelControlsDefault = tmp2(19487);
 require = fn;
 function NOOP() {
 
@@ -620,20 +620,20 @@ function AnimatedWrapper(arg0) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ Pressable: closure_6, ScrollView } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11635);
+const VoicePanelConstants = fn(11734);
 ({ BORDER_RADIUS_PHYSICS: closure_10, DEFAULT_BORDER_RADIUS, DRAWER_SPRING_PHYSICS, IS_IOS: closure_11, MODE_CHANGE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 ({ LAYOUT_PHYSICS, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_14, DEFAULT_BORDER_RADIUS_PIP } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11633).VoicePanelControlsModes;
-const isActivityParticipant = fn(5567).isActivityParticipant;
-const POP_RESISTANCE = fn(11636).POP_RESISTANCE;
+const VoicePanelControlsModes = fn(11732).VoicePanelControlsModes;
+const isActivityParticipant = fn(5662).isActivityParticipant;
+const POP_RESISTANCE = fn(11735).POP_RESISTANCE;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 log = new LoggerDefault("VoicePanelUI");
 let obj = {};
 let merged = Object.assign(LAYOUT_PHYSICS);
 obj.damping = 0;
-let items = [{ code: "(function scrollViewLayoutTransition_VoicePanelUITsx1(values){let[withSpring,LAYOUT_PHYSICS,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS]=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})" }, fn(5518).withSpring, LAYOUT_PHYSICS, obj];
+let items = [{ code: "(function scrollViewLayoutTransition_VoicePanelUITsx1(values){let[withSpring,LAYOUT_PHYSICS,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS]=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})" }, fn(5613).withSpring, LAYOUT_PHYSICS, obj];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;
@@ -674,7 +674,7 @@ let items3 = [tmp14];
 computeViewableChunksFromScrollPosition.__closure = items3;
 computeViewableChunksFromScrollPosition.__workletHash = 804730160053;
 computeViewableChunksFromScrollPosition.__initData = tmp13;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj4 = { accessibilityView: null, wrapper: null, maskDefaultBackground: null, scrollView: null, scrollViewContent: null, shade: null, shadePressable: null };
 let obj6 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
@@ -2027,12 +2027,12 @@ export default noop.memo(function VoicePanelUI() {
     let tmp105Result = tmp107;
     if (isDockEnabled) {
       const obj23 = { children: tmp107 };
-      tmp105Result = closure_18(tmp13(19286).VoicePanelContentWithDock, obj23);
+      tmp105Result = closure_18(tmp13(19397).VoicePanelContentWithDock, obj23);
     }
     obj22.children = tmp105Result;
     items37[1] = closure_18(AnimatedWrapper, obj22);
     const obj24 = { children: null };
-    items37[2] = closure_18(tmp2(isDockEnabled ? 19358 : 19368), {});
+    items37[2] = closure_18(tmp2(isDockEnabled ? 19469 : 19479), {});
     tmp2 = VoicePanelControlsDefault;
     const obj25 = { gestureState: sharedValue4 };
     tmp105Result3 = closure_18(tmp2, obj25);
@@ -2040,11 +2040,11 @@ export default noop.memo(function VoicePanelUI() {
     obj21.children = items37;
     obj21 = closure_19(VoicePanelAccessibilityViewDefault, obj21);
     obj20.children = obj21;
-    obj20 = closure_18(tmp13(5177).GestureDetector, obj20);
+    obj20 = closure_18(tmp13(5272).GestureDetector, obj20);
     items36[2] = obj20;
     obj24.children = items36;
-    obj18.children = closure_19(tmp13(5495).LayerScope, obj24);
-    closure_18(tmp13(6253).AnalyticsLocationProvider, obj18);
+    obj18.children = closure_19(tmp13(5590).LayerScope, obj24);
+    closure_18(tmp13(6348).AnalyticsLocationProvider, obj18);
     const tmp2Result2 = VoicePanelAccessibilityViewDefault;
   }
   const tmp2Result = VoicePanelHeaderDefault;

@@ -1,17 +1,17 @@
-// === Module 12312: GuildAutomodActionCreators ===
+// === Module 12478: GuildAutomodActionCreators ===
 
-// Module 12312 (GuildAutomodActionCreators)
+// Module 12478 (GuildAutomodActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5887 */;
-import AutomodFeedback from "AutomodFeedback" /* 8100 */;
-import DataUtils from "DataUtils" /* 12313 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
+import AutomodFeedback from "AutomodFeedback" /* 8199 */;
+import DataUtils from "DataUtils" /* 12479 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleStore from "GuildRoleStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
+import GuildRoleStore from "GuildRoleStore" /* 4918 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
 
 const require = globalThis.__r;
 
@@ -132,7 +132,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -195,7 +195,7 @@ let closure_19 = async function _executeAlertAction() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -228,7 +228,7 @@ let closure_19 = async function _executeAlertAction() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp8) {
         c3 = tmp;
         throw tmp8;

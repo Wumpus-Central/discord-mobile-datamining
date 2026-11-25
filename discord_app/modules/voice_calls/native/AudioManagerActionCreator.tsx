@@ -1,6 +1,6 @@
-// === Module 8505: AudioManagerActionCreator ===
+// === Module 8604: AudioManagerActionCreator ===
 
-// Module 8505 (AudioManagerActionCreator)
+// Module 8604 (AudioManagerActionCreator)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

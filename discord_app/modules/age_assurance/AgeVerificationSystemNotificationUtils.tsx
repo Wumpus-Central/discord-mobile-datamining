@@ -1,9 +1,9 @@
-// === Module 12374: AgeVerificationSystemNotificationUtils ===
+// === Module 12538: AgeVerificationSystemNotificationUtils ===
 
-// Module 12374 (AgeVerificationSystemNotificationUtils)
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7778 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11777 */;
-import MessageStore from "MessageStore" /* 6265 */;
+// Module 12538 (AgeVerificationSystemNotificationUtils)
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7877 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 11876 */;
+import MessageStore from "MessageStore" /* 6360 */;
 
 require = fn;
 const MessageEmbedTypes = fn(1071).MessageEmbedTypes;

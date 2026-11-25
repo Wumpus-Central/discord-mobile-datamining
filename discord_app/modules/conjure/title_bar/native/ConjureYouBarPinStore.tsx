@@ -1,6 +1,6 @@
-// === Module 14090: ConjureYouBarPinStore ===
+// === Module 14213: ConjureYouBarPinStore ===
 
-// Module 14090 (ConjureYouBarPinStore)
+// Module 14213 (ConjureYouBarPinStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

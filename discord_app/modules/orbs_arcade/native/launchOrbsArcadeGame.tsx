@@ -1,16 +1,16 @@
-// === Module 16483: launchOrbsArcadeGame ===
+// === Module 16604: launchOrbsArcadeGame ===
 
-// Module 16483 (launchOrbsArcadeGame)
+// Module 16604 (launchOrbsArcadeGame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5599 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16463 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6940 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import FramesStore from "FramesStore" /* 6810 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16456 */;
+import FramesStore from "FramesStore" /* 6905 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16577 */;
 
 require = fn;
 function showLaunchError() {
@@ -32,7 +32,7 @@ let closure_12 = async function _ensureEnrollment(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ let closure_13 = async function _launchGame(arg0, arg1, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -158,13 +158,13 @@ let closure_13 = async function _launchGame(arg0, arg1, arg2) {
             closure_133_0(closure_133_2[14]).leaveFrame(closure_132_9);
             closure_133_11();
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (1 === tmp8) {
           c6 = 0;
           closure_133_11();
           c8 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (2 === tmp8) {
           if (arg0 === 1) {
             c8 = 3;
@@ -236,7 +236,7 @@ let closure_13 = async function _launchGame(arg0, arg1, arg2) {
         } else if (4 === tmp8) {
           c6 = 0;
           c8 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c8 = 3;
           throw value;
@@ -310,7 +310,7 @@ let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -384,7 +384,7 @@ let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1, arg2) {
   })();
 };
 const AbortCodes = fn(1071).AbortCodes;
-const FramesConstants = fn(6811);
+const FramesConstants = fn(6906);
 ({ getFrameLaunchParams: closure_8, MAIN_SURFACE: closure_9, makeFrameId: closure_10 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/launchOrbsArcadeGame.tsx");

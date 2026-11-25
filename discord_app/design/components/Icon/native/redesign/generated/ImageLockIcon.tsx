@@ -1,9 +1,9 @@
-// === Module 7025: ImageLockIcon ===
+// === Module 7120: ImageLockIcon ===
 
-// Module 7025 (ImageLockIcon)
+// Module 7120 (ImageLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod7005 from "module_7005" /* 7005 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod7100 from "module_7100" /* 7100 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ImageLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7005, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7100, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,13 +1,13 @@
-// === Module 20075: GuildRoleSubscriptionBenefitModalHeader ===
+// === Module 20180: GuildRoleSubscriptionBenefitModalHeader ===
 
-// Module 20075 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 20180 (GuildRoleSubscriptionBenefitModalHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import NavigatorHeader from "NavigatorHeader" /* 7065 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7354 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 12324 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16664 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import NavigatorHeader from "NavigatorHeader" /* 7160 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7449 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 12490 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16785 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { headerContainer: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", paddingBottom: 8, paddingHorizontal: 16 }, headerButtonContainer: { flexDirection: "row", alignSelf: "center", minWidth: 60 }, headerButtonStart: { alignItems: "flex-start" }, headerButtonEnd: { alignItems: "flex-end" }, titleContainer: { flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

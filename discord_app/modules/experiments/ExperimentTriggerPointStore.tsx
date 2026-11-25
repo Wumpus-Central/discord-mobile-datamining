@@ -1,10 +1,10 @@
-// === Module 15009: ExperimentTriggerPointStore ===
+// === Module 15131: ExperimentTriggerPointStore ===
 
-// Module 15009 (ExperimentTriggerPointStore)
+// Module 15131 (ExperimentTriggerPointStore)
 import initializeDefault from "initialize" /* 504 */;
 import Dispatcher2 from "Dispatcher" /* 572 */;
-import ConnectionOpenTriggerPoint2 from "ConnectionOpenTriggerPoint" /* 15011 */;
-import ExperimentStore from "ExperimentStore" /* 5534 */;
+import ConnectionOpenTriggerPoint2 from "ConnectionOpenTriggerPoint" /* 15133 */;
+import ExperimentStore from "ExperimentStore" /* 5629 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 
 const Dispatcher = Dispatcher2;
@@ -14,7 +14,7 @@ function handleConnectionOpen() {
   const ConnectionOpenTriggerPoint = ConnectionOpenTriggerPoint2.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
-const DebugExperiment = fn(15010);
+const DebugExperiment = fn(15132);
 const Store = initializeDefault.Store;
 class ExperimentTriggerPointStore extends Store {
   constructor() {

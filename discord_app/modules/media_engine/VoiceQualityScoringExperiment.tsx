@@ -1,6 +1,6 @@
-// === Module 5837: VoiceQualityScoringExperiment ===
+// === Module 5932: VoiceQualityScoringExperiment ===
 
-// Module 5837 (VoiceQualityScoringExperiment)
+// Module 5932 (VoiceQualityScoringExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

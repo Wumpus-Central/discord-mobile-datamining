@@ -1,6 +1,6 @@
-// === Module 8265: SoundshareStatsAggregator ===
+// === Module 8364: SoundshareStatsAggregator ===
 
-// Module 8265 (SoundshareStatsAggregator)
+// Module 8364 (SoundshareStatsAggregator)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");

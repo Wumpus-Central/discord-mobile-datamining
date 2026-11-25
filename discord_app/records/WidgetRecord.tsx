@@ -1,6 +1,6 @@
-// === Module 14998: WidgetRecord ===
+// === Module 15120: WidgetRecord ===
 
-// Module 14998 (WidgetRecord)
+// Module 15120 (WidgetRecord)
 import Record from "Record" /* 1406 */;
 
 let size = fn(2);
@@ -71,7 +71,7 @@ const prototype = function WidgetRecord(id) {
   const size1 = { width: 0, height: 0 };
   const merged = Object.assign(id.size);
   tmp7.size = size1;
-  const size2 = { width: "Array", height: "Path" };
+  const size2 = { width: "Array", height: "analyticsLocations" };
   const merged1 = Object.assign(id.minSize);
   tmp7.minSize = size2;
   tmp7.pinned = id.pinned;

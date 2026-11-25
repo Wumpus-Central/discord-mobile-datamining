@@ -1,8 +1,8 @@
-// === Module 11759: UnreadSettingNoticeImpressionTracking ===
+// === Module 11858: UnreadSettingNoticeImpressionTracking ===
 
-// Module 11759 (UnreadSettingNoticeImpressionTracking)
+// Module 11858 (UnreadSettingNoticeImpressionTracking)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 5990 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6085 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeImpressionTracking.tsx");

@@ -1,29 +1,29 @@
-// === Module 18171: ICYMIShared ===
+// === Module 18283: ICYMIShared ===
 
-// Module 18171 (ICYMIShared)
+// Module 18283 (ICYMIShared)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import useThemeDefault from "useTheme" /* 5126 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6007 */;
-import Client from "Client" /* 6658 */;
-import GuildIcon from "GuildIcon" /* 6926 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 6941 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7341 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 7478 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7714 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8103 */;
-import ICYMIUtils from "ICYMIUtils" /* 8781 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8782 */;
-import ClipView from "ClipView" /* 9279 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 18172 */;
+import useThemeDefault from "useTheme" /* 5221 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6102 */;
+import Client from "Client" /* 6753 */;
+import GuildIcon from "GuildIcon" /* 7021 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 7036 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7436 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 7573 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7813 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8202 */;
+import ICYMIUtils from "ICYMIUtils" /* 8880 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8881 */;
+import ClipView from "ClipView" /* 9378 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 18284 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7982 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8081 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -150,7 +150,7 @@ const Constants = fn(1071);
 ({ AnalyticsObjects: closure_10, AnalyticsObjectTypes: closure_11, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(18132);
+const createICYMIStyles = fn(18244);
 let guild = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -595,18 +595,18 @@ export function ThreadAsComments(arg0) {
           parseInlineReplyResult = intl.string(parentMessage(1112).t["6kp9H2"]);
         }
         obj5.children = parseInlineReplyResult;
-        items4[1] = closure_18(parentMessage(5508).Text, obj5);
+        items4[1] = closure_18(parentMessage(5603).Text, obj5);
         const obj7 = { style: tmp.commentCount, children: null };
         const obj8 = { style: tmp.commentsIcon };
-        const items5 = [closure_18(parentMessage(7011).ChatIcon, obj8), , ];
+        const items5 = [closure_18(parentMessage(7106).ChatIcon, obj8), , ];
         const obj9 = { variant: "body-sm/semibold", color: "interactive-text-default", children: str };
-        items5[1] = closure_18(parentMessage(5508).Text, obj9);
+        items5[1] = closure_18(parentMessage(5603).Text, obj9);
         const obj10 = { style: tmp.chevron, size: "xxs" };
-        items5[2] = closure_18(parentMessage(7432).ChevronSmallRightIcon, obj10);
+        items5[2] = closure_18(parentMessage(7527).ChevronSmallRightIcon, obj10);
         obj7.children = items5;
         items4[2] = closure_19(View, obj7);
         obj3.children = items4;
-        return closure_19(parentMessage(6026).PressableHighlight, obj3);
+        return closure_19(parentMessage(6121).PressableHighlight, obj3);
       }
     }
     const obj11 = { style: null, onPress: null, children: null };
@@ -616,16 +616,16 @@ export function ThreadAsComments(arg0) {
     const obj12 = { variant: "body-md/semibold", color: "text-muted", lineClamp: 1, style: tmp.recentCommentText, children: null };
     const intl2 = parentMessage(1112).intl;
     obj12.children = intl2.string(parentMessage(1112).t.VMWjXW);
-    const items7 = [closure_18(parentMessage(5508).Text, obj12), ];
+    const items7 = [closure_18(parentMessage(5603).Text, obj12), ];
     const obj13 = { style: tmp.commentCount, children: null };
     const obj14 = { style: tmp.commentsIcon };
-    const items8 = [closure_18(parentMessage(7011).ChatIcon, obj14), ];
+    const items8 = [closure_18(parentMessage(7106).ChatIcon, obj14), ];
     const obj15 = { style: tmp.chevron, size: "xxs" };
-    items8[1] = closure_18(parentMessage(7432).ChevronSmallRightIcon, obj15);
+    items8[1] = closure_18(parentMessage(7527).ChevronSmallRightIcon, obj15);
     obj13.children = items8;
     items7[1] = closure_19(View, obj13);
     obj11.children = items7;
-    return closure_19(parentMessage(6026).PressableHighlight, obj11);
+    return closure_19(parentMessage(6121).PressableHighlight, obj11);
   } else {
     return null;
   }

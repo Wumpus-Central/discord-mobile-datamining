@@ -1,12 +1,12 @@
-// === Module 6880: GuildJoinRequestStore ===
+// === Module 6975: GuildJoinRequestStore ===
 
-// Module 6880 (GuildJoinRequestStore)
+// Module 6975 (GuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4952 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4953 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5047 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -72,7 +72,7 @@ function handleGuildJoinRequestCreateOrUpdate(request) {
   }
   return false;
 }
-const joinRequestFromServer = fn(4951).joinRequestFromServer;
+const joinRequestFromServer = fn(5046).joinRequestFromServer;
 const map = new Map();
 const dependencyMap = {};
 let closure_8 = {};
@@ -85,9 +85,9 @@ let closure_10 = {
     return "guild-" + guildId + "-" + status;
   }
 };
-const secondaryIndexMap = new fn(4844).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
-const secondaryIndexMap1 = new fn(4844).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
-const secondaryIndexMap2 = new fn(4844).SecondaryIndexMap(guildJoinRequestsIndex, (actionedAt) => "" + actionedAt.actionedAt);
+const secondaryIndexMap = new fn(4939).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
+const secondaryIndexMap1 = new fn(4939).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
+const secondaryIndexMap2 = new fn(4939).SecondaryIndexMap(guildJoinRequestsIndex, (actionedAt) => "" + actionedAt.actionedAt);
 const dependencyMap2 = {};
 const dependencyMap3 = {};
 let closure_17 = {};

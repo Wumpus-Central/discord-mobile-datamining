@@ -1,16 +1,16 @@
-// === Module 14774: UserProfileStreamVolumeScrollTarget ===
+// === Module 14896: UserProfileStreamVolumeScrollTarget ===
 
-// Module 14774 (UserProfileStreamVolumeScrollTarget)
+// Module 14896 (UserProfileStreamVolumeScrollTarget)
 import util from "util" /* 1112 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
-import StreamVolumeMovedStore_mod from "StreamVolumeMovedStore" /* 14775 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import StreamVolumeMovedStore_mod from "StreamVolumeMovedStore" /* 14897 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let StreamVolumeMovedStore = fn(14775);
+let StreamVolumeMovedStore = fn(14897);
 ({ clearScrollToStreamVolume: closure_6, hideStreamVolumeCoachmark: metroImportDefault, showStreamVolumeCoachmark: closure_8 } = StreamVolumeMovedStore);
 let StreamVolumeMovedStore = StreamVolumeMovedStore_mod;
 const jsx = fn(21).jsx;

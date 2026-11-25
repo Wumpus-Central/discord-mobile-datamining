@@ -1,14 +1,14 @@
-// === Module 13364: usePowerupGroupConfig ===
+// === Module 13487: usePowerupGroupConfig ===
 
-// Module 13364 (usePowerupGroupConfig)
+// Module 13487 (usePowerupGroupConfig)
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import _modDef2856 from "module_2856" /* 2856 */;
-import GuildTagUtils from "GuildTagUtils" /* 8437 */;
-import _modDef13365 from "module_13365" /* 13365 */;
-import _modDef13366 from "module_13366" /* 13366 */;
+import _modDef2878 from "module_2878" /* 2878 */;
+import GuildTagUtils from "GuildTagUtils" /* 8536 */;
+import _modDef13488 from "module_13488" /* 13488 */;
+import _modDef13489 from "module_13489" /* 13489 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 const require = globalThis.__r;
 
@@ -31,17 +31,17 @@ export default function usePowerupGroupConfig(arg0, arg1) {
   const items1 = [arg1, stateFromStores];
   return noop.useMemo(() => {
     if ("guildTagsBadgePacks" === group.group) {
-      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "HermesInternal", forceStaticImages: "HermesInternal" };
+      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "HermesInternal", forceStaticImages: "no-hide-descendants" };
       const intl = util.intl;
-      obj2.title = intl.string(_modDef2856.KC9HRW);
+      obj2.title = intl.string(_modDef2878.KC9HRW);
       const intl2 = util.intl;
-      obj2.description = intl2.string(_modDef2856.GJiSmP);
-      const obj3 = { staticUrl: _modDef13365, animatedUrl: _modDef13366 };
+      obj2.description = intl2.string(_modDef2878.GJiSmP);
+      const obj3 = { staticUrl: _modDef13488, animatedUrl: _modDef13489 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {
         const intl3 = util.intl;
-        stringResult = intl3.string(_modDef2856.lvk1Gc);
+        stringResult = intl3.string(_modDef2878.lvk1Gc);
       }
       obj2.disabledReason = stringResult;
       return obj2;

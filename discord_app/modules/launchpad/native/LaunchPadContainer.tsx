@@ -1,17 +1,17 @@
-// === Module 19158: LaunchPadContainer ===
+// === Module 19269: LaunchPadContainer ===
 
-// Module 19158 (LaunchPadContainer)
+// Module 19269 (LaunchPadContainer)
 import _mod1653 from "module_1653" /* 1653 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5177 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import OverlayViewDefault from "OverlayView" /* 5927 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8478 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11812 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12820 */;
-import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 17560 */;
-import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19159 */;
-import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19160 */;
-import useLaunchPadStateDefault from "useLaunchPadState" /* 19188 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import OverlayViewDefault from "OverlayView" /* 6022 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8577 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11911 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12944 */;
+import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 17671 */;
+import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19270 */;
+import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19271 */;
+import useLaunchPadStateDefault from "useLaunchPadState" /* 19299 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -32,11 +32,11 @@ function LaunchPadOverlay(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11811);
+const LaunchPadConstants = fn(11910);
 ({ LAUNCH_PAD_SPRING_CONFIG: hasOwnProperty, LaunchPadTypes: closure_6 } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { wrapper: null, container: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

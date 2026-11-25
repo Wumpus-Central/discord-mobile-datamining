@@ -1,14 +1,14 @@
-// === Module 8060: Arrow ===
+// === Module 8159: Arrow ===
 
-// Module 8060 (Arrow)
+// Module 8159 (Arrow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import _modDef8061 from "module_8061" /* 8061 */;
+import _modDef8160 from "module_8160" /* 8160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const obj2 = { tintColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -16,5 +16,5 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 
 export default function Arrow() {
   const tmp = closure_4();
-  return jsx(native.Icon, { source: _modDef8061, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
+  return jsx(native.Icon, { source: _modDef8160, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
 };

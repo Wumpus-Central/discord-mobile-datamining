@@ -1,13 +1,13 @@
-// === Module 13054: VoicePanelHeaderGlassBlur ===
+// === Module 13177: VoicePanelHeaderGlassBlur ===
 
-// Module 13054 (VoicePanelHeaderGlassBlur)
+// Module 13177 (VoicePanelHeaderGlassBlur)
 import _mod1653 from "module_1653" /* 1653 */;
-import shared from "shared" /* 4924 */;
-import useThemeDefault from "useTheme" /* 5126 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5484 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import springPresets from "springPresets" /* 5519 */;
-import NativeViewDefault from "NativeView" /* 6929 */;
+import shared from "shared" /* 5019 */;
+import useThemeDefault from "useTheme" /* 5221 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5579 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import springPresets from "springPresets" /* 5614 */;
+import NativeViewDefault from "NativeView" /* 7024 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -16,7 +16,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_6 = createStyles.createStyles({ blur: { position: "absolute", top: 0, left: 0, right: 0 }, strokeContainer: { position: "absolute", left: 0, right: 0, bottom: -StyleSheet.hairlineWidth, height: StyleSheet.hairlineWidth }, stroke: { height: StyleSheet.hairlineWidth, opacity: 0.15, backgroundColor: "white" }, strokeAlt: { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" }, strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" } });
 const PlatformUtils = fn(1378);
 let closure_7 = PlatformUtils.isAndroid();

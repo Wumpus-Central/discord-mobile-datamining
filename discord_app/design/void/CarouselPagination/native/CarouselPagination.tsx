@@ -1,10 +1,10 @@
-// === Module 15440: CarouselPagination ===
+// === Module 15562: CarouselPagination ===
 
-// Module 15440 (CarouselPagination)
+// Module 15562 (CarouselPagination)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import Easing_Easing from "Easing/Easing" /* 15235 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import Easing_Easing from "Easing/Easing" /* 15357 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1653 = _mod1653;
@@ -12,7 +12,7 @@ const _modDef1653 = _mod1653;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: { position: "relative", top: -16, marginBottom: -16, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_20, paddingVertical: nativeDefault.space.PX_32 }, dot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.xs, marginHorizontal: 4, backgroundColor: nativeDefault.colors.ICON_STRONG };
 obj.dot = size;

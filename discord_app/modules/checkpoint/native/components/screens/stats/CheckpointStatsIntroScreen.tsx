@@ -1,16 +1,16 @@
-// === Module 12662: CheckpointStatsIntroScreen ===
+// === Module 12826: CheckpointStatsIntroScreen ===
 
-// Module 12662 (CheckpointStatsIntroScreen)
+// Module 12826 (CheckpointStatsIntroScreen)
 import nativeDefault from "native" /* 575 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12425 */;
-import CheckpointTextDefault from "CheckpointText" /* 12426 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12647 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12589 */;
+import CheckpointTextDefault from "CheckpointText" /* 12590 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12811 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_64 }, title: null, titleText: null, wideContainer: null, wideTitle: null, wideDescription: null };
 let obj3 = { flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

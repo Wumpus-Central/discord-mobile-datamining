@@ -1,14 +1,14 @@
-// === Module 15858: ProfileCustomizationSettingScreenV2 ===
+// === Module 15979: ProfileCustomizationSettingScreenV2 ===
 
-// Module 15858 (ProfileCustomizationSettingScreenV2)
+// Module 15979 (ProfileCustomizationSettingScreenV2)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5887 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9298 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5982 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9397 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9296 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 6250 */;
-import WidgetStore from "WidgetStore" /* 14390 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9395 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 6345 */;
+import WidgetStore from "WidgetStore" /* 14513 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const constants = fn(1081).ProfileCustomizationSubsection;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { flex: 1 }, profileSelector: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);

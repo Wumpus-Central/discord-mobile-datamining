@@ -1,11 +1,11 @@
-// === Module 16864: UserSettingsLocale ===
+// === Module 16985: UserSettingsLocale ===
 
-// Module 16864 (UserSettingsLocale)
+// Module 16985 (UserSettingsLocale)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import TableRadioRow from "TableRadioRow" /* 7127 */;
-import flags from "flags" /* 16865 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import TableRadioRow from "TableRadioRow" /* 7222 */;
+import flags from "flags" /* 16986 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2188 */;
@@ -34,7 +34,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
       } else {
         closure_130_1(closure_130_2[8]).updateLocale(closure_129_0);
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp14) {
       c4 = tmp;
@@ -77,7 +77,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
 const ScrollView = fn(17).ScrollView;
 const setAppLocale = fn(2189).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_8 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16 };

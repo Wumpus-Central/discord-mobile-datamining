@@ -1,14 +1,14 @@
-// === Module 18996: ChannelSettingsPermissionsList ===
+// === Module 19107: ChannelSettingsPermissionsList ===
 
-// Module 18996 (ChannelSettingsPermissionsList)
+// Module 19107 (ChannelSettingsPermissionsList)
 import nativeDefault from "native" /* 575 */;
 import Server from "Server" /* 2117 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6862 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6957 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import GuildRoleStore from "GuildRoleStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import GuildRoleStore from "GuildRoleStore" /* 4918 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const Constants = fn(1071);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, containerSearchBar: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.containerSearchBar = { paddingVertical: nativeDefault.space.PX_8 };

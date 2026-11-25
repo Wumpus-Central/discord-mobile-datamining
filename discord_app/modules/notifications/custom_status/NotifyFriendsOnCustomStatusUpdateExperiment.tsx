@@ -1,6 +1,6 @@
-// === Module 17448: NotifyFriendsOnCustomStatusUpdateExperiment ===
+// === Module 17559: NotifyFriendsOnCustomStatusUpdateExperiment ===
 
-// Module 17448 (NotifyFriendsOnCustomStatusUpdateExperiment)
+// Module 17559 (NotifyFriendsOnCustomStatusUpdateExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

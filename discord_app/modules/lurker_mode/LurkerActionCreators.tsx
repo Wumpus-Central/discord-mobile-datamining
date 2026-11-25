@@ -1,10 +1,10 @@
-// === Module 14523: LurkerActionCreators ===
+// === Module 14646: LurkerActionCreators ===
 
-// Module 14523 (LurkerActionCreators)
+// Module 14646 (LurkerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
-import LurkingStore from "LurkingStore" /* 4850 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
+import LurkingStore from "LurkingStore" /* 4945 */;
 
 const require = fn;
 function stopLurkingAll() {
@@ -31,7 +31,7 @@ let closure_8 = async function _stopLurkingAll() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -110,7 +110,7 @@ let closure_8 = async function _stopLurkingAll() {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp13) {
         c1 = tmp;
         throw tmp13;

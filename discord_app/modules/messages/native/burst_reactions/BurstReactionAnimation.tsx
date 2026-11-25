@@ -1,14 +1,14 @@
-// === Module 5500: BurstReactionAnimation ===
+// === Module 5595: BurstReactionAnimation ===
 
-// Module 5500 (BurstReactionAnimation)
+// Module 5595 (BurstReactionAnimation)
 import initialize from "initialize" /* 504 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 4875 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 4970 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_5 = createStyles.createStyles({ content: { width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
@@ -42,6 +42,6 @@ export default function BurstReactionAnimation(arg0) {
     const merged1 = Object.assign(merged);
     const merged2 = Object.assign(obj3);
     obj4.source = burstReactionAnimationSource;
-    return jsx(importDefault(withFadeOut ? 5501 : 5502), { style: tmp2.content, loop: false, speed: null });
+    return jsx(importDefault(withFadeOut ? 5596 : 5597), { style: tmp2.content, loop: false, speed: null });
   }
 };

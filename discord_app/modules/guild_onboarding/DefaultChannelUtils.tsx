@@ -1,10 +1,10 @@
-// === Module 7331: DefaultChannelUtils ===
+// === Module 7426: DefaultChannelUtils ===
 
-// Module 7331 (DefaultChannelUtils)
+// Module 7426 (DefaultChannelUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4854 */;
-import GatedChannelStore from "GatedChannelStore" /* 4821 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4949 */;
+import GatedChannelStore from "GatedChannelStore" /* 4916 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 const require = globalThis.__r;
 

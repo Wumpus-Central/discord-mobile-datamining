@@ -1,9 +1,9 @@
-// === Module 6923: useKeyboardAnimatedValue ===
+// === Module 7018: useKeyboardAnimatedValue ===
 
-// Module 6923 (useKeyboardAnimatedValue)
+// Module 7018 (useKeyboardAnimatedValue)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 6924 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 7019 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

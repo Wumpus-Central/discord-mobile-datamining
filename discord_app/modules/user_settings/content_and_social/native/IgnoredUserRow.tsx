@@ -1,8 +1,8 @@
-// === Module 16141: IgnoredUserRow ===
+// === Module 16262: IgnoredUserRow ===
 
-// Module 16141 (IgnoredUserRow)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6007 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7717 */;
+// Module 16262 (IgnoredUserRow)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6102 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7816 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
@@ -11,7 +11,7 @@ const require = fn;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6253)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6348)().analyticsLocations;
   const intl = userRecord(1112).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -37,7 +37,7 @@ function IgnoredUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16138).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16259).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -57,8 +57,8 @@ function IgnoredUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(5515).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(6018).TableRow, { accessible: false, icon: jsx(userRecord(1186).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1186).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
+  obj.trailing = jsx(userRecord(5610).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  return jsx(userRecord(6113).TableRow, { accessible: false, icon: jsx(userRecord(1186).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1186).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -81,7 +81,7 @@ export default function ConnectedIgnoredUserRow(userId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -104,7 +104,7 @@ export default function ConnectedIgnoredUserRow(userId) {
           } else if (1 === tmp6) {
             c2 = 0;
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
@@ -116,7 +116,7 @@ export default function ConnectedIgnoredUserRow(userId) {
           } else {
             c2 = 0;
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           if (tmp3 === c2) {

@@ -1,14 +1,14 @@
-// === Module 4758: DismissibleContentShownStateStore ===
+// === Module 4853: DismissibleContentShownStateStore ===
 
-// Module 4758 (DismissibleContentShownStateStore)
+// Module 4853 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import isActionRequiredDefault from "isActionRequired" /* 4762 */;
+import isActionRequiredDefault from "isActionRequired" /* 4857 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4759 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4760 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4753 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4854 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4855 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4848 */;
 
 function withContent(currentlyShown, content) {
   let tmp = found;
@@ -66,7 +66,7 @@ let closure_15 = async function _arbitrateCandidates(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -366,7 +366,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -573,7 +573,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4761).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4856).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -654,9 +654,9 @@ export function isStateInCooldown(shownFatigableCandidate) {
 }
 export function addCandidateContent(content) {
   closure_0 = content;
-  closure_1 = closure_0(4754).bypassesFatigue(content.content);
+  closure_1 = closure_0(4849).bypassesFatigue(content.content);
   dependencyMap = null;
-  let obj = closure_0(4754);
+  let obj = closure_0(4849);
   closure_0(1262).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};

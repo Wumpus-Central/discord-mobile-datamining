@@ -1,13 +1,13 @@
-// === Module 19620: MultiAccountManagerNative ===
+// === Module 19721: MultiAccountManagerNative ===
 
-// Module 19620 (MultiAccountManagerNative)
+// Module 19721 (MultiAccountManagerNative)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5599 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6004 */;
-import Constants2 from "Constants" /* 13211 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
+import Constants2 from "Constants" /* 13334 */;
 import Constants from "Constants" /* 1071 */;
-import MultiAccountManager from "MultiAccountManager" /* 19622 */;
+import MultiAccountManager from "MultiAccountManager" /* 19723 */;
 import size from "module_2" /* 2 */;
 
 const SWITCH_ACCOUNTS_MODAL_KEY = Constants2.SWITCH_ACCOUNTS_MODAL_KEY;
@@ -21,7 +21,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   obj.cancelled = false;
   obj.push = function push() {
     obj = ModalActionCreatorsDefault;
-    obj.pushLazy(obj(2119)(19621, dependencyMap.paths), {}, c7);
+    obj.pushLazy(obj(2119)(19722, dependencyMap.paths), {}, c7);
     if (obj.cancelled) {
       ModalActionCreatorsDefault.popWithKey(c7);
       const tmpResult = ModalActionCreatorsDefault;
@@ -29,7 +29,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   };
   obj.enqueue = function enqueue() {
     obj.cancelled = false;
-    obj = obj(5094);
+    obj = obj(5189);
     const rootNavigationRef = obj.getRootNavigationRef();
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -54,7 +54,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(2119)(19621, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(2119)(19722, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
@@ -62,7 +62,7 @@ obj.push = function push() {
 };
 obj.enqueue = function enqueue() {
   obj.cancelled = false;
-  obj = obj(5094);
+  obj = obj(5189);
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -105,13 +105,13 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   if (navigateHome) {
     const self = this;
     if (!this.transitionToLastChannel(currentUser.id)) {
-      user(8459).transitionToGuild(closure_5);
-      obj = user(8459);
+      user(8558).transitionToGuild(closure_5);
+      obj = user(8558);
     }
-    const MobileHomeDrawerExperiment = user(5099).MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = user(5194).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp5(5093).setHomeDrawerState(false);
-      const tmp5Result = tmp5(5093);
+      tmp5(5188).setHomeDrawerState(false);
+      const tmp5Result = tmp5(5188);
     }
     tmp5 = user;
   }
@@ -120,7 +120,7 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     const obj2 = { text: null, icon: null };
     const intl = obj(1112).intl;
     obj2.text = intl.formatToPlainString(obj(1112).t.wx7O3L, { username: user.username });
-    obj2.icon = obj(19623).ArrowsLeftRightIcon;
+    obj2.icon = obj(19724).ArrowsLeftRightIcon;
     obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", obj2);
   }, 100);
 };
@@ -129,7 +129,7 @@ prototype["onSwitchError"] = function onSwitchError() {
   const obj2 = { text: null, icon: null };
   const intl = obj(1112).intl;
   obj2.text = intl.string(obj(1112).t.pqvKWA);
-  obj2.icon = obj(19623).ArrowsLeftRightIcon;
+  obj2.icon = obj(19724).ArrowsLeftRightIcon;
   obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {

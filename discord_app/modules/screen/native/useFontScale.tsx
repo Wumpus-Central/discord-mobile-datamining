@@ -1,6 +1,6 @@
-// === Module 5523: useFontScale ===
+// === Module 5618: useFontScale ===
 
-// Module 5523 (useFontScale)
+// Module 5618 (useFontScale)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1497 */;
 import noop from "module_19" /* 19 */;
 import DimensionsStore from "DimensionsStore" /* 1495 */;

@@ -1,7 +1,7 @@
-// === Module 17174: useCampaignDismissibleContent ===
+// === Module 17293: useCampaignDismissibleContent ===
 
-// Module 17174 (useCampaignDismissibleContent)
-import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9071 */;
+// Module 17293 (useCampaignDismissibleContent)
+import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9170 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ let closure_7 = async function _resetCampaignDismissibleContent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_7 = async function _resetCampaignDismissibleContent(arg0) {
       } else {
         const result = closure_129_0(closure_129_1[7]).overrideDCFLastDCDismissed(null);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp20) {
       c3 = tmp;
@@ -104,7 +104,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -141,7 +141,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -156,7 +156,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
                         return obj3;
                       } else if (dependencyMap !== ref.current) {
                         c1 = 3;
-                        const obj4 = { value: { v: "Array" }, done: true };
+                        const obj4 = { value: { v: "top" }, done: true };
                         return obj4;
                       } else if (next.some((content) => content.content === closure_0)) {
                         c2 = 1;
@@ -185,7 +185,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
                       return obj;
                     }
                     c1 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   } catch (tmp6) {
                     c1 = tmp;
                     throw tmp6;
@@ -317,7 +317,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
             closure_136_2(false);
           }
           c12 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp83) {
           closure_10 = tmp83;
           if (tmp5 === c9) {

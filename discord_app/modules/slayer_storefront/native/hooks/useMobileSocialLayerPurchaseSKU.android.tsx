@@ -1,8 +1,8 @@
-// === Module 11505: useMobileSocialLayerPurchaseSKU ===
+// === Module 11604: useMobileSocialLayerPurchaseSKU ===
 
-// Module 11505 (useMobileSocialLayerPurchaseSKU)
-import GPlayActionCreators from "GPlayActionCreators" /* 9090 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 11431 */;
+// Module 11604 (useMobileSocialLayerPurchaseSKU)
+import GPlayActionCreators from "GPlayActionCreators" /* 9189 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 11530 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

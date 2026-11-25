@@ -1,17 +1,17 @@
-// === Module 11726: UnreadSettingNoticeStore2 ===
+// === Module 11825: UnreadSettingNoticeStore2 ===
 
-// Module 11726 (UnreadSettingNoticeStore2)
+// Module 11825 (UnreadSettingNoticeStore2)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import FlagUtils from "FlagUtils" /* 1404 */;
-import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 11727 */;
+import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 11826 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
 
 require = fn;
 function startInterval() {
@@ -123,7 +123,7 @@ function shouldTrackChannel(channelId) {
   }
 }
 const UserNotificationSettings = fn(1071).UserNotificationSettings;
-const UnreadSetting = fn(6042).UnreadSetting;
+const UnreadSetting = fn(6137).UnreadSetting;
 const constants = fn(1081).ChannelNotificationSettingsFlags;
 let items = [{ timeSinceJoin: DurationsDefault.Millis.HOUR, sends: 1, viewTime: DurationsDefault.Millis.MINUTE }, , , ];
 let obj = { timeSinceJoin: DurationsDefault.Millis.HOUR, sends: 1, viewTime: DurationsDefault.Millis.MINUTE };

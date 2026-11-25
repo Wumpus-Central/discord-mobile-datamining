@@ -1,6 +1,6 @@
-// === Module 16462: OrbsArcadeExperiment ===
+// === Module 16583: OrbsArcadeExperiment ===
 
-// Module 16462 (OrbsArcadeExperiment)
+// Module 16583 (OrbsArcadeExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

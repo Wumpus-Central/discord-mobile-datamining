@@ -1,9 +1,9 @@
-// === Module 9930: openForumExplicitMediaWarning ===
+// === Module 10029: openForumExplicitMediaWarning ===
 
-// Module 9930 (openForumExplicitMediaWarning)
+// Module 10029 (openForumExplicitMediaWarning)
 import jsxProd from "jsxProd" /* 21 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5921 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6016 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -14,7 +14,7 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
   importDefault = arg1;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(9931, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(10030, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};

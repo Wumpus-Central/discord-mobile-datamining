@@ -1,10 +1,10 @@
-// === Module 20251: BackgroundSync ===
+// === Module 20356: BackgroundSync ===
 
-// Module 20251 (BackgroundSync)
+// Module 20356 (BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4812 */;
-import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 19493 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 4907 */;
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 19604 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5818 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
 

@@ -1,9 +1,9 @@
-// === Module 9563: ReactionIcon ===
+// === Module 9662: ReactionIcon ===
 
-// Module 9563 (ReactionIcon)
+// Module 9662 (ReactionIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod9564 from "module_9564" /* 9564 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod9663 from "module_9663" /* 9663 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ReactionIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9564, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9663, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

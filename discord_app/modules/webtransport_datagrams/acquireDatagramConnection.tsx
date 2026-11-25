@@ -1,7 +1,7 @@
-// === Module 14920: acquireDatagramConnection ===
+// === Module 15042: acquireDatagramConnection ===
 
-// Module 14920 (acquireDatagramConnection)
-import DatagramConnectionRecoveryDefault from "DatagramConnectionRecovery" /* 14924 */;
+// Module 15042 (acquireDatagramConnection)
+import DatagramConnectionRecoveryDefault from "DatagramConnectionRecovery" /* 15046 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,17 +1,17 @@
-// === Module 18370: useConjurePublishSchedule ===
+// === Module 18482: useConjurePublishSchedule ===
 
-// Module 18370 (useConjurePublishSchedule)
+// Module 18482 (useConjurePublishSchedule)
 import util from "util" /* 1112 */;
-import _modDef4192 from "module_4192" /* 4192 */;
+import _modDef4244 from "module_4244" /* 4244 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 7563 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 7662 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ensureConnection = fn(7563).ensureConnection;
+const ensureConnection = fn(7662).ensureConnection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishSchedule.tsx");
 
@@ -60,7 +60,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
         }).catch(() => {
           if (ref.current.value === sum) {
             const intl = util.intl;
-            closure_2_8(intl.string(_modDef4192.n25haz));
+            closure_2_8(intl.string(_modDef4244.n25haz));
             closure_4(false);
           }
         });
@@ -96,7 +96,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -166,7 +166,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
                   closure_129_7(false);
                 }
                 c5 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 closure_129_3(closure_128_1);
                 const intl = tmp6(tmp80[6]).intl;

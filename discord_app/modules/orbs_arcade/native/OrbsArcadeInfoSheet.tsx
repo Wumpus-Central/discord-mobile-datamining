@@ -1,10 +1,10 @@
-// === Module 16485: OrbsArcadeInfoSheet ===
+// === Module 16606: OrbsArcadeInfoSheet ===
 
-// Module 16485 (OrbsArcadeInfoSheet)
-import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 16476 */;
-import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 16486 */;
+// Module 16606 (OrbsArcadeInfoSheet)
+import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 16597 */;
+import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 16607 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16456 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16577 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -29,12 +29,12 @@ export default function OrbsArcadeInfoSheet(gameId) {
     const intl2 = tmp(1112).intl;
     obj3.description = intl2.string(tmp(1112).t.GSj8gp);
     const obj4 = { game: stateFromStores, sheetKey: "OrbsArcadeInfoSheet", location: null, surface: null, secondaryAction: null, direction: "vertical" };
-    tmpResult = tmp(16486);
-    obj4.location = tmp(16466).OrbsArcadeCtaLocation.INFO_SHEET;
+    tmpResult = tmp(16607);
+    obj4.location = tmp(16587).OrbsArcadeCtaLocation.INFO_SHEET;
     obj4.surface = gameId.surface;
-    obj4.secondaryAction = tmp(16476).OrbsArcadeSheetSecondaryAction.CLOSE;
+    obj4.secondaryAction = tmp(16597).OrbsArcadeSheetSecondaryAction.CLOSE;
     obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: "OrbsArcadeInfoSheet", location: null, surface: null, secondaryAction: null, direction: "vertical" });
-    tmp5Result2 = jsx(tmp(10603).PromoSheet, { gradientColor: "blue", illustration: tmp5Result, title: null, description: null, actions: null });
+    tmp5Result2 = jsx(tmp(10702).PromoSheet, { gradientColor: "blue", illustration: tmp5Result, title: null, description: null, actions: null });
   }
   return tmp5Result2;
 };

@@ -1,9 +1,9 @@
-// === Module 7787: GoogleWalletActionCreators ===
+// === Module 7886: GoogleWalletActionCreators ===
 
-// Module 7787 (GoogleWalletActionCreators)
+// Module 7886 (GoogleWalletActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7752 */;
-import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 7788 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7851 */;
+import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 7887 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -19,7 +19,7 @@ let closure_6 = async function _requestGoogleWalletVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -97,7 +97,7 @@ let closure_7 = async function _verifyGoogleWalletCredential() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -152,7 +152,7 @@ let closure_7 = async function _verifyGoogleWalletCredential() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp6) {
         c1 = tmp;
@@ -172,7 +172,7 @@ let closure_8 = async function _checkGoogleWalletAvailable() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

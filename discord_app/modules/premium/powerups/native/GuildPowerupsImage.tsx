@@ -1,13 +1,13 @@
-// === Module 13335: GuildPowerupsImage ===
+// === Module 13458: GuildPowerupsImage ===
 
-// Module 13335 (GuildPowerupsImage)
+// Module 13458 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_5 = createStyles.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");

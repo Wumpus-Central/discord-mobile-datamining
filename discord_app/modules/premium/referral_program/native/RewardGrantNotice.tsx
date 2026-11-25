@@ -1,12 +1,12 @@
-// === Module 13724: RewardGrantNotice ===
+// === Module 13847: RewardGrantNotice ===
 
-// Module 13724 (RewardGrantNotice)
+// Module 13847 (RewardGrantNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7365 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 9302 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13705 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7460 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 9401 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13828 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,11 +36,11 @@ function DiscountGrantNotice(nRewardsGranted) {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const Constants = fn(13703);
+const Constants = fn(13826);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: closure_4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" }, orbsPillContainer: null, balancePillOverride: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };
 obj2.orbsPillContainer = { flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };

@@ -1,11 +1,11 @@
-// === Module 18007: YouBarAvatarDefault ===
+// === Module 18119: YouBarAvatarDefault ===
 
-// Module 18007 (YouBarAvatarDefault)
+// Module 18119 (YouBarAvatarDefault)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import useToken from "useToken" /* 5481 */;
-import ClipView from "ClipView" /* 9279 */;
-import ReactionIcon from "ReactionIcon" /* 9563 */;
+import useToken from "useToken" /* 5576 */;
+import ClipView from "ClipView" /* 9378 */;
+import ReactionIcon from "ReactionIcon" /* 9662 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -85,12 +85,12 @@ function AvatarDefaultLarge() {
   return application_id(View, obj2);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(16511);
+const YouBarConstants = fn(16632);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_4, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty, YOU_BAR_STATUS_INSET: closure_6, YOU_BAR_HEIGHT: metroImportDefault, YOU_BAR_LARGE_STATUS_SIZE: closure_8, YOU_BAR_PADDING: closure_9, YOU_BAR_STATUS_OFFSET: closure_10 } = YouBarConstants);
 const StatusTypes = fn(1071).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { placeholderAvatar: { borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, justifyContent: "center", alignItems: "center" }, placeholderAvatarBackground: null, avatarShadow: null };
 let rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round };
 obj.placeholderAvatarBackground = rect;

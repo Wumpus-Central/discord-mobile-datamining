@@ -1,20 +1,20 @@
-// === Module 18560: BunnyIllocon ===
+// === Module 18671: BunnyIllocon ===
 
-// Module 18560 (BunnyIllocon)
-import FastImageDefault from "FastImage" /* 5604 */;
-import assetHelpers from "assetHelpers" /* 7135 */;
-import _modDef18561 from "module_18561" /* 18561 */;
-import _modDef18562 from "module_18562" /* 18562 */;
-import _modDef18563 from "module_18563" /* 18563 */;
+// Module 18671 (BunnyIllocon)
+import FastImageDefault from "FastImage" /* 5699 */;
+import assetHelpers from "assetHelpers" /* 7230 */;
+import _modDef18672 from "module_18672" /* 18672 */;
+import _modDef18673 from "module_18673" /* 18673 */;
+import _modDef18674 from "module_18674" /* 18674 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18561 }, 3: null };
-const obj2 = { uri: _modDef18561 };
-obj[2] = { uri: _modDef18562 };
-const obj3 = { uri: _modDef18562 };
-obj[3] = { uri: _modDef18563 };
+let obj = { 1: null, 2: { uri: _modDef18672 }, 3: null };
+const obj2 = { uri: _modDef18672 };
+obj[2] = { uri: _modDef18673 };
+const obj3 = { uri: _modDef18673 };
+obj[3] = { uri: _modDef18674 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BunnyIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function BunnyIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7135).getAssetSource(obj);
+  obj.source = num(7230).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

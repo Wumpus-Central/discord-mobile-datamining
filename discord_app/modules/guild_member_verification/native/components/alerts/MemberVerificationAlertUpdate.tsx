@@ -1,19 +1,19 @@
-// === Module 7319: MemberVerificationAlertUpdate ===
+// === Module 7414: MemberVerificationAlertUpdate ===
 
-// Module 7319 (MemberVerificationAlertUpdate)
+// Module 7414 (MemberVerificationAlertUpdate)
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import LinkingDefault from "Linking" /* 5596 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import common_AlertDefault from "common/Alert" /* 5992 */;
-import _modDef7320 from "module_7320" /* 7320 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import LinkingDefault from "Linking" /* 5691 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import common_AlertDefault from "common/Alert" /* 6087 */;
+import _modDef7415 from "module_7415" /* 7415 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const DownloadLinks = fn(1071).DownloadLinks;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_6 = createStyles.createStyles({ headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 }, header: { marginTop: 24, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx");
@@ -32,7 +32,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   obj.onCancel = onClose.onClose;
   const obj2 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj2.source = _modDef7320;
+  obj2.source = _modDef7415;
   obj2.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj2), , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

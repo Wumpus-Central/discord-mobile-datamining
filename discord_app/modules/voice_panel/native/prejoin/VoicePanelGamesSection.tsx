@@ -1,14 +1,14 @@
-// === Module 19348: VoicePanelGamesSection ===
+// === Module 19459: VoicePanelGamesSection ===
 
-// Module 19348 (VoicePanelGamesSection)
+// Module 19459 (VoicePanelGamesSection)
 import util from "util" /* 1112 */;
-import TableRow from "TableRow" /* 6018 */;
-import FormComponents from "FormComponents" /* 8506 */;
-import useGame from "useGame" /* 8578 */;
-import GameActivityIconDefault from "GameActivityIcon" /* 8580 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8604 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8613 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 19349 */;
+import TableRow from "TableRow" /* 6113 */;
+import FormComponents from "FormComponents" /* 8605 */;
+import useGame from "useGame" /* 8677 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 8679 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8703 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8712 */;
+import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 19460 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

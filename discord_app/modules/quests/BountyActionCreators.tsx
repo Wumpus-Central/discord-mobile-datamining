@@ -1,18 +1,18 @@
-// === Module 13659: BountyActionCreators ===
+// === Module 13782: BountyActionCreators ===
 
-// Module 13659 (BountyActionCreators)
+// Module 13782 (BountyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 6669 */;
-import QuestDataUtils from "QuestDataUtils" /* 8220 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 8244 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 6764 */;
+import QuestDataUtils from "QuestDataUtils" /* 8319 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 8343 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8221 */;
-import NetworkStore from "NetworkStore" /* 5855 */;
-import BountyStore from "BountyStore" /* 8223 */;
-import QuestStore from "QuestStore" /* 8224 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8320 */;
+import NetworkStore from "NetworkStore" /* 5950 */;
+import BountyStore from "BountyStore" /* 8322 */;
+import QuestStore from "QuestStore" /* 8323 */;
 
 require = fn;
 function fetchBountiesAndDispatch() {
@@ -83,7 +83,7 @@ let closure_14 = async function _fetchQuestHomeBounties(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -101,9 +101,9 @@ let closure_14 = async function _fetchQuestHomeBounties(arg0) {
           c1 = 1;
           const obj4 = {
             value: fetchBountiesAndDispatch(tmp5, asyncGeneratorStep(async () => {
-                      await tmp2(6669).getSession();
+                      await tmp2(6764).getSession();
                       closure_128_0 = value;
-                      const orRefreshAdSession = tmp2(8244).getOrRefreshAdSession();
+                      const orRefreshAdSession = tmp2(8343).getOrRefreshAdSession();
                       const HTTP = tmp2(1284).HTTP;
                       const request = { url: constants.QUESTS_GET_DECISIONS, query: null, rejectWithError: false, context: null };
                       const obj7 = { placement: closure_129_0, client_ad_session_id: orRefreshAdSession.uuid, client_heartbeat_session_id: null, num_decisions_requested: 5 };
@@ -129,7 +129,7 @@ let closure_14 = async function _fetchQuestHomeBounties(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;
@@ -147,7 +147,7 @@ let closure_15 = async function _fetchBountyPreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -194,7 +194,7 @@ let closure_15 = async function _fetchBountyPreview(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp10) {
       c2 = tmp;
       throw tmp10;
@@ -212,7 +212,7 @@ let closure_16 = async function _fetchQuestBarCreativePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -487,7 +487,7 @@ let closure_17 = async function _claimBountyReward() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -606,7 +606,7 @@ let closure_18 = async function _dismissAdContent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -713,7 +713,7 @@ let closure_19 = async function _resetCreativePreviewDeliveryState(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -754,7 +754,7 @@ let closure_19 = async function _resetCreativePreviewDeliveryState(arg0) {
           const obj7 = { type: "ADS_CREATIVE_PREVIEW_DELIVERY_STATE_RESET", adCreativeId: closure_130_0 };
           closure_131_1(closure_131_2[9]).dispatch(obj7);
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp13) {
         c5 = tmp;
@@ -777,7 +777,7 @@ let closure_20 = async function _resetPreviewDeliveryStateLookback() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -811,7 +811,7 @@ let closure_20 = async function _resetPreviewDeliveryStateLookback() {
         } else {
           closure_129_1(closure_129_2[9]).dispatch({ type: "ADS_PREVIEW_DELIVERY_STATE_LOOKBACK_RESET" });
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -820,7 +820,7 @@ let closure_20 = async function _resetPreviewDeliveryStateLookback() {
     }
   })();
 };
-const QuestsExperimentLocations = fn(6745).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6840).QuestsExperimentLocations;
 const Endpoints = fn(1071).Endpoints;
 let closure_10 = 15 * DurationsDefault.Millis.SECOND;
 let closure_11 = new LoggerDefault("BountyActionCreators");

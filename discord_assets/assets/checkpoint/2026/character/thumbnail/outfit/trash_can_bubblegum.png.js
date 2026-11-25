@@ -1,6 +1,6 @@
-// === Module 6485: ? ===
+// === Module 6580: ? ===
 
-// Module 6485
+// Module 6580
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/trash_can_bubblegum.png.js");

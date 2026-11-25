@@ -1,17 +1,17 @@
-// === Module 19503: ChannelResyncManager ===
+// === Module 19614: ChannelResyncManager ===
 
-// Module 19503 (ChannelResyncManager)
+// Module 19614 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8174 */;
+import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8273 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6040 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6135 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5818 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 const require = fn;
 function handleGuildCreate(guild) {
@@ -127,7 +127,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -274,7 +274,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp9) {
       c4 = tmp;
@@ -298,7 +298,7 @@ let closure_25 = async function _getResyncGuilds() {
   }, { eligible: [], ineligible: [] });
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ChannelFlags = fn(4773).ChannelFlags;
+const ChannelFlags = fn(4868).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

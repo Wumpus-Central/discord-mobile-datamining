@@ -1,23 +1,23 @@
-// === Module 18531: useConjureVoiceChannelPin ===
+// === Module 18642: useConjureVoiceChannelPin ===
 
-// Module 18531 (useConjureVoiceChannelPin)
-import useChannelName from "useChannelName" /* 5533 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11324 */;
+// Module 18642 (useConjureVoiceChannelPin)
+import useChannelName from "useChannelName" /* 5628 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11423 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildChannelStore from "GuildChannelStore" /* 4847 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildChannelStore from "GuildChannelStore" /* 4942 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
-import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 7580 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 7679 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4847).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4942).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1071);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);
@@ -109,7 +109,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

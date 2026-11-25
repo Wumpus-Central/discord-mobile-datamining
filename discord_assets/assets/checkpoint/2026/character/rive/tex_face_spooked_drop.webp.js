@@ -1,6 +1,6 @@
-// === Module 12511: ? ===
+// === Module 12675: ? ===
 
-// Module 12511
+// Module 12675
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_face_spooked_drop.webp.js");

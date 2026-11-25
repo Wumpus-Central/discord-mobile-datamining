@@ -1,6 +1,6 @@
-// === Module 13550: ? ===
+// === Module 13673: ? ===
 
-// Module 13550
+// Module 13673
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BookIllocon-3x.png.js");

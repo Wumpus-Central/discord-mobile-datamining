@@ -1,12 +1,12 @@
-// === Module 6007: showUserProfileActionSheet ===
+// === Module 6102: showUserProfileActionSheet ===
 
-// Module 6007 (showUserProfileActionSheet)
+// Module 6102 (showUserProfileActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import UserSettings from "UserSettings" /* 4742 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
+import UserSettings from "UserSettings" /* 4837 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RelationshipStore from "RelationshipStore" /* 4859 */;
+import RelationshipStore from "RelationshipStore" /* 4954 */;
 
 require = fn;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
@@ -16,7 +16,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
     const isBlockedResult = RelationshipStore.isBlocked(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
-      const tmp8 = asyncRequireImpl(6010, dependencyMap.paths);
+      const tmp8 = asyncRequireImpl(6105, dependencyMap.paths);
       const obj = ActionSheetActionCreatorsDefault;
       const _HermesInternal = HermesInternal;
       const combined = "" + UserProfile + "IgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
@@ -32,7 +32,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
     }
     isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
   }
-  const tmp20 = asyncRequireImpl(14671, dependencyMap.paths);
+  const tmp20 = asyncRequireImpl(14793, dependencyMap.paths);
   const combined1 = "" + UserProfile + ignoreBlockedSpeedBump.userId;
   const obj4 = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
@@ -42,7 +42,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   }
   return ActionSheetActionCreatorsDefault.openLazy(tmp20, combined1, obj4, str);
 }
-fn(5721).addPostConnectionCallback;
+fn(5816).addPostConnectionCallback;
 const UserProfile = "UserProfile";
 let closure_7 = new LoggerDefault("showUserProfileActionSheet");
 const size = fn(2);
@@ -72,7 +72,7 @@ export function showUserProfileActionSheetPostConnection(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -150,7 +150,7 @@ export function showUserProfileActionSheetPostConnection(arg0) {
             showUserProfileActionSheet(closure_129_0);
           }
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp37) {
         if (tmp4 === c3) {

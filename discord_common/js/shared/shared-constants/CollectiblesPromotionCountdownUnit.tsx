@@ -1,6 +1,6 @@
-// === Module 10987: CollectiblesPromotionCountdownUnit ===
+// === Module 11086: CollectiblesPromotionCountdownUnit ===
 
-// Module 10987 (CollectiblesPromotionCountdownUnit)
+// Module 11086 (CollectiblesPromotionCountdownUnit)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesPromotionCountdownUnit.tsx");

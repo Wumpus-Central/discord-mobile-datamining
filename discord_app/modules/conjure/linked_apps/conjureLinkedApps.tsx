@@ -1,7 +1,7 @@
-// === Module 18368: conjureLinkedApps ===
+// === Module 18480: conjureLinkedApps ===
 
-// Module 18368 (conjureLinkedApps)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 14571 */;
+// Module 18480 (conjureLinkedApps)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 14693 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -113,7 +113,7 @@ let closure_8 = async function _unlinkConjureApp(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -148,7 +148,7 @@ let closure_8 = async function _unlinkConjureApp(arg0) {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;

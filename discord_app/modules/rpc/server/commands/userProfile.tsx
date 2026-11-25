@@ -1,10 +1,10 @@
-// === Module 15751: commands/userProfile ===
+// === Module 15872: commands/userProfile ===
 
-// Module 15751 (commands/userProfile)
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15694 */;
-import createSocketGateDefault from "createSocketGate" /* 15717 */;
-import getFrameProfileContextDefault from "getFrameProfileContext" /* 15752 */;
-import userProfile from "userProfile" /* 15753 */;
+// Module 15872 (commands/userProfile)
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15815 */;
+import createSocketGateDefault from "createSocketGate" /* 15838 */;
+import getFrameProfileContextDefault from "getFrameProfileContext" /* 15873 */;
+import userProfile from "userProfile" /* 15874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -29,7 +29,7 @@ let closure_6 = async function _openUserProfileForSocket(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -109,9 +109,9 @@ let closure_6 = async function _openUserProfileForSocket(arg0) {
 const RPCCommands = fn(1071).RPCCommands;
 let closure_4 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15701);
+const CONTEXT_MENU_ICON_NAMES = fn(15822);
 obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_USER_PROFILE, {
-  scope: fn(5671).RPC_EMBEDDED_APP_SCOPE,
+  scope: fn(5766).RPC_EMBEDDED_APP_SCOPE,
   handler(socket) {
     return openUserProfileForSocket(socket.socket, socket.args.user_id);
   }

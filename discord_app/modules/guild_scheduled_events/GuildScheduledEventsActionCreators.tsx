@@ -1,20 +1,20 @@
-// === Module 8337: GuildScheduledEventsActionCreators ===
+// === Module 8436: GuildScheduledEventsActionCreators ===
 
-// Module 8337 (GuildScheduledEventsActionCreators)
+// Module 8436 (GuildScheduledEventsActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1098 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6671 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8338 */;
-import guildEventEmbedFetchQueue from "guildEventEmbedFetchQueue" /* 8341 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6766 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8437 */;
+import guildEventEmbedFetchQueue from "guildEventEmbedFetchQueue" /* 8440 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5649 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5744 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4772);
+const GuildScheduledEventsConstants = fn(4867);
 ({ ENTITY_TYPES_REQUIRED_CHANNEL_ID: closure_6, ENTITY_TYPES_REQUIRED_ENTITY_METADATA: metroImportDefault, GuildScheduledEventStatus: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
 const Constants = fn(1071);
 ({ Endpoints: closure_10, Routes: closure_11 } = Constants);
@@ -81,7 +81,7 @@ export default {
       return applyArgumentsResult;
     }
     closure_4 = async function _fetch() {
-      await tmp5(5677).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENT(closure_2_0, closure_2_1), rejectWithError: tmp5(1284).rejectWithMigratedError() });
+      await tmp5(5772).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENT(closure_2_0, closure_2_1), rejectWithError: tmp5(1284).rejectWithMigratedError() });
       const body = value.body;
       tmp2(572).dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: body });
       return body;
@@ -107,7 +107,7 @@ export default {
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(5677).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1284).rejectWithMigratedError() });
+      await tmp5(5772).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1284).rejectWithMigratedError() });
       const body = value.body;
       tmp2(572).dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: closure_129_0, guildScheduledEvents: body });
       return body;
@@ -150,7 +150,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -189,7 +189,7 @@ export default {
             const obj7 = { type: "GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS", guildScheduledEventUsers: body, guildId: closure_129_0 };
             tmp2(572).dispatch(obj7);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -214,7 +214,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -294,7 +294,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -330,7 +330,7 @@ export default {
                 return obj9;
               } else {
                 rsvp = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
           } else if (1 === tmp7) {
@@ -383,7 +383,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -492,7 +492,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

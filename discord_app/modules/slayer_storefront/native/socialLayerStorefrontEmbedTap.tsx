@@ -1,9 +1,9 @@
-// === Module 12243: socialLayerStorefrontEmbedTap ===
+// === Module 12342: socialLayerStorefrontEmbedTap ===
 
-// Module 12243 (socialLayerStorefrontEmbedTap)
-import storefrontCodedLink from "storefrontCodedLink" /* 5660 */;
-import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11843 */;
-import SocialLayerStorefrontMobileMultiSkuEmbedExperiment from "SocialLayerStorefrontMobileMultiSkuEmbedExperiment" /* 11844 */;
+// Module 12342 (socialLayerStorefrontEmbedTap)
+import storefrontCodedLink from "storefrontCodedLink" /* 5755 */;
+import SocialLayerStorefrontMobileEmbedExperiment from "SocialLayerStorefrontMobileEmbedExperiment" /* 11942 */;
+import SocialLayerStorefrontMobileMultiSkuEmbedExperiment from "SocialLayerStorefrontMobileMultiSkuEmbedExperiment" /* 11943 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

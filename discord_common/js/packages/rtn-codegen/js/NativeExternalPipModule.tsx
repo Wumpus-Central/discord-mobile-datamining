@@ -1,6 +1,6 @@
-// === Module 5827: NativeExternalPipModule ===
+// === Module 5922: NativeExternalPipModule ===
 
-// Module 5827 (NativeExternalPipModule)
+// Module 5922 (NativeExternalPipModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// === Module 17848: WaterwheelsSectionLabel ===
+// === Module 17960: WaterwheelsSectionLabel ===
 
-// Module 17848 (WaterwheelsSectionLabel)
+// Module 17960 (WaterwheelsSectionLabel)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5508 */;
+import Text_Text from "Text/Text" /* 5603 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const obj2 = { label: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, text: { flexShrink: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

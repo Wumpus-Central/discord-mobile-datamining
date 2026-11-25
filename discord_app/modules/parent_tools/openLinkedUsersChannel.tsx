@@ -1,10 +1,10 @@
-// === Module 9016: openLinkedUsersChannel ===
+// === Module 9115: openLinkedUsersChannel ===
 
-// Module 9016 (openLinkedUsersChannel)
-import transitionToChannel from "transitionToChannel" /* 6000 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7714 */;
+// Module 9115 (openLinkedUsersChannel)
+import transitionToChannel from "transitionToChannel" /* 6095 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7813 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 require = fn;
 let closure_5 = async function _openLinkedUsersChannel(arg0) {

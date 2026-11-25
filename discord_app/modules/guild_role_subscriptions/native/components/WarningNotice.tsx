@@ -1,17 +1,17 @@
-// === Module 19979: WarningNotice ===
+// === Module 20084: WarningNotice ===
 
-// Module 19979 (WarningNotice)
+// Module 20084 (WarningNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import components_Button_Button from "components/Button/Button" /* 5515 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7152 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import components_Button_Button from "components/Button/Button" /* 5610 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 }, horizontalContainer: { flexDirection: "row", alignItems: "center" }, message: { flex: 1, marginStart: 10, textAlignVertical: "center" }, actionButtonWrapper: { marginTop: 24, alignSelf: "center", width: "100%" }, containerYellow: null, alertIcon: null };
 const obj3 = { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 };
 obj2.containerYellow = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };

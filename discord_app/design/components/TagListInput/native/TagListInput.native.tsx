@@ -1,27 +1,27 @@
-// === Module 8419: TagListInput ===
+// === Module 8518: TagListInput ===
 
-// Module 8419 (TagListInput)
+// Module 8518 (TagListInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4926 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
-import useInitialValueDefault from "useInitialValue" /* 5496 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import _modDef7105 from "module_7105" /* 7105 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7173 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5021 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
+import useInitialValueDefault from "useInitialValue" /* 5591 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import _modDef7200 from "module_7200" /* 7200 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7268 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const TextInput_TextInputDefault = tmp18(8421);
+const TextInput_TextInputDefault = tmp18(8520);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4917);
+let createStyles = fn(5012);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { placeholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT }, iconContainer: null, iconLeft: null, scrollViewContent: null, horizontalScrollViewContent: null, inputInner: null, horizontalInputInner: null, searchInput: null, horizontalSearchInput: null };
   const obj2 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
@@ -45,7 +45,7 @@ let closure_10 = createStyles.createStyles(() => {
 let closure_11 = { x: 0, y: 0.5 };
 let closure_12 = { x: 1, y: 0.5 };
 let closure_13 = ["transparent", "black"];
-createStyles = fn(4917);
+createStyles = fn(5012);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
   const obj2 = {};
@@ -285,12 +285,12 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     }
   }, items3);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp2(5149).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp2(5244).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = onChangeText;
   }
   if (inActionSheet) {
-    let BottomSheetTextInput = tmp2(8420).BottomSheetTextInput;
+    let BottomSheetTextInput = tmp2(8519).BottomSheetTextInput;
   } else {
     BottomSheetTextInput = TextInput_TextInputDefault;
   }
@@ -372,7 +372,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       obj2.children = items2;
       obj.maskElement = React6(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = React5(_modDef7105, obj);
+      tmp = React5(_modDef7200, obj);
     }
     return tmp;
   }, items7);
@@ -571,7 +571,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   const obj13 = { size: "sm", disabled, isFocused, children: null };
   if (null == icon) {
     const obj14 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
-    icon = tmp46(tmp2(7281).MagnifyingGlassIcon, obj14);
+    icon = tmp46(tmp2(7376).MagnifyingGlassIcon, obj14);
   }
   const items14 = [icon, obj6.wrap(c8(BottomSheetScrollView, obj7)), ];
   if (null == footer) {

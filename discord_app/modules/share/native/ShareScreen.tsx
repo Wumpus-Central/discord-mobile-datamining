@@ -1,15 +1,15 @@
-// === Module 15134: ShareScreen ===
+// === Module 15256: ShareScreen ===
 
-// Module 15134 (ShareScreen)
+// Module 15256 (ShareScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 15138 */;
-import ShareEmbedDefault from "ShareEmbed" /* 15139 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 15260 */;
+import ShareEmbedDefault from "ShareEmbed" /* 15261 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
 
 require = fn;
 function getAttachmentsRestriction(type) {
@@ -27,15 +27,15 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(4770);
+const ChannelRecord = fn(4865);
 ({ ChannelRecordBase: metroImportDefault, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(8802).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(8803).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(8901).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(8902).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -117,7 +117,7 @@ export default function ShareScreen(appEntryKey) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -205,7 +205,7 @@ export default function ShareScreen(appEntryKey) {
                                   const obj2 = { value, done: true };
                                   return obj2;
                                 } else {
-                                  return { value: "HermesInternal", done: null };
+                                  return { value: "HermesInternal", done: "HermesInternal" };
                                 }
                               } else {
                                 try {
@@ -358,7 +358,7 @@ export default function ShareScreen(appEntryKey) {
             closure_129_6(false);
             closure_129_7.current = false;
             React = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (arg0 === 1) {
           React = 3;

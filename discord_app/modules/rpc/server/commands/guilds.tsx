@@ -1,17 +1,17 @@
-// === Module 15723: guilds ===
+// === Module 15844: guilds ===
 
-// Module 15723 (guilds)
-import GuildRecord from "GuildRecord" /* 4784 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 5655 */;
-import Constants2 from "Constants" /* 5671 */;
-import RPCErrorDefault from "RPCError" /* 7518 */;
-import botScopedAccess from "botScopedAccess" /* 7521 */;
-import RPCHelpers from "RPCHelpers" /* 10080 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import GuildRoleStore from "GuildRoleStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4788 */;
+// Module 15844 (guilds)
+import GuildRecord from "GuildRecord" /* 4879 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 5750 */;
+import Constants2 from "Constants" /* 5766 */;
+import RPCErrorDefault from "RPCError" /* 7613 */;
+import botScopedAccess from "botScopedAccess" /* 7616 */;
+import RPCHelpers from "RPCHelpers" /* 10179 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import GuildRoleStore from "GuildRoleStore" /* 4918 */;
+import GuildStore from "GuildStore" /* 4883 */;
 import Constants from "Constants" /* 1071 */;
-import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15701 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15822 */;
 import size from "module_2" /* 2 */;
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;

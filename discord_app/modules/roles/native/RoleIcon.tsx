@@ -1,9 +1,9 @@
-// === Module 7428: RoleIcon ===
+// === Module 7523: RoleIcon ===
 
-// Module 7428 (RoleIcon)
+// Module 7523 (RoleIcon)
 import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

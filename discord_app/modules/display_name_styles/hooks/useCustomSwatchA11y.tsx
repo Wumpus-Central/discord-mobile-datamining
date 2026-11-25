@@ -1,6 +1,6 @@
-// === Module 16790: useCustomSwatchA11y ===
+// === Module 16911: useCustomSwatchA11y ===
 
-// Module 16790 (useCustomSwatchA11y)
+// Module 16911 (useCustomSwatchA11y)
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import util from "util" /* 1112 */;
 import noop from "module_19" /* 19 */;

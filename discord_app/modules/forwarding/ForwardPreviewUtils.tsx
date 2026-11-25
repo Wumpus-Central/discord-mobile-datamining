@@ -1,8 +1,8 @@
-// === Module 13936: ForwardPreviewUtils ===
+// === Module 14059: ForwardPreviewUtils ===
 
-// Module 13936 (ForwardPreviewUtils)
-import EmbedUtils from "EmbedUtils" /* 6651 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
+// Module 14059 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 6746 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
 
 require = fn;
 const size = fn(2);

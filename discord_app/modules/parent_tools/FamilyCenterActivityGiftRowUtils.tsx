@@ -1,10 +1,10 @@
-// === Module 16239: FamilyCenterActivityGiftRowUtils ===
+// === Module 16360: FamilyCenterActivityGiftRowUtils ===
 
-// Module 16239 (FamilyCenterActivityGiftRowUtils)
+// Module 16360 (FamilyCenterActivityGiftRowUtils)
 import util from "util" /* 1112 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import _modDef2824 from "module_2824" /* 2824 */;
-import PriceUtils from "PriceUtils" /* 6199 */;
+import _modDef2846 from "module_2846" /* 2846 */;
+import PriceUtils from "PriceUtils" /* 6294 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
@@ -26,12 +26,12 @@ export function getGiftSubtext(claimed) {
     if (null != gifterName) {
       const intl = util.intl;
       const obj2 = { price: formatPriceResult, username: gifterName };
-      let formatToPlainStringResult = intl.formatToPlainString(_modDef2824["o44n/1"], obj2);
+      let formatToPlainStringResult = intl.formatToPlainString(_modDef2846["o44n/1"], obj2);
     }
     items = [formatToPlainStringResult, ];
     const intl2 = util.intl;
     const formatToPlainString = intl2.formatToPlainString;
-    const tmp11 = _modDef2824;
+    const tmp11 = _modDef2846;
     if (claimed.claimed) {
       if (claimedAt == null) {
         claimedAt = offeredAt;

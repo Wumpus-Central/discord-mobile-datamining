@@ -1,12 +1,12 @@
-// === Module 14023: AnnouncementMarkup ===
+// === Module 14146: AnnouncementMarkup ===
 
-// Module 14023 (AnnouncementMarkup)
+// Module 14146 (AnnouncementMarkup)
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
 import _modDef2068 from "module_2068" /* 2068 */;
-import CustomMarkup from "CustomMarkup" /* 5993 */;
-import Spoiler from "Spoiler" /* 5996 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 6941 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 14028 */;
+import CustomMarkup from "CustomMarkup" /* 6088 */;
+import Spoiler from "Spoiler" /* 6091 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 7036 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 14151 */;
 import noop from "module_19" /* 19 */;
 import apply_mod from "apply" /* 12 */;
 

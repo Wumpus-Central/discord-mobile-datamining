@@ -1,9 +1,9 @@
-// === Module 19044: useMessageRequestTimestampText ===
+// === Module 19155: useMessageRequestTimestampText ===
 
-// Module 19044 (useMessageRequestTimestampText)
+// Module 19155 (useMessageRequestTimestampText)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
+import ReadStateStore from "ReadStateStore" /* 6901 */;
 
 const require = globalThis.__r;
 
@@ -53,8 +53,8 @@ export function useMessageRequestRelativeTimestampText(channel) {
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = tmp(8044).getTimestampString(extractTimestampResult);
-      const tmpResult = tmp(8044);
+      str = tmp(8143).getTimestampString(extractTimestampResult);
+      const tmpResult = tmp(8143);
     }
     return str;
   }

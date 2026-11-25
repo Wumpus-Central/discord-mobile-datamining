@@ -1,13 +1,13 @@
-// === Module 11781: GiftCodeActionCreators ===
+// === Module 11880: GiftCodeActionCreators ===
 
-// Module 11781 (GiftCodeActionCreators)
+// Module 11880 (GiftCodeActionCreators)
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4738 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11782 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4833 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11881 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6185 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6280 */;
 
 require = fn;
 function resolveGiftCode() {
@@ -31,7 +31,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -203,11 +203,11 @@ let closure_12 = async function _deliverGiftCodes() {
     return value.body;
   })();
 };
-let closure_6 = fn(6193).isUnknownCollectiblesItemRecord;
+let closure_6 = fn(6288).isUnknownCollectiblesItemRecord;
 const Constants = fn(1071);
 ({ COLLECTIBLES_APPLICATION_ID: metroImportDefault, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1388).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11783).default);
+const merged = Object.assign(fn(11882).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

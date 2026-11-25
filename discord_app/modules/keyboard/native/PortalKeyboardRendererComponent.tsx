@@ -1,10 +1,10 @@
-// === Module 18450: PortalKeyboardRendererComponent ===
+// === Module 18561: PortalKeyboardRendererComponent ===
 
-// Module 18450 (PortalKeyboardRendererComponent)
-import useBackPressHandler from "useBackPressHandler" /* 5984 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7453 */;
+// Module 18561 (PortalKeyboardRendererComponent)
+import useBackPressHandler from "useBackPressHandler" /* 6079 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7548 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -19,7 +19,7 @@ export default noop.memo(function PortalKeyboardRendererComponent(item) {
   ({ state, cleanUp } = item);
   let channel;
   let memo;
-  const tmp3 = state === channelId(4978).TransitionStates.YEETED;
+  const tmp3 = state === channelId(5073).TransitionStates.YEETED;
   dependencyMap = tmp3;
   items = [chatInputRef, tmp3];
   const layoutEffect = channel.useLayoutEffect(() => {
@@ -53,14 +53,14 @@ export default noop.memo(function PortalKeyboardRendererComponent(item) {
   if (null != memo) {
     if (undefined !== memo1) {
       if (tmp(1626).KeyboardTypes.APP_LAUNCHER === type) {
-        const obj2 = { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp(9948).AppLauncherEntrypoint.TEXT };
-        return jsx(chatInputRef(12822), { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp(9948).AppLauncherEntrypoint.TEXT });
+        const obj2 = { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp(10047).AppLauncherEntrypoint.TEXT };
+        return jsx(chatInputRef(12946), { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp(10047).AppLauncherEntrypoint.TEXT });
       } else if (tmp(1626).KeyboardTypes.MEDIA === type) {
         const obj3 = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-        return jsx(chatInputRef(18451), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
+        return jsx(chatInputRef(18562), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else if (tmp(1626).KeyboardTypes.EXPRESSION === type) {
         let obj = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-        return jsx(chatInputRef(18457), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
+        return jsx(chatInputRef(18568), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else {
         return null;
       }

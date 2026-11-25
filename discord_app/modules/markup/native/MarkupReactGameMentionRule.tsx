@@ -1,10 +1,10 @@
-// === Module 10506: MarkupReactGameMentionRule ===
+// === Module 10605: MarkupReactGameMentionRule ===
 
-// Module 10506 (MarkupReactGameMentionRule)
+// Module 10605 (MarkupReactGameMentionRule)
 import nativeDefault from "native" /* 575 */;
-import useGame from "useGame" /* 8578 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8608 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8613 */;
+import useGame from "useGame" /* 8677 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8707 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8712 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -171,12 +171,12 @@ function FetchingGameMention(node) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MUTED_OPACITY_CONTENT = fn(5997).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(6092).MUTED_OPACITY_CONTENT;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = nativeDefault.space.PX_4 / 2;
 let c9 = "body-sm/semibold";
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 const refs = createStyles.createStyles((width, arg1) => {
   const obj = { inlineRoot: { flexDirection: "row" }, pill: { width: "auto", minWidth: 0, flexShrink: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, borderRadius: nativeDefault.radii.xs, paddingHorizontal: gap, gap }, name: { minWidth: 0, flexShrink: 1 }, icon: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.xs, opacity: null };

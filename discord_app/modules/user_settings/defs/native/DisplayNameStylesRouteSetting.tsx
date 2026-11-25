@@ -1,10 +1,10 @@
-// === Module 16773: DisplayNameStylesRouteSetting ===
+// === Module 16894: DisplayNameStylesRouteSetting ===
 
-// Module 16773 (DisplayNameStylesRouteSetting)
+// Module 16894 (DisplayNameStylesRouteSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import _modDef3250 from "module_3250" /* 3250 */;
-import SettingBuilders from "SettingBuilders" /* 11815 */;
+import _modDef3302 from "module_3302" /* 3302 */;
+import SettingBuilders from "SettingBuilders" /* 11914 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3250.ZPMAlX);
+    return intl.string(_modDef3302.ZPMAlX);
   },
   parent: null,
   unsearchable: true,

@@ -1,9 +1,9 @@
-// === Module 11537: navigateToThreadCreation ===
+// === Module 11636: navigateToThreadCreation ===
 
-// Module 11537 (navigateToThreadCreation)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5093 */;
-import transitionToChannel from "transitionToChannel" /* 6000 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7973 */;
+// Module 11636 (navigateToThreadCreation)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5188 */;
+import transitionToChannel from "transitionToChannel" /* 6095 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8072 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/threads/native/navigateToThreadCreation.tsx");

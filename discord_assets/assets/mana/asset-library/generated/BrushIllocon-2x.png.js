@@ -1,6 +1,6 @@
-// === Module 13289: ? ===
+// === Module 13412: ? ===
 
-// Module 13289
+// Module 13412
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BrushIllocon-2x.png.js");

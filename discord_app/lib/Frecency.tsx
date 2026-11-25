@@ -1,6 +1,6 @@
-// === Module 5733: Frecency ===
+// === Module 5828: Frecency ===
 
-// Module 5733 (Frecency)
+// Module 5828 (Frecency)
 import applyDefault from "apply" /* 12 */;
 import _modDef2168 from "module_2168" /* 2168 */;
 import size from "module_2" /* 2 */;

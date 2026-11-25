@@ -1,24 +1,24 @@
-// === Module 14274: transformEmbeds ===
+// === Module 14397: transformEmbeds ===
 
-// Module 14274 (transformEmbeds)
+// Module 14397 (transformEmbeds)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1071 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import DateUtils from "DateUtils" /* 4739 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6277 */;
-import EmbedUtils from "EmbedUtils" /* 6651 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6699 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8670 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8675 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8680 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8707 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8708 */;
-import MarkupParsers from "MarkupParsers" /* 14242 */;
-import utils from "utils" /* 14275 */;
-import isConjureProjectLinkEmbedDefault from "isConjureProjectLinkEmbed" /* 14276 */;
-import NativeChatCapabilities from "NativeChatCapabilities" /* 14277 */;
+import DateUtils from "DateUtils" /* 4834 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6372 */;
+import EmbedUtils from "EmbedUtils" /* 6746 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6794 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8769 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8774 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8779 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8806 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8807 */;
+import MarkupParsers from "MarkupParsers" /* 14365 */;
+import utils from "utils" /* 14398 */;
+import isConjureProjectLinkEmbedDefault from "isConjureProjectLinkEmbed" /* 14399 */;
+import NativeChatCapabilities from "NativeChatCapabilities" /* 14400 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -88,11 +88,11 @@ export default function transformEmbeds(arg0) {
                           obj2.height = sanitizeMediaDimension.sanitizeMediaDimension(height);
                           let imageSrc = proxyURL;
                           if (null != proxyURL) {
-                            const obj4Result = obj4(8707);
+                            const obj4Result = obj4(8806);
                             imageSrc = obj4Result.getImageSrc(proxyURL, width, height, !closure_1_1);
                           }
                           obj2.proxyURL = imageSrc;
-                          const obj4Result3 = obj4(8707);
+                          const obj4Result3 = obj4(8806);
                           if (proxyURL == null) {
                             proxyURL = thumbnail.url;
                           }
@@ -226,14 +226,14 @@ export default function transformEmbeds(arg0) {
                             const mapped1 = fields.map((rawName) => {
                               let result = null;
                               if (null != rawName.rawName) {
-                                result = channelId(14242).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                                const obj = channelId(14242);
+                                result = channelId(14365).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                                const obj = channelId(14365);
                               }
                               let result1 = null;
                               if (null != rawName.rawValue) {
                                 const obj3 = { description: rawName.rawValue, channelId, isField: true, ignoreCache, replaceMap: { "\t": "" }, showListsAndHeaders, showMaskedLinks };
-                                result1 = channelId(14242).parseEmbedDescriptionMarkup(obj3);
-                                const obj2 = channelId(14242);
+                                result1 = channelId(14365).parseEmbedDescriptionMarkup(obj3);
+                                const obj2 = channelId(14365);
                               }
                               const obj4 = {};
                               const merged = Object.assign(rawName);
@@ -262,7 +262,7 @@ export default function transformEmbeds(arg0) {
                                 }
                                 let tmp64 = obj10;
                                 if (null != iconURL) {
-                                  const obj4Result4 = obj4(8707);
+                                  const obj4Result4 = obj4(8806);
                                   obj10.iconURL = obj4Result4.getImageSrc(iconURL, 16, 16, !closure_1_1);
                                   tmp64 = obj10;
                                 }
@@ -377,7 +377,7 @@ export default function transformEmbeds(arg0) {
                                 if (null != iconURL2) {
                                   const obj15 = {};
                                   const merged7 = Object.assign(type.author);
-                                  obj4 = obj4(8707);
+                                  obj4 = obj4(8806);
                                   obj15.iconURL = obj4.getImageSrc(iconURL2, 16, 16, !closure_1_1);
                                   let author = obj15;
                                 } else {

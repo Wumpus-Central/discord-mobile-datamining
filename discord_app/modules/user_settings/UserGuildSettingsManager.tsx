@@ -1,12 +1,12 @@
-// === Module 7347: UserGuildSettingsManager ===
+// === Module 7442: UserGuildSettingsManager ===
 
-// Module 7347 (UserGuildSettingsManager)
+// Module 7442 (UserGuildSettingsManager)
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7348 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7443 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -42,7 +42,7 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
             return obj;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp13) {
         c3 = tmp;
@@ -135,7 +135,7 @@ let closure_16 = async function _saveUserGuildSettingsBulk() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

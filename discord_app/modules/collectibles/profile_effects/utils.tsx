@@ -1,6 +1,6 @@
-// === Module 9330: utils ===
+// === Module 9429: utils ===
 
-// Module 9330 (utils)
+// Module 9429 (utils)
 import apply from "apply" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,15 +23,74 @@ export function sortEffectLayers(effects) {
   });
 }
 export function usePotentiallyRandomizedProfileEffect(arg0) {
-  closure_0 = undefined;
-  let tmp6 = arg0;
-  [tmp4, tmp5] = noop.useState(arg0);
-  if (null != arg0) {
-    const cloneDeepResult = apply.cloneDeep(arg0);
-    const effects = cloneDeepResult.effects;
-    let _Math = Math;
-    const _Math2 = Math;
-    const diff = effects.reduce((acc, randomizedSources) => {
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    tmp = null;
+  }
+  [tmp5, tmp6] = noop.useState(arg0);
+  _slicedToArray(noop.useState(tmp), 2);
+  let rounded1;
+  if (null == arg0) {
+    [tmp16, tmp17] = noop.useState(arg0);
+    const tmp3Result = _slicedToArray(noop.useState(arg0), 2);
+    if (!tmp20) {
+      tmp6(arg0);
+      tmp9(tmp);
+      rounded1 = undefined;
+      if (null == arg0) {
+        tmp17(arg0);
+      } else {
+        const cloneDeepResult = apply.cloneDeep(arg0);
+        const effects = cloneDeepResult.effects;
+        let reduced = effects.reduce((acc, randomizedSources) => {
+          randomizedSources = randomizedSources.randomizedSources;
+          let num;
+          if (randomizedSources != null) {
+            num = randomizedSources.length;
+          }
+          if (num == null) {
+            num = 0;
+          }
+          let tmp = acc;
+          if (num > 0) {
+            let bound = num;
+            if (0 !== acc) {
+              const _Math = Math;
+              bound = Math.min(acc, num);
+            }
+            tmp = bound;
+          }
+          return tmp;
+        }, 0);
+        if (null == tmp) {
+          const _Math5 = Math;
+          const _Math6 = Math;
+          const diff = reduced - 1;
+          let rounded = Math.floor(Math.random() * (diff + 1));
+        } else {
+          const _Math4 = Math;
+          rounded = Math.floor(tmp * reduced);
+        }
+        rounded1 = rounded;
+        reduced = cloneDeepResult.effects;
+        cloneDeepResult.effects = reduced.map((randomizedSources) => {
+          let tmp = null != randomizedSources.randomizedSources;
+          if (tmp) {
+            tmp = randomizedSources.randomizedSources.length > 0;
+          }
+          if (tmp) {
+            randomizedSources.src = randomizedSources.randomizedSources[rounded1].src;
+          }
+          return randomizedSources;
+        });
+        const tmp18Result = apply;
+      }
+    }
+    return tmp16;
+  } else {
+    const cloneDeepResult1 = apply.cloneDeep(arg0);
+    const effects1 = cloneDeepResult1.effects;
+    let reduced1 = effects1.reduce((acc, randomizedSources) => {
       randomizedSources = randomizedSources.randomizedSources;
       let num;
       if (randomizedSources != null) {
@@ -50,69 +109,27 @@ export function usePotentiallyRandomizedProfileEffect(arg0) {
         tmp = bound;
       }
       return tmp;
-    }, 0) - 1;
-    closure_0 = Math.floor(Math.random() * (diff + 1));
-    const effects1 = cloneDeepResult.effects;
-    cloneDeepResult.effects = effects1.map((randomizedSources) => {
+    }, 0);
+    if (null == tmp) {
+      const _Math2 = Math;
+      const _Math3 = Math;
+      const diff1 = reduced1 - 1;
+      rounded1 = Math.floor(Math.random() * (diff1 + 1));
+    } else {
+      let _Math = Math;
+      rounded1 = Math.floor(tmp * reduced1);
+    }
+    reduced1 = cloneDeepResult1.effects;
+    cloneDeepResult1.effects = reduced1.map((randomizedSources) => {
       let tmp = null != randomizedSources.randomizedSources;
       if (tmp) {
         tmp = randomizedSources.randomizedSources.length > 0;
       }
       if (tmp) {
-        randomizedSources.src = randomizedSources.randomizedSources[closure_0].src;
+        randomizedSources.src = randomizedSources.randomizedSources[rounded1].src;
       }
       return randomizedSources;
     });
-    tmp6 = cloneDeepResult;
   }
-  const tmp3 = _slicedToArray(noop.useState(arg0), 2);
-  [tmp8, tmp9] = noop.useState(tmp6);
-  const tmp2Result = _slicedToArray(noop.useState(tmp6), 2);
-  if (!obj.isEqual(tmp4, arg0)) {
-    tmp5(arg0);
-    closure_0 = undefined;
-    let tmp13 = arg0;
-    if (null != arg0) {
-      const cloneDeepResult1 = apply.cloneDeep(arg0);
-      const effects2 = cloneDeepResult1.effects;
-      const _Math3 = Math;
-      const _Math4 = Math;
-      const diff1 = effects2.reduce((acc, randomizedSources) => {
-        randomizedSources = randomizedSources.randomizedSources;
-        let num;
-        if (randomizedSources != null) {
-          num = randomizedSources.length;
-        }
-        if (num == null) {
-          num = 0;
-        }
-        let tmp = acc;
-        if (num > 0) {
-          let bound = num;
-          if (0 !== acc) {
-            const _Math = Math;
-            bound = Math.min(acc, num);
-          }
-          tmp = bound;
-        }
-        return tmp;
-      }, 0) - 1;
-      closure_0 = Math.floor(Math.random() * (diff1 + 1));
-      const effects3 = cloneDeepResult1.effects;
-      cloneDeepResult1.effects = effects3.map((randomizedSources) => {
-        let tmp = null != randomizedSources.randomizedSources;
-        if (tmp) {
-          tmp = randomizedSources.randomizedSources.length > 0;
-        }
-        if (tmp) {
-          randomizedSources.src = randomizedSources.randomizedSources[closure_0].src;
-        }
-        return randomizedSources;
-      });
-      tmp13 = cloneDeepResult1;
-      const tmp10Result = apply;
-    }
-    tmp9(tmp13);
-  }
-  return tmp8;
+  const tmp4 = _slicedToArray(noop.useState(arg0), 2);
 }

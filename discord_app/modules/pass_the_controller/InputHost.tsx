@@ -1,10 +1,10 @@
-// === Module 14927: InputHost ===
+// === Module 15049: InputHost ===
 
-// Module 14927 (InputHost)
+// Module 15049 (InputHost)
 import LoggerDefault from "Logger" /* 3 */;
-import RTCConnection from "RTCConnection" /* 5731 */;
-import InputEvent from "InputEvent" /* 14926 */;
-import PassTheControllerExperimentDefault from "PassTheControllerExperiment" /* 14929 */;
+import RTCConnection from "RTCConnection" /* 5826 */;
+import InputEvent from "InputEvent" /* 15048 */;
+import PassTheControllerExperimentDefault from "PassTheControllerExperiment" /* 15051 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -70,7 +70,7 @@ prototype["_connectHook"] = function _connectHook(pid) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ prototype["_connectHook"] = function _connectHook(pid) {
         } else {
           pid.hook = value;
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp10) {
         c2 = tmp;

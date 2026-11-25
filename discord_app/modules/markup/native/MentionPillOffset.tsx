@@ -1,6 +1,6 @@
-// === Module 10508: MentionPillOffset ===
+// === Module 10607: MentionPillOffset ===
 
-// Module 10508 (MentionPillOffset)
+// Module 10607 (MentionPillOffset)
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 

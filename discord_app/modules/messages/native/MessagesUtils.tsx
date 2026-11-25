@@ -1,6 +1,6 @@
-// === Module 8948: messages/MessagesUtils ===
+// === Module 9047: messages/MessagesUtils ===
 
-// Module 8948 (messages/MessagesUtils)
+// Module 9047 (messages/MessagesUtils)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
@@ -10,48 +10,48 @@ import PlatformUtils from "PlatformUtils" /* 1378 */;
 import KeyboardTypes from "KeyboardTypes" /* 1626 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
 import Server from "Server" /* 2117 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4836 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4837 */;
-import ReactionUtils from "ReactionUtils" /* 4861 */;
-import HapticUtils from "HapticUtils" /* 5133 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5134 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5499 */;
-import ToastUtils from "ToastUtils" /* 5598 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5599 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5621 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5887 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6269 */;
-import InteractionTypes from "InteractionTypes" /* 6274 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6277 */;
-import Client from "Client" /* 6658 */;
-import ChannelUtils from "ChannelUtils" /* 6675 */;
-import QuestTypes from "QuestTypes" /* 6748 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6905 */;
-import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 6999 */;
-import ClipboardUtils from "ClipboardUtils" /* 7412 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7973 */;
-import Tracking from "Tracking" /* 7975 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8042 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8103 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8675 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8950 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 8951 */;
-import QuestActionCreators from "QuestActionCreators" /* 9753 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 10470 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11833 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11861 */;
-import computeScrollData from "computeScrollData" /* 11867 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 13887 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4931 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4932 */;
+import ReactionUtils from "ReactionUtils" /* 4956 */;
+import HapticUtils from "HapticUtils" /* 5228 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5229 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5594 */;
+import ToastUtils from "ToastUtils" /* 5693 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5716 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6364 */;
+import InteractionTypes from "InteractionTypes" /* 6369 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6372 */;
+import Client from "Client" /* 6753 */;
+import ChannelUtils from "ChannelUtils" /* 6770 */;
+import QuestTypes from "QuestTypes" /* 6843 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7000 */;
+import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 7094 */;
+import ClipboardUtils from "ClipboardUtils" /* 7507 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8072 */;
+import Tracking from "Tracking" /* 8074 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8141 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8202 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8774 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 9049 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9050 */;
+import QuestActionCreators from "QuestActionCreators" /* 9852 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 10569 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11932 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11960 */;
+import computeScrollData from "computeScrollData" /* 11966 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 14010 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 8160 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6673 */;
-import MessageStore from "MessageStore" /* 6265 */;
-import NetworkStore from "NetworkStore" /* 5855 */;
-import PermissionStore from "PermissionStore" /* 4849 */;
-import ReadStateStore from "ReadStateStore" /* 6806 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 8259 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6768 */;
+import MessageStore from "MessageStore" /* 6360 */;
+import NetworkStore from "NetworkStore" /* 5950 */;
+import PermissionStore from "PermissionStore" /* 4944 */;
+import ReadStateStore from "ReadStateStore" /* 6901 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
@@ -122,7 +122,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -157,7 +157,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 const findMessageIndexResult = findMessageIndex(SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id));
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -211,8 +211,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(8949).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8083);
+let closure_5 = fn(9048).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8182);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_17, MessageEmbedTypes: closure_18, MessageTypes: closure_19, Permissions: closure_20, MAX_MESSAGES_PER_CHANNEL: closure_21 } = Constants);

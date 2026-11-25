@@ -1,6 +1,6 @@
-// === Module 8357: ActionSheetDragHandle ===
+// === Module 8456: ActionSheetDragHandle ===
 
-// Module 8357 (ActionSheetDragHandle)
+// Module 8456 (ActionSheetDragHandle)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1653 from "module_1653" /* 1653 */;
@@ -9,10 +9,10 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: c3, View: closure_4 } = get_ActivityIndicator);
-const ActionSheetDragHandleConstants = fn(8349);
+const ActionSheetDragHandleConstants = fn(8448);
 ({ DRAG_HANDLE_BAR_HEIGHT, DRAG_HANDLE_PADDING, DRAG_HANDLE_HEIGHT } = ActionSheetDragHandleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: { height: DRAG_HANDLE_HEIGHT }, containerOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, handle: { alignItems: "center", paddingVertical: DRAG_HANDLE_PADDING }, bar: null };
 let size = { backgroundColor: nativeDefault.colors.ICON_MUTED, borderRadius: nativeDefault.radii.xs, height: DRAG_HANDLE_BAR_HEIGHT, width: 31 };
 obj.bar = size;

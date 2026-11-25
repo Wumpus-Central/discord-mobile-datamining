@@ -1,17 +1,17 @@
-// === Module 11290: InstantInviteCreator ===
+// === Module 11389: InstantInviteCreator ===
 
-// Module 11290 (InstantInviteCreator)
+// Module 11389 (InstantInviteCreator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import Stack_Stack from "Stack/Stack" /* 5989 */;
-import DetailedGuildIdentityUserRow from "DetailedGuildIdentityUserRow" /* 11291 */;
+import Stack_Stack from "Stack/Stack" /* 6084 */;
+import DetailedGuildIdentityUserRow from "DetailedGuildIdentityUserRow" /* 11390 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_6 = createStyles.createStyles({ identity: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCreator.tsx");

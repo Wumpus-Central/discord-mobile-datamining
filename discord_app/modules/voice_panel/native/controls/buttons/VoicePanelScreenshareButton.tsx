@@ -1,43 +1,28 @@
-// === Module 19404: VoicePanelScreenshareButton ===
+// === Module 19515: VoicePanelScreenshareButton ===
 
-// Module 19404 (VoicePanelScreenshareButton)
-import _modDef38 from "module_38" /* 38 */;
-import NativeViewDefault from "NativeView" /* 6929 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11634 */;
-import useVoicePanelScreenshareToggleDefault from "useVoicePanelScreenshareToggle" /* 18029 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19391 */;
+// Module 19515 (VoicePanelScreenshareButton)
+import util from "util" /* 1112 */;
+import NativeViewDefault from "NativeView" /* 7024 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
+import useVoicePanelScreenshareToggleDefault from "useVoicePanelScreenshareToggle" /* 18141 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 19501 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19502 */;
+import MobilePhoneDenyIcon2 from "MobilePhoneDenyIcon" /* 19516 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
-const require = fn;
-const jsx = fn(21).jsx;
-const MetaQuestUtils = fn(1625);
-if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13344).ScreenArrowIcon;
-} else {
-  MobilePhoneShareIcon = fn(18035).MobilePhoneShareIcon;
-}
-const createStyles = fn(4917);
-let closure_7 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" } });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
-
-export default function ScreenshareButton(arg0) {
-  ({ props, wrapperSpecs } = arg0);
-  const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
-  const tmp3 = closure_7();
-  const voicePanelButtonStyles = channelId(19390).useVoicePanelButtonStyles(wrapperSpecs);
-  const obj = channelId(19390);
-  items = [ChannelStore];
-  const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  _modDef38(null != stateFromStores, "null channel in VoicePanelScreenshareButton");
-  const tmp8 = useVoicePanelScreenshareToggleDefault(stateFromStores, "VoicePanelScreenshareButton", "connected button");
-  ({ isActive, videoBlocked } = tmp8);
-  let tmp9 = !videoBlocked;
+require = fn;
+function ScreenshareButtonInner(arg0) {
+  ({ props, wrapperSpecs, channel } = arg0);
+  const tmp = closure_7();
+  const voicePanelButtonStyles = VoicePanelStyles.useVoicePanelButtonStyles(wrapperSpecs);
+  const tmp6 = useVoicePanelScreenshareToggleDefault(channel, "VoicePanelScreenshareButton", "connected button");
+  ({ isActive, videoBlocked } = tmp6);
+  let tmp7 = !videoBlocked;
   if (!videoBlocked) {
-    tmp9 = !tmp8.isFeatureEnabled;
+    tmp7 = !tmp6.isFeatureEnabled;
   }
-  if (tmp9) {
+  if (tmp7) {
     let color = voicePanelButtonStyles.iconFillMuted.color;
   } else {
     color = voicePanelButtonStyles.iconFill.color;
@@ -46,15 +31,14 @@ export default function ScreenshareButton(arg0) {
     color = voicePanelButtonStyles.iconFillSelected.color;
   }
   if (videoBlocked) {
-    let MobilePhoneDenyIcon = tmp4(19405).MobilePhoneDenyIcon;
+    let MobilePhoneDenyIcon = MobilePhoneDenyIcon2.MobilePhoneDenyIcon;
   } else {
     MobilePhoneDenyIcon = MobilePhoneShareIcon;
   }
-  const element = { onPress: tmp8.onPress, disabled: tmp9, props, accessibilityLabel: null, style: null, children: null };
-  const obj2 = channelId(504);
-  const intl = tmp4(1112).intl;
+  const element = { onPress: tmp6.onPress, disabled: tmp7, props, accessibilityLabel: null, style: null, children: null };
+  const intl = util.intl;
   const string = intl.string;
-  const t = tmp4(1112).t;
+  const t = util.t;
   if (isActive) {
     let stringResult = string(t.CpkXwZ);
   } else {
@@ -66,9 +50,34 @@ export default function ScreenshareButton(arg0) {
     iconBgSelected = voicePanelButtonStyles.iconBgSelected;
   }
   element.style = iconBgSelected;
-  const obj3 = { style: tmp3.iconContainer, children: null };
-  const tmpResult = VoicePanelAnimatedButtonWrapperDefault;
-  obj3.children = <MobilePhoneDenyIcon color={color} />;
-  element.children = jsx(NativeViewDefault, { style: tmp3.iconContainer, children: null });
-  return <tmpResult onPress={tmp8.onPress} disabled={tmp9} props={props} accessibilityLabel={null} style={null}>{null}</tmpResult>;
+  const obj2 = { style: tmp.iconContainer, children: null };
+  const tmp5Result = VoicePanelAnimatedButtonWrapperDefault;
+  obj2.children = <MobilePhoneDenyIcon color={color} />;
+  element.children = jsx(NativeViewDefault, { style: tmp.iconContainer, children: null });
+  return <tmp5Result onPress={tmp6.onPress} disabled={tmp7} props={props} accessibilityLabel={null} style={null}>{null}</tmp5Result>;
+}
+const jsx = fn(21).jsx;
+const MetaQuestUtils = fn(1625);
+if (MetaQuestUtils.isMetaQuest()) {
+  let MobilePhoneShareIcon = fn(13467).ScreenArrowIcon;
+} else {
+  MobilePhoneShareIcon = fn(18147).MobilePhoneShareIcon;
+}
+const createStyles = fn(5012);
+let closure_7 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
+
+export default function ScreenshareButton(arg0) {
+  const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
+  items = [ChannelStore];
+  const items1 = [channelId];
+  const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  let tmp2 = null;
+  if (null != stateFromStores) {
+    const obj2 = { channel: stateFromStores };
+    const merged = Object.assign(arg0);
+    tmp2 = <ScreenshareButtonInner channel={stateFromStores} />;
+  }
+  return tmp2;
 };

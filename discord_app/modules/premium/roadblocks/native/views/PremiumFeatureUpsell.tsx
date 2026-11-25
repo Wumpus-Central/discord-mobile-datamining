@@ -1,17 +1,17 @@
-// === Module 9610: PremiumFeatureUpsell ===
+// === Module 9709: PremiumFeatureUpsell ===
 
-// Module 9610 (PremiumFeatureUpsell)
+// Module 9709 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import native from "native" /* 1186 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import PremiumUtils from "PremiumUtils" /* 2173 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9453 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9456 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9496 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9552 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9555 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9595 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
 
 require = fn;
 function PremiumFeatureUpsellPill(featureName) {
@@ -141,10 +141,10 @@ get_ActivityIndicator = fn(17);
 const PremiumConstants = fn(1388);
 ({ PremiumSubscriptionSKUs: metroImportDefault, PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const Gradients = fn(8985).Gradients;
+const Gradients = fn(9084).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_12, justifyContent: "space-between" }, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelIcon: null, nitroWheelDisabled: null, button: null, gradient: null };
   const obj3 = {};
@@ -167,7 +167,7 @@ let closure_14 = createStyles.createStyles((arg0) => {
   obj.gradient = {};
   return obj;
 });
-let items = [{ code: "(function animationEnterExit_PremiumFeatureUpsellTsx2(visible,cleanUp){let[withSpring,springStandard,_worklet_11223997992530_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationEnterExit_PremiumFeatureUpsellTsx2([_worklet_11223997992530_init_data,cleanUp]){const PremiumFeatureUpsellTsx1=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};PremiumFeatureUpsellTsx1.__closure=[cleanUp];PremiumFeatureUpsellTsx1.__workletHash=11223997992530;PremiumFeatureUpsellTsx1.__initData=_worklet_11223997992530_init_data;return PremiumFeatureUpsellTsx1;}([_worklet_11223997992530_init_data,cleanUp]))};})" }, fn(5518).withSpring, fn(5519).springStandard, { code: "(function PremiumFeatureUpsellTsx1(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
+let items = [{ code: "(function animationEnterExit_PremiumFeatureUpsellTsx2(visible,cleanUp){let[withSpring,springStandard,_worklet_11223997992530_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationEnterExit_PremiumFeatureUpsellTsx2([_worklet_11223997992530_init_data,cleanUp]){const PremiumFeatureUpsellTsx1=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};PremiumFeatureUpsellTsx1.__closure=[cleanUp];PremiumFeatureUpsellTsx1.__workletHash=11223997992530;PremiumFeatureUpsellTsx1.__initData=_worklet_11223997992530_init_data;return PremiumFeatureUpsellTsx1;}([_worklet_11223997992530_init_data,cleanUp]))};})" }, fn(5613).withSpring, fn(5614).springStandard, { code: "(function PremiumFeatureUpsellTsx1(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;

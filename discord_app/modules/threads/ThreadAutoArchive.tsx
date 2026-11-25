@@ -1,6 +1,6 @@
-// === Module 9920: ThreadAutoArchive ===
+// === Module 10019: ThreadAutoArchive ===
 
-// Module 9920 (ThreadAutoArchive)
+// Module 10019 (ThreadAutoArchive)
 import memoizeDefault from "memoize" /* 594 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import ThreadConstants from "ThreadConstants" /* 1111 */;

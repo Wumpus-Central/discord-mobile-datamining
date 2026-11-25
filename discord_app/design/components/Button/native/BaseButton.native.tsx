@@ -1,10 +1,10 @@
-// === Module 5524: Button/BaseButton ===
+// === Module 5619: Button/BaseButton ===
 
-// Module 5524 (Button/BaseButton)
+// Module 5619 (Button/BaseButton)
 import GlobalUtils from "GlobalUtils" /* 1254 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import native from "native" /* 4978 */;
-import ButtonHooks from "ButtonHooks" /* 5522 */;
+import native from "native" /* 5073 */;
+import ButtonHooks from "ButtonHooks" /* 5617 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import module_1653_mod from "module_1653" /* 1653 */;
@@ -14,9 +14,9 @@ let closure_2 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
 const ThemeTypes = fn(1071).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5525).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5620).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_8 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
 let module_1653 = module_1653_mod;
 let closure_9 = module_1653.createAnimatedComponent(Pressable);

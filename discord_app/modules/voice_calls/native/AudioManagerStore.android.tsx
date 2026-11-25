@@ -1,14 +1,14 @@
-// === Module 8496: AudioManagerStore ===
+// === Module 8595: AudioManagerStore ===
 
-// Module 8496 (AudioManagerStore)
+// Module 8595 (AudioManagerStore)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
-import NativeAudioManagerModule2 from "NativeAudioManagerModule" /* 8497 */;
+import NativeAudioManagerModule2 from "NativeAudioManagerModule" /* 8596 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
 
 const NativeAudioManagerModuleDefault = NativeAudioManagerModule2;
 
@@ -80,7 +80,7 @@ let closure_17 = async function _setActiveAudioDevice() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -147,13 +147,13 @@ let closure_17 = async function _setActiveAudioDevice() {
   })();
 };
 const RTCConnectionStates = fn(1071).RTCConnectionStates;
-const MediaEngineContextTypes = fn(5729).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5824).MediaEngineContextTypes;
 const nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAudioManagerModuleDefault);
 let closure_8 = new LoggerDefault("AudioManagerStore");
 let global = [];
-let NativeAudioManagerModule = fn(8497);
+let NativeAudioManagerModule = fn(8596);
 global = NativeAudioManagerModule.getInvalidAndroidDevice();
-NativeAudioManagerModule = fn(8497);
+NativeAudioManagerModule = fn(8596);
 let device = NativeAudioManagerModule.getInvalidAndroidDevice();
 let c12 = false;
 const Store = initializeDefault.Store;

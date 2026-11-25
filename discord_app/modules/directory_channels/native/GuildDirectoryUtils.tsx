@@ -1,6 +1,6 @@
-// === Module 13093: directory_channels/GuildDirectoryUtils ===
+// === Module 13216: directory_channels/GuildDirectoryUtils ===
 
-// Module 13093 (directory_channels/GuildDirectoryUtils)
+// Module 13216 (directory_channels/GuildDirectoryUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

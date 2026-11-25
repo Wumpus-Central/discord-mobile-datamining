@@ -1,9 +1,9 @@
-// === Module 19852: SoundboardWaveformTrimHandles ===
+// === Module 19957: SoundboardWaveformTrimHandles ===
 
-// Module 19852 (SoundboardWaveformTrimHandles)
+// Module 19957 (SoundboardWaveformTrimHandles)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5177 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,9 +15,9 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let c8 = 0.05;
-let closure_9 = 1 / fn(19842).WAVEFORM_BAR_COUNT;
+let closure_9 = 1 / fn(19947).WAVEFORM_BAR_COUNT;
 let items = [{ name: "increment" }, { name: "decrement" }];
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { position: "absolute", top: 0, left: 0 }, touchTarget: { position: "absolute", top: 0, bottom: 0, width: 44, alignItems: "center", justifyContent: "center" }, handle: null, disabled: null };
 let size = { width: 6, height: "100%", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.handle = size;

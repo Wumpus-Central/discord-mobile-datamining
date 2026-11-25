@@ -1,7 +1,7 @@
-// === Module 18299: useConjureAppIdentity ===
+// === Module 18411: useConjureAppIdentity ===
 
-// Module 18299 (useConjureAppIdentity)
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+// Module 18411 (useConjureAppIdentity)
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
 
 const require = globalThis.__r;
 

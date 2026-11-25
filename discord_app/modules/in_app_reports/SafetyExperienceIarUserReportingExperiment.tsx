@@ -1,7 +1,7 @@
-// === Module 14692: SafetyExperienceIarUserReportingExperiment ===
+// === Module 14814: SafetyExperienceIarUserReportingExperiment ===
 
-// Module 14692 (SafetyExperienceIarUserReportingExperiment)
-import createExperiment from "module_5918" /* 5918 */;
+// Module 14814 (SafetyExperienceIarUserReportingExperiment)
+import createExperiment from "module_6013" /* 6013 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", id: "2023-09_iar_user_reporting", label: "Safety Experience IAR User Reporting", defaultConfig: { enabled: false }, treatments: null };

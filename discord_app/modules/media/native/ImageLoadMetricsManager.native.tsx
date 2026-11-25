@@ -1,22 +1,22 @@
-// === Module 19593: ImageLoadMetricsManager ===
+// === Module 19694: ImageLoadMetricsManager ===
 
-// Module 19593 (ImageLoadMetricsManager)
+// Module 19694 (ImageLoadMetricsManager)
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import NativeImageLoadMetricsModuleDefault from "NativeImageLoadMetricsModule" /* 19594 */;
-import buildImageLoadMetricProperties from "buildImageLoadMetricProperties" /* 19595 */;
+import NativeImageLoadMetricsModuleDefault from "NativeImageLoadMetricsModule" /* 19695 */;
+import buildImageLoadMetricProperties from "buildImageLoadMetricProperties" /* 19696 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
-import NetworkStore from "NetworkStore" /* 5855 */;
+import NetworkStore from "NetworkStore" /* 5950 */;
 import ApexExperiment from "ApexExperiment" /* 1450 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 import size from "module_2" /* 2 */;
 
 ({ PixelRatio: c3, NativeEventEmitter } = get_ActivityIndicator);
 const AnalyticEvents = Constants.AnalyticEvents;
 const nativeEventEmitter = new NativeEventEmitter(NativeImageLoadMetricsModuleDefault);
-let closure_9 = ApexExperiment.createApexExperiment({ name: "2026-10-mobile-image-load-metrics", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: false }, 2: { enabled: true } } });
+let closure_9 = ApexExperiment.createApexExperiment({ name: "2026-10-mobile-image-load-metrics", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 class ImageLoadMetricsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

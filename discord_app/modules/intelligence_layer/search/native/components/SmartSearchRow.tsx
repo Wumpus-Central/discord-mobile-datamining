@@ -1,20 +1,20 @@
-// === Module 18822: SmartSearchRow ===
+// === Module 18933: SmartSearchRow ===
 
-// Module 18822 (SmartSearchRow)
+// Module 18933 (SmartSearchRow)
 import nativeDefault from "native" /* 575 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13115 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13139 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13141 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13238 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13262 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13264 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 const require = fn;
 const View = fn(17).View;
 SmartSearchResultsStoreDefault;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { collapsedFrame: { height: 217, overflow: "hidden" }, expandedContent: { paddingBottom: nativeDefault.space.PX_40 }, divider: null };
 let obj3 = { paddingBottom: nativeDefault.space.PX_40 };
 obj.divider = { height: 1, marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -25,13 +25,13 @@ let closure_11 = noop.memo(function SmartSearchRowContainer(smartSearchQuery) {
   let flashListContext;
   const tmp = closure_10();
   items = [smartSearchQuery.requestKey];
-  const tmp4 = flashListContext(smartSearchQuery(7356).useRecyclingState(hasKeywordResults, items), 2);
+  const tmp4 = flashListContext(smartSearchQuery(7451).useRecyclingState(hasKeywordResults, items), 2);
   const isCollapsed = tmp4[0];
   dependencyMap = tmp6;
-  const obj = smartSearchQuery(7356);
-  const smartSearchRowViewability = smartSearchQuery(18823).useSmartSearchRowViewability();
-  let obj2 = smartSearchQuery(18823);
-  flashListContext = smartSearchQuery(7356).useFlashListContext();
+  const obj = smartSearchQuery(7451);
+  const smartSearchRowViewability = smartSearchQuery(18934).useSmartSearchRowViewability();
+  let obj2 = smartSearchQuery(18934);
+  flashListContext = smartSearchQuery(7451).useFlashListContext();
   const items1 = [flashListContext, isCollapsed, tmp4[1], smartSearchQuery];
   const callback = noop.useCallback(() => {
     closure_2(!first);
@@ -48,22 +48,22 @@ let closure_11 = noop.memo(function SmartSearchRowContainer(smartSearchQuery) {
     const obj3 = { smartSearchQuery, isCollapsed: !first };
   }, items1);
   let tmp19Result = null;
-  if (entry.status !== smartSearchQuery(13116).SmartSearchStatus.NOT_QUALIFIED) {
+  if (entry.status !== smartSearchQuery(13239).SmartSearchStatus.NOT_QUALIFIED) {
     let obj4 = { style: isCollapsed ? tmp.collapsedFrame : tmp.expandedContent, children: null };
     const obj5 = { smartSearchQuery, hasKeywordResults, entry, isCollapsed };
-    const items2 = [closure_8(tmp2(18824).SmartSearchContent, obj5), , ];
+    const items2 = [closure_8(tmp2(18935).SmartSearchContent, obj5), , ];
     if (isCollapsed) {
       if (!tmp2Result.isSmartSearchEmptyOrErrored(entry.status)) {
-        let tmp11Result = closure_8(isCollapsed(18836), { height: 72 });
+        let tmp11Result = closure_8(isCollapsed(18947), { height: 72 });
       }
       items2[1] = tmp11Result;
       let tmp11Result4 = hasKeywordResults;
       if (hasKeywordResults) {
-        tmp11Result4 = entry.status === tmp2(13116).SmartSearchStatus.LOADED;
+        tmp11Result4 = entry.status === tmp2(13239).SmartSearchStatus.LOADED;
       }
       if (tmp11Result4) {
         const obj6 = { isCollapsed, onPress: callback };
-        tmp11Result4 = closure_8(isCollapsed(18838), obj6);
+        tmp11Result4 = closure_8(isCollapsed(18949), obj6);
       }
       items2[2] = tmp11Result4;
       obj4.children = items2;
@@ -77,11 +77,11 @@ let closure_11 = noop.memo(function SmartSearchRowContainer(smartSearchQuery) {
       items3[1] = tmp11Result5;
       obj8.children = items3;
       tmp19Result = closure_9(View, obj8);
-      tmp2Result = tmp2(13114);
+      tmp2Result = tmp2(13237);
     }
     let tmp11Result6 = null;
-    if (entry.status === tmp2(13116).SmartSearchStatus.LOADING) {
-      tmp11Result6 = closure_8(isCollapsed(18836), { height: 120 });
+    if (entry.status === tmp2(13239).SmartSearchStatus.LOADING) {
+      tmp11Result6 = closure_8(isCollapsed(18947), { height: 120 });
     }
     tmp11Result = tmp11Result6;
   }

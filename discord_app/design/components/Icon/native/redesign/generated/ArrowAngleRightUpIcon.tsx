@@ -1,9 +1,9 @@
-// === Module 8860: ArrowAngleRightUpIcon ===
+// === Module 8959: ArrowAngleRightUpIcon ===
 
-// Module 8860 (ArrowAngleRightUpIcon)
+// Module 8959 (ArrowAngleRightUpIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod8861 from "module_8861" /* 8861 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod8960 from "module_8960" /* 8960 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ArrowAngleRightUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8861, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8960, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

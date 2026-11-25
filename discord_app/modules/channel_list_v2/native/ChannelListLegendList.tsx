@@ -1,8 +1,8 @@
-// === Module 17815: ChannelListLegendList ===
+// === Module 17927: ChannelListLegendList ===
 
-// Module 17815 (ChannelListLegendList)
-import FastList from "FastList" /* 7302 */;
-import useChannelListFlatDataDefault from "useChannelListFlatData" /* 17816 */;
+// Module 17927 (ChannelListLegendList)
+import FastList from "FastList" /* 7397 */;
+import useChannelListFlatDataDefault from "useChannelListFlatData" /* 17928 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -333,7 +333,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   obj4.onScroll = require("module_1653").useAnimatedScrollHandler(ChannelListLegendListTsx1);
   obj4.renderItem = callback;
   obj4.scrollIndicatorInsets = memo4;
-  const items8 = [renderItem(tmp5(11423).AnimatedLegendList, obj4), renderAccessory(memo1)];
+  const items8 = [renderItem(tmp5(11522).AnimatedLegendList, obj4), renderAccessory(memo1)];
   obj5.children = items8;
   return renderSectionFooter(renderHeader, obj5);
 });

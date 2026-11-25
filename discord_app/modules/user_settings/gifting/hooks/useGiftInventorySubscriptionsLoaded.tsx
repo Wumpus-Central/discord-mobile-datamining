@@ -1,7 +1,7 @@
-// === Module 13849: useGiftInventorySubscriptionsLoaded ===
+// === Module 13972: useGiftInventorySubscriptionsLoaded ===
 
-// Module 13849 (useGiftInventorySubscriptionsLoaded)
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5680 */;
+// Module 13972 (useGiftInventorySubscriptionsLoaded)
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5775 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ export default function useGiftInventorySubscriptionsLoaded() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ export default function useGiftInventorySubscriptionsLoaded() {
               closure_0(closure_128_0);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp18) {
           if (tmp4 === c2) {

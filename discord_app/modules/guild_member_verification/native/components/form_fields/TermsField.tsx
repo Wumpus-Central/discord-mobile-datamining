@@ -1,16 +1,16 @@
-// === Module 6939: TermsField ===
+// === Module 7034: TermsField ===
 
-// Module 6939 (TermsField)
+// Module 7034 (TermsField)
 import util from "util" /* 1112 */;
-import TermsFieldListDefault from "TermsFieldList" /* 6940 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7055 */;
+import TermsFieldListDefault from "TermsFieldList" /* 7035 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_6 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");

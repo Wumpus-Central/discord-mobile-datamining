@@ -1,7 +1,7 @@
-// === Module 12148: showVoiceChannelCall ===
+// === Module 12247: showVoiceChannelCall ===
 
-// Module 12148 (showVoiceChannelCall)
-import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 12149 */;
+// Module 12247 (showVoiceChannelCall)
+import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 12248 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_channel_apps/showVoiceChannelCall.native.tsx");

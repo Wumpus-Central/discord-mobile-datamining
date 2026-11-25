@@ -1,8 +1,8 @@
-// === Module 8789: selectDiscoverSnapshot ===
+// === Module 8888: selectDiscoverSnapshot ===
 
-// Module 8789 (selectDiscoverSnapshot)
-import ICYMITypes from "ICYMITypes" /* 8776 */;
-import parseWaterwheelsCard from "parseWaterwheelsCard" /* 8790 */;
+// Module 8888 (selectDiscoverSnapshot)
+import ICYMITypes from "ICYMITypes" /* 8875 */;
+import parseWaterwheelsCard from "parseWaterwheelsCard" /* 8889 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

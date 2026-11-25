@@ -1,6 +1,6 @@
-// === Module 5098: useBaseAppContainerDimensions ===
+// === Module 5193: useBaseAppContainerDimensions ===
 
-// Module 5098 (useBaseAppContainerDimensions)
+// Module 5193 (useBaseAppContainerDimensions)
 import useWindowDimensions from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1628 */;
 import noop from "module_19" /* 19 */;

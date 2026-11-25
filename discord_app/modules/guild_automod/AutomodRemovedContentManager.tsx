@@ -1,10 +1,10 @@
-// === Module 19484: AutomodRemovedContentManager ===
+// === Module 19595: AutomodRemovedContentManager ===
 
-// Module 19484 (AutomodRemovedContentManager)
-import AutomodRemovedContentActionCreators from "AutomodRemovedContentActionCreators" /* 19485 */;
-import MessageStore from "MessageStore" /* 6265 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+// Module 19595 (AutomodRemovedContentManager)
+import AutomodRemovedContentActionCreators from "AutomodRemovedContentActionCreators" /* 19596 */;
+import MessageStore from "MessageStore" /* 6360 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 require = fn;
 function handleAutomodContentDeleted(message) {

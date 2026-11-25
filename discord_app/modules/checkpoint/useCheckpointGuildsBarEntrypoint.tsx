@@ -1,14 +1,14 @@
-// === Module 12416: useCheckpointGuildsBarEntrypoint ===
+// === Module 12580: useCheckpointGuildsBarEntrypoint ===
 
-// Module 12416 (useCheckpointGuildsBarEntrypoint)
-import dismissible_content from "dismissible_content" /* 4750 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4949 */;
-import CheckpointExperiments from "CheckpointExperiments" /* 6643 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9420 */;
+// Module 12580 (useCheckpointGuildsBarEntrypoint)
+import dismissible_content from "dismissible_content" /* 4845 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
+import CheckpointExperiments from "CheckpointExperiments" /* 6738 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9519 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const guilds_bar = "guilds_bar";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/useCheckpointGuildsBarEntrypoint.tsx");

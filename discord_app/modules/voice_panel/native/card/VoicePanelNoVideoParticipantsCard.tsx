@@ -1,17 +1,17 @@
-// === Module 19324: VoicePanelNoVideoParticipantsCard ===
+// === Module 19435: VoicePanelNoVideoParticipantsCard ===
 
-// Module 19324 (VoicePanelNoVideoParticipantsCard)
+// Module 19435 (VoicePanelNoVideoParticipantsCard)
 import nativeDefault from "native" /* 575 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import NativeViewDefault from "NativeView" /* 6929 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11634 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6098 */;
+import NativeViewDefault from "NativeView" /* 7024 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: null, label: null, button: null, buttonText: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.container = size;
@@ -35,14 +35,14 @@ export default noop.memo(function VoicePanelNoVideoParticipantsCard() {
   const obj2 = { style: tmp.label, variant: "body-md/semibold", color: "text-overlay-light", children: null };
   const intl = channelId(1112).intl;
   obj2.children = intl.string(channelId(1112).t["8eBJ73"]);
-  const items1 = [closure_5(channelId(5508).Text, obj2), ];
+  const items1 = [closure_5(channelId(5603).Text, obj2), ];
   const obj3 = { style: tmp.button, onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl2 = channelId(1112).intl;
   obj3.accessibilityLabel = intl2.string(channelId(1112).t.kLQySL);
   const obj4 = { variant: "body-sm/semibold", style: tmp.buttonText, children: null };
   const intl3 = channelId(1112).intl;
   obj4.children = intl3.string(channelId(1112).t.kLQySL);
-  obj3.children = closure_5(channelId(5508).Text, obj4);
+  obj3.children = closure_5(channelId(5603).Text, obj4);
   items1[1] = closure_5(Pressable, obj3);
   obj.children = items1;
   return closure_6(NativeViewDefault, obj);

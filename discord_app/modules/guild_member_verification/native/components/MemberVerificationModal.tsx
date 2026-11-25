@@ -1,24 +1,24 @@
-// === Module 6908: MemberVerificationModal ===
+// === Module 7003: MemberVerificationModal ===
 
-// Module 6908 (MemberVerificationModal)
+// Module 7003 (MemberVerificationModal)
 import nativeDefault from "native" /* 575 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4953 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6871 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6966 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6909 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7004 */;
 import module_1653 from "module_1653" /* 1653 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(6910);
+const MemberVerificationFormConstants = fn(7005);
 ({ SCROLL_EVENT_TIMER_MS: metroImportDefault, SHEET_RADIUS, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = module_1653.createAnimatedComponent(fn(1186).Icon);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center" }, scrollContent: { flexGrow: 1 }, sheet: { flexGrow: 1, marginTop: -SHEET_RADIUS, borderTopLeftRadius: SHEET_RADIUS, borderTopRightRadius: SHEET_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, closeButtonContainer: { position: "absolute", right: 0 }, closeIconContainer: { position: "relative", marginTop: 10, marginRight: 20, width: 24, height: 24 }, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 let obj3 = { flexGrow: 1, marginTop: -SHEET_RADIUS, borderTopLeftRadius: SHEET_RADIUS, borderTopRightRadius: SHEET_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.closeIconOverBanner = { position: "absolute", tintColor: nativeDefault.colors.WHITE };

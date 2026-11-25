@@ -1,6 +1,6 @@
-// === Module 12484: ? ===
+// === Module 12648: ? ===
 
-// Module 12484
+// Module 12648
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_base_06_mighnight.webp.js");

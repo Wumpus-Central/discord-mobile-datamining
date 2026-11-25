@@ -1,8 +1,8 @@
-// === Module 9169: acomRetry ===
+// === Module 9268: acomRetry ===
 
-// Module 9169 (acomRetry)
+// Module 9268 (acomRetry)
 import BackoffDefault from "Backoff" /* 559 */;
-import ErrorUtilsAll from "ErrorUtils" /* 9165 */;
+import ErrorUtilsAll from "ErrorUtils" /* 9264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -44,7 +44,7 @@ let closure_10 = async function _retryACOMRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

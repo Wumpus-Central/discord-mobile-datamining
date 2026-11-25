@@ -1,9 +1,9 @@
-// === Module 12384: PiggyBankIcon ===
+// === Module 12548: PiggyBankIcon ===
 
-// Module 12384 (PiggyBankIcon)
+// Module 12548 (PiggyBankIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod12385 from "module_12385" /* 12385 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod12549 from "module_12549" /* 12549 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PiggyBankIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12385, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12549, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

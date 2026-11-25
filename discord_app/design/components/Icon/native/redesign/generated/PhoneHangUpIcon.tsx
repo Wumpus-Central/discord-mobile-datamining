@@ -1,9 +1,9 @@
-// === Module 8883: PhoneHangUpIcon ===
+// === Module 8982: PhoneHangUpIcon ===
 
-// Module 8883 (PhoneHangUpIcon)
+// Module 8982 (PhoneHangUpIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod8884 from "module_8884" /* 8884 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod8983 from "module_8983" /* 8983 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PhoneHangUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8884, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8983, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

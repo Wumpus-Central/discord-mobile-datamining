@@ -1,12 +1,12 @@
-// === Module 14822: ConjureServerWidgetActionCreators ===
+// === Module 14944: ConjureServerWidgetActionCreators ===
 
-// Module 14822 (ConjureServerWidgetActionCreators)
+// Module 14944 (ConjureServerWidgetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6904 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14820 */;
+import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14942 */;
 
 require = fn;
 let closure_7 = async function _fetchConjureServerProfileWidgets() {
@@ -20,7 +20,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
           c2 = 0;
           if (closure_129_4.getId() !== id2) {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             closure_129_1(closure_129_2[4]).dispatch({ type: "CONJURE_SERVER_PROFILE_WIDGETS_FETCH_FAIL" });
             const obj4 = closure_129_1(closure_129_2[4]);
@@ -81,7 +81,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
         }
         c2 = 0;
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
       c4 = 3;
     } catch (tmp30) {

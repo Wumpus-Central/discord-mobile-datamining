@@ -1,11 +1,11 @@
-// === Module 18118: ActionStatusSubLabel ===
+// === Module 18230: ActionStatusSubLabel ===
 
-// Module 18118 (ActionStatusSubLabel)
+// Module 18230 (ActionStatusSubLabel)
 import _mod1653 from "module_1653" /* 1653 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4926 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import useFontScale from "useFontScale" /* 5523 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5021 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import useFontScale from "useFontScale" /* 5618 */;
 import noop from "module_19" /* 19 */;
 
 const module_1653 = _mod1653;
@@ -17,9 +17,9 @@ function announceActioned(intl) {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_5 = createStyles.createStyles(() => ({ container: { overflow: "hidden" }, actionStatus: { position: "absolute" } }));
-let closure_7 = module_1653.createAnimatedComponent(fn(5508).Text);
+let closure_7 = module_1653.createAnimatedComponent(fn(5603).Text);
 let closure_8 = { code: "(function ActionStatusSubLabelTsx1(){let[hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate]=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};})" };
 let closure_9 = { code: "(function ActionStatusSubLabelTsx2(){let[actioned,lineHeight,fontScale,animate,withTiming,interpolate]=this.__closure;const translateYValue=actioned.get()?lineHeight*fontScale:0;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[0,translateYValue]))}]};})" };
 let closure_10 = { code: "(function ActionStatusSubLabelTsx3(){let[actioned,lineHeight,fontScale,animate,withTiming,interpolate]=this.__closure;const translateYValue=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};})" };

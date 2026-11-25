@@ -1,8 +1,8 @@
-// === Module 13848: useGiftInventoryRecipients ===
+// === Module 13971: useGiftInventoryRecipients ===
 
-// Module 13848 (useGiftInventoryRecipients)
-import UserActionCreators from "UserActionCreators" /* 6008 */;
-import GiftedSubscriptionUtils from "GiftedSubscriptionUtils" /* 13845 */;
+// Module 13971 (useGiftInventoryRecipients)
+import UserActionCreators from "UserActionCreators" /* 6103 */;
+import GiftedSubscriptionUtils from "GiftedSubscriptionUtils" /* 13968 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;

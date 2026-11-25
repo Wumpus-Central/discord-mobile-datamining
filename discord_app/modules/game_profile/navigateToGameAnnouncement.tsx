@@ -1,8 +1,8 @@
-// === Module 14043: navigateToGameAnnouncement ===
+// === Module 14166: navigateToGameAnnouncement ===
 
-// Module 14043 (navigateToGameAnnouncement)
+// Module 14166 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 const require = fn;
 let closure_8 = async function _navigateToGameAnnouncement(arg0) {
@@ -16,7 +16,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {

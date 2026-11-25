@@ -3,7 +3,7 @@
 // Module 2188 (LocaleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DiscordNativeDefault from "DiscordNative" /* 4728 */;
+import DiscordNativeDefault from "DiscordNative" /* 4823 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
 
@@ -19,7 +19,7 @@ let closure_6 = async function _getSystemLocale() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

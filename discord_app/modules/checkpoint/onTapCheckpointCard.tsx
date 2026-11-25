@@ -1,8 +1,8 @@
-// === Module 12404: onTapCheckpointCard ===
+// === Module 12568: onTapCheckpointCard ===
 
-// Module 12404 (onTapCheckpointCard)
+// Module 12568 (onTapCheckpointCard)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 const require = fn;
 let closure_4 = async function _onTapCheckpointCard(arg0) {

@@ -1,6 +1,6 @@
-// === Module 5578: ChannelListLayoutTypes ===
+// === Module 5673: ChannelListLayoutTypes ===
 
-// Module 5578 (ChannelListLayoutTypes)
+// Module 5673 (ChannelListLayoutTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/ChannelListLayoutTypes.tsx");

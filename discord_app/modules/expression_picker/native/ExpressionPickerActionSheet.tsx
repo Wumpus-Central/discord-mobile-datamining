@@ -1,25 +1,25 @@
-// === Module 10654: ExpressionPickerActionSheet ===
+// === Module 10753: ExpressionPickerActionSheet ===
 
-// Module 10654 (ExpressionPickerActionSheet)
+// Module 10753 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import KeyboardTypes from "KeyboardTypes" /* 1626 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import useKeyboardType from "useKeyboardType" /* 5104 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5145 */;
-import NavigatorConstants from "NavigatorConstants" /* 5471 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9438 */;
-import KeyboardUtils from "KeyboardUtils" /* 10656 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 10657 */;
+import useKeyboardType from "useKeyboardType" /* 5199 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5240 */;
+import NavigatorConstants from "NavigatorConstants" /* 5566 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9537 */;
+import KeyboardUtils from "KeyboardUtils" /* 10755 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 10756 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
 
 require = fn;
-let closure_5 = fn(5146).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(10655).STICKER_FORMATS;
+let closure_5 = fn(5241).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(10754).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 8972: premium/ProductIds ===
+// === Module 9071: premium/ProductIds ===
 
-// Module 8972 (premium/ProductIds)
+// Module 9071 (premium/ProductIds)
 import PremiumConstants from "PremiumConstants" /* 1388 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1625 */;
 import size from "module_2" /* 2 */;

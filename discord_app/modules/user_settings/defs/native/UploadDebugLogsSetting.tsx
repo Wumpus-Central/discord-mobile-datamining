@@ -1,9 +1,9 @@
-// === Module 16989: UploadDebugLogsSetting ===
+// === Module 17110: UploadDebugLogsSetting ===
 
-// Module 16989 (UploadDebugLogsSetting)
+// Module 17110 (UploadDebugLogsSetting)
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import DebugUploadManager from "DebugUploadManager" /* 10549 */;
+import DebugUploadManager from "DebugUploadManager" /* 10648 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -111,14 +111,14 @@ const DebugLogCategory = fn(1071).DebugLogCategory;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_7 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11815);
+const SettingBuilders = fn(11914);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.aY1OH2);
   },
   parent: null,
-  IconComponent: fn(5621).CircleInformationIcon,
+  IconComponent: fn(5716).CircleInformationIcon,
   onPress: function handleUploadDebugLogSettingPress() {
     const self = this;
     const apply = closure_8.apply;

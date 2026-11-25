@@ -1,8 +1,8 @@
-// === Module 6914: AuthBackgroundArt ===
+// === Module 7009: AuthBackgroundArt ===
 
-// Module 6914 (AuthBackgroundArt)
-import timing_timing from "timing/timing" /* 5127 */;
-import timingPresets from "timingPresets" /* 5130 */;
+// Module 7009 (AuthBackgroundArt)
+import timing_timing from "timing/timing" /* 5222 */;
+import timingPresets from "timingPresets" /* 5225 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthBackgroundArt.tsx");
 
 export default noop.memo(function AuthBackgroundArt() {
-  const tmp3 = sharedValue(6915)();
+  const tmp3 = sharedValue(7010)();
   _require = tmp3;
   let num = 0;
   if ("square" === tmp3) {
@@ -57,15 +57,15 @@ export default noop.memo(function AuthBackgroundArt() {
   const animatedStyle = require("module_1653").useAnimatedStyle(AuthBackgroundArtTsx1);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
   const tmp4Result = require("module_1653");
-  obj3.backgroundImageSource = sharedValue(6919);
-  const items3 = [closure_6(sharedValue(6916), obj3), ];
+  obj3.backgroundImageSource = sharedValue(7014);
+  const items3 = [closure_6(sharedValue(7011), obj3), ];
   const obj4 = { style: null, children: null };
   const items4 = [StyleSheet.absoluteFill, animatedStyle];
   obj4.style = items4;
   const obj5 = { backgroundImageSource: null, backgroundImageCover: true };
-  const tmpResult = sharedValue(6916);
-  obj5.backgroundImageSource = sharedValue(6920);
-  obj4.children = closure_6(sharedValue(6916), obj5);
+  const tmpResult = sharedValue(7011);
+  obj5.backgroundImageSource = sharedValue(7015);
+  obj4.children = closure_6(sharedValue(7011), obj5);
   items3[1] = closure_6(sharedValue(1653).View, obj4);
   obj2.children = items3;
   return closure_7(View, obj2);

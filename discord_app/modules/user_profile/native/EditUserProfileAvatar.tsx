@@ -1,17 +1,17 @@
-// === Module 15986: EditUserProfileAvatar ===
+// === Module 16107: EditUserProfileAvatar ===
 
-// Module 15986 (EditUserProfileAvatar)
+// Module 16107 (EditUserProfileAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 6249 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 6344 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_8 = createStyles.createStyles({ editIcon: { position: "absolute", right: -3 }, editButton: { position: "absolute", top: -8, right: -8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/EditUserProfileAvatar.tsx");
@@ -88,7 +88,7 @@ export default function EditUserProfileAvatar(user) {
       }
     }
     obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
-    const tmp3 = asyncRequireImpl(15978, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(16099, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj2.analyticsLocations = analyticsLocations;
     obj.openLazy(tmp3, "Change Avatar", obj2);

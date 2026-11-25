@@ -1,8 +1,8 @@
-// === Module 12918: useCanInstallApplication ===
+// === Module 13042: useCanInstallApplication ===
 
-// Module 12918 (useCanInstallApplication)
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9958 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+// Module 13042 (useCanInstallApplication)
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10057 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
 
 const require = globalThis.__r;

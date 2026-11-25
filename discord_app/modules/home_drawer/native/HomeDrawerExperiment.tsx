@@ -1,6 +1,6 @@
-// === Module 5099: HomeDrawerExperiment ===
+// === Module 5194: HomeDrawerExperiment ===
 
-// Module 5099 (HomeDrawerExperiment)
+// Module 5194 (HomeDrawerExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1451 */;
 
 const obj = { name: "2025-10-mobile-home-drawer", kind: "user", defaultConfig: { enableHome: false, landOnHome: false, enablePeekHint: false }, variations: null };

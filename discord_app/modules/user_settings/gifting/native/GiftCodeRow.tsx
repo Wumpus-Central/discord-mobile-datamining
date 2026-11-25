@@ -1,12 +1,12 @@
-// === Module 13859: GiftCodeRow ===
+// === Module 13982: GiftCodeRow ===
 
-// Module 13859 (GiftCodeRow)
+// Module 13982 (GiftCodeRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5664 */;
-import showShareActionSheet from "showShareActionSheet" /* 8549 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11781 */;
-import copyGiftCodeDefault from "copyGiftCode" /* 13860 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5759 */;
+import showShareActionSheet from "showShareActionSheet" /* 8648 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11880 */;
+import copyGiftCodeDefault from "copyGiftCode" /* 13983 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1071).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.giftCodeShare = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: nativeDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
@@ -151,7 +151,7 @@ prototype["render"] = function render() {
   }
   const obj5 = require("GiftCodeUtils");
 };
-GiftCodeRow.contextType = fn(4978).ThemeContext;
+GiftCodeRow.contextType = fn(5073).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/gifting/native/GiftCodeRow.tsx");
 

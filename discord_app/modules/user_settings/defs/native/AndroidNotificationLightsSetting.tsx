@@ -1,23 +1,24 @@
-// === Module 16944: AndroidNotificationLightsSetting ===
+// === Module 17065: AndroidNotificationLightsSetting ===
 
-// Module 16944 (AndroidNotificationLightsSetting)
+// Module 17065 (AndroidNotificationLightsSetting)
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import SettingsConstants from "SettingsConstants" /* 9414 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 16926 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 16930 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 16924 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11815 */;
+import _modDef3206 from "module_3206" /* 3206 */;
+import SettingsConstants from "SettingsConstants" /* 9513 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 17047 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17051 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 17045 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11914 */;
 import size from "module_2" /* 2 */;
 
-({ useAndroidNotificationLightsEnabled: c2, setAndroidNotificationLightsEnabled } = AndroidNotificationSettingsStore);
+({ useAndroidNotificationLightsEnabled: c3, setAndroidNotificationLightsEnabled } = AndroidNotificationSettingsStore);
 let obj = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.E3xHUp);
   },
   useValue: function useAndroidNotificationLightsSettingValue() {
-    let flag = React2();
+    let flag = React3();
     if (flag == null) {
       flag = false;
     }
@@ -30,7 +31,7 @@ const obj2 = {};
 const merged = Object.assign(obj);
 obj2.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
 obj2.usePredicate = function usePredicate() {
-  const tmp = React2();
+  const tmp = React3();
   const isIOSResult = PlatformUtils.isIOS();
   let tmp5 = !isIOSResult;
   if (!isIOSResult) {
@@ -49,9 +50,13 @@ const toggle = SettingBuilders.createToggle(obj2);
 let SettingBuilders = SettingBuilders_mod;
 const obj3 = {};
 const merged1 = Object.assign(obj);
+obj3.useTitle = function useTitle() {
+  const intl = util.intl;
+  return intl.string(_modDef3206.ndEta2);
+};
 obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj3.usePredicate = function usePredicate() {
-  const tmp = React2();
+  const tmp = React3();
   const isIOSResult = PlatformUtils.isIOS();
   let isDeclarativeSettingsUIAvailable = !isIOSResult;
   if (!isIOSResult) {

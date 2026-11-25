@@ -1,24 +1,24 @@
-// === Module 10254: VoiceSensitivity ===
+// === Module 10353: VoiceSensitivity ===
 
-// Module 10254 (VoiceSensitivity)
+// Module 10353 (VoiceSensitivity)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4926 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5742 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5021 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5837 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import SpeakingStore from "SpeakingStore" /* 6726 */;
+import SpeakingStore from "SpeakingStore" /* 6821 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
 
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1071).AppStates;
-const NativePermissionTypes = fn(7739).NativePermissionTypes;
+const NativePermissionTypes = fn(7838).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { sensitivity: { position: "relative", height: 20 }, sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" }, sensitivityFill: null, sensitivityCommon: null, sensitivityMin: null, sensitivityMax: null, sensitivityDefault: null, sensitivitySpeaking: null, sensitivitySlider: null };
 const rect = { position: "absolute", backgroundColor: nativeDefault.unsafe_rawColors.WHITE, opacity: 0.5, top: 7, left: 0, right: 0, bottom: 7 };
 obj2.sensitivityFill = rect;
@@ -27,7 +27,7 @@ obj2.sensitivityMin = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_3
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
 obj2.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 let obj5 = { flex: 1, backgroundColor: null };
-const ColorUtils = fn(4914);
+const ColorUtils = fn(5009);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
 obj2.sensitivityDefault = obj5;
 let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -100,7 +100,7 @@ export default function VoiceSensitivity(auto) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -117,7 +117,7 @@ export default function VoiceSensitivity(auto) {
               closure_0 = tmp4;
               c1 = 1;
               c2 = 1;
-              const obj4 = { value: onThresholdChange(7740).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
+              const obj4 = { value: onThresholdChange(7839).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -134,10 +134,10 @@ export default function VoiceSensitivity(auto) {
             }
             if (tmp5) {
               mediaEngine = mediaEngine.getMediaEngine();
-              mediaEngine.on(auto(5742).MediaEngineEvent.VoiceActivity, callback);
+              mediaEngine.on(auto(5837).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp17) {
           c2 = tmp;

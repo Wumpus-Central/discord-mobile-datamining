@@ -1,6 +1,6 @@
-// === Module 12454: ? ===
+// === Module 12618: ? ===
 
-// Module 12454
+// Module 12618
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/sfx/transition-lab.mp3.js");

@@ -1,16 +1,16 @@
-// === Module 16795: DisplayNameStylesColorPickerSheet ===
+// === Module 16916: DisplayNameStylesColorPickerSheet ===
 
-// Module 16795 (DisplayNameStylesColorPickerSheet)
+// Module 16916 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _modDef3250 from "module_3250" /* 3250 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import HapticUtils from "HapticUtils" /* 5133 */;
-import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 9671 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15887 */;
-import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader" /* 16780 */;
-import useColorPresetsWithA11yLabelsDefault from "useColorPresetsWithA11yLabels" /* 16785 */;
-import DisplayNameStylesCustomColorButtonDefault from "DisplayNameStylesCustomColorButton" /* 16789 */;
+import _modDef3302 from "module_3302" /* 3302 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import HapticUtils from "HapticUtils" /* 5228 */;
+import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 9770 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16008 */;
+import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader" /* 16901 */;
+import useColorPresetsWithA11yLabelsDefault from "useColorPresetsWithA11yLabels" /* 16906 */;
+import DisplayNameStylesCustomColorButtonDefault from "DisplayNameStylesCustomColorButton" /* 16910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,11 +20,11 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { sheetBackground: { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg }, container: null, contentContainer: null, presetGrid: null, presetColor: null, presetColorSelected: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
 obj2.container = { flex: 1, paddingTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(16784).SHEET_CONTENT_MAX_WIDTH };
+obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(16905).SHEET_CONTENT_MAX_WIDTH };
 let obj4 = { flex: 1, paddingTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.presetGrid = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", columnGap: nativeDefault.space.PX_24, rowGap: nativeDefault.space.PX_20, marginBottom: nativeDefault.space.PX_20 };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 2, borderColor: "transparent" };
@@ -50,7 +50,7 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const tmp8 = color !== tmp5[0] && !arr.some((item) => item.colors[0] === first);
   let obj3 = { colors: tmp5, a11yLabel: null };
   const intl = onSelectColor(1112).intl;
-  let obj = onSelectColor(8583);
+  let obj = onSelectColor(8682);
   const stringResult = intl.string(onSelectColor(1112).t.bBvAEH);
   obj3.a11yLabel = "" + stringResult + ", " + onSelectColor(1089).int2hex(tmp5[0]);
   items = [obj3, ...arr.filter((item) => item.colors[0] !== 32)];
@@ -70,7 +70,7 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
     showCustomColorPickerActionSheetDefault({
       color,
       onSelect(arg0) {
-        const result = onSelectColor(5133).triggerHapticFeedback(onSelectColor(5133).HapticFeedbackTypes.IMPACT_MEDIUM);
+        const result = onSelectColor(5228).triggerHapticFeedback(onSelectColor(5228).HapticFeedbackTypes.IMPACT_MEDIUM);
         closure_1_4(arg0);
       },
       actionButtonVariant: "primary"
@@ -91,12 +91,12 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const obj5 = { title: null, trailing: null };
   const tmp2Result = onSelectColor(1089);
   const intl2 = onSelectColor(1112).intl;
-  obj5.title = intl2.string(_modDef3250["6OxgN7"]);
+  obj5.title = intl2.string(_modDef3302["6OxgN7"]);
   const obj6 = { text: null, onPress: null, variant: "primary", size: "sm" };
   const intl3 = onSelectColor(1112).intl;
   obj6.text = intl3.string(onSelectColor(1112).t.XqMe3N);
   obj6.onPress = callback2;
-  obj5.trailing = closure_8(onSelectColor(5515).Button, obj6);
+  obj5.trailing = closure_8(onSelectColor(5610).Button, obj6);
   obj4.header = closure_8(DisplayNameStylesSheetHeaderDefault, obj5);
   const obj7 = { style: tmp.container, children: null };
   const obj8 = { style: tmp.contentContainer, children: null };
@@ -132,9 +132,9 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const intl4 = onSelectColor(1112).intl;
   obj10.text = intl4.string(onSelectColor(1112).t.yBZMsQ);
   obj10.onPress = onPress;
-  items6[1] = closure_8(onSelectColor(5515).Button, obj10);
+  items6[1] = closure_8(onSelectColor(5610).Button, obj10);
   obj8.children = items6;
   obj7.children = closure_9(closure_5, obj8);
   obj4.children = closure_8(closure_5, obj7);
-  return closure_8(onSelectColor(5145).BottomSheet, obj4);
+  return closure_8(onSelectColor(5240).BottomSheet, obj4);
 };

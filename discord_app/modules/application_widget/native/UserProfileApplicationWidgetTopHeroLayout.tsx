@@ -1,21 +1,21 @@
-// === Module 14434: UserProfileApplicationWidgetTopHeroLayout ===
+// === Module 14557: UserProfileApplicationWidgetTopHeroLayout ===
 
-// Module 14434 (UserProfileApplicationWidgetTopHeroLayout)
+// Module 14557 (UserProfileApplicationWidgetTopHeroLayout)
 import nativeDefault from "native" /* 575 */;
-import UserProfileSharedStyles from "UserProfileSharedStyles" /* 9346 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 14435 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 14478 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 14479 */;
-import UserProfileApplicationWidgetHeroImageDefault from "UserProfileApplicationWidgetHeroImage" /* 14482 */;
+import UserProfileSharedStyles from "UserProfileSharedStyles" /* 9445 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 14558 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 14601 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 14602 */;
+import UserProfileApplicationWidgetHeroImageDefault from "UserProfileApplicationWidgetHeroImage" /* 14605 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const CARD_PADDING = fn(7431).CARD_PADDING;
+const CARD_PADDING = fn(7526).CARD_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { root: { position: "relative" }, contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 }, heroText: null, heroImageColumn: null, heroImageSkeleton: null, heroImagePositioner: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 };
 obj2.heroText = { flex: 1, minWidth: 120, gap: nativeDefault.space.PX_4, justifyContent: "center" };

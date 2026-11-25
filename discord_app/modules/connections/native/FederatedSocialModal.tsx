@@ -1,7 +1,7 @@
-// === Module 7677: FederatedSocialModal ===
+// === Module 7776: FederatedSocialModal ===
 
-// Module 7677 (FederatedSocialModal)
-import PlatformsDefault from "Platforms" /* 6052 */;
+// Module 7776 (FederatedSocialModal)
+import PlatformsDefault from "Platforms" /* 6147 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function FederatedSocialModalScreen(onClose) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -148,7 +148,7 @@ function FederatedSocialModalScreen(onClose) {
 const WebBrowserType = fn(1071).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_9 = createStyles.createStyles({ container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/FederatedSocialModal.tsx");

@@ -1,6 +1,6 @@
-// === Module 5753: Stats ===
+// === Module 5848: Stats ===
 
-// Module 5753 (Stats)
+// Module 5848 (Stats)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/Stats.tsx");

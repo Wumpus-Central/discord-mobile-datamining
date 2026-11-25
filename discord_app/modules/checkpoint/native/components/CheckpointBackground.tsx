@@ -1,13 +1,13 @@
-// === Module 12423: CheckpointBackground ===
+// === Module 12587: CheckpointBackground ===
 
-// Module 12423 (CheckpointBackground)
+// Module 12587 (CheckpointBackground)
 import noop from "module_19" /* 19 */;
 
-let closure_3 = fn(6270).CHECKPOINT_BACKGROUND_GRADIENT;
+let closure_3 = fn(6365).CHECKPOINT_BACKGROUND_GRADIENT;
 const VerticalGradient = fn(1071).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_8 = createStyles.createStyles({ background: { position: "absolute", width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointBackground.tsx");
@@ -24,12 +24,12 @@ export default function CheckpointBackground(gradientStartColor) {
     items = [gradientStartColor, closure_3[1]];
     return items;
   }, items);
-  const items1 = [closure_5(gradientStartColor(5472), { colors: memo, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp2.background }), ];
+  const items1 = [closure_5(gradientStartColor(5567), { colors: memo, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp2.background }), ];
   const obj3 = { source: null, style: null, resizeMode: "cover" };
-  const obj4 = { uri: gradientStartColor(12414) };
+  const obj4 = { uri: gradientStartColor(12578) };
   obj3.source = obj4;
   obj3.style = tmp2.background;
-  items1[1] = closure_5(gradientStartColor(5604), obj3);
+  items1[1] = closure_5(gradientStartColor(5699), obj3);
   obj.children = items1;
   return closure_7(closure_6, obj);
 };

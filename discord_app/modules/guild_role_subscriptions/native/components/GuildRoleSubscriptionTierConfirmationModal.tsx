@@ -1,25 +1,25 @@
-// === Module 20082: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 20187: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 20082 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 20187 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import TableRowGroup from "TableRowGroup" /* 6014 */;
-import FormStylesDefault from "FormStyles" /* 20051 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20053 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 20061 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 20083 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import TableRowGroup from "TableRowGroup" /* 6109 */;
+import FormStylesDefault from "FormStyles" /* 20156 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20158 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 20166 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 20188 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 20050 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 20155 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.coverPhoto = size;
@@ -53,7 +53,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
           c3 = 0;
           closure_128_1(false);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp22) {
         closure_2 = tmp22;

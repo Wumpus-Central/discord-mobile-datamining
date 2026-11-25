@@ -1,13 +1,13 @@
-// === Module 20125: NativeNotificationsManager ===
+// === Module 20230: NativeNotificationsManager ===
 
-// Module 20125 (NativeNotificationsManager)
+// Module 20230 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
-import PushNotificationDefault from "PushNotification" /* 10136 */;
-import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10139 */;
+import PushNotificationDefault from "PushNotification" /* 10235 */;
+import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10238 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6850 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6945 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;
@@ -35,7 +35,7 @@ const prototype = function NativeNotificationsManager() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ const prototype = function NativeNotificationsManager() {
                 if (null == closure_131_3) {
                   c6 = 0;
                   c8 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const _Map = Map;
                   const map = new Map();

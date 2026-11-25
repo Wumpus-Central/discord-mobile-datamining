@@ -1,6 +1,6 @@
-// === Module 13707: ? ===
+// === Module 13830: ? ===
 
-// Module 13707
+// Module 13830
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphonePinkSpotIllustration-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 19141: accountLinkUpsellExperimentConfig ===
+// === Module 19252: accountLinkUpsellExperimentConfig ===
 
-// Module 19141 (accountLinkUpsellExperimentConfig)
+// Module 19252 (accountLinkUpsellExperimentConfig)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_account_linking/experiments/accountLinkUpsellExperimentConfig.tsx");

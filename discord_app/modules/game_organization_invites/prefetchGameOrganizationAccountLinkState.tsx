@@ -1,11 +1,11 @@
-// === Module 12219: prefetchGameOrganizationAccountLinkState ===
+// === Module 12318: prefetchGameOrganizationAccountLinkState ===
 
-// Module 12219 (prefetchGameOrganizationAccountLinkState)
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
+// Module 12318 (prefetchGameOrganizationAccountLinkState)
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6940 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2164 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6263 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11769 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6358 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11868 */;
 
 const require = fn;
 let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
@@ -19,7 +19,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -95,8 +95,8 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
     }
   }
 };
-const FetchState = fn(6263).FetchState;
-let closure_8 = fn(11770).GameOrganizationInviteStates;
+const FetchState = fn(6358).FetchState;
+let closure_8 = fn(11869).GameOrganizationInviteStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/prefetchGameOrganizationAccountLinkState.tsx");
 

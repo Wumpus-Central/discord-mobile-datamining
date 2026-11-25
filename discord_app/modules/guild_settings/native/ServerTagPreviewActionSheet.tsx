@@ -1,18 +1,18 @@
-// === Module 15148: ServerTagPreviewActionSheet ===
+// === Module 15270: ServerTagPreviewActionSheet ===
 
-// Module 15148 (ServerTagPreviewActionSheet)
+// Module 15270 (ServerTagPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8403 */;
-import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 15149 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8502 */;
+import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 15271 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(8401).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(8500).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { error: { paddingVertical: nativeDefault.space.PX_24, alignItems: "center", rowGap: nativeDefault.space.PX_12 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/ServerT
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_8();
-  const guildProfile1 = guildId(8402).useGuildProfile(guildId);
+  const guildProfile1 = guildId(8501).useGuildProfile(guildId);
   let guildProfile = guildProfile1.guildProfile;
   items = [guildId];
   const effect = noop.useEffect(() => {
@@ -40,26 +40,26 @@ export default function ServerTagPreviewActionSheet(guildId) {
     const obj4 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1112).intl;
     obj4.children = intl.string(tmp2(1112).t.tmGHjc);
-    const items1 = [closure_6(tmp2(5508).Text, obj4), ];
+    const items1 = [closure_6(tmp2(5603).Text, obj4), ];
     const obj6 = { variant: "secondary", text: null, onPress: null };
     const intl2 = tmp2(1112).intl;
     obj6.text = intl2.string(tmp2(1112).t["5911Lb"]);
     obj6.onPress = function onPress() {
       return GuildProfileActionCreators.getGuildProfile(guildId, true);
     };
-    items1[1] = closure_6(tmp2(5515).Button, obj6);
+    items1[1] = closure_6(tmp2(5610).Button, obj6);
     obj3.children = items1;
     tmp7 = closure_7(View, obj3);
     tmp8 = closure_6;
   } else {
-    tmp7 = closure_6(tmp2(7269).SceneLoadingIndicator, {});
+    tmp7 = closure_6(tmp2(7364).SceneLoadingIndicator, {});
     tmp8 = closure_6;
   }
   const obj7 = { children: null };
   const obj13 = { title: null };
   const intl3 = tmp2(1112).intl;
   obj13.title = intl3.string(guildId(1112).t["2QmKZ2"]);
-  const items2 = [tmp8(guildId(7381).BottomSheetTitleHeader, obj13), tmp7];
+  const items2 = [tmp8(guildId(7476).BottomSheetTitleHeader, obj13), tmp7];
   obj7.children = items2;
-  return closure_7(guildId(7420).ActionSheet, obj7);
+  return closure_7(guildId(7515).ActionSheet, obj7);
 };

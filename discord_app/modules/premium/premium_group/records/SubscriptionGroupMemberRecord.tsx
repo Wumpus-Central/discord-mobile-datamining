@@ -1,6 +1,6 @@
-// === Module 13777: SubscriptionGroupMemberRecord ===
+// === Module 13900: SubscriptionGroupMemberRecord ===
 
-// Module 13777 (SubscriptionGroupMemberRecord)
+// Module 13900 (SubscriptionGroupMemberRecord)
 import Record from "Record" /* 1406 */;
 import UserRecord from "UserRecord" /* 1405 */;
 

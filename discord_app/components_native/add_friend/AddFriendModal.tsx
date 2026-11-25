@@ -1,17 +1,17 @@
-// === Module 15085: AddFriendModal ===
+// === Module 15207: AddFriendModal ===
 
-// Module 15085 (AddFriendModal)
+// Module 15207 (AddFriendModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6004 */;
-import NavigatorHeader from "NavigatorHeader" /* 7065 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13499 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
+import NavigatorHeader from "NavigatorHeader" /* 7160 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13622 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
-import TextStyles from "TextStyles" /* 6696 */;
+import TextStyles from "TextStyles" /* 6791 */;
 
 const require = globalThis.__r;
 
@@ -109,10 +109,10 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, Fonts } = Constants);
-const ContactPermissions = fn(13497).ContactPermissions;
+const ContactPermissions = fn(13620).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { headerText: null, subheaderText: null, input: null, otherOptionsContainer: null, rowContainer: null };
 let obj3 = {};
 let merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));

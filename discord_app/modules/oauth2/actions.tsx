@@ -1,12 +1,12 @@
-// === Module 7605: oauth2/actions ===
+// === Module 7704: oauth2/actions ===
 
-// Module 7605 (oauth2/actions)
+// Module 7704 (oauth2/actions)
 import utils_PathUtils from "utils/PathUtils" /* 1080 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6713 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6808 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
 
 require = fn;
 function getLocationContextServer() {
@@ -48,7 +48,7 @@ let closure_9 = async function _authorize(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -152,7 +152,7 @@ let closure_10 = async function _fetchAuthorization(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -237,7 +237,7 @@ let closure_11 = async function _startSamsungAuthorization() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -270,7 +270,7 @@ let closure_11 = async function _startSamsungAuthorization() {
           return obj;
         } else {
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp5) {
         c5 = tmp;

@@ -1,7 +1,7 @@
-// === Module 13423: useIsEmptyMessageRequestChat ===
+// === Module 13546: useIsEmptyMessageRequestChat ===
 
-// Module 13423 (useIsEmptyMessageRequestChat)
-import MessageStore from "MessageStore" /* 6265 */;
+// Module 13546 (useIsEmptyMessageRequestChat)
+import MessageStore from "MessageStore" /* 6360 */;
 
 const require = globalThis.__r;
 

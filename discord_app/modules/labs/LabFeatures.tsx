@@ -1,6 +1,6 @@
-// === Module 14026: LabFeatures ===
+// === Module 14149: LabFeatures ===
 
-// Module 14026 (LabFeatures)
+// Module 14149 (LabFeatures)
 import size from "module_2" /* 2 */;
 
 const obj = { hide_icymi_tab: { description: "Hide ICYMI tab" }, go_back_to_regular_input: { description: "Go back to regular input" }, enable_native_markdown: { description: "Enable native markdown parser", defaultValue: true } };

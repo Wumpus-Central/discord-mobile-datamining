@@ -1,16 +1,16 @@
-// === Module 7976: DraftStore ===
+// === Module 8075: DraftStore ===
 
-// Module 7976 (DraftStore)
+// Module 8075 (DraftStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import DraftCommand from "DraftCommand" /* 7977 */;
+import DraftCommand from "DraftCommand" /* 8076 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6040 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6135 */;
 
 require = fn;
 function handleChanged(type) {

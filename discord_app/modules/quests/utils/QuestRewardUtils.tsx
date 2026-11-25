@@ -1,17 +1,17 @@
-// === Module 9767: QuestRewardUtils ===
+// === Module 9866: QuestRewardUtils ===
 
-// Module 9767 (QuestRewardUtils)
+// Module 9866 (QuestRewardUtils)
 import util from "util" /* 1112 */;
 import _modDef2168 from "module_2168" /* 2168 */;
-import QuestTypes from "QuestTypes" /* 6748 */;
-import QuestDataUtils from "QuestDataUtils" /* 8220 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 8229 */;
-import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 9768 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9769 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9770 */;
-import FractionalPremiumUtils from "FractionalPremiumUtils" /* 9771 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9772 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 9773 */;
+import QuestTypes from "QuestTypes" /* 6843 */;
+import QuestDataUtils from "QuestDataUtils" /* 8319 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 8328 */;
+import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 9867 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9868 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9869 */;
+import FractionalPremiumUtils from "FractionalPremiumUtils" /* 9870 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9871 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 9872 */;
 import size from "module_2" /* 2 */;
 
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {

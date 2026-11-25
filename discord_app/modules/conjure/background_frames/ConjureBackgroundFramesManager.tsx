@@ -1,8 +1,8 @@
-// === Module 19511: ConjureBackgroundFramesManager ===
+// === Module 19622: ConjureBackgroundFramesManager ===
 
-// Module 19511 (ConjureBackgroundFramesManager)
+// Module 19622 (ConjureBackgroundFramesManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7349 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
 
 const require = fn;
 function handleFrameLaunchStart() {
@@ -26,7 +26,7 @@ let closure_4 = async function _handleFrameLaunchStart(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

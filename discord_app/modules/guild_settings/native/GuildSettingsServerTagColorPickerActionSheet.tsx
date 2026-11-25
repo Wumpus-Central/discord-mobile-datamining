@@ -1,22 +1,22 @@
-// === Module 19858: GuildSettingsServerTagColorPickerActionSheet ===
+// === Module 19963: GuildSettingsServerTagColorPickerActionSheet ===
 
-// Module 19858 (GuildSettingsServerTagColorPickerActionSheet)
+// Module 19963 (GuildSettingsServerTagColorPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 4914 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 15890 */;
+import ColorUtils from "ColorUtils" /* 5009 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 16011 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8438);
+const GuildTagConstants = fn(8537);
 ({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6, GUILD_TAG_BADGE_PALETTE_PRESETS: metroImportDefault, GuildTagBadgeSize: closure_8 } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 let closure_12 = { leading: true, trailing: true };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_13 = createStyles.createStyles((width) => {
   const obj = { container: { paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 }, preview: null, previewChiplet: null, colorTabs: null, saturationValuePicker: null, saturationValueColorBox: null, saturationValueColorBoxInner: null, selector: null, huePicker: null, hueColorBarInner: null, hexInput: null, buttonGroup: null };
   const obj2 = { paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 };

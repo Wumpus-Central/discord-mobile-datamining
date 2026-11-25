@@ -1,16 +1,16 @@
-// === Module 7515: RPCServer ===
+// === Module 7610: RPCServer ===
 
-// Module 7515 (RPCServer)
+// Module 7610 (RPCServer)
 import applyDefault from "apply" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import transformUserDefault from "transformUser" /* 7516 */;
-import RPCErrorDefault from "RPCError" /* 7518 */;
-import validateScopeDefault from "validateScope" /* 7520 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 7523 */;
+import transformUserDefault from "transformUser" /* 7611 */;
+import RPCErrorDefault from "RPCError" /* 7613 */;
+import validateScopeDefault from "validateScope" /* 7615 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 7618 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const TransportTypes = fn(5671).TransportTypes;
+const TransportTypes = fn(5766).TransportTypes;
 const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: closure_6, RPCCommands: metroImportDefault, RPCErrors: closure_8, RPCEvents: closure_9 } = Constants);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
@@ -95,7 +95,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

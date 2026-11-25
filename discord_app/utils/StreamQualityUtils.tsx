@@ -1,24 +1,24 @@
-// === Module 5902: StreamQualityUtils ===
+// === Module 5997: StreamQualityUtils ===
 
-// Module 5902 (StreamQualityUtils)
+// Module 5997 (StreamQualityUtils)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5904 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5999 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5903 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5998 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5725 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const StreamSettingsConstants = fn(5817);
+const StreamSettingsConstants = fn(5912);
 ({ ApplicationStreamFPS: closure_10, ApplicationStreamResolutions: closure_11, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = StreamSettingsConstants);
 let closure_15 = fn(1388).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5729).ResolutionTypes;
+const ResolutionTypes = fn(5824).ResolutionTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("utils/StreamQualityUtils.tsx");
 

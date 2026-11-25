@@ -1,10 +1,10 @@
-// === Module 9258: usePromotionMarketingSurface ===
+// === Module 9357: usePromotionMarketingSurface ===
 
-// Module 9258 (usePromotionMarketingSurface)
-import passesTrialOfferGateDefault from "passesTrialOfferGate" /* 9261 */;
+// Module 9357 (usePromotionMarketingSurface)
+import passesTrialOfferGateDefault from "passesTrialOfferGate" /* 9360 */;
 import noop from "module_19" /* 19 */;
-import UserOfferStore from "UserOfferStore" /* 8998 */;
-import PromotionsStore from "PromotionsStore" /* 9021 */;
+import UserOfferStore from "UserOfferStore" /* 9097 */;
+import PromotionsStore from "PromotionsStore" /* 9120 */;
 
 const require = globalThis.__r;
 

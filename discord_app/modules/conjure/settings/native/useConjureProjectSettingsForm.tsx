@@ -1,17 +1,17 @@
-// === Module 18324: useConjureProjectSettingsForm ===
+// === Module 18436: useConjureProjectSettingsForm ===
 
-// Module 18324 (useConjureProjectSettingsForm)
+// Module 18436 (useConjureProjectSettingsForm)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import _modDef4192 from "module_4192" /* 4192 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
-import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18330 */;
+import _modDef4244 from "module_4244" /* 4244 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6904 */;
+import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18442 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4823 */;
+import GuildRoleStore from "GuildRoleStore" /* 4918 */;
 
 const require = globalThis.__r;
 
@@ -83,12 +83,12 @@ function ConjureCollaboratorRolesSheet(guildId) {
   let obj2 = { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES };
   const obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, footer: null, header: null, children: null };
   const intl2 = guildId(onSave[12]).intl;
-  obj3.dismissAccessibilityLabel = intl2.string(require("module_4192").un99lK);
-  let formatToPlainStringResult = intl.formatToPlainString(require("module_4192").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES });
-  obj3.footer = closure_9(closure_6, { style: tmp.roleListFooter, children: closure_9(guildId(onSave[15]).Text, { variant: "body-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_4192").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
+  obj3.dismissAccessibilityLabel = intl2.string(require("module_4244").un99lK);
+  let formatToPlainStringResult = intl.formatToPlainString(require("module_4244").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES });
+  obj3.footer = closure_9(closure_6, { style: tmp.roleListFooter, children: closure_9(guildId(onSave[15]).Text, { variant: "body-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_4244").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
   const obj5 = { title: null, trailing: null };
   const intl3 = guildId(onSave[12]).intl;
-  obj5.title = intl3.string(require("module_4192")["pO3+p5"]);
+  obj5.title = intl3.string(require("module_4244")["pO3+p5"]);
   const obj6 = { label: null, onPress: null };
   const intl4 = guildId(onSave[12]).intl;
   obj6.label = intl4.string(guildId(onSave[12]).t.i4jeWR);
@@ -142,7 +142,7 @@ function ConjureCollaboratorRolesSheet(guildId) {
           if (tmp3) {
             const intl = guildId(onSave[12]).intl;
             const obj4 = { max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES };
-            formatToPlainStringResult = intl.formatToPlainString(require("module_4192")["dH7+/Z"], obj4);
+            formatToPlainStringResult = intl.formatToPlainString(require("module_4244")["dH7+/Z"], obj4);
           }
           obj2.accessibilityHint = formatToPlainStringResult;
           obj2.onPress = function onPress(arg0) {
@@ -163,7 +163,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1071).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(4917);
+let createStyles = fn(5012);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, collaboratorRolesSubLabel: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -176,7 +176,7 @@ obj2.collaboratorRolesSubLabel = { gap: nativeDefault.space.PX_8 };
 let obj7 = { gap: nativeDefault.space.PX_8 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_12 = createStyles.createStyles(obj2);
-createStyles = fn(4917);
+createStyles = fn(5012);
 let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -234,7 +234,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     if (showsManageServerDefault) {
       let obj = { id: "anyone_with_manage_server", label: null };
       const intl = util.intl;
-      obj.label = intl.string(_modDef4192.Ukbq9W);
+      obj.label = intl.string(_modDef4244.Ukbq9W);
       items = [obj];
       let mapped = items;
     } else {
@@ -271,7 +271,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -299,7 +299,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
         } else if (1 === tmp7) {
           sharingOptions = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -321,7 +321,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
             const obj = tmp3(sharingOptions[11]);
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
         sharingOptions = 0;
@@ -378,7 +378,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       obj7.disabled = tmp21;
       obj7.onPress = function onPress() {
         const obj = ActionSheetActionCreatorsDefault;
-        return obj.openLazy(asyncRequireImpl(18330, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, { options: sharingOptions, value, onChange }, "stack");
+        return obj.openLazy(asyncRequireImpl(18442, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, { options: sharingOptions, value, onChange }, "stack");
       };
       obj9.children = tmp17(tmp7(tmp3[25]).TableRow, obj7);
       tmp17Result10 = tmp17(tmp7(tmp3[19]).TableRowGroup, obj9);
@@ -493,18 +493,18 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   const obj27 = { hasIcons: false, children: null };
   const obj28 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
   const intl11 = tmp7(tmp3[12]).intl;
-  obj28.label = intl11.string(require("module_4192")["4liZ45"]);
+  obj28.label = intl11.string(require("module_4244")["4liZ45"]);
   const intl12 = tmp7(tmp3[12]).intl;
-  obj28.subLabel = intl12.string(require("module_4192").I5cl7p);
+  obj28.subLabel = intl12.string(require("module_4244").I5cl7p);
   obj28.checked = smartContext.checked;
   obj28.disabled = saving;
   obj28.onPress = handleSmartContextChange;
   const items7 = [stateFromStoresArray(require("TableCheckboxRow").TableCheckboxRow, obj28), ];
   const obj29 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
   const intl13 = tmp7(tmp3[12]).intl;
-  obj29.label = intl13.string(require("module_4192").mpjaVm);
+  obj29.label = intl13.string(require("module_4244").mpjaVm);
   const intl14 = tmp7(tmp3[12]).intl;
-  obj29.subLabel = intl14.string(require("module_4192")["2PxChh"]);
+  obj29.subLabel = intl14.string(require("module_4244")["2PxChh"]);
   obj29.checked = hostApproval.checked;
   obj29.disabled = saving;
   obj29.onPress = handleRequireHostApprovalChange;

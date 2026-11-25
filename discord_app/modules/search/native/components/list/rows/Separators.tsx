@@ -1,13 +1,13 @@
-// === Module 18785: Separators ===
+// === Module 18896: Separators ===
 
-// Module 18785 (Separators)
+// Module 18896 (Separators)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-const SearchConstants = fn(8878);
+const SearchConstants = fn(8977);
 ({ MEDIA_ITEM_GAP_WIDTH, FILES_OR_LINKS_GAP_WIDTH } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_2 = createStyles.createStyles({ filesOrLinksSeparator: { height: FILES_OR_LINKS_GAP_WIDTH }, mediaSeparator: { height: MEDIA_ITEM_GAP_WIDTH }, messageSeparator: { height: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/Separators.tsx");

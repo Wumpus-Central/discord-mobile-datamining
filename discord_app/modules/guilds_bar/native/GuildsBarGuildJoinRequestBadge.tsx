@@ -1,23 +1,23 @@
-// === Module 17917: GuildsBarGuildJoinRequestBadge ===
+// === Module 18029: GuildsBarGuildJoinRequestBadge ===
 
-// Module 17917 (GuildsBarGuildJoinRequestBadge)
+// Module 18029 (GuildsBarGuildJoinRequestBadge)
 import nativeDefault from "native" /* 575 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4953 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import _modDef13061 from "module_13061" /* 13061 */;
-import _modDef17918 from "module_17918" /* 17918 */;
-import _modDef17919 from "module_17919" /* 17919 */;
-import _modDef17920 from "module_17920" /* 17920 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import _modDef13184 from "module_13184" /* 13184 */;
+import _modDef18030 from "module_18030" /* 18030 */;
+import _modDef18031 from "module_18031" /* 18031 */;
+import _modDef18032 from "module_18032" /* 18032 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { badgeImageContainer: null, badgeImage: null };
 let size = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(6742).DARK_1_LIGHT_08 };
+const size1 = { height: 16, width: 16, opacity: fn(6837).DARK_1_LIGHT_08 };
 obj2.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -27,15 +27,15 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = closure_5();
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = _modDef17918;
+    let tmp4 = _modDef18030;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = _modDef17919;
+    tmp4 = _modDef18031;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = _modDef17920;
+    tmp4 = _modDef18032;
   } else {
     tmp4 = null;
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef13061;
+      tmp4 = _modDef13184;
     }
   }
   let tmp9 = null;

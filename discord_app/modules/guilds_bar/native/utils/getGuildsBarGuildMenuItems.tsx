@@ -1,10 +1,10 @@
-// === Module 17904: getGuildsBarGuildMenuItems ===
+// === Module 18016: getGuildsBarGuildMenuItems ===
 
-// Module 17904 (getGuildsBarGuildMenuItems)
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7350 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15142 */;
+// Module 18016 (getGuildsBarGuildMenuItems)
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7445 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4788 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -60,7 +60,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
             items = [closure_128_0];
             value.default(items, constants.GUILD_LIST);
             paths = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp11) {
           paths = tmp;

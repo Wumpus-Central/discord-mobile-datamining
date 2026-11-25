@@ -1,18 +1,18 @@
-// === Module 13004: ImageInputActionSheet ===
+// === Module 13127: ImageInputActionSheet ===
 
-// Module 13004 (ImageInputActionSheet)
+// Module 13127 (ImageInputActionSheet)
 import nativeDefault from "native" /* 575 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 13005 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 13128 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(12084).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
+let closure_5 = fn(12183).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 }, emojiIcon: { marginRight: 12, borderRadius: nativeDefault.radii.sm } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

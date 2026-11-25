@@ -1,14 +1,14 @@
-// === Module 11887: useBatchUpdateSelectOption ===
+// === Module 11986: useBatchUpdateSelectOption ===
 
-// Module 11887 (useBatchUpdateSelectOption)
+// Module 11986 (useBatchUpdateSelectOption)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1254 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7334 */;
-import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11888 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7429 */;
+import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11987 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6041 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7329 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7424 */;
 
 const require = globalThis.__r;
 

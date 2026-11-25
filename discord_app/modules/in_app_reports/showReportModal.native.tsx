@@ -1,7 +1,7 @@
-// === Module 8052: showReportModal ===
+// === Module 8151: showReportModal ===
 
-// Module 8052 (showReportModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6004 */;
+// Module 8151 (showReportModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ let closure_5 = async function _showReportModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

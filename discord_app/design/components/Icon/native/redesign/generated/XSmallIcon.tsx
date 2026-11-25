@@ -1,9 +1,9 @@
-// === Module 7121: XSmallIcon ===
+// === Module 7216: XSmallIcon ===
 
-// Module 7121 (XSmallIcon)
+// Module 7216 (XSmallIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod7122 from "module_7122" /* 7122 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod7217 from "module_7217" /* 7217 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function XSmallIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7122, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7217, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

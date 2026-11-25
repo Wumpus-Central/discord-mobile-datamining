@@ -1,22 +1,22 @@
-// === Module 10938: ImageCarousel ===
+// === Module 11037: ImageCarousel ===
 
-// Module 10938 (ImageCarousel)
+// Module 11037 (ImageCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import useWindowDimensions from "useWindowDimensions" /* 1494 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import Pressables from "Pressables" /* 6026 */;
-import _modDef7177 from "module_7177" /* 7177 */;
-import Upload from "Upload" /* 7985 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9921 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10569 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10940 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10942 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import Pressables from "Pressables" /* 6121 */;
+import _modDef7272 from "module_7272" /* 7272 */;
+import Upload from "Upload" /* 8084 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10020 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 10668 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 11039 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11041 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7983 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8082 */;
 
 require = fn;
 function useTileEntranceAnimatedStyle(itemKey) {
@@ -329,14 +329,14 @@ class ImageCarouselRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7976).DraftType;
-const ImageCarouselConstants = fn(10939);
+const DraftType = fn(8075).DraftType;
+const ImageCarouselConstants = fn(11038);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: { width: "100%" }, pressableContainer: { marginHorizontal: 4 }, tileContainer: { position: "relative", minWidth: 60, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: nativeDefault.radii.md - 1 }, decorationsContainer: null, highlightedTileContainer: null, closeButton: null, scrollview: null, closeContainer: null, closeButtonIcon: null, altTagText: null, iconContainer: null, spoilerOverlay: null, footerRightContainer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

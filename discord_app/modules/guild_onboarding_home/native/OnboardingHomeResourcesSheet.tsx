@@ -1,25 +1,25 @@
-// === Module 18247: OnboardingHomeResourcesSheet ===
+// === Module 18359: OnboardingHomeResourcesSheet ===
 
-// Module 18247 (OnboardingHomeResourcesSheet)
+// Module 18359 (OnboardingHomeResourcesSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13057 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 18246 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13180 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 18358 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(18245).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(18357).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");
 
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
-  importDefault = guildId(5481).useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
-  let obj = guildId(5481);
+  importDefault = guildId(5576).useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
+  let obj = guildId(5576);
   let obj2 = { children: null };
   const arr = useResourceChannelsDefault(guildId);
-  obj2.children = jsx(guildId(7422).ActionSheetRow.Group, {
+  obj2.children = jsx(guildId(7517).ActionSheetRow.Group, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       const resourceChannelIconURL = height(dependencyMap[10]).getResourceChannelIconURL(label);
@@ -41,5 +41,5 @@ export default function OnboardingHomeResourcesSheet(guildId) {
       return jsx(guildId(dependencyMap[9]).ActionSheetRow, { label: label.title, icon: null, onPress: null, arrow: true }, label.channelId);
     })
   });
-  return jsx(guildId(7420).ActionSheet, { children: null });
+  return jsx(guildId(7515).ActionSheet, { children: null });
 };

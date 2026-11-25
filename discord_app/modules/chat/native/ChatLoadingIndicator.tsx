@@ -1,20 +1,20 @@
-// === Module 13917: ChatLoadingIndicator ===
+// === Module 14040: ChatLoadingIndicator ===
 
-// Module 13917 (ChatLoadingIndicator)
+// Module 14040 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5921 */;
-import Pressables from "Pressables" /* 6026 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6016 */;
+import Pressables from "Pressables" /* 6121 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5723 */;
-import MessageStore from "MessageStore" /* 6265 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4820 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5818 */;
+import MessageStore from "MessageStore" /* 6360 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
 import UserStore from "UserStore" /* 1386 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
 
@@ -58,7 +58,7 @@ const View = fn(17).View;
 const AppStates = fn(1071).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = { height: 8, width: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.pulse = size;

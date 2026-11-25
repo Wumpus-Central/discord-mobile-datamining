@@ -1,9 +1,9 @@
-// === Module 19412: useShowConnectedControls ===
+// === Module 19523: useShowConnectedControls ===
 
-// Module 19412 (useShowConnectedControls)
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8478 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11634 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18077 */;
+// Module 19523 (useShowConnectedControls)
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8577 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18189 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

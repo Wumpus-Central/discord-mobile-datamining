@@ -1,9 +1,9 @@
-// === Module 8234: Quest ===
+// === Module 8333: Quest ===
 
-// Module 8234 (Quest)
-import Task from "Task" /* 8235 */;
-import Reward from "Reward" /* 8239 */;
-import CTA from "CTA" /* 8240 */;
+// Module 8333 (Quest)
+import Task from "Task" /* 8334 */;
+import Reward from "Reward" /* 8338 */;
+import CTA from "CTA" /* 8339 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");

@@ -1,6 +1,6 @@
-// === Module 5650: Constants ===
+// === Module 5745: Constants ===
 
-// Module 5650 (Constants)
+// Module 5745 (Constants)
 import size from "module_2" /* 2 */;
 
 const obj = { GUILD: 0, [0]: "GUILD", GROUP_DM: 1, [1]: "GROUP_DM", FRIEND: 2, [2]: "FRIEND" };

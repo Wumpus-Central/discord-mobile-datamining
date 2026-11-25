@@ -1,22 +1,22 @@
-// === Module 19493: background_sync/BackgroundSync ===
+// === Module 19604: background_sync/BackgroundSync ===
 
-// Module 19493 (background_sync/BackgroundSync)
+// Module 19604 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4795 */;
-import modules_Messages from "modules/Messages" /* 8110 */;
-import GuildVersionsDefault from "GuildVersions" /* 8175 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 8176 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 8178 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4890 */;
+import modules_Messages from "modules/Messages" /* 8209 */;
+import GuildVersionsDefault from "GuildVersions" /* 8274 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 8275 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 8277 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import "ChannelStore";
-import ReadStateStore from "ReadStateStore" /* 6806 */;
+import ReadStateStore from "ReadStateStore" /* 6901 */;
 import AppStateStore from "AppStateStore" /* 2118 */;
-import FileSystemStore from "FileSystemStore" /* 8112 */;
+import FileSystemStore from "FileSystemStore" /* 8211 */;
 
 require = fn;
 let closure_17 = async function _backgroundSync(arg0) {
@@ -35,7 +35,7 @@ let closure_17 = async function _backgroundSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -272,7 +272,7 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -403,7 +403,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -617,7 +617,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {
@@ -920,7 +920,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {
@@ -979,7 +979,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             }
           }
           c12 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -1040,14 +1040,14 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(4770);
+const ChannelRecord = fn(4865);
 ({ isPrivate: hasOwnProperty, isThread: closure_6 } = ChannelRecord);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(6801);
-const ChannelStore = fn(4766);
-const EmojiStore = fn(6757);
-const GuildStore = fn(4788);
+const StickersStore = fn(6896);
+const ChannelStore = fn(4861);
+const EmojiStore = fn(6852);
+const GuildStore = fn(4883);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;
 const lastSyncTime = "lastSyncTime";

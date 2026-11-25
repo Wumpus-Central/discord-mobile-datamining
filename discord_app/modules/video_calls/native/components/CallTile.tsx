@@ -1,23 +1,23 @@
-// === Module 10428: CallTile ===
+// === Module 10527: CallTile ===
 
-// Module 10428 (CallTile)
+// Module 10527 (CallTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6007 */;
-import _modDef7640 from "module_7640" /* 7640 */;
-import RevealProvider from "RevealProvider" /* 9875 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10429 */;
-import _modDef10434 from "module_10434" /* 10434 */;
-import _modDef10435 from "module_10435" /* 10435 */;
-import _modDef10436 from "module_10436" /* 10436 */;
-import _modDef10437 from "module_10437" /* 10437 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 10438 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6098 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6102 */;
+import _modDef7739 from "module_7739" /* 7739 */;
+import RevealProvider from "RevealProvider" /* 9974 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10528 */;
+import _modDef10533 from "module_10533" /* 10533 */;
+import _modDef10534 from "module_10534" /* 10534 */;
+import _modDef10535 from "module_10535" /* 10535 */;
+import _modDef10536 from "module_10536" /* 10536 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 10537 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -45,17 +45,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef10434;
+    let tmp3 = _modDef10533;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef10435;
+      tmp3 = _modDef10534;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef7640;
+      tmp3 = _modDef7739;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef10436;
+      tmp3 = _modDef10535;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef10437;
+      tmp3 = _modDef10536;
     }
   }
   let tmp14 = null;
@@ -157,16 +157,16 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9867);
+const ChannelCallStore = fn(9966);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5567);
+const CallConstants = fn(5662);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-const ColorUtils = fn(4914);
+const ColorUtils = fn(5009);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;

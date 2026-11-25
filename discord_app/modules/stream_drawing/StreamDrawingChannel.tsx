@@ -1,9 +1,9 @@
-// === Module 14972: StreamDrawingChannel ===
+// === Module 15094: StreamDrawingChannel ===
 
-// Module 14972 (StreamDrawingChannel)
-import StreamKeyUtils from "StreamKeyUtils" /* 6690 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildStore from "GuildStore" /* 4788 */;
+// Module 15094 (StreamDrawingChannel)
+import StreamKeyUtils from "StreamKeyUtils" /* 6785 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildStore from "GuildStore" /* 4883 */;
 
 require = fn;
 const size = fn(2);

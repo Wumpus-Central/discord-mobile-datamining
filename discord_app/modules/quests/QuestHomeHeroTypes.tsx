@@ -1,11 +1,11 @@
-// === Module 9780: QuestHomeHeroTypes ===
+// === Module 9879: QuestHomeHeroTypes ===
 
-// Module 9780 (QuestHomeHeroTypes)
+// Module 9879 (QuestHomeHeroTypes)
 import SentryUtilsDefault from "SentryUtils" /* 1241 */;
-import QuestServerUtils from "QuestServerUtils" /* 8233 */;
-import AssetUtils from "AssetUtils" /* 9762 */;
-import QuestSeriesExperiment2 from "QuestSeriesExperiment" /* 9781 */;
-import QuestHomeHeroCta from "QuestHomeHeroCta" /* 9782 */;
+import QuestServerUtils from "QuestServerUtils" /* 8332 */;
+import AssetUtils from "AssetUtils" /* 9861 */;
+import QuestSeriesExperiment2 from "QuestSeriesExperiment" /* 9880 */;
+import QuestHomeHeroCta from "QuestHomeHeroCta" /* 9881 */;
 import size from "module_2" /* 2 */;
 
 function questSeriesFromServer(quest_series) {

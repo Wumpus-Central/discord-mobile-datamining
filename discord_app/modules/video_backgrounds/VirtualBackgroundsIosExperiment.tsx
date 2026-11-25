@@ -1,6 +1,6 @@
-// === Module 5901: VirtualBackgroundsIosExperiment ===
+// === Module 5996: VirtualBackgroundsIosExperiment ===
 
-// Module 5901 (VirtualBackgroundsIosExperiment)
+// Module 5996 (VirtualBackgroundsIosExperiment)
 import ApexExperiment from "ApexExperiment" /* 1450 */;
 import size from "module_2" /* 2 */;
 

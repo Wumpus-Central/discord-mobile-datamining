@@ -1,11 +1,11 @@
-// === Module 19321: useTapGestures ===
+// === Module 19432: useTapGestures ===
 
-// Module 19321 (useTapGestures)
+// Module 19432 (useTapGestures)
 import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import HapticUtils from "HapticUtils" /* 5133 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5177 */;
-import spring_spring from "spring/spring" /* 5518 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import HapticUtils from "HapticUtils" /* 5228 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
+import spring_spring from "spring/spring" /* 5613 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useTap
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11634)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11733)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   closure_4 = tmp2;

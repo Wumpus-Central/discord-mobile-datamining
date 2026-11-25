@@ -1,13 +1,13 @@
-// === Module 9754: VirtualCurrencyUtils ===
+// === Module 9853: VirtualCurrencyUtils ===
 
-// Module 9754 (VirtualCurrencyUtils)
+// Module 9853 (VirtualCurrencyUtils)
 import Constants from "Constants" /* 1071 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1073 */;
 import PremiumConstants from "PremiumConstants" /* 1388 */;
-import dismissible_content from "dismissible_content" /* 4750 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4949 */;
-import SocialLayerStorefrontConstants from "SocialLayerStorefrontConstants" /* 7465 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 4763 */;
+import dismissible_content from "dismissible_content" /* 4845 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
+import SocialLayerStorefrontConstants from "SocialLayerStorefrontConstants" /* 7560 */;
+import DismissibleContentConstants from "DismissibleContentConstants" /* 4858 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Constants.COLLECTIBLES_APPLICATION_ID;

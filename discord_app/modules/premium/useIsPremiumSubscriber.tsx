@@ -1,6 +1,6 @@
-// === Module 9678: useIsPremiumSubscriber ===
+// === Module 9777: useIsPremiumSubscriber ===
 
-// Module 9678 (useIsPremiumSubscriber)
+// Module 9777 (useIsPremiumSubscriber)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
 import UserStore from "UserStore" /* 1386 */;
 

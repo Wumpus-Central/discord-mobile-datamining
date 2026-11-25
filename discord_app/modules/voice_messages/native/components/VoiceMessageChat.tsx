@@ -1,15 +1,15 @@
-// === Module 13472: VoiceMessageChat ===
+// === Module 13595: VoiceMessageChat ===
 
-// Module 13472 (VoiceMessageChat)
+// Module 13595 (VoiceMessageChat)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5127 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import springPresets from "springPresets" /* 5519 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 8013 */;
+import timing_timing from "timing/timing" /* 5222 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import springPresets from "springPresets" /* 5614 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 8112 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4918 */;
+import AccessibilityStore from "AccessibilityStore" /* 5013 */;
 
 const require = globalThis.__r;
 const module_1653 = _mod1653;
@@ -195,19 +195,19 @@ function Duration(animationValue) {
   }
   obj4.color = str;
   obj4.children = memo;
-  items7[1] = closure_13(tmp8(5508).Text, obj4);
+  items7[1] = closure_13(tmp8(5603).Text, obj4);
   obj3.children = items7;
   return closure_14(tmp10(1653).View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12742).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(12743);
+const useVoiceMessagesUIStore = fn(12906).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(12907);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: closure_10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = module_1653.createAnimatedComponent(ActivityIndicator);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { container: { height: "100%", flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL, gap: nativeDefault.modules.mobile.VOICE_MESSAGE_CHAT_GAP, borderRadius: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE }, loading: { position: "absolute", left: 12 }, dot: null, dotDismissed: null, waveformContainer: null, waveformBar: null, durationContainer: null, duration: null };
 let size = { height: 6, width: 6, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, borderRadius: nativeDefault.radii.round };
 obj.dot = size;
@@ -254,7 +254,7 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
     if (!timeout) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const obj = c0(5127);
+        const obj = c0(5222);
         const result = _undefined2.set(obj.withTiming(1, { easing: c0(1653).Easing.quad, duration: 200 }));
       }, 1000);
       return () => {

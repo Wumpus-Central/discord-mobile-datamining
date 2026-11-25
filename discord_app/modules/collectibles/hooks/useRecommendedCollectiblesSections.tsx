@@ -1,9 +1,9 @@
-// === Module 14286: useRecommendedCollectiblesSections ===
+// === Module 14409: useRecommendedCollectiblesSections ===
 
-// Module 14286 (useRecommendedCollectiblesSections)
+// Module 14409 (useRecommendedCollectiblesSections)
 import _mod19 from "module_19" /* 19 */;
-import useInitialValueDefault from "useInitialValue" /* 5496 */;
-import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 14287 */;
+import useInitialValueDefault from "useInitialValue" /* 5591 */;
+import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 14410 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

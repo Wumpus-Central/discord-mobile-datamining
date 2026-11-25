@@ -1,8 +1,8 @@
-// === Module 5046: BountiesScrollIndicatorRive ===
+// === Module 5141: BountiesScrollIndicatorRive ===
 
-// Module 5046 (BountiesScrollIndicatorRive)
-import BaseRive from "BaseRive" /* 4986 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5039 */;
+// Module 5141 (BountiesScrollIndicatorRive)
+import BaseRive from "BaseRive" /* 5081 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5134 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

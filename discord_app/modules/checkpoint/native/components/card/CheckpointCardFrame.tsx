@@ -1,12 +1,12 @@
-// === Module 12434: CheckpointCardFrame ===
+// === Module 12598: CheckpointCardFrame ===
 
-// Module 12434 (CheckpointCardFrame)
+// Module 12598 (CheckpointCardFrame)
 import nativeDefault from "native" /* 575 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6296 */;
-import inlineStyles from "inlineStyles" /* 7813 */;
-import ClydeIcon from "ClydeIcon" /* 11507 */;
-import _modDef12435 from "module_12435" /* 12435 */;
-import CheckpointCharacterCompositeDefault from "CheckpointCharacterComposite" /* 12436 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6391 */;
+import inlineStyles from "inlineStyles" /* 7912 */;
+import ClydeIcon from "ClydeIcon" /* 11606 */;
+import _modDef12599 from "module_12599" /* 12599 */;
+import CheckpointCharacterCompositeDefault from "CheckpointCharacterComposite" /* 12600 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -21,7 +21,7 @@ let c10 = 0;
 let c11 = 432;
 let c12 = 326;
 const styles = { x: -1, y: 0, width: 433, height: 469 };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_14 = createStyles.createStyles({ canvas: { overflow: "hidden", transformOrigin: "top left" }, layer: { position: "absolute", top: 0, left: 0 }, cardTexture: { isolation: "isolate" }, textureOverlay: { mixBlendMode: "overlay" }, logo: { position: "absolute", top: 0, left: 0, width: 44, height: 44, alignItems: "center", justifyContent: "center" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/card/CheckpointCardFrame.tsx");
@@ -106,7 +106,7 @@ export default function CheckpointCardFrame(canvasHeight) {
     const obj9 = { rotation: 180, origin: null, children: null };
     const _HermesInternal4 = HermesInternal;
     obj9.origin = "" + x + width / 2 + ", " + c10 + c12 / 2;
-    const size3 = { href: _modDef12435, x, y: c10 - 0.4348 * c12, width, height: 1.4348 * c12, preserveAspectRatio: "none" };
+    const size3 = { href: _modDef12599, x, y: c10 - 0.4348 * c12, width, height: 1.4348 * c12, preserveAspectRatio: "none" };
     obj9.children = timestampProducer(inlineStyles.Image, size3);
     obj8.children = timestampProducer(inlineStyles.G, obj9);
     items8[1] = timestampProducer(inlineStyles.G, obj8);
@@ -133,7 +133,7 @@ export default function CheckpointCardFrame(canvasHeight) {
     const obj13 = { rotation: 180, origin: null, children: null };
     const _HermesInternal7 = HermesInternal;
     obj13.origin = "" + styles.x + styles.width / 2 + ", " + styles.y + styles.height / 2;
-    const obj14 = { href: _modDef12435 };
+    const obj14 = { href: _modDef12599 };
     const merged = Object.assign(styles);
     obj14.opacity = 0.5;
     obj14.preserveAspectRatio = "xMidYMid slice";
@@ -158,7 +158,7 @@ export default function CheckpointCardFrame(canvasHeight) {
     obj16.children = timestampProducer(inlineStyles.Rect, size7);
     obj15.children = timestampProducer(inlineStyles.ClipPath, obj16);
     const items13 = [timestampProducer(inlineStyles.Defs, obj15), ];
-    const size8 = { href: _modDef12435, width: canvasWidth, height: num, preserveAspectRatio: "xMidYMid slice", clipPath: null };
+    const size8 = { href: _modDef12599, width: canvasWidth, height: num, preserveAspectRatio: "xMidYMid slice", clipPath: null };
     const _HermesInternal = HermesInternal;
     size8.clipPath = "url(#" + id + ")";
     items13[1] = timestampProducer(inlineStyles.Image, size8);

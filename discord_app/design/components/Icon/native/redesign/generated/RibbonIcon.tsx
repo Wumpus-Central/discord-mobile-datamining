@@ -1,9 +1,9 @@
-// === Module 14386: RibbonIcon ===
+// === Module 14509: RibbonIcon ===
 
-// Module 14386 (RibbonIcon)
+// Module 14509 (RibbonIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod14387 from "module_14387" /* 14387 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod14510 from "module_14510" /* 14510 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function RibbonIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14387, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14510, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

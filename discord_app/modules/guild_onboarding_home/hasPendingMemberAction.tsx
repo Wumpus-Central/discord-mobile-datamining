@@ -1,16 +1,16 @@
-// === Module 8031: hasPendingMemberAction ===
+// === Module 8130: hasPendingMemberAction ===
 
-// Module 8031 (hasPendingMemberAction)
+// Module 8130 (hasPendingMemberAction)
 import FlagUtilsAll from "FlagUtils" /* 1404 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7458 */;
-import ChannelStore from "ChannelStore" /* 4766 */;
-import GuildMemberStore from "GuildMemberStore" /* 4829 */;
-import GuildStore from "GuildStore" /* 4788 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7455 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8032 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7553 */;
+import ChannelStore from "ChannelStore" /* 4861 */;
+import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import GuildStore from "GuildStore" /* 4883 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7550 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8131 */;
 
 const GuildFeatures = fn(1071).GuildFeatures;
-const GuildMemberFlags = fn(4835).GuildMemberFlags;
+const GuildMemberFlags = fn(4930).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 

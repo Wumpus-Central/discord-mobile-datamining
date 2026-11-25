@@ -1,25 +1,25 @@
-// === Module 14847: UserProfileWidgetsBoardEditNotice ===
+// === Module 14969: UserProfileWidgetsBoardEditNotice ===
 
-// Module 14847 (UserProfileWidgetsBoardEditNotice)
+// Module 14969 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import dismissible_content from "dismissible_content" /* 4750 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5621 */;
-import Pressables from "Pressables" /* 6026 */;
-import XSmallIcon from "XSmallIcon" /* 7121 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9346 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10930 */;
+import dismissible_content from "dismissible_content" /* 4845 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5716 */;
+import Pressables from "Pressables" /* 6121 */;
+import XSmallIcon from "XSmallIcon" /* 7216 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9445 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11029 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

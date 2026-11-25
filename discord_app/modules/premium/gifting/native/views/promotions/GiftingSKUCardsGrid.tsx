@@ -1,25 +1,25 @@
-// === Module 11526: GiftingSKUCardsGrid ===
+// === Module 11625: GiftingSKUCardsGrid ===
 
-// Module 11526 (GiftingSKUCardsGrid)
+// Module 11625 (GiftingSKUCardsGrid)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import ColorUtils from "ColorUtils" /* 4914 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4979 */;
-import LinearGradientDefault from "LinearGradient" /* 5472 */;
-import useToken from "useToken" /* 5481 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import Pressables from "Pressables" /* 6026 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8567 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11464 */;
+import ColorUtils from "ColorUtils" /* 5009 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5074 */;
+import LinearGradientDefault from "LinearGradient" /* 5567 */;
+import useToken from "useToken" /* 5576 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import Pressables from "Pressables" /* 6121 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8666 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11563 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GiftingSKUCardItemPreview(arg0) {
   ({ item, isSelected } = arg0);
   const tmp = closure_18();
-  const currentUser = isSelected(9274).useCurrentUser();
+  const currentUser = isSelected(9373).useCurrentUser();
   items = [isSelected, currentUser];
   const memo = noop.useMemo(() => {
     let avatarSource;
@@ -30,30 +30,30 @@ function GiftingSKUCardItemPreview(arg0) {
   }, items);
   if (isNameplateRecord(item)) {
     const obj2 = { item, animate: isSelected };
-    let tmp8 = closure_10(currentUser(11026), obj2);
+    let tmp8 = closure_10(currentUser(11125), obj2);
   } else if (isAvatarDecorationRecord(item)) {
     const obj3 = { item, size, animate: isSelected, avatarSource: memo };
-    tmp8 = closure_10(currentUser(9276), obj3);
+    tmp8 = closure_10(currentUser(9375), obj3);
   } else if (isProfileEffectRecord(item)) {
     const obj4 = { style: tmp.profileEffect, children: null };
     const obj5 = { source: null, style: null, resizeMode: "cover" };
-    const obj6 = { uri: currentUser(11025) };
+    const obj6 = { uri: currentUser(11124) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
-    const items1 = [closure_10(currentUser(5604), obj5), ];
+    const items1 = [closure_10(currentUser(5699), obj5), ];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
-    items1[1] = closure_10(currentUser(9329), obj7);
+    items1[1] = closure_10(currentUser(9428), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
-    const tmp19 = currentUser(5604);
+    const tmp19 = currentUser(5699);
   } else {
     tmp8 = null;
     if (isProfileFrameRecord(item)) {
       const obj8 = { style: tmp.profileFrame, children: null };
       const obj9 = { profileFrame: item, previewWidth, previewHeight, profileBackgroundColor: currentUser(575).colors.BACKGROUND_BASE_LOW };
-      obj8.children = closure_10(currentUser(11024), obj9);
+      obj8.children = closure_10(currentUser(11123), obj9);
       tmp8 = closure_10(closure_4, obj8);
-      const tmp12 = currentUser(11024);
+      const tmp12 = currentUser(11123);
     }
   }
   return tmp8;
@@ -109,10 +109,10 @@ function GiftingSKUCardPreview(isSelected) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(6190).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(6285).isAvatarDecorationRecord;
 const isNameplateRecord = fn(2110).isNameplateRecord;
-const isProfileEffectRecord = fn(6191).isProfileEffectRecord;
-const isProfileFrameRecord = fn(6192).isProfileFrameRecord;
+const isProfileEffectRecord = fn(6286).isProfileEffectRecord;
+const isProfileFrameRecord = fn(6287).isProfileFrameRecord;
 const VerticalGradient = fn(1071).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -122,7 +122,7 @@ const previewWidth = 150 - nativeDefault.space.PX_32;
 const sum = 100 + nativeDefault.space.PX_40;
 const PX_122 = nativeDefault.space.PX_12;
 let closure_17 = 2 * nativeDefault.space.PX_24;
-let createStyles = fn(4917);
+let createStyles = fn(5012);
 let obj = { card: { width: 150, display: "flex", flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16, paddingTop: PX_12, paddingBottom: nativeDefault.space.PX_16, borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden", borderColor: nativeDefault.colors.BORDER_SUBTLE }, previewContainer: { display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: 100, overflow: "hidden" }, expandedPreviewContainer: { overflow: "visible" }, preview: null, selected: null, claimed: null, checkmark: null, profileEffect: null, sampleProfile: null, profileFrame: null, collectibleTextFade: null, textContainer: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -136,7 +136,7 @@ obj.claimed = { opacity: 0.4 };
 obj.checkmark = { position: "absolute", opacity: 1, fontWeight: "bold" };
 const rect = { position: "absolute", top: -PX_12, left: 0, right: 0, overflow: "hidden", height: sum + PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.profileEffect = rect;
-obj.sampleProfile = { aspectRatio: fn(9326).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9425).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.profileFrame = { position: "absolute", top: 0, left: 0, right: 0, height: sum, alignItems: "center" };
 const rect1 = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
 obj.collectibleTextFade = rect1;
@@ -193,7 +193,7 @@ let closure_22 = noop.memo(function GiftingSKUCard(rewardSkuId) {
     return closure_1_11(Pressables.PressableOpacity, obj3);
   }
 });
-createStyles = fn(4917);
+createStyles = fn(5012);
 let closure_23 = createStyles.createStyles({ grid: { flexDirection: "column", alignSelf: "center", gap: PX_122 }, row: { flexDirection: "row", gap: PX_122 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");

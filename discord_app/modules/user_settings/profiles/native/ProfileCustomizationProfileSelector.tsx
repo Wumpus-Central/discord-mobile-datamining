@@ -1,18 +1,18 @@
-// === Module 15872: ProfileCustomizationProfileSelector ===
+// === Module 15993: ProfileCustomizationProfileSelector ===
 
-// Module 15872 (ProfileCustomizationProfileSelector)
+// Module 15993 (ProfileCustomizationProfileSelector)
 import nativeDefault from "native" /* 575 */;
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 5925 */;
-import GuildIconDefault from "GuildIcon" /* 6926 */;
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 6020 */;
+import GuildIconDefault from "GuildIcon" /* 7021 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_4 = fn(15873).PROFILE_SELECTOR_ACTION_SHEET_KEY;
+let closure_4 = fn(15994).PROFILE_SELECTOR_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,16 +32,16 @@ export default function ProfileCustomizationProfileSelector(guild) {
   }
   const obj2 = { label: name, labelLineClamp: 1, icon: null, trailing: null, accessibilityLabel: null, accessibilityHint: null, onPress: null };
   if (null != guild) {
-    const obj3 = { guild, size: tmp3(6926).GuildIconSizes.XSMALL };
-    let tmpResult = jsx(GuildIconDefault, { guild, size: tmp3(6926).GuildIconSizes.XSMALL });
+    const obj3 = { guild, size: tmp3(7021).GuildIconSizes.XSMALL };
+    let tmpResult = jsx(GuildIconDefault, { guild, size: tmp3(7021).GuildIconSizes.XSMALL });
     let tmp8 = importDefault;
   } else {
     const obj4 = { size: "md", color: nativeDefault.colors.ICON_DEFAULT };
-    tmpResult = jsx(tmp3(11507).ClydeIcon, { size: "md", color: nativeDefault.colors.ICON_DEFAULT });
+    tmpResult = jsx(tmp3(11606).ClydeIcon, { size: "md", color: nativeDefault.colors.ICON_DEFAULT });
     tmp8 = importDefault;
   }
   obj2.icon = tmpResult;
-  obj2.trailing = jsx(guild(9675).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
+  obj2.trailing = jsx(guild(9774).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
   const intl2 = tmp3(1112).intl;
   let name1;
   if (guild != null) {
@@ -68,7 +68,7 @@ export default function ProfileCustomizationProfileSelector(guild) {
       require("ActionSheetActionCreators").openLazy(guild(paths[15])(paths[14], paths.paths), closure_2_4, { selectedGuildId: id, onSelectMainProfile, onSelectGuild });
     });
   };
-  obj6.children = jsx(guild(6018).TableRow, { label: name, labelLineClamp: 1, icon: null, trailing: null, accessibilityLabel: null, accessibilityHint: null, onPress: null });
-  obj.children = jsx(guild(6014).TableRowGroup, { hasIcons: true, children: null });
+  obj6.children = jsx(guild(6113).TableRow, { label: name, labelLineClamp: 1, icon: null, trailing: null, accessibilityLabel: null, accessibilityHint: null, onPress: null });
+  obj.children = jsx(guild(6109).TableRowGroup, { hasIcons: true, children: null });
   return <View style={closure_6().container}>{null}</View>;
 };

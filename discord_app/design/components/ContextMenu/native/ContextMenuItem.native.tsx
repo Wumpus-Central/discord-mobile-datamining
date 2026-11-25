@@ -1,11 +1,11 @@
-// === Module 15290: ContextMenuItem ===
+// === Module 15412: ContextMenuItem ===
 
-// Module 15290 (ContextMenuItem)
+// Module 15412 (ContextMenuItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1706 from "module_1706" /* 1706 */;
-import IconDefault from "Icon" /* 5517 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 8927 */;
-import ContextMenuState from "ContextMenuState" /* 8928 */;
+import IconDefault from "Icon" /* 5612 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9026 */;
+import ContextMenuState from "ContextMenuState" /* 9027 */;
 import noop from "module_19" /* 19 */;
 import module_1653 from "module_1653" /* 1653 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = module_1653.createAnimatedComponent(Pressable);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { container: { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: ContextMenuConstants.CONTEXT_MENU_ITEM_GAP }, containerRefresh: { justifyContent: "flex-start" }, roundedTop: null, roundedBottom: null, border: null, pressed: null, disabled: null, icon: null, label: null, trailingIndicator: null };
   const obj2 = { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: ContextMenuConstants.CONTEXT_MENU_ITEM_GAP };
@@ -275,14 +275,14 @@ export function ContextMenuItem(children) {
   const items11 = [c5(require("Text/Text").Text, { animated: true, variant: "body-md/medium", color: str2, children: children.label }), ];
   let tmp39Result = null != subLabel;
   if (tmp39Result) {
-    const obj9 = { variant: tmp(8927).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT, color: null, children: null };
+    const obj9 = { variant: tmp(9026).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT, color: null, children: null };
     let str3 = "text-subtle";
     if (tmp41) {
       str3 = "text-feedback-critical";
     }
     obj9.color = str3;
     obj9.children = subLabel;
-    tmp39Result = tmp39(tmp(5508).Text, obj9);
+    tmp39Result = tmp39(tmp(5603).Text, obj9);
   }
   items11[1] = tmp39Result;
   obj8.children = items11;

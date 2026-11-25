@@ -1,13 +1,13 @@
-// === Module 18420: useConjurePreviewMenu ===
+// === Module 18532: useConjurePreviewMenu ===
 
-// Module 18420 (useConjurePreviewMenu)
+// Module 18532 (useConjurePreviewMenu)
 import util from "util" /* 1112 */;
-import _modDef4192 from "module_4192" /* 4192 */;
-import ToastUtils from "ToastUtils" /* 5598 */;
-import conjureExternalConnections from "conjureExternalConnections" /* 18398 */;
-import conjureProjectMenuItems from "conjureProjectMenuItems" /* 18422 */;
+import _modDef4244 from "module_4244" /* 4244 */;
+import ToastUtils from "ToastUtils" /* 5693 */;
+import conjureExternalConnections from "conjureExternalConnections" /* 18510 */;
+import conjureProjectMenuItems from "conjureProjectMenuItems" /* 18534 */;
 import noop from "module_19" /* 19 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 7578 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 7677 */;
 
 require = fn;
 const size = fn(2);
@@ -40,7 +40,7 @@ export default function useConjurePreviewMenu(projectId) {
           connect(found);
         } else {
           const intl = util.intl;
-          ToastUtils.presentError(intl.string(_modDef4192["jCQ/1B"]));
+          ToastUtils.presentError(intl.string(_modDef4244["jCQ/1B"]));
         }
       }
     } else {

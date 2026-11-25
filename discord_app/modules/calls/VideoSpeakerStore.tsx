@@ -1,14 +1,14 @@
-// === Module 9886: VideoSpeakerStore ===
+// === Module 9985: VideoSpeakerStore ===
 
-// Module 9886 (VideoSpeakerStore)
+// Module 9985 (VideoSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6690 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6785 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import SpeakingStore from "SpeakingStore" /* 6726 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
+import SpeakingStore from "SpeakingStore" /* 6821 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6902 */;
 import apply from "apply" /* 12 */;
 
 require = fn;
@@ -136,7 +136,7 @@ function handleChannelRTCUpdate() {
   closure_11();
   return false;
 }
-const ParticipantTypes = fn(5567).ParticipantTypes;
+const ParticipantTypes = fn(5662).ParticipantTypes;
 let closure_11 = apply.throttle(updateSpeaker, 300, { trailing: true });
 const Store = initializeDefault.Store;
 class VideoSpeakerStoreClass extends Store {

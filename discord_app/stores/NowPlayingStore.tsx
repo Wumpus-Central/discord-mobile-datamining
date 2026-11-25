@@ -1,11 +1,11 @@
-// === Module 15067: NowPlayingStore ===
+// === Module 15189: NowPlayingStore ===
 
-// Module 15067 (NowPlayingStore)
+// Module 15189 (NowPlayingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 15068 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8181 */;
-import PresenceStore from "PresenceStore" /* 5888 */;
+import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 15190 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8280 */;
+import PresenceStore from "PresenceStore" /* 5983 */;
 import UserStore from "UserStore" /* 1386 */;
 
 const require = fn;

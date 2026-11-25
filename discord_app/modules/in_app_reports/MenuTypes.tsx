@@ -1,7 +1,7 @@
-// === Module 8051: MenuTypes ===
+// === Module 8150: MenuTypes ===
 
-// Module 8051 (MenuTypes)
-import MediaTakedownRegulation from "MediaTakedownRegulation" /* 5586 */;
+// Module 8150 (MenuTypes)
+import MediaTakedownRegulation from "MediaTakedownRegulation" /* 5681 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");

@@ -1,189 +1,189 @@
-// === Module 4876: getBurstAnimation ===
+// === Module 4971: getBurstAnimation ===
 
-// Module 4876 (getBurstAnimation)
+// Module 4971 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
   {
     load() {
-      return closure_0(4877);
+      return closure_0(4972);
     }
   },
   {
     load() {
-      return closure_0(4878);
+      return closure_0(4973);
     }
   },
   {
     load() {
-      return closure_0(4879);
+      return closure_0(4974);
     }
   },
   {
     load() {
-      return closure_0(4880);
+      return closure_0(4975);
     }
   },
   {
     load() {
-      return closure_0(4881);
+      return closure_0(4976);
     }
   },
   {
     load() {
-      return closure_0(4882);
+      return closure_0(4977);
     }
   },
   {
     load() {
-      return closure_0(4883);
+      return closure_0(4978);
     }
   },
   {
     load() {
-      return closure_0(4884);
+      return closure_0(4979);
     }
   },
   {
     load() {
-      return closure_0(4885);
+      return closure_0(4980);
     }
   },
   {
     load() {
-      return closure_0(4886);
+      return closure_0(4981);
     }
   },
   {
     load() {
-      return closure_0(4887);
+      return closure_0(4982);
     }
   },
   {
     load() {
-      return closure_0(4888);
+      return closure_0(4983);
     }
   },
   {
     load() {
-      return closure_0(4889);
+      return closure_0(4984);
     }
   },
   {
     load() {
-      return closure_0(4890);
+      return closure_0(4985);
     }
   },
   {
     load() {
-      return closure_0(4891);
+      return closure_0(4986);
     }
   },
   {
     load() {
-      return closure_0(4892);
+      return closure_0(4987);
     }
   },
   {
     load() {
-      return closure_0(4893);
+      return closure_0(4988);
     }
   },
   {
     load() {
-      return closure_0(4894);
+      return closure_0(4989);
     }
   }
 ];
 const items1 = [
   {
     load() {
-      return closure_0(4895);
+      return closure_0(4990);
     }
   },
   {
     load() {
-      return closure_0(4896);
+      return closure_0(4991);
     }
   },
   {
     load() {
-      return closure_0(4897);
+      return closure_0(4992);
     }
   },
   {
     load() {
-      return closure_0(4898);
+      return closure_0(4993);
     }
   },
   {
     load() {
-      return closure_0(4899);
+      return closure_0(4994);
     }
   },
   {
     load() {
-      return closure_0(4900);
+      return closure_0(4995);
     }
   },
   {
     load() {
-      return closure_0(4901);
+      return closure_0(4996);
     }
   },
   {
     load() {
-      return closure_0(4902);
+      return closure_0(4997);
     }
   },
   {
     load() {
-      return closure_0(4903);
+      return closure_0(4998);
     }
   },
   {
     load() {
-      return closure_0(4904);
+      return closure_0(4999);
     }
   },
   {
     load() {
-      return closure_0(4905);
+      return closure_0(5000);
     }
   },
   {
     load() {
-      return closure_0(4906);
+      return closure_0(5001);
     }
   },
   {
     load() {
-      return closure_0(4907);
+      return closure_0(5002);
     }
   },
   {
     load() {
-      return closure_0(4908);
+      return closure_0(5003);
     }
   },
   {
     load() {
-      return closure_0(4909);
+      return closure_0(5004);
     }
   },
   {
     load() {
-      return closure_0(4910);
+      return closure_0(5005);
     }
   },
   {
     load() {
-      return closure_0(4911);
+      return closure_0(5006);
     }
   },
   {
     load() {
-      return closure_0(4912);
+      return closure_0(5007);
     }
   }
 ];
@@ -198,7 +198,7 @@ let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1, arg2) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

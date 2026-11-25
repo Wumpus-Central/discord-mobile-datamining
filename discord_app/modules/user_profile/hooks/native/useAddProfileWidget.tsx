@@ -1,22 +1,23 @@
-// === Module 14840: useAddProfileWidget ===
+// === Module 14962: useAddProfileWidget ===
 
-// Module 14840 (useAddProfileWidget)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5093 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5131 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6256 */;
-import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9295 */;
-import WidgetUtils from "WidgetUtils" /* 14395 */;
+// Module 14962 (useAddProfileWidget)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5188 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6351 */;
+import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9394 */;
+import WidgetUtils from "WidgetUtils" /* 14518 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-let closure_5 = fn(6011).TrackUserProfileEditActions;
+const Constants = fn(6106);
+({ TrackUserProfileEditActions: hasOwnProperty, UserProfileSections: closure_6 } = Constants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useAddProfileWidget.tsx");
 
 export default function useAddProfileWidget() {
-  const tmp = useOpenProfileSettingsDefault({ initialTab: "board" });
+  const tmp = useOpenProfileSettingsDefault({ initialTab: constants2.WIDGETS });
   closure_0 = tmp;
   items = [tmp];
   return noop.useCallback((getProfileEditAnalyticsOptions) => {

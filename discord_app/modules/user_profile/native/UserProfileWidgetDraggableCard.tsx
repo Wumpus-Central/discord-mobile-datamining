@@ -1,16 +1,16 @@
-// === Module 14407: UserProfileWidgetDraggableCard ===
+// === Module 14530: UserProfileWidgetDraggableCard ===
 
-// Module 14407 (UserProfileWidgetDraggableCard)
+// Module 14530 (UserProfileWidgetDraggableCard)
 import nativeDefault from "native" /* 575 */;
-import Card from "Card" /* 6019 */;
-import UserProfileCardTitleDefault from "UserProfileCardTitle" /* 7433 */;
+import Card from "Card" /* 6114 */;
+import UserProfileCardTitleDefault from "UserProfileCardTitle" /* 7528 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj = { content: { gap: nativeDefault.space.PX_12 } };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = { gap: nativeDefault.space.PX_12 };

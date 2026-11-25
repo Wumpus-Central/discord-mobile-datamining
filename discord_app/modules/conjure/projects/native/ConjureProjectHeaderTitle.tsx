@@ -1,13 +1,13 @@
-// === Module 18433: ConjureProjectHeaderTitle ===
+// === Module 18546: ConjureProjectHeaderTitle ===
 
-// Module 18433 (ConjureProjectHeaderTitle)
+// Module 18546 (ConjureProjectHeaderTitle)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4192 from "module_4192" /* 4192 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import Pressables from "Pressables" /* 6026 */;
-import Badge from "Badge" /* 6033 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 14112 */;
+import _modDef4244 from "module_4244" /* 4244 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import Pressables from "Pressables" /* 6121 */;
+import Badge from "Badge" /* 6128 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 14235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { row: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, titles: null, titleText: null };
 let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.titles = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -36,7 +36,7 @@ export default function ConjureProjectHeaderTitle(arg0) {
   if (null != project) {
     const obj2 = { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = util.intl;
-    obj2.accessibilityLabel = intl.string(_modDef4192.FzfmQ8);
+    obj2.accessibilityLabel = intl.string(_modDef4244.FzfmQ8);
     const obj3 = { project, size: "list" };
     obj2.children = React4(ConjureProjectIconDefault, obj3);
     tmp4 = React4(Pressables.PressableOpacity, obj2);
@@ -49,7 +49,7 @@ export default function ConjureProjectHeaderTitle(arg0) {
     const obj6 = { type: null, variant: "secondary" };
     const obj7 = { text: null };
     const intl2 = util.intl;
-    obj7.text = intl2.string(_modDef4192["2+GiMw"]);
+    obj7.text = intl2.string(_modDef4244["2+GiMw"]);
     obj6.type = obj7;
     tmp10Result = React4(Badge.Badge, obj6);
   }

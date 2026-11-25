@@ -1,6 +1,6 @@
-// === Module 10984: CollectiblesPromotionIcon ===
+// === Module 11083: CollectiblesPromotionIcon ===
 
-// Module 10984 (CollectiblesPromotionIcon)
+// Module 11083 (CollectiblesPromotionIcon)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesPromotionIcon.tsx");

@@ -1,13 +1,13 @@
-// === Module 8354: CollapsibleFloatingActionButton ===
+// === Module 8453: CollapsibleFloatingActionButton ===
 
-// Module 8354 (CollapsibleFloatingActionButton)
+// Module 8453 (CollapsibleFloatingActionButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1653 from "module_1653" /* 1653 */;
-import BaseTextButton from "BaseTextButton" /* 5516 */;
-import spring_spring from "spring/spring" /* 5518 */;
-import springPresets from "springPresets" /* 5519 */;
-import ButtonConstants2 from "ButtonConstants" /* 5521 */;
-import FloatingActionButton from "FloatingActionButton" /* 8355 */;
+import BaseTextButton from "BaseTextButton" /* 5611 */;
+import spring_spring from "spring/spring" /* 5613 */;
+import springPresets from "springPresets" /* 5614 */;
+import ButtonConstants2 from "ButtonConstants" /* 5616 */;
+import FloatingActionButton from "FloatingActionButton" /* 8454 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,9 +50,9 @@ function CollapsableButton(arg0) {
   return jsx(BaseTextButton.BaseTextButton, {});
 }
 const jsx = fn(21).jsx;
-const ButtonConstants = fn(5521);
-const buttonPadding = ButtonConstants.getButtonPadding(fn(5521).FAB_BUTTON_SIZE, fn(5521).FAB_BUTTON_ICON_SIZE);
-const createStyles = fn(4917);
+const ButtonConstants = fn(5616);
+const buttonPadding = ButtonConstants.getButtonPadding(fn(5616).FAB_BUTTON_SIZE, fn(5616).FAB_BUTTON_ICON_SIZE);
+const createStyles = fn(5012);
 let closure_6 = createStyles.createStyles({ textButtonPill: { paddingHorizontal: 20, paddingVertical: buttonPadding } });
 let closure_7 = { code: "(function CollapsibleFloatingActionButtonNativeTsx1(){let[FAB_BUTTON_SIZE,withSpring,interpolate,collapseText,FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL,SUBTLE_SPRING]=this.__closure;return{minWidth:FAB_BUTTON_SIZE,minHeight:FAB_BUTTON_SIZE,paddingHorizontal:withSpring(interpolate(collapseText.get(),[0,1],[FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL]),SUBTLE_SPRING,'animate-always'),paddingVertical:FAB_PADDING_VERTICAL};})" };
 const size = fn(2);

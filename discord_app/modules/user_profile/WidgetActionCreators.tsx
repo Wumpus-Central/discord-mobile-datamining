@@ -1,6 +1,6 @@
-// === Module 14397: WidgetActionCreators ===
+// === Module 14520: WidgetActionCreators ===
 
-// Module 14397 (WidgetActionCreators)
+// Module 14520 (WidgetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -28,7 +28,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ export default {
                 return obj7;
               } else {
                 constants = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
           } else if (1 === tmp8) {
@@ -122,7 +122,7 @@ export default {
       const request1 = {
         url: upload_url,
         body: closure_129_0,
-        headers: { "Content-Type": closure_0(6049).WIDGET_CLIP_CONTENT_TYPE },
+        headers: { "Content-Type": closure_0(6144).WIDGET_CLIP_CONTENT_TYPE },
         onRequestProgress(direction) {
           let tmp = "upload" === direction.direction;
           if (tmp) {
@@ -153,7 +153,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -237,7 +237,7 @@ export default {
             closure_131_1(closure_131_2[3]).dispatch(obj11);
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp41) {
           closure_4 = tmp41;

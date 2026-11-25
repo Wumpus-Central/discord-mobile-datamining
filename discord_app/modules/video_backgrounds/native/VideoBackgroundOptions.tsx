@@ -1,18 +1,18 @@
-// === Module 10281: VideoBackgroundOptions ===
+// === Module 10380: VideoBackgroundOptions ===
 
-// Module 10281 (VideoBackgroundOptions)
+// Module 10380 (VideoBackgroundOptions)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5604 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5893 */;
+import FastImageDefault from "FastImage" /* 5699 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5988 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const BLUR_BACKGROUND_OPTION = fn(5882).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(5977).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { imageThumbnail: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.lg };
 obj2.imageThumbnail = size;

@@ -1,7 +1,7 @@
-// === Module 5922: useAlertStore ===
+// === Module 6017: useAlertStore ===
 
-// Module 5922 (useAlertStore)
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 5925 */;
+// Module 6017 (useAlertStore)
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 6020 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -37,7 +37,7 @@ export function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(5923)();
+    arr4(6018)();
   }
   const obj = first(1262);
   tmp4 = 0 === tmp[1].length && first.length > 0;
@@ -69,13 +69,13 @@ export function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(5923)();
+      found(6018)();
     }
     let obj = require("ReactBatchUpdates");
   }
 }
-export function openAlert(DeleteEventAlert, arg1, onCloseCallback, arg3) {
-  _require = DeleteEventAlert;
+export function openAlert(ConjureRemoveApp, arg1, onCloseCallback, arg3) {
+  _require = ConjureRemoveApp;
   importDefault = arg1;
   dependencyMap = onCloseCallback;
   closure_3 = arg3;

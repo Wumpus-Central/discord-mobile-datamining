@@ -1,16 +1,16 @@
-// === Module 10397: ScreenshareParticipant ===
+// === Module 10496: ScreenshareParticipant ===
 
-// Module 10397 (ScreenshareParticipant)
+// Module 10496 (ScreenshareParticipant)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6687 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
 
 const require = fn;
 const View = fn(17).View;
 const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 10456: RestrictedScheduleNotificationUtils ===
+// === Module 10555: RestrictedScheduleNotificationUtils ===
 
-// Module 10456 (RestrictedScheduleNotificationUtils)
+// Module 10555 (RestrictedScheduleNotificationUtils)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
-import _modDef2824 from "module_2824" /* 2824 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10457 */;
+import _modDef2846 from "module_2846" /* 2846 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10556 */;
 import size from "module_2" /* 2 */;
 
 function isOnlyDayLoss(label, label2) {
@@ -32,7 +32,7 @@ function isOnlyDayLoss(label, label2) {
 }
 let obj = { Created: "created", Enabled: "enabled", Disabled: "disabled", Updated: "updated", Removed: "removed", Multiple: "multiple" };
 let map = new Map();
-let obj2 = { [Created]: _modDef2824["5V7eBH"], [Enabled]: _modDef2824.iefrVg, [Disabled]: _modDef2824["k+s9cM"], [Updated]: _modDef2824.Nm6hZV, [Multiple]: _modDef2824.Nm6hZV, [Removed]: _modDef2824.jR6uOs };
+let obj2 = { [Created]: _modDef2846["5V7eBH"], [Enabled]: _modDef2846.iefrVg, [Disabled]: _modDef2846["k+s9cM"], [Updated]: _modDef2846.Nm6hZV, [Multiple]: _modDef2846.Nm6hZV, [Removed]: _modDef2846.jR6uOs };
 ({ Created, Enabled, Disabled, Updated, Multiple, Removed } = obj);
 let result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleNotificationUtils.tsx");
 
@@ -209,7 +209,7 @@ export function getRestrictedScheduleNotificationSubtitle(rule) {
   }
   if (result == null) {
     const intl = util.intl;
-    result = intl.string(_modDef2824["8OlpoY"]);
+    result = intl.string(_modDef2846["8OlpoY"]);
   }
   return result;
 }

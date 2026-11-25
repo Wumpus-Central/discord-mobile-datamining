@@ -1,6 +1,6 @@
-// === Module 13699: useTimeUntilNextBadge ===
+// === Module 13822: useTimeUntilNextBadge ===
 
-// Module 13699 (useTimeUntilNextBadge)
+// Module 13822 (useTimeUntilNextBadge)
 import _mod19 from "module_19" /* 19 */;
 import _modDef2168 from "module_2168" /* 2168 */;
 import size from "module_2" /* 2 */;
@@ -14,9 +14,9 @@ export function computeDaysUntilNextBadgeDate(arg0, arg1) {
   return Math.max(0, _modDef2168(arg0).add(arg1, "months").add(1, "day").diff(_modDef2168(), "days"));
 }
 export function useTimeUntilNextBadge() {
-  nextTenureBadge = nextTenureBadge(13700).useNextTenureBadge();
-  let obj = nextTenureBadge(13700);
-  const premiumSince = nextTenureBadge(9709).usePremiumSince();
+  nextTenureBadge = nextTenureBadge(13823).useNextTenureBadge();
+  let obj = nextTenureBadge(13823);
+  const premiumSince = nextTenureBadge(9808).usePremiumSince();
   items = [nextTenureBadge, premiumSince];
   return useMemo(() => {
     if (null != nextTenureBadge) {

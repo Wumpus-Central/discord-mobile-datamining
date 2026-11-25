@@ -1,15 +1,15 @@
-// === Module 10970: useWishlistHooks ===
+// === Module 11069: useWishlistHooks ===
 
-// Module 10970 (useWishlistHooks)
+// Module 11069 (useWishlistHooks)
 import apply from "apply" /* 12 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6183 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 10978 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6278 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 11077 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 6037 */;
+import UserProfileStore from "UserProfileStore" /* 6132 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1386 */;
-import WishlistStore from "WishlistStore" /* 10971 */;
+import WishlistStore from "WishlistStore" /* 11070 */;
 
 const require = globalThis.__r;
 
@@ -103,7 +103,7 @@ function useFetchWishlist(wishlistId) {
   return obj4;
 }
 let useEffect = fn(19).useEffect;
-const getWishlistSkuIds = fn(10972).getWishlistSkuIds;
+const getWishlistSkuIds = fn(11071).getWishlistSkuIds;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistHooks.tsx");
 

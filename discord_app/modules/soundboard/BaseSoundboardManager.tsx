@@ -1,6 +1,6 @@
-// === Module 15814: BaseSoundboardManager ===
+// === Module 15935: BaseSoundboardManager ===
 
-// Module 15814 (BaseSoundboardManager)
+// Module 15935 (BaseSoundboardManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2131 */;

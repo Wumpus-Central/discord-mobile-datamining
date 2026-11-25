@@ -1,21 +1,21 @@
-// === Module 15978: ChangeAvatarActionSheet ===
+// === Module 16099: ChangeAvatarActionSheet ===
 
-// Module 15978 (ChangeAvatarActionSheet)
+// Module 16099 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
-import TableRowGroup from "TableRowGroup" /* 6014 */;
-import TableRow from "TableRow" /* 6018 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6253 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7381 */;
-import ActionSheet from "ActionSheet" /* 7420 */;
-import Form from "Form" /* 7947 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9496 */;
-import ProfileEditSheetNitroUpdatesExperiment from "ProfileEditSheetNitroUpdatesExperiment" /* 15882 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 15884 */;
-import ProfileEditNitroSubLabelDefault from "ProfileEditNitroSubLabel" /* 15885 */;
-import ProfileEditNitroUpsellRowDefault from "ProfileEditNitroUpsellRow" /* 15886 */;
+import TableRowGroup from "TableRowGroup" /* 6109 */;
+import TableRow from "TableRow" /* 6113 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6348 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7476 */;
+import ActionSheet from "ActionSheet" /* 7515 */;
+import Form from "Form" /* 8046 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9595 */;
+import ProfileEditSheetNitroUpdatesExperiment from "ProfileEditSheetNitroUpdatesExperiment" /* 16003 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 16005 */;
+import ProfileEditNitroSubLabelDefault from "ProfileEditNitroSubLabel" /* 16006 */;
+import ProfileEditNitroUpsellRowDefault from "ProfileEditNitroUpsellRow" /* 16007 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1386 */;
 
@@ -24,7 +24,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1071).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { nitroWheel: { marginLeft: nativeDefault.space.PX_8 }, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
 const obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj2.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };

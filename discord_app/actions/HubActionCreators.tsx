@@ -1,10 +1,10 @@
-// === Module 13593: HubActionCreators ===
+// === Module 13716: HubActionCreators ===
 
-// Module 13593 (HubActionCreators)
+// Module 13716 (HubActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
 import HTTPUtils from "HTTPUtils" /* 1284 */;
-import TypeUtils from "TypeUtils" /* 4778 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6009 */;
+import TypeUtils from "TypeUtils" /* 4873 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6104 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -110,7 +110,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -230,7 +230,7 @@ export default {
                 return obj8;
               } else {
                 c5 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
           } else if (1 === tmp7) {

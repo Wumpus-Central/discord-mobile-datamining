@@ -1,31 +1,31 @@
-// === Module 20092: GuildSettingsRoleSubscriptionTierEdit ===
+// === Module 20197: GuildSettingsRoleSubscriptionTierEdit ===
 
-// Module 20092 (GuildSettingsRoleSubscriptionTierEdit)
+// Module 20197 (GuildSettingsRoleSubscriptionTierEdit)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useNavigation from "useNavigation" /* 1500 */;
-import dismissible_content from "dismissible_content" /* 4750 */;
-import Text_Text from "Text/Text" /* 5508 */;
-import components_Button_Button from "components/Button/Button" /* 5515 */;
-import ToastUtils from "ToastUtils" /* 5598 */;
-import TrashIcon from "TrashIcon" /* 5624 */;
-import TableRowGroup from "TableRowGroup" /* 6014 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7354 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7484 */;
-import DismissibleActionSheet from "DismissibleActionSheet" /* 10931 */;
-import ErrorBlockDefault from "ErrorBlock" /* 13000 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16651 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20046 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 20057 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 20061 */;
-import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 20064 */;
-import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 20086 */;
-import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 20088 */;
-import ActionableNoticeDefault from "ActionableNotice" /* 20093 */;
+import dismissible_content from "dismissible_content" /* 4845 */;
+import Text_Text from "Text/Text" /* 5603 */;
+import components_Button_Button from "components/Button/Button" /* 5610 */;
+import ToastUtils from "ToastUtils" /* 5693 */;
+import TrashIcon from "TrashIcon" /* 5719 */;
+import TableRowGroup from "TableRowGroup" /* 6109 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7449 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7579 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 11030 */;
+import ErrorBlockDefault from "ErrorBlock" /* 13123 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16772 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20151 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 20162 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 20166 */;
+import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 20169 */;
+import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 20191 */;
+import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 20193 */;
+import ActionableNoticeDefault from "ActionableNotice" /* 20198 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4842 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 20050 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4937 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 20155 */;
 
 require = fn;
 function ArchiveOrDeleteTierSection() {
@@ -136,13 +136,13 @@ function DraftPublishPrompt(ref) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const FetchState = fn(4842).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(16644).GuildRoleSubscriptionsTierScenes;
+const FetchState = fn(4937).FetchState;
+const GuildRoleSubscriptionsTierScenes = fn(16765).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1071).GuildSettingsSections;
-const ContentDismissActionType = fn(4763).ContentDismissActionType;
+const ContentDismissActionType = fn(4858).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4917);
+const createStyles = fn(5012);
 let obj2 = { container: { flex: 1 }, tabsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 }, tabsContainerWithDraft: { paddingBottom: 0 }, tabContent: null, publishError: null, actionSection: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 };
 obj2.tabContent = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

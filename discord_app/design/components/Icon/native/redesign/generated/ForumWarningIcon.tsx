@@ -1,9 +1,9 @@
-// === Module 7022: ForumWarningIcon ===
+// === Module 7117: ForumWarningIcon ===
 
-// Module 7022 (ForumWarningIcon)
+// Module 7117 (ForumWarningIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5603 */;
-import _mod6992 from "module_6992" /* 6992 */;
+import BaseIconImage from "BaseIconImage" /* 5698 */;
+import _mod7087 from "module_7087" /* 7087 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ForumWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod6992, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7087, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,24 +1,24 @@
-// === Module 7995: utils/UploadUtils ===
+// === Module 8094: utils/UploadUtils ===
 
-// Module 7995 (utils/UploadUtils)
+// Module 8094 (utils/UploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1148 */;
 import PlatformUtils from "PlatformUtils" /* 1378 */;
 import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1442 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7740 */;
-import UploadPlatform from "UploadPlatform" /* 7986 */;
-import UploadUtils from "UploadUtils" /* 7987 */;
-import FileUtils from "FileUtils" /* 7991 */;
-import ImagePickerDefault from "ImagePicker" /* 7996 */;
-import ImageConversionDecision from "ImageConversionDecision" /* 8003 */;
-import VideoUploadUtils from "VideoUploadUtils" /* 8005 */;
-import UploadLimits from "UploadLimits" /* 8006 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 8013 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7839 */;
+import UploadPlatform from "UploadPlatform" /* 8085 */;
+import UploadUtils from "UploadUtils" /* 8086 */;
+import FileUtils from "FileUtils" /* 8090 */;
+import ImagePickerDefault from "ImagePicker" /* 8095 */;
+import ImageConversionDecision from "ImageConversionDecision" /* 8102 */;
+import VideoUploadUtils from "VideoUploadUtils" /* 8104 */;
+import UploadLimits from "UploadLimits" /* 8105 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 8112 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore_mod from "UnsyncedUserSettingsStore" /* 1193 */;
-import NetworkStore from "NetworkStore" /* 5855 */;
+import NetworkStore from "NetworkStore" /* 5950 */;
 import UserStore from "UserStore" /* 1386 */;
 
 require = fn;
@@ -43,7 +43,7 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -373,7 +373,7 @@ let closure_26 = async function _openImagePicker(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -475,7 +475,7 @@ let closure_28 = async function _mediaManager(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -517,7 +517,7 @@ let closure_28 = async function _mediaManager(arg0) {
           closure_130_2 = closure_4;
           closure_131_19.warn(closure_130_2);
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -654,7 +654,7 @@ let closure_30 = async function _getPhotoKitDataUTI(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -680,7 +680,7 @@ let closure_30 = async function _getPhotoKitDataUTI(arg0) {
             }
           }
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (1 === tmp7) {
         c5 = 0;
@@ -729,7 +729,7 @@ let closure_31 = async function _shouldConvertToPNG(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -852,7 +852,7 @@ function convertVideo(videoMetadata) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -987,7 +987,7 @@ function convertVideo(videoMetadata) {
                               if (closure_129_1) {
                                 closure_7 = closure_7 + 1;
                                 c4 = 3;
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               } else {
                                 logger.error("No adjustments possible for current failures", { currentFailures: closure_129_0.failures, config, capabilities: closure_129_0.capabilities, attempt: closure_7 + 1 });
                                 const _Error = Error;
@@ -1336,7 +1336,7 @@ let closure_36 = async function _buildResolvedUpload(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1420,7 +1420,7 @@ let closure_37 = async function _processVideoUpload(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1556,7 +1556,7 @@ let closure_38 = async function _processImageOrFileUpload(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1808,7 +1808,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1947,7 +1947,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(8003);
+                      tmpResult = closure_1_0(8102);
                     }
                     const obj = closure_1_0(1378);
                   })(closure_130_0, closure_130_1)) {
@@ -2154,7 +2154,7 @@ let closure_40 = async function _fetchVideoMetadata(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2258,7 +2258,7 @@ let closure_41 = async function _getImageDimensionsIfMissing() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -2399,7 +2399,7 @@ let closure_43 = async function _checkVideoEncodingSupport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2476,7 +2476,7 @@ let closure_45 = async function _calculateImageQualityMetrics(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2596,7 +2596,7 @@ let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1071);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(7739).NativePermissionTypes;
+const NativePermissionTypes = fn(7838).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2665,8 +2665,8 @@ export function getFileSize(uri) {
 }
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(8003).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(8003).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(8102).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(8102).shouldForceConvertToJPG;
 export function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

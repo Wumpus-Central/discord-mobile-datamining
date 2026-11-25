@@ -1,7 +1,7 @@
-// === Module 8573: useDisplayNameFontsAvailable ===
+// === Module 8672: useDisplayNameFontsAvailable ===
 
-// Module 8573 (useDisplayNameFontsAvailable)
-import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 8574 */;
+// Module 8672 (useDisplayNameFontsAvailable)
+import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 8673 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function isAvailable() {
@@ -31,7 +31,7 @@ let closure_12 = async function _load() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
