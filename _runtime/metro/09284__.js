@@ -1,7 +1,17 @@
 // === Module 9284: ? ===
 
 // Module 9284
-import registerAsset from "module_1118" /* 1118 */;
+const require = globalThis.__r;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "f2d705f9d582bb6c65065afe8639e152", name: "img_classic_error_mobile", type: "png" });
+for (const key10013 in require("enhancedFetch")) {
+  arg5[key10013] = require("enhancedFetch")[key10013];
+  continue;
+}
+for (const key10017 in require("fillProductsWithAdditionalData")) {
+  arg5[key10017] = require("fillProductsWithAdditionalData")[key10017];
+  continue;
+}
+for (const key10021 in require("RNIapIos")) {
+  arg5[key10021] = require("RNIapIos")[key10021];
+  continue;
+}

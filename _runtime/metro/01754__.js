@@ -1,22 +1,22 @@
 // === Module 1754: ? ===
 
 // Module 1754
-import NativeWorklets from "NativeWorklets" /* 1710 */;
-import registerCustomSerializable from "registerCustomSerializable" /* 1717 */;
+import NativeWorklets from "NativeWorklets" /* 1711 */;
+import registerCustomSerializable from "registerCustomSerializable" /* 1718 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function createSynchronizable(__initData, fixedType) {
-  fixedType = undefined;
-  if (fixedType != null) {
-    fixedType = fixedType.fixedType;
+export function createShareable(arg0, __initData, arg2) {
+  let obj = arg2;
+  if (!arg2) {
+    obj = {};
   }
+  const guestDecorator = obj.guestDecorator;
+  ({ hostDecorator, initSynchronously } = obj);
   const WorkletsModule = NativeWorklets.WorkletsModule;
-  let serializable = __initData;
-  if (!fixedType) {
-    serializable = registerCustomSerializable.createSerializable(__initData);
-    const tmp3Result = registerCustomSerializable;
-  }
-  return globalThis.__synchronizableUnpacker(WorkletsModule.createSynchronizable(serializable, fixedType), fixedType);
+  const serializable = registerCustomSerializable.createSerializable(__initData);
+  const tmp2 = !initSynchronously;
+  const serializable1 = registerCustomSerializable.createSerializable(hostDecorator);
+  return globalThis.__shareableGuestUnpacker(arg0, WorkletsModule.createShareable(arg0, serializable, !tmp2, serializable1, registerCustomSerializable.createSerializable(guestDecorator)), guestDecorator);
 }

@@ -1,17 +1,24 @@
 // === Module 5888: ? ===
 
 // Module 5888
-import identity from "identity" /* 549 */;
-import _mod668 from "module_668" /* 668 */;
-import constant from "constant" /* 5889 */;
 
-if (_mod668) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod668(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
-}
-
-export default fn;
+export default function initCloneArray(arg0) {
+  length = arg0.length;
+  const constructor = new arg0.constructor(length);
+  if (length) {
+    length = typeof arg0[0] === "string";
+  }
+  if (!length) {
+    if (length) {
+      ({ index: tmp.index, input: tmp.input } = arg0);
+    }
+    return constructor;
+  } else {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let callResult = hasOwnProperty("index");
+    } else {
+      callResult = call(arg0, "index");
+    }
+  }
+};

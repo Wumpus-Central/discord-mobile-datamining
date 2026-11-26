@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 500, height: 500, scales: [1], hash: "92530bd573dd795df92f429bb50bdfa5", name: "img_account_sync_letterboxd_dark", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "eb232cce91e81121373a2c7b4cc58581", name: "img_account_sync_riot_light_and_dark", type: "png" });

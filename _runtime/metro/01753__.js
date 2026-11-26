@@ -1,22 +1,19 @@
 // === Module 1753: ? ===
 
 // Module 1753
-import NativeWorklets from "NativeWorklets" /* 1710 */;
-import registerCustomSerializable from "registerCustomSerializable" /* 1717 */;
-
-require = arg1;
-const dependencyMap = arg6;
-
-export function createShareable(arg0, __initData, arg2) {
-  let obj = arg2;
-  if (!arg2) {
-    obj = {};
+const items = [{ code: "(function isShareable_Pnpm_isShareableTs1(value){return typeof value==='object'&&value!==null&&!!value.__shareableRef;})" }];
+[tmp2] = items;
+function isShareable(__shareableRef) {
+  __shareableRef = typeof __shareableRef === "object";
+  if (typeof __shareableRef === "object") {
+    __shareableRef = null !== __shareableRef;
   }
-  const guestDecorator = obj.guestDecorator;
-  ({ hostDecorator, initSynchronously } = obj);
-  const WorkletsModule = NativeWorklets.WorkletsModule;
-  const serializable = registerCustomSerializable.createSerializable(__initData);
-  const tmp2 = !initSynchronously;
-  const serializable1 = registerCustomSerializable.createSerializable(hostDecorator);
-  return globalThis.__shareableGuestUnpacker(arg0, WorkletsModule.createShareable(arg0, serializable, !tmp2, serializable1, registerCustomSerializable.createSerializable(guestDecorator)), guestDecorator);
+  if (__shareableRef) {
+    __shareableRef = __shareableRef.__shareableRef;
+  }
+  return __shareableRef;
 }
+isShareable.__workletHash = 12626032708700;
+isShareable.__initData = tmp2;
+
+export { isShareable };

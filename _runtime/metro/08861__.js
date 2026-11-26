@@ -1,5 +1,7 @@
 // === Module 8861: ? ===
 
 // Module 8861
+import _mod8862 from "module_8862" /* 8862 */;
 
-export default { DeprecatedAccessibilityRoles: ["none", "button", "togglebutton", "link", "search", "image", "keyboardkey", "text", "adjustable", "imagebutton", "header", "summary", "alert", "checkbox", "combobox", "menu", "menubar", "menuitem", "progressbar", "radio", "radiogroup", "scrollbar", "spinbutton", "switch", "tab", "tablist", "timer", "toolbar"] };
+
+export default _mod8862.default;

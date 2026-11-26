@@ -1,29 +1,36 @@
 // === Module 5536: ? ===
 
 // Module 5536
-import noop from "module_19" /* 19 */;
+import RecyclerViewManager from "RecyclerViewManager" /* 5537 */;
+import _slicedToArray from "module_5516" /* 5516 */;
 
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
 
-export (renderScrollComponent) => {
-  let BooleanResult = typeof renderScrollComponent === "function";
-  if (typeof renderScrollComponent === "function") {
-    const prototype = renderScrollComponent.prototype;
-    let isReactComponent;
-    if (prototype != null) {
-      isReactComponent = prototype.isReactComponent;
-    }
-    BooleanResult = Boolean(isReactComponent);
-  }
-  return BooleanResult;
-}
-export (backdropComponent1) => {
-  let tmp = backdropComponent1;
-  if (!noop.isValidElement(backdropComponent1)) {
-    let element = null;
-    if (null != backdropComponent1) {
-      element = <backdropComponent1 />;
-    }
-    tmp = element;
-  }
-  return tmp;
+export (data) => {
+  let recyclerViewManager = velocityTracker(closure_5(() => {
+    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
+    return recyclerViewManager;
+  }), 1)[0];
+  velocityTracker = velocityTracker(closure_5(() => {
+    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
+    return velocityTracker;
+  }), 1)[0];
+  items = [data];
+  closure_4(() => {
+    recyclerViewManager.updateProps(closure_0);
+  }, items);
+  const items1 = [data.data];
+  closure_4(() => {
+    recyclerViewManager.processDataUpdate();
+  }, items1);
+  closure_3(() => {
+    recyclerViewManager.restoreIfNeeded();
+    return () => {
+      recyclerViewManager.dispose();
+      velocityTracker.cleanUp();
+    };
+  }, []);
+  return { recyclerViewManager, velocityTracker };
 }

@@ -1,16 +1,20 @@
 // === Module 1719: ? ===
 
 // Module 1719
-const items = [{ code: "(function isWorkletFunction_Pnpm_workletFunctionTs1(value){return(typeof value==='function'&&!!value.__workletHash);})" }];
-[tmp2] = items;
-function isWorkletFunction(initializer) {
-  let __workletHash = typeof initializer === "function";
-  if (typeof initializer === "function") {
-    __workletHash = initializer.__workletHash;
-  }
-  return __workletHash;
-}
-isWorkletFunction.__workletHash = 10543175955225;
-isWorkletFunction.__initData = tmp2;
+const SymbolResult = Symbol("serializable flag");
+const weakMap = new WeakMap();
+const obj = {
+  set(arg0, arg1) {
+    let tmp = arg1;
+    if (!arg1) {
+      tmp = SymbolResult;
+    }
+    const result = weakMap.set(arg0, tmp);
+  },
+  get: null
+};
+const get = weakMap.get;
+obj.get = get.bind(weakMap);
 
-export { isWorkletFunction };
+export const serializableMappingFlag = SymbolResult;
+export const serializableMappingCache = obj;

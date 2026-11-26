@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 78, height: 63.666666666666664, scales: [3], hash: "12db988a3aa80fa68601a7975c65f9c1", name: "asset_emerald_badge_small", type: "webp" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e482df76bca128861506eefe107fb633", name: "BackspaceIcon", type: "png" });

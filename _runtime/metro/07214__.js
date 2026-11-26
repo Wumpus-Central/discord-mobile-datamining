@@ -1,60 +1,38 @@
 // === Module 7214: ? ===
 
 // Module 7214
-import _mod1631 from "module_1631" /* 1631 */;
-import FrameSizeProvider from "FrameSizeProvider" /* 7191 */;
-import noop from "module_19" /* 19 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Dimensions, Platform, StyleSheet, View: c3 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const size = Dimensions.get("window");
-const width = size.width;
-let num = 0;
-if (undefined !== width) {
-  num = width;
-}
-const height = size.height;
-let num2 = 0;
-if (undefined !== height) {
-  num2 = height;
-}
-if (null == fn(1631).initialWindowMetrics) {
-  let obj = { frame: null, insets: null };
-  const size1 = { x: 0, y: 0, width: num, height: num2 };
-  obj.frame = size1;
-  obj.insets = { top: 0, left: 0, right: 0, bottom: 0 };
-  let initialWindowMetrics = obj;
-} else {
-  initialWindowMetrics = fn(1631).initialWindowMetrics;
-}
-class SafeAreaProviderCompat {
-  constructor(arg0) {
-    ({ children, style } = global);
-    closure_2 = undefined;
-    closure_2 = closure_2.useContext(children(style[3]).SafeAreaInsetsContext);
-    obj = {
-      initialFrame: initialWindowMetrics.frame,
-      render(onLayout) {
-            onLayout = onLayout.onLayout;
-            if (closure_2) {
-              const obj2 = { ref: tmp, onLayout, style: null, children: null };
-              items = [container.container, style];
-              obj2.style = items;
-              obj2.children = children;
-              let tmp2Result = <React3 ref={tmp} onLayout={onLayout} style={null}>{null}</React3>;
-            } else {
-              const obj = { initialMetrics: initialWindowMetrics, style, onLayout, children };
-              tmp2Result = jsx(_mod1631.SafeAreaProvider, { initialMetrics: initialWindowMetrics, style, onLayout, children });
-            }
-            return tmp2Result;
-          }
-    };
-    return jsx(children(style[4]).FrameSizeProvider, obj);
+export default function isArrayish(str) {
+  let tmp = !str;
+  if (str) {
+    tmp = typeof str === "string";
   }
-}
-SafeAreaProviderCompat.initialMetrics = initialWindowMetrics;
-const styles = StyleSheet.create({ container: { flex: 1 } });
-
-export { SafeAreaProviderCompat };
+  let tmp2 = !tmp;
+  if (!tmp) {
+    const _Array = Array;
+    let isArray = str instanceof Array;
+    if (!isArray) {
+      const _Array2 = Array;
+      isArray = Array.isArray(str);
+    }
+    if (!isArray) {
+      let tmp5 = str.length >= 0;
+      if (tmp5) {
+        const _Function = Function;
+        let tmp6 = str.splice instanceof Function;
+        if (!tmp6) {
+          const _Object = Object;
+          let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(str, str.length - 1);
+          if (ownPropertyDescriptor) {
+            ownPropertyDescriptor = "String" !== str.constructor.name;
+          }
+          tmp6 = ownPropertyDescriptor;
+        }
+        tmp5 = tmp6;
+      }
+      isArray = tmp5;
+    }
+    tmp2 = isArray;
+  }
+  return tmp2;
+};

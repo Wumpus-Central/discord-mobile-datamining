@@ -1,47 +1,39 @@
 // === Module 15766: ? ===
 
 // Module 15766
-import _typeof from "module_15767" /* 15767 */;
+import _mod15757 from "module_15757" /* 15757 */;
+import _mod15758 from "module_15758" /* 15758 */;
+import _mod15765 from "module_15765" /* 15765 */;
 
-if (_typeof) {
-  if (typeof _typeof === "object") {
-    let _default = _typeof;
-  }
-  let obj = globalThis;
-  const _Intl = Intl;
-  if (typeof Intl === "undefined") {
-    if (undefined !== global) {
-      obj = { PluralRules: _default.default };
-      global.Intl = obj;
-      _default = _default.default;
-      _default.polyfill = true;
-    } else {
-      const _window = window;
-      if (typeof window === "undefined") {
-        const self = this;
-        const obj2 = { PluralRules: _default.default };
-        this.Intl = obj2;
+
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod15758(toString)) {
+      const tmp4 = _mod15765(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
       }
+      tmpResult = _mod15757;
     }
-    obj = { PluralRules: _default.default };
-    obj.window.Intl = obj;
-  } else {
-    const _Intl5 = Intl;
-    if (Intl.PluralRules) {
-      const _Intl2 = Intl;
-      if (Intl.PluralRules.prototype.selectRange) {
-        const items = ["en", "es", "ru", "zh"];
-        const _Intl4 = Intl;
-        if (PluralRules.supportedLocalesOf(items).length < items.length) {
-          const _Intl6 = Intl;
-          Intl.PluralRules = _default.default;
-          _default.default.polyfill = true;
-        }
-      }
-    }
-    const _Intl3 = Intl;
-    Intl.PluralRules = _default.default;
-    _default.default.polyfill = true;
   }
-}
-_default = { default: _typeof };
+  const valueOf = arg0.valueOf;
+  if (_mod15758(valueOf)) {
+    const tmp8 = _mod15765(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+    tmp5Result = _mod15757;
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod15758(toString2)) {
+      const tmp10 = _mod15765(toString2, arg0);
+      if (!tmp5Result2(tmp10)) {
+        return tmp10;
+      }
+      tmp5Result2 = _mod15757;
+    }
+  }
+  throw new TypeError("Can't convert object to primitive value");
+};

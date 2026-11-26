@@ -1,7 +1,18 @@
 // === Module 5560: ? ===
 
 // Module 5560
-import BottomSheetBackdrop from "BottomSheetBackdrop" /* 5561 */;
+import noop from "module_19" /* 19 */;
 
+({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
 
-export const BottomSheetBackdrop = BottomSheetBackdrop.BottomSheetBackdrop;
+export () => {
+  const tmp = React(false);
+  closure_0 = tmp;
+  duration(() => {
+    closure_0.current = false;
+    return () => {
+      closure_1_0.current = true;
+    };
+  }, []);
+  return tmp;
+}

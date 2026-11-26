@@ -1,55 +1,13 @@
 // === Module 1969: ? ===
 
 // Module 1969
-import _mod17 from "module_17" /* 17 */;
-import _mod19 from "module_19" /* 19 */;
-import _mod1970 from "module_1970" /* 1970 */;
+import _mod1707 from "module_1707" /* 1707 */;
 
-const useRef = _mod19.useRef;
-const Animated = _mod17.Animated;
 
-export function useEventHandlerRegistration(arg0) {
-  return (workletEventHandler) => {
-    if (workletEventHandler.current) {
-      let findNodeHandleResult = ref(dependencyMap[2]).findNodeHandle(tmp.current);
-      if (findNodeHandleResult) {
-        if ("workletEventHandler" in workletEventHandler) {
-          workletEventHandler.workletEventHandler.registerForEvents(findNodeHandleResult);
-        } else {
-          workletEventHandler.registerForEvents(findNodeHandleResult);
-        }
-      }
-      const obj = ref(dependencyMap[2]);
-    } else {
-      const _queueMicrotask = queueMicrotask;
-      queueMicrotask(function attachWorkletHandlers() {
-        const findNodeHandleResult = _mod1970.findNodeHandle(workletEventHandler.current);
-        if (findNodeHandleResult) {
-          if ("workletEventHandler" in workletEventHandler) {
-            obj2.workletEventHandler.registerForEvents(findNodeHandleResult);
-          } else {
-            obj2.registerForEvents(findNodeHandleResult);
-          }
-        }
-      });
-    }
-    return () => {
-      const findNodeHandleResult = _mod1970.findNodeHandle(workletEventHandler.current);
-      if (findNodeHandleResult) {
-        if ("workletEventHandler" in workletEventHandler) {
-          obj2.workletEventHandler.unregisterFromEvents(findNodeHandleResult);
-        } else {
-          obj2.unregisterFromEvents(findNodeHandleResult);
-        }
-      }
-    };
-  };
-}
-export function useAnimatedValue(arg0, arg1) {
-  const tmp = useRef(null);
-  if (null === tmp.current) {
-    value = new Animated.Value(arg0, arg1);
-    tmp.current = value;
-  }
-  return tmp.current;
-}
+export const makeShareableCloneRecursive = _mod1707.createSerializable;
+export const createWorkletRuntime = _mod1707.createWorkletRuntime;
+export const executeOnUIRuntimeSync = _mod1707.executeOnUIRuntimeSync;
+export const runOnJS = _mod1707.runOnJS;
+export const runOnUI = _mod1707.runOnUI;
+export const runOnRuntime = _mod1707.runOnRuntime;
+export const isWorkletFunction = _mod1707.isWorkletFunction;

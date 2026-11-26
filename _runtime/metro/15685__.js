@@ -2,10 +2,6 @@
 
 // Module 15685
 
-export default (fn) => {
-  try {
-    return fn();
-  } catch (err) {
-    return true;
-  }
-};
+export function CanonicalizeLocaleList(items) {
+  return Intl.getCanonicalLocales(items);
+}

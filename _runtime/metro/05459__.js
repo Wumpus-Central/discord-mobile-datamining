@@ -1,7 +1,16 @@
 // === Module 5459: ? ===
 
 // Module 5459
-import _modDef5460 from "module_5460" /* 5460 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod5287 from "module_5287" /* 5287 */;
 
+const useContext = _mod19.useContext;
 
-export default _modDef5460;
+export () => {
+  const tmp = useContext(_mod5287.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+}

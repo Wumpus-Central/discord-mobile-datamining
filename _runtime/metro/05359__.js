@@ -1,27 +1,71 @@
 // === Module 5359: ? ===
 
 // Module 5359
-import ComposedGestureName from "ComposedGestureName" /* 5334 */;
-import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5343 */;
-import _mod5360 from "module_5360" /* 5360 */;
+import _mod19 from "module_19" /* 19 */;
+import MountRegistry2 from "MountRegistry" /* 5338 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function transformTapProps(shouldCancelWhenOutside) {
-  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
-    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
+function shouldUpdateDetector(blocksHandlers, handlerTag) {
+  if (undefined === blocksHandlers) {
+    return false;
+  } else {
+    const iter = blocksHandlers[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp4 = nextResult;
+      if (nextResult === handlerTag) {
+        iter.return();
+        let flag2 = true;
+        return true;
+      } else {
+        if (null !== tmp4) {
+          if (typeof tmp4 === "object") {
+            if ("current" in tmp4) {
+              let current = tmp4.current;
+              handlerTag = undefined;
+              if (current != null) {
+                handlerTag = current.handlerTag;
+              }
+              if (handlerTag === handlerTag.handlerTag) {
+                iter.return();
+                let flag = true;
+                return true;
+              }
+            }
+          }
+        }
+        continue;
+      }
+    }
+    return false;
   }
-  return shouldCancelWhenOutside;
 }
-const items = [["maxDistance", "maxDist"], ["maxDuration", "maxDurationMs"], ["maxDelay", "maxDelayMs"]];
-const map = new Map(items);
-let closure_4 = {};
+const useEffect = _mod19.useEffect;
 
-export function useTapGesture() {
-  let tmp = tmp82Result;
-  if (tmp82Result === undefined) {
-    tmp = closure_4;
-  }
-  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp, map, transformTapProps);
-  return _mod5360.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+export function useMountReactions(detectorUpdater, current2) {
+  closure_0 = detectorUpdater;
+  closure_1 = current2;
+  items = [detectorUpdater, current2];
+  useEffect(() => {
+    const MountRegistry = MountRegistry2.MountRegistry;
+    return MountRegistry.addMountListener((handlerTag) => {
+      if (isMounted.isMounted) {
+        if (isMounted.hasExternalRelations) {
+          const attachedGestures = isMounted.attachedGestures;
+          if (!attachedGestures.includes(handlerTag)) {
+            const attachedGestures2 = isMounted.attachedGestures;
+            const iter = attachedGestures2[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              let requireToFail = nextResult.config.requireToFail;
+              let simultaneousWith = nextResult.config.simultaneousWith;
+              if (!shouldUpdateDetector(nextResult.config.blocksHandlers, handlerTag)) {
+              }
+              let tmp11 = detectorUpdater();
+              iter.return();
+            }
+          }
+        }
+      }
+    });
+  }, items);
 }

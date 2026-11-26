@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon", width: 60, height: 60, scales: [2, 3], hash: "68832d737c55ed046c40e8d11571a54e", name: "CircuitIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "31757ea45ee4fb60779fd700caf7d93e", name: "ic_nitro_wheel_gradient_purple", type: "png" });

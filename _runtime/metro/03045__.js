@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/overlay/web/v3", scales: [1], hash: "4a8cbd41ebc1637b2c2862ff5b040034", name: "OverlayWidgets.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9vdmVybGF5L3dlYi92Mw==", scales: [1], hash: "1130f5a17959ad50a587c91c207b6893", name: "zh-TW.messages.1130f5a17959ad50a587c91c207b6893.compiled.messages", type: "jsona" });

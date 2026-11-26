@@ -2,4 +2,4 @@
 
 // Module 1322
 
-export default Math.min;
+export default Math.max;

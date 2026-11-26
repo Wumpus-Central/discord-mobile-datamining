@@ -1,17 +1,7 @@
 // === Module 9242: ? ===
 
 // Module 9242
-const require = globalThis.__r;
+import registerAsset from "module_1118" /* 1118 */;
 
-for (const key10013 in require("enhancedFetch")) {
-  arg5[key10013] = require("enhancedFetch")[key10013];
-  continue;
-}
-for (const key10017 in require("fillProductsWithAdditionalData")) {
-  arg5[key10017] = require("fillProductsWithAdditionalData")[key10017];
-  continue;
-}
-for (const key10021 in require("RNIapIos")) {
-  arg5[key10021] = require("RNIapIos")[key10021];
-  continue;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 449.5, height: 245, scales: [2, 3], hash: "c5de68623f46517bfe4474ddbdb02f66", name: "img_logo_nitro_tier_0", type: "png" });

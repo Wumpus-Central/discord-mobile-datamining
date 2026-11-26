@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_scheduled_events/native/images", width: 24, height: 24, scales: [1, 2, 3], hash: "60c832d89b9f9ddf8ba9ba1f90955760", name: "ic-location", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf_channels/native/images", width: 275.5, height: 78, scales: [2, 3], hash: "b55be157bc31f9c933d8fe113de3e547", name: "voice_channels", type: "png" });

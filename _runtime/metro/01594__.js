@@ -1,52 +1,15 @@
 // === Module 1594: ? ===
 
 // Module 1594
-import _slicedToArray from "module_32" /* 32 */;
+import NOT_INITIALIZED_ERROR from "NOT_INITIALIZED_ERROR" /* 1527 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
+require = arg1;
 
-const require = arg1;
-
-export function usePreventRemove(hasUnsavedChanges, arg1) {
-  _require = hasUnsavedChanges;
-  importDefault = arg1;
-  const first = navigation(key.useState(() => hasUnsavedChanges(first[2]).nanoid()), 1)[0];
-  navigation = require("module_1543").useNavigation();
-  let obj = require("module_1543");
-  key = require("module_1540").useRoute().key;
-  const obj2 = require("module_1540");
-  const preventRemoveContext = require("module_1595").usePreventRemoveContext();
-  const setPreventRemove = preventRemoveContext.setPreventRemove;
-  const notifyPreventRemove = preventRemoveContext.notifyPreventRemove;
-  items = [setPreventRemove, first, key, hasUnsavedChanges];
-  const insertionEffect = key.useInsertionEffect(() => {
-    setPreventRemove(first, key, closure_0);
-    return () => {
-      setPreventRemove(first, key, false);
-    };
-  }, items);
-  const items1 = [first, key, hasUnsavedChanges, notifyPreventRemove];
-  const effect = key.useEffect(() => {
-    notifyPreventRemove();
-    return () => {
-      notifyPreventRemove();
-    };
-  }, items1);
-  const tmp6 = require("module_1522")((preventDefault) => {
-    if (closure_0) {
-      preventDefault.preventDefault();
-      const obj = { data: preventDefault.data };
-      closure_1(obj);
-    }
-  });
-  closure_7 = tmp6;
-  const items2 = [navigation, tmp6];
-  const effect1 = key.useEffect(() => {
-    let addListenerResult;
-    if (navigation != null) {
-      addListenerResult = navigation.addListener("beforeRemove", closure_7);
-    }
-    return addListenerResult;
-  }, items2);
+export function useNavigationContainerRef() {
+  const ref = noop.useRef(null);
+  if (null == ref.current) {
+    ref.current = NOT_INITIALIZED_ERROR.createNavigationContainerRef();
+  }
+  return ref.current;
 }

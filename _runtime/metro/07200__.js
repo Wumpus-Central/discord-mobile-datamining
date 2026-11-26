@@ -1,7 +1,7 @@
 // === Module 7200: ? ===
 
 // Module 7200
-import _modDef7201 from "module_7201" /* 7201 */;
+import registerAsset from "module_1118" /* 1118 */;
 
 
-export default _modDef7201;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_uvkordladmmn2jfdjahig4vaii/node_modules/@react-navigation/elements/lib/module/assets", width: 50, height: 85, scales: [1], hash: "0a328cd9c1afd0afe8e3b1ec5165b1b4", name: "back-icon-mask", type: "png" });

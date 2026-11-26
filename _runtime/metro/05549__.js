@@ -1,24 +1,25 @@
 // === Module 5549: ? ===
 
 // Module 5549
+import _mod5550 from "module_5550" /* 5550 */;
 
-export function useDataMultiplier(arg0, arg1) {
-  const array = new Array(arg1);
-  let flag = false;
-  if (typeof arg0[0] === "object") {
-    flag = true;
-  }
-  for (let num = 0; num < arg1; num = num + 1) {
-    let tmp3 = arg0[num % tmp];
-    if (flag) {
-      let obj = {};
-      let merged = Object.assign(tmp3);
-      let tmp5 = obj;
-    } else {
-      tmp5 = tmp3;
+
+export default function _inherits(value, fn) {
+  if (typeof fn !== "function") {
+    if (null !== fn) {
+      const _TypeError = TypeError;
+      const typeError = new TypeError("Super expression must either be null or a function");
+      throw typeError;
     }
-    array[num] = tmp5;
   }
-  items = [array];
-  return items;
-}
+  let prototype = fn;
+  if (fn) {
+    prototype = fn.prototype;
+  }
+  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
+  Object.defineProperty(value, "prototype", { writable: false });
+  if (fn) {
+    _mod5550(value, fn);
+  }
+  const obj = { constructor: { value, writable: true, configurable: true } };
+};

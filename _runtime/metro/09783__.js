@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 57, height: 56.666666666666664, scales: [3], hash: "7e4be2270db873116542e37e78120107", name: "asset_bronze_badge_small", type: "webp" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "26998a89da8a094ca27d79afeba3b61f", name: "FoodIcon", type: "png" });

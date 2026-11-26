@@ -1,99 +1,57 @@
 // === Module 5115: ? ===
 
 // Module 5115
-import c from "c" /* 5104 */;
-import _slicedToArray from "module_32" /* 32 */;
+import installWorkletsSupport_mod from "installWorkletsSupport" /* 5116 */;
 
-require = fn;
-const noop = fn(19);
-({ useRef: c3, useCallback, useState: closure_4 } = noop);
+const require = globalThis.__r;
 
-export function useRive() {
-  const cResult = c.c(4);
-  const tmp2 = React3(null);
-  [tmp4, dependencyMap] = React4(null);
-  React3(null);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t(current) {
-      if (current.current !== current) {
-        ref.current = current;
-        if (ref2.current) {
-          let _clearTimeout = clearTimeout;
-          clearTimeout(tmp11.current);
-        }
-        const promise = new Promise((arg0, arg1) => {
-          closure_0 = arg1;
-          ref.current = setTimeout(() => {
-            const error = new Error("Rive view ready timeout");
-            closure_0(error);
-          }, 5000);
-        });
-        let awaitViewReadyResult;
-        if (current != null) {
-          awaitViewReadyResult = current.awaitViewReady();
-        }
-        items = [awaitViewReadyResult, promise];
-        const racePromise = Promise.race(items);
-        const nextPromise = Promise.race(items).then((result) => {
-          if (true === result) {
-            dependencyMap(closure_0);
-          } else {
-            const _console = console;
-            console.warn("Rive view ready check returned false");
-            dependencyMap(null);
-          }
-        });
-        Promise.race(items).then((result) => {
-          if (true === result) {
-            dependencyMap(closure_0);
-          } else {
-            const _console = console;
-            console.warn("Rive view ready check returned false");
-            dependencyMap(null);
-          }
-        }).catch((error) => {
-          console.warn("Failed to initialize Rive view:", error);
-          closure_1_1(null);
-        }).finally(() => {
-          if (ref.current) {
-            const _clearTimeout = clearTimeout;
-            clearTimeout(ref.current);
-            ref.current = null;
-          }
-        });
-        const catchPromise = Promise.race(items).then((result) => {
-          if (true === result) {
-            dependencyMap(closure_0);
-          } else {
-            const _console = console;
-            console.warn("Rive view ready check returned false");
-            dependencyMap(null);
-          }
-        }).catch((error) => {
-          console.warn("Failed to initialize Rive view:", error);
-          closure_1_1(null);
-        });
-      }
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { f: first };
-    cResult[1] = obj2;
-    let tmp6 = obj2;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] !== tmp4) {
-    const obj3 = { riveRef: tmp2, riveViewRef: tmp4, setHybridRef: tmp6 };
-    cResult[2] = tmp4;
-    cResult[3] = obj3;
-    let tmp7 = obj3;
-  } else {
-    tmp7 = cResult[3];
-  }
-  return tmp7;
+let installWorkletsSupport = installWorkletsSupport_mod;
+installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
+for (const key10017 in require("module_5121")) {
+  arg5[key10017] = require("module_5121")[key10017];
+  continue;
+}
+for (const key10021 in require("module_5122")) {
+  arg5[key10021] = require("module_5122")[key10021];
+  continue;
+}
+for (const key10025 in require("module_5123")) {
+  arg5[key10025] = require("module_5123")[key10025];
+  continue;
+}
+for (const key10029 in require("module_5124")) {
+  arg5[key10029] = require("module_5124")[key10029];
+  continue;
+}
+for (const key10033 in require("module_5125")) {
+  arg5[key10033] = require("module_5125")[key10033];
+  continue;
+}
+for (const key10037 in require("module_5126")) {
+  arg5[key10037] = require("module_5126")[key10037];
+  continue;
+}
+for (const key10041 in require("module_5117")) {
+  arg5[key10041] = require("module_5117")[key10041];
+  continue;
+}
+for (const key10045 in require("module_5127")) {
+  arg5[key10045] = require("module_5127")[key10045];
+  continue;
+}
+for (const key10049 in require("module_5128")) {
+  arg5[key10049] = require("module_5128")[key10049];
+  continue;
+}
+for (const key10053 in require("module_5129")) {
+  arg5[key10053] = require("module_5129")[key10053];
+  continue;
+}
+for (const key10057 in require("module_5130")) {
+  arg5[key10057] = require("module_5130")[key10057];
+  continue;
+}
+for (const key10061 in require("module_5131")) {
+  arg5[key10061] = require("module_5131")[key10061];
+  continue;
 }

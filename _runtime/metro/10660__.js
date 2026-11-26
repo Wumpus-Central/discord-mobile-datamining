@@ -1,12 +1,7 @@
 // === Module 10660: ? ===
 
 // Module 10660
-import _mod10659 from "module_10659" /* 10659 */;
+import registerAsset from "module_1118" /* 1118 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod10659.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "07392a850e043822a5c8062588fbfbb4", name: "WaveformIcon", type: "png" });

@@ -1,20 +1,30 @@
 // === Module 15714: ? ===
 
 // Module 15714
-import _mod15689 from "module_15689" /* 15689 */;
+const require = globalThis.__r;
 
-if (_mod15689) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
+const require = arg1;
+const dependencyMap = arg6;
+
+export function getSupportedCalendars(locale) {
+  _require = locale;
+  const calendars = require("module_15715").calendars;
+  return calendars.filter((item) => (function isSupportedCalendar(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
     }
-    return applyArgumentsResult;
-  };
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-ca-");
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
+      if ("gregory" === item) {
+        if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
 }
-
-export default fn;

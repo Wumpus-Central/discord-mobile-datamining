@@ -1,21 +1,16 @@
 // === Module 5281: ? ===
 
 // Module 5281
-import Animated from "Animated" /* 5282 */;
-import ScrollView from "ScrollView" /* 5377 */;
-import _modDef5379 from "module_5379" /* 5379 */;
-import Touchable from "Touchable" /* 5392 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod5282 from "module_5282" /* 5282 */;
 
+const useContext = _mod19.useContext;
 
-export const BaseButton = Animated.BaseButton;
-export const BorderlessButton = Animated.BorderlessButton;
-export const PureNativeButton = Animated.PureNativeButton;
-export const RawButton = Animated.RawButton;
-export const RectButton = Animated.RectButton;
-export const FlatList = ScrollView.FlatList;
-export const RefreshControl = ScrollView.RefreshControl;
-export const ScrollView = ScrollView.ScrollView;
-export const Switch = ScrollView.Switch;
-export const TextInput = ScrollView.TextInput;
-export const Pressable = _modDef5379;
-export const Touchable = Touchable.Touchable;
+export () => {
+  const tmp = useContext(_mod5282.BottomSheetContext);
+  if (null === tmp) {
+    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+}

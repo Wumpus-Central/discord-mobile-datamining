@@ -149,7 +149,7 @@ export () => {
                 let obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: "+95" };
               }
             } else {
               try {
@@ -192,7 +192,7 @@ export () => {
                   let found;
                   if (null !== spans) {
                     if (debug1 !== closure_129_4) {
-                      found = closure_129_4.find(/* F142566 */ function() { ... });
+                      found = closure_129_4.find(/* F143031 */ function() { ... });
                     }
                   }
                   closure_128_1 = found;
@@ -261,7 +261,7 @@ export () => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: "+95" };
               }
             } else {
               try {
@@ -308,7 +308,7 @@ export () => {
                       let found;
                       if (null !== spans) {
                         if (debug1 !== closure_129_4) {
-                          found = closure_129_4.find(/* F142568 */ function() { ... });
+                          found = closure_129_4.find(/* F143033 */ function() { ... });
                         }
                       }
                       closure_128_1 = found;
@@ -358,7 +358,7 @@ export () => {
                     }
                   }
                   c3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: "+95" };
                 }
               } catch (tmp83) {
                 c3 = tmp;

@@ -1,13 +1,13 @@
 // === Module 5385: ? ===
 
 // Module 5385
-const require = globalThis.__r;
+import noop from "module_19" /* 19 */;
 
-for (const key10013 in require("module_5386")) {
-  arg5[key10013] = require("module_5386")[key10013];
-  continue;
-}
-for (const key10017 in require("transformTapProps")) {
-  arg5[key10017] = require("transformTapProps")[key10017];
-  continue;
+const use = noop.use;
+const context = noop.createContext(null);
+
+export const InterceptingDetectorMode = { DEFAULT: 0, [0]: "DEFAULT", ANIMATED: 1, [1]: "ANIMATED", REANIMATED: 2, [2]: "REANIMATED" };
+export const InterceptingDetectorContext = context;
+export function useInterceptingDetectorContext() {
+  return use(context);
 }

@@ -1,7 +1,0 @@
-// === Module 3953: ? ===
-
-// Module 3953
-import registerAsset from "module_1118" /* 1118 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3lvdXR1YmVfM3Bw", scales: [1], hash: "30f677a8e294159984ed8389d55e0869", name: "bg.messages.30f677a8e294159984ed8389d55e0869.compiled.messages", type: "jsona" });

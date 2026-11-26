@@ -201,7 +201,7 @@ class FeedbackWidget {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else {
           try {
@@ -234,7 +234,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "sa", attachment: "isArray", attachmentUri: "isArray" });
+                  debug.setState({ filename: "radii", attachment: "id", attachmentUri: "clearTimeout" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;
@@ -618,7 +618,7 @@ let items = [
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: "+95" };
               }
             } else {
               try {
@@ -633,7 +633,7 @@ let items = [
                 } else {
                   v3(closure_1_2[7]).feedbackAlertDialog(props2.errorTitle, props2.captureScreenshotError);
                   v3 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: "+95" };
                 }
               } catch (tmp8) {
                 v3 = tmp;

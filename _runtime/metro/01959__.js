@@ -1,33 +1,29 @@
 // === Module 1959: ? ===
 
 // Module 1959
-import _mod1666 from "module_1666" /* 1666 */;
-import _mod1706 from "module_1706" /* 1706 */;
+import _mod1667 from "module_1667" /* 1667 */;
+import _mod1707 from "module_1707" /* 1707 */;
 
-let items = [{ code: "(function setNativePropsNative_Pnpm_setNativePropsNativeTs1(animatedRef,updates){let[RuntimeKind,logger,processColorsInProps]=this.__closure;if(globalThis.__RUNTIME_KIND===RuntimeKind.ReactNative){logger.warn('setNativeProps() can only be used on the UI runtime.');return;}const shadowNodeWrapper=animatedRef.value;processColorsInProps(updates);global._updateProps([{shadowNodeWrapper:shadowNodeWrapper,updates:updates}]);})" }, _mod1706.RuntimeKind, _mod1666.logger, _mod1666.processColorsInProps];
+const items = [{ code: "(function setGestureStateNative_Pnpm_setGestureStateNativeTs1(handlerTag,newState){let[RuntimeKind,logger]=this.__closure;if(globalThis.__RUNTIME_KIND===RuntimeKind.ReactNative){logger.warn('You can not use setGestureState in non-worklet function.');return;}global._setGestureState(handlerTag,newState);})" }, _mod1707.RuntimeKind, _mod1667.logger];
 let c0;
 let c1;
-let c2;
-[tmp2, tmp3, tmp4, tmp5] = items;
-let setNativePropsJest = function setNativePropsNative(value, updates) {
+[tmp2, tmp3, tmp4] = items;
+let setGestureStateJest = function setGestureStateNative(arg0, arg1) {
   if (globalThis.__RUNTIME_KIND !== _undefined.ReactNative) {
-    _undefined3(updates);
-    const obj = { shadowNodeWrapper: value.value, updates };
-    items = [obj];
-    _undefined._updateProps(items);
+    _undefined._setGestureState(arg0, arg1);
   } else {
-    _undefined2.warn("setNativeProps() can only be used on the UI runtime.");
+    _undefined2.warn("You can not use setGestureState in non-worklet function.");
   }
 };
-const items1 = [tmp3, tmp4, tmp5];
-setNativePropsJest.__closure = items1;
-setNativePropsJest.__workletHash = 9620176991482;
-setNativePropsJest.__initData = tmp2;
-if (_mod1666.IS_JEST) {
-  setNativePropsJest = function setNativePropsJest() {
-    const logger = _undefined2(_undefined3[1]).logger;
-    logger.warn("setNativeProps() is not supported with Jest.");
+const items1 = [tmp3, tmp4];
+setGestureStateJest.__closure = items1;
+setGestureStateJest.__workletHash = 10884479007598;
+setGestureStateJest.__initData = tmp2;
+if (_mod1667.IS_JEST) {
+  setGestureStateJest = function setGestureStateJest() {
+    const logger = _undefined2(1667).logger;
+    logger.warn("setGestureState() cannot be used with Jest.");
   };
 }
 
-export const setNativeProps = setNativePropsJest;
+export const setGestureState = setGestureStateJest;

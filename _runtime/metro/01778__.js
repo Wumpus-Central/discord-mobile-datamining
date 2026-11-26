@@ -1,121 +1,103 @@
 // === Module 1778: ? ===
 
 // Module 1778
-import _mod1666 from "module_1666" /* 1666 */;
-import _mod1759 from "module_1759" /* 1759 */;
+import normalizeDelay from "normalizeDelay" /* 1772 */;
+import _mod1784 from "module_1784" /* 1784 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _toArray from "_toArray" /* 717 */;
 
 require = arg1;
+const ERROR_MESSAGES = {
+  invalidTransitionProperty(transitionProperty1) {
+    return "Invalid transition property \"" + JSON.stringify(transitionProperty1) + "\"";
+  }
+};
 
-export function createEmptyTransitionConfig() {
-  return { transitionProperty: [], transitionDuration: [], transitionTimingFunction: [], transitionDelay: [], transitionBehavior: [] };
-}
-export function parseTransitionShorthand(transition) {
-  return _mod1759.splitByComma(transition).reduce((transitionProperty, item) => {
-    let cubicBezier = str2;
-    items = dependencyMap;
-    const result = str2(1759).parseSingleTransitionShorthand(item);
-    transitionProperty = transitionProperty.transitionProperty;
-    let obj = str2(1759);
-    let str = result.transitionProperty;
-    if (str == null) {
-      str = "all";
-    }
-    transitionProperty.push(str2(1666).camelizeKebabCase(str));
-    const transitionDuration = transitionProperty.transitionDuration;
-    transitionDuration.push(result.transitionDuration);
-    const prop = transitionProperty.transitionTimingFunction;
-    if (!result.transitionTimingFunction) {
-      prop.push(undefined);
-      const transitionDelay = transitionProperty.transitionDelay;
-      transitionDelay.push(result.transitionDelay);
-      const transitionBehavior = transitionProperty.transitionBehavior;
-      transitionBehavior.push(result.transitionBehavior);
-      return transitionProperty;
+export { ERROR_MESSAGES };
+export function normalizeCSSTransitionProperties(prevTransitionProperties) {
+  let tmp = (function getExpandedConfigProperties(transition) {
+    let tmp = transition;
+    obj = closure_0(dependencyMap[1]);
+    if (transition.transition) {
+      const result = obj.parseTransitionShorthand(tmp.transition);
     } else {
-      let result1 = cubicBezier(1759).isPredefinedTimingFunction(str2);
-      let applyResult = str2;
-      if (!result1) {
-        const obj4 = /^(.+)\((.+)\)$/;
-        if (obj4.test(str2)) {
-          const tmp11 = closure_2(str2.match(obj4), 3);
-          result1 = cubicBezier(1759).splitByComma(tmp11[2]);
-          if ("cubic-bezier" === tmp11[1]) {
-            let _Number = Number;
-            const mapped = result1.map(Number);
-            if (cubicBezierResult2.isArrayOfLength(mapped, 4)) {
-              if (mapped.every((item) => !isNaN(item))) {
-                const cubicBezierResult3 = cubicBezier(1779);
-                cubicBezier = cubicBezierResult3.cubicBezier;
-                items = [];
-                HermesBuiltin.arraySpread(mapped, 0);
-                applyResult = HermesBuiltin.apply(items, cubicBezierResult3);
-              }
-            }
-            const _Error2 = Error;
-            const _HermesInternal2 = HermesInternal;
-            let error = new Error("[Reanimated] Invalid timing function: " + str2);
-            throw error;
-          } else if ("linear" !== tmp12) {
-            if ("steps" === tmp12) {
-              let _Number2 = Number;
-              const NumberResult = Number(result1[0]);
-              let _isNaN = isNaN;
-              if (!isNaN(NumberResult)) {
-                if (NumberResult > 0) {
-                  if (undefined !== tmp39) {
-                    cubicBezier(1759);
-                  }
-                  applyResult = cubicBezier(1779).steps(NumberResult, tmp39);
-                  const cubicBezierResult5 = cubicBezier(1779);
-                }
-              }
+      const emptyTransitionConfig = obj.createEmptyTransitionConfig();
+    }
+    const entries = Object.entries(tmp);
+    tmp = entries;
+    entries[Symbol.iterator]();
+  })(prevTransitionProperties);
+  const transitionProperty1 = tmp.transitionProperty;
+  closure_0 = undefined;
+  if (transitionProperty1.length) {
+    closure_0 = tmp5;
+    if (transitionProperty1.some((item) => "none" === item !== closure_0)) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error("[Reanimated] " + settings.invalidTransitionProperty(transitionProperty1));
+      throw error;
+    } else {
+      let someResult = !tmp5;
+    }
+  } else {
+    const _Object = Object;
+    const values = Object.values(tmp2);
+    someResult = values.some((item) => item.length);
+  }
+  if (someResult) {
+    ({ transitionProperty, transitionDuration, transitionTimingFunction, transitionDelay, transitionBehavior } = tmp);
+    const _Set = Set;
+    set = new Set();
+    const _Set2 = Set;
+    const set1 = new Set();
+    if (!transitionProperty.length) {
+      transitionProperty.push("all");
+    }
+    settings = {};
+    let diff = transitionProperty.length - 1;
+    let flag = false;
+    if (0 <= diff) {
+      while (true) {
+        let tmp15 = transitionProperty[diff];
+        if (!set1.has(tmp15)) {
+          let addResult = set1.add(tmp15);
+          let obj5 = normalizeDelay;
+          let normalizeDurationResult = obj5.normalizeDuration(transitionDuration[diff % transitionDuration.length]);
+          let obj6 = normalizeDelay;
+          let normalizeDelayResult = obj6.normalizeDelay(transitionDelay[diff % transitionDelay.length]);
+          if (normalizeDurationResult + normalizeDelayResult > 0) {
+            let tmp18Result = normalizeDelay;
+            let result = tmp18Result.normalizeTimingFunction(transitionTimingFunction[diff % transitionTimingFunction.length]);
+            let tmp18Result2 = _mod1784;
+            let obj2 = { duration: normalizeDurationResult, timingFunction: result, delay: normalizeDelayResult, allowDiscrete: tmp18Result2.normalizeTransitionBehavior(transitionBehavior[diff % transitionBehavior.length]) };
+            settings[tmp15] = obj2;
+            flag = true;
+            if ("all" === tmp15) {
+              break;
+            } else {
+              let addResult1 = set.add(tmp15);
             }
           }
-          const cubicBezierResult1 = cubicBezier(1759);
-        } else {
-          let _Error = Error;
-          let _HermesInternal = HermesInternal;
-          const error1 = new Error("[Reanimated] Unsupported timing function: " + str2);
-          throw error1;
+          break;
+        }
+        diff = diff - 1;
+        flag = false;
+        if (0 > diff) {
+          break;
         }
       }
-      const mapped1 = result1.map((item) => {
-        const arr = _toArray(_mod1759.splitByWhitespace(item));
-        const first = arr[0];
-        const substr = arr.slice(1);
-        let tmp4 = null;
-        if (first) {
-          const _isNaN = isNaN;
-          const _Number = Number;
-          tmp4 = null;
-          if (!isNaN(Number(first))) {
-            tmp4 = null;
-            if (substr.every(_mod1666.isPercentage)) {
-              const _Number2 = Number;
-              items = [Number(first)];
-              HermesBuiltin.arraySpread(substr, 1);
-              tmp4 = items;
-            }
-          }
-        }
-        if (tmp4) {
-          return tmp4;
-        } else {
-          const _Error = Error;
-          const _HermesInternal = HermesInternal;
-          const error = new Error("[Reanimated] Invalid control point: " + item + " in " + str2 + " timing function");
-          throw error;
-        }
-      });
-      const cubicBezierResult6 = cubicBezier(1779);
-      const linear = cubicBezierResult6.linear;
-      const items1 = [];
-      HermesBuiltin.arraySpread(mapped1, 0);
-      applyResult = HermesBuiltin.apply(items1, cubicBezierResult6);
-      const cubicBezierResult = cubicBezier(1759);
     }
-    const obj2 = str2(1666);
-  }, { transitionProperty: [], transitionDuration: [], transitionTimingFunction: [], transitionDelay: [], transitionBehavior: [] });
+    if (flag) {
+      const obj3 = { specificProperties: "Array", settings };
+      let tmp24 = obj3;
+    } else {
+      tmp24 = null;
+      if (set.size) {
+        const obj4 = { specificProperties: set, settings };
+        tmp24 = obj4;
+      }
+    }
+    return tmp24;
+  } else {
+    return null;
+  }
 }

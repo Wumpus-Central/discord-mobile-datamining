@@ -18,7 +18,7 @@ function processEvent(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -201,7 +201,7 @@ function symbolicate(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -290,7 +290,7 @@ function symbolicate(arg0) {
                         let obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: "+95" };
                       }
                     } else {
                       try {
@@ -305,7 +305,7 @@ function symbolicate(arg0) {
                         } else {
                           _self = self;
                           c1 = 3;
-                          let obj = { value: Promise.all(_self.map(/* F142420 */ function() { ... })), done: true };
+                          let obj = { value: Promise.all(_self.map(/* F142885 */ function() { ... })), done: true };
                           return obj;
                         }
                       } catch (tmp7) {

@@ -1,33 +1,7 @@
 // === Module 9239: ? ===
 
 // Module 9239
-const require = globalThis.__r;
+import registerAsset from "module_1118" /* 1118 */;
 
-for (const key10013 in require("module_9240")) {
-  arg5[key10013] = require("module_9240")[key10013];
-  continue;
-}
-for (const key10017 in require("ReplacementModesAndroid")) {
-  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
-  continue;
-}
-for (const key10021 in require("purchaseUpdatedListener")) {
-  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
-  continue;
-}
-for (const key10025 in require("module_9254")) {
-  arg5[key10025] = require("module_9254")[key10025];
-  continue;
-}
-for (const key10029 in require("module_9255")) {
-  arg5[key10029] = require("module_9255")[key10029];
-  continue;
-}
-for (const key10033 in require("PurchaseError")) {
-  arg5[key10033] = require("PurchaseError")[key10033];
-  continue;
-}
-for (const key10037 in require("module_9256")) {
-  arg5[key10037] = require("module_9256")[key10037];
-  continue;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 106, height: 80, scales: [2, 3], hash: "f9a535d371ee710b8f1909e45896c667", name: "img_wumpus_nitro_rev", type: "png" });

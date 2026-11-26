@@ -1,19 +1,10 @@
 // === Module 1845: ? ===
 
 // Module 1845
-import mutablesNative from "mutablesNative" /* 1832 */;
+import mutablesNative from "module_1846" /* 1846 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function createReducedMotionManager(_REANIMATED_IS_REDUCED_MOTION) {
-  const obj = {
-    jsValue: _REANIMATED_IS_REDUCED_MOTION,
-    uiValue: mutablesNative.makeMutable(_REANIMATED_IS_REDUCED_MOTION),
-    setEnabled(jsValue) {
-      obj.jsValue = jsValue;
-      obj.uiValue.value = jsValue;
-    }
-  };
-  return obj;
+export function isReducedMotionEnabledInSystem() {
+  return global._REANIMATED_IS_REDUCED_MOTION;
 }
+export const ReducedMotionManager = mutablesNative.createReducedMotionManager(global._REANIMATED_IS_REDUCED_MOTION);

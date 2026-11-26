@@ -1,13 +1,17 @@
 // === Module 15740: ? ===
 
 // Module 15740
-import _mod15688 from "module_15688" /* 15688 */;
-import _mod15697 from "module_15697" /* 15697 */;
-import all from "module_15707" /* 15707 */;
+import _mod15736 from "module_15736" /* 15736 */;
 
-let closure_0 = _mod15688(Function.toString);
-if (!all(_mod15697.inspectSource)) {
-  _mod15697.inspectSource = (arg0) => closure_0(arg0);
-}
 
-export default _mod15697.inspectSource;
+export default !_mod15736(() => {
+  const fn = () => {
+
+  };
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});

@@ -283,7 +283,7 @@ function nativeFramesIntegration() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -319,19 +319,19 @@ function nativeFramesIntegration() {
                       closure_0 = arg0;
                       closure_1 = arg1;
                       c2 = false;
-                      const timeout = setTimeout(/* F121555 */ function() { ... }, 2000);
+                      const timeout = setTimeout(/* F121943 */ function() { ... }, 2000);
                       const NATIVE = closure_0(866).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
-                      nativeFrames.then(/* F121556 */ function() { ... }).then(undefined, /* F121557 */ function() { ... });
+                      nativeFrames.then(/* F121944 */ function() { ... }).then(undefined, /* F121945 */ function() { ... });
                     });
                     new Promise((arg0, arg1) => {
                       closure_0 = arg0;
                       closure_1 = arg1;
                       c2 = false;
-                      const timeout = setTimeout(/* F121555 */ function() { ... }, 2000);
+                      const timeout = setTimeout(/* F121943 */ function() { ... }, 2000);
                       const NATIVE = closure_0(866).NATIVE;
                       const nativeFrames = NATIVE.fetchNativeFrames();
-                      nativeFrames.then(/* F121556 */ function() { ... }).then(undefined, /* F121557 */ function() { ... });
+                      nativeFrames.then(/* F121944 */ function() { ... }).then(undefined, /* F121945 */ function() { ... });
                     }).then((nativeFrames) => {
                       closure_0({ timestamp, nativeFrames });
                     }).then(undefined, (arg0) => {
@@ -456,7 +456,7 @@ function nativeFramesIntegration() {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else {
           try {
@@ -775,7 +775,7 @@ export (enableNative2) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else {
           try {
@@ -811,19 +811,19 @@ export (enableNative2) => {
                         closure_0 = arg0;
                         closure_1 = arg1;
                         c2 = false;
-                        const timeout = setTimeout(/* F121555 */ function() { ... }, 2000);
+                        const timeout = setTimeout(/* F121943 */ function() { ... }, 2000);
                         const NATIVE = closure_0(866).NATIVE;
                         const nativeFrames = NATIVE.fetchNativeFrames();
-                        nativeFrames.then(/* F121556 */ function() { ... }).then(undefined, /* F121557 */ function() { ... });
+                        nativeFrames.then(/* F121944 */ function() { ... }).then(undefined, /* F121945 */ function() { ... });
                       });
                       new Promise((arg0, arg1) => {
                         closure_0 = arg0;
                         closure_1 = arg1;
                         c2 = false;
-                        const timeout = setTimeout(/* F121555 */ function() { ... }, 2000);
+                        const timeout = setTimeout(/* F121943 */ function() { ... }, 2000);
                         const NATIVE = closure_0(866).NATIVE;
                         const nativeFrames = NATIVE.fetchNativeFrames();
-                        nativeFrames.then(/* F121556 */ function() { ... }).then(undefined, /* F121557 */ function() { ... });
+                        nativeFrames.then(/* F121944 */ function() { ... }).then(undefined, /* F121945 */ function() { ... });
                       }).then((nativeFrames) => {
                         closure_0({ timestamp, nativeFrames });
                       }).then(undefined, (arg0) => {
@@ -948,7 +948,7 @@ export (enableNative2) => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: "+95" };
               }
             } else {
               try {

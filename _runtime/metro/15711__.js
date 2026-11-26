@@ -1,14 +1,10 @@
 // === Module 15711: ? ===
 
 // Module 15711
-import _mod15692 from "module_15692" /* 15692 */;
-import _mod15712 from "module_15712" /* 15712 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod15692(arg0[arg1])) {
-    tmp4 = _mod15712(tmp);
-  }
-  return tmp4;
-};
+export const shouldPolyfill = require("module_15712").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

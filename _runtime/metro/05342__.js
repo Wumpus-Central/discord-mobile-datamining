@@ -1,102 +1,96 @@
 // === Module 5342: ? ===
 
 // Module 5342
+import _modDef5330 from "module_5330" /* 5330 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
+import PlatformConstants from "module_5343" /* 5343 */;
 
-export function isComposedGesture(gesture) {
-  return "handlerTags" in gesture;
-}
-export function prepareRelations(config, handlerTag) {
-  const simultaneousWith1 = config.simultaneousWith;
-  closure_0 = handlerTag;
-  if (simultaneousWith1) {
-    const _Array = Array;
-    if (Array.isArray(simultaneousWith1)) {
-      const item = simultaneousWith1.forEach(function processSingleGesture(externalSimultaneousHandlers) {
-        if ("handlerTags" in externalSimultaneousHandlers) {
-          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
-        } else {
-          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
-        }
-        if (!prop.includes(closure_0)) {
-          prop.push(closure_0);
-        }
-      });
+const ForceTouchFallback = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      if ("handlerTags" in simultaneousWith1) {
-        let prop = simultaneousWith1.externalSimultaneousHandlers;
-      } else {
-        prop = simultaneousWith1.gestureRelations.simultaneousHandlers;
-      }
-      if (!prop.includes(handlerTag)) {
-        prop.push(handlerTag);
-      }
+      callResult = call(constructResult);
     }
-  }
-  const simultaneousWith = config.simultaneousWith;
-  if (simultaneousWith) {
-    const _Array2 = Array;
-    if (Array.isArray(simultaneousWith)) {
-      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
-        if ("handlerTags" in handlerTags) {
-          handlerTags = handlerTags.handlerTags;
-        } else {
-          handlerTags = [];
-          handlerTags[0] = handlerTags.handlerTag;
-        }
-        return handlerTags;
-      });
-    } else if ("handlerTags" in simultaneousWith) {
-      flatMapResult = simultaneousWith.handlerTags;
-    } else {
-      flatMapResult = [simultaneousWith.handlerTag];
-    }
-  } else {
-    const obj = { simultaneousHandlers: [], waitFor: null, blocksHandlers: null };
-    const requireToFail = config.requireToFail;
-    if (requireToFail) {
-      const _Array3 = Array;
-      if (Array.isArray(requireToFail)) {
-        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
-          if ("handlerTags" in handlerTags) {
-            handlerTags = handlerTags.handlerTags;
-          } else {
-            handlerTags = [];
-            handlerTags[0] = handlerTags.handlerTag;
-          }
-          return handlerTags;
-        });
-      } else if ("handlerTags" in requireToFail) {
-        flatMapResult1 = requireToFail.handlerTags;
-      } else {
-        flatMapResult1 = [requireToFail.handlerTag];
-      }
-    } else {
-      obj.waitFor = [];
-      const block = config.block;
-      if (block) {
-        const _Array4 = Array;
-        if (Array.isArray(block)) {
-          let flatMapResult2 = block.flatMap((handlerTags) => {
-            if ("handlerTags" in handlerTags) {
-              handlerTags = handlerTags.handlerTags;
-            } else {
-              handlerTags = [];
-              handlerTags[0] = handlerTags.handlerTag;
-            }
-            return handlerTags;
-          });
-        } else if ("handlerTags" in block) {
-          flatMapResult2 = block.handlerTags;
-        } else {
-          flatMapResult2 = [block.handlerTag];
-        }
-      } else {
-        obj.blocksHandlers = [];
-        return obj;
-      }
-    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-export function containsDuplicates(flatMapResult1) {
-  return new Set(flatMapResult1).size !== flatMapResult1.length;
+class ForceTouchFallback {
+  constructor() {
+    self = this;
+    tmp = c2(this, ForceTouchFallback);
+    tmp2 = closure_4;
+    obj = closure_4(ForceTouchFallback);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
 }
+_inherits(ForceTouchFallback, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    console.warn(ForceTouchFallback(5307).tagMessage("ForceTouchGestureHandler is not available on this platform. Please use ForceTouchGestureHandler.forceTouchAvailable to conditionally render other components that would provide a fallback behavior specific to your usecase"));
+  }
+};
+const items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      return this.props.children;
+    }
+  }
+];
+let importDefaultResultResult = _createClass(ForceTouchFallback, items);
+importDefaultResultResult.forceTouchAvailable = false;
+let forceTouchAvailable;
+if (PlatformConstants != null) {
+  forceTouchAvailable = PlatformConstants.forceTouchAvailable;
+}
+const items1 = ["minForce", "maxForce", "feedbackOnActivation"];
+if (forceTouchAvailable) {
+  let obj = { name: "ForceTouchGestureHandler", allowedProps: null, config: null };
+  const items2 = [];
+  HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(fn(5328).baseGestureHandlerProps, 0));
+  obj.allowedProps = items2;
+  obj.config = {};
+  importDefaultResultResult = _modDef5330(obj);
+  const importDefaultResult4 = _modDef5330;
+}
+let flag;
+if (PlatformConstants != null) {
+  flag = PlatformConstants.forceTouchAvailable;
+}
+if (!flag) {
+  flag = false;
+}
+importDefaultResultResult.forceTouchAvailable = flag;
+
+export const forceTouchGestureHandlerProps = items1;
+export const forceTouchHandlerName = "ForceTouchGestureHandler";
+export const ForceTouchGestureHandler = importDefaultResultResult;

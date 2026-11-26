@@ -1,16 +1,49 @@
 // === Module 15699: ? ===
 
 // Module 15699
-import prop_mod from "module_15700" /* 15700 */;
+import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 15700 */;
+import compareKV from "compareKV" /* 15701 */;
+import likelySubtags from "likelySubtags" /* 15704 */;
+import _mod15705 from "module_15705" /* 15705 */;
+import e_mod from "e" /* 1158 */;
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
-}
+const require = globalThis.__r;
 
-export default prop;
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod15705, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
+    }
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_15703").parseUnicodeLocaleId(arr3[num3])));
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
+  }
+  return items;
+}
+export const isStructurallyValidLanguageTag = require("module_15703").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("module_15703").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("module_15703").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("module_15703").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("module_15703").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("module_15703").parseUnicodeLocaleId;

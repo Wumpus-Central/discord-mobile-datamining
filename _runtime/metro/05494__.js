@@ -1,11 +1,7 @@
 // === Module 5494: ? ===
 
 // Module 5494
+import _modDef5495 from "module_5495" /* 5495 */;
 
-export default function _classCallCheck(arg0, arg1) {
-  if (!(arg0 instanceof arg1)) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Cannot call a class as a function");
-    throw typeError;
-  }
-};
+
+export default _modDef5495;

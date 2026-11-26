@@ -1,204 +1,51 @@
 // === Module 1774: ? ===
 
 // Module 1774
-import _mod1666 from "module_1666" /* 1666 */;
-import _mod1759 from "module_1759" /* 1759 */;
-import normalizeDelay from "normalizeDelay" /* 1771 */;
-import VALID_ANIMATION_DIRECTIONS2 from "VALID_ANIMATION_DIRECTIONS" /* 1775 */;
+import _mod1667 from "module_1667" /* 1667 */;
 
 require = arg1;
 const dependencyMap = arg6;
-const ERROR_MESSAGES = {
-  invalidAnimationDirection(animationDirection) {
-    return "Invalid animation direction \"" + animationDirection + "\".";
-  },
-  invalidIterationCount(animationIterationCount) {
-    return "Invalid iteration count \"" + animationIterationCount + "\". Expected a number or \"infinite\".";
-  },
-  negativeIterationCount(animationIterationCount) {
-    return "Iteration count cannot be negative, received \"" + animationIterationCount + "\".";
-  },
-  invalidFillMode(animationFillMode) {
-    return "Invalid fill mode \"" + animationFillMode + "\".";
-  },
-  invalidPlayState(animationPlayState) {
-    return "Invalid play state \"" + animationPlayState + "\".";
-  }
-};
 
-export { ERROR_MESSAGES };
-export function normalizeDirection() {
-  let str = animationDirection;
-  if (animationDirection === undefined) {
-    str = "normal";
-  }
-  const VALID_ANIMATION_DIRECTIONS = VALID_ANIMATION_DIRECTIONS2.VALID_ANIMATION_DIRECTIONS;
-  if (VALID_ANIMATION_DIRECTIONS.has(str)) {
-    return str;
-  } else {
-    const _Error = Error;
-    const _HermesInternal = HermesInternal;
-    const error = new Error("[Reanimated] " + obj.invalidAnimationDirection(str));
-    throw error;
-  }
-}
-export function normalizeIterationCount() {
-  let num = animationIterationCount;
-  if (animationIterationCount === undefined) {
-    num = 1;
-  }
-  if ("infinite" !== num) {
-    if (num !== Infinity) {
-      const obj = _mod1666;
-      if (obj.isNumber(num)) {
-        if (num < 0) {
-          const _Error2 = Error;
-          const _HermesInternal2 = HermesInternal;
-          const error = new Error("[Reanimated] " + obj.negativeIterationCount(num));
-          throw error;
-        } else {
-          return num;
-        }
-      } else {
-        const _Error = Error;
-        const _HermesInternal = HermesInternal;
-        const error1 = new Error("[Reanimated] " + obj.invalidIterationCount(num));
-        throw error1;
-      }
+export function createSingleCSSAnimationProperties(arg0) {
+  const result = _mod1667.convertPropertiesToArrays(arg0);
+  ({ animationName, animationDuration: require, animationTimingFunction: dependencyMap, animationDelay: closure_2, animationIterationCount: closure_3, animationDirection: closure_4, animationFillMode: closure_5, animationPlayState: closure_6 } = result);
+  return animationName.map((animationName, index) => {
+    const obj = { animationName, animationDuration: null, animationTimingFunction: null, animationDelay: null, animationIterationCount: null, animationDirection: null, animationFillMode: null, animationPlayState: null };
+    let tmp;
+    if (require != null) {
+      tmp = require[index % require.length];
     }
-  }
-  return -1;
-}
-export function normalizeFillMode() {
-  let str = animationFillMode;
-  if (animationFillMode === undefined) {
-    str = "none";
-  }
-  const VALID_FILL_MODES = VALID_ANIMATION_DIRECTIONS2.VALID_FILL_MODES;
-  if (VALID_FILL_MODES.has(str)) {
-    return str;
-  } else {
-    const _Error = Error;
-    const _HermesInternal = HermesInternal;
-    const error = new Error("[Reanimated] " + obj.invalidFillMode(str));
-    throw error;
-  }
-}
-export function normalizePlayState() {
-  let str = animationPlayState;
-  if (animationPlayState === undefined) {
-    str = "running";
-  }
-  const VALID_PLAY_STATES = VALID_ANIMATION_DIRECTIONS2.VALID_PLAY_STATES;
-  if (VALID_PLAY_STATES.has(str)) {
-    return str;
-  } else {
-    const _Error = Error;
-    const _HermesInternal = HermesInternal;
-    const error = new Error("[Reanimated] " + obj.invalidPlayState(str));
-    throw error;
-  }
-}
-export function normalizeSingleCSSAnimationSettings(animationName) {
-  ({ animationIterationCount, animationDirection, animationFillMode, animationPlayState } = animationName);
-  const obj = { duration: normalizeDelay.normalizeDuration(animationDuration), timingFunction: null, delay: null, iterationCount: null, direction: null, fillMode: null, playState: null };
-  ({ animationDuration, animationTimingFunction, animationDelay } = animationName);
-  obj.timingFunction = normalizeDelay.normalizeTimingFunction(animationTimingFunction);
-  obj.delay = normalizeDelay.normalizeDelay(animationDelay);
-  if (animationIterationCount === undefined) {
-    animationIterationCount = 1;
-  }
-  let num = -1;
-  if ("infinite" !== animationIterationCount) {
-    num = -1;
-    if (animationIterationCount !== Infinity) {
-      if (tmpResult.isNumber(animationIterationCount)) {
-        num = animationIterationCount;
-        if (animationIterationCount < 0) {
-          const _Error2 = Error;
-          const _HermesInternal2 = HermesInternal;
-          const error = new Error("[Reanimated] " + obj.negativeIterationCount(animationIterationCount));
-          throw error;
-        }
-      } else {
-        const _Error = Error;
-        const _HermesInternal = HermesInternal;
-        const error1 = new Error("[Reanimated] " + obj.invalidIterationCount(animationIterationCount));
-        throw error1;
-      }
-      tmpResult = _mod1666;
+    obj.animationDuration = tmp;
+    let tmp2;
+    if (dependencyMap != null) {
+      tmp2 = dependencyMap[index % dependencyMap.length];
     }
-  }
-  obj.iterationCount = num;
-  if (animationDirection === undefined) {
-    animationDirection = "normal";
-  }
-  const VALID_ANIMATION_DIRECTIONS = VALID_ANIMATION_DIRECTIONS2.VALID_ANIMATION_DIRECTIONS;
-  if (VALID_ANIMATION_DIRECTIONS.has(animationDirection)) {
-    obj.direction = animationDirection;
-    if (animationFillMode === undefined) {
-      animationFillMode = "none";
+    obj.animationTimingFunction = tmp2;
+    let tmp3;
+    if (length != null) {
+      tmp3 = length[index % length.length];
     }
-    const VALID_FILL_MODES = VALID_ANIMATION_DIRECTIONS2.VALID_FILL_MODES;
-    if (VALID_FILL_MODES.has(animationFillMode)) {
-      obj.fillMode = animationFillMode;
-      if (animationPlayState === undefined) {
-        animationPlayState = "running";
-      }
-      const VALID_PLAY_STATES = VALID_ANIMATION_DIRECTIONS2.VALID_PLAY_STATES;
-      if (VALID_PLAY_STATES.has(animationPlayState)) {
-        obj.playState = animationPlayState;
-        return obj;
-      } else {
-        const _Error5 = Error;
-        const _HermesInternal5 = HermesInternal;
-        const error2 = new Error("[Reanimated] " + obj.invalidPlayState(animationPlayState));
-        throw error2;
-      }
-    } else {
-      const _Error4 = Error;
-      const _HermesInternal4 = HermesInternal;
-      const error3 = new Error("[Reanimated] " + obj.invalidFillMode(animationFillMode));
-      throw error3;
+    obj.animationDelay = tmp3;
+    let tmp4;
+    if (length2 != null) {
+      tmp4 = length2[index % length2.length];
     }
-  } else {
-    const _Error3 = Error;
-    const _HermesInternal3 = HermesInternal;
-    const error4 = new Error("[Reanimated] " + obj.invalidAnimationDirection(animationDirection));
-    throw error4;
-  }
-}
-export function getAnimationSettingsUpdates(normalizedSettings, normalizedSettings2) {
-  const obj = {};
-  if (normalizedSettings.duration !== normalizedSettings2.duration) {
-    obj.duration = normalizedSettings2.duration;
-  }
-  let tmp = normalizedSettings.timingFunction === normalizedSettings2.timingFunction;
-  if (!tmp) {
-    const timingFunction = normalizedSettings.timingFunction;
-    let deepEqualResult = typeof timingFunction === "object";
-    if (typeof timingFunction === "object") {
-      deepEqualResult = _mod1759.deepEqual(normalizedSettings.timingFunction, normalizedSettings2.timingFunction);
+    obj.animationIterationCount = tmp4;
+    let tmp5;
+    if (length3 != null) {
+      tmp5 = length3[index % length3.length];
     }
-    tmp = deepEqualResult;
-  }
-  if (!tmp) {
-    obj.timingFunction = normalizedSettings2.timingFunction;
-  }
-  if (normalizedSettings.delay !== normalizedSettings2.delay) {
-    obj.delay = normalizedSettings2.delay;
-  }
-  if (normalizedSettings.iterationCount !== normalizedSettings2.iterationCount) {
-    obj.iterationCount = normalizedSettings2.iterationCount;
-  }
-  if (normalizedSettings.direction !== normalizedSettings2.direction) {
-    obj.direction = normalizedSettings2.direction;
-  }
-  if (normalizedSettings.fillMode !== normalizedSettings2.fillMode) {
-    obj.fillMode = normalizedSettings2.fillMode;
-  }
-  if (normalizedSettings.playState !== normalizedSettings2.playState) {
-    obj.playState = normalizedSettings2.playState;
-  }
-  return obj;
+    obj.animationDirection = tmp5;
+    let tmp6;
+    if (length4 != null) {
+      tmp6 = length4[index % length4.length];
+    }
+    obj.animationFillMode = tmp6;
+    let tmp7;
+    if (length5 != null) {
+      tmp7 = length5[index % length5.length];
+    }
+    obj.animationPlayState = tmp7;
+    return obj;
+  });
 }
