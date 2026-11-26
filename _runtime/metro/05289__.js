@@ -1,11 +1,7 @@
 // _runtime/metro/05289__.js
-import _mod17 from "00017__.js";
 import _mod19 from "00019__.js";
-import _modDef5290 from "05290__.js";
 
-const use = _mod19.use;
-const Platform = _mod17.Platform;
+const context = _mod19.createContext(null);
 
-export function useEnsureGestureHandlerRootView() {
-  use(_modDef5290);
-}
+export const BottomSheetModalInternalContext = context;
+export const BottomSheetModalInternalProvider = context.Provider;

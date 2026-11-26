@@ -1,13 +1,16 @@
 // _runtime/metro/08983__.js
-import registerAsset from "01118__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b5ac530e11705d268a2dd9d0cf020b0a",
-  name: "PhoneHangUpIcon",
-  type: "png",
-});
+export function createAbortError(signal) {
+  let aborted;
+  if (signal != null) {
+    aborted = signal.aborted;
+  }
+  if (aborted) {
+    if (undefined !== signal.reason) {
+      return signal.reason;
+    }
+  }
+  const error = new Error("The operation was aborted.");
+  error.name = "AbortError";
+  return error;
+}

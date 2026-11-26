@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a223df53550492950018c2a994e89fed",
-  name: "FiltersHorizontalIcon",
+  hash: "c8ba289430cf44af74e8a6dfe840935f",
+  name: "LaptopPhoneIcon",
   type: "png",
 });

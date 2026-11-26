@@ -1,30 +1,37 @@
 // _runtime/metro/08862__.js
-import colorPropType from "../08850_colorPropType.js";
-import _mod8858 from "08858__.js";
-import merged12 from "../08859_merged1.js";
-import merged22 from "../08860_merged2.js";
-import emptyFunction_mod from "05053__.js";
+import processColor from "../00050_processColor.js";
+import get_ActivityIndicator from "00017__.js";
+import resolveAssetSource_mod from "../00081_resolveAssetSource.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-const obj = {};
-const size = Object.assign(_mod8858);
-const merged1 = Object.assign(merged12);
-const merged2 = Object.assign(merged22);
-let emptyFunction = emptyFunction_mod;
-obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
-let emptyFunction = emptyFunction_mod;
-obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
-obj.backgroundColor = colorPropType;
-obj.borderColor = colorPropType;
-obj.borderWidth = emptyFunction.number;
-obj.borderRadius = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
-obj.tintColor = colorPropType;
-obj.opacity = emptyFunction.number;
-obj.overlayColor = emptyFunction.string;
-obj.borderTopLeftRadius = emptyFunction.number;
-obj.borderTopRightRadius = emptyFunction.number;
-obj.borderBottomLeftRadius = emptyFunction.number;
-obj.borderBottomRightRadius = emptyFunction.number;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSlider", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } }, directEventTypes: { topRNCSliderSlidingStart: { registrationName: "onRNCSliderSlidingStart" }, topRNCSliderSlidingComplete: { registrationName: "onRNCSliderSlidingComplete" } }, validAttributes: null };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+const obj3 = { accessibilityUnits: true, accessibilityIncrements: true, disabled: true, inverted: true, vertical: true, tapToSeek: true, maximumTrackImage: { process: resolveAssetSource }, maximumTrackTintColor: { process: processColor.default }, maximumValue: true, minimumTrackImage: null, minimumTrackTintColor: null, minimumValue: true, step: true, testID: true, thumbImage: null, thumbTintColor: null, thumbSize: true, trackImage: null, value: true, lowerLimit: true, upperLimit: true };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.minimumTrackImage = { process: resolveAssetSource };
+const obj2 = { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } };
+const obj4 = { process: processColor.default };
+obj3.minimumTrackTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.thumbImage = { process: resolveAssetSource };
+const obj5 = { process: processColor.default };
+obj3.thumbTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.trackImage = { process: resolveAssetSource };
+__INTERNAL_VIEW_CONFIG.validAttributes = Object.assign(obj3, weakSet.ConditionallyIgnoredEventHandlers({ onChange: true, onRNCSliderSlidingStart: true, onRNCSliderSlidingComplete: true, onRNCSliderValueChange: true }));
 
-export default obj;
+export { __INTERNAL_VIEW_CONFIG };
+export default module_65.get("RNCSlider", () => obj);

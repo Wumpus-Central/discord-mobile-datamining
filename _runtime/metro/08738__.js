@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "eaee56f86ca7905c61b8b9a3d1c990d4",
-  name: "MinecraftNeutralIcon-primary",
+  hash: "d24fd30a4be11fedb417c4afcd1e21a5",
+  name: "ExperimentalWebBadgeIcon-secondary",
   type: "png",
 });

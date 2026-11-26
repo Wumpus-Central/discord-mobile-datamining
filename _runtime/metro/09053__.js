@@ -1,13 +1,16 @@
 // _runtime/metro/09053__.js
-import registerAsset from "01118__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/wumpus",
-  width: 84,
-  height: 66,
-  scales: [1],
-  hash: "1f7ad1fdc74f906f486dc69b445bb809",
-  name: "wumpus-wump",
-  type: "png",
-});
+let context = noop.createContext(undefined);
+
+export const AnimatedHeaderHeightContext = context;
+export function useAnimatedHeaderHeight() {
+  context = noop.useContext(context);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
+    throw error;
+  } else {
+    return context;
+  }
+}

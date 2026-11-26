@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "cad1976e6067251c70a97ab450e89981",
-  name: "PinUprightSlashIcon",
+  hash: "06dd03fc60ccef8d12f4f7cb6c5d239c",
+  name: "XNeutralIcon",
   type: "png",
 });

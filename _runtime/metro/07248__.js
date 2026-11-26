@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CircleErrorIcon-secondary",
+  hash: "1998c882c99c2bfa1f4c01d3c0fdc31d",
+  name: "XSmallIcon",
   type: "png",
 });

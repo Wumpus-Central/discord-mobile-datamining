@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 500,
-  height: 500,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "df9cdfb6f7f1a0f370383360cce3dd97",
-  name: "img_account_sync_crunchyroll_light_and_dark",
+  hash: "8fce658b14b12e381e1ecc554a57f171",
+  name: "img_roblox_dark",
   type: "png",
 });

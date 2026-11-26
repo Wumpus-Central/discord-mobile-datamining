@@ -1,13 +1,31 @@
 // _runtime/metro/09281__.js
-import registerAsset from "01118__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 33,
-  scales: [2, 3],
-  hash: "68d0a7491ea9de9245e6ac89adfb6384",
-  name: "img_tier_0_error_mobile",
-  type: "png",
-});
+for (const key10013 in require("09282__.js")) {
+  arg5[key10013] = require("09282__.js")[key10013];
+  continue;
+}
+for (const key10017 in require("ReplacementModesAndroid")) {
+  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
+  continue;
+}
+for (const key10021 in require("purchaseUpdatedListener")) {
+  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
+  continue;
+}
+for (const key10025 in require("09296__.js")) {
+  arg5[key10025] = require("09296__.js")[key10025];
+  continue;
+}
+for (const key10029 in require("09297__.js")) {
+  arg5[key10029] = require("09297__.js")[key10029];
+  continue;
+}
+for (const key10033 in require("PurchaseError")) {
+  arg5[key10033] = require("PurchaseError")[key10033];
+  continue;
+}
+for (const key10037 in require("09298__.js")) {
+  arg5[key10037] = require("09298__.js")[key10037];
+  continue;
+}

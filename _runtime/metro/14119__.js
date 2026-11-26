@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ee2c0e9df1cdb55262b28d0f27383b12",
-  name: "GooglePlayNeutralIcon",
+  hash: "e2f35893f933ba61ccefbd78592b084f",
+  name: "ExperimentalCheckpointIcon",
   type: "png",
 });

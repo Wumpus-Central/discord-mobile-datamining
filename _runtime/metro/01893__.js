@@ -1,18 +1,29 @@
 // _runtime/metro/01893__.js
-import useAnimatedReactionCommon from "../01894_useAnimatedReactionCommon.js";
+import _mod1829 from "01829__.js";
+import _slicedToArray from "00032__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useState: closure_4 } = noop);
 
-export function useAnimatedReaction(usePIPAvoidanceSpecsTsx1, usePIPAvoidanceSpecsTsx2, items4) {
-  let __closure = usePIPAvoidanceSpecsTsx1.__closure;
-  if (__closure == null) {
-    __closure = [];
-  }
-  const animatedReactionBase = useAnimatedReactionCommon.useAnimatedReactionBase(
-    usePIPAvoidanceSpecsTsx1,
-    usePIPAvoidanceSpecsTsx2,
-    undefined,
-    __closure,
+export function useSharedValue(point) {
+  closure_0 = point;
+  const first = _slicedToArray(
+    closure_4(() => {
+      let tmpResult = closure_0;
+      if (typeof closure_0 === "function") {
+        tmpResult = tmp();
+      }
+      return _mod1829.makeMutable(tmpResult);
+    }),
+    1,
+  )[0];
+  items = [first];
+  closure_3(
+    () => () => {
+      closure_0(first[3]).cancelAnimation(closure_1_1);
+    },
+    items,
   );
+  return first;
 }

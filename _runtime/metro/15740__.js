@@ -1,11 +1,12 @@
 // _runtime/metro/15740__.js
-import _mod15688 from "15688__.js";
-import _mod15697 from "15697__.js";
-import all from "15707__.js";
+import _mod15736 from "15736__.js";
 
-let closure_0 = _mod15688(Function.toString);
-if (!all(_mod15697.inspectSource)) {
-  _mod15697.inspectSource = (arg0) => closure_0(arg0);
-}
-
-export default _mod15697.inspectSource;
+export default !_mod15736(() => {
+  const fn = () => {};
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});

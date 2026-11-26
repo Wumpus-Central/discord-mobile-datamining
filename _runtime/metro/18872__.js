@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1785b591bc534f1d0463ddef745bdb5c",
-  name: "CalendarMinusIcon",
+  hash: "c633d33c98eaf36e731a0f2d3f8db716",
+  name: "ChatShieldIcon",
   type: "png",
 });

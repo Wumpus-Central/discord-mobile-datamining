@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stream_drawing/web",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zdHJlYW1fZHJhd2luZy93ZWI=",
   scales: [1],
-  hash: "3f665ced965844f62d16fb53be78fff4",
-  name: "StreamDrawing.compiled.messages",
+  hash: "28cf86a28aeb723e99af6dda799de7c2",
+  name: "zh-TW.messages.28cf86a28aeb723e99af6dda799de7c2.compiled.messages",
   type: "jsona",
 });

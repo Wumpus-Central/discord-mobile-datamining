@@ -1,11 +1,18 @@
 // _runtime/metro/05385__.js
-const require = globalThis.__r;
+import noop from "00019__.js";
 
-for (const key10013 in require("05386__.js")) {
-  arg5[key10013] = require("05386__.js")[key10013];
-  continue;
-}
-for (const key10017 in require("transformTapProps")) {
-  arg5[key10017] = require("transformTapProps")[key10017];
-  continue;
+const use = noop.use;
+const context = noop.createContext(null);
+
+export const InterceptingDetectorMode = {
+  DEFAULT: 0,
+  [0]: "DEFAULT",
+  ANIMATED: 1,
+  [1]: "ANIMATED",
+  REANIMATED: 2,
+  [2]: "REANIMATED",
+};
+export const InterceptingDetectorContext = context;
+export function useInterceptingDetectorContext() {
+  return use(context);
 }

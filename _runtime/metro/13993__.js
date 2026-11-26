@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 50,
-  height: 50,
-  scales: [1, 2, 3],
-  hash: "6e2864dc237547922e1825f7b5583cf2",
-  name: "img_premium_basic_icon",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 20,
+  height: 20,
+  scales: [2, 3],
+  hash: "b8e06ae6b6de6ac4efb5803ebe56348e",
+  name: "star",
   type: "png",
 });

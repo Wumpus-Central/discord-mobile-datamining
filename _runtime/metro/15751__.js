@@ -1,37 +1,32 @@
 // _runtime/metro/15751__.js
+import _mod15732 from "15732__.js";
+import _mod15736 from "15736__.js";
+import _mod15752 from "15752__.js";
 
-export default {
-  name: "react-native-url-polyfill",
-  version: "2.0.0",
-  description: "A lightweight and trustworthy URL polyfill for React Native",
-  keywords: ["URL", "URLSearchParams", "polyfill", "react native", "whatwg-url"],
-  bugs: { url: "https://github.com/charpeni/react-native-url-polyfill/issues" },
-  homepage: "https://github.com/charpeni/react-native-url-polyfill",
-  readme: "https://github.com/charpeni/react-native-url-polyfill#readme",
-  repository: { type: "git", url: "https://github.com/charpeni/react-native-url-polyfill.git" },
-  main: "index.js",
-  types: "index.d.ts",
-  scripts: { test: "jest", lint: "eslint .", prepare: "husky install", "bundle-size": "node scripts/bundle-size" },
-  author: "Nicolas Charpentier <nicolas.charpentier079@gmail.com>",
-  license: "MIT",
-  dependencies: { "whatwg-url-without-unicode": "8.0.0-3" },
-  devDependencies: {
-    "@react-native-community/eslint-config": "3.2.0",
-    detox: "20.9.1",
-    eslint: "8.44.0",
-    "eslint-plugin-prettier": "4.2.1",
-    husky: "8.0.3",
-    jest: "29.5.0",
-    "lint-staged": "13.2.3",
-    "metro-react-native-babel-preset": "0.76.7",
-    nanoid: "3.3.6",
-    prettier: "2.8.8",
-    react: "18.2.0",
-    "react-native": "0.72.1",
-    "react-native-bundle-scale": "1.1.0",
-    typescript: "5.1.6",
-  },
-  peerDependencies: { "react-native": "*" },
-  jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] },
-  "lint-staged": { "*.js": ["eslint --fix"] },
-};
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod15736(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod15732.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+    }
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = _mod15752;
+      }
+      if (tmp2Result) {
+        tmp2Result = _mod15752 < 41;
+      }
+      tmp5 = tmp2Result;
+    }
+    return tmp5;
+  });
+}
+
+export default prop;

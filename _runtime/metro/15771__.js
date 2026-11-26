@@ -1,107 +1,42 @@
 // _runtime/metro/15771__.js
-import _createClassDefault from "00042__createClass.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod15736 from "15736__.js";
+import _mod15758 from "15758__.js";
 
-function monadic(call, get, fn, image) {
-  let tmp2 = image;
-  if (!tmp) {
-    tmp2 = fn(image);
-  }
-  value = get.get(tmp2);
-  if (undefined !== value) {
-    return value;
-  } else {
-    const self = this;
-    let result = call;
-    call = call.call;
-    const tmp6 = typeof call === "unknown" ? result(image) : call(self, image);
-    result = get.set(tmp2, tmp6);
-  }
-}
-function variadic(apply, get, fn) {
-  const call = slice.call;
-  if (typeof call === "unknown") {
-    let substr = slice(3);
-  } else {
-    substr = call(arguments, 3);
-  }
-  const tmp3 = fn(substr);
-  value = get.get(tmp3);
-  if (undefined === value) {
-    const self = this;
-    const applyResult = apply.apply(this, substr);
-    const result = get.set(tmp3, applyResult);
-    value = applyResult;
-  }
-  return value;
-}
-function strategyDefault(c165, cache) {
-  cache = cache.cache;
-  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
-}
-let _classCallCheck = _classCallCheck_mod;
-function serializerDefault() {
-  return JSON.stringify(arguments);
-}
-class ObjectWithoutPrototypeCache {
-  constructor() {
-    tmp = closure_0(this, ObjectWithoutPrototypeCache);
-    this.cache = Object.create(null);
-    return;
-  }
-}
-_classCallCheck = ObjectWithoutPrototypeCache;
-const entry = {
-  key: "get",
-  value: function get(arg0) {
-    return this.cache[arg0];
-  },
-};
-const items = [
-  entry,
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      this.cache[arg0] = arg1;
-    },
-  },
-];
-let closure_5 = _createClassDefault(ObjectWithoutPrototypeCache, items);
-let closure_6 = {
-  create() {
-    return new closure_5();
-  },
-};
-
-export function memoize(arg0, cache) {
-  if (cache) {
-    if (cache.cache) {
-      cache = cache.cache;
-    }
-    if (cache) {
-      if (cache.serializer) {
-        let serializer = cache.serializer;
-      }
-      if (cache) {
-        if (cache.strategy) {
-          let strategy = cache.strategy;
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod15758(arg1)) {
+          tmp11Result = _mod15736;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
         }
-        const obj = { cache, serializer };
-        return strategy(arg0, obj);
       }
-      strategy = strategyDefault;
     }
-    serializer = serializerDefault;
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  cache = closure_6;
 }
-export const strategies = {
-  variadic: function strategyVariadic(c165, cache) {
-    cache = cache.cache;
-    return variadic.bind(this, c165, cache.create(), cache.serializer);
-  },
-  monadic: function strategyMonadic(c165, cache) {
-    cache = cache.cache;
-    return monadic.bind(this, c165, cache.create(), cache.serializer);
-  },
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
 };
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
+
+export default isForced;

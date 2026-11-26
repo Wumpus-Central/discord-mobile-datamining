@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "452e4649130bf55bccef66e38e059a6a",
-  name: "ListBulletsIcon",
+  hash: "b4bc35e77125dd7a659435efd876e4cc",
+  name: "ChannelListIcon",
   type: "png",
 });

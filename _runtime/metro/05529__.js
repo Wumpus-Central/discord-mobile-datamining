@@ -1,16 +1,28 @@
 // _runtime/metro/05529__.js
-import noop from "00019__.js";
-
-({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
-
-export () => {
-  const tmp = React(false);
-  closure_0 = tmp;
-  duration(() => {
-    closure_0.current = false;
-    return () => {
-      closure_1_0.current = true;
-    };
-  }, []);
-  return tmp;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      exports = (arg0) => typeof arg0;
+    }
+    module.exports = exports;
+    return exports(arg0);
+  }
+  exports = (arg0) => {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
 }
+let exports = _typeof;
+
+export default _typeof;

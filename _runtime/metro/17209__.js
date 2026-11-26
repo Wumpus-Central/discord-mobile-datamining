@@ -3,9 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "d280460baa66780ad374e84d31fc04a4",
-  name: "hr.messages.d280460baa66780ad374e84d31fc04a4.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "3ef7b97baaf789cd87cf8f96f96361db",
+  name: "BeakerIcon",
+  type: "png",
 });

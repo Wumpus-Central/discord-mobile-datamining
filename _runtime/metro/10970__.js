@@ -1,7 +1,7 @@
 // _runtime/metro/10970__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import now from "../10857_now.js";
-import _mod10964 from "10964__.js";
+import AbstractParserWithWordBoundaryChecking from "../10886_AbstractParserWithWordBoundaryChecking.js";
+import now from "../10903_now.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -91,12 +91,12 @@ if (self2) {
     }
     const _Object3 = Object;
     let closure_7 = fn(now);
-    class RUCasualDateParser {
+    class NLCasualDateParser {
       constructor() {
         self = this;
-        tmp = closure_0(this, RUCasualDateParser);
+        tmp = closure_0(this, NLCasualDateParser);
         tmp2 = c2;
-        obj = c2(RUCasualDateParser);
+        obj = c2(NLCasualDateParser);
         tmp3 = closure_1;
         if (closure_3()) {
           tmp7 = globalThis;
@@ -111,43 +111,39 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _classCallCheck = RUCasualDateParser;
-    _inherits(RUCasualDateParser, _mod10964.AbstractParserWithLeftRightBoundaryChecking);
+    _classCallCheck = NLCasualDateParser;
+    _inherits(NLCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
     const entry = {
-      key: "innerPatternString",
-      value: function innerPatternString(arg0) {
-        return "(?:\u0441|\u0441\u043E)?\\s*(\u0441\u0435\u0433\u043E\u0434\u043D\u044F|\u0432\u0447\u0435\u0440\u0430|\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430|\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430)";
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+        return /(nu|vandaag|morgen|morgend|gisteren)(?=\W|$)/i;
       },
     };
     let items = [entry];
     const entry1 = {
       key: "innerExtract",
       value: function innerExtract(reference, arg1) {
-        const formatted = arg1[1].toLowerCase();
-        if ("\u0441\u0435\u0433\u043E\u0434\u043D\u044F" === formatted) {
+        const formatted = arg1[0].toLowerCase();
+        if ("nu" === formatted) {
+          return closure_7.now(reference.reference);
+        } else if ("vandaag" === formatted) {
           return closure_7.today(reference.reference);
-        } else if ("\u0432\u0447\u0435\u0440\u0430" === formatted) {
-          return closure_7.yesterday(reference.reference);
-        } else if ("\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
-          return closure_7.tomorrow(reference.reference);
-        } else if ("\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
-          return closure_7.theDayAfter(reference.reference, 2);
-        } else if (
-          "\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" ===
-          formatted
-        ) {
-          return closure_7.theDayAfter(reference.reference, 3);
-        } else if ("\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
-          return closure_7.theDayBefore(reference.reference, 2);
-        } else if ("\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
-          return closure_7.theDayBefore(reference.reference, 3);
         } else {
-          return tmp2;
+          if ("morgen" !== formatted) {
+            if ("morgend" !== formatted) {
+              if ("gisteren" === formatted) {
+                return closure_7.yesterday(reference.reference);
+              } else {
+                return tmp2;
+              }
+            }
+          }
+          return closure_7.tomorrow(reference.reference);
         }
       },
     };
     items[1] = entry1;
-    exports.default = _createClass(RUCasualDateParser, items);
+    exports.default = _createClass(NLCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

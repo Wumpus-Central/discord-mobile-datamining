@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/create_guild/native/images",
+  width: 48,
+  height: 48,
   scales: [2, 3],
-  hash: "3ee579776b13459d07461b433997e652",
-  name: "ChevronLargeRightIcon",
+  hash: "ddab91eeff97f71a819bf48cb718a6b3",
+  name: "img_create_my_own",
   type: "png",
 });

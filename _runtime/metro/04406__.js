@@ -1,0 +1,11 @@
+// _runtime/metro/04406__.js
+import registerAsset from "01118__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/stage_channels",
+  scales: [1],
+  hash: "083faee7a509c219e7bce51121e503e3",
+  name: "StageChannel.compiled.messages",
+  type: "jsona",
+});

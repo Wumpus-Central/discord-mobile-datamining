@@ -1,7 +1,13 @@
 // _runtime/metro/07508__.js
-import _mod7510 from "07510__.js";
+import registerAsset from "01118__.js";
 
-const require = globalThis.__r;
-
-export const useClipboard = require("07509__.js").useClipboard;
-export default _mod7510.Clipboard;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "481d8ce76f3be0e6139166c2fc65af25",
+  name: "ic_arrow_down",
+  type: "png",
+});

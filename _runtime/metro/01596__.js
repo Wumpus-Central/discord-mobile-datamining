@@ -1,9 +1,16 @@
 // _runtime/metro/01596__.js
-import NavigationFocusedRouteStateContext from "../01568_NavigationFocusedRouteStateContext.js";
+import PreventRemoveContext from "../01571_PreventRemoveContext.js";
 import noop from "00019__.js";
 
 require = arg1;
 
-export function useStateForPath() {
-  return noop.useContext(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext);
+export function usePreventRemoveContext() {
+  const context = noop.useContext(PreventRemoveContext.PreventRemoveContext);
+  if (null == context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the prevent remove context. Is your component inside NavigationContent?");
+    throw error;
+  } else {
+    return context;
+  }
 }

@@ -1,140 +1,92 @@
 // _runtime/metro/01740__.js
-import _createClassDefault from "00042__createClass.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _wrapNativeSuperDefault from "00158__wrapNativeSuper.js";
+import _createClass from "00042__createClass.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const Blob = arg1;
-function toUint8Array(__getBytes) {
-  if (typeof __getBytes === "string") {
-    let utf8EncodeResult = Blob(1742).utf8Encode(__getBytes);
-    const obj2 = Blob(1742);
-  } else if (__getBytes instanceof closure_3) {
-    utf8EncodeResult = __getBytes.__getBytes();
-  } else {
-    const _ArrayBuffer = ArrayBuffer;
-    if (ArrayBuffer.isView(__getBytes)) {
-      const _Uint8Array2 = Uint8Array;
-      const buffer = __getBytes.buffer;
-      utf8EncodeResult = new Uint8Array(
-        buffer.slice(__getBytes.byteOffset, __getBytes.byteOffset + __getBytes.byteLength),
-      );
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      const _ArrayBuffer2 = ArrayBuffer;
-      if (__getBytes instanceof ArrayBuffer) {
-        const _Uint8Array = Uint8Array;
-        utf8EncodeResult = new Uint8Array(__getBytes.slice(0));
-      } else {
-        const _String = String;
-        utf8EncodeResult = Blob(1742).utf8Encode(String(__getBytes));
-        const obj = Blob(1742);
-      }
+      callResult = call(constructResult);
     }
-  }
-  return utf8EncodeResult;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
-class Blob {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+const React4 = {
+  IndexSizeError: 1,
+  HierarchyRequestError: 3,
+  WrongDocumentError: 4,
+  InvalidCharacterError: 5,
+  NoModificationAllowedError: 7,
+  NotFoundError: 8,
+  NotSupportedError: 9,
+  InUseAttributeError: 10,
+  InvalidStateError: 11,
+  SyntaxError: 12,
+  InvalidModificationError: 13,
+  NamespaceError: 14,
+  InvalidAccessError: 15,
+  TypeMismatchError: 17,
+  SecurityError: 18,
+  NetworkError: 19,
+  AbortError: 20,
+  URLMismatchError: 21,
+  QuotaExceededError: 22,
+  TimeoutError: 23,
+  InvalidNodeTypeError: 24,
+  DataCloneError: 25,
+};
+class DOMException {
   constructor() {
-    items = global;
+    str = global;
     if (global === undefined) {
-      items = [];
-    }
-    obj = arg1;
-    if (arg1 === undefined) {
-      obj = {};
-    }
-    self = this;
-    tmp = c2(this, Blob);
-    mapped = items.map(closure_4);
-    uint8Array = new Uint8Array(mapped.reduce((acc, item) => acc + item.length, 0));
-    num = 0;
-    for (const item10025 of mapped) {
-      tmp2 = num;
-      result = uint8Array.set(item10025, num);
-      num = num + item10025.length;
-      continue;
-    }
-    self.bytes = uint8Array;
-    str = obj.type;
-    if (str == null) {
       str = "";
     }
-    str2 = String(str);
-    self.type = str2.toLowerCase();
-    return;
+    str2 = arg1;
+    if (arg1 === undefined) {
+      str2 = "Error";
+    }
+    self = this;
+    tmp = DOMException;
+    tmp2 = closure_0(this, DOMException);
+    items = [];
+    items[0] = str;
+    tmp3 = c2;
+    obj = c2(DOMException);
+    tmp4 = closure_1;
+    if (closure_3()) {
+      tmp6 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp3(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp4Result = tmp4(self, constructResult);
+    setPrototypeOfResult = Object.setPrototypeOf(tmp4Result, tmp.prototype);
+    tmp4Result.name = str2;
+    num = closure_4[str2];
+    if (num == null) {
+      num = 0;
+    }
+    tmp4Result.code = num;
+    return tmp4Result;
   }
 }
-let items = [
-  {
-    key: "size",
-    get() {
-      return this.bytes.byteLength;
-    },
-  },
-  {
-    key: Symbol.toStringTag,
-    get() {
-      return "Blob";
-    },
-  },
-  {
-    key: "slice",
-    value: function slice() {
-      let num = arg0;
-      if (arg0 === undefined) {
-        num = 0;
-      }
-      const self = this;
-      let size = arg1;
-      if (arg1 === undefined) {
-        size = self.size;
-      }
-      let str = arg2;
-      if (arg2 === undefined) {
-        str = "";
-      }
-      const size2 = self.size;
-      if (num < 0) {
-        const _Math2 = Math;
-        let bound = Math.max(size2 + num, 0);
-      } else {
-        const _Math = Math;
-        bound = Math.min(num, size2);
-      }
-      if (size < 0) {
-        const _Math4 = Math;
-        let bound1 = Math.max(size2 + size, 0);
-      } else {
-        const _Math3 = Math;
-        bound1 = Math.min(size, size2);
-      }
-      const bound2 = Math.max(bound1 - bound, 0);
-      const obj = Object.create(Blob.prototype);
-      Blob([], { type: str });
-      const bytes = self.bytes;
-      obj.bytes = bytes.slice(bound, bound + bound2);
-      return obj;
-    },
-  },
-  {
-    key: "arrayBuffer",
-    value: function arrayBuffer() {
-      return Promise.resolve(Blob(1741).toArrayBuffer(this.bytes));
-    },
-  },
-  {
-    key: "text",
-    value: function text() {
-      const obj = Blob(1742);
-      return Promise.resolve(obj.utf8Decode(Blob(1742).stripUtf8Bom(this.bytes)));
-    },
-  },
-  {
-    key: "__getBytes",
-    value: function __getBytes() {
-      return this.bytes;
-    },
-  },
-];
-let tmp2 = _createClassDefault(Blob, items);
-let closure_3 = tmp2;
+_classCallCheck = DOMException;
+_inherits(DOMException, _wrapNativeSuperDefault(Error));
 
-export const Blob = tmp2;
+export const DOMException = _createClass(DOMException);

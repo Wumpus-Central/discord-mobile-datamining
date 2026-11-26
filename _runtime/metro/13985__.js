@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/standard",
-  width: 144,
-  height: 150,
-  scales: [1],
-  hash: "e32285515cb51d557a374cd91c39dd3d",
-  name: "box_idle",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 20,
+  height: 20,
+  scales: [2, 3],
+  hash: "6d92319c85fd42e305e389df8a64c64a",
+  name: "badge",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/voice_calls/light_theme",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "f879d4980a2e6ef68873178eb4fe3d9c",
-  name: "voice_bar_deafen_on",
+  hash: "36751208c860de1cbd5435bad168b075",
+  name: "line",
   type: "png",
 });

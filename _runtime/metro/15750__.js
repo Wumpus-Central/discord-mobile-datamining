@@ -1,4 +1,14 @@
 // _runtime/metro/15750__.js
-import _mod17 from "00017__.js";
+import prop_mod from "15751__.js";
 
-const parsed = parseInt(_mod17.Platform.Version, 10);
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
+
+export default prop;

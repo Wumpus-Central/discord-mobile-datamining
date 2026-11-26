@@ -1,3 +1,4 @@
 // _runtime/metro/01303__.js
+import _mod1304 from "01304__.js";
 
-export default Object;
+export default _mod1304.getPrototypeOf || null;

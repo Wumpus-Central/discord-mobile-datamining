@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "c9f51873ae719a6b4b8c6724362e999e",
-  name: "nl",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "64819f390c3fa24ca76c3246977f2a01",
+  name: "EmojiSmilingFaceWithHornsIcon",
   type: "png",
 });

@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 500,
-  height: 500,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "59966e5b844184ad532c25b89628277b",
-  name: "img_account_sync_letterboxd_dark",
+  hash: "f0c9d04e77af1368c39d93a975075c0b",
+  name: "img_account_sync_epic_dark_and_white",
   type: "png",
 });

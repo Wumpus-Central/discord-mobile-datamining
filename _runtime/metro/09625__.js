@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/MatteLightIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "766fd7e004517bb3fbea8bf5121a6049",
-  name: "MatteLightIcon",
+  hash: "a9da9676c404d3305c620820281d0a06",
+  name: "PencilIcon",
   type: "png",
 });

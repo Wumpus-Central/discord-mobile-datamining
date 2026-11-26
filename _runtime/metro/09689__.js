@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/emoji_picker/native/images",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 261.5,
+  height: 152,
   scales: [2, 3],
-  hash: "494d75fe739ed4a36d195ab8193847fa",
-  name: "alert",
+  hash: "5691c33dd2c3544121435e1c3a569b50",
+  name: "img_nitro_longer_message_upsell_light",
   type: "png",
 });

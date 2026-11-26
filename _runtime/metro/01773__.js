@@ -1,67 +1,100 @@
 // _runtime/metro/01773__.js
-import _mod1666 from "01666__.js";
+import _mod1760 from "01760__.js";
+import _mod1763 from "01763__.js";
 
 require = arg1;
 const dependencyMap = arg6;
+const ERROR_MESSAGES = {
+  invalidDelay(animationDelay) {
+    return 'Invalid delay "' + animationDelay + '". Expected a number, "ms", or "s".';
+  },
+  invalidDuration(animationDuration) {
+    return 'Invalid duration "' + animationDuration + '". Expected a number, "ms", or "s".';
+  },
+  negativeDuration(animationDuration) {
+    return 'Duration cannot be negative, received "' + animationDuration + '".';
+  },
+  invalidPredefinedTimingFunction(ease) {
+    const VALID_PREDEFINED_TIMING_FUNCTIONS = _mod1763.VALID_PREDEFINED_TIMING_FUNCTIONS;
+    return (
+      'Invalid predefined timing function "' +
+      ease +
+      '". Supported values are: ' +
+      VALID_PREDEFINED_TIMING_FUNCTIONS.join(", ") +
+      "."
+    );
+  },
+  invalidParametrizedTimingFunction(ease) {
+    let str;
+    if (ease != null) {
+      str = ease.toString();
+    }
+    return 'Invalid parametrized timing function "' + str + '".';
+  },
+};
 
-export function createSingleCSSAnimationProperties(arg0) {
-  const result = _mod1666.convertPropertiesToArrays(arg0);
-  ({
-    animationName,
-    animationDuration: require,
-    animationTimingFunction: dependencyMap,
-    animationDelay: closure_2,
-    animationIterationCount: closure_3,
-    animationDirection: closure_4,
-    animationFillMode: closure_5,
-    animationPlayState: closure_6,
-  } = result);
-  return animationName.map((animationName, index) => {
-    const obj = {
-      animationName,
-      animationDuration: null,
-      animationTimingFunction: null,
-      animationDelay: null,
-      animationIterationCount: null,
-      animationDirection: null,
-      animationFillMode: null,
-      animationPlayState: null,
-    };
-    let tmp;
-    if (require != null) {
-      tmp = require[index % require.length];
+export { ERROR_MESSAGES };
+export function normalizeDelay() {
+  let num = animationDelay;
+  if (animationDelay === undefined) {
+    num = 0;
+  }
+  const obj = _mod1760;
+  const normalizeTimeUnitResult = obj.normalizeTimeUnit(num);
+  if (null === normalizeTimeUnitResult) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("[Reanimated] " + obj.invalidDelay(num));
+    throw error;
+  } else {
+    return normalizeTimeUnitResult;
+  }
+}
+export function normalizeDuration() {
+  let num = animationDuration;
+  if (animationDuration === undefined) {
+    num = 0;
+  }
+  const obj = _mod1760;
+  const normalizeTimeUnitResult = obj.normalizeTimeUnit(num);
+  if (null === normalizeTimeUnitResult) {
+    const _Error2 = Error;
+    const _HermesInternal2 = HermesInternal;
+    const error = new Error("[Reanimated] " + obj.invalidDuration(num));
+    throw error;
+  } else if (normalizeTimeUnitResult < 0) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error1 = new Error("[Reanimated] " + obj.negativeDuration(num));
+    throw error1;
+  } else {
+    return normalizeTimeUnitResult;
+  }
+}
+export function normalizeTimingFunction() {
+  let str = animationTimingFunction;
+  if (animationTimingFunction === undefined) {
+    str = "ease";
+  }
+  if (typeof str === "string") {
+    const obj = _mod1760;
+    if (obj.isPredefinedTimingFunction(str)) {
+      return str;
+    } else {
+      const _Error2 = Error;
+      const _HermesInternal2 = HermesInternal;
+      const error = new Error("[Reanimated] " + obj.invalidPredefinedTimingFunction(str));
+      throw error;
     }
-    obj.animationDuration = tmp;
-    let tmp2;
-    if (dependencyMap != null) {
-      tmp2 = dependencyMap[index % dependencyMap.length];
+  } else {
+    if (str.normalize) {
+      if (typeof str.normalize === "function") {
+        return str.normalize();
+      }
     }
-    obj.animationTimingFunction = tmp2;
-    let tmp3;
-    if (length != null) {
-      tmp3 = length[index % length.length];
-    }
-    obj.animationDelay = tmp3;
-    let tmp4;
-    if (length2 != null) {
-      tmp4 = length2[index % length2.length];
-    }
-    obj.animationIterationCount = tmp4;
-    let tmp5;
-    if (length3 != null) {
-      tmp5 = length3[index % length3.length];
-    }
-    obj.animationDirection = tmp5;
-    let tmp6;
-    if (length4 != null) {
-      tmp6 = length4[index % length4.length];
-    }
-    obj.animationFillMode = tmp6;
-    let tmp7;
-    if (length5 != null) {
-      tmp7 = length5[index % length5.length];
-    }
-    obj.animationPlayState = tmp7;
-    return obj;
-  });
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error1 = new Error("[Reanimated] " + obj.invalidParametrizedTimingFunction(str));
+    throw error1;
+  }
 }

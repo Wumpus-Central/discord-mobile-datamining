@@ -1,13 +1,19 @@
 // _runtime/metro/09298__.js
-import registerAsset from "01118__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 167.5,
-  height: 16,
-  scales: [2, 3],
-  hash: "48c1555b13d7692f2f1f3a2ca57206f1",
-  name: "server_boost_logo_light",
-  type: "png",
-});
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
+  continue;
+}
+for (const key10017 in require("09291__.js")) {
+  arg5[key10017] = require("09291__.js")[key10017];
+  continue;
+}
+for (const key10021 in require("09292__.js")) {
+  arg5[key10021] = require("09292__.js")[key10021];
+  continue;
+}
+for (const key10025 in require("09299__.js")) {
+  arg5[key10025] = require("09299__.js")[key10025];
+  continue;
+}

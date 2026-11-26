@@ -1,14 +1,49 @@
 // _runtime/metro/15699__.js
-import prop_mod from "15700__.js";
+import emitUnicodeLanguageId from "../15700_emitUnicodeLanguageId.js";
+import compareKV from "../15701_compareKV.js";
+import likelySubtags from "../15704_likelySubtags.js";
+import _mod15705 from "15705__.js";
+import e_mod from "../01158_e.js";
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
-}
+const require = globalThis.__r;
 
-export default prop;
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod15705, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
+    }
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(
+          compareKV.CanonicalizeUnicodeLocaleId(require("15703__.js").parseUnicodeLocaleId(arr3[num3])),
+        );
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
+  }
+  return items;
+}
+export const isStructurallyValidLanguageTag = require("15703__.js").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("15703__.js").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("15703__.js").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("15703__.js").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("15703__.js").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("15703__.js").parseUnicodeLocaleId;

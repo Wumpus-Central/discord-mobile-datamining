@@ -1,9 +1,48 @@
 // _runtime/metro/06060__.js
-import noop from "00019__.js";
+import get_synchronousScreenUpdatesEnabled from "../06061_get_synchronousScreenUpdatesEnabled.js";
 
-const jsxProd = fn(21);
-({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
-const context = noop.createContext((children) => duration(React, { children: children.children }));
+require = arg1;
+const dependencyMap = arg6;
 
-export const GHContext = context;
-export const RNSScreensRefContext = noop.createContext(null);
+export const RNSLog = {
+  log(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+  warn(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+  error(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+  info(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+};

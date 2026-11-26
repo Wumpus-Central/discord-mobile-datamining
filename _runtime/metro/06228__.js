@@ -4,10 +4,10 @@ import registerAsset from "01118__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "153924e2c4b62b4b147186cc6eff6db0",
-  name: "img_account_sync_riot_white",
+  hash: "dd8d766f206aa0428d60e8eb67864f3d",
+  name: "img_account_sync_x_light",
   type: "svg",
 });

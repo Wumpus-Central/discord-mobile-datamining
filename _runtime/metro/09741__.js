@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 80,
+  height: 64,
   scales: [2, 3],
-  hash: "26998a89da8a094ca27d79afeba3b61f",
-  name: "FoodIcon",
+  hash: "5f09a79d208de30c6568041c7b77048f",
+  name: "img_search_empty_dark",
   type: "png",
 });

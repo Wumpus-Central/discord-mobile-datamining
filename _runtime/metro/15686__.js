@@ -1,5 +1,19 @@
 // _runtime/metro/15686__.js
-import _mod15687 from "15687__.js";
-import _mod15691 from "15691__.js";
+import _mod15676 from "15676__.js";
+import BestAvailableLocale from "../15679_BestAvailableLocale.js";
 
-export default (arg0) => _mod15687(_mod15691(arg0));
+require = arg1;
+const dependencyMap = arg6;
+
+export function LookupSupportedLocales(arg0, arg1) {
+  items = [];
+  for (let num = 0; num < arg1.length; num = num + 1) {
+    let str = arg1[num];
+    let replaced = str.replace(_mod15676.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
+    if (BestAvailableLocaleResult) {
+      let arr = items.push(BestAvailableLocaleResult);
+    }
+  }
+  return items;
+}

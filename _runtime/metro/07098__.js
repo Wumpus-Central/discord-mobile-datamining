@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aa3bf5fde9af21e55dfd8368b9aaaf36",
-  name: "TextControllerIcon",
+  hash: "f5152f59510615cd9a196a52f24801ee",
+  name: "ThreadIcon",
   type: "png",
 });

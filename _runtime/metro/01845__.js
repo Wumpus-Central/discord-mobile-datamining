@@ -1,17 +1,7 @@
 // _runtime/metro/01845__.js
-import mutablesNative from "../01832_mutablesNative.js";
+import mutablesNative from "01846__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function createReducedMotionManager(_REANIMATED_IS_REDUCED_MOTION) {
-  const obj = {
-    jsValue: _REANIMATED_IS_REDUCED_MOTION,
-    uiValue: mutablesNative.makeMutable(_REANIMATED_IS_REDUCED_MOTION),
-    setEnabled(jsValue) {
-      obj.jsValue = jsValue;
-      obj.uiValue.value = jsValue;
-    },
-  };
-  return obj;
+export function isReducedMotionEnabledInSystem() {
+  return global._REANIMATED_IS_REDUCED_MOTION;
 }
+export const ReducedMotionManager = mutablesNative.createReducedMotionManager(global._REANIMATED_IS_REDUCED_MOTION);

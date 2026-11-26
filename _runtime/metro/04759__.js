@@ -3,9 +3,9 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/user_settings/phoenix_launch",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL3Bob2VuaXhfbGF1bmNo",
   scales: [1],
-  hash: "8a79592cbc32a10d94bfc70a32a54828",
-  name: "PhoenixSettings.compiled.messages",
+  hash: "c279a73df8956402e6b1b29a60d4da2b",
+  name: "zh-TW.messages.c279a73df8956402e6b1b29a60d4da2b.compiled.messages",
   type: "jsona",
 });

@@ -1,94 +1,126 @@
 // _runtime/metro/01747__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class AbortSignal {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = closure_0(this, AbortController);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(AbortController);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.aborted = false;
+    tmp3Result.reason = undefined;
+    tmp3Result.onabort = null;
+    return tmp3Result;
+  }
+}
+_classCallCheck = AbortSignal;
+_inherits(AbortSignal, fn(1739).EventTargetLite);
+const entry = {
+  key: "throwIfAborted",
+  value: function throwIfAborted() {
+    if (this.aborted) {
+      throw this.reason;
+    }
+  },
+};
 let items = [
+  entry,
   {
-    code: "(function setupRequestAnimationFrame_Pnpm_requestAnimationFrameTs1(){let queuedCallbacks=[];let queuedCallbacksBegin=0;let queuedCallbacksEnd=0;let flushedCallbacks=queuedCallbacks;let flushedCallbacksBegin=0;let flushedCallbacksEnd=0;let queuedFinalizers=[];function executeQueue(timestamp){flushedCallbacks=queuedCallbacks;queuedCallbacks=[];flushedCallbacksBegin=queuedCallbacksBegin;flushedCallbacksEnd=queuedCallbacksEnd;queuedCallbacksBegin=queuedCallbacksEnd;if(flushedCallbacks.length>0){for(const callback of flushedCallbacks){callback(timestamp);globalThis.__drainMicrotasks();}}else{globalThis.__drainMicrotasks();}flushedCallbacksBegin=flushedCallbacksEnd;const finalizers=queuedFinalizers;queuedFinalizers=[];for(const finalizer of finalizers){finalizer();}}function requestAnimationFrame(callback){const handle=queuedCallbacksEnd++;queuedCallbacks.push(callback);return handle;}function cancelAnimationFrame(handle){if(handle<flushedCallbacksBegin||handle>=queuedCallbacksEnd){return;}if(handle<flushedCallbacksEnd){flushedCallbacks[handle-flushedCallbacksBegin]=function(){};}else{queuedCallbacks[handle-queuedCallbacksBegin]=function(){};}}function nativeFlushQueue(timestamp){flushQueue(timestamp);globalThis.__nativeRequestAnimationFrame(nativeFlushQueue);}function flushQueue(timestamp){globalThis.__frameTimestamp=timestamp;executeQueue(timestamp);globalThis.__frameTimestamp=undefined;}globalThis.requestAnimationFrame=requestAnimationFrame;globalThis.cancelAnimationFrame=cancelAnimationFrame;globalThis.requestAnimationFrameFinalizer=function(callback){queuedFinalizers.push(callback);};globalThis.__nativeRequestAnimationFrame(nativeFlushQueue);globalThis.__flushAnimationFrame=function(eventTimestamp){flushQueue(eventTimestamp);};})",
+    key: "__abort",
+    value: function __abort(error) {
+      const self = this;
+      if (!this.aborted) {
+        let tmp = error;
+        self.aborted = true;
+        if (undefined === error) {
+          const _Error = Error;
+          error = new Error("[Worklets] The operation was aborted.");
+          error.name = "AbortError";
+          tmp = error;
+        }
+        self.reason = tmp;
+        self.__dispatch("abort");
+      }
+    },
   },
 ];
-[tmp2] = items;
-function setupRequestAnimationFrame() {
-  items = [];
-  c1 = 0;
-  closure_2 = 0;
-  c4 = 0;
-  c5 = 0;
-  closure_6 = [];
-  globalThis.requestAnimationFrame = function requestAnimationFrame(arg0) {
-    closure_2 = closure_2 + 1;
-    items.push(arg0);
-    return closure_2;
-  };
-  globalThis.cancelAnimationFrame = function cancelAnimationFrame(arg0) {
-    let tmp = arg0 < c4;
-    if (!tmp) {
-      tmp = arg0 >= closure_2;
-    }
-    if (!tmp) {
-      if (arg0 < c5) {
-        items[arg0 - c4] = () => {};
-      } else {
-        items[arg0 - c1] = () => {};
-      }
-    }
-  };
-  globalThis.requestAnimationFrameFinalizer = (arg0) => {
-    closure_6.push(arg0);
-  };
-  function nativeFlushQueue(__frameTimestamp) {
-    globalThis.__frameTimestamp = __frameTimestamp;
-    (function executeQueue(__frameTimestamp) {
-      dependencyMap = length;
-      length = [];
-      closure_4 = closure_1;
-      closure_5 = closure_1_2;
-      closure_1 = closure_1_2;
-      if (length.length > 0) {
-        const iter = dependencyMap[Symbol.iterator]();
-        while (iter !== undefined) {
-          let tmp8 = iter.next()(__frameTimestamp);
-          let _globalThis2 = globalThis;
-          let __drainMicrotasksResult = globalThis.__drainMicrotasks();
-          continue;
-        }
-      } else {
-        const _globalThis = globalThis;
-        globalThis.__drainMicrotasks();
-      }
-      closure_4 = closure_5;
-      dependencyMap2 = [];
-      dependencyMap2[Symbol.iterator]();
-    })(__frameTimestamp);
-    globalThis.__frameTimestamp = undefined;
-    const result = globalThis.__nativeRequestAnimationFrame(nativeFlushQueue);
+const entry1 = {
+  key: "abort",
+  value: function abort(error) {
+    const obj = _classCallCheck();
+    obj.__abort(error);
+    return obj;
+  },
+};
+let items1 = [
+  entry1,
+  {
+    key: "timeout",
+    value: function timeout(arg0) {
+      const tmp = _classCallCheck();
+      closure_0 = tmp;
+      const timerId = setTimeout(() => {
+        const error = new Error("[Worklets] The operation timed out.");
+        error.name = "TimeoutError";
+        return closure_0.__abort(error);
+      }, arg0);
+      return tmp;
+    },
+  },
+];
+const importDefaultResultResult = _createClass(AbortSignal, items, items1);
+class AbortController {
+  constructor() {
+    tmp = closure_0(this, AbortController);
+    tmp2 = new closure_4();
+    this.signal = tmp2;
+    return;
   }
-  let result = globalThis.__nativeRequestAnimationFrame(nativeFlushQueue);
-  globalThis.__flushAnimationFrame = (__frameTimestamp) => {
-    globalThis.__frameTimestamp = __frameTimestamp;
-    (function executeQueue(__frameTimestamp) {
-      dependencyMap = length;
-      length = [];
-      closure_4 = closure_1;
-      closure_5 = closure_1_2;
-      closure_1 = closure_1_2;
-      if (length.length > 0) {
-        const iter = dependencyMap[Symbol.iterator]();
-        while (iter !== undefined) {
-          let tmp8 = iter.next()(__frameTimestamp);
-          let _globalThis2 = globalThis;
-          let __drainMicrotasksResult = globalThis.__drainMicrotasks();
-          continue;
-        }
-      } else {
-        const _globalThis = globalThis;
-        globalThis.__drainMicrotasks();
-      }
-      closure_4 = closure_5;
-      dependencyMap2 = [];
-      dependencyMap2[Symbol.iterator]();
-    })(__frameTimestamp);
-    globalThis.__frameTimestamp = undefined;
-  };
 }
-setupRequestAnimationFrame.__workletHash = 4828216215772;
-setupRequestAnimationFrame.__initData = tmp2;
+_classCallCheck = AbortController;
+const entry2 = {
+  key: "abort",
+  value: function abort(error) {
+    const signal = this.signal;
+    signal.__abort(error);
+  },
+};
+const items2 = [entry2];
 
-export { setupRequestAnimationFrame };
+export const AbortSignal = importDefaultResultResult;
+export const AbortController = _createClass(AbortController, items2);

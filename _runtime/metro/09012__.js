@@ -1,32 +1,13 @@
 // _runtime/metro/09012__.js
-import _slicedToArray from "00032__.js";
-import noop from "00019__.js";
+import registerAsset from "01118__.js";
 
-export function useDismissedRouteError(state) {
-  const setNextDismissedKey = _slicedToArray(noop.useState(null), 2);
-  const first = setNextDismissedKey[0];
-  let tmp3 = null;
-  if (first) {
-    const routes = state.routes;
-    const found = routes.find((key) => key.key === first);
-    let name;
-    if (found != null) {
-      name = found.name;
-    }
-    tmp3 = name;
-  }
-  name = tmp3;
-  items = [tmp3];
-  const effect = noop.useEffect(() => {
-    if (name) {
-      const _HermesInternal = HermesInternal;
-      const _console = console;
-      console.error(
-        "The screen '" +
-          tmp +
-          "' was removed natively but didn't get removed from JS state. This can happen if the action was prevented in a 'beforeRemove' listener, which is not fully supported in native-stack.\n\nConsider using a 'usePreventRemove' hook with 'headerBackButtonMenuEnabled: false' to prevent users from natively going back multiple screens.",
-      );
-    }
-  }, items);
-  return { setNextDismissedKey: setNextDismissedKey[1] };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3, 4],
+  hash: "3b3008631d50089085453fd7d277929c",
+  name: "stack-nav-close",
+  type: "png",
+});

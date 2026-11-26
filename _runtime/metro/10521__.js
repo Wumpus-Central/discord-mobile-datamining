@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 16,
-  height: 16,
-  scales: [1, 2, 3],
-  hash: "98e013109b389eb9fdfad5277cb35b88",
-  name: "ic_moderator",
+  httpServerLocation: "/assets/modules/game_console/images",
+  width: 32,
+  height: 32,
+  scales: [2, 3],
+  hash: "238a115f1ad03e07bad0181bb5c110d4",
+  name: "ic_playstation_device_ps5_32px",
   type: "png",
 });

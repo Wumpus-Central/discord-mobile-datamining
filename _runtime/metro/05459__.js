@@ -1,4 +1,14 @@
 // _runtime/metro/05459__.js
-import _modDef5460 from "05460__.js";
+import _mod19 from "00019__.js";
+import _mod5287 from "05287__.js";
 
-export default _modDef5460;
+const useContext = _mod19.useContext;
+
+export () => {
+  const tmp = useContext(_mod5287.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+}

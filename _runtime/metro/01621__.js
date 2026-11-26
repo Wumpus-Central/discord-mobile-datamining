@@ -1,51 +1,17 @@
 // _runtime/metro/01621__.js
-import BaseNavigationContainer from "../01503_BaseNavigationContainer.js";
-import get_options from "../01600_get_options.js";
+import _mod1612 from "01612__.js";
 import noop from "00019__.js";
 
 require = arg1;
 
-export function useRoutePath() {
-  const options = noop.useContext(get_options.LinkingContext).options;
-  const stateForPath = BaseNavigationContainer.useStateForPath();
-  if (undefined === stateForPath) {
+export function useLocale() {
+  const context = noop.useContext(_mod1612.LocaleDirContext);
+  if (undefined === context) {
     const _Error = Error;
-    const error = new Error(
-      "Couldn't find a state for the route object. Is your component inside a screen in a navigator?",
-    );
+    const error = new Error("Couldn't determine the text direction. Is your component inside NavigationContainer?");
     throw error;
   } else {
-    let getPathFromState;
-    if (options != null) {
-      getPathFromState = options.getPathFromState;
-    }
-    if (getPathFromState == null) {
-      getPathFromState = BaseNavigationContainer.getPathFromState;
-    }
-    let enabled;
-    if (options != null) {
-      enabled = options.enabled;
-    }
-    items = [enabled, , ,];
-    let config;
-    if (options != null) {
-      config = options.config;
-    }
-    items[1] = config;
-    items[2] = stateForPath;
-    items[3] = getPathFromState;
-    return noop.useMemo(() => {
-      let enabled;
-      if (options != null) {
-        enabled = options.enabled;
-      }
-      if (false !== enabled) {
-        let config;
-        if (options != null) {
-          config = options.config;
-        }
-        return getPathFromState(stateForPath, config);
-      }
-    }, items);
+    const obj = { direction: context };
+    return obj;
   }
 }

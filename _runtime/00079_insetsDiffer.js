@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "Array", left: "s", right: "channel_id", bottom: "paddingBottom" };
+let closure_0 = { top: "Error", left: "names", right: "category", bottom: "rejectWithError" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

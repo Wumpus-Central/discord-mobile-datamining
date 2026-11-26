@@ -1,40 +1,38 @@
 // _runtime/metro/15745__.js
-import _mod15684 from "15684__.js";
-import _mod15685 from "15685__.js";
-import _mod15687 from "15687__.js";
-import _mod15688 from "15688__.js";
-import _mod15705 from "15705__.js";
-import _mod15714 from "15714__.js";
-import _mod15734 from "15734__.js";
-import _mod15746 from "15746__.js";
+import withoutSetter from "../15746_withoutSetter.js";
+import _mod15757 from "15757__.js";
+import _mod15759 from "15759__.js";
+import _mod15762 from "15762__.js";
+import _mod15765 from "15765__.js";
+import _mod15766 from "15766__.js";
 
-let closure_4 = _mod15688([].concat);
-if (!assign) {
-  assign = function assign(arg0, arg1) {
-    const tmp = _mod15705(arg0);
-    const f = _mod15734.f;
-    for (let num = 1; length > num; num = num + 1) {
-      let tmp5 = _mod15687(arguments[num]);
-      if (f) {
-        let tmp8 = _mod15746(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
+let closure_3 = withoutSetter("toPrimitive");
+
+export default (arg0, arg1) => {
+  if (_mod15757(arg0)) {
+    if (!_mod15759(arg0)) {
+      let str = arg1;
+      const tmp4 = _mod15762(arg0, closure_3);
+      if (tmp4) {
+        if (undefined === str) {
+          str = "default";
+        }
+        const tmp5 = _mod15765(tmp4, arg0, str);
+        if (_mod15757(tmp5)) {
+          if (!_mod15759(tmp5)) {
+            const tmp9 = new TypeError("Can't convert object to primitive value");
+            throw tmp9;
+          }
+        }
+        return tmp5;
       } else {
-        arr = _mod15746(tmp5);
-      }
-      let length2 = arr.length;
-      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
-        let tmp9 = arr[num2];
-        let tmp12 = _mod15684;
-        if (tmp12) {
-          tmp12 = !_mod15714(tmp2, tmp5, tmp9);
+        let str2 = str;
+        if (undefined === str) {
+          str2 = "number";
         }
-        if (!tmp12) {
-          tmp[tmp9] = tmp5[tmp9];
-        }
+        return _mod15766(arg0, str2);
       }
     }
-    return tmp;
-  };
-}
-
-export default assign;
+  }
+  return arg0;
+};

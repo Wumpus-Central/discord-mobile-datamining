@@ -1,13 +1,13 @@
 // _runtime/metro/15077__.js
+import registerAsset from "01118__.js";
 
-export default {
-  2: "need dictionary",
-  1: "stream end",
-  0: "",
-  "-1": "file error",
-  "-2": "stream error",
-  "-3": "data error",
-  "-4": "insufficient memory",
-  "-5": "buffer error",
-  "-6": "incompatible version",
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "3d5f9f8f212b24a0f18f5afb706f5f80",
+  name: "UserClockIcon",
+  type: "png",
+});
