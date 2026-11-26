@@ -25,7 +25,7 @@ export function openUserProfile(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -43,7 +43,7 @@ export function openUserProfile(arg0) {
             if (null == authStore.getUser(require)) {
               v2 = 3;
               c3 = 1;
-              const obj4 = { value: tmp3(6103).getUser(require), done: false };
+              const obj4 = { value: tmp3(6134).getUser(require), done: false };
               return obj4;
             }
           }
@@ -84,7 +84,7 @@ export function openUserProfile(arg0) {
           const obj8 = { userId: closure_128_0, channelId: closure_128_1, onClose: closure_128_3 };
           v2 = 2;
           c3 = 1;
-          const obj9 = { value: v2(6102)(obj8), done: false };
+          const obj9 = { value: v2(6133)(obj8), done: false };
           return obj9;
         }
       } catch (tmp29) {

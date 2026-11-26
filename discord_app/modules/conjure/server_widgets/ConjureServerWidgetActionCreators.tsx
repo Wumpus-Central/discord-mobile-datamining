@@ -18,7 +18,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
           c2 = 0;
           if (closure_129_4.getId() !== id2) {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           } else {
             closure_129_1(closure_129_2[4]).dispatch({ type: "CONJURE_SERVER_PROFILE_WIDGETS_FETCH_FAIL" });
             const obj4 = closure_129_1(closure_129_2[4]);
@@ -82,7 +82,7 @@ let closure_7 = async function _fetchConjureServerProfileWidgets() {
         }
         c2 = 0;
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
       c4 = 3;
     } catch (tmp30) {

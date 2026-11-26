@@ -1,12 +1,12 @@
 // discord_app/modules/checkpoint/native/components/CheckpointRecapCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
 import CheckpointCharacterAccessibilityUtils from "../../CheckpointCharacterAccessibilityUtils.tsx";
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext.tsx";
 import CheckpointCardFrameDefault from "card/CheckpointCardFrame.tsx";
 import useCheckpointCharacterImagesDefault from "../../hooks/useCheckpointCharacterImages.tsx";
 import useCheckpointCompositeRevealStyleDefault from "../useCheckpointCompositeRevealStyle.tsx";
 import CheckpointShareCardYearDefault from "share/CheckpointShareCardYear.tsx";
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -35,8 +35,8 @@ export default function CheckpointRecapCard(character) {
     bound = Math.min(Math.max(maxHeight / 268, 0.75), maxScale);
   }
   const tmp4 = useCheckpointCompositeRevealStyleDefault(tmp3);
-  const characterCardColorPalette = character(6391).getCharacterCardColorPalette(character);
-  const obj2 = character(6391);
+  const characterCardColorPalette = character(6422).getCharacterCardColorPalette(character);
+  const obj2 = character(6422);
   items = [character];
   const memo = noop.useMemo(() => {
     let checkpointCharacterAccessibilityLabel = null;
@@ -57,11 +57,11 @@ export default function CheckpointRecapCard(character) {
     characterLayout: rect,
     children: null,
   };
-  const obj3 = character(6391);
+  const obj3 = character(6422);
   const obj6 = { path: null, x: null, color: null };
   const tmpResult = CheckpointCardFrameDefault;
-  obj6.path = character(12606).YEAR_PATH;
-  obj6.x = 200 - character(12606).YEAR_WIDTH;
+  obj6.path = character(12642).YEAR_PATH;
+  obj6.x = 200 - character(12642).YEAR_WIDTH;
   obj6.color = obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor;
   obj5.children = jsx(CheckpointShareCardYearDefault, { path: null, x: null, color: null });
   obj4.children = (
@@ -77,7 +77,7 @@ export default function CheckpointRecapCard(character) {
       {null}
     </tmpResult>
   );
-  const tmp13 = jsx(_modDef1653.View, { style: tmp4, children: null });
+  const tmp13 = jsx(_modDef1654.View, { style: tmp4, children: null });
   if (null == memo) {
     const obj7 = {
       accessibilityElementsHidden: true,

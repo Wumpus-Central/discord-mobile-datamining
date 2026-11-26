@@ -1,15 +1,15 @@
 // discord_app/modules/collectibles/native/SkeletonCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_5 = createStyles.createStyles((width, height) => {
   const obj = { skeletonCard: null };
   const size = {
@@ -36,14 +36,14 @@ export default function _default(width) {
     COLLECTIBLES_SHOP_CARD_HEIGHT = require("CollectiblesShopCardV2").COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
   const tmp3Result = closure_5(COLLECTIBLES_SHOP_CARD_WIDTH, COLLECTIBLES_SHOP_CARD_HEIGHT);
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0.3);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(0.3);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1653;
+    const obj = _mod1654;
     const result = _undefined.set(obj.withRepeat(timing_timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = require("../../../../_runtime/metro/01653__.js");
+  let obj = require("../../../../_runtime/metro/01654__.js");
   const items1 = [closure_6, sharedValue];
   _require = undefined;
   [tmp10, tmp11] = items1;
@@ -57,9 +57,9 @@ export default function _default(width) {
   SkeletonCardTsx1.__closure = items2;
   SkeletonCardTsx1.__workletHash = 5075628150833;
   SkeletonCardTsx1.__initData = tmp10;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(SkeletonCardTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(SkeletonCardTsx1);
   const obj3 = { style: null };
   const items3 = [tmp3Result.skeletonCard, width.style, animatedStyle];
   obj3.style = items3;
-  return jsx(_modDef1653.View, { style: null });
+  return jsx(_modDef1654.View, { style: null });
 }

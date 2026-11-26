@@ -31,10 +31,10 @@ export default noop.memo(function GuildsBarFavorites() {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        closure_1_1(17979)(closure_1_5);
+        closure_1_1(18036)(closure_1_5);
       },
       onLongPress() {
-        closure_1_1(17805)();
+        closure_1_1(17862)();
       },
     }),
     [],
@@ -64,9 +64,9 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: 0,
-    externalChildren: null,
-    expandedChildren: null,
+    label: "Array",
+    externalChildren: "en-US",
+    expandedChildren: 0,
     children: null,
   };
   const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
@@ -88,9 +88,9 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: 0,
-    externalChildren: null,
-    expandedChildren: null,
+    label: "Array",
+    externalChildren: "en-US",
+    expandedChildren: 0,
     children: null,
   });
 });

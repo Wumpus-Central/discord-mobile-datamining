@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import SendMessageIcon from "../../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
@@ -70,11 +70,11 @@ function ConjureNativeDraftTile(draft) {
   if ("uploading" === draft.status) {
     const intl3 = util.intl;
     const obj5 = { name: draft.name };
-    let formatToPlainStringResult = intl3.formatToPlainString(_modDef4244.MWTYwv, obj5);
+    let formatToPlainStringResult = intl3.formatToPlainString(_modDef4245.MWTYwv, obj5);
   } else if (null != draft.errorText) {
     const intl2 = util.intl;
     ({ name: obj4.name, errorText: obj4.error } = draft);
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef4244.U2WbGx, { name: null, error: null });
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef4245.U2WbGx, { name: null, error: null });
     const obj6 = { name: null, error: null };
   } else {
     const intl = util.intl;
@@ -107,7 +107,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let obj2 = {
   pill: {
     backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
@@ -116,7 +116,7 @@ let obj2 = {
   },
 };
 let closure_15 = createStyles.createStyles(obj2);
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj5 = {
   container: null,
   containerFlushTop: null,
@@ -214,7 +214,7 @@ let obj11 = {
 obj5.input = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 let obj12 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 obj5.inputStacked = { paddingHorizontal: nativeDefault.space.PX_4 };
-obj5.draftCarousel = { marginTop: -fn(11038).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
+obj5.draftCarousel = { marginTop: -fn(11084).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
 let obj14 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj14.alignItems = "center";
@@ -690,7 +690,7 @@ export default function ConjureNativeComposer(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -708,9 +708,9 @@ export default function ConjureNativeComposer(projectId) {
               c1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: projectId(18745).pickConjurePhotos(
+                value: projectId(18808).pickConjurePhotos(
                   "mixed",
-                  projectId(18429).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                  projectId(18491).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                 ),
                 done: false,
               };
@@ -726,7 +726,7 @@ export default function ConjureNativeComposer(projectId) {
           } else {
             projectId(value);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -763,7 +763,7 @@ export default function ConjureNativeComposer(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -819,7 +819,7 @@ export default function ConjureNativeComposer(projectId) {
               );
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp17) {
           c4 = tmp;
@@ -860,13 +860,13 @@ export default function ConjureNativeComposer(projectId) {
   const memo3 = obj.useMemo(() => {
     const obj = { label: null, IconComponent: null, action: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef4244["51+9lc"]);
+    obj.label = intl.string(_modDef4245["51+9lc"]);
     obj.IconComponent = ImagesIcon.ImagesIcon;
     obj.action = callback7;
     items = [obj, ,];
     const obj2 = { label: null, IconComponent: null, action: null };
     const intl2 = util.intl;
-    obj2.label = intl2.string(_modDef4244["10ljr2"]);
+    obj2.label = intl2.string(_modDef4245["10ljr2"]);
     obj2.IconComponent = MusicIcon.MusicIcon;
     obj2.action = function action() {
       items = [closure_0(onSend[33]).types.audio];
@@ -875,7 +875,7 @@ export default function ConjureNativeComposer(projectId) {
     items[1] = obj2;
     const obj3 = { label: null, IconComponent: null, action: null };
     const intl3 = util.intl;
-    obj3.label = intl3.string(_modDef4244.aotDee);
+    obj3.label = intl3.string(_modDef4245.aotDee);
     obj3.IconComponent = FileUpIcon.FileUpIcon;
     obj3.action = function action() {
       return callback9();
@@ -884,7 +884,7 @@ export default function ConjureNativeComposer(projectId) {
     if (null != onSendToOtherProjects) {
       const obj4 = { label: null, IconComponent: null, action: null };
       const intl4 = util.intl;
-      obj4.label = intl4.string(_modDef4244["5HmLrK"]);
+      obj4.label = intl4.string(_modDef4245["5HmLrK"]);
       obj4.IconComponent = ChatArrowRightIcon.ChatArrowRightIcon;
       obj4.action = callback10;
       const items1 = [obj4];
@@ -936,7 +936,7 @@ export default function ConjureNativeComposer(projectId) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -951,13 +951,13 @@ export default function ConjureNativeComposer(projectId) {
               return obj5;
             } else {
               if (c43) {
-                const obj2 = tmp4(18624);
+                const obj2 = tmp4(18687);
                 const conjureTypedMentions = obj2.resolveConjureTypedMentions(
-                  tmp4(18774).encodeConjurePills(str, ref.current),
+                  tmp4(18837).encodeConjurePills(str, ref.current),
                   closure_34,
                 );
                 if (null == onSendFiles) {
-                  const result = tmp4(18584).takeConjureAttachmentRefs(tmp4, "chat");
+                  const result = tmp4(18647).takeConjureAttachmentRefs(tmp4, "chat");
                   if (onSend != null) {
                     let tmp21;
                     if (result.length > 0) {
@@ -966,7 +966,7 @@ export default function ConjureNativeComposer(projectId) {
                     tmp20(conjureTypedMentions, tmp21);
                   }
                   callback11();
-                  const tmp10Result = tmp4(18584);
+                  const tmp10Result = tmp4(18647);
                 } else {
                   c1 = 1;
                   dependencyMap = 1;
@@ -979,7 +979,7 @@ export default function ConjureNativeComposer(projectId) {
                   };
                   return obj6;
                 }
-                const obj3 = tmp4(18774);
+                const obj3 = tmp4(18837);
               }
               dependencyMap = 3;
             }
@@ -1069,7 +1069,7 @@ export default function ConjureNativeComposer(projectId) {
         accessibilityLabel: null,
       };
       const intl2 = util.intl;
-      obj4.accessibilityLabel = intl2.string(_modDef4244.wiguT0);
+      obj4.accessibilityLabel = intl2.string(_modDef4245.wiguT0);
       tmp14 = application_id(ChatInputActionButtonDefault, obj4);
     } else if ("models" === key.key) {
       const obj = {
@@ -1080,7 +1080,7 @@ export default function ConjureNativeComposer(projectId) {
         accessibilityLabel: null,
       };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef4244["3E7Yc0"]);
+      obj.accessibilityLabel = intl.string(_modDef4245["3E7Yc0"]);
       tmp14 = application_id(ChatInputActionButtonDefault, obj);
     } else {
       const obj9 = {
@@ -1142,7 +1142,7 @@ export default function ConjureNativeComposer(projectId) {
           onAccessibilityAction: null,
         };
         const intl = util.intl;
-        obj.accessibilityLabel = intl.string(_modDef4244.hFS71Z);
+        obj.accessibilityLabel = intl.string(_modDef4245.hFS71Z);
         obj.accessibilityActions = accessibilityActions;
         obj.onAccessibilityAction = onAccessibilityAction;
         return application_id(ChatInputActionButtonDefault, obj);

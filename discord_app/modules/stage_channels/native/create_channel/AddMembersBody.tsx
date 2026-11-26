@@ -48,12 +48,12 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(7808);
+const ChannelPermissionsConstants = fn(7842);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1082).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   inputContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 },
   inputDescContainer: null,
@@ -184,12 +184,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(5244).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(5275).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(5244).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(5275).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -218,13 +218,13 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(8518), obj10);
+  obj9.children = closure_16(pendingAdditions(8560), obj10);
   const items5 = [closure_16(closure_7, obj9), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
     const obj11 = { style: tmp3.inputDescContainer, children: null };
     const obj12 = { style: tmp3.inputDescText, variant: "body-xs/medium", color: "text-default", children: inputDesc };
-    obj11.children = closure_16(guild(5603).Text, obj12);
+    obj11.children = closure_16(guild(5634).Text, obj12);
     tmp27Result = closure_16(tmp28, obj11);
   }
   items5[1] = tmp27Result;
@@ -233,7 +233,7 @@ export default function AddMembersBody(pendingAdditions) {
     const obj14 = { type: "warning", message: null, role: "status" };
     const intl4 = guild(1112).intl;
     obj14.message = intl4.string(guild(1112).t["5f3HIC"]);
-    obj13.children = closure_16(guild(7907).InlineNotice, obj14);
+    obj13.children = closure_16(guild(7941).InlineNotice, obj14);
     canEveryoneRoleResult = closure_16(tmp28, obj13);
   }
   items5[2] = canEveryoneRoleResult;
@@ -241,7 +241,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(8523).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(8565).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1112).intl;
         const obj17 = { query: str };
@@ -262,10 +262,10 @@ export default function AddMembersBody(pendingAdditions) {
     sections: null,
     keyboardShouldPersistTaps: "always",
   };
-  const tmp4Result = pendingAdditions(8518);
+  const tmp4Result = pendingAdditions(8560);
   obj19.contentContainerStyle = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5587)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5618)(obj).insets.bottom,
   };
   obj19.renderItem = function renderItem(item) {
     item = item.item;
@@ -368,6 +368,6 @@ export default function AddMembersBody(pendingAdditions) {
   tmp27Result2 = closure_16(BottomSheetSectionList, obj19);
   const obj20 = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5587)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5618)(obj).insets.bottom,
   };
 }

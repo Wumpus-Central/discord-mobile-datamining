@@ -91,7 +91,7 @@ const rect1 = { top: PX_4, right: PX_4 / 2, bottom: PX_4, left: PX_4 / 2 };
 let closure_7 = Object.freeze(rect1);
 const rect2 = { top: PX_4, right: PX_4, bottom: PX_4, left: PX_4 / 2 };
 let closure_8 = Object.freeze(rect2);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   ternaryCheckBox: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -137,7 +137,7 @@ const obj9 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELE
 obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj.disabled = { opacity: 0.3 };
 let closure_9 = createStyles.createStyles(obj);
-let items = [fn(4949).DENY, fn(4949).PASSTHROUGH, fn(4949).ALLOW];
+let items = [fn(4980).DENY, fn(4980).PASSTHROUGH, fn(4980).ALLOW];
 const obj10 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 const size = fn(2);
 const result = size.fileFinishedImporting(

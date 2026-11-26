@@ -84,7 +84,7 @@ function getProductIdFromSubscriptionItems(subscriptionItemsForProduct) {
   const error = new Error("No App Store bundled product matches the subscription items");
   throw error;
 }
-const PremiumConstants = fn(1388);
+const PremiumConstants = fn(1389);
 ({
   PREMIUM_GUILD_SUBSCRIPTION_PLANS: c3,
   PremiumTypes: closure_4,
@@ -249,11 +249,11 @@ export function excludeNitroOnlyPlansForActiveTrial(premiumTier) {
 }
 export { getSubscriptionItemsForProduct };
 export function getModifySubscriptionItemsForProduct(productId, subscription) {
-  if (productId in found(9071).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(9071).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(9113).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(9113).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
-        const itemsWithUpsertedPremiumPlanId = tmp(2173).getItemsWithUpsertedPremiumPlanId(
+        const itemsWithUpsertedPremiumPlanId = tmp(2174).getItemsWithUpsertedPremiumPlanId(
           subscription,
           tmp8.basePlanId,
         );
@@ -275,7 +275,7 @@ export function getModifySubscriptionItemsForProduct(productId, subscription) {
         }
         return mapped;
       }
-      tmpResult = tmp(2173);
+      tmpResult = tmp(2174);
     }
     return getSubscriptionItemsForProduct(productId);
   } else {

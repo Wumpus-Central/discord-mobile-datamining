@@ -1,6 +1,6 @@
 // discord_app/modules/game_organization_invites/getInvitableGameOrganizationsFullState.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2650 from "GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2651 from "GameOrganizationInvitesUntranslated.messages.js";
 import isGameOrganizationFullDefault from "../game_organizations/isGameOrganizationFull.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
@@ -41,7 +41,7 @@ export function getGameOrganizationFullSubLabel(data) {
     str = "other";
   }
   obj.displayNoun = str;
-  return intl.formatToPlainString(_modDef2650.xuM052, obj);
+  return intl.formatToPlainString(_modDef2651.xuM052, obj);
 }
 export function getInvitableGameOrganizationsFullSubLabel(kind) {
   kind = kind.kind;
@@ -57,10 +57,10 @@ export function getInvitableGameOrganizationsFullSubLabel(kind) {
         str2 = "other";
       }
       obj.displayNoun = str2;
-      return intl2.formatToPlainString(_modDef2650.xuM052, obj);
+      return intl2.formatToPlainString(_modDef2651.xuM052, obj);
     } else if ("all_full" === kind) {
       const intl = util.intl;
-      return intl.string(_modDef2650.bY80Jh);
+      return intl.string(_modDef2651.bY80Jh);
     }
   }
 }

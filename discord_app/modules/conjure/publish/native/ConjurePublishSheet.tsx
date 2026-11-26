@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import useConjurePublishActionDefault from "../useConjurePublishAction.tsx";
@@ -46,7 +46,7 @@ function PublishSheetBody(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ function PublishSheetBody(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ function PublishSheetBody(project) {
             v1(entryPoint[18])(closure_128_0.id);
           }
           entryPoint = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp14) {
         entryPoint = tmp;
@@ -172,10 +172,10 @@ function PublishSheetBody(project) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj = { value, done: true };
+        return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -186,42 +186,51 @@ function PublishSheetBody(project) {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             closure_0 = tmp2;
             c1 = 1;
             c2 = 1;
-            const obj4 = { value: saveEdits(), done: false };
-            return obj4;
+            const obj3 = { value: saveEdits(), done: false };
+            return obj3;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          const obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           current = value;
           if (value) {
             current = closure_128_6.current;
           }
-          if (current) {
+          if (!current) {
+            c2 = 3;
+            return { value: "HermesInternal", done: "+95" };
+          } else {
             hidePublishSheet();
             const appChannelsPrivate = closure_128_3.appChannelsPrivate;
             let isPrivate;
             if (appChannelsPrivate != null) {
               isPrivate = appChannelsPrivate.isPrivate;
             }
-            closure_128_1.run(closure_128_2, true === isPrivate);
+            let runResult = { appChannelsPrivate: true === isPrivate };
+            if (null != closure_128_3.placement) {
+              const obj5 = { viewMounts: closure_128_3.placement.wire };
+              let obj6 = obj5;
+            } else {
+              obj6 = {};
+            }
+            const merged = Object.assign(obj6);
+            runResult = closure_128_1.run(closure_128_2, runResult);
           }
-          c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
         }
-      } catch (tmp18) {
+      } catch (tmp24) {
         c2 = tmp;
-        throw tmp18;
+        throw tmp24;
       }
     }
   };
@@ -281,6 +290,14 @@ function PublishSheetBody(project) {
   if (!disabled) {
     disabled = null != tmp6.nameError;
   }
+  if (!disabled) {
+    const placement = tmp6.placement;
+    let blocked;
+    if (placement != null) {
+      blocked = placement.blocked;
+    }
+    disabled = true === blocked;
+  }
   obj6.disabled = disabled;
   obj6.loading = tmp6.saving;
   obj6.onPress = function handlePublish() {
@@ -323,7 +340,7 @@ function PublishDestination(destination) {
     let name = destination.guild.name;
   } else {
     const intl = util.intl;
-    name = intl.string(_modDef4244["11Xr/r"]);
+    name = intl.string(_modDef4245["11Xr/r"]);
   }
   const obj = { style: tmp.destination, accessible: true, children: null };
   if ("server" === destination.type) {
@@ -341,10 +358,10 @@ function PublishDestination(destination) {
   const obj4 = { style: tmp.destinationText, children: null };
   const obj5 = { variant: "body-xs/normal", color: "text-subtle", children: null };
   const intl2 = tmp8(1112).intl;
-  obj5.children = intl2.string(_modDef4244.XHjO6t);
+  obj5.children = intl2.string(_modDef4245.XHjO6t);
   const items1 = [
-    tmp10(tmp8(5603).Text, obj5),
-    tmp10(tmp8(5603).Text, { variant: "body-md/medium", color: "text-strong", lineClamp: 1, children: name }),
+    tmp10(tmp8(5634).Text, obj5),
+    tmp10(tmp8(5634).Text, { variant: "body-md/medium", color: "text-strong", lineClamp: 1, children: name }),
   ];
   obj4.children = items1;
   items[1] = React5(View, obj4);
@@ -354,7 +371,7 @@ function PublishDestination(destination) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     content: { gap: nativeDefault.space.PX_24, paddingBottom: arg0 + nativeDefault.space.PX_24 },
@@ -382,7 +399,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   };
   return obj;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj3 = {
   destination: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   destinationText: null,

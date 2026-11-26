@@ -231,7 +231,7 @@ function useRichImageForActivity(activity, activityApplication) {
   }
   const data = useGame.useGame(canonicalGameId).data;
   if (null == activity) {
-    return { largeImage: "Array", smallImage: "analyticsLocations" };
+    return { largeImage: "Array", smallImage: "channel_id" };
   } else {
     let large_image;
     if (activity != null) {

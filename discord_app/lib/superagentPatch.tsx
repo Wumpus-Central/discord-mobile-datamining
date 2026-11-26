@@ -1,7 +1,7 @@
 // discord_app/lib/superagentPatch.tsx
 import LogAggregatorAll from "../modules/debug/LogAggregator.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import _createForOfIteratorHelperDefault from "../../_runtime/01285__createForOfIteratorHelper.js";
+import _createForOfIteratorHelperDefault from "../../_runtime/01286__createForOfIteratorHelper.js";
 import getTimeZoneDefault from "getTimeZone.native.tsx";
 import trackHttpRequestDefault from "../modules/telemetry_ring/trackHttpRequest.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
@@ -23,9 +23,9 @@ let closure_6 = [
   "https://cdn.discordapp.com/bad-domains/hashes.json",
 ];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new fn(19555).IdGenerator();
+const idGenerator = new fn(19618).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
-const ApexExperiment = fn(1450);
+const ApexExperiment = fn(1451);
 let obj2 = {
   name: "2026-07-reject-with-error-kill-switch",
   kind: "user",
@@ -40,7 +40,7 @@ let closure_11 = null;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   closure_11 = null;
 });
-let HTTPUtils = fn(1284);
+let HTTPUtils = fn(1285);
 let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedErrorEnabled() {
   let tmp = closure_11;
   if (null == closure_11) {
@@ -55,15 +55,15 @@ let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedE
   }
   return tmp;
 });
-HTTPUtils = fn(1284);
+HTTPUtils = fn(1285);
 HTTPUtils.setRequestPatch({
   prepareRequest(promise) {
     const _default = promise(502).default;
-    const _default2 = promise(1360).default;
-    const _default3 = promise(1386).default;
+    const _default2 = promise(1361).default;
+    const _default3 = promise(1387).default;
     importDefault = performance.now();
     if ("/" === promise.url[0]) {
-      promise.url = tmp(1284).getAPIBaseURL() + promise.url;
+      promise.url = tmp(1285).getAPIBaseURL() + promise.url;
       let tmp3 = "Authorization" in promise.header;
       if (!tmp3) {
         tmp3 = "authorization" in promise.header;
@@ -71,8 +71,8 @@ HTTPUtils.setRequestPatch({
       if (!tmp3) {
         const result = promise.set("Authorization", _default.getToken());
       }
-      const tmpResult = tmp(1284);
-      const result1 = tmp(19556).updateDynamicSuperProperties();
+      const tmpResult = tmp(1285);
+      const result1 = tmp(19619).updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
         const result2 = promise.set("X-Super-Properties", superPropertiesBase64);
@@ -93,7 +93,7 @@ HTTPUtils.setRequestPatch({
       if (tmp13) {
         const result4 = promise.set("X-Installation-ID", installationForTracking);
       }
-      if (promise(1378).isPlatformEmbedded) {
+      if (promise(1379).isPlatformEmbedded) {
         items = [];
         const _default5 = tmp(1113).default;
         if (null != _default5) {
@@ -121,7 +121,7 @@ HTTPUtils.setRequestPatch({
           })(items),
         );
       }
-      const result6 = promise.set("X-Discord-Locale", promise(2188).default.locale);
+      const result6 = promise.set("X-Discord-Locale", promise(2189).default.locale);
       const tmp18 = getTimeZoneDefault();
       if (null != tmp18) {
         const result7 = promise.set("X-Discord-Timezone", tmp18);
@@ -174,12 +174,12 @@ HTTPUtils.setRequestPatch({
           }
         } catch (err) {}
       }
-      const tmpResult2 = tmp(19556);
+      const tmpResult2 = tmp(19619);
     }
     importAll = (function shouldTrackHttpRequest(url) {
       return !isAnalyticsEndpoint(url);
     })(promise.url);
-    _default4 = promise(1255).default;
+    _default4 = promise(1256).default;
     LogAggregatorAll.report("Network", "Sending " + promise.method + " to " + promise.url);
     promise.on("response", (status) => {
       let text = null;
@@ -280,7 +280,7 @@ HTTPUtils.setRequestPatch({
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        items = [statusCode(2119)(19561, dependencyMap.paths), statusCode(2119)(5778, dependencyMap.paths)];
+        items = [statusCode(2120)(19624, dependencyMap.paths), statusCode(2120)(5809, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
@@ -384,14 +384,14 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(2119)(17241, dependencyMap.paths);
-          statusCode(2119)(17241, dependencyMap.paths)
+          const promise4 = statusCode(2120)(17292, dependencyMap.paths);
+          statusCode(2120)(17292, dependencyMap.paths)
             .then((openMFAModal) => {
               openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
             })
             .catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(2119)(17241, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(2120)(17292, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -403,11 +403,11 @@ HTTPUtils.setRequestPatch({
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(2119)(6962, dependencyMap.paths).then((result) => {
+      tmp7(2120)(6993, dependencyMap.paths).then((result) => {
         result.default();
       });
       flag = false;
-      const promise3 = tmp7(2119)(6962, dependencyMap.paths);
+      const promise3 = tmp7(2120)(6993, dependencyMap.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -415,7 +415,7 @@ HTTPUtils.setRequestPatch({
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(2119)(6788, dependencyMap.paths).then((result) => {
+        tmp7(2120)(6819, dependencyMap.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -424,7 +424,7 @@ HTTPUtils.setRequestPatch({
           result.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(2119)(6788, dependencyMap.paths);
+        const promise2 = tmp7(2120)(6819, dependencyMap.paths);
       } else {
         if (403 === statusCode.statusCode) {
           const body6 = statusCode.body;
@@ -433,11 +433,11 @@ HTTPUtils.setRequestPatch({
             code3 = body6.code;
           }
           if (code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE) {
-            tmp7(2119)(19573, dependencyMap.paths).then((openRestrictedHoursModal) => {
+            tmp7(2120)(19636, dependencyMap.paths).then((openRestrictedHoursModal) => {
               const result = openRestrictedHoursModal.openRestrictedHoursModal();
             });
             flag = false;
-            const promise = tmp7(2119)(19573, dependencyMap.paths);
+            const promise = tmp7(2120)(19636, dependencyMap.paths);
           }
         }
         flag = 400 === statusCode.statusCode;
@@ -454,12 +454,12 @@ HTTPUtils.setRequestPatch({
           flag = false;
         }
       }
-      tmp7Result = tmp7(19572);
+      tmp7Result = tmp7(19635);
     }
-    obj = statusCode(7819);
+    obj = statusCode(7853);
   },
 });
-HTTPUtils = fn(1284);
+HTTPUtils = fn(1285);
 let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (c4 === 2) {
     c4 = 3;
@@ -471,7 +471,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -494,10 +494,10 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
           } else {
             dependencyMap = 1;
             c4 = 1;
-            const obj4 = { value: tmp2(1478).awaitOnline(), done: false };
+            const obj4 = { value: tmp2(1479).awaitOnline(), done: false };
             return obj4;
           }
-          obj8 = tmp2(1478);
+          obj8 = tmp2(1479);
         }
       } else if (arg0 === 1) {
         c4 = 3;

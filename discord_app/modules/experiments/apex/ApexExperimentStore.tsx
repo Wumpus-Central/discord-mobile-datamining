@@ -1,5 +1,6 @@
 // discord_app/modules/experiments/apex/ApexExperimentStore.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import ApexUnitUtils from "ApexUnitUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import BuildOverrideUtils from "../../build_overrides/BuildOverrideUtils.tsx";
 import ApexLaunchLatch from "ApexLaunchLatch.tsx";
@@ -103,7 +104,9 @@ class ApexExperimentStore extends tmp2 {
     return tmp1;
   }
   trackCommonTriggerPointExposures(arg0) {
-    result = super.trackCommonTriggerPointExposures(global, closure_4.getId());
+    id = closure_4.getId();
+    obj = closure_0(closure_2[8]);
+    result = super.trackCommonTriggerPointExposures(global, id, obj.getInstallationUnitId());
     return;
   }
   handleLogout(arg0) {
@@ -127,6 +130,9 @@ prototype["initialize"] = function initialize(version) {
   const storedState = this.loadStoredState(version, BuildOverrideUtils.getBuildOverrideExperiments());
   const result = this.initializeLaunchLatch();
   const result1 = this.updateLaunchLatchUnits();
+};
+prototype["getInstallationUnitIdForSuppression"] = function getInstallationUnitIdForSuppression() {
+  return ApexUnitUtils.getInstallationUnitId();
 };
 prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEvent() {
   const self = this;
@@ -224,4 +230,4 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/apex/ApexExperimentStore.tsx");
 
 export default apexExperimentStore;
-export const ExperimentAssignment = fn(1246).ExperimentAssignment;
+export const ExperimentAssignment = fn(1247).ExperimentAssignment;

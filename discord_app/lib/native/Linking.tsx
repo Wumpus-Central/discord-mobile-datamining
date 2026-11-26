@@ -12,6 +12,7 @@ export default {
     if (arg2 === undefined) {
       flag = true;
     }
+    const merged = Object.assign(arg3);
     handleURL.default(arg0, arg1, { allowExternal: flag });
   },
   openURLExternally(href, SAFARI) {

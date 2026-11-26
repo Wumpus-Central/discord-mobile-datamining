@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputRightActions.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread.tsx";
 import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem.tsx";
@@ -121,15 +121,15 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "Path",
-    shouldShowThread: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH",
+    shouldShowThread: 900,
   });
-  return metroImportDefault(_modDef1653.View, obj2);
+  return metroImportDefault(_modDef1654.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12908).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12960).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const React6 = createStyles.createStyles(() => {
   const obj = {
     container: {

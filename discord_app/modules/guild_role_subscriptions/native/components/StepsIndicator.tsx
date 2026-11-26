@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/components/StepsIndicator.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function StepNode(isCurrent) {
@@ -19,13 +19,13 @@ function StepNode(isCurrent) {
   if (isCurrent) {
     num = 1;
   }
-  const sharedValue = _mod1653.useSharedValue(num);
+  const sharedValue = _mod1654.useSharedValue(num);
   c1 = sharedValue;
   let num2 = 180;
   if (useReducedMotion) {
     num2 = 0;
   }
-  items = [closure_8, _mod1653.interpolate, sharedValue, timing_timing.withTiming, num2, _mod1653.Easing];
+  items = [closure_8, _mod1654.interpolate, sharedValue, timing_timing.withTiming, num2, _mod1654.Easing];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -54,7 +54,7 @@ function StepNode(isCurrent) {
   StepsIndicatorTsx1.__workletHash = 3353878627962;
   StepsIndicatorTsx1.__initData = tmp5;
   const items2 = [sharedValue, isCurrent];
-  const animatedStyle = _mod1653.useAnimatedStyle(StepsIndicatorTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(StepsIndicatorTsx1);
   const effect = noop.useEffect(() => {
     let num = 0;
     if (c0) {
@@ -78,14 +78,14 @@ function StepNode(isCurrent) {
       });
     }
     obj2.children = isCurrent;
-    return jsx(_modDef1653.View, { style: null, children: null });
+    return jsx(_modDef1654.View, { style: null, children: null });
   }
   filledNode = tmp.filledNode;
-  const tmp2Result = _mod1653;
+  const tmp2Result = _mod1654;
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
   node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 },

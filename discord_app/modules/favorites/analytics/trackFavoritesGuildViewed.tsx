@@ -7,7 +7,7 @@ import FavoriteStore from "../FavoriteStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const PremiumTypes = fn(1388).PremiumTypes;
+const PremiumTypes = fn(1389).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/trackFavoritesGuildViewed.tsx");
 

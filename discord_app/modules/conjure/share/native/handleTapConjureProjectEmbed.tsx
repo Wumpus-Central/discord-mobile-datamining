@@ -67,7 +67,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -158,7 +158,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
     }
   }
 };
-const canRemixProject = fn(6903).canRemixProject;
+const canRemixProject = fn(6934).canRemixProject;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/handleTapConjureProjectEmbed.tsx");
 

@@ -2,6 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import discord_common_shallowEqual from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import conjureViewsStatus from "../views/conjureViewsStatus.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
@@ -155,6 +156,10 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
     if (flag2 === undefined) {
       flag2 = false;
     }
+    let views = previewDevicePermissions.views;
+    if (views === undefined) {
+      views = null;
+    }
     let deleteResult = !flag;
     if (!flag) {
       deleteResult = map1.delete(projectId);
@@ -167,7 +172,7 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
     let deleteResult2 = flag;
     if (!flag) {
       deleteResult2 = null != value && value.publishedRevision !== publishedRevision;
-      const tmp10 = null != value && value.publishedRevision !== publishedRevision;
+      const tmp11 = null != value && value.publishedRevision !== publishedRevision;
     }
     if (deleteResult2) {
       deleteResult2 = map3.delete(projectId);
@@ -205,17 +210,17 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
           }
           if (publishState1 === publishState) {
             if (value.surface === surface) {
-              if (obj4.areArraysShallowEqual(value.previewAppChannels, previewAppChannels)) {
+              if (obj5.areArraysShallowEqual(value.previewAppChannels, previewAppChannels)) {
                 let newAppChannels2 = value.newAppChannels;
                 if (newAppChannels2 == null) {
                   newAppChannels2 = closure_12;
                 }
-                if (tmp17Result.areArraysShallowEqual(newAppChannels2, newAppChannels)) {
+                if (tmp19Result.areArraysShallowEqual(newAppChannels2, newAppChannels)) {
                   let previewDevicePermissions2 = value.previewDevicePermissions;
                   if (previewDevicePermissions2 == null) {
                     previewDevicePermissions2 = closure_11;
                   }
-                  if (tmp17Result2.areArraysShallowEqual(previewDevicePermissions2, previewDevicePermissions)) {
+                  if (tmp19Result3.areArraysShallowEqual(previewDevicePermissions2, previewDevicePermissions)) {
                     if (value.publishedRevision === publishedRevision) {
                       if (value.publishedAt === publishedAt) {
                         if (value.publishing === flag) {
@@ -226,7 +231,14 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
                                 flag3 = false;
                               }
                               if (flag3 === flag2) {
-                                return false;
+                                let views1 = value.views;
+                                if (views1 == null) {
+                                  views1 = null;
+                                }
+                                if (tmp19Result4.sameConjureViewsStatus(views1, views)) {
+                                  return false;
+                                }
+                                tmp19Result4 = conjureViewsStatus;
                               }
                             }
                           }
@@ -234,11 +246,11 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
                       }
                     }
                   }
-                  tmp17Result2 = discord_common_shallowEqual;
+                  tmp19Result3 = discord_common_shallowEqual;
                 }
-                tmp17Result = discord_common_shallowEqual;
+                tmp19Result = discord_common_shallowEqual;
               }
-              obj4 = discord_common_shallowEqual;
+              obj5 = discord_common_shallowEqual;
             }
           }
         }
@@ -256,6 +268,7 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
       patchNotesSent,
       newUiUnpublished,
       safetyHold: flag2,
+      views,
     });
   },
   CONJURE_PROJECT_PUBLISH_START: function handleProjectPublishStart(projectId) {

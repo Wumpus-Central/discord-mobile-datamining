@@ -13,7 +13,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -174,7 +174,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
     }
   }
 };
-const AppLauncherRouteName = fn(1499).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1500).AppLauncherRouteName;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
 

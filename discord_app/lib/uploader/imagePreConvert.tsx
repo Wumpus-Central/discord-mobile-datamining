@@ -1,5 +1,5 @@
 // discord_app/lib/uploader/imagePreConvert.tsx
-import asyncRequireImpl from "../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02120_asyncRequireImpl.js";
 import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import imageFilename from "imageFilename.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -44,7 +44,7 @@ let closure_5 = async function _maybePreConvertImageItem() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

@@ -6,7 +6,7 @@ import UserRecord from "../../records/UserRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(8259).ReferencedMessageState;
+const ReferencedMessageState = fn(8301).ReferencedMessageState;
 const Constants = fn(1071);
 ({
   MessageStates: metroImportDefault,

@@ -238,11 +238,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj8 = {
-    logoUrl,
-    buttonColor: "Array",
-    categoryName: 1018840830874056800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-  };
+  const obj8 = { logoUrl, buttonColor: "Array", categoryName: false };
   let name;
   if (category != null) {
     name = category.name;
@@ -303,7 +299,7 @@ function CategoryItemsContent(category) {
   });
   let obj = require("useFilteredAndSortedProducts");
   let obj2 = { products: category.products };
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
   const items1 = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -312,7 +308,7 @@ function CategoryItemsContent(category) {
     }
     const result = sharedValue.set(spring_spring.withSpring(num, springPresets.Reanimated3DefaultSpringConfig));
   }, items1);
-  let obj3 = require("../../../../_runtime/metro/01653__.js");
+  let obj3 = require("../../../../_runtime/metro/01654__.js");
   const items2 = [closure_20, sharedValue];
   _require = undefined;
   [tmp9, tmp10] = items2;
@@ -327,7 +323,7 @@ function CategoryItemsContent(category) {
   CollectiblesShopViewAllCategoryItemsTsx1.__workletHash = 3426078799765;
   CollectiblesShopViewAllCategoryItemsTsx1.__initData = tmp9;
   let sessionId;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     CollectiblesShopViewAllCategoryItemsTsx1,
   );
   if (analyticsContext != null) {
@@ -389,7 +385,7 @@ function CategoryItemsContent(category) {
   const obj12 = { logoUrl, buttonColor: null, categoryName: null };
   let toHexStringResult;
   const obj11 = { source: { uri: mobileBgUrl }, style: absoluteFill.absoluteFill };
-  const obj5 = require("../../../../_runtime/metro/01653__.js");
+  const obj5 = require("../../../../_runtime/metro/01654__.js");
   if (backgroundColors != null) {
     const label = backgroundColors.label;
     toHexStringResult = label.toHexString();
@@ -439,7 +435,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, UserSettingsSections: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   border: null,

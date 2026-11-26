@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const _modDef1653 = tmp5(1653);
+const _modDef1654 = tmp5(1654);
 require = fn;
 class UnreadIndicator {
   constructor(arg0) {
@@ -214,8 +214,8 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
     arg0,
   );
 }
-const IOS_POINTER_STYLE = fn(5620).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(18012);
+const IOS_POINTER_STYLE = fn(5651).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(18071);
 ({
   GUILD_ITEM_HIT_SLOP: hasOwnProperty,
   GUILD_ITEM_INSET_LEFT: closure_6,
@@ -225,7 +225,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { mass: 0.8, damping: 100, stiffness: 150 };
 let closure_11 = { mass: 0.25, damping: 100, stiffness: 200 };
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 const application_id = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -260,7 +260,7 @@ const application_id = createStyles.createStyles(() => {
   obj.expandedChildrenWrapper = rect;
   return obj;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   const obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
   const size = {
@@ -392,11 +392,11 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   GuildsBarAnimatedItemWrapperTsx4.__closure = items1;
   GuildsBarAnimatedItemWrapperTsx4.__workletHash = 1300086607522;
   GuildsBarAnimatedItemWrapperTsx4.__initData = tmp9;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     GuildsBarAnimatedItemWrapperTsx4,
   );
-  const enableHome = noop.useContext(tmp2(17693).HomeDrawerStateContext).enableHome;
-  const obj3 = require("../../../../_runtime/metro/01653__.js");
+  const enableHome = noop.useContext(tmp2(17750).HomeDrawerStateContext).enableHome;
+  const obj3 = require("../../../../_runtime/metro/01654__.js");
   const drawerOpen = require("useDrawerState").useDrawerOpen(enableHome);
   const items2 = [isDragTarget, dragState, num, overState, zIndex, tmp];
   const memo = noop.useMemo(() => {
@@ -477,7 +477,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
         let AccessibilityAnnouncer = require;
         const intl = util.intl;
         const t = util.t;
-        AccessibilityAnnouncer = AccessibilityAnnouncer(5021).AccessibilityAnnouncer;
+        AccessibilityAnnouncer = AccessibilityAnnouncer(5052).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
         ref.current = expanded;
         const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);
@@ -609,12 +609,12 @@ export default function GuildsBarAnimatedItemWrapper(id) {
       tmp41 = expandedChildren;
     }
     obj10.children = tmp41;
-    tmp29Result = tmp29(tmp4(7024), obj10);
-    const tmp4Result6 = tmp4(7024);
+    tmp29Result = tmp29(tmp4(7055), obj10);
+    const tmp4Result6 = tmp4(7055);
   }
   items14[1] = tmp29Result;
   obj9.children = items14;
-  return accessibilityActions(_modDef1653.View, obj9);
+  return accessibilityActions(_modDef1654.View, obj9);
 }
 export function useGuildsBarAnimatedWrapperStyles(arg0) {
   let obj = arg0;

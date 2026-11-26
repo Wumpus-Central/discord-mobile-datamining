@@ -1,27 +1,27 @@
 // discord_app/modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx
-import _modDef2846 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2847 from "../../../parent_tools/FamilyCenter.messages.js";
 import LayerActionCreators from "../../../../actions/LayerActionCreators.tsx";
 import openLinkedUsersChannelDefault from "../../../parent_tools/openLinkedUsersChannel.tsx";
 import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SafetySettingsNoticeType = fn(7806).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7840).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  activeLinkUserIds = activeLinkUserIds(8169).useActiveLinkUserIds();
+  activeLinkUserIds = activeLinkUserIds(8211).useActiveLinkUserIds();
   const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
-  const obj = activeLinkUserIds(8169);
-  obj2.label = _modDef2846.i284fU;
+  const obj = activeLinkUserIds(8211);
+  obj2.label = _modDef2847.i284fU;
   obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
   obj2.labelHook = function handleMessageParentClick() {
     openLinkedUsersChannelDefault(activeLinkUserIds, LayerActionCreators.popLayer, () => {
       const intl = activeLinkUserIds(1112).intl;
-      return activeLinkUserIds(5693).presentFailedToast(
-        intl.formatToPlainString(_modDef2846.D1BwNC, { count: length.length }),
+      return activeLinkUserIds(5724).presentFailedToast(
+        intl.formatToPlainString(_modDef2847.D1BwNC, { count: length.length }),
       );
     });
   };

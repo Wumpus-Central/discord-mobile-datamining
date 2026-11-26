@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/share/native/ConjureShareSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ConjureShareSheet = "ConjureShareSheet";
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { header: { alignItems: "center", gap: nativeDefault.space.PX_12 }, body: null };
 let obj3 = { alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.body = { gap: nativeDefault.space.PX_16 };
@@ -47,9 +47,9 @@ export default function ConjureShareSheet(projectId) {
     str = "";
   }
   const obj3 = { header: null, children: null };
-  const obj4 = { title: intl.formatToPlainString(_modDef4244.pgxjO4, { app: str }), subtitle: null };
+  const obj4 = { title: intl.formatToPlainString(_modDef4245.pgxjO4, { app: str }), subtitle: null };
   const intl2 = util.intl;
-  obj4.subtitle = intl2.string(_modDef4244.mbybxl);
+  obj4.subtitle = intl2.string(_modDef4245.mbybxl);
   items[1] = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4);
   obj.children = items;
   obj3.header = hasOwnProperty(View, obj);

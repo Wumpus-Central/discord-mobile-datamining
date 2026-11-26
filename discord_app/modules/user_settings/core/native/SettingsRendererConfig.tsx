@@ -222,6 +222,7 @@ import DesignSystemBadgeSettingDefault from "../../defs/native/DesignSystemBadge
 import DesignSystemSheetsSettingDefault from "../../defs/native/DesignSystemSheetsSetting.tsx";
 import DesignSystemFormPrimitivesSettingDefault from "../../defs/native/DesignSystemFormPrimitivesSetting.tsx";
 import DesignSystemHapticsSettingDefault from "../../defs/native/DesignSystemHapticsSetting.tsx";
+import DesignSystemAnimatedAssetSettingDefault from "../../defs/native/DesignSystemAnimatedAssetSetting.tsx";
 import DesignSystemDragHandleSettingDefault from "../../defs/native/DesignSystemDragHandleSetting.tsx";
 import DesignSystemAILoaderSettingDefault from "../../defs/native/DesignSystemAILoaderSetting.tsx";
 import DesignSystemAIShimmerSettingDefault from "../../defs/native/DesignSystemAIShimmerSetting.tsx";
@@ -542,6 +543,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   DESIGN_SYSTEM_SHEETS,
   DESIGN_SYSTEM_FORM_PRIMITIVES,
   DESIGN_SYSTEM_HAPTICS,
+  DESIGN_SYSTEM_ANIMATED_ASSET,
   DESIGN_SYSTEM_DRAG_HANDLE,
   DESIGN_SYSTEM_AI_LOADER,
   DESIGN_SYSTEM_AI_SHIMMER,
@@ -576,7 +578,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   DOUBLE_TAP_EMOJI,
   DOUBLE_TAP_TO_REACT_ENABLED,
   PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
-  PARENTAL_CONTROLS_DIRECT_MESSAGES,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -834,6 +835,7 @@ const frozen = Object.freeze({
   [DESIGN_SYSTEM_SHEETS]: DesignSystemSheetsSettingDefault,
   [DESIGN_SYSTEM_FORM_PRIMITIVES]: DesignSystemFormPrimitivesSettingDefault,
   [DESIGN_SYSTEM_HAPTICS]: DesignSystemHapticsSettingDefault,
+  [DESIGN_SYSTEM_ANIMATED_ASSET]: DesignSystemAnimatedAssetSettingDefault,
   [DESIGN_SYSTEM_DRAG_HANDLE]: DesignSystemDragHandleSettingDefault,
   [DESIGN_SYSTEM_AI_LOADER]: DesignSystemAILoaderSettingDefault,
   [DESIGN_SYSTEM_AI_SHIMMER]: DesignSystemAIShimmerSettingDefault,
@@ -868,7 +870,7 @@ const frozen = Object.freeze({
   [DOUBLE_TAP_EMOJI]: DoubleTapEmojiSettingDefault,
   [DOUBLE_TAP_TO_REACT_ENABLED]: DoubleTapToReactSettingDefault,
   [PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS]: ParentalControlsSensitiveContentFilterSettingDefault,
-  [PARENTAL_CONTROLS_DIRECT_MESSAGES]: ParentalControlsDirectMessagesDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_DIRECT_MESSAGES]: ParentalControlsDirectMessagesDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_MESSAGE_REQUESTS]: ParentalControlsMessageRequestsDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE]: ParentalControlsFriendRequestsEveryoneSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]:

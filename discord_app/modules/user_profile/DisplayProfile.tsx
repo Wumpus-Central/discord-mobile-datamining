@@ -300,8 +300,8 @@ prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
   obj2.guildId = this.guildId;
   return ProfileCustomizationUtils.getProfilePreviewValue(obj2);
 };
-prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
-  const obj2 = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
+prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingPronouns) {
+  const obj2 = { pendingValue: pendingPronouns, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let pronouns;
   if (_guildMemberProfile != null) {

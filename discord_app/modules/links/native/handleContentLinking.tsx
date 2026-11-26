@@ -13,7 +13,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -144,7 +144,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
             }
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
         if (safe) {
           const obj10 = {
@@ -183,7 +183,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
     }
   }
 };
-fn(5816).addPostConnectionCallback;
+fn(5847).addPostConnectionCallback;
 const Routes = fn(1071).Routes;
 let c6 = null;
 const size = fn(2);

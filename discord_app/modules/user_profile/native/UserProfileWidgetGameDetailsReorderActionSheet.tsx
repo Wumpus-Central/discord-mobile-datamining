@@ -10,7 +10,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { list: { gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = noop.memo(function CompactGameWithDetailsCard(arg0) {
@@ -42,7 +42,7 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   const tmp = closure_7();
   items = [AuthenticationStore];
   const stateFromStores = widgetType(504).useStateFromStores(items, () => id.getId());
-  const tmp3 = stateFromStores(14514)(stateFromStores);
+  const tmp3 = stateFromStores(14566)(stateFromStores);
   dependencyMap = tmp3;
   const items1 = [tmp3, widgetType];
   const memo = noop.useMemo(() => {
@@ -65,7 +65,7 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   const intl = widgetType(1112).intl;
   obj2.dismissAccessibilityLabel = intl.string(widgetType(1112).t.rnh54p);
   obj2.returnFocusRef = widgetType.returnFocusRef;
-  const tmp4 = stateFromStores(14544);
+  const tmp4 = stateFromStores(14596);
   obj2.children = (
     <View accessibilityRole="list" style={tmp.list}>
       {memo.map((game) => (

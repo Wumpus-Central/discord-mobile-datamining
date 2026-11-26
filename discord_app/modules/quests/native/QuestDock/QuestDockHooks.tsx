@@ -2,9 +2,9 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../../_runtime/metro/01706__.js";
-import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../../_runtime/metro/01707__.js";
+import asyncRequireImpl from "../../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
@@ -28,9 +28,9 @@ import QuestDockStore from "QuestDockStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(6840);
+const QuestConstants = fn(6871);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_6, QuestDockMode: metroImportDefault } = QuestConstants);
-const QuestDockConstants = fn(16629);
+const QuestDockConstants = fn(16680);
 ({
   QUEST_DOCK_CLOSED_HEIGHT: closure_8,
   QUEST_DOCK_COLLAPSED_HEIGHT: closure_9,
@@ -88,7 +88,7 @@ export function useQuestDockModeAnimatedReaction() {
     closure_15,
     cheapWorkletShallowEqual.cheapWorkletShallowEqual,
     height,
-    _mod1706.scheduleOnRN,
+    _mod1707.scheduleOnRN,
     setRestingQuestDockMode,
     questDockWrapperSpecs,
     QuestDockUtils.getQuestDockCollapsedWidth,
@@ -245,7 +245,7 @@ export function useQuestDockModeAnimatedReaction() {
   QuestDockHooksTsx2.__closure = items3;
   QuestDockHooksTsx2.__workletHash = 14570820956228;
   QuestDockHooksTsx2.__initData = tmp14;
-  const animatedReaction = _mod1653.useAnimatedReaction(QuestDockHooksTsx1, QuestDockHooksTsx2);
+  const animatedReaction = _mod1654.useAnimatedReaction(QuestDockHooksTsx1, QuestDockHooksTsx2);
 }
 export function useQuestDockExternalOffset() {
   items = [QuestDockStore];
@@ -342,7 +342,7 @@ export function useActionSheetPressHandler(questCreative) {
     obj2.impressionId = questImpressionId;
     obj.captureAdUserAction(obj2);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16638, dependencyMap.paths),
+      asyncRequireImpl(16689, dependencyMap.paths),
       "QuestDockContextMenuActionSheet",
       { creative, impressionId: questImpressionId },
     );

@@ -1,5 +1,5 @@
 // discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ExperimentEmbedUtils from "../ExperimentEmbedUtils.tsx";
 import ExperimentManager from "../ExperimentManager.tsx";
@@ -47,7 +47,7 @@ export function handleCodedLinkExperimentEmbedTap(experimentFromEmbedURL, experi
       }
     }
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12334, dependencyMap.paths), "ExperimentOverrideSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12384, dependencyMap.paths), "ExperimentOverrideSheet", {
     id: experimentFromEmbedURL,
   });
   const obj3 = { id: experimentFromEmbedURL };

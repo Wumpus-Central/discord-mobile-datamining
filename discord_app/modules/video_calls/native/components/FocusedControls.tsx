@@ -1,20 +1,20 @@
 // discord_app/modules/video_calls/native/components/FocusedControls.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import inlineStyles from "../../../../../_runtime/07912_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07946_inlineStyles.js";
 import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function FocusedControlsHeader(arg0) {
   ({ header, reveal, isTouchingLeftScreenEdge } = arg0);
-  obj = _mod1653;
+  obj = _mod1654;
   items = [closure_11, reveal, 54];
   c0 = undefined;
   c1 = undefined;
@@ -55,7 +55,7 @@ function FocusedControlsHeader(arg0) {
   FocusedControlsTsx2.__closure = items3;
   FocusedControlsTsx2.__workletHash = 5859274917667;
   FocusedControlsTsx2.__initData = tmp10;
-  const animatedStyle = _mod1653.useAnimatedStyle(FocusedControlsTsx2);
+  const animatedStyle = _mod1654.useAnimatedStyle(FocusedControlsTsx2);
   const obj2 = { style: animatedStyle, children: null };
   const rect = {
     top: !tmp9,
@@ -64,7 +64,7 @@ function FocusedControlsHeader(arg0) {
     children: metroImportDefault(hasOwnProperty, { style: tmp.headerContainer, children: header }),
   };
   obj2.children = metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, rect);
-  return metroImportDefault(_modDef1653.View, obj2);
+  return metroImportDefault(_modDef1654.View, obj2);
 }
 function FocusedControlsHeaderGradient() {
   const width = useWindowDimensionsDefault().width;
@@ -94,7 +94,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({
   backgroundGradient: { position: "absolute", left: 0, right: 0, top: 0, height: 130 },
   headerContainer: { position: "relative", height: 54 },
@@ -136,7 +136,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
     require("GlobalStatusIndicator").useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
   let obj2 = require("GlobalStatusIndicator");
   let reveal = noop.useContext(require("RevealProvider").RevealContext).reveal;
-  const tmp6 = analyticsLocations(10224)();
+  const tmp6 = analyticsLocations(10266)();
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   if (!reveal) {
     reveal = forceReveal;
@@ -163,8 +163,8 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   FocusedControlsTsx3.__closure = items1;
   FocusedControlsTsx3.__workletHash = 15152715120003;
   FocusedControlsTsx3.__initData = tmp8;
-  const derivedValue = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(FocusedControlsTsx3);
-  const tmpResult = require("../../../../../_runtime/metro/01653__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(FocusedControlsTsx3);
+  const tmpResult = require("../../../../../_runtime/metro/01654__.js");
   const items2 = [closure_16, reveal];
   _require = undefined;
   [tmp12, tmp13] = items2;
@@ -181,8 +181,8 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   FocusedControlsTsx4.__closure = items3;
   FocusedControlsTsx4.__workletHash = 3205365180320;
   FocusedControlsTsx4.__initData = tmp12;
-  const derivedValue1 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(FocusedControlsTsx4);
-  const tmpResult3 = require("../../../../../_runtime/metro/01653__.js");
+  const derivedValue1 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(FocusedControlsTsx4);
+  const tmpResult3 = require("../../../../../_runtime/metro/01654__.js");
   const items4 = [closure_17, require("timing/timing").withTiming, derivedValue, obj, derivedValue1];
   _require = undefined;
   analyticsLocations = undefined;
@@ -199,10 +199,10 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   FocusedControlsTsx5.__closure = items5;
   FocusedControlsTsx5.__workletHash = 13660104452358;
   FocusedControlsTsx5.__initData = tmp15;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(FocusedControlsTsx5);
-  const tmpResult4 = require("../../../../../_runtime/metro/01653__.js");
-  analyticsLocations = analyticsLocations(6348)(tmp5(6349).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  dependencyMap = tmp5(10151)();
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(FocusedControlsTsx5);
+  const tmpResult4 = require("../../../../../_runtime/metro/01654__.js");
+  analyticsLocations = analyticsLocations(6379)(tmp5(6380).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+  dependencyMap = tmp5(10193)();
   if (containerStyle == null) {
     containerStyle = absoluteFill.absoluteFill;
   }
@@ -253,11 +253,11 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
         reveal,
         children,
       };
-      tmp27Result = closure_7(tmp5(10241), obj5);
+      tmp27Result = closure_7(tmp5(10283), obj5);
     }
   }
   items7[2] = tmp27Result;
   obj4.children = items7;
-  return closure_8(analyticsLocations(1653).View, obj4);
+  return closure_8(analyticsLocations(1654).View, obj4);
 });
 export const FOCUSED_CONTROLS_HEADER_HEIGHT = 54;

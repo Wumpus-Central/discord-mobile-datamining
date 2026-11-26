@@ -136,7 +136,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -211,7 +211,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
                   }
                   if (null == guild.getGuild(id)) {
                     let obj2 = { guild_id: id, request_id: str, failure_reason: "guild_not_found" };
-                    closure_2_1(1255).track(constants.GUILD_CHANNEL_RESYNC_FAILED, obj2);
+                    closure_2_1(1256).track(constants.GUILD_CHANNEL_RESYNC_FAILED, obj2);
                     if (null != dependencyMap2[id]) {
                       let _clearTimeout2 = clearTimeout;
                       clearTimeout(tmp26[id]);
@@ -222,7 +222,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
                       clearTimeout(dependencyMap[id]);
                       delete tmp3[tmp2];
                     }
-                    const obj4 = closure_2_1(1255);
+                    const obj4 = closure_2_1(1256);
                   } else {
                     items = [];
                     mutableGuildChannelsForGuild = mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(id);
@@ -232,7 +232,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
                     if (keys !== undefined) {
                       num = num2;
                       while (keys[tmp] !== undefined) {
-                        let obj6 = closure_2_0(1404);
+                        let obj6 = closure_2_0(1405);
                         if (obj6.hasFlag(mutableGuildChannelsForGuild[tmp9].flags, constants2.OBFUSCATED)) {
                           let arr = items.push(tmp9);
                         }
@@ -246,7 +246,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
                       num_obfuscated_channels: items.length,
                       num_total_channels: num,
                     };
-                    closure_2_1(1255).track(constants.GUILD_CHANNEL_RESYNC_EXECUTED, obj3);
+                    closure_2_1(1256).track(constants.GUILD_CHANNEL_RESYNC_EXECUTED, obj3);
                     socket = socket.getSocket();
                     const result = socket.triggerGuildChannelResync(id, items);
                     const guild_id = id;
@@ -275,7 +275,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
                       const obj = closure_2_1(dependencyMap[11]);
                       const obj2 = { guild_id, request_id: str, failure_reason: "timeout" };
                     }, closure_2_13);
-                    let obj = closure_2_1(1255);
+                    let obj = closure_2_1(1256);
                   }
                 },
                 Math.ceil(Math.random() * closure_2_12),
@@ -298,7 +298,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp9) {
       c4 = tmp;
@@ -325,7 +325,7 @@ let closure_25 = async function _getResyncGuilds() {
   );
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ChannelFlags = fn(4868).ChannelFlags;
+const ChannelFlags = fn(4899).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

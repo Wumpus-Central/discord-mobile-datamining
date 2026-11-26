@@ -1,6 +1,7 @@
 // discord_app/modules/conjure/publish/useConjureStartPublish.tsx
 import useConjurePublishAction from "useConjurePublishAction.tsx";
 import conjurePublishReview from "conjurePublishReview.tsx";
+import conjureViewPlacement from "../views/conjureViewPlacement.tsx";
 import openConjurePublishReview from "openConjurePublishReview.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -25,24 +26,42 @@ let closure_6 = async function _publishNow(arg0) {
 };
 function startConjurePublish(projectId, entryPoint, context) {
   const project = ConjureProjectStore.getProject(projectId);
-  let tmp2 = null != project;
-  if (tmp2) {
-    tmp2 = true !== context.busy;
+  let flag = false;
+  if (null != project) {
+    flag = false;
+    if (true !== context.busy) {
+      flag = false;
+      if (!obj6.approvalPending(projectId)) {
+        flag = false;
+        if (!ConjurePublishStatusStore.isProjectPublishing(projectId)) {
+          const publishStatus = ConjurePublishStatusStore.getPublishStatus(projectId);
+          let tmp3 = null != conjurePublishReview.conjurePublishReviewReason(project, publishStatus);
+          if (!tmp3) {
+            let safetyHold;
+            if (publishStatus != null) {
+              safetyHold = publishStatus.safetyHold;
+            }
+            let result = true !== safetyHold;
+            if (result) {
+              let views;
+              if (publishStatus != null) {
+                views = publishStatus.views;
+              }
+              result = conjureViewPlacement.conjureViewPlacementNeeded(views);
+              const tmp11Result2 = conjureViewPlacement;
+            }
+            tmp3 = result;
+          }
+          flag = tmp3;
+          const tmp11Result = conjurePublishReview;
+        }
+      }
+      obj6 = useConjurePublishAction;
+    }
   }
-  if (tmp2) {
-    tmp2 = !useConjurePublishAction.approvalPending(projectId);
-  }
-  if (tmp2) {
-    tmp2 = !ConjurePublishStatusStore.isProjectPublishing(projectId);
-  }
-  if (tmp2) {
-    tmp2 =
-      null !=
-      conjurePublishReview.conjurePublishReviewReason(project, ConjurePublishStatusStore.getPublishStatus(projectId));
-  }
-  if (tmp2) {
-    const obj4 = { projectId, publishOptions: context, entryPoint };
-    const result = openConjurePublishReview.openConjurePublishReview(obj4);
+  if (flag) {
+    const obj2 = { projectId, publishOptions: context, entryPoint };
+    const result1 = openConjurePublishReview.openConjurePublishReview(obj2);
   } else {
     (function publishNow() {
       const self = this;

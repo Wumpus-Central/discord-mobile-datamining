@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx
-import _modDef1343 from "../../../_runtime/metro/01343__.js";
+import _modDef1344 from "../../../_runtime/metro/01344__.js";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -68,7 +68,7 @@ prototype["isEqual"] = function isEqual(getUploadedClips) {
   if (tmp) {
     const self = this;
     const uploadedClips = this.getUploadedClips();
-    tmp = _modDef1343(uploadedClips, getUploadedClips.getUploadedClips());
+    tmp = _modDef1344(uploadedClips, getUploadedClips.getUploadedClips());
   }
   return tmp;
 };

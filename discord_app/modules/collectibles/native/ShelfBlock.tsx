@@ -1,5 +1,6 @@
 // discord_app/modules/collectibles/native/ShelfBlock.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesShopCardV2Default from "CollectiblesShopCardV2.tsx";
@@ -9,17 +10,18 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
 require = fn;
 function ListEdgeSpacer() {
-  return React5(View, { style: closure_10().listEdgeSpacer });
+  return React6(View, { style: closure_11().listEdgeSpacer });
 }
 function ListItemSeparator() {
-  return React5(View, { style: closure_10().listItemSeparator });
+  return React6(View, { style: closure_11().listItemSeparator });
 }
 const View = fn(17).View;
 let closure_6 = fn(1073).CollectiblesMobileShopScreen;
-const UserSettingsSections = fn(1071).UserSettingsSections;
+const Constants = fn(1071);
+({ AnalyticEvents: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5043);
 let obj2 = {
   container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   containerWithBackground: null,
@@ -73,60 +75,82 @@ let obj5 = {
 obj2.listEdgeSpacer = { width: nativeDefault.space.PX_16 };
 let obj6 = { width: nativeDefault.space.PX_16 };
 obj2.listItemSeparator = { width: nativeDefault.space.PX_12 };
-let closure_10 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ShelfBlock.tsx");
 
 export default function _default(block) {
   block = block.block;
+  const screen = block.screen;
   const preferVCPrice = block.preferVCPrice;
-  let navigation;
-  closure_5 = undefined;
-  const tmp = closure_10();
-  navigation = block(navigation[8]).useNavigation();
-  let obj = block(navigation[8]);
-  const collectiblesAnalyticsContext = block(navigation[9]).useCollectiblesAnalyticsContext();
-  let obj2 = block(navigation[9]);
-  let obj3 = block(navigation[10]);
-  const tmp7 = preferVCPrice(navigation[11]);
-  items = [closure_5];
-  const stateFromStores = block(navigation[13]).useStateFromStores(items, () => {
+  const tmp = closure_11();
+  const navigation = block(preferVCPrice[8]).useNavigation();
+  let obj = block(preferVCPrice[8]);
+  const collectiblesAnalyticsContext = block(preferVCPrice[9]).useCollectiblesAnalyticsContext();
+  let obj2 = block(preferVCPrice[9]);
+  let obj3 = block(preferVCPrice[10]);
+  const analyticsLocations = screen(preferVCPrice[11])(
+    screen(preferVCPrice[12]).COLLECTIBLES_SHOP_SHELF,
+  ).analyticsLocations;
+  const tmp7 = screen(preferVCPrice[11]);
+  items = [analyticsLocations];
+  const stateFromStores = block(preferVCPrice[13]).useStateFromStores(items, () => {
     let category;
     if (null != block.categorySkuId) {
       category = CollectiblesCategoryStore.getCategory(tmp.categorySkuId);
     }
     return category;
   });
-  const tmp9 = preferVCPrice(navigation[14])();
-  closure_5 = tmp9;
+  const tmp9 = screen(preferVCPrice[14])();
+  closure_7 = tmp9;
   const items1 = [block.rankedSkuIds, tmp9];
-  const memo = collectiblesAnalyticsContext.useMemo(() => closure_5(block.rankedSkuIds), items1);
-  const obj4 = block(navigation[13]);
-  const filteredAndSortedProducts = block(navigation[15]).useFilteredAndSortedProducts({ products: memo });
-  const items2 = [stateFromStores, navigation, collectiblesAnalyticsContext];
+  const memo = navigation.useMemo(() => closure_7(block.rankedSkuIds), items1);
+  let obj4 = block(preferVCPrice[13]);
+  const filteredAndSortedProducts = block(preferVCPrice[15]).useFilteredAndSortedProducts({ products: memo });
+  const items2 = [stateFromStores, navigation, collectiblesAnalyticsContext, screen, analyticsLocations];
   const items3 = [block.name, preferVCPrice];
-  const callback = collectiblesAnalyticsContext.useCallback(() => {
+  const callback = navigation.useCallback(() => {
     if (null != stateFromStores) {
+      let sessionId;
+      if (collectiblesAnalyticsContext != null) {
+        sessionId = collectiblesAnalyticsContext.sessionId;
+      }
+      const obj = {
+        collectibles_shop_session_id: sessionId,
+        page_type: screen,
+        page_section: null,
+        page_category: null,
+        location_stack: null,
+        cta_name: "shelf header shop all",
+      };
+      let pageSection;
+      if (collectiblesAnalyticsContext != null) {
+        pageSection = collectiblesAnalyticsContext.pageSection;
+      }
+      obj.page_section = pageSection;
+      obj.page_category = stateFromStores.name;
+      obj.location_stack = analyticsLocations;
+      AnalyticsUtilsDefault.track(constants.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj);
       if (stateFromStores.isOrbsExclusive) {
-        const obj3 = { analyticsLocations: null, analyticsSource: null, screen: null };
+        const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
         items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
-        obj3.analyticsLocations = items;
-        obj3.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
-        obj3.screen = constants.ORBS;
-        const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj3);
+        obj2.analyticsLocations = items;
+        obj2.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
+        obj2.screen = stateFromStores.ORBS;
+        const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj2);
       } else {
-        const obj = { category: stateFromStores, analyticsContext: collectiblesAnalyticsContext };
-        navigation.navigate(UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, obj);
+        const obj4 = { category: stateFromStores, analyticsContext: collectiblesAnalyticsContext };
+        navigation.navigate(constants2.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, obj4);
       }
     }
   }, items2);
-  const callback1 = collectiblesAnalyticsContext.useCallback((arg0) => {
+  const callback1 = navigation.useCallback((arg0) => {
     ({ item, index } = arg0);
     const obj = {
       newValue: { tilePosition: index, pageSection: block.name },
-      children: React5(CollectiblesShopCardV2Default, { product: item, preferVCPrice }),
+      children: React6(CollectiblesShopCardV2Default, { product: item, preferVCPrice }),
     };
-    return React5(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+    return React6(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
   }, items3);
   if (0 === filteredAndSortedProducts.length) {
     return null;
@@ -137,10 +161,7 @@ export default function _default(block) {
       containerWithBackground = tmp.containerWithBackground;
     }
     items4[1] = containerWithBackground;
-    const obj6 = {
-      value: tmp7(preferVCPrice(navigation[12]).COLLECTIBLES_SHOP_SHELF).analyticsLocations,
-      children: null,
-    };
+    const obj6 = { value: analyticsLocations, children: null };
     const obj7 = { style: items4, children: null };
     let tmp14Result = tmp24;
     if (null != block.mobileBackgroundImage) {
@@ -150,7 +171,7 @@ export default function _default(block) {
       const obj8 = { style: tmp.backgroundImage, source: null };
       const obj9 = { uri: block.mobileBackgroundImage };
       obj8.source = obj9;
-      tmp14Result = closure_8(tmp6(tmp3[18]), obj8);
+      tmp14Result = closure_9(tmp6(tmp3[19]), obj8);
     }
     const items5 = [tmp14Result, ,];
     const obj10 = { style: tmp.header, children: null };
@@ -165,8 +186,8 @@ export default function _default(block) {
       tmp18 = obj12;
     }
     const obj13 = { variant: "body-md/semibold", style: tmp18, children: block.name };
-    obj11.children = closure_8(tmp2(tmp3[19]).Heading, obj13);
-    const items6 = [closure_8(stateFromStores, obj11)];
+    obj11.children = closure_9(tmp2(tmp3[20]).Heading, obj13);
+    const items6 = [closure_9(collectiblesAnalyticsContext, obj11)];
     let tmp14Result2 = block.showButton && null != stateFromStores;
     if (tmp14Result2) {
       let str2 = "secondary";
@@ -174,14 +195,14 @@ export default function _default(block) {
         str2 = "primary-overlay";
       }
       const obj14 = { variant: str2, size: "sm", shrink: true, grow: false, text: null, onPress: null };
-      const intl = tmp2(tmp3[21]).intl;
-      obj14.text = intl.string(tmp2(tmp3[21]).t.xFcotU);
+      const intl = tmp2(tmp3[22]).intl;
+      obj14.text = intl.string(tmp2(tmp3[22]).t.xFcotU);
       obj14.onPress = callback;
-      tmp14Result2 = closure_8(tmp2(tmp3[20]).Button, obj14);
+      tmp14Result2 = closure_9(tmp2(tmp3[21]).Button, obj14);
     }
     items6[1] = tmp14Result2;
     obj10.children = items6;
-    items5[1] = closure_9(stateFromStores, obj10);
+    items5[1] = closure_10(collectiblesAnalyticsContext, obj10);
     const obj15 = { children: null };
     const obj16 = {
       horizontal: true,
@@ -192,17 +213,17 @@ export default function _default(block) {
       onScroll: obj3.useCollectiblesCoachmarkScrollDismissContext().handleDismissCoachmarkOnScroll,
       renderItem: callback1,
       decelerationRate: "fast",
-      snapToInterval: tmp2(tmp3[17]).COLLECTIBLES_SHOP_CARD_WIDTH + tmp6(tmp3[7]).space.PX_12,
+      snapToInterval: tmp2(tmp3[18]).COLLECTIBLES_SHOP_CARD_WIDTH + tmp6(tmp3[7]).space.PX_12,
       showsHorizontalScrollIndicator: false,
       ListHeaderComponent: ListEdgeSpacer,
       ListFooterComponent: ListEdgeSpacer,
       ItemSeparatorComponent: ListItemSeparator,
     };
-    obj15.children = closure_8(tmp2(tmp3[23]).FlashList, obj16);
-    items5[2] = closure_8(tmp2(tmp3[22]).LayerScope, obj15);
+    obj15.children = closure_9(tmp2(tmp3[24]).FlashList, obj16);
+    items5[2] = closure_9(tmp2(tmp3[23]).LayerScope, obj15);
     obj7.children = items5;
-    obj6.children = closure_9(stateFromStores, obj7);
-    return closure_8(tmp2(tmp3[11]).AnalyticsLocationProvider, obj6);
+    obj6.children = closure_10(collectiblesAnalyticsContext, obj7);
+    return closure_9(tmp2(tmp3[11]).AnalyticsLocationProvider, obj6);
   }
-  const obj5 = block(navigation[15]);
+  let obj5 = block(preferVCPrice[15]);
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/native/components/customization/TraitOptionDetails.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3494 from "../../../Checkpoint2026.messages.js";
+import _modDef3495 from "../../../Checkpoint2026.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import RarityBadgeDefault from "RarityBadge.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -22,9 +22,9 @@ function OptionDescription(option) {
             style: subscribeLink.subscribeLink,
             onPress() {
               const obj = { analyticsLocations: null };
-              items = [closure_1_1(6349).CHECKPOINT, closure_1_1(6349).CHECKPOINT_TRAIT];
+              items = [closure_1_1(6380).CHECKPOINT, closure_1_1(6380).CHECKPOINT_TRAIT];
               obj.analyticsLocations = items;
-              return closure_1_1(9059)(obj);
+              return closure_1_1(9101)(obj);
             },
             accessibilityRole: "link",
             children,
@@ -33,10 +33,10 @@ function OptionDescription(option) {
         );
       },
     };
-    let formatResult = intl.format(_modDef3494.E6AfCb, obj);
+    let formatResult = intl.format(_modDef3495.E6AfCb, obj);
   } else {
-    formatResult = tmp2(6734).getPlaintextAssetDescription(option);
-    const tmp2Result = tmp2(6734);
+    formatResult = tmp2(6765).getPlaintextAssetDescription(option);
+    const tmp2Result = tmp2(6765);
   }
   return closure_4(require("Text/Text").Text, {
     variant: "body-md/medium",
@@ -49,7 +49,7 @@ function OptionDescription(option) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   title: { textTransform: "capitalize" },

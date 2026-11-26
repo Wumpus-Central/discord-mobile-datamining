@@ -1,6 +1,6 @@
 // discord_app/modules/badges/native/BadgeDetailsSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -18,7 +18,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import BadgeDirectorySeenStore from "../BadgeDirectorySeenStore.tsx";
 import BadgeDirectoryStore from "../BadgeDirectoryStore.tsx";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function BadgeAccessoryLine(segments) {
@@ -76,14 +76,14 @@ function BadgeUnlockLabel(unlock) {
   BadgeDetailsSheetTsx1.__closure = items1;
   BadgeDetailsSheetTsx1.__workletHash = 3063648354188;
   BadgeDetailsSheetTsx1.__initData = tmp4;
-  const animatedStyle = _mod1653.useAnimatedStyle(BadgeDetailsSheetTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(BadgeDetailsSheetTsx1);
   const obj2 = { style: null, pointerEvents: "none", "aria-hidden": true, children: null };
   const items2 = [tmp.unlockLabel, animatedStyle];
   obj2.style = items2;
   const obj3 = { variant: "heading-lg/semibold", color: "text-strong", style: tmp.centeredText, children: null };
   obj3.children = BadgeUtils.getBadgeUnlockLabel(unlock.badge, unlock.previousTierKey);
   obj2.children = state(Text_Text.Text, obj3);
-  return state(_modDef1653.View, obj2);
+  return state(_modDef1654.View, obj2);
 }
 function BadgeDetailsSheetContent(badge) {
   badge = badge.badge;
@@ -124,8 +124,8 @@ function BadgeDetailsSheetContent(badge) {
   BadgeDetailsSheetTsx2.__closure = items3;
   BadgeDetailsSheetTsx2.__workletHash = 4967119618479;
   BadgeDetailsSheetTsx2.__initData = tmp10;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(BadgeDetailsSheetTsx2);
-  let obj3 = require("../../../../_runtime/metro/01653__.js");
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(BadgeDetailsSheetTsx2);
+  let obj3 = require("../../../../_runtime/metro/01654__.js");
   const items4 = [closure_22, titleScale];
   _require = undefined;
   [tmp13, tmp14] = items4;
@@ -143,8 +143,8 @@ function BadgeDetailsSheetContent(badge) {
   BadgeDetailsSheetTsx3.__closure = items5;
   BadgeDetailsSheetTsx3.__workletHash = 10150135716089;
   BadgeDetailsSheetTsx3.__initData = tmp13;
-  const animatedStyle1 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(BadgeDetailsSheetTsx3);
-  const tmp2Result = require("../../../../_runtime/metro/01653__.js");
+  const animatedStyle1 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(BadgeDetailsSheetTsx3);
+  const tmp2Result = require("../../../../_runtime/metro/01654__.js");
   [tmp17, tmp18] = noop.useState(!startsHidden);
   const tmp16 = _slicedToArray(noop.useState(!startsHidden), 2);
   const items6 = [closure_23, contentOpacity];
@@ -159,7 +159,7 @@ function BadgeDetailsSheetContent(badge) {
   BadgeDetailsSheetTsx4.__closure = items7;
   BadgeDetailsSheetTsx4.__workletHash = 4791037630466;
   BadgeDetailsSheetTsx4.__initData = tmp19;
-  const items8 = [closure_24, require("../../../../_runtime/metro/01706__.js").scheduleOnRN, tmp18];
+  const items8 = [closure_24, require("../../../../_runtime/metro/01707__.js").scheduleOnRN, tmp18];
   _require = undefined;
   importDefault = undefined;
   [tmp21, tmp22, tmp23] = items8;
@@ -178,7 +178,7 @@ function BadgeDetailsSheetContent(badge) {
   BadgeDetailsSheetTsx5.__closure = items9;
   BadgeDetailsSheetTsx5.__workletHash = 2925858299866;
   BadgeDetailsSheetTsx5.__initData = tmp21;
-  const animatedReaction = require("../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     BadgeDetailsSheetTsx4,
     BadgeDetailsSheetTsx5,
   );
@@ -186,7 +186,7 @@ function BadgeDetailsSheetContent(badge) {
   if (!tmp17) {
     obj4 = { pointerEvents: "none", "aria-hidden": true };
   }
-  const tmp2Result14 = require("../../../../_runtime/metro/01653__.js");
+  const tmp2Result14 = require("../../../../_runtime/metro/01654__.js");
   const displayTier = require("BadgeUtils").getDisplayTier(badge);
   const tmp2Result15 = require("BadgeUtils");
   const badgeArtUrls = require("BadgeDetailsUtils").getBadgeArtUrls(badge, displayTier, stateFromStores);
@@ -377,10 +377,10 @@ function BadgeDetailsSheetContent(badge) {
   obj25.style = items19;
   obj25.children = displayName;
   obj24.children = closure_13(require("Text/Text").Heading, obj25);
-  items17[1] = closure_13(require("../../../../_runtime/metro/01653__.js").View, obj24);
+  items17[1] = closure_13(require("../../../../_runtime/metro/01654__.js").View, obj24);
   items17[2] = closure_13(BadgeAccessoryLine, { segments: items10 });
   obj22.children = items17;
-  const items20 = [closure_14(require("../../../../_runtime/metro/01653__.js").View, obj22)];
+  const items20 = [closure_14(require("../../../../_runtime/metro/01654__.js").View, obj22)];
   let tmp33Result11 = null != unlock;
   if (tmp33Result11) {
     const obj26 = { unlock, opacity: unlockLabelOpacity };
@@ -508,7 +508,7 @@ function BadgeDetailsSheetContent(badge) {
   items24[3] = tmp49Result4;
   items24[4] = tmp33Result;
   obj34.children = items24;
-  obj33.children = closure_14(require("../../../../_runtime/metro/01653__.js").View, obj34);
+  obj33.children = closure_14(require("../../../../_runtime/metro/01654__.js").View, obj34);
   tmp33Result13 = closure_13(closure_6, obj33);
   const tmp2Result24 = require("badgeDetailsCtas");
 }
@@ -660,10 +660,10 @@ function BadgeDetailsPage(badgeId) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-let closure_12 = fn(5241).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_12 = fn(5272).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   content: { flexGrow: 1 },
   page: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },
@@ -921,7 +921,7 @@ export default function BadgeDetailsSheet(badgeId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -951,7 +951,7 @@ export default function BadgeDetailsSheet(badgeId) {
           } else {
             closure_1_6(true);
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp11) {
           c2 = tmp;

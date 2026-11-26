@@ -5,8 +5,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const module_1653 = fn(1653);
-const mutable = module_1653.makeMutable(0);
+const module_1654 = fn(1654);
+const mutable = module_1654.makeMutable(0);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockRimLight.tsx");
 

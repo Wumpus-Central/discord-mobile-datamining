@@ -39,5 +39,5 @@ const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperime
 export default function createApexExperiment(definition) {
   return discord_common_apex_ApexExperimentDefault(definition, ApexExperimentStore, ApexUnitUtils.getUnitId, useUnitId);
 }
-export const ApexExperiment = fn(1452).ApexExperiment;
-export const getUnitId = fn(1252).getUnitId;
+export const ApexExperiment = fn(1453).ApexExperiment;
+export const getUnitId = fn(1253).getUnitId;

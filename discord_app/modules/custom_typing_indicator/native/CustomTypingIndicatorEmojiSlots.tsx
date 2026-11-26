@@ -1,7 +1,7 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorEmojiSlots.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
@@ -10,7 +10,7 @@ import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function EmojiGlyph(emoji) {
@@ -40,7 +40,7 @@ function EmojiGlyph(emoji) {
 }
 function PlaceholderEmojiGlyph(arg0) {
   ({ Icon, pressed } = arg0);
-  items = [closure_11, spring_spring.withSpring, _mod1653.interpolate, pressed, 1.14, springPresets.ON_PRESS_SPRING];
+  items = [closure_11, spring_spring.withSpring, _mod1654.interpolate, pressed, 1.14, springPresets.ON_PRESS_SPRING];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -64,13 +64,13 @@ function PlaceholderEmojiGlyph(arg0) {
   CustomTypingIndicatorEmojiSlotsTsx1.__closure = items1;
   CustomTypingIndicatorEmojiSlotsTsx1.__workletHash = 15621299402355;
   CustomTypingIndicatorEmojiSlotsTsx1.__initData = tmp2;
-  const animatedStyle = _mod1653.useAnimatedStyle(CustomTypingIndicatorEmojiSlotsTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(CustomTypingIndicatorEmojiSlotsTsx1);
   let obj2 = { style: animatedStyle, children: null };
   const obj3 = { size: "custom", color: nativeDefault.colors.ICON_MUTED, style: null };
   const size = { width: v28, height: v28 };
   obj3.style = size;
   obj2.children = <Icon size="custom" color={nativeDefault.colors.ICON_MUTED} style={null} />;
-  return jsx(_modDef1653.View, { style: animatedStyle, children: null });
+  return jsx(_modDef1654.View, { style: animatedStyle, children: null });
 }
 function CustomTypingIndicatorEmojiSlot(index) {
   index = index.index;
@@ -144,34 +144,34 @@ function CustomTypingIndicatorEmojiSlot(index) {
     children: null,
   });
 }
-const EmojiIntention = fn(1389).EmojiIntention;
+const EmojiIntention = fn(1390).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
 let items = [
-  fn(16925).EmojiAngryFaceWithHornsIcon,
-  fn(16927).EmojiColdFaceIcon,
-  fn(16929).EmojiCowboyHatFaceIcon,
-  fn(16931).EmojiCryingFaceIcon,
-  fn(16933).EmojiDisguisedFaceIcon,
-  fn(16935).EmojiFaceVomitingIcon,
-  fn(16937).EmojiFaceWithMonocleIcon,
-  fn(16939).EmojiFaceWithSpiralEyesIcon,
-  fn(16941).EmojiMeltingFaceIcon,
-  fn(16943).EmojiMoneyMouthFaceIcon,
-  fn(16945).EmojiNerdFaceIcon,
-  fn(16947).EmojiPartyingFaceIcon,
-  fn(16949).EmojiSalutingFaceIcon,
-  fn(16951).EmojiSkullIcon,
-  fn(16953).EmojiSmilingFaceWithHornsIcon,
-  fn(16955).EmojiSmilingFaceWithSunglassesIcon,
-  fn(16957).EmojiSquintingFaceWithTongueIcon,
-  fn(16959).EmojiUpsideDownFaceIcon,
-  fn(16961).EmojiWoozyFaceIcon,
-  fn(16963).EmojiZanyFaceIcon,
-  fn(16965).EmojiRollingOnTheFloorLaughingIcon,
-  fn(16967).EmojiSmilingFaceWithHeartsIcon,
+  fn(16976).EmojiAngryFaceWithHornsIcon,
+  fn(16978).EmojiColdFaceIcon,
+  fn(16980).EmojiCowboyHatFaceIcon,
+  fn(16982).EmojiCryingFaceIcon,
+  fn(16984).EmojiDisguisedFaceIcon,
+  fn(16986).EmojiFaceVomitingIcon,
+  fn(16988).EmojiFaceWithMonocleIcon,
+  fn(16990).EmojiFaceWithSpiralEyesIcon,
+  fn(16992).EmojiMeltingFaceIcon,
+  fn(16994).EmojiMoneyMouthFaceIcon,
+  fn(16996).EmojiNerdFaceIcon,
+  fn(16998).EmojiPartyingFaceIcon,
+  fn(17000).EmojiSalutingFaceIcon,
+  fn(17002).EmojiSkullIcon,
+  fn(17004).EmojiSmilingFaceWithHornsIcon,
+  fn(17006).EmojiSmilingFaceWithSunglassesIcon,
+  fn(17008).EmojiSquintingFaceWithTongueIcon,
+  fn(17010).EmojiUpsideDownFaceIcon,
+  fn(17012).EmojiWoozyFaceIcon,
+  fn(17014).EmojiZanyFaceIcon,
+  fn(17016).EmojiRollingOnTheFloorLaughingIcon,
+  fn(17018).EmojiSmilingFaceWithHeartsIcon,
 ];
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({
   slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" },
 });
@@ -186,13 +186,13 @@ export default function CustomTypingIndicatorEmojiSlots(emojis) {
   const onChange = emojis.onChange;
   _slicedToArray = undefined;
   dependencyMap = _slicedToArray(
-    noop.useState(() => emojis(12).sampleSize(items, emojis(1408).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)),
+    noop.useState(() => emojis(12).sampleSize(items, emojis(1409).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)),
     1,
   )[0];
-  _slicedToArray = emojis(1408).getCustomTypingIndicatorEmojisKey(emojis);
+  _slicedToArray = emojis(1409).getCustomTypingIndicatorEmojisKey(emojis);
   const obj2 = { direction: "horizontal", spacing: 8, children: null };
-  let obj = emojis(1408);
-  obj2.children = Array.from({ length: emojis(1408).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
+  let obj = emojis(1409);
+  obj2.children = Array.from({ length: emojis(1409).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
     const obj = { index, emoji: null, emojisKey: null, placeholderIcon: null, onChange: null };
     let tmp3 = emojis[index];
     if (tmp3 == null) {
@@ -213,5 +213,5 @@ export default function CustomTypingIndicatorEmojiSlots(emojis) {
       />
     );
   });
-  return jsx(emojis(6084).Stack, { direction: "horizontal", spacing: 8, children: null });
+  return jsx(emojis(6115).Stack, { direction: "horizontal", spacing: 8, children: null });
 }

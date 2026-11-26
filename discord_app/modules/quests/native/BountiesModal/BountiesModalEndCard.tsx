@@ -1,14 +1,14 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalEndCard.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05567_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05598_LinearGradient.js";
 import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
@@ -43,7 +43,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = closure_7();
-  _mod1653;
+  _mod1654;
   items = [closure_8, timing_timing.withTiming, visible, timingPresets.timingStandard];
   c0 = undefined;
   c1 = undefined;
@@ -89,7 +89,7 @@ export default function BountiesModalEndCard(visible) {
       }
     }
     obj.children = items3;
-    visible = timestampProducer(_modDef1653.View, obj);
+    visible = timestampProducer(_modDef1654.View, obj);
   }
   return visible;
 }

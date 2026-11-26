@@ -1,21 +1,21 @@
 // discord_app/modules/soundboard/native/creation/SoundboardWaveformTrimHandles.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
-import LegacyBaseButton from "../../../../../_runtime/05272_LegacyBaseButton.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let c8 = 0.05;
-let closure_9 = 1 / fn(19947).WAVEFORM_BAR_COUNT;
+let closure_9 = 1 / fn(20011).WAVEFORM_BAR_COUNT;
 let items = [{ name: "increment" }, { name: "decrement" }];
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { position: "absolute", top: 0, left: 0 },
   touchTarget: { position: "absolute", top: 0, bottom: 0, width: 44, alignItems: "center", justifyContent: "center" },
@@ -72,14 +72,14 @@ export default function SoundboardWaveformTrimHandles(height) {
   }
   c9 = undefined;
   const tmp = closure_11();
-  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const obj = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const obj2 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const obj3 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue3 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(1);
-  const obj4 = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const obj = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const obj2 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const obj3 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue3 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(1);
+  const obj4 = require("../../../../../_runtime/metro/01654__.js");
   const obj5 = { start: startRatio.get(), end: endRatio.get() };
   [tmp9, c9] = onChange(flag.useState({ start: startRatio.get(), end: endRatio.get() }), 2);
   items = [onChange, startRatio, endRatio];
@@ -111,7 +111,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx1.__initData = tmp6;
     const enabledResult = Gesture.Pan().enabled(!flag);
     const tmp4 = c1;
-    const items2 = [closure_13, sharedValue, c0, c2, c8, tmp4, sharedValue2, closure_9, _mod1653.runOnJS, callback];
+    const items2 = [closure_13, sharedValue, c0, c2, c8, tmp4, sharedValue2, closure_9, _mod1654.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -142,7 +142,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx2.__workletHash = 284697789328;
     SoundboardWaveformTrimHandlesTsx2.__initData = tmp11;
     const onBeginResult = Gesture.Pan().enabled(!flag).onBegin(SoundboardWaveformTrimHandlesTsx1);
-    const items4 = [closure_14, _mod1653.runOnJS, callback];
+    const items4 = [closure_14, _mod1654.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     [tmp21, tmp22, tmp23] = items4;
@@ -183,7 +183,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx4.__initData = tmp6;
     const enabledResult = Gesture.Pan().enabled(!flag);
     const tmp4 = c2;
-    const items2 = [closure_16, sharedValue1, c0, c1, c8, tmp4, sharedValue3, closure_9, _mod1653.runOnJS, callback];
+    const items2 = [closure_16, sharedValue1, c0, c1, c8, tmp4, sharedValue3, closure_9, _mod1654.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -214,7 +214,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx5.__workletHash = 16740779483743;
     SoundboardWaveformTrimHandlesTsx5.__initData = tmp11;
     const onBeginResult = Gesture.Pan().enabled(!flag).onBegin(SoundboardWaveformTrimHandlesTsx4);
-    const items4 = [closure_17, _mod1653.runOnJS, callback];
+    const items4 = [closure_17, _mod1654.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     [tmp21, tmp22, tmp23] = items4;
@@ -250,10 +250,10 @@ export default function SoundboardWaveformTrimHandles(height) {
   SoundboardWaveformTrimHandlesTsx7.__closure = items4;
   SoundboardWaveformTrimHandlesTsx7.__workletHash = 13043813667435;
   SoundboardWaveformTrimHandlesTsx7.__initData = tmp13;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     SoundboardWaveformTrimHandlesTsx7,
   );
-  const obj6 = require("../../../../../_runtime/metro/01653__.js");
+  const obj6 = require("../../../../../_runtime/metro/01654__.js");
   let items5 = [closure_19, endRatio, width, 44];
   _require = undefined;
   importDefault = undefined;
@@ -271,7 +271,7 @@ export default function SoundboardWaveformTrimHandles(height) {
   SoundboardWaveformTrimHandlesTsx8.__initData = tmp18;
   const items7 = [tmp.container, { width, height: height.height }];
   let disabled = null;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     SoundboardWaveformTrimHandlesTsx8,
   );
   if (flag) {
@@ -319,7 +319,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     }
   };
   obj9.children = sharedValue1(sharedValue, { style: tmp.handle });
-  obj8.children = sharedValue1(_modDef1653.View, obj9);
+  obj8.children = sharedValue1(_modDef1654.View, obj9);
   const items9 = [sharedValue1(require("LegacyBaseButton").GestureDetector, obj8)];
   const obj11 = { gesture: memo1, children: null };
   const obj12 = {
@@ -356,7 +356,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     }
   };
   obj12.children = sharedValue1(sharedValue, { style: tmp.handle });
-  obj11.children = sharedValue1(_modDef1653.View, obj12);
+  obj11.children = sharedValue1(_modDef1654.View, obj12);
   items9[1] = sharedValue1(require("LegacyBaseButton").GestureDetector, obj11);
   obj7.children = items9;
   return sharedValue2(sharedValue, obj7);

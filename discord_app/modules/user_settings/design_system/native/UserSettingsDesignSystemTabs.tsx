@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { margin: 16, flex: 1, alignItems: "center" },
   item: {
@@ -81,30 +81,30 @@ export default function UserSettingsDesignSystemTabs() {
     return items;
   }, items);
   const tmp13 = closure_9();
-  const segmentedControlState = first(8574).useSegmentedControlState({ items: memo, pageWidth: num, defaultIndex: 1 });
-  let obj = first(8574);
-  const token = first(5576).useToken(tmp(575).colors.BACKGROUND_BASE_LOW);
+  const segmentedControlState = first(8616).useSegmentedControlState({ items: memo, pageWidth: num, defaultIndex: 1 });
+  let obj = first(8616);
+  const token = first(5607).useToken(tmp(575).colors.BACKGROUND_BASE_LOW);
   let items1 = [token];
-  let obj2 = first(5576);
-  items1[1] = first(5009).hexWithOpacity(token, 0);
+  let obj2 = first(5607);
+  items1[1] = first(5040).hexWithOpacity(token, 0);
   const obj4 = { style: tmp13.container, ref, onLayout, children: null };
-  const items2 = [closure_8(first(13560).Tabs, { state: segmentedControlState, grow: first1 })];
+  const items2 = [closure_8(first(13612).Tabs, { state: segmentedControlState, grow: first1 })];
   let tmp19Result = first2;
   if (first2) {
     const obj5 = { state: segmentedControlState, colors: items1 };
-    tmp19Result = closure_8(tmp(13747), obj5);
+    tmp19Result = closure_8(tmp(13799), obj5);
   }
   const obj6 = { children: null };
   const obj7 = { spacing: 24, children: null };
   items2[1] = tmp19Result;
   const items3 = [
     closure_7(closure_5, { children: items2 }),
-    closure_8(first(13563).SegmentedControlPages, { state: segmentedControlState }),
+    closure_8(first(13615).SegmentedControlPages, { state: segmentedControlState }),
     ,
   ];
   const obj8 = { spacing: 8, direction: "horizontal", children: null };
   const items4 = [
-    closure_8(first(5610).Button, {
+    closure_8(first(5641).Button, {
       text: "Add Tab",
       variant: "active",
       size: "sm",
@@ -113,7 +113,7 @@ export default function UserSettingsDesignSystemTabs() {
         return closure_1(first + 1);
       },
     }),
-    closure_8(first(5610).Button, {
+    closure_8(first(5641).Button, {
       text: "Remove Tab",
       variant: "destructive",
       size: "sm",
@@ -124,12 +124,12 @@ export default function UserSettingsDesignSystemTabs() {
     }),
   ];
   obj8.children = items4;
-  items3[2] = closure_7(first(6084).Stack, obj8);
+  items3[2] = closure_7(first(6115).Stack, obj8);
   const obj11 = { children: null };
   const items5 = [
-    closure_8(first(7518).TableSwitchRow, { start: true, label: "Enable Grow", value: first1, onValueChange: tmp6[1] }),
-    closure_8(first(7518).TableSwitchRow, { label: "Enable Counts", value: tmp9, onValueChange: tmp10 }),
-    closure_8(first(7518).TableSwitchRow, {
+    closure_8(first(7549).TableSwitchRow, { start: true, label: "Enable Grow", value: first1, onValueChange: tmp6[1] }),
+    closure_8(first(7549).TableSwitchRow, { label: "Enable Counts", value: tmp9, onValueChange: tmp10 }),
+    closure_8(first(7549).TableSwitchRow, {
       end: true,
       label: "Enable Overflow Gradient",
       value: first2,
@@ -139,7 +139,7 @@ export default function UserSettingsDesignSystemTabs() {
   obj11.children = items5;
   items3[3] = closure_7(closure_5, obj11);
   obj7.children = items3;
-  obj4.children = closure_7(first(6084).Stack, obj7);
+  obj4.children = closure_7(first(6115).Stack, obj7);
   obj6.children = closure_8(closure_5, obj4);
   return closure_8(closure_6, obj6);
 }

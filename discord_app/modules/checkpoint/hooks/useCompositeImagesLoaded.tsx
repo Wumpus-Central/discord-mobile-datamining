@@ -2,7 +2,7 @@
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-let closure_2 = fn(12595).CHECKPOINT_COMPOSITE_LOAD_DEADLINE_MS;
+let closure_2 = fn(12631).CHECKPOINT_COMPOSITE_LOAD_DEADLINE_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useCompositeImagesLoaded.tsx");
 

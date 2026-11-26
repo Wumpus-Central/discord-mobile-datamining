@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishReviewDetails.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -42,7 +42,7 @@ function PrivateCheckbox(appChannelsPrivate) {
   items = [React4(FormCheckbox.FormCheckbox, { checked: isPrivate })];
   const obj3 = { variant: "body-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef4244.RSyIc9);
+  obj3.children = intl.string(_modDef4245.RSyIc9);
   items[1] = React4(Text_Text.Text, obj3);
   obj2.children = items;
   return timestampProducer(Pressables.PressableOpacity, obj2);
@@ -87,15 +87,15 @@ function ContentRow(isNew) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { screen_capture: fn(13304).ScreenIcon, connect_user_to_voice: fn(7136).VoiceNormalIcon };
-let obj2 = { app_channel: fn(7141).AppsIcon };
-obj2[fn(6904).ConjureSupportedSurface.BOT] = fn(12220).RobotIcon;
-obj2[fn(6904).ConjureSupportedSurface.ACTIVITY] = fn(18149).ActivitiesIcon;
-obj2[fn(6904).ConjureSupportedSurface.VOICE_CHANNEL] = fn(7136).VoiceNormalIcon;
-obj2[fn(6904).ConjureSupportedSurface.PROFILE_WIDGET] = fn(18422).BadgeIcon;
-obj2[fn(6904).ConjureSupportedSurface.AUTOMOD] = fn(10036).ShieldIcon;
-obj2[fn(6904).ConjureSupportedSurface.OVERLAY] = fn(18424).WindowTopIcon;
-const createStyles = fn(5012);
+let obj = { screen_capture: fn(13356).ScreenIcon, connect_user_to_voice: fn(7167).VoiceNormalIcon };
+let obj2 = { app_channel: fn(7172).AppsIcon };
+obj2[fn(6935).ConjureSupportedSurface.BOT] = fn(12270).RobotIcon;
+obj2[fn(6935).ConjureSupportedSurface.ACTIVITY] = fn(18208).ActivitiesIcon;
+obj2[fn(6935).ConjureSupportedSurface.VOICE_CHANNEL] = fn(7167).VoiceNormalIcon;
+obj2[fn(6935).ConjureSupportedSurface.PROFILE_WIDGET] = fn(18484).BadgeIcon;
+obj2[fn(6935).ConjureSupportedSurface.AUTOMOD] = fn(10078).ShieldIcon;
+obj2[fn(6935).ConjureSupportedSurface.OVERLAY] = fn(18486).WindowTopIcon;
+const createStyles = fn(5043);
 let obj4 = {
   section: { gap: nativeDefault.space.PX_4 },
   row: null,
@@ -143,7 +143,7 @@ export default function ConjurePublishReviewDetails(review) {
   }
   appChannelsPrivate = tmp2;
   const includes = review.includes;
-  let tmp6 = null;
+  let shared;
   const mapped = includes.map((icon) => {
     if ("app_channel" === icon.icon) {
       if (icon.creates) {
@@ -170,14 +170,26 @@ export default function ConjurePublishReviewDetails(review) {
     }
     AppsLockIcon = obj2[icon.icon];
   });
-  if (review.managedCopy) {
-    obj = { projectId: review.projectId };
-    tmp6 = closure_4(appChannelsPrivate(18426), obj);
+  if (appChannelsPrivate != null) {
+    shared = appChannelsPrivate.shared;
   }
-  items = [tmp6, , , , ,];
-  obj2 = { children: null };
+  let tmp5 = null;
+  if (true === shared) {
+    obj = { label: null, checked: null, onToggle: null };
+    let intl = appChannelsPrivate(1112).intl;
+    obj.label = intl.string(appChannelsPrivate(4245).Td1mlg);
+    ({ isPrivate: obj.checked, setPrivate: obj.onToggle } = appChannelsPrivate);
+    tmp5 = closure_4(appChannelsPrivate(12474).Checkbox, obj);
+  }
+  let tmp12 = null;
+  if (review.managedCopy) {
+    obj2 = { projectId: review.projectId };
+    tmp12 = closure_4(appChannelsPrivate(18488), obj2);
+  }
+  items = [tmp12, , , , , , ,];
+  const obj3 = { children: null };
   if (review.editable) {
-    const obj3 = {
+    const obj4 = {
       iconURL: identity.iconURL,
       size: 48,
       radius: 12,
@@ -186,92 +198,96 @@ export default function ConjurePublishReviewDetails(review) {
       onError(text) {
         if (null != text) {
           obj2 = { text, variant: "critical" };
-          appChannelsPrivate(5694).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
-          obj = appChannelsPrivate(5694);
+          appChannelsPrivate(5725).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
+          obj = appChannelsPrivate(5725);
         }
       },
       onConjure: review.onConjureIcon,
     };
-    const items1 = [closure_4(appChannelsPrivate(18428).ConjureAppIconTile, obj3), ,];
-    const obj4 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
-    let intl = appChannelsPrivate(1112).intl;
-    obj4.label = intl.string(appChannelsPrivate(4244).knevPu);
-    ({ name: obj9.value, setName: obj9.onChange } = review);
-    obj4.maxLength = appChannelsPrivate(6904).MAX_PROJECT_NAME_LENGTH;
-    ({ saving: obj9.disabled, nameError } = review);
-    obj4.errorMessage = nameError;
-    items1[1] = closure_4(appChannelsPrivate(7243).TextInput, obj4);
-    const obj5 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
-    const intl2 = tmp21(1112).intl;
-    obj5.label = intl2.string(appChannelsPrivate(4244).ynaGa1);
-    const intl3 = tmp21(1112).intl;
-    obj5.placeholder = intl3.string(appChannelsPrivate(4244)["I+3UTL"]);
-    ({ description: obj10.value, setDescription: obj10.onChange } = identity);
-    obj5.maxLength = appChannelsPrivate(6904).MAX_APP_DESCRIPTION_LENGTH;
-    obj5.disabled = review.saving;
-    items1[2] = closure_4(appChannelsPrivate(7409).TextArea, obj5);
-    obj2.children = items1;
-    let tmp4Result = closure_6(closure_5, obj2);
-    let tmp16 = tmp21;
-    let tmp15 = closure_4;
+    const items1 = [closure_4(appChannelsPrivate(18490).ConjureAppIconTile, obj4), ,];
+    const obj5 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
+    const intl2 = appChannelsPrivate(1112).intl;
+    obj5.label = intl2.string(appChannelsPrivate(4245).knevPu);
+    ({ name: obj10.value, setName: obj10.onChange } = review);
+    obj5.maxLength = appChannelsPrivate(6935).MAX_PROJECT_NAME_LENGTH;
+    ({ saving: obj10.disabled, nameError } = review);
+    obj5.errorMessage = nameError;
+    items1[1] = closure_4(appChannelsPrivate(7274).TextInput, obj5);
+    const obj6 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
+    const intl3 = tmp28(1112).intl;
+    obj6.label = intl3.string(appChannelsPrivate(4245).ynaGa1);
+    const intl4 = tmp28(1112).intl;
+    obj6.placeholder = intl4.string(appChannelsPrivate(4245)["I+3UTL"]);
+    ({ description: obj11.value, setDescription: obj11.onChange } = identity);
+    obj6.maxLength = appChannelsPrivate(6935).MAX_APP_DESCRIPTION_LENGTH;
+    obj6.disabled = review.saving;
+    items1[2] = closure_4(appChannelsPrivate(7440).TextArea, obj6);
+    obj3.children = items1;
+    let tmp10Result = closure_6(closure_5, obj3);
+    let tmp26 = tmp28;
+    let tmp21 = closure_4;
   } else {
-    let tmp10 = null;
+    let tmp16 = null;
     if (null != identity.iconURL) {
-      const obj6 = { source: null, style: null, resizeMode: "cover" };
-      const obj7 = { uri: identity.iconURL };
-      obj6.source = obj7;
-      obj6.style = tmp.readOnlyIcon;
-      tmp10 = closure_4(appChannelsPrivate(5699), obj6);
+      const obj7 = { source: null, style: null, resizeMode: "cover" };
+      const obj8 = { uri: identity.iconURL };
+      obj7.source = obj8;
+      obj7.style = tmp.readOnlyIcon;
+      tmp16 = closure_4(appChannelsPrivate(5730), obj7);
     }
-    const items2 = [tmp10];
-    const obj8 = { style: tmp.readOnlyText, children: null };
-    tmp15 = closure_4;
-    tmp16 = appChannelsPrivate;
-    const obj11 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: review.name };
-    const items3 = [closure_4(appChannelsPrivate(5603).Text, obj11)];
-    let tmp15Result = null;
+    const items2 = [tmp16];
+    const obj9 = { style: tmp.readOnlyText, children: null };
+    tmp21 = closure_4;
+    const obj13 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: review.name };
+    const items3 = [closure_4(appChannelsPrivate(5634).Text, obj13)];
+    let tmp21Result = null;
     if ("" !== identity.description) {
-      const obj13 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 3, children: identity.description };
-      tmp15Result = tmp15(tmp16(5603).Text, obj13);
+      const obj14 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 3, children: identity.description };
+      tmp21Result = tmp21(tmp22(5634).Text, obj14);
     }
-    items3[1] = tmp15Result;
-    obj8.children = items3;
-    items2[1] = closure_6(View, obj8);
-    obj2.children = items2;
-    tmp4Result = closure_6(closure_5, obj2);
+    items3[1] = tmp21Result;
+    obj9.children = items3;
+    items2[1] = closure_6(View, obj9);
+    obj3.children = items2;
+    tmp10Result = closure_6(closure_5, obj3);
+    tmp26 = tmp22;
   }
-  items[1] = tmp4Result;
-  const obj14 = { title: null, rows: null };
-  const intl4 = tmp16(1112).intl;
-  obj14.title = intl4.string(appChannelsPrivate(4244).BqNMms);
-  obj14.rows = mapped;
-  items[2] = tmp15(RowSection, obj14);
-  let shared;
-  if (appChannelsPrivate != null) {
-    shared = appChannelsPrivate.shared;
+  items[1] = tmp10Result;
+  let tmp21Result2 = null;
+  if (null != review.placement) {
+    ({ placement: obj12.placement, saving: obj12.disabled } = review);
+    tmp21Result2 = tmp21(appChannelsPrivate(18494), { placement: null, disabled: null });
+    const obj15 = { placement: null, disabled: null };
   }
-  let tmp15Result2 = null;
-  if (true === shared) {
-    const obj15 = { label: null, checked: null, onToggle: null };
-    const intl5 = tmp16(1112).intl;
-    obj15.label = intl5.string(tmp25(4244).Td1mlg);
-    ({ isPrivate: obj12.checked, setPrivate: obj12.onToggle } = appChannelsPrivate);
-    tmp15Result2 = tmp15(tmp16(12425).Checkbox, obj15);
+  items[2] = tmp21Result2;
+  let tmp33 = null;
+  if (null != review.placement) {
+    tmp33 = tmp5;
   }
-  const obj29 = { children: null };
-  items[3] = tmp15Result2;
-  const obj30 = { title: null, rows: null };
-  const intl6 = tmp16(1112).intl;
-  obj30.title = intl6.string(appChannelsPrivate(4244).LnqeFd);
+  items[3] = tmp33;
+  const obj16 = { title: null, rows: null };
+  const intl5 = tmp26(1112).intl;
+  obj16.title = intl5.string(appChannelsPrivate(4245).BqNMms);
+  obj16.rows = mapped;
+  items[4] = tmp21(RowSection, obj16);
+  let tmp36 = null;
+  if (null == review.placement) {
+    tmp36 = tmp5;
+  }
+  const obj31 = { children: null };
+  items[5] = tmp36;
+  const obj32 = { title: null, rows: null };
+  const intl6 = tmp26(1112).intl;
+  obj32.title = intl6.string(appChannelsPrivate(4245).LnqeFd);
   const devicePermissions = review.devicePermissions;
-  obj30.rows = devicePermissions.map((item) => {
+  obj32.rows = devicePermissions.map((item) => {
     obj = { icon: closure_1_7[item], label: null };
     const intl = appChannelsPrivate(1112).intl;
-    obj.label = intl.string(appChannelsPrivate(18405).CONJURE_REVIEW_PERMISSION_LABELS[item]);
+    obj.label = intl.string(appChannelsPrivate(18464).CONJURE_REVIEW_PERMISSION_LABELS[item]);
     return closure_1_4(ContentRow, obj, item);
   });
-  items[4] = tmp15(RowSection, obj30);
-  items[5] = tmp15(appChannelsPrivate(18432), { remix: review.remix, disabled: review.saving });
-  obj29.children = items;
-  return closure_6(closure_5, obj29);
+  items[6] = tmp21(RowSection, obj32);
+  items[7] = tmp21(appChannelsPrivate(18495), { remix: review.remix, disabled: review.saving });
+  obj31.children = items;
+  return closure_6(closure_5, obj31);
 }

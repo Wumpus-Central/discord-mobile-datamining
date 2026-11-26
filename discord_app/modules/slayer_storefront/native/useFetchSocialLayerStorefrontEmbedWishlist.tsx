@@ -15,11 +15,11 @@ let closure_8 = {
   user: "a",
   profile: "Path",
   wishlistId: "context",
-  wishlist: "nl-SR",
-  updatedAt: "nl",
-  storedUpdatedAt: false,
-  fetching: null,
-  error: null,
+  wishlist: "main-app",
+  updatedAt: "app",
+  storedUpdatedAt: null,
+  fetching: 32,
+  error: 64,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting(

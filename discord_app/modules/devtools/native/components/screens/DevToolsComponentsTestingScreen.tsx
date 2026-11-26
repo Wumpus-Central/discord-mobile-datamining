@@ -6,6 +6,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../../../design/components/Card/native/Card.native.tsx";
+import InteractionComponentTypes2 from "../../../../interaction_components/InteractionComponentTypes.tsx";
 import ComponentStateContext from "../../../../interaction_components/ComponentStateContext.tsx";
 import StringSelectActionComponentDefault from "../../../../interaction_components/native/actions/StringSelectActionComponent.tsx";
 import SearchableSelectActionComponentDefault from "../../../../interaction_components/native/actions/SearchableSelectActionComponent.tsx";
@@ -27,20 +28,20 @@ function Select(children) {
   }
   obj.maxValues = num;
   obj.type = type;
-  obj.id = String(type);
   const tmp = _slicedToArray(noop.useState(false), 2);
+  obj.id = InteractionComponentTypes2.asComponentId(type);
   state = ComponentStateContext.useComponentState(obj).state;
-  const obj3 = { style: { gap: 8 }, children: null };
+  const obj4 = { style: { gap: 8 }, children: null };
   items = [metroImportDefault(Text_Text.Text, { variant: "heading-lg/medium", children: children.title }), , ,];
   if (obj.type === Server.ComponentType.STRING_SELECT) {
-    const obj4 = {};
-    const merged1 = Object.assign(obj);
-    let tmp7Result = metroImportDefault(StringSelectActionComponentDefault, obj4);
-  } else {
     const obj5 = {};
+    const merged1 = Object.assign(obj);
+    let tmp7Result = metroImportDefault(StringSelectActionComponentDefault, obj5);
+  } else {
+    const obj6 = {};
     const merged2 = Object.assign(obj);
-    obj5.type = obj.type;
-    tmp7Result = metroImportDefault(SearchableSelectActionComponentDefault, obj5);
+    obj6.type = obj.type;
+    tmp7Result = metroImportDefault(SearchableSelectActionComponentDefault, obj6);
   }
   items[1] = tmp7Result;
   let type1;
@@ -64,34 +65,37 @@ function Select(children) {
     if (tmp2) {
       str3 = "on";
     }
-    const obj6 = { text: null, onPress: null, size: "sm" };
+    const obj7 = { text: null, onPress: null, size: "sm" };
     const _HermesInternal = HermesInternal;
-    obj6.text = "Toggle Multi Select (" + str3 + ")";
-    obj6.onPress = function onPress() {
+    obj7.text = "Toggle Multi Select (" + str3 + ")";
+    obj7.onPress = function onPress() {
       return _undefined((arg0) => !arg0);
     };
-    items[3] = metroImportDefault(components_Button_Button.Button, obj6);
-    obj3.children = items;
-    return React5(Card.Card, obj3);
+    items[3] = metroImportDefault(components_Button_Button.Button, obj7);
+    obj4.children = items;
+    return React5(Card.Card, obj4);
   }
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 let closure_9 = createStyles.createStyles(obj2);
-const InteractionComponentUtils = fn(6364);
+const InteractionComponentUtils = fn(6395);
 let obj6 = {
-  type: fn(2117).ComponentType.STRING_SELECT,
+  type: fn(2118).ComponentType.STRING_SELECT,
+  id: null,
   custom_id: "test",
   max_values: 1,
   min_values: 1,
   placeholder: "Choose...",
   options: null,
 };
+let InteractionComponentTypes = fn(6405);
+obj6.id = InteractionComponentTypes.asComponentId(0);
 let items = [
   { label: "test with a long label", value: "test" },
   { label: "test 2 with a long label", value: "test2", description: "with description!" },
@@ -100,18 +104,17 @@ let items = [
 ];
 obj6.options = items;
 let items1 = [obj6];
-let obj4 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
-items1[1] = {
-  type: fn(2117).ComponentType.TEXT_DISPLAY,
+let obj8 = {
+  type: fn(2118).ComponentType.TEXT_DISPLAY,
+  id: null,
   content:
     "hello world! :eyes: **bold** `code` https://cdn.discordapp.com/attachments/1408191424968523819/1408191500277387274/advaith.webp\nhttps://discord.com [google](https://google.com) ||spoiler|| <t:1755730638:t> <a:wumpus_party:393564669765353483>",
 };
+InteractionComponentTypes = fn(6405);
+obj8.id = InteractionComponentTypes.asComponentId(1);
+items1[1] = obj8;
 const transformComponentsResult = InteractionComponentUtils.transformComponents(items1);
-let obj7 = {
-  type: fn(2117).ComponentType.TEXT_DISPLAY,
-  content:
-    "hello world! :eyes: **bold** `code` https://cdn.discordapp.com/attachments/1408191424968523819/1408191500277387274/advaith.webp\nhttps://discord.com [google](https://google.com) ||spoiler|| <t:1755730638:t> <a:wumpus_party:393564669765353483>",
-};
+let obj4 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 [closure_11, closure_12] = transformComponentsResult;
 const modal = "modal";
 const size = fn(2);

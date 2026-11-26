@@ -2,8 +2,8 @@
 import applyDefault from "../../../_runtime/00012_apply.js";
 import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import _mod1653 from "../../../_runtime/metro/01653__.js";
-import BottomSheetModal from "../../../_runtime/05244_BottomSheetModal.js";
+import _mod1654 from "../../../_runtime/metro/01654__.js";
+import BottomSheetModal from "../../../_runtime/05275_BottomSheetModal.js";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -11,7 +11,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const discord_common_shallowEqualDefault = discord_common_shallowEqual;
-const module_1653 = _mod1653;
+const module_1654 = _mod1654;
 
 require = fn;
 function renderDefaultEmpty() {
@@ -22,8 +22,8 @@ function FastListScrollWorklet(scrollViewRef) {
   scrollViewRef = scrollViewRef.scrollViewRef;
   _require = scrollViewRef;
   ({ scrollPosValue, horizontal, onScrollWorklet } = scrollViewRef);
-  const mutable = require("../../../_runtime/metro/01653__.js").makeMutable(false);
-  obj = require("../../../_runtime/metro/01653__.js");
+  const mutable = require("../../../_runtime/metro/01654__.js").makeMutable(false);
+  obj = require("../../../_runtime/metro/01654__.js");
   items = [closure_29, horizontal, mutable, scrollPosValue, onScrollWorklet];
   _require = undefined;
   let event;
@@ -60,7 +60,7 @@ function FastListScrollWorklet(scrollViewRef) {
   FastListTsx2.__closure = items1;
   FastListTsx2.__workletHash = 15276307591274;
   FastListTsx2.__initData = tmp2;
-  event = require("../../../_runtime/metro/01653__.js").useEvent(FastListTsx2, ["onScroll"]);
+  event = require("../../../_runtime/metro/01654__.js").useEvent(FastListTsx2, ["onScroll"]);
   const items2 = [event, scrollViewRef];
   const effect = noop.useEffect(() => {
     const tmp = closure_1_9(_undefined.current);
@@ -1202,7 +1202,7 @@ let closure_20 = noop.memo(function FastListStickySectionRendererComponent(child
     items.push(layoutStart + 1);
     items1.push(1);
   }
-  const items2 = [closure_19, scrollPosValue, _mod1653.interpolate, items, items1, horizontal];
+  const items2 = [closure_19, scrollPosValue, _mod1654.interpolate, items, items1, horizontal];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -1245,7 +1245,7 @@ let closure_20 = noop.memo(function FastListStickySectionRendererComponent(child
   FastListTsx1.__workletHash = 2474480770200;
   FastListTsx1.__initData = tmp11;
   const Children = noop.Children;
-  const animatedStyle = _mod1653.useAnimatedStyle(FastListTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(FastListTsx1);
   const onlyResult = Children.only(children.children(section, fastListInstance, scrollPosValue, layoutStart));
   let style;
   if (null != onlyResult) {
@@ -1274,7 +1274,7 @@ let closure_20 = noop.memo(function FastListStickySectionRendererComponent(child
   }
   const items5 = [cloneElementResult, false];
   obj4.children = items5;
-  return refs(module_1653.View, obj4);
+  return refs(module_1654.View, obj4);
 });
 let closure_21 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, section, recyclerKey, horizontal } = disableWrapper);
@@ -2086,7 +2086,7 @@ prototype4["getInitialState"] = function getInitialState(endImportTime, setInfo,
     const result2 = scrollPosValue.set(tmp10);
     self.scrollPosValue = scrollPosValue;
   } else {
-    self.scrollPosValue = _mod1653.makeMutable(tmp10);
+    self.scrollPosValue = _mod1654.makeMutable(tmp10);
   }
   if (endImportTime > 0) {
     let computeResult = setInfo.compute(tmp3, sum, items, true);
@@ -2622,7 +2622,7 @@ FastList.defaultProps = {
 let closure_29 = {
   code: "(function FastListTsx2(event){let[horizontal,workletMounted,scrollPosValue,onScrollWorklet]=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}})",
 };
-const animatedComponent = module_1653.createAnimatedComponent(FastList);
+const animatedComponent = module_1654.createAnimatedComponent(FastList);
 let size = fn(2);
 let result = size.fileFinishedImporting("lib/native/FastList.tsx");
 

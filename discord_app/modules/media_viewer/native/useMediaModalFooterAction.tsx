@@ -17,5 +17,5 @@ export function setMediaModalFooterAction(footerAction) {
   });
 }
 export function clearMediaModalFooterAction() {
-  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "top" }));
+  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "r" }));
 }

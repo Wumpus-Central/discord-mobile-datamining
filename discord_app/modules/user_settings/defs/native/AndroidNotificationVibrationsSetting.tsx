@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AndroidNotificationVibrationsSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _modDef3206 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef3207 from "../../../notifications/NotificationSettings.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingsNotificationUtils from "../../notifications/native/SettingsNotificationUtils.tsx";
 import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
@@ -51,7 +51,7 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef3206.KHzigZ);
+  return intl.string(_modDef3207.KHzigZ);
 };
 obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj3.usePredicate = function usePredicate() {

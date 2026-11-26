@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/command_view/hooks/useOptionAnimations.tsx
 import Discord from "../../../../../../index.native.tsx";
-import _mod1653 from "../../../../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../../../../_runtime/metro/01706__.js";
+import _mod1654 from "../../../../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../../../../_runtime/metro/01707__.js";
 import timing_timing from "../../../../../../design/animation/reanimated/timing/timing.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ let items = [
   {
     code: "(function LayoutAnimation_useOptionAnimationsTsx1(values){let[withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION]=this.__closure;const animations={originY:withTiming(values.targetOriginY,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originY:values.currentOriginY};return{initialValues:initialValues,animations:animations};})",
   },
-  fn(5222).withTiming,
+  fn(5253).withTiming,
   300,
 ];
 let closure_129_0;
@@ -35,7 +35,7 @@ const items2 = [
   {
     code: "(function ExitingAnimation_useOptionAnimationsTsx2(values){let[withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION]=this.__closure;const offScreenX=Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth);const animations={opacity:withTiming(0,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}),originX:withTiming(offScreenX,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originX:values.currentOriginX,opacity:1};return{initialValues:initialValues,animations:animations};})",
   },
-  fn(5222).withTiming,
+  fn(5253).withTiming,
   300,
 ];
 let closure_130_0;
@@ -69,7 +69,7 @@ export const OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION = 300;
 export { LayoutAnimation };
 export { ExitingAnimation };
 export function useOptionEnteringAnimation() {
-  sharedValue = sharedValue(1653).useSharedValue(false);
+  sharedValue = sharedValue(1654).useSharedValue(false);
   dependencyMap = noop.useRef([]);
   items = [sharedValue];
   _slicedToArray = noop.useCallback(() => {
@@ -79,17 +79,17 @@ export function useOptionEnteringAnimation() {
     const current1 = closure_1.current;
     current1.splice(0, closure_1.current.length);
   }, items);
-  let obj = sharedValue(1653);
+  let obj = sharedValue(1654);
   return {
     EnteringAnimation: _slicedToArray(
       noop.useState(() => {
         items = [
           closure_5,
           timing_timing.withTiming,
-          _mod1653.Easing,
+          _mod1654.Easing,
           c4,
-          _mod1653.withDelay,
-          _mod1706.scheduleOnRN,
+          _mod1654.withDelay,
+          _mod1707.scheduleOnRN,
           closure_2,
         ];
         c0 = undefined;

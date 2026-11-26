@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/openUserProfileAddGameActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/openUserP
 
 export default function openUserProfileAddGameActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(14512, dependencyMap.paths),
+    asyncRequireImpl(14564, dependencyMap.paths),
     UserProfileAddGameActionSheet,
     arg0,
   );

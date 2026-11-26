@@ -4,7 +4,7 @@ import EmojiDefault from "../../../emojis/native/Emoji.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = {
   emojiWrapper: { flexShrink: 0, borderRadius: nativeDefault.radii.xs, overflow: "hidden" },
   textEmoji: null,

@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_6 = fn(1081).ProfileCustomizationSubsection;
-const UserProfileSections = fn(6106).UserProfileSections;
+const UserProfileSections = fn(6137).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/useProfileSelection.tsx");
 

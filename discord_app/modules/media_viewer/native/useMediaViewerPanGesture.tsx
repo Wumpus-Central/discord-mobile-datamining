@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/useMediaViewerPanGesture.tsx
-import _mod1706 from "../../../../_runtime/metro/01706__.js";
-import LegacyBaseButton from "../../../../_runtime/05272_LegacyBaseButton.js";
+import _mod1707 from "../../../../_runtime/metro/01707__.js";
+import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import MediaViewerAnalyticsManager from "../MediaViewerAnalyticsManager.tsx";
 import useVideoControls from "useVideoControls.tsx";
@@ -31,17 +31,17 @@ let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaVie
 export function useMediaViewerPanGestureConfig(arg0, swipeVelocityThreshold, onClose) {
   _require = arg0;
   dependencyMap = onClose;
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  let obj = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  let obj2 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  let obj3 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue3 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const obj4 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue4 = require("../../../../_runtime/metro/01653__.js").useSharedValue({ y: 0, x: 0 });
-  const obj5 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue5 = require("../../../../_runtime/metro/01653__.js").useSharedValue(true);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  let obj = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  let obj2 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  let obj3 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue3 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const obj4 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue4 = require("../../../../_runtime/metro/01654__.js").useSharedValue({ y: 0, x: 0 });
+  const obj5 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue5 = require("../../../../_runtime/metro/01654__.js").useSharedValue(true);
   items = [onClose];
   const callback = sharedValue.useCallback(() => {
     useVideoControls.tryPauseCurrentVideo();
@@ -61,7 +61,7 @@ export function useMediaViewerPanGestureConfig(arg0, swipeVelocityThreshold, onC
     }
     const obj2 = spring_spring;
     const merged = Object.assign(closure_4);
-    items = [closure_5, _mod1706.scheduleOnRN, callback];
+    items = [closure_5, _mod1707.scheduleOnRN, callback];
     c0 = undefined;
     c1 = undefined;
     [tmp6, tmp7, tmp8] = items;
@@ -166,7 +166,7 @@ export function useMediaViewerPanGesture(panGestureConfig, derivedValue) {
       isInteracting,
       velocity,
       swipeVelocityThreshold,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       _undefined6,
       translatePos,
       spring_spring.withSpring,

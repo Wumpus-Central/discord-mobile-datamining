@@ -18,7 +18,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -152,7 +152,7 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -199,8 +199,8 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
             closure_129_4 = closure_129_0.filter((item) => {
               let storefrontPricingKey = closure_1_3;
               if (closure_1_3 === undefined) {
-                storefrontPricingKey = closure_0(11554).getStorefrontPricingKey();
-                const obj = closure_0(11554);
+                storefrontPricingKey = closure_0(11602).getStorefrontPricingKey();
+                const obj = closure_0(11602);
               }
               let diff = globalThis;
               let flag = false;
@@ -213,9 +213,9 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
                     flag = true;
                     if (null != fetchedAtForSku) {
                       if ("error" === fetchStateForSku) {
-                        let TWELVE_HOURS_MS = closure_0(11557).ERROR_STALE_THRESHOLD_MS;
+                        let TWELVE_HOURS_MS = closure_0(11605).ERROR_STALE_THRESHOLD_MS;
                       } else {
-                        TWELVE_HOURS_MS = closure_0(11557).TWELVE_HOURS_MS;
+                        TWELVE_HOURS_MS = closure_0(11605).TWELVE_HOURS_MS;
                       }
                       const _Date = diff.Date;
                       diff = _Date.now() - fetchedAtForSku;

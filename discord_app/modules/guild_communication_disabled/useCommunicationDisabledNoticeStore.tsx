@@ -1,11 +1,11 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
-import _mod1257 from "../../../_runtime/metro/01257__.js";
-import _mod4927 from "../../../_runtime/metro/04927__.js";
+import _mod1258 from "../../../_runtime/metro/01258__.js";
+import _mod4958 from "../../../_runtime/metro/04958__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
 const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY =
-  fn(4926).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+  fn(4957).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_561 = fn(561);
 let state = module_561.createStore((arg0, arg1) => {
   _require = arg0;
@@ -25,7 +25,7 @@ let state = module_561.createStore((arg0, arg1) => {
         DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY,
         notificationDismissedInGuilds,
       );
-      notificationDismissedInGuilds(1262).batchUpdates(() =>
+      notificationDismissedInGuilds(1263).batchUpdates(() =>
         notificationDismissedInGuilds({ notificationDismissedInGuilds }),
       );
     },
@@ -38,10 +38,10 @@ let state = module_561.createStore((arg0, arg1) => {
           DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY,
           notificationDismissedInGuilds,
         );
-        notificationDismissedInGuilds(1262).batchUpdates(() =>
+        notificationDismissedInGuilds(1263).batchUpdates(() =>
           notificationDismissedInGuilds({ notificationDismissedInGuilds }),
         );
-        const obj = notificationDismissedInGuilds(1262);
+        const obj = notificationDismissedInGuilds(1263);
       }
     },
   };
@@ -60,14 +60,14 @@ let result = size.fileFinishedImporting("modules/guild_communication_disabled/us
 
 export function useCommunicationDisabledNoticeStore(arg0) {
   const tmp = _slicedToArray(
-    _mod1257.useStoreWithEqualityFn(
+    _mod1258.useStoreWithEqualityFn(
       closure_4,
       (arg0) => {
         items = [,];
         ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
         return items;
       },
-      _mod4927.shallow,
+      _mod4958.shallow,
     ),
     2,
   );

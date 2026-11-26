@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 const require = fn;
-let closure_5 = fn(12595).CHECKPOINT_CHARACTER_STAGE_FADE;
+let closure_5 = fn(12631).CHECKPOINT_CHARACTER_STAGE_FADE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/hooks/useIsChangingCustomizationRoute.tsx");
 
@@ -16,9 +16,9 @@ export default function useIsChangingCustomizationRoute(stepName) {
   [first1] = noop.useState(false);
   dependencyMap = tmp8;
   if (stepName !== first) {
-    const result = tmp(6736).isCheckpointCustomizationRoute(first);
-    const tmpResult = tmp(6736);
-    const result1 = tmp(6736).isCheckpointCustomizationRoute(stepName);
+    const result = tmp(6767).isCheckpointCustomizationRoute(first);
+    const tmpResult = tmp(6767);
+    const result1 = tmp(6767).isCheckpointCustomizationRoute(stepName);
     tmp4[1](stepName);
     let tmp12 = !stateFromStores;
     if (!stateFromStores) {
@@ -28,7 +28,7 @@ export default function useIsChangingCustomizationRoute(stepName) {
       tmp12 = result1;
     }
     tmp8(tmp12);
-    const tmpResult2 = tmp(6736);
+    const tmpResult2 = tmp(6767);
   }
   const items1 = [first1, stepName];
   const effect = noop.useEffect(() => {

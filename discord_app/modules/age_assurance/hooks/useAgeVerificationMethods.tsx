@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AgeVerificationStore from "../AgeVerificationStore.tsx";
 
 require = fn;
-const AgeVerificationConstants = fn(6796);
+const AgeVerificationConstants = fn(6827);
 ({ VERIFICATION_METHOD_TITLE_MAP: metroImportDefault, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
@@ -96,7 +96,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: "+95" };
                 }
               } else {
                 try {
@@ -110,11 +110,11 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(6797);
+                      const obj5 = id(6828);
                       const result = obj5.trackAgeVerificationModalClicked(
                         id,
-                        id(6797).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                        id(6797).AgeVerificationModalCta.METHOD_SELECT,
+                        id(6828).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                        id(6828).AgeVerificationModalCta.METHOD_SELECT,
                         id,
                       );
                       v1 = 1;
@@ -131,7 +131,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                     return obj;
                   } else {
                     c1 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: "+95" };
                   }
                 } catch (tmp5) {
                   c1 = tmp;

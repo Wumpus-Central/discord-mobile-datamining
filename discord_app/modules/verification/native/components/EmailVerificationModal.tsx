@@ -13,7 +13,7 @@ function closeModal() {
   resetChangeEmailStore();
   EmailVerificationModalActionCreatorsDefault.close();
 }
-const resetChangeEmailStore = fn(7159).resetChangeEmailStore;
+const resetChangeEmailStore = fn(7190).resetChangeEmailStore;
 const VerificationModalScenes = fn(1071).VerificationModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);

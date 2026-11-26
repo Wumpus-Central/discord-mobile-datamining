@@ -3,13 +3,13 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef8803 from "../../../../_runtime/metro/08803__.js";
+import _modDef8845 from "../../../../_runtime/metro/08845__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(7601);
+const SpotifyConstants = fn(7632);
 ({
   SPOTIFY_APP_PROTOCOL: closure_6,
   SpotifyEndpoints: metroImportDefault,
@@ -263,7 +263,7 @@ export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
   let obj2 = {
-    icon: closure_9(activity(5610).Button.Icon, { source: _modDef8803 }),
+    icon: closure_9(activity(5641).Button.Icon, { source: _modDef8845 }),
     text: null,
     size: "sm",
     onPress: null,
@@ -280,7 +280,7 @@ export function SpotifyPlayButton(activity) {
           let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id)).catch(() => {});
           const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id));
         } else {
-          const HTTP = activity(1284).HTTP;
+          const HTTP = activity(1285).HTTP;
           const obj2 = {
             url: closure_2_7.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier),
             rejectWithError: true,
@@ -292,7 +292,7 @@ export function SpotifyPlayButton(activity) {
       })
       .catch(() => {});
   };
-  obj.children = closure_9(activity(5610).Button, obj2);
+  obj.children = closure_9(activity(5641).Button, obj2);
   return closure_9(closure_5, obj);
 }
 export { SpotifyTrack };

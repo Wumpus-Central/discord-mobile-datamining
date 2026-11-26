@@ -9,11 +9,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getGuildAcronym = fn(4879).getGuildAcronym;
-const Constants = fn(18214);
+const getGuildAcronym = fn(4910).getGuildAcronym;
+const Constants = fn(18273);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 48;
   if (arg0) {
@@ -48,7 +48,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.guildFallbackImage = size1;
   return obj;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj = {
   fallbackImage: { color: nativeDefault.colors.WHITE },
   fallbackImageV2: null,

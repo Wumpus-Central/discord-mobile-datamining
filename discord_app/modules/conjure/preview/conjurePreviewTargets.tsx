@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/preview/conjurePreviewTargets.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../intl/ConjureUntranslated.messages.js";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import ConjurePreviewMode from "ConjurePreviewMode.tsx";
 import slugConjureChannelNameDefault from "../shared/slugConjureChannelName.tsx";
@@ -9,26 +9,28 @@ import size from "../../../../_runtime/metro/00002__.js";
 function getPreviewTargetLabel(string) {
   const mode = string.mode;
   if ("frame" === mode) {
-    if (null == string.appChannel) {
-      let previewFrameSurfaceLabel = ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface);
+    if (null != string.view) {
+      let name = string.view.name;
+    } else if (null == string.appChannel) {
+      name = ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface);
     } else {
       const intl4 = util.intl;
       const obj = {
         surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface),
         channel: string.appChannel,
       };
-      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef4244["6xVl+N"], obj);
+      name = intl4.formatToPlainString(_modDef4245["6xVl+N"], obj);
     }
-    return previewFrameSurfaceLabel;
+    return name;
   } else if ("widget" === mode) {
     const intl3 = util.intl;
-    return intl3.string(_modDef4244.y5GiL1);
+    return intl3.string(_modDef4245.y5GiL1);
   } else if ("overlay" === mode) {
     const intl2 = util.intl;
-    return intl2.string(_modDef4244["2940LX"]);
+    return intl2.string(_modDef4245["2940LX"]);
   } else if ("bot" === mode) {
     const intl = util.intl;
-    return intl.string(_modDef4244.tjpaGN);
+    return intl.string(_modDef4245.tjpaGN);
   }
 }
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
@@ -39,11 +41,25 @@ export function previewTargets(modes, frameSurfaceOptions) {
   if (stateFromStores3 === undefined) {
     items = [];
   }
+  let items1 = stateFromStores4;
+  if (stateFromStores4 === undefined) {
+    items1 = [];
+  }
   return modes.flatMap((mode) => {
     if ("frame" === mode) {
-      let flatMapResult = mode.flatMap((surface) => {
+      if (items1.length > 0) {
+        let mapped = items1.map((id) => ({
+          mode,
+          surface: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL,
+          view: { id: id.id, name: id.name },
+        }));
+      }
+      return mapped;
+    }
+    if ("frame" === mode) {
+      mapped = mode.flatMap((surface) => {
         mode = surface;
-        if (surface === mode(dependencyMap[0]).EmbeddedSurfaceType.APP_CHANNEL) {
+        if (surface === mode(items1[0]).EmbeddedSurfaceType.APP_CHANNEL) {
           if (length.length > 1) {
             let mapped = length.map((appChannel) => ({ mode: surface, surface, appChannel }));
           }
@@ -54,14 +70,16 @@ export function previewTargets(modes, frameSurfaceOptions) {
       });
     } else {
       let obj = { mode };
-      flatMapResult = [obj];
+      mapped = [obj];
     }
-    return flatMapResult;
   });
 }
 export function previewTargetKey(target) {
   if ("frame" !== target.mode) {
     let mode = target.mode;
+  } else if (null != target.view) {
+    const _HermesInternal3 = HermesInternal;
+    mode = "frame-view-" + target.view.id;
   } else if (null == target.appChannel) {
     const _HermesInternal2 = HermesInternal;
     mode = "frame-" + target.surface;
@@ -76,12 +94,18 @@ export function activePreviewTarget(activeMode, frameSurface) {
   if (appChannel === undefined) {
     tmp = null;
   }
+  let tmp2 = view;
+  if (view === undefined) {
+    tmp2 = null;
+  }
   if (null == activeMode) {
     return null;
   } else if ("frame" !== activeMode) {
     const obj2 = { mode: activeMode };
+  } else if (null != tmp2) {
+    const obj3 = { mode: activeMode, surface: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, view: tmp2 };
   } else if (null == tmp) {
-    const obj3 = { mode: activeMode, surface: frameSurface };
+    const obj4 = { mode: activeMode, surface: frameSurface };
   } else {
     const obj = { mode: activeMode, surface: frameSurface, appChannel: tmp };
   }
@@ -90,8 +114,13 @@ export { getPreviewTargetLabel };
 export function getPreviewTabLabel(mode, arg1) {
   if ("bot" === mode.mode) {
     const intl = util.intl;
-    return intl.string(_modDef4244.gThNz6);
+    return intl.string(_modDef4245.gThNz6);
   } else {
+    if ("frame" === mode.mode) {
+      if (null != mode.view) {
+        return mode.view.name;
+      }
+    }
     if ("frame" === mode.mode) {
       if (mode.surface === EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL) {
         let appChannel = mode.appChannel;
@@ -107,12 +136,17 @@ export function getPreviewTabLabel(mode, arg1) {
     return getPreviewTargetLabel(mode);
   }
 }
-export function selectPreviewTarget(mode, fn, fn2, fn3) {
+export function selectPreviewTarget(mode, fn, fn2, fn3, fn4) {
   if ("frame" === mode.mode) {
     fn2(mode.surface);
     if (null != mode.appChannel) {
       if (fn3 != null) {
         fn3(mode.appChannel);
+      }
+    }
+    if (null != mode.view) {
+      if (fn4 != null) {
+        fn4(mode.view.id);
       }
     }
   }

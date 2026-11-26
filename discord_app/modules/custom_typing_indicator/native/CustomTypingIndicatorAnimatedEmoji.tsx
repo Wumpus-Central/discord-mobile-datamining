@@ -1,6 +1,6 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji.tsx";
@@ -9,13 +9,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const AppStates = fn(1071).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles((width) => {
   const obj = {
     emojiContainer: { width, height: width, alignItems: "center", justifyContent: "center" },
@@ -72,12 +72,12 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
     closure_6(name);
   }, items);
   const tmp7 = useCanPlayAnimatedEmojiDefault();
-  sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(1);
-  const tmp2Result = require("../../../../_runtime/metro/01653__.js");
-  sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const tmp2Result5 = require("../../../../_runtime/metro/01653__.js");
-  sharedValue2 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const tmp2Result6 = require("../../../../_runtime/metro/01653__.js");
+  sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(1);
+  const tmp2Result = require("../../../../_runtime/metro/01654__.js");
+  sharedValue1 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const tmp2Result5 = require("../../../../_runtime/metro/01654__.js");
+  sharedValue2 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const tmp2Result6 = require("../../../../_runtime/metro/01654__.js");
   const items1 = [name];
   stateFromStores = require("initialize").useStateFromStores(items1, () => name.getState() === closure_6.ACTIVE);
   const items2 = [animation, index, emojiCount, enabled, stateFromStores, sharedValue1, sharedValue, sharedValue2, num];
@@ -91,9 +91,9 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
           const result3 = c0 * duration;
           const result4 = duration * (c1 - 1);
           if (user.TypingIndicatorAnimation.PULSE === c3) {
-            const tmp5Result = _mod1653;
-            const tmp5Result15 = _mod1653;
-            const tmp5Result16 = _mod1653;
+            const tmp5Result = _mod1654;
+            const tmp5Result15 = _mod1654;
+            const tmp5Result16 = _mod1654;
             const obj4 = { duration };
             const tmp5Result17 = timing_timing;
             const withTimingResult = timing_timing.withTiming(1.16, obj4);
@@ -112,20 +112,20 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
             );
             const tmp5Result19 = timing_timing;
           } else if (user.TypingIndicatorAnimation.RING === c3) {
-            const tmp5Result20 = _mod1653;
-            const tmp5Result21 = _mod1653;
+            const tmp5Result20 = _mod1654;
+            const tmp5Result21 = _mod1654;
             const _Math = Math;
             const obj7 = { duration: 1600, easing: null };
             const result6 = 2 * Math.PI;
-            obj7.easing = _mod1653.Easing.linear;
+            obj7.easing = _mod1654.Easing.linear;
             const result7 = sharedValue1.set(
               tmp5Result20.withDelay(result3, tmp5Result21.withRepeat(timing_timing.withTiming(result6, obj7), -1)),
             );
             const tmp5Result22 = timing_timing;
           } else if (user.TypingIndicatorAnimation.WAVE === c3) {
-            const tmp5Result23 = _mod1653;
-            const tmp5Result24 = _mod1653;
-            const tmp5Result25 = _mod1653;
+            const tmp5Result23 = _mod1654;
+            const tmp5Result24 = _mod1654;
+            const tmp5Result25 = _mod1654;
             const obj8 = { duration };
             const tmp5Result26 = timing_timing;
             const withTimingResult2 = timing_timing.withTiming(-0.12 * c2, obj8);
@@ -145,11 +145,11 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
             const tmp5Result28 = timing_timing;
           }
           return () => {
-            c0(1653).cancelAnimation(sharedValue);
-            const obj = c0(1653);
-            c0(1653).cancelAnimation(sharedValue1);
-            const obj2 = c0(1653);
-            c0(1653).cancelAnimation(sharedValue2);
+            c0(1654).cancelAnimation(sharedValue);
+            const obj = c0(1654);
+            c0(1654).cancelAnimation(sharedValue1);
+            const obj2 = c0(1654);
+            c0(1654).cancelAnimation(sharedValue2);
           };
         }
       }
@@ -185,7 +185,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
   CustomTypingIndicatorAnimatedEmojiTsx1.__closure = items4;
   CustomTypingIndicatorAnimatedEmojiTsx1.__workletHash = 1185511828923;
   CustomTypingIndicatorAnimatedEmojiTsx1.__initData = tmp13;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     CustomTypingIndicatorAnimatedEmojiTsx1,
   );
   let obj2 = { style: animatedStyle, children: null };
@@ -198,7 +198,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
     onError: null,
   };
   let str = "\u{1F615}";
-  const tmp2Result8 = require("../../../../_runtime/metro/01653__.js");
+  const tmp2Result8 = require("../../../../_runtime/metro/01654__.js");
   if (tmp4[0] !== name) {
     let str2 = "";
     if (null == emoji.id) {
@@ -220,13 +220,13 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
       }
       obj4.animated = animated;
       obj4.size = num;
-      emojiURL = tmp6(1412).getEmojiURL(obj4);
-      const tmp6Result2 = tmp6(1412);
+      emojiURL = tmp6(1413).getEmojiURL(obj4);
+      const tmp6Result2 = tmp6(1413);
     }
   }
   obj3.src = emojiURL;
   ({ imageEmoji: obj8.fastImageStyle, textEmoji: obj8.textEmojiStyle } = tmp);
   obj3.onError = callback;
   obj2.children = sharedValue(EmojiDefault, obj3, emojiCount.emojisKey);
-  return sharedValue(_modDef1653.View, obj2);
+  return sharedValue(_modDef1654.View, obj2);
 }

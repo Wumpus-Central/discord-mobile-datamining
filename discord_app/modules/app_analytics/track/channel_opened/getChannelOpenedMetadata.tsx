@@ -13,7 +13,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_9, Permissions: closure_10 } = Constants);
-const isStaticChannelRoute = fn(4868).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4899).isStaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedMetadata.tsx");
 

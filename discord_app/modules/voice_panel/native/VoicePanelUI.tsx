@@ -2,10 +2,10 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../_runtime/metro/01706__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../_runtime/metro/01707__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05272_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import ReleaseChannelUtils from "../../../utils/ReleaseChannelUtils.native.tsx";
 import ExternalPipDefault from "../../external_pip/ExternalPip.android.tsx";
@@ -32,20 +32,20 @@ import AppFreezeStore from "../../panels/morphable/AppFreezeStore.tsx";
 import VoicePanelStore from "../VoicePanelStore.tsx";
 
 const require = globalThis.__r;
-const module_1653 = _mod1653;
+const module_1654 = _mod1654;
 
-const closeVoicePanelsDefault = tmp2(9955);
-const calculateVoicePanelHeaderSpecsDefault = tmp2(11739);
-const useControlsLockDefault = tmp2(19395);
-const useControlsHoverGestureDefault = tmp2(19401);
-const VoicePanelHeaderDefault = tmp2(19402);
-const VoicePanelCardViewDefault = tmp2(19424);
-const VoicePanelPreJoinContentDefault = tmp2(19458);
-const VoicePanelVoiceChannelAppDefault = tmp2(19462);
-const VoicePanelSystemUIManagerDefault = tmp2(19465);
-const VoicePanelAccessibilityViewDefault = tmp2(19466);
-const VoicePanelDismissableContentDefault = tmp2(19467);
-const VoicePanelControlsDefault = tmp2(19487);
+const closeVoicePanelsDefault = tmp2(9997);
+const calculateVoicePanelHeaderSpecsDefault = tmp2(11787);
+const useControlsLockDefault = tmp2(19458);
+const useControlsHoverGestureDefault = tmp2(19464);
+const VoicePanelHeaderDefault = tmp2(19465);
+const VoicePanelCardViewDefault = tmp2(19487);
+const VoicePanelPreJoinContentDefault = tmp2(19521);
+const VoicePanelVoiceChannelAppDefault = tmp2(19525);
+const VoicePanelSystemUIManagerDefault = tmp2(19528);
+const VoicePanelAccessibilityViewDefault = tmp2(19529);
+const VoicePanelDismissableContentDefault = tmp2(19530);
+const VoicePanelControlsDefault = tmp2(19550);
 require = fn;
 function NOOP() {}
 function log() {
@@ -95,7 +95,7 @@ function AnimatedWrapper(arg0) {
   VoicePanelUITsx26.__closure = items1;
   VoicePanelUITsx26.__workletHash = 10614477099225;
   VoicePanelUITsx26.__initData = tmp7;
-  const derivedValue = _mod1653.useDerivedValue(VoicePanelUITsx26);
+  const derivedValue = _mod1654.useDerivedValue(VoicePanelUITsx26);
   const pIPState = VoicePanelPIPStateContext.usePIPState();
   const tmp3Result = VoicePanelPIPStateContext;
   let items2 = [
@@ -273,8 +273,8 @@ function AnimatedWrapper(arg0) {
   VoicePanelUITsx28.__closure = items5;
   VoicePanelUITsx28.__workletHash = 11671043152030;
   VoicePanelUITsx28.__initData = tmp22;
-  const animatedReaction = _mod1653.useAnimatedReaction(VoicePanelUITsx27, VoicePanelUITsx28);
-  const tmp3Result8 = _mod1653;
+  const animatedReaction = _mod1654.useAnimatedReaction(VoicePanelUITsx27, VoicePanelUITsx28);
+  const tmp3Result8 = _mod1654;
   const items6 = [
     closure_57,
     useReducedMotion,
@@ -284,7 +284,7 @@ function AnimatedWrapper(arg0) {
     closure_56,
     mode,
     VoicePanelModes,
-    _mod1706.scheduleOnRN,
+    _mod1707.scheduleOnRN,
     ExternalPipDefault.updateSourceTrackingView,
     isDockEnabled,
     VoicePanelDockSheet.getDockSheetTransform,
@@ -538,8 +538,8 @@ function AnimatedWrapper(arg0) {
   VoicePanelUITsx30.__closure = items7;
   VoicePanelUITsx30.__workletHash = 16698086189253;
   VoicePanelUITsx30.__initData = tmp34;
-  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelUITsx30);
-  const tmp3Result9 = _mod1653;
+  const animatedStyle = _mod1654.useAnimatedStyle(VoicePanelUITsx30);
+  const tmp3Result9 = _mod1654;
   const dockSheetSurfaceFills = VoicePanelDockSheet.useDockSheetSurfaceFills();
   const tmp3Result10 = VoicePanelDockSheet;
   const items8 = [
@@ -623,8 +623,8 @@ function AnimatedWrapper(arg0) {
   VoicePanelUITsx31.__closure = items9;
   VoicePanelUITsx31.__workletHash = 7192428607857;
   VoicePanelUITsx31.__initData = tmp60;
-  const animatedStyle1 = _mod1653.useAnimatedStyle(VoicePanelUITsx31);
-  const tmp3Result11 = _mod1653;
+  const animatedStyle1 = _mod1654.useAnimatedStyle(VoicePanelUITsx31);
+  const tmp3Result11 = _mod1654;
   const items10 = [
     closure_59,
     isDockEnabled,
@@ -754,7 +754,7 @@ function AnimatedWrapper(arg0) {
   VoicePanelUITsx32.__closure = items11;
   VoicePanelUITsx32.__workletHash = 2084017363392;
   VoicePanelUITsx32.__initData = tmp74;
-  animatedStyle2 = _mod1653.useAnimatedStyle(VoicePanelUITsx32);
+  animatedStyle2 = _mod1654.useAnimatedStyle(VoicePanelUITsx32);
   if (!ReleaseChannelUtils.isStable) {
     const items12 = [closure_60, windowDimensions];
     c0 = undefined;
@@ -768,7 +768,7 @@ function AnimatedWrapper(arg0) {
     VoicePanelUITsx33.__closure = items13;
     VoicePanelUITsx33.__workletHash = 11289230546412;
     VoicePanelUITsx33.__initData = tmp94;
-    const items14 = [closure_61, _mod1706.scheduleOnRN, log];
+    const items14 = [closure_61, _mod1707.scheduleOnRN, log];
     c0 = undefined;
     c1 = undefined;
     [tmp99, tmp100, tmp101] = items14;
@@ -782,8 +782,8 @@ function AnimatedWrapper(arg0) {
     VoicePanelUITsx34.__closure = items15;
     VoicePanelUITsx34.__workletHash = 9854052507414;
     VoicePanelUITsx34.__initData = tmp99;
-    const animatedReaction1 = _mod1653.useAnimatedReaction(VoicePanelUITsx33, VoicePanelUITsx34);
-    const tmp3Result13 = _mod1653;
+    const animatedReaction1 = _mod1654.useAnimatedReaction(VoicePanelUITsx33, VoicePanelUITsx34);
+    const tmp3Result13 = _mod1654;
     const items16 = [closure_62, wrapperDimensions];
     c0 = undefined;
     [r10598, tmp105] = items16;
@@ -800,7 +800,7 @@ function AnimatedWrapper(arg0) {
         return closure_0.get().height;
       }
     }
-    const items18 = [closure_63, _mod1706.scheduleOnRN, log];
+    const items18 = [closure_63, _mod1707.scheduleOnRN, log];
     c0 = undefined;
     c1 = undefined;
     [tmp108, tmp109, tmp110] = items18;
@@ -814,8 +814,8 @@ function AnimatedWrapper(arg0) {
     VoicePanelUITsx36.__closure = items19;
     VoicePanelUITsx36.__workletHash = 13802443686923;
     VoicePanelUITsx36.__initData = tmp108;
-    const animatedReaction2 = _mod1653.useAnimatedReaction(VoicePanelUITsx35, VoicePanelUITsx36);
-    const tmp3Result14 = _mod1653;
+    const animatedReaction2 = _mod1654.useAnimatedReaction(VoicePanelUITsx35, VoicePanelUITsx36);
+    const tmp3Result14 = _mod1654;
   }
   const items20 = [tmp4.wrapper, animatedStyle1, animatedStyle2, animatedStyle];
   const memo = noop.useMemo(
@@ -842,18 +842,18 @@ function AnimatedWrapper(arg0) {
     }
     const items21 = [StyleSheet.absoluteFill, wrapperSurfaceLayerStyles];
     tmp115[0] = items21;
-    const items22 = [collapsedCategories(module_1653.View, tmp115), children];
+    const items22 = [collapsedCategories(module_1654.View, tmp115), children];
     obj7.children = items22;
-    obj6.children = closure_1_19(module_1653.View, obj7);
-    tmp113Result = collapsedCategories(module_1653.View, obj6);
+    obj6.children = closure_1_19(module_1654.View, obj7);
+    tmp113Result = collapsedCategories(module_1654.View, obj6);
   }
   obj4.children = tmp113Result;
-  return collapsedCategories(module_1653.View, obj4);
+  return collapsedCategories(module_1654.View, obj4);
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ Pressable: closure_6, ScrollView } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11734);
+const VoicePanelConstants = fn(11782);
 ({
   BORDER_RADIUS_PHYSICS: closure_10,
   DEFAULT_BORDER_RADIUS,
@@ -864,9 +864,9 @@ const VoicePanelConstants = fn(11734);
 } = VoicePanelConstants);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 ({ LAYOUT_PHYSICS, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_14, DEFAULT_BORDER_RADIUS_PIP } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11732).VoicePanelControlsModes;
-const isActivityParticipant = fn(5662).isActivityParticipant;
-const POP_RESISTANCE = fn(11735).POP_RESISTANCE;
+const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
+const isActivityParticipant = fn(5693).isActivityParticipant;
+const POP_RESISTANCE = fn(11783).POP_RESISTANCE;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 log = new LoggerDefault("VoicePanelUI");
@@ -877,7 +877,7 @@ let items = [
   {
     code: "(function scrollViewLayoutTransition_VoicePanelUITsx1(values){let[withSpring,LAYOUT_PHYSICS,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS]=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})",
   },
-  fn(5613).withSpring,
+  fn(5644).withSpring,
   LAYOUT_PHYSICS,
   obj,
 ];
@@ -936,7 +936,7 @@ let items3 = [tmp14];
 computeViewableChunksFromScrollPosition.__closure = items3;
 computeViewableChunksFromScrollPosition.__workletHash = 804730160053;
 computeViewableChunksFromScrollPosition.__initData = tmp13;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj4 = {
   accessibilityView: null,
   wrapper: null,
@@ -967,8 +967,8 @@ let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj4.shade = { backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BACKGROUND, zIndex: 0 };
 obj4.shadePressable = { flexGrow: 1 };
 let closure_27 = createStyles.createStyles(obj4);
-let closure_28 = module_1653.createAnimatedComponent(ScrollView);
-const MetaQuestUtils = fn(1625);
+let closure_28 = module_1654.createAnimatedComponent(ScrollView);
+const MetaQuestUtils = fn(1626);
 let closure_29 = MetaQuestUtils.isMetaQuest();
 let closure_30 = {
   code: "(function VoicePanelUITsx3(){let[gestureState,connected,mode]=this.__closure;return{gestureActive:gestureState.get().active,connected:connected.get(),mode:mode.get()};})",
@@ -1136,7 +1136,7 @@ let closure_67 = noop.memo(function DrawerShade(arg0) {
   VoicePanelUITsx37.__closure = items1;
   VoicePanelUITsx37.__workletHash = 10971630675340;
   VoicePanelUITsx37.__initData = tmp4;
-  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelUITsx37);
+  const animatedStyle = _mod1654.useAnimatedStyle(VoicePanelUITsx37);
   obj2 = {
     style: null,
     importantForAccessibility: "no-hide-descendants",
@@ -1145,7 +1145,7 @@ let closure_67 = noop.memo(function DrawerShade(arg0) {
   };
   const items2 = [StyleSheet.absoluteFill, tmp.shade, animatedStyle];
   obj2.style = items2;
-  return collapsedCategories(module_1653.View, obj2);
+  return collapsedCategories(module_1654.View, obj2);
 });
 let obj10 = { backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BACKGROUND, zIndex: 0 };
 let size = fn(2);
@@ -1242,15 +1242,15 @@ export default noop.memo(function VoicePanelUI() {
   const tmp12 = useSafeAreaInsetsDefault();
   closure_129_18 = tmp12;
   let tmp4 = useAnalyticsLocationsDefault;
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
   closure_129_19 = sharedValue;
-  obj2 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  obj2 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01654__.js").useSharedValue(false);
   closure_129_20 = sharedValue1;
-  let obj3 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  const obj4 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue3 = require("../../../../_runtime/metro/01653__.js").useSharedValue({
+  let obj3 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  const obj4 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue3 = require("../../../../_runtime/metro/01654__.js").useSharedValue({
     start: 0,
     end: VOICE_PANEL_CHUNK_DIVISOR,
   });
@@ -1263,11 +1263,11 @@ export default noop.memo(function VoicePanelUI() {
     return Gesture.Native();
   }, []);
   closure_129_23 = memo;
-  let obj5 = require("../../../../_runtime/metro/01653__.js");
+  let obj5 = require("../../../../_runtime/metro/01654__.js");
   let obj6 = { start: 0, end: VOICE_PANEL_CHUNK_DIVISOR };
-  const animatedRef = require("../../../../_runtime/metro/01653__.js").useAnimatedRef();
-  const obj7 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue4 = require("../../../../_runtime/metro/01653__.js").useSharedValue({
+  const animatedRef = require("../../../../_runtime/metro/01654__.js").useAnimatedRef();
+  const obj7 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue4 = require("../../../../_runtime/metro/01654__.js").useSharedValue({
     absoluteXStart: 0,
     absoluteYStart: 0,
     cancel: false,
@@ -1275,7 +1275,7 @@ export default noop.memo(function VoicePanelUI() {
     requiresPop: false,
   });
   closure_129_24 = sharedValue4;
-  const obj8 = require("../../../../_runtime/metro/01653__.js");
+  const obj8 = require("../../../../_runtime/metro/01654__.js");
   let items3 = [closure_30, sharedValue4, connected, mode];
   _require = undefined;
   importDefault = undefined;
@@ -1295,7 +1295,7 @@ export default noop.memo(function VoicePanelUI() {
     closure_31,
     require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
     VoicePanelModes,
-    require("../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01707__.js").scheduleOnRN,
     callback,
     callback1,
     callback2,
@@ -1356,11 +1356,11 @@ export default noop.memo(function VoicePanelUI() {
   VoicePanelUITsx4.__closure = items6;
   VoicePanelUITsx4.__workletHash = 15249848589911;
   VoicePanelUITsx4.__initData = tmp28;
-  const animatedReaction = require("../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     VoicePanelUITsx3,
     VoicePanelUITsx4,
   );
-  const obj9 = require("../../../../_runtime/metro/01653__.js");
+  const obj9 = require("../../../../_runtime/metro/01654__.js");
   let items7 = [closure_32, mode];
   _require = undefined;
   [tmp36, tmp37] = items7;
@@ -1397,7 +1397,7 @@ export default noop.memo(function VoicePanelUI() {
   VoicePanelUITsx6.__closure = items10;
   VoicePanelUITsx6.__workletHash = 831695033676;
   VoicePanelUITsx6.__initData = tmp38;
-  const animatedReaction1 = require("../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     VoicePanelUITsx5,
     VoicePanelUITsx6,
   );
@@ -1409,7 +1409,7 @@ export default noop.memo(function VoicePanelUI() {
     }
     log(!tmp);
   }, items11);
-  const tmp13Result = require("../../../../_runtime/metro/01653__.js");
+  const tmp13Result = require("../../../../_runtime/metro/01654__.js");
   let items12 = [closure_34, mode, VoicePanelModes, focused];
   _require = undefined;
   importDefault = undefined;
@@ -1435,7 +1435,7 @@ export default noop.memo(function VoicePanelUI() {
   VoicePanelUITsx7.__closure = items13;
   VoicePanelUITsx7.__workletHash = 13070549736071;
   VoicePanelUITsx7.__initData = tmp44;
-  let items14 = [closure_35, require("../../../../_runtime/metro/01706__.js").scheduleOnRN, callback3];
+  let items14 = [closure_35, require("../../../../_runtime/metro/01707__.js").scheduleOnRN, callback3];
   _require = undefined;
   importDefault = undefined;
   [tmp48, tmp49, tmp50] = items14;
@@ -1453,7 +1453,7 @@ export default noop.memo(function VoicePanelUI() {
   VoicePanelUITsx8.__closure = items15;
   VoicePanelUITsx8.__workletHash = 6427194929748;
   VoicePanelUITsx8.__initData = tmp48;
-  const animatedReaction2 = require("../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction2 = require("../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     VoicePanelUITsx7,
     VoicePanelUITsx8,
   );
@@ -1499,7 +1499,7 @@ export default noop.memo(function VoicePanelUI() {
       VoicePanelModes,
       c4,
       VoicePanelControlsModes,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       closure_1_14,
       c8,
     ];
@@ -1639,7 +1639,7 @@ export default noop.memo(function VoicePanelUI() {
       c3,
       c4,
       VoicePanelControlsModes,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       obj2,
     ];
     c0 = undefined;
@@ -1708,7 +1708,7 @@ export default noop.memo(function VoicePanelUI() {
       10,
       c7,
       c9,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       utils_triggerIOSHapticDefault,
       updateSharedValueIfChangedDefault,
       closure_1_17,
@@ -1845,7 +1845,7 @@ export default noop.memo(function VoicePanelUI() {
       tmp48,
       180,
       POP_RESISTANCE,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,
     ];
@@ -2037,7 +2037,7 @@ export default noop.memo(function VoicePanelUI() {
       closure_1_17,
       0.2,
       VoicePanelSheetMorph.SHEET_COMMIT_FLING_VELOCITY,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,
       c2,
@@ -2267,7 +2267,7 @@ export default noop.memo(function VoicePanelUI() {
       scrollViewLayoutTransition,
       closure_1_17,
       closure_1_20,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       obj2,
       closure_1_11,
       VoicePanelModes,
@@ -2334,7 +2334,7 @@ export default noop.memo(function VoicePanelUI() {
         .onFinalize(VoicePanelUITsx16),
     );
   }, items16);
-  const tmp13Result7 = require("../../../../_runtime/metro/01653__.js");
+  const tmp13Result7 = require("../../../../_runtime/metro/01654__.js");
   const items17 = [closure_44, scrollPosition, dragScrolling];
   [tmp54, tmp55, tmp56] = items17;
   const obj10 = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
@@ -2373,7 +2373,7 @@ export default noop.memo(function VoicePanelUI() {
     sharedValue1,
     sharedValue2,
     scrollPosition,
-    require("../../../../_runtime/metro/01653__.js").scrollTo,
+    require("../../../../_runtime/metro/01654__.js").scrollTo,
     animatedRef,
     computeViewableChunksFromScrollPosition,
     windowDimensions,
@@ -2423,8 +2423,8 @@ export default noop.memo(function VoicePanelUI() {
   onScroll.__workletHash = 5096849357050;
   onScroll.__initData = tmp61;
   obj10.onScroll = onScroll;
-  const tmp13Result8 = require("../../../../_runtime/metro/01653__.js");
-  const animatedScrollHandler = require("../../../../_runtime/metro/01653__.js").useAnimatedScrollHandler(obj10);
+  const tmp13Result8 = require("../../../../_runtime/metro/01654__.js");
+  const animatedScrollHandler = require("../../../../_runtime/metro/01654__.js").useAnimatedScrollHandler(obj10);
   const items25 = [closure_48, mode];
   _require = undefined;
   [tmp73, tmp74] = items25;
@@ -2466,11 +2466,11 @@ export default noop.memo(function VoicePanelUI() {
   VoicePanelUITsx22.__closure = items28;
   VoicePanelUITsx22.__workletHash = 13562682085354;
   VoicePanelUITsx22.__initData = tmp75;
-  const animatedReaction3 = require("../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction3 = require("../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     VoicePanelUITsx21,
     VoicePanelUITsx22,
   );
-  const tmp13Result9 = require("../../../../_runtime/metro/01653__.js");
+  const tmp13Result9 = require("../../../../_runtime/metro/01654__.js");
   const token = require("useToken").useToken(nativeDefault.modules.mobile.VOICE_PANEL_GUTTER);
   const tmp13Result10 = require("useToken");
   const items29 = [
@@ -2531,11 +2531,11 @@ export default noop.memo(function VoicePanelUI() {
   VoicePanelUITsx23.__workletHash = 8373057512913;
   VoicePanelUITsx23.__initData = tmp80;
   const items31 = [sharedValue];
-  const animatedProps = require("../../../../_runtime/metro/01653__.js").useAnimatedProps(VoicePanelUITsx23);
+  const animatedProps = require("../../../../_runtime/metro/01654__.js").useAnimatedProps(VoicePanelUITsx23);
   const callback4 = obj.useCallback((arg0, arg1) => {
     const result = closure_1_19.set(arg1);
   }, items31);
-  const tmp13Result11 = require("../../../../_runtime/metro/01653__.js");
+  const tmp13Result11 = require("../../../../_runtime/metro/01654__.js");
   const items32 = [
     closure_51,
     isDockConnected,
@@ -2622,9 +2622,9 @@ export default noop.memo(function VoicePanelUI() {
   VoicePanelUITsx24.__closure = items33;
   VoicePanelUITsx24.__workletHash = 13886774489991;
   VoicePanelUITsx24.__initData = tmp90;
-  const derivedValue = require("../../../../_runtime/metro/01653__.js").useDerivedValue(VoicePanelUITsx24);
+  const derivedValue = require("../../../../_runtime/metro/01654__.js").useDerivedValue(VoicePanelUITsx24);
   const obj11 = { children: null };
-  const tmp13Result12 = require("../../../../_runtime/metro/01653__.js");
+  const tmp13Result12 = require("../../../../_runtime/metro/01654__.js");
   const obj12 = { zIndex: 2, children: null };
   const obj13 = { wrapperOffset, gestureState: sharedValue4, layout: null };
   const tmp103 = useControlsHoverGestureDefault();
@@ -2658,7 +2658,7 @@ export default noop.memo(function VoicePanelUI() {
   obj17.children = items35;
   obj16.children = closure_19(closure_28, obj17);
   obj15.children = closure_18(require("LegacyBaseButton").GestureDetector, obj16);
-  obj14.children = closure_18(module_1653.View, obj15);
+  obj14.children = closure_18(module_1654.View, obj15);
   items34[1] = closure_18(require("LegacyBaseButton").GestureDetector, obj14);
   items34[2] = closure_18(VoicePanelVoiceChannelAppDefault, {});
   obj11.children = items34;
@@ -2689,12 +2689,12 @@ export default noop.memo(function VoicePanelUI() {
     let tmp105Result = tmp107;
     if (isDockEnabled) {
       const obj23 = { children: tmp107 };
-      tmp105Result = closure_18(tmp13(19397).VoicePanelContentWithDock, obj23);
+      tmp105Result = closure_18(tmp13(19460).VoicePanelContentWithDock, obj23);
     }
     obj22.children = tmp105Result;
     items37[1] = closure_18(AnimatedWrapper, obj22);
     const obj24 = { children: null };
-    items37[2] = closure_18(tmp2(isDockEnabled ? 19469 : 19479), {});
+    items37[2] = closure_18(tmp2(isDockEnabled ? 19532 : 19542), {});
     tmp2 = VoicePanelControlsDefault;
     const obj25 = { gestureState: sharedValue4 };
     tmp105Result3 = closure_18(tmp2, obj25);
@@ -2702,11 +2702,11 @@ export default noop.memo(function VoicePanelUI() {
     obj21.children = items37;
     obj21 = closure_19(VoicePanelAccessibilityViewDefault, obj21);
     obj20.children = obj21;
-    obj20 = closure_18(tmp13(5272).GestureDetector, obj20);
+    obj20 = closure_18(tmp13(5303).GestureDetector, obj20);
     items36[2] = obj20;
     obj24.children = items36;
-    obj18.children = closure_19(tmp13(5590).LayerScope, obj24);
-    closure_18(tmp13(6348).AnalyticsLocationProvider, obj18);
+    obj18.children = closure_19(tmp13(5621).LayerScope, obj24);
+    closure_18(tmp13(6379).AnalyticsLocationProvider, obj18);
     const tmp2Result2 = VoicePanelAccessibilityViewDefault;
   }
   const tmp2Result = VoicePanelHeaderDefault;

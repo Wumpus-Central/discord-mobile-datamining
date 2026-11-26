@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let closure_3 = ["onPress", "onPressIn", "onPressOut", "onLongPress"];
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_4 = createStyles.createStyles({
   stretchButton: { flexDirection: "row", alignItems: "stretch", alignSelf: "stretch" },
   stretchPill: { height: "100%", alignSelf: "stretch" },

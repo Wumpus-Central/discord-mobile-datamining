@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const AgeGateSource = fn(1096).AgeGateSource;
-const AgeGate = fn(19585).ExistingUserAgeGateScreens;
+const AgeGate = fn(19648).ExistingUserAgeGateScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_gate/native/components/DateOfBirthGateModal.tsx");
@@ -42,27 +42,27 @@ export default function DateOfBirthGateModal(source) {
             const obj2 = { text: null, variant: "success" };
             const intl = closure_0(1112).intl;
             obj2.text = intl.string(closure_0(1112).t.gUiIGZ);
-            closure_2_1(5694).open("AGE_GATE_AGE_VERIFIED", obj2);
+            closure_2_1(5725).open("AGE_GATE_AGE_VERIFIED", obj2);
           };
         }
         let obj2 = { onSuccess: fn, onClose: null, source: null };
-        obj = source(1378);
-        obj2.onClose = source(19586).onGateClose;
+        obj = source(1379);
+        obj2.onClose = source(19649).onGateClose;
         obj2.source = tmp;
         return jsx(ExistingUserAgeGateDefault, { onSuccess: fn, onClose: null, source: null });
       }
       fn = () => {
-        const result = closure_0(6807).closeAgeGateModalAfterSubmit();
-        const obj = closure_0(6807);
+        const result = closure_0(6838).closeAgeGateModalAfterSubmit();
+        const obj = closure_0(6838);
         const obj3 = { text: null, variant: "success" };
         const intl = closure_0(1112).intl;
         obj3.text = intl.string(closure_0(1112).t.gUiIGZ);
-        closure_2_1(5694).open("AGE_GATE_AGE_VERIFIED", obj3);
+        closure_2_1(5725).open("AGE_GATE_AGE_VERIFIED", obj3);
         if (closure_0 === constants.FAMILY_CENTER) {
-          closure_2_1(8172).initialPageLoad();
-          const tmp3Result = closure_2_1(8172);
+          closure_2_1(8214).initialPageLoad();
+          const tmp3Result = closure_2_1(8214);
         }
-        const obj2 = closure_2_1(5694);
+        const obj2 = closure_2_1(5725);
       };
     };
     obj2[NSFWGateGuild.AgeGate] = obj3;
@@ -93,7 +93,7 @@ export default function DateOfBirthGateModal(source) {
       impressionProperties: { existing_user: true },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(17642), {});
+        return closure_1_6(closure_1_1(17699), {});
       },
     };
     const obj6 = { headerTitle: ageGateNavigationCallbacks.renderHeaderTitle, headerLeft: null, render: null };
@@ -103,18 +103,18 @@ export default function DateOfBirthGateModal(source) {
       impressionProperties: { existing_user: true },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(17642), {});
+        return closure_1_6(closure_1_1(17699), {});
       },
     };
     obj6.headerLeft = NavigatorHeader.getHeaderBackButton(fn);
     obj6.render = function render() {
-      const obj = { onClose: source(19586).onGateClose };
-      return closure_1_6(closure_1_1(7537), obj);
+      const obj = { onClose: source(19649).onGateClose };
+      return closure_1_6(closure_1_1(7568), obj);
     };
     obj2[NSFWGateGuild.NSFWGateGuild] = obj6;
     return obj2;
   }, items);
   let intl = source(1112).intl;
   obj.headerBackTitle = intl.string(source(1112).t["13/7kX"]);
-  return jsx(source(7324).Navigator, { screens: null, initialRouteName: AgeGate.AgeGate, headerBackTitle: null });
+  return jsx(source(7355).Navigator, { screens: null, initialRouteName: AgeGate.AgeGate, headerBackTitle: null });
 }

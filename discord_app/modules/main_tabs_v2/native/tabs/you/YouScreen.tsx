@@ -17,7 +17,7 @@ import LocaleStore from "../../../../user_settings/LocaleStore.tsx";
 import UserSettingSearchStore from "../../../../user_settings/UserSettingSearchStore.tsx";
 import GuildReadStateStore from "../../../../../stores/GuildReadStateStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
-import module_1653_mod from "../../../../../../_runtime/metro/01653__.js";
+import module_1654_mod from "../../../../../../_runtime/metro/01654__.js";
 
 require = fn;
 function handleBackButtonPress() {
@@ -97,8 +97,8 @@ function UnconnectedYouScreen(isCard) {
   ({ theme, primaryColor, secondaryColor } = navigateToShop(tmp2[31])({ user, displayProfile: obj2 }));
   const tmp11 = navigateToShop(tmp2[31])({ user, displayProfile: obj2 });
   const tmp12 = navigateToShop(tmp2[32])();
-  const sharedValue = require("../../../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const obj3 = require("../../../../../../_runtime/metro/01653__.js");
+  const sharedValue = require("../../../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const obj3 = require("../../../../../../_runtime/metro/01654__.js");
   items = [closure_29, sharedValue];
   _require = undefined;
   [tmp14, tmp15] = items;
@@ -112,8 +112,8 @@ function UnconnectedYouScreen(isCard) {
   YouScreenTsx1.__closure = items1;
   YouScreenTsx1.__workletHash = 11467832296045;
   YouScreenTsx1.__initData = tmp14;
-  const obj4 = require("../../../../../../_runtime/metro/01653__.js");
-  const animatedScrollHandler = require("../../../../../../_runtime/metro/01653__.js").useAnimatedScrollHandler(
+  const obj4 = require("../../../../../../_runtime/metro/01654__.js");
+  const animatedScrollHandler = require("../../../../../../_runtime/metro/01654__.js").useAnimatedScrollHandler(
     YouScreenTsx1,
   );
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } =
@@ -623,7 +623,7 @@ function UnconnectedYouScreen(isCard) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(18103);
+const YouConstants = fn(18162);
 ({
   YOU_ACTION_SHEET_TOP_INSET: closure_12,
   YOU_AVATAR_SIZE: map1,
@@ -632,14 +632,14 @@ const YouConstants = fn(18103);
 } = YouConstants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
 let closure_17 = fn(1073).CollectiblesMobileShopScreen;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
-const Constants = fn(7526);
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
+const Constants = fn(7557);
 ({ BANNER_ASPECT_RATIO: closure_19, UserProfileThemeTypes: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
-let module_1653 = module_1653_mod;
-const VisualEffectViewThemed = module_1653.createAnimatedComponent(VisualEffectViewThemedDefault);
-let createStyles = fn(5012);
+let module_1654 = module_1654_mod;
+const VisualEffectViewThemed = module_1654.createAnimatedComponent(VisualEffectViewThemedDefault);
+let createStyles = fn(5043);
 let closure_24 = createStyles.createStyles(() => {
   let xl;
   if (obj.isIOS()) {
@@ -693,7 +693,7 @@ let closure_24 = createStyles.createStyles(() => {
   obj3.cardDecorations = obj10;
   return obj3;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let closure_25 = createStyles.createStyles(() => {
   const obj = {
     backButton: {
@@ -707,8 +707,8 @@ let closure_25 = createStyles.createStyles(() => {
   };
   return obj;
 });
-let module_1653 = module_1653_mod;
-let closure_26 = module_1653.createAnimatedComponent(ScrollView);
+let module_1654 = module_1654_mod;
+let closure_26 = module_1654.createAnimatedComponent(ScrollView);
 let closure_29 = {
   code: "(function YouScreenTsx1(e){let[scrollPosition]=this.__closure;scrollPosition.set(e.contentOffset.y);})",
 };

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/app_build_request/ConjureAppBuildRequest.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
 import conjureSendToProject from "../connection/conjureSendToProject.tsx";
 import conjureAttachmentDrafts from "../chat/conjureAttachmentDrafts.tsx";
@@ -20,7 +20,7 @@ export function appBuildRequestSentToast(arr) {
   const obj = { names: null };
   const mapped = arr.map((name) => name.name);
   obj.names = mapped.join(", ");
-  return intl.formatToPlainString(_modDef4244.RZO35O, obj);
+  return intl.formatToPlainString(_modDef4245.RZO35O, obj);
 }
 export function useConjureAppBuildRequestForm(projectId, request, canSend, onDismiss, onSent) {
   importDefault = request;
@@ -105,14 +105,14 @@ export function useConjureAppBuildRequestForm(projectId, request, canSend, onDis
                 [tmp, arr] = arg0;
                 const mapped = arr.map((name) => {
                   const intl = closure_1_0(1112).intl;
-                  return intl.formatToPlainString(closure_1_1(4244).tcDZw9, {
+                  return intl.formatToPlainString(closure_1_1(4245).tcDZw9, {
                     name: name.name,
                     projectId: name.projectId,
                   });
                 });
                 const targets = mapped.join(", ");
                 let intl = closure_1_0(1112).intl;
-                return "" + intl.formatToPlainString(closure_1_1(4244).jZlNst, { targets }) + "\n\n" + tmp;
+                return "" + intl.formatToPlainString(closure_1_1(4245).jZlNst, { targets }) + "\n\n" + tmp;
               });
               return arr.join("\n\n");
             })(arr),

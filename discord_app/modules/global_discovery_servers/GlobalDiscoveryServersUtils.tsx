@@ -1,7 +1,7 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import util from "../../intl/index.native.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
-import v1 from "../../../_runtime/01268_v1.js";
+import v1 from "../../../_runtime/01269_v1.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
@@ -31,7 +31,7 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "Path";
 };
-const GlobalDiscoveryServersConstants = fn(8533);
+const GlobalDiscoveryServersConstants = fn(8575);
 ({
   GlobalDiscoveryServerTab: closure_6,
   FEATURED_GUILDS_CACHE_DURATION: metroImportDefault,
@@ -216,9 +216,9 @@ export function fromDiscoverableGuildSearchResult(id) {
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "analyticsLocations",
-    discoverySplash: "<string:4047568898>",
-    emojis: "<string:16777503>",
+    preferredLocale: "channel_id",
+    discoverySplash: "<string:626066432>",
+    emojis: "<string:3847291181>",
   };
   ({
     approximate_presence_count: obj.presenceCount,

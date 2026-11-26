@@ -6,8 +6,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef15208 from "../../../../../../../_runtime/metro/15208__.js";
-import _modDef17771 from "../../../../../../../_runtime/metro/17771__.js";
+import _modDef15258 from "../../../../../../../_runtime/metro/15258__.js";
+import _modDef17828 from "../../../../../../../_runtime/metro/17828__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -33,7 +33,7 @@ let closure_11 = async function _getFriendInviteCode() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ let closure_13 = async function _handleShare() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -154,7 +154,7 @@ let closure_13 = async function _handleShare() {
           closure_129_6.ADD_FRIENDS_WIDGET,
         );
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp7) {
       c3 = tmp;
@@ -183,7 +183,7 @@ let closure_15 = async function _handleLink() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -216,7 +216,7 @@ let closure_15 = async function _handleLink() {
         closure_128_0 = value;
         closure_129_0(closure_129_2[11]).handleCopy(closure_128_0, null, closure_129_6.ADD_FRIENDS_WIDGET);
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -228,8 +228,8 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1071).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const sum = fn(14015).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(5012);
+const sum = fn(14067).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(5043);
 let obj = {
   container: {
     height: sum,
@@ -306,7 +306,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   const obj5 = {
     style: tmp.actionIcon,
     variant: "filled",
-    source: _modDef15208,
+    source: _modDef15258,
     onPress: handleShare,
     accessibilityLabel: null,
   };
@@ -314,7 +314,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [metroImportDefault(IconActionButtonDefault, obj5)];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef17771;
+  obj6.source = _modDef17828;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

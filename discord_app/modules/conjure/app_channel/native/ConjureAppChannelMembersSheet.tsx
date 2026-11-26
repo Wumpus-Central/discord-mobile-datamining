@@ -4,11 +4,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const UsersFastListConstants = fn(10685);
+const UsersFastListConstants = fn(10730);
 ({ USERS_LIST_PADDING_BETWEEN_SECTIONS, USERS_LIST_SECTION_BOTTOM_PADDING } = UsersFastListConstants);
 const jsx = fn(21).jsx;
 const diff = USERS_LIST_PADDING_BETWEEN_SECTIONS - USERS_LIST_SECTION_BOTTOM_PADDING;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ body: { overflow: "hidden" }, list: { marginTop: -diff } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/app_channel/native/ConjureAppChannelMembersSheet.tsx");
@@ -41,7 +41,7 @@ export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
       disableThemedGradient: true,
       listStyleOverride: tmp.list,
     };
-    obj2.children = jsx(guild_id(12036), {
+    obj2.children = jsx(guild_id(12084), {
       channelId,
       guildId: guild_id,
       headerShown: false,
@@ -50,7 +50,7 @@ export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
       disableThemedGradient: true,
       listStyleOverride: tmp.list,
     });
-    tmp7 = jsx(channelId(5240).BottomSheet, {
+    tmp7 = jsx(channelId(5271).BottomSheet, {
       startExpanded: true,
       scrollable: true,
       bodyStyles: tmp.body,

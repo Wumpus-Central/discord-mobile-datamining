@@ -1,35 +1,35 @@
 // discord_app/modules/checkpoint/CheckpointConstants.tsx
-import _modDef3494 from "Checkpoint2026.messages.js";
+import _modDef3495 from "Checkpoint2026.messages.js";
 
-const items = [{ list: "gamesByPlayers", label: _modDef3494.b4s18j }, , ,];
-const obj = { list: "gamesByPlayers", label: _modDef3494.b4s18j };
-items[1] = { list: "newGamesByPlayers", label: _modDef3494.DcxpNj };
-const obj2 = { list: "newGamesByPlayers", label: _modDef3494.DcxpNj };
-items[2] = { list: "indieGamesByPlayers", label: _modDef3494.OAUTki };
-const obj3 = { list: "indieGamesByPlayers", label: _modDef3494.OAUTki };
-items[3] = { list: "gamesByStreamWatchMinutes", label: _modDef3494.M1L00s };
+const items = [{ list: "gamesByPlayers", label: _modDef3495.b4s18j }, , ,];
+const obj = { list: "gamesByPlayers", label: _modDef3495.b4s18j };
+items[1] = { list: "newGamesByPlayers", label: _modDef3495.DcxpNj };
+const obj2 = { list: "newGamesByPlayers", label: _modDef3495.DcxpNj };
+items[2] = { list: "indieGamesByPlayers", label: _modDef3495.OAUTki };
+const obj3 = { list: "indieGamesByPlayers", label: _modDef3495.OAUTki };
+items[3] = { list: "gamesByStreamWatchMinutes", label: _modDef3495.M1L00s };
 const obj5 = {};
-obj5[fn(6366).CheckpointTraitRarity.DEFAULT] = _modDef3494.bP4GV1;
-obj5[fn(6366).CheckpointTraitRarity.COMMON] = _modDef3494.QwkKWr;
-obj5[fn(6366).CheckpointTraitRarity.RARE] = _modDef3494.KLmNgL;
-obj5[fn(6366).CheckpointTraitRarity.EPIC] = _modDef3494.hAmdLZ;
-obj5[fn(6366).CheckpointTraitRarity.ULTRA] = _modDef3494.Tv4xyf;
-obj5[fn(6366).CheckpointTraitRarity.NITRO] = _modDef3494["0ModIv"];
+obj5[fn(6397).CheckpointTraitRarity.DEFAULT] = _modDef3495.bP4GV1;
+obj5[fn(6397).CheckpointTraitRarity.COMMON] = _modDef3495.QwkKWr;
+obj5[fn(6397).CheckpointTraitRarity.RARE] = _modDef3495.KLmNgL;
+obj5[fn(6397).CheckpointTraitRarity.EPIC] = _modDef3495.hAmdLZ;
+obj5[fn(6397).CheckpointTraitRarity.ULTRA] = _modDef3495.Tv4xyf;
+obj5[fn(6397).CheckpointTraitRarity.NITRO] = _modDef3495["0ModIv"];
 const items1 = [
-  fn(6366).CheckpointTraitRarity.ULTRA,
-  fn(6366).CheckpointTraitRarity.EPIC,
-  fn(6366).CheckpointTraitRarity.RARE,
-  fn(6366).CheckpointTraitRarity.COMMON,
-  fn(6366).CheckpointTraitRarity.DEFAULT,
-  fn(6366).CheckpointTraitRarity.NITRO,
+  fn(6397).CheckpointTraitRarity.ULTRA,
+  fn(6397).CheckpointTraitRarity.EPIC,
+  fn(6397).CheckpointTraitRarity.RARE,
+  fn(6397).CheckpointTraitRarity.COMMON,
+  fn(6397).CheckpointTraitRarity.DEFAULT,
+  fn(6397).CheckpointTraitRarity.NITRO,
 ];
 const items2 = [
-  fn(6366).CheckpointTraitRarity.DEFAULT,
-  fn(6366).CheckpointTraitRarity.COMMON,
-  fn(6366).CheckpointTraitRarity.RARE,
-  fn(6366).CheckpointTraitRarity.EPIC,
-  fn(6366).CheckpointTraitRarity.ULTRA,
-  fn(6366).CheckpointTraitRarity.NITRO,
+  fn(6397).CheckpointTraitRarity.DEFAULT,
+  fn(6397).CheckpointTraitRarity.COMMON,
+  fn(6397).CheckpointTraitRarity.RARE,
+  fn(6397).CheckpointTraitRarity.EPIC,
+  fn(6397).CheckpointTraitRarity.ULTRA,
+  fn(6397).CheckpointTraitRarity.NITRO,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");
@@ -66,12 +66,12 @@ export const CHECKPOINT_2026_POWER_BAR_UNITS = 6;
 export const CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS = 1;
 export const CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS = 5;
 export const CHECKPOINT_RARITY_TO_COLOR = {
-  [fn(6366).CheckpointTraitRarity.DEFAULT]: "#FFE047",
-  [fn(6366).CheckpointTraitRarity.COMMON]: "#35ED7E",
-  [fn(6366).CheckpointTraitRarity.RARE]: "#EF3054",
-  [fn(6366).CheckpointTraitRarity.EPIC]: "#7D53DE",
-  [fn(6366).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
-  [fn(6366).CheckpointTraitRarity.NITRO]: "#ABACB2",
+  [fn(6397).CheckpointTraitRarity.DEFAULT]: "#FFE047",
+  [fn(6397).CheckpointTraitRarity.COMMON]: "#35ED7E",
+  [fn(6397).CheckpointTraitRarity.RARE]: "#EF3054",
+  [fn(6397).CheckpointTraitRarity.EPIC]: "#7D53DE",
+  [fn(6397).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
+  [fn(6397).CheckpointTraitRarity.NITRO]: "#ABACB2",
 };
 export const CHECKPOINT_RARITY_TO_LABEL_MESSAGE = obj5;
 export const CHECKPOINT_RARITY_ORDER_MOBILE = items1;

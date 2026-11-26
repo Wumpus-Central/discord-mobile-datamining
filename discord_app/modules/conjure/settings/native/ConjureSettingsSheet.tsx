@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/settings/native/ConjureSettingsSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -220,7 +220,7 @@ class ConjureSettingsSheet {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else {
           try {
@@ -518,21 +518,21 @@ function SettingsTabStrip(tabs) {
   return closure_12(View, obj3);
 }
 const View = fn(17).View;
-let ConjureProjectStore = fn(6903);
+let ConjureProjectStore = fn(6934);
 ({ canPublishProject: closure_9, isProjectOwner: closure_10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const ConjureSettingsSheet = "ConjureSettingsSheet";
 let obj = {
-  project: _modDef4244.W0eQfN,
-  app: _modDef4244.lFaJYF,
-  secrets: _modDef4244.vDpCPU,
-  model: _modDef4244.Rs3qc9,
-  linked: _modDef4244.fBEHdq,
-  experimental: _modDef4244["0Pe9uw"],
+  project: _modDef4245.W0eQfN,
+  app: _modDef4245.lFaJYF,
+  secrets: _modDef4245.vDpCPU,
+  model: _modDef4245.Rs3qc9,
+  linked: _modDef4245.fBEHdq,
+  experimental: _modDef4245["0Pe9uw"],
 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj3 = { container: { gap: nativeDefault.space.PX_16 } };
 const value = createStyles.createStyles(obj3);
 const size = fn(2);

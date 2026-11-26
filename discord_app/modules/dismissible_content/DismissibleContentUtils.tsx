@@ -88,7 +88,7 @@ let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -123,7 +123,7 @@ let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp10) {
       c2 = tmp;
@@ -171,7 +171,7 @@ let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -208,7 +208,7 @@ let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0
       } else {
         closure_132_20(closure_131_0, closure_131_1);
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp20) {
       c6 = tmp;
@@ -232,7 +232,7 @@ let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -276,7 +276,7 @@ let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed
         } else {
           closure_132_20(closure_131_0, closure_131_1);
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp23) {
         c6 = tmp;
@@ -296,7 +296,7 @@ let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -333,7 +333,7 @@ let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(
       } else {
         closure_131_20(closure_130_0, closure_130_1);
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp19) {
       c5 = tmp;
@@ -497,21 +497,21 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4847).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4853);
+const DCFEventTypes = fn(4878).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4884);
 ({
   addCandidateContent: closure_8,
   removeCandidateContent: closure_9,
   isContentShown: closure_10,
   getCurrentlyShownCounts: closure_11,
 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 let c14 = 2592000000;
 let items = [
-  fn(4845).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
-  fn(4845).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION,
-  fn(4845).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
+  fn(4876).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
+  fn(4876).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION,
+  fn(4876).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
 ];
 const set = new Set(items);
 const size = fn(2);
@@ -684,7 +684,7 @@ export function isTimeRecurringDismissibleContentDismissed(id, cooldownConfig) {
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "Array" };
+      return { isDismissed: false, lastDismissedAtMs: "r" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

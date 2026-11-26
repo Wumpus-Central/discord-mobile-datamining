@@ -16,7 +16,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const SecureFramesConstants = fn(8639);
+const SecureFramesConstants = fn(8681);
 ({
   AnalyticsSecureFramesUserVerification: closure_9,
   SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_10,
@@ -25,7 +25,7 @@ const SecureFramesConstants = fn(8639);
 const AnalyticsLocations = fn(1071).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
 let size = {
   height: 80,

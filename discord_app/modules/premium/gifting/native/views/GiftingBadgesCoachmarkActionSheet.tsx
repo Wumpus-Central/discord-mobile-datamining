@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2942 from "../../GiftingBadge.messages.js";
+import _modDef2943 from "../../GiftingBadge.messages.js";
 import RootNavigationRef from "../../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
@@ -9,7 +9,7 @@ import BadgeId from "../../../../../../discord_common/js/shared/shared-constants
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import utils_openGiftModal from "../../../native/utils/openGiftModal.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
-import _modDef19227 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import _modDef19290 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../../badges/BadgeDirectoryStore.tsx";
 
@@ -18,7 +18,7 @@ function HasBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ currentTier, giftCount } = markAsDismissed);
   const tmp = closure_9();
-  const giftingBadgeTierIconUrl = markAsDismissed(11110).getGiftingBadgeTierIconUrl(currentTier);
+  const giftingBadgeTierIconUrl = markAsDismissed(11156).getGiftingBadgeTierIconUrl(currentTier);
   items = [markAsDismissed];
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
@@ -49,22 +49,22 @@ function HasBadgeCoachmark(markAsDismissed) {
   if (str == null) {
     str = "";
   }
-  obj7.children = intl.format(_modDef2942["a+jfuy"], { tierName: str });
-  const items3 = [closure_7(markAsDismissed(5603).Text, obj7)];
+  obj7.children = intl.format(_modDef2943["a+jfuy"], { tierName: str });
+  const items3 = [closure_7(markAsDismissed(5634).Text, obj7)];
   const obj8 = { style: tmp.text, variant: "body-sm/medium", color: "text-default", children: null };
   if ("noCount" === markAsDismissed.variant) {
     const intl3 = tmp2(1112).intl;
-    let stringResult = intl3.string(_modDef2942["0N8fCf"]);
+    let stringResult = intl3.string(_modDef2943["0N8fCf"]);
   } else {
     const intl2 = tmp2(1112).intl;
     if (giftCount == null) {
       giftCount = 0;
     }
     const obj9 = { giftCount };
-    stringResult = intl2.formatToPlainString(_modDef2942.QxRA6w, obj9);
+    stringResult = intl2.formatToPlainString(_modDef2943.QxRA6w, obj9);
   }
   obj8.children = stringResult;
-  items3[1] = closure_7(markAsDismissed(5603).Text, obj8);
+  items3[1] = closure_7(markAsDismissed(5634).Text, obj8);
   obj6.children = items3;
   items2[1] = closure_8(View, obj6);
   const obj10 = { style: tmp.footer, children: null };
@@ -72,11 +72,11 @@ function HasBadgeCoachmark(markAsDismissed) {
   const intl4 = tmp2(1112).intl;
   obj11.text = intl4.string(markAsDismissed(1112).t.RzWDqY);
   obj11.onPress = callback;
-  obj10.children = closure_7(markAsDismissed(5610).Button, obj11);
+  obj10.children = closure_7(markAsDismissed(5641).Button, obj11);
   items2[2] = closure_7(View, obj10);
   obj3.children = items2;
   obj2.children = closure_8(View, obj3);
-  return closure_7(markAsDismissed(5240).BottomSheet, obj2);
+  return closure_7(markAsDismissed(5271).BottomSheet, obj2);
 }
 function NewBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -98,7 +98,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
   const obj4 = { source: null, style: null };
-  const obj5 = { uri: _modDef19227 };
+  const obj5 = { uri: _modDef19290 };
   obj4.source = obj5;
   obj4.style = tmp.newBadgeImage;
   obj3.children = closure_7(FastImageDefault, obj4);
@@ -111,34 +111,34 @@ function NewBadgeCoachmark(markAsDismissed) {
     children: null,
   };
   const intl = markAsDismissed(1112).intl;
-  obj7.children = intl.string(_modDef2942.Q2RQka);
-  const items3 = [closure_7(markAsDismissed(5603).Text, obj7)];
+  obj7.children = intl.string(_modDef2943.Q2RQka);
+  const items3 = [closure_7(markAsDismissed(5634).Text, obj7)];
   const obj8 = { style: tmp.text, variant: "body-sm/medium", color: "text-muted", children: null };
   const intl2 = markAsDismissed(1112).intl;
-  obj8.children = intl2.string(_modDef2942["3EQnkg"]);
-  items3[1] = closure_7(markAsDismissed(5603).Text, obj8);
+  obj8.children = intl2.string(_modDef2943["3EQnkg"]);
+  items3[1] = closure_7(markAsDismissed(5634).Text, obj8);
   obj6.children = items3;
   items2[1] = closure_8(View, obj6);
   const obj9 = { style: tmp.footer, children: null };
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1112).intl;
-  obj10.text = intl3.string(_modDef2942.DZnomS);
-  obj10.icon = closure_7(markAsDismissed(11261).GiftIcon, {
+  obj10.text = intl3.string(_modDef2943.DZnomS);
+  obj10.icon = closure_7(markAsDismissed(11307).GiftIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
   });
   obj10.onPress = callback;
-  obj9.children = closure_7(markAsDismissed(5610).Button, obj10);
+  obj9.children = closure_7(markAsDismissed(5641).Button, obj10);
   items2[2] = closure_7(View, obj9);
   obj2.children = items2;
   obj.children = closure_8(View, obj2);
-  return closure_7(markAsDismissed(5240).BottomSheet, obj);
+  return closure_7(markAsDismissed(5271).BottomSheet, obj);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { alignItems: "center", paddingHorizontal: 20, paddingBottom: 20, gap: nativeDefault.space.PX_24 },
   graphicContainer: null,

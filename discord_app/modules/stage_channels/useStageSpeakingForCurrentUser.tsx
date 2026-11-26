@@ -67,11 +67,11 @@ export function useShouldAgeVerifyToSpeakForCurrentUser(id) {
     items1,
   );
   const obj = channelId(504);
-  const isVerifiedAdult = channelId(6794).useIsVerifiedAdult();
-  const obj2 = channelId(6794);
-  const obj3 = channelId(5674);
+  const isVerifiedAdult = channelId(6825).useIsVerifiedAdult();
+  const obj2 = channelId(6825);
+  const obj3 = channelId(5705);
   return (
-    channelId(5674).useIsFeatureAgeGated(channelId(6799).AgeGatedFeature.STAGE_SPEAKING) &&
+    channelId(5705).useIsFeatureAgeGated(channelId(6830).AgeGatedFeature.STAGE_SPEAKING) &&
     !isVerifiedAdult &&
     stateFromStores
   );
@@ -99,11 +99,11 @@ export function useShouldShowAgeVerificationPopover(id) {
     items1,
   );
   const obj = channelId(504);
-  const isAgeVerified = channelId(6794).useIsAgeVerified();
-  const obj2 = channelId(6794);
-  const obj3 = channelId(5674);
+  const isAgeVerified = channelId(6825).useIsAgeVerified();
+  const obj2 = channelId(6825);
+  const obj3 = channelId(5705);
   return (
-    channelId(5674).useIsFeatureAgeGated(channelId(6799).AgeGatedFeature.STAGE_SPEAKING) &&
+    channelId(5705).useIsFeatureAgeGated(channelId(6830).AgeGatedFeature.STAGE_SPEAKING) &&
     !isAgeVerified &&
     stateFromStores
   );

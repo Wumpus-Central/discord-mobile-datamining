@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/identity/requestConjureAppIcon.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../intl/ConjureUntranslated.messages.js";
 import ConjureConnectionStore from "../connection/ConjureConnectionStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -9,5 +9,5 @@ const result = size.fileFinishedImporting("modules/conjure/identity/requestConju
 
 export default function requestConjureAppIcon(arg0) {
   const intl = util.intl;
-  return sendUserMessage(arg0, intl.string(_modDef4244["hOg/Uu"]));
+  return sendUserMessage(arg0, intl.string(_modDef4245["hOg/Uu"]));
 }

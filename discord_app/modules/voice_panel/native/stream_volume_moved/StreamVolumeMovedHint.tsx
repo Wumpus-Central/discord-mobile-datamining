@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(14897).clearStreamVolumeMovedHint;
+let closure_6 = fn(14947).clearStreamVolumeMovedHint;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: null, pill: null };
 const rect = {
   position: "absolute",
@@ -42,7 +42,7 @@ export default function StreamVolumeMovedHint(streamKey) {
   const tmp = closure_8();
   items = [
     closure_9,
-    require("../../../../../_runtime/metro/01653__.js").interpolate,
+    require("../../../../../_runtime/metro/01654__.js").interpolate,
     streamKey.longPressProgress,
     0.9,
   ];
@@ -67,7 +67,7 @@ export default function StreamVolumeMovedHint(streamKey) {
   StreamVolumeMovedHintTsx1.__closure = items1;
   StreamVolumeMovedHintTsx1.__workletHash = 3187140271576;
   StreamVolumeMovedHintTsx1.__initData = tmp4;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(StreamVolumeMovedHintTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(StreamVolumeMovedHintTsx1);
   state = StreamVolumeMovedStore.useState((hintStreamKey) => hintStreamKey.hintStreamKey === c0);
   const intl = tmp2(1112).intl;
   const stringResult = intl.string(require("util").t["6nKlgr"]);
@@ -88,12 +88,12 @@ export default function StreamVolumeMovedHint(streamKey) {
     const items4 = [tmp.pill, animatedStyle];
     obj3.style = items4;
     const obj4 = { variant: "body-md/semibold", color: "text-overlay-light", children: stringResult };
-    obj3.children = jsx(tmp2(5603).Text, {
+    obj3.children = jsx(tmp2(5634).Text, {
       variant: "body-md/semibold",
       color: "text-overlay-light",
       children: stringResult,
     });
-    obj2.children = jsx(state(1653).View, { style: null, children: null });
+    obj2.children = jsx(state(1654).View, { style: null, children: null });
     tmp13 = (
       <View style={tmp.container} pointerEvents="none">
         {null}

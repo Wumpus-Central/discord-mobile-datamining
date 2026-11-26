@@ -4,8 +4,8 @@ import SuggestedSearchStore from "SuggestedSearchStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const EMPTY_SUGGESTED_SEARCHES = fn(13235).EMPTY_SUGGESTED_SEARCHES;
-let closure_4 = fn(13236).SUGGESTED_SEARCHES_WINDOW_SIZE;
+const EMPTY_SUGGESTED_SEARCHES = fn(13287).EMPTY_SUGGESTED_SEARCHES;
+let closure_4 = fn(13288).SUGGESTED_SEARCHES_WINDOW_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/useSuggestedSearches.tsx");
 

@@ -8,11 +8,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(5638).ActivityPanelModes;
-const orbAmount = fn(6840).PLAYABLE_REWARD_ORB_QUANTITY;
+const ActivityPanelModes = fn(5669).ActivityPanelModes;
+const orbAmount = fn(6871).PLAYABLE_REWARD_ORB_QUANTITY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   header: null,
   handleWrapper: null,
@@ -62,15 +62,16 @@ const result = size.fileFinishedImporting("modules/frames/panel/native/PlayableA
 
 export default function PlayableActivityFrameHeader(arg0) {
   ({ frameId: require, playable } = arg0);
+  let isClaimed;
   let setMode;
   function onLeave() {
     setMode(ActivityPanelModes.DISCONNECTED);
     const timerId = setTimeout(() => require("leaveFrame").leaveFrame(closure_1_0), 400);
   }
   const tmp = closure_9();
-  const tmp4 = setMode(onLeave[7])(playable.id);
-  let isClaimed = tmp4.isClaimed;
-  const context = noop.useContext(setMode(onLeave[8]));
+  const tmp4 = isClaimed(setMode[7])(playable.id);
+  isClaimed = tmp4.isClaimed;
+  const context = onLeave.useContext(isClaimed(setMode[8]));
   setMode = context.setMode;
   ({ wrapperOffset, pipState } = context);
   let obj2 = {
@@ -87,7 +88,7 @@ export default function PlayableActivityFrameHeader(arg0) {
   items = [closure_7(View, obj4), ,];
   const obj6 = { style: tmp.info, children: null };
   const items1 = [
-    closure_7(setMode(onLeave[12]), {
+    closure_7(isClaimed(setMode[12]), {
       isCompleted: isClaimed,
       totalSeconds: playable.rewardTimerSeconds,
       remainingSeconds: tmp4.remainingSeconds,
@@ -133,7 +134,7 @@ export default function PlayableActivityFrameHeader(arg0) {
   obj6.children = items1;
   items[1] = closure_8(View, obj6);
   const obj12 = { size: "sm", variant: "secondary-overlay", icon: null, accessibilityLabel: null, onPress: null };
-  const obj = require("ActivityPanelHeader");
+  let obj = require("ActivityPanelHeader");
   const obj5 = { style: tmp.handle };
   const obj7 = {
     isCompleted: isClaimed,
@@ -142,29 +143,35 @@ export default function PlayableActivityFrameHeader(arg0) {
   };
   obj12.icon = closure_7(require("XSmallIcon").XSmallIcon, {
     size: "sm",
-    color: setMode(onLeave[6]).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
+    color: isClaimed(setMode[6]).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
   });
   let intl3 = require("util").intl;
   obj12.accessibilityLabel = intl3.string(require("util").t.cpT0Cq);
   obj12.onPress = function onClose() {
-    const obj2 = {
-      key: "playable-leave-game-confirm",
-      title: null,
-      content: null,
-      confirmText: null,
-      cancelText: null,
-      onConfirm: null,
-    };
-    const intl = util.intl;
-    obj2.title = intl.string(util.t.sfp1IW);
-    const intl2 = util.intl;
-    obj2.content = intl2.string(util.t.N9rsFG);
-    const intl3 = util.intl;
-    obj2.confirmText = intl3.string(util.t["Hi1/aQ"]);
-    const intl4 = util.intl;
-    obj2.cancelText = intl4.string(util.t.DvApnG);
-    obj2.onConfirm = onLeave;
-    AlertModal.showConfirmModal(obj2);
+    if (isClaimed) {
+      const obj2 = {
+        key: "playable-leave-game-confirm",
+        title: null,
+        content: null,
+        confirmText: null,
+        cancelText: null,
+        onConfirm: null,
+      };
+      const intl = util.intl;
+      obj2.title = intl.string(util.t.sfp1IW);
+      const intl2 = util.intl;
+      obj2.content = intl2.string(util.t.N9rsFG);
+      const intl3 = util.intl;
+      obj2.confirmText = intl3.string(util.t["Hi1/aQ"]);
+      const intl4 = util.intl;
+      obj2.cancelText = intl4.string(util.t.DvApnG);
+      obj2.onConfirm = onLeave;
+      AlertModal.showConfirmModal(obj2);
+    } else {
+      setMode(ActivityPanelModes.DISCONNECTED);
+      const _setTimeout = setTimeout;
+      const timerId = setTimeout(() => require("leaveFrame").leaveFrame(closure_1_0), 400);
+    }
   };
   items[2] = closure_7(require("IconButton").IconButton, obj12);
   obj3.children = items;

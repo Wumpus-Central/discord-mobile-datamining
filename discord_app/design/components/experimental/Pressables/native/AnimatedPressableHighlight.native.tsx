@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import useToken from "../../../../tokens/native/useToken.tsx";
 import useIOSPressEffects from "../../../../../modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
-import 01653__ from "../../../../../../_runtime/metro/01653__.js";
+import 01654__ from "../../../../../../_runtime/metro/01654__.js";
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_6 = module_1653.createAnimatedComponent(fn(6121).PressableHighlight);
-const PlatformUtils = fn(1378);
+let closure_6 = module_1654.createAnimatedComponent(fn(6152).PressableHighlight);
+const PlatformUtils = fn(1379);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");
 

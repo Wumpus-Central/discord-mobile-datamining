@@ -124,7 +124,7 @@ function BountiesModalContentInner(bounty) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -187,8 +187,8 @@ function BountiesModalContentInner(bounty) {
                   if (obj.isAndroid()) {
                     num = 0.15;
                   }
-                  obj = closure_1_0(1378);
-                  const tmpResult = closure_1_0(1378);
+                  obj = closure_1_0(1379);
+                  const tmpResult = closure_1_0(1379);
                   items = [];
                   let num3 = 0;
                   let num4 = 0;
@@ -196,7 +196,7 @@ function BountiesModalContentInner(bounty) {
                     let _Math = Math;
                     let result = arr[num3] / tmp4;
                     let rounded = Math.round(
-                      result * (closure_1_0(9411).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
+                      result * (closure_1_0(9453).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
                     );
                     let obj2 = {
                       time: num4,
@@ -213,13 +213,13 @@ function BountiesModalContentInner(bounty) {
                   items.push({ time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 });
                   arr = Array.from({ length: 6 }, (arg0, arg1) => 6 - arg1);
                   const obj3 = { time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 };
-                  closure_1_0(5230).triggerPattern(items);
-                  const tmp7Result = closure_1_0(5230);
+                  closure_1_0(5261).triggerPattern(items);
+                  const tmp7Result = closure_1_0(5261);
                 })();
               }
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp39) {
           if (tmp4 === c3) {
@@ -601,9 +601,9 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_17(height(sharedValue[42]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestConstants = fn(6840);
+const QuestConstants = fn(6871);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16475);
+const BountiesModalConstants = fn(16526);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } =
   BountiesModalConstants);
 const Constants = fn(1071);
@@ -613,7 +613,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let c18 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_20 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },

@@ -5,9 +5,9 @@ import BackoffDefault from "../../discord_common/js/packages/backoff/Backoff.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import MurmurHashV3Default from "../../_runtime/01250_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01251_MurmurHashV3.js";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
-import v1 from "../../_runtime/01268_v1.js";
+import v1 from "../../_runtime/01269_v1.js";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -16,7 +16,7 @@ import RTCControlSocket from "RTCControlSocket.tsx";
 import DiscordNativeDefault from "DiscordNative.tsx";
 import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import flatRestDefault from "../../_runtime/05884_flatRest.js";
+import flatRestDefault from "../../_runtime/05915_flatRest.js";
 import DaveJoinTimerDefault from "../modules/rtc/DaveJoinTimer.tsx";
 import DaveRecipientTrackerDefault from "../modules/rtc/DaveRecipientTracker.tsx";
 import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager.tsx";
@@ -114,7 +114,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5831).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5862).getSystemAnalyticsInfo;
 let Constants = fn(1071);
 ({
   AnalyticEvents: closure_18,
@@ -123,10 +123,10 @@ let Constants = fn(1071);
   RTCConnectionQuality: closure_21,
   BoostedGuildTiers: closure_22,
 } = Constants);
-const StreamSettingsConstants = fn(5912);
+const StreamSettingsConstants = fn(5943);
 ({ ApplicationStreamFPS: closure_23, ApplicationStreamResolutions: closure_24 } = StreamSettingsConstants);
-let closure_25 = fn(5913).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5824);
+let closure_25 = fn(5944).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5855);
 ({
   ExperimentFlags: closure_26,
   Features: closure_27,
@@ -1463,9 +1463,9 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
     ({ hostname: obj2.hostname, _connectCount: obj2.connect_count } = self);
     obj3.code = code;
     obj3.reason = reason;
-    self(1255).track(constants.VOICE_CONNECTION_SOCKET_FAILURE, obj3);
+    self(1256).track(constants.VOICE_CONNECTION_SOCKET_FAILURE, obj3);
     self._encountered_socket_failure = true;
-    let obj = self(1255);
+    let obj = self(1256);
   }
   if (RTCConnectionStore.getRemoteDisconnectVoiceChannelId() === self.channelId) {
     const _connection = self._connection;
@@ -1603,7 +1603,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
     self._secureFramesLastExecutedTransitionId = undefined;
     const _daveJoinTimer = self._daveJoinTimer;
     _daveJoinTimer.socketLost();
-    const tmp49 = new self(5916)();
+    const tmp49 = new self(5947)();
     self._daveRecipientTracker = tmp49;
     self._daveRecipientsActive = false;
     if (null != self._connection) {
@@ -1623,8 +1623,8 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
     self.setState(constants3.DISCONNECTED, obj6);
   } else {
     if (code !== require("RTCControlSocket").RTCSocketCloseCode.REPEATED_MLS_INVALID_MESSAGES) {
-      if (code !== tmp11(2130).RTCSocketCloseCode.DAVE_DOWNGRADE_REFUSED) {
-        if (code !== tmp11(2130).RTCSocketCloseCode.DAVE_INVALID_MESSAGE) {
+      if (code !== tmp11(2131).RTCSocketCloseCode.DAVE_DOWNGRADE_REFUSED) {
+        if (code !== tmp11(2131).RTCSocketCloseCode.DAVE_INVALID_MESSAGE) {
           let _scheduleReconnectResult = self._scheduleReconnect();
         }
         const logger2 = self.logger;
@@ -1904,7 +1904,7 @@ prototype["_trackSpatialAudioSessionEnded"] = function _trackSpatialAudioSession
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -2484,7 +2484,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -2522,7 +2522,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
             const obj = tmp2(dependencyMap[59]);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -4428,7 +4428,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5796).now();
+  const commitReceivedTime = _connection(5827).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;
@@ -4481,7 +4481,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5796).now();
+  const welcomeReceivedTime = _connection(5827).now();
   _connection = this._connection;
   if (null != _connection) {
     let _daveRecipientTracker = this._daveRecipientTracker;

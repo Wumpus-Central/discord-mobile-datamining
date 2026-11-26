@@ -1,7 +1,7 @@
 // discord_app/modules/badges/native/BadgeSocialComparison.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef1653 from "../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../_runtime/metro/01654__.js";
 import StringUtils from "../../../utils/StringUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
@@ -70,8 +70,8 @@ function EligibleBadgeSocialComparison(arg0) {
   BadgeSocialComparisonTsx1.__closure = items1;
   BadgeSocialComparisonTsx1.__workletHash = 17178513634755;
   BadgeSocialComparisonTsx1.__initData = tmp5;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(BadgeSocialComparisonTsx1);
-  const obj2 = require("../../../../_runtime/metro/01653__.js");
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(BadgeSocialComparisonTsx1);
+  const obj2 = require("../../../../_runtime/metro/01654__.js");
   const items2 = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items2, () => currentUser.getCurrentUser());
   const tmp2Result = require("initialize");
@@ -132,7 +132,7 @@ function EligibleBadgeSocialComparison(arg0) {
         items7[1] = closure_6(closure_10, obj6);
         obj4.children = items7;
         obj3.children = closure_7(View, obj4);
-        tmp13Result = closure_6(_modDef1653.View, obj3);
+        tmp13Result = closure_6(_modDef1654.View, obj3);
       } else {
         tmp13Result = null;
         if (null != getActivityStatCount(viewerBadge)) {
@@ -140,9 +140,9 @@ function EligibleBadgeSocialComparison(arg0) {
         }
       }
       tmp11 =
-        badge_id === tmp2(6107).BadgeId.GAME_VARIETY ||
-        badge_id === tmp2(6107).BadgeId.STREAMING ||
-        badge_id === tmp2(6107).BadgeId.GAME_TIME;
+        badge_id === tmp2(6138).BadgeId.GAME_VARIETY ||
+        badge_id === tmp2(6138).BadgeId.STREAMING ||
+        badge_id === tmp2(6138).BadgeId.GAME_TIME;
     }
   }
   return tmp13Result;
@@ -150,7 +150,7 @@ function EligibleBadgeSocialComparison(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   wrapper: { marginBottom: -nativeDefault.space.PX_12 },
   comparison: null,

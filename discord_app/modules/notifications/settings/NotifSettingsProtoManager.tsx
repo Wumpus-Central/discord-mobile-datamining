@@ -89,7 +89,7 @@ function handleAssignmentChange() {
   }
   set = new Set(mapped.filter((item) => null != item));
 }
-const NOTIF_SETTINGS = fn(15798).NOTIF_SETTINGS;
+const NOTIF_SETTINGS = fn(15849).NOTIF_SETTINGS;
 class NotifSettingsProtoManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

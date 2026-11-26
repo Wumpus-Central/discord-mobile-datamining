@@ -10,7 +10,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(6340);
+const Constants = fn(6371);
 ({ MetadataFields: hasOwnProperty, OperatorTypes: closure_6 } = Constants);
 const PlatformTypes = fn(1071).PlatformTypes;
 const size = fn(2);

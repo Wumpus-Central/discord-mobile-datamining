@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Endpoints = fn(1071).Endpoints;
-fn(4957).NotificationSettingsUpdateType;
+fn(4988).NotificationSettingsUpdateType;
 const constants = fn(1081).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
@@ -207,7 +207,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -223,18 +223,18 @@ export default {
             } else {
               closure_0 = tmp5;
               closure_128_0 = undefined;
-              const setFlagResult = closure_0(1404).setFlag(
+              const setFlagResult = closure_0(1405).setFlag(
                 UserGuildSettingsStore.accountNotificationSettings.flags,
                 closure_0,
                 tmp2,
               );
               closure_128_0 = setFlagResult;
-              const HTTP = closure_0(1284).HTTP;
+              const HTTP = closure_0(1285).HTTP;
               const request = { url: constants.ACCOUNT_NOTIFICATION_SETTINGS, body: null, rejectWithError: null };
               const obj5 = { flags: setFlagResult };
               request.body = obj5;
-              const obj10 = closure_0(1404);
-              request.rejectWithError = closure_0(1284).rejectWithMigratedError();
+              const obj10 = closure_0(1405);
+              request.rejectWithError = closure_0(1285).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj6 = { value: HTTP.patch(request), done: false };
@@ -266,7 +266,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp11) {
           c3 = tmp;

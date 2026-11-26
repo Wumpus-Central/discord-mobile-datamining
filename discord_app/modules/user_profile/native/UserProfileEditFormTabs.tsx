@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileEditFormTabs.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef1653 from "../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../_runtime/metro/01654__.js";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
 import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
@@ -27,11 +27,11 @@ function MainPage() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const UserProfileSections = fn(6106).UserProfileSections;
-const PROFILE_SIDE_PADDING = fn(7526).PROFILE_SIDE_PADDING;
+const UserProfileSections = fn(6137).UserProfileSections;
+const PROFILE_SIDE_PADDING = fn(7557).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   tabbedContainer: { marginHorizontal: -PROFILE_SIDE_PADDING },
   stickyTabs: { zIndex: 1, paddingTop: nativeDefault.space.PX_12 },
@@ -114,8 +114,8 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   UserProfileEditFormTabsTsx1.__closure = items2;
   UserProfileEditFormTabsTsx1.__workletHash = 9996648724256;
   UserProfileEditFormTabsTsx1.__initData = tmp9;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(UserProfileEditFormTabsTsx1);
-  let tmp2Result = require("../../../../_runtime/metro/01653__.js");
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(UserProfileEditFormTabsTsx1);
+  let tmp2Result = require("../../../../_runtime/metro/01654__.js");
   const items3 = [closure_15, stickyTranslateY];
   _require = undefined;
   [tmp12, tmp13] = items3;
@@ -132,7 +132,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   UserProfileEditFormTabsTsx2.__closure = items4;
   UserProfileEditFormTabsTsx2.__workletHash = 5290718826457;
   UserProfileEditFormTabsTsx2.__initData = tmp12;
-  const animatedStyle1 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(UserProfileEditFormTabsTsx2);
+  const animatedStyle1 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(UserProfileEditFormTabsTsx2);
   const tmp16 = UserProfileSharedStylesDefault();
   card = tmp16;
   const tmp17 = useMeasuredLayoutDefault();
@@ -149,11 +149,11 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   const tmp6Result = tmp6(first.useState(num2), 2);
   first = tmp6Result[0];
   absoluteFill = tmp6Result[1];
-  arr5 = tmp15(14514)(userId);
+  arr5 = tmp15(14566)(userId);
   closure_7 = tmp20;
   const items5 = [arr5];
   const memo = first.useMemo(() => arr5.filter(UserProfileGameWidgetTypes.isGameWidget), items5);
-  const tmp2Result6 = require("../../../../_runtime/metro/01653__.js");
+  const tmp2Result6 = require("../../../../_runtime/metro/01654__.js");
   const fetchSuggestedGames = require("SuggestedGameHooks").useFetchSuggestedGames(true, memo);
   const items6 = [first];
   const layoutEffect = first.useLayoutEffect(() => {
@@ -235,7 +235,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   UserProfileEditFormTabsTsx4.__closure = items11;
   UserProfileEditFormTabsTsx4.__workletHash = 2474607394788;
   UserProfileEditFormTabsTsx4.__initData = tmp31;
-  const animatedReaction = require("../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     UserProfileEditFormTabsTsx3,
     UserProfileEditFormTabsTsx4,
   );
@@ -246,7 +246,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   let obj5 = { pointerEvents: "none", style: null };
   const items13 = [absoluteFill.absoluteFill, { backgroundColor: tmp8 }, animatedStyle1];
   obj5.style = items13;
-  const items14 = [closure_9(_modDef1653.View, obj5)];
+  const items14 = [closure_9(_modDef1654.View, obj5)];
   let obj6 = { state: segmentedControlState, variant: null };
   let str;
   if (hasCustomProfileTheme) {
@@ -256,7 +256,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   items14[1] = closure_9(require("Tabs/Tabs").Tabs, obj6);
   obj4.children = items14;
   const items15 = [
-    closure_11(_modDef1653.View, obj4),
+    closure_11(_modDef1654.View, obj4),
     closure_9(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
   obj3.children = items15;

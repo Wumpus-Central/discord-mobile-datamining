@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11734).VoicePanelModes;
-const VoicePanelDockConstants = fn(11757);
+const VoicePanelModes = fn(11782).VoicePanelModes;
+const VoicePanelDockConstants = fn(11805);
 ({ DOCK_PRESS_PHYSICS: hasOwnProperty, getVoicePanelDockHeight: closure_6 } = VoicePanelDockConstants);
 let closure_7 = {
   code: "(function useVoicePanelDockMorphStateTsx1(){let[isDockEnabled,getVoicePanelDockHeight,safeArea]=this.__closure;return isDockEnabled?getVoicePanelDockHeight(safeArea.get().bottom):0;})",
@@ -93,7 +93,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoic
 export default function useVoicePanelDockMorphState(arg0) {
   ({ isDockEnabled, mode, connected, safeArea, wrapperDimensions } = arg0);
   ({ mountsMinimized, wrapperOffset } = arg0);
-  let sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue({
+  let sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue({
     gestureActive: false,
     x: 0,
     y: 0,
@@ -101,7 +101,7 @@ export default function useVoicePanelDockMorphState(arg0) {
   if (isDockEnabled) {
     sharedValue = wrapperOffset;
   }
-  let obj = require("../../../../../_runtime/metro/01653__.js");
+  let obj = require("../../../../../_runtime/metro/01654__.js");
   items = [c7, isDockEnabled, c6, safeArea];
   _require = undefined;
   [tmp4, tmp5, tmp6, tmp7] = items;
@@ -116,12 +116,12 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx1.__closure = items1;
   useVoicePanelDockMorphStateTsx1.__workletHash = 16574063931371;
   useVoicePanelDockMorphStateTsx1.__initData = tmp4;
-  const derivedValue = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx1,
   );
-  const tmpResult = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(null);
-  const tmpResult32 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(null);
+  const tmpResult32 = require("../../../../../_runtime/metro/01654__.js");
   const items2 = [c8, mode];
   [tmp10, tmp11] = items2;
   function useVoicePanelDockMorphStateTsx2() {
@@ -147,13 +147,13 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx3.__closure = items5;
   useVoicePanelDockMorphStateTsx3.__workletHash = 11294143921957;
   useVoicePanelDockMorphStateTsx3.__initData = tmp12;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     useVoicePanelDockMorphStateTsx2,
     useVoicePanelDockMorphStateTsx3,
   );
-  const tmpResult33 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  const tmpResult34 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult33 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  const tmpResult34 = require("../../../../../_runtime/metro/01654__.js");
   const items6 = [c10, mode];
   [tmp16, tmp17] = items6;
   function useVoicePanelDockMorphStateTsx4() {
@@ -179,13 +179,13 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx5.__closure = items9;
   useVoicePanelDockMorphStateTsx5.__workletHash = 16449264979544;
   useVoicePanelDockMorphStateTsx5.__initData = tmp19;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     useVoicePanelDockMorphStateTsx4,
     useVoicePanelDockMorphStateTsx5,
   );
-  const tmpResult35 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue3 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  const tmpResult36 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult35 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue3 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  const tmpResult36 = require("../../../../../_runtime/metro/01654__.js");
   const items10 = [closure_12, connected, mode];
   [tmp24, tmp25, tmp26] = items10;
   function useVoicePanelDockMorphStateTsx6() {
@@ -211,11 +211,11 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx7.__closure = items13;
   useVoicePanelDockMorphStateTsx7.__workletHash = 10331916200307;
   useVoicePanelDockMorphStateTsx7.__initData = tmp27;
-  const animatedReaction2 = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction2 = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     useVoicePanelDockMorphStateTsx6,
     useVoicePanelDockMorphStateTsx7,
   );
-  const tmpResult37 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult37 = require("../../../../../_runtime/metro/01654__.js");
   const items14 = [closure_14, isDockEnabled, mode, c4, sharedValue3, connected];
   _require = undefined;
   c4 = undefined;
@@ -233,10 +233,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx8.__closure = items15;
   useVoicePanelDockMorphStateTsx8.__workletHash = 484957089417;
   useVoicePanelDockMorphStateTsx8.__initData = tmp31;
-  const derivedValue1 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue1 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx8,
   );
-  const tmpResult38 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult38 = require("../../../../../_runtime/metro/01654__.js");
   const items16 = [closure_15, mode, c4, sharedValue2, sharedValue1];
   _require = undefined;
   noop = undefined;
@@ -264,10 +264,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx9.__closure = items17;
   useVoicePanelDockMorphStateTsx9.__workletHash = 11998655504610;
   useVoicePanelDockMorphStateTsx9.__initData = tmp38;
-  const derivedValue2 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue2 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx9,
   );
-  const tmpResult39 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult39 = require("../../../../../_runtime/metro/01654__.js");
   const items18 = [closure_16, derivedValue2];
   _require = undefined;
   [tmp44, tmp45] = items18;
@@ -278,12 +278,12 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx10.__closure = items19;
   useVoicePanelDockMorphStateTsx10.__workletHash = 9313360300259;
   useVoicePanelDockMorphStateTsx10.__initData = tmp44;
-  const derivedValue3 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue3 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx10,
   );
   _require = undefined;
-  const tmpResult40 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue4 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(1);
+  const tmpResult40 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue4 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(1);
   _require = sharedValue4;
   noop.useRef(false);
   noop.useRef(false);
@@ -304,9 +304,9 @@ export default function useVoicePanelDockMorphState(arg0) {
       const result = _undefined.set(spring_spring.withSpring(1, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG));
     }
   }, items21);
-  const tmpResult41 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue5 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  const tmpResult42 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult41 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue5 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  const tmpResult42 = require("../../../../../_runtime/metro/01654__.js");
   const items22 = [closure_17, sharedValue5, sharedValue, mode, c4];
   _require = undefined;
   [tmp51, tmp52, tmp53, tmp54, tmp55] = items22;
@@ -325,10 +325,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx11.__closure = items23;
   useVoicePanelDockMorphStateTsx11.__workletHash = 2842369107004;
   useVoicePanelDockMorphStateTsx11.__initData = tmp51;
-  const derivedValue4 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue4 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx11,
   );
-  const tmpResult43 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult43 = require("../../../../../_runtime/metro/01654__.js");
   const items24 = [closure_18, require("spring/spring").withSpring, derivedValue4, c5];
   _require = undefined;
   [tmp57, tmp58, tmp59, tmp60] = items24;
@@ -343,10 +343,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx12.__closure = items25;
   useVoicePanelDockMorphStateTsx12.__workletHash = 4055713938309;
   useVoicePanelDockMorphStateTsx12.__initData = tmp57;
-  const derivedValue5 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue5 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx12,
   );
-  const tmpResult44 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult44 = require("../../../../../_runtime/metro/01654__.js");
   const items26 = [
     closure_19,
     require("spring/spring").withSpring,
@@ -372,10 +372,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx13.__closure = items27;
   useVoicePanelDockMorphStateTsx13.__workletHash = 11884228837973;
   useVoicePanelDockMorphStateTsx13.__initData = tmp62;
-  const derivedValue6 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue6 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx13,
   );
-  const tmpResult45 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult45 = require("../../../../../_runtime/metro/01654__.js");
   const tmp69 = useIsDockCoveredByActivityDefault();
   const items28 = [
     closure_20,
@@ -400,12 +400,12 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx14.__closure = items29;
   useVoicePanelDockMorphStateTsx14.__workletHash = 15444941422787;
   useVoicePanelDockMorphStateTsx14.__initData = tmp70;
-  const derivedValue7 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue7 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx14,
   );
-  const tmpResult46 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue6 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(mountsMinimized);
-  const tmpResult47 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult46 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue6 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(mountsMinimized);
+  const tmpResult47 = require("../../../../../_runtime/metro/01654__.js");
   const items30 = [
     closure_21,
     derivedValue1,
@@ -414,7 +414,7 @@ export default function useVoicePanelDockMorphState(arg0) {
     c4,
     wrapperDimensions,
     derivedValue,
-    require("../../../../../_runtime/metro/01653__.js").clamp,
+    require("../../../../../_runtime/metro/01654__.js").clamp,
     derivedValue2,
     sharedValue6,
     require("spring/spring").withSpring,
@@ -451,10 +451,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx15.__closure = items31;
   useVoicePanelDockMorphStateTsx15.__workletHash = 16670830062611;
   useVoicePanelDockMorphStateTsx15.__initData = tmp77;
-  const derivedValue8 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue8 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx15,
   );
-  const tmpResult48 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult48 = require("../../../../../_runtime/metro/01654__.js");
   const items32 = [closure_22, sharedValue6, derivedValue8, derivedValue2];
   [tmp90, tmp91, tmp92, tmp93] = items32;
   function useVoicePanelDockMorphStateTsx16() {
@@ -481,13 +481,13 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx17.__closure = items35;
   useVoicePanelDockMorphStateTsx17.__workletHash = 14577082908322;
   useVoicePanelDockMorphStateTsx17.__initData = tmp94;
-  const animatedReaction3 = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction3 = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     useVoicePanelDockMorphStateTsx16,
     useVoicePanelDockMorphStateTsx17,
   );
-  const tmpResult49 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue7 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(null);
-  const tmpResult50 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult49 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue7 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(null);
+  const tmpResult50 = require("../../../../../_runtime/metro/01654__.js");
   const items36 = [
     closure_24,
     sharedValue7,
@@ -533,13 +533,13 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx19.__closure = items39;
   useVoicePanelDockMorphStateTsx19.__workletHash = 11308110243690;
   useVoicePanelDockMorphStateTsx19.__initData = tmp106;
-  const animatedReaction4 = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction4 = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     useVoicePanelDockMorphStateTsx18,
     useVoicePanelDockMorphStateTsx19,
   );
-  const tmpResult51 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue8 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const tmpResult52 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult51 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue8 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const tmpResult52 = require("../../../../../_runtime/metro/01654__.js");
   const items40 = [
     closure_26,
     sharedValue,
@@ -600,15 +600,15 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx21.__closure = items43;
   useVoicePanelDockMorphStateTsx21.__workletHash = 9767573494832;
   useVoicePanelDockMorphStateTsx21.__initData = tmp117;
-  const animatedReaction5 = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction5 = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     useVoicePanelDockMorphStateTsx20,
     useVoicePanelDockMorphStateTsx21,
   );
-  const tmpResult53 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue9 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  const tmpResult54 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue10 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  const tmpResult55 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult53 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue9 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  const tmpResult54 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue10 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  const tmpResult55 = require("../../../../../_runtime/metro/01654__.js");
   const items44 = [
     closure_28,
     derivedValue1,
@@ -658,12 +658,12 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx22.__closure = items45;
   useVoicePanelDockMorphStateTsx22.__workletHash = 14048220308711;
   useVoicePanelDockMorphStateTsx22.__initData = tmp124;
-  const derivedValue9 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue9 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx22,
   );
-  const tmpResult56 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue11 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const tmpResult57 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult56 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue11 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const tmpResult57 = require("../../../../../_runtime/metro/01654__.js");
   const items46 = [closure_29, safeArea];
   _require = undefined;
   [tmp137, tmp138] = items46;
@@ -674,10 +674,10 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx23.__closure = items47;
   useVoicePanelDockMorphStateTsx23.__workletHash = 6282712608507;
   useVoicePanelDockMorphStateTsx23.__initData = tmp137;
-  const derivedValue10 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue10 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx23,
   );
-  const tmpResult58 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult58 = require("../../../../../_runtime/metro/01654__.js");
   const items48 = [closure_30, sharedValue11, derivedValue10, wrapperDimensions];
   _require = undefined;
   [tmp140, tmp141, tmp142, tmp143] = items48;
@@ -695,14 +695,14 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx24.__closure = items49;
   useVoicePanelDockMorphStateTsx24.__workletHash = 11175662872542;
   useVoicePanelDockMorphStateTsx24.__initData = tmp140;
-  const derivedValue11 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+  const derivedValue11 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
     useVoicePanelDockMorphStateTsx24,
   );
-  const tmpResult59 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue12 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(
+  const tmpResult59 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue12 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(
     wrapperDimensions.get().drawerWidth,
   );
-  const tmpResult60 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult60 = require("../../../../../_runtime/metro/01654__.js");
   const items50 = [
     closure_31,
     isDockEnabled,
@@ -790,17 +790,17 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx26.__closure = items53;
   useVoicePanelDockMorphStateTsx26.__workletHash = 5086911464732;
   useVoicePanelDockMorphStateTsx26.__initData = tmp154;
-  const animatedReaction6 = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction6 = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     useVoicePanelDockMorphStateTsx25,
     useVoicePanelDockMorphStateTsx26,
   );
-  const tmpResult61 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult61 = require("../../../../../_runtime/metro/01654__.js");
   const items54 = [
     closure_33,
     wrapperDimensions,
     derivedValue10,
     derivedValue11,
-    require("../../../../../_runtime/metro/01653__.js").clamp,
+    require("../../../../../_runtime/metro/01654__.js").clamp,
     sharedValue12,
   ];
   _require = undefined;
@@ -830,7 +830,7 @@ export default function useVoicePanelDockMorphState(arg0) {
   useVoicePanelDockMorphStateTsx27.__closure = items55;
   useVoicePanelDockMorphStateTsx27.__workletHash = 1534026483273;
   useVoicePanelDockMorphStateTsx27.__initData = tmp159;
-  const tmpResult62 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult62 = require("../../../../../_runtime/metro/01654__.js");
   return {
     beginDockEntry: callback,
     committedMode: sharedValue1,
@@ -844,7 +844,7 @@ export default function useVoicePanelDockMorphState(arg0) {
     dockRestLeft: derivedValue10,
     dockRestWidth: derivedValue11,
     dockSlotWidth: sharedValue11,
-    dockSheetLeft: require("../../../../../_runtime/metro/01653__.js").useDerivedValue(
+    dockSheetLeft: require("../../../../../_runtime/metro/01654__.js").useDerivedValue(
       useVoicePanelDockMorphStateTsx27,
     ),
     dockSheetWidth: sharedValue12,

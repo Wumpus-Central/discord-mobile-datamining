@@ -57,7 +57,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: "+95" };
                         }
                       } else {
                         try {
@@ -154,7 +154,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                                 const obj5 = { value: closure_1_20(length, closure_2_2), done: false };
                                 return obj5;
                               } else {
-                                const obj6 = v3(7813);
+                                const obj6 = v3(7847);
                                 v3 = 1;
                                 dependencyMap = 1;
                                 const obj7 = {
@@ -191,21 +191,21 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               const obj = { value, done: true };
                               return obj;
                             } else {
-                              const tmp8 = v3(7815);
+                              const tmp8 = v3(7849);
                               const call = tmp8.call;
                               if (typeof call === "unknown") {
                                 tmp8(false, true);
                               } else {
                                 call(tmp9, false, true);
                               }
-                              v3(12248)(closure_128_3);
+                              v3(12298)(closure_128_3);
                               dependencyMap = 3;
                               tmp9 = closure_128_3;
                             }
                             closure_128_3 = value;
                             v3 = 3;
                             dependencyMap = 1;
-                            const obj10 = { value: id(8407).monkeyPatchCall(), done: false };
+                            const obj10 = { value: id(8449).monkeyPatchCall(), done: false };
                             return obj10;
                           }
                         } catch (tmp26) {
@@ -291,7 +291,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const UserRowModes = fn(8902).UserRowModes;
+const UserRowModes = fn(8944).UserRowModes;
 const Constants = fn(1071);
 ({
   InstantInviteSources: map1,
@@ -301,7 +301,7 @@ const Constants = fn(1071);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   button: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE },
   container: { height: "100%", display: "flex" },
@@ -410,7 +410,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -799,7 +799,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {

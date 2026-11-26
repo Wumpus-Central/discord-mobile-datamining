@@ -14,7 +14,7 @@ import TimestampUtils from "../../markup/TimestampUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
-import _modDef8794 from "../../../../_runtime/metro/08794__.js";
+import _modDef8836 from "../../../../_runtime/metro/08836__.js";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import StickersHooks from "../../stickers/StickersHooks.tsx";
 import ChannelAutocompleteEmojiUpsellDefault from "../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx";
@@ -35,10 +35,10 @@ const Constants = fn(1071);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   row: {
-    height: fn(10744).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(10790).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -57,7 +57,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(10744).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(10790).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -134,8 +134,8 @@ export default {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(5068).getName(user);
-      const obj3 = guildId(5068);
+      nick = guildId(5099).getName(user);
+      const obj3 = guildId(5099);
     }
     obj2.label = closure_9(AutocompleteLabel, { text: nick });
     const obj = user(504);
@@ -150,8 +150,8 @@ export default {
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj5.usernameStyle = items1;
-    obj2.trailing = closure_9(guildId(8589), obj5);
-    return closure_9(user(8046).FormRow, obj2);
+    obj2.trailing = closure_9(guildId(8631), obj5);
+    return closure_9(user(8088).FormRow, obj2);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -196,7 +196,7 @@ export default {
     ({ channel, category } = onPress);
     const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8794;
+      let channelIconWithGuild = _modDef8836;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }

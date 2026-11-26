@@ -1,11 +1,11 @@
 // discord_app/modules/icymi/native/CaughtUpRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../_runtime/metro/00671__.js";
-import LinearGradientDefault from "../../../../_runtime/05567_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05598_LinearGradient.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
-import 01653__ from "../../../../_runtime/metro/01653__.js";
+import 01654__ from "../../../../_runtime/metro/01654__.js";
 
 const require = globalThis.__r;
 
@@ -13,8 +13,8 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let closure_9 = module_1653.createAnimatedComponent(fn(5603).Text);
-const createICYMIStyles = fn(18244);
+let closure_9 = module_1654.createAnimatedComponent(fn(5634).Text);
+const createICYMIStyles = fn(18303);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -42,7 +42,7 @@ export default function ExploreServersRow(visible) {
   visible = visible.visible;
   _require = visible;
   const tmp = closure_10();
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(false);
   items = [visible, sharedValue];
   const effect = noop.useEffect(() => {
     let tmp2 = c0;
@@ -68,7 +68,7 @@ export default function ExploreServersRow(visible) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -83,14 +83,14 @@ export default function ExploreServersRow(visible) {
             return obj3;
           } else {
             dependencyMap(true);
-            v1(8881).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v1(8881);
+            v1(8923).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(8923);
             const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-            v1(8881).feedItemActioned(obj4);
-            const obj6 = v1(8881);
+            v1(8923).feedItemActioned(obj4);
+            const obj6 = v1(8923);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(18261).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(18320).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -109,7 +109,7 @@ export default function ExploreServersRow(visible) {
             }, 500);
           }, 100);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp8) {
         dependencyMap = tmp;
@@ -127,8 +127,8 @@ export default function ExploreServersRow(visible) {
       rootNavigationRef.navigate("tabs", { screen: "guilds" });
     }
   }, []);
-  let obj = require("../../../../_runtime/metro/01653__.js");
-  const items1 = [closure_11, sharedValue, require("timing/timing").withTiming, require("../../../../_runtime/metro/01653__.js").Easing];
+  let obj = require("../../../../_runtime/metro/01654__.js");
+  const items1 = [closure_11, sharedValue, require("timing/timing").withTiming, require("../../../../_runtime/metro/01654__.js").Easing];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -177,9 +177,9 @@ export default function ExploreServersRow(visible) {
   CaughtUpRowTsx1.__closure = items2;
   CaughtUpRowTsx1.__workletHash = 808134122268;
   CaughtUpRowTsx1.__initData = tmp9;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(CaughtUpRowTsx1);
-  let obj2 = require("../../../../_runtime/metro/01653__.js");
-  const items3 = [closure_12, sharedValue, require("../../../../_runtime/metro/01653__.js").withDelay, require("../../../../_runtime/metro/01653__.js").withSequence, require("timing/timing").withTiming, require("../../../../_runtime/metro/01653__.js").Easing];
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(CaughtUpRowTsx1);
+  let obj2 = require("../../../../_runtime/metro/01654__.js");
+  const items3 = [closure_12, sharedValue, require("../../../../_runtime/metro/01654__.js").withDelay, require("../../../../_runtime/metro/01654__.js").withSequence, require("timing/timing").withTiming, require("../../../../_runtime/metro/01654__.js").Easing];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -214,9 +214,9 @@ export default function ExploreServersRow(visible) {
   CaughtUpRowTsx2.__closure = items4;
   CaughtUpRowTsx2.__workletHash = 5492465188513;
   CaughtUpRowTsx2.__initData = tmp14;
-  const animatedStyle1 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(CaughtUpRowTsx2);
-  const tmp2Result = require("../../../../_runtime/metro/01653__.js");
-  const items5 = [closure_13, sharedValue, require("../../../../_runtime/metro/01653__.js").withDelay, require("../../../../_runtime/metro/01653__.js").withSequence, require("timing/timing").withTiming, require("../../../../_runtime/metro/01653__.js").Easing];
+  const animatedStyle1 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(CaughtUpRowTsx2);
+  const tmp2Result = require("../../../../_runtime/metro/01654__.js");
+  const items5 = [closure_13, sharedValue, require("../../../../_runtime/metro/01654__.js").withDelay, require("../../../../_runtime/metro/01654__.js").withSequence, require("timing/timing").withTiming, require("../../../../_runtime/metro/01654__.js").Easing];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -251,8 +251,8 @@ export default function ExploreServersRow(visible) {
   CaughtUpRowTsx3.__closure = items6;
   CaughtUpRowTsx3.__workletHash = 13859124718008;
   CaughtUpRowTsx3.__initData = tmp21;
-  const animatedStyle2 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(CaughtUpRowTsx3);
-  const tmp2Result3 = require("../../../../_runtime/metro/01653__.js");
+  const animatedStyle2 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(CaughtUpRowTsx3);
+  const tmp2Result3 = require("../../../../_runtime/metro/01654__.js");
   const token = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BRAND);
   let obj3 = { children: null };
   let obj4 = { style: tmp.container, children: null };
@@ -260,7 +260,7 @@ export default function ExploreServersRow(visible) {
   let obj6 = { style: null, children: closure_7(require("FlashIcon").FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
   const items7 = [tmp.iconWrapper, animatedStyle];
   obj6.style = items7;
-  const items8 = [closure_7(module_1653.View, obj6), , ];
+  const items8 = [closure_7(module_1654.View, obj6), , ];
   const obj8 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: null, children: null };
   const items9 = [tmp.headerText, animatedStyle1];
   obj8.style = items9;

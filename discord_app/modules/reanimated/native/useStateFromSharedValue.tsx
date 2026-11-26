@@ -1,5 +1,5 @@
 // discord_app/modules/reanimated/native/useStateFromSharedValue.tsx
-import _mod1706 from "../../../../_runtime/metro/01706__.js";
+import _mod1707 from "../../../../_runtime/metro/01707__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -74,7 +74,7 @@ export default function useStateFromSharedValue(tmp12Result5) {
         }
         useStateFromSharedValueTsx2.__workletHash = 7876346397934;
         useStateFromSharedValueTsx2.__initData = tmp3;
-        _mod1706.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
+        _mod1707.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
         map.delete(closure_0);
       }
     };
@@ -146,7 +146,7 @@ export function useDerivedStateFromSharedValue(activeIndex, current) {
         }
         useStateFromSharedValueTsx2.__workletHash = 7876346397934;
         useStateFromSharedValueTsx2.__initData = tmp3;
-        _mod1706.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
+        _mod1707.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
         map.delete(closure_0);
       }
     };

@@ -1,8 +1,8 @@
 // discord_app/modules/double_tap_to_react/native/DoubleTapToReactActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../_runtime/metro/01706__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../_runtime/metro/01707__.js";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import UnicodeEmojisDefault from "../../emojis/UnicodeEmojis.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
@@ -15,46 +15,46 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function EmojiConfetti(arg0) {
   ({ bottom, right, leading: c0 } = arg0);
   ({ emojiComponent, top, left } = arg0);
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  let obj = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const obj2 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0.2);
-  const obj3 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue3 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  let obj4 = require("../../../../_runtime/metro/01653__.js");
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  let obj = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const obj2 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0.2);
+  const obj3 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue3 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  let obj4 = require("../../../../_runtime/metro/01654__.js");
   const mountLayoutEffect = require("useMountEffect").useMountLayoutEffect(() => {
     let num = 0;
     if (!c0) {
       const _Math = Math;
       num = 50 + 150 * Math.random();
     }
-    const obj5 = _mod1653;
+    const obj5 = _mod1654;
     const withTimingResult = timing_timing.withTiming(0, { duration: num });
     const obj8 = { duration: 600, easing: null };
     const result = 10 * Math.random();
-    const Easing = _mod1653.Easing;
-    obj8.easing = Easing.out(_mod1653.Easing.ease);
+    const Easing = _mod1654.Easing;
+    obj8.easing = Easing.out(_mod1654.Easing.ease);
     const result1 = _undefined.set(obj5.withSequence(withTimingResult, timing_timing.withTiming(result + 35, obj8)));
-    const obj9 = _mod1653;
+    const obj9 = _mod1654;
     const withTimingResult1 = timing_timing.withTiming(0, { duration: num });
     const obj12 = { duration: 600, easing: null };
     const result2 = 40 * Math.random();
-    obj12.easing = _mod1653.Easing.ease;
+    obj12.easing = _mod1654.Easing.ease;
     const result3 = c2.set(obj9.withSequence(withTimingResult1, timing_timing.withTiming(result2 + 20, obj12)));
-    const obj13 = _mod1653;
+    const obj13 = _mod1654;
     const withTimingResult2 = timing_timing.withTiming(0, { duration: num });
     const withTimingResult3 = timing_timing.withTiming(0.3 * Math.random() + 0.5, { duration: 240 });
     const result4 = _undefined2.set(
       obj13.withSequence(withTimingResult2, withTimingResult3, timing_timing.withTiming(0.5, { duration: 360 })),
     );
-    const obj17 = _mod1653;
+    const obj17 = _mod1654;
     const withTimingResult4 = timing_timing.withTiming(0, { duration: num });
     const withTimingResult5 = timing_timing.withTiming(1, { duration: 360 });
     const result5 = _undefined3.set(
@@ -108,8 +108,8 @@ function EmojiConfetti(arg0) {
   DoubleTapToReactActionSheetTsx1.__closure = items1;
   DoubleTapToReactActionSheetTsx1.__workletHash = 7386139842022;
   DoubleTapToReactActionSheetTsx1.__initData = tmp7;
-  const style = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(DoubleTapToReactActionSheetTsx1);
-  return closure_11(_modDef1653.View, { style, children });
+  const style = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(DoubleTapToReactActionSheetTsx1);
+  return closure_11(_modDef1654.View, { style, children });
 }
 function EmojiBurstAnimation(emojiComponent) {
   emojiComponent = emojiComponent.emojiComponent;
@@ -125,10 +125,10 @@ function EmojiBurstAnimation(emojiComponent) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1390).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   emoji: { width: 48, height: 48, zIndex: 2 },
   selectedCustomEmoji: { width: 48, height: 48 },
@@ -142,13 +142,13 @@ let obj2 = {
   emojiName: null,
   burstContainer: null,
 };
-let PlatformUtils = fn(1378);
+let PlatformUtils = fn(1379);
 let num = 36;
 if (PlatformUtils.isIOS()) {
   num = 48;
 }
 let obj4 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1378);
+PlatformUtils = fn(1379);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 56;
@@ -157,7 +157,7 @@ obj4.lineHeight = num2;
 obj4.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 obj2.selectedTextEmoji = obj4;
 let obj6 = { marginLeft: nativeDefault.space.PX_16, fontSize: 40, lineHeight: null };
-PlatformUtils = fn(1378);
+PlatformUtils = fn(1379);
 let num3;
 if (PlatformUtils.isIOS()) {
   num3 = 56;
@@ -257,9 +257,9 @@ export default function DoubleTapToReactActionSheet(emoji) {
   closure_6 = tmp8[1];
   ref = first1.useRef(null);
   let obj2 = require("initialize");
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  let obj3 = require("../../../../_runtime/metro/01653__.js");
-  let items1 = [closure_17, require("../../../../_runtime/metro/01653__.js").interpolate, sharedValue];
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  let obj3 = require("../../../../_runtime/metro/01654__.js");
+  let items1 = [closure_17, require("../../../../_runtime/metro/01654__.js").interpolate, sharedValue];
   _require = undefined;
   importDefault = undefined;
   [tmp11, tmp12, tmp13] = items1;
@@ -279,14 +279,14 @@ export default function DoubleTapToReactActionSheet(emoji) {
   DoubleTapToReactActionSheetTsx2.__closure = items2;
   DoubleTapToReactActionSheetTsx2.__workletHash = 4658248494487;
   DoubleTapToReactActionSheetTsx2.__initData = tmp11;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     DoubleTapToReactActionSheetTsx2,
   );
-  let obj4 = require("../../../../_runtime/metro/01653__.js");
-  sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(1);
-  const tmp3Result = require("../../../../_runtime/metro/01653__.js");
-  sharedValue2 = require("../../../../_runtime/metro/01653__.js").useSharedValue(1);
-  const tmp3Result4 = require("../../../../_runtime/metro/01653__.js");
+  let obj4 = require("../../../../_runtime/metro/01654__.js");
+  sharedValue1 = require("../../../../_runtime/metro/01654__.js").useSharedValue(1);
+  const tmp3Result = require("../../../../_runtime/metro/01654__.js");
+  sharedValue2 = require("../../../../_runtime/metro/01654__.js").useSharedValue(1);
+  const tmp3Result4 = require("../../../../_runtime/metro/01654__.js");
   const items3 = [closure_18, sharedValue1, sharedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -307,7 +307,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   DoubleTapToReactActionSheetTsx3.__workletHash = 2167494599504;
   DoubleTapToReactActionSheetTsx3.__initData = tmp17;
   const items5 = [sharedValue1, sharedValue2, stateFromStores, first1];
-  const animatedStyle1 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     DoubleTapToReactActionSheetTsx3,
   );
   const items6 = [selectedEmoji];
@@ -396,7 +396,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
     src: null,
   };
   let str = "";
-  const tmp3Result5 = require("../../../../_runtime/metro/01653__.js");
+  const tmp3Result5 = require("../../../../_runtime/metro/01654__.js");
   if (null == selectedEmoji.id) {
     str = selectedEmoji.surrogates;
   }
@@ -416,7 +416,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -432,7 +432,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
             } else {
               let tmp22 = tmp2;
               if (memo) {
-                const DoubleTapReactionEmoji = tmp2(4837).DoubleTapReactionEmoji;
+                const DoubleTapReactionEmoji = tmp2(4868).DoubleTapReactionEmoji;
                 const obj5 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
                 tmp22 = first;
                 obj5.emojiName = first.name;
@@ -456,13 +456,13 @@ export default function DoubleTapToReactActionSheet(emoji) {
             emoji_name: closure_129_2.name,
             emoji_animated: closure_129_2.animated,
             recommended: closure_129_4.current,
-            location: tmp22(6349).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+            location: tmp22(6380).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
           };
-          tmp22(1255).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
+          tmp22(1256).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         } catch (tmp24) {
           c3 = tmp;
           throw tmp24;
@@ -478,14 +478,14 @@ export default function DoubleTapToReactActionSheet(emoji) {
     if (c1) {
       const result = set(0);
     } else {
-      const obj = _mod1653;
+      const obj = _mod1654;
       const withTimingResult = timing_timing.withTiming(0, { duration: 0 });
       const obj4 = { duration: 100, easing: null };
-      const Easing = _mod1653.Easing;
-      obj4.easing = Easing.out(_mod1653.Easing.quad);
+      const Easing = _mod1654.Easing;
+      obj4.easing = Easing.out(_mod1654.Easing.quad);
       const withTimingResult1 = timing_timing.withTiming(1, obj4);
       const obj5 = timing_timing;
-      items = [closure_19, _mod1706.scheduleOnRN, c0];
+      items = [closure_19, _mod1707.scheduleOnRN, c0];
       c0 = undefined;
       c1 = undefined;
       [tmp11, tmp12, tmp13] = items;
@@ -550,7 +550,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   items12[1] = tmp24Result2;
   obj9.children = items12;
   const items13 = [
-    callback1(require("../../../../_runtime/metro/01653__.js").View, obj9),
+    callback1(require("../../../../_runtime/metro/01654__.js").View, obj9),
     memo(require("Text/Text").Text, {
       variant: "body-lg/semibold",
       style: tmp.selectedEmojiText,

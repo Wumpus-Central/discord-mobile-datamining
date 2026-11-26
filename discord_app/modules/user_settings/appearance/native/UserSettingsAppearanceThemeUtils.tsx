@@ -14,7 +14,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 require = fn;
 const SystemThemeState = fn(1194).SystemThemeState;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const constants = fn(1388).AnalyticsPremiumFeatureNames;
+const constants = fn(1389).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
@@ -189,7 +189,7 @@ export function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
   } else {
     if (c4) {
       if (tmp >= 0) {
-        return memo1.findIndex((type) => type.type === userPreset(1240).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
+        return memo1.findIndex((type) => type.type === userPreset(1241).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
       }
     }
     const str = "system";

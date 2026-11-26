@@ -1,6 +1,6 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeBunny.tsx
-import v1 from "../../../../../_runtime/01268_v1.js";
-import inlineStyles from "../../../../../_runtime/07912_inlineStyles.js";
+import v1 from "../../../../../_runtime/01269_v1.js";
+import inlineStyles from "../../../../../_runtime/07946_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

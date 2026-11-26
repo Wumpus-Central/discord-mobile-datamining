@@ -8,7 +8,7 @@ import NativePaymentHooksDefault from "../../payments/native/hooks/NativePayment
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import ImprovedMobileShopLoadingExperiment from "../experiments/ImprovedMobileShopLoadingExperiment.tsx";
 import CollectiblesShopManager2 from "../CollectiblesShopManager.tsx";
-import takeWhileDefault from "../../../../_runtime/17434_takeWhile.js";
+import takeWhileDefault from "../../../../_runtime/17491_takeWhile.js";
 import ShopCategory from "ShopCategory.tsx";
 import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -120,7 +120,7 @@ class CollectiblesShopV2 {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const FeedBlockRecord = fn(6317).FeedBlockRecord;
+const FeedBlockRecord = fn(6348).FeedBlockRecord;
 const CollectiblesShopConstants = fn(1073);
 ({
   COLLECTIBLES_SHOP_CACHE_DURATION_MS: map1,
@@ -133,7 +133,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_18, COLLECTIBLES_APPLICATION_ID: closure_19, PaymentGateways: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_23 = createStyles.createStyles({
   rootContainer: { height: "100%", width: "100%" },
   spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 },

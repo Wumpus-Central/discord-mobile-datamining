@@ -8,10 +8,10 @@ import TableCheckboxRow from "../../../../design/components/TableRow/native/Tabl
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import Slider from "../../../../design/components/Slider/native/Slider.native.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import Checkbox from "../../../../design/components/Checkbox/native/Checkbox.native.tsx";
 import TableSliderRow from "../../../../design/components/TableRow/native/TableSliderRow.native.tsx";
-import Slider from "../../../../design/components/Slider/native/Slider.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -232,7 +232,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

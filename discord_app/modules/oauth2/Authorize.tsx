@@ -4,7 +4,7 @@ import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
 import scopes from "scopes.tsx";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import keysSorter from "../../../_runtime/05751_keysSorter.js";
+import keysSorter from "../../../_runtime/05782_keysSorter.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 

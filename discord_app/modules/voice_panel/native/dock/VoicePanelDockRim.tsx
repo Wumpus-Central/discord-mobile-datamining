@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockRim.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
-import LinearGradientDefault from "../../../../../_runtime/05567_LinearGradient.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
+import LinearGradientDefault from "../../../../../_runtime/05598_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ rim: { position: "absolute", left: 0, right: 0, height: 1 } });
 let closure_7 = {
   code: "(function VoicePanelDockRimTsx1(){let[voicePanelDockRimOpacity]=this.__closure;return{opacity:voicePanelDockRimOpacity.get()};})",
@@ -42,7 +42,7 @@ export default noop.memo(function VoicePanelDockRim(style) {
   VoicePanelDockRimTsx1.__closure = items2;
   VoicePanelDockRimTsx1.__workletHash = 16403229704209;
   VoicePanelDockRimTsx1.__initData = tmp7;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelDockRimTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoicePanelDockRimTsx1);
   const obj3 = { style: null, pointerEvents: "none", children: null };
   const items3 = [tmp.rim, style.style, animatedStyle];
   obj3.style = items3;
@@ -56,7 +56,7 @@ export default noop.memo(function VoicePanelDockRim(style) {
       end: { x: 1, y: 0.5 },
     }),
   };
-  obj3.children = jsx(tmp2(13357).VoicePanelDockRimLevel, {
+  obj3.children = jsx(tmp2(13409).VoicePanelDockRimLevel, {
     style: StyleSheet.absoluteFill,
     children: jsx(LinearGradientDefault, {
       style: StyleSheet.absoluteFill,
@@ -66,5 +66,5 @@ export default noop.memo(function VoicePanelDockRim(style) {
       end: { x: 1, y: 0.5 },
     }),
   });
-  return jsx(_modDef1653.View, { style: null, pointerEvents: "none", children: null });
+  return jsx(_modDef1654.View, { style: null, pointerEvents: "none", children: null });
 });

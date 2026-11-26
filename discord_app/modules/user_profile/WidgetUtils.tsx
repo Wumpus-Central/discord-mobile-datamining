@@ -137,8 +137,8 @@ function reorderMovableWidgets(isBoardWidget, arg1, arg2) {
     }
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(6141).WIDGET_TITLES_BY_TYPE;
-let closure_8 = fn(14519).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(6172).WIDGET_TITLES_BY_TYPE;
+let closure_8 = fn(14571).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -929,6 +929,40 @@ export function reorderGamesInWidget(widgetType, arg1, arg2) {
           }
         }
       }
+    }
+  }
+}
+export function setGameOrderInWidget(widgetType, arr) {
+  const tmp = findGameWidget(widgetType);
+  if (null != tmp) {
+    if (null != tmp.games) {
+      const _Map = Map;
+      const map = new Map(
+        applyDefault.uniqBy(tmp.games, "gameId").map((gameId) => {
+          items = [gameId.gameId, gameId];
+          return items;
+        }),
+      );
+      const flatMapResult = arr.flatMap((item) => {
+        items = map.get(item);
+        if (items == null) {
+          items = [];
+        }
+        return items;
+      });
+      if (flatMapResult.length === map.size) {
+        const _Set = Set;
+        set = new Set(arr);
+        if (set.size === arr.length) {
+          const obj = {};
+          const merged = Object.assign(tmp);
+          obj.games = flatMapResult;
+          const baseGameWidget = new UserProfileGameWidgetTypes.BaseGameWidget(obj);
+          WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(baseGameWidget));
+          const tmp15Result = WidgetActionCreatorsDefault;
+        }
+      }
+      const uniqByResult = applyDefault.uniqBy(tmp.games, "gameId");
     }
   }
 }

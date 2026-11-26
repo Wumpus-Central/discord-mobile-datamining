@@ -6,7 +6,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6906);
+const FramesConstants = fn(6937);
 ({ getFrameSurfaceForChannel: hasOwnProperty, makeFrameId: closure_6 } = FramesConstants);
 const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, Permissions: closure_8 } = Constants);

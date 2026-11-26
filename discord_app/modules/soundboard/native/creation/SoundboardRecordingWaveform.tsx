@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const WAVEFORM_WAVE_MAX_VALUE = fn(12907).WAVEFORM_WAVE_MAX_VALUE;
+const WAVEFORM_WAVE_MAX_VALUE = fn(12959).WAVEFORM_WAVE_MAX_VALUE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   container: { flexDirection: "row", alignItems: "center" },
   slot: { flex: 1, marginHorizontal: 1, alignItems: "center", justifyContent: "center" },
@@ -29,8 +29,8 @@ let closure_9 = noop.memo(function WaveformBar(level) {
   let sharedValue;
   const tmp = closure_7();
   const tmp2 = sharedValue;
-  sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const obj = require("../../../../../_runtime/metro/01653__.js");
+  sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const obj = require("../../../../../_runtime/metro/01654__.js");
   items = [closure_8, sharedValue];
   _require = undefined;
   [tmp4, tmp5] = items;
@@ -45,7 +45,7 @@ let closure_9 = noop.memo(function WaveformBar(level) {
   SoundboardRecordingWaveformTsx1.__workletHash = 14110970372869;
   SoundboardRecordingWaveformTsx1.__initData = tmp4;
   const items2 = [sharedValue, level, maxHeight];
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     SoundboardRecordingWaveformTsx1,
   );
   const effect = noop.useEffect(() => {

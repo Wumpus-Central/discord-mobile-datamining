@@ -1,14 +1,14 @@
 // discord_app/modules/panels/morphable/native/useMorphablePanelGesture.tsx
-import _mod1706 from "../../../../../_runtime/metro/01706__.js";
+import _mod1707 from "../../../../../_runtime/metro/01707__.js";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05272_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import MorphablePanelUtils from "MorphablePanelUtils.tsx";
 import triggerIOSHapticDefault from "triggerIOSHaptic.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MorphablePanelConstants = fn(11735);
+const MorphablePanelConstants = fn(11783);
 ({ IS_IOS: closure_4, MIN_PAN_GESTURE_MOVE: hasOwnProperty, MorphablePanelModes } = MorphablePanelConstants);
 ({
   PANEL_TAP_GESTURE_MAX_DISTANCE: metroImportDefault,
@@ -145,7 +145,7 @@ export default function useMorphablePanelGesture(mode) {
       mode,
       MorphablePanelModes,
       hasOwnProperty,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       triggerIOSHapticDefault,
       updateSharedValueIfChangedDefault,
       wrapperOffset,
@@ -212,7 +212,7 @@ export default function useMorphablePanelGesture(mode) {
       sharedValue,
       React6,
       React5,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,
       updateSharedValueIfChangedDefault,

@@ -17,7 +17,7 @@ let closure_8 = async function _readPhoenixLaunchState() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -121,7 +121,7 @@ let closure_11 = async function _setShouldLaunchPhoenix(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -178,7 +178,7 @@ let closure_11 = async function _setShouldLaunchPhoenix(arg0) {
   }
 };
 let closure_5 = new LoggerDefault("PhoenixLaunchState");
-const identity = fn(1257);
+const identity = fn(1258);
 let closure_6 = identity.createWithEqualityFn(() => ({ hasPhoenix: false, shouldLaunchPhoenix: false }));
 let c7 = null;
 const size = fn(2);

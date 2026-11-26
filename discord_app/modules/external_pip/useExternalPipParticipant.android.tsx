@@ -56,14 +56,14 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
     obj = closure_9;
   }
 }
-const ParticipantTypes = fn(5662).ParticipantTypes;
-const VoicePanelModes = fn(11734).VoicePanelModes;
+const ParticipantTypes = fn(5693).ParticipantTypes;
+const VoicePanelModes = fn(11782).VoicePanelModes;
 let closure_9 = {
   participantType: "Path",
   selectedParticipantId: "text",
   selectedParticipantSpeaking: 0,
   selectedParticipantStreamId: null,
-  selectedParticipantUserId: -1,
+  selectedParticipantUserId: "absolute",
 };
 let items = [ChannelRTCStore, ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
 const size = fn(2);

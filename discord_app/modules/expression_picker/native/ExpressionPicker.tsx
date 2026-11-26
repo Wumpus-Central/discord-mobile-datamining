@@ -16,10 +16,10 @@ const ExpressionPickerConstants = fn(1227);
   PADDING_HORIZONTAL,
 } = ExpressionPickerConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const EmojiIntention = fn(1389).EmojiIntention;
+const EmojiIntention = fn(1390).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   expressionPickerContainer: {
     flex: 1,

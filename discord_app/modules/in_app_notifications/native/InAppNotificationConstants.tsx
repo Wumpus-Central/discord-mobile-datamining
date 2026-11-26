@@ -1,10 +1,10 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationConstants.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = { duration: 220, easing: null };
-const Easing = _mod1653.Easing;
+const Easing = _mod1654.Easing;
 obj.easing = Easing.bezier(0.16, 1, 0.3, 1);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationConstants.tsx");
 

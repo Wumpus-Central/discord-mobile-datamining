@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/CheckpointCustomizationUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef3494 from "Checkpoint2026.messages.js";
+import _modDef3495 from "Checkpoint2026.messages.js";
 import CheckpointTraitRarity from "../../../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx";
 import CheckpointTraitConfig from "../../../discord_common/js/shared/shared-constants/CheckpointTraitConfig.tsx";
 import CheckpointCharacterTraits from "CheckpointCharacterTraits.tsx";
@@ -26,14 +26,14 @@ function getPlaintextAssetDescription(option) {
     return stringResult;
   } else if (rarity === CheckpointTraitRarity.CheckpointTraitRarity.DEFAULT) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3494["4aaADG"]);
+    return intl5.string(_modDef3495["4aaADG"]);
   } else if (rarity === CheckpointTraitRarity.CheckpointTraitRarity.NITRO) {
     if (option.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.NITRO_LOCKED) {
       const intl4 = util.intl;
-      let stringResult1 = intl4.string(_modDef3494.vic5bB);
+      let stringResult1 = intl4.string(_modDef3495.vic5bB);
     } else {
       const intl3 = util.intl;
-      stringResult1 = intl3.string(_modDef3494.sQ1bDT);
+      stringResult1 = intl3.string(_modDef3495.sQ1bDT);
     }
     return stringResult1;
   } else if (trait !== CheckpointTrait.CheckpointTrait.BASE) {
@@ -68,14 +68,14 @@ const CheckpointCustomizationOption = {
   BASE: "base",
 };
 const obj2 = {
-  [FACE]: _modDef3494.QQsnUi,
-  [OUTFIT]: _modDef3494.R4kQz6,
-  [OUTFIT_COLOR]: _modDef3494.Yzaoit,
-  [HAT]: _modDef3494.ZUGgI7,
-  [WEARABLE]: _modDef3494["KrhX/b"],
-  [AURA]: _modDef3494["35nXwl"],
-  [SHOES]: _modDef3494["Yt3O/L"],
-  [BASE]: _modDef3494.bbQzr1,
+  [FACE]: _modDef3495.QQsnUi,
+  [OUTFIT]: _modDef3495.R4kQz6,
+  [OUTFIT_COLOR]: _modDef3495.Yzaoit,
+  [HAT]: _modDef3495.ZUGgI7,
+  [WEARABLE]: _modDef3495["KrhX/b"],
+  [AURA]: _modDef3495["35nXwl"],
+  [SHOES]: _modDef3495["Yt3O/L"],
+  [BASE]: _modDef3495.bbQzr1,
 };
 ({ FACE, OUTFIT, OUTFIT_COLOR, HAT, WEARABLE, AURA, SHOES, BASE } = CheckpointCustomizationOption);
 let items = [, ,];
@@ -111,85 +111,85 @@ const obj4 = {
   [CheckpointNavigation.CheckpointCharacterStage.AURA]: CheckpointCustomizationOption.AURA,
 };
 const obj5 = {};
-obj5[CheckpointTrait.CheckpointTrait.OUTFIT] = _modDef3494.kcAWvo;
-obj5[CheckpointTrait.CheckpointTrait.HAT] = _modDef3494.RYvRmE;
-obj5[CheckpointTrait.CheckpointTrait.WEARABLE] = _modDef3494.lbzScK;
-obj5[CheckpointTrait.CheckpointTrait.AURA] = _modDef3494.mRPtBV;
-obj5[CheckpointTrait.CheckpointTrait.SHOES] = _modDef3494.KHsJlD;
+obj5[CheckpointTrait.CheckpointTrait.OUTFIT] = _modDef3495.kcAWvo;
+obj5[CheckpointTrait.CheckpointTrait.HAT] = _modDef3495.RYvRmE;
+obj5[CheckpointTrait.CheckpointTrait.WEARABLE] = _modDef3495.lbzScK;
+obj5[CheckpointTrait.CheckpointTrait.AURA] = _modDef3495.mRPtBV;
+obj5[CheckpointTrait.CheckpointTrait.SHOES] = _modDef3495.KHsJlD;
 const obj6 = {};
 obj6[CheckpointTrait.CheckpointTrait.FACE] = {
-  commonMessage: _modDef3494.mmlFSp,
-  topMessage: _modDef3494.PNMVaH,
-  lockedCommonMessage: _modDef3494.Yi9yiQ,
-  lockedTopMessage: _modDef3494.ZHmprE,
+  commonMessage: _modDef3495.mmlFSp,
+  topMessage: _modDef3495.PNMVaH,
+  lockedCommonMessage: _modDef3495.Yi9yiQ,
+  lockedTopMessage: _modDef3495.ZHmprE,
 };
 const obj7 = {
-  commonMessage: _modDef3494.mmlFSp,
-  topMessage: _modDef3494.PNMVaH,
-  lockedCommonMessage: _modDef3494.Yi9yiQ,
-  lockedTopMessage: _modDef3494.ZHmprE,
+  commonMessage: _modDef3495.mmlFSp,
+  topMessage: _modDef3495.PNMVaH,
+  lockedCommonMessage: _modDef3495.Yi9yiQ,
+  lockedTopMessage: _modDef3495.ZHmprE,
 };
 obj6[CheckpointTrait.CheckpointTrait.OUTFIT] = {
-  commonMessage: _modDef3494["7ycqkx"],
-  topMessage: _modDef3494["stpl+C"],
-  lockedCommonMessage: _modDef3494.Wpd6ol,
-  lockedTopMessage: _modDef3494.tU2fxW,
+  commonMessage: _modDef3495["7ycqkx"],
+  topMessage: _modDef3495["stpl+C"],
+  lockedCommonMessage: _modDef3495.Wpd6ol,
+  lockedTopMessage: _modDef3495.tU2fxW,
 };
 const obj8 = {
-  commonMessage: _modDef3494["7ycqkx"],
-  topMessage: _modDef3494["stpl+C"],
-  lockedCommonMessage: _modDef3494.Wpd6ol,
-  lockedTopMessage: _modDef3494.tU2fxW,
+  commonMessage: _modDef3495["7ycqkx"],
+  topMessage: _modDef3495["stpl+C"],
+  lockedCommonMessage: _modDef3495.Wpd6ol,
+  lockedTopMessage: _modDef3495.tU2fxW,
 };
 obj6[CheckpointTrait.CheckpointTrait.HAT] = {
-  commonMessage: _modDef3494.TTkbUY,
-  topMessage: _modDef3494["2UDofx"],
-  lockedCommonMessage: _modDef3494["5+8d3J"],
-  lockedTopMessage: _modDef3494.X9NBcv,
+  commonMessage: _modDef3495.TTkbUY,
+  topMessage: _modDef3495["2UDofx"],
+  lockedCommonMessage: _modDef3495["5+8d3J"],
+  lockedTopMessage: _modDef3495.X9NBcv,
 };
 const obj9 = {
-  commonMessage: _modDef3494.TTkbUY,
-  topMessage: _modDef3494["2UDofx"],
-  lockedCommonMessage: _modDef3494["5+8d3J"],
-  lockedTopMessage: _modDef3494.X9NBcv,
+  commonMessage: _modDef3495.TTkbUY,
+  topMessage: _modDef3495["2UDofx"],
+  lockedCommonMessage: _modDef3495["5+8d3J"],
+  lockedTopMessage: _modDef3495.X9NBcv,
 };
 obj6[CheckpointTrait.CheckpointTrait.SHOES] = {
-  commonMessage: _modDef3494.vX6Vdt,
-  topMessage: _modDef3494.cbssIC,
-  lockedCommonMessage: _modDef3494.cyJktg,
-  lockedTopMessage: _modDef3494["Yjz+5u"],
+  commonMessage: _modDef3495.vX6Vdt,
+  topMessage: _modDef3495.cbssIC,
+  lockedCommonMessage: _modDef3495.cyJktg,
+  lockedTopMessage: _modDef3495["Yjz+5u"],
 };
 const obj10 = {
-  commonMessage: _modDef3494.vX6Vdt,
-  topMessage: _modDef3494.cbssIC,
-  lockedCommonMessage: _modDef3494.cyJktg,
-  lockedTopMessage: _modDef3494["Yjz+5u"],
+  commonMessage: _modDef3495.vX6Vdt,
+  topMessage: _modDef3495.cbssIC,
+  lockedCommonMessage: _modDef3495.cyJktg,
+  lockedTopMessage: _modDef3495["Yjz+5u"],
 };
 obj6[CheckpointTrait.CheckpointTrait.WEARABLE] = {
-  commonMessage: _modDef3494.ZHs2bR,
-  topMessage: _modDef3494.yoZxcn,
-  lockedCommonMessage: _modDef3494["2tBPVn"],
-  lockedTopMessage: _modDef3494.HPCBcH,
+  commonMessage: _modDef3495.ZHs2bR,
+  topMessage: _modDef3495.yoZxcn,
+  lockedCommonMessage: _modDef3495["2tBPVn"],
+  lockedTopMessage: _modDef3495.HPCBcH,
 };
 const obj11 = {
-  commonMessage: _modDef3494.ZHs2bR,
-  topMessage: _modDef3494.yoZxcn,
-  lockedCommonMessage: _modDef3494["2tBPVn"],
-  lockedTopMessage: _modDef3494.HPCBcH,
+  commonMessage: _modDef3495.ZHs2bR,
+  topMessage: _modDef3495.yoZxcn,
+  lockedCommonMessage: _modDef3495["2tBPVn"],
+  lockedTopMessage: _modDef3495.HPCBcH,
 };
 obj6[CheckpointTrait.CheckpointTrait.AURA] = {
-  commonMessage: _modDef3494.m9gYwn,
-  topMessage: _modDef3494.mCmdPk,
-  lockedCommonMessage: _modDef3494.uT5tyB,
-  lockedTopMessage: _modDef3494["5Mc39J"],
+  commonMessage: _modDef3495.m9gYwn,
+  topMessage: _modDef3495.mCmdPk,
+  lockedCommonMessage: _modDef3495.uT5tyB,
+  lockedTopMessage: _modDef3495["5Mc39J"],
 };
 const obj13 = {};
-obj13[CheckpointTrait.CheckpointTrait.FACE] = _modDef3494["4IdR/H"];
-obj13[CheckpointTrait.CheckpointTrait.OUTFIT] = _modDef3494.NuujPd;
-obj13[CheckpointTrait.CheckpointTrait.HAT] = _modDef3494.o1Zign;
-obj13[CheckpointTrait.CheckpointTrait.WEARABLE] = _modDef3494.C0CzoH;
-obj13[CheckpointTrait.CheckpointTrait.AURA] = _modDef3494["+9TbTS"];
-obj13[CheckpointTrait.CheckpointTrait.SHOES] = _modDef3494.sTG4TS;
+obj13[CheckpointTrait.CheckpointTrait.FACE] = _modDef3495["4IdR/H"];
+obj13[CheckpointTrait.CheckpointTrait.OUTFIT] = _modDef3495.NuujPd;
+obj13[CheckpointTrait.CheckpointTrait.HAT] = _modDef3495.o1Zign;
+obj13[CheckpointTrait.CheckpointTrait.WEARABLE] = _modDef3495.C0CzoH;
+obj13[CheckpointTrait.CheckpointTrait.AURA] = _modDef3495["+9TbTS"];
+obj13[CheckpointTrait.CheckpointTrait.SHOES] = _modDef3495.sTG4TS;
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointCustomizationUtils.tsx");
 
 export { CheckpointCustomizationOption };
@@ -295,10 +295,10 @@ export function getAssetAccessibilityLabel(getName, arg1) {
   items = [getName.getName()];
   if (getName.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.LOCKED) {
     const intl2 = util.intl;
-    items.push(intl2.string(_modDef3494.AEDeza));
+    items.push(intl2.string(_modDef3495.AEDeza));
   } else if (getName.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.NITRO_LOCKED) {
     const intl = util.intl;
-    items.push(intl.string(_modDef3494.F52sSw));
+    items.push(intl.string(_modDef3495.F52sSw));
   }
   if (!flag) {
     if (null != getName.rarity) {
@@ -327,14 +327,14 @@ export function getCheckpointRouteBlockedTrait(activeRoute, arr) {
     return arr[0];
   } else {
     if (tmpResult.isCheckpointCustomizationRoute(activeRoute)) {
-      const tmpResult2 = tmp(6736);
+      const tmpResult2 = tmp(6767);
       const tmp4 = obj4[tmpResult2.getCheckpointRoutePresentation(tmpResult2, activeRoute).characterStage];
       _require = tmp4;
       if (null != tmp4) {
         return arr.find((item) => item === obj3[closure_0]);
       }
     }
-    tmpResult = tmp(6736);
+    tmpResult = tmp(6767);
   }
 }
 export function getChamferedRectPoints(width, height, arg2) {

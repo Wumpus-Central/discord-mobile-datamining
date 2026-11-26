@@ -4,7 +4,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
@@ -15,7 +15,7 @@ import TableRowArrow from "../../../../design/components/TableRow/native/TableRo
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
-import _modDef8147 from "../../../../../_runtime/metro/08147__.js";
+import _modDef8189 from "../../../../../_runtime/metro/08189__.js";
 import FormComponents from "../shared/FormComponents.tsx";
 import useIsSecureFramesVerified from "../../../rtc/hooks/useIsSecureFramesVerified.tsx";
 import SecureFramesPlatformUtilsDefault from "../../../rtc/SecureFramesPlatformUtils.native.tsx";
@@ -138,7 +138,7 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = {
     onPress: callback,
-    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8147 }),
+    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8189 }),
     label: null,
     trailing: null,
   };
@@ -158,7 +158,7 @@ function ActivityDebugToggle() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: WrenchIcon.WrenchIcon,
-    source: _modDef8147,
+    source: _modDef8189,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
@@ -170,11 +170,11 @@ function ActivityDebugToggle() {
 }
 const Constants = fn(1071);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
-const isStreamParticipant = fn(5662).isStreamParticipant;
-let closure_17 = fn(8639).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+const isStreamParticipant = fn(5693).isStreamParticipant;
+let closure_17 = fn(8681).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   headerContainer: { alignItems: "center" },
   channelTitleWrapper: {
@@ -309,7 +309,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18155, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18214, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

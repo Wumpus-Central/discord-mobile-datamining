@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/BotUserProfileContent.tsx
-import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -10,10 +10,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7526);
+const Constants = fn(7557);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_6, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: metroImportDefault } =
   Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5241).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5272).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const size = fn(2);
@@ -26,14 +26,14 @@ export default noop.memo(function BotUserProfileContent(user) {
   closure_4 = undefined;
   let guild_id;
   ({ disableMessage, scrollPosition } = user);
-  const tmp3 = channel(9445)();
-  const tmp5 = channel(14797)(ACTION_SHEET_MAX_WIDTH);
+  const tmp3 = channel(9487)();
+  const tmp5 = channel(14850)(ACTION_SHEET_MAX_WIDTH);
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = channel(
-    14803,
+    14856,
   )({ scrollPosition, bannerHeight: tmp5 }));
-  const tmp6 = channel(14803)({ scrollPosition, bannerHeight: tmp5 });
-  const trackUserProfileAction = user(6350).useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj = user(6350);
+  const tmp6 = channel(14856)({ scrollPosition, bannerHeight: tmp5 });
+  const trackUserProfileAction = user(6381).useUserProfileAnalyticsContext().trackUserProfileAction;
+  let obj = user(6381);
   items = [guild_id];
   const stateFromStores = user(504).useStateFromStores(items, () => guild_id.getCurrentUser());
   let obj2 = user(504);
@@ -45,19 +45,19 @@ export default noop.memo(function BotUserProfileContent(user) {
   if (channel != null) {
     id = channel.id;
   }
-  const name = channel(6776).useName(guildId, id, user);
-  const obj3 = channel(6776);
-  closure_4 = channel(5068).useUserTag(user);
+  const name = channel(6807).useName(guildId, id, user);
+  const obj3 = channel(6807);
+  closure_4 = channel(5099).useUserTag(user);
   let application;
   if (displayProfile != null) {
     application = displayProfile.application;
   }
-  channel(14806)(user, "BotUserProfileContent");
-  let result = tmp(13042)(application);
+  channel(14859)(user, "BotUserProfileContent");
+  let result = tmp(13094)(application);
   const tmp16 = channel;
-  const tmpResult = channel(5068);
+  const tmpResult = channel(5099);
   guild_id = undefined;
-  const tmpResult7 = channel(13057);
+  const tmpResult7 = channel(13109);
   if (channel != null) {
     guild_id = channel.guild_id;
   }
@@ -72,14 +72,14 @@ export default noop.memo(function BotUserProfileContent(user) {
       return {};
     }
   }, items1);
-  const tmpResult1Result = channel(13057)(tmp16);
-  const subscribeGuildMembers = user(12415).useSubscribeGuildMembers(memo, "BotUserProfileContent");
-  const tmp7Result = user(12415);
-  const tmp22 = channel(9763)(user.id);
-  const tmp21 = channel(9461)(displayProfile);
-  ({ primaryColor, theme, secondaryColor } = channel(9443)({ user, displayProfile }));
-  const tmp23 = channel(9443)({ user, displayProfile });
-  const userProfileColors = user(9447).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const tmpResult1Result = channel(13109)(tmp16);
+  const subscribeGuildMembers = user(12464).useSubscribeGuildMembers(memo, "BotUserProfileContent");
+  const tmp7Result = user(12464);
+  const tmp22 = channel(9805)(user.id);
+  const tmp21 = channel(9503)(displayProfile);
+  ({ primaryColor, theme, secondaryColor } = channel(9485)({ user, displayProfile }));
+  const tmp23 = channel(9485)({ user, displayProfile });
+  const userProfileColors = user(9489).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null != user) {
     if (null != stateFromStores) {
@@ -92,13 +92,13 @@ export default noop.memo(function BotUserProfileContent(user) {
         blurAnimatedProps,
         showBlur,
       };
-      const items2 = [closure_9(tmp(14804), obj4), ,];
+      const items2 = [closure_9(tmp(14857), obj4), ,];
       const obj5 = { style: null, children: null };
       const items3 = [tmp3.bannerButtons, bannerAnimatedStyle];
       obj5.style = items3;
       const obj6 = { user, currentUser: stateFromStores, application, displayProfile, channel };
-      obj5.children = closure_9(tmp(14807), obj6);
-      items2[1] = closure_9(tmp(1653).View, obj5);
+      obj5.children = closure_9(tmp(14860), obj6);
+      items2[1] = closure_9(tmp(1654).View, obj5);
       const obj7 = { style: contentAnimatedStyle, children: null };
       const obj8 = { user, guildId: null, backgroundColor: null, statusStyle: null };
       let guildId1;
@@ -109,7 +109,7 @@ export default noop.memo(function BotUserProfileContent(user) {
       obj8.backgroundColor = tmp25;
       const obj9 = { backgroundColor: tmp26 };
       obj8.statusStyle = obj9;
-      const items4 = [closure_9(tmp7(9478).OpenableUserProfileAvatar, obj8)];
+      const items4 = [closure_9(tmp7(9520).OpenableUserProfileAvatar, obj8)];
       const items5 = [, ,];
       ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp3);
       let num = 0;
@@ -117,7 +117,7 @@ export default noop.memo(function BotUserProfileContent(user) {
         num = closure_7;
       }
       const obj11 = { style: null, children: null };
-      const obj12 = { paddingTop: num, paddingBottom: channel(1628)().bottom + closure_6 };
+      const obj12 = { paddingTop: num, paddingBottom: channel(1629)().bottom + closure_6 };
       items5[2] = obj12;
       obj11.style = items5;
       const obj13 = {
@@ -132,7 +132,7 @@ export default noop.memo(function BotUserProfileContent(user) {
           }
           obj2.channelId = id;
           obj.openLazy(
-            asyncRequireImpl(9762, dependencyMap.paths),
+            asyncRequireImpl(9804, dependencyMap.paths),
             "UserProfileCustomStatusActionSheet",
             obj2,
             "stack",
@@ -142,7 +142,7 @@ export default noop.memo(function BotUserProfileContent(user) {
         emojiOnlyStyle: null,
       };
       ({ customStatusBubble: obj10.style, emojiOnlyCustomStatusBubble: obj10.emojiOnlyStyle } = tmp3);
-      const items6 = [closure_9(tmp(9485), obj13), ,];
+      const items6 = [closure_9(tmp(9527), obj13), ,];
       const obj14 = { style: tmp3.primaryInfo, children: null };
       const obj15 = {
         user,
@@ -178,9 +178,9 @@ export default noop.memo(function BotUserProfileContent(user) {
       obj15.onPressDisplayName = handleCopyUsername;
       obj15.onPressUserTag = handleCopyUsername;
       obj15.onPressPronouns = handlePressPronouns;
-      const items7 = [closure_9(tmp(9765), obj15), ,];
+      const items7 = [closure_9(tmp(9807), obj15), ,];
       const obj16 = { user };
-      items7[1] = closure_9(tmp(14832), obj16);
+      items7[1] = closure_9(tmp(14885), obj16);
       const obj17 = {
         style: tmp3.primaryButtons,
         maxWidth: ACTION_SHEET_MAX_WIDTH,
@@ -188,16 +188,16 @@ export default noop.memo(function BotUserProfileContent(user) {
         secondaryButton: null,
       };
       let tmp43Result;
-      const tmpResult8 = tmp(9765);
+      const tmpResult8 = tmp(9807);
       if (null != application) {
         if (tmpResult1Result) {
-          result = tmp7(10057).hasInstallConfiguration(application);
-          const tmp7Result4 = tmp7(10057);
+          result = tmp7(10099).hasInstallConfiguration(application);
+          const tmp7Result4 = tmp7(10099);
         }
         if (result) {
           const obj18 = { application, botUserId: user.id, channel, guildId: guild_id };
-          tmp43Result = closure_9(tmp(14836), obj18);
-          const tmpResult10 = tmp(14836);
+          tmp43Result = closure_9(tmp(14889), obj18);
+          const tmpResult10 = tmp(14889);
         }
       }
       obj17.primaryButton = tmp43Result;
@@ -211,14 +211,14 @@ export default noop.memo(function BotUserProfileContent(user) {
         onPress: null,
       };
       const obj20 = { size: "sm", color: tmp(575).colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-      obj19.icon = closure_9(tmp7(7106).ChatIcon, obj20);
+      obj19.icon = closure_9(tmp7(7137).ChatIcon, obj20);
       const intl2 = tmp7(1112).intl;
       obj19.text = intl2.string(tmp7(1112).t.zROXEV);
       obj19.disabled = disableMessage;
       const intl3 = tmp7(1112).intl;
       const obj21 = { name: null };
-      const tmpResult9 = tmp(14835);
-      obj21.name = tmp(5068).getName(user);
+      const tmpResult9 = tmp(14888);
+      obj21.name = tmp(5099).getName(user);
       obj19.accessibilityHint = intl3.formatToPlainString(tmp7(1112).t.zFfSFQ, obj21);
       obj19.onPress = function onPress() {
         trackUserProfileAction({ action: "SEND_MESSAGE" });
@@ -226,7 +226,7 @@ export default noop.memo(function BotUserProfileContent(user) {
         ModalActionCreatorsDefault.popAll();
         ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id, navigationReplace });
       };
-      obj17.secondaryButton = closure_9(tmp7(5610).Button, obj19);
+      obj17.secondaryButton = closure_9(tmp7(5641).Button, obj19);
       items7[2] = closure_9(tmpResult9, obj17);
       obj14.children = items7;
       items6[1] = closure_10(closure_4, obj14);
@@ -237,13 +237,13 @@ export default noop.memo(function BotUserProfileContent(user) {
         items8[1] = obj22;
         const obj23 = { style: tmp3.cards, children: null };
         const obj24 = { user, currentUser: stateFromStores, guildId: guild_id, style: items8 };
-        const items9 = [closure_9(tmp(14837), obj24), , ,];
+        const items9 = [closure_9(tmp(14890), obj24), , ,];
         const obj25 = { userId: user.id, displayProfile, channel, style: items8 };
-        items9[1] = closure_9(tmp(13814), obj25);
+        items9[1] = closure_9(tmp(13866), obj25);
         let tmp41Result = null != guild_id;
         if (tmp41Result) {
           const obj26 = { userId: user.id, guildId: guild_id, style: items8 };
-          const items10 = [closure_9(tmp(7504), obj26)];
+          const items10 = [closure_9(tmp(7535), obj26)];
           const obj27 = {
             user,
             currentUser: stateFromStores,
@@ -260,14 +260,14 @@ export default noop.memo(function BotUserProfileContent(user) {
           obj27.channelId = id1;
           obj27.showUserProfile = showUserProfileActionSheet;
           obj27.style = items8;
-          items10[1] = closure_9(tmp(14903), obj27);
+          items10[1] = closure_9(tmp(14953), obj27);
           obj28.children = items10;
           tmp41Result = closure_10(closure_11, obj28);
-          const tmpResult12 = tmp(14903);
+          const tmpResult12 = tmp(14953);
         }
         items9[2] = tmp41Result;
         const obj29 = { userId: user.id, onBack: showUserProfileActionSheet };
-        items9[3] = closure_9(tmp(14906), obj29);
+        items9[3] = closure_9(tmp(14956), obj29);
         obj23.children = items9;
         tmp41Result2 = closure_10(tmp28, obj23);
       }
@@ -276,7 +276,7 @@ export default noop.memo(function BotUserProfileContent(user) {
       obj11.children = items6;
       items4[1] = closure_10(closure_4, obj11);
       obj7.children = items4;
-      items2[2] = closure_10(tmp(1653).View, obj7);
+      items2[2] = closure_10(tmp(1654).View, obj7);
       obj30.children = items2;
       return closure_10(closure_11, obj30);
     }

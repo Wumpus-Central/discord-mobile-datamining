@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/notifications/native/SettingsEmailNotificationsScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3206 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef3207 from "../../../notifications/NotificationSettings.messages.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import EmailSettingsActionCreators from "../EmailSettingsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmailSettingsStore from "../EmailSettingsStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(9513).MobileUserSettings;
+const MobileUserSettings = fn(9555).MobileUserSettings;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { notice: { padding: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj4 = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };
@@ -74,7 +74,7 @@ export default noop.memo(function SettingsEmailNotificationsScreen() {
     let stringResult;
     if (isDeclarativeSettingsUIAvailable) {
       const intl = util.intl;
-      stringResult = intl.string(_modDef3206.dpeWco);
+      stringResult = intl.string(_modDef3207.dpeWco);
     }
     const obj2 = { label: stringResult, settings: tmp2.categories, subLabel: null };
     if (!enabled) {
@@ -90,7 +90,7 @@ export default noop.memo(function SettingsEmailNotificationsScreen() {
     } else {
       const intl2 = util.intl;
       if (isDeclarativeSettingsUIAvailable) {
-        tmp4 = _modDef3206;
+        tmp4 = _modDef3207;
         let WViBDk = tmp4.aPtRHt;
       } else {
         WViBDk = util.t.WViBDk;

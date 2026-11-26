@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
@@ -187,11 +187,11 @@ class VoicePanelFloatingCTAContainer {
     return tmp27(tmp2(tmp3[19]).View, obj1);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(11734).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11737).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(11782).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11785).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1082).ThemeTypes;
 let jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: null };
 const rect = {
   zIndex: 1,

@@ -271,7 +271,7 @@ export function showUnauthenticatedReportModalForTida(emailToken, onClose) {
 export function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "Array", channel_id: "analyticsLocations" });
+  const merged = Object.assign({ message_id: "Array", channel_id: "channel_id" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, {
     report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE,
     location: "Array",

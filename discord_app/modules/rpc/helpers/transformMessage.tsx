@@ -27,18 +27,19 @@ function recurseReplaceContentTree(type) {
 function transformComponent(type) {
   type = type.type;
   if (Server.ComponentType.ACTION_ROW === type) {
-    const obj16 = { type: null, components: null };
-    ({ type: obj22.type, components: components3 } = type);
+    const obj41 = { type: null, id: null, components: null };
+    ({ type: obj22.type, id: obj22.id, components: components3 } = type);
     let found;
     if (components3 != null) {
       let mapped = components3.map(transformComponent);
       found = mapped.filter(GlobalUtils.isNotNullish);
     }
-    obj16.components = found;
-    return obj16;
+    obj41.components = found;
+    return obj41;
   } else if (Server.ComponentType.BUTTON === type) {
-    const obj18 = {
+    const obj42 = {
       type: null,
+      id: null,
       custom_id: null,
       disabled: null,
       style: null,
@@ -49,6 +50,7 @@ function transformComponent(type) {
     };
     ({
       type: obj20.type,
+      id: obj20.id,
       customId: obj20.custom_id,
       disabled: obj20.disabled,
       style: obj20.style,
@@ -60,14 +62,15 @@ function transformComponent(type) {
     if (null != emoji2) {
       ({ id: obj21.id, name: obj21.name, animated: obj21.animated } = emoji2);
       tmp26 = { id: null, name: null, animated: null };
-      const obj41 = { id: null, name: null, animated: null };
+      const obj43 = { id: null, name: null, animated: null };
     }
-    obj18.emoji = tmp26;
-    obj18.sku_id = type.skuId;
-    return obj18;
+    obj42.emoji = tmp26;
+    obj42.sku_id = type.skuId;
+    return obj42;
   } else if (Server.ComponentType.STRING_SELECT === type) {
-    const obj42 = { type: type.type };
-    const obj43 = {
+    const obj44 = { type: null, id: null };
+    ({ type: obj18.type, id: obj18.id } = type);
+    const obj45 = {
       custom_id: null,
       disabled: null,
       required: null,
@@ -83,9 +86,9 @@ function transformComponent(type) {
       minValues: obj19.min_values,
       maxValues: obj19.max_values,
     } = type);
-    const merged = Object.assign(obj43);
+    const merged = Object.assign(obj45);
     const options = type.options;
-    obj42.options = options.map((label) => {
+    obj44.options = options.map((label) => {
       const obj = {
         label: label.label,
         value: label.value,
@@ -103,14 +106,15 @@ function transformComponent(type) {
       obj.emoji = tmp;
       return obj;
     });
-    return obj42;
+    return obj44;
   } else {
     if (Server.ComponentType.USER_SELECT !== type) {
       if (Server.ComponentType.ROLE_SELECT !== type) {
         if (Server.ComponentType.MENTIONABLE_SELECT !== type) {
           if (Server.ComponentType.CHANNEL_SELECT === type) {
-            const obj44 = { type: type.type };
-            const obj45 = {
+            const obj46 = { type: null, id: null };
+            ({ type: obj14.type, id: obj14.id } = type);
+            const obj47 = {
               custom_id: null,
               disabled: null,
               required: null,
@@ -126,31 +130,35 @@ function transformComponent(type) {
               minValues: obj15.min_values,
               maxValues: obj15.max_values,
             } = type);
-            const merged1 = Object.assign(obj45);
+            const merged1 = Object.assign(obj47);
             ({ channelTypes: obj14.channel_types, defaultValues: obj14.default_values } = type);
-            return obj44;
+            return obj46;
           } else if (Server.ComponentType.SECTION === type) {
-            const tmp12 = transformComponent(type.accessory);
-            let tmp14 = null;
-            if (null != tmp12) {
-              const obj46 = { type: null, components: null, accessory: null };
-              ({ type: obj13.type, components: components2 } = type);
-              let found1;
-              if (components2 != null) {
-                const mapped1 = components2.map(transformComponent);
-                found1 = mapped1.filter(GlobalUtils.isNotNullish);
+            if (null == type.accessory) {
+              return null;
+            } else {
+              const tmp13 = transformComponent(type.accessory);
+              let tmp14 = null;
+              if (null != tmp13) {
+                const obj48 = { type: null, id: null, components: null, accessory: null };
+                ({ type: obj13.type, id: obj13.id, components: components2 } = type);
+                let found1;
+                if (components2 != null) {
+                  const mapped1 = components2.map(transformComponent);
+                  found1 = mapped1.filter(GlobalUtils.isNotNullish);
+                }
+                obj48.components = found1;
+                obj48.accessory = tmp13;
+                tmp14 = obj48;
               }
-              obj46.components = found1;
-              obj46.accessory = tmp12;
-              tmp14 = obj46;
+              return tmp14;
             }
-            return tmp14;
           } else if (Server.ComponentType.TEXT_DISPLAY === type) {
-            ({ type: obj12.type, content: obj12.content } = type);
-            return { type: null, content: null };
+            ({ type: obj12.type, id: obj12.id, content: obj12.content } = type);
+            return { type: null, id: null, content: null };
           } else if (Server.ComponentType.THUMBNAIL === type) {
-            const obj48 = { type: null, media: null, description: null, spoiler: null };
-            ({ type: obj10.type, media } = type);
+            const obj50 = { type: null, id: null, media: null, description: null, spoiler: null };
+            ({ type: obj10.type, id: obj10.id, media } = type);
             const size = {
               url: null,
               proxy_url: null,
@@ -175,17 +183,17 @@ function transformComponent(type) {
               originalContentType: obj11.original_content_type,
               flags: obj11.flags,
             } = media);
-            obj48.media = size;
+            obj50.media = size;
             ({ description: obj10.description, spoiler: spoiler2 } = type);
             if (spoiler2 == null) {
               spoiler2 = false;
             }
-            obj48.spoiler = spoiler2;
-            return obj48;
+            obj50.spoiler = spoiler2;
+            return obj50;
           } else if (Server.ComponentType.MEDIA_GALLERY === type) {
-            const obj49 = { type: null, items: null };
-            ({ type: obj9.type, items } = type);
-            obj49.items = items.map((description) => {
+            const obj51 = { type: null, id: null, items: null };
+            ({ type: obj9.type, id: obj9.id, items } = type);
+            obj51.items = items.map((description) => {
               const obj = { media: null, description: description.description, spoiler: null };
               const media = description.media;
               obj.media = {
@@ -207,10 +215,10 @@ function transformComponent(type) {
               obj.spoiler = flag;
               return obj;
             });
-            return obj49;
+            return obj51;
           } else if (Server.ComponentType.FILE === type) {
-            const obj50 = { type: null, file: null, name: null, size: null, spoiler: null };
-            ({ type: obj7.type, file } = type);
+            const obj52 = { type: null, id: null, file: null, name: null, size: null, spoiler: null };
+            ({ type: obj7.type, id: obj7.id, file } = type);
             const size1 = {
               url: null,
               proxy_url: null,
@@ -235,33 +243,39 @@ function transformComponent(type) {
               originalContentType: obj8.original_content_type,
               flags: obj8.flags,
             } = file);
-            obj50.file = size1;
+            obj52.file = size1;
             ({ name: obj7.name, size: obj7.size, spoiler } = type);
             if (spoiler == null) {
               spoiler = false;
             }
-            obj50.spoiler = spoiler;
-            return obj50;
+            obj52.spoiler = spoiler;
+            return obj52;
           } else if (Server.ComponentType.SEPARATOR === type) {
-            ({ type: obj6.type, divider: obj6.divider, spacing: obj6.spacing } = type);
-            return { type: null, divider: null, spacing: null };
+            ({ type: obj6.type, id: obj6.id, divider: obj6.divider, spacing: obj6.spacing } = type);
+            return { type: null, id: null, divider: null, spacing: null };
           } else if (Server.ComponentType.CONTENT_INVENTORY_ENTRY === type) {
-            ({ type: obj5.type, contentInventoryEntry: obj5.content_inventory_entry } = type);
-            return { type: null, content_inventory_entry: null };
+            ({ type: obj5.type, id: obj5.id, contentInventoryEntry: obj5.content_inventory_entry } = type);
+            return { type: null, id: null, content_inventory_entry: null };
           } else if (Server.ComponentType.CONTAINER === type) {
-            const obj53 = { type: null, accent_color: null, spoiler: null, components: null };
-            ({ type: obj4.type, accentColor: obj4.accent_color, spoiler: obj4.spoiler, components } = type);
+            const obj55 = { type: null, id: null, accent_color: null, spoiler: null, components: null };
+            ({
+              type: obj4.type,
+              id: obj4.id,
+              accentColor: obj4.accent_color,
+              spoiler: obj4.spoiler,
+              components,
+            } = type);
             let found2;
             if (components != null) {
               const mapped2 = components.map(transformComponent);
               found2 = mapped2.filter(GlobalUtils.isNotNullish);
             }
-            obj53.components = found2;
-            return obj53;
+            obj55.components = found2;
+            return obj55;
           } else if (Server.ComponentType.OVERFLOW_MENU === type) {
-            const obj54 = { type: null, groups: null };
-            ({ type: obj3.type, groups } = type);
-            obj54.groups = groups.map((label) => {
+            const obj56 = { type: null, id: null, groups: null };
+            ({ type: obj3.type, id: obj3.id, groups } = type);
+            obj56.groups = groups.map((label) => {
               const obj = { label: label.label, components: null };
               const components = label.components;
               let found;
@@ -272,10 +286,11 @@ function transformComponent(type) {
               obj.components = found;
               return obj;
             });
-            return obj54;
+            return obj56;
           } else if (Server.ComponentType.MENU_ACTION_ITEM === type) {
             let obj = {
               type: null,
+              id: null,
               custom_id: null,
               disabled: null,
               style: null,
@@ -286,6 +301,7 @@ function transformComponent(type) {
             };
             ({
               type: obj.type,
+              id: obj.id,
               customId: obj.custom_id,
               disabled: obj.disabled,
               style: obj.style,
@@ -298,7 +314,7 @@ function transformComponent(type) {
             if (null != emoji) {
               ({ id: obj2.id, name: obj2.name, animated: obj2.animated } = emoji);
               tmp5 = { id: null, name: null, animated: null };
-              const obj55 = { id: null, name: null, animated: null };
+              const obj57 = { id: null, name: null, animated: null };
             }
             obj.emoji = tmp5;
             return obj;
@@ -321,8 +337,9 @@ function transformComponent(type) {
         }
       }
     }
-    const obj56 = { type: type.type };
-    const obj57 = {
+    const obj58 = { type: null, id: null };
+    ({ type: obj16.type, id: obj16.id } = type);
+    const obj59 = {
       custom_id: null,
       disabled: null,
       required: null,
@@ -338,9 +355,9 @@ function transformComponent(type) {
       minValues: obj17.min_values,
       maxValues: obj17.max_values,
     } = type);
-    const merged2 = Object.assign(obj57);
-    obj56.default_values = type.defaultValues;
-    return obj56;
+    const merged2 = Object.assign(obj59);
+    obj58.default_values = type.defaultValues;
+    return obj58;
   }
 }
 function transformEmbed(type) {

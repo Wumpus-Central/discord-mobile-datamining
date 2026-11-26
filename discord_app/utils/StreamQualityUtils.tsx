@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const StreamSettingsConstants = fn(5912);
+const StreamSettingsConstants = fn(5943);
 ({
   ApplicationStreamFPS: closure_10,
   ApplicationStreamResolutions: closure_11,
@@ -21,8 +21,8 @@ const StreamSettingsConstants = fn(5912);
   getApplicationFramerate: map1,
   getApplicationResolution: closure_14,
 } = StreamSettingsConstants);
-let closure_15 = fn(1388).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5824).ResolutionTypes;
+let closure_15 = fn(1389).StreamQualitiesToPremiumType;
+const ResolutionTypes = fn(5855).ResolutionTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("utils/StreamQualityUtils.tsx");
 

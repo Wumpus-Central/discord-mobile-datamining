@@ -108,8 +108,8 @@ function handleVisibilityChange() {
   return tmp;
 }
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ActivityPanelModes = fn(5638).ActivityPanelModes;
-const FramesConstants = fn(6906);
+const ActivityPanelModes = fn(5669).ActivityPanelModes;
+const FramesConstants = fn(6937);
 ({ asLaunched: closure_10, makeFrameId: closure_11, MAIN_SURFACE: closure_12 } = FramesConstants);
 let c13 = 30000;
 let c3 = null;

@@ -1,5 +1,5 @@
 // discord_app/modules/emojis/native/utils/EmojiColorUtils.tsx
-import privDefault from "../../../../../_runtime/01454_priv.js";
+import privDefault from "../../../../../_runtime/01455_priv.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 function _getEmojiCacheKey(name) {
@@ -16,7 +16,7 @@ let closure_6 = async function _getFromCacheOrFallback2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_7 = async function _getEmojiDominantColors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

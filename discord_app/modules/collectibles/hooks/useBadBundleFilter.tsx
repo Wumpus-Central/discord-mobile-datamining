@@ -21,18 +21,18 @@ export function useBadBundleFilter() {
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          const obj = canUseShopDiscountsResult(11185);
+          const obj = canUseShopDiscountsResult(11231);
           if (obj2.isBundleProduct(product)) {
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                 if (tmpResult5.isOrbsExclusiveProduct(product)) {
                   const obj3 = { product, hasShopDiscount };
-                  return null != canUseShopDiscountsResult(6291).getProductOrbPrice(obj3);
+                  return null != canUseShopDiscountsResult(6322).getProductOrbPrice(obj3);
                 } else {
                   const defaultPriceSetAssignmentPurchaseType =
-                    canUseShopDiscountsResult(6292).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult7 = canUseShopDiscountsResult(6292);
-                  let result = canUseShopDiscountsResult(6292).extractPriceByPurchaseTypes(
+                    canUseShopDiscountsResult(6323).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                  const tmpResult7 = canUseShopDiscountsResult(6323);
+                  let result = canUseShopDiscountsResult(6323).extractPriceByPurchaseTypes(
                     product,
                     defaultPriceSetAssignmentPurchaseType,
                   );
@@ -61,10 +61,10 @@ export function useBadBundleFilter() {
                   }
                   return true;
                 }
-                tmpResult5 = canUseShopDiscountsResult(6291);
+                tmpResult5 = canUseShopDiscountsResult(6322);
               }
             }
-            tmpResult = canUseShopDiscountsResult(6292);
+            tmpResult = canUseShopDiscountsResult(6323);
           }
           return true;
         });

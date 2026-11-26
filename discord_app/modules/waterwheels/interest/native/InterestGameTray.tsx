@@ -1,219 +1,255 @@
 // discord_app/modules/waterwheels/interest/native/InterestGameTray.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
-import GameCoverDefault from "../../native/GameCover.tsx";
+import _modDef2655 from "../../Waterwheels.messages.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-
-const require = globalThis.__r;
 
 const require = fn;
 function TrayCover(game) {
   game = game.game;
   _require = game;
-  const index = game.index;
-  importDefault = index;
-  const step = game.step;
-  dependencyMap = step;
-  const reduceMotion = game.reduceMotion;
-  const onExit = game.onExit;
-  let sharedValue;
+  ({ index, count, reduceMotion } = game);
+  importDefault = reduceMotion;
+  ({ firstRun, onExit } = game);
+  dependencyMap = onExit;
+  _slicedToArray = undefined;
+  let sum1;
+  let sum2;
   let first;
+  let sharedValue;
   let sharedValue1;
   let sharedValue2;
-  closure_9 = undefined;
-  const tmp = closure_12();
-  let num = 0;
-  let result = Math.max(0, index) * step;
-  if (!reduceMotion) {
-    num = 0;
-    if (0 !== index) {
-      num = PX_12;
+  let sharedValue3;
+  closure_11 = undefined;
+  const tmp = closure_11();
+  let num = 56;
+  if (count > 3) {
+    num = 156;
+    if (count <= 5) {
+      num = 93;
     }
   }
-  sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(result + num);
-  first = reduceMotion(onExit.useState(0 === index), 1)[0];
-  let obj = require("../../../../../_runtime/metro/01653__.js");
-  let obj2 = onExit;
-  if (reduceMotion) {
-    let num2 = 1;
+  const bound = Math.min(num, Math.max(0, game.width - 66 - 2 * sharedValue2));
+  if (count <= 1) {
+    _slicedToArray = 0;
+    const _Math = Math;
+    const sum = tmp2 + Math.min(nativeDefault.space.PX_16, bound);
+    PX_12 = nativeDefault.space.PX_12;
+    sum2 = PX_12;
+    sum1 = sum;
+    let num6 = 0;
+    let tmp9 = importDefault;
   } else {
-    num2 = 0;
+    const _Math2 = Math;
+    let result = Math.max(0, index) / (count - 1);
+    let num5 = 6;
+    if (count > 3) {
+      num5 = 7 + ((count - 5) / 5) * 3;
+    }
+    const diff = 2 * result - 1;
+    num6 = diff * num5;
+    _slicedToArray = num6;
+    sum1 = tmp2 + bound * result;
+    sum2 = nativeDefault.space.PX_12 + (1 - diff * diff) * -nativeDefault.space.PX_4;
+    tmp9 = importDefault;
   }
-  sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(num2);
-  const tmp2Result = require("../../../../../_runtime/metro/01653__.js");
-  sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(1);
-  closure_9 = tmp9;
-  items = [index < 0, first, game.id, index, onExit, sharedValue1, reduceMotion, sharedValue2, step, sharedValue];
-  const effect = obj2.useEffect(() => {
-    if (!closure_9) {
-      const result = c1 * _undefined3;
-      let withSpringResult = result;
-      if (!reduceMotion) {
-        withSpringResult = _undefined(_undefined3[8]).withSpring(result, _undefined(_undefined3[9]).springStandard);
+  if (firstRun) {
+    firstRun = 1 === count;
+  }
+  first = _slicedToArray(sum1.useState(firstRun), 1)[0];
+  sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(sum1);
+  let obj = sum1;
+  let obj2 = require("../../../../../_runtime/metro/01654__.js");
+  let num7 = 0;
+  if (!reduceMotion) {
+    num7 = 0;
+    if (!first) {
+      num7 = sharedValue3;
+    }
+  }
+  sharedValue1 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(sum2 + num7);
+  let obj3 = require("../../../../../_runtime/metro/01654__.js");
+  sharedValue2 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(num6);
+  const tmp14Result = require("../../../../../_runtime/metro/01654__.js");
+  if (reduceMotion) {
+    let num8 = 1;
+  } else {
+    num8 = 0;
+  }
+  sharedValue3 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(num8);
+  closure_11 = tmp19;
+  items = [
+    num6,
+    first,
+    index < 0,
+    game.id,
+    onExit,
+    sharedValue3,
+    reduceMotion,
+    sharedValue2,
+    sum1,
+    sum2,
+    sharedValue,
+    sharedValue1,
+  ];
+  const effect = obj.useEffect(() => {
+    if (closure_11) {
+      if (!c1) {
+        if (first) {
+          tmp26(withTimingResult);
+          if (closure_11) {
+            let num2 = 120;
+            if (tmp27) {
+              num2 = 0;
+            }
+            const id = setTimeout(() => _undefined3(id.id), num2);
+            return () => clearTimeout(closure_0);
+          }
+        }
+        let num = 1;
+        if (closure_11) {
+          num = 0;
+        }
+        withTimingResult = _undefined(_undefined3[10]).withTiming(num, { duration: 120 });
+        const obj4 = _undefined(_undefined3[10]);
+      }
+      const _Number = Number;
+      withTimingResult = Number(!closure_11);
+    } else {
+      if (c1) {
+        let withSpringResult = sum1;
+      } else {
+        withSpringResult = _undefined(_undefined3[8]).withSpring(sum1, _undefined(_undefined3[9]).springStandard);
         const obj = _undefined(_undefined3[8]);
       }
-      const result1 = sharedValue.set(withSpringResult);
-    }
-    if (reduceMotion) {
-      let num3 = 1;
-      if (closure_9) {
-        num3 = 0;
+      const result = sharedValue.set(withSpringResult);
+      if (c1) {
+        let withSpringResult1 = sum2;
+      } else {
+        withSpringResult1 = _undefined(_undefined3[8]).withSpring(sum2, _undefined(_undefined3[9]).springStandard);
+        const obj2 = _undefined(_undefined3[8]);
       }
-      let num = num3;
-    } else if (closure_9) {
-      let num2 = 1;
-      if (closure_9) {
-        num2 = 0;
+      const result1 = sharedValue1.set(withSpringResult1);
+      if (c1) {
+        let withTimingResult1 = c3;
+      } else {
+        withTimingResult1 = _undefined(_undefined3[10]).withTiming(c3, { duration: 120 });
+        const obj3 = _undefined(_undefined3[10]);
       }
-      num = _undefined(_undefined3[10]).withTiming(num2, { duration: 120 });
-      const obj2 = _undefined(_undefined3[10]);
-    } else {
-      num = 1;
-    }
-    const result2 = sharedValue1.set(num);
-    let num4 = 1;
-    let num5 = 1;
-    if (!reduceMotion) {
-      if (closure_9) {
-        num4 = 0.96;
-      }
-      num5 = _undefined(_undefined3[10]).withTiming(num4, { duration: 120 });
-      const obj3 = _undefined(_undefined3[10]);
-    }
-    const result3 = sharedValue2.set(num5);
-    if (closure_9) {
-      let num6 = 120;
-      if (reduceMotion) {
-        num6 = 0;
-      }
-      const id = setTimeout(() => onExit(id.id), num6);
-      return () => clearTimeout(closure_0);
+      const result2 = sharedValue2.set(withTimingResult1);
     }
   }, items);
-  const tmp2Result3 = require("../../../../../_runtime/metro/01653__.js");
-  const items1 = [closure_13, sharedValue1, sharedValue, sharedValue2];
+  const tmp14Result3 = require("../../../../../_runtime/metro/01654__.js");
+  const items1 = [closure_12, sharedValue3, sharedValue, sharedValue1, sharedValue2];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
-  [tmp11, tmp12, tmp13, tmp14] = items1;
+  _slicedToArray = undefined;
+  [tmp21, tmp22, tmp23, tmp24, tmp25] = items1;
   class InterestGameTrayTsx1 {
     constructor() {
       obj = { opacity: closure_0.get(), transform: null };
       obj1 = { translateX: closure_1.get() };
-      items = [,];
+      items = [, ,];
       items[0] = obj1;
-      obj4 = { scale: closure_2.get() };
-      items[1] = obj4;
+      obj5 = { translateY: closure_2.get() };
+      items[1] = obj5;
+      obj6 = { rotateZ: "" + closure_3.get() + "deg" };
+      items[2] = obj6;
       obj.transform = items;
       return obj;
     }
   }
-  const items2 = [tmp12, tmp13, tmp14];
+  const items2 = [tmp22, tmp23, tmp24, tmp25];
   InterestGameTrayTsx1.__closure = items2;
-  InterestGameTrayTsx1.__workletHash = 7147928113380;
-  InterestGameTrayTsx1.__initData = tmp11;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(InterestGameTrayTsx1);
-  let obj3 = {
+  InterestGameTrayTsx1.__workletHash = 3577041238824;
+  InterestGameTrayTsx1.__initData = tmp21;
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(InterestGameTrayTsx1);
+  let obj4 = {
     style: null,
     pointerEvents: null,
-    accessibilityElementsHidden: null,
-    importantForAccessibility: null,
+    accessible: false,
+    accessibilityElementsHidden: true,
+    importantForAccessibility: "no-hide-descendants",
     children: null,
   };
-  const items3 = [tmp.item, animatedStyle];
-  obj3.style = items3;
+  const items3 = [tmp.item, { width: 66, height: 86, zIndex: count - index }, animatedStyle];
+  obj4.style = items3;
   let str = "auto";
-  let str2 = "auto";
   if (index < 0) {
-    str2 = "none";
+    str = "none";
   }
-  obj3.pointerEvents = str2;
-  obj3.accessibilityElementsHidden = index < 0;
-  if (index < 0) {
-    str = "no-hide-descendants";
-  }
-  obj3.importantForAccessibility = str;
-  const obj4 = { accessible: true, accessibilityLabel: game.name, style: tmp.target, children: null };
-  const obj5 = {
+  obj4.pointerEvents = str;
+  const tmp14Result4 = require("../../../../../_runtime/metro/01654__.js");
+  obj4.children = sharedValue(sum2, {
     style: tmp.art,
-    children: sharedValue2(GameCoverDefault, { game, width: game.coverWidth, imageWidth: sharedValue1, compact: true }),
-  };
-  const items4 = [
-    sharedValue2(sharedValue, obj5),
-    sharedValue2(sharedValue, { pointerEvents: "none", style: tmp.stroke }),
-  ];
-  obj4.children = items4;
-  obj3.children = closure_9(sharedValue, obj4);
-  return sharedValue2(_modDef1653.View, obj3);
+    children: sharedValue(tmp9(18029), { game, width: 66, imageWidth: 66, compact: true }),
+  });
+  return sharedValue(tmp9(1654).View, obj4);
 }
 const View = fn(17).View;
-const InterestGamePickerConstants = fn(17973);
-const SELECTED_BORDER_WIDTH = InterestGamePickerConstants.SELECTED_BORDER_WIDTH;
-const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
-({ FOOTER_THUMBNAIL_GAP, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
+const MAX_SELECTIONS = fn(18030).MAX_SELECTIONS;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let result = THUMBNAIL_WIDTH / THUMBNAIL_ASPECT_RATIO;
-let closure_10 = THUMBNAIL_WIDTH + FOOTER_THUMBNAIL_GAP;
-const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5012);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const PX_8 = nativeDefault.space.PX_8;
+let PX_12 = nativeDefault.space.PX_12;
+const createStyles = fn(5043);
 let obj2 = {
-  tray: { height: result, flex: 1 },
-  viewport: { position: "absolute", inset: -SELECTED_BORDER_WIDTH, right: 0, overflow: "hidden" },
-  content: { position: "absolute", inset: SELECTED_BORDER_WIDTH, right: 0 },
-  item: { position: "absolute", width: THUMBNAIL_WIDTH, height: result },
-  target: { flex: 1 },
-  art: {
-    flex: 1,
-    overflow: "hidden",
-    borderRadius: nativeDefault.radii.xs,
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  },
-  stroke: null,
+  tray: { height: 86 + nativeDefault.space.PX_24, flex: 1, minWidth: 66 + 2 * PX_8 },
+  viewport: { flex: 1, overflow: "hidden" },
+  item: null,
+  art: null,
+  helper: null,
 };
-let obj3 = {
+let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
+obj2.item = { position: "absolute" };
+let obj3 = { height: 86 + nativeDefault.space.PX_24, flex: 1, minWidth: 66 + 2 * PX_8 };
+let obj4 = { position: "absolute" };
+obj2.art = {
   flex: 1,
   overflow: "hidden",
-  borderRadius: nativeDefault.radii.xs,
+  borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-obj2.stroke = {
-  position: "absolute",
-  inset: -SELECTED_BORDER_WIDTH,
-  borderRadius: nativeDefault.radii.xs + SELECTED_BORDER_WIDTH,
-  borderWidth: SELECTED_BORDER_WIDTH,
-  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+let obj5 = {
+  flex: 1,
+  overflow: "hidden",
+  borderRadius: nativeDefault.radii.md,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-let closure_12 = createStyles.createStyles(obj2);
-let closure_13 = {
-  code: "(function InterestGameTrayTsx1(){let[opacity,x,scale]=this.__closure;return{opacity:opacity.get(),transform:[{translateX:x.get()},{scale:scale.get()}]};})",
+const merged1 = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
+obj2.helper = {
+  position: "absolute",
+  alignSelf: "center",
+  bottom: 0,
+  maxWidth: "100%",
+  paddingHorizontal: nativeDefault.space.PX_8,
+  paddingVertical: nativeDefault.space.PX_4,
+  borderRadius: nativeDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+};
+let closure_11 = createStyles.createStyles(obj2);
+let closure_12 = {
+  code: '(function InterestGameTrayTsx1(){let[opacity,x,y,rotation]=this.__closure;return{opacity:opacity.get(),transform:[{translateX:x.get()},{translateY:y.get()},{rotateZ:rotation.get()+"deg"}]};})',
 };
 const size = fn(2);
-let result1 = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGameTray.tsx");
+let result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGameTray.tsx");
 
 export default function InterestGameTray(games) {
   games = games.games;
-  ({ coverWidth: importDefault, reduceMotion } = games);
-  _slicedToArray = undefined;
+  ({ reduceMotion: importDefault, firstRun: dependencyMap } = games);
+  let width;
   noop = undefined;
-  c5 = undefined;
-  let onExit;
-  const tmp2 = _slicedToArray(noop.useState(0), 2);
-  _slicedToArray = tmp2[1];
-  let num = 0;
-  const diff = tmp2[0] - onExit;
-  if (!reduceMotion) {
-    num = PX_12;
-  }
-  const diff1 = Math.min(require("native").space.PX_128, Math.max(THUMBNAIL_WIDTH, diff - num)) - THUMBNAIL_WIDTH;
-  noop = Math.min(closure_10, diff1 / Math.max(1, games.length - 1));
-  const tmp6 = closure_12();
-  [tmp8, tmp9] = noop.useState({ games, displayed: games });
-  c5 = tmp9;
-  if (tmp8.games !== games) {
+  max = undefined;
+  let tmp = closure_11();
+  const tmp2 = width(noop.useState(0), 2);
+  width = tmp2[0];
+  noop = tmp2[1];
+  [tmp5, tmp6] = width(noop.useState({ games, displayed: games }), 2);
+  c5 = tmp6;
+  if (tmp5.games !== games) {
     const obj2 = { games, displayed: null };
-    let displayed = tmp8.displayed;
+    let displayed = tmp5.displayed;
     items = [];
     HermesBuiltin.arraySpread(
       games,
@@ -223,9 +259,9 @@ export default function InterestGameTray(games) {
       ),
     );
     obj2.displayed = items;
-    tmp9(obj2);
+    tmp6(obj2);
   }
-  onExit = obj.useCallback((arg0) => {
+  max = noop.useCallback((arg0) => {
     closure_0 = arg0;
     return _undefined((games) => {
       games = games.games;
@@ -241,23 +277,61 @@ export default function InterestGameTray(games) {
     });
   }, []);
   const obj3 = {
-    style: tmp6.tray,
+    style: tmp.tray,
     onLayout(nativeEvent) {
-      return closure_3(nativeEvent.nativeEvent.layout.width);
+      return closure_4(nativeEvent.nativeEvent.layout.width);
     },
     children: null,
   };
-  const obj4 = { style: tmp6.viewport, children: null };
-  const obj5 = { style: tmp6.content, children: null };
-  const displayed1 = tmp8.displayed;
-  obj5.children = displayed1.map((game) =>
-    React5(
-      TrayCover,
-      { game, index: games.findIndex((id) => id.id === game.id), step, coverWidth, reduceMotion, onExit },
-      game.id,
-    ),
-  );
-  obj4.children = closure_8(c5, obj5);
-  obj3.children = closure_8(c5, obj4);
+  const obj4 = { style: tmp.viewport, accessible: games.length > 0, accessibilityLabel: null, children: null };
+  let formatToPlainStringResult;
+  if (games.length > 0) {
+    const intl = games(1112).intl;
+    const obj5 = { games: null };
+    const _Intl = Intl;
+    const listFormat = new Intl.ListFormat(games(1112).intl.currentLocale, { type: "conjunction" });
+    const items1 = [];
+    HermesBuiltin.arraySpread(games, 0);
+    const reversed = items1.reverse();
+    obj5.games = listFormat.format(reversed.map((name) => name.name));
+    formatToPlainStringResult = intl.formatToPlainString(_modDef2655["V/fzLc"], obj5);
+  }
+  obj4.accessibilityLabel = formatToPlainStringResult;
+  let mapped = width > 0;
+  if (mapped) {
+    const displayed1 = tmp5.displayed;
+    mapped = displayed1.map((game) => {
+      const findIndexResult = games.findIndex((id) => id.id === game.id);
+      const obj = { game, index: null, count: null, width: null, reduceMotion: null, firstRun: null, onExit: null };
+      let num = -1;
+      if (findIndexResult >= 0) {
+        num = games.length - 1 - findIndexResult;
+      }
+      obj.index = num;
+      obj.count = games.length;
+      obj.width = width;
+      obj.reduceMotion = reduceMotion;
+      obj.firstRun = firstRun;
+      obj.onExit = onExit;
+      return metroImportDefault(TrayCover, obj, game.id);
+    });
+  }
+  obj4.children = mapped;
+  const items2 = [closure_7(c5, obj4)];
+  let tmp14Result = games.length >= 7;
+  if (tmp14Result) {
+    const obj6 = { pointerEvents: "none", style: tmp.helper, children: null };
+    const obj7 = { variant: "body-xs/medium", color: "text-default", accessibilityLabel: null, children: null };
+    const intl2 = games(1112).intl;
+    const obj8 = { count: games.length, max };
+    obj7.accessibilityLabel = intl2.formatToPlainString(_modDef2655.v9v0uY, obj8);
+    const intl3 = games(1112).intl;
+    const obj9 = { count: games.length, max };
+    obj7.children = intl3.format(_modDef2655["8g6QdR"], obj9);
+    obj6.children = closure_7(games(5634).Text, obj7);
+    tmp14Result = closure_7(tmp13, obj6);
+  }
+  items2[1] = tmp14Result;
+  obj3.children = items2;
   return closure_8(c5, obj3);
 }

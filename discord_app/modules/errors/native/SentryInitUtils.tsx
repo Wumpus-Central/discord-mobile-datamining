@@ -33,7 +33,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -563,8 +563,8 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1241).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1241);
+    tmp25(1242).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1242);
   }
   const AppCrashedReasons = AppCrashedReasons2.AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
@@ -575,8 +575,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(5780).increment(obj6, true);
-  const tmp26Result = tmp26(5780);
+  tmp26(5811).increment(obj6, true);
+  const tmp26Result = tmp26(5811);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1071);
@@ -601,7 +601,7 @@ let closure_11 = [
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-const CommonSentryInitUtils = fn(1371);
+const CommonSentryInitUtils = fn(1372);
 let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
@@ -669,13 +669,13 @@ export function initSentry() {
               tunnel: `/error-reporting-proxy/${str2}`,
               autoInitializeNativeSdk: false,
               beforeSend,
-              dist: "35720300000000",
+              dist: "35720400000000",
               dsn: SentryStaffDsn,
               environment: ReleaseChannel,
               tracesSampleRate: 0,
               sampleRate: 1,
               ignoreErrors,
-              release: "discord_android@357.3.0-2+357203",
+              release: "discord_android@357.4.0-2+357204",
               tracePropagationTargets: null,
               integrations: null,
               beforeBreadcrumb: null,
@@ -710,7 +710,7 @@ export function initSentry() {
             };
             tmp15Result13.init(obj3);
             const tmp15Result16 = _mod674;
-            _mod674.setTag("buildNumber", "35720300000000");
+            _mod674.setTag("buildNumber", "35720400000000");
             const tmp15Result17 = _mod674;
             _mod674.setTag("appVersion", constants.Version);
             const tmp15Result18 = _mod674;

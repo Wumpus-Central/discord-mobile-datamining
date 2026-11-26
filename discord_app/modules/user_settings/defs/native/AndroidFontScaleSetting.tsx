@@ -8,16 +8,16 @@ require = fn;
 function formatFontScale(arg0) {
   return 100 * FontScales[Math.round(Math, arg0)] + "%";
 }
-const useFontScaleStore = fn(16825).useFontScaleStore;
+const useFontScaleStore = fn(16876).useFontScaleStore;
 const FontScales = fn(1081).FontScales;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11914);
+const SettingBuilders = fn(11962);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.i19n5L);
   },
-  parent: fn(9513).MobileUserSettings.APPEARANCE,
+  parent: fn(9555).MobileUserSettings.APPEARANCE,
   useProps: function useFontScaleSliderProps() {
     const tmp = useFontScaleStore();
     closure_0 = tmp;
@@ -46,7 +46,7 @@ const slider = SettingBuilders.createSlider({
       items,
     );
   },
-  usePredicate: fn(1378).isAndroid,
+  usePredicate: fn(1379).isAndroid,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidFontScaleSetting.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsCategoryFriendsActivityScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3206 from "../../../NotificationSettings.messages.js";
+import _modDef3207 from "../../../NotificationSettings.messages.js";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
 import FamilyCenterAgeGroupPrefetch from "../../../../parent_tools/FamilyCenterAgeGroupPrefetch.tsx";
@@ -9,7 +9,7 @@ import SystemNotifPermissionLayoutDefault from "../SystemNotifPermissionLayout.t
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(9513).MobileUserSettings;
+const MobileUserSettings = fn(9555).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -37,14 +37,14 @@ export default noop.memo(function RedesignSettingsCategoryFriendsActivityScreen(
     const obj7 = {};
     const merged = Object.assign(friendActivityTitleSettingsSection);
     const intl2 = util.intl;
-    obj7.label = intl2.string(_modDef3206.B0OBFd);
+    obj7.label = intl2.string(_modDef3207.B0OBFd);
     const items2 = [...items];
     obj7.settings = items2;
     const items3 = [obj7, ,];
     const obj8 = {};
     const merged1 = Object.assign(categoryFriendsActivitySettingsSection);
     const intl3 = util.intl;
-    obj8.label = intl3.string(_modDef3206.wB1ASV);
+    obj8.label = intl3.string(_modDef3207.wB1ASV);
     items3[1] = obj8;
     items3[2] = obj3;
     obj6.sections = items3;
@@ -52,7 +52,7 @@ export default noop.memo(function RedesignSettingsCategoryFriendsActivityScreen(
     const obj10 = { sections: null };
     const obj11 = { label: null, settings: null };
     const intl4 = util.intl;
-    obj11.label = intl4.string(_modDef3206.B0OBFd);
+    obj11.label = intl4.string(_modDef3207.B0OBFd);
     obj11.settings = items;
     const items4 = [obj11, obj3];
     obj10.sections = items4;

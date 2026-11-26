@@ -7,7 +7,7 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { shopBlockSpacing: { marginTop: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -76,8 +76,8 @@ export default function _default(block) {
     const obj12 = { pageSection: block.name };
     obj11.newValue = obj12;
     const obj13 = { style: tmp.shopBlockSpacing, children: null };
-    const obj14 = { block, preferVCPrice };
-    obj13.children = jsx(stateFromStores(tmp3[12]), { block, preferVCPrice }, memo);
+    const obj14 = { block, screen, preferVCPrice };
+    obj13.children = jsx(stateFromStores(tmp3[12]), { block, screen, preferVCPrice }, memo);
     obj11.children = <View style={tmp.shopBlockSpacing}>{null}</View>;
     return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, { newValue: null, children: null });
   } else {

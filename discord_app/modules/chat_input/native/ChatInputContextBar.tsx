@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7272 from "../../../../_runtime/metro/07272__.js";
+import _modDef7303 from "../../../../_runtime/metro/07303__.js";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
 import ScheduledMessagesUtils from "../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
 import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageTypes.tsx";
@@ -51,7 +51,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
   obj6.hitSlop = tmp10;
   obj6.onPress = onCancelReplying.onCancelReplying;
   obj6.children = application_id(native.Icon, {
-    source: _modDef7272,
+    source: _modDef7303,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
@@ -398,14 +398,14 @@ function ChatInputEditBar(onCancelEditing) {
   obj4.onPress = onCancelEditing.onCancelEditing;
   const tmp8 = application_id(Text_Text.Text, obj3);
   obj4.children = application_id(native.Icon, {
-    source: _modDef7272,
+    source: _modDef7303,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj6 = { style: tmp.contextBarRow, children: null };
   const obj7 = { children: null };
   items = [tmp8];
-  const obj5 = { source: _modDef7272, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj5 = { source: _modDef7303, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = application_id(component, {
     style: tmp.floatingRightActions,
     children: application_id(Pressables.PressableOpacity, obj4),
@@ -463,14 +463,14 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj5.onPress = onCancelScheduling;
   const tmp9 = application_id(Pressables.PressableOpacity, obj4);
   obj5.children = application_id(native.Icon, {
-    source: _modDef7272,
+    source: _modDef7303,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj7 = { style: tmp.contextBarRow, children: null };
   const obj8 = { children: null };
   items = [tmp9];
-  const obj6 = { source: _modDef7272, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj6 = { source: _modDef7303, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = application_id(component, {
     style: tmp.floatingRightActions,
     children: application_id(Pressables.PressableOpacity, obj5),
@@ -485,9 +485,9 @@ function ContextBarItem(arg0) {
   ({ children, ref } = arg0);
   obj = require("client_themes/ClientThemesUtils");
   const tmp2 = closure_17();
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
   _require = sharedValue;
-  const obj2 = require("../../../../_runtime/metro/01653__.js");
+  const obj2 = require("../../../../_runtime/metro/01654__.js");
   items = [
     closure_22,
     closure_16(obj.useGradientValue(require("client_themes/ClientThemesUtils").GradientPercentage.END)).contextBar
@@ -507,7 +507,7 @@ function ContextBarItem(arg0) {
   ChatInputContextBarTsx1.__closure = items1;
   ChatInputContextBarTsx1.__workletHash = 878688550161;
   ChatInputContextBarTsx1.__initData = tmp4;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(ChatInputContextBarTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(ChatInputContextBarTsx1);
   ref1 = noop.useRef(null);
   const items2 = [ref1];
   dependencyMap = noop.useCallback(() => {
@@ -518,14 +518,14 @@ function ContextBarItem(arg0) {
   }, items2);
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     componentDidAppear() {
-      const result = backgroundColor.set(c0(5222).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5253).withTiming(60, obj));
     },
     componentDidEnter() {
-      const result = backgroundColor.set(c0(5222).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5253).withTiming(60, obj));
     },
     componentWillLeave(current) {
       ref1.current = current;
-      items = [closure_2_23, c0(1706).scheduleOnRN, dependencyMap];
+      items = [closure_2_23, c0(1707).scheduleOnRN, dependencyMap];
       c0 = undefined;
       c1 = undefined;
       [tmp3, tmp4, tmp5] = items;
@@ -544,25 +544,25 @@ function ContextBarItem(arg0) {
       ChatInputContextBarTsx2.__workletHash = 5373252367218;
       ChatInputContextBarTsx2.__initData = tmp3;
       const result = backgroundColor.set(
-        c0(5222).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2),
+        c0(5253).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2),
       );
-      obj = c0(5222);
+      obj = c0(5253);
     },
   }));
   const obj4 = { style: null, children };
   const items3 = [animatedStyle, tmp2.floatingContextBar];
   obj4.style = items3;
-  return closure_12(ref1(1653).View, obj4);
+  return closure_12(ref1(1654).View, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(8075).DraftType;
+const DraftType = fn(8117).DraftType;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let obj = { duration: 250, easing: fn(1186).STANDARD_EASING };
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let closure_16 = createStyles.createStyles((arg0) => {
   let MOBILE_FLOATING_ACCESSORY_BACKGROUND = arg0;
   if (arg0 == null) {
@@ -570,7 +570,7 @@ let closure_16 = createStyles.createStyles((arg0) => {
   }
   return { contextBar: { backgroundColor: MOBILE_FLOATING_ACCESSORY_BACKGROUND } };
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let closure_17 = createStyles.createStyles(() => {
   obj = {
     contextBarRow: {

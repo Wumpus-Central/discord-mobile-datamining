@@ -28,7 +28,7 @@ export function useIsComponentTreeLoading(memo, callback) {
       const obj2 = { loading: true, component: tmp };
       let obj = obj2;
     } else {
-      obj = { loading: false, component: "Array" };
+      obj = { loading: false, component: "r" };
     }
     return obj;
   }, items1);

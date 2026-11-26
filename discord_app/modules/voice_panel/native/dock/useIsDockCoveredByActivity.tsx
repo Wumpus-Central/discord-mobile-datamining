@@ -3,8 +3,8 @@ import ActivityPanelUtils from "../../../activities/panel/native/utils/ActivityP
 import FramesStore from "../../../frames/FramesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(5638).ActivityPanelModes;
-const isLaunched = fn(6906).isLaunched;
+const ActivityPanelModes = fn(5669).ActivityPanelModes;
+const isLaunched = fn(6937).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useIsDockCoveredByActivity.tsx");
 

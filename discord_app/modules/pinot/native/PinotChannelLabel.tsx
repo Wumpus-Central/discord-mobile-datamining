@@ -1,6 +1,6 @@
 // discord_app/modules/pinot/native/PinotChannelLabel.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3562 from "../Pinot.messages.js";
+import _modDef3563 from "../Pinot.messages.js";
 import PinotChannelLabelAnchor from "PinotChannelLabelAnchor.tsx";
 import useAttachPinotMemberCoachmark from "useAttachPinotMemberCoachmark.tsx";
 import ChannelHeaderShared from "../../main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx";
@@ -9,7 +9,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles((marginStart) => {
   const obj = { label: { marginStart } };
   return obj;
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/pinot/native/PinotChannelLabe
 
 export function getPinotChannelLabelText() {
   const intl = util.intl;
-  return intl.string(_modDef3562.uneDIi);
+  return intl.string(_modDef3563.uneDIi);
 }
 export function PinotChannelLabel(arg0) {
   ({ channel, insetStart } = arg0);
@@ -48,7 +48,7 @@ export function PinotChannelLabel(arg0) {
   };
   const obj4 = { children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3562.uneDIi);
+  obj4.children = intl.string(_modDef3563.uneDIi);
   obj3.children = jsx(ChannelHeaderShared.SubtitleText, { children: null });
   return (
     <View

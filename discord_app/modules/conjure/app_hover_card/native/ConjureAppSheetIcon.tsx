@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_4 = createStyles.createStyles((width, borderRadius) => {
   const obj = { icon: null };
   const size = { width, height: width, borderRadius, overflow: "hidden" };

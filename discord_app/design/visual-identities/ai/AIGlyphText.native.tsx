@@ -2,13 +2,13 @@
 import useToken from "../../tokens/native/useToken.tsx";
 import AIGlyphFont from "AIGlyphFont.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import 01653__ from "../../../../_runtime/metro/01653__.js";
+import 01654__ from "../../../../_runtime/metro/01654__.js";
 
 require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-let closure_4 = module_1653.createAnimatedComponent(Text);
-const createStyles = fn(5012);
+let closure_4 = module_1654.createAnimatedComponent(Text);
+const createStyles = fn(5043);
 let closure_5 = createStyles.createStyles((fontSize, color) => {
   const obj = { glyph: { color, fontFamily: AIGlyphFont.AI_GLYPH_FONT_FAMILY_NATIVE, fontSize, lineHeight: fontSize, textAlign: "center", includeFontPadding: false } };
   return obj;

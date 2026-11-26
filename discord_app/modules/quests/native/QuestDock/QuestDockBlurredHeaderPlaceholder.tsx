@@ -1,19 +1,19 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import thumbHashToRGBA from "../../../../../_runtime/16737_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/16788_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(6840).QuestDockMode;
-const QuestDockConstants = fn(16629);
+const QuestDockMode = fn(6871).QuestDockMode;
+const QuestDockConstants = fn(16680);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { imageContainer: null, overlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -73,7 +73,7 @@ export default noop.memo(function QuestDockBlurredHeaderPlaceholder(arg0) {
   QuestDockBlurredHeaderPlaceholderTsx1.__workletHash = 16240509940580;
   QuestDockBlurredHeaderPlaceholderTsx1.__initData = tmp5;
   const obj2 = { children: null };
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     QuestDockBlurredHeaderPlaceholderTsx1,
   );
   const obj3 = {
@@ -83,11 +83,11 @@ export default noop.memo(function QuestDockBlurredHeaderPlaceholder(arg0) {
   };
   const items3 = [tmp4.imageContainer, layoutAnimatedStyle, animatedStyle, opacityAnimatedStyle];
   obj3.style = items3;
-  const items4 = [closure_7(_modDef1653.View, obj3)];
+  const items4 = [closure_7(_modDef1654.View, obj3)];
   const obj5 = { style: null };
   const items5 = [tmp4.overlay, opacityAnimatedStyle];
   obj5.style = items5;
-  items4[1] = closure_7(_modDef1653.View, obj5);
+  items4[1] = closure_7(_modDef1654.View, obj5);
   obj2.children = items4;
   return closure_9(closure_8, obj2);
 });

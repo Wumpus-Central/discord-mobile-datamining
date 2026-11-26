@@ -2,7 +2,7 @@
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4728 from "../../phoenix_launch/PhoenixSettings.messages.js";
+import _modDef4729 from "../../phoenix_launch/PhoenixSettings.messages.js";
 import Badge from "../../../../design/components/Badge/native/Badge.native.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import FireIcon from "../../../../design/components/Icon/native/redesign/generated/FireIcon.tsx";
@@ -16,7 +16,7 @@ const jsx = jsxProd.jsx;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef4728["3uRAgZ"]);
+    return intl.string(_modDef4729["3uRAgZ"]);
   },
   useSearchTerms() {
     const intl = util.intl;

@@ -38,9 +38,9 @@ class GiftCustomMessage {
   }
 }
 const View = fn(17).View;
-const React4 = fn(1388).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
+const React4 = fn(1389).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
 const timestampProducer = createStyles.createStyles(obj);
 const obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };

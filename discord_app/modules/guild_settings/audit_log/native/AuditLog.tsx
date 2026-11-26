@@ -54,7 +54,7 @@ const Constants = fn(1071);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { marginHorizontal: 8, marginVertical: 4, borderRadius: 3 },
   rowContainer: { flex: 1, flexDirection: "row", alignItems: "center" },
@@ -121,7 +121,7 @@ obj2.forumTag = obj8;
 obj2.imageEmoji = { height: 14, width: 14 };
 obj2.textEmoji = { fontSize: 14, lineHeight: 16 };
 let closure_16 = createStyles.createLegacyClassComponentStyles(obj2);
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let tmp6;
 if (PlatformUtils.isAndroid()) {
   let obj9 = { transform: null };
@@ -680,7 +680,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(19902), { action: log.action }), , ,];
+  const items2 = [closure_14(user(19966), { action: log.action }), , ,];
   const obj7 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -708,15 +708,15 @@ prototype["render"] = function render() {
       if (log.action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            value = tmp18(6147).get(log.options.integration_type);
+            value = tmp18(6178).get(log.options.integration_type);
             if (null != value) {
               const icon = value.icon;
-              const tmp9Result = tmp9(5019);
-              const tmp25 = tmp9(5019).isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
-              let source = tmp9(1412).makeSource(tmp25);
-              const tmp9Result5 = tmp9(1412);
+              const tmp9Result = tmp9(5050);
+              const tmp25 = tmp9(5050).isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
+              let source = tmp9(1413).makeSource(tmp25);
+              const tmp9Result5 = tmp9(1413);
             }
-            const tmp18Result = tmp18(6147);
+            const tmp18Result = tmp18(6178);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -730,7 +730,7 @@ prototype["render"] = function render() {
         obj8.source = source;
         obj8.size = tmp10(1186).AvatarSizes.SMALL;
         obj7.children = closure_14(tmp20, obj8);
-        items2[1] = closure_14(tmp10(6121).PressableOpacity, obj7);
+        items2[1] = closure_14(tmp10(6152).PressableOpacity, obj7);
         obj9 = {
           accessibilityRole: "button",
           accessibilityState: null,
@@ -746,14 +746,14 @@ prototype["render"] = function render() {
         obj9.disabled = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj9.children = items3;
-        items2[2] = closure_15(tmp10(6121).PressableOpacity, obj9);
+        items2[2] = closure_15(tmp10(6152).PressableOpacity, obj9);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj11 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj11.style = items4;
           obj11.size = tmp10(1186).Icon.Sizes.CUSTOM;
-          obj11.source = tmp18(16015);
+          obj11.source = tmp18(16045);
           tmp17Result = closure_14(tmp10(1186).Icon, obj11);
         }
         items2[3] = tmp17Result;
@@ -765,17 +765,17 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj4.children = items5;
-        return closure_15(tmp10(6114).Card, obj4);
+        return closure_15(tmp10(6145).Card, obj4);
       }
     }
   }
   const obj6 = { action: log.action };
-  const tmp9Result6 = tmp9(1415);
-  const tmp9Result7 = tmp9(1412);
-  source = tmp9Result6.ensureAvatarSource(tmp9Result7.makeSource(tmp9(1415).getAutomodAvatarURL()));
-  const tmp9Result8 = tmp9(1415);
+  const tmp9Result6 = tmp9(1416);
+  const tmp9Result7 = tmp9(1413);
+  source = tmp9Result6.ensureAvatarSource(tmp9Result7.makeSource(tmp9(1416).getAutomodAvatarURL()));
+  const tmp9Result8 = tmp9(1416);
 };
-AuditLog.contextType = fn(5073).ThemeContext;
+AuditLog.contextType = fn(5104).ThemeContext;
 let items3 = [ThemeStore];
 let obj7 = { color: nativeDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
 size = fn(2);

@@ -18,14 +18,14 @@ import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildRecord = fn(4879);
+const GuildRecord = fn(4910);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(18015).useItemDragState;
-const TRANSITION_PHYSICS = fn(18012).TRANSITION_PHYSICS;
+const useItemDragState = fn(18074).useItemDragState;
+const TRANSITION_PHYSICS = fn(18071).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -137,11 +137,11 @@ export default noop.memo(function GuildsBarGuild(guildId) {
               });
               if (findIndexResult > -1) {
                 const obj = { guild_id: _undefined, index: findIndexResult, active_hook: ref.current };
-                c1(1255).track(constants.HOME_DRAWER_GUILD_CLICKED, obj);
-                const obj2 = c1(1255);
+                c1(1256).track(constants.HOME_DRAWER_GUILD_CLICKED, obj);
+                const obj2 = c1(1256);
               }
             }
-            c1(17979)(_undefined);
+            c1(18036)(_undefined);
           }
         }
         const obj3 = { title: null, body: null };
@@ -149,7 +149,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
         obj3.title = intl.string(c0(1112).t.R0RpRX);
         const intl2 = c0(1112).intl;
         obj3.body = intl2.string(c0(1112).t.m9gRVN);
-        return c1(6015).show(obj3);
+        return c1(6046).show(obj3);
       },
     }),
     items4,
@@ -237,7 +237,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
   }, items7);
   ({ accessibilityActions, onAccessibilityAction } = memo2);
   const obj6 = require("initialize");
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(guildId);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(guildId);
   const items8 = [
     closure_18,
     dragDropInProgress,
@@ -323,7 +323,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
     children: null,
   };
   let tmp30;
-  const obj7 = require("../../../../_runtime/metro/01653__.js");
+  const obj7 = require("../../../../_runtime/metro/01654__.js");
   if (!isDragTarget) {
     tmp30 = cutouts;
   }
@@ -350,21 +350,21 @@ export default noop.memo(function GuildsBarGuild(guildId) {
   if (enableHome) {
     if (!flag2) {
       const obj10 = { guildId, onActiveHookChange: callback };
-      tmp28Result = closure_16(tmp4(18044), obj10);
+      tmp28Result = closure_16(tmp4(18103), obj10);
     }
   }
   obj8.expandedChildren = tmp28Result;
   if (isUnavailable) {
-    const obj11 = { source: tmp4(18066), style: tmp.guildIcon };
-    let tmp28Result2 = closure_16(tmp4(5699), obj11);
-    const tmp4Result3 = tmp4(5699);
+    const obj11 = { source: tmp4(18125), style: tmp.guildIcon };
+    let tmp28Result2 = closure_16(tmp4(5730), obj11);
+    const tmp4Result3 = tmp4(5730);
   } else if (null != tmp15) {
     const obj12 = { source: tmp15, style: tmp.guildIcon };
-    tmp28Result2 = closure_16(tmp4(5699), obj12);
+    tmp28Result2 = closure_16(tmp4(5730), obj12);
   } else {
-    const obj13 = { value: guildName, selected, animate: selected, size: tmp2(7021).GuildIconSizes.LARGE };
-    tmp28Result2 = closure_16(tmp4(7021), obj13);
-    const tmp4Result4 = tmp4(7021);
+    const obj13 = { value: guildName, selected, animate: selected, size: tmp2(7052).GuildIconSizes.LARGE };
+    tmp28Result2 = closure_16(tmp4(7052), obj13);
+    const tmp4Result4 = tmp4(7052);
   }
   obj8.children = tmp28Result2;
   return closure_16(GuildsBarAnimatedItemWrapperDefault, obj8);

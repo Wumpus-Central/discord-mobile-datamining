@@ -1,15 +1,15 @@
 // discord_app/modules/in_app_notifications/native/NotificationProgress.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   progress: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 },
   progressContainerBottom: { width: "100%", position: "absolute", bottom: -1 },
@@ -50,11 +50,11 @@ export default function NotificationProgress(percent) {
   NotificationProgressTsx1.__workletHash = 14085017050901;
   NotificationProgressTsx1.__initData = tmp6;
   let obj2 = { onLayout: callback, style: tmp.progressContainerBottom, children: null };
-  const animatedStyle = _mod1653.useAnimatedStyle(NotificationProgressTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(NotificationProgressTsx1);
   const obj3 = { style: null };
   const items2 = [tmp.progress, animatedStyle];
   obj3.style = items2;
-  obj2.children = jsx(_modDef1653.View, { style: null });
+  obj2.children = jsx(_modDef1654.View, { style: null });
   return (
     <View onLayout={callback} style={tmp.progressContainerBottom}>
       {null}

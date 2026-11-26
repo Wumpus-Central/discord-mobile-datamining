@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/RestrictedScheduleNotificationUtils.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import util from "../../intl/index.native.tsx";
-import _modDef2846 from "FamilyCenter.messages.js";
+import _modDef2847 from "FamilyCenter.messages.js";
 import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -38,12 +38,12 @@ let obj = {
 };
 let map = new Map();
 let obj2 = {
-  [Created]: _modDef2846["5V7eBH"],
-  [Enabled]: _modDef2846.iefrVg,
-  [Disabled]: _modDef2846["k+s9cM"],
-  [Updated]: _modDef2846.Nm6hZV,
-  [Multiple]: _modDef2846.Nm6hZV,
-  [Removed]: _modDef2846.jR6uOs,
+  [Created]: _modDef2847["5V7eBH"],
+  [Enabled]: _modDef2847.iefrVg,
+  [Disabled]: _modDef2847["k+s9cM"],
+  [Updated]: _modDef2847.Nm6hZV,
+  [Multiple]: _modDef2847.Nm6hZV,
+  [Removed]: _modDef2847.jR6uOs,
 };
 ({ Created, Enabled, Disabled, Updated, Multiple, Removed } = obj);
 let result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleNotificationUtils.tsx");
@@ -223,7 +223,7 @@ export function getRestrictedScheduleNotificationSubtitle(rule) {
   }
   if (result == null) {
     const intl = util.intl;
-    result = intl.string(_modDef2846["8OlpoY"]);
+    result = intl.string(_modDef2847["8OlpoY"]);
   }
   return result;
 }

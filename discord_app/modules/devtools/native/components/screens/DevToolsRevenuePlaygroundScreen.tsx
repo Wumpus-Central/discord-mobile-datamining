@@ -2,7 +2,7 @@
 import useStateFromStores from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -207,7 +207,7 @@ function FriendAnniversary() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -305,7 +305,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -723,7 +723,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(9094).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(9136).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -736,16 +736,16 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17268, dependencyMap.paths),
+          asyncRequireImpl(17319, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(6113).TableRow, obj2)];
+  items = [closure_17(premiumTrialOffer(6144).TableRow, obj2)];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(6113).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(6144).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -757,7 +757,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17268, dependencyMap.paths),
+          asyncRequireImpl(17319, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -765,7 +765,7 @@ function TrialOfferSheetExample() {
     },
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(6109).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(6140).TableRowGroup, obj3);
 }
 function PremiumToggles() {
   items = [DevSettingsStore];
@@ -785,7 +785,7 @@ function PremiumToggles() {
     children: stateFromStores.map((item) => {
       [tmp, tmp2] = item;
       return closure_17(
-        closure_0(7518).TableSwitchRow,
+        closure_0(7549).TableSwitchRow,
         {
           label: tmp3,
           subLabel: tmp,
@@ -915,8 +915,8 @@ function GuildTagBadges() {
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const DevSettingsCategory = fn(5606).DevSettingsCategory;
-const PremiumConstants = fn(1388);
+const DevSettingsCategory = fn(5637).DevSettingsCategory;
+const PremiumConstants = fn(1389);
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
@@ -932,7 +932,7 @@ let items = [
 ];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16 };

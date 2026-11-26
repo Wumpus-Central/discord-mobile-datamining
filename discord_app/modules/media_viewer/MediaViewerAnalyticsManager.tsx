@@ -26,8 +26,8 @@ let obj2 = {
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "channel_id",
-  source: "IFRAME_MOUNT",
-  incrementableActions: "_INTERNAL_getSpanForToolCallId",
+  source: 1895895542,
+  incrementableActions: 8,
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

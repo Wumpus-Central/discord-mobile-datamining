@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const GuildFeatures = fn(1071).GuildFeatures;
-const GuildPrompts = fn(13599).GuildPrompts;
+const GuildPrompts = fn(13651).GuildPrompts;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
 

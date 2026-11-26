@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/useFlashListAnimationDisabler.tsx
-import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../../_runtime/metro/01654__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,8 +18,8 @@ let result = size.fileFinishedImporting(
 );
 
 export function useFlashListAnimationDisabler(userId) {
-  const sharedValue = _mod1653.useSharedValue(false);
-  const sharedValue1 = _mod1653.useSharedValue(userId);
+  const sharedValue = _mod1654.useSharedValue(false);
+  const sharedValue1 = _mod1654.useSharedValue(userId);
   items = [sharedValue1, userId];
   const effect = noop.useEffect(() => {
     const result = sharedValue1.set(c0);
@@ -44,7 +44,7 @@ export function useFlashListAnimationDisabler(userId) {
   useFlashListAnimationDisablerTsx2.__closure = items4;
   useFlashListAnimationDisablerTsx2.__workletHash = 6865280416933;
   useFlashListAnimationDisablerTsx2.__initData = tmp6;
-  const animatedReaction = _mod1653.useAnimatedReaction(
+  const animatedReaction = _mod1654.useAnimatedReaction(
     useFlashListAnimationDisablerTsx1,
     useFlashListAnimationDisablerTsx2,
   );

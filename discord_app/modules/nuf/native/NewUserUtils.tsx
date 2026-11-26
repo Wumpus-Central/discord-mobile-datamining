@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import router_utils from "../../routing/router_utils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import Link from "../../../../_runtime/01501_Link.js";
+import Link from "../../../../_runtime/01502_Link.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NativePermissionManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativePermissionManagerModule.tsx";
 import WaterwheelsDiscoverExperiment from "../../waterwheels/WaterwheelsDiscoverExperiment.tsx";
@@ -36,7 +36,7 @@ let closure_17 = async function _shouldSkipContactSyncStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -125,7 +125,7 @@ let closure_23 = async function _getNextOnboardingStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -255,13 +255,13 @@ let closure_23 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NewUserTypes = fn(13648).NewUserTypes;
-const NotificationPermissionConstants = fn(13330);
+const NewUserTypes = fn(13700).NewUserTypes;
+const NotificationPermissionConstants = fn(13382);
 ({ EventActionLocation: closure_9, EventActionType: closure_10 } = NotificationPermissionConstants);
 const Constants = fn(1071);
 ({ PlatformTypes: closure_11, Routes: closure_12 } = Constants);
-const ContactPermissions = fn(13620).ContactPermissions;
-let closure_14 = fn(7838).NotificationAuthorizationStatus;
+const ContactPermissions = fn(13672).ContactPermissions;
+let closure_14 = fn(7872).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_18 = asyncGeneratorStep(async () => {
@@ -275,7 +275,7 @@ let closure_18 = asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ let closure_18 = asyncGeneratorStep(async () => {
             } else {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           }
         } else if (arg0 === 1) {
@@ -412,7 +412,7 @@ let closure_19 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -523,7 +523,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(10383).hasDeferredInvite,
+    shouldShowStep: fn(10428).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3206 from "../../NotificationSettings.messages.js";
+import _modDef3207 from "../../NotificationSettings.messages.js";
 import BellIcon from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
 import settings_NotifSettingsUtils from "../NotifSettingsUtils.tsx";
 import NotifSettings from "../../../../../discord_common/js/shared/shared-constants/NotifSettings.tsx";
@@ -35,11 +35,11 @@ let SettingBuilders = SettingBuilders_mod;
 const obj3 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3206.gbaIfD);
+    return intl.string(_modDef3207.gbaIfD);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3206.EDuIWR);
+    return intl.string(_modDef3207.EDuIWR);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -64,11 +64,11 @@ let SettingBuilders = SettingBuilders_mod;
 const obj5 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3206["ZwNQS+"]);
+    return intl.string(_modDef3207["ZwNQS+"]);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3206["/8n8hE"]);
+    return intl.string(_modDef3207["/8n8hE"]);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -93,11 +93,11 @@ let SettingBuilders = SettingBuilders_mod;
 const obj7 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3206.BBcVf5);
+    return intl.string(_modDef3207.BBcVf5);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3206.F8hJUK);
+    return intl.string(_modDef3207.F8hJUK);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -122,7 +122,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj9 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3206.vcrTV5);
+    return intl.string(_modDef3207.vcrTV5);
   },
   unsearchable: true,
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
@@ -148,11 +148,11 @@ let SettingBuilders = SettingBuilders_mod;
 const obj11 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3206.qxdDqr);
+    return intl.string(_modDef3207.qxdDqr);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3206.fEt8MH);
+    return intl.string(_modDef3207.fEt8MH);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -177,7 +177,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj13 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3206.sMUINc);
+    return intl.string(_modDef3207.sMUINc);
   },
   useTrailing() {
     const notifSettingRadioValue = settings_NotifSettingsUtils.useNotifSettingRadioValue(
@@ -185,13 +185,13 @@ const obj13 = {
     );
     if (2 === notifSettingRadioValue) {
       const intl3 = util.intl;
-      return intl3.string(_modDef3206.Lq41PP);
+      return intl3.string(_modDef3207.Lq41PP);
     } else if (1 === notifSettingRadioValue) {
       const intl2 = util.intl;
-      return intl2.string(_modDef3206.RoC4aT);
+      return intl2.string(_modDef3207.RoC4aT);
     } else if (0 === notifSettingRadioValue) {
       const intl = util.intl;
-      return intl.string(_modDef3206.kKc6Gs);
+      return intl.string(_modDef3207.kKc6Gs);
     } else {
       return null;
     }

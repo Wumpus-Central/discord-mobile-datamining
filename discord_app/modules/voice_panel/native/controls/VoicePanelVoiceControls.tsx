@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05272_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
@@ -18,7 +18,7 @@ import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons.tsx";
 import StreamVolumeMovedNoticeDefault from "../stream_volume_moved/StreamVolumeMovedNotice.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
-import 01653__ from "../../../../../_runtime/metro/01653__.js";
+import 01654__ from "../../../../../_runtime/metro/01654__.js";
 
 const require = globalThis.__r;
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
@@ -27,16 +27,16 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11732).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11780).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 obj.blurRegion = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 let closure_8 = createStyles.createStyles(obj);
-let closure_9 = module_1653.createAnimatedComponent(fn(17).ScrollView);
+let closure_9 = module_1654.createAnimatedComponent(fn(17).ScrollView);
 let closure_10 = noop.memo(function ListItems(arg0) {
   ({ channel, openTab } = arg0);
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
@@ -162,7 +162,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj2 = require("initialize");
-  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(false);
   const items1 = [closure_13, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items1;
@@ -178,7 +178,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   VoicePanelVoiceControlsTsx1.__initData = tmp7;
   const items3 = [sharedValue];
   const callback = scrollerRef.useCallback(VoicePanelVoiceControlsTsx1, items3);
-  const obj3 = require("../../../../../_runtime/metro/01653__.js");
+  const obj3 = require("../../../../../_runtime/metro/01654__.js");
   const animatedScrollLock = require("useAnimatedScrollLock").useAnimatedScrollLock({ onScrollHandlerWorkletized: callback });
   gestureRef = animatedScrollLock.gestureRef;
   scrollerRef = animatedScrollLock.scrollerRef;

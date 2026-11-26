@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/EditCollectiblesCTAButton.tsx
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1653 from "../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../_runtime/metro/01654__.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
@@ -16,9 +16,9 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_5 = fn(1073).CollectiblesMobileShopScreen;
-let closure_6 = fn(1624).MEDIA_PICKER_SEND_BUTTON_SPRING;
+let closure_6 = fn(1625).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_8 = createStyles.createStyles({
   buttonRowContainer: {
     flexGrow: 0,
@@ -69,12 +69,12 @@ export default noop.memo(function EditCollectiblesCTAButton(user) {
   let obj = require("initialize");
   ({ purchase, product } = useCollectiblesDataDefault(selectedSkuId));
   const tmp6 = useCollectiblesDataDefault(selectedSkuId);
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(false);
   const items1 = [selectedSkuId, currentSkuId, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(c2 !== c1);
   }, items1);
-  let obj2 = require("../../../../_runtime/metro/01653__.js");
+  let obj2 = require("../../../../_runtime/metro/01654__.js");
   const items2 = [
     isShopStandalonePdpMobileEnabled,
     sharedValue,
@@ -125,10 +125,10 @@ export default noop.memo(function EditCollectiblesCTAButton(user) {
   EditCollectiblesCTAButtonTsx1.__closure = items3;
   EditCollectiblesCTAButtonTsx1.__workletHash = 3346300187216;
   EditCollectiblesCTAButtonTsx1.__initData = tmp10;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     EditCollectiblesCTAButtonTsx1,
   );
-  let obj4 = require("../../../../_runtime/metro/01653__.js");
+  let obj4 = require("../../../../_runtime/metro/01654__.js");
   const tmp9 = sharedValue;
   const items4 = [closure_10, sharedValue];
   _require = undefined;
@@ -146,10 +146,10 @@ export default noop.memo(function EditCollectiblesCTAButton(user) {
   EditCollectiblesCTAButtonTsx2.__closure = items5;
   EditCollectiblesCTAButtonTsx2.__workletHash = 2472922412820;
   EditCollectiblesCTAButtonTsx2.__initData = tmp18;
-  const animatedProps = require("../../../../_runtime/metro/01653__.js").useAnimatedProps(
+  const animatedProps = require("../../../../_runtime/metro/01654__.js").useAnimatedProps(
     EditCollectiblesCTAButtonTsx2,
   );
-  const tmp4Result = require("../../../../_runtime/metro/01653__.js");
+  const tmp4Result = require("../../../../_runtime/metro/01654__.js");
   const items6 = [closure_11, sharedValue, stateFromStores, require("spring/spring").withSpring, tmp9];
   _require = undefined;
   importDefault = undefined;
@@ -180,21 +180,21 @@ export default noop.memo(function EditCollectiblesCTAButton(user) {
   EditCollectiblesCTAButtonTsx3.__closure = items7;
   EditCollectiblesCTAButtonTsx3.__workletHash = 13264991240196;
   EditCollectiblesCTAButtonTsx3.__initData = tmp21;
-  const animatedStyle1 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     EditCollectiblesCTAButtonTsx3,
   );
-  const tmp4Result6 = require("../../../../_runtime/metro/01653__.js");
+  const tmp4Result6 = require("../../../../_runtime/metro/01654__.js");
   const canUseCollectiblesResult = PremiumUtilsDefault.canUseCollectibles(user);
   const tmp2Result = PremiumUtilsDefault;
   let result = require("CollectiblesUtils").isPremiumCollectiblesProduct(product);
   if (!result) {
-    result = tmp4(6292).isPremiumCollectiblesPurchase(purchase);
-    const tmp4Result8 = tmp4(6292);
+    result = tmp4(6323).isPremiumCollectiblesPurchase(purchase);
+    const tmp4Result8 = tmp4(6323);
   }
   let result1 = !canUseCollectiblesResult;
   if (!canUseCollectiblesResult) {
-    result1 = tmp4(6292).isPremiumCollectiblesPurchase(purchase);
-    const tmp4Result9 = tmp4(6292);
+    result1 = tmp4(6323).isPremiumCollectiblesPurchase(purchase);
+    const tmp4Result9 = tmp4(6323);
   }
   let tmp30 = null == selectedSkuId;
   if (!tmp30) {
@@ -286,6 +286,6 @@ export default noop.memo(function EditCollectiblesCTAButton(user) {
     text: memo,
     grow: true,
   });
-  obj5.children = isTryItOut(_modDef1653.View, obj6);
-  return isTryItOut(_modDef1653.View, obj5);
+  obj5.children = isTryItOut(_modDef1654.View, obj6);
+  return isTryItOut(_modDef1654.View, obj5);
 });

@@ -1,9 +1,9 @@
 // discord_app/modules/checkpoint/native/components/card/CheckpointCardFrame.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import CheckpointCardColors from "../../../CheckpointCardColors.tsx";
-import inlineStyles from "../../../../../../_runtime/07912_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07946_inlineStyles.js";
 import ClydeIcon from "../../../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
-import _modDef12599 from "../../../../../../discord_assets/assets/checkpoint/checkpoint_2026_share_card_texture.png.js";
+import _modDef12635 from "../../../../../../discord_assets/assets/checkpoint/checkpoint_2026_share_card_texture.png.js";
 import CheckpointCharacterCompositeDefault from "../CheckpointCharacterComposite.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -19,7 +19,7 @@ let c10 = 0;
 let c11 = 432;
 let c12 = 326;
 const styles = { x: -1, y: 0, width: 433, height: 469 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_14 = createStyles.createStyles({
   canvas: { overflow: "hidden", transformOrigin: "top left" },
   layer: { position: "absolute", top: 0, left: 0 },
@@ -123,7 +123,7 @@ export default function CheckpointCardFrame(canvasHeight) {
     const _HermesInternal4 = HermesInternal;
     obj9.origin = "" + x + width / 2 + ", " + c10 + c12 / 2;
     const size3 = {
-      href: _modDef12599,
+      href: _modDef12635,
       x,
       y: c10 - 0.4348 * c12,
       width,
@@ -156,7 +156,7 @@ export default function CheckpointCardFrame(canvasHeight) {
     const obj13 = { rotation: 180, origin: null, children: null };
     const _HermesInternal7 = HermesInternal;
     obj13.origin = "" + styles.x + styles.width / 2 + ", " + styles.y + styles.height / 2;
-    const obj14 = { href: _modDef12599 };
+    const obj14 = { href: _modDef12635 };
     const merged = Object.assign(styles);
     obj14.opacity = 0.5;
     obj14.preserveAspectRatio = "xMidYMid slice";
@@ -182,7 +182,7 @@ export default function CheckpointCardFrame(canvasHeight) {
     obj15.children = timestampProducer(inlineStyles.ClipPath, obj16);
     const items13 = [timestampProducer(inlineStyles.Defs, obj15)];
     const size8 = {
-      href: _modDef12599,
+      href: _modDef12635,
       width: canvasWidth,
       height: num,
       preserveAspectRatio: "xMidYMid slice",

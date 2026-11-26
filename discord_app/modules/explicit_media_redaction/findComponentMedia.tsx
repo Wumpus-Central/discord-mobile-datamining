@@ -21,46 +21,28 @@ function findComponentMedia(arg0) {
       let components2 = type.components;
       let items1 = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
-      let accessory = type.accessory;
-      let _Array = Array;
-      let obj = accessory;
-      if (!Array.isArray(accessory)) {
-        let items2 = [accessory];
-        obj = items2;
-      }
-      HermesBuiltin.arraySpread(obj.flatMap((type) => {
-        type = type.type;
-        if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
-          let items = type.items;
-          return items.map((media) => media.media);
-        } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
-          return type.media;
-        } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
-          return type.file;
-        } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
-          let components2 = type.components;
-          let items1 = [];
-          let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
-          let accessory = type.accessory;
-          let _Array = Array;
-          let obj = accessory;
-          if (!Array.isArray(accessory)) {
-            let items2 = [accessory];
-            obj = items2;
-          }
-          HermesBuiltin.arraySpread(obj.flatMap((type) => {
-            type = type.type;
-            if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
-              let items = type.items;
-              return items.map((media) => media.media);
-            } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
-              return type.media;
-            } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
-              return type.file;
-            } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
-              let components2 = type.components;
-              let items1 = [];
-              let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+      if (null != type.accessory) {
+        let accessory = type.accessory;
+        let _Array = Array;
+        let obj = accessory;
+        if (!Array.isArray(accessory)) {
+          let items2 = [accessory];
+          obj = items2;
+        }
+        let mapped = obj.flatMap((type) => {
+          type = type.type;
+          if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+            let items = type.items;
+            return items.map((media) => media.media);
+          } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+            return type.media;
+          } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+            return type.file;
+          } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+            let components2 = type.components;
+            let items1 = [];
+            let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+            if (null != type.accessory) {
               let accessory = type.accessory;
               let _Array = Array;
               let obj = accessory;
@@ -68,11 +50,11 @@ function findComponentMedia(arg0) {
                 let items2 = [accessory];
                 obj = items2;
               }
-              HermesBuiltin.arraySpread(obj.flatMap((type) => {
+              let mapped = obj.flatMap((type) => {
                 type = type.type;
                 if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
                   let items = type.items;
-                  return items.map(/* F124156 */ function() { ... });
+                  return items.map((media) => media.media);
                 } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
                   return type.media;
                 } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
@@ -81,14 +63,101 @@ function findComponentMedia(arg0) {
                   let components2 = type.components;
                   let items1 = [];
                   let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
-                  let accessory = type.accessory;
-                  let _Array = Array;
-                  let obj = accessory;
-                  if (!Array.isArray(accessory)) {
-                    let items2 = [accessory];
-                    obj = items2;
+                  if (null != type.accessory) {
+                    let accessory = type.accessory;
+                    let _Array = Array;
+                    let obj = accessory;
+                    if (!Array.isArray(accessory)) {
+                      let items2 = [accessory];
+                      obj = items2;
+                    }
+                    let mapped = obj.flatMap((type) => {
+                      type = type.type;
+                      if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                        let items = type.items;
+                        return items.map(/* F124542 */ function() { ... });
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                        return type.media;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                        return type.file;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                        let components2 = type.components;
+                        let items1 = [];
+                        let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                        if (null != type.accessory) {
+                          let accessory = type.accessory;
+                          let _Array = Array;
+                          let obj = accessory;
+                          if (!Array.isArray(accessory)) {
+                            let items2 = [accessory];
+                            obj = items2;
+                          }
+                          let mapped = obj.flatMap(/* F90096 */ function() { ... }).map(/* F90097 */ function() { ... });
+                          let flatMapResult = obj.flatMap(/* F90096 */ function() { ... });
+                        } else {
+                          mapped = [];
+                        }
+                        HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                        return items1;
+                      } else {
+                        if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                          if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                            return [];
+                          }
+                        }
+                        let components = type.components;
+                        return components.flatMap(closure_1_2);
+                      }
+                    }).map((item) => {
+                      let toUnfurledMediaItemResult = item;
+                      if ("proxy_url" in item) {
+                        toUnfurledMediaItemResult = closure_1_0(dependencyMap[1]).toUnfurledMediaItem(item);
+                        const obj = closure_1_0(dependencyMap[1]);
+                      }
+                      return toUnfurledMediaItemResult;
+                    });
+                    let flatMapResult = obj.flatMap((type) => {
+                      type = type.type;
+                      if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                        let items = type.items;
+                        return items.map(/* F124542 */ function() { ... });
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                        return type.media;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                        return type.file;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                        let components2 = type.components;
+                        let items1 = [];
+                        let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                        if (null != type.accessory) {
+                          let accessory = type.accessory;
+                          let _Array = Array;
+                          let obj = accessory;
+                          if (!Array.isArray(accessory)) {
+                            let items2 = [accessory];
+                            obj = items2;
+                          }
+                          let mapped = obj.flatMap(/* F90096 */ function() { ... }).map(/* F90097 */ function() { ... });
+                          let flatMapResult = obj.flatMap(/* F90096 */ function() { ... });
+                        } else {
+                          mapped = [];
+                        }
+                        HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                        return items1;
+                      } else {
+                        if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                          if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                            return [];
+                          }
+                        }
+                        let components = type.components;
+                        return components.flatMap(closure_1_2);
+                      }
+                    });
+                  } else {
+                    mapped = [];
                   }
-                  HermesBuiltin.arraySpread(obj.flatMap(/* F89854 */ function() { ... }).map(/* F89855 */ function() { ... }), arraySpreadResult);
+                  HermesBuiltin.arraySpread(mapped, arraySpreadResult);
                   return items1;
                 } else {
                   if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
@@ -106,43 +175,433 @@ function findComponentMedia(arg0) {
                   const obj = closure_1_0(dependencyMap[1]);
                 }
                 return toUnfurledMediaItemResult;
-              }), arraySpreadResult);
-              return items1;
-            } else {
-              if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
-                if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
-                  return [];
+              });
+              let flatMapResult = obj.flatMap((type) => {
+                type = type.type;
+                if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                  let items = type.items;
+                  return items.map((media) => media.media);
+                } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                  return type.media;
+                } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                  return type.file;
+                } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                  let components2 = type.components;
+                  let items1 = [];
+                  let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                  if (null != type.accessory) {
+                    let accessory = type.accessory;
+                    let _Array = Array;
+                    let obj = accessory;
+                    if (!Array.isArray(accessory)) {
+                      let items2 = [accessory];
+                      obj = items2;
+                    }
+                    let mapped = obj.flatMap((type) => {
+                      type = type.type;
+                      if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                        let items = type.items;
+                        return items.map(/* F124542 */ function() { ... });
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                        return type.media;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                        return type.file;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                        let components2 = type.components;
+                        let items1 = [];
+                        let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                        if (null != type.accessory) {
+                          let accessory = type.accessory;
+                          let _Array = Array;
+                          let obj = accessory;
+                          if (!Array.isArray(accessory)) {
+                            let items2 = [accessory];
+                            obj = items2;
+                          }
+                          let mapped = obj.flatMap(/* F90096 */ function() { ... }).map(/* F90097 */ function() { ... });
+                          let flatMapResult = obj.flatMap(/* F90096 */ function() { ... });
+                        } else {
+                          mapped = [];
+                        }
+                        HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                        return items1;
+                      } else {
+                        if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                          if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                            return [];
+                          }
+                        }
+                        let components = type.components;
+                        return components.flatMap(closure_1_2);
+                      }
+                    }).map((item) => {
+                      let toUnfurledMediaItemResult = item;
+                      if ("proxy_url" in item) {
+                        toUnfurledMediaItemResult = closure_1_0(dependencyMap[1]).toUnfurledMediaItem(item);
+                        const obj = closure_1_0(dependencyMap[1]);
+                      }
+                      return toUnfurledMediaItemResult;
+                    });
+                    let flatMapResult = obj.flatMap((type) => {
+                      type = type.type;
+                      if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                        let items = type.items;
+                        return items.map(/* F124542 */ function() { ... });
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                        return type.media;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                        return type.file;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                        let components2 = type.components;
+                        let items1 = [];
+                        let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                        if (null != type.accessory) {
+                          let accessory = type.accessory;
+                          let _Array = Array;
+                          let obj = accessory;
+                          if (!Array.isArray(accessory)) {
+                            let items2 = [accessory];
+                            obj = items2;
+                          }
+                          let mapped = obj.flatMap(/* F90096 */ function() { ... }).map(/* F90097 */ function() { ... });
+                          let flatMapResult = obj.flatMap(/* F90096 */ function() { ... });
+                        } else {
+                          mapped = [];
+                        }
+                        HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                        return items1;
+                      } else {
+                        if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                          if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                            return [];
+                          }
+                        }
+                        let components = type.components;
+                        return components.flatMap(closure_1_2);
+                      }
+                    });
+                  } else {
+                    mapped = [];
+                  }
+                  HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                  return items1;
+                } else {
+                  if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                    if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                      return [];
+                    }
+                  }
+                  let components = type.components;
+                  return components.flatMap(closure_1_2);
                 }
+              });
+            } else {
+              mapped = [];
+            }
+            HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+            return items1;
+          } else {
+            if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+              if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                return [];
               }
-              let components = type.components;
-              return components.flatMap(closure_1_2);
             }
-          }).map((item) => {
-            let toUnfurledMediaItemResult = item;
-            if ("proxy_url" in item) {
-              toUnfurledMediaItemResult = closure_1_0(dependencyMap[1]).toUnfurledMediaItem(item);
-              const obj = closure_1_0(dependencyMap[1]);
-            }
-            return toUnfurledMediaItemResult;
-          }), arraySpreadResult);
-          return items1;
-        } else {
-          if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
-            if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
-              return [];
-            }
+            let components = type.components;
+            return components.flatMap(closure_1_2);
           }
-          let components = type.components;
-          return components.flatMap(closure_1_2);
-        }
-      }).map((item) => {
-        let toUnfurledMediaItemResult = item;
-        if ("proxy_url" in item) {
-          toUnfurledMediaItemResult = closure_1_0(dependencyMap[1]).toUnfurledMediaItem(item);
-          const obj = closure_1_0(dependencyMap[1]);
-        }
-        return toUnfurledMediaItemResult;
-      }), arraySpreadResult);
+        }).map((item) => {
+          let toUnfurledMediaItemResult = item;
+          if ("proxy_url" in item) {
+            toUnfurledMediaItemResult = closure_1_0(dependencyMap[1]).toUnfurledMediaItem(item);
+            const obj = closure_1_0(dependencyMap[1]);
+          }
+          return toUnfurledMediaItemResult;
+        });
+        let flatMapResult = obj.flatMap((type) => {
+          type = type.type;
+          if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+            let items = type.items;
+            return items.map((media) => media.media);
+          } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+            return type.media;
+          } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+            return type.file;
+          } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+            let components2 = type.components;
+            let items1 = [];
+            let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+            if (null != type.accessory) {
+              let accessory = type.accessory;
+              let _Array = Array;
+              let obj = accessory;
+              if (!Array.isArray(accessory)) {
+                let items2 = [accessory];
+                obj = items2;
+              }
+              let mapped = obj.flatMap((type) => {
+                type = type.type;
+                if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                  let items = type.items;
+                  return items.map((media) => media.media);
+                } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                  return type.media;
+                } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                  return type.file;
+                } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                  let components2 = type.components;
+                  let items1 = [];
+                  let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                  if (null != type.accessory) {
+                    let accessory = type.accessory;
+                    let _Array = Array;
+                    let obj = accessory;
+                    if (!Array.isArray(accessory)) {
+                      let items2 = [accessory];
+                      obj = items2;
+                    }
+                    let mapped = obj.flatMap((type) => {
+                      type = type.type;
+                      if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                        let items = type.items;
+                        return items.map(/* F124542 */ function() { ... });
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                        return type.media;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                        return type.file;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                        let components2 = type.components;
+                        let items1 = [];
+                        let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                        if (null != type.accessory) {
+                          let accessory = type.accessory;
+                          let _Array = Array;
+                          let obj = accessory;
+                          if (!Array.isArray(accessory)) {
+                            let items2 = [accessory];
+                            obj = items2;
+                          }
+                          let mapped = obj.flatMap(/* F90096 */ function() { ... }).map(/* F90097 */ function() { ... });
+                          let flatMapResult = obj.flatMap(/* F90096 */ function() { ... });
+                        } else {
+                          mapped = [];
+                        }
+                        HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                        return items1;
+                      } else {
+                        if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                          if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                            return [];
+                          }
+                        }
+                        let components = type.components;
+                        return components.flatMap(closure_1_2);
+                      }
+                    }).map((item) => {
+                      let toUnfurledMediaItemResult = item;
+                      if ("proxy_url" in item) {
+                        toUnfurledMediaItemResult = closure_1_0(dependencyMap[1]).toUnfurledMediaItem(item);
+                        const obj = closure_1_0(dependencyMap[1]);
+                      }
+                      return toUnfurledMediaItemResult;
+                    });
+                    let flatMapResult = obj.flatMap((type) => {
+                      type = type.type;
+                      if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                        let items = type.items;
+                        return items.map(/* F124542 */ function() { ... });
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                        return type.media;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                        return type.file;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                        let components2 = type.components;
+                        let items1 = [];
+                        let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                        if (null != type.accessory) {
+                          let accessory = type.accessory;
+                          let _Array = Array;
+                          let obj = accessory;
+                          if (!Array.isArray(accessory)) {
+                            let items2 = [accessory];
+                            obj = items2;
+                          }
+                          let mapped = obj.flatMap(/* F90096 */ function() { ... }).map(/* F90097 */ function() { ... });
+                          let flatMapResult = obj.flatMap(/* F90096 */ function() { ... });
+                        } else {
+                          mapped = [];
+                        }
+                        HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                        return items1;
+                      } else {
+                        if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                          if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                            return [];
+                          }
+                        }
+                        let components = type.components;
+                        return components.flatMap(closure_1_2);
+                      }
+                    });
+                  } else {
+                    mapped = [];
+                  }
+                  HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                  return items1;
+                } else {
+                  if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                    if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                      return [];
+                    }
+                  }
+                  let components = type.components;
+                  return components.flatMap(closure_1_2);
+                }
+              }).map((item) => {
+                let toUnfurledMediaItemResult = item;
+                if ("proxy_url" in item) {
+                  toUnfurledMediaItemResult = closure_1_0(dependencyMap[1]).toUnfurledMediaItem(item);
+                  const obj = closure_1_0(dependencyMap[1]);
+                }
+                return toUnfurledMediaItemResult;
+              });
+              let flatMapResult = obj.flatMap((type) => {
+                type = type.type;
+                if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                  let items = type.items;
+                  return items.map((media) => media.media);
+                } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                  return type.media;
+                } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                  return type.file;
+                } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                  let components2 = type.components;
+                  let items1 = [];
+                  let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                  if (null != type.accessory) {
+                    let accessory = type.accessory;
+                    let _Array = Array;
+                    let obj = accessory;
+                    if (!Array.isArray(accessory)) {
+                      let items2 = [accessory];
+                      obj = items2;
+                    }
+                    let mapped = obj.flatMap((type) => {
+                      type = type.type;
+                      if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                        let items = type.items;
+                        return items.map(/* F124542 */ function() { ... });
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                        return type.media;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                        return type.file;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                        let components2 = type.components;
+                        let items1 = [];
+                        let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                        if (null != type.accessory) {
+                          let accessory = type.accessory;
+                          let _Array = Array;
+                          let obj = accessory;
+                          if (!Array.isArray(accessory)) {
+                            let items2 = [accessory];
+                            obj = items2;
+                          }
+                          let mapped = obj.flatMap(/* F90096 */ function() { ... }).map(/* F90097 */ function() { ... });
+                          let flatMapResult = obj.flatMap(/* F90096 */ function() { ... });
+                        } else {
+                          mapped = [];
+                        }
+                        HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                        return items1;
+                      } else {
+                        if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                          if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                            return [];
+                          }
+                        }
+                        let components = type.components;
+                        return components.flatMap(closure_1_2);
+                      }
+                    }).map((item) => {
+                      let toUnfurledMediaItemResult = item;
+                      if ("proxy_url" in item) {
+                        toUnfurledMediaItemResult = closure_1_0(dependencyMap[1]).toUnfurledMediaItem(item);
+                        const obj = closure_1_0(dependencyMap[1]);
+                      }
+                      return toUnfurledMediaItemResult;
+                    });
+                    let flatMapResult = obj.flatMap((type) => {
+                      type = type.type;
+                      if (closure_1_0(closure_1_1[0]).ComponentType.MEDIA_GALLERY === type) {
+                        let items = type.items;
+                        return items.map(/* F124542 */ function() { ... });
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.THUMBNAIL === type) {
+                        return type.media;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.FILE === type) {
+                        return type.file;
+                      } else if (closure_1_0(closure_1_1[0]).ComponentType.SECTION === type) {
+                        let components2 = type.components;
+                        let items1 = [];
+                        let arraySpreadResult = HermesBuiltin.arraySpread(components2.flatMap(closure_1_2), 0);
+                        if (null != type.accessory) {
+                          let accessory = type.accessory;
+                          let _Array = Array;
+                          let obj = accessory;
+                          if (!Array.isArray(accessory)) {
+                            let items2 = [accessory];
+                            obj = items2;
+                          }
+                          let mapped = obj.flatMap(/* F90096 */ function() { ... }).map(/* F90097 */ function() { ... });
+                          let flatMapResult = obj.flatMap(/* F90096 */ function() { ... });
+                        } else {
+                          mapped = [];
+                        }
+                        HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                        return items1;
+                      } else {
+                        if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                          if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                            return [];
+                          }
+                        }
+                        let components = type.components;
+                        return components.flatMap(closure_1_2);
+                      }
+                    });
+                  } else {
+                    mapped = [];
+                  }
+                  HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+                  return items1;
+                } else {
+                  if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+                    if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                      return [];
+                    }
+                  }
+                  let components = type.components;
+                  return components.flatMap(closure_1_2);
+                }
+              });
+            } else {
+              mapped = [];
+            }
+            HermesBuiltin.arraySpread(mapped, arraySpreadResult);
+            return items1;
+          } else {
+            if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {
+              if (closure_1_0(closure_1_1[0]).ComponentType.CONTAINER !== type) {
+                return [];
+              }
+            }
+            let components = type.components;
+            return components.flatMap(closure_1_2);
+          }
+        });
+      } else {
+        mapped = [];
+      }
+      HermesBuiltin.arraySpread(mapped, arraySpreadResult);
       return items1;
     } else {
       if (closure_1_0(closure_1_1[0]).ComponentType.ACTION_ROW !== type) {

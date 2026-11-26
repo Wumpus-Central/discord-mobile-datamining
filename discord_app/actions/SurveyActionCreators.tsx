@@ -8,7 +8,7 @@ import SurveyStore from "../stores/SurveyStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SURVEY_REFETCH_INTERVAL = fn(7822).SURVEY_REFETCH_INTERVAL;
+const SURVEY_REFETCH_INTERVAL = fn(7856).SURVEY_REFETCH_INTERVAL;
 const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, NoticeTypes: closure_6, Endpoints: metroImportDefault } = Constants);
 const size = fn(2);

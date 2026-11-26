@@ -21,7 +21,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 const require = globalThis.__r;
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
-const useStateFromSharedValueDefault = tmp(8577);
+const useStateFromSharedValueDefault = tmp(8619);
 require = fn;
 function getButtons(c1, stateFromStores, c2, memo) {
   if (c1) {
@@ -111,7 +111,7 @@ function getButtons(c1, stateFromStores, c2, memo) {
     arr2 = items1;
   }
 }
-const VoicePanelControlsConstants = fn(11732);
+const VoicePanelControlsConstants = fn(11780);
 ({ CONTROLS_BUTTON_SIZE_LARGE: closure_6, CONTROLS_BUTTON_SIZE_NORMAL: metroImportDefault } =
   VoicePanelControlsConstants);
 const InputModes = fn(1071).InputModes;
@@ -231,7 +231,7 @@ export default function useControlsButtons() {
   useControlsButtonsTsx1.__closure = items5;
   useControlsButtonsTsx1.__workletHash = 5736026634823;
   useControlsButtonsTsx1.__initData = tmp13;
-  const derivedValue = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(useControlsButtonsTsx1);
+  const derivedValue = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(useControlsButtonsTsx1);
   const tmp18 = useStateFromSharedValueDefault(derivedValue);
   constants = tmp18;
   const items6 = [tmp4, stateFromStores, tmp18, treatment, memo];

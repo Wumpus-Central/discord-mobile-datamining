@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkModal.tsx
 import util from "../../../../../../intl/index.native.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef7718 from "../../../../../../../_runtime/metro/07718__.js";
+import _modDef7752 from "../../../../../../../_runtime/metro/07752__.js";
 import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators.tsx";
 import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess.tsx";
 import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 function CloseButton() {
   const obj = {
-    source: _modDef7718,
+    source: _modDef7752,
     onPress: function onClose() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
@@ -19,14 +19,14 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7718,
+    source: _modDef7752,
     onPress: function onClose() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null,
   });
 }
-const constants = fn(7762).CrunchyrollLinkModalScenes;
+const constants = fn(7796).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1071).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -36,11 +36,11 @@ const result = size.fileFinishedImporting(
 
 export default function CrunchyrollLinkModal(locationStack) {
   let twoWayLinkStyles;
-  twoWayLinkStyles = twoWayLinkStyles(7726).useTwoWayLinkStyles();
+  twoWayLinkStyles = twoWayLinkStyles(7760).useTwoWayLinkStyles();
   items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => {
     function onClose() {
-      return closure_1_1(7760).hideModal();
+      return closure_1_1(7794).hideModal();
     }
     function blank() {
       return null;
@@ -52,7 +52,7 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(7763), {});
+          return closure_1_6(closure_1_1(7797), {});
         },
       },
       [closure_2_4.PRE_CONNECT]: {
@@ -60,10 +60,10 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerRight: CloseButton,
         headerStyle: twoWayLinkStyles.navHeader,
         headerTitle() {
-          return closure_1_6(onClose(7727).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+          return closure_1_6(onClose(7761).TwoWayLinkStepHeader, { idx: 1, total: 2 });
         },
         render() {
-          return closure_1_6(closure_1_1(7767), {});
+          return closure_1_6(closure_1_1(7801), {});
         },
       },
       [closure_2_4.DISCORD_CONSENT]: {
@@ -71,11 +71,11 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerRight: CloseButton,
         headerStyle: twoWayLinkStyles.navHeader,
         headerTitle() {
-          return closure_1_6(onClose(7727).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+          return closure_1_6(onClose(7761).TwoWayLinkStepHeader, { idx: 2, total: 2 });
         },
         render(arg0) {
           ({ callbackCode, callbackState } = arg0);
-          return closure_1_6(closure_1_1(7770), { callbackCode, callbackState });
+          return closure_1_6(closure_1_1(7804), { callbackCode, callbackState });
         },
       },
       [closure_2_4.SUCCESS]: {
@@ -98,8 +98,8 @@ export default function CrunchyrollLinkModal(locationStack) {
       },
     };
   }, items);
-  const obj = twoWayLinkStyles(7726);
-  const accountLinkStepTracking = twoWayLinkStyles(7748).useAccountLinkStepTracking(
+  const obj = twoWayLinkStyles(7760);
+  const accountLinkStepTracking = twoWayLinkStyles(7782).useAccountLinkStepTracking(
     PlatformTypes.CRUNCHYROLL,
     locationStack.locationStack,
   );
@@ -111,7 +111,7 @@ export default function CrunchyrollLinkModal(locationStack) {
   };
   const intl = twoWayLinkStyles(1112).intl;
   obj3.headerBackTitle = intl.string(twoWayLinkStyles(1112).t["13/7kX"]);
-  return jsx(twoWayLinkStyles(7324).Navigator, {
+  return jsx(twoWayLinkStyles(7355).Navigator, {
     onStateChange: accountLinkStepTracking,
     screens: memo,
     initialRouteName: constants.LANDING,

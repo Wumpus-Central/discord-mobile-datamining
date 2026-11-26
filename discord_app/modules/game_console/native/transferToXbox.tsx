@@ -4,123 +4,32 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_8 = async function _transferToXbox(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = closure_0;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          c3 = 1;
-          c4 = 1;
-          const obj3 = { value: GameConsoleAlertUtilsDefault.maybeShowPTTAlert(constants.XBOX), done: false };
-          return obj3;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          c3 = 2;
-          c4 = 1;
-          const obj7 = { value: closure_130_2(closure_130_3[6]).disconnectRemote(), done: false };
-          return obj7;
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
-        } else {
-          c3 = 3;
-          c4 = 1;
-          const obj9 = { value: closure_130_2(closure_130_3[6]).getConnectNonce(), done: false };
-          return obj9;
-        }
-      } else if (3 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
-        } else {
-          closure_129_1 = value;
-          const obj12 = { nonce: closure_129_1, forQRCode: false };
-          closure_129_2 = closure_130_1(closure_130_3[7])(closure_129_0, obj12);
-          c3 = 4;
-          c4 = 1;
-          const obj14 = { value: closure_130_5.canOpenURL(closure_129_2), done: false };
-          return obj14;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj15 = { value, done: true };
-        return obj15;
-      } else if (value) {
-        closure_130_1(closure_130_3[11])(closure_129_0.id, closure_130_6.XBOX);
-        closure_130_2(closure_130_3[6]).waitForSession(closure_130_6.XBOX, closure_129_0.id, closure_129_1);
-        const obj4 = closure_130_2(closure_130_3[6]);
-        closure_130_2(closure_130_3[12]).stopOwnStream(false);
-        closure_130_5.openURL(closure_129_2);
-        c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
-      } else {
-        const obj17 = {
-          importer() {
-            return closure_1_0(paths[10])(paths[9], paths.paths).then((result) => {
-              closure_0 = result.default;
-              return (arg0) => {
-                const merged = Object.assign(arg0);
-                return closure_2_7(closure_0, {});
-              };
-            });
-          },
-          isDismissable: false,
+let closure_8 = async function _transferToXbox() {
+  closure_2 = tmp2;
+  closure_129_0 = closure_0;
+  await GameConsoleAlertUtilsDefault.maybeShowPTTAlert(constants.XBOX);
+  await closure_130_2(closure_130_3[6]).disconnectRemote();
+  await closure_130_2(closure_130_3[6]).getConnectNonce();
+  closure_129_1 = value;
+  closure_129_2 = closure_130_1(closure_130_3[7])(closure_129_0, { nonce: closure_129_1, forQRCode: false });
+  await closure_130_5.openURL(closure_129_2);
+  closure_130_1(closure_130_3[11])(closure_129_0.id, closure_130_6.XBOX);
+  closure_130_2(closure_130_3[6]).waitForSession(closure_130_6.XBOX, closure_129_0.id, closure_129_1);
+  closure_130_2(closure_130_3[6]);
+  closure_130_2(closure_130_3[12]).stopOwnStream(false);
+  await "HermesInternal";
+  return closure_130_1(closure_130_3[8]).openLazy({
+    importer() {
+      return closure_1_0(paths[10])(paths[9], paths.paths).then((result) => {
+        closure_0 = result.default;
+        return (arg0) => {
+          const merged = Object.assign(arg0);
+          return closure_2_7(closure_0, {});
         };
-        c4 = 3;
-        const obj18 = { value: closure_130_1(closure_130_3[8]).openLazy(obj17), done: true };
-        return obj18;
-      }
-    } catch (tmp39) {
-      c4 = tmp;
-      throw tmp39;
-    }
-  }
+      });
+    },
+    isDismissable: false,
+  });
 };
 const Linking = fn(17).Linking;
 const PlatformTypes = fn(1071).PlatformTypes;

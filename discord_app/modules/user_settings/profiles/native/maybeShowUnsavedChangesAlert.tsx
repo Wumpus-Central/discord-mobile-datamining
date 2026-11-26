@@ -20,7 +20,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
           c3 = 0;
           closure_129_3(false);
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -131,16 +131,16 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
   onReset = onReset.onReset;
   const onContinue = onReset.onContinue;
   if (onReset.hasUnsavedChanges) {
-    onReset(5197).dismissKeyboard();
-    const obj = onReset(5197);
+    onReset(5228).dismissKeyboard();
+    const obj = onReset(5228);
     if (obj2.getIsUserProfileMobileSavePromptEnabled(tmp)) {
-      tmp7(5226).hideActionSheet();
-      const tmp7Result = tmp7(5226);
-      tmp7(6016).close();
-      const tmp4Result = tmp4(6017);
+      tmp7(5257).hideActionSheet();
+      const tmp7Result = tmp7(5257);
+      tmp7(6047).close();
+      const tmp4Result = tmp4(6048);
       const obj3 = { onReset, onContinue, onSave: tmp2 };
       tmp4Result.openAlert(c9, closure_6(UnsavedChangesSavePromptAlert, obj3), undefined, { dismissable: true });
-      const tmp7Result3 = tmp7(6016);
+      const tmp7Result3 = tmp7(6047);
     } else {
       const obj4 = {
         title: null,
@@ -166,10 +166,10 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       obj4.onCancel = function onCancel() {
         onContinue(dependencyMap[10]).close();
       };
-      tmp7(6016).show(obj4);
-      const tmp7Result4 = tmp7(6016);
+      tmp7(6047).show(obj4);
+      const tmp7Result4 = tmp7(6047);
     }
-    obj2 = onReset(9760);
+    obj2 = onReset(9802);
   } else {
     onContinue();
   }

@@ -34,10 +34,10 @@ export default function OrbsArcadeInfoSheet(gameId) {
       secondaryAction: null,
       direction: "vertical",
     };
-    tmpResult = tmp(16607);
-    obj4.location = tmp(16587).OrbsArcadeCtaLocation.INFO_SHEET;
+    tmpResult = tmp(16658);
+    obj4.location = tmp(16638).OrbsArcadeCtaLocation.INFO_SHEET;
     obj4.surface = gameId.surface;
-    obj4.secondaryAction = tmp(16597).OrbsArcadeSheetSecondaryAction.CLOSE;
+    obj4.secondaryAction = tmp(16648).OrbsArcadeSheetSecondaryAction.CLOSE;
     obj3.actions = jsx(OrbsArcadeSheetActionsDefault, {
       game: stateFromStores,
       sheetKey: "OrbsArcadeInfoSheet",
@@ -46,7 +46,7 @@ export default function OrbsArcadeInfoSheet(gameId) {
       secondaryAction: null,
       direction: "vertical",
     });
-    tmp5Result2 = jsx(tmp(10702).PromoSheet, {
+    tmp5Result2 = jsx(tmp(10747).PromoSheet, {
       gradientColor: "blue",
       illustration: tmp5Result,
       title: null,

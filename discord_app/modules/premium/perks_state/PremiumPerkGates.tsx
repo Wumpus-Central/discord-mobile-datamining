@@ -75,8 +75,8 @@ export function canUsePremiumProfileCustomization(currentUser) {
 export function canUsePremiumAppIcons(currentUser) {
   return ProductCatalog.canUserUse(user2.Perk.APP_ICONS, currentUser);
 }
-export function canUsePremiumGuildMemberProfile(currentUser) {
-  return ProductCatalog.canUserUse(user2.Perk.PREMIUM_GUILD_MEMBER_PROFILE, currentUser);
+export function canUsePremiumGuildMemberProfile(user) {
+  return ProductCatalog.canUserUse(user2.Perk.PREMIUM_GUILD_MEMBER_PROFILE, user);
 }
 export function canUseClientThemes(currentUser) {
   return ProductCatalog.canUserUse(user2.Perk.CLIENT_THEMES, currentUser);

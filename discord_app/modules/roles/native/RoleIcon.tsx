@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let c6 = 1.25;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");

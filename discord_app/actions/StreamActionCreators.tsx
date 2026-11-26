@@ -103,7 +103,7 @@ let closure_20 = async function _fetchStreamPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -138,7 +138,7 @@ let closure_20 = async function _fetchStreamPreview() {
               const obj7 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: HTTPResult };
               DispatcherDefault.dispatch(obj7);
               c6 = 1;
-              HTTP = obj6(1284).HTTP;
+              HTTP = obj6(1285).HTTP;
               const request = {
                 url: closure_2_14.STREAM_PREVIEW(HTTPResult),
                 query: null,
@@ -149,7 +149,7 @@ let closure_20 = async function _fetchStreamPreview() {
               timestamp = Date.now();
               obj9.version = timestamp;
               request.query = obj9;
-              obj6 = obj6(1284);
+              obj6 = obj6(1285);
               result = obj6.rejectWithMigratedError();
               request.rejectWithError = result;
               value = HTTP.get(request);
@@ -219,7 +219,7 @@ let closure_21 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1071);
 ({ Endpoints: closure_14, AppContext: closure_15, PopoutWindowKeys: closure_16 } = Constants);
-const StreamTypes = fn(6783).StreamTypes;
+const StreamTypes = fn(6814).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -392,15 +392,15 @@ export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(8406)(closure_1_1);
+          closure_1(8448)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(6770).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(6770);
+          closure_0(6801).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(6801);
         }
       }
     };

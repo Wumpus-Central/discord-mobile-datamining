@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/FractionalNitroPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05567_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05598_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import _modDef11246 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import _modDef11292 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -13,10 +13,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1071).VerticalGradient;
-const PremiumTypes = fn(1388).PremiumTypes;
+const PremiumTypes = fn(1389).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: {
     flexDirection: "column",
@@ -91,7 +91,7 @@ export function FractionalNitroPreview() {
     end: VerticalGradient.END,
     style: tmp.gradient,
   };
-  obj8.uri = _modDef11246;
+  obj8.uri = _modDef11292;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);

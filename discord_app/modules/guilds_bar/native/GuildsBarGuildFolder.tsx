@@ -9,7 +9,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
-import _modDef7068 from "../../../../_runtime/metro/07068__.js";
+import _modDef7099 from "../../../../_runtime/metro/07099__.js";
 import ListUtils from "../../../utils/ListUtils.tsx";
 import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems.tsx";
 import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper.tsx";
@@ -25,7 +25,7 @@ import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
 
-const _modDef1653 = tmp3(1653);
+const _modDef1654 = tmp3(1654);
 require = fn;
 function MiniGuildIcon(arg0) {
   ({ guildId: require, position, selected } = arg0);
@@ -77,8 +77,8 @@ function TransitionWrapper(children) {
   } else {
     num = 0;
   }
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(num);
-  let obj3 = require("../../../../_runtime/metro/01653__.js");
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(num);
+  let obj3 = require("../../../../_runtime/metro/01654__.js");
   let items1 = [
     closure_25,
     require("spring/spring").withSpring,
@@ -87,7 +87,7 @@ function TransitionWrapper(children) {
     closure_24,
     state,
     require("native").TransitionStates,
-    require("../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01707__.js").scheduleOnRN,
     cleanUp,
     flag,
     token,
@@ -178,7 +178,7 @@ function TransitionWrapper(children) {
   GuildsBarGuildFolderTsx4.__workletHash = 7096753639625;
   GuildsBarGuildFolderTsx4.__initData = tmp8;
   const items3 = [state, sharedValue, stateFromStores, cleanUp];
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(GuildsBarGuildFolderTsx4);
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(GuildsBarGuildFolderTsx4);
   const effect = noop.useEffect(() => {
     if (c2) {
       if (c1 === native.TransitionStates.YEETED) {
@@ -194,7 +194,7 @@ function TransitionWrapper(children) {
   let obj4 = { style: null, children: children.children };
   const items4 = [animatedStyle, tmp5.folderScaleContainer];
   obj4.style = items4;
-  return closure_17(_modDef1653.View, obj4);
+  return closure_17(_modDef1654.View, obj4);
 }
 function getItemKey(type) {
   return type.type;
@@ -203,7 +203,7 @@ function GuildFolderIcon(item) {
   item = item.item;
   let tmp = null;
   if ("icon" === item.type) {
-    const obj = { source: _modDef7068, style: item.tintStyle };
+    const obj = { source: _modDef7099, style: item.tintStyle };
     tmp = closure_1_17(FastImageDefault, obj);
   }
   return tmp;
@@ -242,20 +242,20 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
     return closure_17(TransitionWrapper, obj, arg0);
   }
 }
-const GuildsNodeType = fn(6133).GuildsNodeType;
-const GuildsBarDnDStore = fn(18015);
+const GuildsNodeType = fn(6164).GuildsNodeType;
+const GuildsBarDnDStore = fn(18074);
 ({ useItemDragState: closure_10, useFolderBGHeightOffset: closure_11 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(18020);
+let GuildsBarConstants = fn(18079);
 ({
   DEFAULT_FOLDER_COLOR: closure_12,
   isDefaultFolderColor: map1,
   normalizeFolderColor: closure_14,
 } = GuildsBarConstants);
-GuildsBarConstants = fn(18012);
+GuildsBarConstants = fn(18071);
 ({ TRANSITION_PHYSICS: closure_15, FOLDER_SPRING_PHYSICS: closure_16 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_19 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -379,7 +379,7 @@ const memoResult = noop.memo(function FolderBGInner(color) {
   GuildsBarGuildFolderTsx2.__closure = items4;
   GuildsBarGuildFolderTsx2.__workletHash = 14463623001088;
   GuildsBarGuildFolderTsx2.__initData = tmp15;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(GuildsBarGuildFolderTsx2);
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(GuildsBarGuildFolderTsx2);
   const obj5 = { pointerEvents: "none", collapsable: false, layout: callback, style: null };
   const items5 = [
     tmp6.folderBackground,
@@ -623,10 +623,10 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
             const result = closure_1_5.set(set);
           }
         }
-        const result1 = c0(5228).triggerHapticFeedback(c0(5228).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj4 = c0(5228);
-        const result2 = c1(6960).toggleGuildFolderExpand(_undefined);
-        const obj5 = c1(6960);
+        const result1 = c0(5259).triggerHapticFeedback(c0(5259).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj4 = c0(5259);
+        const result2 = c1(6991).toggleGuildFolderExpand(_undefined);
+        const obj5 = c1(6991);
       },
     }),
     items7,
@@ -690,7 +690,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
   }, items10);
   ({ accessibilityActions, onAccessibilityAction } = memo4);
   const obj7 = require("useToken");
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue("" + id);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue("" + id);
   const items11 = [
     closure_30,
     dragDropInProgress,
@@ -781,7 +781,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
     expandedChildren: null,
     children: null,
   };
-  const obj8 = require("../../../../_runtime/metro/01653__.js");
+  const obj8 = require("../../../../_runtime/metro/01654__.js");
   obj9.id = "" + id;
   obj9.draggedItemSize = itemSize;
   obj9.accessibilityActions = accessibilityActions;
@@ -815,10 +815,10 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
   let tmp28Result2;
   if (!flag2) {
     const obj11 = { folderId: id, expanded };
-    tmp28Result2 = closure_17(tmp3(18035), obj11);
+    tmp28Result2 = closure_17(tmp3(18094), obj11);
   }
   obj9.expandedChildren = tmp28Result2;
-  obj9.children = closure_17(tmp(5073).TransitionGroup, {
+  obj9.children = closure_17(tmp(5104).TransitionGroup, {
     renderItem: renderGuildFolderContent,
     getItemKey,
     items: memo3,

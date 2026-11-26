@@ -2,7 +2,7 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
-import asyncRequireImpl from "../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/02120_asyncRequireImpl.js";
 import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import windowSourceMatchesDefault from "../modules/go_live/utils/windowSourceMatches.tsx";
@@ -54,7 +54,7 @@ const Constants = fn(1071);
   NULL_STRING_GUILD_ID: closure_21,
   BasicPermissions: closure_22,
 } = Constants);
-const StreamTypes = fn(6783).StreamTypes;
+const StreamTypes = fn(6814).StreamTypes;
 const selfStreamParticipantsHidden = {};
 let intent = null;
 let closure_27 = 10 * DurationsDefault.Millis.SECOND;
@@ -701,7 +701,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    const obj = sourceId(6785);
+    const obj = sourceId(6816);
     const encodeStreamKeyResult = obj.encodeStreamKey({
       streamType,
       guildId,
@@ -823,11 +823,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(6788, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(6819, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(6788, dependencyMap.paths);
+        const promise = asyncRequireImpl(6819, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

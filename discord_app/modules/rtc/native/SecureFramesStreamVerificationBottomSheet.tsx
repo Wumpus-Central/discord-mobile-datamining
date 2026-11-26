@@ -36,8 +36,8 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   obj2.subtitle = intl2.string(channelId(1112).t.qODBkW);
   const intl3 = channelId(1112).intl;
   const obj3 = { helpArticle: null };
-  const tmp3 = streamKey(8662);
-  obj3.helpArticle = channelId(8638).getSecureFramesHelpdeskArticle();
+  const tmp3 = streamKey(8704);
+  obj3.helpArticle = channelId(8680).getSecureFramesHelpdeskArticle();
   obj2.footer = intl3.format(channelId(1112).t["H3+ktv"], obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;

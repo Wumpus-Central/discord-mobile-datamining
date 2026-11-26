@@ -2,7 +2,7 @@
 import CutoutBackgroundContext from "CutoutBackgroundContext.tsx";
 import ClipViewNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/ClipViewNativeComponent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import 01653__ from "../../../../../_runtime/metro/01653__.js";
+import 01654__ from "../../../../../_runtime/metro/01654__.js";
 
 require = fn;
 function SolidCutout(arg0) {
@@ -43,7 +43,7 @@ let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.solidCutoutContainer = {};
 obj2.solidCutout = { position: "absolute" };
 const styles = StyleSheet.create(obj2);
-const ClipViewNativeComponent = module_1653.createAnimatedComponent(ClipViewNativeComponentDefault);
+const ClipViewNativeComponent = module_1654.createAnimatedComponent(ClipViewNativeComponentDefault);
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/ClipView.tsx");
 

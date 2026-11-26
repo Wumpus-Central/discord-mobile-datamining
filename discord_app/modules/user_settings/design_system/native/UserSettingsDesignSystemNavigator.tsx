@@ -7,7 +7,7 @@ import TableRowGroup from "../../../../design/components/TableRow/native/TableRo
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7167 from "../../../../../_runtime/metro/07167__.js";
+import _mod7198 from "../../../../../_runtime/metro/07198__.js";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import ModalScreen from "../../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../../design/components/Modal/native/ModalContent.native.tsx";
@@ -44,7 +44,7 @@ function HomeScreen(navigation) {
   };
   const obj3 = { style: closure_9().fullWidth, children: null };
   const tmp = closure_9();
-  obj3.children = closure_7(navigation(6109).TableRowGroup, {
+  obj3.children = closure_7(navigation(6140).TableRowGroup, {
     hasIcons: false,
     children: items.map((screen) => {
       screen = screen.screen;
@@ -64,7 +64,7 @@ function HomeScreen(navigation) {
   });
   obj2.children = closure_7(closure_6, obj3);
   obj.children = closure_7(DemoScreen, obj2);
-  return closure_7(navigation(7854).ModalScreen, obj);
+  return closure_7(navigation(7888).ModalScreen, obj);
 }
 function SimpleScreen(arg0) {
   ({ title, description } = arg0);
@@ -74,7 +74,7 @@ function SimpleScreen(arg0) {
 }
 function FullscreenScreen() {
   const tmp = closure_9();
-  const headerHeight = _mod7167.useHeaderHeight();
+  const headerHeight = _mod7198.useHeaderHeight();
   const obj2 = { children: null };
   const obj3 = {
     style: null,
@@ -151,7 +151,7 @@ function DemoNavigator(arg0) {
     const obj2 = {
       headerLeft: NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
       headerTitle() {
-        return closure_1_7(closure_1_0(7160).NavigatorHeader, { title: constants.HOME });
+        return closure_1_7(closure_1_0(7191).NavigatorHeader, { title: constants.HOME });
       },
       render(arg0, navigation) {
         return closure_1_7(closure_1_14, { navigation });
@@ -162,7 +162,7 @@ function DemoNavigator(arg0) {
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj4.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7160).NavigatorHeader, {
+      return closure_1_7(closure_1_0(7191).NavigatorHeader, {
         title: constants.SUBTITLE,
         subtitle: "A short supporting line",
       });
@@ -178,9 +178,9 @@ function DemoNavigator(arg0) {
     obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj7.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7160).NavigatorHeader, {
+      return closure_1_7(closure_1_0(7191).NavigatorHeader, {
         title: constants.ICON,
-        icon: closure_1_7(closure_1_0(17401).SparklesIcon, { size: "sm" }),
+        icon: closure_1_7(closure_1_0(17452).SparklesIcon, { size: "sm" }),
       });
     };
     obj7.render = function render() {
@@ -190,10 +190,10 @@ function DemoNavigator(arg0) {
     const obj10 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     obj10.headerLeft = NavigatorHeader.getHeaderTextButton("Cancel", ModalActionCreatorsDefault.pop);
     obj10.headerRight = function headerRight() {
-      return closure_1_7(closure_1_0(7717).HeaderActionButton, { text: "Save", onPress: closure_1_1(6099).pop });
+      return closure_1_7(closure_1_0(7751).HeaderActionButton, { text: "Save", onPress: closure_1_1(6130).pop });
     };
     obj10.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7160).NavigatorHeader, { title: constants.TEXT_BUTTONS });
+      return closure_1_7(closure_1_0(7191).NavigatorHeader, { title: constants.TEXT_BUTTONS });
     };
     obj10.render = function render() {
       return closure_1_7(closure_1_15, {
@@ -205,10 +205,10 @@ function DemoNavigator(arg0) {
     const obj12 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     obj12.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj12.headerRight = function headerRight() {
-      return closure_1_7(closure_1_0(7160).HeaderSubmittingIndicator, {});
+      return closure_1_7(closure_1_0(7191).HeaderSubmittingIndicator, {});
     };
     obj12.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7160).NavigatorHeader, { title: constants.SUBMITTING });
+      return closure_1_7(closure_1_0(7191).NavigatorHeader, { title: constants.SUBMITTING });
     };
     obj12.render = function render() {
       return closure_1_7(closure_1_15, {
@@ -231,7 +231,7 @@ function DemoNavigator(arg0) {
     obj17.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj17.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj17.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7160).NavigatorHeader, { title: constants.FOOTER });
+      return closure_1_7(closure_1_0(7191).NavigatorHeader, { title: constants.FOOTER });
     };
     obj17.render = function render(arg0, navigation) {
       return closure_1_7(closure_1_17, { navigation });
@@ -241,7 +241,7 @@ function DemoNavigator(arg0) {
     obj20.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj20.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj20.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7160).NavigatorHeader, { title: constants.LONG_CONTENT });
+      return closure_1_7(closure_1_0(7191).NavigatorHeader, { title: constants.LONG_CONTENT });
     };
     obj20.render = function render() {
       return closure_1_7(closure_1_18, {});
@@ -267,7 +267,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
   fullWidth: { width: "100%" },
@@ -322,7 +322,7 @@ export default function UserSettingsDesignSystemNavigator() {
   const obj2 = { spacing: first1(575).space.PX_16, style: closure_9().container, children: null };
   const tmp = closure_9();
   items = [
-    closure_7(value(7220).TableRadioGroup, {
+    closure_7(value(7251).TableRadioGroup, {
       title: "Gradient",
       value,
       onChange: tmp2[1],
@@ -336,12 +336,12 @@ export default function UserSettingsDesignSystemNavigator() {
   ];
   const obj4 = { title: "Title alignment", value: first1, onChange: tmp4[1], hasIcons: false, children: null };
   items1 = [
-    closure_7(value(7222).TableRadioRow, { label: "Center", value: "center" }),
-    closure_7(value(7222).TableRadioRow, { label: "Left", value: "left" }),
+    closure_7(value(7253).TableRadioRow, { label: "Center", value: "center" }),
+    closure_7(value(7253).TableRadioRow, { label: "Left", value: "left" }),
   ];
   obj4.children = items1;
-  items[1] = closure_8(value(7220).TableRadioGroup, obj4);
-  items[2] = closure_7(value(5610).Button, {
+  items[1] = closure_8(value(7251).TableRadioGroup, obj4);
+  items[2] = closure_7(value(5641).Button, {
     onPress: function openNavigator() {
       let tmp2;
       if ("none" !== first) {
@@ -353,6 +353,6 @@ export default function UserSettingsDesignSystemNavigator() {
     text: "Show Navigator",
   });
   obj2.children = items;
-  obj.children = closure_8(value(6084).Stack, obj2);
+  obj.children = closure_8(value(6115).Stack, obj2);
   return closure_7(closure_5, obj);
 }

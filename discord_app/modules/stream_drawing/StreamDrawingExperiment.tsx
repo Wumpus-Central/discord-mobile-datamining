@@ -7,14 +7,14 @@ const require = globalThis.__r;
 
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
-let ApexExperiment = fn(1450);
+let ApexExperiment = fn(1451);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-11-stream-drawing",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-ApexExperiment = fn(1450);
+ApexExperiment = fn(1451);
 const apexExperiment1 = ApexExperiment.createApexExperiment({
   name: "2026-11-stream-drawing-guild",
   kind: "guild",

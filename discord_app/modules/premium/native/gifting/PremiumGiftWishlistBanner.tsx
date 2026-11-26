@@ -11,17 +11,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_7 = fn(7558).WishlistRecommendationReason;
-const PremiumConstants = fn(1388);
+let closure_7 = fn(7589).WishlistRecommendationReason;
+const PremiumConstants = fn(1389);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1073).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(6106).UserProfileSections;
+const UserProfileSections = fn(6137).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = {
     title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 },
@@ -161,7 +161,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {

@@ -368,11 +368,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4865);
+const ChannelRecord = fn(4896);
 ({ THREAD_CHANNEL_TYPES: metroImportDefault, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(4879);
+const GuildRecord = fn(4910);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: closure_10 } = GuildRecord);
-const hasPermission = fn(4919).hasPermission;
+const hasPermission = fn(4950).hasPermission;
 const Constants = fn(1071);
 const Permissions = Constants.Permissions;
 ({
@@ -444,7 +444,7 @@ let closure_29 = BigFlagUtils.combine(
   Permissions.READ_MESSAGE_HISTORY,
   Permissions.CHANGE_NICKNAME,
 );
-const items1 = [fn(4930).GuildMemberFlags.IS_GUEST, ...fn(4950).AUTOMOD_QUARANTINED_PROFILE_FLAGS];
+const items1 = [fn(4961).GuildMemberFlags.IS_GUEST, ...fn(4981).AUTOMOD_QUARANTINED_PROFILE_FLAGS];
 const reduced = items1.reduce((acc, item) => acc | item, 0);
 let BigFlagUtils = BigFlagUtils_mod;
 const size = fn(2);
@@ -566,7 +566,7 @@ export function areChannelsLocked(c18, c19, appChannelBotUserId) {
           if (null == obj2[guild_id]) {
             let obj = {
               id: guild_id,
-              type: obj2(2117).PermissionOverwriteType.ROLE,
+              type: obj2(2118).PermissionOverwriteType.ROLE,
               allow: deserializeResult,
               deny: deserializeResult,
             };

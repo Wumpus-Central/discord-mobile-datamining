@@ -17,7 +17,7 @@ let closure_6 = async function _getSystemLocale() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -99,7 +99,7 @@ function handleUpdate() {
   }
   return flag;
 }
-const setAppLocale = fn(2189).setAppLocale;
+const setAppLocale = fn(2190).setAppLocale;
 let locale = fn(1112).intl.currentLocale;
 let global = fn(1112).systemLocale;
 (function getSystemLocale() {

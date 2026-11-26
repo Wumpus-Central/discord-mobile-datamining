@@ -30,20 +30,20 @@ let obj2 = {
       } else {
         substr = hash1;
       }
-      const frameDeepLinkChannelId = socket(5814).getFrameDeepLinkChannelId(frame);
+      const frameDeepLinkChannelId = socket(5845).getFrameDeepLinkChannelId(frame);
       const subscriptions = socket.server.subscriptions;
       let tmp8 = null != frameDeepLinkChannelId;
-      const obj = socket(5814);
+      const obj = socket(5845);
       if (tmp8) {
-        tmp8 = !tmp4(7646).isConjurePreviewSurface(frame.surface);
-        const tmp4Result = tmp4(7646);
+        tmp8 = !tmp4(7677).isConjurePreviewSurface(frame.surface);
+        const tmp4Result = tmp4(7677);
       }
       if (tmp8) {
         tmp8 = someResult;
       }
       if (tmp8) {
-        const result = tmp4(5814).setFrameRelaunchDeepLink(frameDeepLinkChannelId, frame.applicationId, substr);
-        const tmp4Result2 = tmp4(5814);
+        const result = tmp4(5845).setFrameRelaunchDeepLink(frameDeepLinkChannelId, frame.applicationId, substr);
+        const tmp4Result2 = tmp4(5845);
       }
       const obj3 = { hash: substr };
       return obj3;

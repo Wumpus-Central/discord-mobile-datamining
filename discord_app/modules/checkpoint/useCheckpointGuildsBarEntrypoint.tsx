@@ -6,14 +6,14 @@ import useSelectedDismissibleContent from "../dismissible_content/hooks/useSelec
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const guilds_bar = "guilds_bar";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/useCheckpointGuildsBarEntrypoint.tsx");
 
 export const CHECKPOINT_GUILDS_BAR_SOURCE = "guilds_bar";
-export function dismissCheckpointIntro(arg0) {
-  if (arg0 === guilds_bar) {
+export function dismissCheckpointIntro(devtools) {
+  if (devtools === guilds_bar) {
     let INDIRECT_ACTION = ContentDismissActionType.TAKE_ACTION;
   } else {
     INDIRECT_ACTION = ContentDismissActionType.INDIRECT_ACTION;

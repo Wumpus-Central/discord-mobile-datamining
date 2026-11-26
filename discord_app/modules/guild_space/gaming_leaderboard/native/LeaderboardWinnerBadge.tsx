@@ -7,7 +7,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ container: { marginLeft: 4 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/native/LeaderboardWinnerBadge.tsx");
@@ -32,7 +32,7 @@ export default function LeaderboardWinnerBadge(guildId) {
   );
   const tmp5 = useActiveLeaderboardWinnerDataDefault(guildId, userId);
   let obj = guildId(504);
-  const activeLeaderboardLeaderData = guildId(11342).useActiveLeaderboardLeaderData(guildId, userId);
+  const activeLeaderboardLeaderData = guildId(11388).useActiveLeaderboardLeaderData(guildId, userId);
   if (stateFromStores) {
     if (null == tmp5) {
       let tmp9 = null;
@@ -40,19 +40,19 @@ export default function LeaderboardWinnerBadge(guildId) {
         const obj3 = {
           style: tmp.container,
           accessible: true,
-          accessibilityLabel: tmp2(11343).getLeaderboardLeaderBadgeText(activeLeaderboardLeaderData),
-          children: jsx(tmp2(11345).MedalFirstBadge, { width: 16, height: 16 }),
+          accessibilityLabel: tmp2(11389).getLeaderboardLeaderBadgeText(activeLeaderboardLeaderData),
+          children: jsx(tmp2(11391).MedalFirstBadge, { width: 16, height: 16 }),
         };
         tmp9 = (
           <View
             style={tmp.container}
             accessible
-            accessibilityLabel={tmp2(11343).getLeaderboardLeaderBadgeText(activeLeaderboardLeaderData)}
+            accessibilityLabel={tmp2(11389).getLeaderboardLeaderBadgeText(activeLeaderboardLeaderData)}
           >
-            {jsx(tmp2(11345).MedalFirstBadge, { width: 16, height: 16 })}
+            {jsx(tmp2(11391).MedalFirstBadge, { width: 16, height: 16 })}
           </View>
         );
-        const tmp2Result = tmp2(11343);
+        const tmp2Result = tmp2(11389);
       }
       return tmp9;
     } else {
@@ -61,18 +61,18 @@ export default function LeaderboardWinnerBadge(guildId) {
         num = 0;
       }
       if (num > 1) {
-        let WinnerTrophyBadge = tmp2(11349).StreakTrophyBadge;
+        let WinnerTrophyBadge = tmp2(11395).StreakTrophyBadge;
       } else {
-        WinnerTrophyBadge = tmp2(11353).WinnerTrophyBadge;
+        WinnerTrophyBadge = tmp2(11399).WinnerTrophyBadge;
       }
       const obj4 = {
         style: tmp.container,
         accessible: true,
-        accessibilityLabel: tmp2(11343).getLeaderboardWinnerBadgeText(tmp5),
+        accessibilityLabel: tmp2(11389).getLeaderboardWinnerBadgeText(tmp5),
         children: <WinnerTrophyBadge width={16} height={16} />,
       };
       return (
-        <View style={tmp.container} accessible accessibilityLabel={tmp2(11343).getLeaderboardWinnerBadgeText(tmp5)}>
+        <View style={tmp.container} accessible accessibilityLabel={tmp2(11389).getLeaderboardWinnerBadgeText(tmp5)}>
           <WinnerTrophyBadge width={16} height={16} />
         </View>
       );
@@ -80,5 +80,5 @@ export default function LeaderboardWinnerBadge(guildId) {
   } else {
     return null;
   }
-  const obj2 = guildId(11342);
+  const obj2 = guildId(11388);
 }

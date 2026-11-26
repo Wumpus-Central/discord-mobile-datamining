@@ -25,11 +25,11 @@ function VerificationListItem(userId) {
   obj.subLabel = memo;
   obj.start = start;
   obj.end = end;
-  obj.trailing = jsx(userId(6121).PressableHighlight, {
+  obj.trailing = jsx(userId(6152).PressableHighlight, {
     onPress: callback,
-    children: jsx(userId(7216).XSmallIcon, {}),
+    children: jsx(userId(7247).XSmallIcon, {}),
   });
-  return jsx(userId(6113).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
+  return jsx(userId(6144).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
 }
 function SectionListItem(children) {
   const tmp = closure_7();
@@ -74,17 +74,17 @@ function ClearVerificationsListFooter(userId) {
   const obj2 = { variant: "body-md/semibold", color: "text-feedback-critical", children: null };
   const intl = userId(1112).intl;
   obj2.children = intl.string(userId(1112).t["2xL5lu"]);
-  obj.label = jsx(userId(5603).Text, { variant: "body-md/semibold", color: "text-feedback-critical", children: null });
+  obj.label = jsx(userId(5634).Text, { variant: "body-md/semibold", color: "text-feedback-critical", children: null });
   const obj3 = { variant: "body-xs/medium", color: "text-subtle", children: null };
   const intl2 = userId(1112).intl;
   obj3.children = intl2.string(userId(1112).t.kgAfXN);
-  obj.subLabel = jsx(userId(5603).Text, { variant: "body-xs/medium", color: "text-subtle", children: null });
+  obj.subLabel = jsx(userId(5634).Text, { variant: "body-xs/medium", color: "text-subtle", children: null });
   obj.onPress = callback;
-  return jsx(userId(6113).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
+  return jsx(userId(6144).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({
   list: { flexGrow: 1 },
   listContent: { paddingVertical: 32, paddingHorizontal: 16 },
@@ -99,14 +99,14 @@ let result = size.fileFinishedImporting(
 
 export default function SettingsSecureFramesVerificationsScreen() {
   const tmp = closure_7();
-  userId = userId(7319).useSettingNavigationRoute().params.userId;
-  let obj = userId(7319);
-  const navigation = userId(1500).useNavigation();
-  const obj2 = userId(1500);
+  userId = userId(7350).useSettingNavigationRoute().params.userId;
+  let obj = userId(7350);
+  const navigation = userId(1501).useNavigation();
+  const obj2 = userId(1501);
   items = [UserStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
   const obj3 = userId(504);
-  dependencyMap = navigation(5068).getFormattedName(stateFromStores, false);
+  dependencyMap = navigation(5099).getFormattedName(stateFromStores, false);
   const layoutEffect = secureFramesUserVerifiedKeys.useLayoutEffect(() => {
     let obj = { title: null, headerTitle: null };
     let intl = util.intl;
@@ -120,8 +120,8 @@ export default function SettingsSecureFramesVerificationsScreen() {
     };
     navigation.setOptions(obj);
   });
-  const obj4 = navigation(5068);
-  secureFramesUserVerifiedKeys = userId(17493).useSecureFramesUserVerifiedKeys(userId);
+  const obj4 = navigation(5099);
+  secureFramesUserVerifiedKeys = userId(17550).useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId, secureFramesUserVerifiedKeys];
   const items2 = [navigation, secureFramesUserVerifiedKeys];
   const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -156,13 +156,13 @@ export default function SettingsSecureFramesVerificationsScreen() {
     contentContainerStyle: tmp.listContent,
     ListFooterComponent: null,
   };
-  const obj5 = userId(17493);
+  const obj5 = userId(17550);
   obj7.ListFooterComponent = (
     <View style={tmp.listFooter}>
       <ClearVerificationsListFooter userId={userId} />
     </View>
   );
-  obj6.children = jsx(userId(7451).FlashList, {
+  obj6.children = jsx(userId(7482).FlashList, {
     keyExtractor,
     getItemType,
     renderItem,

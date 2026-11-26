@@ -1,5 +1,5 @@
 // discord_app/design/components/TableRow/native/TableCheckboxRow.native.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import TableRow from "TableRow.native.tsx";
 import TableRowBadge from "TableRowBadge.native.tsx";
@@ -18,11 +18,21 @@ export function TableCheckboxRow(checked) {
     disabled = false;
   }
   const onPress = checked.onPress;
+  let accessibilityLabel = checked.accessibilityLabel;
   const merged = Object.assign(
     checked,
-    Object.assign({ checked: 0, label: 0, subLabel: 0, badge: 0, disabled: 0, onPress: 0, accessibilityHint: 0 }),
+    Object.assign({
+      checked: 0,
+      label: 0,
+      subLabel: 0,
+      badge: 0,
+      disabled: 0,
+      onPress: 0,
+      accessibilityLabel: 0,
+      accessibilityHint: 0,
+    }),
   );
-  const sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(0);
   items = [sharedValue];
   const items1 = [onPress, sharedValue, checked];
   const callback = noop.useCallback(() => {
@@ -44,7 +54,11 @@ export function TableCheckboxRow(checked) {
   obj3.accessibilityState = accessibilityState;
   obj3.accessible = true;
   obj3.accessibilityRole = accessibilityRole;
-  obj3.accessibilityLabel = TableRowBadge.getTableRowAccessibilityLabel(label, subLabel, badge);
+  if (accessibilityLabel == null) {
+    accessibilityLabel = TableRowBadge.getTableRowAccessibilityLabel(label, subLabel, badge);
+    const tmp2Result = TableRowBadge;
+  }
+  obj3.accessibilityLabel = accessibilityLabel;
   obj3.accessibilityHint = checked.accessibilityHint;
   obj3.onPressIn = callback;
   obj3.onPress = callback1;

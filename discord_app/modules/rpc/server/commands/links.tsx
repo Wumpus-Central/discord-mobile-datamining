@@ -56,7 +56,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -162,7 +162,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5687)(href);
+                  closure_1(5718)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -179,7 +179,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   if (application != null) {
                     id = application.id;
                   }
-                  const tmpResult = closure_1(1255);
+                  const tmpResult = closure_1(1256);
                   tmpResult.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                     application_id: id,
                     url: str.toString(),
@@ -205,7 +205,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   if (application != null) {
                     id = application.id;
                   }
-                  const obj = closure_1(1255);
+                  const obj = closure_1(1256);
                   obj.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                     application_id: id,
                     url: str.toString(),
@@ -238,7 +238,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(5766);
+let Constants = fn(5797);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1071);
 ({
@@ -247,13 +247,13 @@ Constants = fn(1071);
   UserSettingsSections: metroImportDefault,
   AnalyticEvents: closure_8,
 } = Constants);
-Constants = fn(2144);
+Constants = fn(2145);
 const items = [,];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
 let closure_10 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15822);
+let CONTEXT_MENU_ICON_NAMES = fn(15873);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -305,16 +305,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15822);
+CONTEXT_MENU_ICON_NAMES = fn(15873);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(10179).validatePostMessageTransport(socket.transport);
-    let obj = socket(10179);
+    let result = socket(10221).validatePostMessageTransport(socket.transport);
+    let obj = socket(10221);
     let tmp = socket;
-    const validateApplicationResult = socket(10179).validateApplication(socket.application);
+    const validateApplicationResult = socket(10221).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -345,9 +345,9 @@ let obj6 = {
         const tmp10 = new RPCErrorDefault(obj4, "This application cannot access this API");
         throw tmp10;
       }
-      tmpResult = tmp(2150);
+      tmpResult = tmp(2151);
     }
-    let obj2 = socket(10179);
+    let obj2 = socket(10221);
   },
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

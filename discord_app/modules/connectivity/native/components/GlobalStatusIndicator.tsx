@@ -1,5 +1,5 @@
 // discord_app/modules/connectivity/native/components/GlobalStatusIndicator.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
@@ -166,7 +166,7 @@ export default function GlobalStatusIndicator(children) {
   }, items2);
 }
 export function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
-  const sharedValue = _mod1653.useSharedValue(globalStatusIndicatorState.height);
+  const sharedValue = _mod1654.useSharedValue(globalStatusIndicatorState.height);
   items = [globalStatusIndicatorState.height, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(globalStatusIndicatorState.height);

@@ -27,7 +27,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-const TransportTypes = fn(5766).TransportTypes;
+const TransportTypes = fn(5797).TransportTypes;
 const Constants = fn(1071);
 ({
   ActivityActionTypes: closure_16,
@@ -38,9 +38,9 @@ const Constants = fn(1071);
   RPCCloseCodes: closure_21,
   ChannelTypes: closure_22,
 } = Constants);
-const FrameLayoutModes = fn(6906).FrameLayoutModes;
-const ActivityLayoutMode = fn(10149).ActivityLayoutMode;
-const MediaEngineContextTypes = fn(5824).MediaEngineContextTypes;
+const FrameLayoutModes = fn(6937).FrameLayoutModes;
+const ActivityLayoutMode = fn(10191).ActivityLayoutMode;
+const MediaEngineContextTypes = fn(5855).MediaEngineContextTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
 class RPCServerManager {
@@ -127,7 +127,7 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = obj.rpcServer;
         const result = rpcServer.dispatchToSubscriptions(constants3.VOICE_CHANNEL_SELECT, {}, (socket) => {
-          obj = obj(15818);
+          obj = obj(15869);
           if (obj.isGuildVoiceSocket(socket.socket)) {
             channel = channel.getChannel(channelId);
             let type;
@@ -281,7 +281,7 @@ class RPCServerManager {
         subscriptions.some((evt) => {
           let tmp = evt.evt === constants2.FRAME_DEEP_LINK;
           if (tmp) {
-            obj = obj(5814);
+            obj = obj(5845);
             tmp = obj.getFrameDeepLinkChannelId(getSocketFrameDefault(evt.socket)) === channelId;
           }
           return tmp;
@@ -295,7 +295,7 @@ class RPCServerManager {
           const result = rpcServer.dispatchToSubscriptions(
             constants3.FRAME_DEEP_LINK,
             function targetsChannelFrame(socket) {
-              obj = obj(5814);
+              obj = obj(5845);
               return obj.getFrameDeepLinkChannelId(getSocketFrameDefault(socket.socket)) === channelId;
             },
             obj2,
@@ -459,7 +459,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(10179);
+            obj = obj(10221);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -474,7 +474,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(10179);
+            obj = obj(10221);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -489,7 +489,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(constants2.NONE, user);
           const rpcServer = tmp2.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(10179);
+            obj = obj(10221);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -511,7 +511,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(10179);
+              obj = obj(10221);
               rpcServer = obj.transformBaseRelationship(relationshipType, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) =>
@@ -538,7 +538,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(10179);
+              obj = obj(10221);
               rpcServer = obj.transformBaseRelationship(tmp, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) =>
@@ -570,7 +570,7 @@ class RPCServerManager {
             closure_0 = obj.transformBaseRelationship(relationshipType, user);
             const rpcServer = tmp.rpcServer;
             const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-              obj = obj(10179);
+              obj = obj(10221);
               return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
             });
           }

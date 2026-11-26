@@ -13,7 +13,7 @@ const View = fn(17).View;
 const UserFlags = fn(1071).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   header: {
     paddingBottom: 16,

@@ -1,6 +1,6 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildSettingsStore from "../../../../guild_settings/GuildSettingsStore.tsx";
@@ -11,8 +11,8 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4942).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(8534).CREATE_NEW_CHANNEL_VALUE;
+let closure_8 = fn(4973).GUILD_SELECTABLE_CHANNELS_KEY;
+const CREATE_NEW_CHANNEL_VALUE = fn(8576).CREATE_NEW_CHANNEL_VALUE;
 const ChannelTypes = fn(1071).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
@@ -23,10 +23,10 @@ const result = size.fileFinishedImporting(
 
 export default function ChannelSetupScreen() {
   const ref = noop.useRef(null);
-  const token = guild(5576).useToken(callback(575).modules.mobile.TABLE_ROW_PADDING);
-  let obj2 = guild(5576);
-  const enableCommunitySharedStyles = guild(20044).useEnableCommunitySharedStyles();
-  let obj3 = guild(20044);
+  const token = guild(5607).useToken(callback(575).modules.mobile.TABLE_ROW_PADDING);
+  let obj2 = guild(5607);
+  const enableCommunitySharedStyles = guild(20108).useEnableCommunitySharedStyles();
+  let obj3 = guild(20108);
   items = [GuildSettingsStore];
   guild = guild(504).useStateFromStoresObject(items, () => props.getProps()).guild;
   const obj4 = guild(504);
@@ -45,9 +45,9 @@ export default function ChannelSetupScreen() {
     return obj2;
   });
   ({ rulesChannel, publicUpdatesChannel } = stateFromStoresObject);
-  const tmp8 = callback(5628)(rulesChannel, true);
+  const tmp8 = callback(5659)(rulesChannel, true);
   if (tmp8 != null) {
-    const tmp12 = tmp4(5628)(publicUpdatesChannel, true);
+    const tmp12 = tmp4(5659)(publicUpdatesChannel, true);
     if (tmp12 != null) {
       let id;
       if (guild != null) {
@@ -97,10 +97,10 @@ export default function ChannelSetupScreen() {
         items = [obj3, ...callback()];
         obj2.items = items;
         obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-          callback(8531).updateGuild({ rulesChannelId });
-          const obj = callback(8531);
+          callback(8573).updateGuild({ rulesChannelId });
+          const obj = callback(8573);
           const obj2 = { rulesChannelId };
-          callback(5226).hideActionSheet();
+          callback(5257).hideActionSheet();
         };
         let rulesChannelId;
         if (guild != null) {
@@ -110,7 +110,7 @@ export default function ChannelSetupScreen() {
           rulesChannelId = null;
         }
         obj2.selectedItem = rulesChannelId;
-        obj.openLazy(asyncRequireImpl(8457, dependencyMap.paths), "SelectRulesChannel", obj2);
+        obj.openLazy(asyncRequireImpl(8499, dependencyMap.paths), "SelectRulesChannel", obj2);
       }, items3);
       if (guild != null) {
         prop = guild.publicUpdatesChannelId;
@@ -127,10 +127,10 @@ export default function ChannelSetupScreen() {
         items = [obj3, ...callback()];
         obj2.items = items;
         obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-          callback(8531).updateGuild({ publicUpdatesChannelId });
-          const obj = callback(8531);
+          callback(8573).updateGuild({ publicUpdatesChannelId });
+          const obj = callback(8573);
           const obj2 = { publicUpdatesChannelId };
-          callback(5226).hideActionSheet();
+          callback(5257).hideActionSheet();
         };
         let prop;
         if (guild != null) {
@@ -140,12 +140,12 @@ export default function ChannelSetupScreen() {
           prop = null;
         }
         obj2.selectedItem = prop;
-        obj.openLazy(asyncRequireImpl(8457, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+        obj.openLazy(asyncRequireImpl(8499, dependencyMap.paths), "SelectUpdatesChannel", obj2);
       }, items4);
       const obj6 = {
         headerRef: ref,
         disableNextStep: false,
-        currentStep: tmp2(20042).EnableCommunityModalSteps.STEP_2,
+        currentStep: tmp2(20106).EnableCommunityModalSteps.STEP_2,
         children: null,
       };
       const obj7 = { style: enableCommunitySharedStyles.content, children: null };
@@ -158,9 +158,9 @@ export default function ChannelSetupScreen() {
       };
       const intl4 = tmp2(1112).intl;
       obj8.children = intl4.formatToPlainString(tmp2(1112).t.tInpJj, { number: 2, total: 3 });
-      const items5 = [closure_13(tmp2(5603).Text, obj8), , ,];
-      const obj9 = { resizeMode: "contain", source: tmp4(20045)().channelSetup };
-      items5[1] = closure_13(tmp4(5699), obj9);
+      const items5 = [closure_13(tmp2(5634).Text, obj8), , ,];
+      const obj9 = { resizeMode: "contain", source: tmp4(20109)().channelSetup };
+      items5[1] = closure_13(tmp4(5730), obj9);
       const obj10 = {
         style: enableCommunitySharedStyles.header,
         variant: "heading-xl/semibold",
@@ -169,7 +169,7 @@ export default function ChannelSetupScreen() {
       };
       const intl5 = tmp2(1112).intl;
       obj10.children = intl5.string(tmp2(1112).t.YtXpEh);
-      items5[2] = closure_13(tmp2(5603).Heading, obj10);
+      items5[2] = closure_13(tmp2(5634).Heading, obj10);
       const obj11 = {
         style: enableCommunitySharedStyles.description,
         variant: "body-md/medium",
@@ -178,7 +178,7 @@ export default function ChannelSetupScreen() {
       };
       const intl6 = tmp2(1112).intl;
       obj11.children = intl6.string(tmp2(1112).t["J/fYR8"]);
-      items5[3] = closure_13(tmp2(5603).Text, obj11);
+      items5[3] = closure_13(tmp2(5634).Text, obj11);
       obj7.children = items5;
       const items6 = [closure_14(View, obj7)];
       const obj12 = { spacing: 24, style: null, children: null };
@@ -191,10 +191,10 @@ export default function ChannelSetupScreen() {
       const intl8 = tmp2(1112).intl;
       obj15.label = intl8.string(tmp2(1112).t.dYrhCO);
       const obj16 = { text: tmp8 };
-      obj15.trailing = closure_13(tmp2(6113).TableRow.TrailingText, obj16);
+      obj15.trailing = closure_13(tmp2(6144).TableRow.TrailingText, obj16);
       obj15.onPress = callback1;
-      obj14.children = closure_13(tmp2(6113).TableRow, obj15);
-      const items7 = [closure_13(tmp2(6109).TableRowGroup, obj14)];
+      obj14.children = closure_13(tmp2(6144).TableRow, obj15);
+      const items7 = [closure_13(tmp2(6140).TableRowGroup, obj14)];
       const intl9 = tmp2(1112).intl;
       const items8 = [intl9.string(tmp2(1112).t.ZFeonu)];
       let prop1;
@@ -227,14 +227,14 @@ export default function ChannelSetupScreen() {
       const intl12 = tmp2(1112).intl;
       obj20.subLabel = intl12.string(tmp2(1112).t.zdWNET);
       const obj21 = { text: tmp12 };
-      obj20.trailing = closure_13(tmp2(6113).TableRow.TrailingText, obj21);
+      obj20.trailing = closure_13(tmp2(6144).TableRow.TrailingText, obj21);
       obj20.onPress = callback2;
-      obj18.children = closure_13(tmp2(6113).TableRow, obj20);
-      items7[1] = closure_13(tmp2(6109).TableRowGroup, obj18);
+      obj18.children = closure_13(tmp2(6144).TableRow, obj20);
+      items7[1] = closure_13(tmp2(6140).TableRowGroup, obj18);
       obj12.children = items7;
-      items6[1] = closure_14(tmp2(6084).Stack, obj12);
+      items6[1] = closure_14(tmp2(6115).Stack, obj12);
       obj6.children = items6;
-      return closure_14(tmp2(20042).EnableCommunityModalScreen, obj6);
+      return closure_14(tmp2(20106).EnableCommunityModalScreen, obj6);
     } else {
       let prop3;
       if (guild != null) {

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/server_apps/native/ConjureServerAppsSection.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureAppSheetIconDefault from "../../app_hover_card/native/ConjureAppSheetIcon.tsx";
 import GuildSettingsModalIntegrationsAppsDefault from "../../../guild_settings/integrations/native/GuildSettingsModalIntegrationsApps.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -19,7 +19,7 @@ let closure_5 = async function _removeApp(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -103,7 +103,7 @@ export default function ConjureServerAppsSection(apps) {
   ({ guildId: require, onRemoveIntegration: importDefault } = apps);
   let obj = { title: null, apps: null, renderIcon: null, onRemove: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef4244.EPSYTs);
+  obj.title = intl.string(_modDef4245.EPSYTs);
   obj.apps = apps.apps;
   obj.renderIcon = function renderIcon(application) {
     const obj = { application, size: 24, radius: nativeDefault.radii.xs };

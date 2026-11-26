@@ -23,9 +23,9 @@ function createSoundItems(arg0, fn) {
   }
   return arr.map((sound, index) => ({ type: categories(length[10]).SoundboardSoundItemType.SOUND, sound, index }));
 }
-const SoundboardConstants = fn(6894);
+const SoundboardConstants = fn(6925);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
-const PremiumTypes = fn(1388).PremiumTypes;
+const PremiumTypes = fn(1389).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/useSoundGrid.tsx");
 
@@ -225,11 +225,11 @@ export default function useSoundGrid(guild_id) {
           }
           if (0 !== items.length) {
             const obj2 = {
-              key: closure_0(7058).SoundboardSoundGridSectionType.TOP_SOUNDS,
+              key: closure_0(7089).SoundboardSoundGridSectionType.TOP_SOUNDS,
               categoryInfo: null,
               items: null,
             };
-            const obj3 = { type: closure_0(7058).SoundboardSoundGridSectionType.TOP_SOUNDS, guild: id };
+            const obj3 = { type: closure_0(7089).SoundboardSoundGridSectionType.TOP_SOUNDS, guild: id };
             obj2.categoryInfo = obj3;
             obj2.items = stateFromStores3(items);
             items.push(obj2);
@@ -383,7 +383,7 @@ export default function useSoundGrid(guild_id) {
             if (tmp9Result.length > 0) {
               let obj = { categoryInfo: null, key: null, items: null };
               let obj2 = {
-                type: closure_0(7058).SoundboardSoundGridSectionType.GUILD,
+                type: closure_0(7089).SoundboardSoundGridSectionType.GUILD,
                 guild: null,
                 isNitroLocked: null,
               };

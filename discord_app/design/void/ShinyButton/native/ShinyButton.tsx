@@ -1,6 +1,6 @@
 // discord_app/design/void/ShinyButton/native/ShinyButton.tsx
 import Button_ButtonDefault from "../../Button/native/Button.tsx";
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../modules/a11y/AccessibilityStore.tsx";
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const require = fn;
 let AppState = fn(17).AppState;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   shinyButton: { overflow: "hidden" },
   shineContainer: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" },
@@ -74,10 +74,10 @@ export default function ShinyButton(disabled) {
     c9,
     tmp3[0],
     100,
-    require("../../../../../_runtime/metro/01653__.js").withRepeat,
-    require("../../../../../_runtime/metro/01653__.js").withSequence,
+    require("../../../../../_runtime/metro/01654__.js").withRepeat,
+    require("../../../../../_runtime/metro/01654__.js").withSequence,
     require("timing/timing").withTiming,
-    require("../../../../../_runtime/metro/01653__.js").withDelay,
+    require("../../../../../_runtime/metro/01654__.js").withDelay,
     750,
     2000,
   ];
@@ -131,9 +131,9 @@ export default function ShinyButton(disabled) {
   ShinyButtonTsx1.__closure = items2;
   ShinyButtonTsx1.__workletHash = 1149292223259;
   ShinyButtonTsx1.__initData = tmp7;
-  closure_10 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(ShinyButtonTsx1);
+  closure_10 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(ShinyButtonTsx1);
   let obj3 = {};
-  let obj2 = require("../../../../../_runtime/metro/01653__.js");
+  let obj2 = require("../../../../../_runtime/metro/01654__.js");
   const merged1 = Object.assign(merged);
   const items3 = [disabled.style, tmp2.shinyButton];
   obj3.style = items3;
@@ -158,9 +158,9 @@ export default function ShinyButton(disabled) {
               const obj3 = { style: null };
               const items2 = [_undefined4.shineInner, c4];
               obj3.style = items2;
-              obj2.children = jsx(_modDef1653.View, { style: null });
-              obj.children = jsx(_modDef1653.View, { style: null, children: null });
-              tmp = jsx(_modDef1653.View, { onLayout: handleLayout, style: null, children: null });
+              obj2.children = jsx(_modDef1654.View, { style: null });
+              obj.children = jsx(_modDef1654.View, { style: null, children: null });
+              tmp = jsx(_modDef1654.View, { onLayout: handleLayout, style: null, children: null });
             }
           }
         }

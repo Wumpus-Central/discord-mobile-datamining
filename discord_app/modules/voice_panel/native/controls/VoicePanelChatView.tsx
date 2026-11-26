@@ -1,24 +1,24 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelChatView.tsx
 import util from "../../../../intl/index.native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import ThemedGradientDefault from "../../../client_themes/native/ThemedGradient.tsx";
-import _modDef10717 from "../../../../../_runtime/metro/10717__.js";
+import _modDef10762 from "../../../../../_runtime/metro/10762__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import ChatFloatingNavButtonDefault from "../../../chat_input/native/ChatFloatingNavButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(11732).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(11780).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1071);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE },
   gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 },
@@ -42,11 +42,11 @@ let closure_10 = noop.memo(function GradientHack() {
   VoicePanelChatViewTsx1.__closure = items1;
   VoicePanelChatViewTsx1.__workletHash = 6734453041358;
   VoicePanelChatViewTsx1.__initData = tmp4;
-  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelChatViewTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(VoicePanelChatViewTsx1);
   const obj2 = { style: null, children: timestampProducer(ThemedGradientDefault, { absolute: true }) };
   const items2 = [tmp3.gradientWrapper, animatedStyle];
   obj2.style = items2;
-  return timestampProducer(_modDef1653.View, obj2);
+  return timestampProducer(_modDef1654.View, obj2);
 });
 const memoResult = noop.memo(function VoicePanelDismissChatButton() {
   const callback = noop.useCallback(() => {
@@ -56,7 +56,7 @@ const memoResult = noop.memo(function VoicePanelDismissChatButton() {
   const obj = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5MstTl"]);
-  obj.icon = _modDef10717;
+  obj.icon = _modDef10762;
   obj.onPress = callback;
   return timestampProducer(ChatFloatingNavButtonDefault, obj);
 });

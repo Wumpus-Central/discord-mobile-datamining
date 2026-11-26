@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "analyticsLocations" }));
+const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "sa" }));
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export { useRegistrationUIStore };
@@ -20,7 +20,7 @@ export function clearRegistrationErrorMessage() {
   let errors = {};
   const merged = Object.assign(errors.getState().errors);
   delete tmp2[tmp];
-  errors(1262).batchUpdates(() => {
+  errors(1263).batchUpdates(() => {
     errors = { errors };
     errors.setState(errors);
   });

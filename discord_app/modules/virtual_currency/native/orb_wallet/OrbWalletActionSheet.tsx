@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import _modDef2386 from "../../messages/OrbWallet.messages.js";
+import _modDef2387 from "../../messages/OrbWallet.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import OrbChallengeActionCreators from "../../stores/OrbChallengeActionCreators.tsx";
@@ -44,7 +44,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
     if (null != orbChallengesDisplayError) {
       if (orbChallengesDisplayError.errorType === orbChallengesDisplayError.CLAIM_CHALLENGE) {
         const intl3 = util.intl;
-        let stringResult = intl3.string(_modDef2386.FYb5rH);
+        let stringResult = intl3.string(_modDef2387.FYb5rH);
       } else {
         const intl2 = util.intl;
         const obj2 = {
@@ -61,7 +61,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
             });
           },
         };
-        stringResult = intl2.format(_modDef2386.ggLzeg, obj2);
+        stringResult = intl2.format(_modDef2387.ggLzeg, obj2);
       }
       const obj3 = { type: "warning", message: stringResult, role: "status" };
     } else {
@@ -236,13 +236,13 @@ function OrbWalletContent(reopenWallet) {
   return closure_12(challengesForOrbWallet, obj5);
 }
 const View = fn(17).View;
-let closure_7 = fn(15180).OrbChallengesDisplayErrorType;
-let closure_8 = fn(16453).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_7 = fn(15230).OrbChallengesDisplayErrorType;
+let closure_8 = fn(16504).ORB_WALLET_ACTION_SHEET_KEY;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const PremiumTypes = fn(1388).PremiumTypes;
+const PremiumTypes = fn(1389).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { width: "100%", paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 },
   section: null,

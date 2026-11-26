@@ -10,7 +10,7 @@ import MessageStore from "../../../stores/MessageStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GiftIntentType = fn(1388).GiftIntentType;
+const GiftIntentType = fn(1389).GiftIntentType;
 const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);
@@ -42,8 +42,8 @@ export function fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs
       }
     },
     (arg0) => {
-      closure_1(1241).captureException(arg0, { tags: { feature: "gift_intent" } });
-      const obj = closure_1(1241);
+      closure_1(1242).captureException(arg0, { tags: { feature: "gift_intent" } });
+      const obj = closure_1(1242);
       closure_1(572).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
     },
   );

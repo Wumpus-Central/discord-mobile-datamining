@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePremiumTryItOutPresetShuffle.tsx");
 
 export default function usePremiumTryItOutPresetShuffle() {
-  const tmp = callback(5221)();
+  const tmp = callback(5252)();
   const isThemeLightResult = shared.isThemeLight(tmp);
   require = isThemeLightResult;
   items = [isThemeLightResult];

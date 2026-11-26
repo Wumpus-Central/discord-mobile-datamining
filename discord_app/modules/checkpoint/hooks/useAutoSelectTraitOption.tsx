@@ -40,11 +40,11 @@ function getInitialTraitOption(availableTraitOptions) {
   return found[0];
 }
 let items = [
-  fn(6366).CheckpointTraitRarity.ULTRA,
-  fn(6366).CheckpointTraitRarity.EPIC,
-  fn(6366).CheckpointTraitRarity.RARE,
-  fn(6366).CheckpointTraitRarity.COMMON,
-  fn(6366).CheckpointTraitRarity.DEFAULT,
+  fn(6397).CheckpointTraitRarity.ULTRA,
+  fn(6397).CheckpointTraitRarity.EPIC,
+  fn(6397).CheckpointTraitRarity.RARE,
+  fn(6397).CheckpointTraitRarity.COMMON,
+  fn(6397).CheckpointTraitRarity.DEFAULT,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useAutoSelectTraitOption.tsx");

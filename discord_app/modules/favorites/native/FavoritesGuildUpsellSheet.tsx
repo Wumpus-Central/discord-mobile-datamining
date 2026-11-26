@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/native/FavoritesGuildUpsellSheet.tsx
 import router_utils from "../../routing/router_utils.tsx";
-import _modDef3856 from "../intl/FavoritesGuild.messages.js";
+import _modDef3857 from "../intl/FavoritesGuild.messages.js";
 import openPremiumModalDefault from "../../premium/native/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import useTrackFavoritesGuildUpsellModalOpenedDefault from "../analytics/useTrackFavoritesGuildUpsellModalOpened.tsx";
@@ -8,7 +8,7 @@ import FavoritesGuildAnalytics from "../analytics/FavoritesGuildAnalytics.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(4874).MAX_FAVORITE_CHANNELS;
+const MAX_FAVORITE_CHANNELS = fn(4905).MAX_FAVORITE_CHANNELS;
 const FAVORITES = fn(1071).FAVORITES;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -18,21 +18,21 @@ let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuild
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(10698).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(10743).FREE_FAVORITE_LIMIT;
   }
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault().analyticsLocations;
   importDefault = noop.useCallback(() => {
-    closure_1(5226).hideActionSheet(analyticsLocations(10699).FAVORITES_UPSELL_SHEET_KEY);
+    closure_1(5257).hideActionSheet(analyticsLocations(10744).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   let obj = { title: null, description: null, illustration: null, actions: null };
   const intl = analyticsLocations(1112).intl;
-  obj.title = intl.string(_modDef3856.hINqUs);
+  obj.title = intl.string(_modDef3857.hINqUs);
   const intl2 = analyticsLocations(1112).intl;
-  obj.description = intl2.formatToPlainString(_modDef3856.D7S0Zo, {
+  obj.description = intl2.formatToPlainString(_modDef3857.D7S0Zo, {
     count: FREE_FAVORITE_LIMIT,
     maxCount: MAX_FAVORITE_CHANNELS,
   });
-  obj.illustration = closure_6(analyticsLocations(10703).FavoritesSpotIllustration, {});
+  obj.illustration = closure_6(analyticsLocations(10748).FavoritesSpotIllustration, {});
   const obj3 = { children: null };
   const obj4 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = analyticsLocations(1112).intl;
@@ -45,17 +45,17 @@ export default function FavoritesGuildUpsellSheet(limit) {
     };
     openPremiumModalDefault(obj);
   };
-  items = [closure_6(analyticsLocations(5610).Button, obj4)];
+  items = [closure_6(analyticsLocations(5641).Button, obj4)];
   const obj5 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl4 = analyticsLocations(1112).intl;
-  obj5.text = intl4.string(_modDef3856.PprSsy);
+  obj5.text = intl4.string(_modDef3857.PprSsy);
   obj5.onPress = function onPress() {
     closure_1();
     const result = FavoritesGuildAnalytics.setNextFavoritesGuildViewSource("upsell_modal");
     router_utils.transitionToGuild(FAVORITES);
   };
-  items[1] = closure_6(analyticsLocations(5610).Button, obj5);
+  items[1] = closure_6(analyticsLocations(5641).Button, obj5);
   obj3.children = items;
-  obj.actions = closure_7(analyticsLocations(6832).ButtonGroup, obj3);
-  return closure_6(analyticsLocations(10702).PromoSheet, obj);
+  obj.actions = closure_7(analyticsLocations(6863).ButtonGroup, obj3);
+  return closure_6(analyticsLocations(10747).PromoSheet, obj);
 }

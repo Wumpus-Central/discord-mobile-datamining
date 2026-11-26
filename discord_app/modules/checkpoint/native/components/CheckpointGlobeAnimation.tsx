@@ -1,14 +1,14 @@
 // discord_app/modules/checkpoint/native/components/CheckpointGlobeAnimation.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import CheckpointApngPlayerDefault from "CheckpointApngPlayer.tsx";
-import _modDef12807 from "../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef12808 from "../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
+import _modDef12855 from "../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12856 from "../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointGlobeAnimation.tsx");
 
 export default function CheckpointGlobeAnimation(style) {
-  const obj = { animatedUri: _modDef12807, staticUri: _modDef12808, style: style.style };
-  return jsx(CheckpointApngPlayerDefault, { animatedUri: _modDef12807, staticUri: _modDef12808, style: style.style });
+  const obj = { animatedUri: _modDef12855, staticUri: _modDef12856, style: style.style };
+  return jsx(CheckpointApngPlayerDefault, { animatedUri: _modDef12855, staticUri: _modDef12856, style: style.style });
 }

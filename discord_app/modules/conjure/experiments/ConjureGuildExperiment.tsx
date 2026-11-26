@@ -66,7 +66,7 @@ function hasConjureGuildWithoutExposure(ConjureProjectReconnectManager) {
   return false;
 }
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
-const ApexExperiment = fn(1450);
+const ApexExperiment = fn(1451);
 let closure_4 = ApexExperiment.createApexExperiment({
   name: "2026-07-vibegrations-guild",
   kind: "guild",

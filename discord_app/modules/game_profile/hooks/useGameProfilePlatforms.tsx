@@ -5,12 +5,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let items = [
-  fn(8716).PlatformType.DESKTOP,
+  fn(8758).PlatformType.DESKTOP,
   "mobile",
-  fn(8716).PlatformType.XBOX,
-  fn(8716).PlatformType.PLAYSTATION,
-  fn(8716).PlatformType.NINTENDO,
-  fn(8716).PlatformType.ROBLOX,
+  fn(8758).PlatformType.XBOX,
+  fn(8758).PlatformType.PLAYSTATION,
+  fn(8758).PlatformType.NINTENDO,
+  fn(8758).PlatformType.ROBLOX,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfilePlatforms.tsx");

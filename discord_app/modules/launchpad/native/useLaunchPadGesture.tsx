@@ -1,14 +1,14 @@
 // discord_app/modules/launchpad/native/useLaunchPadGesture.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import _mod1706 from "../../../../_runtime/metro/01706__.js";
+import _mod1707 from "../../../../_runtime/metro/01707__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05272_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
 import updateSharedValueIfChangedDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import useWindowDimensionsSharedValue from "../../screen/useWindowDimensionsSharedValue.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LaunchPadConstants = fn(11910);
+const LaunchPadConstants = fn(11958);
 ({
   LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: closure_4,
   LAUNCH_PAD_END_TRANSLATION_THRESHOLD: hasOwnProperty,
@@ -202,7 +202,7 @@ export default function useLaunchPadGesture(launchPadType) {
         70,
         updaters,
         updateSharedValueIfChangedDefault,
-        _mod1706.scheduleOnRN,
+        _mod1707.scheduleOnRN,
         HapticUtils.triggerHapticFeedback,
         HapticUtils.HapticFeedbackTypes,
       ];

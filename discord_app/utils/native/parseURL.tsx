@@ -4,10 +4,10 @@ import FingerprintUtils from "../../../discord_common/js/packages/fingerprint-ut
 import AnalyticsUtilsDefault from "../AnalyticsUtils.tsx";
 import PlatformUtils from "../PlatformUtils.tsx";
 import URLUtilsDefault from "../URLUtils.tsx";
-import UrlDefault from "../../../_runtime/01381_Url.js";
-import _modDef1488 from "../../../_runtime/metro/01488__.js";
+import UrlDefault from "../../../_runtime/01382_Url.js";
+import _modDef1489 from "../../../_runtime/metro/01489__.js";
 import MetaQuestUtils from "../../modules/device/MetaQuestUtils.android.tsx";
-import _modDef2068 from "../../../_runtime/metro/02068__.js";
+import _modDef2069 from "../../../_runtime/metro/02069__.js";
 import LinkUtils from "../../modules/links/LinkUtils.tsx";
 import findCodedLinks from "../../modules/coded_links/findCodedLinks.tsx";
 import CodedLink from "../../modules/coded_links/CodedLink.tsx";
@@ -26,7 +26,7 @@ function parseQuery(arg0) {
   try {
     const _Object = Object;
     const _Object2 = Object;
-    const entries = Object.entries(_modDef1488.parse(arg0));
+    const entries = Object.entries(_modDef1489.parse(arg0));
     return Object.fromEntries(
       entries.map((item) => {
         [tmp, tmp2] = item;
@@ -52,9 +52,9 @@ const Constants = fn(1071);
 } = Constants);
 const CollectiblesShopConstants = fn(1073);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const CONVERSATION_QUERY_PARAM = fn(5636).CONVERSATION_QUERY_PARAM;
-const UPDATE_CONFIG = fn(5728).UPDATE_CONFIG;
-const PaymentConstants = fn(5729);
+const CONVERSATION_QUERY_PARAM = fn(5667).CONVERSATION_QUERY_PARAM;
+const UPDATE_CONFIG = fn(5759).UPDATE_CONFIG;
+const PaymentConstants = fn(5760);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_12, MobileWebRedirectCheckoutDeepLinkQueryKeys: map1 } =
   PaymentConstants);
 const re14 = /feature\/([\w-]+)/;
@@ -81,7 +81,7 @@ export default function parseURL(ctaLink) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const sanitizeUrlResult = _modDef2068.sanitizeUrl(ctaLink);
+  const sanitizeUrlResult = _modDef2069.sanitizeUrl(ctaLink);
   if (null == sanitizeUrlResult) {
     const obj3 = { payload: null };
     const obj4 = { type: metroImportDefault.NONE };
@@ -94,9 +94,9 @@ export default function parseURL(ctaLink) {
     if (query == null) {
       str = "";
     }
-    const tmp145Result = parseQuery(str);
-    ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp145Result);
-    ({ username, didRegister, custom_id, link_id, channel_id } = tmp145Result);
+    const tmp146Result = parseQuery(str);
+    ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp146Result);
+    ({ username, didRegister, custom_id, link_id, channel_id } = tmp146Result);
     const tmpResult = UrlDefault;
     const findCodedLinkResult = findCodedLinks.findCodedLink(sanitizeUrlResult);
     if (null != findCodedLinkResult) {
@@ -251,10 +251,10 @@ export default function parseURL(ctaLink) {
             host1 = UPDATE_CONFIG.url.host;
           }
           if (host === host1) {
-            const obj26 = { fingerprint, attemptId, installationId, payload: null };
+            const obj25 = { fingerprint, attemptId, installationId, payload: null };
             const obj27 = { type: metroImportDefault.MOBILE_NATIVE_UPDATE, url: sanitizeUrlResult };
-            obj26.payload = obj27;
-            obj28 = obj26;
+            obj25.payload = obj27;
+            obj28 = obj25;
           } else {
             obj28 = { fingerprint, attemptId, installationId, payload: null };
             const obj29 = { type: metroImportDefault.NONE };
@@ -268,7 +268,7 @@ export default function parseURL(ctaLink) {
         if (null != result1) {
           const obj30 = { fingerprint, attemptId, installationId, payload: null };
           const obj31 = { type: metroImportDefault.SOCIAL_LAYER_STOREFRONT, guildId: null, skuId: null };
-          ({ guildId: obj103.guildId, skuId: obj103.skuId } = result1);
+          ({ guildId: obj104.guildId, skuId: obj104.skuId } = result1);
           obj30.payload = obj31;
           return obj30;
         } else {
@@ -283,10 +283,10 @@ export default function parseURL(ctaLink) {
               diceSides: null,
             };
             ({
-              guildId: obj101.guildId,
-              channelId: obj101.channelId,
-              diceCount: obj101.diceCount,
-              diceSides: obj101.diceSides,
+              guildId: obj102.guildId,
+              channelId: obj102.channelId,
+              diceCount: obj102.diceCount,
+              diceSides: obj102.diceSides,
             } = tryParseDiceRollLinkResult);
             obj32.payload = obj33;
             return obj32;
@@ -296,12 +296,12 @@ export default function parseURL(ctaLink) {
               if (query == null) {
                 query = "";
               }
-              const tmp145Result8 = parseQuery(query);
+              const tmp146Result8 = parseQuery(query);
               let castResult = null;
-              if (null != tmp145Result8[CONVERSATION_QUERY_PARAM]) {
+              if (null != tmp146Result8[CONVERSATION_QUERY_PARAM]) {
                 castResult = null;
-                if (tmpResult11.isProbablyAValidSnowflake(tmp132)) {
-                  castResult = SnowflakeUtilsDefault.cast(tmp132);
+                if (tmpResult11.isProbablyAValidSnowflake(tmp133)) {
+                  castResult = SnowflakeUtilsDefault.cast(tmp133);
                   const tmpResult12 = SnowflakeUtilsDefault;
                 }
                 tmpResult11 = SnowflakeUtilsDefault;
@@ -321,11 +321,11 @@ export default function parseURL(ctaLink) {
                 conversationId: null,
               };
               ({
-                guildId: obj99.guildId,
-                channelId: obj99.channelId,
-                messageId: obj99.messageId,
+                guildId: obj100.guildId,
+                channelId: obj100.channelId,
+                messageId: obj100.messageId,
               } = tryParseChannelPathResult);
-              obj35.summaryId = tmp145Result8.summaryId;
+              obj35.summaryId = tmp146Result8.summaryId;
               obj35.conversationId = castResult;
               obj34.payload = obj35;
               return obj34;
@@ -348,10 +348,10 @@ export default function parseURL(ctaLink) {
               const match1 = pathname.match(re26);
               if (null != match1) {
                 if (match1.length > 1) {
-                  const obj39 = { fingerprint, attemptId, installationId, payload: null };
+                  const obj38 = { fingerprint, attemptId, installationId, payload: null };
                   const obj40 = { type: metroImportDefault.QUEST_PREVIEW_TOOL, questId: match1[1] };
-                  obj39.payload = obj40;
-                  return obj39;
+                  obj38.payload = obj40;
+                  return obj38;
                 }
               }
               if (null != pathname.match(re28)) {
@@ -359,26 +359,26 @@ export default function parseURL(ctaLink) {
                 if (query == null) {
                   str5 = "";
                 }
-                let ad_creative_ids = _modDef1488.parse(str5).ad_creative_ids;
+                let ad_creative_ids = _modDef1489.parse(str5).ad_creative_ids;
                 if (ad_creative_ids == null) {
                   ad_creative_ids = [];
                 }
                 items = [ad_creative_ids];
                 const first = _slicedToArray(items.flat(), 1)[0];
                 if (null != first) {
-                  const obj42 = { fingerprint, attemptId, installationId, payload: null };
+                  const obj41 = { fingerprint, attemptId, installationId, payload: null };
                   const obj43 = { type: metroImportDefault.QUEST_BAR_PREVIEW, adCreativeId: first };
-                  obj42.payload = obj43;
-                  return obj42;
+                  obj41.payload = obj43;
+                  return obj41;
                 }
-                const tmpResult13 = _modDef1488;
+                const tmpResult13 = _modDef1489;
               }
               if (null != pathname.match(re27)) {
                 let str27 = query;
                 if (query == null) {
                   str27 = "";
                 }
-                let ad_creative_ids1 = _modDef1488.parse(str27).ad_creative_ids;
+                let ad_creative_ids1 = _modDef1489.parse(str27).ad_creative_ids;
                 if (ad_creative_ids1 == null) {
                   ad_creative_ids1 = [];
                 }
@@ -396,10 +396,10 @@ export default function parseURL(ctaLink) {
                 }
                 return obj46;
               } else if (null != pathname.match(re29)) {
-                const obj49 = { fingerprint, attemptId, installationId, payload: null };
+                const obj48 = { fingerprint, attemptId, installationId, payload: null };
                 const obj50 = { type: metroImportDefault.SUBSCRIPTION_SETTINGS };
-                obj49.payload = obj50;
-                return obj49;
+                obj48.payload = obj50;
+                return obj48;
               } else {
                 const match2 = pathname.match(re16);
                 if (null != match2) {
@@ -455,25 +455,25 @@ export default function parseURL(ctaLink) {
                   const match4 = pathname.match(re14);
                   if (null != match4) {
                     if (match4.length > 1) {
-                      let tmp28 = null;
+                      let tmp29 = null;
                       switch (match4[1]) {
                         case "composeMessage":
                           const obj59 = { type: metroImportDefault.COMPOSE_MESSAGE };
-                          tmp28 = obj59;
+                          tmp29 = obj59;
                           while (true) {
-                            if (null != tmp28) {
-                              let obj60 = { fingerprint, attemptId, installationId, payload: tmp28 };
+                            if (null != tmp29) {
+                              let obj60 = { fingerprint, attemptId, installationId, payload: tmp29 };
                               return obj60;
                             }
                           }
                           break;
                         case "contactSync":
                           const obj61 = { type: metroImportDefault.CONTACT_SYNC };
-                          tmp28 = obj61;
+                          tmp29 = obj61;
                           break;
                         case "addFriends":
                           const obj62 = { type: metroImportDefault.ADD_FRIENDS };
-                          tmp28 = obj62;
+                          tmp29 = obj62;
                           break;
                         case "friends":
                           let str18 = query;
@@ -481,22 +481,22 @@ export default function parseURL(ctaLink) {
                             str18 = "";
                           }
                           const obj63 = { type: metroImportDefault.FRIENDS, userId: parseQuery(str18).user_id };
-                          tmp28 = obj63;
+                          tmp29 = obj63;
                           break;
                         case "editProfile":
-                          const obj65 = { type: metroImportDefault.EDIT_PROFILE };
-                          tmp28 = obj65;
+                          const obj64 = { type: metroImportDefault.EDIT_PROFILE };
+                          tmp29 = obj64;
                           break;
                         case "badges":
                           const obj66 = { type: metroImportDefault.BADGE_DIRECTORY };
-                          tmp28 = obj66;
+                          tmp29 = obj66;
                           break;
                         case "voiceChannel":
                           let str17 = query;
                           if (query == null) {
                             str17 = "";
                           }
-                          const obj68 = {
+                          const obj67 = {
                             type: metroImportDefault.VOICE_CHANNEL,
                             guildId: null,
                             channelId: null,
@@ -505,22 +505,22 @@ export default function parseURL(ctaLink) {
                             action: null,
                           };
                           ({
-                            guild_id: obj41.guildId,
-                            channel_id: obj41.channelId,
-                            user_id: obj41.userId,
-                            via: obj41.via,
-                            action: obj41.action,
+                            guild_id: obj42.guildId,
+                            channel_id: obj42.channelId,
+                            user_id: obj42.userId,
+                            via: obj42.via,
+                            action: obj42.action,
                           } = parseQuery(str17));
-                          tmp28 = obj68;
-                          const tmp145Result9 = parseQuery(str17);
+                          tmp29 = obj67;
+                          const tmp146Result9 = parseQuery(str17);
                           break;
                         case "sessionManagement":
                           const obj69 = { type: metroImportDefault.SESSION_MANAGEMENT };
-                          tmp28 = obj69;
+                          tmp29 = obj69;
                           break;
                         case "messageRequests":
                           const obj70 = { type: metroImportDefault.MESSAGE_REQUESTS };
-                          tmp28 = obj70;
+                          tmp29 = obj70;
                           break;
                         case "home":
                           let str16 = query;
@@ -534,16 +534,16 @@ export default function parseURL(ctaLink) {
                             highlightMessageId: null,
                           };
                           ({
-                            guild_id: obj38.guildId,
-                            highlight_channel_id: obj38.highlightChannelId,
-                            highlight_message_id: obj38.highlightMessageId,
+                            guild_id: obj39.guildId,
+                            highlight_channel_id: obj39.highlightChannelId,
+                            highlight_message_id: obj39.highlightMessageId,
                           } = parseQuery(str16));
-                          tmp28 = obj71;
-                          const tmp145Result10 = parseQuery(str16);
+                          tmp29 = obj71;
+                          const tmp146Result10 = parseQuery(str16);
                           break;
                         case "icymi":
-                          const obj73 = { type: metroImportDefault.ICYMI };
-                          tmp28 = obj73;
+                          const obj72 = { type: metroImportDefault.ICYMI };
+                          tmp29 = obj72;
                           break;
                         case "connections":
                           let str15 = query;
@@ -551,11 +551,11 @@ export default function parseURL(ctaLink) {
                             str15 = "";
                           }
                           const obj74 = { type: metroImportDefault.CONNECTIONS, source: parseQuery(str15).source };
-                          tmp28 = obj74;
+                          tmp29 = obj74;
                           break;
                         case "family-center":
                           const obj75 = { type: metroImportDefault.FAMILY_CENTER, pathname };
-                          tmp28 = obj75;
+                          tmp29 = obj75;
                           break;
                         case "promo-url":
                           let str14 = query;
@@ -563,15 +563,15 @@ export default function parseURL(ctaLink) {
                             str14 = "";
                           }
                           const promo_url = parseQuery(str14).promo_url;
-                          tmp28 = null;
+                          tmp29 = null;
                           if (undefined !== promo_url) {
                             const obj76 = { type: metroImportDefault.FEATURE_PROMO_URL, promoUrl: promo_url };
-                            tmp28 = obj76;
+                            tmp29 = obj76;
                           }
                           break;
                         case "account-standing":
                           const obj77 = { type: metroImportDefault.ACCOUNT_STANDING, pathname };
-                          tmp28 = obj77;
+                          tmp29 = obj77;
                           break;
                         case "mobile-web-redirect-checkout":
                           let result3 = MobileWebRedirectCheckoutUtils.isMobileWebRedirectCheckoutEnabled();
@@ -585,7 +585,7 @@ export default function parseURL(ctaLink) {
                           }
                           const tmp5Result17 = MobileWebRedirectCheckoutUtils;
                           let DEFAULT = parseQuery(str13)[constants5.DEEP_LINK_ACTION];
-                          tmp28 = null;
+                          tmp29 = null;
                           if (result3) {
                             const obj78 = {
                               type: metroImportDefault.MOBILE_WEB_REDIRECT_CHECKOUT,
@@ -596,21 +596,21 @@ export default function parseURL(ctaLink) {
                               DEFAULT = constants4.DEFAULT;
                             }
                             obj78.deepLinkAction = DEFAULT;
-                            obj78.guildId = tmp51;
-                            tmp28 = obj78;
+                            obj78.guildId = tmp52;
+                            tmp29 = obj78;
                           }
-                          const tmp145Result11 = parseQuery(str13);
+                          const tmp146Result11 = parseQuery(str13);
                           break;
                         case "open-shop":
                           const obj79 = { type: metroImportDefault.SHOP };
-                          tmp28 = obj79;
+                          tmp29 = obj79;
                           break;
                         case "authorized-apps":
                           const obj80 = { type: metroImportDefault.AUTHORIZED_APPS };
-                          tmp28 = obj80;
+                          tmp29 = obj80;
                           break;
                         case "share":
-                          tmp28 = null;
+                          tmp29 = null;
                           if (tmp5Result19.isIOS()) {
                             let str12 = query;
                             if (query == null) {
@@ -640,7 +640,7 @@ export default function parseURL(ctaLink) {
                             const items4 = [];
                             items2 = items3;
                             items3[Symbol.iterator]();
-                            const tmp145Result12 = parseQuery(str12);
+                            const tmp146Result12 = parseQuery(str12);
                           }
                           tmp5Result19 = PlatformUtils;
                           break;
@@ -650,23 +650,23 @@ export default function parseURL(ctaLink) {
                             str11 = "";
                           }
                           ({ userId, fingerprint: fingerprint2 } = parseQuery(str11));
-                          tmp28 = null;
+                          tmp29 = null;
                           if (null != userId) {
-                            tmp28 = null;
+                            tmp29 = null;
                             if (null != fingerprint2) {
-                              tmp28 = null;
+                              tmp29 = null;
                               if (tmp5Result20.getSecureFramesDeeplinkExperiment({ location: "parseUrl" }).enabled) {
                                 const obj81 = {
                                   type: metroImportDefault.DAVE_PROTOCOL_VERIFICATION,
                                   userId,
                                   fingerprint: fingerprint2,
                                 };
-                                tmp28 = obj81;
+                                tmp29 = obj81;
                               }
                               tmp5Result20 = SecureFramesDeeplinkExperiment;
                             }
                           }
-                          const tmp145Result13 = parseQuery(str11);
+                          const tmp146Result13 = parseQuery(str11);
                           break;
                         case "agekey-return":
                           let str10 = query;
@@ -680,16 +680,16 @@ export default function parseURL(ctaLink) {
                             verificationId: null,
                           };
                           ({
-                            result: obj25.result,
-                            ageKeySaved: obj25.ageKeySaved,
-                            verificationId: obj25.verificationId,
+                            result: obj26.result,
+                            ageKeySaved: obj26.ageKeySaved,
+                            verificationId: obj26.verificationId,
                           } = parseQuery(str10));
-                          tmp28 = obj82;
-                          const tmp145Result14 = parseQuery(str10);
+                          tmp29 = obj82;
+                          const tmp146Result14 = parseQuery(str10);
                           break;
                         case "gift":
                           const obj83 = { type: metroImportDefault.GIFT };
-                          tmp28 = obj83;
+                          tmp29 = obj83;
                           break;
                         case "store":
                           let str9 = query;
@@ -697,15 +697,15 @@ export default function parseURL(ctaLink) {
                             str9 = "";
                           }
                           const obj84 = { type: metroImportDefault.NITRO_HOME, section: parseQuery(str9).section };
-                          tmp28 = obj84;
+                          tmp29 = obj84;
                           break;
                         case "connected-games":
                           const obj85 = { type: metroImportDefault.CONNECTED_GAMES };
-                          tmp28 = obj85;
+                          tmp29 = obj85;
                           break;
                         case "boost-settings":
                           const obj86 = { type: metroImportDefault.BOOST_SETTINGS };
-                          tmp28 = obj86;
+                          tmp29 = obj86;
                           break;
                         case "quest-preview-tool":
                           let str8 = query;
@@ -716,11 +716,11 @@ export default function parseURL(ctaLink) {
                             type: metroImportDefault.QUEST_PREVIEW_TOOL,
                             questId: parseQuery(str8).quest_id,
                           };
-                          tmp28 = obj87;
+                          tmp29 = obj87;
                           break;
                         case "subscription-settings":
                           const obj88 = { type: metroImportDefault.SUBSCRIPTION_SETTINGS };
-                          tmp28 = obj88;
+                          tmp29 = obj88;
                           break;
                         case "conjure":
                           let str7 = query;
@@ -728,31 +728,35 @@ export default function parseURL(ctaLink) {
                             str7 = "";
                           }
                           const project_id = parseQuery(str7).project_id;
-                          tmp28 = null;
+                          tmp29 = null;
                           if (null != project_id) {
                             const obj89 = { type: metroImportDefault.CONJURE, projectId: project_id };
-                            tmp28 = obj89;
+                            tmp29 = obj89;
                           }
+                          break;
+                        case "checkpoint":
+                          const obj90 = { type: metroImportDefault.CHECKPOINT };
+                          tmp29 = obj90;
                           break;
                       }
                     }
                   }
                   const result4 = LinkUtils.tryParseEventDetailsPath(pathname);
                   if (null != result4) {
-                    const obj90 = { fingerprint, attemptId, installationId, payload: null };
-                    const obj91 = {
+                    const obj91 = { fingerprint, attemptId, installationId, payload: null };
+                    const obj92 = {
                       type: metroImportDefault.GUILD_EVENT_DETAILS,
                       guildEventId: null,
                       guildId: null,
                       recurrenceId: null,
                     };
                     ({
-                      guildEventId: obj72.guildEventId,
-                      guildId: obj72.guildId,
-                      recurrenceId: obj72.recurrenceId,
+                      guildEventId: obj73.guildEventId,
+                      guildId: obj73.guildId,
+                      recurrenceId: obj73.recurrenceId,
                     } = result4);
-                    obj90.payload = obj91;
-                    return obj90;
+                    obj91.payload = obj92;
+                    return obj91;
                   } else if (null != pathname.match(re19)) {
                     const _decodeURIComponent = decodeURIComponent;
                     ({ key, redirect, fingerprint: fingerprint3 } = parseQuery(decodeURIComponent(query)));
@@ -767,23 +771,23 @@ export default function parseURL(ctaLink) {
                           const searchParams = uRL.searchParams;
                           searchParams.append("fingerprint", fingerprint3);
                         }
-                        const obj92 = { fingerprint: fingerprint3, attemptId, installationId, payload: null };
-                        const obj93 = {
+                        const obj93 = { fingerprint: fingerprint3, attemptId, installationId, payload: null };
+                        const obj94 = {
                           type: metroImportDefault.MOBILE_WEB_HANDOFF,
                           nonce: key,
                           redirectUrl: uRL,
                           fingerprint: fingerprint3,
                         };
-                        obj92.payload = obj93;
-                        return obj92;
+                        obj93.payload = obj94;
+                        return obj93;
                       }
                     }
-                    const tmp105 = parseQuery(decodeURIComponent(query));
-                    const obj94 = { reason: "invalid_query_params", fingerprint: null };
-                    const obj67 = AnalyticsUtilsDefault;
-                    obj94.fingerprint = FingerprintUtils.maybeExtractId(fingerprint3);
-                    const obj95 = { fingerprint: fingerprint3 };
-                    obj67.track(constants.MOBILE_WEB_HANDOFF_FAILURE, obj94, obj95);
+                    const tmp106 = parseQuery(decodeURIComponent(query));
+                    const obj95 = { reason: "invalid_query_params", fingerprint: null };
+                    const obj68 = AnalyticsUtilsDefault;
+                    obj95.fingerprint = FingerprintUtils.maybeExtractId(fingerprint3);
+                    const obj96 = { fingerprint: fingerprint3 };
+                    obj68.track(constants.MOBILE_WEB_HANDOFF_FAILURE, obj95, obj96);
                     const _Error = Error;
                     const error = new Error("Missing nonce or redirect query params");
                     throw error;
@@ -794,77 +798,77 @@ export default function parseURL(ctaLink) {
                       if (query == null) {
                         str23 = "";
                       }
-                      const obj96 = { fingerprint, attemptId, installationId, payload: null };
-                      const obj97 = {
+                      const obj97 = { fingerprint, attemptId, installationId, payload: null };
+                      const obj98 = {
                         type: metroImportDefault.USER_CONNECTIONS_LINK_CALLBACK,
                         provider: match5[1],
                         callbackCode: null,
                         callbackState: null,
                       };
-                      ({ code: obj64.callbackCode, state: obj64.callbackState } = parseQuery(
+                      ({ code: obj65.callbackCode, state: obj65.callbackState } = parseQuery(
                         decodeURIComponent(str23),
                       ));
-                      obj96.payload = obj97;
-                      return obj96;
+                      obj97.payload = obj98;
+                      return obj97;
                     } else {
                       const match6 = pathname.match(re21);
                       if (null != match6) {
-                        const tmp94 = _slicedToArray(match6, 2);
-                        const first1 = tmp94[0];
+                        const tmp95 = _slicedToArray(match6, 2);
+                        const first1 = tmp95[0];
                         let str22 = query;
                         if (query == null) {
                           str22 = "";
                         }
-                        const obj98 = { fingerprint, attemptId, installationId, payload: null };
-                        const obj100 = {
+                        const obj99 = { fingerprint, attemptId, installationId, payload: null };
+                        const obj101 = {
                           type: metroImportDefault.USER_CONNECTIONS_CALLBACK,
-                          provider: tmp94[1],
+                          provider: tmp95[1],
                           searchParams: parseQuery(decodeURIComponent(str22)),
                         };
-                        obj98.payload = obj100;
-                        return obj98;
+                        obj99.payload = obj101;
+                        return obj99;
                       } else {
                         const match7 = pathname.match(re22);
                         if (null != match7) {
-                          const tmp88 = _slicedToArray(match7, 4);
-                          const obj102 = { fingerprint, attemptId, installationId, payload: null };
-                          const obj104 = {
+                          const tmp89 = _slicedToArray(match7, 4);
+                          const obj103 = { fingerprint, attemptId, installationId, payload: null };
+                          const obj105 = {
                             type: metroImportDefault.GUILD_SETTINGS,
-                            guildId: tmp88[1],
-                            settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp88[2]),
-                            settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp88[3]),
+                            guildId: tmp89[1],
+                            settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp89[2]),
+                            settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp89[3]),
                           };
-                          obj102.payload = obj104;
-                          return obj102;
+                          obj103.payload = obj105;
+                          return obj103;
                         } else {
                           const match8 = pathname.match(re23);
                           if (null != match8) {
-                            const tmp81 = _slicedToArray(match8, 3);
+                            const tmp82 = _slicedToArray(match8, 3);
                             let str21 = query;
                             if (query == null) {
                               str21 = "";
                             }
-                            const obj105 = { fingerprint, attemptId, installationId, payload: null };
-                            const obj106 = {
+                            const obj106 = { fingerprint, attemptId, installationId, payload: null };
+                            const obj107 = {
                               type: metroImportDefault.GUILD_SETTINGS_PICKER,
-                              settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp81[1]),
-                              settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp81[2]),
+                              settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp82[1]),
+                              settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp82[2]),
                               feature: parseQuery(str21).feature,
                             };
-                            obj105.payload = obj106;
-                            return obj105;
+                            obj106.payload = obj107;
+                            return obj106;
                           } else if (null != pathname.match(re24)) {
                             let str20 = query;
                             if (query == null) {
                               str20 = "";
                             }
-                            const obj107 = { fingerprint, attemptId, installationId, payload: null };
-                            const obj108 = {
+                            const obj108 = { fingerprint, attemptId, installationId, payload: null };
+                            const obj109 = {
                               type: metroImportDefault.ACTIVATE_DEVICE,
                               userCode: parseQuery(decodeURIComponent(str20)).user_code,
                             };
-                            obj107.payload = obj108;
-                            return obj107;
+                            obj108.payload = obj109;
+                            return obj108;
                           }
                         }
                       }

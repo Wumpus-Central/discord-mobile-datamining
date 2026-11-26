@@ -12,14 +12,14 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10685).USERS_LIST_PADDING_BETWEEN_SECTIONS;
+const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10730).USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const Constants = fn(1071);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "Array", listActionHeight: "analyticsLocations" };
+let closure_16 = { listActionRenderer: "Array", listActionHeight: "channel_id" };
 let closure_17 = [];
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_18 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -317,7 +317,7 @@ export default function useMemberListAction(channel) {
           tmp42Result2 = null;
           if (null != recipientId) {
             const obj8 = { icon: null, onPress: null, label: null, subLabel: null, disabled: null, arrow: true };
-            const obj9 = { IconComponent: channel(stateFromStores[34]).GameControllerIcon };
+            const obj9 = { IconComponent: channel(stateFromStores[34]).ExperimentalBannerPlusIcon };
             obj8.icon = closure_14(channel(stateFromStores[33]).RowButton.Icon, obj9);
             obj8.onPress = function onPress() {
               return height(stateFromStores[35])(recipientId);

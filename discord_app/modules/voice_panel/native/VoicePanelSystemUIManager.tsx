@@ -9,9 +9,9 @@ import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11734).VoicePanelModes;
-const VoicePanelControlsModes = fn(11732).VoicePanelControlsModes;
-const ParticipantTypes = fn(5662).ParticipantTypes;
+const VoicePanelModes = fn(11782).VoicePanelModes;
+const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
+const ParticipantTypes = fn(5693).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = {
@@ -38,7 +38,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
     closure_0 = _undefined2(_undefined3[10])(
       function updateState(arg0) {
         ({ focusedId: closure_0, mode: focusedId, controlsMode: closure_2, landscape: closure_3 } = arg0);
-        closure_0(1262).batchUpdates(() => {
+        closure_0(1263).batchUpdates(() => {
           dependencyMap(c1 !== constants.PIP);
           let tmp4 = null == _undefined;
           if (tmp4) {
@@ -149,7 +149,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   const items4 = [
     closure_13,
     require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
-    require("../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01707__.js").scheduleOnRN,
     memo.handleStateChange,
   ];
   _require = undefined;
@@ -172,14 +172,14 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   VoicePanelSystemUIManagerTsx2.__closure = items5;
   VoicePanelSystemUIManagerTsx2.__workletHash = 4961093697158;
   VoicePanelSystemUIManagerTsx2.__initData = tmp18;
-  const animatedReaction = require("../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     VoicePanelSystemUIManagerTsx1,
     VoicePanelSystemUIManagerTsx2,
   );
   let tmp25 = null;
   if (tmp6[0]) {
     const obj2 = { hidden: !tmp5, barStyle: "light-content" };
-    tmp25 = closure_9(tmp(9976), obj2);
+    tmp25 = closure_9(tmp(10018), obj2);
   }
   const obj3 = { children: null };
   const items6 = [

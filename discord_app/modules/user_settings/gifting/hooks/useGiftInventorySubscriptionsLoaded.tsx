@@ -24,7 +24,7 @@ export default function useGiftInventorySubscriptionsLoaded() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ export default function useGiftInventorySubscriptionsLoaded() {
               closure_0(closure_128_0);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp18) {
           if (tmp4 === c2) {

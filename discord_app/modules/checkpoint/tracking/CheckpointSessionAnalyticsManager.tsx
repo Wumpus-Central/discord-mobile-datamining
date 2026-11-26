@@ -1,5 +1,5 @@
 // discord_app/modules/checkpoint/tracking/CheckpointSessionAnalyticsManager.tsx
-import v1 from "../../../../_runtime/01268_v1.js";
+import v1 from "../../../../_runtime/01269_v1.js";
 import CheckpointNavigation from "../CheckpointNavigation.tsx";
 import CheckpointStore from "../CheckpointStore.tsx";
 

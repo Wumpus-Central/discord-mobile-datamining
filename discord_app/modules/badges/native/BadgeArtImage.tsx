@@ -2,7 +2,7 @@
 import DurationsDefault from "../../../utils/Durations.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import inlineStyles from "../../../../_runtime/07912_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07946_inlineStyles.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -51,7 +51,7 @@ function SvgArt(url) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           } else {
             try {
@@ -69,7 +69,7 @@ function SvgArt(url) {
                   closure_1 = tmp2;
                   closure_129_0 = undefined;
                   closure_129_1 = undefined;
-                  items = [closure_2_0(7912).fetchText(c0), closure_2_11()];
+                  items = [closure_2_0(7946).fetchText(c0), closure_2_11()];
                   c3 = 1;
                   c4 = 1;
                   const obj4 = { value: Promise.race(items), done: false };
@@ -88,7 +88,7 @@ function SvgArt(url) {
                 if (closure_129_0 == null) {
                   c0 = "";
                 }
-                closure_129_1 = closure_2_0(7912).parse(c0);
+                closure_129_1 = closure_2_0(7946).parse(c0);
                 if (null == closure_129_1) {
                   const _Error = Error;
                   const error = new Error("svg has no content");
@@ -98,7 +98,7 @@ function SvgArt(url) {
                   const obj = { value: closure_129_1, done: true };
                   return obj;
                 }
-                const obj6 = closure_2_0(7912);
+                const obj6 = closure_2_0(7946);
               }
             } catch (tmp15) {
               c4 = tmp;
@@ -164,7 +164,7 @@ function SvgArt(url) {
       let obj2 = { ast: tmp2, override: null };
       const size = { width, height };
       obj2.override = size;
-      tmp9 = jsx(url(7912).SvgAst, { ast: tmp2, override: null });
+      tmp9 = jsx(url(7946).SvgAst, { ast: tmp2, override: null });
     }
     fallback = tmp9;
   }
@@ -172,7 +172,7 @@ function SvgArt(url) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const promiseDeduper = new fn(5132).PromiseDeduper();
+const promiseDeduper = new fn(5163).PromiseDeduper();
 let closure_10 = 10 * DurationsDefault.Millis.SECOND;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeArtImage.tsx");

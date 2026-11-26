@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import Backdrop from "../../../../design/components/Backdrop/native/Backdrop.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -80,7 +80,7 @@ export default function UserSettingsDesignSystemBackdrop() {
   UserSettingsDesignSystemBackdropTsx1.__workletHash = 10294771591742;
   UserSettingsDesignSystemBackdropTsx1.__initData = tmp10;
   const obj2 = { contentContainerStyle: tmp.container, children: null };
-  const animatedStyle = _mod1653.useAnimatedStyle(UserSettingsDesignSystemBackdropTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(UserSettingsDesignSystemBackdropTsx1);
   const obj3 = { spacing: 24, children: null };
   const items2 = [
     timestampProducer(BackdropCard, {

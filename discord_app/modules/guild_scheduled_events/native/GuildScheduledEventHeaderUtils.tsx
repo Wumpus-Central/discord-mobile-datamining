@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import GuildScheduledEventsConstants from "../GuildScheduledEventsConstants.tsx";
-import _modDef8065 from "../../../../_runtime/metro/08065__.js";
-import _modDef8564 from "../../../../_runtime/metro/08564__.js";
-import _modDef8565 from "../../../../_runtime/metro/08565__.js";
+import _modDef8107 from "../../../../_runtime/metro/08107__.js";
+import _modDef8606 from "../../../../_runtime/metro/08606__.js";
+import _modDef8607 from "../../../../_runtime/metro/08607__.js";
 import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -27,12 +27,12 @@ export function getGuildScheduledEventHeaderProps(eventTimeData) {
   }
   const tmp7 = React3(event);
   const ICON_SUBTLE = nativeDefault.colors.ICON_SUBTLE;
-  let tmp8Result = _modDef8564;
+  let tmp8Result = _modDef8606;
   if (tmp4) {
     const intl4 = util.intl;
     let stringResult = intl4.string(util.t["X2K3/4"]);
     if (isStage) {
-      tmp8Result = _modDef8065;
+      tmp8Result = _modDef8107;
     }
     let entity_type;
     if (event != null) {
@@ -46,11 +46,11 @@ export function getGuildScheduledEventHeaderProps(eventTimeData) {
     let stringResult1 = stringResult;
     let tmp8Result3 = tmp8Result;
   } else if (tmp7) {
-    tmp8Result3 = _modDef8565;
+    tmp8Result3 = _modDef8607;
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result3 = _modDef8565;
+    tmp8Result3 = _modDef8607;
     const intl3 = util.intl;
     stringResult1 = intl3.string(util.t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
@@ -68,9 +68,9 @@ export function getGuildScheduledEventHeaderProps(eventTimeData) {
         formatToPlainStringResult = intl.string(util.t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result3 = _modDef8565;
+      tmp8Result3 = _modDef8607;
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result4 = _modDef8565;
+      const tmp8Result4 = _modDef8607;
     }
   }
   if (isCanceled) {

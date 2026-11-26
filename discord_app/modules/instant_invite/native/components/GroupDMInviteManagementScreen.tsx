@@ -18,7 +18,7 @@ function GroupDMInviteManagement(channelId) {
   [first, dependencyMap] = noop.useState([]);
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   closure_3 = tmp3[1];
-  first(5573)(() => {
+  first(5604)(() => {
     closure_0 = async function _fetchInvites() {
       if (v3 === 2) {
         v3 = 3;
@@ -30,7 +30,7 @@ function GroupDMInviteManagement(channelId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -77,7 +77,7 @@ function GroupDMInviteManagement(channelId) {
             v1(closure_128_0);
             v3(false);
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp13) {
           v3 = tmp;
@@ -118,22 +118,22 @@ function GroupDMInviteManagement(channelId) {
   );
   const callback = noop.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp12 = jsx(channelId(7364).SceneLoadingIndicator, {});
+    let tmp12 = jsx(channelId(7395).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(11397), darkSource: tmp4(11398), title: null, body: null };
+    let obj2 = { lightSource: tmp4(11443), darkSource: tmp4(11444), title: null, body: null };
     const intl = channelId(1112).intl;
     obj2.title = intl.string(channelId(1112).t["+nLJkZ"]);
     const intl2 = channelId(1112).intl;
     obj2.body = intl2.string(channelId(1112).t.F53CAc);
     tmp12 = jsx(channelId(1186).EmptyState, {
-      lightSource: tmp4(11397),
-      darkSource: tmp4(11398),
+      lightSource: tmp4(11443),
+      darkSource: tmp4(11444),
       title: null,
       body: null,
     });
   } else {
     let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
-    tmp12 = jsx(channelId(7451).FlashList, {
+    tmp12 = jsx(channelId(7482).FlashList, {
       contentContainerStyle: tmp.listContent,
       data: memo,
       keyExtractor: callback,
@@ -144,11 +144,11 @@ function GroupDMInviteManagement(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(8071);
+const ChannelSettingsStore = fn(8113);
 const Constants = fn(1071);
 ({ ChannelSettingsSections: closure_8, Endpoints: closure_9 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { listContent: { paddingTop: nativeDefault.space.PX_8 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
@@ -172,5 +172,5 @@ export default noop.memo(function GroupDMInviteManagementScreen(channelId) {
     obj[constants.INSTANT_INVITES_MANAGEMENT] = obj2;
     return obj;
   }, items);
-  return jsx(channelId(7324).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(7355).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });

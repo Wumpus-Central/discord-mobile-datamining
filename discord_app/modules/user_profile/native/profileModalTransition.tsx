@@ -8,7 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/profileModalTransition.tsx");
 
 export function useReportProfileModalTransition() {
-  navigation = navigation(1500).useNavigation();
+  navigation = navigation(1501).useNavigation();
   items = [navigation];
   const effect = noop.useEffect(() => {
     function leave() {

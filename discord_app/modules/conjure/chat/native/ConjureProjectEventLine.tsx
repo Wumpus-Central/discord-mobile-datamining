@@ -29,19 +29,19 @@ export default function ConjureProjectEventLine(arg0) {
   const tmp4 = useConjureRemixSettingsRequestDefault(projectId, event);
   if ("voice_channel_pin" === event.type) {
     const obj2 = { projectId };
-    let tmp8Result = React3(ConjureVoiceChannelPinCardDefault, obj2);
+    let tmp5Result = React3(ConjureVoiceChannelPinCardDefault, obj2);
   } else {
-    const obj3 = { variant: "body-md/normal", color: "text-default", children: tmp3 };
-    items = [React3(Text_Text.Text, obj3)];
-    let tmp10Result = null;
+    const obj = { variant: "body-md/normal", color: "text-default", children: tmp3 };
+    items = [React3(Text_Text.Text, obj)];
+    let tmp7Result = null;
     if (null != tmp4) {
-      const obj = { projectId, request: tmp4, notifyAgent: false };
-      tmp10Result = React3(ConjureSettingsRequestCardDefault, obj);
+      const obj3 = { projectId, request: tmp4, notifyAgent: false };
+      tmp7Result = React3(ConjureSettingsRequestCardDefault, obj3);
     }
     const obj4 = { children: null };
-    items[1] = tmp10Result;
+    items[1] = tmp7Result;
     obj4.children = items;
-    tmp8Result = hasOwnProperty(React4, obj4);
+    tmp5Result = hasOwnProperty(React4, obj4);
   }
-  return tmp8Result;
+  return tmp5Result;
 }

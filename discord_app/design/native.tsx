@@ -106,6 +106,7 @@ import TooltipConstants from "components/Tooltip/native/TooltipConstants.native.
 import AnimatedEnterExitItem from "components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import Coachmark from "components/Coachmark/native/Coachmark.native.tsx";
 import CameraLottie from "components/LottieIcon/native/generated/CameraLottie.tsx";
+import Slider from "components/Slider/native/Slider.native.tsx";
 import ImageButton from "components/Button/native/ImageButton.native.tsx";
 import ThemeContextProvider_RootThemeContextProvider from "components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx";
 import PromoSheet from "components/Sheet/native/PromoSheet.native.tsx";
@@ -128,7 +129,6 @@ import GuildIconPile from "components/Pile/native/GuildIconPile.native.tsx";
 import TabsGradientDefault from "components/Tabs/native/TabsGradient.native.tsx";
 import AvatarPile from "components/Pile/native/AvatarPile.native.tsx";
 import TableSliderRow from "components/TableRow/native/TableSliderRow.native.tsx";
-import Slider from "components/Slider/native/Slider.native.tsx";
 import RowGroup from "components/RowGroup/native/RowGroup.native.tsx";
 import BackdropConstants from "components/Backdrop/native/BackdropConstants.tsx";
 import Menu from "components/Menu/native/Menu.tsx";

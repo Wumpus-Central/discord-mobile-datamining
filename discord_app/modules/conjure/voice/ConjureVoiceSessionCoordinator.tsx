@@ -15,8 +15,8 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 let obj2 = fn;
 const RPCErrors = fn(1071).RPCErrors;
-const constants = fn(5967).SpatialAudioOverrideSource;
-const Constants = fn(5824);
+const constants = fn(5998).SpatialAudioOverrideSource;
+const Constants = fn(5855);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 let closure_14 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
@@ -168,15 +168,15 @@ prototype["start"] = function start(id) {
               );
               throw tmp15;
             }
-            tmp41Result2 = tmp41(15814);
+            tmp41Result2 = tmp41(15865);
           }
-          tmp41Result = tmp41(15814);
+          tmp41Result = tmp41(15865);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj13 = handleFrameLifecycleChange(15814);
+        obj13 = handleFrameLifecycleChange(15865);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -197,7 +197,7 @@ prototype["start"] = function start(id) {
         focusSequence = num;
       }
       const obj3 = {
-        id: handleFrameLifecycleChange(1268).v4(),
+        id: handleFrameLifecycleChange(1269).v4(),
         socketId: id.id,
         frameId,
         applicationId,
@@ -232,7 +232,7 @@ prototype["start"] = function start(id) {
         const tmp34 = new RPCErrorDefault(obj5, "The voice connection is unavailable");
         throw tmp34;
       }
-      const obj7 = handleFrameLifecycleChange(1268);
+      const obj7 = handleFrameLifecycleChange(1269);
     }
   }
   const obj6 = { errorCode: RPCErrors.INVALID_CHANNEL };
@@ -266,16 +266,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15816);
+    obj2 = obj2(15867);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15816).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15867).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15816);
+      const tmp11Result = tmp11(15867);
     }
     tmp11 = obj2;
   } else {
@@ -402,7 +402,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15817).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15868).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

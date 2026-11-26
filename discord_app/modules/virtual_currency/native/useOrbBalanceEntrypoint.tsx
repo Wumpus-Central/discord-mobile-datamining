@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(16453).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_5 = fn(16504).ORB_WALLET_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/useOrbBalanceEntrypoint.tsx");
 
@@ -42,7 +42,7 @@ export function openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, analy
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -109,7 +109,7 @@ export function openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, analy
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -179,10 +179,10 @@ export function useOrbBalanceEntrypoint(location) {
     obj.useVirtualCurrencyMobileEnabled().enabled;
   _require = tmp3;
   let obj2 = require("OrbchievementsExperiment");
-  const orbChallengeUnreadState = tmp(16457).useOrbChallengeUnreadState({ enabled: tmp3 });
+  const orbChallengeUnreadState = tmp(16508).useOrbChallengeUnreadState({ enabled: tmp3 });
   items = [tmp3];
   ({ hasUnreadUpdate, notificationType } = orbChallengeUnreadState);
-  const tmpResult = tmp(16457);
+  const tmpResult = tmp(16508);
   return {
     isOrbchievementsEnabled: tmp3,
     hasUnreadUpdate,
@@ -213,7 +213,7 @@ export function useOrbBalanceEntrypoint(location) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           } else {
             try {
@@ -280,7 +280,7 @@ export function useOrbBalanceEntrypoint(location) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else {
           try {

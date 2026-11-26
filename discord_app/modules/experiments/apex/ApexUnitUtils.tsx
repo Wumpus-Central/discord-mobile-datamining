@@ -7,6 +7,9 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexUnitUtils.tsx");
 
+export function getInstallationUnitId() {
+  return FingerprintUtils.maybeExtractId(AuthenticationStore.getInstallationForTracking());
+}
 export function getUnitId(installation, guildId) {
   if ("guild" === installation) {
     return guildId.guildId;

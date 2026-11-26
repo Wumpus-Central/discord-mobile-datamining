@@ -90,7 +90,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15332);
+const GuildReportRaidModalConstants = fn(15382);
 ({
   getReportRaidHelpArticleURL: metroImportDefault,
   getReportRaidTypeLabel: closure_8,
@@ -99,7 +99,7 @@ const GuildReportRaidModalConstants = fn(15332);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: {
     flex: 1,
@@ -150,7 +150,7 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -167,9 +167,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
               dependencyMap = 3;
             } else {
               tmp21.current = true;
-              const result = tmp2(12434).trackReportRaidViewed(guildId, first);
-              const obj2 = tmp2(12434);
-              tmp2(12434).handleReportRaid(guildId);
+              const result = tmp2(12483).trackReportRaidViewed(guildId, first);
+              const obj2 = tmp2(12483);
+              tmp2(12483).handleReportRaid(guildId);
               const intl = tmp2(1112).intl;
               c1 = 1;
               dependencyMap = 1;

@@ -5,8 +5,8 @@ import age_gate_AgeGateUtils from "../../age_gate/native/AgeGateUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let useStickerPickerStore = fn(10788).useStickerPickerStore;
-const StickerPickerConstants = fn(10754);
+let useStickerPickerStore = fn(10834).useStickerPickerStore;
+const StickerPickerConstants = fn(10800);
 ({
   MIN_MARGIN: hasOwnProperty,
   ROW_HEIGHT: closure_6,
@@ -15,7 +15,7 @@ const StickerPickerConstants = fn(10754);
 } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
 let closure_9 = LABEL_HEIGHT + 2 * fn(1227).PADDING_VERTICAL;
-let closure_10 = fn(9685).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(9685).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+let closure_10 = fn(9727).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(9727).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 

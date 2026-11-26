@@ -66,13 +66,13 @@ function ScreenshareButtonInner(arg0) {
   );
 }
 const jsx = fn(21).jsx;
-const MetaQuestUtils = fn(1625);
+const MetaQuestUtils = fn(1626);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13467).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13519).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18147).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18206).MobilePhoneShareIcon;
 }
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({
   iconContainer: {
     position: "absolute",

@@ -57,16 +57,16 @@ export function getPricingPromotionForCollectiblesProduct(arg0) {
 }
 export function useCollectiblesPricingPromotionForProduct(skuId) {
   collectiblesStorefrontPricingIntegrationEnabled =
-    collectiblesStorefrontPricingIntegrationEnabled(11206).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
+    collectiblesStorefrontPricingIntegrationEnabled(11252).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
   skuId = undefined;
   if (skuId != null) {
     skuId = skuId.skuId;
   }
-  let obj = collectiblesStorefrontPricingIntegrationEnabled(11206);
+  let obj = collectiblesStorefrontPricingIntegrationEnabled(11252);
   const collectiblesStorefrontPrices = collectiblesStorefrontPricingIntegrationEnabled(
-    11205,
+    11251,
   ).useCollectiblesStorefrontPrices(skuId, c7);
-  const tmpResult = collectiblesStorefrontPricingIntegrationEnabled(11205);
+  const tmpResult = collectiblesStorefrontPricingIntegrationEnabled(11251);
   items = [SKUPricesStore];
   const stateFromStores = collectiblesStorefrontPricingIntegrationEnabled(504).useStateFromStores(items, () => {
     let promotionIdsForSkuId;

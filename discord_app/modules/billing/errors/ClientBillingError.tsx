@@ -1,5 +1,6 @@
 // discord_app/modules/billing/errors/ClientBillingError.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
+import util from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import BillingUtils from "../../../utils/BillingUtils.tsx";
 import BillingErrorDefault from "../../../errors/BillingError.tsx";
@@ -430,6 +431,18 @@ prototype["isStripeWalletSelected"] = function isStripeWalletSelected() {
     BooleanResult = this.source.selectedElementType === PaymentSourceTypes.PAYMENT_REQUEST;
   }
   return BooleanResult;
+};
+prototype["getApiError"] = function getApiError() {
+  const classification = this.classification;
+  const shape = classification.shape;
+  if ("billing_error" === shape) {
+    return classification.error;
+  } else if ("http_error" === shape) {
+    const tmp6 = new BillingErrorDefault(classification.error);
+    return tmp6;
+  } else {
+    return null;
+  }
 };
 prototype["getErrorTags"] = function getErrorTags() {
   const classification = this.classification;
@@ -917,6 +930,21 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
     }
     return fromEntriesResult;
   }
+};
+prototype["getUserFacingMessage"] = function getUserFacingMessage() {
+  const apiError = this.getApiError();
+  let status;
+  if (apiError != null) {
+    status = apiError.status;
+  }
+  if (null != status) {
+    if (apiError.status < 500) {
+      let message = apiError.message;
+    }
+    return message;
+  }
+  const intl = util.intl;
+  message = intl.string(util.t["5mlOCW"]);
 };
 prototype["getSentryOptions"] = function getSentryOptions(arg0) {
   const self = this;

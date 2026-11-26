@@ -599,7 +599,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "sa",
+      fetchError: "__workletHash",
     };
     value4 = obj;
   }

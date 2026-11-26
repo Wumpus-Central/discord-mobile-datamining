@@ -24,7 +24,7 @@ require = fn;
 const Permissions = fn(1071).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   screenContainer: {
     flex: 1,
@@ -313,7 +313,7 @@ prototype["render"] = function render() {
   obj.children = gesture(Stack_Stack.Stack, obj2);
   return state(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(5073).ThemeContext;
+ChannelSettingsChangeCategory.contextType = fn(5104).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 
@@ -322,9 +322,9 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   items = [ChannelStore];
   const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(504);
-  const navigation = channelId(1500).useNavigation();
-  const obj2 = channelId(1500);
-  const appChannelBotUserId = channelId(12070).useAppChannelBotUserId(channel);
+  const navigation = channelId(1501).useNavigation();
+  const obj2 = channelId(1501);
+  const appChannelBotUserId = channelId(12118).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 }

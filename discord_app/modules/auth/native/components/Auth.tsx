@@ -2,17 +2,17 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import KeyboardChatScrollView from "../../../../../_runtime/01642_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../../_runtime/01643_KeyboardChatScrollView.js";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
 import WideAuthScrollContext from "WideAuthScrollContext.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import StackNavigator from "../../../../../_runtime/07327_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07358_StackNavigator.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import useShouldShowChooseAccountDefault from "../../../multi_account/useShouldShowChooseAccount.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import _mod17652 from "../../../../../_runtime/metro/17652__.js";
+import _mod17709 from "../../../../../_runtime/metro/17709__.js";
 import AuthManagerDefault from "../AuthManager.tsx";
 import useOrientationLockDefault from "../useOrientationLock.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -62,7 +62,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod17652;
+  obj3.backgroundImageSource = _mod17709;
   const children = [closure_9(BackgroundImageDefault, obj3), ,];
   let tmp18Result = null;
   if (tmp5) {
@@ -70,7 +70,7 @@ function NavigatorWithCaptchaHook() {
     if (tmp9 === AuthStates.WELCOME) {
       tmp18Result = null;
       if (tmp7) {
-        tmp18Result = closure_9(tmp4(7009), {});
+        tmp18Result = closure_9(tmp4(7040), {});
       }
     }
   }
@@ -170,7 +170,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1071).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(17598);
+let RegistrationStepsUtils = fn(17655);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
@@ -225,13 +225,13 @@ const screens = Object.fromEntries(
   }),
 );
 let num = 540;
-if (fn(7284).hasWebAuthn) {
+if (fn(7315).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
 obj[AuthStates.LOGIN] = num;
 obj[AuthStates.MFA] = 600;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj3 = {
   transparent: { backgroundColor: "transparent" },
   cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" },
@@ -273,7 +273,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[25]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(8207).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(8249).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, {

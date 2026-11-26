@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPCardThaw.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../../_runtime/metro/01706__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../../_runtime/metro/01707__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -106,7 +106,7 @@ export function usePIPCardThaw(cardThaw, arg1) {
       tmp = !closure_1;
     }
     if (tmp) {
-      items = [closure_3, pipCardSize, scale, width, height, 10, _mod1706.scheduleOnRN, finish];
+      items = [closure_3, pipCardSize, scale, width, height, 10, _mod1707.scheduleOnRN, finish];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;
@@ -127,7 +127,7 @@ export function usePIPCardThaw(cardThaw, arg1) {
       VoicePanelPIPCardThawTsx1.__closure = items1;
       VoicePanelPIPCardThawTsx1.__workletHash = 6411568076857;
       VoicePanelPIPCardThawTsx1.__initData = tmp12;
-      _mod1706.scheduleOnUI(VoicePanelPIPCardThawTsx1);
+      _mod1707.scheduleOnUI(VoicePanelPIPCardThawTsx1);
     }
   }, items2);
   const items3 = [finish];

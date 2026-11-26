@@ -1,13 +1,13 @@
 // discord_app/modules/animations/native/useEaseInEaseOutLayoutAnimations.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const Easing = fn(1653).Easing;
-let closure_5 = Easing.inOut(fn(1653).Easing.ease);
+const Easing = fn(1654).Easing;
+let closure_5 = Easing.inOut(fn(1654).Easing.ease);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/animations/native/useEaseInEaseOutLayoutAnimations.tsx");
 
@@ -17,19 +17,19 @@ export default function useEaseInEaseOutLayoutAnimations() {
   const items1 = [stateFromStores];
   return noop.useMemo(() => {
     if (obj.isAndroid()) {
-      return { entering: "sa", exiting: "isArray", layout: "isArray" };
+      return { entering: "radii", exiting: "id", layout: "clearTimeout" };
     } else {
-      const ReduceMotion = _mod1653.ReduceMotion;
+      const ReduceMotion = _mod1654.ReduceMotion;
       const tmp4 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
       const obj2 = { entering: null, exiting: null, layout: null };
-      const FadeIn = _mod1653.FadeIn;
+      const FadeIn = _mod1654.FadeIn;
       const durationResult = FadeIn.duration(300);
       obj2.entering = FadeIn.duration(300).easing(closure_5).reduceMotion(tmp4);
-      const FadeOut = _mod1653.FadeOut;
+      const FadeOut = _mod1654.FadeOut;
       const easingResult = FadeIn.duration(300).easing(closure_5);
       const durationResult1 = FadeOut.duration(300);
       obj2.exiting = FadeOut.duration(300).easing(closure_5).reduceMotion(tmp4);
-      const LinearTransition = _mod1653.LinearTransition;
+      const LinearTransition = _mod1654.LinearTransition;
       const easingResult1 = FadeOut.duration(300).easing(closure_5);
       const durationResult2 = LinearTransition.duration(300);
       obj2.layout = LinearTransition.duration(300).easing(closure_5).reduceMotion(tmp4);
@@ -50,19 +50,19 @@ export function useTriggeredLayoutTransition() {
   if (tmp3) {
     layout = noop.useMemo(() => {
       if (obj.isAndroid()) {
-        return { entering: "sa", exiting: "isArray", layout: "isArray" };
+        return { entering: "radii", exiting: "id", layout: "clearTimeout" };
       } else {
-        const ReduceMotion = _mod1653.ReduceMotion;
+        const ReduceMotion = _mod1654.ReduceMotion;
         const tmp4 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
         const obj2 = { entering: null, exiting: null, layout: null };
-        const FadeIn = _mod1653.FadeIn;
+        const FadeIn = _mod1654.FadeIn;
         const durationResult = FadeIn.duration(300);
         obj2.entering = FadeIn.duration(300).easing(closure_5).reduceMotion(tmp4);
-        const FadeOut = _mod1653.FadeOut;
+        const FadeOut = _mod1654.FadeOut;
         const easingResult = FadeIn.duration(300).easing(closure_5);
         const durationResult1 = FadeOut.duration(300);
         obj2.exiting = FadeOut.duration(300).easing(closure_5).reduceMotion(tmp4);
-        const LinearTransition = _mod1653.LinearTransition;
+        const LinearTransition = _mod1654.LinearTransition;
         const easingResult1 = FadeOut.duration(300).easing(closure_5);
         const durationResult2 = LinearTransition.duration(300);
         obj2.layout = LinearTransition.duration(300).easing(closure_5).reduceMotion(tmp4);

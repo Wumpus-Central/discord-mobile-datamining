@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/AdvertiserCtaBanner.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ButtonHooks from "../../../design/components/Button/native/ButtonHooks.native.tsx";
@@ -10,7 +10,7 @@ import AssetUtils from "../lib/AssetUtils.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const module_1653 = _mod1653;
+const module_1654 = _mod1654;
 
 require = fn;
 let closure_3 = ["style"];
@@ -18,8 +18,8 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let closure_9 = module_1653.createAnimatedComponent(Pressable);
-const createStyles = fn(5012);
+let closure_9 = module_1654.createAnimatedComponent(Pressable);
+const createStyles = fn(5043);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     outerContainer: null,
@@ -79,7 +79,7 @@ export default function AdvertiserCtaBanner(ctaInfo) {
     const size = { assetUrl: ctaInfo.iconImageUri, width: 40, height: 40 };
     scaledImageUrl = AssetUtils.getScaledImageUrl(size);
   }
-  const sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(0);
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(sharedValue);
   const obj2 = { style: null, children: null };
   items = [tmp.outerContainer, style];
@@ -125,5 +125,5 @@ export default function AdvertiserCtaBanner(ctaInfo) {
   obj6.children = items2;
   obj5.children = React5(BackgroundBlurView.BackgroundBlurView, obj6);
   obj2.children = metroImportDefault(closure_9, obj5);
-  return metroImportDefault(module_1653.View, obj2);
+  return metroImportDefault(module_1654.View, obj2);
 }

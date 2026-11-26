@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const result = fn(5048).MAX_RESULTS_PER_PAGE * fn(5048).MAX_VISIBLE_PAGES;
+const result = fn(5079).MAX_RESULTS_PER_PAGE * fn(5079).MAX_VISIBLE_PAGES;
 const size = fn(2);
 const result1 = size.fileFinishedImporting(
   "modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx",
@@ -36,7 +36,7 @@ export function usePaginatedMemberApplications(guildId) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -75,8 +75,8 @@ export function usePaginatedMemberApplications(guildId) {
                   const current4 = dependencyMap.current;
                   current4.add(status);
                   const tmp66 = (function getRequestPaginationParams(after, status, guildId2, status2, flag) {
-                    const tmp2 = status2 === guildId(5048).GuildJoinRequestApplicationStatuses.SUBMITTED;
-                    if (guildId2 === guildId(5048).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+                    const tmp2 = status2 === guildId(5079).GuildJoinRequestApplicationStatuses.SUBMITTED;
+                    if (guildId2 === guildId(5079).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
                       if (!flag) {
                         if (0 !== status.length) {
                           const obj2 = {
@@ -111,7 +111,7 @@ export function usePaginatedMemberApplications(guildId) {
                   const merged = Object.assign(tmp66);
                   limit = 3;
                   c7 = 1;
-                  const obj6 = { value: guildJoinRequests(6974).fetchGuildJoinRequests(obj5), done: false };
+                  const obj6 = { value: guildJoinRequests(7005).fetchGuildJoinRequests(obj5), done: false };
                   return obj6;
                 }
               }
@@ -121,7 +121,7 @@ export function usePaginatedMemberApplications(guildId) {
             if (2 === tmp8) {
               ref = 1;
               closure_130_4 = tmp74;
-              const aPIError = new guildId(5761).APIError(closure_130_4);
+              const aPIError = new guildId(5792).APIError(closure_130_4);
               closure_130_3 = aPIError;
               tmp74(closure_130_3.getAnyErrorMessage());
             } else if (arg0 === 1) {

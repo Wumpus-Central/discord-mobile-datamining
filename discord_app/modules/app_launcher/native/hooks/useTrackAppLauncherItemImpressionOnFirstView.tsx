@@ -10,11 +10,11 @@ const result = size.fileFinishedImporting(
 );
 
 export function useTrackAppLauncherItemImpressionOnFirstView() {
-  entrypoint = entrypoint(12095).useAppLauncherContext().entrypoint;
-  let obj = entrypoint(12095);
+  entrypoint = entrypoint(12145).useAppLauncherContext().entrypoint;
+  let obj = entrypoint(12145);
   dependencyMap = noop.useRef(new Set());
   set = new Set();
-  const focusEffect = entrypoint(1501).useFocusEffect(
+  const focusEffect = entrypoint(1502).useFocusEffect(
     noop.useCallback(() => {
       const current = ref.current;
       current.clear();

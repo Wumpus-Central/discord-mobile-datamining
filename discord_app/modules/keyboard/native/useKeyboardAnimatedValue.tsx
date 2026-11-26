@@ -7,20 +7,20 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const Easing = fn(1653).Easing;
+const Easing = fn(1654).Easing;
 const bezierResult = Easing.bezier(0.2, 0, 0, 1);
 let c3 = bezierResult;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/useKeyboardAnimatedValue.tsx");
 
-export default function useKeyboardAnimatedValue(UNDETERMINED) {
-  _require = UNDETERMINED;
+export default function useKeyboardAnimatedValue(point) {
+  _require = point;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(UNDETERMINED);
-  items = [sharedValue, UNDETERMINED, flag];
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(point);
+  items = [sharedValue, point, flag];
   const effect = sharedValue.useEffect(() => {
     if (flag) {
       if (!obj.isAndroid()) {

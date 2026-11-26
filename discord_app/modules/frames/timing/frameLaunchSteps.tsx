@@ -6,12 +6,12 @@ import FramesStore from "../FramesStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const makeFrameId = fn(6906).makeFrameId;
+const makeFrameId = fn(6937).makeFrameId;
 let obj = {};
-obj[fn(7649).EmbeddedAppCSPSource.SKIPPED] = fn(7654).StepStatus.SKIPPED;
-obj[fn(7649).EmbeddedAppCSPSource.CACHED] = fn(7654).StepStatus.CACHED;
-obj[fn(7649).EmbeddedAppCSPSource.IN_FLIGHT] = fn(7654).StepStatus.IN_FLIGHT;
-obj[fn(7649).EmbeddedAppCSPSource.FETCHED] = fn(7654).StepStatus.OK;
+obj[fn(7680).EmbeddedAppCSPSource.SKIPPED] = fn(7685).StepStatus.SKIPPED;
+obj[fn(7680).EmbeddedAppCSPSource.CACHED] = fn(7685).StepStatus.CACHED;
+obj[fn(7680).EmbeddedAppCSPSource.IN_FLIGHT] = fn(7685).StepStatus.IN_FLIGHT;
+obj[fn(7680).EmbeddedAppCSPSource.FETCHED] = fn(7685).StepStatus.OK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/timing/frameLaunchSteps.tsx");
 
@@ -27,7 +27,7 @@ export function loadLaunchCSP(span, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -46,7 +46,7 @@ export function loadLaunchCSP(span, arg1) {
             closure_129_1 = undefined;
             c3 = 1;
             c4 = 1;
-            const obj4 = { value: tmp2(7649)(closure_0), done: false };
+            const obj4 = { value: tmp2(7680)(closure_0), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -60,7 +60,7 @@ export function loadLaunchCSP(span, arg1) {
           closure_129_1 = value;
           closure_129_0.setStatus(closure_2_7[closure_129_1]);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp16) {
         c4 = tmp;
@@ -109,7 +109,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -125,10 +125,10 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
           } else {
             closure_2 = tmp5;
             closure_129_0 = closure_0;
-            const tmp21 = tmp2(6908)(tmp2);
+            const tmp21 = tmp2(6939)(tmp2);
             c3 = 1;
             c4 = 1;
-            const obj4 = { value: closure_0(7657).prefetchProxyTicket(closure_0, tmp21, tmp2.type), done: false };
+            const obj4 = { value: closure_0(7688).prefetchProxyTicket(closure_0, tmp21, tmp2.type), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -140,10 +140,10 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
           return obj;
         } else {
           if (value.alreadyPrefetched) {
-            closure_129_0.setStatus(closure_0(7654).StepStatus.PREFETCHED);
+            closure_129_0.setStatus(closure_0(7685).StepStatus.PREFETCHED);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp12) {
         c4 = tmp;
@@ -163,7 +163,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -182,7 +182,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
             closure_129_1 = undefined;
             c3 = 1;
             c4 = 1;
-            const obj4 = { value: tmp2(7649)(closure_0), done: false };
+            const obj4 = { value: tmp2(7680)(closure_0), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -196,7 +196,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
           closure_129_1 = value;
           closure_129_0.setStatus(closure_2_7[closure_129_1]);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp16) {
         c4 = tmp;
@@ -204,7 +204,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
       }
     }
   });
-  const spanResult = NOOP_FRAME_LAUNCH_TIMING.span(tmp13(7654).LaunchStep.PROXY_TICKET, function () {
+  const spanResult = NOOP_FRAME_LAUNCH_TIMING.span(tmp13(7685).LaunchStep.PROXY_TICKET, function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -229,7 +229,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -244,9 +244,9 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
               return obj3;
             } else {
               if (hydrated.isHydrated(status)) {
-                status.setStatus(status(7654).StepStatus.CACHED);
+                status.setStatus(status(7685).StepStatus.CACHED);
               }
-              const useApplication = status(6940).useApplication;
+              const useApplication = status(6971).useApplication;
               items = [status];
               c2 = 1;
               c1 = 1;
@@ -262,7 +262,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp10) {
           c1 = tmp;
@@ -273,7 +273,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
   });
   items = [
     spanResult,
-    NOOP_FRAME_LAUNCH_TIMING.span(tmp11(7654).LaunchStep.CSP, function () {
+    NOOP_FRAME_LAUNCH_TIMING.span(tmp11(7685).LaunchStep.CSP, function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -283,7 +283,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
       }
       return applyArgumentsResult;
     }),
-    NOOP_FRAME_LAUNCH_TIMING.span(tmp13(7654).LaunchStep.APPLICATION, function () {
+    NOOP_FRAME_LAUNCH_TIMING.span(tmp13(7685).LaunchStep.APPLICATION, function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -295,7 +295,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
     }),
   ];
   Promise.allSettled(items);
-  const spanResult1 = NOOP_FRAME_LAUNCH_TIMING.span(tmp11(7654).LaunchStep.CSP, function () {
+  const spanResult1 = NOOP_FRAME_LAUNCH_TIMING.span(tmp11(7685).LaunchStep.CSP, function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

@@ -283,8 +283,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.has_unread_indicator = hasUnreadIndicator;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(6358).FetchState;
-const constants = fn(6106).TrackUserProfileProperties;
+const FetchState = fn(6389).FetchState;
+const constants = fn(6137).TrackUserProfileProperties;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const StatusTypes = fn(1082).StatusTypes;
 const size = fn(2);

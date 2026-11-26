@@ -24,13 +24,13 @@ function SoundboardSoundRow(arg0) {
   const obj2 = { style: tmp.soundEmoji, children: null };
   if (null == sound.emojiId) {
     if (null == sound.emojiName) {
-      let tmp5Result = closure_11(sound(7122).ImageIcon, { size: "lg", color: "icon-subtle" });
+      let tmp5Result = closure_11(sound(7153).ImageIcon, { size: "lg", color: "icon-subtle" });
     }
     const obj3 = { icon: null, label: null, trailing: null, onPress: null };
     obj2.children = tmp5Result;
     obj3.icon = closure_11(closure_6, obj2);
     const obj4 = { variant: "heading-xs/semibold", color: "text-strong", style: tmp.name, children: sound.name };
-    const items2 = [closure_11(sound(5603).Text, obj4)];
+    const items2 = [closure_11(sound(5634).Text, obj4)];
     let tmp12Result = null;
     if (null != stateFromStores) {
       const obj5 = { style: tmp.userRow, children: null };
@@ -41,7 +41,7 @@ function SoundboardSoundRow(arg0) {
         color: "text-subtle",
         children: NicknameUtilsDefault.getName(guildId, undefined, stateFromStores),
       };
-      items3[1] = closure_11(sound(5603).Text, obj7);
+      items3[1] = closure_11(sound(5634).Text, obj7);
       obj5.children = items3;
       tmp12Result = closure_12(closure_6, obj5);
     }
@@ -51,7 +51,7 @@ function SoundboardSoundRow(arg0) {
     obj3.label = closure_12(closure_6, obj8);
     let tmp5Result2;
     if (canManage) {
-      tmp5Result2 = closure_11(sound(6125).TableRowArrow, {});
+      tmp5Result2 = closure_11(sound(6156).TableRowArrow, {});
     }
     obj3.trailing = tmp5Result2;
     obj3.onPress = onPress;
@@ -78,7 +78,7 @@ function AddSoundButton(guildId) {
   obj2.onPress = function onPress() {
     return SoundboardCreationUtils.showAddSoundboardSoundOptions(guildId);
   };
-  obj.children = closure_11(guildId(5610).Button, obj2);
+  obj.children = closure_11(guildId(5641).Button, obj2);
   return closure_11(closure_6, obj);
 }
 get_ActivityIndicator = fn(17);
@@ -86,7 +86,7 @@ get_ActivityIndicator = fn(17);
 const BoostedGuildTiers = fn(1071).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 },
@@ -96,10 +96,10 @@ let closure_13 = createStyles.createStyles((arg0) => {
   obj.label = { marginBottom: nativeDefault.space.PX_8 };
   return obj;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj = { addSoundButton: { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 } };
 let closure_14 = createStyles.createStyles(obj);
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj5 = { soundEmoji: null, soundEmojiImage: null, soundEmojiText: null, name: null, userRow: null };
 let size = {
   width: nativeDefault.space.PX_48,

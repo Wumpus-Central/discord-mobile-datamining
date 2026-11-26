@@ -5,7 +5,7 @@ import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore
 const require = globalThis.__r;
 
 const require = fn;
-let ApplicationCommandFrecencyStore = fn(10007);
+let ApplicationCommandFrecencyStore = fn(10049);
 ({ getFilteredTopCommands: c3, getTopRealCommands: closure_4 } = ApplicationCommandFrecencyStore);
 let ApplicationCommandFrecencyStore = ApplicationCommandFrecencyStore_mod;
 const UserSettingsTypes = fn(1081).UserSettingsTypes;

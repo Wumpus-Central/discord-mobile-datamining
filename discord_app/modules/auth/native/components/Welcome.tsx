@@ -5,15 +5,15 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import Link from "../../../../../_runtime/01501_Link.js";
+import Link from "../../../../../_runtime/01502_Link.js";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import _modDef14461 from "../../../../../_runtime/metro/14461__.js";
-import _mod15216 from "../../../../../_runtime/metro/15216__.js";
+import _modDef14513 from "../../../../../_runtime/metro/14513__.js";
+import _mod15266 from "../../../../../_runtime/metro/15266__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -72,9 +72,9 @@ function InviteCard(invite) {
     const items1 = [tmp14];
     const obj6 = { style: tmp.text, children: null };
     const obj7 = { variant: "body-sm/medium", color: "text-subtle", children: stringResult };
-    const items2 = [tmp18(tmp17(5603).Text, obj7)];
+    const items2 = [tmp18(tmp17(5634).Text, obj7)];
     const obj8 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: name };
-    items2[1] = tmp18(tmp17(5603).Text, obj8);
+    items2[1] = tmp18(tmp17(5634).Text, obj8);
     obj6.children = items2;
     items1[1] = set(React4, obj6);
     obj5.children = items1;
@@ -87,7 +87,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef14461 };
+  const obj2 = { source: _modDef14513 };
   const items1 = [closure_1_19(FastImageDefault, obj2)];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "body-sm/medium", color: "text-subtle", children: null };
@@ -116,7 +116,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15216 }), ,];
+  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15266 }), ,];
   const obj4 = {
     style: tmp4.header,
     lineClamp: null,
@@ -178,11 +178,11 @@ const Constants = fn(1071);
   InviteStates: closure_15,
   ThemeTypes: closure_16,
 } = Constants);
-const GuildTemplateStates = fn(7833).GuildTemplateStates;
-const InviteTypes = fn(5745).InviteTypes;
+const GuildTemplateStates = fn(7867).GuildTemplateStates;
+const InviteTypes = fn(5776).InviteTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let closure_21 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { height: "100%", flex: 1, padding: 16 },
@@ -211,7 +211,7 @@ let closure_21 = createStyles.createStyles((arg0) => {
   obj.buttonContainer = { paddingHorizontal: 28, maxWidth: 480, alignSelf: "center", width: "100%" };
   return obj;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj3 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,

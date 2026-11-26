@@ -1,16 +1,16 @@
 // discord_app/modules/share/native/SearchableDestinationListHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import Link from "../../../../_runtime/01501_Link.js";
+import Link from "../../../../_runtime/01502_Link.js";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7167 from "../../../../_runtime/metro/07167__.js";
+import _mod7198 from "../../../../_runtime/metro/07198__.js";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = {
   headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 },
   headerRightContainer: null,
@@ -78,7 +78,7 @@ export default function SearchableDestinationListHeader(arg0) {
     headerStatusBarHeight = num + nativeDefault.space.PX_8;
   }
   obj3.headerStatusBarHeight = headerStatusBarHeight;
-  return jsx(_mod7167.Header, {
+  return jsx(_mod7198.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

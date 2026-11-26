@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/share/native/ConjureProjectAboutSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -30,7 +30,7 @@ function Surfaces(project) {
     const obj2 = { spacing: nativeDefault.space.PX_4, children: null };
     const obj3 = { variant: "body-xs/semibold", color: "text-muted", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef4244["cF++B3"]);
+    obj3.children = intl.string(_modDef4245["cF++B3"]);
     items = [timestampProducer(Text_Text.Text, obj3)];
     const obj4 = { variant: "body-sm/normal", color: "text-default", children: result.join(" \u00B7 ") };
     items[1] = timestampProducer(Text_Text.Text, obj4);
@@ -67,7 +67,7 @@ function RemixActions(project) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     body: { gap: nativeDefault.space.PX_16, paddingBottom: arg0 + nativeDefault.space.PX_16 },
@@ -141,7 +141,7 @@ export default function ConjureProjectAboutSheet(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -169,11 +169,11 @@ export default function ConjureProjectAboutSheet(arg0) {
             return obj5;
           } else {
             if (value) {
-              v1(5226).hideActionSheet(tmp4(12323).CONJURE_PROJECT_ABOUT_SHEET_KEY);
-              const obj = v1(5226);
+              v1(5257).hideActionSheet(tmp4(12373).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+              const obj = v1(5257);
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp11) {
           dependencyMap = tmp;
@@ -191,20 +191,20 @@ export default function ConjureProjectAboutSheet(arg0) {
   } else {
     const intl = tmp8(1112).intl;
     if ("expired" === tmp3.type) {
-      let mQma36 = _modDef4244.wahvH2;
+      let mQma36 = _modDef4245.wahvH2;
     } else {
-      mQma36 = _modDef4244.mQma36;
+      mQma36 = _modDef4245.mQma36;
     }
     name = intl.string(mQma36);
   }
-  let obj2 = { header: closure_6(run(7476).BottomSheetTitleHeader, { title: name }), footer: null, children: null };
+  let obj2 = { header: closure_6(run(7507).BottomSheetTitleHeader, { title: name }), footer: null, children: null };
   let tmp14Result;
   if (null != tmp9) {
     let obj3 = { style: tmp5Result.footer, ref, onLayout, children: null };
     let obj4 = { bottom: true, children: null };
     let obj5 = { project: tmp9, guildId: source.guildId, ticket };
     obj4.children = closure_6(RemixActions, obj5);
-    obj3.children = closure_6(tmp8(7449).SafeAreaPaddingView, obj4);
+    obj3.children = closure_6(tmp8(7480).SafeAreaPaddingView, obj4);
     tmp14Result = closure_6(View, obj3);
   }
   obj2.footer = tmp14Result;
@@ -217,8 +217,8 @@ export default function ConjureProjectAboutSheet(arg0) {
     if (launchFailed) {
       const obj8 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
       const intl3 = tmp8(1112).intl;
-      obj8.children = intl3.string(_modDef4244.hh2nuX);
-      tmp14Result4 = closure_6(tmp8(5603).Text, obj8);
+      obj8.children = intl3.string(_modDef4245.hh2nuX);
+      tmp14Result4 = closure_6(tmp8(5634).Text, obj8);
     }
     items1[1] = tmp14Result4;
     const obj9 = { style: tmp5Result.identity, children: null };
@@ -226,13 +226,13 @@ export default function ConjureProjectAboutSheet(arg0) {
     const items2 = [closure_6(ConjureAppSheetIconDefault, obj10)];
     const obj11 = { style: tmp5Result.details, children: null };
     const obj12 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: application.name };
-    const items3 = [closure_6(tmp8(5603).Text, obj12)];
+    const items3 = [closure_6(tmp8(5634).Text, obj12)];
     let tmp14Result5 = null;
     if (null != application.description) {
       tmp14Result5 = null;
       if ("" !== str3.trim()) {
         const obj13 = { variant: "body-sm/normal", color: "text-default", children: application.description.trim() };
-        tmp14Result5 = closure_6(tmp8(5603).Text, obj13);
+        tmp14Result5 = closure_6(tmp8(5634).Text, obj13);
       }
       str3 = application.description;
     }
@@ -262,11 +262,11 @@ export default function ConjureProjectAboutSheet(arg0) {
   if ("info_only" === tmp3.type) {
     const obj18 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl4 = tmp8(1112).intl;
-    obj18.children = intl4.string(_modDef4244["2DSRxV"]);
-    tmp14Result6 = closure_6(tmp8(5603).Text, obj18);
+    obj18.children = intl4.string(_modDef4245["2DSRxV"]);
+    tmp14Result6 = closure_6(tmp8(5634).Text, obj18);
   }
   items4[2] = tmp14Result6;
   obj6.children = items4;
   obj2.children = closure_7(View, obj6);
-  return closure_6(run(7515).ActionSheet, obj2);
+  return closure_6(run(7546).ActionSheet, obj2);
 }

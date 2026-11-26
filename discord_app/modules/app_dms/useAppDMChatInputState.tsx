@@ -8,13 +8,13 @@ import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 const require = fn;
-const useQueryState = fn(10005).useQueryState;
+const useQueryState = fn(10047).useQueryState;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 let items = [
-  fn(2117).ApplicationCommandType.PRIMARY_ENTRY_POINT,
-  fn(2117).ApplicationCommandType.CHAT,
-  fn(2117).ApplicationCommandType.MESSAGE,
-  fn(2117).ApplicationCommandType.USER,
+  fn(2118).ApplicationCommandType.PRIMARY_ENTRY_POINT,
+  fn(2118).ApplicationCommandType.CHAT,
+  fn(2118).ApplicationCommandType.MESSAGE,
+  fn(2118).ApplicationCommandType.USER,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/controls/utils/useControlsHiddenPresentation.tsx
-import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../../../_runtime/metro/01706__.js";
+import _mod1654 from "../../../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../../../_runtime/metro/01707__.js";
 import native from "../../../../../../discord_common/js/packages/design/native.tsx";
 import spring_spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import VoicePanelConstants from "../../../VoicePanelConstants.tsx";
@@ -43,8 +43,8 @@ export default function useControlsHiddenPresentation(arg0, arg1) {
   useControlsHiddenPresentationTsx1.__closure = items1;
   useControlsHiddenPresentationTsx1.__workletHash = 10191676178362;
   useControlsHiddenPresentationTsx1.__initData = tmp4;
-  const animatedProps = _mod1653.useAnimatedProps(useControlsHiddenPresentationTsx1);
-  const items2 = [closure_5, spring_spring.withSpring, tmp3, arg1, obj, cleanUp, _mod1706.scheduleOnRN];
+  const animatedProps = _mod1654.useAnimatedProps(useControlsHiddenPresentationTsx1);
+  const items2 = [closure_5, spring_spring.withSpring, tmp3, arg1, obj, cleanUp, _mod1707.scheduleOnRN];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -76,6 +76,6 @@ export default function useControlsHiddenPresentation(arg0, arg1) {
   useControlsHiddenPresentationTsx2.__closure = items3;
   useControlsHiddenPresentationTsx2.__workletHash = 14159877281811;
   useControlsHiddenPresentationTsx2.__initData = tmp10;
-  const tmpResult = _mod1653;
-  return { hiddenProps: animatedProps, hiddenStyles: _mod1653.useAnimatedStyle(useControlsHiddenPresentationTsx2) };
+  const tmpResult = _mod1654;
+  return { hiddenProps: animatedProps, hiddenStyles: _mod1654.useAnimatedStyle(useControlsHiddenPresentationTsx2) };
 }

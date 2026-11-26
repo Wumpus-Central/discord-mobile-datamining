@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: {
     flex: 1,
@@ -24,13 +24,13 @@ let obj2 = {
   downloadProgressSlider: null,
   playbackSlider: null,
 };
-let PlatformUtils = fn(1378);
+let PlatformUtils = fn(1379);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 12;
 }
 obj2.centerText = { lineHeight: num };
-PlatformUtils = fn(1378);
+PlatformUtils = fn(1379);
 let num2 = 16;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;

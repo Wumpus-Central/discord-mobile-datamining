@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/HighlightNotificationsSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3206 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef3207 from "../../../notifications/NotificationSettings.messages.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
@@ -9,13 +9,13 @@ function useHighlightNotifications() {
   items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-let SettingBuilders = fn(11914);
+let SettingBuilders = fn(11962);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(9513).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(9555).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);
@@ -28,18 +28,18 @@ const route = SettingBuilders.createRoute({
     },
   },
 });
-SettingBuilders = fn(11914);
+SettingBuilders = fn(11962);
 const obj4 = {};
 const merged = Object.assign(route);
 obj4.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef3206["Sq+zmG"]);
+  return intl.string(_modDef3207["Sq+zmG"]);
 };
 obj4.useDescription = function useDescription() {
   const intl = util.intl;
-  return intl.string(_modDef3206.yHrluZ);
+  return intl.string(_modDef3207.yHrluZ);
 };
-obj4.parent = fn(17051).MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS;
+obj4.parent = fn(17102).MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS;
 const route1 = SettingBuilders.createRoute(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");

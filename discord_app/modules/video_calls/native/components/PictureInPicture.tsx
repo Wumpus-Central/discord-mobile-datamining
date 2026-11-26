@@ -1,8 +1,8 @@
 // discord_app/modules/video_calls/native/components/PictureInPicture.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
-import LegacyBaseButton from "../../../../../_runtime/05272_LegacyBaseButton.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useShouldForcePipOrientation from "useShouldForcePipOrientation.tsx";
@@ -12,15 +12,15 @@ import useDraggablePip from "../useDraggablePip.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const toggleFocus = fn(9966).toggleFocus;
+const toggleFocus = fn(10008).toggleFocus;
 const PictureInPicturePositions = fn(1071).PictureInPicturePositions;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { pipOuterContainer: null, pipInnerContainer: null, elevationShadow: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -84,7 +84,7 @@ export default noop.memo(function PictureInPicture(preferredPosition) {
   PictureInPictureTsx2.__closure = items1;
   PictureInPictureTsx2.__workletHash = 16667877031596;
   PictureInPictureTsx2.__initData = tmp9;
-  const animatedStyle = _mod1653.useAnimatedStyle(PictureInPictureTsx2);
+  const animatedStyle = _mod1654.useAnimatedStyle(PictureInPictureTsx2);
   const isViewingActivity = useIsViewingActivity.useIsViewingActivity({ channelId: channel.id });
   const obj5 = { channelId: channel.id };
   const tmp3Result = useIsViewingActivity;
@@ -131,7 +131,7 @@ export default noop.memo(function PictureInPicture(preferredPosition) {
   }
   tmp3Result4 = PlatformUtils;
   items3[1] = elevationShadow;
-  obj8.children = jsx(_modDef1653.View, { style: items3, children: <hasOwnProperty>{children}</hasOwnProperty> });
+  obj8.children = jsx(_modDef1654.View, { style: items3, children: <hasOwnProperty>{children}</hasOwnProperty> });
   obj7.children = jsx(LegacyBaseButton.GestureDetector, { gesture, children: null });
   obj6.children = (
     <hasOwnProperty
@@ -151,6 +151,6 @@ export default noop.memo(function PictureInPicture(preferredPosition) {
       {null}
     </hasOwnProperty>
   );
-  return jsx(_modDef1653.View, { style: null, pointerEvents: "box-none", children: null });
+  return jsx(_modDef1654.View, { style: null, pointerEvents: "box-none", children: null });
 });
 export const DEFAULT_PIP_POSITION = PictureInPicturePositions.TOP_LEFT;

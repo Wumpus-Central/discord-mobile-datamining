@@ -29,7 +29,7 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -134,7 +134,7 @@ const Constants = fn(1071);
   DEVICE_TOKEN: closure_6,
   DEVICE_VOIP_TOKEN: metroImportDefault,
 } = Constants);
-const PushNotificationConstants = fn(6811);
+const PushNotificationConstants = fn(6842);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -227,8 +227,8 @@ export function saveProfileAndAccountChanges(avatar) {
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
-      result = avatar(1408).serializeTypingIndicatorStyle(typingIndicatorStyle);
-      const obj3 = avatar(1408);
+      result = avatar(1409).serializeTypingIndicatorStyle(typingIndicatorStyle);
+      const obj3 = avatar(1409);
     }
     user.typing_indicator_style = result;
   }
@@ -252,10 +252,10 @@ export function saveProfileAndAccountChanges(avatar) {
   const obj4 = { headers: null };
   const obj = avatarId(572);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(7308).buildHeadersForMd5({
-    [avatar(7312).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+  obj4.headers = avatarId(7339).buildHeadersForMd5({
+    [avatar(7343).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
   });
-  let tmpResult = avatarId(7308);
+  let tmpResult = avatarId(7339);
   return saveProfileAndAccountRequest(user, obj4).then(
     (result) => {
       DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });

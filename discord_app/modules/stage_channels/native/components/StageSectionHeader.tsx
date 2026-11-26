@@ -1,20 +1,20 @@
 // discord_app/modules/stage_channels/native/components/StageSectionHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef7477 from "../../../../../_runtime/metro/07477__.js";
+import _modDef7508 from "../../../../../_runtime/metro/07508__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   section: { height: 48, paddingHorizontal: 4 },
   children: { marginLeft: 12 },
@@ -69,7 +69,7 @@ export default function StageSectionHeader(children) {
   StageSectionHeaderTsx1.__initData = tmp4;
   const obj2 = { style: tmp.section, children: null };
   const obj3 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
-  const animatedStyle = _mod1653.useAnimatedStyle(StageSectionHeaderTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(StageSectionHeaderTsx1);
   const obj4 = {
     variant: "body-md/semibold",
     color: "text-overlay-light",
@@ -87,8 +87,8 @@ export default function StageSectionHeader(children) {
   items3[1] = tmp8Result;
   const obj6 = { style: tmp.collapseButton, children: null };
   const obj7 = { style: animatedStyle, children: null };
-  obj7.children = timestampProducer(native.Icon, { source: _modDef7477, style: tmp.collapseIcon });
-  obj6.children = timestampProducer(_modDef1653.View, obj7);
+  obj7.children = timestampProducer(native.Icon, { source: _modDef7508, style: tmp.collapseIcon });
+  obj6.children = timestampProducer(_modDef1654.View, obj7);
   items3[2] = timestampProducer(React4, obj6);
   obj3.children = items3;
   obj2.children = hasOwnProperty(React3, obj3);

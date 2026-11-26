@@ -1,10 +1,10 @@
 // discord_app/modules/guilds_bar/native/GuildsBarItemEmptyNUX.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1653 from "../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../_runtime/metro/01654__.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
-import _modDef8759 from "../../../../_runtime/metro/08759__.js";
+import _modDef8801 from "../../../../_runtime/metro/08801__.js";
 import usePressabilityDefault from "../../core/native/usePressability.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -17,13 +17,13 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(18012);
+const GuildsBarConstants = fn(18071);
 ({ GUILD_ITEM_HIT_SLOP: metroImportDefault, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1071).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(9387).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(9429).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_13 = createStyles.createStyles((width, arg1) => {
   const diff = width - 10;
   const obj = {
@@ -77,7 +77,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
     () => guildId.getGuildId() === EMPTY_NUX_SERVER,
   );
   const obj2 = require("initialize");
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(false);
   _require = sharedValue;
   const items1 = [sharedValue];
   const items2 = [sharedValue];
@@ -87,7 +87,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
   const callback1 = noop.useCallback(() => {
     const result = _undefined.set(false);
   }, items2);
-  const obj3 = require("../../../../_runtime/metro/01653__.js");
+  const obj3 = require("../../../../_runtime/metro/01654__.js");
   const obj4 = noop;
   const token1 = require("useToken").useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
   const obj5 = require("useToken");
@@ -117,7 +117,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
   GuildsBarItemEmptyNUXTsx1.__closure = items4;
   GuildsBarItemEmptyNUXTsx1.__workletHash = 11514219811718;
   GuildsBarItemEmptyNUXTsx1.__initData = tmp12;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(GuildsBarItemEmptyNUXTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(GuildsBarItemEmptyNUXTsx1);
   const tmp19 = usePressabilityDefault({ onPress: handlePress });
   const obj9 = {
     style: tmp5.container,
@@ -138,11 +138,11 @@ export default noop.memo(function GuildsBarEmptyNUX() {
   const obj10 = { style: null };
   const items5 = [tmp5.backdrop, animatedStyle];
   obj10.style = items5;
-  const items6 = [closure_11(_modDef1653.View, obj10), ,];
+  const items6 = [closure_11(_modDef1654.View, obj10), ,];
   const obj11 = { style: tmp5.icon, source: null, resizeMode: "contain" };
-  const obj7 = require("../../../../_runtime/metro/01653__.js");
+  const obj7 = require("../../../../_runtime/metro/01654__.js");
   const obj8 = { onPress: handlePress };
-  obj11.source = _modDef8759;
+  obj11.source = _modDef8801;
   items6[1] = closure_11(FastImageDefault, obj11);
   const obj12 = {
     style: tmp5.guildIndicator,
@@ -167,10 +167,10 @@ export default noop.memo(function GuildsBarEmptyNUX() {
     const obj17 = { variant: "body-md/medium", color: "text-default", lineClamp: 1, children: null };
     const intl2 = tmp(1112).intl;
     obj17.children = intl2.string(tmp(1112).t["3S2xmm"]);
-    obj16.title = closure_11(tmp(5603).Text, obj17);
-    obj15.children = closure_11(tmp(18036).HomeDrawerSharedItem, obj16);
-    tmp21Result = closure_11(tmp3(7024), obj15);
-    const tmp3Result4 = tmp3(7024);
+    obj16.title = closure_11(tmp(5634).Text, obj17);
+    obj15.children = closure_11(tmp(18095).HomeDrawerSharedItem, obj16);
+    tmp21Result = closure_11(tmp3(7055), obj15);
+    const tmp3Result4 = tmp3(7055);
   }
   items7[1] = tmp21Result;
   obj14.children = items7;

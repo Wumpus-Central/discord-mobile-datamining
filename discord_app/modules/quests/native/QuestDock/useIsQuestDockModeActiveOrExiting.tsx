@@ -1,12 +1,12 @@
 // discord_app/modules/quests/native/QuestDock/useIsQuestDockModeActiveOrExiting.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useStateFromSharedValueDefault from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import QuestDockGestureContext from "QuestDockGestureContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(16629).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let closure_4 = fn(16680).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 let closure_5 = {
   code: "(function useIsQuestDockModeActiveOrExitingTsx1(){let[activeQuestDockMode,mode]=this.__closure;return activeQuestDockMode.get()===mode;})",
 };
@@ -21,8 +21,8 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQu
 
 export default function useIsQuestDockModeActiveOrExiting(arg0) {
   const activeQuestDockMode = noop.useContext(QuestDockGestureContext.QuestDockGestureContext).activeQuestDockMode;
-  const sharedValue = _mod1653.useSharedValue(activeQuestDockMode.get() === arg0);
-  const sharedValue1 = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(activeQuestDockMode.get() === arg0);
+  const sharedValue1 = _mod1654.useSharedValue(0);
   items = [closure_5, activeQuestDockMode, arg0];
   [tmp5, tmp6, tmp7] = items;
   function useIsQuestDockModeActiveOrExitingTsx1() {
@@ -90,7 +90,7 @@ export default function useIsQuestDockModeActiveOrExiting(arg0) {
   useIsQuestDockModeActiveOrExitingTsx3.__closure = items3;
   useIsQuestDockModeActiveOrExitingTsx3.__workletHash = 14421846937413;
   useIsQuestDockModeActiveOrExitingTsx3.__initData = tmp8;
-  const animatedReaction = _mod1653.useAnimatedReaction(
+  const animatedReaction = _mod1654.useAnimatedReaction(
     useIsQuestDockModeActiveOrExitingTsx1,
     useIsQuestDockModeActiveOrExitingTsx3,
   );

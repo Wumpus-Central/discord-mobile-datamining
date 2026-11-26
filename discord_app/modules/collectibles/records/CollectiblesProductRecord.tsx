@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(6284);
+const CollectiblesItemRecord = fn(6315);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } =
   CollectiblesItemRecord);
 let closure_7 = fn(1073).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -260,18 +260,18 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "to",
                 type: "Array",
-                premiumType: "channel_id",
-                items: "en-SI",
-                categorySkuId: "en-150",
-                categoryWillUnpublishAt: "embed",
-                isCategoryReward: false,
-                prices: null,
-                previewAssets: null,
-                googleSkuIds: null,
-                eligibleOffers: null,
-                variants: null,
-                bundledProducts: null,
-                isFirstParty: "en-Shaw",
+                premiumType: "id",
+                items: "<string:3511748795>",
+                categorySkuId: "<string:1376133514>",
+                categoryWillUnpublishAt: "<string:146483657>",
+                isCategoryReward: "__sentry_template_values__",
+                prices: "<string:961675520>",
+                previewAssets: "<string:1359526767>",
+                googleSkuIds: "<string:1375808805>",
+                eligibleOffers: "<string:146481663>",
+                variants: "<string:22156369>",
+                bundledProducts: "<string:17032785>",
+                isFirstParty: "<string:3144510290>",
               };
               let str;
               if (first != null) {

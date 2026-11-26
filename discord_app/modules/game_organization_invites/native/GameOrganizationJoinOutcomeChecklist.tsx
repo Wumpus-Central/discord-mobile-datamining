@@ -25,7 +25,7 @@ function RowIcon(status) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   card: {
     padding: nativeDefault.space.PX_24,
@@ -51,7 +51,7 @@ export default function GameOrganizationJoinOutcomeChecklist(rows) {
   rows = rows.rows;
   const tmp = closure_6();
   importDefault = tmp;
-  return closure_4(rows(6084).Stack, {
+  return closure_4(rows(6115).Stack, {
     spacing: nativeDefault.space.PX_16,
     style: tmp.card,
     children: rows.map((subtitle, index) => {

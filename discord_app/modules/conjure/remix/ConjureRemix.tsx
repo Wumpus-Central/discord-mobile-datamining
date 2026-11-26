@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/remix/ConjureRemix.tsx
-import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import ConjureWorkerTickets from "../connection/ConjureWorkerTickets.tsx";
@@ -9,26 +9,26 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import Dispatcher from "../../../Dispatcher.tsx";
 
 require = fn;
-function startRemix(id, guildId, arg2, arg3, share_ticket) {
+function startRemix(id, guildId, arg2, arg3) {
   ({ name, copy } = arg2);
-  importDefault = arg3;
-  c3 = undefined;
+  ({ preloadPreview: importDefault, shareTicket, onReserved: dependencyMap } = arg3);
   GuildStore = undefined;
   closure_5 = undefined;
   closure_6 = undefined;
   map = undefined;
   c8 = undefined;
-  closure_10 = undefined;
+  c9 = undefined;
+  closure_11 = undefined;
   let nonce;
   function accept(comma) {
     timestampProducer(comma);
-    if (closure_5 == null) {
-      closure_5 = conjureRemixConnection.acceptRemix(c3, comma, copy).catch(() => "rejected");
-      const acceptRemixResult = conjureRemixConnection.acceptRemix(c3, comma, copy);
+    if (closure_6 == null) {
+      closure_6 = conjureRemixConnection.acceptRemix(c4, comma, copy).catch(() => "rejected");
+      const acceptRemixResult = conjureRemixConnection.acceptRemix(c4, comma, copy);
     }
-    return closure_5;
+    return closure_6;
   }
-  closure_13 = async function _open() {
+  closure_14 = async function _open() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -39,7 +39,7 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -57,7 +57,7 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
             const v0 = 0;
             closure_128_0 = undefined;
             closure_128_1 = undefined;
-            c7 = true;
+            c8 = true;
             dependencyMap = 1;
             c3 = 1;
             const obj5 = { value, done: false };
@@ -74,14 +74,14 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
           } else {
             closure_128_0 = value;
             if (null == closure_128_0) {
-              const obj7 = { ok: false, message: closure_129_2, kept: false };
+              const obj7 = { ok: false, message: closure_129_3, kept: false };
               c3 = 3;
               const obj8 = { value: obj7, done: true };
               return obj8;
             } else {
               dependencyMap = 2;
               c3 = 1;
-              const obj9 = { value: closure_129_9(closure_128_0.id), done: false };
+              const obj9 = { value: closure_129_10(closure_128_0.id), done: false };
               return obj9;
             }
           }
@@ -96,14 +96,14 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
           } else {
             closure_128_1 = value;
             if ("unreachable" === closure_128_1) {
-              closure_129_5 = null;
-              closure_129_7 = false;
-              const obj11 = { ok: false, message: closure_129_2, kept: true };
+              closure_129_6 = null;
+              closure_129_8 = false;
+              const obj11 = { ok: false, message: closure_129_3, kept: true };
               c3 = 3;
             } else if ("rejected" !== closure_128_1) {
-              const obj12 = { ok: true, projectId: closure_128_0.id, guildId: closure_129_10 };
+              const obj12 = { ok: true, projectId: closure_128_0.id, guildId: closure_129_11 };
             }
-            if (closure_129_4 != null) {
+            if (closure_129_5 != null) {
               tmp12();
             }
             closure_1_5(closure_128_0.id);
@@ -126,7 +126,7 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
           const obj = { value, done: true };
           return obj;
         } else {
-          { ok: false, message: null, kept: false }[1] = closure_129_2;
+          { ok: false, message: null, kept: false }[1] = closure_129_3;
         }
       } catch (tmp36) {
         c3 = tmp;
@@ -135,21 +135,21 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
     }
   };
   const intl = copy(1112).intl;
-  dependencyMap = intl.string(_modDef4244.Cn8H0Y);
+  closure_3 = intl.string(_modDef4245.Cn8H0Y);
   let tmp3;
-  if (null != share_ticket) {
-    let obj2 = { share_ticket };
+  if (null != shareTicket) {
+    let obj2 = { share_ticket: shareTicket };
     tmp3 = obj2;
   }
-  const mintRemixTicketResult = copy(7643).mintRemixTicket(id.id, tmp3);
-  c3 = mintRemixTicketResult;
+  const mintRemixTicketResult = copy(7674).mintRemixTicket(id.id, tmp3);
+  GuildStore = mintRemixTicketResult;
   mintRemixTicketResult.catch(() => {
 
   });
-  closure_5 = null;
   closure_6 = null;
-  map = false;
+  map = null;
   c8 = false;
+  c9 = false;
   let tmp5 = null;
   if (null != guildId) {
     tmp5 = null;
@@ -161,26 +161,30 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
         if (tmpResult.canStartConjureProject(guild, "ConjureRemix")) {
           tmp8 = guildId;
         }
-        tmpResult = tmp(7571);
+        tmpResult = copy(7602);
       }
       tmp5 = tmp8;
     }
   }
-  closure_10 = tmp5;
-  let obj = copy(7643);
-  nonce = copy(10028).createNonce();
+  closure_11 = tmp5;
+  let obj = copy(7674);
+  nonce = copy(10070).createNonce();
   let result = map.set(nonce, (id, ws_ticket) => {
     map.delete(nonce);
-    closure_6 = id;
+    closure_7 = id;
+    set.add(id);
     const result = ConjureWorkerTickets.rememberCreatedProjectTicket(id, ws_ticket);
     timestampProducer(id);
-    if (closure_5 == null) {
-      const tmp2Result = conjureRemixConnection;
-      closure_5 = conjureRemixConnection.acceptRemix(c3, id, copy).catch(() => "rejected");
-      const acceptRemixResult = conjureRemixConnection.acceptRemix(c3, id, copy);
+    if (closure_6 == null) {
+      const tmp3Result = conjureRemixConnection;
+      closure_6 = conjureRemixConnection.acceptRemix(c4, id, copy).catch(() => "rejected");
+      const acceptRemixResult = conjureRemixConnection.acceptRemix(c4, id, copy);
+    }
+    if (dependencyMap != null) {
+      tmp9(id, closure_11);
     }
   });
-  const tmpResult3 = copy(10028);
+  const tmpResult3 = copy(10070);
   let obj3 = { name };
   if (null != tmp5) {
     let obj4 = { guild_id: tmp5 };
@@ -190,32 +194,34 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
   }
   const merged = Object.assign(obj5);
   obj3.remix_source_project_id = id.id;
-  obj3.remix_share_ticket = share_ticket;
+  obj3.remix_share_ticket = shareTicket;
   obj3.nonce = nonce;
-  const remix = copy(7636).createRemix(obj3);
-  remix.then((remix_preview) => {
+  const remix = copy(7667).createRemix(obj3);
+  remix.then((id) => {
     map.delete(nonce);
-    if (null != remix_preview.remix_preview) {
-      ConjureActionCreators.applyRemixPreview(remix_preview.id, remix_preview.remix_preview);
-      if (!c8) {
-        let tmp6;
-        if (closure_1 != null) {
-          tmp6 = closure_1(remix_preview);
+    set.delete(id.id);
+    if (null != id.remix_preview) {
+      ConjureActionCreators.applyRemixPreview(id.id, id.remix_preview);
+      if (!c9) {
+        let tmp7;
+        if (importDefault != null) {
+          tmp7 = importDefault(id);
         }
-        closure_4 = tmp6;
+        closure_5 = tmp7;
       }
     }
-    id = remix_preview.id;
+    id = id.id;
     timestampProducer(id);
-    if (closure_5 == null) {
-      closure_5 = conjureRemixConnection.acceptRemix(c3, id, copy).catch(() => "rejected");
-      const acceptRemixResult = conjureRemixConnection.acceptRemix(c3, id, copy);
+    if (closure_6 == null) {
+      closure_6 = conjureRemixConnection.acceptRemix(c4, id, copy).catch(() => "rejected");
+      const acceptRemixResult = conjureRemixConnection.acceptRemix(c4, id, copy);
     }
-    return remix_preview;
+    return id;
   }, () => {
     map.delete(nonce);
-    if (null != closure_6) {
-      hasOwnProperty(closure_6);
+    if (null != closure_7) {
+      set.delete(closure_7);
+      hasOwnProperty(closure_7);
     }
     return null;
   });
@@ -225,7 +231,7 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
     copy,
     open() {
       const self = this;
-      const apply = closure_13.apply;
+      const apply = closure_14.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -234,14 +240,14 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
       return applyArgumentsResult;
     },
     abandon() {
-      let tmp = c7;
-      if (!c7) {
-        tmp = c8;
+      let tmp = c8;
+      if (!c8) {
+        tmp = c9;
       }
       if (!tmp) {
-        c8 = true;
+        c9 = true;
         promise.then((id) => {
-          if (closure_1_4 != null) {
+          if (closure_1_5 != null) {
             tmp();
           }
           if (null != id) {
@@ -252,9 +258,10 @@ function startRemix(id, guildId, arg2, arg3, share_ticket) {
     }
   };
 }
-const ConjureConnectionStore = fn(7662);
+const ConjureConnectionStore = fn(7693);
 ({ closeConnection: hasOwnProperty, ensureConnection: closure_6 } = ConjureConnectionStore);
 let map = new Map();
+const set = new Set();
 const subscription = Dispatcher.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (nonce) => {
   ({ projectId, wsTicket } = nonce);
   value = map.get(nonce.nonce);
@@ -268,13 +275,16 @@ let result = size.fileFinishedImporting("modules/conjure/remix/ConjureRemix.tsx"
 export function isValidCopyName(str) {
   return str.trim().length >= ConjureProjectTypes.MIN_PROJECT_NAME_LENGTH;
 }
+export function isConjureRemixCreating(c1) {
+  return set.has(c1);
+}
 export function createConjureRemix(project, arg1, shareTicket) {
   closure_0 = project;
   closure_1 = arg1;
   closure_2 = shareTicket;
   closure_5 = async function _confirm(arg0) {
-    if (c7 === 2) {
-      c7 = 3;
+    if (c8 === 2) {
+      c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
@@ -283,108 +293,111 @@ export function createConjureRemix(project, arg1, shareTicket) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
-        c7 = 2;
-        if (0 === c6) {
+        c8 = 2;
+        if (0 === c7) {
           if (arg0 === 1) {
-            c7 = 3;
+            c8 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
+            c8 = 3;
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_3 = tmp3;
-            closure_2 = tmp7;
-            closure_130_1 = undefined;
-            closure_130_2 = undefined;
-            closure_130_0 = closure_0;
-            ({ name: closure_130_1, copy: closure_130_2 } = closure_1);
-            closure_130_3 = undefined;
-            closure_130_4 = undefined;
-            closure_130_5 = undefined;
-            c6 = 1;
+            closure_4 = tmp3;
+            closure_3 = tmp7;
+            closure_131_1 = undefined;
+            closure_131_2 = undefined;
+            closure_131_3 = undefined;
+            closure_131_0 = closure_0;
+            ({ name: closure_131_1, copy: closure_131_2 } = closure_1);
+            closure_131_3 = closure_2;
+            closure_131_4 = undefined;
+            closure_131_5 = undefined;
+            closure_131_6 = undefined;
             c7 = 1;
+            c8 = 1;
             return { value: "Path", done: true };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {
-            c7 = 3;
+            c8 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
+            c8 = 3;
             const obj5 = { value, done: true };
             return obj5;
-          } else if (closure_131_4) {
-            c7 = 3;
+          } else if (closure_132_4) {
+            c8 = 3;
             return { value: null, done: true };
           } else {
-            closure_131_4 = true;
-            closure_130_3 = closure_130_1.trim();
-            closure_130_4 = true === closure_130_2;
-            c5 = 1;
+            closure_132_4 = true;
+            closure_131_4 = closure_131_1.trim();
+            closure_131_5 = true === closure_131_2;
+            c6 = 1;
             let guildId;
-            if (closure_131_3 != null) {
-              guildId = closure_131_3.guildId;
+            if (closure_132_3 != null) {
+              guildId = closure_132_3.guildId;
             }
-            let tmp26 = guildId === closure_130_0;
+            let tmp26 = guildId === closure_131_0;
             if (tmp26) {
-              tmp26 = closure_131_3.name === closure_130_3;
+              tmp26 = closure_132_3.name === closure_131_4;
             }
             if (tmp26) {
-              tmp26 = closure_131_3.copy === closure_130_4;
+              tmp26 = closure_132_3.copy === closure_131_5;
             }
             if (!tmp26) {
-              if (closure_131_3 != null) {
+              if (closure_132_3 != null) {
                 obj3.abandon();
               }
-              const obj6 = { name: closure_130_3, copy: closure_130_4 };
-              closure_131_3 = startRemix(closure_131_0, closure_130_0, obj6, closure_131_1, closure_131_2);
-              obj3 = closure_131_3;
+              const obj6 = { name: closure_131_4, copy: closure_131_5 };
+              const obj7 = { preloadPreview: closure_132_1, shareTicket: closure_132_2, onReserved: closure_131_3 };
+              closure_132_3 = startRemix(closure_132_0, closure_131_0, obj6, obj7);
+              obj3 = closure_132_3;
             }
-            c6 = 3;
-            c7 = 1;
-            const obj7 = { value: closure_131_3.open(), done: false };
-            return obj7;
+            c7 = 3;
+            c8 = 1;
+            const obj8 = { value: closure_132_3.open(), done: false };
+            return obj8;
           }
         } else if (2 === tmp7) {
-          c5 = 0;
-          closure_131_4 = false;
-          throw closure_4;
+          c6 = 0;
+          closure_132_4 = false;
+          throw closure_5;
         } else if (arg0 === 1) {
-          c7 = 3;
+          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 0;
-          closure_131_4 = false;
-          c7 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          c6 = 0;
+          closure_132_4 = false;
+          c8 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
-          closure_130_5 = value;
-          let kept = closure_130_5.ok;
+          closure_131_6 = value;
+          let kept = closure_131_6.ok;
           if (!kept) {
-            kept = closure_130_5.kept;
+            kept = closure_131_6.kept;
           }
           if (!kept) {
-            closure_131_3 = null;
+            closure_132_3 = null;
           }
-          c5 = 0;
-          closure_131_4 = false;
-          c7 = 3;
-          const obj = { value: closure_130_5, done: true };
+          c6 = 0;
+          closure_132_4 = false;
+          c8 = 3;
+          const obj = { value: closure_131_6, done: true };
           return obj;
         }
-      } catch (tmp50) {
-        closure_4 = tmp50;
-        if (tmp4 === c5) {
-          c7 = tmp2;
-          throw tmp50;
+      } catch (tmp53) {
+        closure_5 = tmp53;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp53;
         } else {
-          c6 = tmp;
+          c7 = tmp;
         }
       }
     }
@@ -392,7 +405,7 @@ export function createConjureRemix(project, arg1, shareTicket) {
   c3 = null;
   c4 = false;
   return {
-    confirm(arg0, arg1) {
+    confirm(arg0, arg1, arg2) {
       const self = this;
       const apply = closure_5.apply;
       if (typeof apply === "unknown") {

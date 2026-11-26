@@ -3,16 +3,14 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import useGameOrganizationJoinOutcome from "../useGameOrganizationJoinOutcome.tsx";
+import useGameOrganizationJoinOutcomeDefault from "../useGameOrganizationJoinOutcome.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-
-const useGameOrganizationJoinOutcomeDefault = useGameOrganizationJoinOutcome;
 
 require = fn;
 function hideSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(closure_3);
 }
-let closure_3 = fn(11869).GAME_ORGANIZATION_JOIN_OUTCOME_ACTION_SHEET_KEY;
+let closure_3 = fn(11917).GAME_ORGANIZATION_JOIN_OUTCOME_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -28,20 +26,12 @@ export default function GameOrganizationJoinOutcomeActionSheet(arg0) {
     header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null }),
     title,
     description: subtitle,
-    actions: null,
+    actions: jsx(components_Button_Button.Button, { text: cta.text, size: "lg", onPress: cta.action }),
   };
-  const obj2 = { text: cta.text, variant: null, size: "lg", onPress: null };
-  let str = "primary";
-  if (cta.type === useGameOrganizationJoinOutcome.GameOrganizationJoinOutcomeCtaType.CLOSE) {
-    str = "secondary";
-  }
-  obj2.variant = str;
-  obj2.onPress = cta.action;
-  obj.actions = jsx(components_Button_Button.Button, { text: cta.text, variant: null, size: "lg", onPress: null });
   return jsx(PromoSheet.PromoSheet, {
     header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null }),
     title,
     description: subtitle,
-    actions: null,
+    actions: jsx(components_Button_Button.Button, { text: cta.text, size: "lg", onPress: cta.action }),
   });
 }

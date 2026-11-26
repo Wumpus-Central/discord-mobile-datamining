@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx
-import _mod1653 from "../../../../../../../_runtime/metro/01653__.js";
-import LegacyBaseButton from "../../../../../../../_runtime/05272_LegacyBaseButton.js";
+import _mod1654 from "../../../../../../../_runtime/metro/01654__.js";
+import LegacyBaseButton from "../../../../../../../_runtime/05303_LegacyBaseButton.js";
 import SearchPlatformUtilsDefault from "../../../SearchPlatformUtils.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -64,13 +64,13 @@ export function useSearchSuggestionsContext() {
 }
 export function useSearchSuggestionsGesture(channelDetailsSearchContext) {
   _require = channelDetailsSearchContext;
-  const sharedValue = require("../../../../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  const obj = require("../../../../../../../_runtime/metro/01653__.js");
-  sharedValue1 = require("../../../../../../../_runtime/metro/01653__.js").useSharedValue(false);
-  const obj2 = require("../../../../../../../_runtime/metro/01653__.js");
-  const animatedRef = require("../../../../../../../_runtime/metro/01653__.js").useAnimatedRef();
-  const obj3 = require("../../../../../../../_runtime/metro/01653__.js");
-  const animatedRef1 = require("../../../../../../../_runtime/metro/01653__.js").useAnimatedRef();
+  const sharedValue = require("../../../../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  const obj = require("../../../../../../../_runtime/metro/01654__.js");
+  sharedValue1 = require("../../../../../../../_runtime/metro/01654__.js").useSharedValue(false);
+  const obj2 = require("../../../../../../../_runtime/metro/01654__.js");
+  const animatedRef = require("../../../../../../../_runtime/metro/01654__.js").useAnimatedRef();
+  const obj3 = require("../../../../../../../_runtime/metro/01654__.js");
+  const animatedRef1 = require("../../../../../../../_runtime/metro/01654__.js").useAnimatedRef();
   items = [sharedValue];
   const callback = animatedRef.useCallback((arg0, arg1) => {
     if (arg0 !== arg1) {
@@ -89,7 +89,7 @@ export function useSearchSuggestionsGesture(channelDetailsSearchContext) {
     items = [
       closure_7,
       sharedValue1,
-      _mod1653.measure,
+      _mod1654.measure,
       animatedRef1,
       animatedRef,
       measureRelativeTo,

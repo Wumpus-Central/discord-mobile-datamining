@@ -8,16 +8,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isNameplateRecord = fn(2110).isNameplateRecord;
+const isNameplateRecord = fn(2111).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(14414).GUTTER_SIZE,
+    paddingHorizontal: fn(14466).GUTTER_SIZE,
   },
   rowSpacer: null,
   nameplate: null,
@@ -26,9 +26,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(14414).GUTTER_SIZE,
+  paddingHorizontal: fn(14466).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(14414).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14466).GUTTER_SIZE };
 obj.nameplate = { overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {
@@ -86,8 +86,8 @@ const memoResult1 = noop.memo((nameplate) => {
   const obj2 = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: null };
   const items2 = [closure_9().nameplate, { borderRadius: 6 }];
   obj2.style = items2;
-  obj.children = closure_6(setSelectedNameplate(9437), obj2);
-  return closure_6(nameplate(14415).EditCollectiblesListItemProduct, obj);
+  obj.children = closure_6(setSelectedNameplate(9479), obj2);
+  return closure_6(nameplate(14467).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditNameplateItem";
 let size = fn(2);

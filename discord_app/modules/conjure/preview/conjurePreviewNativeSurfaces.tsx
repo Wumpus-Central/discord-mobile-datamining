@@ -65,14 +65,14 @@ function answerFor(cmd) {
       if (obj2.hasConjurePreviewGameCapture(applicationId)) {
         if (cmd.cmd === RPCCommands.CAPTURE_SCREEN) {
           const obj3 = { result: null, answered: "returned the selected game capture" };
-          obj = obj(14686);
+          obj = obj(14739);
           conjurePreviewGameCapture = obj.readConjurePreviewGameCapture(applicationId);
           obj3.result = conjurePreviewGameCapture;
           let obj4 = obj3;
         } else {
           obj4 = { result: null, answered: "screen capture allowed for the selected game capture" };
           const obj5 = { permissions: null };
-          const prop = obj(11417).CONJURE_DEVICE_PERMISSION_NAMES;
+          const prop = obj(11464).CONJURE_DEVICE_PERMISSION_NAMES;
           obj5.permissions = prop.map((permission) => {
             if ("screen_capture" === permission) {
               const obj2 = { permission, state: "granted" };
@@ -252,11 +252,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "channel_id", answered: "STANDALONE_CHANNEL_HEADER_BORDER" }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({
-    result: "channel_id",
-    answered: "STANDALONE_CHANNEL_HEADER_BORDER",
-  }),
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "channel_id", answered: "<string:4023140625>" }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "channel_id", answered: "<string:4023140625>" }),
 };
 let closure_7 = {
   drain() {
@@ -293,7 +290,7 @@ export function beginNativeSurfaceSessionForFrame(iframeId, beneathBatches) {
     } else {
       tmp9 = null;
     }
-    let result = obj2(7618).setRpcCommandInterceptor(tmp9);
+    let result = obj2(7649).setRpcCommandInterceptor(tmp9);
     const obj3 = {
       iframeId,
       drain() {

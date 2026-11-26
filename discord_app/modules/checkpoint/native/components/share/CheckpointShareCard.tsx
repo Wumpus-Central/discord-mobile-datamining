@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/native/components/share/CheckpointShareCard.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1653 from "../../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../../_runtime/metro/01654__.js";
 import CheckpointCardTypes from "../../../../../../discord_common/js/shared/shared-constants/CheckpointCardTypes.tsx";
 import CheckpointCardColors from "../../../CheckpointCardColors.tsx";
 import CheckpointCardFrame from "../card/CheckpointCardFrame.tsx";
@@ -20,14 +20,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 let c7 = 200;
-const result = fn(12598).CHECKPOINT_CARD_HEIGHT * 0.6944444444444444;
+const result = fn(12634).CHECKPOINT_CARD_HEIGHT * 0.6944444444444444;
 const characterLayout = { size: 224, top: 16, left: -12 };
 const rect = { size: 224, top: nativeDefault.space.PX_16, left: -4 };
 let layout = { iconSize: 16, textVariant: "body-sm/medium" };
 let obj2 = {};
 const merged = Object.assign(layout);
-obj2.reactionsIcon = fn(12601).EmojiSlightlySmilingFaceIcon;
-const createStyles = fn(5012);
+obj2.reactionsIcon = fn(12637).EmojiSlightlySmilingFaceIcon;
+const createStyles = fn(5043);
 const obj3 = {
   card: { overflow: "hidden" },
   portraitCard: null,
@@ -37,10 +37,10 @@ const obj3 = {
   characterAndStatsStats: null,
   statRow: null,
 };
-let size = { width: 200, height: fn(12598).CHECKPOINT_CARD_HEIGHT };
+let size = { width: 200, height: fn(12634).CHECKPOINT_CARD_HEIGHT };
 obj3.portraitCard = size;
 obj3.characterAndStatsCard = { width: 300, height: result };
-let size1 = { width: 432, height: fn(12598).CHECKPOINT_CARD_HEIGHT, transform: null, transformOrigin: "top left" };
+let size1 = { width: 432, height: fn(12634).CHECKPOINT_CARD_HEIGHT, transform: null, transformOrigin: "top left" };
 let items = [{ scale: 0.6944444444444444 }];
 size1.transform = items;
 obj3.characterAndStatsCanvas = size1;
@@ -167,7 +167,7 @@ export default function CheckpointShareCard(arg0) {
     cardType === CheckpointCardTypes.CheckpointCardTypes.DEFAULT ? tmp.characterAndStatsCard : tmp.portraitCard;
   obj15.style = items3;
   obj15.children = tmp29Result;
-  obj14.children = React4(_modDef1653.View, obj15);
+  obj14.children = React4(_modDef1654.View, obj15);
   return React4(CheckpointShareCardContext.CheckpointShareCardColorsContext.Provider, obj14);
 }
 export function getCheckpointShareCardSize(item) {

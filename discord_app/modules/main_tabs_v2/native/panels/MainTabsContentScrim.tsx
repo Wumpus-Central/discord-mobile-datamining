@@ -2,11 +2,11 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 const jsx = jsxProd.jsx;
 let obj = { scrim: null };
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/Ma
 export function MainTabsContentScrim(arg0) {
   ({ translateX, maxWidth } = arg0);
   const tmp = closure_4();
-  items = [closure_5, _mod1653.interpolate, translateX, maxWidth, _mod1653.Extrapolation];
+  items = [closure_5, _mod1654.interpolate, translateX, maxWidth, _mod1654.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -44,9 +44,9 @@ export function MainTabsContentScrim(arg0) {
   MainTabsContentScrimTsx1.__closure = items1;
   MainTabsContentScrimTsx1.__workletHash = 7095253436147;
   MainTabsContentScrimTsx1.__initData = tmp3;
-  const animatedStyle = _mod1653.useAnimatedStyle(MainTabsContentScrimTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(MainTabsContentScrimTsx1);
   const obj2 = { style: null, pointerEvents: "none" };
   const items2 = [tmp.scrim, animatedStyle];
   obj2.style = items2;
-  return jsx(_modDef1653.View, { style: null, pointerEvents: "none" });
+  return jsx(_modDef1654.View, { style: null, pointerEvents: "none" });
 }

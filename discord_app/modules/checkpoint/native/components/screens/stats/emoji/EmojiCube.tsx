@@ -44,7 +44,7 @@ const importDefaultResultResult = _slicedToArray(createFaceTransforms(items, ite
 [tmp7, tmp8] = createFaceTransforms(items1, items2, items4);
 const importDefaultResultResult1 = _slicedToArray(createFaceTransforms(items1, items2, items4), 2);
 [tmp10, tmp11] = createFaceTransforms(items, items2, items1);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { position: "relative", width: 200, height: 200 },
   face: { position: "absolute", top: 0, left: 0, width: 200, height: 200 },
@@ -55,7 +55,7 @@ let obj2 = {
     width: 200,
     height: 200,
     borderWidth: 2,
-    borderColor: fn(6365).CHECKPOINT_PRIMARY,
+    borderColor: fn(6396).CHECKPOINT_PRIMARY,
     overflow: "hidden",
   },
   customEmoji: { width: 196, height: 196 },
@@ -67,13 +67,13 @@ let obj2 = {
   leftEmoji: null,
   rightEmoji: null,
 };
-let PlatformUtils = fn(1358);
+let PlatformUtils = fn(1359);
 let num = 196;
 if (PlatformUtils.isIOS()) {
   num = 200;
 }
 let obj4 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1358);
+PlatformUtils = fn(1359);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 229.99999999999997;
@@ -111,8 +111,8 @@ export default function EmojiCube(emoji) {
     }
     obj4.animated = tmp5;
     obj4.size = 196 * scale;
-    emojiURL = emojiURL(1412).getEmojiURL(obj4);
-    const obj3 = emojiURL(1412);
+    emojiURL = emojiURL(1413).getEmojiURL(obj4);
+    const obj3 = emojiURL(1413);
   }
   const tmp6 = closure_7();
   dependencyMap = tmp6;

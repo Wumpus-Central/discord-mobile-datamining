@@ -1,13 +1,13 @@
 // discord_app/modules/qualtrics/CUJSurveyCard.messages.js
 import AssetJsonUtils from "../asset_json/native/AssetJsonUtils.tsx";
-import _mod2322 from "../../../_runtime/metro/02322__.js";
+import _mod2323 from "../../../_runtime/metro/02323__.js";
 import module_1151_mod from "../../../_runtime/metro/01151__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let module_1151 = module_1151_mod;
 const loader = module_1151.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2322);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2323);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

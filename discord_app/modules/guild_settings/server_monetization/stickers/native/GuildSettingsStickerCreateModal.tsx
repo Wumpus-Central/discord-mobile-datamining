@@ -1,6 +1,6 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx
 import util from "../../../../../intl/index.native.tsx";
-import Link from "../../../../../../_runtime/01501_Link.js";
+import Link from "../../../../../../_runtime/01502_Link.js";
 import GuildSettingsStickerCreateDefault from "GuildSettingsStickerCreate.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -15,10 +15,10 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   ({ guildId: require, stickerId } = arg0);
   dependencyMap = undefined;
   c3 = undefined;
-  ({ onGoBack: c2, ref: c3 } = stickerId(11368)());
-  const tmp2 = stickerId(11368)();
+  ({ onGoBack: c2, ref: c3 } = stickerId(11414)());
+  const tmp2 = stickerId(11414)();
   const isFocused = Link.useIsFocused();
-  stickerId(6079)(() => {
+  stickerId(6110)(() => {
     onFinish(true);
     return true;
   }, isFocused);
@@ -29,7 +29,7 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   } else {
     tdhW5b = util.t["3DzNjU"];
   }
-  const tmp7 = stickerId(11371);
+  const tmp7 = stickerId(11417);
   return tmp6(tmp7, {
     screenKey: "guild-settings-sticker-create",
     title: intl.string(tdhW5b),

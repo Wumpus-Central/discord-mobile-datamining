@@ -2,17 +2,17 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
-import _modDef7739 from "../../../../../_runtime/metro/07739__.js";
+import _modDef7773 from "../../../../../_runtime/metro/07773__.js";
 import RevealProvider from "RevealProvider.tsx";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef10533 from "../../../../../_runtime/metro/10533__.js";
-import _modDef10534 from "../../../../../_runtime/metro/10534__.js";
-import _modDef10535 from "../../../../../_runtime/metro/10535__.js";
-import _modDef10536 from "../../../../../_runtime/metro/10536__.js";
+import _modDef10578 from "../../../../../_runtime/metro/10578__.js";
+import _modDef10579 from "../../../../../_runtime/metro/10579__.js";
+import _modDef10580 from "../../../../../_runtime/metro/10580__.js";
+import _modDef10581 from "../../../../../_runtime/metro/10581__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -43,17 +43,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef10533;
+    let tmp3 = _modDef10578;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef10534;
+      tmp3 = _modDef10579;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef7739;
+      tmp3 = _modDef7773;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef10535;
+      tmp3 = _modDef10580;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef10536;
+      tmp3 = _modDef10581;
     }
   }
   let tmp14 = null;
@@ -160,13 +160,13 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9966);
+const ChannelCallStore = fn(10008);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5662);
+const CallConstants = fn(5693);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   liveContainer: { position: "absolute", top: 8, right: 8 },
   titleIcon: { marginRight: 6 },
@@ -185,7 +185,7 @@ let obj3 = {
   paddingHorizontal: 8,
   paddingVertical: 4,
 };
-const ColorUtils = fn(5009);
+const ColorUtils = fn(5040);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;

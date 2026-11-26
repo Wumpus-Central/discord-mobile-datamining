@@ -1,5 +1,5 @@
 // discord_app/design/visual-identities/ai/AIShimmer/createWaveTransition.native.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../animation/reanimated/timing/timing.tsx";
 import waveTransition from "waveTransition.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -35,7 +35,7 @@ export function createWaveTransition(duration) {
   }
   let DEFAULT_PASS_DURATION = duration.duration;
   if (DEFAULT_PASS_DURATION == null) {
-    DEFAULT_PASS_DURATION = obj(15370).DEFAULT_PASS_DURATION;
+    DEFAULT_PASS_DURATION = obj(15420).DEFAULT_PASS_DURATION;
   }
   obj = {
     duration: DEFAULT_PASS_DURATION,
@@ -87,7 +87,7 @@ export function createWaveTransition(duration) {
   let str2 = "";
   if (0 < glyphCountResult) {
     do {
-      let GLYPH_PEAK = obj(15370).GLYPH_PEAK;
+      let GLYPH_PEAK = obj(15420).GLYPH_PEAK;
       let tmp5Result = tmp5();
       str = `${tmp8((tmp9 * obj(c1[0]).GLYPH_PEAK.length) | 0)}`;
       num = num + 1;
@@ -104,7 +104,7 @@ export function createWaveTransition(duration) {
     closure_8 = closure_8 + 1;
     c6 = 0;
     c5 = false;
-    obj = _mod1653;
+    obj = _mod1654;
     obj.cancelAnimation(obj.animationProgress);
     if (c5) {
       const animationProgress = tmp4.animationProgress;
@@ -141,7 +141,7 @@ export function createWaveTransition(duration) {
       closure_8 = closure_8 + 1;
       c6 = 0;
       c5 = false;
-      obj = _mod1653;
+      obj = _mod1654;
       obj.cancelAnimation(obj.animationProgress);
       if (c5) {
         const animationProgress = obj2.animationProgress;
@@ -312,9 +312,9 @@ export function createWaveTransition(duration) {
       closure_8 = closure_8 + 1;
       c6 = 0;
       c5 = false;
-      obj = _mod1653;
+      obj = _mod1654;
       obj.cancelAnimation(obj.animationProgress);
-      _mod1653.cancelAnimation(obj.crossFadeOpacity);
+      _mod1654.cancelAnimation(obj.crossFadeOpacity);
     },
   };
   Object.defineProperty(obj3, "running", { get: () => c5, set: undefined });

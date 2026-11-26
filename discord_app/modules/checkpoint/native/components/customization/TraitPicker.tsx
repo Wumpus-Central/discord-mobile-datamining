@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/customization/TraitPicker.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3494 from "../../../Checkpoint2026.messages.js";
+import _modDef3495 from "../../../Checkpoint2026.messages.js";
 import useWindowSizeClassifier from "../../../../screen/native/useWindowSizeClassifier.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
@@ -23,7 +23,7 @@ function EarnedCountHeader(customizationOption) {
     "" +
     customizationOptionName +
     ", " +
-    intl.formatToPlainString(_modDef3494.Vfq58K, {
+    intl.formatToPlainString(_modDef3495.Vfq58K, {
       earnedCount,
       totalCount,
       countHook(arg0) {
@@ -39,7 +39,7 @@ function EarnedCountHeader(customizationOption) {
     children: null,
   };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3494.Vfq58K, {
+  obj3.children = intl2.format(_modDef3495.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
@@ -78,14 +78,28 @@ class TraitPickerOptionList {
   constructor(arg0) {
     customizationOption = global.customizationOption;
     merged = Object.assign(global, Object.assign({ customizationOption: 0 }));
-    obj = {};
-    tmp2 = closure_1(closure_2[4]);
-    merged1 = Object.assign(merged);
-    obj.key = customizationOption;
-    obj.customizationOption = customizationOption;
-    obj2 = closure_0(closure_2[6]);
-    obj.hideRarity = !obj2.getIsTraitRarityVisible(customizationOption);
-    return createElement(tmp2, obj);
+    closure_0 = merged;
+    ({ options, options: options2 } = merged);
+    someResult = options.some((optionId) => optionId.optionId === merged.selectedOptionId);
+    if (someResult) {
+      tmp5 = createElement;
+      tmp6 = closure_1;
+      tmp7 = closure_2;
+      obj = {};
+      tmp9 = obj;
+      tmp10 = merged;
+      tmp8 = closure_1(closure_2[4]);
+      merged1 = Object.assign(merged);
+      obj.key = customizationOption;
+      obj.customizationOption = customizationOption;
+      tmp12 = closure_0;
+      obj2 = closure_0(closure_2[6]);
+      obj.hideRarity = !obj2.getIsTraitRarityVisible(customizationOption);
+      tmp4 = createElement(tmp8, obj);
+    } else {
+      tmp4 = null;
+    }
+    return tmp4;
   }
 }
 class TraitPickerPortrait {
@@ -141,20 +155,20 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createElement = fn(19).createElement;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
-  container: { gap: fn(12867).TRAIT_OPTION_SPACING },
+  container: { gap: fn(12918).TRAIT_OPTION_SPACING },
   earnedRow: null,
   landscapeGap: null,
   details: null,
   landscapeScrollContent: null,
 };
-let obj3 = { gap: fn(12867).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(12867).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(12867).CONTENT_INSET };
+let obj3 = { gap: fn(12918).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(12918).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(12918).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(12867).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(12918).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 const React6 = createStyles.createStyles(obj2);
 const size = fn(2);

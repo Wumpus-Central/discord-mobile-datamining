@@ -7,7 +7,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: closure_6 } = noop);
-const OrderStatus = fn(5729).OrderStatus;
+const OrderStatus = fn(5760).OrderStatus;
 const prototype = function OrderSigningFailedError(arg0) {
   const tmp2 = new tmp(concat(arg0), concat);
   tmp2.name = "OrderSigningFailed";
@@ -72,7 +72,7 @@ export function useOrderSigning(order) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

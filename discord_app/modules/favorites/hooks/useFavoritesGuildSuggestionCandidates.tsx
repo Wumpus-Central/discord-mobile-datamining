@@ -15,8 +15,8 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(17867).NO_SUGGESTIONS;
-const isAllowedType = fn(8919).isAllowedType;
+const NO_SUGGESTIONS = fn(17924).NO_SUGGESTIONS;
+const isAllowedType = fn(8961).isAllowedType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
 

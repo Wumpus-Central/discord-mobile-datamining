@@ -2,8 +2,8 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import BackoffDefault from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import _modDef10261 from "../../../../discord_assets/assets/sounds/stage_waiting.mp3.js";
-import _modDef10262 from "../../../../discord_assets/assets/sounds/vibing_wumpus.mp3.js";
+import _modDef10303 from "../../../../discord_assets/assets/sounds/stage_waiting.mp3.js";
+import _modDef10304 from "../../../../discord_assets/assets/sounds/vibing_wumpus.mp3.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -153,9 +153,9 @@ let obj5 = {
   activity_user_join: null,
   activity_user_left: null,
 };
-let MetaQuestUtils = fn(1625);
+let MetaQuestUtils = fn(1626);
 obj5.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
-MetaQuestUtils = fn(1625);
+MetaQuestUtils = fn(1626);
 obj5.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 ({
   VOICE: obj2.camera_on,
@@ -189,7 +189,7 @@ obj5.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RIN
   NOTIFICATION_NO_VIBRATION: obj2.activity_user_join,
   NOTIFICATION_NO_VIBRATION: obj2.activity_user_left,
 } = obj);
-const obj8 = { stage_waiting: _modDef10261, vibing_wumpus: _modDef10262 };
+const obj8 = { stage_waiting: _modDef10303, vibing_wumpus: _modDef10304 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
 fn = (mobileAudioSound, soundboard_sound, c1, DEFAULT) => {
@@ -353,7 +353,7 @@ prototype2["ensureSound"] = function ensureSound() {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else {
           try {

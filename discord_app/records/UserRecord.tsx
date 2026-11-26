@@ -16,7 +16,7 @@ const Constants = fn(1071);
   PREMIUM_TYPE_NONE: closure_6,
   UserFlags: metroImportDefault,
 } = Constants);
-const PremiumConstants = fn(1388);
+const PremiumConstants = fn(1389);
 ({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: closure_9, PurchasedFlags: closure_10 } = PremiumConstants);
 class UserRecord extends tmp2 {
   constructor(arg0) {

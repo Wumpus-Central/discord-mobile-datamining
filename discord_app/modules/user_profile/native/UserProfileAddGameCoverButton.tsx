@@ -5,11 +5,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = {
   button: {
-    aspectRatio: fn(14506).GAME_COVER_ASPECT_RATIO,
-    borderRadius: fn(14506).GAME_COVER_BORDER_RADIUS,
+    aspectRatio: fn(14558).GAME_COVER_ASPECT_RATIO,
+    borderRadius: fn(14558).GAME_COVER_BORDER_RADIUS,
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
     alignItems: "center",
     justifyContent: "center",
@@ -37,8 +37,8 @@ export default function UserProfileAddGameCoverButton(ref) {
   items = [closure_4().button, { width: ref.coverWidth }];
   obj.style = items;
   const tmp = closure_4();
-  obj.children = jsx(ref(9589).PlusLargeIcon, { size: "md", color: widgetType(575).colors.ICON_MUTED });
-  return jsx(ref(6121).PressableOpacity, {
+  obj.children = jsx(ref(9631).PlusLargeIcon, { size: "md", color: widgetType(575).colors.ICON_MUTED });
+  return jsx(ref(6152).PressableOpacity, {
     ref,
     onPress() {
       return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });

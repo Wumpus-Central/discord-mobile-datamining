@@ -15,9 +15,9 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const showStreamVolumeMovedHint = fn(14897).showStreamVolumeMovedHint;
-const VoicePanelControlsModes = fn(11732).VoicePanelControlsModes;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const showStreamVolumeMovedHint = fn(14947).showStreamVolumeMovedHint;
+const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/stream_volume_moved/StreamVolumeMovedNotice.tsx");

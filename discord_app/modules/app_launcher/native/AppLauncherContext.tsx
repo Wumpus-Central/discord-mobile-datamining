@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/AppLauncherContext.tsx
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import AppLauncherTypes from "../AppLauncherTypes.tsx";
 import useDefaultAppLauncherWidth from "hooks/useDefaultAppLauncherWidth.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -74,9 +74,9 @@ export function useRequiredAppLauncherContext() {
 export function useAppLauncherContext() {
   noop.useRef(obj.DISMISSED);
   const bottomSheetExpandReasonRef = noop.useRef(undefined);
-  obj = _mod1653;
+  obj = _mod1654;
   const sharedValue = obj.useSharedValue(-1);
-  const sharedValue1 = _mod1653.useSharedValue(0);
+  const sharedValue1 = _mod1654.useSharedValue(0);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
   const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
   c0 = false;

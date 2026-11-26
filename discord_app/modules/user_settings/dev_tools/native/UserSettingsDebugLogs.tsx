@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   searchWrap: null,
@@ -32,8 +32,8 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(7264).InputHeights.MD,
-  width: fn(7264).InputHeights.MD,
+  height: fn(7295).InputHeights.MD,
+  width: fn(7295).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };

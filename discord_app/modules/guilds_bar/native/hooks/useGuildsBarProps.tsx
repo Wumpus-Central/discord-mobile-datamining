@@ -73,8 +73,8 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   }
   return tmp;
 }
-const GuildsNodeType = fn(6133).GuildsNodeType;
-const GuildsBarConstants = fn(18012);
+const GuildsNodeType = fn(6164).GuildsNodeType;
+const GuildsBarConstants = fn(18071);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = {
@@ -537,26 +537,26 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return pendingFolderNode(closure_1_1(18077), {}, item);
+              return pendingFolderNode(closure_1_1(18136), {}, item);
             } else if ("empty-nux" === item) {
-              return pendingFolderNode(closure_1_1(18078), {}, item);
+              return pendingFolderNode(closure_1_1(18137), {}, item);
             } else if ("waterwheels" === item) {
-              return pendingFolderNode(closure_1_1(18079), {}, item);
+              return pendingFolderNode(closure_1_1(18138), {}, item);
             } else if ("create-join-guild" === item) {
-              return pendingFolderNode(closure_1_1(18080), {}, item);
+              return pendingFolderNode(closure_1_1(18139), {}, item);
             }
           }),
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return pendingFolderNode(closure_1_1(18077), {}, item);
+              return pendingFolderNode(closure_1_1(18136), {}, item);
             } else if ("empty-nux" === item) {
-              return pendingFolderNode(closure_1_1(18078), {}, item);
+              return pendingFolderNode(closure_1_1(18137), {}, item);
             } else if ("waterwheels" === item) {
-              return pendingFolderNode(closure_1_1(18079), {}, item);
+              return pendingFolderNode(closure_1_1(18138), {}, item);
             } else if ("create-join-guild" === item) {
-              return pendingFolderNode(closure_1_1(18080), {}, item);
+              return pendingFolderNode(closure_1_1(18139), {}, item);
             }
           }),
         });

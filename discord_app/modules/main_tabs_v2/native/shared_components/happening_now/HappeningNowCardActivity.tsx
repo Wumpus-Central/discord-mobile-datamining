@@ -2,13 +2,13 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02120_asyncRequireImpl.js";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import ActivityTypes from "../../../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef17747 from "../../../../../../_runtime/metro/17747__.js";
-import _modDef17748 from "../../../../../../_runtime/metro/17748__.js";
+import _modDef17804 from "../../../../../../_runtime/metro/17804__.js";
+import _modDef17805 from "../../../../../../_runtime/metro/17805__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
@@ -132,10 +132,10 @@ function IconOrPreview(arg0) {
       obj8.style = tmp.cardImageStreamPreview;
       const intl5 = tmp28(1112).intl;
       obj8.ctaText = intl5.string(tmp28(1112).t["7Xq/nV"]);
-      obj3.children = closure_10(tmp2(10529), obj8);
+      obj3.children = closure_10(tmp2(10574), obj8);
       return closure_10(closure_4, obj3);
     } else {
-      if (tmp2(11331)(activity)) {
+      if (tmp2(11377)(activity)) {
         const intl4 = tmp28(1112).intl;
         let stringResult = intl4.string(tmp28(1112).t.rmnkz4);
       } else {
@@ -143,10 +143,10 @@ function IconOrPreview(arg0) {
         if (activity != null) {
           type = activity.type;
         }
-        if (type === tmp28(5984).ActivityTypes.LISTENING) {
+        if (type === tmp28(6015).ActivityTypes.LISTENING) {
           const intl3 = tmp28(1112).intl;
           stringResult = intl3.string(tmp28(1112).t.kUEnxN);
-        } else if (tmp2(14847)(activity)) {
+        } else if (tmp2(14900)(activity)) {
           const intl2 = tmp28(1112).intl;
           stringResult = intl2.string(tmp28(1112).t.T0uYK9);
         } else {
@@ -154,7 +154,7 @@ function IconOrPreview(arg0) {
           if (activity != null) {
             type1 = activity.type;
           }
-          if (type1 !== tmp28(5984).ActivityTypes.CUSTOM_STATUS) {
+          if (type1 !== tmp28(6015).ActivityTypes.CUSTOM_STATUS) {
             const intl = tmp28(1112).intl;
             stringResult = intl.string(tmp28(1112).t["2TbM/G"]);
           }
@@ -163,7 +163,7 @@ function IconOrPreview(arg0) {
       const obj10 = { style: memo, accessibilityLabel: stringResult, children: null };
       const obj11 = { style: tmp35, children: null };
       const obj12 = { style: tmp.cardImageAsset, source: memoizedImageSourceResult };
-      obj11.children = closure_10(tmp2(5699), obj12);
+      obj11.children = closure_10(tmp2(5730), obj12);
       obj10.children = closure_10(closure_4, obj11);
       return closure_10(closure_4, obj10);
     }
@@ -178,7 +178,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result4 = items[userId % items.length];
     } else {
-      tmp2Result4 = tmp2(17757);
+      tmp2Result4 = tmp2(17814);
     }
   }
 }
@@ -200,7 +200,7 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16856);
+const HappeningNowConstants = fn(16907);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: metroImportDefault,
@@ -211,8 +211,8 @@ const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef17747, _modDef17748];
-const createStyles = fn(5012);
+let items = [_modDef17804, _modDef17805];
+const createStyles = fn(5043);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
   avatarStackContainer: {
@@ -372,13 +372,13 @@ export default noop.memo(function ActivityCard(userId) {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(12248, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(12248, dependencyMap.paths);
+      asyncRequireImpl(12298, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(12298, dependencyMap.paths);
     } else {
-      asyncRequireImpl(6102, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(6133, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(6102, dependencyMap.paths);
+      const promise = asyncRequireImpl(6133, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {

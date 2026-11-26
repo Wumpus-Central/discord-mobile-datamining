@@ -117,8 +117,8 @@ function EmbedAnnouncementCard(message) {
     items3[2] = tmp8Result8;
     let tmp8Result9 = message.body.length > 0;
     if (tmp8Result9) {
-      obj15 = { variant: "body-sm/medium", color: "text-default", lineClamp: 3, children: null };
-      const obj16 = { content: message.body, guildId, channelId };
+      const obj15 = { variant: "body-sm/medium", color: "text-default", lineClamp: 3, children: null };
+      obj16 = { content: message.body, guildId, channelId };
       obj15.children = metroImportDefault(AnnouncementMarkupDefault, obj16);
       tmp8Result9 = metroImportDefault(Text_Text.Text, obj15);
     }
@@ -150,19 +150,19 @@ function EmbedAnnouncementCard(message) {
       const obj21 = { style: tmp.reactionInfo, children: null };
       const obj22 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
       const items6 = [metroImportDefault(ReactionIcon.ReactionIcon, obj22)];
-      let tmp46 = null != obj15;
+      let tmp46 = null != obj16;
       if (tmp46) {
-        tmp46 = obj15.locale === util.intl.currentLocale;
+        tmp46 = obj16.locale === util.intl.currentLocale;
       }
       if (!tmp46) {
         const obj23 = { locale: util.intl.currentLocale, format: null };
         const _Intl = Intl;
         const numberFormat = new Intl.NumberFormat(util.intl.currentLocale);
         obj23.format = numberFormat;
-        obj15 = obj23;
+        obj16 = obj23;
       }
       const obj24 = { variant: "body-xs/medium", color: "text-muted", children: null };
-      const format = obj15.format;
+      const format = obj16.format;
       obj24.children = format.format(message.reactionCount);
       items6[1] = metroImportDefault(Text_Text.Text, obj24);
       obj21.children = items6;
@@ -235,7 +235,7 @@ function MessageAnnouncementCard(message) {
     obj6.children = metroImportDefault(AnnouncementMarkupDefault, obj7);
     tmp15 = metroImportDefault(Text_Text.Text, obj6);
   }
-  const items1 = [tmp15, ,];
+  const items1 = [tmp15, , ,];
   let tmp20 = message.body.length > 0;
   if (tmp20) {
     const obj8 = { variant: "body-sm/medium", color: "text-default", lineClamp: 3, children: null };
@@ -244,36 +244,44 @@ function MessageAnnouncementCard(message) {
     tmp20 = metroImportDefault(Text_Text.Text, obj8);
   }
   items1[1] = tmp20;
-  const obj10 = { style: tmp.metadataRow, children: null };
-  const obj11 = { variant: "body-xs/medium", color: "text-muted", children: null };
-  const obj12 = DateUtils;
-  obj11.children = obj12.dateFormat(new Date(message.timestamp), "LL");
-  const items2 = [metroImportDefault(Text_Text.Text, obj11)];
+  let tmp25 = null != message.attachmentFilenames && message.attachmentFilenames.length > 0;
+  if (tmp25) {
+    const obj10 = { variant: "body-sm/medium", color: "text-default", lineClamp: 3, children: null };
+    const attachmentFilenames = message.attachmentFilenames;
+    obj10.children = attachmentFilenames.join(", ");
+    tmp25 = metroImportDefault(Text_Text.Text, obj10);
+  }
+  items1[2] = tmp25;
+  const obj11 = { style: tmp.metadataRow, children: null };
+  const obj12 = { variant: "body-xs/medium", color: "text-muted", children: null };
+  const obj13 = DateUtils;
+  obj12.children = obj13.dateFormat(new Date(message.timestamp), "LL");
+  const items2 = [metroImportDefault(Text_Text.Text, obj12)];
   let tmp7Result = message.reactionCount > 0;
   if (tmp7Result) {
-    const obj13 = { style: tmp.reactionInfo, children: null };
-    const obj14 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-    const items3 = [metroImportDefault(ReactionIcon.ReactionIcon, obj14)];
-    let tmp32 = null != obj15;
-    if (tmp32) {
-      tmp32 = obj15.locale === util.intl.currentLocale;
+    const obj14 = { style: tmp.reactionInfo, children: null };
+    const obj15 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
+    const items3 = [metroImportDefault(ReactionIcon.ReactionIcon, obj15)];
+    let tmp36 = null != obj16;
+    if (tmp36) {
+      tmp36 = obj16.locale === util.intl.currentLocale;
     }
-    if (!tmp32) {
-      obj15 = { locale: util.intl.currentLocale, format: null };
+    if (!tmp36) {
+      obj16 = { locale: util.intl.currentLocale, format: null };
       const _Intl = Intl;
       const numberFormat = new Intl.NumberFormat(util.intl.currentLocale);
-      obj15.format = numberFormat;
+      obj16.format = numberFormat;
     }
-    const obj16 = { variant: "body-xs/medium", color: "text-muted", children: null };
-    const format = obj15.format;
-    obj16.children = format.format(message.reactionCount);
-    items3[1] = metroImportDefault(Text_Text.Text, obj16);
-    obj13.children = items3;
-    tmp7Result = React5(React4, obj13);
+    const obj17 = { variant: "body-xs/medium", color: "text-muted", children: null };
+    const format = obj16.format;
+    obj17.children = format.format(message.reactionCount);
+    items3[1] = metroImportDefault(Text_Text.Text, obj17);
+    obj14.children = items3;
+    tmp7Result = React5(React4, obj14);
   }
   items2[1] = tmp7Result;
-  obj10.children = items2;
-  items1[2] = React5(React4, obj10);
+  obj11.children = items2;
+  items1[3] = React5(React4, obj11);
   obj5.children = items1;
   items[1] = React5(React4, obj5);
   obj2.children = items;
@@ -302,7 +310,7 @@ function PollAnnouncementCard(message) {
     };
     const obj3 = { style: tmp.cardBody, children: null };
     const obj4 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: poll.question.text };
-    items = [closure_7(message(5603).Text, obj4), ,];
+    items = [closure_7(message(5634).Text, obj4), ,];
     const obj5 = { style: tmp.pollAnswers, children: null };
     const items1 = [
       substr.map((poll_media) => {
@@ -326,7 +334,7 @@ function PollAnnouncementCard(message) {
       const intl = tmp13(1112).intl;
       const obj6 = { count: diff };
       obj.children = intl.format(tmp13(1112).t["mv/nIa"], obj6);
-      tmp9Result = closure_7(tmp13(5603).Text, obj);
+      tmp9Result = closure_7(tmp13(5634).Text, obj);
     }
     items1[1] = tmp9Result;
     obj5.children = items1;
@@ -338,9 +346,9 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj9.createdAt = date;
-    obj9.expiryLabel = message(14143).getPollExpiryLabel(poll);
+    obj9.expiryLabel = message(14195).getPollExpiryLabel(poll);
     obj8.children = intl2.format(message(1112).t.t0FTsH, obj9);
-    obj7.children = closure_7(message(5603).Text, obj8);
+    obj7.children = closure_7(message(5634).Text, obj8);
     items[2] = closure_7(closure_4, obj7);
     obj3.children = items;
     obj2.children = closure_8(closure_4, obj3);
@@ -349,10 +357,10 @@ function PollAnnouncementCard(message) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(8749).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(8791).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   smallCardsScroller: { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" },
   skeletonCardsScroller: null,
@@ -455,20 +463,25 @@ let obj12 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spa
 obj.embedMedia = { overflow: "hidden", borderRadius: nativeDefault.radii.sm, aspectRatio: 1.7777777777777777 };
 let obj13 = { overflow: "hidden", borderRadius: nativeDefault.radii.sm, aspectRatio: 1.7777777777777777 };
 obj.pollAnswers = { flexDirection: "column", gap: nativeDefault.space.PX_4, flex: 1 };
+let obj14 = { flexDirection: "column", gap: nativeDefault.space.PX_4, flex: 1 };
+obj.pollAnswerOption = {
+  paddingVertical: nativeDefault.space.PX_8,
+  paddingHorizontal: nativeDefault.space.PX_12,
+  borderRadius: nativeDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+let obj16 = { paddingHorizontal: nativeDefault.space.PX_12 };
+obj.pollMoreOptions = obj16;
+obj.skeletonCard = { height: 282 };
+obj.skeletonCardLarge = { height: 264 };
+obj.skeletonAnimationRoot = { flex: 1 };
+obj.skeletonCardImage = { width: "100%" };
 let obj15 = {
   paddingVertical: nativeDefault.space.PX_8,
   paddingHorizontal: nativeDefault.space.PX_12,
   borderRadius: nativeDefault.radii.sm,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-obj.pollAnswerOption = obj15;
-let obj14 = { flexDirection: "column", gap: nativeDefault.space.PX_4, flex: 1 };
-obj.pollMoreOptions = { paddingHorizontal: nativeDefault.space.PX_12 };
-obj.skeletonCard = { height: 282 };
-obj.skeletonCardLarge = { height: 264 };
-obj.skeletonAnimationRoot = { flex: 1 };
-obj.skeletonCardImage = { width: "100%" };
-let obj16 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.skeletonCardBody = { gap: nativeDefault.space.PX_8 };
 const size1 = { height: nativeDefault.space.PX_48, borderRadius: nativeDefault.radii.xs, width: "88%" };
 obj.skeletonCardContent = size1;

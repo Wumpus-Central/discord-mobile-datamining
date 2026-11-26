@@ -170,12 +170,12 @@ function ChannelContent(arg0) {
   return metroImportDefault(View, obj2);
 }
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(6092).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(6137).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(6123).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(6168).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
-let PlatformUtils = fn(1378);
+const createStyles = fn(5043);
+let PlatformUtils = fn(1379);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
@@ -190,7 +190,7 @@ let obj3 = {
   channelTraitIcon: null,
 };
 let obj4 = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
-PlatformUtils = fn(1378);
+PlatformUtils = fn(1379);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

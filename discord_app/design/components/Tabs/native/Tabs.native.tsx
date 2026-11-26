@@ -1,9 +1,9 @@
 // discord_app/design/components/Tabs/native/Tabs.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05272_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
-import 01653__ from "../../../../../_runtime/metro/01653__.js";
+import 01654__ from "../../../../../_runtime/metro/01654__.js";
 
 const require = globalThis.__r;
 
@@ -15,9 +15,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let closure_8 = module_1653.createAnimatedComponent(ScrollView);
+let closure_8 = module_1654.createAnimatedComponent(ScrollView);
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_10 = createStyles.createStyles((gap, arg1) => {
   const obj = { container: { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
   const obj2 = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
@@ -75,14 +75,14 @@ export function Tabs(state) {
   ({ onScrollWorklet, onEndDrag } = state);
   const tmp = c10(itemSpacing, variant);
   c10 = tmp;
-  sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(pageWidth);
+  sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(pageWidth);
   length = items.length;
   const ref = noop.useRef(null);
   let items1 = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
   }, items1);
-  let obj = require("../../../../../_runtime/metro/01653__.js");
+  let obj = require("../../../../../_runtime/metro/01654__.js");
   let items2 = [length, activeIndex, length];
   _require = undefined;
   importDefault = undefined;
@@ -96,8 +96,8 @@ export function Tabs(state) {
   TabsNativeTsx1.__closure = items3;
   TabsNativeTsx1.__workletHash = 9107573448935;
   TabsNativeTsx1.__initData = tmp7;
-  const derivedValue = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(TabsNativeTsx1);
-  const obj3 = require("../../../../../_runtime/metro/01653__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(TabsNativeTsx1);
+  const obj3 = require("../../../../../_runtime/metro/01654__.js");
   let items4 = [ref, itemDimensions, derivedValue];
   _require = undefined;
   importDefault = undefined;
@@ -117,8 +117,8 @@ export function Tabs(state) {
   TabsNativeTsx2.__closure = items5;
   TabsNativeTsx2.__workletHash = 5186637785842;
   TabsNativeTsx2.__initData = tmp11;
-  const derivedValue1 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(TabsNativeTsx2);
-  const tmp2Result = require("../../../../../_runtime/metro/01653__.js");
+  const derivedValue1 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(TabsNativeTsx2);
+  const tmp2Result = require("../../../../../_runtime/metro/01654__.js");
   const items6 = [closure_14, itemDimensions, derivedValue];
   _require = undefined;
   importDefault = undefined;
@@ -141,9 +141,9 @@ export function Tabs(state) {
   TabsNativeTsx3.__closure = items7;
   TabsNativeTsx3.__workletHash = 1444207560709;
   TabsNativeTsx3.__initData = tmp15;
-  const derivedValue2 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(TabsNativeTsx3);
-  const tmp2Result6 = require("../../../../../_runtime/metro/01653__.js");
-  const items8 = [closure_15, derivedValue2, pressedIndex, derivedValue, 0.04, derivedValue1, state.scrollOverflow, require("../../../../../_runtime/metro/01653__.js").interpolate, 50, 0.9, require("spring/spring").withSpring, c9];
+  const derivedValue2 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(TabsNativeTsx3);
+  const tmp2Result6 = require("../../../../../_runtime/metro/01654__.js");
+  const items8 = [closure_15, derivedValue2, pressedIndex, derivedValue, 0.04, derivedValue1, state.scrollOverflow, require("../../../../../_runtime/metro/01654__.js").interpolate, 50, 0.9, require("spring/spring").withSpring, c9];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -248,8 +248,8 @@ export function Tabs(state) {
   TabsNativeTsx4.__closure = items9;
   TabsNativeTsx4.__workletHash = 9859194654578;
   TabsNativeTsx4.__initData = tmp19;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(TabsNativeTsx4);
-  const tmp2Result7 = require("../../../../../_runtime/metro/01653__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(TabsNativeTsx4);
+  const tmp2Result7 = require("../../../../../_runtime/metro/01654__.js");
   const items10 = [closure_16, scrollOffset, onScrollWorklet];
   _require = undefined;
   importDefault = undefined;
@@ -286,7 +286,7 @@ export function Tabs(state) {
   TabsNativeTsx6.__initData = tmp35;
   obj4.onEndDrag = TabsNativeTsx6;
   const items14 = [useReducedMotion];
-  const tmp2Result8 = require("../../../../../_runtime/metro/01653__.js");
+  const tmp2Result8 = require("../../../../../_runtime/metro/01654__.js");
   const callback1 = obj2.useCallback((x) => {
     const current = ref.current;
     if (current != null) {
@@ -294,7 +294,7 @@ export function Tabs(state) {
       current.scrollTo(obj);
     }
   }, items14);
-  const animatedScrollHandler = require("../../../../../_runtime/metro/01653__.js").useAnimatedScrollHandler(obj4);
+  const animatedScrollHandler = require("../../../../../_runtime/metro/01654__.js").useAnimatedScrollHandler(obj4);
   const items15 = [closure_18, scrollOffset, activeIndex, itemDimensions];
   _require = undefined;
   importDefault = undefined;
@@ -310,7 +310,7 @@ export function Tabs(state) {
   TabsNativeTsx7.__closure = items16;
   TabsNativeTsx7.__workletHash = 16238996091738;
   TabsNativeTsx7.__initData = tmp39;
-  const items17 = [closure_19, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, itemSpacing, pageWidth, require("../../../../../_runtime/metro/01706__.js").scheduleOnRN, callback1, 16];
+  const items17 = [closure_19, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, itemSpacing, pageWidth, require("../../../../../_runtime/metro/01707__.js").scheduleOnRN, callback1, 16];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -380,7 +380,7 @@ export function Tabs(state) {
   TabsNativeTsx8.__closure = items18;
   TabsNativeTsx8.__workletHash = 332745523033;
   TabsNativeTsx8.__initData = tmp43;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(TabsNativeTsx7, TabsNativeTsx8);
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(TabsNativeTsx7, TabsNativeTsx8);
   const items19 = [items, length, formatCount, state, flag, pressedIndex, activeIndex, setActiveIndex, tmp.controlsContainer, variant];
   const items20 = [state.simultaneousHandlers];
   const memo = obj2.useMemo(() => timestampProducer(React4, {
@@ -410,7 +410,7 @@ export function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return _undefined7(state(13561).TabItem, obj, id);
+      return _undefined7(state(13613).TabItem, obj, id);
     })
   }), items19);
   const memo1 = obj2.useMemo(() => {
@@ -423,7 +423,7 @@ export function Tabs(state) {
     return result;
   }, items20);
   let obj5 = { ref, accessibilityRole: null, keyboardShouldPersistTaps: "handled", horizontal: true, onScroll: null, scrollEventThrottle: 16, showsHorizontalScrollIndicator: false, contentContainerStyle: null, bounces: false, children: null };
-  const tmp2Result9 = require("../../../../../_runtime/metro/01653__.js");
+  const tmp2Result9 = require("../../../../../_runtime/metro/01654__.js");
   const tmp53 = c7;
   const tmp54 = c8;
   let str;
@@ -437,14 +437,14 @@ export function Tabs(state) {
   const obj7 = { style: null };
   const items21 = [tmp.indicator, animatedStyle];
   obj7.style = items21;
-  obj6.children = c6(module_1653.View, obj7);
+  obj6.children = c6(module_1654.View, obj7);
   const items22 = [c6(c4, obj6), memo];
   obj5.children = items22;
   const tmp53Result = tmp53(tmp54, obj5);
   let tmp55Result = tmp53Result;
   if (null != memo1) {
     const obj8 = { gesture: memo1, children: tmp53Result };
-    tmp55Result = c6(tmp2(5272).GestureDetector, obj8);
+    tmp55Result = c6(tmp2(5303).GestureDetector, obj8);
   }
   return tmp55Result;
 }

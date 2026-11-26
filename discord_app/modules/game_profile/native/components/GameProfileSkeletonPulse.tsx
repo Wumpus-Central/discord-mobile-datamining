@@ -1,14 +1,14 @@
 // discord_app/modules/game_profile/native/components/GameProfileSkeletonPulse.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 let c4 = 1300;
-const Easing = fn(1653).Easing;
-const module_1653 = fn(1653);
-let closure_5 = module_1653.makeMutable(0);
+const Easing = fn(1654).Easing;
+const module_1654 = fn(1654);
+let closure_5 = module_1654.makeMutable(0);
 let c6 = 0;
 let c7 = false;
 let items = [
@@ -17,7 +17,7 @@ let items = [
   },
   0.05,
   0.1,
-  Easing.inOut(fn(1653).Easing.quad),
+  Easing.inOut(fn(1654).Easing.quad),
 ];
 let closure_129_0;
 let closure_129_1;
@@ -135,5 +135,5 @@ export function useSkeletonPulseStyle(animationDelayMs) {
   GameProfileSkeletonPulseTsx2.__closure = items3;
   GameProfileSkeletonPulseTsx2.__workletHash = 9470986050093;
   GameProfileSkeletonPulseTsx2.__initData = tmp4;
-  return _mod1653.useAnimatedStyle(GameProfileSkeletonPulseTsx2);
+  return _mod1654.useAnimatedStyle(GameProfileSkeletonPulseTsx2);
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/server_share/startConjureScopeMigration.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
 import openConjureProjectInBuilderDefault from "../projects/openConjureProjectInBuilder.native.tsx";
 import conjureSendToProject from "../connection/conjureSendToProject.tsx";
@@ -8,7 +8,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ConjurePublishStatusStore from "../publish/ConjurePublishStatusStore.tsx";
 
 require = fn;
-let closure_7 = async function _sendMigrationMessage(arg0) {
+let closure_8 = async function _sendMigrationMessage(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -16,10 +16,10 @@ let closure_7 = async function _sendMigrationMessage(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
+      obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -125,7 +125,8 @@ let closure_7 = async function _sendMigrationMessage(arg0) {
   }
 };
 const logger = new fn(4).Logger("startConjureScopeMigration");
-let obj = { added: _modDef4244.YXmrDJ, removed: _modDef4244.OYaecm };
+let obj = { added: _modDef4245.YXmrDJ, removed: _modDef4245.OYaecm, moved: _modDef4245.EmQX8f };
+let obj2 = { added: _modDef4245.QxOTur, removed: _modDef4245.vmlwZE, moved: _modDef4245.Ot15Gc };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/server_share/startConjureScopeMigration.tsx");
 
@@ -160,17 +161,16 @@ export default function startConjureScopeMigration(id, arg1) {
       tmp5 = num3 > 0;
     }
   }
-  if (tmp5) {
-    const intl = util.intl;
-    (function sendMigrationMessage() {
-      const self = this;
-      const apply = closure_1_7.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })(id.id, intl.string(obj[arg1]));
-  }
+  const intl = util.intl;
+  !(function sendMigrationMessage() {
+    const self = this;
+    const apply = closure_1_8.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })(id.id, intl.string(tmp5 ? obj : obj2[arg1]));
+  const tmp6 = tmp5 ? obj : obj2;
 }

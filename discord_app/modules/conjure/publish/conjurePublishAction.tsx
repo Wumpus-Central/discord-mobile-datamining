@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/conjurePublishAction.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4244 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../intl/ConjureUntranslated.messages.js";
 import conjurePreviewModes from "../preview/conjurePreviewModes.tsx";
 import ConjurePublishTypes from "ConjurePublishTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -55,7 +55,7 @@ function resolveConjurePublishAction(input) {
         str3 = "";
       }
       const obj5 = { server: str3 };
-      formatResult = intl.format(_modDef4244.N4NkyR, obj5);
+      formatResult = intl.format(_modDef4245.N4NkyR, obj5);
     }
   }
   const obj7 = {
@@ -94,7 +94,7 @@ function resolveConjurePublishAction(input) {
     missingSurface: null,
   };
   const intl2 = util.intl;
-  obj8.label = intl2.string(_modDef4244["120EFN"]);
+  obj8.label = intl2.string(_modDef4245["120EFN"]);
   let str4 = "publish";
   if (result) {
     str4 = "consent_then_publish";
@@ -132,7 +132,7 @@ function resolveConjurePublishAction(input) {
             str6 = "";
           }
           const obj9 = { server: str6 };
-          formatResult1 = intl3.format(_modDef4244.eHYXFg, obj9);
+          formatResult1 = intl3.format(_modDef4245.eHYXFg, obj9);
         }
       }
     }

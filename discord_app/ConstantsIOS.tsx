@@ -122,6 +122,7 @@ export const LinkingTypes = {
   AGE_VERIFICATION_AGEKEY_RETURN: "agekey-return",
   CONJURE: "conjure",
   CONJURE_PROJECT_LINK: "conjure-project-link",
+  CHECKPOINT: "checkpoint",
 };
 export const ActivityPartyApplicationNames = { spotify: "Spotify" };
 export const CACHE_STORE_LAZY_KEY = "CacheStoreLazy";

@@ -12,7 +12,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const EmojiCategoryTypes = fn(6855).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6886).EmojiCategoryTypes;
 const Constants = fn(1071);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -23,7 +23,7 @@ const Constants = fn(1071);
 let ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED },
@@ -87,7 +87,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   let callback3;
   const tmp = callback();
   ExpressionPickerViewType = tmp;
-  const sharedValue = require("../../../../../../_runtime/metro/01653__.js").useSharedValue(undefined);
+  const sharedValue = require("../../../../../../_runtime/metro/01654__.js").useSharedValue(undefined);
   noop.useRef(undefined);
   const ref = noop.useRef(null);
   items = [categories];
@@ -121,7 +121,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       }
     }
   }, []);
-  let obj = require("../../../../../../_runtime/metro/01653__.js");
+  let obj = require("../../../../../../_runtime/metro/01654__.js");
   let items1 = [derivedValue, categoryIndexActive];
   _require = undefined;
   [tmp8, tmp9] = items1;
@@ -138,7 +138,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     ref2,
     sharedValue,
     onClearSearch,
-    require("../../../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../../../_runtime/metro/01707__.js").scheduleOnRN,
     callback,
   ];
   _require = undefined;
@@ -171,7 +171,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx2.__closure = items4;
   EmojiPickerCategoriesTsx2.__workletHash = 7202421305396;
   EmojiPickerCategoriesTsx2.__initData = tmp11;
-  const animatedReaction = require("../../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     EmojiPickerCategoriesTsx1,
     EmojiPickerCategoriesTsx2,
   );
@@ -185,7 +185,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       const result = sharedValue.set(obj);
     }
   }, items5);
-  let obj3 = require("../../../../../../_runtime/metro/01653__.js");
+  let obj3 = require("../../../../../../_runtime/metro/01654__.js");
   const tmp10 = onClearSearch;
   const items6 = [ref3, flag, bottomSheetIndex];
   _require = undefined;
@@ -208,7 +208,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx3.__closure = items7;
   EmojiPickerCategoriesTsx3.__workletHash = 1755978433752;
   EmojiPickerCategoriesTsx3.__initData = tmp18;
-  derivedValue = require("../../../../../../_runtime/metro/01653__.js").useDerivedValue(EmojiPickerCategoriesTsx3);
+  derivedValue = require("../../../../../../_runtime/metro/01654__.js").useDerivedValue(EmojiPickerCategoriesTsx3);
   ref2 = obj2.useRef(undefined);
   ref3 = obj2.useRef(false);
   const items8 = [
@@ -257,7 +257,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       return tmp11;
     }
   }, items8);
-  const tmp2Result = require("../../../../../../_runtime/metro/01653__.js");
+  const tmp2Result = require("../../../../../../_runtime/metro/01654__.js");
   const items9 = [callback2, derivedValue];
   _require = undefined;
   [tmp23, tmp24] = items9;
@@ -270,7 +270,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx4.__closure = items10;
   EmojiPickerCategoriesTsx4.__workletHash = 4255098648304;
   EmojiPickerCategoriesTsx4.__initData = tmp23;
-  const items11 = [callback3, require("../../../../../../_runtime/metro/01706__.js").scheduleOnRN, callback2];
+  const items11 = [callback3, require("../../../../../../_runtime/metro/01707__.js").scheduleOnRN, callback2];
   _require = undefined;
   importDefault = undefined;
   [tmp25, tmp26, tmp27] = items11;
@@ -288,7 +288,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx5.__closure = items12;
   EmojiPickerCategoriesTsx5.__workletHash = 806583209655;
   EmojiPickerCategoriesTsx5.__initData = tmp25;
-  const animatedReaction1 = require("../../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     EmojiPickerCategoriesTsx4,
     EmojiPickerCategoriesTsx5,
   );
@@ -367,7 +367,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       }),
     items17,
   );
-  const tmp2Result2 = require("../../../../../../_runtime/metro/01653__.js");
+  const tmp2Result2 = require("../../../../../../_runtime/metro/01654__.js");
   const memo1 = obj2.useMemo(() => {
     const Gesture = _undefined(_undefined3[14]).Gesture;
     return Gesture.Native().disallowInterruption(true);
@@ -404,7 +404,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       onPress: callback4,
       style: tmp.item,
     };
-    tmp37Result = tmp37(tmp34(9752), obj7);
+    tmp37Result = tmp37(tmp34(9794), obj7);
   }
   items18[1] = tmp37Result;
   let tmp37Result2 = null;
@@ -412,7 +412,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const obj8 = { style: null, iconStyle: null, onBackspace: null };
     ({ item: obj10.style, keyboardItem: obj10.iconStyle } = tmp);
     obj8.onBackspace = onBackspace;
-    tmp37Result2 = tmp37(tmp34(9754), obj8);
+    tmp37Result2 = tmp37(tmp34(9796), obj8);
   }
   items18[2] = tmp37Result2;
   obj4.children = ref(ref, { children: items18 });

@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockGlow.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05567_LinearGradient.js";
-import inlineStyles from "../../../../../_runtime/07912_inlineStyles.js";
+import LinearGradientDefault from "../../../../../_runtime/05598_LinearGradient.js";
+import inlineStyles from "../../../../../_runtime/07946_inlineStyles.js";
 import useStateFromSharedValueDefault from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoicePanelDockRimLight from "VoicePanelDockRimLight.tsx";
@@ -14,12 +14,12 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 const inlineStylesDefault = inlineStyles;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
-const getDockInset = fn(11757).getDockInset;
+const getDockInset = fn(11805).getDockInset;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let items = [
@@ -105,7 +105,7 @@ export function VoicePanelDockGlow(micLive) {
   const tmp4 = useStateFromSharedValueDefault(dockHeight);
   const context1 = noop.useContext(VoicePanelStateContextDefault);
   ({ dockMinimizeProgress, dockPressProgress, dockPressed, isDockConnected, wrapperOffset } = context1);
-  const sharedValue = _mod1653.useSharedValue(1);
+  const sharedValue = _mod1654.useSharedValue(1);
   items = [closure_13, dockPressed];
   c0 = undefined;
   [tmp8, tmp9] = items;
@@ -143,9 +143,9 @@ export function VoicePanelDockGlow(micLive) {
   VoicePanelDockGlowTsx2.__closure = items3;
   VoicePanelDockGlowTsx2.__workletHash = 16677252752401;
   VoicePanelDockGlowTsx2.__initData = tmp11;
-  const animatedReaction = _mod1653.useAnimatedReaction(VoicePanelDockGlowTsx1, VoicePanelDockGlowTsx2);
-  const sharedValue1 = _mod1653.useSharedValue(0);
-  const tmp6Result = _mod1653;
+  const animatedReaction = _mod1654.useAnimatedReaction(VoicePanelDockGlowTsx1, VoicePanelDockGlowTsx2);
+  const sharedValue1 = _mod1654.useSharedValue(0);
+  const tmp6Result = _mod1654;
   const items4 = [closure_15, isDockConnected, wrapperOffset, dockMinimizeProgress, dockPressProgress];
   c0 = undefined;
   c1 = undefined;
@@ -208,8 +208,8 @@ export function VoicePanelDockGlow(micLive) {
   VoicePanelDockGlowTsx4.__closure = items7;
   VoicePanelDockGlowTsx4.__workletHash = 9180121447929;
   VoicePanelDockGlowTsx4.__initData = tmp22;
-  const animatedReaction1 = _mod1653.useAnimatedReaction(VoicePanelDockGlowTsx3, VoicePanelDockGlowTsx4);
-  const tmp6Result5 = _mod1653;
+  const animatedReaction1 = _mod1654.useAnimatedReaction(VoicePanelDockGlowTsx3, VoicePanelDockGlowTsx4);
+  const tmp6Result5 = _mod1654;
   const voicePanelDockGlowLevelProps = useVoicePanelDockLevelProps.useVoicePanelDockGlowLevelProps();
   const tmp6Result6 = useVoicePanelDockLevelProps;
   [tmp30, c0] = noop.useState(0);
@@ -237,8 +237,8 @@ export function VoicePanelDockGlow(micLive) {
   VoicePanelDockGlowTsx5.__closure = items9;
   VoicePanelDockGlowTsx5.__workletHash = 11149034218573;
   VoicePanelDockGlowTsx5.__initData = tmp32;
-  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelDockGlowTsx5);
-  const tmp6Result7 = _mod1653;
+  const animatedStyle = _mod1654.useAnimatedStyle(VoicePanelDockGlowTsx5);
+  const tmp6Result7 = _mod1654;
   const items10 = [closure_19, sharedValue1, sharedValue, micLive];
   c0 = undefined;
   c1 = undefined;
@@ -268,7 +268,7 @@ export function VoicePanelDockGlow(micLive) {
   VoicePanelDockGlowTsx7.__closure = items13;
   VoicePanelDockGlowTsx7.__workletHash = 12895478017097;
   VoicePanelDockGlowTsx7.__initData = tmp43;
-  const animatedReaction2 = _mod1653.useAnimatedReaction(VoicePanelDockGlowTsx6, VoicePanelDockGlowTsx7);
+  const animatedReaction2 = _mod1654.useAnimatedReaction(VoicePanelDockGlowTsx6, VoicePanelDockGlowTsx7);
   let tmp46 = null;
   if (tmp4 > 0) {
     const obj4 = { style: null, pointerEvents: "none", onLayout: null, children: null };
@@ -285,7 +285,7 @@ export function VoicePanelDockGlow(micLive) {
     const obj7 = { dockHeight: tmp4 };
     obj6.children = metroImportDefault(closure_17, obj7, tmp30);
     obj4.children = metroImportDefault(LiveVoiceLevelViewDefault, obj6);
-    tmp46 = metroImportDefault(_modDef1653.View, obj4);
+    tmp46 = metroImportDefault(_modDef1654.View, obj4);
     const tmpResult = LiveVoiceLevelViewDefault;
   }
   return tmp46;
@@ -368,12 +368,12 @@ export function VoicePanelDockBottomLine(micLive) {
   VoicePanelDockGlowTsx8.__closure = items2;
   VoicePanelDockGlowTsx8.__workletHash = 559055664937;
   VoicePanelDockGlowTsx8.__initData = tmp7;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelDockGlowTsx8);
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoicePanelDockGlowTsx8);
   const obj4 = { style: null, pointerEvents: "none", children: null };
   const items3 = [closure_12.bottomLine, animatedStyle];
   obj4.style = items3;
   const obj5 = { style: StyleSheet.absoluteFill };
-  const obj3 = require("../../../../../_runtime/metro/01653__.js");
+  const obj3 = require("../../../../../_runtime/metro/01654__.js");
   const merged = Object.assign(voicePanelDockGlowLevelProps);
   obj5.minOpacity = 0.16;
   obj5.maxOpacity = 0.4;
@@ -385,5 +385,5 @@ export function VoicePanelDockBottomLine(micLive) {
     end: { x: 1, y: 0.5 },
   });
   obj4.children = c7(LiveVoiceLevelViewDefault, obj5);
-  return c7(_modDef1653.View, obj4);
+  return c7(_modDef1654.View, obj4);
 }

@@ -13,9 +13,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(18012).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(18071).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -38,7 +38,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(18024);
+  let obj = restrictedGuild(18083);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -75,7 +75,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18024).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18083).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -84,14 +84,11 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren:
-      "(function pnpm_useGestureHandlerTs1(event){let[state,State,gestureSource,source,onStart]=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;})",
-    expandedChildren:
-      "(function pnpm_useGestureHandlerTs2(event){let[gestureSource,source,state,onChange]=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);})",
-    children:
-      "(function pnpm_useGestureHandlerTs3(event){let[gestureSource,source,state,GESTURE_SOURCE,onEnd]=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);})",
+    externalChildren: "FRAME_CLEAR_MAIN_SLOT",
+    expandedChildren: null,
+    children: "body-xs/medium",
   };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(18024).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(18083).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
@@ -109,13 +106,13 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(7021).GuildIconSizes.LARGE,
+      size: tmp2(7052).GuildIconSizes.LARGE,
     };
     tmp8Result = jsx(GuildIconDefault, {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(7021).GuildIconSizes.LARGE,
+      size: tmp2(7052).GuildIconSizes.LARGE,
     });
     const tmp9Result = GuildIconDefault;
   }
@@ -124,7 +121,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18024).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18083).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -133,11 +130,8 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren:
-      "(function pnpm_useGestureHandlerTs1(event){let[state,State,gestureSource,source,onStart]=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;})",
-    expandedChildren:
-      "(function pnpm_useGestureHandlerTs2(event){let[gestureSource,source,state,onChange]=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);})",
-    children:
-      "(function pnpm_useGestureHandlerTs3(event){let[gestureSource,source,state,GESTURE_SOURCE,onEnd]=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);})",
+    externalChildren: "FRAME_CLEAR_MAIN_SLOT",
+    expandedChildren: null,
+    children: "body-xs/medium",
   });
 });

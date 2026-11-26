@@ -400,6 +400,8 @@ const obj20 = {
   [36]: "PREMIUM_TENURE_BADGE",
   SCHEDULED_MESSAGES: 37,
   [37]: "SCHEDULED_MESSAGES",
+  INCREASED_GROUP_DM_SIZE_LIMIT: 38,
+  [38]: "INCREASED_GROUP_DM_SIZE_LIMIT",
 };
 const obj21 = {
   SOURCE_UNSPECIFIED: 0,
@@ -1877,7 +1879,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(partialSettings) {
-  obj = { emoji: { oneofKind: "top" }, animated: false };
+  obj = { emoji: { oneofKind: "r" }, animated: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -3148,7 +3150,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(partialSettings) {
-  obj = { badge: { oneofKind: "top" } };
+  obj = { badge: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -6072,7 +6074,7 @@ class PerkConfig$Type extends MessageType30 {
 }
 const prototype30 = PerkConfig$Type.prototype;
 prototype30["create"] = function create(partialSettings) {
-  obj = { source: [], kind: { oneofKind: "top" } };
+  obj = { source: [], kind: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {

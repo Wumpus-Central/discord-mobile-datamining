@@ -10,7 +10,7 @@ import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.ts
 import FramesStore from "../../frames/FramesStore.tsx";
 
 require = fn;
-let Constants = fn(5766);
+let Constants = fn(5797);
 ({ MAX_POST_MESSAGE_STRING_LENGTH: metroImportDefault, RPC_EMBEDDED_APP_SCOPE: closure_8 } = Constants);
 Constants = fn(1071);
 ({
@@ -20,7 +20,7 @@ Constants = fn(1071);
   RPCErrors: closure_12,
   RPCCommands: map1,
 } = Constants);
-const asLaunched = fn(6906).asLaunched;
+const asLaunched = fn(6937).asLaunched;
 let closure_15 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
 map1 = new Map();
@@ -64,10 +64,10 @@ class PostMessageTransport extends EventEmitter {
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((item) => {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
-          const obj = closure_1_1(1255);
-          obj2.channel_id = closure_1_0(4933).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(4933);
-          obj2.guild_id = closure_1_0(4933).getEmbeddedActivityLocationGuildId(tmp2.location);
+          const obj = closure_1_1(1256);
+          obj2.channel_id = closure_1_0(4964).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4964);
+          obj2.guild_id = closure_1_0(4964).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });
@@ -163,7 +163,7 @@ class PostMessageTransport extends EventEmitter {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else {
           try {
@@ -347,7 +347,7 @@ class PostMessageTransport extends EventEmitter {
               logger2.info("Socket Validated: " + closure_132_7.id);
               c7 = 0;
               constants = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             } else {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
@@ -396,7 +396,7 @@ class PostMessageTransport extends EventEmitter {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -443,7 +443,7 @@ class PostMessageTransport extends EventEmitter {
               c5 = 0;
               closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           } else {
             c5 = 0;
@@ -624,7 +624,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(
                                   const obj2 = { value, done: true };
                                   return obj2;
                                 } else {
-                                  return { value: "HermesInternal", done: "HermesInternal" };
+                                  return { value: "HermesInternal", done: "+95" };
                                 }
                               } else {
                                 try {
@@ -720,7 +720,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(
                                         const pendingTicketRefreshes2 = tmp59.pendingTicketRefreshes;
                                         pendingTicketRefreshes2.delete(source.iframeId);
                                         c5 = 3;
-                                        return { value: "HermesInternal", done: "HermesInternal" };
+                                        return { value: "HermesInternal", done: "+95" };
                                       }
                                     } else if (arg0 === 1) {
                                       c5 = 3;

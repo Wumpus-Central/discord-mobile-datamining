@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/native/ConjureProjectList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -28,8 +28,8 @@ function ProjectRow(project) {
   project = project.project;
   const onMore = project.onMore;
   const tmp = closure_13(0);
-  const conjureProjectBadge = project(7638).useConjureProjectBadge(project.id);
-  const obj = project(7638);
+  const conjureProjectBadge = project(7669).useConjureProjectBadge(project.id);
+  const obj = project(7669);
   items = [ConjureProjectStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(
@@ -43,9 +43,9 @@ function ProjectRow(project) {
     const obj3 = { time: null };
     const _Date = Date;
     const date = new Date(project.updated_at);
-    obj3.time = tmp2(6919).getRelativeTimestamp(date.getTime());
-    formatToPlainStringResult = intl.formatToPlainString(_modDef4244.AXydi3, obj3);
-    const tmp2Result = tmp2(6919);
+    obj3.time = tmp2(6950).getRelativeTimestamp(date.getTime());
+    formatToPlainStringResult = intl.formatToPlainString(_modDef4245.AXydi3, obj3);
+    const tmp2Result = tmp2(6950);
   }
   const obj4 = {
     label: project.name,
@@ -59,13 +59,13 @@ function ProjectRow(project) {
   };
   if (stateFromStores) {
     const intl2 = tmp2(1112).intl;
-    formatToPlainStringResult = intl2.string(_modDef4244.Yh5pAc);
+    formatToPlainStringResult = intl2.string(_modDef4245.Yh5pAc);
   }
   obj4.subLabel = formatToPlainStringResult;
   let stringResult;
   if (null != conjureProjectBadge && conjureProjectBadge > 0 && !stateFromStores) {
     const intl3 = tmp2(1112).intl;
-    stringResult = intl3.string(_modDef4244.hfIuc7);
+    stringResult = intl3.string(_modDef4245.hfIuc7);
   }
   obj4.accessibilityHint = stringResult;
   obj4.disabled = stateFromStores;
@@ -80,7 +80,7 @@ function ProjectRow(project) {
       tmp15Result3 = closure_11(ConjureNumberBadgeDefault, obj6);
     }
     const items2 = [tmp15Result3];
-    const obj7 = { IconComponent: tmp2(7711).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
+    const obj7 = { IconComponent: tmp2(7745).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
     const intl4 = tmp2(1112).intl;
     obj7.accessibilityLabel = intl4.string(tmp2(1112).t["UKOtz+"]);
     items2[1] = closure_11(ConjureHeaderIconButtonDefault, obj7);
@@ -91,7 +91,7 @@ function ProjectRow(project) {
   obj4.trailing = tmp13Result;
   obj4.onPress = project.onPress;
   obj4.onLongPress = onMore;
-  const children = [closure_11(project(6113).TableRow, obj4)];
+  const children = [closure_11(project(6144).TableRow, obj4)];
   let tmp15Result4 = null;
   if (null != conjureProjectBadge) {
     tmp15Result4 = null;
@@ -112,7 +112,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, ScrollView: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_13 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom },
@@ -215,11 +215,7 @@ export default function ConjureProjectList(guildId) {
     };
     ActionSheetActionCreators.showActionSheet(obj2);
   }, items4);
-  let obj4 = {
-    latest: null,
-    route: "Array",
-    loading: 1018840830874056800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-  };
+  let obj4 = { latest: null, route: "Array", loading: false };
   let obj3 = require("useConjureProjects");
   obj4.loading = new Set();
   const ref = memo1.useRef(obj4);
@@ -263,7 +259,7 @@ export default function ConjureProjectList(guildId) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {

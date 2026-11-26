@@ -1,5 +1,5 @@
 // discord_app/design/animation/reanimated/timing/timing.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import ReanimatedConstants from "../ReanimatedConstants.tsx";
 import reanimated_AccessibilityPreferencesSharedValue from "../AccessibilityPreferencesSharedValue.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -10,8 +10,8 @@ const items = [
   },
   reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
   ReanimatedConstants.CONFIG_NEVER_ANIMATE_TIMING,
-  _mod1653.ReduceMotion,
-  _mod1653.withTiming,
+  _mod1654.ReduceMotion,
+  _mod1654.withTiming,
 ];
 let c0;
 let c1;

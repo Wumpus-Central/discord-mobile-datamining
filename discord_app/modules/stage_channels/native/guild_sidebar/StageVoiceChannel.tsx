@@ -21,22 +21,22 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(5823).NO_VOICE_STATES;
+const NO_VOICE_STATES = fn(5854).NO_VOICE_STATES;
 const Constants = fn(1071);
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   voiceStates: { marginLeft: 36, marginBottom: 8 },
   container: {
-    marginVertical: fn(6092).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(6123).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_16 = createStyles.createStyles(obj);
 let obj3 = {
-  marginVertical: fn(6092).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(6123).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -79,9 +79,9 @@ export default noop.memo(function StageVoiceChannel(channel) {
     arr3 = NO_VOICE_STATES;
   }
   let obj = channel(504);
-  const stageParticipantsCount = channel(6830).useStageParticipantsCount(
+  const stageParticipantsCount = channel(6861).useStageParticipantsCount(
     channel.id,
-    tmp2(6824).StageChannelParticipantNamedIndex.AUDIENCE,
+    tmp2(6855).StageChannelParticipantNamedIndex.AUDIENCE,
   );
   const sum = stageParticipantsCount + arr3.length;
   const items2 = [channel];
@@ -101,12 +101,12 @@ export default noop.memo(function StageVoiceChannel(channel) {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
-  const tmp2Result = channel(6830);
-  const isConnectedToVoiceChannel = channel(9970).useIsConnectedToVoiceChannel(channel);
+  const tmp2Result = channel(6861);
+  const isConnectedToVoiceChannel = channel(10012).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  const tmp2Result2 = channel(9970);
+  const tmp2Result2 = channel(10012);
   const intl = tmp2(1112).intl;
   const tmp5Result = ChannelItemDefault;
   if (null != channel.userLimit) {

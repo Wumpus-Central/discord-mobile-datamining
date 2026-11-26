@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
-import _modDef1653 from "../../../../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../../../../_runtime/metro/01654__.js";
 import useFontScale from "../../../../../../screen/native/useFontScale.tsx";
 import usePlaceholderStyles from "../../../../hooks/usePlaceholderStyles.tsx";
 import SearchListCard from "../../../list/SearchListCard.tsx";
@@ -30,7 +30,7 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   };
   const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
   obj3.style = items1;
-  return jsx(_modDef1653.View, {
+  return jsx(_modDef1654.View, {
     style: null,
     pointerEvents: "none",
     children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }),

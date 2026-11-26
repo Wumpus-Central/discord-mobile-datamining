@@ -1,12 +1,12 @@
 // discord_app/design/void/Ellipsis/native/Ellipsis.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../modules/a11y/AccessibilityStore.tsx";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function AnimatedEllipsisDot(disableScale) {
@@ -16,16 +16,16 @@ function AnimatedEllipsisDot(disableScale) {
   const sequenceStartDelay = disableScale.sequenceStartDelay;
   const sequenceEndDelay = disableScale.sequenceEndDelay;
   let tmp = closure_9();
-  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0.4);
-  let obj = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0.75);
+  const sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0.4);
+  let obj = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0.75);
   items = [delay, sequenceStartDelay, sequenceEndDelay, disableScale, sharedValue, sharedValue1];
   const effect = sequenceEndDelay.useEffect(() => {
     items = [
       closure_10,
-      _mod1653.withRepeat,
-      _mod1653.withSequence,
-      _mod1653.withDelay,
+      _mod1654.withRepeat,
+      _mod1654.withSequence,
+      _mod1654.withDelay,
       c2,
       timing_timing.withTiming,
       c1,
@@ -92,7 +92,7 @@ function AnimatedEllipsisDot(disableScale) {
       _undefined(_undefined3[6]).cancelAnimation(c5);
     };
   }, items);
-  let obj2 = require("../../../../../_runtime/metro/01653__.js");
+  let obj2 = require("../../../../../_runtime/metro/01654__.js");
   let items1 = [closure_11, sharedValue, disableScale, sharedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -118,11 +118,11 @@ function AnimatedEllipsisDot(disableScale) {
   EllipsisTsx2.__closure = items2;
   EllipsisTsx2.__workletHash = 17326421138636;
   EllipsisTsx2.__initData = tmp6;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(EllipsisTsx2);
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(EllipsisTsx2);
   const obj4 = { style: null };
   const items3 = [tmp.typingIndicatorDot, disableScale.dotStyle, animatedStyle];
   obj4.style = items3;
-  return jsx(_modDef1653.View, { style: null });
+  return jsx(_modDef1654.View, { style: null });
 }
 function EllipsisDot(dotStyle) {
   const obj = { style: null };
@@ -134,7 +134,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let c7 = 233.33333333333334;
 let c8 = 116.66666666666667;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   typingIndicator: { justifyContent: "center", alignItems: "center", flexDirection: "row", marginRight: 4 },
   typingIndicatorDot: null,

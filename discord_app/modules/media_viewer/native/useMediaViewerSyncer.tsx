@@ -1,11 +1,11 @@
 // discord_app/modules/media_viewer/native/useMediaViewerSyncer.tsx
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import MediaSourceUtil from "MediaSourceUtil.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(8831);
+const Constants = fn(8873);
 ({
   THUMBNAIL_MARGIN: hasOwnProperty,
   THUMBNAIL_HEIGHT: closure_6,
@@ -13,7 +13,7 @@ const Constants = fn(8831);
   THUMBNAIL_MIN_WIDTH: closure_8,
   THUMBNAIL_WIDTH_MARGIN: closure_9,
 } = Constants);
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = {
   code: "(function useMediaViewerSyncerTsx1(){let[thumbnailsScrolling,SCROLLING_DRAG,swipeSource]=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');})",
@@ -118,7 +118,7 @@ export function useMediaViewerSyncer(sources) {
   items = [initialIndex];
   memo = memo.useMemo(() => {
     const obj = {
-      selectedIndex: _mod1653.makeMutable(initialIndex),
+      selectedIndex: _mod1654.makeMutable(initialIndex),
       thumbnailsIndex: null,
       thumbnailsScrolling: null,
       thumbnailsAnimateTo: null,
@@ -127,13 +127,13 @@ export function useMediaViewerSyncer(sources) {
       zoomed: null,
       swipeSource: null,
     };
-    obj.thumbnailsIndex = _mod1653.makeMutable(initialIndex);
-    obj.thumbnailsScrolling = _mod1653.makeMutable(0);
-    obj.thumbnailsAnimateTo = _mod1653.makeMutable(-1);
-    obj.viewerPos = _mod1653.makeMutable(initialIndex);
-    obj.viewerScrolling = _mod1653.makeMutable(0);
-    obj.zoomed = _mod1653.makeMutable(false);
-    obj.swipeSource = _mod1653.makeMutable(undefined);
+    obj.thumbnailsIndex = _mod1654.makeMutable(initialIndex);
+    obj.thumbnailsScrolling = _mod1654.makeMutable(0);
+    obj.thumbnailsAnimateTo = _mod1654.makeMutable(-1);
+    obj.viewerPos = _mod1654.makeMutable(initialIndex);
+    obj.viewerScrolling = _mod1654.makeMutable(0);
+    obj.zoomed = _mod1654.makeMutable(false);
+    obj.swipeSource = _mod1654.makeMutable(undefined);
     return obj;
   }, items);
   let items1 = [sources, memo, onEndReached, onEndReachedThreshold];

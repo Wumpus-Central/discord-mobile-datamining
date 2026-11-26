@@ -1,26 +1,26 @@
 // discord_app/modules/game_profile/native/components/GameProfileHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
-import LinearGradientDefault from "../../../../../_runtime/05567_LinearGradient.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
+import LinearGradientDefault from "../../../../../_runtime/05598_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
 import GameCoverArt from "GameCoverArt.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
-import _modDef8759 from "../../../../../_runtime/metro/08759__.js";
+import _modDef8801 from "../../../../../_runtime/metro/08801__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(8749);
+const GameProfileConstants = fn(8791);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   artHero: null,
@@ -97,7 +97,7 @@ const result = size.fileFinishedImporting("modules/game_profile/native/component
 export default function GameProfileHeader(arg0) {
   ({ game, scrollY, onHeightMeasured } = arg0);
   const tmp = closure_8();
-  const sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(0);
   items = [closure_9];
   if (scrollY == null) {
     scrollY = sharedValue;
@@ -115,7 +115,7 @@ export default function GameProfileHeader(arg0) {
   GameProfileHeaderTsx1.__workletHash = 14790445044571;
   GameProfileHeaderTsx1.__initData = tmp5;
   const genres = game.genres;
-  const animatedStyle = _mod1653.useAnimatedStyle(GameProfileHeaderTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(GameProfileHeaderTsx1);
   const mapped = genres.map(SKUUtils.getGenreText);
   const joined = mapped.join(", ");
   const l30Rank = game.l30Rank;
@@ -147,7 +147,7 @@ export default function GameProfileHeader(arg0) {
   obj7.colors = items5;
   items4[1] = timestampProducer(LinearGradientDefault, obj7);
   obj4.children = items4;
-  const items6 = [metroImportDefault(_modDef1653.View, obj4)];
+  const items6 = [metroImportDefault(_modDef1654.View, obj4)];
   const obj8 = { style: tmp.headerContent, children: null };
   const obj9 = { style: tmp.shadowContainer, children: null };
   const obj10 = { game, imageSize: 114, size: null, style: null };
@@ -176,7 +176,7 @@ export default function GameProfileHeader(arg0) {
   const items10 = [timestampProducer(Text_Text.Text, obj14)];
   let tmp15Result3 = game.id === hasOwnProperty;
   if (tmp15Result3) {
-    const obj15 = { source: _modDef8759, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj15 = { source: _modDef8801, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp15Result3 = timestampProducer(FastImageDefault, obj15);
     const tmp9Result2 = FastImageDefault;
   }

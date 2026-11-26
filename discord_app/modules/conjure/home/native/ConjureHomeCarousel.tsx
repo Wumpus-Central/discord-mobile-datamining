@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/home/native/ConjureHomeCarousel.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useMeasuredLayoutDefault from "../../../screen/native/useMeasuredLayout.tsx";
@@ -14,9 +14,9 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
-const _modDef4244 = tmp7(4244);
+const _modDef4245 = tmp7(4245);
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1071).AppStates;
@@ -27,14 +27,14 @@ const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
 let obj = {
-  games: fn(7722).GameControllerIcon,
-  apps: fn(7141).AppsIcon,
-  profile_widget: fn(18780).WidgetsIcon,
-  overlay_widget: fn(13304).ScreenIcon,
-  automod: fn(10036).ShieldIcon,
-  chat_bot: fn(12220).RobotIcon,
+  games: fn(7756).GameControllerIcon,
+  apps: fn(7172).AppsIcon,
+  profile_widget: fn(18843).WidgetsIcon,
+  overlay_widget: fn(13356).ScreenIcon,
+  automod: fn(10078).ShieldIcon,
+  chat_bot: fn(12270).RobotIcon,
 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" },
   item: null,
@@ -118,7 +118,7 @@ let closure_14 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
   inspiration = inspiration.inspiration;
   ({ index, count, offset, viewportWidth } = inspiration);
   const tmp = closure_12();
-  obj = _mod1653;
+  obj = _mod1654;
   items = [
     closure_13,
     conjureHomeCarouselFan.wrapConjureHomeCarouselDistance,
@@ -214,7 +214,7 @@ let closure_14 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
   obj7.children = items5;
   items4[1] = React6(View, obj7);
   obj2.children = items4;
-  return React6(_modDef1653.View, obj2);
+  return React6(_modDef1654.View, obj2);
 });
 let closure_15 = {
   code: "(function ConjureHomeCarouselTsx2(frame){let[offset,CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,loop]=this.__closure;var _frame$timeSincePrevi;const elapsed=(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:0;offset.set((offset.get()+CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND*elapsed/1000)%loop);})",
@@ -256,9 +256,9 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   }
   importDefault = num;
   const obj4 = require("Link");
-  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
   let result = closure_10 * memo.length;
-  const tmp2Result = require("../../../../../_runtime/metro/01653__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01654__.js");
   const items2 = [
     closure_15,
     sharedValue,
@@ -283,7 +283,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   ConjureHomeCarouselTsx2.__closure = items3;
   ConjureHomeCarouselTsx2.__workletHash = 453717571992;
   ConjureHomeCarouselTsx2.__initData = tmp11;
-  frameCallback = require("../../../../../_runtime/metro/01653__.js").useFrameCallback(ConjureHomeCarouselTsx2, false);
+  frameCallback = require("../../../../../_runtime/metro/01654__.js").useFrameCallback(ConjureHomeCarouselTsx2, false);
   onScreen = !stateFromStores;
   if (!stateFromStores) {
     onScreen = stateFromStores1;
@@ -310,7 +310,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     children: null,
   };
   const intl = tmp2(1112).intl;
-  obj5.accessibilityLabel = intl.string(_modDef4244.Qc4S39);
+  obj5.accessibilityLabel = intl.string(_modDef4245.Qc4S39);
   obj5.ref = ref;
   obj5.onLayout = onLayout;
   let mapped = null;

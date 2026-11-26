@@ -9,8 +9,8 @@ import createStyles from "../../../../design/components/Styles/native/createStyl
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const nativeDefault = tmp4(575);
-const _modDef1653 = tmp4(1653);
-const CheckpointCharacterCompositeDefault = tmp4(12600);
+const _modDef1654 = tmp4(1654);
+const CheckpointCharacterCompositeDefault = tmp4(12636);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
 let obj = { preview: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, layer: null };
@@ -46,7 +46,7 @@ export default function Checkpoint2026ForwardPreview(checkpointData) {
       const obj6 = { images: tmp5 };
       tmp7Result = <tmp4 images={tmp5} />;
       obj5.children = tmp7Result;
-      let tmp7Result3 = jsx(_modDef1653.View, { style: null, children: null });
+      let tmp7Result3 = jsx(_modDef1654.View, { style: null, children: null });
     } else {
       const obj7 = { color: nativeDefault.colors.BLACK };
       tmp7Result3 = jsx(ExperimentalCheckpointIcon.ExperimentalCheckpointIcon, { color: nativeDefault.colors.BLACK });

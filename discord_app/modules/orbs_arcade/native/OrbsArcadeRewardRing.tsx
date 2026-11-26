@@ -1,8 +1,8 @@
 // discord_app/modules/orbs_arcade/native/OrbsArcadeRewardRing.tsx
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const module_1653 = _mod1653;
+const module_1654 = _mod1654;
 
 require = fn;
 function RingArc(arcLength) {
@@ -35,13 +35,13 @@ function RingArc(arcLength) {
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeDasharray={arcLength}
-      animatedProps={_mod1653.useAnimatedProps(OrbsArcadeRewardRingTsx1)}
+      animatedProps={_mod1654.useAnimatedProps(OrbsArcadeRewardRingTsx1)}
     />
   );
 }
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let closure_4 = module_1653.createAnimatedComponent(fn(7912).Path);
+let closure_4 = module_1654.createAnimatedComponent(fn(7946).Path);
 let closure_5 = {
   code: "(function OrbsArcadeRewardRingTsx1(){let[arcLength,progress]=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};})",
 };

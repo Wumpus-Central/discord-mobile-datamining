@@ -8,9 +8,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function OverflowMenuSheetContent(component) {
   component = component.component;
-  let obj = component(6364);
+  let obj = component(6395);
   const overflowMenuComponentActionSheetKey = obj.getOverflowMenuComponentActionSheetKey(
-    component(8782).useComponentContainerId(),
+    component(8824).useComponentContainerId(),
     component.id,
   );
   const groups = component.groups;
@@ -29,8 +29,8 @@ function OverflowMenuSheetContent(component) {
     items = [component];
     return items;
   }, items1);
-  const obj2 = component(8782);
-  const isComponentTreeLoading = component(12363).useIsComponentTreeLoading(memo, callback);
+  const obj2 = component(8824);
+  const isComponentTreeLoading = component(12413).useIsComponentTreeLoading(memo, callback);
   const obj4 = { children: null };
   const groups1 = component.groups;
   obj4.children = groups1.map((label, index) => {
@@ -41,7 +41,7 @@ function OverflowMenuSheetContent(component) {
     );
     return jsx(TableRowGroup.TableRowGroup, { title: label.label, hasIcons, children: null }, index);
   });
-  return jsx(component(7515).ActionSheet, { children: null });
+  return jsx(component(7546).ActionSheet, { children: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

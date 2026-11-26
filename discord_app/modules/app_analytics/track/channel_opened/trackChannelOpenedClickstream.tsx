@@ -5,7 +5,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 require = fn;
 const Constants = fn(1071);
 ({ ChannelTypes: c3, AnalyticEvents: closure_4 } = Constants);
-const StaticChannelRoute = fn(4868).StaticChannelRoute;
+const StaticChannelRoute = fn(4899).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx",

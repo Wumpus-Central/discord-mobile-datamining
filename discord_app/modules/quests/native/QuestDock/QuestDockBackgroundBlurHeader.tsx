@@ -10,8 +10,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const QuestDockMode = fn(6840).QuestDockMode;
-const QuestDockConstants = fn(16629);
+const QuestDockMode = fn(6871).QuestDockMode;
+const QuestDockConstants = fn(16680);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({
   QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
@@ -23,7 +23,7 @@ const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MOD
 } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   header: {
     alignItems: "center",
@@ -69,7 +69,7 @@ let items = [
   {
     code: "(function questDockHeaderLayoutAnimation_QuestDockBackgroundBlurHeaderTsx1(values){let[withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED]=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}};})",
   },
-  fn(5613).withSpring,
+  fn(5644).withSpring,
   QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
 ];
 let closure_129_0;
@@ -246,10 +246,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
   QuestDockBackgroundBlurHeaderTsx2.__closure = items1;
   QuestDockBackgroundBlurHeaderTsx2.__workletHash = 15843117992557;
   QuestDockBackgroundBlurHeaderTsx2.__initData = tmp13;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     QuestDockBackgroundBlurHeaderTsx2,
   );
-  let obj2 = require("../../../../../_runtime/metro/01653__.js");
+  let obj2 = require("../../../../../_runtime/metro/01654__.js");
   const items2 = [closure_18, require("spring/spring").withSpring, activeQuestDockMode, c7, c8];
   _require = undefined;
   importDefault = undefined;
@@ -271,10 +271,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
   QuestDockBackgroundBlurHeaderTsx3.__closure = items3;
   QuestDockBackgroundBlurHeaderTsx3.__workletHash = 13259096238986;
   QuestDockBackgroundBlurHeaderTsx3.__initData = tmp24;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     QuestDockBackgroundBlurHeaderTsx3,
   );
-  const tmpResult = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01654__.js");
   const items4 = [closure_19, activeQuestDockMode, c7, closure_10];
   _require = undefined;
   importDefault = undefined;
@@ -295,10 +295,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
   QuestDockBackgroundBlurHeaderTsx4.__closure = items5;
   QuestDockBackgroundBlurHeaderTsx4.__workletHash = 5498318902770;
   QuestDockBackgroundBlurHeaderTsx4.__initData = tmp31;
-  const animatedStyle2 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle2 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     QuestDockBackgroundBlurHeaderTsx4,
   );
-  const tmpResult8 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult8 = require("../../../../../_runtime/metro/01654__.js");
   const items6 = [closure_20, require("spring/spring").withSpring, activeQuestDockMode, c7, c8];
   _require = undefined;
   importDefault = undefined;
@@ -320,10 +320,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
   QuestDockBackgroundBlurHeaderTsx5.__closure = items7;
   QuestDockBackgroundBlurHeaderTsx5.__workletHash = 4711611266444;
   QuestDockBackgroundBlurHeaderTsx5.__initData = tmp36;
-  const animatedStyle3 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle3 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     QuestDockBackgroundBlurHeaderTsx5,
   );
-  const tmpResult9 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult9 = require("../../../../../_runtime/metro/01654__.js");
   const items8 = [closure_21, activeQuestDockMode, c7, closure_10];
   _require = undefined;
   importDefault = undefined;
@@ -342,10 +342,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
   QuestDockBackgroundBlurHeaderTsx6.__closure = items9;
   QuestDockBackgroundBlurHeaderTsx6.__workletHash = 9528005254022;
   QuestDockBackgroundBlurHeaderTsx6.__initData = tmp42;
-  const animatedStyle4 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle4 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     QuestDockBackgroundBlurHeaderTsx6,
   );
-  const tmpResult10 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult10 = require("../../../../../_runtime/metro/01654__.js");
   const items10 = [closure_22, activeQuestDockMode, c7];
   _require = undefined;
   importDefault = undefined;
@@ -363,10 +363,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
   QuestDockBackgroundBlurHeaderTsx7.__closure = items11;
   QuestDockBackgroundBlurHeaderTsx7.__workletHash = 4001448257594;
   QuestDockBackgroundBlurHeaderTsx7.__initData = tmp47;
-  const animatedProps = require("../../../../../_runtime/metro/01653__.js").useAnimatedProps(
+  const animatedProps = require("../../../../../_runtime/metro/01654__.js").useAnimatedProps(
     QuestDockBackgroundBlurHeaderTsx7,
   );
-  const tmpResult11 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult11 = require("../../../../../_runtime/metro/01654__.js");
   const items12 = [
     closure_23,
     activeQuestDockMode,
@@ -423,10 +423,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
   QuestDockBackgroundBlurHeaderTsx8.__closure = items13;
   QuestDockBackgroundBlurHeaderTsx8.__workletHash = 4109714632929;
   QuestDockBackgroundBlurHeaderTsx8.__initData = tmp51;
-  const animatedStyle5 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle5 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     QuestDockBackgroundBlurHeaderTsx8,
   );
-  const tmpResult12 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult12 = require("../../../../../_runtime/metro/01654__.js");
   const items14 = [closure_24, require("spring/spring").withSpring, activeQuestDockMode, c7, c8];
   _require = undefined;
   importDefault = undefined;
@@ -462,12 +462,12 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
     const obj5 = { color: "interactive-text-active", variant: "body-sm/medium", children: null };
     const intl2 = tmp(1112).intl;
     obj5.children = intl2.string(tmp(1112).t.o6FLcF);
-    const items17 = [closure_12(tmp(5603).Text, obj5)];
+    const items17 = [closure_12(tmp(5634).Text, obj5)];
     const obj6 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp67.actionDisclosuresIcon };
-    items17[1] = closure_12(tmp(9420).CircleQuestionIcon, obj6);
+    items17[1] = closure_12(tmp(9462).CircleQuestionIcon, obj6);
     obj4.children = items17;
     obj3.children = closure_14(closure_13, obj4);
-    let tmp68Result = closure_12(tmp(6121).PressableOpacity, obj3);
+    let tmp68Result = closure_12(tmp(6152).PressableOpacity, obj3);
     let tmp71 = closure_12;
   } else {
     const obj7 = { style: null, children: null };
@@ -477,14 +477,14 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
     const obj8 = { color: "text-default", variant: "body-sm/medium", children: null };
     const intl = tmp(1112).intl;
     obj8.children = intl.string(tmp(1112).t.o6FLcF);
-    obj7.children = closure_12(tmp(5603).Text, obj8);
+    obj7.children = closure_12(tmp(5634).Text, obj8);
     tmp68Result = closure_12(c6, obj7);
     tmp71 = closure_12;
   }
   const obj9 = { style: null, layout: questDockHeaderLayoutAnimation, children: null };
   const items19 = [tmp67.header, animatedStyle];
   obj9.style = items19;
-  tmpResult13 = require("../../../../../_runtime/metro/01653__.js");
+  tmpResult13 = require("../../../../../_runtime/metro/01654__.js");
   if (tmpResult14.isAndroid()) {
     if (null != blurHash) {
       const obj10 = {
@@ -493,7 +493,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
         opacityAnimatedStyle: animatedStyle6,
         layoutAnimation: questDockHeaderLayoutAnimation,
       };
-      let tmp71Result = tmp71(tmp7(16736), obj10);
+      let tmp71Result = tmp71(tmp7(16787), obj10);
     }
     const items20 = [tmp71Result, ,];
     let tmp71Result2 = children;
@@ -512,8 +512,8 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
       obj13.style = items22;
       obj13.layout = questDockHeaderLayoutAnimation;
       const obj14 = { style: animatedStyle1, children: withPressableDisclosure.collapsedContent };
-      obj13.children = tmp71(tmp7(1653).View, obj14);
-      const items23 = [tmp71(tmp7(1653).View, obj13)];
+      obj13.children = tmp71(tmp7(1654).View, obj14);
+      const items23 = [tmp71(tmp7(1654).View, obj13)];
       const obj15 = { animatedProps, style: null, layout: null, children: null };
       let secondaryContentOverlay = null != secondaryContentWidth;
       if (secondaryContentOverlay) {
@@ -531,7 +531,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
       let tmp74Result = !flag2;
       if (!flag2) {
         const obj17 = { children: null };
-        const items26 = [tmp68Result, tmp71(tmp7(16738), {})];
+        const items26 = [tmp68Result, tmp71(tmp7(16789), {})];
         obj17.children = items26;
         tmp74Result = closure_14(closure_13, obj17);
       }
@@ -548,15 +548,15 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
       obj18.onPress = onSubmenuPress;
       obj18.style = tmp67.tertiaryContent;
       const obj19 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE };
-      obj18.children = tmp71(tmp(7711).MoreHorizontalIcon, obj19);
-      items27[1] = tmp71(tmp(6121).PressableOpacity, obj18);
+      obj18.children = tmp71(tmp(7745).MoreHorizontalIcon, obj19);
+      items27[1] = tmp71(tmp(6152).PressableOpacity, obj18);
       obj16.children = items27;
-      obj15.children = closure_14(tmp7(1653).View, obj16);
-      items23[1] = tmp71(tmp7(1653).View, obj15);
+      obj15.children = closure_14(tmp7(1654).View, obj16);
+      items23[1] = tmp71(tmp7(1654).View, obj15);
       obj12.children = items23;
       items20[2] = closure_14(tmp80, obj12);
       obj9.children = items20;
-      return closure_14(tmp7(1653).View, obj9);
+      return closure_14(tmp7(1654).View, obj9);
     } else if ("inline" === secondaryContentLayout) {
       const items28 = [, ,];
       ({ secondaryContentStretched: arr24[0], secondaryContentTrailing: arr24[1] } = tmp67);
@@ -569,7 +569,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
       items29[1] = obj21;
     }
   }
-  tmp71Result = tmp71(tmp7(16701), {
+  tmp71Result = tmp71(tmp7(16752), {
     layoutAnimatedStyle: animatedStyle5,
     opacityAnimatedStyle: animatedStyle6,
     layoutAnimation: questDockHeaderLayoutAnimation,

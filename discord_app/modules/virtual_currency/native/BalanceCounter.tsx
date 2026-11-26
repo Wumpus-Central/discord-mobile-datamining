@@ -1,6 +1,6 @@
 // discord_app/modules/virtual_currency/native/BalanceCounter.tsx
-import _modDef1653 from "../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../_runtime/metro/01706__.js";
+import _modDef1654 from "../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../_runtime/metro/01707__.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop_mod from "../../../../_runtime/metro/00019__.js";
@@ -73,7 +73,7 @@ class BalanceCounter {
     [tmp12, closure_8] = tmp11;
     tmp13 = closure_7((set, _undefined2, duration) => {
       _undefined7(true);
-      items = [closure_10, _mod1706.scheduleOnRN, _undefined7];
+      items = [closure_10, _mod1707.scheduleOnRN, _undefined7];
       c0 = undefined;
       c1 = undefined;
       [tmp2, tmp3, tmp4] = items;

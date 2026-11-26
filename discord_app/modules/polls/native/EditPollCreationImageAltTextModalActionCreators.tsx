@@ -1,5 +1,5 @@
 // discord_app/modules/polls/native/EditPollCreationImageAltTextModalActionCreators.tsx
-import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02120_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -7,7 +7,7 @@ let c3 = "edit-poll-creation-image-alt-text-modal";
 const result = size.fileFinishedImporting("modules/polls/native/EditPollCreationImageAltTextModalActionCreators.tsx");
 
 export function openEditPollCreationImageAltTextModal(merged) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13129, dependencyMap.paths), merged, c3);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13181, dependencyMap.paths), merged, c3);
 }
 export function closeEditPollCreationImageAltTextModal() {
   ModalActionCreatorsDefault.popWithKey(c3);

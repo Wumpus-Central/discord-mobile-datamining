@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_11 = createStyles.createStyles((paddingLeft, paddingRight) => {
   const obj = {
     containerWithPadding: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingLeft, paddingRight },
@@ -30,15 +30,15 @@ export default function Modal(route) {
   importDefault = undefined;
   let isIpadOSResult = useIsWindowLargeDefault();
   if (isIpadOSResult) {
-    isIpadOSResult = modal(4969).isIpadOS();
-    const obj = modal(4969);
+    isIpadOSResult = modal(5000).isIpadOS();
+    const obj = modal(5000);
   }
   if (isIpadOSResult) {
     isIpadOSResult = "modal" === params.presentation;
   }
   if (!isIpadOSResult) {
-    isIpadOSResult = modal(19150).shouldExcludeSafeAreaForModalKey(modal.key);
-    const obj2 = modal(19150);
+    isIpadOSResult = modal(19213).shouldExcludeSafeAreaForModalKey(modal.key);
+    const obj2 = modal(19213);
   }
   ({ insets, styles } = useAppFrameDefault({ enabled: !isIpadOSResult }));
   const tmp7 = closure_11(insets.left, insets.right);
@@ -50,11 +50,11 @@ export default function Modal(route) {
   const obj3 = { enabled: !isIpadOSResult };
   const tmp6 = useAppFrameDefault({ enabled: !isIpadOSResult });
   const callback = noop.useCallback(() => {
-    closure_1(6099).pop();
+    closure_1(6130).pop();
   }, []);
   const obj4 = { type: null, name: null, properties: null };
   const tmp9 = _objectWithoutProperties(props, closure_3);
-  obj4.type = modal(1263).ImpressionTypes.MODAL;
+  obj4.type = modal(1264).ImpressionTypes.MODAL;
   obj4.name = impressionName;
   obj4.properties = impressionProperties;
   useTrackImpressionDefault(obj4);
@@ -83,7 +83,7 @@ export default function Modal(route) {
     },
     [],
   );
-  const layoutEffect = noop.useLayoutEffect(() => modal(8207).trackAppUIViewed("ModalScreen"), []);
+  const layoutEffect = noop.useLayoutEffect(() => modal(8249).trackAppUIViewed("ModalScreen"), []);
   items = [absoluteFillObject.absoluteFillObject, ,];
   let containerWithPadding;
   if (!isIpadOSResult) {
@@ -93,7 +93,7 @@ export default function Modal(route) {
   items[1] = containerWithPadding;
   items[2] = styles.container;
   if (modal.closable) {
-    let pop = tmp(6099).pop;
+    let pop = tmp(6130).pop;
   } else {
     pop = NOOP;
   }
@@ -120,8 +120,8 @@ export default function Modal(route) {
   obj7.children = items3;
   const items4 = [closure_10(closure_6, obj7)];
   const tmpResult = useTrackImpressionDefault;
-  const tmp12Result = modal(1378);
-  items4[1] = modal(1378).isIOS() && closure_9(modal(18560).PortalKeyboardRenderer, { portal: false });
-  obj6.children = closure_10(modal(15970).SafeAreaProvider, { children: items4 });
+  const tmp12Result = modal(1379);
+  items4[1] = modal(1379).isIOS() && closure_9(modal(18623).PortalKeyboardRenderer, { portal: false });
+  obj6.children = closure_10(modal(16021).SafeAreaProvider, { children: items4 });
   return closure_9(closure_6, obj6);
 }

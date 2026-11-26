@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/useQuestHomeHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
@@ -33,15 +33,15 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let balance;
   const tmp2 = closure_11();
   const tmp3 = balance;
-  balance = balance(9398).useFetchVirtualCurrencyBalance().balance;
-  let obj = balance(9398);
-  const orbBalanceEntrypoint = balance(16452).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
+  balance = balance(9440).useFetchVirtualCurrencyBalance().balance;
+  let obj = balance(9440);
+  const orbBalanceEntrypoint = balance(16503).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
   items = [balance, openBalanceWidgetActionSheet];
   let obj3 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     const obj4 = { balance, onPress: tmp6, showNotificationBadge: orbBalanceEntrypoint.hasUnreadUpdate };
-    isVirtualCurrencyEnabled = closure_9(tmp3(9401).BalanceWidgetPillButton, obj4);
+    isVirtualCurrencyEnabled = closure_9(tmp3(9443).BalanceWidgetPillButton, obj4);
   }
   const items1 = [isVirtualCurrencyEnabled];
   const merged1 = Object.assign(merged);
@@ -73,7 +73,7 @@ function FiltersButton(setSelectedSortMethod) {
   items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16467, dependencyMap.paths),
+      asyncRequireImpl(16518, dependencyMap.paths),
       "QuestHomeSortingFilteringBottomSheet",
       {
         onSortMethodChange: setSelectedSortMethod,
@@ -99,13 +99,13 @@ function FiltersButton(setSelectedSortMethod) {
   return closure_9(setSelectedSortMethod(tmp3[20]).BaseIconButton, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6840).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(6871).QuestHomeSortMethods;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, AnalyticsPages: metroImportDefault } = Constants);
 let closure_8 = fn(1073).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   headerTitleContainer: {
     width: "100%",

@@ -4,57 +4,57 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
-import _modDef10119 from "../../../_runtime/metro/10119__.js";
-import _modDef10120 from "../../../_runtime/metro/10120__.js";
-import _modDef10121 from "../../../_runtime/metro/10121__.js";
-import _modDef10122 from "../../../_runtime/metro/10122__.js";
-import _modDef10123 from "../../../_runtime/metro/10123__.js";
-import _modDef10124 from "../../../_runtime/metro/10124__.js";
-import _modDef10125 from "../../../_runtime/metro/10125__.js";
-import _modDef10126 from "../../../_runtime/metro/10126__.js";
-import _modDef10127 from "../../../_runtime/metro/10127__.js";
-import _modDef10128 from "../../../_runtime/metro/10128__.js";
-import _modDef10129 from "../../../_runtime/metro/10129__.js";
-import _modDef10130 from "../../../_runtime/metro/10130__.js";
-import _modDef10131 from "../../../_runtime/metro/10131__.js";
-import _modDef10132 from "../../../_runtime/metro/10132__.js";
-import _modDef10133 from "../../../_runtime/metro/10133__.js";
-import _modDef10134 from "../../../_runtime/metro/10134__.js";
-import _modDef10135 from "../../../_runtime/metro/10135__.js";
-import _modDef10136 from "../../../_runtime/metro/10136__.js";
-import _modDef10137 from "../../../_runtime/metro/10137__.js";
-import _modDef10138 from "../../../_runtime/metro/10138__.js";
-import _modDef10139 from "../../../_runtime/metro/10139__.js";
-import _modDef10140 from "../../../_runtime/metro/10140__.js";
+import _modDef10161 from "../../../_runtime/metro/10161__.js";
+import _modDef10162 from "../../../_runtime/metro/10162__.js";
+import _modDef10163 from "../../../_runtime/metro/10163__.js";
+import _modDef10164 from "../../../_runtime/metro/10164__.js";
+import _modDef10165 from "../../../_runtime/metro/10165__.js";
+import _modDef10166 from "../../../_runtime/metro/10166__.js";
+import _modDef10167 from "../../../_runtime/metro/10167__.js";
+import _modDef10168 from "../../../_runtime/metro/10168__.js";
+import _modDef10169 from "../../../_runtime/metro/10169__.js";
+import _modDef10170 from "../../../_runtime/metro/10170__.js";
+import _modDef10171 from "../../../_runtime/metro/10171__.js";
+import _modDef10172 from "../../../_runtime/metro/10172__.js";
+import _modDef10173 from "../../../_runtime/metro/10173__.js";
+import _modDef10174 from "../../../_runtime/metro/10174__.js";
+import _modDef10175 from "../../../_runtime/metro/10175__.js";
+import _modDef10176 from "../../../_runtime/metro/10176__.js";
+import _modDef10177 from "../../../_runtime/metro/10177__.js";
+import _modDef10178 from "../../../_runtime/metro/10178__.js";
+import _modDef10179 from "../../../_runtime/metro/10179__.js";
+import _modDef10180 from "../../../_runtime/metro/10180__.js";
+import _modDef10181 from "../../../_runtime/metro/10181__.js";
+import _modDef10182 from "../../../_runtime/metro/10182__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import apply from "../../../_runtime/00012_apply.js";
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(10118);
+const VoiceChannelEffectsConstants = fn(10160);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef10119];
+const items = [_modDef10161];
 const items1 = [
-  _modDef10120,
-  _modDef10121,
-  _modDef10122,
-  _modDef10123,
-  _modDef10124,
-  _modDef10125,
-  _modDef10126,
-  _modDef10127,
-  _modDef10128,
-  _modDef10129,
-  _modDef10130,
-  _modDef10131,
-  _modDef10132,
-  _modDef10133,
-  _modDef10134,
-  _modDef10135,
-  _modDef10136,
-  _modDef10137,
-  _modDef10138,
-  _modDef10139,
-  _modDef10140,
+  _modDef10162,
+  _modDef10163,
+  _modDef10164,
+  _modDef10165,
+  _modDef10166,
+  _modDef10167,
+  _modDef10168,
+  _modDef10169,
+  _modDef10170,
+  _modDef10171,
+  _modDef10172,
+  _modDef10173,
+  _modDef10174,
+  _modDef10175,
+  _modDef10176,
+  _modDef10177,
+  _modDef10178,
+  _modDef10179,
+  _modDef10180,
+  _modDef10181,
+  _modDef10182,
 ];
 const AnimationTypeToAnimations = {
   [VoiceChannelEffectAnimationType.BASIC]: items,

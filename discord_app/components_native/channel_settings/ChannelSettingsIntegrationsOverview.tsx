@@ -16,14 +16,14 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 require = fn;
 function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
-  importDefault = channel(1500).useNavigation();
-  const obj = channel(1500);
+  importDefault = channel(1501).useNavigation();
+  const obj = channel(1501);
   const linkedLobby = channel.linkedLobby;
   application_id = undefined;
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7484).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(7515).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -35,16 +35,16 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(6113).TableRow, obj4);
-    tmp5 = closure_6(tmp(6109).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(6144).TableRow, obj4);
+    tmp5 = closure_6(tmp(6140).TableRowGroup, obj3);
   }
   return tmp5;
 }
-fn(4865).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+fn(4896).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
 const ChannelSettingsSections = fn(1071).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = {
   screenContainer: {
     flex: 1,

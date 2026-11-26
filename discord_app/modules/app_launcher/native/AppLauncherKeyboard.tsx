@@ -5,7 +5,7 @@ import KeyboardUIStore from "../../keyboard/native/KeyboardUIStore.native.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import BottomSheetModal from "../../../../_runtime/05244_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05275_BottomSheetModal.js";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
 import useKeyboardActionSheetHeightDefault from "../../action_sheet/native/useKeyboardActionSheetHeight.tsx";
@@ -21,11 +21,11 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12947).KEYBOARD_ANIMATION_CONFIG;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
+const KEYBOARD_ANIMATION_CONFIG = fn(12999).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   onboardingRoundingView: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm },
   onboardingHeader: null,
@@ -95,9 +95,9 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   onboardingNavigatorContent = null != visibleContent;
   let obj3 = require("useIsScreenReaderEnabled");
   let obj4 = { channelId: context.channel.id };
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(-1);
-  let obj5 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(-1);
+  let obj5 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
   const ref2 = transitionState.useRef(null);
   items = [ref2];
   const callback = transitionState.useCallback(() => {
@@ -121,7 +121,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   const effect = transitionState.useEffect(() => {
     callback1(sharedValue.get(), onboardingNavigatorContent);
   }, items1);
-  let obj6 = require("../../../../_runtime/metro/01653__.js");
+  let obj6 = require("../../../../_runtime/metro/01654__.js");
   const items2 = [ref2, sharedValue];
   _require = undefined;
   [tmp16, tmp17] = items2;
@@ -136,7 +136,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   AppLauncherKeyboardTsx1.__initData = tmp16;
   const items4 = [
     callback1,
-    require("../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01707__.js").scheduleOnRN,
     callback1,
     onboardingNavigatorContent,
   ];
@@ -159,7 +159,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   AppLauncherKeyboardTsx2.__closure = items5;
   AppLauncherKeyboardTsx2.__workletHash = 335137472657;
   AppLauncherKeyboardTsx2.__initData = tmp18;
-  const animatedReaction = require("../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     AppLauncherKeyboardTsx1,
     AppLauncherKeyboardTsx2,
   );
@@ -198,20 +198,20 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(12095).AppLauncherBottomSheetExpandReason.KEYBOARD;
-        } else if (arg2 === trackWithMetadata(5244).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(12095).AppLauncherBottomSheetExpandReason.GESTURE;
-        } else if (arg2 !== trackWithMetadata(5244).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(12095).AppLauncherBottomSheetExpandReason.OTHER;
+          let current = trackWithMetadata(12145).AppLauncherBottomSheetExpandReason.KEYBOARD;
+        } else if (arg2 === trackWithMetadata(5275).ANIMATION_SOURCE.GESTURE) {
+          current = trackWithMetadata(12145).AppLauncherBottomSheetExpandReason.GESTURE;
+        } else if (arg2 !== trackWithMetadata(5275).ANIMATION_SOURCE.USER) {
+          current = trackWithMetadata(12145).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
-        trackWithMetadata = trackWithMetadata(5982).trackWithMetadata;
+        trackWithMetadata = trackWithMetadata(6013).trackWithMetadata;
         APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
         const obj = { reason: current };
         trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
         ref1.current = undefined;
-        const trackWithMetadataResult = trackWithMetadata(5982);
+        const trackWithMetadataResult = trackWithMetadata(6013);
       }
     }
   }, items8);
@@ -268,10 +268,10 @@ export default noop.memo(function AppLauncherKeyboard(context) {
     width: null,
     children: null,
   };
-  let obj7 = require("../../../../_runtime/metro/01653__.js");
+  let obj7 = require("../../../../_runtime/metro/01654__.js");
   if (!isScreenReaderEnabled) {
-    isScreenReaderEnabled = tmp(1625).isMetaQuest();
-    const tmpResult = tmp(1625);
+    isScreenReaderEnabled = tmp(1626).isMetaQuest();
+    const tmpResult = tmp(1626);
   }
   obj8.forceMaxHeight = isScreenReaderEnabled;
   const tmp7Result = PortalKeyboardBottomSheetDefault;
@@ -282,7 +282,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   obj8.backdropComponent = callback2;
   let tmp29 = onboardingNavigatorContent;
   if (!onboardingNavigatorContent) {
-    tmp29 = entrypoint === tmp(10047).AppLauncherEntrypoint.VOICE;
+    tmp29 = entrypoint === tmp(10089).AppLauncherEntrypoint.VOICE;
   }
   obj8.disableHeaderRoundingAnimation = tmp29;
   let onboardingRoundingView = onboardingNavigatorContent;

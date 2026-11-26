@@ -1,6 +1,6 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumExpressionPickerFeatureUpsell.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../../_runtime/metro/01654__.js";
 import useKeyboardIsOpenDefault from "../../../../keyboard/native/useKeyboardIsOpen.tsx";
 import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { container: null };
   const rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0 };
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting(
 export default function PremiumExpressionPickerFeatureUpsell(arg0) {
   ({ bottomSheetIndex, featureName, analyticsLocation, inPortalKeyboard, shouldShow } = arg0);
   const tmp3 = useKeyboardIsOpenDefault();
-  _mod1653;
+  _mod1654;
   items = [closure_6, shouldShow, inPortalKeyboard, bottomSheetIndex];
   c0 = undefined;
   c1 = undefined;

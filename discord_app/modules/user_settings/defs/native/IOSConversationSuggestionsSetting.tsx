@@ -2,20 +2,20 @@
 import LoggerDefault from "../../../debug/Logger.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _mod4927 from "../../../../../_runtime/metro/04927__.js";
+import _mod4958 from "../../../../../_runtime/metro/04958__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const identity = fn(1257);
+const identity = fn(1258);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 fn(17).NativeModules.IntentsHandler;
-const SettingBuilders = fn(11914);
+const SettingBuilders = fn(11962);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(9513).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9555).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
     const effect = noop.useEffect(() => {
       conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
@@ -24,14 +24,14 @@ const toggle = SettingBuilders.createToggle({
         isEnabled(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
       });
     }, []);
-    return closure_4((isEnabled) => isEnabled.isEnabled, _mod4927.shallow);
+    return closure_4((isEnabled) => isEnabled.isEnabled, _mod4958.shallow);
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
     result
       .then((result) => {
         closure_0 = result;
-        closure_0(1262).batchUpdates(() => state.setState({ isEnabled }));
+        closure_0(1263).batchUpdates(() => state.setState({ isEnabled }));
       })
       .catch((error) => {
         new LoggerDefault("ConversationSuggestions").error("Error suggesting conversations", error);

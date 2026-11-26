@@ -7,7 +7,7 @@ import NoticeStore from "../../../../../premium/native/NoticeStore.tsx";
 
 require = fn;
 const NoticeTypes = fn(1071).NoticeTypes;
-const PremiumSubscriptionSKUs = fn(1388).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1389).PremiumSubscriptionSKUs;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting(

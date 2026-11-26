@@ -35,7 +35,7 @@ let closure_15 = async function _startSoundboardRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_15 = async function _startSoundboardRecording(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp18) {
       closure_3 = tmp18;
@@ -122,8 +122,8 @@ function stopSoundboardRecording(arg0, items, arg2) {
   });
 }
 const View = fn(17).View;
-const NativePermissionTypes = fn(7838).NativePermissionTypes;
-const VoiceMessageConstants = fn(12907);
+const NativePermissionTypes = fn(7872).NativePermissionTypes;
+const VoiceMessageConstants = fn(12959);
 ({
   VOICE_RECORDING_MAX_DB: closure_9,
   VOICE_RECORDING_MIN_DURATION_MILLIS: closure_10,
@@ -131,7 +131,7 @@ const VoiceMessageConstants = fn(12907);
 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16, alignItems: "center" },
   title: null,
@@ -242,7 +242,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -345,7 +345,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -367,7 +367,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
                     ref3.current = true;
                     c3 = 1;
                     c4 = 1;
-                    const obj5 = { value: tmp3(7839).requestPermission(ref.AUDIO), done: false };
+                    const obj5 = { value: tmp3(7873).requestPermission(ref.AUDIO), done: false };
                     return obj5;
                   }
                 }
@@ -431,7 +431,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
               closure_129_8.current = null;
               closure_129_2(false);
               closure_129_5(closure_129_13.current);
-              const result = guildId(5693).showVoiceRecordingFailed();
+              const result = guildId(5724).showVoiceRecordingFailed();
               c4 = 3;
               const obj9 = { value: undefined, done: true };
               return obj9;
@@ -496,8 +496,8 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
         items = [];
         c1 = false;
         mediaEngine = mediaEngine.getMediaEngine();
-        mediaEngine.removeListener(guildId(5837).MediaEngineEvent.VoiceActivity, callback);
-        closure_2 = guildId(13160).generateBase64EncodedWaveform(items);
+        mediaEngine.removeListener(guildId(5868).MediaEngineEvent.VoiceActivity, callback);
+        closure_2 = guildId(13212).generateBase64EncodedWaveform(items);
         new Promise((arg0) => {
           closure_0 = arg0;
           const reachedLimit = setTimeout(
@@ -510,7 +510,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
             closure_0({ uri, durationSecs: arg1 / 1000, waveform, waveformLevels: items, reachedLimit });
           });
         });
-        const obj2 = guildId(13160);
+        const obj2 = guildId(13212);
       }
     },
     items4,

@@ -3,17 +3,17 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import _modDef10796 from "../../../../../_runtime/metro/10796__.js";
+import _modDef10842 from "../../../../../_runtime/metro/10842__.js";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
 
-const module_1653 = _mod1653;
+const module_1654 = _mod1654;
 
 require = fn;
 function NewCaption(arg0) {
@@ -23,7 +23,7 @@ function NewCaption(arg0) {
   items = [tmp.labelContainer, style];
   obj.style = items;
   const items1 = [
-    React6(native.Icon, { source: _modDef10796, style: tmp.icon }),
+    React6(native.Icon, { source: _modDef10842, style: tmp.icon }),
     React6(Text_Text.Text, {
       style: textStyle,
       color: "text-overlay-light",
@@ -262,17 +262,17 @@ function MediaKeyboardSpecialButton(arg0) {
   ({ size, disabled, index, totalNumItems, numItemsPerRow } = arg0);
   ({ onPress, accessibilityLabel, children } = arg0);
   const tmp = closure_12();
-  const sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(0);
   ({ backgroundColor, pressedBackgroundColor } = closure_16());
   const tmp3 = closure_16();
   items = [
     closure_17,
     timing_timing.withTiming,
-    _mod1653.interpolateColor,
+    _mod1654.interpolateColor,
     sharedValue,
     backgroundColor,
     pressedBackgroundColor,
-    _mod1653.Easing,
+    _mod1654.Easing,
   ];
   index = undefined;
   numItemsPerRow = undefined;
@@ -299,7 +299,7 @@ function MediaKeyboardSpecialButton(arg0) {
   MediaKeyboardItemTsx1.__workletHash = 14962449975931;
   MediaKeyboardItemTsx1.__initData = tmp4;
   const items2 = [index, numItemsPerRow, totalNumItems];
-  const animatedStyle = _mod1653.useAnimatedStyle(MediaKeyboardItemTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(MediaKeyboardItemTsx1);
   const obj3 = {
     disabled,
     accessibilityRole: "button",
@@ -380,12 +380,12 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(11055);
+const DeviceConstants = fn(11101);
 ({ ALAssetsType: metroImportDefault, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-let closure_11 = module_1653.createAnimatedComponent(Pressable);
-let createStyles = fn(5012);
+let closure_11 = module_1654.createAnimatedComponent(Pressable);
+let createStyles = fn(5043);
 let obj = {
   container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" },
   image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
@@ -413,7 +413,7 @@ const rect = {
   left: 8,
   bottom: 8,
 };
-let ColorUtils = fn(5009);
+let ColorUtils = fn(5040);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.6);
 rect.borderRadius = nativeDefault.radii.xs;
 obj.labelContainer = rect;
@@ -435,20 +435,20 @@ let size2 = {
   borderWidth: 1,
   borderColor: null,
 };
-ColorUtils = fn(5009);
+ColorUtils = fn(5040);
 size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
 obj.checkIconContainer = size2;
 let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj5.borderRadius = nativeDefault.radii.xs;
-ColorUtils = fn(5009);
+ColorUtils = fn(5040);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj.selectedOverlay = obj5;
 obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
 obj.disabled = { opacity: 0.4 };
 obj.imageDisabled = { opacity: 0.2 };
 let closure_12 = createStyles.createStyles(obj);
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 let closure_16 = createStyles.createStyleProperties({
   backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,

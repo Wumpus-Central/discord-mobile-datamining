@@ -13,14 +13,14 @@ function GuildOnboardingHomePage(guildId) {
   guildId = guildId.guildId;
   dependencyMap = undefined;
   let tmp = dependencyMap;
-  const sharedValue = guildId(1653).useSharedValue(-999);
-  let obj = guildId(1653);
+  const sharedValue = guildId(1654).useSharedValue(-999);
+  let obj = guildId(1654);
   items = [GuildOnboardingHomeSettingsStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () =>
     GuildOnboardingHomeSettingsStore.getSettings(guildId),
   );
   let tmp4 = stateFromStores;
-  const tmp5 = stateFromStores(7552)(guildId);
+  const tmp5 = stateFromStores(7583)(guildId);
   let tmp6 = !tmp5;
   if (!tmp5) {
     let num;
@@ -85,14 +85,14 @@ function GuildOnboardingHomePage(guildId) {
   } else {
     let obj3 = { guildId, scrollValue: sharedValue, children: null };
     const obj4 = { guildId, hideDescription: tmp5 };
-    const items3 = [closure_9(tmp4(18352), obj4)];
+    const items3 = [closure_9(tmp4(18411), obj4)];
     if (tmp5) {
       let obj5 = { children: null };
       const obj6 = { guildId };
-      const items4 = [closure_9(tmp4(18356), obj6), ,];
+      const items4 = [closure_9(tmp4(18415), obj6), ,];
       const obj7 = { guildId };
-      items4[1] = closure_9(tmp4(18360), obj7);
-      tmp4 = tmp4(18361);
+      items4[1] = closure_9(tmp4(18419), obj7);
+      tmp4 = tmp4(18420);
       const obj8 = { guildId };
       tmp = closure_9(tmp4, obj8);
       items4[2] = tmp;
@@ -100,16 +100,16 @@ function GuildOnboardingHomePage(guildId) {
       let tmp12Result = closure_11(closure_10, obj5);
     } else {
       const obj9 = { guildId };
-      tmp12Result = closure_9(tmp4(18364), obj9);
+      tmp12Result = closure_9(tmp4(18423), obj9);
     }
     items3[1] = tmp12Result;
     obj3.children = items3;
-    closure_11(tmp4(18351), obj3);
-    const tmp4Result = tmp4(18351);
+    closure_11(tmp4(18410), obj3);
+    const tmp4Result = tmp4(18410);
   }
   let obj2 = guildId(504);
 }
-const NO_SETTINGS = fn(7550).NO_SETTINGS;
+const NO_SETTINGS = fn(7581).NO_SETTINGS;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);

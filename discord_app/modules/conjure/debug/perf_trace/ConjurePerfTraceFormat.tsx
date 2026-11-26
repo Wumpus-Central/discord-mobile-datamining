@@ -54,8 +54,8 @@ function sectionFor(service, str) {
   }
   return str;
 }
-function detail(Duration, value) {
-  const obj = { label: Duration, value, block: null };
+function detail(Start, value) {
+  const obj = { label: Start, value, block: null };
   let hasItem = value.length > 80;
   if (!hasItem) {
     hasItem = value.includes("\n");
@@ -130,6 +130,39 @@ export function formatSpanCount(dropped) {
   return "" + dropped + " " + str + str2;
 }
 export { perfNodeDuration };
+export function perfNodeTimeLabel(marker) {
+  if (marker.marker) {
+    let str5 = globalThis;
+    const _Math2 = Math;
+    const rounded = Math.round(marker.start);
+    if (rounded < 1000) {
+      let combined = "" + rounded + "ms";
+    } else {
+      const result = rounded / 1000;
+      const _HermesInternal3 = HermesInternal;
+      combined = "" + result.toFixed(1) + "s";
+    }
+    str5 = "at ";
+    const combined1 = "at " + combined;
+  } else {
+    if (marker.count > 1) {
+      let totalMs = marker.totalMs;
+    } else {
+      totalMs = marker.end - marker.start;
+    }
+    const _Math = Math;
+    const rounded1 = Math.round(totalMs);
+    if (rounded1 < 1000) {
+      const _HermesInternal2 = HermesInternal;
+      let combined2 = "" + rounded1 + "ms";
+    } else {
+      const result1 = rounded1 / 1000;
+      const _HermesInternal = HermesInternal;
+      combined2 = "" + result1.toFixed(1) + "s";
+    }
+    return combined2;
+  }
+}
 export function perfSmallerLabel(row) {
   const count = row.count;
   let str = "s";
@@ -156,7 +189,10 @@ export function perfTickLabel(arg0) {
   }
 }
 export function perfNodeSections(node) {
-  items = [detail("Start", "+" + formatPerfMs(node.start)), detail("Duration", perfNodeDuration(node))];
+  items = [detail("Start", "+" + formatPerfMs(node.start))];
+  if (!node.marker) {
+    items.push(detail("Duration", perfNodeDuration(node)));
+  }
   if (node.count > 1) {
     const _String = String;
     const tmp2Result = detail("Calls", String(node.count));
@@ -174,21 +210,21 @@ export function perfNodeSections(node) {
     const _HermesInternal = HermesInternal;
     items.push(detail("Waited on", "" + waits_on.span_name + " in " + waits_on.trace_name));
   }
-  let str7 = null;
-  if (node.parallel) {
-    str7 = "ran in parallel with a sibling";
-  }
-  const items1 = [str7, ,];
   let str8 = null;
-  if (node.running) {
-    str8 = "still running";
+  if (node.parallel) {
+    str8 = "ran in parallel with a sibling";
   }
-  items1[1] = str8;
+  const items1 = [str8, ,];
   let str9 = null;
-  if (node.outlivedParent) {
-    str9 = "outlived its parent";
+  if (node.running) {
+    str9 = "still running";
   }
-  items1[2] = str9;
+  items1[1] = str9;
+  let str10 = null;
+  if (node.outlivedParent) {
+    str10 = "outlived its parent";
+  }
+  items1[2] = str10;
   const found = items1.filter((item) => null != item);
   if (found.length > 0) {
     items.push(detail("Notes", found.join(", ")));
@@ -204,26 +240,26 @@ export function perfNodeSections(node) {
   }
   const merged1 = Object.assign(details);
   const entries = Object.entries({});
-  while (tmp18 !== undefined) {
-    [first, tmp23] = tmp19;
-    let str13 = first;
-    let tmp25 = sectionFor(node, first);
+  while (tmp21 !== undefined) {
+    [first, tmp26] = tmp22;
+    let str14 = first;
+    let tmp28 = sectionFor(node, first);
     if ("cost_usd" === first) {
       let _Number = Number;
-      let StringResult = formatUsd(Number(tmp23));
+      let StringResult = formatUsd(Number(tmp26));
     } else {
       let _String2 = String;
-      StringResult = String(tmp23);
+      StringResult = String(tmp26);
     }
-    let tmp30 = StringResult;
-    let items4 = map.get(tmp25);
+    let tmp33 = StringResult;
+    let items4 = map.get(tmp28);
     if (items4 == null) {
       items4 = [];
     }
     let items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(items4, 0);
-    items2[arraySpreadResult] = detail(str13.replace(/_/g, " "), tmp30);
-    let result = map.set(tmp25, items2);
+    items2[arraySpreadResult] = detail(str14.replace(/_/g, " "), tmp33);
+    let result = map.set(tmp28, items2);
     continue;
   }
   const items3 = [

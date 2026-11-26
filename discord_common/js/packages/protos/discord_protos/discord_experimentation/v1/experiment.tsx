@@ -2208,7 +2208,7 @@ class LifecyclePlan_MeasurementPlan$Type extends MessageType11 {
         return items;
       },
     };
-    items = [,];
+    items = [, ,];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -2219,13 +2219,14 @@ class LifecyclePlan_MeasurementPlan$Type extends MessageType11 {
         return lifecyclePlan_RolloutPlanType;
       },
     };
+    items[2] = { no: 3, name: "id", kind: "scalar", T: 6 };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.LifecyclePlan.MeasurementPlan", items, new.target);
     return tmp1;
   }
 }
 const prototype11 = LifecyclePlan_MeasurementPlan$Type.prototype;
 prototype11["create"] = function create(partialSettings) {
-  const obj = { status: 0, rampSteps: [] };
+  const obj = { status: 0, rampSteps: [], id: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -2250,6 +2251,9 @@ prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let rampSteps = obj.rampSteps;
         let arr = rampSteps.push(lifecyclePlan_RolloutPlanType.internalBinaryRead(pos, pos.uint32(), readUnknownField));
+      } else if (3 === tmp5) {
+        let str4 = pos.fixed64();
+        obj.id = str4.toString();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -2296,6 +2300,10 @@ prototype11["internalBinaryWrite"] = function internalBinaryWrite(status, tag, w
       length = status.rampSteps.length;
     } while (num2 < length);
   }
+  if ("0" !== status.id) {
+    tag.tag(3, _mod1196.WireType.Bit64).fixed64(status.id);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.Bit64);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -2316,17 +2324,18 @@ const items7 = [
       return items;
     },
   },
-];
-const obj26 = {
-  no: 2,
-  name: "ramp_steps",
-  kind: "message",
-  repeat: 1,
-  T() {
-    return lifecyclePlan_RolloutPlanType;
+  {
+    no: 2,
+    name: "ramp_steps",
+    kind: "message",
+    repeat: 1,
+    T() {
+      return lifecyclePlan_RolloutPlanType;
+    },
   },
-};
-items7[1] = obj26;
+];
+const obj26 = { no: 3, name: "id", kind: "scalar", T: 6 };
+items7[2] = obj26;
 const bucket_AllocationExposureModeType2 = new Bucket_AllocationExposureMode$Type(
   "discord_protos.discord_experimentation.v1.LifecyclePlan.MeasurementPlan",
   items7,
@@ -2392,7 +2401,7 @@ class LifecyclePlan_RolloutPlan$Type extends MessageType12 {
         return items;
       },
     };
-    items = [,];
+    items = [, ,];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -2403,13 +2412,14 @@ class LifecyclePlan_RolloutPlan$Type extends MessageType12 {
         return lifecyclePlan_RolloutPlanType;
       },
     };
+    items[2] = { no: 3, name: "id", kind: "scalar", T: 6 };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan", items, new.target);
     return tmp1;
   }
 }
 const prototype12 = LifecyclePlan_RolloutPlan$Type.prototype;
 prototype12["create"] = function create(partialSettings) {
-  const obj = { status: 0, rampSteps: [] };
+  const obj = { status: 0, rampSteps: [], id: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -2434,6 +2444,9 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let rampSteps = obj.rampSteps;
         let arr = rampSteps.push(lifecyclePlan_RolloutPlanType.internalBinaryRead(pos, pos.uint32(), readUnknownField));
+      } else if (3 === tmp5) {
+        let str4 = pos.fixed64();
+        obj.id = str4.toString();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -2480,6 +2493,10 @@ prototype12["internalBinaryWrite"] = function internalBinaryWrite(status, tag, w
       length = status.rampSteps.length;
     } while (num2 < length);
   }
+  if ("0" !== status.id) {
+    tag.tag(3, _mod1196.WireType.Bit64).fixed64(status.id);
+    const tagResult2 = tag.tag(3, _mod1196.WireType.Bit64);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -2500,17 +2517,18 @@ const items8 = [
       return items;
     },
   },
-];
-const obj28 = {
-  no: 2,
-  name: "ramp_steps",
-  kind: "message",
-  repeat: 1,
-  T() {
-    return lifecyclePlan_RolloutPlanType;
+  {
+    no: 2,
+    name: "ramp_steps",
+    kind: "message",
+    repeat: 1,
+    T() {
+      return lifecyclePlan_RolloutPlanType;
+    },
   },
-};
-items8[1] = obj28;
+];
+const obj28 = { no: 3, name: "id", kind: "scalar", T: 6 };
+items8[2] = obj28;
 const lifecyclePlan_MeasurementPlanType = new LifecyclePlan_MeasurementPlan$Type(
   "discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan",
   items8,

@@ -1,6 +1,6 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationContainer.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _mod1706 from "../../../../_runtime/metro/01706__.js";
+import _mod1707 from "../../../../_runtime/metro/01707__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import InAppNotificationUtils from "InAppNotificationUtils.tsx";
@@ -20,7 +20,7 @@ import NativeMenuStore from "../../native_menu/native/NativeMenuStore.tsx";
 
 const require = globalThis.__r;
 
-const _modDef1653 = tmp17(1653);
+const _modDef1654 = tmp17(1654);
 require = fn;
 function NotificationWrapper(notification) {
   notification = notification.notification;
@@ -65,7 +65,7 @@ function NotificationWrapper(notification) {
   }
 }
 let StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(10582);
+const InAppNotificationConstants = fn(10627);
 ({
   DEFAULT_ANIMATION_TIMING: metroImportDefault,
   extrapolateConfig: closure_8,
@@ -78,9 +78,9 @@ const Constants = fn(1071);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);
 const jsx = fn(21).jsx;
 let obj = { duration: 200, easing: null };
-const Easing = fn(1653).Easing;
-obj.easing = Easing.in(fn(1653).Easing.ease);
-const createStyles = fn(5012);
+const Easing = fn(1654).Easing;
+obj.easing = Easing.in(fn(1654).Easing.ease);
+const createStyles = fn(5043);
 let closure_16 = createStyles.createStyles({
   safeAreaContainer: {
     position: "absolute",
@@ -134,8 +134,8 @@ export default function InAppNotificationContainer(notification) {
   const tmp = closure_16();
   let isIOSResult = require("utils/PlatformUtils").isIOS();
   if (isIOSResult) {
-    isIOSResult = tmp2(11707).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
-    const tmp2Result = tmp2(11707);
+    isIOSResult = tmp2(11755).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
+    const tmp2Result = tmp2(11755);
   }
   items = [notification];
   const memo = noop.useMemo(() => InAppNotificationUtils.extractMetadataFromNotification(c0), items);
@@ -148,15 +148,15 @@ export default function InAppNotificationContainer(notification) {
   noop = channelType;
   obj = require("utils/PlatformUtils");
   const obj3 = noop;
-  const sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
   StyleSheet = sharedValue;
-  const tmp2Result7 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const tmp2Result7 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
   c6 = sharedValue1;
-  const tmp2Result8 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const tmp2Result9 = require("../../../../_runtime/metro/01653__.js");
-  const sharedValue3 = require("../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const tmp2Result8 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const tmp2Result9 = require("../../../../_runtime/metro/01654__.js");
+  const sharedValue3 = require("../../../../_runtime/metro/01654__.js").useSharedValue(0);
   c7 = sharedValue3;
   const tmp10 = c3(noop.useState(false), 2);
   let first = tmp10[0];
@@ -165,7 +165,7 @@ export default function InAppNotificationContainer(notification) {
   const tmp12 = c3(noop.useState(false), 2);
   const first1 = tmp12[0];
   c10 = first1;
-  const tmp2Result10 = require("../../../../_runtime/metro/01653__.js");
+  const tmp2Result10 = require("../../../../_runtime/metro/01654__.js");
   let items1 = [c6];
   const items2 = [notification, guildId, channelId, messageId];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => velocityY.isOpen());
@@ -189,7 +189,7 @@ export default function InAppNotificationContainer(notification) {
   c11 = callback;
   useMountEffectDefault(() => {
     obj = timing_timing;
-    items = [closure_18, _mod1706.scheduleOnRN, c9];
+    items = [closure_18, _mod1707.scheduleOnRN, c9];
     c0 = undefined;
     c1 = undefined;
     [tmp3, tmp4, tmp5] = items;
@@ -227,14 +227,14 @@ export default function InAppNotificationContainer(notification) {
       AnalyticsUtilsDefault.track(constants2.IN_APP_NOTIFICATION_SHOWN, obj2);
     }
   }, items3);
-  const Gesture = tmp2(5272).Gesture;
+  const Gesture = tmp2(5303).Gesture;
   const tmp2Result11 = require("initialize");
   const items4 = [
     closure_19,
     sharedValue2,
     sharedValue,
     sharedValue1,
-    require("../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01707__.js").scheduleOnRN,
     tmp12[1],
   ];
   _require = undefined;
@@ -284,7 +284,7 @@ export default function InAppNotificationContainer(notification) {
     c11,
     c7,
     closure_21,
-    require("../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01707__.js").scheduleOnRN,
     callback,
     tmp12[1],
     require("spring/spring").withSpring,
@@ -368,7 +368,7 @@ export default function InAppNotificationContainer(notification) {
   InAppNotificationContainerTsx5.__initData = tmp31;
   const onUpdateResult = Gesture.Pan().onBegin(InAppNotificationContainerTsx2).onUpdate(InAppNotificationContainerTsx3);
   const tmp30 = c11;
-  const items10 = [closure_23, require("../../../../_runtime/metro/01706__.js").scheduleOnRN, tmp12[1]];
+  const items10 = [closure_23, require("../../../../_runtime/metro/01707__.js").scheduleOnRN, tmp12[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp44, tmp45, tmp46] = items10;
@@ -396,7 +396,7 @@ export default function InAppNotificationContainer(notification) {
     sharedValue,
     sharedValue3,
     first,
-    require("../../../../_runtime/metro/01653__.js").interpolate,
+    require("../../../../_runtime/metro/01654__.js").interpolate,
     tmp30,
     c8,
     isIOSResult,
@@ -447,7 +447,7 @@ export default function InAppNotificationContainer(notification) {
   InAppNotificationContainerTsx7.__workletHash = 9732012167849;
   InAppNotificationContainerTsx7.__initData = tmp48;
   const items14 = [callback, first, sharedValue, sharedValue1, first1];
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     InAppNotificationContainerTsx7,
   );
   const memo1 = obj3.useMemo(
@@ -479,7 +479,7 @@ export default function InAppNotificationContainer(notification) {
   };
   const items15 = [tmp.animatedContainer, animatedStyle];
   obj6.style = items15;
-  obj5.children = jsx(_modDef1653.View, {
+  obj5.children = jsx(_modDef1654.View, {
     style: null,
     pointerEvents: "box-none",
     children: <NotificationWrapper notification={notification} />,

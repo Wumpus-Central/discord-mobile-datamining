@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../../_runtime/metro/01706__.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../../_runtime/metro/01707__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce.tsx";
@@ -17,12 +17,12 @@ function FadeTransitionItem(state) {
   if (tmp3) {
     num = 0;
   }
-  sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(num);
+  sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(num);
   items = [state, sharedValue, cleanup];
   const effect = noop.useEffect(() => {
     if (c0 === native.TransitionStates.YEETED) {
       const tmpResult = timing_timing;
-      items = [closure_7, _mod1706.scheduleOnRN, cleanup];
+      items = [closure_7, _mod1707.scheduleOnRN, cleanup];
       c0 = undefined;
       c1 = undefined;
       [tmp11, tmp12, tmp13] = items;
@@ -53,7 +53,7 @@ function FadeTransitionItem(state) {
       const tmpResult2 = timing_timing;
     }
   }, items);
-  const obj = require("../../../../../_runtime/metro/01653__.js");
+  const obj = require("../../../../../_runtime/metro/01654__.js");
   let items1 = [closure_8, sharedValue];
   _require = undefined;
   [tmp6, tmp7] = items1;
@@ -67,7 +67,7 @@ function FadeTransitionItem(state) {
   ChatInputActionButtonTransitionItemTsx2.__closure = items2;
   ChatInputActionButtonTransitionItemTsx2.__workletHash = 10652693384285;
   ChatInputActionButtonTransitionItemTsx2.__initData = tmp6;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     ChatInputActionButtonTransitionItemTsx2,
   );
   const obj2 = { style: null };
@@ -113,10 +113,10 @@ function BounceTransitionItem(state) {
   obj3.importantForAccessibility = str2;
   const merged = Object.assign(obj3);
   obj2.children = children;
-  return jsx(_modDef1653.View, { style: null });
+  return jsx(_modDef1654.View, { style: null });
 }
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(12908).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(12960).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({
   transitionItem: { position: "absolute" },

@@ -7,7 +7,7 @@ import shared from "../../../../design/shared.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import _modDef7459 from "../../../../../_runtime/metro/07459__.js";
+import _modDef7490 from "../../../../../_runtime/metro/07490__.js";
 import getEmojiItemUrlDefault from "../../../emojis/utils/getEmojiItemUrl.tsx";
 import EmojiPickerListRowViewDefault from "EmojiPickerListRowView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -97,12 +97,12 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9498);
+const EmojiPickerListConstants = fn(9540);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1227).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   image: { height: IMAGE_SIZE, width: IMAGE_SIZE },
   surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" },
@@ -112,7 +112,7 @@ let obj = {
   lockContainer: null,
   lock: null,
 };
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let num = 28;
 if (PlatformUtils.isAndroid()) {
   num = 26;

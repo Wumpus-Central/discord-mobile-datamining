@@ -1,8 +1,8 @@
 // discord_app/design/components/Modal/native/ModalStepIndicator.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
-import _modDef2223 from "../../../intl/Mana.messages.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
+import _modDef2224 from "../../../intl/Mana.messages.js";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -28,8 +28,8 @@ function StepPill(isActive) {
   if (isActive) {
     num2 = 1;
   }
-  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(num2);
-  let obj = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(num2);
+  let obj = require("../../../../../_runtime/metro/01654__.js");
   const token = require("useToken").useToken(TEXT_BRAND);
   const tmp6Result = require("useToken");
   items = [isActive, sharedValue];
@@ -44,11 +44,11 @@ function StepPill(isActive) {
   const tmp6Result3 = require("useToken");
   let items1 = [
     closure_8,
-    require("../../../../../_runtime/metro/01653__.js").interpolate,
+    require("../../../../../_runtime/metro/01654__.js").interpolate,
     sharedValue,
     12,
     36,
-    require("../../../../../_runtime/metro/01653__.js").interpolateColor,
+    require("../../../../../_runtime/metro/01654__.js").interpolateColor,
     token1,
     token,
     num,
@@ -84,18 +84,18 @@ function StepPill(isActive) {
   ModalStepIndicatorNativeTsx1.__closure = items2;
   ModalStepIndicatorNativeTsx1.__workletHash = 1125363098386;
   ModalStepIndicatorNativeTsx1.__initData = tmp12;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     ModalStepIndicatorNativeTsx1,
   );
   const obj2 = { style: null };
   const items3 = [animatedStyle, tmp5.stepPill];
   obj2.style = items3;
-  return jsx(_modDef1653.View, { style: null });
+  return jsx(_modDef1654.View, { style: null });
 }
 const View = fn(17).View;
 let jsx = fn(21).jsx;
 let closure_6 = { overshootClamping: true };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", gap: 4 },
   stepPill: { height: 4, borderRadius: 2 },
@@ -135,7 +135,7 @@ export function ModalStepIndicator(arg0) {
       const obj4 = {
         accessible: true,
         accessibilityRole: "progressbar",
-        accessibilityLabel: intl.string(_modDef2223.KUwsC0),
+        accessibilityLabel: intl.string(_modDef2224.KUwsC0),
         accessibilityValue: null,
         importantForAccessibility: "yes",
         style: null,
@@ -149,7 +149,7 @@ export function ModalStepIndicator(arg0) {
         <View
           accessible
           accessibilityRole="progressbar"
-          accessibilityLabel={intl.string(_modDef2223.KUwsC0)}
+          accessibilityLabel={intl.string(_modDef2224.KUwsC0)}
           accessibilityValue={null}
           importantForAccessibility="yes"
           style={null}

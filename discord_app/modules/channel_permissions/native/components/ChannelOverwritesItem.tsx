@@ -8,8 +8,8 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import FormCheckbox from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
 import ChannelPermissionsUtilsAll from "../../ChannelPermissionsUtils.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import _modDef8516 from "../../../../../_runtime/metro/08516__.js";
-import _modDef8517 from "../../../../../_runtime/metro/08517__.js";
+import _modDef8558 from "../../../../../_runtime/metro/08558__.js";
+import _modDef8559 from "../../../../../_runtime/metro/08559__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -59,8 +59,8 @@ function RemoveIcon(item) {
       prop = tmp.rowRemoveIconDisabled;
     }
     let obj2 = { style: prop };
-    obj.children = closure_7(item(7253).CircleXIcon, obj2);
-    tmp3Result = closure_7(item(6121).PressableOpacity, obj);
+    obj.children = closure_7(item(7284).CircleXIcon, obj2);
+    tmp3Result = closure_7(item(6152).PressableOpacity, obj);
   }
   return tmp3Result;
 }
@@ -141,7 +141,7 @@ function MemberItem(arg0) {
   if (item.rowType === RowType.OWNER) {
     const obj3 = {
       size: native.Icon.Sizes.REFRESH_SMALL_16,
-      source: _modDef8516,
+      source: _modDef8558,
       disableColor: true,
       style: tmp.ownerIcon,
     };
@@ -190,7 +190,7 @@ function EmptyRoleItem(item) {
   const obj = { icon: null, label: null };
   const tmp = closure_9();
   obj.icon = metroImportDefault(native.Icon, {
-    source: _modDef8517,
+    source: _modDef8559,
     color: item.colorString,
     size: native.IconSizes.MEDIUM,
     style: closure_9().roleIcon,
@@ -240,10 +240,10 @@ class ChannelOverwritesItem {
   }
 }
 const View = fn(17).View;
-const RowType = fn(7808).RowType;
+const RowType = fn(7842).RowType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({
   nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 },
   name: { paddingRight: 4 },

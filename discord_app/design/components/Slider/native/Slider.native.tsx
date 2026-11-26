@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../modules/haptics/HapticFeedbackTypes.tsx";
-import _modDef8817 from "../../../../../_runtime/metro/08817__.js";
+import _modDef8859 from "../../../../../_runtime/metro/08859__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = {
   container: { flexGrow: 1, flexDirection: "row", alignItems: "center" },
   disabled: { opacity: 0.5 },
@@ -77,7 +77,7 @@ export function Slider(maxValue) {
   if (tmp7 == null) {
     tmp7 = minValue;
   }
-  let obj = step(5073);
+  let obj = step(5104);
   [tmp9, tmp10] = noop.useState(tmp7);
   const tmp4Result3 = _slicedToArray(noop.useState(first), 2);
   if (first !== tmp4Result3[0]) {
@@ -157,11 +157,11 @@ export function Slider(maxValue) {
       tmp2(arg0);
     }
   };
-  const tmp21 = _modDef8817;
+  const tmp21 = _modDef8859;
   if (tmp2Result.isThemeDark(obj.useThemeContext().theme)) {
-    let tmp2Result3 = tmp2(14894);
+    let tmp2Result3 = tmp2(10399);
   } else {
-    tmp2Result3 = tmp2(14895);
+    tmp2Result3 = tmp2(10400);
   }
   obj5.thumbImage = tmp2Result3;
   obj5.thumbSize = 1.625 * num2;
@@ -176,7 +176,7 @@ export function Slider(maxValue) {
   }
   obj5.accessibilityValue = tmp23;
   obj5.testID = testID;
-  tmp2Result = step(5177);
+  tmp2Result = step(5208);
   let fn;
   if (tmp2Result4.isAndroid()) {
     fn = () => true;

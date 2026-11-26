@@ -14,10 +14,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ClearAfterOptions = fn(9489).ClearAfterOptions;
+const ClearAfterOptions = fn(9531).ClearAfterOptions;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, buttonWrapper: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.buttonWrapper = { marginTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 };
@@ -40,7 +40,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   obj3.title = intl2.string(util.t.E45wvP);
   obj3.defaultValue = initialValue;
   obj3.children = ClearAfterOptions.map((value) =>
-    closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(13812)(value) }, value),
+    closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(13864)(value) }, value),
   );
   items = [closure_7(TableRadioGroup.TableRadioGroup, obj3)];
   const obj4 = { style: tmp.buttonWrapper, children: null };

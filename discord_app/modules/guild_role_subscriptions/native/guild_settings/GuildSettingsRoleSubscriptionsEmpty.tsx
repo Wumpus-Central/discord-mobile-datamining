@@ -32,7 +32,7 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
 }
 const Constants = fn(1071);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
-const ApplicationTypes = fn(1363).ApplicationTypes;
+const ApplicationTypes = fn(1364).ApplicationTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

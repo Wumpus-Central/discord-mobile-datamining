@@ -31,12 +31,12 @@ export function useTrackSearchItems(callback3, memo1, current) {
             ({ applicationId, commandId } = dependencyMap(isViewable.item));
             const tmp5 = dependencyMap(isViewable.item);
             const obj2 = {
-              type: closure_0(1263).ImpressionTypes.VIEW,
-              name: closure_0(1263).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+              type: closure_0(1264).ImpressionTypes.VIEW,
+              name: closure_0(1264).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
               properties: null,
             };
             const obj3 = {
-              location: closure_0(5664).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+              location: closure_0(5695).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
               application_id: applicationId,
               command_id: commandId,
               search_results_position: isViewable.index,
@@ -44,8 +44,8 @@ export function useTrackSearchItems(callback3, memo1, current) {
               source,
             };
             obj2.properties = obj3;
-            closure_0(6085).trackImpression(obj2, false);
-            const obj = closure_0(6085);
+            closure_0(6116).trackImpression(obj2, false);
+            const obj = closure_0(6116);
           }
         }
       }

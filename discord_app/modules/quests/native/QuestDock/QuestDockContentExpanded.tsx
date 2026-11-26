@@ -1,18 +1,18 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockContentExpanded.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useSafeAreaInsetsSharedValueDefault from "../../../safe_area/useSafeAreaInsetsSharedValue.native.tsx";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import QuestDockGestureContext from "QuestDockGestureContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
-const QuestDockMode = fn(6840).QuestDockMode;
-let closure_5 = fn(16629).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6871).QuestDockMode;
+let closure_5 = fn(16680).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj = { wrapper: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -100,9 +100,9 @@ export default noop.memo(function QuestDockContentExpanded(arg0) {
   QuestDockContentExpandedTsx1.__closure = items1;
   QuestDockContentExpandedTsx1.__workletHash = 5435658496809;
   QuestDockContentExpandedTsx1.__initData = tmp6;
-  const animatedStyle = _mod1653.useAnimatedStyle(QuestDockContentExpandedTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(QuestDockContentExpandedTsx1);
   const obj2 = { pointerEvents: "box-none", style: null, children };
   const items2 = [tmp.wrapper, animatedStyle];
   obj2.style = items2;
-  return jsx(_modDef1653.View, { pointerEvents: "box-none", style: null, children });
+  return jsx(_modDef1654.View, { pointerEvents: "box-none", style: null, children });
 });

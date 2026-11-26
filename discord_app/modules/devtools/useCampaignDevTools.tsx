@@ -19,7 +19,7 @@ function setCampaignNitro(value) {
   }
   const result = OverridePremiumTypeActions.updateClientPremiumTypeOverride(value, UserStore.getCurrentUser());
 }
-const prop = fn(1388).PREMIUM_TYPE_OVERRIDE_OPTIONS;
+const prop = fn(1389).PREMIUM_TYPE_OVERRIDE_OPTIONS;
 let items = [
   { id: "actual", value: "actual", label: "Use actual Nitro status" },
   ...prop.map((id) => {
@@ -46,7 +46,7 @@ let closure_13 = module_560.create((arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -111,7 +111,7 @@ let closure_13 = module_560.create((arg0) => {
             closure_129_0({ campaignsLoading: false });
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp43) {
         if (tmp5 === c3) {
@@ -152,7 +152,7 @@ export default function useCampaignDevTools() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -274,7 +274,7 @@ export default function useCampaignDevTools() {
   const items1 = [closure_7];
   const stateFromStoresArray = campaigns(504).useStateFromStoresArray(items1, () => closure_7.campaignOverrideRows);
   let obj3 = campaigns(504);
-  const tmp8 = reload(17293)(stateFromStores, stateFromStoresArray);
+  const tmp8 = reload(17344)(stateFromStores, stateFromStoresArray);
   const items2 = [locale];
   stateFromStores1 = campaigns(504).useStateFromStores(items2, () => locale.locale);
   let end_date;
@@ -288,8 +288,8 @@ export default function useCampaignDevTools() {
   if (componentsLoading) {
     let items4 = [];
   } else {
-    items4 = tmp3(9170).campaignPreviewActions(tmp11, stateFromStoresArray, found);
-    const tmp3Result = tmp3(9170);
+    items4 = tmp3(9212).campaignPreviewActions(tmp11, stateFromStoresArray, found);
+    const tmp3Result = tmp3(9212);
   }
   let obj4 = campaigns(504);
   const items5 = [end_date];
@@ -348,8 +348,8 @@ export default function useCampaignDevTools() {
   obj5.previewActions = items4;
   if (!componentsLoading) {
     if (null != found) {
-      tmp3(9170).campaignDetails(found, stateFromStoresArray);
-      const tmp3Result4 = tmp3(9170);
+      tmp3(9212).campaignDetails(found, stateFromStoresArray);
+      const tmp3Result4 = tmp3(9212);
     }
     obj5.details = [];
     obj5.nitro = str;

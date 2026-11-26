@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef11693 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-1x.png.js";
-import _modDef11694 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-2x.png.js";
-import _modDef11695 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-3x.png.js";
+import _modDef11741 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-1x.png.js";
+import _modDef11742 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-2x.png.js";
+import _modDef11743 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11693 }, 3: null };
-let obj2 = { uri: _modDef11693 };
-obj[2] = { uri: _modDef11694 };
-const obj3 = { uri: _modDef11694 };
-obj[3] = { uri: _modDef11695 };
+let obj = { 1: null, 2: { uri: _modDef11741 }, 3: null };
+let obj2 = { uri: _modDef11741 };
+obj[2] = { uri: _modDef11742 };
+const obj3 = { uri: _modDef11742 };
+obj[3] = { uri: _modDef11743 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx",

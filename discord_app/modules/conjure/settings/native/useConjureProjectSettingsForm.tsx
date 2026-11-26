@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/settings/native/useConjureProjectSettingsForm.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02119_asyncRequireImpl.js";
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import asyncRequireImpl from "../../../../../_runtime/02120_asyncRequireImpl.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureProjectTypes from "../../projects/ConjureProjectTypes.tsx";
 import ConjureSharingModeSheet from "../../share/native/ConjureSharingModeSheet.tsx";
@@ -194,7 +194,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1071).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let obj2 = {
   content: { gap: nativeDefault.space.PX_16 },
   roleLabel: null,
@@ -220,7 +220,7 @@ obj2.roleListFooter = {
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
 let closure_12 = createStyles.createStyles(obj2);
-createStyles = fn(5012);
+createStyles = fn(5043);
 let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -312,7 +312,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     if (showsManageServerDefault) {
       let obj = { id: "anyone_with_manage_server", label: null };
       const intl = util.intl;
-      obj.label = intl.string(_modDef4244.Ukbq9W);
+      obj.label = intl.string(_modDef4245.Ukbq9W);
       items = [obj];
       let mapped = items;
     } else {
@@ -350,7 +350,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -378,7 +378,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
           } else if (1 === tmp7) {
             sharingOptions = 0;
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -400,7 +400,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
               const obj = tmp3(sharingOptions[11]);
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           }
           sharingOptions = 0;
@@ -469,7 +469,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       obj7.onPress = function onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         return obj.openLazy(
-          asyncRequireImpl(18442, dependencyMap.paths),
+          asyncRequireImpl(18505, dependencyMap.paths),
           ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY,
           { options: sharingOptions, value, onChange },
           "stack",

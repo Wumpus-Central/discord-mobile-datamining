@@ -22,31 +22,30 @@ export function getWidgetEmptyStateSuggestions(addableWidgets) {
     }
     return isConnected;
   });
-  const substr = found
-    .toSorted((isConnected, isConnected2) => {
-      if (isConnected.isConnected !== isConnected2.isConnected) {
-        let num4 = 1;
-        if (isConnected.isConnected) {
-          num4 = -1;
-        }
-        return num4;
-      } else {
-        let diff = isConnected2.totalPlayDuration - isConnected.totalPlayDuration;
-        if (0 === diff) {
-          let num2 = isConnected2.lastPlayedAt;
-          if (num2 == null) {
-            num2 = 0;
-          }
-          let num3 = isConnected.lastPlayedAt;
-          if (num3 == null) {
-            num3 = 0;
-          }
-          diff = num2 - num3;
-        }
-        return diff;
+  const sorted = found.sort((isConnected, isConnected2) => {
+    if (isConnected.isConnected !== isConnected2.isConnected) {
+      let num4 = 1;
+      if (isConnected.isConnected) {
+        num4 = -1;
       }
-    })
-    .slice(0, 2);
+      return num4;
+    } else {
+      let diff = isConnected2.totalPlayDuration - isConnected.totalPlayDuration;
+      if (0 === diff) {
+        let num2 = isConnected2.lastPlayedAt;
+        if (num2 == null) {
+          num2 = 0;
+        }
+        let num3 = isConnected.lastPlayedAt;
+        if (num3 == null) {
+          num3 = 0;
+        }
+        diff = num2 - num3;
+      }
+      return diff;
+    }
+  });
+  const substr = sorted.slice(0, 2);
   const mapped = substr.map((applicationId) => applicationId.applicationId);
   const item = mapped.forEach(function appendByApplicationId(item) {
     closure_0 = item;

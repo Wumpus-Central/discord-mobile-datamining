@@ -12,7 +12,7 @@ const Constants = fn(1071);
   AnalyticsSections: closure_6,
   UpsellTypes: metroImportDefault,
 } = Constants);
-const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1389).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/ProfileEditNitroUpsellRow.tsx");

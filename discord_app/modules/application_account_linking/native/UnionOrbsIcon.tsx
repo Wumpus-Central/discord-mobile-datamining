@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import _modDef17471 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
+import _modDef17528 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { container: { width: "auto" }, dot: null, orb: null };
 let size = {
   width: 5,
@@ -29,7 +29,7 @@ export function UnionOrbsIcon() {
   const obj = { direction: "horizontal", align: "center", spacing: 4, style: tmp.container, children: null };
   items = [React4(View, { style: tmp.dot }), ,];
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef17471 };
+  const obj4 = { uri: _modDef17528 };
   obj3.source = obj4;
   obj3.style = tmp.orb;
   items[1] = React4(FastImageDefault, obj3);

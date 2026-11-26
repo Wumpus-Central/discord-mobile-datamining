@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
-import _modDef2654 from "../../Waterwheels.messages.js";
+import _modDef2655 from "../../Waterwheels.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
@@ -104,9 +104,9 @@ const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const NavigatorHeader = fn(7160);
+const NavigatorHeader = fn(7191);
 const headerBackButton = NavigatorHeader.getHeaderBackButton();
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_13 = createStyles.createStyles(() => {
   let PX_64 = arg0;
   if (arg0 === undefined) {
@@ -276,10 +276,10 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
     onJoinResult: View,
   } = guild);
   const tmp = closure_13();
-  const token = guild(5576).useToken(nativeDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
-  let obj = guild(5576);
-  const token1 = guild(5576).useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const obj2 = guild(5576);
+  const token = guild(5607).useToken(nativeDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
+  let obj = guild(5607);
+  const token1 = guild(5607).useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const obj2 = guild(5607);
   const obj5 = {
     onLayout(arg0) {
       return dependencyMap(importDefault + 1, arg0);
@@ -296,7 +296,7 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
     children: null,
   };
   const intl = guild(1112).intl;
-  obj6.accessibilityHint = intl.string(_modDef2654.nkweXX);
+  obj6.accessibilityHint = intl.string(_modDef2655.nkweXX);
   obj6.onPress = function openProfile() {
     noop(guild.id, closure_1_1);
     const obj = ActionSheetActionCreatorsDefault;
@@ -324,14 +324,14 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   obj9.style = items;
   const obj11 = { icon: guildIconURL, value: guild.name, size: null, selected: false, style: null };
   const tmp11 = ClipViewDefault;
-  obj11.size = guild(7021).GuildIconSizes.NORMAL;
+  obj11.size = guild(7052).GuildIconSizes.NORMAL;
   obj11.style = tmp.guildIconImage;
   obj9.children = closure_9(GuildIconDefault, obj11);
   const items1 = [closure_9(tmp11, obj9)];
   const obj12 = { style: tmp.details, spacing: nativeDefault.space.PX_0, children: null };
   const obj13 = { style: tmp.name, children: null };
   const items2 = [
-    closure_9(guild(5603).Text, {
+    closure_9(guild(5634).Text, {
       style: tmp.nameText,
       variant: "body-md/semibold",
       color: "text-strong",
@@ -354,13 +354,13 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
     const _Set = Set;
     set = new Set(guild.features);
     obj16.features = set;
-    obj15.guild = tmp2(4875).constructFromPartialGuildRecord(obj16);
+    obj15.guild = tmp2(4906).constructFromPartialGuildRecord(obj16);
     obj15.style = tmp.badge;
     hasItem = closure_9(tmp4Result, obj15);
-    const tmp2Result = tmp2(4875);
+    const tmp2Result = tmp2(4906);
   }
   items2[1] = hasItem;
-  items2[2] = closure_9(guild(7527).ChevronSmallRightIcon, { size: "xxs", accessible: false });
+  items2[2] = closure_9(guild(7558).ChevronSmallRightIcon, { size: "xxs", accessible: false });
   obj13.children = items2;
   const items3 = [closure_10(View, obj13)];
   const obj18 = { style: tmp.online, children: null };
@@ -368,11 +368,11 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   const obj20 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl2 = tmp2(1112).intl;
   obj20.children = intl2.format(guild(1112).t["LC+S+m"], { membersOnline: guild.approximate_presence_count });
-  items4[1] = closure_9(guild(5603).Text, obj20);
+  items4[1] = closure_9(guild(5634).Text, obj20);
   obj18.children = items4;
   items3[1] = closure_10(View, obj18);
   obj12.children = items3;
-  items1[1] = closure_10(guild(6084).Stack, obj12);
+  items1[1] = closure_10(guild(6115).Stack, obj12);
   obj8.children = items1;
   const items5 = [closure_10(View, obj8), closure_9(View, { style: tmp.joinSpace })];
   obj7.children = items5;
@@ -383,11 +383,11 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   }
   if (tmp10Result) {
     const obj23 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 2, children: guild.description };
-    tmp10Result = closure_9(tmp2(5603).Text, obj23);
+    tmp10Result = closure_9(tmp2(5634).Text, obj23);
   }
   items6[1] = tmp10Result;
   obj6.children = items6;
-  const items7 = [closure_10(guild(6121).PressableHighlight, obj6)];
+  const items7 = [closure_10(guild(6152).PressableHighlight, obj6)];
   const obj24 = {
     style: tmp.joinTarget,
     children: closure_9(InterestGuildJoinButtonDefault, {
@@ -654,7 +654,7 @@ export default function InterestGuildRecommendations(analyticsContext) {
   }
   items9[4] = tmp18Result;
   obj12.children = items9;
-  items7[1] = ref2(require("../../../../../_runtime/metro/01653__.js").ScrollView, obj12);
+  items7[1] = ref2(require("../../../../../_runtime/metro/01654__.js").ScrollView, obj12);
   obj4.children = items7;
   return ref2(View, obj4);
 }

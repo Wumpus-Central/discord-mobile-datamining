@@ -5,23 +5,23 @@ import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell.tsx";
 import EmojiPickerNativeComponent2 from "../../../../../discord_common/js/packages/rtn-codegen/js/EmojiPickerNativeComponent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../../emojis/EmojiStore.tsx";
-import 01653__ from "../../../../../_runtime/metro/01653__.js";
+import 01654__ from "../../../../../_runtime/metro/01654__.js";
 
 const require = globalThis.__r;
 const EmojiPickerNativeComponentDefault = EmojiPickerNativeComponent2;
 
 require = fn;
-const EmojiCategoryTypes = fn(6855).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9498).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6886).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(9540).IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1227).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_11 = createStyles.createStyles({ container: { flex: 1 } });
-const EmojiPickerNativeComponent = module_1653.createAnimatedComponent(EmojiPickerNativeComponentDefault);
-const BottomSheetModal = fn(5244);
-let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(fn(5244).SCROLLABLE_TYPE.SCROLLVIEW, EmojiPickerNativeComponent);
-const MetaQuestUtils = fn(1625);
+const EmojiPickerNativeComponent = module_1654.createAnimatedComponent(EmojiPickerNativeComponentDefault);
+const BottomSheetModal = fn(5275);
+let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(fn(5275).SCROLLABLE_TYPE.SCROLLVIEW, EmojiPickerNativeComponent);
+const MetaQuestUtils = fn(1626);
 let closure_13 = MetaQuestUtils.isMetaQuest();
 let closure_14 = { code: "(function EmojiPickerListComponentAndroidTsx1(){let[bottomSheetIndex]=this.__closure;return bottomSheetIndex.get();})" };
 let closure_15 = { code: "(function EmojiPickerListComponentAndroidTsx2(index){let[inPortalKeyboard,IS_META_QUEST,scheduleOnRN,scrollingEnabled]=this.__closure;if(!inPortalKeyboard||index<0||IS_META_QUEST){return;}if(index===0){scheduleOnRN(scrollingEnabled,false);}else if(index===1){scheduleOnRN(scrollingEnabled,true);}})" };
@@ -76,7 +76,7 @@ export default function EmojiPickerListComponent(analyticsLocations) {
   EmojiPickerListComponentAndroidTsx1.__closure = items2;
   EmojiPickerListComponentAndroidTsx1.__workletHash = 7865271848533;
   EmojiPickerListComponentAndroidTsx1.__initData = tmp7;
-  const items3 = [closure_15, inPortalKeyboard, closure_13, tmp5(1706).scheduleOnRN, callback];
+  const items3 = [closure_15, inPortalKeyboard, closure_13, tmp5(1707).scheduleOnRN, callback];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -116,7 +116,7 @@ export default function EmojiPickerListComponent(analyticsLocations) {
   EmojiPickerListComponentAndroidTsx2.__closure = items4;
   EmojiPickerListComponentAndroidTsx2.__workletHash = 15639036497539;
   EmojiPickerListComponentAndroidTsx2.__initData = tmp9;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(EmojiPickerListComponentAndroidTsx1, EmojiPickerListComponentAndroidTsx2);
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(EmojiPickerListComponentAndroidTsx1, EmojiPickerListComponentAndroidTsx2);
   const items5 = [guildId];
   callback1 = obj.useCallback((emojiId) => {
     emojiId = emojiId.emojiId;
@@ -169,7 +169,7 @@ export default function EmojiPickerListComponent(analyticsLocations) {
     }
   }));
   const items10 = [animateEmoji];
-  let obj2 = require("../../../../../_runtime/metro/01653__.js");
+  let obj2 = require("../../../../../_runtime/metro/01654__.js");
   const items11 = [guildId, analyticsLocations, useTier0UpsellContent, data.hasSearchUpsell];
   const obj3 = { config: noop.useMemo(() => ({ animateEmoji, scrollFastOptimizationEnabled: true, scrollFastVelocity: 8000, disableAnimationsOnScroll: true }), items10), emojiData: data, emojiMargin: onShowNitroUpsell, emojiSize: onLongPressEmoji, onPressEmoji: callback2, onLongPressEmoji: callback3, onStickyHeaderRender: callback4, onShowNitroUpsell: callback5, paddingTop, paddingBottom, useTier0UpsellContent, ref: ref1, style: tmp.container };
   const obj4 = { children: null };

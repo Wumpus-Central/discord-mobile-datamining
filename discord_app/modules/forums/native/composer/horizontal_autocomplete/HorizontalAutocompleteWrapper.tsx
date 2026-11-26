@@ -147,7 +147,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
   HorizontalAutocompleteWrapperTsx1.__closure = items5;
   HorizontalAutocompleteWrapperTsx1.__workletHash = 15765485703035;
   HorizontalAutocompleteWrapperTsx1.__initData = tmp13;
-  const animatedStyle = require("../../../../../../_runtime/metro/01653__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     HorizontalAutocompleteWrapperTsx1,
   );
   let obj3 = {

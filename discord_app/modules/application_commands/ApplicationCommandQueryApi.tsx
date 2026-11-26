@@ -52,7 +52,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(10005);
+let ApplicationCommandIndexStore = fn(10047);
 ({
   useContextIndexState: closure_6,
   useDiscoveryState: metroImportDefault,
@@ -60,17 +60,17 @@ let ApplicationCommandIndexStore = fn(10005);
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(7042).BuiltInSectionId;
+const BuiltInSectionId = fn(7073).BuiltInSectionId;
 const NOOP = fn(1071).NOOP;
-let items = [fn(2117).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(5664).ApplicationCommandSectionType.APPLICATION, name: "" };
+let items = [fn(2118).ApplicationCommandType.CHAT];
+let section = { id: "placeholder-section", type: fn(5695).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "sa", command: "isArray", section: "isArray" };
+    return { application: "radii", command: "id", section: "clearTimeout" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -121,7 +121,7 @@ export function getCachedCommand(type, commandId, applicationId) {
         }
       }
     }
-    return { application: "sa", command: "isArray", section: "isArray" };
+    return { application: "radii", command: "id", section: "clearTimeout" };
   }
 }
 export function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -462,7 +462,7 @@ export function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "analyticsLocations" };
+    return { command: "Array", application: "channel_id" };
   }, items);
 }
 export function useCommandsForApplication(arg0, arg1, arg2) {

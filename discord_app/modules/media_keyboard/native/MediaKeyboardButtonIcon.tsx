@@ -1,13 +1,13 @@
 // discord_app/modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
 import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import PlusLargeIcon from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -49,11 +49,11 @@ export function MediaKeyboardButtonIcon(arg0) {
     MediaKeyboardButtonIconTsx1.__closure = items1;
     MediaKeyboardButtonIconTsx1.__workletHash = 8539740243314;
     MediaKeyboardButtonIconTsx1.__initData = tmp;
-    const animatedStyle = _mod1653.useAnimatedStyle(MediaKeyboardButtonIconTsx1);
+    const animatedStyle = _mod1654.useAnimatedStyle(MediaKeyboardButtonIconTsx1);
     let obj = { style: animatedStyle, children: null };
     const obj2 = {};
     const merged1 = Object.assign(merged);
     obj.children = jsx(PlusLargeIcon.PlusLargeIcon, {});
-    return jsx(_modDef1653.View, { style: animatedStyle, children: null });
+    return jsx(_modDef1654.View, { style: animatedStyle, children: null });
   }
 }

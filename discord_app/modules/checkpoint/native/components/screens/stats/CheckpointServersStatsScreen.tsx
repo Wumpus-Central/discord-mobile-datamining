@@ -1,13 +1,13 @@
 // discord_app/modules/checkpoint/native/components/screens/stats/CheckpointServersStatsScreen.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3462 from "../../../../Checkpoint.messages.js";
-import _modDef3494 from "../../../../Checkpoint2026.messages.js";
+import _modDef3463 from "../../../../Checkpoint.messages.js";
+import _modDef3495 from "../../../../Checkpoint2026.messages.js";
 import GuildIconDefault from "../../../../../guild/native/GuildIcon.tsx";
 import CheckpointScreen from "../../CheckpointScreen.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
-import _modDef12807 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef12808 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
+import _modDef12855 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12856 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
 import useIsCheckpointWideDefault from "../../../useIsCheckpointWide.tsx";
 import CheckpointDisplayTextDefault from "../../CheckpointDisplayText.tsx";
 import CheckpointGuildStatsDefault from "../../CheckpointGuildStats.tsx";
@@ -123,13 +123,13 @@ function GuildCard(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6365);
+const CheckpointConstants = fn(6396);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_NAV_HEIGHT, CHECKPOINT_WHITE } =
   CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: {
     width: "100%",
@@ -227,14 +227,14 @@ obj2.wideContainer = {
   alignItems: "center",
   alignSelf: "center",
   width: "100%",
-  maxWidth: fn(12811).CHECKPOINT_WIDE_MAX_WIDTH,
+  maxWidth: fn(12860).CHECKPOINT_WIDE_MAX_WIDTH,
 };
 let obj14 = {
   flexDirection: "row",
   alignItems: "center",
   alignSelf: "center",
   width: "100%",
-  maxWidth: fn(12811).CHECKPOINT_WIDE_MAX_WIDTH,
+  maxWidth: fn(12860).CHECKPOINT_WIDE_MAX_WIDTH,
 };
 obj2.wideHeader = { width: "50%", paddingRight: nativeDefault.space.PX_32 };
 obj2.wideGuildsScroll = { flexGrow: 0, width: "50%", alignSelf: "stretch" };
@@ -246,7 +246,7 @@ const obj16 = {
   paddingLeft: nativeDefault.space.PX_32,
   paddingRight: null,
 };
-const result = 2 * fn(12593).CHECKPOINT_HEADER_BUTTON_SIZE;
+const result = 2 * fn(12646).CHECKPOINT_HEADER_BUTTON_SIZE;
 let sum = result + nativeDefault.space.PX_12;
 obj16.paddingRight = sum + nativeDefault.space.PX_8;
 obj2.wideGuildsContent = obj16;
@@ -289,26 +289,26 @@ export default function CheckpointServersStatsScreen() {
       const obj4 = { style: tmp.heading, children: null };
       const obj5 = { style: tmp.title, children: null };
       const obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-      const items1 = [closure_9(tmp2(11399).ServerIcon, obj6)];
+      const items1 = [closure_9(tmp2(11445).ServerIcon, obj6)];
       const obj7 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
       const intl3 = tmp2(1112).intl;
       const tmp18 = CheckpointTextDefault;
-      obj7.children = intl3.string(_modDef3494.Mb5E6r).toLocaleUpperCase();
+      obj7.children = intl3.string(_modDef3495.Mb5E6r).toLocaleUpperCase();
       items1[1] = closure_9(tmp18, obj7);
       obj5.children = items1;
       const items2 = [closure_10(closure_6, obj5)];
       const obj8 = { children: null };
-      const stringResult = intl3.string(_modDef3494.Mb5E6r);
+      const stringResult = intl3.string(_modDef3495.Mb5E6r);
       const intl4 = tmp2(1112).intl;
       const tmp19 = CheckpointDisplayTextDefault;
-      obj8.children = intl4.string(_modDef3462.F0fkrh).toLocaleUpperCase();
+      obj8.children = intl4.string(_modDef3463.F0fkrh).toLocaleUpperCase();
       items2[1] = closure_9(tmp19, obj8);
       obj4.children = items2;
       const items3 = [closure_10(closure_6, obj4)];
       const obj9 = { variant: "heading-lg/medium", children: null };
-      const stringResult1 = intl4.string(_modDef3462.F0fkrh);
+      const stringResult1 = intl4.string(_modDef3463.F0fkrh);
       const intl5 = tmp2(1112).intl;
-      obj9.children = intl5.string(_modDef3494.IN1DaS);
+      obj9.children = intl5.string(_modDef3495.IN1DaS);
       items3[1] = closure_9(CheckpointTextDefault, obj9);
       obj3.children = items3;
       obj2.header = closure_10(closure_6, obj3);
@@ -349,21 +349,21 @@ export default function CheckpointServersStatsScreen() {
   const obj12 = { style: tmp.globalHeading, children: null };
   const obj13 = { animatedUri: null, staticUri: null, style: null };
   let obj = require("initialize");
-  obj13.animatedUri = _modDef12807;
-  obj13.staticUri = _modDef12808;
+  obj13.animatedUri = _modDef12855;
+  obj13.staticUri = _modDef12856;
   obj13.style = tmp.globe;
   const items5 = [closure_9(CheckpointApngPlayerDefault, obj13)];
   const obj14 = { isStepHeading: true, children: null };
   const intl = tmp2(1112).intl;
   const tmp8 = CheckpointDisplayTextDefault;
-  obj14.children = intl.string(_modDef3462.F0fkrh).toLocaleUpperCase();
+  obj14.children = intl.string(_modDef3463.F0fkrh).toLocaleUpperCase();
   items5[1] = closure_9(tmp8, obj14);
   obj12.children = items5;
   const items6 = [closure_10(closure_6, obj12)];
   const obj15 = { variant: "heading-lg/medium", children: null };
-  const stringResult2 = intl.string(_modDef3462.F0fkrh);
+  const stringResult2 = intl.string(_modDef3463.F0fkrh);
   const intl2 = tmp2(1112).intl;
-  obj15.children = intl2.string(_modDef3494.bhnqop);
+  obj15.children = intl2.string(_modDef3495.bhnqop);
   items6[1] = closure_9(CheckpointTextDefault, obj15);
   obj11.children = items6;
   obj10.header = closure_10(closure_6, obj11);

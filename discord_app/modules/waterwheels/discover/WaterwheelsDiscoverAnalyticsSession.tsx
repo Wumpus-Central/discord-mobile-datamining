@@ -1,5 +1,5 @@
 // discord_app/modules/waterwheels/discover/WaterwheelsDiscoverAnalyticsSession.tsx
-import v1 from "../../../../_runtime/01268_v1.js";
+import v1 from "../../../../_runtime/01269_v1.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 

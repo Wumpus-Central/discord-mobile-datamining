@@ -32,7 +32,7 @@ let closure_9 = async function _unpublishProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -126,7 +126,7 @@ let closure_10 = async function _unpublishLiveApp(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -184,9 +184,21 @@ let closure_10 = async function _unpublishLiveApp(arg0) {
               surface: publishStatus.surface,
               previewAppChannels: publishStatus.previewAppChannels,
               previewDevicePermissions: publishStatus.previewDevicePermissions,
+              views: null,
             };
+            let tmp12 = null;
+            if (null != publishStatus.views) {
+              const obj = {};
+              const merged = Object.assign(publishStatus.views);
+              const obj9 = { activity: null, voiceChannel: null, appChannels: [] };
+              obj.mounts = obj9;
+              obj.placed = false;
+              obj.missingViews = [];
+              tmp12 = obj;
+            }
+            obj7.views = tmp12;
             closure_130_1(closure_130_2[8]).dispatch(obj7);
-            const obj = closure_130_1(closure_130_2[8]);
+            const obj8 = closure_130_1(closure_130_2[8]);
           }
           const currentUser = closure_130_4.getCurrentUser();
           let id1;
@@ -203,9 +215,9 @@ let closure_10 = async function _unpublishLiveApp(arg0) {
           return { value: true, done: true };
         }
       }
-    } catch (tmp31) {
+    } catch (tmp28) {
       c4 = tmp;
-      throw tmp31;
+      throw tmp28;
     }
   }
 };
@@ -220,7 +232,7 @@ let closure_11 = async function _refreshPublishedProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -382,7 +394,7 @@ let closure_13 = async function _refreshPublishedApplication() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -423,7 +435,7 @@ let closure_13 = async function _refreshPublishedApplication() {
             closure_132_14(closure_131_0, closure_131_1, closure_131_2);
           }
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp16) {
         c6 = tmp;

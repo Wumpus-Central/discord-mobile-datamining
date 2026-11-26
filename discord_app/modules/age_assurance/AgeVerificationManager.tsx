@@ -60,7 +60,7 @@ function handleMessageCreate(channelId) {
 function handleLoadChannelMessages(channelId) {
   const messages = MessageActionCreatorsDefault.fetchMessages({ channelId, limit });
 }
-const transformUser = fn(1386).transformUser;
+const transformUser = fn(1387).transformUser;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_9, MAX_MESSAGES_PER_CHANNEL: closure_10 } = Constants);
 let closure_11 = new LoggerDefault("AgeVerificationManager");
@@ -93,7 +93,7 @@ const prototype = function AgeVerificationManager() {
     }
     try {
       if (isAdultStatusResult) {
-        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6751).clear(channelId.channelId));
+        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6782).clear(channelId.channelId));
         const channelId = SelectedChannelStore.getChannelId();
         if (null != channelId) {
           handleLoadChannelMessages(tmp17);
@@ -112,8 +112,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              closure_1_0(11657).preloadForumThreads(channel);
-              const obj = closure_1_0(11657);
+              closure_1_0(11705).preloadForumThreads(channel);
+              const obj = closure_1_0(11705);
             }
           })(tmp17);
           const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(tmp17);

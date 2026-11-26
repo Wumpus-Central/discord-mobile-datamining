@@ -7,11 +7,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const getIconById = fn(9616).getIconById;
+const getIconById = fn(9658).getIconById;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const HexagonCampaignPerk = fn(5037).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5068).HexagonCampaignPerk;
 let closure_9 = new LoggerDefault("AppIconPremiumManager");
-const DEFAULT = fn(5038).FreemiumAppIconIds.DEFAULT;
+const DEFAULT = fn(5069).FreemiumAppIconIds.DEFAULT;
 let closure_11 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost", CAMPAIGN_EXPIRED: "campaign_expired" };
 class AppIconPremiumManager extends tmp3 {
   constructor() {
@@ -51,7 +51,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -125,7 +125,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
                   id = closure_132_2.id;
                 } else {
                   c7 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: "+95" };
                 }
                 obj3 = _self(_undefined2[13]);
               }
@@ -171,7 +171,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
             obj11 = _self(_undefined2[11]);
           }
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp89) {
         c7 = tmp;

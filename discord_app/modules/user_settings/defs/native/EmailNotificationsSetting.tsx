@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/EmailNotificationsSetting.tsx
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3206 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef3207 from "../../../notifications/NotificationSettings.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import notifications_NotificationSettingsUtils from "../../../notifications/NotificationSettingsUtils.tsx";
 import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
@@ -39,7 +39,7 @@ const obj4 = {};
 const merged1 = Object.assign(obj);
 obj4.useDescription = function useDescription() {
   const intl = util.intl;
-  return intl.string(_modDef3206.k3h440);
+  return intl.string(_modDef3207.k3h440);
 };
 obj4.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj4.usePredicate = function usePredicate() {

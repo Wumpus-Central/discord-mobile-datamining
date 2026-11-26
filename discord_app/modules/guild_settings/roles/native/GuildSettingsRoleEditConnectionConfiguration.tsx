@@ -133,7 +133,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7518).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7549).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -187,7 +187,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(20013).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(20077).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -195,9 +195,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(20013);
-  const tmpResult = metadataField(20013);
-  str1 = metadataField(20013).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(20077);
+  const tmpResult = metadataField(20077);
+  str1 = metadataField(20077).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -221,7 +221,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   }
   closure_11 = tmp14;
   if (undefined !== fieldTextHook) {
-    closure_13 = metadataField(1378).isIOS()
+    closure_13 = metadataField(1379).isIOS()
       ? map.numericalInputContainerIOSInline
       : map.numericalInputContainerAndroidInline;
     const intl = metadataField(1112).intl;
@@ -252,7 +252,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       },
     };
     const obj3 = { style: map.metadataRow, children: null };
-    const tmpResult2 = metadataField(1378);
+    const tmpResult2 = metadataField(1379);
     fieldTextHook = mapped.Children;
     map = fieldTextHook.map;
     mapped = map(intl.format(fieldTextHook, obj2), (children, arg1) => {
@@ -286,7 +286,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj5.children = onInputValueChange(metadataField(1186).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer")];
       const obj7 = { variant: "body-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(5603).Text, obj7);
+      items1[1] = onInputValueChange(metadataField(5634).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -328,9 +328,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
         _slicedToArray(tmp3, num);
       },
     };
-    return onInputValueChange(metadataField(7518).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(7549).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(20013).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(20077).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
@@ -891,7 +891,7 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1071).PlatformTypes;
-const Constants = fn(6340);
+const Constants = fn(6371);
 ({
   MetadataFields: metroImportDefault,
   OperatorTypes: closure_8,
@@ -901,7 +901,7 @@ const Constants = fn(6340);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   numericalInputContainerIOSInline: { marginTop: -2 },
   numericalInputContainerAndroidInline: null,

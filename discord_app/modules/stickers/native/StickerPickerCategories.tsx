@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10788).useStickerPickerStore;
+let useStickerPickerStore = fn(10834).useStickerPickerStore;
 const Constants = fn(1071);
 ({
   AnalyticEvents: closure_8,
@@ -23,7 +23,7 @@ const NODE_SIZE = Constants.NODE_SIZE;
 const ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: {
@@ -272,9 +272,9 @@ export default function _default(categories) {
   );
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(9750)();
+  const tmp19 = categoryIndex(9792)();
   const items9 = [
-    closure_14(categoryIndex(7380), {
+    closure_14(categoryIndex(7411), {
       estimatedListSize: "windowSize",
       horizontal: true,
       itemSize: EXPRESSION_FOOTER_HEIGHT,
@@ -300,12 +300,12 @@ export default function _default(categories) {
     const items10 = [,];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj4.style = items10;
-    const obj5 = { style: tmp.guildIcon, source: tmp17(10820) };
+    const obj5 = { style: tmp.guildIcon, source: tmp17(10866) };
     obj4.children = closure_14(categories(1186).Icon, obj5);
     obj3.children = closure_14(closure_5, obj4);
-    tmp22Result = closure_14(categories(6121).PressableOpacity, obj3);
+    tmp22Result = closure_14(categories(6152).PressableOpacity, obj3);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(9751), obj);
+  return closure_15(categoryIndex(9793), obj);
 }

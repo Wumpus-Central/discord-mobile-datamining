@@ -17,7 +17,7 @@ import ConjureSharedProjectStore from "../ConjureSharedProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelLoader = fn(4861).ChannelLoader;
+const ChannelLoader = fn(4892).ChannelLoader;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/useConjureProjectLinkEmbeds.tsx");
 

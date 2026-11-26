@@ -4,9 +4,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 let _default = fn(17).View;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 if (PlatformUtils.isIOS()) {
-  _default = fn(13584).default;
+  _default = fn(13636).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");

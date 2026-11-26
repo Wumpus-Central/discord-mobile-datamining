@@ -1,5 +1,5 @@
 // discord_app/modules/guild_identity/native/EditGuildIdentityAvatar.tsx
-import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,10 +9,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1071);
 ({ AnalyticsSections: closure_6, AnalyticsObjects: metroImportDefault, UpsellTypes: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1389).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");
@@ -111,27 +111,13 @@ export default function EditGuildIdentityAvatar(userId) {
     obj7.accessibilityLabel = intl.string(tmp2(tmp3[23]).t["70lEQe"]);
     const obj8 = {
       user: stateFromStores,
-      guildId: null,
-      pendingAvatarSrc: null,
-      pendingAvatarDecoration: null,
-      statusStyle: null,
-      disableStatus: null,
-      style: null,
+      guildId,
+      pendingAvatarSrc,
+      pendingAvatarDecoration,
+      statusStyle,
+      disableStatus,
+      style: avatarStyle,
     };
-    let tmp23;
-    if (null !== pendingAvatar) {
-      tmp23 = guildId;
-    }
-    obj8.guildId = tmp23;
-    let tmp24;
-    if (null !== pendingAvatar) {
-      tmp24 = pendingAvatarSrc;
-    }
-    obj8.pendingAvatarSrc = tmp24;
-    obj8.pendingAvatarDecoration = pendingAvatarDecoration;
-    obj8.statusStyle = statusStyle;
-    obj8.disableStatus = disableStatus;
-    obj8.style = avatarStyle;
     const items3 = [closure_10(tmp6(tmp3[24]), obj8)];
     let tmp20Result = !disabled;
     if (!disabled) {
@@ -141,7 +127,6 @@ export default function EditGuildIdentityAvatar(userId) {
     items3[1] = tmp20Result;
     obj7.children = items3;
     tmp19Result = closure_11(tmp2(tmp3[22]).PressableOpacity, obj7);
-    const tmp6Result = tmp6(tmp3[24]);
   }
   return tmp19Result;
 }

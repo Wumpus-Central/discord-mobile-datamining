@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1071).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   giftCodeRow: { paddingHorizontal: 16 },
   giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -166,7 +166,7 @@ prototype["render"] = function render() {
       const obj11 = { hours: null, revokeHook: null };
       const expiresAt2 = diff.expiresAt;
       diff = expiresAt2.diff;
-      diffResult = diff(require("../../../../../_runtime/metro/02168__.js")(), "h");
+      diffResult = diff(require("../../../../../_runtime/metro/02169__.js")(), "h");
       obj11.hours = diffResult;
       obj11.revokeHook = function revokeHook(children, arg1) {
         const obj = {
@@ -187,7 +187,7 @@ prototype["render"] = function render() {
     } else {
       const obj12 = { hours: null };
       const expiresAt = diff.expiresAt;
-      obj12.hours = expiresAt.diff(require("../../../../../_runtime/metro/02168__.js")(), "h");
+      obj12.hours = expiresAt.diff(require("../../../../../_runtime/metro/02169__.js")(), "h");
       formatResult = format(t.ltVZcJ, obj12);
     }
     t = { variant: "body-xs/normal", color: "text-subtle", children: formatResult };
@@ -195,7 +195,7 @@ prototype["render"] = function render() {
   }
   const obj5 = require("GiftCodeUtils");
 };
-GiftCodeRow.contextType = fn(5073).ThemeContext;
+GiftCodeRow.contextType = fn(5104).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/gifting/native/GiftCodeRow.tsx");
 

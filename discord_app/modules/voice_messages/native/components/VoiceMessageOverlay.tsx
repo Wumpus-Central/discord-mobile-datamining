@@ -3,18 +3,18 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import _modDef5720 from "../../../../../_runtime/metro/05720__.js";
+import _modDef5751 from "../../../../../_runtime/metro/05751__.js";
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import LegacyTokens from "../../../../design/migrations/native/LegacyTokens.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
-import inlineStyles from "../../../../../_runtime/07912_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07946_inlineStyles.js";
 import ChatInputActionButtonDefault from "../../../chat_input/native/action_buttons/ChatInputActionButton.tsx";
 import useVoiceMessageBottomInsetDefault from "../useVoiceMessageBottomInset.tsx";
-import _modDef13594 from "../../../../../_runtime/metro/13594__.js";
+import _modDef13646 from "../../../../../_runtime/metro/13646__.js";
 import VoiceMessageChatDefault from "VoiceMessageChat.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,7 +22,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import apply from "../../../../../_runtime/00012_apply.js";
 
-const module_1653_mod = _mod1653;
+const module_1654_mod = _mod1654;
 
 require = fn;
 function useDerivedColors(voiceMessageAnimationState, token, RED_400, token2, token3) {
@@ -30,7 +30,7 @@ function useDerivedColors(voiceMessageAnimationState, token, RED_400, token2, to
     closure_27,
     voiceMessageAnimationState,
     require("timing/timing").withTiming,
-    require("../../../../../_runtime/metro/01653__.js").Easing,
+    require("../../../../../_runtime/metro/01654__.js").Easing,
   ];
   _require = undefined;
   c1 = undefined;
@@ -46,8 +46,8 @@ function useDerivedColors(voiceMessageAnimationState, token, RED_400, token2, to
   VoiceMessageOverlayTsx6.__closure = items1;
   VoiceMessageOverlayTsx6.__workletHash = 1937850946684;
   VoiceMessageOverlayTsx6.__initData = tmp3;
-  const derivedValue = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(VoiceMessageOverlayTsx6);
-  const obj = require("../../../../../_runtime/metro/01653__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(VoiceMessageOverlayTsx6);
+  const obj = require("../../../../../_runtime/metro/01654__.js");
   const items2 = [
     closure_28,
     voiceMessageAnimationState,
@@ -55,7 +55,7 @@ function useDerivedColors(voiceMessageAnimationState, token, RED_400, token2, to
     token2,
     token3,
     RED_400,
-    require("../../../../../_runtime/metro/01653__.js").interpolateColor,
+    require("../../../../../_runtime/metro/01654__.js").interpolateColor,
     derivedValue,
     items,
   ];
@@ -99,7 +99,7 @@ function useDerivedColors(voiceMessageAnimationState, token, RED_400, token2, to
   VoiceMessageOverlayTsx7.__closure = items3;
   VoiceMessageOverlayTsx7.__workletHash = 10731604101373;
   VoiceMessageOverlayTsx7.__initData = tmp8;
-  return require("../../../../../_runtime/metro/01653__.js").useDerivedValue(VoiceMessageOverlayTsx7);
+  return require("../../../../../_runtime/metro/01654__.js").useDerivedValue(VoiceMessageOverlayTsx7);
 }
 function LockPill(voiceMessageAnimationState) {
   voiceMessageAnimationState = voiceMessageAnimationState.voiceMessageAnimationState;
@@ -122,7 +122,7 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx14.__closure = items1;
   VoiceMessageOverlayTsx14.__workletHash = 6639518721222;
   VoiceMessageOverlayTsx14.__initData = tmp7;
-  let items2 = [closure_37, require("../../../../../_runtime/metro/01706__.js").scheduleOnRN, tmp4];
+  let items2 = [closure_37, require("../../../../../_runtime/metro/01707__.js").scheduleOnRN, tmp4];
   _require = undefined;
   importDefault = undefined;
   [tmp10, tmp11, tmp12] = items2;
@@ -140,11 +140,11 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx15.__closure = items3;
   VoiceMessageOverlayTsx15.__workletHash = 17511119327213;
   VoiceMessageOverlayTsx15.__initData = tmp10;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     VoiceMessageOverlayTsx14,
     VoiceMessageOverlayTsx15,
   );
-  let obj = require("../../../../../_runtime/metro/01653__.js");
+  let obj = require("../../../../../_runtime/metro/01654__.js");
   const token = require("useToken").useToken(
     nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_LOCK_BACKGROUND_DEFAULT,
   );
@@ -165,7 +165,7 @@ function LockPill(voiceMessageAnimationState) {
     closure_30,
     voiceMessageAnimationState,
     require("timing/timing").withTiming,
-    require("../../../../../_runtime/metro/01653__.js").Easing,
+    require("../../../../../_runtime/metro/01654__.js").Easing,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -181,12 +181,12 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx8.__closure = items5;
   VoiceMessageOverlayTsx8.__workletHash = 13445838226418;
   VoiceMessageOverlayTsx8.__initData = tmp22;
-  const derivedValue = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(VoiceMessageOverlayTsx8);
-  const tmp5Result16 = require("../../../../../_runtime/metro/01653__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(VoiceMessageOverlayTsx8);
+  const tmp5Result16 = require("../../../../../_runtime/metro/01654__.js");
   const items6 = [
     closure_31,
     voiceMessageAnimationState,
-    require("../../../../../_runtime/metro/01653__.js").interpolate,
+    require("../../../../../_runtime/metro/01654__.js").interpolate,
     derivedValue,
     items,
   ];
@@ -206,9 +206,9 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx9.__closure = items7;
   VoiceMessageOverlayTsx9.__workletHash = 13136470989075;
   VoiceMessageOverlayTsx9.__initData = tmp28;
-  const derivedValue1 = require("../../../../../_runtime/metro/01653__.js").useDerivedValue(VoiceMessageOverlayTsx9);
-  const tmp5Result17 = require("../../../../../_runtime/metro/01653__.js");
-  const items8 = [closure_32, require("../../../../../_runtime/metro/01653__.js").interpolate, derivedValue, items, 68];
+  const derivedValue1 = require("../../../../../_runtime/metro/01654__.js").useDerivedValue(VoiceMessageOverlayTsx9);
+  const tmp5Result17 = require("../../../../../_runtime/metro/01654__.js");
+  const items8 = [closure_32, require("../../../../../_runtime/metro/01654__.js").interpolate, derivedValue, items, 68];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -230,11 +230,11 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx10.__closure = items9;
   VoiceMessageOverlayTsx10.__workletHash = 2807894586864;
   VoiceMessageOverlayTsx10.__initData = tmp34;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoiceMessageOverlayTsx10);
-  const tmp5Result18 = require("../../../../../_runtime/metro/01653__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoiceMessageOverlayTsx10);
+  const tmp5Result18 = require("../../../../../_runtime/metro/01654__.js");
   const items10 = [
     closure_33,
-    require("../../../../../_runtime/metro/01653__.js").interpolate,
+    require("../../../../../_runtime/metro/01654__.js").interpolate,
     derivedValue,
     items,
     token2,
@@ -287,11 +287,11 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx11.__closure = items11;
   VoiceMessageOverlayTsx11.__workletHash = 2634943908675;
   VoiceMessageOverlayTsx11.__initData = tmp40;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoiceMessageOverlayTsx11);
-  const tmp5Result19 = require("../../../../../_runtime/metro/01653__.js");
+  const animatedStyle1 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoiceMessageOverlayTsx11);
+  const tmp5Result19 = require("../../../../../_runtime/metro/01654__.js");
   const items12 = [
     closure_34,
-    require("../../../../../_runtime/metro/01653__.js").interpolate,
+    require("../../../../../_runtime/metro/01654__.js").interpolate,
     derivedValue,
     items,
     tmp21,
@@ -316,9 +316,9 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx12.__closure = items13;
   VoiceMessageOverlayTsx12.__workletHash = 9845319037974;
   VoiceMessageOverlayTsx12.__initData = tmp51;
-  const animatedStyle2 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoiceMessageOverlayTsx12);
-  const tmp5Result20 = require("../../../../../_runtime/metro/01653__.js");
-  const items14 = [closure_35, require("../../../../../_runtime/metro/01653__.js").interpolate, derivedValue, items];
+  const animatedStyle2 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoiceMessageOverlayTsx12);
+  const tmp5Result20 = require("../../../../../_runtime/metro/01654__.js");
+  const items14 = [closure_35, require("../../../../../_runtime/metro/01654__.js").interpolate, derivedValue, items];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -333,9 +333,9 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx13.__closure = items15;
   VoiceMessageOverlayTsx13.__workletHash = 15177392803931;
   VoiceMessageOverlayTsx13.__initData = tmp57;
-  const animatedStyle3 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoiceMessageOverlayTsx13);
-  const tmp5Result21 = require("../../../../../_runtime/metro/01653__.js");
-  const tmp14Result = importDefault(tmp3 ? 7103 : 10719);
+  const animatedStyle3 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoiceMessageOverlayTsx13);
+  const tmp5Result21 = require("../../../../../_runtime/metro/01654__.js");
+  const tmp14Result = importDefault(tmp3 ? 7134 : 10764);
   const items16 = [closure_38, initialAnimation, bottomInset, CHAT_INPUT_HEIGHT, 32, 8];
   _require = undefined;
   importDefault = undefined;
@@ -355,7 +355,7 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx16.__closure = items17;
   VoiceMessageOverlayTsx16.__workletHash = 6747984380168;
   VoiceMessageOverlayTsx16.__initData = tmp63;
-  const animatedStyle4 = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoiceMessageOverlayTsx16);
+  const animatedStyle4 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoiceMessageOverlayTsx16);
   const obj2 = { style: null, children: null };
   const items18 = [tmp.lockParentContainer, animatedStyle, animatedStyle4];
   obj2.style = items18;
@@ -363,28 +363,28 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result })];
-  const obj4 = { style: null, source: _modDef13594 };
+  const obj4 = { style: null, source: _modDef13646 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
   obj3.children = items20;
-  obj2.children = closure_14(module_1653.View, obj3);
-  return closure_13(module_1653.View, obj2);
+  obj2.children = closure_14(module_1654.View, obj3);
+  return closure_13(module_1654.View, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12906).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12907).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(12958).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12959).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1071).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12908).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12960).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-let module_1653 = module_1653_mod;
-let closure_16 = module_1653.createAnimatedComponent(fn(1186).Icon);
-let module_1653 = module_1653_mod;
-let closure_17 = module_1653.createAnimatedComponent(fn(5603).Text);
-let closure_18 = apply.memoize(() => module_1653.createAnimatedComponent(inlineStyles.Ellipse));
-const createStyles = fn(5012);
+let module_1654 = module_1654_mod;
+let closure_16 = module_1654.createAnimatedComponent(fn(1186).Icon);
+let module_1654 = module_1654_mod;
+let closure_17 = module_1654.createAnimatedComponent(fn(5634).Text);
+let closure_18 = apply.memoize(() => module_1654.createAnimatedComponent(inlineStyles.Ellipse));
+const createStyles = fn(5043);
 let closure_19 = createStyles.createStyles(() => {
   const obj = {
     innerContainer: {
@@ -542,7 +542,7 @@ let closure_26 = noop.memo(function VoiceMessagePrompt(voiceMessageState) {
   const effect = noop.useEffect(() => {
     c1.current = current;
   }, items);
-  _mod1653;
+  _mod1654;
   const items1 = [closure_25, initialAnimation, recordingAnimation];
   c0 = undefined;
   c1 = undefined;
@@ -626,9 +626,9 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   const bottomInset = useVoiceMessageBottomInsetDefault().bottomInset;
   let obj = require("useToken");
   if (obj2.useIsMobileRTCV2Enabled("VoiceMessageOverlay")) {
-    let SendMessageIcon = tmp(10614).WaveformIcon;
+    let SendMessageIcon = tmp(10659).WaveformIcon;
   } else {
-    SendMessageIcon = tmp(10459).MicrophoneIcon;
+    SendMessageIcon = tmp(10504).MicrophoneIcon;
   }
   obj2 = require("MobileRTCV2Experiment");
   const keyboardOpenPaddingStyle = require("FloatingChatInputContainer").useKeyboardOpenPaddingStyle();
@@ -636,41 +636,41 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   closure_129_0 = tmp7;
   closure_129_1 = exiting;
   let tmpResult = require("FloatingChatInputContainer");
-  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
   closure_129_2 = sharedValue;
   closure_129_3 = noop.useRef(performance.now());
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1653;
+    const obj = _mod1654;
     const obj2 = timing_timing;
     const result = dependencyMap.set(
-      obj.withDelay(500, obj2.withTiming(1, { easing: _mod1653.Easing.quad, duration: 250 })),
+      obj.withDelay(500, obj2.withTiming(1, { easing: _mod1654.Easing.quad, duration: 250 })),
     );
   }, items);
   const items1 = [sharedValue, exiting];
   const effect1 = noop.useEffect(() => {
     if (c1) {
-      const obj2 = { easing: _mod1653.Easing.quad, duration: 100 };
+      const obj2 = { easing: _mod1654.Easing.quad, duration: 100 };
       const result = dependencyMap.set(timing_timing.withTiming(0, obj2));
     }
   }, items1);
-  const tmpResult6 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
+  const tmpResult6 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
   closure_129_4 = sharedValue1;
   const items2 = [sharedValue, sharedValue1, tmp7];
   const effect2 = noop.useEffect(() => {
     if (c0) {
-      const obj2 = { easing: _mod1653.Easing.quad, duration: 200 };
+      const obj2 = { easing: _mod1654.Easing.quad, duration: 200 };
       const result = noop.set(timing_timing.withTiming(1, obj2));
       const _performance = performance;
       if (performance.now() - ref2.current < 500) {
-        const obj3 = { easing: _mod1653.Easing.quad, duration: 250 };
+        const obj3 = { easing: _mod1654.Easing.quad, duration: 250 };
         const result1 = dependencyMap.set(timing_timing.withTiming(1, obj3));
         const tmp2Result = timing_timing;
       }
     }
   }, items2);
-  const tmpResult7 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult7 = require("../../../../../_runtime/metro/01654__.js");
   [tmp15, tmp16] = noop.useState(VoiceMessageAnimationState.SENDING);
   const tmp14 = _slicedToArray(noop.useState(VoiceMessageAnimationState.SENDING), 2);
   const items3 = [closure_40, voiceMessageAnimationState];
@@ -685,7 +685,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   VoiceMessageOverlayTsx17.__closure = items4;
   VoiceMessageOverlayTsx17.__workletHash = 13417586896774;
   VoiceMessageOverlayTsx17.__initData = tmp17;
-  const items5 = [closure_41, require("../../../../../_runtime/metro/01706__.js").scheduleOnRN, tmp16];
+  const items5 = [closure_41, require("../../../../../_runtime/metro/01707__.js").scheduleOnRN, tmp16];
   _require = undefined;
   importDefault = undefined;
   [tmp19, tmp20, tmp21] = items5;
@@ -703,7 +703,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   VoiceMessageOverlayTsx18.__closure = items6;
   VoiceMessageOverlayTsx18.__workletHash = 8966188609438;
   VoiceMessageOverlayTsx18.__initData = tmp19;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     VoiceMessageOverlayTsx17,
     VoiceMessageOverlayTsx18,
   );
@@ -736,7 +736,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
       closure_0.remove();
     };
   }, items7);
-  const tmpResult8 = require("../../../../../_runtime/metro/01653__.js");
+  const tmpResult8 = require("../../../../../_runtime/metro/01654__.js");
   const items8 = [closure_42, sharedValue, bottomInset];
   _require = undefined;
   importDefault = undefined;
@@ -751,8 +751,8 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   VoiceMessageOverlayTsx19.__closure = items9;
   VoiceMessageOverlayTsx19.__workletHash = 8872010594998;
   VoiceMessageOverlayTsx19.__initData = tmp26;
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoiceMessageOverlayTsx19);
-  const tmpResult9 = require("../../../../../_runtime/metro/01653__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoiceMessageOverlayTsx19);
+  const tmpResult9 = require("../../../../../_runtime/metro/01654__.js");
   const wakeLock = require("WakeLock").useWakeLock("VoiceMessageOverlay");
   let obj3 = { style: null, children: null };
   const items10 = [tmp5.contentContainer, animatedStyle];
@@ -773,7 +773,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   const obj7 = { isRecording: tmp7, initialAnimation: sharedValue, leftAccessory: null, rightAccessory: null };
   const tmpResult10 = require("WakeLock");
   const obj8 = {
-    icon: _modDef5720,
+    icon: _modDef5751,
     variant: null,
     size: "sm",
     maxFontSizeMultiplier: 2,
@@ -818,7 +818,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
     floatingSendButtonIconActive: obj15.activeIconStyle,
   } = tmp5);
   if (tmp7) {
-    SendMessageIcon = tmp(5710).SendMessageIcon;
+    SendMessageIcon = tmp(5741).SendMessageIcon;
   }
   const obj10 = { children: null };
   obj9.IconComponent = SendMessageIcon;
@@ -834,7 +834,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   items12[2] = closure_13(closure_5, obj4);
   obj3.children = items12;
   const items13 = [
-    closure_14(module_1653.View, obj3),
+    closure_14(module_1654.View, obj3),
     closure_13(LockPill, { bottomInset, initialAnimation: sharedValue, voiceMessageAnimationState }),
   ];
   obj10.children = items13;
@@ -872,7 +872,7 @@ const memoResult = noop.memo(function VoiceMessageEllipse(arg0) {
   VoiceMessageOverlayTsx1.__closure = items2;
   VoiceMessageOverlayTsx1.__workletHash = 14053531181026;
   VoiceMessageOverlayTsx1.__initData = tmp5;
-  const derivedValue = _mod1653.useDerivedValue(VoiceMessageOverlayTsx1);
+  const derivedValue = _mod1654.useDerivedValue(VoiceMessageOverlayTsx1);
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BRAND);
   const tmpResult = useToken;
   const tmp11 = useDerivedColors(
@@ -895,8 +895,8 @@ const memoResult = noop.memo(function VoiceMessageEllipse(arg0) {
   VoiceMessageOverlayTsx2.__closure = items4;
   VoiceMessageOverlayTsx2.__workletHash = 12904912958499;
   VoiceMessageOverlayTsx2.__initData = tmp12;
-  const derivedValue1 = _mod1653.useDerivedValue(VoiceMessageOverlayTsx2);
-  const tmpResult4 = _mod1653;
+  const derivedValue1 = _mod1654.useDerivedValue(VoiceMessageOverlayTsx2);
+  const tmpResult4 = _mod1654;
   const items5 = [closure_23, tmp11, radius, derivedValue1];
   c0 = undefined;
   c1 = undefined;
@@ -918,8 +918,8 @@ const memoResult = noop.memo(function VoiceMessageEllipse(arg0) {
   VoiceMessageOverlayTsx3.__closure = items6;
   VoiceMessageOverlayTsx3.__workletHash = 5686983311618;
   VoiceMessageOverlayTsx3.__initData = tmp16;
-  const animatedProps = _mod1653.useAnimatedProps(VoiceMessageOverlayTsx3);
-  const tmpResult5 = _mod1653;
+  const animatedProps = _mod1654.useAnimatedProps(VoiceMessageOverlayTsx3);
+  const tmpResult5 = _mod1654;
   const items7 = [closure_24, radius, height, derivedValue1];
   c0 = undefined;
   c1 = undefined;
@@ -937,12 +937,12 @@ const memoResult = noop.memo(function VoiceMessageEllipse(arg0) {
   VoiceMessageOverlayTsx4.__closure = items8;
   VoiceMessageOverlayTsx4.__workletHash = 12520636886923;
   VoiceMessageOverlayTsx4.__initData = tmp21;
-  const animatedStyle = _mod1653.useAnimatedStyle(VoiceMessageOverlayTsx4);
-  const tmpResult6 = _mod1653;
+  const animatedStyle = _mod1654.useAnimatedStyle(VoiceMessageOverlayTsx4);
+  const tmpResult6 = _mod1654;
   const obj3 = { style: animatedStyle, children: null };
   const tmp26 = closure_18();
   obj3.children = state(inlineStyles.Svg, { children: state(closure_18(), { animatedProps, opacity }) });
-  return state(module_1653.View, obj3);
+  return state(module_1654.View, obj3);
 });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageOverlay.tsx");

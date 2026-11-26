@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/app_channel/native/getConjureAppSoundButton.tsx
-import _modDef4244 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4245 from "../../intl/ConjureUntranslated.messages.js";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -11,12 +11,12 @@ export default function getConjureAppSoundButton(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const intl = require("util").intl;
-  const tmp3 = _modDef4244;
+  const tmp3 = _modDef4245;
   const obj = { label: intl.string(arg1 ? tmp3.bd0Ufh : tmp3.dxBzpe), IconComponent: null, onPress: null };
   if (arg1) {
-    let VoiceXIcon = tmp(7136).VoiceNormalIcon;
+    let VoiceXIcon = tmp(7167).VoiceNormalIcon;
   } else {
-    VoiceXIcon = tmp(10356).VoiceXIcon;
+    VoiceXIcon = tmp(10401).VoiceXIcon;
   }
   obj.IconComponent = VoiceXIcon;
   obj.onPress = function onPress() {

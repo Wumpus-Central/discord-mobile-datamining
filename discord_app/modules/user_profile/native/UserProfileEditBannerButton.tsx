@@ -10,7 +10,7 @@ import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBan
 import noop from "../../../../_runtime/metro/00019__.js";
 import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
 
-const EditButtonDefault = tmp(16018);
+const EditButtonDefault = tmp(16048);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -58,10 +58,10 @@ function EditButton(disabled) {
   return metroImportDefault(Pressables.PressableOpacity, obj);
 }
 const View = fn(17).View;
-let closure_6 = fn(6106).TrackUserProfileEditActions;
+let closure_6 = fn(6137).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,

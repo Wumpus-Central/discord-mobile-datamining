@@ -1,5 +1,5 @@
 // discord_app/modules/game_organization_invites/native/openGameOrganizationJoinOutcomeActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02120_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GameOrganizationInviteConstants from "../GameOrganizationInviteConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default function openGameOrganizationJoinOutcomeActionSheet(code, result) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12298, dependencyMap.paths), closure_3, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12348, dependencyMap.paths), closure_3, {
     code,
     result,
   });

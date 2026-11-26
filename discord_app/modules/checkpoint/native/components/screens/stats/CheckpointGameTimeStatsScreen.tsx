@@ -3,7 +3,7 @@ import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3494 from "../../../../Checkpoint2026.messages.js";
+import _modDef3495 from "../../../../Checkpoint2026.messages.js";
 import CheckpointConstants from "../../../../CheckpointConstants.tsx";
 import CheckpointStatsUtils from "../../../../CheckpointStatsUtils.tsx";
 import CalendarIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
@@ -15,8 +15,8 @@ import CheckpointGlobalStatNumberDefault from "../../CheckpointGlobalStatNumber.
 import CheckpointCountUpStatNumberDefault from "../../CheckpointCountUpStatNumber.tsx";
 import CheckpointNumberUtils from "../../../CheckpointNumberUtils.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
-import _modDef12852 from "../../../../../../../discord_assets/assets/checkpoint/2026/gaming_loop_400w.png.js";
-import _modDef12853 from "../../../../../../../discord_assets/assets/checkpoint/2026/gaming_loop_static.png.js";
+import _modDef12902 from "../../../../../../../discord_assets/assets/checkpoint/2026/gaming_loop_400w.png.js";
+import _modDef12903 from "../../../../../../../discord_assets/assets/checkpoint/2026/gaming_loop_static.png.js";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
@@ -127,7 +127,7 @@ export default function CheckpointGameTimeStatsScreen() {
   const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
   const string = intl.string;
-  const tmp2Result = _modDef3494;
+  const tmp2Result = _modDef3495;
   if (rounded <= 0 && null != stateFromStores1) {
     let stringResult = string(tmp2Result["dx4+NI"]);
   } else {
@@ -138,7 +138,7 @@ export default function CheckpointGameTimeStatsScreen() {
     if (null != checkpointTopPercent) {
       const intl2 = util.intl;
       const obj3 = { percent: checkpointTopPercent };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3494.uKOgr9, obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3495.uKOgr9, obj3);
     }
   }
   const obj4 = { centered: tmp4, children: null };
@@ -147,8 +147,8 @@ export default function CheckpointGameTimeStatsScreen() {
   const tmp5Result = CheckpointStatsUtils;
   const obj7 = { animatedUri: null, staticUri: null, style: null };
   const tmp2Result5 = CheckpointScreenDefault;
-  obj7.animatedUri = _modDef12852;
-  obj7.staticUri = _modDef12853;
+  obj7.animatedUri = _modDef12902;
+  obj7.staticUri = _modDef12903;
   const items2 = [tmp.image];
   let wideImage = tmp4;
   if (tmp4) {
@@ -188,7 +188,7 @@ export default function CheckpointGameTimeStatsScreen() {
   const tmp2Result7 = CheckpointTextDefault;
   if (rounded <= 0 && null != stateFromStores1) {
     const intl5 = util.intl;
-    let stringResult1 = intl5.string(_modDef3494["7nfXWu"]);
+    let stringResult1 = intl5.string(_modDef3495["7nfXWu"]);
   } else if (null != checkpointTopPercent) {
     const intl4 = util.intl;
     const obj16 = {
@@ -197,11 +197,11 @@ export default function CheckpointGameTimeStatsScreen() {
         return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
       },
     };
-    stringResult1 = intl4.format(_modDef3494["4FXB/m"], obj16);
+    stringResult1 = intl4.format(_modDef3495["4FXB/m"], obj16);
   } else {
     const intl3 = util.intl;
     const obj17 = { numDays: rounded };
-    stringResult1 = intl3.format(_modDef3494.iCKjh6, obj17);
+    stringResult1 = intl3.format(_modDef3495.iCKjh6, obj17);
   }
   obj15.children = stringResult1;
   items5[2] = timestampProducer(CheckpointTextDefault, obj15);

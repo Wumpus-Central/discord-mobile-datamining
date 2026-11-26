@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2168 from "../../../_runtime/metro/02168__.js";
+import _modDef2169 from "../../../_runtime/metro/02169__.js";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -27,7 +27,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -75,11 +75,11 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
             if (null == closure_130_2.recipients) {
               c5 = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             } else if (closure_130_2.recipients.length > 1) {
               c5 = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             } else {
               const recipients = closure_130_2.recipients;
               c6 = 3;
@@ -117,7 +117,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj11 = { openChannel: true, navigationReplace: closure_131_0(closure_131_2[11]).isGuildsOnTopOfTabs() };
         tmp20(CHANNELResult, obj11);
         c7 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       } catch (tmp34) {
         closure_4 = tmp34;
         if (tmp4 === c5) {
@@ -130,7 +130,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const ChannelRecord = fn(4865);
+const ChannelRecord = fn(4896);
 ({ PrivateChannelRecord: hasOwnProperty, UnknownChannelRecord: closure_6 } = ChannelRecord);
 const Constants = fn(1071);
 ({ ChannelTypes: closure_9, Routes: closure_10 } = Constants);
@@ -164,7 +164,7 @@ export function useDueInString(arg0) {
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef2168.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef2169.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;

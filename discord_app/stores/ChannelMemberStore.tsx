@@ -3,7 +3,7 @@ import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import MurmurHashV3Default from "../../_runtime/01250_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01251_MurmurHashV3.js";
 import PermissionUtilsAll from "../utils/PermissionUtils.tsx";
 import ExperimentStore from "../modules/experiments/ExperimentStore.tsx";
 import ApplicationStreamingStore from "ApplicationStreamingStore.tsx";
@@ -193,7 +193,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "channel_id" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "IconComponent" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -288,7 +288,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "channel_id" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "IconComponent" };
           let str = "";
           if (null != role) {
             str = role.name;

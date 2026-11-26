@@ -6,14 +6,14 @@ import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import _modDef6396 from "../../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js";
-import _modDef6397 from "../../../../../discord_assets/assets/checkpoint/2026/clyde_small_static.png.js";
+import _modDef6427 from "../../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js";
+import _modDef6428 from "../../../../../discord_assets/assets/checkpoint/2026/clyde_small_static.png.js";
 import VoiceNormalIcon2 from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import CheckpointActionCreators from "../../CheckpointActionCreators.tsx";
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer.tsx";
 import CheckpointHeaderButtonDefault from "CheckpointHeaderButton.tsx";
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer.tsx";
 import CheckpointStore from "../../CheckpointStore.tsx";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -49,11 +49,11 @@ let result = size.fileFinishedImporting("modules/checkpoint/native/components/Ch
 export default function CheckpointHeader(logoAnimatedUri) {
   logoAnimatedUri = logoAnimatedUri.logoAnimatedUri;
   if (logoAnimatedUri === undefined) {
-    logoAnimatedUri = _modDef6396;
+    logoAnimatedUri = _modDef6427;
   }
   let logoStaticUri = logoAnimatedUri.logoStaticUri;
   if (logoStaticUri === undefined) {
-    logoStaticUri = _modDef6397;
+    logoStaticUri = _modDef6428;
   }
   let color = logoAnimatedUri.color;
   if (color === undefined) {

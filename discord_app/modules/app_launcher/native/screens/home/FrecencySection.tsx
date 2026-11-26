@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import _modDef1653 from "../../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../../_runtime/metro/01654__.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
 import ChevronSmallDownIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
@@ -117,7 +117,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12962).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(13014).getAppLauncherIconSource(app.section.application);
     let obj = {
       style: disabled ? tmp.appContainerDisabled : tmp.appContainer,
       disabled,
@@ -149,22 +149,22 @@ function FrecentApp(app) {
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_11(onAppSelected(5699), obj2);
+      tmp3 = closure_11(onAppSelected(5730), obj2);
     }
     items = [tmp3];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12971).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(13023).SubmittingOverlay, obj3);
     obj.children = items;
-    return closure_12(app(6121).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(6152).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(12964).FrecencySectionSelection;
+let FrecencySectionSelection = fn(13016).FrecencySectionSelection;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: { marginBottom: nativeDefault.space.PX_16 },
   headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
@@ -536,7 +536,7 @@ export default function FrecencySection(loading) {
               const obj3 = { style, children: null };
               const obj4 = { color: "interactive-text-default", style: selection.contextMenuIcon };
               obj3.children = closure_2_11(ChevronSmallDownIcon.ChevronSmallDownIcon, obj4);
-              tmp5Result = closure_2_11(_modDef1653.View, obj3);
+              tmp5Result = closure_2_11(_modDef1654.View, obj3);
             }
           }
           items[1] = tmp5Result;

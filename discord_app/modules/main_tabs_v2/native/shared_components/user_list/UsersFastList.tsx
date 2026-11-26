@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../../_runtime/metro/01654__.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -15,7 +15,7 @@ import ChannelRowDefault from "ChannelRow.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function Placeholder(arg0) {
@@ -40,11 +40,11 @@ function PlaceholderSection() {
   return metroImportDefault(View, {});
 }
 const View = fn(17).View;
-const UsersFastListConstants = fn(10685);
+const UsersFastListConstants = fn(10730);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   sectionHeader: { flex: 1, overflow: "hidden" },
   stickySectionContent: { top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING },
@@ -147,7 +147,7 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   UsersFastListTsx1.__closure = items3;
   UsersFastListTsx1.__workletHash = 5651317094590;
   UsersFastListTsx1.__initData = tmp7;
-  const derivedValue = _mod1653.useDerivedValue(UsersFastListTsx1);
+  const derivedValue = _mod1654.useDerivedValue(UsersFastListTsx1);
   const items4 = [closure_14, derivedValue, tmp];
   c0 = undefined;
   c1 = undefined;
@@ -166,13 +166,13 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   UsersFastListTsx2.__closure = items5;
   UsersFastListTsx2.__workletHash = 3082250653169;
   UsersFastListTsx2.__initData = tmp11;
-  animatedStyle = _mod1653.useAnimatedStyle(UsersFastListTsx2);
+  animatedStyle = _mod1654.useAnimatedStyle(UsersFastListTsx2);
   const items6 = [tmp.sectionHeader, animatedStyle];
   const memo2 = noop.useMemo(() => {
     items = [closure_3.sectionHeader, animatedStyle];
     return items;
   }, items6);
-  const tmp3Result = _mod1653;
+  const tmp3Result = _mod1654;
   const items7 = [closure_15, derivedValue];
   c0 = undefined;
   [tmp16, tmp17] = items7;
@@ -189,7 +189,7 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   UsersFastListTsx3.__closure = items8;
   UsersFastListTsx3.__workletHash = 4870088856322;
   UsersFastListTsx3.__initData = tmp16;
-  const animatedStyle1 = _mod1653.useAnimatedStyle(UsersFastListTsx3);
+  const animatedStyle1 = _mod1654.useAnimatedStyle(UsersFastListTsx3);
   if (null == title) {
     if (null == actionTitle) {
       const obj4 = { style: tmp.emptySection };
@@ -264,11 +264,11 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
         style: animatedStyle1,
         children: metroImportDefault(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: true }),
       };
-      tmp35 = metroImportDefault(_modDef1653.View, obj15);
+      tmp35 = metroImportDefault(_modDef1654.View, obj15);
     }
     const items12 = [tmp35, tmp19Result5];
     obj14.children = items12;
-    tmp19Result6 = React5(_modDef1653.View, obj14);
+    tmp19Result6 = React5(_modDef1654.View, obj14);
   }
   return tmp19Result6;
 });

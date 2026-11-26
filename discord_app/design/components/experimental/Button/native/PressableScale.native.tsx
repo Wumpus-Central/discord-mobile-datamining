@@ -1,15 +1,15 @@
 // discord_app/design/components/experimental/Button/native/PressableScale.native.tsx
-import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../../_runtime/metro/01654__.js";
 import ButtonHooks from "../../../Button/native/ButtonHooks.native.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const module_1653 = _mod1653;
+const module_1654 = _mod1654;
 
 require = fn;
 let closure_2 = ["style"];
 const jsx = fn(21).jsx;
-let closure_5 = module_1653.createAnimatedComponent(fn(17).Pressable);
+let closure_5 = module_1654.createAnimatedComponent(fn(17).Pressable);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/PressableScale.native.tsx");
 
@@ -23,7 +23,7 @@ export function PressableScale(scaleAmountInPx) {
     scaleAmountInPx,
     Object.assign({ style: 0, scaleAmountInPx: 0, onLayout: 0, onPressIn: 0, onPressOut: 0, ref: 0 }),
   );
-  const sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(0);
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(
     sharedValue,
     num,

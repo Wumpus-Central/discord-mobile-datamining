@@ -1,18 +1,18 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawerTitle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import VoicePanelHeaderGlassBlurDefault from "../shared/VoicePanelHeaderGlassBlur.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   titleWrapper: {
     position: "absolute",
@@ -22,7 +22,7 @@ let obj = {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    height: fn(11732).CONTROLS_DRAWER_HEADER_SIZE,
+    height: fn(11780).CONTROLS_DRAWER_HEADER_SIZE,
   },
   titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 },
   titlePillBG: null,
@@ -44,7 +44,7 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   }
   ({ style, blurStyle } = children);
   const tmp = closure_6();
-  const sharedValue = _mod1653.useSharedValue(true);
+  const sharedValue = _mod1654.useSharedValue(true);
   items = [closure_7, shown, sharedValue, disablePill, tmp.titlePillBG.backgroundColor];
   c0 = undefined;
   c1 = undefined;
@@ -75,7 +75,7 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   VoicePanelControlsDrawerTitleTsx1.__closure = items1;
   VoicePanelControlsDrawerTitleTsx1.__workletHash = 6652044620822;
   VoicePanelControlsDrawerTitleTsx1.__initData = tmp5;
-  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelControlsDrawerTitleTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(VoicePanelControlsDrawerTitleTsx1);
   const obj3 = { style: null, children: null };
   const items2 = [tmp.titleWrapper, style];
   obj3.style = items2;
@@ -95,7 +95,7 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   };
   const items4 = [tmp.titlePill, animatedStyle];
   obj5.style = items4;
-  items3[1] = React4(_modDef1653.View, obj5);
+  items3[1] = React4(_modDef1654.View, obj5);
   obj3.children = items3;
   return hasOwnProperty(tmp13, obj3);
 });

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/PlayIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod7765 from "../../../../../../../_runtime/metro/07765__.js";
+import _mod7799 from "../../../../../../../_runtime/metro/07799__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function PlayIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7765, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7799, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

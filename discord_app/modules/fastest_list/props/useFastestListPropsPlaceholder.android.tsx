@@ -39,10 +39,10 @@ function createNativePlaceholderConfig(listFooter) {
     placeholderFeedShape: "isArray",
     placeholderFeedShapeSize: "channel_id",
     placeholderType: NONE,
-    width: null,
-    height: null,
-    verticalAlignment: null,
-    horizontalAlignment: null,
+    width: "v",
+    height: "window",
+    verticalAlignment: "Button",
+    horizontalAlignment: "isArray",
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7387).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7418).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

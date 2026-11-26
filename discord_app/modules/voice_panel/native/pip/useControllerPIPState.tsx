@@ -13,11 +13,11 @@ import PIPSpeakerStore from "PIPSpeakerStore.tsx";
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19391);
+const useExternalPipSelectedTileDefault = tmp6(19454);
 require = fn;
-const VoicePanelModes = fn(11734).VoicePanelModes;
-const ActivityPanelModes = fn(5638).ActivityPanelModes;
-const asLaunched = fn(6906).asLaunched;
+const VoicePanelModes = fn(11782).VoicePanelModes;
+const ActivityPanelModes = fn(5669).ActivityPanelModes;
+const asLaunched = fn(6937).asLaunched;
 let closure_12 = {
   code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})",
 };
@@ -37,14 +37,14 @@ export function useControllerPIPState(channelId) {
   const mode = channelId.mode;
   _slicedToArray = undefined;
   ({ windowDimensions, pipAvoidanceSpecs, safeArea } = channelId);
-  let obj = require("../../../../../_runtime/metro/01653__.js");
+  let obj = require("../../../../../_runtime/metro/01654__.js");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
   const ref = noop.useRef({
     id: "displayName",
     mode: "isArray",
     width: false,
     height: null,
-    containerHeight: "sku",
+    containerHeight: "transparent",
     showSecondaryPIP: null,
     scale: sharedValue,
   });
@@ -216,7 +216,7 @@ export function useControllerPIPState(channelId) {
   useControllerPIPStateTsx2.__closure = items6;
   useControllerPIPStateTsx2.__workletHash = 16873305114518;
   useControllerPIPStateTsx2.__initData = tmp24;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     useControllerPIPStateTsx1,
     useControllerPIPStateTsx2,
   );

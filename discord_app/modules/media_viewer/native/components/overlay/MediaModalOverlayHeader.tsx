@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../../_runtime/metro/01654__.js";
 import NavigationRouteUtils from "../../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -16,15 +16,15 @@ import useOverlayLayoutDriver from "../../useOverlayLayoutDriver.tsx";
 import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const SHARE_PREPARING_MODAL_KEY = fn(8651).SHARE_PREPARING_MODAL_KEY;
+const SHARE_PREPARING_MODAL_KEY = fn(8693).SHARE_PREPARING_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_8 = createStyles.createStyles({
   navbarInner: { flex: 1, justifyContent: "space-between" },
   navbarLeft: { flexShrink: 1, flexDirection: "row", marginRight: 8 },
@@ -75,7 +75,7 @@ export function MediaModalOverlayHeader(arg0) {
   MediaModalOverlayHeaderTsx1.__closure = items1;
   MediaModalOverlayHeaderTsx1.__workletHash = 9063538094430;
   MediaModalOverlayHeaderTsx1.__initData = tmp9;
-  const animatedStyle = _mod1653.useAnimatedStyle(MediaModalOverlayHeaderTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(MediaModalOverlayHeaderTsx1);
   const obj5 = { style: null, children: null };
   const obj6 = {};
   let merged = Object.assign(absoluteFillObject.absoluteFillObject);
@@ -143,14 +143,14 @@ export function MediaModalOverlayHeader(arg0) {
           const obj = { accessibilityLabel: null, icon: null, ref: null };
           const intl = _undefined(1112).intl;
           obj.accessibilityLabel = intl.string(_undefined(1112).t.PdRCRg);
-          const tmp4 = _undefined2(8656);
+          const tmp4 = _undefined2(8698);
           if (obj2.isAndroid()) {
-            let tmp2Result = closure_1_6(_undefined(14080).MoreVerticalIcon, {
+            let tmp2Result = closure_1_6(_undefined(14132).MoreVerticalIcon, {
               size: "md",
               color: "interactive-text-active",
             });
           } else {
-            tmp2Result = closure_1_6(_undefined(7711).MoreHorizontalIcon, {
+            tmp2Result = closure_1_6(_undefined(7745).MoreHorizontalIcon, {
               size: "md",
               color: "interactive-text-active",
             });
@@ -170,6 +170,6 @@ export function MediaModalOverlayHeader(arg0) {
   items5[1] = tmp15Result;
   obj8.children = items5;
   obj7.children = metroImportDefault(MediaModalOverlayHeaderWrapper.MediaModalOverlayHeaderWrapper, obj8);
-  obj5.children = timestampProducer(_modDef1653.View, obj7);
-  return timestampProducer(_modDef1653.View, obj5);
+  obj5.children = timestampProducer(_modDef1654.View, obj7);
+  return timestampProducer(_modDef1654.View, obj5);
 }

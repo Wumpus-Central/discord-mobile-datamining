@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/useSheetDismissPointerEvents.tsx
-import _mod1653 from "../../../../_runtime/metro/01653__.js";
-import BottomSheetModal from "../../../../_runtime/05244_BottomSheetModal.js";
-import LegacyBaseButton from "../../../../_runtime/05272_LegacyBaseButton.js";
+import _mod1654 from "../../../../_runtime/metro/01654__.js";
+import BottomSheetModal from "../../../../_runtime/05275_BottomSheetModal.js";
+import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_2 = {
@@ -44,5 +44,5 @@ export default function useSheetDismissPointerEvents() {
   useSheetDismissPointerEventsTsx1.__closure = items1;
   useSheetDismissPointerEventsTsx1.__workletHash = 6909948922505;
   useSheetDismissPointerEventsTsx1.__initData = tmp6;
-  return _mod1653.useAnimatedStyle(useSheetDismissPointerEventsTsx1);
+  return _mod1654.useAnimatedStyle(useSheetDismissPointerEventsTsx1);
 }

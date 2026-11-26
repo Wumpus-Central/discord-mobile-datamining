@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -17,11 +17,11 @@ export default function useQuestDockAnimatedBorderRadius(arg0) {
   }
   items = [
     closure_3,
-    _mod1653.interpolate,
+    _mod1654.interpolate,
     noop.useContext(QuestDockExternalCoordinationContext.QuestDockExternalCoordinationContext).questDockOffset,
     num,
     arg0,
-    _mod1653.Extrapolation,
+    _mod1654.Extrapolation,
   ];
   c0 = undefined;
   c1 = undefined;
@@ -37,5 +37,5 @@ export default function useQuestDockAnimatedBorderRadius(arg0) {
   useQuestDockAnimatedBorderRadiusTsx1.__closure = items1;
   useQuestDockAnimatedBorderRadiusTsx1.__workletHash = 16041776927081;
   useQuestDockAnimatedBorderRadiusTsx1.__initData = tmp;
-  return _mod1653.useDerivedValue(useQuestDockAnimatedBorderRadiusTsx1);
+  return _mod1654.useDerivedValue(useQuestDockAnimatedBorderRadiusTsx1);
 }

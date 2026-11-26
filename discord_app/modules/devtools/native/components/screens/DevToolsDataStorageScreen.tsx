@@ -1,7 +1,7 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Link from "../../../../../../_runtime/01501_Link.js";
+import Link from "../../../../../../_runtime/01502_Link.js";
 import DatabaseDaosDefault from "../../../../app_database/DatabaseDaos.tsx";
 import DatabaseManagerDefault from "../../../../app_database/system/DatabaseManager.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -16,10 +16,10 @@ require = fn;
 function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(7476).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(7507).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(7517).ActionSheetRow, {
+    children: jsx(store(7548).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -32,9 +32,9 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   };
-  obj.children = jsx(store(7517).ActionSheetRow.Group, {
+  obj.children = jsx(store(7548).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7517).ActionSheetRow, {
+    children: jsx(store(7548).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -47,15 +47,15 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   });
-  return jsx(store(7515).ActionSheet, {
-    header: jsx(store(7476).BottomSheetTitleHeader, { title: store.getName() }),
+  return jsx(store(7546).ActionSheet, {
+    header: jsx(store(7507).BottomSheetTitleHeader, { title: store.getName() }),
     children: null,
   });
 }
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,

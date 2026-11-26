@@ -1,7 +1,7 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoriesUnicodeShortcutItem.tsx
 import util from "../../../../../intl/index.native.tsx";
-import _mod1653 from "../../../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../../../_runtime/metro/01706__.js";
+import _mod1654 from "../../../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../../../_runtime/metro/01707__.js";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon.tsx";
 import cheapWorkletShallowEqual from "../../../../reanimated/native/cheapWorkletShallowEqual.tsx";
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Constants = fn(1071);
 ({ EXPRESSION_FOOTER_HEIGHT: closure_6, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
 let size = {
   justifyContent: "center",
@@ -62,7 +62,7 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(category) {
     categoryIndex,
     timestampProducer,
     first,
-    _mod1706.scheduleOnRN,
+    _mod1707.scheduleOnRN,
     tmp[1],
   ];
   c0 = undefined;
@@ -97,7 +97,7 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(category) {
   EmojiPickerCategoriesUnicodeShortcutItemTsx2.__closure = items3;
   EmojiPickerCategoriesUnicodeShortcutItemTsx2.__workletHash = 7076312301625;
   EmojiPickerCategoriesUnicodeShortcutItemTsx2.__initData = tmp7;
-  const animatedReaction = _mod1653.useAnimatedReaction(
+  const animatedReaction = _mod1654.useAnimatedReaction(
     EmojiPickerCategoriesUnicodeShortcutItemTsx1,
     EmojiPickerCategoriesUnicodeShortcutItemTsx2,
   );

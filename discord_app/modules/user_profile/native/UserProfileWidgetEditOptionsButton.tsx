@@ -14,7 +14,7 @@ export default function UserProfileWidgetEditOptionsButton(widget) {
     ref,
     size: "sm",
     variant: "secondary",
-    icon: jsx(widget(7711).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }),
+    icon: jsx(widget(7745).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }),
     accessibilityLabel: null,
     onPress: null,
   };
@@ -23,11 +23,11 @@ export default function UserProfileWidgetEditOptionsButton(widget) {
   obj.onPress = function onPress() {
     return openUserProfileWidgetEditOptionsActionSheetDefault({ widget, returnFocusRef: ref });
   };
-  return jsx(widget(7910).IconButton, {
+  return jsx(widget(7944).IconButton, {
     ref,
     size: "sm",
     variant: "secondary",
-    icon: jsx(widget(7711).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }),
+    icon: jsx(widget(7745).MoreHorizontalIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }),
     accessibilityLabel: null,
     onPress: null,
   });

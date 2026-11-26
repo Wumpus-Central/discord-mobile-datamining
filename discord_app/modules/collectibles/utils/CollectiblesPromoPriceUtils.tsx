@@ -62,7 +62,7 @@ function getNextStorefrontPromotionBoundary(pricingPromotionIds) {
   }
   return tmp2;
 }
-let closure_6 = fn(11081).doesStorefrontPromotionCoverSku;
+let closure_6 = fn(11127).doesStorefrontPromotionCoverSku;
 const Constants = fn(1071);
 ({ COLLECTIBLES_APPLICATION_ID: metroImportDefault, CurrencyCodes: closure_8, PriceTypes: closure_9 } = Constants);
 const result = 10 * DurationsDefault.Millis.MINUTE;
@@ -215,8 +215,8 @@ export function areStorefrontPricingPromotionsActive(arg0) {
 export { getNextStorefrontPromotionBoundary };
 export function useCollectiblesStorefrontPrices(skuId, c7) {
   stateFromStores2 = skuId;
-  stateFromStores2(11206).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
-  const obj = stateFromStores2(11206);
+  stateFromStores2(11252).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
+  const obj = stateFromStores2(11252);
   items = [SKUPricesStore];
   const stateFromStores = stateFromStores2(504).useStateFromStores(items, () => {
     let pricesForSkuId;

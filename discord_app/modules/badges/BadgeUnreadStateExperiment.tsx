@@ -3,7 +3,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ApexExperiment = fn(1450);
+const ApexExperiment = fn(1451);
 let closure_4 = ApexExperiment.createApexExperiment({
   name: "2026-10-badges-unread-state",
   kind: "user",

@@ -1,7 +1,7 @@
 // discord_app/modules/waterwheels/interest/InterestPickerExperiment.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ApexExperiment = fn(1450);
+const ApexExperiment = fn(1451);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-10-interest-picker",
   kind: "user",

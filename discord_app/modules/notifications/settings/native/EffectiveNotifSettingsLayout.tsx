@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/native/EffectiveNotifSettingsLayout.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3206 from "../../NotificationSettings.messages.js";
+import _modDef3207 from "../../NotificationSettings.messages.js";
 import EffectiveNotifSettingsActionCreators from "../EffectiveNotifSettingsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingsProtoStore from "../../../user_settings/UserSettingsProtoStore.tsx";
@@ -28,22 +28,22 @@ function EffectiveSettingsHeader() {
     let obj = { style: tmp.notice, children: null };
     const obj2 = { type: "warning", role: "status", message: null, action: null };
     const intl = loading(1112).intl;
-    obj2.message = intl.string(_modDef3206.Nu2TMI);
+    obj2.message = intl.string(_modDef3207.Nu2TMI);
     const obj3 = { text: null, onPress: null, loading: null };
     const intl2 = loading(1112).intl;
     obj3.text = intl2.string(loading(1112).t["5911Lb"]);
     obj3.onPress = callback;
     obj3.loading = loading;
     obj2.action = obj3;
-    obj.children = closure_7(loading(7907).InlineNotice, obj2);
-    tmp8 = closure_7(loading(6084).Stack, obj);
+    obj.children = closure_7(loading(7941).InlineNotice, obj2);
+    tmp8 = closure_7(loading(6115).Stack, obj);
   }
   children[1] = tmp8;
   return closure_9(closure_8, { children });
 }
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { notice: { paddingTop: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj);
 const redux = noop.createContext({ unavailable: false, loading: false });

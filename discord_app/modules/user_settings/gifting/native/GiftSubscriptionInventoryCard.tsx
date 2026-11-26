@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/gifting/native/GiftSubscriptionInventoryCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2450 from "../../../checkout/messages/Checkout.messages.js";
-import _modDef2910 from "../../../premium/gifting/PremiumGifting.messages.js";
+import _modDef2451 from "../../../checkout/messages/Checkout.messages.js";
+import _modDef2911 from "../../../premium/gifting/PremiumGifting.messages.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GiftCodeActionCreatorsDefault from "../../../../actions/GiftCodeActionCreators.tsx";
-import _modDef13981 from "../../../../../_runtime/metro/13981__.js";
+import _modDef14033 from "../../../../../_runtime/metro/14033__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GiftCodeStore from "../../../../stores/GiftCodeStore.tsx";
@@ -14,10 +14,10 @@ import SKUStore from "../../../../stores/game_store/SKUStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const SubscriptionIntervalTypes = fn(1388).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1389).SubscriptionIntervalTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = {
   card: { marginBottom: nativeDefault.space.PX_16 },
   header: null,
@@ -71,12 +71,12 @@ export default noop.memo(function GiftSubscriptionInventoryCard(subscription) {
   let first1;
   closure_7 = undefined;
   const tmp = closure_13();
-  const giftedSubscriptionRowState = recipientUserId(13968).getGiftedSubscriptionRowState(subscription);
+  const giftedSubscriptionRowState = recipientUserId(14020).getGiftedSubscriptionRowState(subscription);
   recipientUserId = null;
   if ("pending" !== giftedSubscriptionRowState.kind) {
     recipientUserId = giftedSubscriptionRowState.recipientUserId;
   }
-  let obj = recipientUserId(13968);
+  let obj = recipientUserId(14020);
   items = [closure_7];
   const stateFromStores = recipientUserId(504).useStateFromStores(items, () => {
     let user = null;
@@ -87,8 +87,8 @@ export default noop.memo(function GiftSubscriptionInventoryCard(subscription) {
   });
   const tmp2Result = recipientUserId(504);
   ({ initialEntitlementId: c1, initialGiftCode: c2 } = subscription.giftSubscription);
-  const userTag = recipientUserId(5068).useUserTag(stateFromStores, { decoration: "auto" });
-  const tmp2Result6 = recipientUserId(5068);
+  const userTag = recipientUserId(5099).useUserTag(stateFromStores, { decoration: "auto" });
+  const tmp2Result6 = recipientUserId(5099);
   const items1 = [EntitlementStore];
   stateFromStores1 = recipientUserId(504).useStateFromStores(items1, () => {
     let found;
@@ -151,13 +151,13 @@ export default noop.memo(function GiftSubscriptionInventoryCard(subscription) {
     if ("active" === kind) {
       const intl2 = tmp2(1112).intl;
       const obj3 = { renewalDate: giftedSubscriptionRowState.renewsAt };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef2450.MR4VnX, obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef2451.MR4VnX, obj3);
     } else if ("canceled" === kind) {
       const intl = tmp2(1112).intl;
-      formatToPlainStringResult = intl.string(_modDef2910.bWW0Gp);
+      formatToPlainStringResult = intl.string(_modDef2911.bWW0Gp);
     } else if ("payment_failed" === kind) {
       const intl7 = tmp2(1112).intl;
-      formatToPlainStringResult = intl7.string(_modDef2910.nZIlOV);
+      formatToPlainStringResult = intl7.string(_modDef2911.nZIlOV);
     }
   }
   const obj4 = { style: tmp.card, children: null };
@@ -199,16 +199,16 @@ export default noop.memo(function GiftSubscriptionInventoryCard(subscription) {
   const obj7 = { style: tmp.header, children: null };
   const obj8 = { source: null, style: null, accessible: false };
   const tmp2Result9 = recipientUserId(504);
-  obj8.source = _modDef13981;
+  obj8.source = _modDef14033;
   obj8.style = tmp.icon;
   const items4 = [closure_11(FastImageDefault, obj8), ,];
   const obj9 = { style: tmp.details, children: null };
   const intl4 = tmp2(1112).intl;
   const stringResult = intl4.string(recipientUserId(1112).t.lG6a5x);
-  let intervalCount = recipientUserId(13968).getGiftSubscriptionInterval(subscription.planId);
+  let intervalCount = recipientUserId(14020).getGiftSubscriptionInterval(subscription.planId);
   if (null == intervalCount) {
     const obj10 = { variant: "body-md/semibold", children: stringResult };
-    const items5 = [closure_11(tmp2(5603).Text, obj10), ,];
+    const items5 = [closure_11(tmp2(5634).Text, obj10), ,];
     let tmp20Result = null;
     if ("pending" !== giftedSubscriptionRowState.kind) {
       tmp20Result = null;
@@ -216,18 +216,18 @@ export default noop.memo(function GiftSubscriptionInventoryCard(subscription) {
         const obj11 = { variant: "body-sm/medium", color: "text-muted", children: null };
         const intl6 = tmp2(1112).intl;
         const obj12 = { username: userTag };
-        obj11.children = intl6.formatToPlainString(tmp23(2910).kVUGot, obj12);
-        tmp20Result = closure_11(tmp2(5603).Text, obj11);
+        obj11.children = intl6.formatToPlainString(tmp23(2911).kVUGot, obj12);
+        tmp20Result = closure_11(tmp2(5634).Text, obj11);
       }
     }
     items5[1] = tmp20Result;
     const obj13 = { variant: "body-sm/medium", color: "text-muted", children: formatToPlainStringResult };
-    items5[2] = closure_11(tmp2(5603).Text, obj13);
+    items5[2] = closure_11(tmp2(5634).Text, obj13);
     obj9.children = items5;
     items4[1] = closure_12(tmp19, obj9);
     let tmp20Result4 = null;
     if (tmp14) {
-      const obj14 = { source: tmp23(7477), style: null, accessible: false };
+      const obj14 = { source: tmp23(7508), style: null, accessible: false };
       const items6 = [tmp.caret];
       let caretOpen = null;
       if (first1) {
@@ -235,13 +235,13 @@ export default noop.memo(function GiftSubscriptionInventoryCard(subscription) {
       }
       items6[1] = caretOpen;
       obj14.style = items6;
-      tmp20Result4 = closure_11(tmp23(5699), obj14);
-      const tmp23Result = tmp23(5699);
+      tmp20Result4 = closure_11(tmp23(5730), obj14);
+      const tmp23Result = tmp23(5730);
     }
     items4[2] = tmp20Result4;
     obj7.children = items4;
     obj5.children = closure_12(tmp19, obj7);
-    const items7 = [closure_11(tmp2(6114).Card, obj5)];
+    const items7 = [closure_11(tmp2(6145).Card, obj5)];
     let tmp18Result = null;
     if (tmp14) {
       tmp18Result = null;
@@ -249,7 +249,7 @@ export default noop.memo(function GiftSubscriptionInventoryCard(subscription) {
         const obj15 = { style: tmp.body, children: null };
         let tmp20Result5 = null;
         if (isFetching) {
-          tmp20Result5 = closure_11(tmp2(7016).ActivityIndicator, {});
+          tmp20Result5 = closure_11(tmp2(7047).ActivityIndicator, {});
         }
         const items8 = [tmp20Result5];
         let tmp20Result6 = null;
@@ -259,7 +259,7 @@ export default noop.memo(function GiftSubscriptionInventoryCard(subscription) {
             tmp20Result6 = null;
             if (null != stateFromStores2) {
               const obj16 = { giftCode, sku: stateFromStores2, isFirst: true, canRevoke: false, showCopy: true };
-              tmp20Result6 = closure_11(tmp23(13982), obj16);
+              tmp20Result6 = closure_11(tmp23(14034), obj16);
             }
           }
         }
@@ -283,5 +283,5 @@ export default noop.memo(function GiftSubscriptionInventoryCard(subscription) {
     obj17.intervalCount = intervalCount;
     intl5.formatToPlainString(Vd3Iu8, obj17);
   }
-  const tmp2Result10 = recipientUserId(13968);
+  const tmp2Result10 = recipientUserId(14020);
 });

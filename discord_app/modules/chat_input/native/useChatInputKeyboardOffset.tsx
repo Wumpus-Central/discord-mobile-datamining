@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import KeyboardChatScrollView from "../../../../_runtime/01642_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../_runtime/01643_KeyboardChatScrollView.js";
 import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import useCustomKeyboardHeightDefault from "../../keyboard/native/useCustomKeyboardHeight.tsx";

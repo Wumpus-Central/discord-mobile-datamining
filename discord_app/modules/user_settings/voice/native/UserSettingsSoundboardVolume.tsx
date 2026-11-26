@@ -10,14 +10,14 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_8 = createStyles.createStyles({ slider: { marginTop: 4 }, text: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsSoundboardVolume.tsx");
 
 export default function SoundboardVolume() {
   const tmp = closure_8();
-  const amplitudinalSoundboardVolume = analyticsLocations(10359).getAmplitudinalSoundboardVolume();
+  const amplitudinalSoundboardVolume = analyticsLocations(10404).getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = analyticsLocations(1112).intl;
@@ -35,7 +35,7 @@ export default function SoundboardVolume() {
     },
     accessibilityLabel: null,
   };
-  const obj = analyticsLocations(10359);
+  const obj = analyticsLocations(10404);
   const intl3 = analyticsLocations(1112).intl;
   obj6.accessibilityLabel = intl3.string(analyticsLocations(1112).t.kbFsAD);
   obj5.children = closure_5(VolumeSliderDefault, obj6);
@@ -45,9 +45,9 @@ export default function SoundboardVolume() {
   const obj8 = { helpCenterArticle: null };
   obj8.helpCenterArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
   obj7.children = intl4.format(analyticsLocations(1112).t.BPbGq7, obj8);
-  items[1] = closure_5(analyticsLocations(5603).Text, obj7);
+  items[1] = closure_5(analyticsLocations(5634).Text, obj7);
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
-  obj2.children = closure_5(analyticsLocations(6113).TableRow, obj3);
-  return closure_5(analyticsLocations(10346).UserSettingsTableRowGroup, obj2);
+  obj2.children = closure_5(analyticsLocations(6144).TableRow, obj3);
+  return closure_5(analyticsLocations(10388).UserSettingsTableRowGroup, obj2);
 }

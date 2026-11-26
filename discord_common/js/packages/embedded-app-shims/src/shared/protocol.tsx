@@ -52,6 +52,8 @@ export const ParentToChildEvent = {
   [0]: "STATE_UPDATED",
   KEYBINDS_UPDATED: 1,
   [1]: "KEYBINDS_UPDATED",
+  LAUNCH_TIMINGS_REQUEST: 2,
+  [2]: "LAUNCH_TIMINGS_REQUEST",
 };
 export const ChildToParentEvent = {
   STATE_UPDATED: 0,
@@ -62,4 +64,6 @@ export const ChildToParentEvent = {
   [2]: "CONNECTION_ACCEPTED",
   KEYBIND_CAPTURED: 3,
   [3]: "KEYBIND_CAPTURED",
+  LAUNCH_TIMINGS_RESPONSE: 4,
+  [4]: "LAUNCH_TIMINGS_RESPONSE",
 };

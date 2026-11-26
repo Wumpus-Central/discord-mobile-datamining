@@ -12,14 +12,14 @@ import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(9076).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(9118).useNativeCheckoutStore;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
-const PremiumConstants = fn(1388);
+const PremiumConstants = fn(1389);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -193,7 +193,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

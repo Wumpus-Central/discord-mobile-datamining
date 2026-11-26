@@ -7,10 +7,10 @@ import QuestDockStore from "QuestDockStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(6840);
+const QuestConstants = fn(6871);
 const QuestDockMode = QuestConstants.QuestDockMode;
 let QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
-let closure_6 = fn(16629).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+let closure_6 = fn(16680).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = {
@@ -19,15 +19,15 @@ let obj = {
   lastScrollEventSourceId: null,
   questDockOffset: null,
 };
-let ReanimatedHelperTypes = fn(7398);
+let ReanimatedHelperTypes = fn(7429);
 obj.restingQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj.setRestingQuestDockMode = function setRestingQuestDockMode() {};
-ReanimatedHelperTypes = fn(7398);
+ReanimatedHelperTypes = fn(7429);
 obj.lastScrollEventSourceId = ReanimatedHelperTypes.createFakeSharedValue(null);
-ReanimatedHelperTypes = fn(7398);
+ReanimatedHelperTypes = fn(7429);
 obj.questDockOffset = ReanimatedHelperTypes.createFakeSharedValue(0);
 let context = noop.createContext(obj);
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = {
   code: "(function QuestDockExternalCoordinationContextTsx1(){let[restingQuestDockMode]=this.__closure;return restingQuestDockMode.get();})",
@@ -100,7 +100,7 @@ export function useExternalScrollEventHandler(id) {
     { autoTrackExposure: false },
   ).autoCloseEnabled;
   noop = autoCloseEnabled;
-  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(autoCloseEnabled);
+  const sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(autoCloseEnabled);
   c3 = sharedValue;
   items = [autoCloseEnabled, sharedValue];
   const effect = noop.useEffect(() => {
@@ -126,7 +126,7 @@ export function useExternalScrollEventHandler(id) {
     }
   }, []);
   const obj2 = { location: QuestsExperimentLocations.QUESTS_BAR_MOBILE };
-  const obj3 = require("../../../../../_runtime/metro/01653__.js");
+  const obj3 = require("../../../../../_runtime/metro/01654__.js");
   const items2 = [c11, restingQuestDockMode];
   _require = undefined;
   [tmp8, tmp9] = items2;
@@ -139,7 +139,7 @@ export function useExternalScrollEventHandler(id) {
   QuestDockExternalCoordinationContextTsx1.__closure = items3;
   QuestDockExternalCoordinationContextTsx1.__workletHash = 4531016347305;
   QuestDockExternalCoordinationContextTsx1.__initData = tmp8;
-  const items4 = [c12, require("../../../../../_runtime/metro/01706__.js").scheduleOnRN, callback1];
+  const items4 = [c12, require("../../../../../_runtime/metro/01707__.js").scheduleOnRN, callback1];
   _require = undefined;
   dependencyMap = undefined;
   [tmp10, tmp11, tmp12] = items4;
@@ -157,14 +157,14 @@ export function useExternalScrollEventHandler(id) {
   QuestDockExternalCoordinationContextTsx2.__closure = items5;
   QuestDockExternalCoordinationContextTsx2.__workletHash = 3450868736561;
   QuestDockExternalCoordinationContextTsx2.__initData = tmp10;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     QuestDockExternalCoordinationContextTsx1,
     QuestDockExternalCoordinationContextTsx2,
   );
-  const obj4 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  const tmp2Result = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(false);
+  const obj4 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  const tmp2Result = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(false);
   const items6 = [sharedValue2];
   const effect1 = obj.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -182,7 +182,7 @@ export function useExternalScrollEventHandler(id) {
     sharedValue1,
     lastScrollEventSourceId,
     id,
-    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01707__.js").scheduleOnRN,
     callback1,
     c10,
     callback,

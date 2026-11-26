@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockGestureDetector.tsx
-import _mod1706 from "../../../../../_runtime/metro/01706__.js";
+import _mod1707 from "../../../../../_runtime/metro/01707__.js";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05272_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import useSafeAreaInsetsSharedValueDefault from "../../../safe_area/useSafeAreaInsetsSharedValue.native.tsx";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext.tsx";
@@ -38,13 +38,13 @@ function useQuestDockSwipeGesture() {
     isDrawer: restingQuestDockMode.get() === minExpandedContentHeight.EXPANDED,
     active: false,
   };
-  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(point);
-  let obj3 = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(point);
+  let obj3 = require("../../../../../_runtime/metro/01654__.js");
   const tmp8 = minExpandedContentHeight;
-  const sharedValue1 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(0);
-  let obj5 = require("../../../../../_runtime/metro/01653__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01653__.js").useSharedValue(isVisibleToUser);
-  const obj6 = require("../../../../../_runtime/metro/01653__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(0);
+  let obj5 = require("../../../../../_runtime/metro/01654__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(isVisibleToUser);
+  const obj6 = require("../../../../../_runtime/metro/01654__.js");
   const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
   let obj7 = require("useYouBarTotalHeight");
   const youBarHorizontalMargin = require("useYouBarMargins").useYouBarHorizontalMargin();
@@ -246,7 +246,7 @@ function useQuestDockSwipeGesture() {
       hasOwnProperty,
       gesture,
       questDockOffset,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,
       metroImportDefault,
@@ -522,7 +522,7 @@ function useQuestDockSwipeGesture() {
       QuestDockMode,
       sharedValue,
       closure_2_11,
-      _mod1706.scheduleOnRN,
+      _mod1707.scheduleOnRN,
       c0,
       setRestingQuestDockMode,
     ];
@@ -626,7 +626,7 @@ function useQuestDockSwipeGesture() {
   let items4 = [
     closure_23,
     tmp8,
-    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01707__.js").scheduleOnRN,
     require("HapticUtils").triggerHapticFeedback,
     require("HapticUtils").HapticFeedbackTypes,
   ];
@@ -670,14 +670,14 @@ function useQuestDockSwipeGesture() {
   QuestDockGestureDetectorTsx6.__closure = items5;
   QuestDockGestureDetectorTsx6.__workletHash = 6602612210534;
   QuestDockGestureDetectorTsx6.__initData = tmp19;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     QuestDockGestureDetectorTsx5,
     QuestDockGestureDetectorTsx6,
   );
   return memo;
 }
-const QuestDockMode = fn(6840).QuestDockMode;
-const QuestDockConstants = fn(16629);
+const QuestDockMode = fn(6871).QuestDockMode;
+const QuestDockConstants = fn(16680);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: closure_6,

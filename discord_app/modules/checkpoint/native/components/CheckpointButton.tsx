@@ -4,10 +4,10 @@ import CheckpointPressableDefault from "CheckpointPressable.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const Pressable = fn(17).Pressable;
-const CheckpointConstants = fn(6365);
+const CheckpointConstants = fn(6396);
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_BUTTON_DISABLED_BORDER_MOBILE, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = {
   button: {
     width: CHECKPOINT_CONTROL_SIZE,
@@ -17,16 +17,16 @@ const obj2 = {
   },
   shadowContainer: {
     justifyContent: "center",
-    marginRight: -fn(12816).SHADOW_OFFSET,
-    marginBottom: -fn(12816).SHADOW_OFFSET,
+    marginRight: -fn(12865).SHADOW_OFFSET,
+    marginBottom: -fn(12865).SHADOW_OFFSET,
   },
   shadow: null,
   shadowDisabled: null,
 };
 const obj3 = {
   justifyContent: "center",
-  marginRight: -fn(12816).SHADOW_OFFSET,
-  marginBottom: -fn(12816).SHADOW_OFFSET,
+  marginRight: -fn(12865).SHADOW_OFFSET,
+  marginBottom: -fn(12865).SHADOW_OFFSET,
 };
 obj2.shadow = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2, borderColor: CHECKPOINT_DARK_CYAN };
 obj2.shadowDisabled = { borderColor: CHECKPOINT_BUTTON_DISABLED_BORDER_MOBILE };

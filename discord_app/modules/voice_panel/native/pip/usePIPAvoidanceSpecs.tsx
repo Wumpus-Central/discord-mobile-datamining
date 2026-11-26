@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import VoicePanelControlsConstants from "../controls/VoicePanelControlsConstants.tsx";
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/pip/usePIP
 
 export default function usePIPAvoidanceSpecs(arg0) {
   ({ mode, controlsSpecs, safeArea, dockHeight } = arg0);
-  const sharedValue = _mod1653.useSharedValue({ top: 0, bottom: 0 });
+  const sharedValue = _mod1654.useSharedValue({ top: 0, bottom: 0 });
   const tmp5 = useAnimatedKeyboardHeightDefault();
   let tmp6 = useScreenNameSharedValueDefault();
   const token = useToken.useToken(nativeDefault.modules.mobile.VOICE_PANEL_GUTTER);
@@ -118,6 +118,6 @@ export default function usePIPAvoidanceSpecs(arg0) {
   usePIPAvoidanceSpecsTsx2.__closure = items3;
   usePIPAvoidanceSpecsTsx2.__workletHash = 1918666425620;
   usePIPAvoidanceSpecsTsx2.__initData = tmp15;
-  const animatedReaction = _mod1653.useAnimatedReaction(usePIPAvoidanceSpecsTsx1, usePIPAvoidanceSpecsTsx2);
+  const animatedReaction = _mod1654.useAnimatedReaction(usePIPAvoidanceSpecsTsx1, usePIPAvoidanceSpecsTsx2);
   return sharedValue;
 }

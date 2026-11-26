@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCardView.tsx
 import applyDefault from "../../../../../_runtime/00012_apply.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import Suspender from "../../../../../_runtime/06046_Suspender.js";
+import Suspender from "../../../../../_runtime/06077_Suspender.js";
 import VoicePanelCardDefault from "VoicePanelCard.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -80,7 +80,7 @@ function CardContentFreezer(children) {
   VoicePanelCardViewTsx4.__closure = items1;
   VoicePanelCardViewTsx4.__workletHash = 13976123982266;
   VoicePanelCardViewTsx4.__initData = tmp11;
-  const items2 = [closure_24, require("../../../../../_runtime/metro/01706__.js").scheduleOnRN, tmp9];
+  const items2 = [closure_24, require("../../../../../_runtime/metro/01707__.js").scheduleOnRN, tmp9];
   _require = undefined;
   importDefault = undefined;
   [tmp19, tmp20, tmp21] = items2;
@@ -98,7 +98,7 @@ function CardContentFreezer(children) {
   VoicePanelCardViewTsx5.__closure = items3;
   VoicePanelCardViewTsx5.__workletHash = 5067780860290;
   VoicePanelCardViewTsx5.__initData = tmp19;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     VoicePanelCardViewTsx4,
     VoicePanelCardViewTsx5,
   );
@@ -129,7 +129,7 @@ function CardContentFreezer(children) {
     }
   }, items4);
   const tmp29 = tmp8 && require("useRefValue")(ref);
-  const obj3 = require("../../../../../_runtime/metro/01653__.js");
+  const obj3 = require("../../../../../_runtime/metro/01654__.js");
   const tmp10 = c10;
   let tmp30 = tmp29;
   if (tmp29) {
@@ -365,7 +365,7 @@ function CardContentFreezer(children) {
   VoicePanelCardViewTsx3.__closure = items7;
   VoicePanelCardViewTsx3.__workletHash = 14589964706813;
   VoicePanelCardViewTsx3.__initData = tmp35;
-  animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(VoicePanelCardViewTsx3);
+  animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoicePanelCardViewTsx3);
   const items8 = [animatedStyle, tmp29, children];
   return noop.useMemo(() => {
     obj = { style: animatedStyle, children: null };
@@ -385,22 +385,22 @@ function CardContentFreezer(children) {
         </timestampProducer>
       ),
     });
-    return jsx(_modDef1653.View, { style: animatedStyle, children: null });
+    return jsx(_modDef1654.View, { style: animatedStyle, children: null });
   }, items8);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11734);
+const VoicePanelConstants = fn(11782);
 ({
   LAYOUT_PHYSICS: closure_9,
   VoicePanelModes: closure_10,
   UI_SHOW_HIDE_PHYSICS,
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11732).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19320).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11737).EDGE_GUTTER;
-const isUserParticipant = fn(5662).isUserParticipant;
+const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19383).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11785).EDGE_GUTTER;
+const isUserParticipant = fn(5693).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);
@@ -459,7 +459,7 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   const items2 = [
     closure_21,
     require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
-    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01707__.js").scheduleOnRN,
     callback,
   ];
   _require = undefined;
@@ -482,11 +482,11 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   VoicePanelCardViewTsx2.__closure = items3;
   VoicePanelCardViewTsx2.__workletHash = 9848593615087;
   VoicePanelCardViewTsx2.__initData = tmp8;
-  const animatedReaction = require("../../../../../_runtime/metro/01653__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01654__.js").useAnimatedReaction(
     VoicePanelCardViewTsx1,
     VoicePanelCardViewTsx2,
   );
-  let obj2 = require("../../../../../_runtime/metro/01653__.js");
+  let obj2 = require("../../../../../_runtime/metro/01654__.js");
   chunkedParticipants = require("useVoicePanelParticipants").useChunkedParticipants(channelId, tmp3);
   const tmp5Result = require("useVoicePanelParticipants");
   const items4 = [ChannelRTCStore];

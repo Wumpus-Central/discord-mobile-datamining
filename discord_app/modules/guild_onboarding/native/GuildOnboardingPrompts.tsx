@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1653 from "../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../_runtime/metro/01654__.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05567_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05598_LinearGradient.js";
 import LottieAnimationViewDefault from "../../../components_native/common/LottieAnimationView.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
@@ -59,20 +59,20 @@ function BackgroundImageGradient(uri) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const OnboardingPromptType = fn(7425).OnboardingPromptType;
-let closure_15 = fn(7421).GuildOnboardingModalStates;
+const OnboardingPromptType = fn(7456).OnboardingPromptType;
+let closure_15 = fn(7452).GuildOnboardingModalStates;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5566).NAV_BAR_HEIGHT,
+    marginTop: fn(5597).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -91,7 +91,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5566).NAV_BAR_HEIGHT,
+  marginTop: fn(5597).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -206,12 +206,12 @@ export default function GuildOnboardingPrompt(guildId) {
   skipped = tmp10;
   closure_10 = tmp11;
   let tmp2Result = require("useNavigation");
-  sharedValue = require("../../../../_runtime/metro/01653__.js").useSharedValue(!isFirstOpen);
+  sharedValue = require("../../../../_runtime/metro/01654__.js").useSharedValue(!isFirstOpen);
   const items3 = [guildId, prompts];
   callback = stateFromStores.useCallback(() => {
     GuildOnboardingActionCreatorsDefault.completeOnboarding(c0, c2);
   }, items3);
-  const tmp2Result13 = require("../../../../_runtime/metro/01653__.js");
+  const tmp2Result13 = require("../../../../_runtime/metro/01654__.js");
   const items4 = [sharedValue];
   stateFromStores2 = require("initialize").useStateFromStores(items4, () => GuildStore.getGuild(c0));
   const tmp2Result14 = require("initialize");
@@ -240,8 +240,8 @@ export default function GuildOnboardingPrompt(guildId) {
   required1 = tmp15;
   let tmp18 = currentPromptIdx + 1 >= prompts.length;
   if (tmp18) {
-    tmp18 = !tmp2(7430).showRulesInOnboarding(stateFromStores2, stateFromStores);
-    const tmp2Result16 = tmp2(7430);
+    tmp18 = !tmp2(7461).showRulesInOnboarding(stateFromStores2, stateFromStores);
+    const tmp2Result16 = tmp2(7461);
   }
   closure_16 = tmp18;
   const tmp19 = _slicedToArray(stateFromStores.useState(nativeDefault.unsafe_rawColors.PRIMARY_800), 2);
@@ -250,9 +250,9 @@ export default function GuildOnboardingPrompt(guildId) {
   if (null != stateFromStores2) {
     let obj4 = { id: null, splash: null, size: null };
     ({ id: obj11.id, splash: obj11.splash } = stateFromStores2);
-    obj4.size = 400 * tmp6(2022)();
-    guildSplashURL = tmp6(1412).getGuildSplashURL(obj4);
-    const tmp6Result = tmp6(1412);
+    obj4.size = 400 * tmp6(2023)();
+    guildSplashURL = tmp6(1413).getGuildSplashURL(obj4);
+    const tmp6Result = tmp6(1413);
   }
   const items7 = [guildSplashURL];
   const effect = obj6.useEffect(() => {
@@ -344,7 +344,7 @@ export default function GuildOnboardingPrompt(guildId) {
     closure_25,
     sharedValue,
     require("timing/timing").withTiming,
-    require("../../../../_runtime/metro/01653__.js").Easing,
+    require("../../../../_runtime/metro/01654__.js").Easing,
     stateFromStores1,
   ];
   _require = undefined;
@@ -384,14 +384,14 @@ export default function GuildOnboardingPrompt(guildId) {
   GuildOnboardingPromptsTsx1.__closure = items13;
   GuildOnboardingPromptsTsx1.__workletHash = 4968831838677;
   GuildOnboardingPromptsTsx1.__initData = tmp26;
-  const animatedStyle = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(GuildOnboardingPromptsTsx1);
-  const tmp2Result17 = require("../../../../_runtime/metro/01653__.js");
+  const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(GuildOnboardingPromptsTsx1);
+  const tmp2Result17 = require("../../../../_runtime/metro/01654__.js");
   const items14 = [
     closure_26,
     sharedValue,
-    require("../../../../_runtime/metro/01653__.js").withDelay,
+    require("../../../../_runtime/metro/01654__.js").withDelay,
     require("timing/timing").withTiming,
-    require("../../../../_runtime/metro/01653__.js").Easing,
+    require("../../../../_runtime/metro/01654__.js").Easing,
     stateFromStores1,
   ];
   _require = undefined;
@@ -433,14 +433,14 @@ export default function GuildOnboardingPrompt(guildId) {
   GuildOnboardingPromptsTsx2.__closure = items15;
   GuildOnboardingPromptsTsx2.__workletHash = 15352699765229;
   GuildOnboardingPromptsTsx2.__initData = tmp32;
-  const animatedStyle1 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(GuildOnboardingPromptsTsx2);
-  const tmp2Result18 = require("../../../../_runtime/metro/01653__.js");
+  const animatedStyle1 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(GuildOnboardingPromptsTsx2);
+  const tmp2Result18 = require("../../../../_runtime/metro/01654__.js");
   const items16 = [
     closure_27,
     sharedValue,
-    require("../../../../_runtime/metro/01653__.js").withDelay,
+    require("../../../../_runtime/metro/01654__.js").withDelay,
     require("timing/timing").withTiming,
-    require("../../../../_runtime/metro/01653__.js").Easing,
+    require("../../../../_runtime/metro/01654__.js").Easing,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -463,8 +463,8 @@ export default function GuildOnboardingPrompt(guildId) {
   GuildOnboardingPromptsTsx3.__closure = items17;
   GuildOnboardingPromptsTsx3.__workletHash = 7281893132057;
   GuildOnboardingPromptsTsx3.__initData = tmp39;
-  const animatedStyle2 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(GuildOnboardingPromptsTsx3);
-  const tmp2Result19 = require("../../../../_runtime/metro/01653__.js");
+  const animatedStyle2 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(GuildOnboardingPromptsTsx3);
+  const tmp2Result19 = require("../../../../_runtime/metro/01654__.js");
   const items18 = [closure_28, sharedValue];
   _require = undefined;
   [tmp45, tmp46] = items18;
@@ -481,14 +481,14 @@ export default function GuildOnboardingPrompt(guildId) {
   GuildOnboardingPromptsTsx4.__closure = items19;
   GuildOnboardingPromptsTsx4.__workletHash = 7888519317763;
   GuildOnboardingPromptsTsx4.__initData = tmp45;
-  const animatedProps = require("../../../../_runtime/metro/01653__.js").useAnimatedProps(GuildOnboardingPromptsTsx4);
-  const tmp2Result20 = require("../../../../_runtime/metro/01653__.js");
+  const animatedProps = require("../../../../_runtime/metro/01654__.js").useAnimatedProps(GuildOnboardingPromptsTsx4);
+  const tmp2Result20 = require("../../../../_runtime/metro/01654__.js");
   const items20 = [
     closure_29,
     sharedValue,
-    require("../../../../_runtime/metro/01653__.js").withDelay,
+    require("../../../../_runtime/metro/01654__.js").withDelay,
     require("timing/timing").withTiming,
-    require("../../../../_runtime/metro/01653__.js").Easing,
+    require("../../../../_runtime/metro/01654__.js").Easing,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -511,14 +511,14 @@ export default function GuildOnboardingPrompt(guildId) {
   GuildOnboardingPromptsTsx5.__closure = items21;
   GuildOnboardingPromptsTsx5.__workletHash = 16271494377695;
   GuildOnboardingPromptsTsx5.__initData = tmp48;
-  const animatedStyle3 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(GuildOnboardingPromptsTsx5);
-  const tmp2Result21 = require("../../../../_runtime/metro/01653__.js");
+  const animatedStyle3 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(GuildOnboardingPromptsTsx5);
+  const tmp2Result21 = require("../../../../_runtime/metro/01654__.js");
   const items22 = [
     closure_30,
     sharedValue,
-    require("../../../../_runtime/metro/01653__.js").withDelay,
+    require("../../../../_runtime/metro/01654__.js").withDelay,
     require("timing/timing").withTiming,
-    require("../../../../_runtime/metro/01653__.js").Easing,
+    require("../../../../_runtime/metro/01654__.js").Easing,
     stateFromStores1,
   ];
   _require = undefined;
@@ -568,7 +568,7 @@ export default function GuildOnboardingPrompt(guildId) {
     backShouldLeaveGuild,
     tmp8,
   ];
-  const animatedStyle4 = require("../../../../_runtime/metro/01653__.js").useAnimatedStyle(GuildOnboardingPromptsTsx6);
+  const animatedStyle4 = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(GuildOnboardingPromptsTsx6);
   const layoutEffect = obj6.useLayoutEffect(() => {
     if (0 === c1) {
       if (!closure_6) {
@@ -577,8 +577,8 @@ export default function GuildOnboardingPrompt(guildId) {
             let transitionTo = dependencyMap;
             const obj2 = {};
             let tmp = c0;
-            const obj = step(1255);
-            const merged = Object.assign(c0(5982).collectGuildAnalyticsMetadata(_undefined));
+            const obj = step(1256);
+            const merged = Object.assign(c0(6013).collectGuildAnalyticsMetadata(_undefined));
             obj2.step = 0;
             obj2.skipped = true;
             obj2.back = false;
@@ -600,7 +600,7 @@ export default function GuildOnboardingPrompt(guildId) {
             } else {
               tmp5();
             }
-            const obj3 = c0(5982);
+            const obj3 = c0(6013);
           }),
         };
         navigation.setOptions(obj4);
@@ -609,8 +609,8 @@ export default function GuildOnboardingPrompt(guildId) {
     if (0 !== c1) {
       let headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
         const obj2 = {};
-        const obj = step(1255);
-        const merged = Object.assign(c0(5982).collectGuildAnalyticsMetadata(_undefined));
+        const obj = step(1256);
+        const merged = Object.assign(c0(6013).collectGuildAnalyticsMetadata(_undefined));
         obj2.step = step;
         obj2.skipped = false;
         obj2.back = true;
@@ -618,10 +618,10 @@ export default function GuildOnboardingPrompt(guildId) {
         obj2.in_onboarding = true;
         obj2.is_final_step = false;
         obj.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
-        const obj3 = c0(5982);
+        const obj3 = c0(6013);
         const obj5 = {};
-        const obj4 = step(1255);
-        const merged1 = Object.assign(c0(5982).collectGuildAnalyticsMetadata(_undefined));
+        const obj4 = step(1256);
+        const merged1 = Object.assign(c0(6013).collectGuildAnalyticsMetadata(_undefined));
         obj5.step = step - 1;
         obj5.required = dependencyMap[step - 1].required;
         obj4.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj5);
@@ -630,8 +630,8 @@ export default function GuildOnboardingPrompt(guildId) {
     }
     headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
       const obj2 = {};
-      const obj = step(1255);
-      const merged = Object.assign(c0(5982).collectGuildAnalyticsMetadata(_undefined));
+      const obj = step(1256);
+      const merged = Object.assign(c0(6013).collectGuildAnalyticsMetadata(_undefined));
       obj2.step = 0;
       obj2.skipped = false;
       obj2.back = true;
@@ -701,7 +701,7 @@ export default function GuildOnboardingPrompt(guildId) {
           selectOption,
           handleOnPress,
         };
-        tmp64Result = tmp64(tmp2(7450).MultipleChoicePrompt, obj8);
+        tmp64Result = tmp64(tmp2(7481).MultipleChoicePrompt, obj8);
       } else if (tmp66.DROPDOWN === type) {
         const obj9 = {
           guildId,
@@ -712,15 +712,15 @@ export default function GuildOnboardingPrompt(guildId) {
           selectOption,
           handleOnPress,
         };
-        tmp64Result = tmp64(tmp2(7450).DropdownPrompt, obj9);
+        tmp64Result = tmp64(tmp2(7481).DropdownPrompt, obj9);
       } else {
-        tmp2(1254).assertNever(tmp11.type);
-        const tmp2Result23 = tmp2(1254);
+        tmp2(1255).assertNever(tmp11.type);
+        const tmp2Result23 = tmp2(1255);
       }
     }
   }
   obj7.children = tmp64Result;
-  rect.children = required(_modDef1653.View, obj7);
+  rect.children = required(_modDef1654.View, obj7);
   const items27 = [required(require("common/SafeAreaView").SafeAreaPaddingView, rect)];
   const obj10 = { style: absoluteFill.absoluteFill, pointerEvents: "box-none", children: null };
   const obj12 = { style: null, pointerEvents: "none", children: null };
@@ -737,7 +737,7 @@ export default function GuildOnboardingPrompt(guildId) {
   }
   const items30 = [tmp64Result2];
   const obj15 = { style: tmp.darkColorGradient, start: null, end: null, colors: null };
-  const tmp2Result22 = require("../../../../_runtime/metro/01653__.js");
+  const tmp2Result22 = require("../../../../_runtime/metro/01654__.js");
   obj15.start = require("ConstantsIOS").VerticalGradient.START;
   obj15.end = require("ConstantsIOS").VerticalGradient.END;
   const tmp6Result2 = LinearGradientDefault;
@@ -748,7 +748,7 @@ export default function GuildOnboardingPrompt(guildId) {
   obj15.colors = items31;
   items30[1] = required(tmp6Result2, obj15);
   obj13.children = items30;
-  const items32 = [closure_21(_modDef1653.View, obj13), ,];
+  const items32 = [closure_21(_modDef1654.View, obj13), ,];
   const obj16 = {
     style: null,
     children: required(LottieAnimationViewDefault, {
@@ -759,7 +759,7 @@ export default function GuildOnboardingPrompt(guildId) {
   };
   const items33 = [tmp.artWrapper, animatedStyle];
   obj16.style = items33;
-  items32[1] = required(_modDef1653.View, obj16);
+  items32[1] = required(_modDef1654.View, obj16);
   const obj18 = { style: null, children: null };
   const items34 = [tmp.landingBody, animatedStyle1];
   obj18.style = items34;
@@ -785,7 +785,7 @@ export default function GuildOnboardingPrompt(guildId) {
   obj20.children = intl2.string(require("util").t["Alcl/e"]);
   items35[1] = required(require("Text/Text").Text, obj20);
   obj18.children = items35;
-  items32[2] = closure_21(_modDef1653.View, obj18);
+  items32[2] = closure_21(_modDef1654.View, obj18);
   obj12.children = items32;
   const items36 = [closure_21(isFirstOpen, obj12)];
   const obj21 = { style: null, animatedProps, children: null };
@@ -800,7 +800,7 @@ export default function GuildOnboardingPrompt(guildId) {
   const intl3 = tmp2(1112).intl;
   obj22.children = intl3.format(require("util").t.kI6UoD, { privacyLink: constants2.PRIVACY });
   obj21.children = required(require("Text/Text").Text, obj22);
-  items36[1] = required(_modDef1653.View, obj21);
+  items36[1] = required(_modDef1654.View, obj21);
   obj10.children = items36;
   items27[1] = closure_21(isFirstOpen, obj10);
   obj5.children = items27;

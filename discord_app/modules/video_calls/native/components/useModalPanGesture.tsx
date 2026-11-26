@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/useModalPanGesture.tsx
-import _mod1653 from "../../../../../_runtime/metro/01653__.js";
-import _mod1706 from "../../../../../_runtime/metro/01706__.js";
-import LegacyBaseButton from "../../../../../_runtime/05272_LegacyBaseButton.js";
+import _mod1654 from "../../../../../_runtime/metro/01654__.js";
+import _mod1707 from "../../../../../_runtime/metro/01707__.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -27,10 +27,10 @@ export default function useModalPanGesture(thresholdVelocity) {
   }
   const translateY = thresholdVelocity.translateY;
   ({ gestureEnabled, maxTranslate, thresholdTranslate, height, onStart, onEnd, onClose } = thresholdVelocity);
-  const sharedValue = _mod1653.useSharedValue({ y: 0 });
+  const sharedValue = _mod1654.useSharedValue({ y: 0 });
   const Gesture = LegacyBaseButton.Gesture;
   const PanResult = Gesture.Pan();
-  items = [_undefined4, onStart, _mod1706.scheduleOnRN, sharedValue, translateY];
+  items = [_undefined4, onStart, _mod1707.scheduleOnRN, sharedValue, translateY];
   [tmp4, tmp5, tmp6, tmp7, tmp8] = items;
   function useModalPanGestureTsx1() {
     if (null != c0) {
@@ -44,7 +44,7 @@ export default function useModalPanGesture(thresholdVelocity) {
   useModalPanGestureTsx1.__workletHash = 8962705443819;
   useModalPanGestureTsx1.__initData = tmp4;
   const enabledResult = Gesture.Pan().enabled(gestureEnabled);
-  const items2 = [_undefined5, translateY, _mod1653.interpolate, sharedValue, maxTranslate, _mod1653.Extrapolate];
+  const items2 = [_undefined5, translateY, _mod1654.interpolate, sharedValue, maxTranslate, _mod1654.Extrapolate];
   [tmp9, tmp10, tmp11, tmp12, tmp13, tmp14] = items2;
   function useModalPanGestureTsx2(translationY) {
     items = [0, c3];
@@ -66,7 +66,7 @@ export default function useModalPanGesture(thresholdVelocity) {
     spring_spring.withSpring,
     height,
     closure_5,
-    _mod1706.scheduleOnRN,
+    _mod1707.scheduleOnRN,
     ModalActionCreatorsDefault,
     onClose,
     onEnd,

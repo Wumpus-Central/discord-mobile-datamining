@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef2168 from "../../../_runtime/metro/02168__.js";
+import _modDef2169 from "../../../_runtime/metro/02169__.js";
 import findCodedLinksDefault from "../coded_links/findCodedLinks.tsx";
 import GiftCodeUtils from "../../utils/GiftCodeUtils.tsx";
 import useMessageAuthor from "useMessageAuthor.tsx";
@@ -206,11 +206,11 @@ function createMessageRecord(message, arg1) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp47Result = _modDef2168(date);
+      tmp47Result = _modDef2169(date);
     }
     let durationResult = null;
     if (null != tmp47Result) {
-      durationResult = _modDef2168.duration(tmp47Result.diff(tmp43));
+      durationResult = _modDef2169.duration(tmp47Result.diff(tmp43));
     }
     const obj11 = { participants: call.participants, endedTimestamp: tmp47Result, duration: durationResult };
     tmp44 = obj11;
@@ -343,7 +343,7 @@ function isCurrentReactionType(count_details) {
   }
   return tmp;
 }
-let MessageRecord = fn(4955);
+let MessageRecord = fn(4986);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1071);
@@ -380,11 +380,11 @@ export function updateMessageRecord(message, message2) {
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = _modDef2168(date);
+          tmp = _modDef2169(date);
         }
         let durationResult = null;
         if (null != tmp) {
-          durationResult = _modDef2168.duration(tmp.diff(tmp46));
+          durationResult = _modDef2169.duration(tmp.diff(tmp46));
         }
         const obj3 = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
         tmp13 = obj3;

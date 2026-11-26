@@ -7,7 +7,7 @@ import AnimatedCounterUtils from "AnimatedCounterUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1653 = tmp2(1653);
+const _modDef1654 = tmp2(1654);
 require = fn;
 function AnimatedCount(state) {
   state = state.state;
@@ -31,7 +31,7 @@ function AnimatedCount(state) {
       NEUTRAL = c10.NEUTRAL;
     }
   }
-  const sharedValue = require("../../../../../_runtime/metro/01653__.js").useSharedValue(NEUTRAL);
+  const sharedValue = require("../../../../../_runtime/metro/01654__.js").useSharedValue(NEUTRAL);
   items = [height];
   const memo = obj.useMemo(
     () =>
@@ -45,11 +45,11 @@ function AnimatedCount(state) {
       }),
     items,
   );
-  let obj2 = require("../../../../../_runtime/metro/01653__.js");
+  let obj2 = require("../../../../../_runtime/metro/01654__.js");
   let items1 = [
     closure_14,
     require("spring/spring").withSpring,
-    require("../../../../../_runtime/metro/01653__.js").interpolate,
+    require("../../../../../_runtime/metro/01654__.js").interpolate,
     sharedValue,
     items,
     memo,
@@ -57,7 +57,7 @@ function AnimatedCount(state) {
     closure_13,
     state,
     require("native").TransitionStates,
-    require("../../../../../_runtime/metro/01706__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01707__.js").scheduleOnRN,
     cleanUp,
   ];
   _require = undefined;
@@ -126,7 +126,7 @@ function AnimatedCount(state) {
   AnimatedCounterTsx2.__workletHash = 10296245481336;
   AnimatedCounterTsx2.__initData = tmp12;
   const items3 = [sharedValue, context, state];
-  const animatedStyle = require("../../../../../_runtime/metro/01653__.js").useAnimatedStyle(AnimatedCounterTsx2);
+  const animatedStyle = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(AnimatedCounterTsx2);
   const effect = obj.useEffect(() => {
     if (c0 === native.TransitionStates.YEETED) {
       ({ current, previous } = c2);
@@ -145,14 +145,14 @@ function AnimatedCount(state) {
   const obj3 = { style: null, children: null };
   const items4 = [absoluteFill.absoluteFill, animatedStyle, { height }];
   obj3.style = items4;
-  const tmp5Result = require("../../../../../_runtime/metro/01653__.js");
+  const tmp5Result = require("../../../../../_runtime/metro/01654__.js");
   obj3.children = c7(require("Text/Text").Text, {
     variant: textVariant,
     color: textColor,
     style: textStyle,
     children: formatter(count),
   });
-  return c7(_modDef1653.View, obj3);
+  return c7(_modDef1654.View, obj3);
 }
 function getItemKey(arg0) {
   return "" + arg0;
@@ -245,7 +245,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({
   container: {
     flex: 0,

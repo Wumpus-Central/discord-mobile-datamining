@@ -29,7 +29,7 @@ const Constants = fn(1071);
 ({ PLACEHOLDER_TAG: metroImportDefault, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -184,7 +184,7 @@ export default function _default(arg0) {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(7820).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(7854).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
@@ -194,7 +194,7 @@ export default function _default(arg0) {
         const obj6 = {
           discordTag: tmp2,
           context: { location: "Search - Add Friend Search" },
-          errorUxConfig: sourcePage(7816).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+          errorUxConfig: sourcePage(7850).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
           note: null,
         };
         let tmp9;
@@ -202,8 +202,8 @@ export default function _default(arg0) {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(7816);
-        ref(7816)
+        const obj5 = ref(7850);
+        ref(7850)
           .sendRequest(obj6)
           .then(
             () => {
@@ -262,9 +262,9 @@ export default function _default(arg0) {
               closure_6(obj3);
             },
           );
-        const sendRequestResult = ref(7816).sendRequest(obj6);
+        const sendRequestResult = ref(7850).sendRequest(obj6);
       }
-      let obj = sourcePage(7820);
+      let obj = sourcePage(7854);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText, ref } = arg0);
@@ -377,7 +377,7 @@ export default function _default(arg0) {
   obj5.style = items6;
   let intl = sourcePage(1112).intl;
   obj5.children = intl.string(sourcePage(1112).t.Yi6Mpu);
-  const items7 = [closure_9(sourcePage(5603).Text, obj5), ,];
+  const items7 = [closure_9(sourcePage(5634).Text, obj5), ,];
   let obj6 = {
     returnKeyType: "done",
     submitBehavior: "submit",
@@ -394,7 +394,7 @@ export default function _default(arg0) {
     }
   }
   obj6.status = str2;
-  items7[1] = closure_9(sourcePage(7409).TextArea, obj6);
+  items7[1] = closure_9(sourcePage(7440).TextArea, obj6);
   if (first1.status === constants2.ERROR) {
     if (first1.field === constants3.MESSAGE) {
       const obj7 = { errorMessage: first1.message };
@@ -414,14 +414,14 @@ export default function _default(arg0) {
     obj10.disabled = str.trim().length <= 0;
     obj10.onPress = handleSubmitEditing;
     obj10.loading = first1.status === constants2.LOADING;
-    items8[2] = closure_9(sourcePage(5610).Button, obj10);
+    items8[2] = closure_9(sourcePage(5641).Button, obj10);
     obj8.children = items8;
     return closure_10(closure_11, obj8);
   }
   const obj11 = { style: tmp.messageFooterText, variant: "body-xs/medium", color: "text-muted", children: null };
   let intl2 = sourcePage(1112).intl;
   obj11.children = intl2.string(sourcePage(1112).t.UtfQNw);
-  tmp16Result = closure_9(sourcePage(5603).Text, obj11);
+  tmp16Result = closure_9(sourcePage(5634).Text, obj11);
   let obj = { status: constants2.NONE };
   let obj3 = {
     textState,

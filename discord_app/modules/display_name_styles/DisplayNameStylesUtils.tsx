@@ -19,7 +19,7 @@ function isValidDisplayNameColor(arg0) {
   }
   return isIntegerResult;
 }
-const DisplayNameStylesConstants = fn(1395);
+const DisplayNameStylesConstants = fn(1396);
 ({
   DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4,
   DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty,
@@ -27,10 +27,10 @@ const DisplayNameStylesConstants = fn(1395);
   HEXAGON_CAMPAIGN_FONTS: metroImportDefault,
 } = DisplayNameStylesConstants);
 let items = [
-  fn(1397).DisplayNameEffect.NEON,
-  fn(1397).DisplayNameEffect.TOON,
-  fn(1397).DisplayNameEffect.POP,
-  fn(1397).DisplayNameEffect.GUMMY,
+  fn(1398).DisplayNameEffect.NEON,
+  fn(1398).DisplayNameEffect.TOON,
+  fn(1398).DisplayNameEffect.POP,
+  fn(1398).DisplayNameEffect.GUMMY,
 ];
 const set = new Set(items);
 const items1 = [

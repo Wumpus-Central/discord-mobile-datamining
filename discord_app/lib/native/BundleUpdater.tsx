@@ -2,9 +2,9 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/02119_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02120_asyncRequireImpl.js";
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
-import _mod5805 from "module_5805" /* 5805 */;
+import _mod5836 from "module_5836" /* 5836 */;
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -60,7 +60,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
   })();
 };
 prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
-  const match = _mod5805.match(item10010);
+  const match = _mod5836.match(item10010);
   const withResult = match.with({ type: "OtaCheckAttempt" }, (result) => {
     closure_1_5.verbose("OTA check attempt", result);
     AnalyticsUtilsDefault.track(constants.MOBILE_OTA_CHECK_ATTEMPT, {

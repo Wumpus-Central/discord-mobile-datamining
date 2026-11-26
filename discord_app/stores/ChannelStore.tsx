@@ -45,7 +45,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               );
             } else {
               [arr, tmp41] = result;
-              tmp4(4912)(arr);
+              tmp4(4943)(arr);
               if (Full !== tmp2.Basic) {
                 closure_35 = closure_35 + 1;
               }
@@ -509,7 +509,7 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(4865);
+const ChannelRecord = fn(4896);
 ({
   createChannelRecordFromServer: metroImportDefault,
   isPrivate: closure_8,
@@ -519,7 +519,7 @@ const ChannelRecord = fn(4865);
   castChannelRecord: closure_12,
 } = ChannelRecord);
 const ChannelTypes = fn(1071).ChannelTypes;
-const ChannelFlags = fn(4868).ChannelFlags;
+const ChannelFlags = fn(4899).ChannelFlags;
 let closure_18 = new LoggerDefault("ChannelStore");
 let closure_19 = {};
 let dependencyMap2 = {};
@@ -559,7 +559,7 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1254).isNotNullish);
+  found = items.filter(found(1255).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -569,7 +569,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_32;
-      return tmp(4910).tryLoadOrResetCacheGatewayAsync(
+      return tmp(4941).tryLoadOrResetCacheGatewayAsync(
         "loadChannels",
         asyncGeneratorStep(async () => {
           if (c7 === 2) {
@@ -582,7 +582,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           } else {
             while (true) {
@@ -620,7 +620,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                       return obj2;
                     }
                   });
-                  found = mapped.filter(closure_0(1254).isNotNullish);
+                  found = mapped.filter(closure_0(1255).isNotNullish);
                   closure_130_0 = found;
                   c5 = 1;
                   let _Promise = Promise;

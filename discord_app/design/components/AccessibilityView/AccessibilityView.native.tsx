@@ -1,7 +1,7 @@
 // discord_app/design/components/AccessibilityView/AccessibilityView.native.tsx
 import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import 01653__ from "../../../../_runtime/metro/01653__.js";
+import 01654__ from "../../../../_runtime/metro/01654__.js";
 
 class AccessibilityView {
   constructor(arg0) {
@@ -41,7 +41,7 @@ class AccessibilityView {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const animatedComponent = module_1653.createAnimatedComponent(AccessibilityView);
+const animatedComponent = module_1654.createAnimatedComponent(AccessibilityView);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/AccessibilityView/AccessibilityView.native.tsx");
 

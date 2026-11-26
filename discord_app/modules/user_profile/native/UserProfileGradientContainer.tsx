@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileGradientContainer.tsx
-import LinearGradientDefault from "../../../../_runtime/05567_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05598_LinearGradient.js";
 import useUserProfileGradientColors from "../hooks/native/useUserProfileGradientColors.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 

@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { icon: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.xs };
 obj2.icon = size;

@@ -98,8 +98,8 @@ function fireFriendRequestSurveyAction(arg0) {
 }
 const Constants = fn(1071);
 ({ Endpoints: closure_8, AbortCodes: closure_9, RelationshipTypes: closure_10 } = Constants);
-const ClearFriendRequestFilters = fn(7817).ClearFriendRequestFilters;
-const SafetyToastType = fn(7806).SafetyToastType;
+const ClearFriendRequestFilters = fn(7851).ClearFriendRequestFilters;
+const SafetyToastType = fn(7840).SafetyToastType;
 const RelationshipErrorUXConfig = {
   SHOW_ALWAYS: 0,
   [0]: "SHOW_ALWAYS",
@@ -129,7 +129,7 @@ let obj2 = {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -176,7 +176,7 @@ let obj2 = {
             }
             closure_128_0 = NONE;
             dependencyMap = 1;
-            HTTP = closure_0(1284).HTTP;
+            HTTP = closure_0(1285).HTTP;
             const request = {
               url: closure_1_8.USER_RELATIONSHIPS(),
               body: null,
@@ -192,11 +192,11 @@ let obj2 = {
             request.body = obj6;
             request.context = context;
             const tmp41 = v2(_require.split("#"), 2);
-            request.rejectWithError = closure_0(1284).rejectWithMigratedError();
+            request.rejectWithError = closure_0(1285).rejectWithMigratedError();
             HTTP.post(request);
             v2 = 2;
             c5 = 1;
-            const obj5 = closure_0(1284);
+            const obj5 = closure_0(1285);
           }
         } catch (tmp30) {
           closure_2 = tmp30;
@@ -220,7 +220,7 @@ let obj2 = {
     }
     dependencyMap = UserStore.getUser(userId);
     const relationshipType = RelationshipStore.getRelationshipType(userId);
-    const HTTP = type(1284).HTTP;
+    const HTTP = type(1285).HTTP;
     const request = {
       url: closure_8.USER_RELATIONSHIP(userId),
       body: null,
@@ -232,8 +232,8 @@ let obj2 = {
     const merged = Object.assign(captchaPayload.captchaPayload);
     request.body = body;
     request.context = context;
-    request.rejectWithError = type(1284).rejectWithMigratedError();
-    let obj3 = type(1284);
+    request.rejectWithError = type(1285).rejectWithMigratedError();
+    let obj3 = type(1285);
     const putResult = HTTP.put(request);
     return HTTP.put(request)
       .then(() => {
@@ -319,7 +319,7 @@ let obj2 = {
         }
       })
       .catch(() => {
-        const AccessibilityAnnouncer = closure_0(5019).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = closure_0(5050).AccessibilityAnnouncer;
         const intl = closure_0(1112).intl;
         AccessibilityAnnouncer.announce(intl.string(closure_0(1112).t.n6Jo3E));
       });
@@ -412,8 +412,8 @@ let obj2 = {
         );
       })
       .catch(() => {
-        channelId(7811).showFailedToast();
-        const AccessibilityAnnouncer = userId(5019).AccessibilityAnnouncer;
+        channelId(7845).showFailedToast();
+        const AccessibilityAnnouncer = userId(5050).AccessibilityAnnouncer;
         const intl = userId(1112).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1112).t.n6Jo3E));
       });
@@ -440,8 +440,8 @@ let obj2 = {
         );
       })
       .catch(() => {
-        channelId(7811).showFailedToast();
-        const AccessibilityAnnouncer = userId(5019).AccessibilityAnnouncer;
+        channelId(7845).showFailedToast();
+        const AccessibilityAnnouncer = userId(5050).AccessibilityAnnouncer;
         const intl = userId(1112).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1112).t.n6Jo3E));
       });

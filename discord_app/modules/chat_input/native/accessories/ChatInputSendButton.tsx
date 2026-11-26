@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputSendButton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef1653 from "../../../../../_runtime/metro/01653__.js";
+import _modDef1654 from "../../../../../_runtime/metro/01654__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import SendMessageIcon from "../../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
 import ChatInputActionButtonDefault from "../action_buttons/ChatInputActionButton.tsx";
@@ -171,10 +171,10 @@ function FloatingSlot(arg0) {
     }).animatedStyle,
   ];
   obj2.style = items;
-  return jsx(_modDef1653.View, { style: null, children });
+  return jsx(_modDef1654.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(12908).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(12960).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = {
   BUTTON_SEND: "send-button",
@@ -182,7 +182,7 @@ const constants = {
   BUTTON_SEND_VOICE_MESSAGE: "voice-message-button",
   BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled",
 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_11 = createStyles.createStyles((width, height) => {
   const obj = {
     button: null,

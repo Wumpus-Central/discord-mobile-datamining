@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = {
   timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE },
 };
@@ -34,7 +34,7 @@ export default function Timestamp(node) {
     obj2.style = timestamp2;
     obj2.onPress = fn;
     obj2.children = tmp3;
-    let tmp4Result = jsx(node(5603).Text, { variant, color: "none", style: null, onPress: null, children: null });
+    let tmp4Result = jsx(node(5634).Text, { variant, color: "none", style: null, onPress: null, children: null });
   } else {
     let timestamp = tmp.timestamp;
     if (timestamp == null) {

@@ -23,10 +23,10 @@ import DiceIcon from "../../../design/components/Icon/native/redesign/generated/
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
+import EditUserProfileAvatarDefault from "EditUserProfileAvatar.tsx";
 import usePremiumTryItOutPresetShuffleDefault from "../hooks/usePremiumTryItOutPresetShuffle.tsx";
 import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields.tsx";
 import UserProfileFloatingUpsell from "UserProfileFloatingUpsell.tsx";
-import EditUserProfileAvatarDefault from "EditUserProfileAvatar.tsx";
 import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
@@ -53,7 +53,7 @@ function EditableBanner(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-let closure_6 = fn(7526).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
+let closure_6 = fn(7557).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);

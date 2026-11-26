@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/SponsoredContentPreferencesSetting.tsx
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2287 from "../../../ads/SponsoredContentPreferences.messages.js";
+import _modDef2288 from "../../../ads/SponsoredContentPreferences.messages.js";
 import QuestsIcon from "../../../../design/components/Icon/native/redesign/generated/QuestsIcon.tsx";
 import AdTopicOptOutClientExperiment from "../../../ads/AdTopicOptOutClientExperiment.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2287.XUj46U);
+    return intl.string(_modDef2288.XUj46U);
   },
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,
