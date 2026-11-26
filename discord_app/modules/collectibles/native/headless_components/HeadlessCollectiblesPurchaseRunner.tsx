@@ -1,10 +1,10 @@
-// === Module 11581: HeadlessCollectiblesPurchaseRunner ===
+// === Module 11629: HeadlessCollectiblesPurchaseRunner ===
 
-// Module 11581 (HeadlessCollectiblesPurchaseRunner)
-import useHandleBuyNowDefault from "useHandleBuyNow" /* 11582 */;
+// Module 11629 (HeadlessCollectiblesPurchaseRunner)
+import useHandleBuyNowDefault from "useHandleBuyNow" /* 11630 */;
 import noop from "module_19" /* 19 */;
 
-const useNativeCheckoutStore = fn(9076).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(9118).useNativeCheckoutStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx");
 

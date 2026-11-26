@@ -1,8 +1,8 @@
-// === Module 17974: useCoverColor ===
+// === Module 18031: useCoverColor ===
 
-// Module 17974 (useCoverColor)
+// Module 18031 (useCoverColor)
 import _modDef671 from "module_671" /* 671 */;
-import privDefault from "priv" /* 1454 */;
+import privDefault from "priv" /* 1455 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -58,7 +58,7 @@ function fetchCoverColor(arg0, uri) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ function fetchCoverColor(arg0, uri) {
     return obj2.pending;
   }
 }
-const sum = fn(5019).WCAGContrastRatios.Text + 0.3;
+const sum = fn(5050).WCAGContrastRatios.Text + 0.3;
 let closure_7 = new privDefault({ max: 256 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/native/useCoverColor.tsx");
@@ -182,7 +182,7 @@ export default function useCoverColor(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -218,7 +218,7 @@ export default function useCoverColor(arg0, arg1) {
               v1(obj);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp17) {
           c3 = tmp;

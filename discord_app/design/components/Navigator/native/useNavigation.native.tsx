@@ -1,7 +1,7 @@
-// === Module 1500: useNavigation ===
+// === Module 1501: useNavigation ===
 
-// Module 1500 (useNavigation)
-import Link from "Link" /* 1501 */;
+// Module 1501 (useNavigation)
+import Link from "Link" /* 1502 */;
 import size from "module_2" /* 2 */;
 
 function useNavigation() {

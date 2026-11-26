@@ -1,8 +1,8 @@
-// === Module 15140: requestReviewModal ===
+// === Module 15190: requestReviewModal ===
 
-// Module 15140 (requestReviewModal)
+// Module 15190 (requestReviewModal)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /* 15141 */;
+import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /* 15191 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_4 = async function _requestReviewModal() {
@@ -16,7 +16,7 @@ let closure_4 = async function _requestReviewModal() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

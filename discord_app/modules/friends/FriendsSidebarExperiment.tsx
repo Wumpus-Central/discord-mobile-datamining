@@ -1,7 +1,7 @@
-// === Module 6924: FriendsSidebarExperiment ===
+// === Module 6955: FriendsSidebarExperiment ===
 
-// Module 6924 (FriendsSidebarExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 6955 (FriendsSidebarExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-friends-sidebar", kind: "user", defaultConfig: { sidebarEnabled: false, appBarToggleEnabled: false }, variations: { 0: { sidebarEnabled: false, appBarToggleEnabled: false }, 1: { sidebarEnabled: true, appBarToggleEnabled: false }, 2: { sidebarEnabled: true, appBarToggleEnabled: true } } });

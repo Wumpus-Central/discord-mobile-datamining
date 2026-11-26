@@ -1,9 +1,9 @@
-// === Module 11841: ExperimentalWebIcon ===
+// === Module 11889: ExperimentalWebIcon ===
 
-// Module 11841 (ExperimentalWebIcon)
+// Module 11889 (ExperimentalWebIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5698 */;
-import _mod11842 from "module_11842" /* 11842 */;
+import BaseIconImage from "BaseIconImage" /* 5729 */;
+import _mod11890 from "module_11890" /* 11890 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ExperimentalWebIcon(dependencyMap) {
   }
   const merged = Object.assign(dependencyMap, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11842, color: INTERACTIVE_ICON_DEFAULT, style: dependencyMap.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11890, color: INTERACTIVE_ICON_DEFAULT, style: dependencyMap.style });
 }

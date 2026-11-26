@@ -1,9 +1,9 @@
-// === Module 12095: AppLauncherContext ===
+// === Module 12145: AppLauncherContext ===
 
-// Module 12095 (AppLauncherContext)
-import _mod1653 from "module_1653" /* 1653 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10047 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 12096 */;
+// Module 12145 (AppLauncherContext)
+import _mod1654 from "module_1654" /* 1654 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10089 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 12146 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,9 +54,9 @@ export function useRequiredAppLauncherContext() {
 export function useAppLauncherContext() {
   noop.useRef(obj.DISMISSED);
   const bottomSheetExpandReasonRef = noop.useRef(undefined);
-  obj = _mod1653;
+  obj = _mod1654;
   const sharedValue = obj.useSharedValue(-1);
-  const sharedValue1 = _mod1653.useSharedValue(0);
+  const sharedValue1 = _mod1654.useSharedValue(0);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
   const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
   c0 = false;

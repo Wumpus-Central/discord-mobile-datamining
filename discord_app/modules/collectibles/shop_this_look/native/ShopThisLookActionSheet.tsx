@@ -1,17 +1,17 @@
-// === Module 14818: ShopThisLookActionSheet ===
+// === Module 14871: ShopThisLookActionSheet ===
 
-// Module 14818 (ShopThisLookActionSheet)
+// Module 14871 (ShopThisLookActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6279 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6291 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import ShopThisLookUtils from "ShopThisLookUtils" /* 14819 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14821 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6322 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import ShopThisLookUtils from "ShopThisLookUtils" /* 14872 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14874 */;
 import noop from "module_19" /* 19 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 11553 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 11601 */;
 
 const require = globalThis.__r;
 
@@ -23,10 +23,10 @@ function ShopThisLookCard(skuId) {
   let ref;
   let callback;
   let wishlistButton = closure_11();
-  const collectiblesShopProduct = skuId(11552).useCollectiblesShopProduct(skuId, { needsCategory: false, shouldFetchProduct: false });
+  const collectiblesShopProduct = skuId(11600).useCollectiblesShopProduct(skuId, { needsCategory: false, shouldFetchProduct: false });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
-  let obj = skuId(11552);
+  let obj = skuId(11600);
   const tmp = skuId;
   items = [ref];
   const items1 = [skuId];
@@ -99,28 +99,28 @@ function ShopThisLookCard(skuId) {
         },
       accessibilityHidden: true
     };
-    let tmp23 = closure_9(onPress(11120), obj3);
+    let tmp23 = closure_9(onPress(11166), obj3);
   } else {
     tmp23 = null;
     if (null != stateFromStores) {
       if (memo) {
         const obj4 = { style: wishlistButton.cardWrapper, children: null };
         const obj5 = { sku: stateFromStores, size, onPress: callback1 };
-        const items7 = [closure_9(onPress(11617), obj5), ];
+        const items7 = [closure_9(onPress(11665), obj5), ];
         let tmp17Result = null != memo1;
         if (tmp17Result) {
           callback1 = { selectedProduct: memo1, style: null };
           wishlistButton = wishlistButton.wishlistButton;
           callback1.style = wishlistButton;
-          tmp17Result = closure_9(onPress(11182), callback1);
+          tmp17Result = closure_9(onPress(11228), callback1);
         }
         items7[1] = tmp17Result;
         obj4.children = items7;
         let tmp15Result = closure_10(memo, obj4);
       } else {
-        const obj6 = { sku: stateFromStores, size, overlay: tmp(11120).WishlistItemCardOverlay.LOCKED, onPress: tmp10 };
-        tmp15Result = closure_9(onPress(11617), obj6);
-        const tmp13 = onPress(11617);
+        const obj6 = { sku: stateFromStores, size, overlay: tmp(11166).WishlistItemCardOverlay.LOCKED, onPress: tmp10 };
+        tmp15Result = closure_9(onPress(11665), obj6);
+        const tmp13 = onPress(11665);
       }
     }
   }
@@ -128,11 +128,11 @@ function ShopThisLookCard(skuId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_MAX_WIDTH = fn(5241).ACTION_SHEET_MAX_WIDTH;
-const UserProfileThemeTypes = fn(7526).UserProfileThemeTypes;
+const ACTION_SHEET_MAX_WIDTH = fn(5272).ACTION_SHEET_MAX_WIDTH;
+const UserProfileThemeTypes = fn(7557).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, description: null, itemsContainer: null, cardWrapper: null, wishlistButton: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.description = { textAlign: "center", marginTop: -nativeDefault.space.PX_8 };
@@ -140,7 +140,7 @@ let obj4 = { textAlign: "center", marginTop: -nativeDefault.space.PX_8 };
 obj2.itemsContainer = { alignSelf: "center", flexDirection: "row", flexWrap: "wrap", paddingBottom: nativeDefault.space.PX_8 };
 obj2.cardWrapper = { position: "relative" };
 let obj6 = {};
-const merged = Object.assign(fn(11120).CARD_TOP_RIGHT_OVERLAY_POSITION);
+const merged = Object.assign(fn(11166).CARD_TOP_RIGHT_OVERLAY_POSITION);
 obj6.zIndex = 1;
 obj2.wishlistButton = obj6;
 let closure_11 = createStyles.createStyles(obj2);
@@ -155,9 +155,9 @@ export default function ShopThisLookActionSheet(arg0) {
   const equippedCollectibleSkuIds = require("useMaybeFetchEquippedCollectibleProducts").useEquippedCollectibleSkuIds(userId, guildId);
   let obj = require("useMaybeFetchEquippedCollectibleProducts");
   let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(14822)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
-  const tmp2 = analyticsLocations(14822)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
-  analyticsLocations = analyticsLocations(6348)(analyticsLocations(6349).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(14875)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+  const tmp2 = analyticsLocations(14875)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+  analyticsLocations = analyticsLocations(6379)(analyticsLocations(6380).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   items = [analyticsLocations];
   dependencyMap = noop.useCallback((initialProductSkuId) => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -165,10 +165,10 @@ export default function ShopThisLookActionSheet(arg0) {
     const result = obj2.openCollectiblesShopMobile({ initialProductSkuId, analyticsLocations, analyticsSource: AnalyticsLocationDefault.USER_PROFILE_OVERFLOW_MENU });
   }, items);
   const obj3 = { value: null, children: null };
-  const items1 = [analyticsLocations(6349).SHOP_THIS_LOOK_ACTION_SHEET];
+  const items1 = [analyticsLocations(6380).SHOP_THIS_LOOK_ACTION_SHEET];
   obj3.value = items1;
   const obj4 = { startExpanded: true, title: null, children: null };
-  const tmp3 = analyticsLocations(6348);
+  const tmp3 = analyticsLocations(6379);
   const intl = require("util").intl;
   obj4.title = intl.string(require("util").t.xNdRDO);
   const obj5 = { style: tmp.container, children: null };
@@ -194,6 +194,6 @@ export default function ShopThisLookActionSheet(arg0) {
   items2[1] = closure_9(closure_5, obj7);
   obj5.children = items2;
   obj4.children = closure_10(closure_5, obj5);
-  obj3.children = closure_9(analyticsLocations(9764), obj4);
+  obj3.children = closure_9(analyticsLocations(9806), obj4);
   return closure_9(require("useAnalyticsLocations").AnalyticsLocationProvider, obj3);
 };

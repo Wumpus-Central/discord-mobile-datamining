@@ -1,21 +1,21 @@
-// === Module 14284: VoiceEmptyState ===
+// === Module 14336: VoiceEmptyState ===
 
-// Module 14284 (VoiceEmptyState)
+// Module 14336 (VoiceEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef14285 from "module_14285" /* 14285 */;
-import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 14286 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _modDef14337 from "module_14337" /* 14337 */;
+import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 14338 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6791 */;
+import TextStyles_mod from "TextStyles" /* 6822 */;
 
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1071).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { container: { justifyContent: "center" }, button: { paddingHorizontal: 12, paddingTop: 16 }, emptyTitle: null, emptyBody: null };
 const obj3 = {};
 let TextStyles = TextStyles_mod;
@@ -43,8 +43,8 @@ export default function VoiceEmptyState(channel) {
   obj4.title = intl.string(util.t["/HABZo"]);
   const intl2 = util.intl;
   obj4.body = intl2.string(util.t["5Jy2FY"]);
-  obj4.lightSource = _modDef14285;
-  obj4.darkSource = _modDef14285;
+  obj4.lightSource = _modDef14337;
+  obj4.darkSource = _modDef14337;
   ({ emptyTitle: obj3.titleStyle, emptyBody: obj3.bodyStyle } = tmp);
   obj4.imageStyle = { marginBottom: 16, marginTop: 20 };
   const items1 = [React4(native.ThemedEmptyState, obj4), React4(JoinVoiceChannelButtonDefault, { channel: channel.channel, style: tmp.button })];

@@ -1,7 +1,7 @@
-// === Module 13868: NitroMobileRefreshExperiment ===
+// === Module 13920: NitroMobileRefreshExperiment ===
 
-// Module 13868 (NitroMobileRefreshExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 13920 (NitroMobileRefreshExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-11-nitro-mobile-refresh", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,11 +1,11 @@
-// === Module 16775: LoadingIndicator ===
+// === Module 16826: LoadingIndicator ===
 
-// Module 16775 (LoadingIndicator)
+// Module 16826 (LoadingIndicator)
 import noop from "module_19" /* 19 */;
 
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_2 = createStyles.createStyles({ indicator: { margin: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx");

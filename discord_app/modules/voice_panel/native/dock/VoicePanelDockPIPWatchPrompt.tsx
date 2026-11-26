@@ -1,19 +1,19 @@
-// === Module 19470: VoicePanelDockPIPWatchPrompt ===
+// === Module 19533: VoicePanelDockPIPWatchPrompt ===
 
-// Module 19470 (VoicePanelDockPIPWatchPrompt)
+// Module 19533 (VoicePanelDockPIPWatchPrompt)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import native from "native" /* 5073 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6348 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import StreamActionCreators from "StreamActionCreators" /* 8377 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
-import VoicePanelDockActionCreators from "VoicePanelDockActionCreators" /* 19471 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import native from "native" /* 5104 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import StreamActionCreators from "StreamActionCreators" /* 8419 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
+import VoicePanelDockActionCreators from "VoicePanelDockActionCreators" /* 19534 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
-import UserStore from "UserStore" /* 1386 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function WatchPrompt(ownerId) {
@@ -23,7 +23,7 @@ function WatchPrompt(ownerId) {
   let sharedValue;
   ({ hideContent, transitionState } = ownerId);
   const tmp = closure_10();
-  const context = sharedValue.useContext(cleanUp(11733));
+  const context = sharedValue.useContext(cleanUp(11781));
   ({ channelId, guildId } = context);
   items = [UserStore];
   let items1 = [ownerId];
@@ -32,14 +32,14 @@ function WatchPrompt(ownerId) {
   closure_129_0 = ownerId;
   closure_129_1 = streamKey;
   closure_129_2 = isConnecting;
-  const name = cleanUp(6776).useName(guildId, channelId, stateFromStores);
-  const context1 = sharedValue.useContext(cleanUp(11733));
+  const name = cleanUp(6807).useName(guildId, channelId, stateFromStores);
+  const context1 = sharedValue.useContext(cleanUp(11781));
   const channelId2 = context1.channelId;
   closure_129_3 = channelId2;
   const guildId2 = context1.guildId;
   closure_129_4 = guildId2;
-  let obj2 = cleanUp(6776);
-  const analyticsLocations = cleanUp(6348)(cleanUp(6349).STREAM_WATCH_PROMPT_PIP).analyticsLocations;
+  let obj2 = cleanUp(6807);
+  const analyticsLocations = cleanUp(6379)(cleanUp(6380).STREAM_WATCH_PROMPT_PIP).analyticsLocations;
   closure_129_5 = analyticsLocations;
   const items2 = [ownerId, guildId2, isConnecting, analyticsLocations];
   const items3 = [guildId2, channelId2, isConnecting, streamKey, analyticsLocations];
@@ -68,15 +68,15 @@ function WatchPrompt(ownerId) {
   }, items3);
   const tmp12 = transitionState !== require("native").TransitionStates.YEETED;
   dependencyMap = tmp12;
-  const tmp9 = cleanUp(6348);
-  sharedValue = require("module_1653").useSharedValue(1);
+  const tmp9 = cleanUp(6379);
+  sharedValue = require("module_1654").useSharedValue(1);
   const items4 = [sharedValue, tmp12, cleanUp];
   const effect = sharedValue.useEffect(() => {
     if (closure_2) {
       const result = set(1);
     } else {
       const obj = timing_timing;
-      items = [closure_11, _mod1706.scheduleOnRN, cleanUp];
+      items = [closure_11, _mod1707.scheduleOnRN, cleanUp];
       c0 = undefined;
       c1 = undefined;
       [tmp8, tmp9, tmp10] = items;
@@ -97,7 +97,7 @@ function WatchPrompt(ownerId) {
       const result1 = set(obj.withTiming(0, closure_9, "respect-motion-settings", VoicePanelDockPIPWatchPromptTsx1));
     }
   }, items4);
-  let obj3 = require("module_1653");
+  let obj3 = require("module_1654");
   const items5 = [closure_12, sharedValue];
   _require = undefined;
   [tmp15, tmp16] = items5;
@@ -112,7 +112,7 @@ function WatchPrompt(ownerId) {
   VoicePanelDockPIPWatchPromptTsx2.__workletHash = 9976352241568;
   VoicePanelDockPIPWatchPromptTsx2.__initData = tmp15;
   let tmp18 = !tmp12;
-  const animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelDockPIPWatchPromptTsx2);
+  const animatedStyle = require("module_1654").useAnimatedStyle(VoicePanelDockPIPWatchPromptTsx2);
   if (tmp12) {
     tmp18 = hideContent;
   }
@@ -124,10 +124,10 @@ function WatchPrompt(ownerId) {
     str = "none";
   }
   obj5.pointerEvents = str;
-  const items8 = [closure_7(cleanUp(7024), { style: tmp.border, pointerEvents: "none" }), , ];
+  const items8 = [closure_7(cleanUp(7055), { style: tmp.border, pointerEvents: "none" }), , ];
   const items9 = [tmp.content, ];
   let hidden = null;
-  let obj4 = require("module_1653");
+  let obj4 = require("module_1654");
   const obj6 = { style: tmp.border, pointerEvents: "none" };
   if (tmp18) {
     hidden = tmp.hidden;
@@ -145,8 +145,8 @@ function WatchPrompt(ownerId) {
     const obj10 = { variant: "body-sm/medium", color: "text-default", lineClamp: 1, style: tmp.label, children: null };
     const intl2 = tmp5(1112).intl;
     const obj11 = { username: name };
-    obj10.children = intl2.formatToPlainString(cleanUp(3430)["g9x8/M"], obj11);
-    tmp20Result = closure_7(tmp5(5603).Text, obj10);
+    obj10.children = intl2.formatToPlainString(cleanUp(3431)["g9x8/M"], obj11);
+    tmp20Result = closure_7(tmp5(5634).Text, obj10);
   }
   items10[1] = tmp20Result;
   const obj12 = { size: "sm", variant: "primary-overlay", text: null, onPress: null, loading: null };
@@ -156,10 +156,10 @@ function WatchPrompt(ownerId) {
   obj12.loading = isConnecting;
   items10[2] = closure_7(require("components/Button/Button").Button, obj12);
   obj7.children = items10;
-  items8[1] = closure_8(cleanUp(7024), obj7);
+  items8[1] = closure_8(cleanUp(7055), obj7);
   const items11 = [tmp.dismissButton, ];
   let hidden1 = null;
-  const tmp2Result = cleanUp(7024);
+  const tmp2Result = cleanUp(7055);
   if (tmp18) {
     hidden1 = tmp.hidden;
   }
@@ -169,9 +169,9 @@ function WatchPrompt(ownerId) {
   const intl4 = tmp5(1112).intl;
   obj14.accessibilityLabel = intl4.string(require("util").t.WAI6xu);
   obj13.children = closure_7(require("IconButton").IconButton, obj14);
-  items8[2] = closure_7(cleanUp(7024), obj13);
+  items8[2] = closure_7(cleanUp(7055), obj13);
   obj5.children = items8;
-  return closure_8(cleanUp(1653).View, obj5);
+  return closure_8(cleanUp(1654).View, obj5);
 }
 function renderWatchPrompt(id, arg1, transitionState, cleanUp) {
   const obj = {};
@@ -185,7 +185,7 @@ const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { duration: 200 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: null, border: null, content: null, hidden: null, dismissButton: null, label: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

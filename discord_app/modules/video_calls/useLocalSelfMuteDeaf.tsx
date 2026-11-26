@@ -1,9 +1,9 @@
-// === Module 8608: useLocalSelfMuteDeaf ===
+// === Module 8650: useLocalSelfMuteDeaf ===
 
-// Module 8608 (useLocalSelfMuteDeaf)
+// Module 8650 (useLocalSelfMuteDeaf)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 
 require = fn;
 function getLocalSelfMuteDeaf() {

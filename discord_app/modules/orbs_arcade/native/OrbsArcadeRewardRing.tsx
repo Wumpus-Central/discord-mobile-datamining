@@ -1,10 +1,10 @@
-// === Module 16592: OrbsArcadeRewardRing ===
+// === Module 16643: OrbsArcadeRewardRing ===
 
-// Module 16592 (OrbsArcadeRewardRing)
-import _mod1653 from "module_1653" /* 1653 */;
+// Module 16643 (OrbsArcadeRewardRing)
+import _mod1654 from "module_1654" /* 1654 */;
 import noop from "module_19" /* 19 */;
 
-const module_1653 = _mod1653;
+const module_1654 = _mod1654;
 
 require = fn;
 function RingArc(arcLength) {
@@ -29,11 +29,11 @@ function RingArc(arcLength) {
   OrbsArcadeRewardRingTsx1.__closure = items1;
   OrbsArcadeRewardRingTsx1.__workletHash = 15686336593485;
   OrbsArcadeRewardRingTsx1.__initData = tmp;
-  return <closure_4 d={d} fill="none" stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" strokeDasharray={arcLength} animatedProps={_mod1653.useAnimatedProps(OrbsArcadeRewardRingTsx1)} />;
+  return <closure_4 d={d} fill="none" stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" strokeDasharray={arcLength} animatedProps={_mod1654.useAnimatedProps(OrbsArcadeRewardRingTsx1)} />;
 }
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let closure_4 = module_1653.createAnimatedComponent(fn(7912).Path);
+let closure_4 = module_1654.createAnimatedComponent(fn(7946).Path);
 let closure_5 = { code: "(function OrbsArcadeRewardRingTsx1(){let[arcLength,progress]=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeRewardRing.tsx");

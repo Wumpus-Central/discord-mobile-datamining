@@ -1,6 +1,6 @@
-// === Module 6572: ? ===
+// === Module 6603: ? ===
 
-// Module 6572
+// Module 6603
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/jester_sunrise.png.js");

@@ -1,9 +1,9 @@
-// === Module 14815: useSheetDismissPointerEvents ===
+// === Module 14868: useSheetDismissPointerEvents ===
 
-// Module 14815 (useSheetDismissPointerEvents)
-import _mod1653 from "module_1653" /* 1653 */;
-import BottomSheetModal from "BottomSheetModal" /* 5244 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
+// Module 14868 (useSheetDismissPointerEvents)
+import _mod1654 from "module_1654" /* 1654 */;
+import BottomSheetModal from "BottomSheetModal" /* 5275 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = { code: "(function useSheetDismissPointerEventsTsx1(){let[contentGestureState,State,handleGestureState]=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};})" };
@@ -44,5 +44,5 @@ export default function useSheetDismissPointerEvents() {
   useSheetDismissPointerEventsTsx1.__closure = items1;
   useSheetDismissPointerEventsTsx1.__workletHash = 6909948922505;
   useSheetDismissPointerEventsTsx1.__initData = tmp6;
-  return _mod1653.useAnimatedStyle(useSheetDismissPointerEventsTsx1);
+  return _mod1654.useAnimatedStyle(useSheetDismissPointerEventsTsx1);
 };

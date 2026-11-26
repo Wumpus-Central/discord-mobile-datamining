@@ -1,7 +1,7 @@
-// === Module 10207: allowPopups ===
+// === Module 10249: allowPopups ===
 
-// Module 10207 (allowPopups)
-import Constants from "Constants" /* 2144 */;
+// Module 10249 (allowPopups)
+import Constants from "Constants" /* 2145 */;
 import size from "module_2" /* 2 */;
 
 Constants.APPLICATIONS_WITH_ALLOWED_POPUPS;

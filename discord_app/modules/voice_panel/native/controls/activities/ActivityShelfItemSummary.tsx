@@ -1,14 +1,14 @@
-// === Module 19445: ActivityShelfItemSummary ===
+// === Module 19508: ActivityShelfItemSummary ===
 
-// Module 19445 (ActivityShelfItemSummary)
+// Module 19508 (ActivityShelfItemSummary)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import ButtonPill from "ButtonPill" /* 5621 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5623 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10524 */;
-import useActivityUsersDefault from "useActivityUsers" /* 19446 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import ButtonPill from "ButtonPill" /* 5652 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5654 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10569 */;
+import useActivityUsersDefault from "useActivityUsers" /* 19509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,10 +25,10 @@ function ParticipantsSummary(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
 let obj3 = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: nativeDefault.radii.round, backgroundColor: null, marginBottom: 8 };
-const ColorUtils = fn(5009);
+const ColorUtils = fn(5040);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 obj2.overlayActivityName = obj3;
 obj2.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -56,7 +56,7 @@ export default function ActivityShelfItemSummary(submitting) {
     tmp7Result = hasOwnProperty(ButtonEllipsis.Ellipsis, { variant: "active", size: "md" });
   }
   obj5.children = tmp7Result;
-  items[1] = hasOwnProperty(_modDef1653.View, obj5);
+  items[1] = hasOwnProperty(_modDef1654.View, obj5);
   obj3.children = items;
   const items2 = [timestampProducer(View, obj3), hasOwnProperty(ParticipantsSummary, { channelId, applicationId })];
   obj2.children = items2;

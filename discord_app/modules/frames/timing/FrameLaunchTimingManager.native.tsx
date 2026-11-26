@@ -1,7 +1,7 @@
-// === Module 7656: FrameLaunchTimingManager ===
+// === Module 7687: FrameLaunchTimingManager ===
 
-// Module 7656 (FrameLaunchTimingManager)
-import noopFrameLaunchTiming from "noopFrameLaunchTiming" /* 7655 */;
+// Module 7687 (FrameLaunchTimingManager)
+import noopFrameLaunchTiming from "noopFrameLaunchTiming" /* 7686 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/timing/FrameLaunchTimingManager.native.tsx");

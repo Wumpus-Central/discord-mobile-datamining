@@ -1,18 +1,18 @@
-// === Module 19900: GuildSettingsModalAuditLogFilter ===
+// === Module 19964: GuildSettingsModalAuditLogFilter ===
 
-// Module 19900 (GuildSettingsModalAuditLogFilter)
+// Module 19964 (GuildSettingsModalAuditLogFilter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5074 */;
-import FormRadio from "FormRadio" /* 7223 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11390 */;
-import AuditLogUtils from "AuditLogUtils" /* 19898 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 19901 */;
+import UserUtilsDefault from "UserUtils" /* 5099 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5105 */;
+import FormRadio from "FormRadio" /* 7254 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11436 */;
+import AuditLogUtils from "AuditLogUtils" /* 19962 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 19965 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19896 */;
+import UserStore from "UserStore" /* 1387 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19960 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1071).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = noop.memo(function AuditLogFilterUserRow(selected) {

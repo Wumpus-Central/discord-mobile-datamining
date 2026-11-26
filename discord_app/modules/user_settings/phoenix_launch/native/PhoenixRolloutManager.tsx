@@ -1,11 +1,11 @@
-// === Module 19784: PhoenixRolloutManager ===
+// === Module 19848: PhoenixRolloutManager ===
 
-// Module 19784 (PhoenixRolloutManager)
+// Module 19848 (PhoenixRolloutManager)
 import LoggerDefault from "Logger" /* 3 */;
-import NativePhoenixLaunchModuleDefault from "NativePhoenixLaunchModule" /* 17330 */;
+import NativePhoenixLaunchModuleDefault from "NativePhoenixLaunchModule" /* 17381 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 const require = fn;
 let closure_6 = async function _applyPhoenixRollout() {
@@ -19,7 +19,7 @@ let closure_6 = async function _applyPhoenixRollout() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

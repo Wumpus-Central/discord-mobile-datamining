@@ -1,9 +1,9 @@
-// === Module 11452: ChannelNotificationIcon ===
+// === Module 11499: ChannelNotificationIcon ===
 
-// Module 11452 (ChannelNotificationIcon)
+// Module 11499 (ChannelNotificationIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5698 */;
-import _mod11453 from "module_11453" /* 11453 */;
+import BaseIconImage from "BaseIconImage" /* 5729 */;
+import _mod11500 from "module_11500" /* 11500 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ChannelNotificationIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11453, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11500, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

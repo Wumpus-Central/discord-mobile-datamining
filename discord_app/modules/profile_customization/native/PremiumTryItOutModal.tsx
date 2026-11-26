@@ -1,17 +1,17 @@
-// === Module 16104: PremiumTryItOutModal ===
+// === Module 16160: PremiumTryItOutModal ===
 
-// Module 16104 (PremiumTryItOutModal)
+// Module 16160 (PremiumTryItOutModal)
 import util from "util" /* 1112 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6278 */;
-import NavigatorHeader from "NavigatorHeader" /* 7160 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
+import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: closure_6 } = Constants);
-const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1389).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/PremiumTryItOutModal.tsx");

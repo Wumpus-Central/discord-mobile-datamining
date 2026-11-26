@@ -1,17 +1,17 @@
-// === Module 16381: FamilyCenterAvatarPair ===
+// === Module 16432: FamilyCenterAvatarPair ===
 
-// Module 16381 (FamilyCenterAvatarPair)
+// Module 16432 (FamilyCenterAvatarPair)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { avatars: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 8 }, icon: { height: 24, width: 24, marginHorizontal: 16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

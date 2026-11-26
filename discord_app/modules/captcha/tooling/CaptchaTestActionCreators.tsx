@@ -1,7 +1,7 @@
-// === Module 17266: CaptchaTestActionCreators ===
+// === Module 17317: CaptchaTestActionCreators ===
 
-// Module 17266 (CaptchaTestActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1284 */;
+// Module 17317 (CaptchaTestActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_4 = async function _testCaptcha() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -51,7 +51,7 @@ let closure_4 = async function _testCaptcha() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp10) {
         c2 = tmp;

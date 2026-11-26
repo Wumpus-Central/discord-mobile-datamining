@@ -1,15 +1,15 @@
-// === Module 19827: NotificationSettingsModalStore ===
+// === Module 19891: NotificationSettingsModalStore ===
 
-// Module 19827 (NotificationSettingsModalStore)
+// Module 19891 (NotificationSettingsModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 4865 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7438 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7437 */;
-import GuildChannelStore from "GuildChannelStore" /* 4942 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5633 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
+import ChannelRecord from "ChannelRecord" /* 4896 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7469 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7468 */;
+import GuildChannelStore from "GuildChannelStore" /* 4973 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5664 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

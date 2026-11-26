@@ -1,6 +1,6 @@
-// === Module 1347: AnalyticsSchema ===
+// === Module 1348: AnalyticsSchema ===
 
-// Module 1347 (AnalyticsSchema)
+// Module 1348 (AnalyticsSchema)
 import Constants from "Constants" /* 1082 */;
 import size from "module_2" /* 2 */;
 

@@ -1,17 +1,17 @@
-// === Module 4968: EmojiUtilsPlatformed ===
+// === Module 4999: EmojiUtilsPlatformed ===
 
-// Module 4968 (EmojiUtilsPlatformed)
+// Module 4999 (EmojiUtilsPlatformed)
 import applyDefault from "apply" /* 12 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2023 */;
-import DeviceUtils from "DeviceUtils" /* 4969 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 4970 */;
-import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 5011 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2024 */;
+import DeviceUtils from "DeviceUtils" /* 5000 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 5001 */;
+import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 5042 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4959 */;
-import MemoizerUtils from "MemoizerUtils" /* 5624 */;
+import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4990 */;
+import MemoizerUtils from "MemoizerUtils" /* 5655 */;
 
 require = fn;
 function getURL(name) {
@@ -40,7 +40,7 @@ let closure_8 = async function _getEmojiColors(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

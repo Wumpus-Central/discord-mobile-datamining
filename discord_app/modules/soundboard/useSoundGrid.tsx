@@ -1,19 +1,19 @@
-// === Module 18172: useSoundGrid ===
+// === Module 18231: useSoundGrid ===
 
-// Module 18172 (useSoundGrid)
-import SoundboardTypes from "SoundboardTypes" /* 7058 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8429 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 10321 */;
-import useSoundOrganizer from "useSoundOrganizer" /* 18173 */;
-import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 18175 */;
+// Module 18231 (useSoundGrid)
+import SoundboardTypes from "SoundboardTypes" /* 7089 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8471 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 10363 */;
+import useSoundOrganizer from "useSoundOrganizer" /* 18232 */;
+import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 18234 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import UserStore from "UserStore" /* 1386 */;
-import SoundboardStore from "SoundboardStore" /* 6892 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import UserStore from "UserStore" /* 1387 */;
+import SoundboardStore from "SoundboardStore" /* 6923 */;
 
 const require = globalThis.__r;
 
@@ -25,9 +25,9 @@ function createSoundItems(arg0, fn) {
   }
   return arr.map((sound, index) => ({ type: categories(length[10]).SoundboardSoundItemType.SOUND, sound, index }));
 }
-const SoundboardConstants = fn(6894);
+const SoundboardConstants = fn(6925);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
-const PremiumTypes = fn(1388).PremiumTypes;
+const PremiumTypes = fn(1389).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/useSoundGrid.tsx");
 
@@ -188,8 +188,8 @@ export default function useSoundGrid(guild_id) {
             continue;
           }
           if (0 !== items.length) {
-            const obj2 = { key: closure_0(7058).SoundboardSoundGridSectionType.TOP_SOUNDS, categoryInfo: null, items: null };
-            const obj3 = { type: closure_0(7058).SoundboardSoundGridSectionType.TOP_SOUNDS, guild: id };
+            const obj2 = { key: closure_0(7089).SoundboardSoundGridSectionType.TOP_SOUNDS, categoryInfo: null, items: null };
+            const obj3 = { type: closure_0(7089).SoundboardSoundGridSectionType.TOP_SOUNDS, guild: id };
             obj2.categoryInfo = obj3;
             obj2.items = stateFromStores3(items);
             items.push(obj2);
@@ -316,7 +316,7 @@ export default function useSoundGrid(guild_id) {
             let tmp9Result = stateFromStores3(items, sortSoundsFn);
             if (tmp9Result.length > 0) {
               let obj = { categoryInfo: null, key: null, items: null };
-              let obj2 = { type: closure_0(7058).SoundboardSoundGridSectionType.GUILD, guild: null, isNitroLocked: null };
+              let obj2 = { type: closure_0(7089).SoundboardSoundGridSectionType.GUILD, guild: null, isNitroLocked: null };
               obj2.guild = tmp2;
               obj2.isNitroLocked = !hasNitro;
               obj.categoryInfo = obj2;

@@ -1,7 +1,7 @@
-// === Module 15978: UserProfileMobileEditingRefreshExperiment ===
+// === Module 16029: UserProfileMobileEditingRefreshExperiment ===
 
-// Module 15978 (UserProfileMobileEditingRefreshExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 16029 (UserProfileMobileEditingRefreshExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-11-user-profile-mobile-editing-refresh", kind: "user", defaultConfig: { enabled: false }, variations: null };

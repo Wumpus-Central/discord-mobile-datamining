@@ -1,7 +1,7 @@
-// === Module 7466: FormLabel ===
+// === Module 7497: FormLabel ===
 
-// Module 7466 (FormLabel)
-import Text_Text from "Text/Text" /* 5603 */;
+// Module 7497 (FormLabel)
+import Text_Text from "Text/Text" /* 5634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

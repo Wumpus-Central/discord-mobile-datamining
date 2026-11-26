@@ -1,12 +1,12 @@
-// === Module 11122: WishlistShopUnpublishLabel ===
+// === Module 11168: WishlistShopUnpublishLabel ===
 
-// Module 11122 (WishlistShopUnpublishLabel)
+// Module 11168 (WishlistShopUnpublishLabel)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import Badge from "Badge" /* 6128 */;
-import WishlistShopUnpublishUtils from "WishlistShopUnpublishUtils" /* 11121 */;
-import createStyles from "createStyles" /* 5012 */;
+import Badge from "Badge" /* 6159 */;
+import WishlistShopUnpublishUtils from "WishlistShopUnpublishUtils" /* 11167 */;
+import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

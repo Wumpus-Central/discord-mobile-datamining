@@ -1,6 +1,6 @@
-// === Module 5648: ContentRatingGOPClassification ===
+// === Module 5679: ContentRatingGOPClassification ===
 
-// Module 5648 (ContentRatingGOPClassification)
+// Module 5679 (ContentRatingGOPClassification)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set([1]), IS_ADULT: null };

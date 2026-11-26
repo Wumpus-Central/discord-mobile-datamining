@@ -1,13 +1,13 @@
-// === Module 18499: ConjureShareAccess ===
+// === Module 18562: ConjureShareAccess ===
 
-// Module 18499 (ConjureShareAccess)
+// Module 18562 (ConjureShareAccess)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import ToastUtils from "ToastUtils" /* 5693 */;
-import ClipboardUtils from "ClipboardUtils" /* 7507 */;
-import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18442 */;
-import buildConjureProjectLinkDefault from "buildConjureProjectLink" /* 18503 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import ToastUtils from "ToastUtils" /* 5724 */;
+import ClipboardUtils from "ClipboardUtils" /* 7538 */;
+import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18505 */;
+import buildConjureProjectLinkDefault from "buildConjureProjectLink" /* 18566 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function ShareLinkRow(project) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { body: { gap: nativeDefault.space.PX_16 }, notice: null, noticeText: null, sharingMode: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.notice = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -62,7 +62,7 @@ export default function ConjureShareAccess(arg0) {
   let tmp7 = null;
   const callback = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(18442, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(18505, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, {
       options,
       value: mode,
       onChange(AUTO_DISMISS) {

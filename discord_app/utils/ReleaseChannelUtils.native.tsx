@@ -1,10 +1,10 @@
-// === Module 5781: ReleaseChannelUtils ===
+// === Module 5812: ReleaseChannelUtils ===
 
-// Module 5781 (ReleaseChannelUtils)
-import ClientInfoUtils from "ClientInfoUtils" /* 1377 */;
+// Module 5812 (ReleaseChannelUtils)
+import ClientInfoUtils from "ClientInfoUtils" /* 1378 */;
 
 const ReleaseChannel = ClientInfoUtils.getConstants().ReleaseChannel;
-let PlatformUtils = fn(1378);
+let PlatformUtils = fn(1379);
 PlatformUtils = PlatformUtils.isAndroid();
 if (PlatformUtils) {
   PlatformUtils = -1 === ReleaseChannel.indexOf("canary");

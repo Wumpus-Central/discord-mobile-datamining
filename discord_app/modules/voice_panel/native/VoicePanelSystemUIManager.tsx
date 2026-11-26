@@ -1,19 +1,19 @@
-// === Module 19465: VoicePanelSystemUIManager ===
+// === Module 19528: VoicePanelSystemUIManager ===
 
-// Module 19465 (VoicePanelSystemUIManager)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 9978 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
+// Module 19528 (VoicePanelSystemUIManager)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 10020 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6902 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11734).VoicePanelModes;
-const VoicePanelControlsModes = fn(11732).VoicePanelControlsModes;
-const ParticipantTypes = fn(5662).ParticipantTypes;
+const VoicePanelModes = fn(11782).VoicePanelModes;
+const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
+const ParticipantTypes = fn(5693).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = { code: "(function VoicePanelSystemUIManagerTsx1(){let[focused,mode,controlsSpecs,windowDimensions]=this.__closure;var _focused$get;return{focusedId:(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,mode:mode.get(),controlsMode:controlsSpecs.get().mode,landscape:windowDimensions.get().landscape};})" };
@@ -35,7 +35,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   const memo = noop.useMemo(() => {
     closure_0 = _undefined2(_undefined3[10])(function updateState(arg0) {
       ({ focusedId: closure_0, mode: focusedId, controlsMode: closure_2, landscape: closure_3 } = arg0);
-      closure_0(1262).batchUpdates(() => {
+      closure_0(1263).batchUpdates(() => {
         dependencyMap(c1 !== constants.PIP);
         let tmp4 = null == _undefined;
         if (tmp4) {
@@ -135,7 +135,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   VoicePanelSystemUIManagerTsx1.__closure = items3;
   VoicePanelSystemUIManagerTsx1.__workletHash = 5587147718300;
   VoicePanelSystemUIManagerTsx1.__initData = tmp13;
-  const items4 = [closure_13, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, require("module_1706").scheduleOnRN, memo.handleStateChange];
+  const items4 = [closure_13, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, require("module_1707").scheduleOnRN, memo.handleStateChange];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -156,11 +156,11 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   VoicePanelSystemUIManagerTsx2.__closure = items5;
   VoicePanelSystemUIManagerTsx2.__workletHash = 4961093697158;
   VoicePanelSystemUIManagerTsx2.__initData = tmp18;
-  const animatedReaction = require("module_1653").useAnimatedReaction(VoicePanelSystemUIManagerTsx1, VoicePanelSystemUIManagerTsx2);
+  const animatedReaction = require("module_1654").useAnimatedReaction(VoicePanelSystemUIManagerTsx1, VoicePanelSystemUIManagerTsx2);
   let tmp25 = null;
   if (tmp6[0]) {
     const obj2 = { hidden: !tmp5, barStyle: "light-content" };
-    tmp25 = closure_9(tmp(9976), obj2);
+    tmp25 = closure_9(tmp(10018), obj2);
   }
   const obj3 = { children: null };
   const items6 = [tmp25, closure_9(HomeIndicatorDefault, { prefersHidden: tmp8, prefersDeferringSystemGestures: tmp9[0] })];

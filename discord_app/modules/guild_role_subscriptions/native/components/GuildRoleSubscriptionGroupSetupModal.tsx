@@ -1,10 +1,10 @@
-// === Module 20196: GuildRoleSubscriptionGroupSetupModal ===
+// === Module 20260: GuildRoleSubscriptionGroupSetupModal ===
 
-// Module 20196 (GuildRoleSubscriptionGroupSetupModal)
+// Module 20260 (GuildRoleSubscriptionGroupSetupModal)
 import util from "util" /* 1112 */;
-import ToastUtils from "ToastUtils" /* 5693 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5982 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16785 */;
+import ToastUtils from "ToastUtils" /* 5724 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16836 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ let closure_12 = async function _createGroupFromStore(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_12 = async function _createGroupFromStore(arg0) {
         return obj;
       }
       c6 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp13) {
       c6 = tmp;
       throw tmp13;
@@ -119,7 +119,7 @@ class GuildRoleSubscriptionGroupSetupModal {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -168,8 +168,8 @@ class GuildRoleSubscriptionGroupSetupModal {
                       const intl = merged(1112).intl;
                       closure_1 = intl.string(merged(1112).t.ZUEGFn);
                     }
-                    merged(5693).presentError(closure_1);
-                    const obj8 = merged(5693);
+                    merged(5724).presentError(closure_1);
+                    const obj8 = merged(5724);
                   }
                   const obj5 = {
                     guildId: closure_131_1,
@@ -295,8 +295,8 @@ class GuildRoleSubscriptionGroupSetupModal {
     return closure_11(tmp3(tmp4[13]).EditStateContextProvider, obj1);
   }
 }
-const useRoleTierEditStore = fn(20155).useRoleTierEditStore;
-const GuildRoleSubscriptionsConstants = fn(16765);
+const useRoleTierEditStore = fn(20219).useRoleTierEditStore;
+const GuildRoleSubscriptionsConstants = fn(16816);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_9 } = GuildRoleSubscriptionsConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;

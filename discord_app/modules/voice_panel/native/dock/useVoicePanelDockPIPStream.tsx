@@ -1,18 +1,18 @@
-// === Module 19475: useVoicePanelDockPIPStream ===
+// === Module 19538: useVoicePanelDockPIPStream ===
 
-// Module 19475 (useVoicePanelDockPIPStream)
-import StreamKeyUtils from "StreamKeyUtils" /* 6785 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6902 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
+// Module 19538 (useVoicePanelDockPIPStream)
+import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import VoicePanelDockPIPWatchPromptStore from "VoicePanelDockPIPWatchPromptStore" /* 19476 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import VoicePanelDockPIPWatchPromptStore from "VoicePanelDockPIPWatchPromptStore" /* 19539 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
-const ParticipantTypes = fn(5662).ParticipantTypes;
+const ParticipantTypes = fn(5693).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockPIPStream.tsx");
 

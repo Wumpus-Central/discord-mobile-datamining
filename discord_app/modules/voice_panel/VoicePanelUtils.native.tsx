@@ -1,11 +1,11 @@
-// === Module 10228: VoicePanelUtils ===
+// === Module 10270: VoicePanelUtils ===
 
-// Module 10228 (VoicePanelUtils)
+// Module 10270 (VoicePanelUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10229 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
-import VoicePanelStore from "VoicePanelStore" /* 6934 */;
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10271 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
+import VoicePanelStore from "VoicePanelStore" /* 6965 */;
 
 require = fn;
 const size = fn(2);

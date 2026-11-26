@@ -1,11 +1,11 @@
-// === Module 9335: useIsUserEligibleForThirdPartyPerks ===
+// === Module 9377: useIsUserEligibleForThirdPartyPerks ===
 
-// Module 9335 (useIsUserEligibleForThirdPartyPerks)
+// Module 9377 (useIsUserEligibleForThirdPartyPerks)
 import initialize from "initialize" /* 504 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
-import ThirdPartyPerkUtils from "ThirdPartyPerkUtils" /* 9336 */;
-import UserStore from "UserStore" /* 1386 */;
-import SubscriptionStore from "SubscriptionStore" /* 2178 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2109 */;
+import ThirdPartyPerkUtils from "ThirdPartyPerkUtils" /* 9378 */;
+import UserStore from "UserStore" /* 1387 */;
+import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 
 require = fn;
 const size = fn(2);

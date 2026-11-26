@@ -1,20 +1,20 @@
-// === Module 15533: Collapsible ===
+// === Module 15584: Collapsible ===
 
-// Module 15533 (Collapsible)
+// Module 15584 (Collapsible)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5613 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import spring_spring from "spring/spring" /* 5644 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { stiffness: 150, overshootClamping: true };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { collapsible: { position: "relative", overflow: "hidden" }, collapsibleContent: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { code: "(function CollapsibleTsx1(){let[withSpring,totalHeight,EXPAND_SPRING]=this.__closure;return{height:withSpring(totalHeight,EXPAND_SPRING)};})" };
@@ -60,7 +60,7 @@ export default function Collapsible(isExpanded) {
     CollapsibleTsx1.__workletHash = 912890471066;
     CollapsibleTsx1.__initData = tmp17;
     const items3 = [first, tmp4];
-    const animatedStyle = _mod1653.useAnimatedStyle(CollapsibleTsx1);
+    const animatedStyle = _mod1654.useAnimatedStyle(CollapsibleTsx1);
     const obj3 = { style, children: null };
     const callback1 = noop.useCallback(() => {
       _undefined2(!c0);
@@ -80,7 +80,7 @@ export default function Collapsible(isExpanded) {
     const obj7 = { style: tmp.collapsibleContent, onLayout: tmp10, children: collapsibleContent };
     items5[1] = timestampProducer(View, obj7);
     obj4.children = items5;
-    obj3.children = metroImportDefault(_modDef1653.View, obj4);
+    obj3.children = metroImportDefault(_modDef1654.View, obj4);
     return timestampProducer(View, obj3);
   } else {
     num = 0;

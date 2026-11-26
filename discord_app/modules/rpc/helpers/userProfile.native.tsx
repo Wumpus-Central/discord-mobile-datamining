@@ -1,10 +1,10 @@
-// === Module 15874: userProfile ===
+// === Module 15925: userProfile ===
 
-// Module 15874 (userProfile)
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 6102 */;
+// Module 15925 (userProfile)
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 6133 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 5227 */;
-import UserStore from "UserStore" /* 1386 */;
+import ActionSheetStore from "ActionSheetStore" /* 5258 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const size = fn(2);
@@ -27,7 +27,7 @@ export function openUserProfile(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -45,7 +45,7 @@ export function openUserProfile(arg0) {
             if (null == authStore.getUser(require)) {
               v2 = 3;
               c3 = 1;
-              const obj4 = { value: tmp3(6103).getUser(require), done: false };
+              const obj4 = { value: tmp3(6134).getUser(require), done: false };
               return obj4;
             }
           }
@@ -86,7 +86,7 @@ export function openUserProfile(arg0) {
           const obj8 = { userId: closure_128_0, channelId: closure_128_1, onClose: closure_128_3 };
           v2 = 2;
           c3 = 1;
-          const obj9 = { value: v2(6102)(obj8), done: false };
+          const obj9 = { value: v2(6133)(obj8), done: false };
           return obj9;
         }
       } catch (tmp29) {

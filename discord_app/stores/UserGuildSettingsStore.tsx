@@ -1,16 +1,16 @@
-// === Module 6136: UserGuildSettingsStore ===
+// === Module 6167: UserGuildSettingsStore ===
 
-// Module 6136 (UserGuildSettingsStore)
+// Module 6167 (UserGuildSettingsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtilsAll from "FlagUtils" /* 1404 */;
-import MuteTimers from "MuteTimers" /* 4947 */;
-import ImpersonateStore from "ImpersonateStore" /* 4917 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4946 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import UserStore from "UserStore" /* 1386 */;
+import FlagUtilsAll from "FlagUtils" /* 1405 */;
+import MuteTimers from "MuteTimers" /* 4978 */;
+import ImpersonateStore from "ImpersonateStore" /* 4948 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4977 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const MuteTimersDefault = MuteTimers;
 
@@ -206,12 +206,12 @@ function updateUserGuildChannelSettingsBulk(guildId, channel_overrides) {
 function handleGuildUpdate() {
   return true;
 }
-const ChannelRecord = fn(4865);
+const ChannelRecord = fn(4896);
 ({ THREAD_CHANNEL_TYPES: closure_6, isPrivate: metroImportDefault } = ChannelRecord);
 const Constants = fn(1071);
 const UserNotificationSettings = Constants.UserNotificationSettings;
-const AccountNotificationFlags = fn(4957).AccountNotificationFlags;
-const UnreadSetting = fn(6137).UnreadSetting;
+const AccountNotificationFlags = fn(4988).AccountNotificationFlags;
+const UnreadSetting = fn(6168).UnreadSetting;
 const UserSettingsConstants = fn(1081);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};

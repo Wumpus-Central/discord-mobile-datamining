@@ -1,9 +1,9 @@
-// === Module 6357: BadgeDirectoryActionCreators ===
+// === Module 6388: BadgeDirectoryActionCreators ===
 
-// Module 6357 (BadgeDirectoryActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1284 */;
+// Module 6388 (BadgeDirectoryActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -141,7 +141,7 @@ let closure_15 = async function _fetchBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -271,7 +271,7 @@ let closure_17 = async function _ackBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -411,7 +411,7 @@ export function fetchBadgeDirectory(id, arg1) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           } else {
             try {
@@ -470,7 +470,7 @@ export function fetchBadgeDirectory(id, arg1) {
                   map.delete(closure_128_1);
                 }
                 c4 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: "+95" };
               }
             } catch (tmp43) {
               closure_2 = tmp43;

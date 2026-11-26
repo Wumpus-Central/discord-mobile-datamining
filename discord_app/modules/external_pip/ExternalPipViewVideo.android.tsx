@@ -1,17 +1,17 @@
-// === Module 19315: ExternalPipViewVideo ===
+// === Module 19378: ExternalPipViewVideo ===
 
-// Module 19315 (ExternalPipViewVideo)
+// Module 19378 (ExternalPipViewVideo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5716 */;
-import ExternalPipDefault from "ExternalPip" /* 5921 */;
-import VideoActionCreators from "VideoActionCreators" /* 19317 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 19318 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5747 */;
+import ExternalPipDefault from "ExternalPip" /* 5952 */;
+import VideoActionCreators from "VideoActionCreators" /* 19380 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 19381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import UserStore from "UserStore" /* 1386 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function ExternalPipViewVideoUnavailable() {
@@ -44,17 +44,17 @@ function ExternalPipViewVideoUser(userId) {
     return guild_id;
   });
   const obj3 = userId(504);
-  const avatarDecoration = userId(6913).useAvatarDecoration(stateFromStores, stateFromStores1);
+  const avatarDecoration = userId(6944).useAvatarDecoration(stateFromStores, stateFromStores1);
   const obj2 = { userId, guildId: stateFromStores1, avatarURI: null, location: "ExternalPipViewVideo-native" };
   let avatarURL;
-  const obj4 = userId(6913);
+  const obj4 = userId(6944);
   const tmp6 = channelId;
   if (stateFromStores != null) {
     avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
   }
   obj2.avatarURI = avatarURL;
-  const tmp7 = channelId(19316);
-  ({ gradientStops, backgroundColor } = channelId(19316)(obj2));
+  const tmp7 = channelId(19379);
+  ({ gradientStops, backgroundColor } = channelId(19379)(obj2));
   const items2 = [tmp.user, backgroundColor];
   const obj5 = {
     style: noop.useMemo(() => {
@@ -66,7 +66,7 @@ function ExternalPipViewVideoUser(userId) {
   let tmp12 = null;
   if (null != gradientStops) {
     const obj6 = { colors: gradientStops, start, end, style: StyleSheet.absoluteFill, pointerEvents: "none" };
-    tmp12 = closure_11(tmp6(5567), obj6);
+    tmp12 = closure_11(tmp6(5598), obj6);
   }
   const items3 = [tmp12, ];
   let tmp17 = null;
@@ -83,7 +83,7 @@ function ExternalPipViewVideoStream(streamId) {
   first = 300;
   _slicedToArray = undefined;
   noop = undefined;
-  const surfaceDirectRendererExperiment = streamId(5937).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
+  const surfaceDirectRendererExperiment = streamId(5968).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
   [first, _slicedToArray] = noop.useState(undefined);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   noop = tmp4[1];
@@ -121,8 +121,8 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items3);
-  let obj = streamId(5937);
-  const token = streamId(5576).useToken(first(575).colors.TEXT_FEEDBACK_INFO);
+  let obj = streamId(5968);
+  const token = streamId(5607).useToken(first(575).colors.TEXT_FEEDBACK_INFO);
   value = closure_8.get();
   _slicedToArray = value;
   const items4 = [streamId, value];
@@ -133,7 +133,7 @@ function ExternalPipViewVideoStream(streamId) {
       VideoActionCreators.updateVideoSize(tmp, size, 1);
     }
   }, items4);
-  const children = [closure_11(first(10109), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
+  const children = [closure_11(first(10151), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
   let tmp15Result = null;
   if (null == first) {
     tmp15Result = null;
@@ -152,7 +152,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, PixelRatio: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: null, video: null, videoUnavailableWrap: null, videoUnavailableSpinner: null, unavailable: null, unavailableText: null, user: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

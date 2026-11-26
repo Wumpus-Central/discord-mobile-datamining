@@ -1,25 +1,25 @@
-// === Module 7623: SelfPresenceStore ===
+// === Module 7654: SelfPresenceStore ===
 
-// Module 7623 (SelfPresenceStore)
+// Module 7654 (SelfPresenceStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef1343 from "module_1343" /* 1343 */;
-import UserSettings from "UserSettings" /* 4837 */;
-import ActivityTypes from "ActivityTypes" /* 5984 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 6330 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11331 */;
-import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 14713 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
-import SpotifyStore from "SpotifyStore" /* 7600 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import DetectableGameStore from "DetectableGameStore" /* 2158 */;
-import IdleStore from "IdleStore" /* 6765 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2162 */;
-import LocalActivityStore from "LocalActivityStore" /* 7624 */;
-import PresenceStore from "PresenceStore" /* 5983 */;
-import SessionsStore from "SessionsStore" /* 5822 */;
+import _modDef1344 from "module_1344" /* 1344 */;
+import UserSettings from "UserSettings" /* 4868 */;
+import ActivityTypes from "ActivityTypes" /* 6015 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 6361 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11377 */;
+import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 14766 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
+import SpotifyStore from "SpotifyStore" /* 7631 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import DetectableGameStore from "DetectableGameStore" /* 2159 */;
+import IdleStore from "IdleStore" /* 6796 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;
+import LocalActivityStore from "LocalActivityStore" /* 7655 */;
+import PresenceStore from "PresenceStore" /* 6014 */;
+import SessionsStore from "SessionsStore" /* 5853 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -130,7 +130,7 @@ function handleUpdate() {
       found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!_modDef1343(found, found)) {
+    if (!_modDef1344(found, found)) {
       closure_21 = filterPlayingActivities(found);
       flag = true;
     }
@@ -158,7 +158,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5983).sortActivity;
+const sortActivity = fn(6014).sortActivity;
 const Constants = fn(1071);
 const StatusTypes = Constants.StatusTypes;
 const AppStates = Constants.AppStates;

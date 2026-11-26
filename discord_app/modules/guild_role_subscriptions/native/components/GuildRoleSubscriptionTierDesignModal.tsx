@@ -1,13 +1,13 @@
-// === Module 20191: GuildRoleSubscriptionTierDesignModal ===
+// === Module 20255: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 20191 (GuildRoleSubscriptionTierDesignModal)
+// Module 20255 (GuildRoleSubscriptionTierDesignModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import useToken from "useToken" /* 5576 */;
-import RoleIconUtils from "RoleIconUtils" /* 7506 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16785 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 16797 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20158 */;
+import useToken from "useToken" /* 5607 */;
+import RoleIconUtils from "RoleIconUtils" /* 7537 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16836 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 16848 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20222 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ function MemberPreviews(role) {
   return refs(View, obj5);
 }
 function Content() {
-  const tmp3 = role(20156)();
+  const tmp3 = role(20220)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -79,23 +79,23 @@ function Content() {
     return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
   };
   obj9.disabled = roleSubscriptionSettingsDisabled;
-  items3[1] = closure_9(role(20157), obj9);
+  items3[1] = closure_9(role(20221), obj9);
   obj7.children = items3;
   items2[1] = closure_10(View, obj7);
   const obj10 = { title: null, hasIcons: true, children: null };
   const intl3 = tmp4(1112).intl;
   obj10.title = intl3.string(require("util").t["W7hH+z"]);
-  obj10.children = closure_9(role(20192), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  obj10.children = closure_9(role(20256), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   items2[2] = closure_9(require("TableRowGroup").TableRowGroup, obj10);
   obj6.children = items2;
   return closure_10(View, obj6);
 }
 const View = fn(17).View;
-const constants = fn(16765).GuildRoleSubscriptionsTierScenes;
+const constants = fn(16816).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1071).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_26 }, member: null, memberLight: null, memberDark: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_26 };
 obj2.member = { padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };

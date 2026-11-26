@@ -1,17 +1,17 @@
-// === Module 19343: ActivityPanelFocusedView ===
+// === Module 19406: ActivityPanelFocusedView ===
 
-// Module 19343 (ActivityPanelFocusedView)
+// Module 19406 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10158 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18388 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19336 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10200 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18447 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19399 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 
 const require = fn;
 class BaseActivityPanelFocusedView {
@@ -340,17 +340,17 @@ class BaseActivityPanelFocusedView {
     return tmp48(tmp(tmp2[19]).ThemeContextProvider, obj1);
   }
 }
-const ActivityPanelConstants = fn(5638);
+const ActivityPanelConstants = fn(5669);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: metroImportDefault, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8, ActivityPanelModes: closure_9 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(19189);
+const ActivityPanelNativeConstants = fn(19252);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_10, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: closure_12 } = ActivityPanelNativeConstants);
 let ThemeTypes = fn(1071).ThemeTypes;
-const IS_IOS = fn(11734).IS_IOS;
-const ActivityLayoutMode = fn(10149).ActivityLayoutMode;
+const IS_IOS = fn(11782).IS_IOS;
+const ActivityLayoutMode = fn(10191).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = { duration: 300 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { wrapper: { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, shade: null };
 let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -420,7 +420,7 @@ export default noop.memo(function ActivityPanelFocusedView(transitionState) {
 });
 export function useBaseActivityPanelFocusedView(context) {
   let isWindowLandscape;
-  const tmp = isWindowLandscape(1628)();
+  const tmp = isWindowLandscape(1629)();
   closure_0 = tmp;
   const wrapperDimensions = noop.useContext(context.context).wrapperDimensions;
   const isLandscape = wrapperDimensions.isLandscape;

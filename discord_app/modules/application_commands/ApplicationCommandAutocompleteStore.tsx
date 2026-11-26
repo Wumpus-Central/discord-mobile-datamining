@@ -1,11 +1,11 @@
-// === Module 8139: ApplicationCommandAutocompleteStore ===
+// === Module 8181: ApplicationCommandAutocompleteStore ===
 
-// Module 8139 (ApplicationCommandAutocompleteStore)
+// Module 8181 (ApplicationCommandAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Server from "Server" /* 2117 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8140 */;
+import Server from "Server" /* 2118 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8182 */;
 
 require = fn;
 function handleInit() {
@@ -48,7 +48,7 @@ const AnalyticEvents = fn(1071).AnalyticEvents;
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let closure_7 = PlatformUtils.isDesktop();
 const Store = initializeDefault.Store;
 class ApplicationCommandAutocompleteStore extends Store {

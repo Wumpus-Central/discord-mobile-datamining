@@ -1,8 +1,8 @@
-// === Module 19089: useVoiceChannelApp ===
+// === Module 19152: useVoiceChannelApp ===
 
-// Module 19089 (useVoiceChannelApp)
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
+// Module 19152 (useVoiceChannelApp)
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 const require = globalThis.__r;
 

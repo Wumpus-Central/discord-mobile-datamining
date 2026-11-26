@@ -1,16 +1,16 @@
-// === Module 13337: NotificationUtils ===
+// === Module 13389: NotificationUtils ===
 
-// Module 13337 (NotificationUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7845 */;
-import PushNotificationDefault from "PushNotification" /* 10235 */;
-import SoundUtils from "SoundUtils" /* 10256 */;
+// Module 13389 (NotificationUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7879 */;
+import PushNotificationDefault from "PushNotification" /* 10277 */;
+import SoundUtils from "SoundUtils" /* 10298 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PermissionStateType = fn(13329).PermissionStateType;
+const PermissionStateType = fn(13381).PermissionStateType;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");
@@ -74,7 +74,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -88,7 +88,7 @@ export default {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp4) {
           c0 = tmp;

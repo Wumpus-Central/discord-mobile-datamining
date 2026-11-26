@@ -1,11 +1,11 @@
-// === Module 19919: ConjureServerAppsSection ===
+// === Module 19983: ConjureServerAppsSection ===
 
-// Module 19919 (ConjureServerAppsSection)
+// Module 19983 (ConjureServerAppsSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 11508 */;
-import GuildSettingsModalIntegrationsAppsDefault from "GuildSettingsModalIntegrationsApps" /* 19917 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 11556 */;
+import GuildSettingsModalIntegrationsAppsDefault from "GuildSettingsModalIntegrationsApps" /* 19981 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ let closure_5 = async function _removeApp(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ export default function ConjureServerAppsSection(apps) {
   ({ guildId: require, onRemoveIntegration: importDefault } = apps);
   let obj = { title: null, apps: null, renderIcon: null, onRemove: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef4244.EPSYTs);
+  obj.title = intl.string(_modDef4245.EPSYTs);
   obj.apps = apps.apps;
   obj.renderIcon = function renderIcon(application) {
     const obj = { application, size: 24, radius: nativeDefault.radii.xs };

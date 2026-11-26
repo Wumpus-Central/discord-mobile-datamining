@@ -1,19 +1,19 @@
-// === Module 13286: useEventsButtonProps ===
+// === Module 13338: useEventsButtonProps ===
 
-// Module 13286 (useEventsButtonProps)
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7000 */;
-import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 8421 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8431 */;
+// Module 13338 (useEventsButtonProps)
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7031 */;
+import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 8463 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8473 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6901 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
+import ReadStateStore from "ReadStateStore" /* 6932 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6137).ReadStateTypes;
+const ReadStateTypes = fn(6168).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
@@ -41,7 +41,7 @@ export default function useEventsButtonProps(id) {
   }, items3);
   const handleLongPress = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(13287, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, { guildId: user.id });
+    obj.openLazy(asyncRequireImpl(13339, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, { guildId: user.id });
   }, items4);
   if (arr4.length > 0) {
     const intl2 = tmp(1112).intl;
@@ -51,13 +51,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1112).intl;
     name = intl.string(tmp(1112).t.tlopTM);
   }
-  let mode = tmp(13291).ChannelModes.DEFAULT;
+  let mode = tmp(13343).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(13291).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(13343).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 };

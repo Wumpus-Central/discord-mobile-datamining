@@ -1,7 +1,7 @@
-// === Module 11943: SocialLayerStorefrontMobileMultiSkuEmbedExperiment ===
+// === Module 11991: SocialLayerStorefrontMobileMultiSkuEmbedExperiment ===
 
-// Module 11943 (SocialLayerStorefrontMobileMultiSkuEmbedExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 11991 (SocialLayerStorefrontMobileMultiSkuEmbedExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-10-social-layer-storefront-mobile-multi-sku-embed", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,13 +1,13 @@
-// === Module 15429: ModalDisclaimer ===
+// === Module 15479: ModalDisclaimer ===
 
-// Module 15429 (ModalDisclaimer)
-import Text_Text from "Text/Text" /* 5603 */;
+// Module 15479 (ModalDisclaimer)
+import Text_Text from "Text/Text" /* 5634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_4 = createStyles.createStyles({ container: { flexDirection: "column", alignItems: "center" }, disclaimer: { marginBottom: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalDisclaimer.native.tsx");

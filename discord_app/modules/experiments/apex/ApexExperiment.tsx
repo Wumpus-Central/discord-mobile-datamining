@@ -1,14 +1,14 @@
-// === Module 1451: apex/ApexExperiment ===
+// === Module 1452: apex/ApexExperiment ===
 
-// Module 1451 (apex/ApexExperiment)
+// Module 1452 (apex/ApexExperiment)
 import initialize from "initialize" /* 504 */;
-import ApexUnitUtils from "ApexUnitUtils" /* 1252 */;
-import FingerprintUtils from "FingerprintUtils" /* 1253 */;
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import discord_common_apex_ApexExperimentDefault from "discord_common/apex/ApexExperiment" /* 1452 */;
+import ApexUnitUtils from "ApexUnitUtils" /* 1253 */;
+import FingerprintUtils from "FingerprintUtils" /* 1254 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import discord_common_apex_ApexExperimentDefault from "discord_common/apex/ApexExperiment" /* 1453 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
 require = fn;
 function useUnitId(type, guildId) {
@@ -38,5 +38,5 @@ const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperime
 export default function createApexExperiment(definition) {
   return discord_common_apex_ApexExperimentDefault(definition, ApexExperimentStore, ApexUnitUtils.getUnitId, useUnitId);
 };
-export const ApexExperiment = fn(1452).ApexExperiment;
-export const getUnitId = fn(1252).getUnitId;
+export const ApexExperiment = fn(1453).ApexExperiment;
+export const getUnitId = fn(1253).getUnitId;

@@ -1,10 +1,10 @@
-// === Module 18874: SearchFilterButton ===
+// === Module 18937: SearchFilterButton ===
 
-// Module 18874 (SearchFilterButton)
+// Module 18937 (SearchFilterButton)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const SearchFilterAddLocations = fn(8976).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9018).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterButton.tsx");

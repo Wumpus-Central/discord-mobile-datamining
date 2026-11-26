@@ -1,14 +1,14 @@
-// === Module 15528: Ellipsis ===
+// === Module 15579: Ellipsis ===
 
-// Module 15528 (Ellipsis)
+// Module 15579 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5222 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import timing_timing from "timing/timing" /* 5253 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function AnimatedEllipsisDot(disableScale) {
@@ -18,12 +18,12 @@ function AnimatedEllipsisDot(disableScale) {
   const sequenceStartDelay = disableScale.sequenceStartDelay;
   const sequenceEndDelay = disableScale.sequenceEndDelay;
   let tmp = closure_9();
-  const sharedValue = require("module_1653").useSharedValue(0.4);
-  let obj = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(0.75);
+  const sharedValue = require("module_1654").useSharedValue(0.4);
+  let obj = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(0.75);
   items = [delay, sequenceStartDelay, sequenceEndDelay, disableScale, sharedValue, sharedValue1];
   const effect = sequenceEndDelay.useEffect(() => {
-    items = [closure_10, _mod1653.withRepeat, _mod1653.withSequence, _mod1653.withDelay, c2, timing_timing.withTiming, c1, 350, sequenceEndDelay];
+    items = [closure_10, _mod1654.withRepeat, _mod1654.withSequence, _mod1654.withDelay, c2, timing_timing.withTiming, c1, 350, sequenceEndDelay];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -61,7 +61,7 @@ function AnimatedEllipsisDot(disableScale) {
       _undefined(_undefined3[6]).cancelAnimation(c5);
     };
   }, items);
-  let obj2 = require("module_1653");
+  let obj2 = require("module_1654");
   let items1 = [closure_11, sharedValue, disableScale, sharedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -87,11 +87,11 @@ function AnimatedEllipsisDot(disableScale) {
   EllipsisTsx2.__closure = items2;
   EllipsisTsx2.__workletHash = 17326421138636;
   EllipsisTsx2.__initData = tmp6;
-  const animatedStyle = require("module_1653").useAnimatedStyle(EllipsisTsx2);
+  const animatedStyle = require("module_1654").useAnimatedStyle(EllipsisTsx2);
   const obj4 = { style: null };
   const items3 = [tmp.typingIndicatorDot, disableScale.dotStyle, animatedStyle];
   obj4.style = items3;
-  return jsx(_modDef1653.View, { style: null });
+  return jsx(_modDef1654.View, { style: null });
 }
 function EllipsisDot(dotStyle) {
   const obj = { style: null };
@@ -103,7 +103,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let c7 = 233.33333333333334;
 let c8 = 116.66666666666667;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { typingIndicator: { justifyContent: "center", alignItems: "center", flexDirection: "row", marginRight: 4 }, typingIndicatorDot: null };
 let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, marginRight: 2, height: 6, width: 6 };
 obj.typingIndicatorDot = size;

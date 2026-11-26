@@ -1,13 +1,13 @@
-// === Module 17057: EmailNotificationsSetting ===
+// === Module 17108: EmailNotificationsSetting ===
 
-// Module 17057 (EmailNotificationsSetting)
+// Module 17108 (EmailNotificationsSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import _modDef3206 from "module_3206" /* 3206 */;
-import SettingsConstants from "SettingsConstants" /* 9513 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15802 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17051 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11914 */;
+import _modDef3207 from "module_3207" /* 3207 */;
+import SettingsConstants from "SettingsConstants" /* 9555 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15853 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17102 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11962 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -41,7 +41,7 @@ const obj4 = {};
 const merged1 = Object.assign(obj);
 obj4.useDescription = function useDescription() {
   const intl = util.intl;
-  return intl.string(_modDef3206.k3h440);
+  return intl.string(_modDef3207.k3h440);
 };
 obj4.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj4.usePredicate = function usePredicate() {

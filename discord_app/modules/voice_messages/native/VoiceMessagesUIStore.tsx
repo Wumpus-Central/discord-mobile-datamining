@@ -1,11 +1,11 @@
-// === Module 12906: VoiceMessagesUIStore ===
+// === Module 12958: VoiceMessagesUIStore ===
 
-// Module 12906 (VoiceMessagesUIStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import springPresets from "springPresets" /* 5614 */;
-import VoiceMessageConstants from "VoiceMessageConstants" /* 12907 */;
+// Module 12958 (VoiceMessagesUIStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import springPresets from "springPresets" /* 5645 */;
+import VoiceMessageConstants from "VoiceMessageConstants" /* 12959 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ let obj = module_560.create(() => {
   obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "Path", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "Promise", showVoiceMessagesTooltip: -1, savedVoiceMessageUploadData: -1, isVoiceMessageButtonMounted: -1, isUsingHoldGesture: -1 };
   items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
-  obj.voiceMessageAnimationState = _mod1653.makeMutable(items);
+  obj.voiceMessageAnimationState = _mod1654.makeMutable(items);
   obj.waveform = [];
   return obj;
 });
@@ -65,17 +65,17 @@ export function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(5613);
+    obj = waveformVersion(5644);
     const result = arg0 / closure_3;
-    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5614).Reanimated3DefaultSpringConfig));
+    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5645).Reanimated3DefaultSpringConfig));
   }
   items = [arg0, waveformVersion];
   waveform.push(items);
-  waveformVersion(1262).batchUpdates(() => {
+  waveformVersion(1263).batchUpdates(() => {
     obj = { waveformVersion: waveformVersion + 1 };
     obj.setState(obj);
   });
-  const obj2 = waveformVersion(1262);
+  const obj2 = waveformVersion(1263);
 }
 export function showVoiceMessagesTooltip() {
   ReactBatchUpdates.batchUpdates(() => {

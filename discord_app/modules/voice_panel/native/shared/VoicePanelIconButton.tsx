@@ -1,8 +1,8 @@
-// === Module 19355: VoicePanelIconButton ===
+// === Module 19418: VoicePanelIconButton ===
 
-// Module 19355 (VoicePanelIconButton)
-import _modDef1653 from "module_1653" /* 1653 */;
-import IconButton from "IconButton" /* 7910 */;
+// Module 19418 (VoicePanelIconButton)
+import _modDef1654 from "module_1654" /* 1654 */;
+import IconButton from "IconButton" /* 7944 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,5 +24,5 @@ export default noop.memo(function VoicePanelIconButton(overrideVariant) {
   obj2.variant = str;
   obj2.maxFontSizeMultiplier = 2;
   obj.children = jsx(IconButton.IconButton, {});
-  return jsx(_modDef1653.View, { ref, style, layout, children: null });
+  return jsx(_modDef1654.View, { ref, style, layout, children: null });
 });

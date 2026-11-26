@@ -1,13 +1,13 @@
-// === Module 15260: ShareAttachments ===
+// === Module 15310: ShareAttachments ===
 
-// Module 15260 (ShareAttachments)
+// Module 15310 (ShareAttachments)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5009 */;
-import LinearGradientDefault from "LinearGradient" /* 5567 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8094 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10668 */;
+import ColorUtils from "ColorUtils" /* 5040 */;
+import LinearGradientDefault from "LinearGradient" /* 5598 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8136 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 10713 */;
 import noop from "module_19" /* 19 */;
-import module_1653 from "module_1653" /* 1653 */;
+import module_1654 from "module_1654" /* 1654 */;
 
 const require = globalThis.__r;
 
@@ -15,9 +15,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const LinearGradient = module_1653.createAnimatedComponent(LinearGradientDefault);
+const LinearGradient = module_1654.createAnimatedComponent(LinearGradientDefault);
 let obj = { duration: 300, easing: fn(1186).STANDARD_EASING };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { containerRevamp: { marginHorizontal: -nativeDefault.space.PX_16 }, attachmentPreviewContentContainer: null, attachmentPreviewContentContainerRevamp: null, attachmentPreview: null, leftGradient: null, rightGradient: null, gradient: null };
 let obj4 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.attachmentPreviewContentContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -43,12 +43,12 @@ export default function ShareAttachments(arg0) {
   }
   let tmp = closure_9();
   _require = tmp;
-  obj = require("module_1653");
+  obj = require("module_1654");
   const sharedValue = obj.useSharedValue(0);
-  const sharedValue1 = require("module_1653").useSharedValue(0);
-  const obj2 = require("module_1653");
-  const sharedValue2 = require("module_1653").useSharedValue(0);
-  let obj3 = require("module_1653");
+  const sharedValue1 = require("module_1654").useSharedValue(0);
+  const obj2 = require("module_1654");
+  const sharedValue2 = require("module_1654").useSharedValue(0);
+  let obj3 = require("module_1654");
   items = [closure_10, require("timing/timing").withTiming, sharedValue, obj];
   _require = undefined;
   importDefault = undefined;
@@ -69,8 +69,8 @@ export default function ShareAttachments(arg0) {
   ShareAttachmentsTsx1.__closure = items1;
   ShareAttachmentsTsx1.__workletHash = 2089299746555;
   ShareAttachmentsTsx1.__initData = tmp8;
-  const animatedStyle = require("module_1653").useAnimatedStyle(ShareAttachmentsTsx1);
-  const obj4 = require("module_1653");
+  const animatedStyle = require("module_1654").useAnimatedStyle(ShareAttachmentsTsx1);
+  const obj4 = require("module_1654");
   const tmp7 = obj;
   const items2 = [closure_11, require("timing/timing").withTiming, sharedValue, sharedValue2, sharedValue1, tmp7];
   _require = undefined;
@@ -96,8 +96,8 @@ export default function ShareAttachments(arg0) {
   ShareAttachmentsTsx2.__closure = items3;
   ShareAttachmentsTsx2.__workletHash = 8432492365025;
   ShareAttachmentsTsx2.__initData = tmp13;
-  const animatedStyle1 = require("module_1653").useAnimatedStyle(ShareAttachmentsTsx2);
-  const tmp2Result = require("module_1653");
+  const animatedStyle1 = require("module_1654").useAnimatedStyle(ShareAttachmentsTsx2);
+  const tmp2Result = require("module_1654");
   const items4 = [closure_12, sharedValue, sharedValue1, sharedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -116,7 +116,7 @@ export default function ShareAttachments(arg0) {
   ShareAttachmentsTsx3.__workletHash = 11612093533242;
   ShareAttachmentsTsx3.__initData = tmp20;
   const items6 = [sharedValue2];
-  const tmp2Result2 = require("module_1653");
+  const tmp2Result2 = require("module_1654");
   const items7 = [sharedValue1];
   const callback = noop.useCallback((nativeEvent) => {
     const result = _undefined3.set(nativeEvent.nativeEvent.layout.width);
@@ -179,7 +179,7 @@ export default function ShareAttachments(arg0) {
       obj.children = hasOwnProperty(tmp, size);
       return hasOwnProperty(View, obj, index);
     });
-    items11[2] = closure_5(module_1653.ScrollView, obj8);
+    items11[2] = closure_5(module_1654.ScrollView, obj8);
     obj5.children = items11;
     tmp34Result = closure_6(c4, obj5);
   }

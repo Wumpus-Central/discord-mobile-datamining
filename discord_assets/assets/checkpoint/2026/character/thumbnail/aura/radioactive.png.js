@@ -1,6 +1,6 @@
-// === Module 6726: ? ===
+// === Module 6757: ? ===
 
-// Module 6726
+// Module 6757
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/aura/radioactive.png.js");

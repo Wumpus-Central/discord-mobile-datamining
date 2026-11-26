@@ -1,6 +1,6 @@
-// === Module 4856: Timers ===
+// === Module 4887: Timers ===
 
-// Module 4856 (Timers)
+// Module 4887 (Timers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 class Timeout {
@@ -233,7 +233,7 @@ prototype5["_flush"] = function _flush() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

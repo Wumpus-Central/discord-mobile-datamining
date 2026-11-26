@@ -1,8 +1,8 @@
-// === Module 18733: ConjurePlanCommandText ===
+// === Module 18796: ConjurePlanCommandText ===
 
-// Module 18733 (ConjurePlanCommandText)
+// Module 18796 (ConjurePlanCommandText)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5603 */;
+import Text_Text from "Text/Text" /* 5634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,9 +25,9 @@ class ConjurePlanCommandMention {
     return tmp2(closure_0(closure_1[5]).Text, obj);
   }
 }
-const COMMAND_SENTINEL = fn(7043).COMMAND_SENTINEL;
+const COMMAND_SENTINEL = fn(7074).COMMAND_SENTINEL;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND } };
 const hasOwnProperty = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -37,9 +37,9 @@ export { ConjurePlanCommandMention };
 export function ConjurePlanCommandText(text) {
   text = text.text;
   ({ commandNames, size } = text);
-  const conjurePlanCommandPattern = size(18718).useConjurePlanCommandPattern(commandNames);
-  const obj = size(18718);
-  const result = size(18718).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
+  const conjurePlanCommandPattern = size(18781).useConjurePlanCommandPattern(commandNames);
+  const obj = size(18781);
+  const result = size(18781).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
   if (null != result) {
     text = result.map((kind) => {
       if ("command" === kind.kind) {
@@ -119,7 +119,7 @@ export function ConjurePlanCommandMarkup(markup) {
                           size = closure_1;
                           const result = markup(size[6]).splitConjurePlanCommandText(mapped, size);
                           if (null != result) {
-                            mapped = result.map(/* F115788 */ function() { ... });
+                            mapped = result.map(/* F116175 */ function() { ... });
                           }
                           let cloneElementResult = mapped;
                           let obj = markup(size[6]);
@@ -129,7 +129,7 @@ export function ConjurePlanCommandMarkup(markup) {
                             cloneElementResult = mapped;
                             if (null != mapped.props.children) {
                               ({ Children, cloneElement } = conjurePlanCommandPattern);
-                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F115789 */ function() { ... }));
+                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F116176 */ function() { ... }));
                             }
                           }
                         }

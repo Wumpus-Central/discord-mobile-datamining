@@ -1,9 +1,9 @@
-// === Module 9410: BalanceCounter ===
+// === Module 9452: BalanceCounter ===
 
-// Module 9410 (BalanceCounter)
-import _modDef1653 from "module_1653" /* 1653 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import spring_spring from "spring/spring" /* 5613 */;
+// Module 9452 (BalanceCounter)
+import _modDef1654 from "module_1654" /* 1654 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import spring_spring from "spring/spring" /* 5644 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop_mod from "module_19" /* 19 */;
 
@@ -71,7 +71,7 @@ class BalanceCounter {
     [tmp12, closure_8] = tmp11;
     tmp13 = closure_7((set, _undefined2, duration) => {
       _undefined7(true);
-      items = [closure_10, _mod1706.scheduleOnRN, _undefined7];
+      items = [closure_10, _mod1707.scheduleOnRN, _undefined7];
       c0 = undefined;
       c1 = undefined;
       [tmp2, tmp3, tmp4] = items;

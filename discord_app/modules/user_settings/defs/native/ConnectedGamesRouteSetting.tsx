@@ -1,12 +1,12 @@
-// === Module 17531: ConnectedGamesRouteSetting ===
+// === Module 17588: ConnectedGamesRouteSetting ===
 
-// Module 17531 (ConnectedGamesRouteSetting)
+// Module 17588 (ConnectedGamesRouteSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import FriendsIcon from "FriendsIcon" /* 5697 */;
-import SettingsConstants from "SettingsConstants" /* 9513 */;
-import ContentAndSocialScreen from "ContentAndSocialScreen" /* 17512 */;
-import SettingBuilders from "SettingBuilders" /* 11914 */;
+import FriendsIcon from "FriendsIcon" /* 5728 */;
+import SettingsConstants from "SettingsConstants" /* 9555 */;
+import ContentAndSocialScreen from "ContentAndSocialScreen" /* 17569 */;
+import SettingBuilders from "SettingBuilders" /* 11962 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

@@ -1,12 +1,12 @@
-// === Module 10006: ApplicationFrecencyStore ===
+// === Module 10048: ApplicationFrecencyStore ===
 
-// Module 10006 (ApplicationFrecencyStore)
+// Module 10048 (ApplicationFrecencyStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5828 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import FrecencyDefault from "Frecency" /* 5859 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 function handleUserSettingsProtoStoreChange() {
   const applicationFrecency = UserSettingsProtoStore.frecencyWithoutFetchingLatest.applicationFrecency;
@@ -27,7 +27,7 @@ function handleUserSettingsProtoStoreChange() {
   }), global.pendingUsages);
 }
 const UserSettingsTypes = fn(1081).UserSettingsTypes;
-let items = [fn(2117).ApplicationCommandType.CHAT, fn(2117).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(2118).ApplicationCommandType.CHAT, fn(2118).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 let global = { pendingUsages: [] };
 let obj = {
   computeBonus() {
@@ -39,7 +39,7 @@ let obj = {
   afterCompute() {
 
   },
-  numFrequentlyItems: fn(1363).FREQUENCY_ITEM_LIMIT
+  numFrequentlyItems: fn(1364).FREQUENCY_ITEM_LIMIT
 };
 let closure_7 = new FrecencyDefault({
   computeBonus() {
@@ -51,7 +51,7 @@ let closure_7 = new FrecencyDefault({
   afterCompute() {
 
   },
-  numFrequentlyItems: fn(1363).FREQUENCY_ITEM_LIMIT
+  numFrequentlyItems: fn(1364).FREQUENCY_ITEM_LIMIT
 });
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationFrecencyStore extends PersistedStore {

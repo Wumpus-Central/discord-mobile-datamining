@@ -1,43 +1,43 @@
-// === Module 9125: premium_marketing_component_properties ===
+// === Module 9167: premium_marketing_component_properties ===
 
-// Module 9125 (premium_marketing_component_properties)
+// Module 9167 (premium_marketing_component_properties)
 import _mod1196 from "module_1196" /* 1196 */;
-import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 9126 */;
-import premium_tab from "premium_tab" /* 9130 */;
-import marketing_page_banner from "marketing_page_banner" /* 9133 */;
-import payment_modal_banner from "payment_modal_banner" /* 9134 */;
-import mobile_bottom_sheet from "mobile_bottom_sheet" /* 9135 */;
-import gift_icon from "gift_icon" /* 9136 */;
-import gift_icon_coachmark from "gift_icon_coachmark" /* 9138 */;
-import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 9139 */;
-import gift_customization_banner from "gift_customization_banner" /* 9140 */;
-import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 9141 */;
-import gift_reminder_nagbar from "gift_reminder_nagbar" /* 9142 */;
-import gift_reminder_coachmark from "gift_reminder_coachmark" /* 9143 */;
-import premium_tab_tooltip from "premium_tab_tooltip" /* 9144 */;
-import premium_tab_popover from "premium_tab_popover" /* 9145 */;
-import nagbar from "nagbar" /* 9146 */;
-import plan_select_card_banner from "plan_select_card_banner" /* 9147 */;
-import billing_settings_banner from "billing_settings_banner" /* 9148 */;
-import shop_nagbar from "shop_nagbar" /* 9149 */;
-import admin_editor_test_component from "admin_editor_test_component" /* 9150 */;
-import guild_header_coachmark from "guild_header_coachmark" /* 9151 */;
-import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 9152 */;
-import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 9153 */;
-import guild_boost_tab_banner from "guild_boost_tab_banner" /* 9154 */;
-import shop_tab_tooltip from "shop_tab_tooltip" /* 9155 */;
-import premium_home_perk_card from "premium_home_perk_card" /* 9156 */;
-import marketing_page_bento_box from "marketing_page_bento_box" /* 9157 */;
-import outbound_promotion_popover from "outbound_promotion_popover" /* 9158 */;
-import outbound_promotion_claim_modal_card from "outbound_promotion_claim_modal_card" /* 9159 */;
-import shop_coachmark from "shop_coachmark" /* 9160 */;
-import nitro_perk_card from "nitro_perk_card" /* 9161 */;
-import collection_page_marketing_block from "collection_page_marketing_block" /* 9162 */;
-import game_exit_panel from "game_exit_panel" /* 9163 */;
-import announcement_modal_video_led from "announcement_modal_video_led" /* 9164 */;
-import announcement_modal_two_panel from "announcement_modal_two_panel" /* 9166 */;
-import nitro_home_section_header from "nitro_home_section_header" /* 9167 */;
-import orbs_confirmation_modal from "orbs_confirmation_modal" /* 9168 */;
+import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 9168 */;
+import premium_tab from "premium_tab" /* 9172 */;
+import marketing_page_banner from "marketing_page_banner" /* 9175 */;
+import payment_modal_banner from "payment_modal_banner" /* 9176 */;
+import mobile_bottom_sheet from "mobile_bottom_sheet" /* 9177 */;
+import gift_icon from "gift_icon" /* 9178 */;
+import gift_icon_coachmark from "gift_icon_coachmark" /* 9180 */;
+import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 9181 */;
+import gift_customization_banner from "gift_customization_banner" /* 9182 */;
+import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 9183 */;
+import gift_reminder_nagbar from "gift_reminder_nagbar" /* 9184 */;
+import gift_reminder_coachmark from "gift_reminder_coachmark" /* 9185 */;
+import premium_tab_tooltip from "premium_tab_tooltip" /* 9186 */;
+import premium_tab_popover from "premium_tab_popover" /* 9187 */;
+import nagbar from "nagbar" /* 9188 */;
+import plan_select_card_banner from "plan_select_card_banner" /* 9189 */;
+import billing_settings_banner from "billing_settings_banner" /* 9190 */;
+import shop_nagbar from "shop_nagbar" /* 9191 */;
+import admin_editor_test_component from "admin_editor_test_component" /* 9192 */;
+import guild_header_coachmark from "guild_header_coachmark" /* 9193 */;
+import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 9194 */;
+import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 9195 */;
+import guild_boost_tab_banner from "guild_boost_tab_banner" /* 9196 */;
+import shop_tab_tooltip from "shop_tab_tooltip" /* 9197 */;
+import premium_home_perk_card from "premium_home_perk_card" /* 9198 */;
+import marketing_page_bento_box from "marketing_page_bento_box" /* 9199 */;
+import outbound_promotion_popover from "outbound_promotion_popover" /* 9200 */;
+import outbound_promotion_claim_modal_card from "outbound_promotion_claim_modal_card" /* 9201 */;
+import shop_coachmark from "shop_coachmark" /* 9202 */;
+import nitro_perk_card from "nitro_perk_card" /* 9203 */;
+import collection_page_marketing_block from "collection_page_marketing_block" /* 9204 */;
+import game_exit_panel from "game_exit_panel" /* 9205 */;
+import announcement_modal_video_led from "announcement_modal_video_led" /* 9206 */;
+import announcement_modal_two_panel from "announcement_modal_two_panel" /* 9208 */;
+import nitro_home_section_header from "nitro_home_section_header" /* 9209 */;
+import orbs_confirmation_modal from "orbs_confirmation_modal" /* 9210 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -377,7 +377,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { properties: { oneofKind: "top" }, contentIdentifier: "", isDefaultBase: false };
+  const obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1196.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {

@@ -1,26 +1,26 @@
-// === Module 7600: SpotifyStore ===
+// === Module 7631: SpotifyStore ===
 
-// Module 7600 (SpotifyStore)
+// Module 7631 (SpotifyStore)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import Timers from "Timers" /* 4856 */;
-import useIsSpeaking from "useIsSpeaking" /* 6912 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 7602 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 7619 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7620 */;
-import RunningGameStore from "RunningGameStore" /* 2139 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import Timers from "Timers" /* 4887 */;
+import useIsSpeaking from "useIsSpeaking" /* 6943 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 7633 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 7650 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7651 */;
+import RunningGameStore from "RunningGameStore" /* 2140 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7431 */;
-import IdleStore from "IdleStore" /* 6765 */;
-import PresenceStore from "PresenceStore" /* 5983 */;
-import SpeakingStore from "SpeakingStore" /* 6821 */;
-import VoiceStateStore from "VoiceStateStore" /* 5660 */;
-import Platforms from "Platforms" /* 6147 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
+import IdleStore from "IdleStore" /* 6796 */;
+import PresenceStore from "PresenceStore" /* 6014 */;
+import SpeakingStore from "SpeakingStore" /* 6852 */;
+import VoiceStateStore from "VoiceStateStore" /* 5691 */;
+import Platforms from "Platforms" /* 6178 */;
 
 require = fn;
 function upsertAccount(accountId, accessToken) {
@@ -56,7 +56,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4856).Interval();
+    const interval = new obj(4887).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -484,7 +484,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(7601);
+const SpotifyConstants = fn(7632);
 ({ getSpotifyResourceType: map1, isSpotifyParty: closure_14, SPOTIFY_PARTY_PREFIX: closure_15, SpotifyEndpoints: closure_16, SpotifyResourceTypes: closure_17 } = SpotifyConstants);
 const Constants = fn(1071);
 const PlatformTypes = Constants.PlatformTypes;
@@ -503,11 +503,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-const timeout = new fn(4856).Timeout();
-const timeout1 = new fn(4856).Timeout();
-const timeout2 = new fn(4856).Timeout();
-const timeout3 = new fn(4856).Timeout();
-const timeout4 = new fn(4856).Timeout();
+const timeout = new fn(4887).Timeout();
+const timeout1 = new fn(4887).Timeout();
+const timeout2 = new fn(4887).Timeout();
+const timeout3 = new fn(4887).Timeout();
+const timeout4 = new fn(4887).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -574,7 +574,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(7602).SpotifyAPI;
+    const SpotifyAPI = self(7633).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1170,7 +1170,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6912);
+        obj9 = device(6943);
       }
       if (null != tmp10) {
         if (!tmp22) {
@@ -1211,8 +1211,8 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
               obj7.author_ids = artists.map((id) => id.id);
               const artists1 = tmp10.artists;
               obj7.author_names = artists1.map((name) => name.name);
-              tmp25(1255).track(constants4.ACTIVITY_UPDATED, obj7);
-              const tmp25Result2 = tmp25(1255);
+              tmp25(1256).track(constants4.ACTIVITY_UPDATED, obj7);
+              const tmp25Result2 = tmp25(1256);
             }
           } else {
             tmp55 = flag;

@@ -1,11 +1,11 @@
-// === Module 7626: FirstPartyRichPresenceStore ===
+// === Module 7657: FirstPartyRichPresenceStore ===
 
-// Module 7626 (FirstPartyRichPresenceStore)
+// Module 7657 (FirstPartyRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef1343 from "module_1343" /* 1343 */;
-import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 14709 */;
-import ConjureRichPresenceStore from "ConjureRichPresenceStore" /* 7627 */;
+import _modDef1344 from "module_1344" /* 1344 */;
+import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 14762 */;
+import ConjureRichPresenceStore from "ConjureRichPresenceStore" /* 7658 */;
 
 function updateActivities() {
   items = [];
@@ -17,7 +17,7 @@ function updateActivities() {
     }
     continue;
   }
-  const tmp6 = _modDef1343(items, items);
+  const tmp6 = _modDef1344(items, items);
   let flag = !tmp6;
   if (!tmp6) {
     flag = true;

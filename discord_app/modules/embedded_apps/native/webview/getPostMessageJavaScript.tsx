@@ -1,7 +1,7 @@
-// === Module 10166: getPostMessageJavaScript ===
+// === Module 10208: getPostMessageJavaScript ===
 
-// Module 10166 (getPostMessageJavaScript)
-import EmbeddedAppConstants from "EmbeddedAppConstants" /* 10165 */;
+// Module 10208 (getPostMessageJavaScript)
+import EmbeddedAppConstants from "EmbeddedAppConstants" /* 10207 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = EmbeddedAppConstants.EMBEDDED_APP_FRAME_ELEMENT_ID;

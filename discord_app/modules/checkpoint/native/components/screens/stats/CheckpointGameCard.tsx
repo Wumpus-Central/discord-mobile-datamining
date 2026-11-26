@@ -1,21 +1,21 @@
-// === Module 12850: CheckpointGameCard ===
+// === Module 12900: CheckpointGameCard ===
 
-// Module 12850 (CheckpointGameCard)
+// Module 12900 (CheckpointGameCard)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import CheckpointTextDefault from "CheckpointText" /* 12590 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import CheckpointTextDefault from "CheckpointText" /* 12852 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2140 */;
+import GameStore from "GameStore" /* 2141 */;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6365);
+const CheckpointConstants = fn(6396);
 ({ CHECKPOINT_DARK_CYAN, CHECKPOINT_PRIMARY, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { cover: null, coverImage: { width: "100%", height: "100%", borderWidth: 1, borderColor: CHECKPOINT_PRIMARY }, unknownCover: { backgroundColor: nativeDefault.colors.BLACK, alignItems: "center", justifyContent: "center" }, description: null, centeredText: null, name: null, label: null };
 let obj3 = { aspectRatio: 0.75, boxShadow: null };
 let items = [{ offsetX: 4, offsetY: 4, blurRadius: 0, color: CHECKPOINT_DARK_CYAN }];
@@ -60,7 +60,7 @@ export function CheckpointGameCard(game) {
     const items2 = [, ];
     ({ coverImage: arr3[0], unknownCover: arr3[1] } = tmp);
     obj6.style = items2;
-    obj6.children = closure_5(id(8024).UnknownGameIcon, { size: "lg" });
+    obj6.children = closure_5(id(8058).UnknownGameIcon, { size: "lg" });
     tmp9 = closure_5(View, obj6);
   }
   const items3 = [tmp9, children];

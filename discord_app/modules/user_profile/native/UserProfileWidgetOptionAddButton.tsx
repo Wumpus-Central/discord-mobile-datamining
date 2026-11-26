@@ -1,13 +1,13 @@
-// === Module 14953: UserProfileWidgetOptionAddButton ===
+// === Module 15003: UserProfileWidgetOptionAddButton ===
 
-// Module 14953 (UserProfileWidgetOptionAddButton)
+// Module 15003 (UserProfileWidgetOptionAddButton)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 13043 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14532 */;
-import AddWidgetButtonConfig from "AddWidgetButtonConfig" /* 14954 */;
-import UserProfileApplicationWidgetPreviewDefault from "UserProfileApplicationWidgetPreview" /* 14956 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 13095 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14584 */;
+import AddWidgetButtonConfig from "AddWidgetButtonConfig" /* 15004 */;
+import UserProfileApplicationWidgetPreviewDefault from "UserProfileApplicationWidgetPreview" /* 15006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -68,7 +68,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const NUMBER_OF_COLUMNS_BY_VARIANT = { default: 4, compact: 3 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj3 = { button: { backgroundColor: nativeDefault.colors.CARD_MUTED_BG, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.md, overflow: "hidden", alignSelf: "stretch" }, coverRow: { flexDirection: "row", justifyContent: "space-between" }, cover: null, coverImage: null, detailsCard: null, textColumn: null, textBar: null, overlay: null };
 let obj4 = { backgroundColor: nativeDefault.colors.CARD_MUTED_BG, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.md, overflow: "hidden", alignSelf: "stretch" };
 obj3.cover = { aspectRatio: 0.75, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, overflow: "hidden" };

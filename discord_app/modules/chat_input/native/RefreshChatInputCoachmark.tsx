@@ -1,17 +1,17 @@
-// === Module 12931: RefreshChatInputCoachmark ===
+// === Module 12983: RefreshChatInputCoachmark ===
 
-// Module 12931 (RefreshChatInputCoachmark)
+// Module 12983 (RefreshChatInputCoachmark)
 import util from "util" /* 1112 */;
-import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 5165 */;
-import useCoachmark from "useCoachmark" /* 9526 */;
-import _modDef12932 from "module_12932" /* 12932 */;
+import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 5196 */;
+import useCoachmark from "useCoachmark" /* 9568 */;
+import _modDef12984 from "module_12984" /* 12984 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
 
@@ -48,7 +48,7 @@ export function useRefreshChatInputCoachmark(disabled) {
         closure_1_0(constants.USER_DISMISS);
       };
       if (reducedMotion.enabled) {
-        const obj2 = { type: "image", src: _modDef12932, aspectRatio: "16/9" };
+        const obj2 = { type: "image", src: _modDef12984, aspectRatio: "16/9" };
         let obj3 = obj2;
       } else {
         obj3 = { type: "rive", rive: OmnibuttonCoachmarkRive.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };

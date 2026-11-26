@@ -1,9 +1,9 @@
-// === Module 10489: useMuteAwareLocalVolume ===
+// === Module 10534: useMuteAwareLocalVolume ===
 
-// Module 10489 (useMuteAwareLocalVolume)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5965 */;
+// Module 10534 (useMuteAwareLocalVolume)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5996 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 
 const require = globalThis.__r;
 

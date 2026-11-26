@@ -1,9 +1,9 @@
-// === Module 19262: useNitroFileUploadMarketingEligible ===
+// === Module 19325: useNitroFileUploadMarketingEligible ===
 
-// Module 19262 (useNitroFileUploadMarketingEligible)
-import PremiumConstants from "PremiumConstants" /* 1388 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8087 */;
-import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 9777 */;
+// Module 19325 (useNitroFileUploadMarketingEligible)
+import PremiumConstants from "PremiumConstants" /* 1389 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8129 */;
+import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 9819 */;
 import size from "module_2" /* 2 */;
 
 const PremiumTypes = PremiumConstants.PremiumTypes;

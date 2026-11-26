@@ -1,11 +1,11 @@
-// === Module 8417: NUFVoiceChannelsTemplate ===
+// === Module 8459: NUFVoiceChannelsTemplate ===
 
-// Module 8417 (NUFVoiceChannelsTemplate)
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2018 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6766 */;
-import NUFChannelsManagerDefault from "NUFChannelsManager" /* 8410 */;
-import NUFTemplateDefault from "NUFTemplate" /* 8418 */;
-import _modDef8419 from "module_8419" /* 8419 */;
+// Module 8459 (NUFVoiceChannelsTemplate)
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2019 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6797 */;
+import NUFChannelsManagerDefault from "NUFChannelsManager" /* 8452 */;
+import NUFTemplateDefault from "NUFTemplate" /* 8460 */;
+import _modDef8461 from "module_8461" /* 8461 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -20,7 +20,7 @@ export default function NUFVoiceChannelsTemplate(channel) {
   obj.title = intl.string(channel(1112).t.w5HAll);
   const intl2 = channel(1112).intl;
   obj.description = intl2.string(channel(1112).t.Ww4hhq);
-  obj.imageSrc = _modDef8419;
+  obj.imageSrc = _modDef8461;
   const intl3 = channel(1112).intl;
   obj.CTALabel = intl3.string(channel(1112).t.eIi3Om);
   obj.onCTAPress = function onCTAPress() {

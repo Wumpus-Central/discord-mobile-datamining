@@ -1,6 +1,6 @@
-// === Module 14128: ? ===
+// === Module 14180: ? ===
 
-// Module 14128
+// Module 14180
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/game-profile/opencritic-weak.png.js");

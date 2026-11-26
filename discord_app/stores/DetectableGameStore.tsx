@@ -1,18 +1,18 @@
-// === Module 2158: DetectableGameStore ===
+// === Module 2159: DetectableGameStore ===
 
-// Module 2158 (DetectableGameStore)
+// Module 2159 (DetectableGameStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import ApplicationConstants from "ApplicationConstants" /* 1363 */;
-import ApplicationRecord from "ApplicationRecord" /* 2142 */;
-import CachedEntriesMapDefault from "CachedEntriesMap" /* 2159 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2161 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import ApplicationConstants from "ApplicationConstants" /* 1364 */;
+import ApplicationRecord from "ApplicationRecord" /* 2143 */;
+import CachedEntriesMapDefault from "CachedEntriesMap" /* 2160 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2162 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

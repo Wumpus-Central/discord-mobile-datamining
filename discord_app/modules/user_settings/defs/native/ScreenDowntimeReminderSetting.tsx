@@ -1,14 +1,14 @@
-// === Module 17076: ScreenDowntimeReminderSetting ===
+// === Module 17127: ScreenDowntimeReminderSetting ===
 
-// Module 17076 (ScreenDowntimeReminderSetting)
+// Module 17127 (ScreenDowntimeReminderSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 16368 */;
-import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 17077 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10554 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 16419 */;
+import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 17128 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10599 */;
 
 require = fn;
-let SettingBuilders = fn(11914);
+let SettingBuilders = fn(11962);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -18,7 +18,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(9513).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(9555).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);
@@ -34,10 +34,10 @@ const toggle = SettingBuilders.createToggle({
     return hasActiveParentLinks;
   }
 });
-SettingBuilders = fn(11914);
+SettingBuilders = fn(11962);
 const obj4 = {};
 const merged = Object.assign(toggle);
-obj4.parent = fn(17051).MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY;
+obj4.parent = fn(17102).MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY;
 const toggle1 = SettingBuilders.createToggle(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx");

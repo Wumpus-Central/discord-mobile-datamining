@@ -1,66 +1,66 @@
-// === Module 17781: FavoritesGuildCategoryActionSheet ===
+// === Module 17838: FavoritesGuildCategoryActionSheet ===
 
-// Module 17781 (FavoritesGuildCategoryActionSheet)
-import ToastUtils from "ToastUtils" /* 5693 */;
-import ClipboardUtils from "ClipboardUtils" /* 7507 */;
-import openFavoritesGuildCategorySettingsModalDefault from "openFavoritesGuildCategorySettingsModal" /* 17782 */;
+// Module 17838 (FavoritesGuildCategoryActionSheet)
+import ToastUtils from "ToastUtils" /* 5724 */;
+import ClipboardUtils from "ClipboardUtils" /* 7538 */;
+import openFavoritesGuildCategorySettingsModalDefault from "openFavoritesGuildCategorySettingsModal" /* 17839 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 4864 */;
+import FavoriteStore from "FavoriteStore" /* 4895 */;
 
 require = fn;
 function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
-  const tmp3 = onClose(11472)(category);
+  const tmp3 = onClose(11519)(category);
   dependencyMap = tmp3;
-  const DeveloperMode = category(4837).DeveloperMode;
+  const DeveloperMode = category(4868).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = { header: closure_5(category(7476).BottomSheetTitleHeader, { title: onClose(5628)(category, true) }), children: null };
+  let obj = { header: closure_5(category(7507).BottomSheetTitleHeader, { title: onClose(5659)(category, true) }), children: null };
   let tmp7Result = null;
   if (null != tmp3) {
     const obj2 = { hasIcons: true, children: null };
     const obj3 = { label: tmp3.label, icon: null, onPress: null };
-    const obj4 = { IconComponent: tmp4(9589).PlusLargeIcon };
-    obj3.icon = closure_5(tmp4(7517).ActionSheetRow.Icon, obj4);
+    const obj4 = { IconComponent: tmp4(9631).PlusLargeIcon };
+    obj3.icon = closure_5(tmp4(7548).ActionSheetRow.Icon, obj4);
     obj3.onPress = function onPress() {
       closure_2.perform();
       onClose();
     };
-    obj2.children = closure_5(tmp4(7517).ActionSheetRow, obj3);
-    tmp7Result = closure_5(tmp4(7517).ActionSheetRow.Group, obj2);
+    obj2.children = closure_5(tmp4(7548).ActionSheetRow, obj3);
+    tmp7Result = closure_5(tmp4(7548).ActionSheetRow.Group, obj2);
   }
   items = [tmp7Result, , ];
   const obj5 = { hasIcons: true, children: null };
   const obj6 = { label: null, icon: null, onPress: null };
   const intl = tmp4(1112).intl;
   obj6.label = intl.string(category(1112).t.zdPFs9);
-  const tmp2 = onClose(5628)(category, true);
-  obj6.icon = closure_5(category(7517).ActionSheetRow.Icon, { IconComponent: category(10409).SettingsIcon });
+  const tmp2 = onClose(5659)(category, true);
+  obj6.icon = closure_5(category(7548).ActionSheetRow.Icon, { IconComponent: category(10454).SettingsIcon });
   obj6.onPress = function onPress() {
     openFavoritesGuildCategorySettingsModalDefault(category.id);
     onClose();
   };
-  obj5.children = closure_5(category(7517).ActionSheetRow, obj6);
-  items[1] = closure_5(category(7517).ActionSheetRow.Group, obj5);
+  obj5.children = closure_5(category(7548).ActionSheetRow, obj6);
+  items[1] = closure_5(category(7548).ActionSheetRow.Group, obj5);
   let tmp7Result2 = null;
   if (setting) {
     const obj8 = { hasIcons: true, children: null };
     const obj9 = { label: null, icon: null, onPress: null };
     const intl2 = tmp4(1112).intl;
     obj9.label = intl2.string(tmp4(1112).t["2visC6"]);
-    const obj10 = { IconComponent: tmp4(11035).IdIcon };
-    obj9.icon = closure_5(tmp4(7517).ActionSheetRow.Icon, obj10);
+    const obj10 = { IconComponent: tmp4(11081).IdIcon };
+    obj9.icon = closure_5(tmp4(7548).ActionSheetRow.Icon, obj10);
     obj9.onPress = function onPress() {
       ClipboardUtils.copy(category.id);
       ToastUtils.presentIdCopied();
       onClose();
     };
-    obj8.children = closure_5(tmp4(7517).ActionSheetRow, obj9);
-    tmp7Result2 = closure_5(tmp4(7517).ActionSheetRow.Group, obj8);
+    obj8.children = closure_5(tmp4(7548).ActionSheetRow, obj9);
+    tmp7Result2 = closure_5(tmp4(7548).ActionSheetRow.Group, obj8);
   }
   items[2] = tmp7Result2;
   obj.children = items;
-  return closure_6(category(7515).ActionSheet, obj);
+  return closure_6(category(7546).ActionSheet, obj);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);

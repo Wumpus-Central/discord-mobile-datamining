@@ -1,15 +1,15 @@
-// === Module 17326: PhoenixSetting ===
+// === Module 17377: PhoenixSetting ===
 
-// Module 17326 (PhoenixSetting)
+// Module 17377 (PhoenixSetting)
 import jsxProd from "jsxProd" /* 21 */;
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import _modDef4728 from "module_4728" /* 4728 */;
-import Badge from "Badge" /* 6128 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9595 */;
-import FireIcon from "FireIcon" /* 14251 */;
-import PhoenixEntrypoint from "PhoenixEntrypoint" /* 17328 */;
-import SettingBuilders from "SettingBuilders" /* 11914 */;
+import _modDef4729 from "module_4729" /* 4729 */;
+import Badge from "Badge" /* 6159 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9637 */;
+import FireIcon from "FireIcon" /* 14303 */;
+import PhoenixEntrypoint from "PhoenixEntrypoint" /* 17379 */;
+import SettingBuilders from "SettingBuilders" /* 11962 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const jsx = jsxProd.jsx;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef4728["3uRAgZ"]);
+    return intl.string(_modDef4729["3uRAgZ"]);
   },
   useSearchTerms() {
     const intl = util.intl;

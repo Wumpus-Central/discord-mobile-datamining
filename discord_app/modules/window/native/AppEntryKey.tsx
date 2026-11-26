@@ -1,6 +1,6 @@
-// === Module 1641: AppEntryKey ===
+// === Module 1642: AppEntryKey ===
 
-// Module 1641 (AppEntryKey)
+// Module 1642 (AppEntryKey)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/window/native/AppEntryKey.tsx");

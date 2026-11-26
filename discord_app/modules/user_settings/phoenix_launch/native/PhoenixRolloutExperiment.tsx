@@ -1,8 +1,8 @@
-// === Module 17332: PhoenixRolloutExperiment ===
+// === Module 17383: PhoenixRolloutExperiment ===
 
-// Module 17332 (PhoenixRolloutExperiment)
-import LaunchClient from "LaunchClient" /* 17331 */;
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 17383 (PhoenixRolloutExperiment)
+import LaunchClient from "LaunchClient" /* 17382 */;
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-11-phoenix-rollout", kind: "user", defaultConfig: { forcedClient: null }, variations: null };

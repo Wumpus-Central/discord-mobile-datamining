@@ -1,14 +1,21 @@
-// === Module 17973: InterestGamePickerConstants ===
+// === Module 18030: InterestGamePickerConstants ===
 
-// Module 17973 (InterestGamePickerConstants)
+// Module 18030 (InterestGamePickerConstants)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
+import _mod1654 from "module_1654" /* 1654 */;
 import size from "module_2" /* 2 */;
 
 const PixelRatio = _mod17.PixelRatio;
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8, left: 0, right: 0 };
 const tmp2 = -nativeDefault.space.PX_8;
+const obj = { duration: 320, easing: null };
 const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(nativeDefault.space.PX_6 / 2);
+const Easing = _mod1654.Easing;
+obj.easing = Easing.bezier(0.22, 1, 0.36, 1);
+const obj2 = { duration: 220, easing: null };
+const Easing2 = _mod1654.Easing;
+obj2.easing = Easing2.bezier(0.4, 0, 1, 1);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGamePickerConstants.tsx");
 
 export const GRID_COLUMNS = 3;
@@ -28,3 +35,5 @@ export const GRID_COVER_HAIRLINE_WIDTH = 1;
 export const MIN_SELECTIONS = 1;
 export const TRAY_ENTER_MS = 300;
 export const TRAY_EXIT_MS = 300;
+export const FIRST_RUN_TRAY_ENTER = obj;
+export const FIRST_RUN_TRAY_EXIT = obj2;

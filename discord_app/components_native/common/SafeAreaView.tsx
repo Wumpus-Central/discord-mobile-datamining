@@ -1,9 +1,9 @@
-// === Module 7449: common/SafeAreaView ===
+// === Module 7480: common/SafeAreaView ===
 
-// Module 7449 (common/SafeAreaView)
-import _modDef1343 from "module_1343" /* 1343 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import useRefValueDefault from "useRefValue" /* 7023 */;
+// Module 7480 (common/SafeAreaView)
+import _modDef1344 from "module_1344" /* 1344 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import useRefValueDefault from "useRefValue" /* 7054 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -64,7 +64,7 @@ export function SafeAreaPaddingView(top) {
   items[4] = tmp12;
   current = items;
   const tmp13 = useRefValueDefault(ref);
-  const tmp14 = _modDef1343(items, tmp13);
+  const tmp14 = _modDef1344(items, tmp13);
   closure_2 = tmp14;
   if (tmp14) {
     current = tmp13;

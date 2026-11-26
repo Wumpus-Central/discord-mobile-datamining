@@ -1,13 +1,13 @@
-// === Module 17073: FriendAnniversaryNotificationSetting ===
+// === Module 17124: FriendAnniversaryNotificationSetting ===
 
-// Module 17073 (FriendAnniversaryNotificationSetting)
+// Module 17124 (FriendAnniversaryNotificationSetting)
 import util from "util" /* 1112 */;
-import _modDef3206 from "module_3206" /* 3206 */;
-import UserSettings from "UserSettings" /* 4837 */;
-import SettingsConstants from "SettingsConstants" /* 9513 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17051 */;
-import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 17074 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11914 */;
+import _modDef3207 from "module_3207" /* 3207 */;
+import UserSettings from "UserSettings" /* 4868 */;
+import SettingsConstants from "SettingsConstants" /* 9555 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17102 */;
+import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 17125 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11962 */;
 import size from "module_2" /* 2 */;
 
 let SettingBuilders = SettingBuilders_mod;
@@ -29,7 +29,7 @@ const obj2 = {};
 const merged = Object.assign(toggle);
 obj2.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef3206.KEDd8y);
+  return intl.string(_modDef3207.KEDd8y);
 };
 obj2.useDescription = undefined;
 obj2.parent = MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY;

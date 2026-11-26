@@ -1,6 +1,6 @@
-// === Module 19754: InterestGuildsAPI ===
+// === Module 19818: InterestGuildsAPI ===
 
-// Module 19754 (InterestGuildsAPI)
+// Module 19818 (InterestGuildsAPI)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,7 @@ export function createInterestGuildsResource() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {

@@ -1,7 +1,7 @@
-// === Module 17751: utils/EmojiColorUtils ===
+// === Module 17808: utils/EmojiColorUtils ===
 
-// Module 17751 (utils/EmojiColorUtils)
-import privDefault from "priv" /* 1454 */;
+// Module 17808 (utils/EmojiColorUtils)
+import privDefault from "priv" /* 1455 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _getEmojiCacheKey(name) {
@@ -18,7 +18,7 @@ let closure_6 = async function _getFromCacheOrFallback2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_7 = async function _getEmojiDominantColors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

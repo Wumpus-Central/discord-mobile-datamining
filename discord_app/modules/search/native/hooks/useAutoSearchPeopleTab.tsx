@@ -1,15 +1,15 @@
-// === Module 18986: useAutoSearchPeopleTab ===
+// === Module 19049: useAutoSearchPeopleTab ===
 
-// Module 18986 (useAutoSearchPeopleTab)
+// Module 19049 (useAutoSearchPeopleTab)
 import apply from "apply" /* 12 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 10401 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13234 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13265 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 10446 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13286 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13317 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13248 */;
+import SearchQueryStore from "SearchQueryStore" /* 13300 */;
 
 require = fn;
-let closure_5 = fn(13250).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(13302).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
 
@@ -28,8 +28,8 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
     if (!closure_1) {
       const debounceResult = apply.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          closure_1(13265).searchPeopleTab(searchContext, searchQueryString);
-          const obj = closure_1(13265);
+          closure_1(13317).searchPeopleTab(searchContext, searchQueryString);
+          const obj = closure_1(13317);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -37,6 +37,6 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
   }, items1);
   const items2 = [searchContext];
   const effect2 = noop.useEffect(() => () => {
-    closure_1(13265).cleanupPeopleTab(searchContext);
+    closure_1(13317).cleanupPeopleTab(searchContext);
   }, items2);
 }

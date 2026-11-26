@@ -1,7 +1,7 @@
-// === Module 15320: GuildActionSheetUtils ===
+// === Module 15370: GuildActionSheetUtils ===
 
-// Module 15320 (GuildActionSheetUtils)
-import PermissionStore from "PermissionStore" /* 4944 */;
+// Module 15370 (GuildActionSheetUtils)
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 const require = globalThis.__r;
 

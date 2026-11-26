@@ -1,7 +1,7 @@
-// === Module 14498: SafetyWarningAgeTextExperiment ===
+// === Module 14550: SafetyWarningAgeTextExperiment ===
 
-// Module 14498 (SafetyWarningAgeTextExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 14550 (SafetyWarningAgeTextExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-09-safety-warning-age-text", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

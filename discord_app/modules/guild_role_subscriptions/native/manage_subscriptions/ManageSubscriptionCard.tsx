@@ -1,18 +1,18 @@
-// === Module 16776: ManageSubscriptionCard ===
+// === Module 16827: ManageSubscriptionCard ===
 
-// Module 16776 (ManageSubscriptionCard)
+// Module 16827 (ManageSubscriptionCard)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
 import util from "util" /* 1112 */;
-import PremiumUtils from "PremiumUtils" /* 2173 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import LinkingDefault from "Linking" /* 5691 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6016 */;
-import Pressables from "Pressables" /* 6121 */;
-import GuildIconDefault from "GuildIcon" /* 7021 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9774 */;
-import FormSeparatorDefault from "FormSeparator" /* 16777 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16781 */;
+import PremiumUtils from "PremiumUtils" /* 2174 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import LinkingDefault from "Linking" /* 5722 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
+import Pressables from "Pressables" /* 6152 */;
+import GuildIconDefault from "GuildIcon" /* 7052 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9816 */;
+import FormSeparatorDefault from "FormSeparator" /* 16828 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16832 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -108,7 +108,7 @@ function CardBody(isTrial) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -129,9 +129,9 @@ function CardBody(isTrial) {
               obj5.body = intl.string(tmp5(1112).t.NL7DFi);
               const intl2 = tmp5(1112).intl;
               obj5.confirmText = intl2.string(tmp5(1112).t["NX+WJN"]);
-              tmp3(6016).show(obj5);
+              tmp3(6047).show(obj5);
               c5 = 3;
-              const obj6 = tmp3(6016);
+              const obj6 = tmp3(6047);
             } else {
               dependencyMap = 1;
               _slicedToArray(true);
@@ -144,7 +144,7 @@ function CardBody(isTrial) {
               } else {
                 c4 = 2;
                 c5 = 1;
-                const obj8 = { value: tmp38(5775).resubscribeToSubscription(tmp45, analyticsLocations), done: false };
+                const obj8 = { value: tmp38(5806).resubscribeToSubscription(tmp45, analyticsLocations), done: false };
                 return obj8;
               }
             }
@@ -332,10 +332,10 @@ function CardBody(isTrial) {
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ Routes: closure_8, UserSettingsSections: closure_9 } = Constants);
-const StaticChannelRoute = fn(4868).StaticChannelRoute;
+const StaticChannelRoute = fn(4899).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { padding: 0 }, cardContent: { padding: 16 }, resubscribeButtonContainer: { backgroundColor: nativeDefault.colors.CARD_MUTED_BG, padding: 16 }, separator: { paddingHorizontal: 16 }, header: null, headerContent: null, headerTitlesContainer: null, expandIconExpanded: null, cardRow: null, paymentOverDueWarning: null, headerStatusContainer: null, headerStatusCancel: null, headerStatusTrial: null, headerStatusPastDue: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_MUTED_BG, padding: 16 };
 obj2.header = { borderRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS, overflow: "hidden" };
@@ -366,7 +366,7 @@ export default function ManageSubscriptionCard(subscription) {
   ({ listing, guild, expanded, subscriptionInfo, groupListing, handleToggleExpanded } = useManageSubscriptionCardDataDefault(subscription));
   const tmp3 = useManageSubscriptionCardDataDefault(subscription);
   const tmp4 = subscription;
-  importDefault = subscription(1500).useNavigation();
+  importDefault = subscription(1501).useNavigation();
   let tmp6Result = null;
   if (null != groupListing) {
     tmp6Result = null;
@@ -404,7 +404,7 @@ export default function ManageSubscriptionCard(subscription) {
         }
         items[1] = expanded;
         obj2.children = items;
-        tmp6Result = closure_12(tmp4(6114).Card, obj2);
+        tmp6Result = closure_12(tmp4(6145).Card, obj2);
       }
     }
   }

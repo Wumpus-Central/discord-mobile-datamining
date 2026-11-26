@@ -1,15 +1,15 @@
-// === Module 18748: useConjureSafetyAlertsChannelPick ===
+// === Module 18811: useConjureSafetyAlertsChannelPick ===
 
-// Module 18748 (useConjureSafetyAlertsChannelPick)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
-import ConjureUtils from "ConjureUtils" /* 7571 */;
-import conjureAppInServer from "conjureAppInServer" /* 7661 */;
-import ConjureClarification from "ConjureClarification" /* 18576 */;
+// Module 18811 (useConjureSafetyAlertsChannelPick)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6991 */;
+import ConjureUtils from "ConjureUtils" /* 7602 */;
+import conjureAppInServer from "conjureAppInServer" /* 7692 */;
+import ConjureClarification from "ConjureClarification" /* 18639 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4942 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import GuildChannelStore from "GuildChannelStore" /* 4973 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 import BigFlagUtils from "BigFlagUtils" /* 1083 */;
 
 require = fn;

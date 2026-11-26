@@ -1,11 +1,11 @@
-// === Module 15337: useGuildHeaderCounts ===
+// === Module 15387: useGuildHeaderCounts ===
 
-// Module 15337 (useGuildHeaderCounts)
+// Module 15387 (useGuildHeaderCounts)
 import apply from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5633 */;
-import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 15338 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5664 */;
+import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 15388 */;
 
 const require = globalThis.__r;
 

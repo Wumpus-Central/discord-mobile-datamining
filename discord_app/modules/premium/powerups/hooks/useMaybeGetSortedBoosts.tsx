@@ -1,15 +1,15 @@
-// === Module 13518: useMaybeGetSortedBoosts ===
+// === Module 13570: useMaybeGetSortedBoosts ===
 
-// Module 13518 (useMaybeGetSortedBoosts)
+// Module 13570 (useMaybeGetSortedBoosts)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1112 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 10324 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 10366 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13500 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6825 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import GuildStore from "GuildStore" /* 4883 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13552 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6856 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import GuildStore from "GuildStore" /* 4914 */;
 
 const require = globalThis.__r;
 

@@ -1,6 +1,6 @@
-// === Module 8398: ? ===
+// === Module 8440: ? ===
 
-// Module 8398
+// Module 8440
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/guild-room/plant-dead-2.png.js");

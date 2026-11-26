@@ -1,10 +1,10 @@
-// === Module 13777: KeybindRouterStore ===
+// === Module 13829: KeybindRouterStore ===
 
-// Module 13777 (KeybindRouterStore)
-import matchPathCompat from "matchPathCompat" /* 5050 */;
-import RouteUtils from "RouteUtils" /* 5063 */;
+// Module 13829 (KeybindRouterStore)
+import matchPathCompat from "matchPathCompat" /* 5081 */;
+import RouteUtils from "RouteUtils" /* 5094 */;
 import Constants from "Constants" /* 1071 */;
-import identity from "module_1257" /* 1257 */;
+import identity from "module_1258" /* 1258 */;
 import size from "module_2" /* 2 */;
 
 function getMatchData(pathname) {
@@ -60,13 +60,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     updatePath(path) {
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(path));
       const tmp = getMatchData(path);
-      path(1262).batchUpdates(() => path({ path, guildId, channelId }));
+      path(1263).batchUpdates(() => path({ path, guildId, channelId }));
     },
     resetPath(pathname) {
       const basePath = pathname;
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(pathname));
       const tmp = getMatchData(pathname);
-      basePath(1262).batchUpdates(() => basePath({ path: null, guildId, channelId, basePath }));
+      basePath(1263).batchUpdates(() => basePath({ path: null, guildId, channelId, basePath }));
     }
   };
 });

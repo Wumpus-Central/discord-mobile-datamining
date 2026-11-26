@@ -1,22 +1,22 @@
-// === Module 11683: MessageReminderDurationActionSheet ===
+// === Module 11731: MessageReminderDurationActionSheet ===
 
-// Module 11683 (MessageReminderDurationActionSheet)
+// Module 11731 (MessageReminderDurationActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import TableRow from "TableRow" /* 6113 */;
-import Pressables from "Pressables" /* 6121 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7164 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7476 */;
-import MessageRemindersTypes from "MessageRemindersTypes" /* 11684 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import TableRow from "TableRow" /* 6144 */;
+import Pressables from "Pressables" /* 6152 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7195 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
+import MessageRemindersTypes from "MessageRemindersTypes" /* 11732 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11670 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11718 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { body: { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -46,8 +46,8 @@ export default function MessageReminderDurationActionSheet(createReminder) {
   if (stateFromStores != null) {
     dueAt = stateFromStores.saveData.dueAt;
   }
-  let obj3 = createReminder(11680);
-  const dueInString = obj3.useDueInString({ dueAt, now: tmp7, type: createReminder(11680).DueInStringTypes.SHORT });
+  let obj3 = createReminder(11728);
+  const dueInString = obj3.useDueInString({ dueAt, now: tmp7, type: createReminder(11728).DueInStringTypes.SHORT });
   dueInText = dueInString.dueInText;
   isOverdue = dueInString.isOverdue;
   const items1 = [onBack, dueInText, isOverdue];
@@ -108,19 +108,19 @@ export default function MessageReminderDurationActionSheet(createReminder) {
     return mapped;
   }, items2);
   const obj5 = { header: memo, bodyStyles: tmp.body, startExpanded: true, children: null };
-  const items3 = [dueInText(createReminder(6109).TableRowGroup, { hasIcons: false, children: memo1 }), ];
+  const items3 = [dueInText(createReminder(6140).TableRowGroup, { hasIcons: false, children: memo1 }), ];
   let tmp14Result = null != removeReminder;
   if (tmp14Result) {
-    const obj6 = { icon: tmp14(tmp2(7155).CheckmarkLargeIcon, {}), label: null, onPress: null, start: true, end: true };
+    const obj6 = { icon: tmp14(tmp2(7186).CheckmarkLargeIcon, {}), label: null, onPress: null, start: true, end: true };
     let intl = tmp2(1112).intl;
     obj6.label = intl.string(tmp2(1112).t.yjGtdJ);
     obj6.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       removeReminder();
     };
-    tmp14Result = tmp14(tmp2(6113).TableRow, obj6, "remove-reminder");
+    tmp14Result = tmp14(tmp2(6144).TableRow, obj6, "remove-reminder");
   }
   items3[1] = tmp14Result;
   obj5.children = items3;
-  return isOverdue(createReminder(5240).BottomSheet, obj5);
+  return isOverdue(createReminder(5271).BottomSheet, obj5);
 };

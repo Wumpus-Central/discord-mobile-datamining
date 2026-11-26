@@ -1,8 +1,8 @@
-// === Module 14523: useGameCoverLayout ===
+// === Module 14575: useGameCoverLayout ===
 
-// Module 14523 (useGameCoverLayout)
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8444 */;
-import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 14506 */;
+// Module 14575 (useGameCoverLayout)
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8486 */;
+import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 14558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/native/useGameCoverLayout.tsx");

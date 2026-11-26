@@ -1,17 +1,17 @@
-// === Module 13148: useChatInputFloatingBounce ===
+// === Module 13200: useChatInputFloatingBounce ===
 
-// Module 13148 (useChatInputFloatingBounce)
-import _mod1653 from "module_1653" /* 1653 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import spring_spring from "spring/spring" /* 5613 */;
+// Module 13200 (useChatInputFloatingBounce)
+import _mod1654 from "module_1654" /* 1654 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import spring_spring from "spring/spring" /* 5644 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChatInputConstants = fn(12908);
+const ChatInputConstants = fn(12960);
 ({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: closure_6, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: metroImportDefault } = ChatInputConstants);
 let closure_8 = { code: "(function useChatInputFloatingBounceTsx1(finished){let[scheduleOnRN,setEnterFinished]=this.__closure;if(finished===true){scheduleOnRN(setEnterFinished,true);}})" };
 let closure_9 = { code: "(function useChatInputFloatingBounceTsx2(finished){let[scheduleOnRN,handleExitFinished]=this.__closure;if(finished===true){scheduleOnRN(handleExitFinished);}})" };
@@ -44,13 +44,13 @@ export default function useChatInputFloatingBounce(visible) {
   if (initiallyVisible) {
     num2 = 1;
   }
-  sharedValue = require("module_1653").useSharedValue(num2);
-  let obj = require("module_1653");
+  sharedValue = require("module_1654").useSharedValue(num2);
+  let obj = require("module_1654");
   let num3 = 1;
   if (!initiallyVisible) {
     num3 = closure_5;
   }
-  sharedValue1 = require("module_1653").useSharedValue(num3);
+  sharedValue1 = require("module_1654").useSharedValue(num3);
   const tmp5 = onExitComplete(sharedValue.useState(initiallyVisible), 2);
   closure_5 = tmp6;
   const tmp7 = onExitComplete(sharedValue.useState(visible), 2);
@@ -77,7 +77,7 @@ export default function useChatInputFloatingBounce(visible) {
   const effect1 = obj3.useEffect(() => {
     if (c0) {
       const obj3 = timing_timing;
-      items = [closure_8, _mod1706.scheduleOnRN, closure_5];
+      items = [closure_8, _mod1707.scheduleOnRN, closure_5];
       c0 = undefined;
       c1 = undefined;
       [tmp29, tmp30, tmp31] = items;
@@ -93,20 +93,20 @@ export default function useChatInputFloatingBounce(visible) {
       const withTimingResult = obj3.withTiming(1, timestampProducer, "respect-motion-settings", useChatInputFloatingBounceTsx1);
       let withDelayResult = withTimingResult;
       if (c1 > 0) {
-        withDelayResult = _mod1653.withDelay(tmp37, withTimingResult);
+        withDelayResult = _mod1654.withDelay(tmp37, withTimingResult);
       }
       const result = sharedValue.set(withDelayResult);
       const withSpringResult = spring_spring.withSpring(1, React4, "respect-motion-settings");
       let withDelayResult1 = withSpringResult;
       if (c1 > 0) {
-        withDelayResult1 = _mod1653.withDelay(tmp37, withSpringResult);
+        withDelayResult1 = _mod1654.withDelay(tmp37, withSpringResult);
       }
       const result1 = sharedValue1.set(withDelayResult1);
     } else {
       const obj = timing_timing;
       const items2 = [
         closure_9,
-        _mod1706.scheduleOnRN,
+        _mod1707.scheduleOnRN,
         function handleExitFinished() {
             const current = ref.current;
             let currentResult;
@@ -132,7 +132,7 @@ export default function useChatInputFloatingBounce(visible) {
       const result3 = sharedValue1.set(timing_timing.withTiming(hasOwnProperty, metroImportDefault, "respect-motion-settings"));
     }
   }, items1);
-  const tmpResult = require("module_1653");
+  const tmpResult = require("module_1654");
   let items2 = [closure_10, sharedValue, sharedValue1];
   _require = undefined;
   dependencyMap = undefined;
@@ -147,6 +147,6 @@ export default function useChatInputFloatingBounce(visible) {
   useChatInputFloatingBounceTsx3.__closure = items3;
   useChatInputFloatingBounceTsx3.__workletHash = 19796400512;
   useChatInputFloatingBounceTsx3.__initData = tmp14;
-  const tmpResult2 = require("module_1653");
-  return { animatedStyle: require("module_1653").useAnimatedStyle(useChatInputFloatingBounceTsx3), isInteractive: tmp10 };
+  const tmpResult2 = require("module_1654");
+  return { animatedStyle: require("module_1654").useAnimatedStyle(useChatInputFloatingBounceTsx3), isInteractive: tmp10 };
 };

@@ -1,8 +1,8 @@
-// === Module 7714: XboxLinkModalActionCreators ===
+// === Module 7748: XboxLinkModalActionCreators ===
 
-// Module 7714 (XboxLinkModalActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
+// Module 7748 (XboxLinkModalActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "USER_SETTINGS_CONNECTIONS_XBOX_LINK_MODAL_KEY";
@@ -18,7 +18,7 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7715, dependencyMap.paths), { locationStack, startAtSignIn: flag }, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7749, dependencyMap.paths), { locationStack, startAtSignIn: flag }, c3);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(c3);

@@ -1,14 +1,14 @@
-// === Module 10256: SoundUtils ===
+// === Module 10298: SoundUtils ===
 
-// Module 10256 (SoundUtils)
+// Module 10298 (SoundUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import getSoundsForPackDefault from "getSoundsForPack" /* 10259 */;
-import sound_playback_SoundUtils from "sound_playback/SoundUtils" /* 10260 */;
-import SoundpackStore from "SoundpackStore" /* 10257 */;
-import StreamerModeStore from "StreamerModeStore" /* 5069 */;
+import getSoundsForPackDefault from "getSoundsForPack" /* 10301 */;
+import sound_playback_SoundUtils from "sound_playback/SoundUtils" /* 10302 */;
+import SoundpackStore from "SoundpackStore" /* 10299 */;
+import StreamerModeStore from "StreamerModeStore" /* 5100 */;
 
 require = fn;
-const SoundOutputChannel = fn(5970).SoundOutputChannel;
+const SoundOutputChannel = fn(6001).SoundOutputChannel;
 const logger = new LoggerDefault("SoundUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");

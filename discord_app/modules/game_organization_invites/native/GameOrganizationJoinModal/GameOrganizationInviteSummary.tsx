@@ -1,19 +1,19 @@
-// === Module 12285: GameOrganizationInviteSummary ===
+// === Module 12335: GameOrganizationInviteSummary ===
 
-// Module 12285 (GameOrganizationInviteSummary)
+// Module 12335 (GameOrganizationInviteSummary)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef2650 from "module_2650" /* 2650 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import Stack_Stack from "Stack/Stack" /* 6084 */;
-import GroupIcon from "GroupIcon" /* 7124 */;
-import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12076 */;
+import _modDef2651 from "module_2651" /* 2651 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import Stack_Stack from "Stack/Stack" /* 6115 */;
+import GroupIcon from "GroupIcon" /* 7155 */;
+import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_5 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationInviteSummary.tsx");
@@ -32,13 +32,13 @@ export default function GameOrganizationInviteSummary(invite) {
   }
   const obj2 = { iconUrl: organization.iconUrl, size: 64, fallback: "guild" };
   const tmp = closure_5();
-  const items1 = [React3(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: intl.formatToPlainString(_modDef2650["jKi+kc"], { displayNoun: str }) }), , ];
+  const items1 = [React3(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: intl.formatToPlainString(_modDef2651["jKi+kc"], { displayNoun: str }) }), , ];
   const obj5 = { variant: "heading-xl/semibold", color: "text-subtle", style: tmp.text, children: null };
   const intl2 = util.intl;
   if (displayNoun == null) {
     displayNoun = "other";
   }
-  obj5.children = intl2.format(_modDef2650.gptW7Y, {
+  obj5.children = intl2.format(_modDef2651.gptW7Y, {
     displayNoun,
     orgName: organization.name,
     gameName: invite.application.name,
@@ -55,7 +55,7 @@ export default function GameOrganizationInviteSummary(invite) {
     const obj9 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
     const intl3 = util.intl;
     const obj10 = { count: memberCount, max: maxMembers };
-    obj9.children = intl3.formatToPlainString(_modDef2650.VuENGl, obj10);
+    obj9.children = intl3.formatToPlainString(_modDef2651.VuENGl, obj10);
     items2[1] = React3(Text_Text.Text, obj9);
     obj7.children = items2;
     tmp2Result = React4(Stack_Stack.Stack, obj7);

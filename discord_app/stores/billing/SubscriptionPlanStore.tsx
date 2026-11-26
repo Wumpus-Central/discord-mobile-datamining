@@ -1,11 +1,11 @@
-// === Module 2177: SubscriptionPlanStore ===
+// === Module 2178: SubscriptionPlanStore ===
 
-// Module 2177 (SubscriptionPlanStore)
+// Module 2178 (SubscriptionPlanStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FunctionUtils from "FunctionUtils" /* 2160 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2170 */;
+import FunctionUtils from "FunctionUtils" /* 2161 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2171 */;
 
 require = fn;
 function addSubscriptionPlan(fromServer) {
@@ -55,7 +55,7 @@ function reset() {
 }
 const Constants = fn(1071);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1388);
+const PremiumConstants = fn(1389);
 ({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = PremiumConstants);
 const SubscriptionPlans = PremiumConstants.SubscriptionPlans;
 ({ PremiumSubscriptionSKUs: closure_8, ACTIVE_PREMIUM_SKUS: closure_9 } = PremiumConstants);

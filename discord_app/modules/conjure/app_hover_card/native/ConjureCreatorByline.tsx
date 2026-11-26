@@ -1,17 +1,17 @@
-// === Module 11514: ConjureCreatorByline ===
+// === Module 11562: ConjureCreatorByline ===
 
-// Module 11514 (ConjureCreatorByline)
+// Module 11562 (ConjureCreatorByline)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import Stack_Stack from "Stack/Stack" /* 6084 */;
-import conjureCreatorByline from "conjureCreatorByline" /* 11515 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import Stack_Stack from "Stack/Stack" /* 6115 */;
+import conjureCreatorByline from "conjureCreatorByline" /* 11563 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_5 = createStyles.createStyles({ text: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_hover_card/native/ConjureCreatorByline.tsx");

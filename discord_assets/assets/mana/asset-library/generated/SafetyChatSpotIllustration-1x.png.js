@@ -1,6 +1,6 @@
-// === Module 17310: ? ===
+// === Module 17361: ? ===
 
-// Module 17310
+// Module 17361
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SafetyChatSpotIllustration-1x.png.js");

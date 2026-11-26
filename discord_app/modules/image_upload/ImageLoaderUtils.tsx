@@ -1,13 +1,13 @@
-// === Module 1447: ImageLoaderUtils ===
+// === Module 1448: ImageLoaderUtils ===
 
-// Module 1447 (ImageLoaderUtils)
-import URLUtilsDefault from "URLUtils" /* 1379 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1448 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1449 */;
-import privDefault from "priv" /* 1454 */;
-import _modDef1488 from "module_1488" /* 1488 */;
-import ImageUtils from "ImageUtils" /* 1491 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2022 */;
+// Module 1448 (ImageLoaderUtils)
+import URLUtilsDefault from "URLUtils" /* 1380 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1449 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1450 */;
+import privDefault from "priv" /* 1455 */;
+import _modDef1489 from "module_1489" /* 1489 */;
+import ImageUtils from "ImageUtils" /* 1492 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2023 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -43,10 +43,10 @@ function getSrcWithWidthAndHeight(quality) {
     if (!obj.isDiscordCdnUrl(src)) {
       [tmp8, tmp9] = src.split("?");
       const tmp7 = _slicedToArray(src.split("?"), 2);
-      const parsed = _modDef1488.parse(tmp9);
+      const parsed = _modDef1489.parse(tmp9);
       delete tmp2[tmp];
       items = [tmp8, parsed];
-      const tmp4Result = _modDef1488;
+      const tmp4Result = _modDef1489;
       [tmp12, tmp13] = items;
       if (null != format) {
         tmp13.format = format;
@@ -105,7 +105,7 @@ function getSrcWithWidthAndHeight(quality) {
       const fitResult = ImageUtils.fit(size1);
       let text = tmp12;
       if (!tmp4Result3.isEmpty(tmp13)) {
-        _modDef1488;
+        _modDef1489;
         text = `${tmp12}?${obj9.stringify(tmp13)}`;
       }
       return text;
@@ -178,7 +178,7 @@ export function loadImage(url, bind) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -226,7 +226,7 @@ export function loadImage(url, bind) {
                       let obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: "+95" };
                     }
                   } else {
                     try {
@@ -263,7 +263,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F121801 */ function() { ... });
+                            image.onerror = closure_2_4(/* F122188 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

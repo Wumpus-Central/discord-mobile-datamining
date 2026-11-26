@@ -1,6 +1,6 @@
-// === Module 6652: ? ===
+// === Module 6683: ? ===
 
-// Module 6652
+// Module 6683
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/hat/headphones.png.js");

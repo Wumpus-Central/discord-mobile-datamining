@@ -1,16 +1,16 @@
-// === Module 19345: BlurVisualEffectView ===
+// === Module 19408: BlurVisualEffectView ===
 
-// Module 19345 (BlurVisualEffectView)
+// Module 19408 (BlurVisualEffectView)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5576 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5580 */;
+import useToken from "useToken" /* 5607 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5611 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const ThemeTypes = fn(1071).ThemeTypes;
 const jsx = fn(21).jsx;
-const ColorUtils = fn(5009);
+const ColorUtils = fn(5040);
 const tintColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.24);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/BlurVisualEffectView.tsx");

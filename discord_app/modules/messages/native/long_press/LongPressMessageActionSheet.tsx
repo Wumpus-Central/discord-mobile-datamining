@@ -1,29 +1,29 @@
-// === Module 12154: LongPressMessageActionSheet ===
+// === Module 12204: LongPressMessageActionSheet ===
 
-// Module 12154 (LongPressMessageActionSheet)
-import FlagUtils from "FlagUtils" /* 1404 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1625 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5982 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6348 */;
-import ActionSheet from "ActionSheet" /* 7515 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 12153 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 12163 */;
-import EmojiRowUtils from "EmojiRowUtils" /* 12205 */;
-import EmojiRowDefault from "EmojiRow" /* 12206 */;
+// Module 12204 (LongPressMessageActionSheet)
+import FlagUtils from "FlagUtils" /* 1405 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1626 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6379 */;
+import ActionSheet from "ActionSheet" /* 7546 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 12203 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 12213 */;
+import EmojiRowUtils from "EmojiRowUtils" /* 12255 */;
+import EmojiRowDefault from "EmojiRow" /* 12256 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8187 */;
-import ReportToModStore from "ReportToModStore" /* 12155 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11670 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8229 */;
+import ReportToModStore from "ReportToModStore" /* 12205 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11718 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let isMessageComponentsV2 = fn(4955).isMessageComponentsV2;
-const FileUploadErrorTypes = fn(5017).FileUploadErrorTypes;
+let isMessageComponentsV2 = fn(4986).isMessageComponentsV2;
+const FileUploadErrorTypes = fn(5048).FileUploadErrorTypes;
 const Constants = fn(1071);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ChannelTypes: closure_15, GuildFeatures: closure_16, LOCAL_BOT_ID: closure_17, MessageAttachmentFlags: closure_18, MessageFlags: closure_19, MessageStates: closure_20, MessageTypes: closure_21, MessageTypesSets: closure_22, Permissions: closure_23 } = Constants);
 const jsx = fn(21).jsx;

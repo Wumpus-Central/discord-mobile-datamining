@@ -1,8 +1,8 @@
-// === Module 7042: ApplicationCommandConstants ===
+// === Module 7073: ApplicationCommandConstants ===
 
-// Module 7042 (ApplicationCommandConstants)
+// Module 7073 (ApplicationCommandConstants)
 import util from "util" /* 1112 */;
-import Server from "Server" /* 2117 */;
+import Server from "Server" /* 2118 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ name: "True", displayName: "True", value: "true" }, { name: "False", displayName: "False", value: "false" }];

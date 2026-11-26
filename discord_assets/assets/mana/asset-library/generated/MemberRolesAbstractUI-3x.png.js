@@ -1,6 +1,6 @@
-// === Module 19995: ? ===
+// === Module 20059: ? ===
 
-// Module 19995
+// Module 20059
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MemberRolesAbstractUI-3x.png.js");

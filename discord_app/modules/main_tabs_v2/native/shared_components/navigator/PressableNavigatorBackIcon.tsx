@@ -1,18 +1,18 @@
-// === Module 8964: PressableNavigatorBackIcon ===
+// === Module 9006: PressableNavigatorBackIcon ===
 
-// Module 8964 (PressableNavigatorBackIcon)
+// Module 9006 (PressableNavigatorBackIcon)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6945 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6976 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
   const rect = { position: "absolute", minWidth: native.BADGE_SIZE, height: native.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };

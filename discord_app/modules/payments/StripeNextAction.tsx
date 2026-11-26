@@ -1,6 +1,6 @@
-// === Module 11216: StripeNextAction ===
+// === Module 11262: StripeNextAction ===
 
-// Module 11216 (StripeNextAction)
+// Module 11262 (StripeNextAction)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

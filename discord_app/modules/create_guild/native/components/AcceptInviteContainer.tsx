@@ -1,19 +1,19 @@
-// === Module 13697: AcceptInviteContainer ===
+// === Module 13749: AcceptInviteContainer ===
 
-// Module 13697 (AcceptInviteContainer)
+// Module 13749 (AcceptInviteContainer)
 import nativeDefault from "native" /* 575 */;
-import NavigatorHeader from "NavigatorHeader" /* 7160 */;
+import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import InviteStore from "InviteStore" /* 5731 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import InviteStore from "InviteStore" /* 5762 */;
 
 require = fn;
 const ThemeTypes = fn(1071).ThemeTypes;
-const GuildMemberFlags = fn(4930).GuildMemberFlags;
+const GuildMemberFlags = fn(4961).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { flex: { flex: 1 }, paddingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -102,7 +102,7 @@ export default function AcceptInviteContainer(code) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -164,7 +164,7 @@ export default function AcceptInviteContainer(code) {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       } catch (tmp14) {
         c3 = tmp;
         throw tmp14;
@@ -183,7 +183,7 @@ export default function AcceptInviteContainer(code) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -220,7 +220,7 @@ export default function AcceptInviteContainer(code) {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: "+95" };
                   }
                 } else {
                   try {
@@ -245,7 +245,7 @@ export default function AcceptInviteContainer(code) {
                             }
                             if (null == prop) {
                               c6 = 3;
-                              return { value: "HermesInternal", done: "HermesInternal" };
+                              return { value: "HermesInternal", done: "+95" };
                             } else {
                               closure_1();
                               const result = v3(transitionToInviteChannel[17]).transitionToEventDetailsFromInvite(prop);
@@ -383,7 +383,7 @@ export default function AcceptInviteContainer(code) {
           return obj;
         }
         v3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       } catch (tmp5) {
         v3 = tmp;
         throw tmp5;

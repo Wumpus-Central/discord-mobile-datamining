@@ -1,22 +1,22 @@
-// === Module 10515: StageChannelListStore ===
+// === Module 10560: StageChannelListStore ===
 
-// Module 10515 (StageChannelListStore)
-import _mod4927 from "module_4927" /* 4927 */;
+// Module 10560 (StageChannelListStore)
+import _mod4958 from "module_4958" /* 4958 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const identity = fn(1257);
+const identity = fn(1258);
 let closure_4 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   return {
     showActiveSpeakerPill: false,
     setShowActiveSpeakerPill(showActiveSpeakerPill) {
-      return showActiveSpeakerPill(1262).batchUpdates(() => showActiveSpeakerPill({ showActiveSpeakerPill }));
+      return showActiveSpeakerPill(1263).batchUpdates(() => showActiveSpeakerPill({ showActiveSpeakerPill }));
     },
     listRef: null,
     setListRef(listRef) {
-      return listRef(1262).batchUpdates(() => listRef({ listRef }));
+      return listRef(1263).batchUpdates(() => listRef({ listRef }));
     }
   };
 });
@@ -28,7 +28,7 @@ export function useActiveSpeakerPillScrollHandler() {
     items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, _mod4927.shallow), 2);
+  }, _mod4958.shallow), 2);
   const first = tmp[0];
   closure_1 = tmp3;
   items = [tmp[1]];
@@ -51,5 +51,5 @@ export function useActiveSpeakerPillState() {
     items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, _mod4927.shallow);
+  }, _mod4958.shallow);
 }

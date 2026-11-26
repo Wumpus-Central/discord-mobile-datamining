@@ -1,18 +1,18 @@
-// === Module 17722: ScreenAlignedThemedGradient ===
+// === Module 17779: ScreenAlignedThemedGradient ===
 
-// Module 17722 (ScreenAlignedThemedGradient)
+// Module 17779 (ScreenAlignedThemedGradient)
 import jsxProd from "jsxProd" /* 21 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import useActiveTheme from "useActiveTheme" /* 8973 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10546 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11488 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17693 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import useActiveTheme from "useActiveTheme" /* 9015 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10591 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11536 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17750 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 5012 */;
+import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
@@ -63,10 +63,10 @@ export function ScreenAlignedThemedGradientSliding(arg0) {
   ScreenAlignedThemedGradientTsx1.__closure = items1;
   ScreenAlignedThemedGradientTsx1.__workletHash = 8637379102627;
   ScreenAlignedThemedGradientTsx1.__initData = tmp4;
-  const animatedStyle = _mod1653.useAnimatedStyle(ScreenAlignedThemedGradientTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(ScreenAlignedThemedGradientTsx1);
   const obj4 = { pointerEvents: "none", style: null, children: null };
   const items2 = [React3.absoluteFill, animatedStyle];
   obj4.style = items2;
   obj4.children = jsx(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive, componentStyles: { height: useWindowDimensionsDefault({ ignoreKeyboard: true }).height } });
-  return jsx(_modDef1653.View, { pointerEvents: "none", style: null, children: null });
+  return jsx(_modDef1654.View, { pointerEvents: "none", style: null, children: null });
 }

@@ -1,9 +1,9 @@
-// === Module 14978: ProfileReadStateExperiment ===
+// === Module 15028: ProfileReadStateExperiment ===
 
-// Module 14978 (ProfileReadStateExperiment)
+// Module 15028 (ProfileReadStateExperiment)
 import initialize from "initialize" /* 504 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
-import UserStore from "UserStore" /* 1386 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function getProfileReadStateConfigPeek() {
@@ -36,7 +36,7 @@ function getProfileReadStateConfigPeek() {
 }
 const obj = { enabled: false };
 const obj2 = { 0: obj, 1: { enabled: true } };
-const ApexExperiment = fn(1450);
+const ApexExperiment = fn(1451);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-10-profile-read-state", kind: "user", defaultConfig: obj, variations: obj2 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/experiments/ProfileReadStateExperiment.tsx");

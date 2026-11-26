@@ -1,25 +1,25 @@
-// === Module 17959: WaterwheelsPostCard ===
+// === Module 18016: WaterwheelsPostCard ===
 
-// Module 17959 (WaterwheelsPostCard)
+// Module 18016 (WaterwheelsPostCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import AvatarUtils from "AvatarUtils" /* 1412 */;
-import themes from "themes" /* 5034 */;
-import native from "native" /* 5073 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import components_Button_Button from "components/Button/Button" /* 5610 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import LinkIcon from "LinkIcon" /* 5708 */;
-import PlatformsDefault from "Platforms" /* 6147 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8890 */;
-import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 17960 */;
+import AvatarUtils from "AvatarUtils" /* 1413 */;
+import themes from "themes" /* 5065 */;
+import native from "native" /* 5104 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import components_Button_Button from "components/Button/Button" /* 5641 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import LinkIcon from "LinkIcon" /* 5739 */;
+import PlatformsDefault from "Platforms" /* 6178 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8932 */;
+import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 18017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { content: { gap: nativeDefault.space.PX_12 }, standardContent: null, header: null, copy: null, icon: null, sectionIcon: null, connectionCard: null, connectionArt: null, connectionArtImage: null, connectionProviderArt: null, connectionCopy: null, connectionText: null, fallback: null, media: null, postAction: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.standardContent = { gap: nativeDefault.space.PX_8 };

@@ -1,16 +1,16 @@
-// === Module 19949: SoundboardRecordingWaveform ===
+// === Module 20013: SoundboardRecordingWaveform ===
 
-// Module 19949 (SoundboardRecordingWaveform)
+// Module 20013 (SoundboardRecordingWaveform)
 import nativeDefault from "native" /* 575 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import springPresets from "springPresets" /* 5614 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import springPresets from "springPresets" /* 5645 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const WAVEFORM_WAVE_MAX_VALUE = fn(12907).WAVEFORM_WAVE_MAX_VALUE;
+const WAVEFORM_WAVE_MAX_VALUE = fn(12959).WAVEFORM_WAVE_MAX_VALUE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: { flexDirection: "row", alignItems: "center" }, slot: { flex: 1, marginHorizontal: 1, alignItems: "center", justifyContent: "center" }, bar: { alignSelf: "stretch", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = { code: "(function SoundboardRecordingWaveformTsx1(){let[height]=this.__closure;return{height:height.get()};})" };
@@ -21,8 +21,8 @@ let closure_9 = noop.memo(function WaveformBar(level) {
   let sharedValue;
   const tmp = closure_7();
   const tmp2 = sharedValue;
-  sharedValue = require("module_1653").useSharedValue(0);
-  const obj = require("module_1653");
+  sharedValue = require("module_1654").useSharedValue(0);
+  const obj = require("module_1654");
   items = [closure_8, sharedValue];
   _require = undefined;
   [tmp4, tmp5] = items;
@@ -37,7 +37,7 @@ let closure_9 = noop.memo(function WaveformBar(level) {
   SoundboardRecordingWaveformTsx1.__workletHash = 14110970372869;
   SoundboardRecordingWaveformTsx1.__initData = tmp4;
   const items2 = [sharedValue, level, maxHeight];
-  const animatedStyle = require("module_1653").useAnimatedStyle(SoundboardRecordingWaveformTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(SoundboardRecordingWaveformTsx1);
   const effect = noop.useEffect(() => {
     const bound = Math.max(2, c0 / WAVEFORM_WAVE_MAX_VALUE * maxHeight);
     const result = sharedValue.set(spring_spring.withSpring(bound, springPresets.Reanimated3DefaultSpringConfig));

@@ -1,14 +1,14 @@
-// === Module 7645: prefetchConjurePreviewFrame ===
+// === Module 7676: prefetchConjurePreviewFrame ===
 
-// Module 7645 (prefetchConjurePreviewFrame)
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 7646 */;
-import frameLaunchSteps from "frameLaunchSteps" /* 7648 */;
-import FrameLaunchTimingTypes from "FrameLaunchTimingTypes" /* 7654 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 7637 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+// Module 7676 (prefetchConjurePreviewFrame)
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 7677 */;
+import frameLaunchSteps from "frameLaunchSteps" /* 7679 */;
+import FrameLaunchTimingTypes from "FrameLaunchTimingTypes" /* 7685 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 7668 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 
 require = fn;
-const isLaunched = fn(6906).isLaunched;
+const isLaunched = fn(6937).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/prefetchConjurePreviewFrame.tsx");
 

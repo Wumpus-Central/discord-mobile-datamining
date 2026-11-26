@@ -1,6 +1,6 @@
-// === Module 9978: HomeIndicator ===
+// === Module 10020: HomeIndicator ===
 
-// Module 9978 (HomeIndicator)
+// Module 10020 (HomeIndicator)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -59,19 +59,19 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
     const prefersHidden = obj.prefersHidden;
     const autoHideHomeIndicator = tmp;
     const prefersDeferringSystemGestures = obj.prefersDeferringSystemGestures;
-    autoHideHomeIndicator(1262).batchUpdates(() => state.setState({ autoHideHomeIndicator }));
-    const obj2 = autoHideHomeIndicator(1262);
+    autoHideHomeIndicator(1263).batchUpdates(() => state.setState({ autoHideHomeIndicator }));
+    const obj2 = autoHideHomeIndicator(1263);
     const tmp2 = undefined !== prefersDeferringSystemGestures && prefersDeferringSystemGestures;
     if (obj3.isAndroid()) {
-      const result = closure_1(1640).setNavigationBarVisible(!tmp);
-      const obj4 = closure_1(1640);
+      const result = closure_1(1641).setNavigationBarVisible(!tmp);
+      const obj4 = closure_1(1641);
     } else if (DCDHomeIndicator.DCDHomeIndicator) {
       DCDHomeIndicator = tmp5.DCDHomeIndicator;
       DCDHomeIndicator.setPrefersAutoHidden(tmp);
       const DCDHomeIndicator2 = tmp5.DCDHomeIndicator;
       const result1 = DCDHomeIndicator2.setPrefersDeferringSystemGestures(tmp2);
     }
-    obj3 = autoHideHomeIndicator(1378);
+    obj3 = autoHideHomeIndicator(1379);
   });
 };
 prototype["componentDidMount"] = function componentDidMount() {

@@ -1,19 +1,19 @@
-// === Module 12077: GuildFallbackAbstractUI ===
+// === Module 12127: GuildFallbackAbstractUI ===
 
-// Module 12077 (GuildFallbackAbstractUI)
-import assetHelpers from "assetHelpers" /* 7230 */;
-import _modDef12078 from "module_12078" /* 12078 */;
-import _modDef12079 from "module_12079" /* 12079 */;
-import _modDef12080 from "module_12080" /* 12080 */;
+// Module 12127 (GuildFallbackAbstractUI)
+import assetHelpers from "assetHelpers" /* 7261 */;
+import _modDef12128 from "module_12128" /* 12128 */;
+import _modDef12129 from "module_12129" /* 12129 */;
+import _modDef12130 from "module_12130" /* 12130 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12078 }, 3: null };
-let obj2 = { uri: _modDef12078 };
-obj[2] = { uri: _modDef12079 };
-const obj3 = { uri: _modDef12079 };
-obj[3] = { uri: _modDef12080 };
+let obj = { 1: null, 2: { uri: _modDef12128 }, 3: null };
+let obj2 = { uri: _modDef12128 };
+obj[2] = { uri: _modDef12129 };
+const obj3 = { uri: _modDef12129 };
+obj[3] = { uri: _modDef12130 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GuildFallbackAbstractUI.native.tsx");
 

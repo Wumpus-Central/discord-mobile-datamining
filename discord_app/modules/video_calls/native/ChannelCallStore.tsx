@@ -1,29 +1,29 @@
-// === Module 9966: ChannelCallStore ===
+// === Module 10008: ChannelCallStore ===
 
-// Module 9966 (ChannelCallStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2145 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6098 */;
-import DeviceOrientation from "DeviceOrientation" /* 8868 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9968 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 9969 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9971 */;
+// Module 10008 (ChannelCallStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
+import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2146 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6129 */;
+import DeviceOrientation from "DeviceOrientation" /* 8910 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10010 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 10011 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 10013 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import apply from "apply" /* 12 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(9967);
+const ChannelCallConstants = fn(10009);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5662).ParticipantTypes;
-const timeout = new fn(4856).Timeout();
+const ParticipantTypes = fn(5693).ParticipantTypes;
+const timeout = new fn(4887).Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
 let obj2 = {};
-let size = { x: "Array", y: "s", width: "channel_id", height: "paddingBottom", screenOrientation: fn(8868).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "<string:1202590843>", isInitialized: "<string:1068792545>", isVisible: "answerCall" };
+let size = { x: "Array", y: "s", width: "channel_id", height: "cix", screenOrientation: fn(8910).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: null, isInitialized: null, isVisible: null };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
-const size1 = { x: "Array", y: "s", width: "channel_id", height: "paddingBottom", screenOrientation: fn(8868).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "<string:1202590843>", isInitialized: "<string:1068792545>", isVisible: "answerCall" };
+const size1 = { x: "Array", y: "s", width: "channel_id", height: "cix", screenOrientation: fn(8910).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: null, isInitialized: null, isVisible: null };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;
 let closure_8 = Object.freeze(obj);
@@ -39,7 +39,7 @@ export function setFocus(focus) {
 }
 export function toggleFocus() {
   const focus = obj3.getState().focus;
-  focus(1262).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+  focus(1263).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
 }
 export function resetFocusTimer() {
   timeout.stop();
@@ -71,7 +71,7 @@ export function setVoiceChatDrawerState(embeddedActivityLocationChannelId, CLOSE
 }
 export const togglePipFocus = apply.throttle(() => {
   const pipFocus = obj3.getState().pipFocus;
-  pipFocus(1262).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+  pipFocus(1263).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
 }, 300);
 export function useIsVoiceChatFocused() {
   const voiceChatDrawerState = obj3().voiceChatDrawerState;

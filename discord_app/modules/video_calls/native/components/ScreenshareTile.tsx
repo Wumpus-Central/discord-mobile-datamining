@@ -1,14 +1,14 @@
-// === Module 10090: ScreenshareTile ===
+// === Module 10132: ScreenshareTile ===
 
-// Module 10090 (ScreenshareTile)
+// Module 10132 (ScreenshareTile)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 10091 */;
-import _modDef10092 from "module_10092" /* 10092 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 10133 */;
+import _modDef10134 from "module_10134" /* 10134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BLACK, overflow: "hidden", flex: 1 }, image: { marginBottom: 8, width: 60, height: 40 }, label: { lineHeight: 18, textAlign: "center" }, liveContainer: { position: "absolute", top: 8, right: 8, zIndex: 2 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -38,7 +38,7 @@ export default function ScreenShareTile(onSingleTap) {
   items = [hasOwnProperty(View, { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) }), , ];
   const obj4 = { source: null, style: null, resizeMode: "contain" };
   const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-  obj4.source = _modDef10092;
+  obj4.source = _modDef10134;
   obj4.style = tmp.image;
   items[1] = hasOwnProperty(FastImageDefault, obj4);
   const obj5 = { style: tmp.label, variant: "body-xs/semibold", color: "text-overlay-light", children: null };

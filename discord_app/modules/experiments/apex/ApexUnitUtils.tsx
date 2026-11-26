@@ -1,14 +1,17 @@
-// === Module 1252: ApexUnitUtils ===
+// === Module 1253: ApexUnitUtils ===
 
-// Module 1252 (ApexUnitUtils)
-import FingerprintUtils from "FingerprintUtils" /* 1253 */;
-import GlobalUtils from "GlobalUtils" /* 1254 */;
+// Module 1253 (ApexUnitUtils)
+import FingerprintUtils from "FingerprintUtils" /* 1254 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexUnitUtils.tsx");
 
+export function getInstallationUnitId() {
+  return FingerprintUtils.maybeExtractId(AuthenticationStore.getInstallationForTracking());
+}
 export function getUnitId(installation, guildId) {
   if ("guild" === installation) {
     return guildId.guildId;

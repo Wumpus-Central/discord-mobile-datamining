@@ -1,8 +1,8 @@
-// === Module 17927: ChannelListLegendList ===
+// === Module 17984: ChannelListLegendList ===
 
-// Module 17927 (ChannelListLegendList)
-import FastList from "FastList" /* 7397 */;
-import useChannelListFlatDataDefault from "useChannelListFlatData" /* 17928 */;
+// Module 17984 (ChannelListLegendList)
+import FastList from "FastList" /* 7428 */;
+import useChannelListFlatDataDefault from "useChannelListFlatData" /* 17985 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -65,7 +65,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
       return Math.max(0, Math.min(diff, contentSize + c2 - c3));
     }
   }, []);
-  const sharedValue = require("module_1653").useSharedValue(memo);
+  const sharedValue = require("module_1654").useSharedValue(memo);
   const ref2 = noop.useRef(tmp3);
   ref2.current = tmp3;
   const ref3 = noop.useRef(0);
@@ -264,9 +264,9 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   }, items);
   const items1 = [memo1];
   const imperativeHandle = noop.useImperativeHandle(ref, () => memo1, items1);
-  let obj2 = require("module_1653");
+  let obj2 = require("module_1654");
   const tmp5 = _require;
-  const items2 = [index, sharedValue, onScrollWorklet, onScroll, require("module_1706").scheduleOnRN];
+  const items2 = [index, sharedValue, onScrollWorklet, onScroll, require("module_1707").scheduleOnRN];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -288,7 +288,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   ChannelListLegendListTsx1.__workletHash = 15385241443618;
   ChannelListLegendListTsx1.__initData = tmp11;
   const items4 = [renderItem, renderSectionFooter, renderSectionHeader];
-  const obj3 = require("module_1653");
+  const obj3 = require("module_1654");
   const callback = obj.useCallback((item) => {
     item = item.item;
     const type = item.type;
@@ -330,10 +330,10 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   obj4.ListHeaderComponentStyle = ref1;
   obj4.onEndReached = onEndReached;
   obj4.onEndReachedThreshold = num;
-  obj4.onScroll = require("module_1653").useAnimatedScrollHandler(ChannelListLegendListTsx1);
+  obj4.onScroll = require("module_1654").useAnimatedScrollHandler(ChannelListLegendListTsx1);
   obj4.renderItem = callback;
   obj4.scrollIndicatorInsets = memo4;
-  const items8 = [renderItem(tmp5(11522).AnimatedLegendList, obj4), renderAccessory(memo1)];
+  const items8 = [renderItem(tmp5(11570).AnimatedLegendList, obj4), renderAccessory(memo1)];
   obj5.children = items8;
   return renderSectionFooter(renderHeader, obj5);
 });

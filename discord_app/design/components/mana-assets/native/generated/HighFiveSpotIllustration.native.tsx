@@ -1,19 +1,19 @@
-// === Module 12292: HighFiveSpotIllustration ===
+// === Module 12342: HighFiveSpotIllustration ===
 
-// Module 12292 (HighFiveSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7230 */;
-import _modDef12293 from "module_12293" /* 12293 */;
-import _modDef12294 from "module_12294" /* 12294 */;
-import _modDef12295 from "module_12295" /* 12295 */;
+// Module 12342 (HighFiveSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7261 */;
+import _modDef12343 from "module_12343" /* 12343 */;
+import _modDef12344 from "module_12344" /* 12344 */;
+import _modDef12345 from "module_12345" /* 12345 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12293 }, 3: null };
-let obj2 = { uri: _modDef12293 };
-obj[2] = { uri: _modDef12294 };
-const obj3 = { uri: _modDef12294 };
-obj[3] = { uri: _modDef12295 };
+let obj = { 1: null, 2: { uri: _modDef12343 }, 3: null };
+let obj2 = { uri: _modDef12343 };
+obj[2] = { uri: _modDef12344 };
+const obj3 = { uri: _modDef12344 };
+obj[3] = { uri: _modDef12345 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HighFiveSpotIllustration.native.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 5577: Sheet/BottomSheetBackdrop ===
+// === Module 5608: Sheet/BottomSheetBackdrop ===
 
-// Module 5577 (Sheet/BottomSheetBackdrop)
-import _mod1653 from "module_1653" /* 1653 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import BottomSheetModal from "BottomSheetModal" /* 5244 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import Backdrop from "Backdrop" /* 5578 */;
+// Module 5608 (Sheet/BottomSheetBackdrop)
+import _mod1654 from "module_1654" /* 1654 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import BottomSheetModal from "BottomSheetModal" /* 5275 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import Backdrop from "Backdrop" /* 5609 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_4 = createStyles.createStyles({ container: { flex: 1 } });
 let closure_5 = { code: "(function BottomSheetBackdropNativeTsx1(){let[scheduleOnRN,handleOnPress]=this.__closure;scheduleOnRN(handleOnPress);})" };
 let closure_6 = { code: "(function BottomSheetBackdropNativeTsx2(){let[interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity]=this.__closure;return{opacity:interpolate(animatedIndex.get(),[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity])};})" };
@@ -59,7 +59,7 @@ export const BottomSheetBackdrop = noop.memo(function BottomSheetBackdropCompone
     }
   }, items);
   const Gesture = LegacyBaseButton.Gesture;
-  let items1 = [closure_5, _mod1706.scheduleOnRN, callback];
+  let items1 = [closure_5, _mod1707.scheduleOnRN, callback];
   c0 = undefined;
   c1 = undefined;
   [tmp6, tmp7, tmp8] = items1;
@@ -75,7 +75,7 @@ export const BottomSheetBackdrop = noop.memo(function BottomSheetBackdropCompone
   BottomSheetBackdropNativeTsx1.__initData = tmp6;
   const TapResult = Gesture.Tap();
   const onEndResult = Gesture.Tap().onEnd(BottomSheetBackdropNativeTsx1);
-  const items3 = [closure_6, _mod1653.interpolate, opacity.animatedIndex, num3, num2, num];
+  const items3 = [closure_6, _mod1654.interpolate, opacity.animatedIndex, num3, num2, num];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -98,7 +98,7 @@ export const BottomSheetBackdrop = noop.memo(function BottomSheetBackdropCompone
   BottomSheetBackdropNativeTsx2.__closure = items4;
   BottomSheetBackdropNativeTsx2.__workletHash = 16206177452089;
   BottomSheetBackdropNativeTsx2.__initData = tmp10;
-  animatedStyle = _mod1653.useAnimatedStyle(BottomSheetBackdropNativeTsx2);
+  animatedStyle = _mod1654.useAnimatedStyle(BottomSheetBackdropNativeTsx2);
   const items5 = [tmp.container, style, animatedStyle];
   const memo = noop.useMemo(() => {
     items = [_undefined3.container, c3, animatedStyle];

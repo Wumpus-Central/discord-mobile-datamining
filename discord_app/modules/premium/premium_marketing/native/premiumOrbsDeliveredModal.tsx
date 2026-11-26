@@ -1,19 +1,19 @@
-// === Module 9229: premiumOrbsDeliveredModal ===
+// === Module 9271: premiumOrbsDeliveredModal ===
 
-// Module 9229 (premiumOrbsDeliveredModal)
+// Module 9271 (premiumOrbsDeliveredModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6016 */;
-import NitroOrbsDeliveredModalDefault from "NitroOrbsDeliveredModal" /* 9231 */;
-import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 9236 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
+import NitroOrbsDeliveredModalDefault from "NitroOrbsDeliveredModal" /* 9273 */;
+import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 9278 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 6328 */;
+import EntitlementStore from "EntitlementStore" /* 6359 */;
 
 const require = fn;
 function getCoinEntitlements() {
   return EntitlementStore.getForSku(SINGLE_ORB_SKU_ID);
 }
 const jsx = fn(21).jsx;
-const SINGLE_ORB_SKU_ID = fn(9230).SINGLE_ORB_SKU_ID;
+const SINGLE_ORB_SKU_ID = fn(9272).SINGLE_ORB_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_marketing/native/premiumOrbsDeliveredModal.tsx");
 
@@ -38,7 +38,7 @@ export function openOrbsModalIfDelivered() {
           return null;
         } else {
           for (const item10008 of tmp) {
-            if (item10008.type === closure_0(2172).EntitlementTypes.PURCHASE_REWARD) {
+            if (item10008.type === closure_0(2173).EntitlementTypes.PURCHASE_REWARD) {
               knownCoinEntitlementIds = arg0.knownCoinEntitlementIds;
               if (!knownCoinEntitlementIds.has(item10008.id)) {
                 obj = SnowflakeUtilsDefault;

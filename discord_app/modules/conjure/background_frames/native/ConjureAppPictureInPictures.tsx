@@ -1,11 +1,11 @@
-// === Module 19321: ConjureAppPictureInPictures ===
+// === Module 19384: ConjureAppPictureInPictures ===
 
-// Module 19321 (ConjureAppPictureInPictures)
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 15901 */;
-import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19325 */;
-import useFloatConjureAppsOffScreenDefault from "useFloatConjureAppsOffScreen" /* 19329 */;
+// Module 19384 (ConjureAppPictureInPictures)
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 15952 */;
+import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19388 */;
+import useFloatConjureAppsOffScreenDefault from "useFloatConjureAppsOffScreen" /* 19392 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6905 */;
+import FramesStore from "FramesStore" /* 6936 */;
 
 require = fn;
 function ConjureAppPictureInPictureLayer(frameIds) {
@@ -88,11 +88,11 @@ function ConjureAppPictureInPictureWithSize(frameId) {
   return closure_8(windowWidth(stateFromStores[14]), obj2);
 }
 const View = fn(17).View;
-const FramesConstants = fn(6906);
+const FramesConstants = fn(6937);
 ({ asLaunched: closure_6, getPipOrientationLockStateForFrame: metroImportDefault } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_10 = createStyles.createStyles({ layer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, hidden: { opacity: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/background_frames/native/ConjureAppPictureInPictures.tsx");

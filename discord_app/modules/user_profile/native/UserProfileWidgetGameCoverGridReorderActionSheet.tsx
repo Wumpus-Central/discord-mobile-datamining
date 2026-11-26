@@ -1,87 +1,91 @@
-// === Module 14545: UserProfileWidgetGameCoverGridReorderActionSheet ===
+// === Module 14597: UserProfileWidgetGameCoverGridReorderActionSheet ===
 
-// Module 14545 (UserProfileWidgetGameCoverGridReorderActionSheet)
+// Module 14597 (UserProfileWidgetGameCoverGridReorderActionSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1112 */;
-import DragHandle from "DragHandle" /* 6116 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 14514 */;
-import WidgetUtils from "WidgetUtils" /* 14518 */;
-import useGameCoverLayoutDefault from "useGameCoverLayout" /* 14523 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14532 */;
-import GameCoverImageDefault from "GameCoverImage" /* 14534 */;
-import UserProfileReorderActionSheetDefault from "UserProfileReorderActionSheet" /* 14544 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import DragHandle from "DragHandle" /* 6147 */;
+import WidgetUtils from "WidgetUtils" /* 14570 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14584 */;
+import GameCoverImageDefault from "GameCoverImage" /* 14586 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
+const require = globalThis.__r;
+
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
-let obj = { grid: { flexDirection: "row", flexWrap: "wrap", gap: fn(14506).GAME_COVER_GRID_GAP }, dragHandle: null };
-let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: fn(14506).GAME_COVER_GRID_GAP };
-obj.dragHandle = { position: "absolute", top: nativeDefault.space.PX_8, start: 0 };
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(5043);
+let obj = { dragHandle: { position: "absolute", top: nativeDefault.space.PX_8, start: 0 } };
 let closure_9 = createStyles.createStyles(obj);
 let closure_10 = noop.memo(function ReorderableGameCover(arg0) {
-  ({ game, coverWidth } = arg0);
-  const tmp4 = useGameNameAndCoverImageDefault(game.gameId);
-  if (tmp4.isLoading) {
-    const intl = util.intl;
-    let gameName = intl.string(util.t.ZTNur7);
-  } else {
-    gameName = tmp4.gameName;
-  }
-  const obj = { accessibilityLabel: gameName, children: null };
-  const obj2 = {};
+  ({ gameId, coverWidth, handleGesture } = arg0);
+  const obj = { children: null };
   const tmp = closure_9();
-  const merged = Object.assign(tmp4);
+  const obj2 = {};
+  const tmp2 = useGameNameAndCoverImageDefault(gameId);
+  const merged = Object.assign(tmp2);
   obj2.width = coverWidth;
   obj2.accessible = false;
-  items = [metroImportDefault(GameCoverImageDefault, obj2), metroImportDefault(DragHandle.DragHandle, { style: tmp.dragHandle, variant: "overlay", size: "sm", borderRadius: { topStart: 0, bottomStart: 0 } })];
+  items = [timestampProducer(GameCoverImageDefault, obj2), ];
+  const obj3 = { gesture: handleGesture, children: null };
+  obj3.children = timestampProducer(View, { style: tmp.dragHandle, children: timestampProducer(DragHandle.DragHandle, { variant: "overlay", size: "sm", borderRadius: { topStart: 0, bottomStart: 0 } }) });
+  items[1] = timestampProducer(LegacyBaseButton.GestureDetector, obj3);
   obj.children = items;
-  return React5(React4, obj);
+  return React5(metroImportDefault, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetGameCoverGridReorderActionSheet.tsx");
 
 export default function UserProfileWidgetGameCoverGridReorderActionSheet(widgetType) {
   widgetType = widgetType.widgetType;
-  dependencyMap = undefined;
-  const tmp = closure_9();
+  importDefault = undefined;
+  coverWidth = undefined;
   items = [AuthenticationStore];
-  const stateFromStores = widgetType(504).useStateFromStores(items, () => id.getId());
-  const tmp3 = useUserProfileWidgetsDefault(stateFromStores);
-  importDefault = tmp3;
-  const items1 = [tmp3, widgetType];
+  const stateFromStores = widgetType(coverWidth[10]).useStateFromStores(items, () => id.getId());
+  const tmp5 = require("useUserProfileWidgets")(stateFromStores);
+  importDefault = tmp5;
+  const items1 = [tmp5, widgetType];
   const memo = noop.useMemo(() => {
     const found = closure_1.find((type) => {
-      let isGameWidgetResult = widgetType(c2[13]).isGameWidget(type);
+      let isGameWidgetResult = widgetType(coverWidth[12]).isGameWidget(type);
       if (isGameWidgetResult) {
         isGameWidgetResult = type.type === closure_1_0;
       }
       return isGameWidgetResult;
     });
     if (null != found) {
-      let uniqueWidgetGames = WidgetUtils.getUniqueWidgetGames(found);
+      const uniqueWidgetGames = WidgetUtils.getUniqueWidgetGames(found);
+      let mapped = uniqueWidgetGames.map((gameId) => gameId.gameId);
     } else {
-      uniqueWidgetGames = [];
+      mapped = [];
     }
-    return uniqueWidgetGames;
+    return mapped;
   }, items1);
-  const tmp4 = useGameCoverLayoutDefault();
-  ({ isMeasured, coverWidth: c2 } = tmp4);
-  ({ ref, onLayout } = tmp4);
-  const obj2 = { dismissAccessibilityLabel: null, returnFocusRef: null, children: null };
-  let obj = widgetType(504);
-  const intl = widgetType(1112).intl;
-  obj2.dismissAccessibilityLabel = intl.string(widgetType(1112).t.rnh54p);
-  obj2.returnFocusRef = widgetType.returnFocusRef;
-  const obj3 = { ref, onLayout, accessibilityRole: "list", style: tmp.grid, children: null };
+  const tmp7 = require("useGameCoverLayout")();
+  ({ isMeasured, coverWidth } = tmp7);
+  ({ ref, onLayout, columns } = tmp7);
+  let obj = widgetType(coverWidth[10]);
+  const tmp4 = importDefault;
+  const animatedRef = widgetType(coverWidth[15]).useAnimatedRef();
+  const items2 = [widgetType];
+  const items3 = [coverWidth];
+  const callback = noop.useCallback((arr) => WidgetUtils.setGameOrderInWidget(widgetType, arr), items2);
+  const callback1 = noop.useCallback((gameId, handleGesture) => timestampProducer(closure_10, { gameId, coverWidth, handleGesture }), items3);
+  const obj3 = { dismissAccessibilityLabel: null, returnFocusRef: null, scrollRef: null, children: null };
+  const obj2 = widgetType(coverWidth[15]);
+  const intl = widgetType(coverWidth[17]).intl;
+  obj3.dismissAccessibilityLabel = intl.string(widgetType(coverWidth[17]).t.rnh54p);
+  obj3.returnFocusRef = widgetType.returnFocusRef;
+  obj3.scrollRef = animatedRef;
+  const obj4 = { ref, onLayout, children: null };
   if (isMeasured) {
-    isMeasured = memo.map((game) => metroImportDefault(closure_10, { game, coverWidth }, game.gameId));
+    const obj5 = { gameIds: memo, columns, itemWidth: coverWidth, itemHeight: coverWidth / tmp(tmp2[19]).GAME_COVER_ASPECT_RATIO, gap: tmp(tmp2[19]).GAME_COVER_GRID_GAP, scrollRef: animatedRef, onCommitOrder: callback, renderGame: callback1 };
+    isMeasured = closure_6(tmp4(tmp2[18]), obj5);
+    const tmp4Result = tmp4(tmp2[18]);
   }
-  obj3.children = isMeasured;
-  obj2.children = closure_7(closure_5, obj3);
-  return closure_7(UserProfileReorderActionSheetDefault, obj2);
+  obj4.children = isMeasured;
+  obj3.children = closure_6(View, obj4);
+  return closure_6(require("UserProfileReorderActionSheet"), obj3);
 };

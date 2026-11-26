@@ -1,9 +1,9 @@
-// === Module 10732: BackgroundTaskManager ===
+// === Module 10778: BackgroundTaskManager ===
 
-// Module 10732 (BackgroundTaskManager)
-import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10313 */;
-import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 10733 */;
+// Module 10778 (BackgroundTaskManager)
+import PlatformUtils2 from "PlatformUtils" /* 1379 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10355 */;
+import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 10779 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function startBackgroundTask(arg0) {
   obj = PlatformUtils2;
 }
 const NativeModules = fn(17).NativeModules;
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let num = -1;
 if (!PlatformUtils.isAndroid()) {
   num = NativeModules.DCDBackgroundTaskManager.backgroundTaskIdentifierInvalid;
@@ -54,7 +54,7 @@ function backgroundify(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

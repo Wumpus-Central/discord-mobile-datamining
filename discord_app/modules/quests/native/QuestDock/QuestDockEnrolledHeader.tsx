@@ -1,14 +1,14 @@
-// === Module 16728: QuestDockEnrolledHeader ===
+// === Module 16779: QuestDockEnrolledHeader ===
 
-// Module 16728 (QuestDockEnrolledHeader)
+// Module 16779 (QuestDockEnrolledHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6093 */;
-import QuestTypes from "QuestTypes" /* 6843 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 9850 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 13787 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 16663 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 16673 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6124 */;
+import QuestTypes from "QuestTypes" /* 6874 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 9892 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 13839 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 16714 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 16724 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,8 +19,8 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 let c7 = "heading-sm/semibold";
 let c8 = "body-sm/medium";
-let closure_9 = fn(16629).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
-const createStyles = fn(5012);
+let closure_9 = fn(16680).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+const createStyles = fn(5043);
 let closure_10 = createStyles.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: PX_8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1, minWidth: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx");

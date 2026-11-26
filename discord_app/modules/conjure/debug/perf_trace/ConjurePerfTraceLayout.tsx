@@ -1,8 +1,9 @@
-// === Module 7684: ConjurePerfTraceLayout ===
+// === Module 7717: ConjurePerfTraceLayout ===
 
-// Module 7684 (ConjurePerfTraceLayout)
+// Module 7717 (ConjurePerfTraceLayout)
 import _slicedToArray from "module_32" /* 32 */;
 
+let require = fn;
 function walkNodes(findPerfTraceNodeResult, fn) {
   fn(findPerfTraceNodeResult);
   while (tmp2 !== undefined) {
@@ -50,7 +51,7 @@ function describePerfSpan(nextResult) {
     }
   }
   obj.operation = combined;
-  let str5 = closure_1[substr];
+  let str5 = closure_3[substr];
   if (str5 == null) {
     str5 = "other";
   }
@@ -98,8 +99,8 @@ function childrenByParent(spans) {
   }
   return map;
 }
-function coveredMs(items, arr, applyResult, applyResult1) {
-  let as_of = items;
+function coveredMs(spans, arr, applyResult, applyResult1) {
+  let as_of = spans;
   closure_1 = applyResult;
   closure_2 = applyResult1;
   const mapped = arr.map((start) => {
@@ -130,10 +131,11 @@ function coveredMs(items, arr, applyResult, applyResult1) {
   }
   return num;
 }
-let closure_1 = { op: "op", ws: "op", turn: "op", alarm: "op", side_chat: "op", session: "op", step: "op", model: "model", version_note: "model", tool: "tool", mcp: "tool", sandbox: "sandbox", worktree: "worktree", build: "build", deps: "build", api: "platform", state: "platform", publish: "platform", preview: "platform", healthcheck: "platform", usage: "platform", live: "platform", replay: "platform", template: "setup", workspace: "setup", declarations: "setup", manifest: "setup", storage: "setup", conversation: "setup", runtime: "setup", attachments: "setup", upstream: "setup", remix: "setup", repo: "setup" };
+let closure_3 = { op: "op", ws: "op", turn: "op", alarm: "op", side_chat: "op", session: "op", step: "op", model: "model", version_note: "model", tool: "tool", mcp: "tool", sandbox: "sandbox", worktree: "worktree", build: "build", deps: "build", api: "platform", state: "platform", publish: "platform", preview: "platform", healthcheck: "platform", usage: "platform", live: "platform", replay: "platform", launch: "op", request: "platform", template: "setup", workspace: "setup", declarations: "setup", manifest: "setup", storage: "setup", conversation: "setup", runtime: "setup", attachments: "setup", upstream: "setup", remix: "setup", repo: "setup" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/ConjurePerfTraceLayout.tsx");
 
+export const PERF_TRACE_MARKER_NAMES = fn(7718).FRAME_LAUNCH_MOMENT_SPAN_NAMES;
 export const PERF_CATEGORIES = ["op", "model", "tool", "setup", "worktree", "sandbox", "build", "platform", "other"];
 export function perfTraceRoot(spans) {
   spans = spans.spans;
@@ -206,15 +208,14 @@ export function perfTraceInterrupted(live) {
   return tmp;
 }
 export function perfTraceTree(spans) {
-  closure_0 = spans;
-  function isLeaf(buildResult) {
-    const hasItem = map.has(buildResult.id);
+  function isLeaf(id) {
+    const hasItem = map.has(id.id);
     let tmp2 = !hasItem;
     if (!hasItem) {
-      tmp2 = null != buildResult.end;
+      tmp2 = null != id.end;
     }
     if (tmp2) {
-      tmp2 = null == buildResult.error;
+      tmp2 = null == id.error;
     }
     return tmp2;
   }
@@ -227,31 +228,32 @@ export function perfTraceTree(spans) {
   if (null == found) {
     return null;
   } else {
-    function build(items, arg1, arg2, arg3) {
+    function build(buildResult, arg1, arg2, arg3) {
+      spans = buildResult;
       let tmp = arg1;
       map = arg1;
       closure_2 = arg2;
-      let first = items[0];
-      items = [...items.map((start) => start.start)];
+      let first = buildResult[0];
+      items = [...buildResult.map((start) => start.start)];
       const applyResult = Math.min.apply(items);
       const items1 = [
-        ...items.map((end) => {
+        ...buildResult.map((end) => {
           let as_of = end.end;
           if (as_of == null) {
-            as_of = items.as_of;
+            as_of = buildResult.as_of;
           }
           return as_of;
         })
       ];
-      let applyResult1 = Math.max.apply(items1);
-      let mapped = items.map((end) => {
+      const applyResult1 = Math.max.apply(items1);
+      let mapped = buildResult.map((end) => {
         let as_of = end.end;
         if (as_of == null) {
-          as_of = items.as_of;
+          as_of = buildResult.as_of;
         }
         return as_of - end.start;
       });
-      if (1 === items.length) {
+      if (1 === buildResult.length) {
         let items4 = map.get(first.id);
         if (items4 == null) {
           items4 = [];
@@ -260,20 +262,25 @@ export function perfTraceTree(spans) {
       } else {
         items2 = [];
       }
-      if (1 === items.length) {
+      let hasItem = 1 === buildResult.length;
+      if (hasItem) {
+        const FRAME_LAUNCH_MOMENT_SPAN_NAMES = spans(map[1]).FRAME_LAUNCH_MOMENT_SPAN_NAMES;
+        hasItem = FRAME_LAUNCH_MOMENT_SPAN_NAMES.has(first.name);
+      }
+      if (1 === buildResult.length) {
         const _HermesInternal2 = HermesInternal;
         let combined = "span-" + first.id;
       } else {
         const _HermesInternal = HermesInternal;
         combined = "fold-" + first.id;
       }
-      const obj = { key: combined, depth: tmp, span: first, count: items.length, start: applyResult, end: applyResult1, totalMs: mapped.reduce((acc, item) => acc + item, 0), maxMs: null, selfMs: null, running: null == first.end, failed: null != first.error, parallel: null, outlivedParent: applyResult1 > arg3 };
+      const obj = { key: combined, depth: tmp, span: first, count: buildResult.length, start: applyResult, end: applyResult1, totalMs: mapped.reduce((acc, item) => acc + item, 0), maxMs: null, selfMs: null, running: null == first.end, failed: null != first.error, parallel: null, outlivedParent: applyResult1 > arg3 };
       const items3 = [...mapped];
       obj.maxMs = Math.max.apply(items3);
       const diff = applyResult1 - applyResult;
-      obj.selfMs = diff - coveredMs(items, items2, applyResult, applyResult1);
+      obj.selfMs = diff - coveredMs(spans, items2, applyResult, applyResult1);
       tmp = null;
-      mapped = items.some;
+      mapped = buildResult.some;
       obj.parallel = mapped((arg0) => {
         closure_0 = arg0;
         return closure_2.some((end) => {
@@ -297,24 +304,28 @@ export function perfTraceTree(spans) {
           return tmp2;
         });
       });
-      const merged = Object.assign(closure_3(first));
+      const merged = Object.assign(describePerfSpan(first));
       obj.significant = false;
+      obj.marker = hasItem;
       obj.children = [];
       obj.descendants = 0;
       map = new Map();
-      applyResult1 = map;
-      first = items2[Symbol.iterator]();
+      first = map;
+      hasItem = items2;
+      items2[Symbol.iterator]();
     }
     items = [found];
     const buildResult = build(items, 0, [], Infinity);
     closure_3 = 0.1 * (buildResult.end - buildResult.start);
-    isLeaf(buildResult, (count) => {
-      if (count.count > 1) {
-        let totalMs = count.totalMs;
+    build(buildResult, (marker) => {
+      marker = marker.marker;
+      if (marker) {
+        marker.significant = marker;
+      } else if (marker.count > 1) {
+        let totalMs = marker.totalMs;
       } else {
-        totalMs = count.end - count.start;
+        totalMs = marker.end - marker.start;
       }
-      count.significant = totalMs >= closure_3;
     });
     return buildResult;
   }
@@ -386,7 +397,7 @@ export function visiblePerfTraceRows(key, arg1) {
 }
 export function overviewView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f91607 = (depth) => {
+  const f91855 = (depth) => {
     let tmp = depth.depth > 0;
     if (tmp) {
       const children = depth.children;
@@ -398,7 +409,7 @@ export function overviewView(children) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f91623(children);
+      tmp = f91871(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -427,7 +438,7 @@ export function extendView(collapsed, memo, current) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f91623(children);
+      tmp = f91871(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -462,12 +473,12 @@ export function perfTraceKeys(memo) {
 }
 export function expandedView(children) {
   const obj = { collapsed: new Set(), revealed: null };
-  const f91622 = () => true;
+  const f91870 = () => true;
   const set1 = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f91623(children);
+      tmp = f91871(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -483,12 +494,12 @@ export function expandedView(children) {
 }
 export function collapsedView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f91623 = (depth) => depth.depth > 0;
+  const f91871 = (depth) => depth.depth > 0;
   set = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f91623(children);
+      tmp = f91871(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -568,7 +579,7 @@ export function perfSpanSelfTimes(spans) {
 }
 export function perfTimelineTicks(arg0) {
   const result = arg0 / 6;
-  _slicedToArray = result;
+  require = result;
   closure_1 = 10 ** Math.floor(Math.log10(result));
   items = [1, 2, 5, 10];
   const mapped = items.map((item) => item * closure_1);

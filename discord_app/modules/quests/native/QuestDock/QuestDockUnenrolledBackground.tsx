@@ -1,42 +1,41 @@
-// === Module 16743: QuestDockUnenrolledBackground ===
+// === Module 16794: QuestDockUnenrolledBackground ===
 
-// Module 16743 (QuestDockUnenrolledBackground)
+// Module 16794 (QuestDockUnenrolledBackground)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8350 */;
-import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 16745 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
+import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 16796 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(6840).QuestsExperimentLocations;
-const expandedHeight = fn(16629).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const QuestsExperimentLocations = fn(6871).QuestsExperimentLocations;
+const expandedHeight = fn(16680).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
+const NEUTRAL_79 = nativeDefault.unsafe_rawColors.NEUTRAL_79;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
 
 export default noop.memo(function QuestDockUnenrolledBackground() {
-  const questDockQuest = handleAcceptQuest(16663).useQuestDockQuest();
-  const obj = handleAcceptQuest(16663);
-  const questDockHeroAsset = handleAcceptQuest(16623).useQuestDockHeroAsset(questDockQuest);
+  const questDockQuest = handleAcceptQuest(16714).useQuestDockQuest();
+  const obj = handleAcceptQuest(16714);
+  const questDockHeroAsset = handleAcceptQuest(16674).useQuestDockHeroAsset(questDockQuest);
   ({ videoAsset, staticUrl } = questDockHeroAsset);
-  const obj2 = handleAcceptQuest(16623);
-  const token = handleAcceptQuest(5576).useToken(nativeDefault.colors.CARD_BACKGROUND_DEFAULT);
-  const QuestBarStartQuestOnClickExperiment = handleAcceptQuest(16744).QuestBarStartQuestOnClickExperiment;
+  const QuestBarStartQuestOnClickExperiment = handleAcceptQuest(16795).QuestBarStartQuestOnClickExperiment;
   let isEnrolling = QuestBarStartQuestOnClickExperiment.useConfig({ location: QuestsExperimentLocations.QUESTS_BAR_MOBILE }).enabled;
-  const obj3 = handleAcceptQuest(5576);
-  const obj4 = { location: QuestsExperimentLocations.QUESTS_BAR_MOBILE };
-  const questDockAcceptQuest = handleAcceptQuest(16741).useQuestDockAcceptQuest();
+  const obj2 = handleAcceptQuest(16674);
+  const obj3 = { location: QuestsExperimentLocations.QUESTS_BAR_MOBILE };
+  const questDockAcceptQuest = handleAcceptQuest(16792).useQuestDockAcceptQuest();
   handleAcceptQuest = questDockAcceptQuest.handleAcceptQuest;
   items = [handleAcceptQuest];
   const callback = noop.useCallback(() => {
     handleAcceptQuest(AnalyticsTypes.QuestContentCTA.QUEST_BAR_HERO);
   }, items);
-  const obj6 = { expandedHeight, imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null, onPress: null, disabled: null };
+  const obj5 = { expandedHeight, imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null, onPress: null, disabled: null };
   let url;
-  const obj5 = handleAcceptQuest(16741);
+  const obj4 = handleAcceptQuest(16792);
   if (videoAsset != null) {
     url = videoAsset.url;
   }
-  obj6.videoUrl = url;
+  obj5.videoUrl = url;
   let mimetype;
   if (videoAsset != null) {
     mimetype = videoAsset.mimetype;
@@ -44,16 +43,16 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
   if (mimetype == null) {
     mimetype = null;
   }
-  obj6.videoMimetype = mimetype;
-  obj6.gradientBaseColor = token;
-  let tmp10;
+  obj5.videoMimetype = mimetype;
+  obj5.gradientBaseColor = NEUTRAL_79;
+  let tmp9;
   if (isEnrolling) {
-    tmp10 = callback;
+    tmp9 = callback;
   }
-  obj6.onPress = tmp10;
+  obj5.onPress = tmp9;
   if (isEnrolling) {
     isEnrolling = questDockAcceptQuest.isEnrolling;
   }
-  obj6.disabled = isEnrolling;
+  obj5.disabled = isEnrolling;
   return jsx(QuestDockVideoBackgroundDefault, { expandedHeight, imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null, onPress: null, disabled: null });
 });

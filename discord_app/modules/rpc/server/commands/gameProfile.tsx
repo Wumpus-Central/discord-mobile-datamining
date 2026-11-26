@@ -1,7 +1,7 @@
-// === Module 15841: gameProfile ===
+// === Module 15892: gameProfile ===
 
-// Module 15841 (gameProfile)
-import createSocketGateDefault from "createSocketGate" /* 15838 */;
+// Module 15892 (gameProfile)
+import createSocketGateDefault from "createSocketGate" /* 15889 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -9,9 +9,9 @@ const Constants = fn(1071);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let closure_5 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15822);
+const CONTEXT_MENU_ICON_NAMES = fn(15873);
 obj[RPCCommands.OPEN_GAME_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_GAME_PROFILE, {
-  scope: fn(5766).RPC_EMBEDDED_APP_SCOPE,
+  scope: fn(5797).RPC_EMBEDDED_APP_SCOPE,
   handler(arg0) {
     ({ socket: require, args } = arg0);
     ({ game_id: importDefault, application_id: dependencyMap } = args);
@@ -26,7 +26,7 @@ obj[RPCCommands.OPEN_GAME_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -52,28 +52,28 @@ obj[RPCCommands.OPEN_GAME_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
                   value: closure_1_5.runExclusive(require, asyncGeneratorStep(async () => {
                               const gameId = tmp2;
                               closure_0 = tmp5;
-                              await v1(15842)({ gameId, applicationId });
+                              await v1(15893)({ gameId, applicationId });
                               closure_128_0 = value;
                               if (null != closure_128_0) {
                                 if (!obj10.isGameDisabled(closure_128_0)) {
                                   let appContextForIframeId = null;
                                   if (null != obj.tryValidateEmbeddedAppFrame(closure_0)) {
-                                    appContextForIframeId = iframeId(15843).getAppContextForIframeId(closure_129_0);
-                                    iframeId(15843);
+                                    appContextForIframeId = iframeId(15894).getAppContextForIframeId(closure_129_0);
+                                    iframeId(15894);
                                   }
                                   closure_128_1 = appContextForIframeId;
                                   if (null != closure_128_1) {
                                     const obj9 = { gameId: closure_128_0.id, gameProfileModalChecks: null, source: null, appContext: null };
                                     obj9.gameProfileModalChecks = { shouldOpenGameProfile: true, gameId: closure_128_0.id };
-                                    obj9.source = iframeId(8712).GameProfileSources.Frame;
+                                    obj9.source = iframeId(8754).GameProfileSources.Frame;
                                     obj9.appContext = closure_128_1;
-                                    v1(8707).openGameProfileModal(obj9);
-                                    v1(8707);
+                                    v1(8749).openGameProfileModal(obj9);
+                                    v1(8749);
                                   }
                                   c3 = 3;
-                                  obj = iframeId(15815);
+                                  obj = iframeId(15866);
                                 }
-                                obj10 = iframeId(8704);
+                                obj10 = iframeId(8746);
                               }
                               return { opened: false };
                             }), { opened: false }),

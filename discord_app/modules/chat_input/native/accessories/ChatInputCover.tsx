@@ -1,6 +1,6 @@
-// === Module 13157: ChatInputCover ===
+// === Module 13209: ChatInputCover ===
 
-// Module 13157 (ChatInputCover)
+// Module 13209 (ChatInputCover)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -33,13 +33,13 @@ class ChatInputCover {
               tmp = setFocused;
             }
             if (tmp) {
-              tmp = dependencyMap !== flag(1626).KeyboardTypes.SYSTEM;
+              tmp = dependencyMap !== flag(1627).KeyboardTypes.SYSTEM;
             }
             if (tmp) {
               tmp = closure_1_3;
             }
             if (tmp) {
-              const obj = { type: flag(1626).KeyboardTypes.SYSTEM };
+              const obj = { type: flag(1627).KeyboardTypes.SYSTEM };
               closure_1_2(obj);
             }
           }

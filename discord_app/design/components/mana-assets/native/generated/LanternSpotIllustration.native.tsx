@@ -1,19 +1,19 @@
-// === Module 19760: LanternSpotIllustration ===
+// === Module 19824: LanternSpotIllustration ===
 
-// Module 19760 (LanternSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7230 */;
-import _modDef19761 from "module_19761" /* 19761 */;
-import _modDef19762 from "module_19762" /* 19762 */;
-import _modDef19763 from "module_19763" /* 19763 */;
+// Module 19824 (LanternSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7261 */;
+import _modDef19825 from "module_19825" /* 19825 */;
+import _modDef19826 from "module_19826" /* 19826 */;
+import _modDef19827 from "module_19827" /* 19827 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19761 }, 3: null };
-let obj2 = { uri: _modDef19761 };
-obj[2] = { uri: _modDef19762 };
-const obj3 = { uri: _modDef19762 };
-obj[3] = { uri: _modDef19763 };
+let obj = { 1: null, 2: { uri: _modDef19825 }, 3: null };
+let obj2 = { uri: _modDef19825 };
+obj[2] = { uri: _modDef19826 };
+const obj3 = { uri: _modDef19826 };
+obj[3] = { uri: _modDef19827 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/LanternSpotIllustration.native.tsx");
 

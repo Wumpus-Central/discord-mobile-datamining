@@ -1,14 +1,14 @@
-// === Module 17025: UserSettingsText ===
+// === Module 17076: UserSettingsText ===
 
-// Module 17025 (UserSettingsText)
+// Module 17076 (UserSettingsText)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import UserSettings from "UserSettings" /* 4837 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5987 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7316 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import UserSettings from "UserSettings" /* 4868 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6018 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7347 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
-import SubscriptionStore from "SubscriptionStore" /* 2178 */;
+import UserStore from "UserStore" /* 1387 */;
+import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
 
@@ -21,7 +21,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;

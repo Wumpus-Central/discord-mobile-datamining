@@ -1,8 +1,8 @@
-// === Module 5043: HexagonCampaignExperiment ===
+// === Module 5074: HexagonCampaignExperiment ===
 
-// Module 5043 (HexagonCampaignExperiment)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5040 */;
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 5074 (HexagonCampaignExperiment)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5071 */;
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-hexagon-campaign-client", defaultConfig: { enabled: false, questHomeRedirect: false }, variations: { 0: { enabled: false, questHomeRedirect: false }, 1: { enabled: true, questHomeRedirect: true }, 2: { enabled: true, questHomeRedirect: false } } });

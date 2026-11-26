@@ -1,14 +1,14 @@
-// === Module 15801: ClientNotifDenylist ===
+// === Module 15852: ClientNotifDenylist ===
 
-// Module 15801 (ClientNotifDenylist)
+// Module 15852 (ClientNotifDenylist)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SentryUtilsDefault from "SentryUtils" /* 1241 */;
-import notification_settings from "notification_settings" /* 15100 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15802 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import notification_settings from "notification_settings" /* 15150 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15853 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15099 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15149 */;
 
 const require = globalThis.__r;
 
@@ -190,7 +190,7 @@ function syncClientNotifDenylist(map) {
   }
 }
 const TurboModuleRegistry = fn(17).TurboModuleRegistry;
-let items = [fn(15799).NotifSettings.CALLS, fn(15799).NotifSettings.FRIEND_REQUESTS, fn(15799).NotifSettings.POLLS, fn(15799).NotifSettings.REACTIONS, fn(15799).NotifSettings.MISSED_MESSAGES_LOW, fn(15799).NotifSettings.MISSED_MESSAGES_DEFAULT, fn(15799).NotifSettings.VOICE_ACTIVITY_LOW, fn(15799).NotifSettings.VOICE_ACTIVITY_DEFAULT, fn(15799).NotifSettings.VOICE_CHANNEL_ACTIVITY, fn(15799).NotifSettings.GO_LIVE, fn(15799).NotifSettings.FRIENDS_GAMING_LOW, fn(15799).NotifSettings.FRIENDS_GAMING_DEFAULT, fn(15799).NotifSettings.GAMING_OTHER, fn(15799).NotifSettings.CUSTOM_STATUS_UPDATE, fn(15799).NotifSettings.PROFILE_UPDATES, fn(15799).NotifSettings.FRIEND_ONLINE, fn(15799).NotifSettings.FRIEND_REQUEST_REMINDER, fn(15799).NotifSettings.FRIEND_SUGGESTIONS, fn(15799).NotifSettings.NUDGE_NEW_FRIEND_DM, fn(15799).NotifSettings.FORUM_NOTIFICATIONS, fn(15799).NotifSettings.GUILD_EVENT_NOTIFICATIONS, fn(15799).NotifSettings.STAGE_NOTIFICATIONS, fn(15799).NotifSettings.OTHER_GUILD, fn(15799).NotifSettings.SAFETY_ALERTS, fn(15799).NotifSettings.INVITES_RECONNECTING, fn(15799).NotifSettings.TRENDING_SUGGESTIONS, fn(15799).NotifSettings.UPDATES_OFFERS];
+let items = [fn(15850).NotifSettings.CALLS, fn(15850).NotifSettings.FRIEND_REQUESTS, fn(15850).NotifSettings.POLLS, fn(15850).NotifSettings.REACTIONS, fn(15850).NotifSettings.MISSED_MESSAGES_LOW, fn(15850).NotifSettings.MISSED_MESSAGES_DEFAULT, fn(15850).NotifSettings.VOICE_ACTIVITY_LOW, fn(15850).NotifSettings.VOICE_ACTIVITY_DEFAULT, fn(15850).NotifSettings.VOICE_CHANNEL_ACTIVITY, fn(15850).NotifSettings.GO_LIVE, fn(15850).NotifSettings.FRIENDS_GAMING_LOW, fn(15850).NotifSettings.FRIENDS_GAMING_DEFAULT, fn(15850).NotifSettings.GAMING_OTHER, fn(15850).NotifSettings.CUSTOM_STATUS_UPDATE, fn(15850).NotifSettings.PROFILE_UPDATES, fn(15850).NotifSettings.FRIEND_ONLINE, fn(15850).NotifSettings.FRIEND_REQUEST_REMINDER, fn(15850).NotifSettings.FRIEND_SUGGESTIONS, fn(15850).NotifSettings.NUDGE_NEW_FRIEND_DM, fn(15850).NotifSettings.FORUM_NOTIFICATIONS, fn(15850).NotifSettings.GUILD_EVENT_NOTIFICATIONS, fn(15850).NotifSettings.STAGE_NOTIFICATIONS, fn(15850).NotifSettings.OTHER_GUILD, fn(15850).NotifSettings.SAFETY_ALERTS, fn(15850).NotifSettings.INVITES_RECONNECTING, fn(15850).NotifSettings.TRENDING_SUGGESTIONS, fn(15850).NotifSettings.UPDATES_OFFERS];
 let set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/native/ClientNotifDenylist.tsx");

@@ -1,13 +1,13 @@
-// === Module 19769: NotifSettingsProtoManager ===
+// === Module 19833: NotifSettingsProtoManager ===
 
-// Module 19769 (NotifSettingsProtoManager)
+// Module 19833 (NotifSettingsProtoManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ApexExperiment from "ApexExperiment" /* 1450 */;
-import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 15113 */;
-import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 17576 */;
-import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17584 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15099 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+import ApexExperiment from "ApexExperiment" /* 1451 */;
+import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 15163 */;
+import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 17633 */;
+import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17641 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15149 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
 function cancelRefresh() {
@@ -74,7 +74,7 @@ function handleAssignmentChange() {
   }
   set = new Set(mapped.filter((item) => null != item));
 }
-const NOTIF_SETTINGS = fn(15798).NOTIF_SETTINGS;
+const NOTIF_SETTINGS = fn(15849).NOTIF_SETTINGS;
 class NotifSettingsProtoManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

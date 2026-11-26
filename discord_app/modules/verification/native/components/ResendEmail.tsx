@@ -1,29 +1,29 @@
-// === Module 7231: ResendEmail ===
+// === Module 7262: ResendEmail ===
 
-// Module 7231 (ResendEmail)
+// Module 7262 (ResendEmail)
 import util from "util" /* 1112 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6808 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7157 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6839 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4855 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4886 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const View = fn(17).View;
 const VerificationModalScenes = fn(1071).VerificationModalScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_11 = createStyles.createStyles({ container: { flex: 1, padding: 16, justifyContent: "center", alignItems: "center" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, resend: { marginTop: 16, width: "100%" }, change: { marginTop: 8, width: "100%" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/components/ResendEmail.tsx");
 
 export default function ResendEmail() {
   let tmp = closure_11();
-  navigation = navigation(1500).useNavigation();
-  let obj = navigation(1500);
+  navigation = navigation(1501).useNavigation();
+  let obj = navigation(1501);
   items = [UserStore];
   const stateFromStores = navigation(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -35,9 +35,9 @@ export default function ResendEmail() {
   const items1 = [UserRequiredActionStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items1, () => action.getAction());
   let obj3 = navigation(504);
-  const result = verified(7232).isEmailReverification(stateFromStores1);
+  const result = verified(7263).isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
-  const obj4 = verified(7232);
+  const obj4 = verified(7263);
   [tmp10, dependencyMap] = noop.useState(false);
   _slicedToArray = noop.useRef(verified);
   const items2 = [verified];
@@ -58,11 +58,11 @@ export default function ResendEmail() {
   const callback = noop.useCallback(() => {
     navigation.push(VerificationModalScenes.ENTER_EMAIL);
   }, items3);
-  const items4 = [closure_9(navigation(7233).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [closure_9(navigation(7264).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1112).intl;
   obj6.children = intl.string(navigation(1112).t.fUtddV);
-  items4[1] = closure_9(navigation(5603).Text, obj6);
+  items4[1] = closure_9(navigation(5634).Text, obj6);
   const obj7 = { style: tmp.body, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1112).intl;
   if (tmp10) {
@@ -72,7 +72,7 @@ export default function ResendEmail() {
     formatResult = intl2.string(tmp2(1112).t.tSXg8O);
   }
   obj7.children = formatResult;
-  items4[2] = closure_9(navigation(5603).Text, obj7);
+  items4[2] = closure_9(navigation(5634).Text, obj7);
   const obj9 = { style: tmp.resend, children: null };
   const obj10 = { text: null, variant: "primary", onPress: null, grow: true };
   const intl3 = tmp2(1112).intl;
@@ -85,7 +85,7 @@ export default function ResendEmail() {
     obj3.text = intl.string(util.t["84yeoz"]);
     ToastActionCreatorsDefault.open("USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", obj3);
   };
-  obj9.children = closure_9(navigation(5610).Button, obj10);
+  obj9.children = closure_9(navigation(5641).Button, obj10);
   items4[3] = closure_9(View, obj9);
   if (!result) {
     const obj11 = { style: tmp.change, children: null };
@@ -93,7 +93,7 @@ export default function ResendEmail() {
     const intl4 = tmp2(1112).intl;
     obj12.text = intl4.string(tmp2(1112).t.Vm8akB);
     obj12.onPress = callback;
-    obj11.children = closure_9(tmp2(5610).Button, obj12);
+    obj11.children = closure_9(tmp2(5641).Button, obj12);
     tmp16Result = closure_9(View, obj11);
   }
   items4[4] = tmp16Result;

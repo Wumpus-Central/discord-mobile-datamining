@@ -1,10 +1,10 @@
-// === Module 19616: showTakeoverModal ===
+// === Module 19679: showTakeoverModal ===
 
-// Module 19616 (showTakeoverModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11465 */;
-import Constants from "Constants" /* 11771 */;
+// Module 19679 (showTakeoverModal)
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11512 */;
+import Constants from "Constants" /* 11819 */;
 import size from "module_2" /* 2 */;
 
 const TAKEOVER_MODAL_KEY = Constants.TAKEOVER_MODAL_KEY;
@@ -14,7 +14,7 @@ export function showTakeoverModal(arg0) {
   ({ warningId, warningType, senderId, channelId } = arg0);
   if (obj.isEligibleForInappropriateConversationWarning({ location: "takeover-modal" })) {
     const obj3 = { warningId, warningType, senderId, channelId };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17307, dependencyMap.paths), obj3, TAKEOVER_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17358, dependencyMap.paths), obj3, TAKEOVER_MODAL_KEY);
   }
   obj = SelfModInappropriateConversationExperiment;
 }

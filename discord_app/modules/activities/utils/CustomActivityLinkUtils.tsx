@@ -1,10 +1,10 @@
-// === Module 14442: CustomActivityLinkUtils ===
+// === Module 14494: CustomActivityLinkUtils ===
 
-// Module 14442 (CustomActivityLinkUtils)
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14445 */;
+// Module 14494 (CustomActivityLinkUtils)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14497 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14443 */;
+import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14495 */;
 
 require = fn;
 function fetchCustomActivityLink() {
@@ -28,7 +28,7 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -117,7 +117,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -158,7 +158,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       } else if (1 === tmp6) {
         c6 = 0;
         c7 = 3;
-        const obj9 = { value: { customId: "top" }, done: true };
+        const obj9 = { value: { customId: "r" }, done: true };
         return obj9;
       } else if (arg0 === 1) {
         c7 = 3;

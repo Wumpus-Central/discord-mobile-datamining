@@ -1,8 +1,8 @@
-// === Module 10030: ForumExplicitMediaAlert ===
+// === Module 10072: ForumExplicitMediaAlert ===
 
-// Module 10030 (ForumExplicitMediaAlert)
+// Module 10072 (ForumExplicitMediaAlert)
 import nativeDefault from "native" /* 575 */;
-import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 10031 */;
+import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 10073 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, alignItems: "stretch" }, title: null, body: null, buttonContainer: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_16, alignItems: "stretch" };
 obj2.title = { marginBottom: nativeDefault.space.PX_16 };

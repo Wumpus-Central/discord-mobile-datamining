@@ -1,18 +1,18 @@
-// === Module 17672: ChannelScreenAnimatedFrame ===
+// === Module 17729: ChannelScreenAnimatedFrame ===
 
-// Module 17672 (ChannelScreenAnimatedFrame)
+// Module 17729 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8971 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9013 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, splitDivider: null };
 let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -31,7 +31,7 @@ export default function ChannelScreenAnimatedFrame(arg0) {
   ({ translateX, maxWidth, isChatLockedOpen } = arg0);
   const tmp = closure_6();
   const top = useSafeAreaInsetsDefault().top;
-  items = [closure_7, isChatLockedOpen, _mod1653.interpolate, translateX, maxWidth, _mod1653.Extrapolation];
+  items = [closure_7, isChatLockedOpen, _mod1654.interpolate, translateX, maxWidth, _mod1654.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -59,8 +59,8 @@ export default function ChannelScreenAnimatedFrame(arg0) {
   ChannelScreenAnimatedFrameTsx1.__closure = items1;
   ChannelScreenAnimatedFrameTsx1.__workletHash = 9515959290845;
   ChannelScreenAnimatedFrameTsx1.__initData = tmp5;
-  const animatedStyle = _mod1653.useAnimatedStyle(ChannelScreenAnimatedFrameTsx1);
-  const items2 = [closure_8, isChatLockedOpen, _mod1653.interpolate, translateX, maxWidth, _mod1653.Extrapolation];
+  const animatedStyle = _mod1654.useAnimatedStyle(ChannelScreenAnimatedFrameTsx1);
+  const items2 = [closure_8, isChatLockedOpen, _mod1654.interpolate, translateX, maxWidth, _mod1654.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -89,18 +89,18 @@ export default function ChannelScreenAnimatedFrame(arg0) {
   ChannelScreenAnimatedFrameTsx2.__closure = items3;
   ChannelScreenAnimatedFrameTsx2.__workletHash = 11289548854911;
   ChannelScreenAnimatedFrameTsx2.__initData = tmp12;
-  const animatedStyle1 = _mod1653.useAnimatedStyle(ChannelScreenAnimatedFrameTsx2);
-  const tmp4Result = _mod1653;
+  const animatedStyle1 = _mod1654.useAnimatedStyle(ChannelScreenAnimatedFrameTsx2);
+  const tmp4Result = _mod1654;
   const obj2 = { children: null };
   const gradientTop = ClientThemesOverrides.useGradientTop();
   const obj3 = { pointerEvents: "none", style: null };
   const items4 = [tmp.container, { height: top }, gradientTop, animatedStyle];
   obj3.style = items4;
-  const items5 = [React3(_modDef1653.View, obj3), ];
+  const items5 = [React3(_modDef1654.View, obj3), ];
   const obj4 = { pointerEvents: "none", style: null };
   const items6 = [tmp.splitDivider, { top }, animatedStyle1];
   obj4.style = items6;
-  items5[1] = React3(_modDef1653.View, obj4);
+  items5[1] = React3(_modDef1654.View, obj4);
   obj2.children = items5;
   return hasOwnProperty(constants, obj2);
 };

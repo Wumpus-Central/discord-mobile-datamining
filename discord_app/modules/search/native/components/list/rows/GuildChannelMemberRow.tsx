@@ -1,7 +1,7 @@
-// === Module 18929: GuildChannelMemberRow ===
+// === Module 18992: GuildChannelMemberRow ===
 
-// Module 18929 (GuildChannelMemberRow)
-import UserRowDefault from "UserRow" /* 11310 */;
+// Module 18992 (GuildChannelMemberRow)
+import UserRowDefault from "UserRow" /* 11356 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

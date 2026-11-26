@@ -1,30 +1,30 @@
-// === Module 13295: SelectDoubleTapEmojiRow ===
+// === Module 13347: SelectDoubleTapEmojiRow ===
 
-// Module 13295 (SelectDoubleTapEmojiRow)
+// Module 13347 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5594 */;
-import EmojiDefault from "Emoji" /* 7457 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9495 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5625 */;
+import EmojiDefault from "Emoji" /* 7488 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9537 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5241).ACTION_SHEET_MAX_WIDTH;
-const EmojiConstants = fn(1389);
+const ACTION_SHEET_MAX_WIDTH = fn(5272).ACTION_SHEET_MAX_WIDTH;
+const EmojiConstants = fn(1390);
 ({ EMOJI_URL_BASE_SIZE: metroImportDefault, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { emoji: { width: 24, height: 24 }, customEmoji: { width: 24, height: 24 }, textEmoji: null, emojiRow: null, emojiPressable: null, selectedEmojiPressable: null, emojiWrapper: null, selectedEmojiWrapper: null, chooseEmojiButton: null, customReactionOverlay: null, selectedCustomReactionIcon: null };
-let PlatformUtils = fn(1378);
+let PlatformUtils = fn(1379);
 let num = 20;
 if (PlatformUtils.isIOS()) {
   num = 24;
 }
 let obj3 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1378);
+PlatformUtils = fn(1379);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 28;
@@ -100,7 +100,7 @@ let closure_13 = noop.memo(function EmojiButton(emoji) {
   obj4.src = url;
   obj3.children = closure_9(EmojiDefault, obj4);
   obj2.children = closure_9(View, obj3);
-  return closure_9(emoji(6121).PressableOpacity, obj2);
+  return closure_9(emoji(6152).PressableOpacity, obj2);
 });
 const obj11 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 size = fn(2);

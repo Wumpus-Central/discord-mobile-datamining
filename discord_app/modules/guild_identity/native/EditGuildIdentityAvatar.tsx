@@ -1,20 +1,20 @@
-// === Module 16127: EditGuildIdentityAvatar ===
+// === Module 16180: EditGuildIdentityAvatar ===
 
-// Module 16127 (EditGuildIdentityAvatar)
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9544 */;
+// Module 16180 (EditGuildIdentityAvatar)
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9586 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import UserStore from "UserStore" /* 1386 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ AnalyticsSections: closure_6, AnalyticsObjects: metroImportDefault, UpsellTypes: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1389).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");
@@ -83,21 +83,7 @@ export default function EditGuildIdentityAvatar(userId) {
     const obj7 = { style, disabled, onPress: tmp17, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = tmp2(tmp3[23]).intl;
     obj7.accessibilityLabel = intl.string(tmp2(tmp3[23]).t["70lEQe"]);
-    const obj8 = { user: stateFromStores, guildId: null, pendingAvatarSrc: null, pendingAvatarDecoration: null, statusStyle: null, disableStatus: null, style: null };
-    let tmp23;
-    if (null !== pendingAvatar) {
-      tmp23 = guildId;
-    }
-    obj8.guildId = tmp23;
-    let tmp24;
-    if (null !== pendingAvatar) {
-      tmp24 = pendingAvatarSrc;
-    }
-    obj8.pendingAvatarSrc = tmp24;
-    obj8.pendingAvatarDecoration = pendingAvatarDecoration;
-    obj8.statusStyle = statusStyle;
-    obj8.disableStatus = disableStatus;
-    obj8.style = avatarStyle;
+    const obj8 = { user: stateFromStores, guildId, pendingAvatarSrc, pendingAvatarDecoration, statusStyle, disableStatus, style: avatarStyle };
     const items3 = [closure_10(tmp6(tmp3[24]), obj8), ];
     let tmp20Result = !disabled;
     if (!disabled) {
@@ -107,7 +93,6 @@ export default function EditGuildIdentityAvatar(userId) {
     items3[1] = tmp20Result;
     obj7.children = items3;
     tmp19Result = closure_11(tmp2(tmp3[22]).PressableOpacity, obj7);
-    const tmp6Result = tmp6(tmp3[24]);
   }
   return tmp19Result;
 };

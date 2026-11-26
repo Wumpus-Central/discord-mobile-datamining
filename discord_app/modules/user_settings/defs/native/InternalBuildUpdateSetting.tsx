@@ -1,17 +1,17 @@
-// === Module 17343: InternalBuildUpdateSetting ===
+// === Module 17394: InternalBuildUpdateSetting ===
 
-// Module 17343 (InternalBuildUpdateSetting)
+// Module 17394 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
-import _modDef2168 from "module_2168" /* 2168 */;
-import DownloadIcon from "DownloadIcon" /* 5714 */;
-import RefreshIcon2 from "RefreshIcon" /* 14025 */;
-import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 15263 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16298 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 15778 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import DownloadIcon from "DownloadIcon" /* 5745 */;
+import RefreshIcon2 from "RefreshIcon" /* 14077 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 15313 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16349 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 15829 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11914);
+const SettingBuilders = fn(11962);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Internal Build Update";
@@ -45,8 +45,8 @@ const pressable = SettingBuilders.createPressable({
       str = "Never refreshed";
       if (null != stateFromStores1) {
         const _HermesInternal = HermesInternal;
-        str = "Last refreshed " + _modDef2168(stateFromStores1).fromNow();
-        const obj3 = _modDef2168(stateFromStores1);
+        str = "Last refreshed " + _modDef2169(stateFromStores1).fromNow();
+        const obj3 = _modDef2169(stateFromStores1);
       }
     }
     return str;

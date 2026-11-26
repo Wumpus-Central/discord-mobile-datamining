@@ -1,9 +1,9 @@
-// === Module 17671: LaunchPadGestureRefContext ===
+// === Module 17728: LaunchPadGestureRefContext ===
 
-// Module 17671 (LaunchPadGestureRefContext)
+// Module 17728 (LaunchPadGestureRefContext)
 import noop from "module_19" /* 19 */;
 
-const context = noop.createContext({ current: "top" });
+const context = noop.createContext({ current: "r" });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadGestureRefContext.tsx");
 

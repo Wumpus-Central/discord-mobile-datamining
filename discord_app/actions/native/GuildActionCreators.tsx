@@ -1,9 +1,9 @@
-// === Module 19990: actions/GuildActionCreators ===
+// === Module 20054: actions/GuildActionCreators ===
 
-// Module 19990 (actions/GuildActionCreators)
+// Module 20054 (actions/GuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import size from "module_2" /* 2 */;
 
 function batchChannelUpdate(guildId, body) {

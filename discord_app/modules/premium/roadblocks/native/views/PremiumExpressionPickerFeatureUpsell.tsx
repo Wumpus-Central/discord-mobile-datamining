@@ -1,16 +1,16 @@
-// === Module 9708: PremiumExpressionPickerFeatureUpsell ===
+// === Module 9750: PremiumExpressionPickerFeatureUpsell ===
 
-// Module 9708 (PremiumExpressionPickerFeatureUpsell)
+// Module 9750 (PremiumExpressionPickerFeatureUpsell)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7267 */;
-import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9709 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7298 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { container: null };
   const rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0 };
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/premium/roadblocks/native/vie
 export default function PremiumExpressionPickerFeatureUpsell(arg0) {
   ({ bottomSheetIndex, featureName, analyticsLocation, inPortalKeyboard, shouldShow } = arg0);
   const tmp3 = useKeyboardIsOpenDefault();
-  _mod1653;
+  _mod1654;
   items = [closure_6, shouldShow, inPortalKeyboard, bottomSheetIndex];
   c0 = undefined;
   c1 = undefined;

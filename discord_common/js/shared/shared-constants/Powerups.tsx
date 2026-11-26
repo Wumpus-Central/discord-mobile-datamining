@@ -1,6 +1,6 @@
-// === Module 8258: Powerups ===
+// === Module 8300: Powerups ===
 
-// Module 8258 (Powerups)
+// Module 8300 (Powerups)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/Powerups.tsx");

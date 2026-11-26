@@ -1,9 +1,9 @@
-// === Module 9395: ProfileCustomizationNavigationStore ===
+// === Module 9437: ProfileCustomizationNavigationStore ===
 
-// Module 9395 (ProfileCustomizationNavigationStore)
+// Module 9437 (ProfileCustomizationNavigationStore)
 import UserSettingsConstants from "UserSettingsConstants" /* 1081 */;
-import ZustandStore from "ZustandStore" /* 5201 */;
-import Constants from "Constants" /* 6106 */;
+import ZustandStore from "ZustandStore" /* 5232 */;
+import Constants from "Constants" /* 6137 */;
 import size from "module_2" /* 2 */;
 
 const UserProfileSections = Constants.UserProfileSections;

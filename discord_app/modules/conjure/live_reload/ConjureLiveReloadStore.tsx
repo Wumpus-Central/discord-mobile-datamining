@@ -1,6 +1,6 @@
-// === Module 7670: ConjureLiveReloadStore ===
+// === Module 7701: ConjureLiveReloadStore ===
 
-// Module 7670 (ConjureLiveReloadStore)
+// Module 7701 (ConjureLiveReloadStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

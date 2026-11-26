@@ -1,6 +1,6 @@
-// === Module 12770: ? ===
+// === Module 12815: ? ===
 
-// Module 12770
+// Module 12815
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_shoes_09_snowShoes.webp.js");

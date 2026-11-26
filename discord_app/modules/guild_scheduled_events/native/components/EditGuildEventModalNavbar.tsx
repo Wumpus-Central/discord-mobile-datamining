@@ -1,13 +1,13 @@
-// === Module 8442: EditGuildEventModalNavbar ===
+// === Module 8484: EditGuildEventModalNavbar ===
 
-// Module 8442 (EditGuildEventModalNavbar)
+// Module 8484 (EditGuildEventModalNavbar)
 import util from "util" /* 1112 */;
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7449 */;
-import HeaderActionButton from "HeaderActionButton" /* 7717 */;
-import _modDef7718 from "module_7718" /* 7718 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8437 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7480 */;
+import HeaderActionButton from "HeaderActionButton" /* 7751 */;
+import _modDef7752 from "module_7752" /* 7752 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8479 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28 }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
@@ -45,7 +45,7 @@ export default function EditGuildEventModalNavbar(screen) {
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj5.onPress = screen.onClose;
-  obj5.source = _modDef7718;
+  obj5.source = _modDef7752;
   obj5.style = tmp.rightButton;
   obj4.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
   items1[2] = hasOwnProperty(View, obj4);

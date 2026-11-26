@@ -1,15 +1,15 @@
-// === Module 13131: PollCreationInputError ===
+// === Module 13183: PollCreationInputError ===
 
-// Module 13131 (PollCreationInputError)
+// Module 13183 (PollCreationInputError)
 import nativeDefault from "native" /* 575 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5021 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { container: { flexDirection: "row", alignItems: "center", marginTop: -10 }, icon: { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL } };
 let closure_6 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -31,7 +31,7 @@ export default function PollCreationInputError(message) {
   }, items);
   const obj = { style: tmp.container, children: null };
   const size = { width: 16, height: 16, style: tmp.icon };
-  const items1 = [closure_4(message(1186).WarningCircle, size), closure_4(message(5603).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children: message })];
+  const items1 = [closure_4(message(1186).WarningCircle, size), closure_4(message(5634).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children: message })];
   obj.children = items1;
   return closure_5(View, obj);
 };

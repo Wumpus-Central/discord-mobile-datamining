@@ -1,17 +1,17 @@
-// === Module 11838: PinotChannelLabel ===
+// === Module 11886: PinotChannelLabel ===
 
-// Module 11838 (PinotChannelLabel)
+// Module 11886 (PinotChannelLabel)
 import util from "util" /* 1112 */;
-import _modDef3562 from "module_3562" /* 3562 */;
-import PinotChannelLabelAnchor from "PinotChannelLabelAnchor" /* 11839 */;
-import useAttachPinotMemberCoachmark from "useAttachPinotMemberCoachmark" /* 11840 */;
-import ChannelHeaderShared from "ChannelHeaderShared" /* 11845 */;
+import _modDef3563 from "module_3563" /* 3563 */;
+import PinotChannelLabelAnchor from "PinotChannelLabelAnchor" /* 11887 */;
+import useAttachPinotMemberCoachmark from "useAttachPinotMemberCoachmark" /* 11888 */;
+import ChannelHeaderShared from "ChannelHeaderShared" /* 11893 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles((marginStart) => {
   const obj = { label: { marginStart } };
   return obj;
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/pinot/native/PinotChannelLabe
 
 export function getPinotChannelLabelText() {
   const intl = util.intl;
-  return intl.string(_modDef3562.uneDIi);
+  return intl.string(_modDef3563.uneDIi);
 }
 export function PinotChannelLabel(arg0) {
   ({ channel, insetStart } = arg0);
@@ -46,7 +46,7 @@ export function PinotChannelLabel(arg0) {
   };
   const obj4 = { children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3562.uneDIi);
+  obj4.children = intl.string(_modDef3563.uneDIi);
   obj3.children = jsx(ChannelHeaderShared.SubtitleText, { children: null });
   return <View ref={noop.useCallback((current) => {
     ref1.current = current;

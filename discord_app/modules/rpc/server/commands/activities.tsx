@@ -1,32 +1,32 @@
-// === Module 15882: activities ===
+// === Module 15933: activities ===
 
-// Module 15882 (activities)
-import RPCHelpers from "RPCHelpers" /* 10179 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15821 */;
+// Module 15933 (activities)
+import RPCHelpers from "RPCHelpers" /* 10221 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15872 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15822);
+let CONTEXT_MENU_ICON_NAMES = fn(15873);
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
-  scope: fn(15821).activityInstanceConnectedParticipantsScope,
+  scope: fn(15872).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(15822);
+CONTEXT_MENU_ICON_NAMES = fn(15873);
 let obj3 = {
-  scope: fn(15821).activityInstanceConnectedParticipantsScope,
+  scope: fn(15872).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 };
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, {
-  scope: fn(15821).activityInstanceConnectedParticipantsScope,
+  scope: fn(15872).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     socket = socket.socket;
     return (async () => {
@@ -40,7 +40,7 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {

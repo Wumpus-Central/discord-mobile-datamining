@@ -1,8 +1,8 @@
-// === Module 6925: FriendsSidebarTracking ===
+// === Module 6956: FriendsSidebarTracking ===
 
-// Module 6925 (FriendsSidebarTracking)
+// Module 6956 (FriendsSidebarTracking)
 import Constants from "Constants" /* 1071 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

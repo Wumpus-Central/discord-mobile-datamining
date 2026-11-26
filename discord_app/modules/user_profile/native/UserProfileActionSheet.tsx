@@ -1,28 +1,28 @@
-// === Module 14793: UserProfileActionSheet ===
+// === Module 14846: UserProfileActionSheet ===
 
-// Module 14793 (UserProfileActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import isChangelogUserDefault from "isChangelogUser" /* 4913 */;
-import BottomSheetModal from "BottomSheetModal" /* 5244 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6102 */;
-import UserActionCreators from "UserActionCreators" /* 6103 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6278 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import openUserSettings from "openUserSettings" /* 8067 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 9454 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 9462 */;
-import ProfileFrameDefault from "ProfileFrame" /* 9463 */;
-import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 14798 */;
+// Module 14846 (UserProfileActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import isChangelogUserDefault from "isChangelogUser" /* 4944 */;
+import BottomSheetModal from "BottomSheetModal" /* 5275 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
+import UserActionCreators from "UserActionCreators" /* 6134 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import openUserSettings from "openUserSettings" /* 8109 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 9496 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 9504 */;
+import ProfileFrameDefault from "ProfileFrame" /* 9505 */;
+import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 14851 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import UserStore from "UserStore" /* 1386 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 6345 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import UserStore from "UserStore" /* 1387 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 6376 */;
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function UseAnimatedPosition(animatedPosition) {
@@ -51,12 +51,12 @@ function UseAnimatedPosition(animatedPosition) {
   UserProfileActionSheetTsx2.__closure = items3;
   UserProfileActionSheetTsx2.__workletHash = 15025652485949;
   UserProfileActionSheetTsx2.__initData = tmp3;
-  const animatedReaction = _mod1653.useAnimatedReaction(UserProfileActionSheetTsx1, UserProfileActionSheetTsx2);
+  const animatedReaction = _mod1654.useAnimatedReaction(UserProfileActionSheetTsx1, UserProfileActionSheetTsx2);
   return null;
 }
 function ActionSheetAlignedView(arg0) {
   ({ animatedPosition, animatedIndex, safeAreaTop, children } = arg0);
-  items = [closure_22, animatedPosition, safeAreaTop, _mod1653.interpolate, animatedIndex, _mod1653.Extrapolation];
+  items = [closure_22, animatedPosition, safeAreaTop, _mod1654.interpolate, animatedIndex, _mod1654.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -78,21 +78,21 @@ function ActionSheetAlignedView(arg0) {
   UserProfileActionSheetTsx3.__closure = items1;
   UserProfileActionSheetTsx3.__workletHash = 8011994194653;
   UserProfileActionSheetTsx3.__initData = tmp2;
-  const animatedStyle = _mod1653.useAnimatedStyle(UserProfileActionSheetTsx3);
+  const animatedStyle = _mod1654.useAnimatedStyle(UserProfileActionSheetTsx3);
   const obj2 = { style: null, pointerEvents: "box-none", children };
   const items2 = [absoluteFill.absoluteFill, animatedStyle];
   obj2.style = items2;
-  return closure_1_16(_modDef1653.View, obj2);
+  return closure_1_16(_modDef1654.View, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7526).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7557).UserProfileThemeTypes;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5241).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5272).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_18 = createStyles.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 }, profileEffect: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1 } });
 let closure_19 = { code: "(function UserProfileActionSheetTsx1(){let[value]=this.__closure;return value.get();})" };
 let closure_20 = { code: "(function UserProfileActionSheetTsx2(prepared){let[animatedPosition]=this.__closure;return animatedPosition.set(prepared);})" };
@@ -146,11 +146,11 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   }
   let tmp = closure_18();
   const tmp3 = localUser;
-  const sharedValue = require("module_1653").useSharedValue(0);
-  let obj = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(-1);
+  const sharedValue = require("module_1654").useSharedValue(0);
+  let obj = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(-1);
   const top = channelId(localUser[14])().top;
-  let obj2 = require("module_1653");
+  let obj2 = require("module_1654");
   items = [top];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(c0));
   let obj4 = stateFromStores;
@@ -206,7 +206,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   const bottomSheetClose = bottomSheetRef.bottomSheetClose;
   const ref = onClose.useRef(null);
   const tmp2Result14 = require("useBottomSheetRef");
-  sharedValue2 = require("module_1653").useSharedValue(0);
+  sharedValue2 = require("module_1654").useSharedValue(0);
   const items5 = [sharedValue2];
   const memo = onClose.useMemo(() => {
     closure_0 = sharedValue2;
@@ -248,7 +248,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
       return obj3;
     };
   }, items5);
-  const tmp2Result15 = require("module_1653");
+  const tmp2Result15 = require("module_1654");
   const items6 = [closure_25, sharedValue2];
   _require = undefined;
   [tmp23, tmp24] = items6;
@@ -271,7 +271,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   UserProfileActionSheetTsx5.__closure = items7;
   UserProfileActionSheetTsx5.__workletHash = 4107598224583;
   UserProfileActionSheetTsx5.__initData = tmp23;
-  const animatedStyle = require("module_1653").useAnimatedStyle(UserProfileActionSheetTsx5);
+  const animatedStyle = require("module_1654").useAnimatedStyle(UserProfileActionSheetTsx5);
   const tmp26 = navigationReplace(onClose.useState(false), 2);
   first = tmp26[0];
   closure_18 = tmp26[1];
@@ -283,7 +283,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   }, []);
   const ProfileVisibility = tmp2(tmp3[20]).ProfileVisibility;
   const setting = ProfileVisibility.useSetting();
-  const tmp2Result16 = require("module_1653");
+  const tmp2Result16 = require("module_1654");
   const items8 = [stateFromStores];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items8, () => stateFromStores.getPendingChanges());
   avatarDecoration = undefined;

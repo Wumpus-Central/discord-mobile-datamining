@@ -1,19 +1,19 @@
-// === Module 12411: ForumPostContainer ===
+// === Module 12460: ForumPostContainer ===
 
-// Module 12411 (ForumPostContainer)
+// Module 12460 (ForumPostContainer)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import Card from "Card" /* 6114 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10691 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import Card from "Card" /* 6145 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10736 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { childContainer: { position: "relative", minHeight: 110, padding: 12 }, card: { marginBottom: 12 }, disabledContainer: { marginBottom: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md, overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj);
-const ReanimatedHelperTypes = fn(7398);
+const ReanimatedHelperTypes = fn(7429);
 const redux = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue(false));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostContainer.tsx");
@@ -24,7 +24,7 @@ export function useForumPostContainerPressedIn() {
 export function ForumPostPressableContainer(arg0) {
   ({ threadId, children, style } = arg0);
   const tmp = closure_6();
-  const sharedValue = _mod1653.useSharedValue(false);
+  const sharedValue = _mod1654.useSharedValue(false);
   items = [sharedValue];
   const memo = noop.useMemo(() => ({
     onPressIn() {

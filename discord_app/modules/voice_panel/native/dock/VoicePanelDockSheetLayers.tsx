@@ -1,25 +1,25 @@
-// === Module 19399: VoicePanelDockSheetLayers ===
+// === Module 19462: VoicePanelDockSheetLayers ===
 
-// Module 19399 (VoicePanelDockSheetLayers)
+// Module 19462 (VoicePanelDockSheetLayers)
 import native from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import Portal from "Portal" /* 5204 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8577 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 18163 */;
-import voicePanelLayoutTransitionDefault from "voicePanelLayoutTransition" /* 19400 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import Portal from "Portal" /* 5235 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8619 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 18222 */;
+import voicePanelLayoutTransitionDefault from "voicePanelLayoutTransition" /* 19463 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockSlotStore = fn(13359);
+const VoicePanelDockSlotStore = fn(13411);
 ({ VoicePanelDockHiddenContext: hasOwnProperty, useShareVoicePanelDockState: closure_6 } = VoicePanelDockSlotStore);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { dockSheetLayers: null, dockSurfaceClip: null, dockSurfaceShadow: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -60,7 +60,7 @@ export default function VoicePanelDockSheetLayers(wrapperTransformStyles) {
   VoicePanelDockSheetLayersTsx1.__closure = items1;
   VoicePanelDockSheetLayersTsx1.__workletHash = 3684693226456;
   VoicePanelDockSheetLayersTsx1.__initData = tmp7;
-  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelDockSheetLayersTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(VoicePanelDockSheetLayersTsx1);
   const tmpResult = useDockBoxShadowDefault;
   const tmp13 = useStateFromSharedValueDefault(isDockInLayout);
   const tmpResultResult = useDockBoxShadowDefault(native.Shadow.SHADOW_TOP_HIGH);
@@ -87,7 +87,7 @@ export default function VoicePanelDockSheetLayers(wrapperTransformStyles) {
   VoicePanelDockSheetLayersTsx2.__closure = items3;
   VoicePanelDockSheetLayersTsx2.__workletHash = 4900754012109;
   VoicePanelDockSheetLayersTsx2.__initData = tmp14;
-  const animatedStyle1 = _mod1653.useAnimatedStyle(VoicePanelDockSheetLayersTsx2);
+  const animatedStyle1 = _mod1654.useAnimatedStyle(VoicePanelDockSheetLayersTsx2);
   let obj2 = { style: null, accessibilityElementsHidden: tmp13, importantForAccessibility: null, children: null };
   const items4 = [tmp4.dockSheetLayers, animatedStyle1];
   obj2.style = items4;
@@ -101,19 +101,19 @@ export default function VoicePanelDockSheetLayers(wrapperTransformStyles) {
   const obj5 = { style: null, pointerEvents: "none" };
   const items5 = [tmp4.dockSurfaceShadow, { boxShadow: tmpResultResult }, wrapperSurfaceLayerStyles];
   obj5.style = items5;
-  const items6 = [metroImportDefault(_modDef1653.View, obj5), ];
+  const items6 = [metroImportDefault(_modDef1654.View, obj5), ];
   const obj6 = { style: null, layout: voicePanelLayoutTransitionDefault, children: null };
   const items7 = [tmp4.dockSurfaceClip, wrapperSurfaceStyles];
   obj6.style = items7;
-  const tmp6Result = _mod1653;
-  obj6.children = metroImportDefault(_modDef1653.View, { style: animatedStyle, onLayout: handleDockSheetLayout, children: metroImportDefault(redux.Provider, { value: tmp13, children }) });
-  items6[1] = metroImportDefault(_modDef1653.View, obj6);
+  const tmp6Result = _mod1654;
+  obj6.children = metroImportDefault(_modDef1654.View, { style: animatedStyle, onLayout: handleDockSheetLayout, children: metroImportDefault(redux.Provider, { value: tmp13, children }) });
+  items6[1] = metroImportDefault(_modDef1654.View, obj6);
   obj4.children = items6;
-  obj2.children = React5(_modDef1653.View, obj4);
-  const items8 = [metroImportDefault(_modDef1653.View, obj2), ];
+  obj2.children = React5(_modDef1654.View, obj4);
+  const items8 = [metroImportDefault(_modDef1654.View, obj2), ];
   const obj8 = { style: tmp4.dockSheetLayers, pointerEvents: "box-none", children: null };
   const obj7 = { style: animatedStyle, onLayout: handleDockSheetLayout, children: metroImportDefault(redux.Provider, { value: tmp13, children }) };
-  obj8.children = metroImportDefault(_modDef1653.View, { ref: dockPTTMeasureHostRef, style: wrapperTransformStyles, pointerEvents: "box-none", collapsable: false, children: metroImportDefault(Portal.PortalHost, { name: dockPTTPortalHostName }) });
+  obj8.children = metroImportDefault(_modDef1654.View, { ref: dockPTTMeasureHostRef, style: wrapperTransformStyles, pointerEvents: "box-none", collapsable: false, children: metroImportDefault(Portal.PortalHost, { name: dockPTTPortalHostName }) });
   items8[1] = metroImportDefault(React4, obj8);
   obj3.children = items8;
   return React5(React6, obj3);

@@ -1,6 +1,6 @@
-// === Module 6907: EmbeddedAppTypes ===
+// === Module 6938: EmbeddedAppTypes ===
 
-// Module 6907 (EmbeddedAppTypes)
+// Module 6938 (EmbeddedAppTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/EmbeddedAppTypes.tsx");

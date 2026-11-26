@@ -1,13 +1,13 @@
-// === Module 9779: PremiumPerkGates ===
+// === Module 9821: PremiumPerkGates ===
 
-// Module 9779 (PremiumPerkGates)
-import PerksStateUtils from "PerksStateUtils" /* 1392 */;
-import user2 from "user" /* 1399 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2108 */;
-import FileSizeUtils from "FileSizeUtils" /* 5767 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8087 */;
-import ProductCatalog from "ProductCatalog" /* 9780 */;
-import PremiumConstants from "PremiumConstants" /* 1388 */;
+// Module 9821 (PremiumPerkGates)
+import PerksStateUtils from "PerksStateUtils" /* 1393 */;
+import user2 from "user" /* 1400 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2109 */;
+import FileSizeUtils from "FileSizeUtils" /* 5798 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8129 */;
+import ProductCatalog from "ProductCatalog" /* 9822 */;
+import PremiumConstants from "PremiumConstants" /* 1389 */;
 import size from "module_2" /* 2 */;
 
 ({ PremiumTypes: c2, PremiumUserLimits: c3 } = PremiumConstants);
@@ -75,8 +75,8 @@ export function canUsePremiumProfileCustomization(currentUser) {
 export function canUsePremiumAppIcons(currentUser) {
   return ProductCatalog.canUserUse(user2.Perk.APP_ICONS, currentUser);
 }
-export function canUsePremiumGuildMemberProfile(currentUser) {
-  return ProductCatalog.canUserUse(user2.Perk.PREMIUM_GUILD_MEMBER_PROFILE, currentUser);
+export function canUsePremiumGuildMemberProfile(user) {
+  return ProductCatalog.canUserUse(user2.Perk.PREMIUM_GUILD_MEMBER_PROFILE, user);
 }
 export function canUseClientThemes(currentUser) {
   return ProductCatalog.canUserUse(user2.Perk.CLIENT_THEMES, currentUser);

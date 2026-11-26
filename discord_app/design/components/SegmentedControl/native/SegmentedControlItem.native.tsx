@@ -1,12 +1,12 @@
-// === Module 8576: SegmentedControlItem ===
+// === Module 8618: SegmentedControlItem ===
 
-// Module 8576 (SegmentedControlItem)
+// Module 8618 (SegmentedControlItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 8577 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 8619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let closure_8 = createStyles.createStyles((arg0) => {
   const item = { borderRadius: nativeDefault.radii.lg, paddingVertical: null, flexDirection: "row", justifyContent: "center" };
   let num = 8;
@@ -25,7 +25,7 @@ let closure_8 = createStyles.createStyles((arg0) => {
   item.paddingVertical = num;
   return { item, label: { flexDirection: "column", alignItems: "center", gap: 8 } };
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let closure_9 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, pressed: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE });
 let closure_10 = { code: "(function SegmentedControlItemNativeTsx1(){let[colors,pressed,index,activeIndex,withSpring,SPRING_CONFIG]=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,SPRING_CONFIG,'animate-always')};})" };
 const size = fn(2);
@@ -72,7 +72,7 @@ export function SegmentedControlItem(index) {
   const obj3 = { style: null, onPress, onPressIn, onPressOut, accessibilityRole: "tab", accessibilityState: derivedStateFromSharedValue, accessibilityHint: null, children: null };
   const items2 = [tmp.item, style];
   obj3.style = items2;
-  const animatedStyle = _mod1653.useAnimatedStyle(SegmentedControlItemNativeTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(SegmentedControlItemNativeTsx1);
   let formatToPlainStringResult;
   if (tmp3Result.isAndroid()) {
     const intl = util.intl;

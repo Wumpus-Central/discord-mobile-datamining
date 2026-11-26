@@ -1,12 +1,12 @@
-// === Module 14203: useGameProfileCommunitiesLocaleOptions ===
+// === Module 14255: useGameProfileCommunitiesLocaleOptions ===
 
-// Module 14203 (useGameProfileCommunitiesLocaleOptions)
+// Module 14255 (useGameProfileCommunitiesLocaleOptions)
 import util from "util" /* 1112 */;
 import noop from "module_19" /* 19 */;
-import GameProfileCommunitiesLocaleFilterStore from "GameProfileCommunitiesLocaleFilterStore" /* 14201 */;
+import GameProfileCommunitiesLocaleFilterStore from "GameProfileCommunitiesLocaleFilterStore" /* 14253 */;
 
 require = fn;
-let closure_4 = fn(14201).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(14253).useGameProfileCommunitiesLocaleFilterExclusions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleOptions.tsx");
 

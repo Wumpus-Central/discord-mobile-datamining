@@ -1,13 +1,13 @@
-// === Module 17948: MobileGameCommunitiesActionCreators ===
+// === Module 18005: MobileGameCommunitiesActionCreators ===
 
-// Module 17948 (MobileGameCommunitiesActionCreators)
+// Module 18005 (MobileGameCommunitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import _modDef1488 from "module_1488" /* 1488 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import _modDef1489 from "module_1489" /* 1489 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15154 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17194 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15204 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17245 */;
 
 require = fn;
 let closure_7 = async function _fetchDetectedGameCommunities() {
@@ -21,7 +21,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -53,7 +53,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
           const obj4 = { game_ids: tmp19, limit: 20, ignored_guild_ids: null };
           const _Array = Array;
           obj4.ignored_guild_ids = Array.from(dismissedGuildIds.getDismissedGuildIds());
-          request.query = _modDef1488.stringify(obj4);
+          request.query = _modDef1489.stringify(obj4);
           c2 = 1;
           c3 = 1;
           const obj5 = { value: HTTP.get(request), done: false };
@@ -71,7 +71,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
         const obj7 = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds, gameIds: closure_128_0 };
         closure_129_1(closure_129_2[8]).dispatch(obj7);
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp14) {
       c3 = tmp;
@@ -107,7 +107,7 @@ let closure_8 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -151,7 +151,7 @@ let closure_8 = asyncGeneratorStep(async () => {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;

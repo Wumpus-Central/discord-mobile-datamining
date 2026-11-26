@@ -1,21 +1,21 @@
-// === Module 14424: transformMessageAttachments ===
+// === Module 14476: transformMessageAttachments ===
 
-// Module 14424 (transformMessageAttachments)
+// Module 14476 (transformMessageAttachments)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import FlagUtils from "FlagUtils" /* 1404 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6372 */;
-import MediaFormatParamUtils from "MediaFormatParamUtils" /* 6775 */;
-import noConflictDefault from "noConflict" /* 8091 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8182 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8775 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8795 */;
-import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8797 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8806 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8807 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 12034 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 14010 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6403 */;
+import MediaFormatParamUtils from "MediaFormatParamUtils" /* 6806 */;
+import noConflictDefault from "noConflict" /* 8133 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8224 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8817 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8837 */;
+import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8839 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8848 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8849 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 12082 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 14062 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;

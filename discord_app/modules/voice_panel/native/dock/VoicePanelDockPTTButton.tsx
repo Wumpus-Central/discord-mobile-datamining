@@ -1,19 +1,19 @@
-// === Module 18187: VoicePanelDockPTTButton ===
+// === Module 18246: VoicePanelDockPTTButton ===
 
-// Module 18187 (VoicePanelDockPTTButton)
+// Module 18246 (VoicePanelDockPTTButton)
 import nativeDefault from "native" /* 575 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10246 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10288 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelDockConstants = fn(11757);
+const VoicePanelDockConstants = fn(11805);
 ({ DOCK_ROW_HEIGHT, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
@@ -39,7 +39,7 @@ getDockPTTIndicatorDrag.__closure = items1;
 getDockPTTIndicatorDrag.__workletHash = 14207531924828;
 getDockPTTIndicatorDrag.__initData = tmp5;
 const diff = result - 1;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { ring: { padding: diff, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.md }, buttonShadow: null };
 let obj3 = { padding: diff, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.md };
 obj.buttonShadow = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
@@ -120,13 +120,13 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
       let withTiming = require;
       let obj2 = dependencyMap;
       if (useReducedMotion.get()) {
-        withTiming = withTiming(5222).withTiming;
+        withTiming = withTiming(5253).withTiming;
         obj2 = { duration: 150 };
         let withTimingResult3 = withTiming(0, obj2);
-        const withTimingResult2 = withTiming(5222);
+        const withTimingResult2 = withTiming(5253);
       } else {
-        withTimingResult3 = withTiming(5613).withSpring(0, closure_10);
-        const withTimingResult4 = withTiming(5613);
+        withTimingResult3 = withTiming(5644).withSpring(0, closure_10);
+        const withTimingResult4 = withTiming(5644);
       }
       const result2 = sharedValue4.set(withTimingResult3);
     }
@@ -184,7 +184,7 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
     const PanResult = Gesture.Pan();
     const enabledResult = Gesture.Pan().enabled(!isScreenReaderEnabled);
     let result = Gesture.Pan().enabled(!isScreenReaderEnabled).manualActivation(true).shouldCancelWhenOutside(false);
-    items = [closure_13, _mod1706.scheduleOnRN, closure_13];
+    items = [closure_13, _mod1707.scheduleOnRN, closure_13];
     c0 = undefined;
     c1 = undefined;
     [tmp3, tmp4, tmp5] = items;
@@ -263,7 +263,7 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
     VoicePanelDockPTTButtonTsx4.__workletHash = 2024555727413;
     VoicePanelDockPTTButtonTsx4.__initData = tmp13;
     const onTouchesDownResult = result.onBegin(VoicePanelDockPTTButtonTsx2).onTouchesDown(VoicePanelDockPTTButtonTsx3);
-    const items6 = [closure_16, _mod1706.scheduleOnRN, closure_14];
+    const items6 = [closure_16, _mod1707.scheduleOnRN, closure_14];
     c0 = undefined;
     c1 = undefined;
     [tmp19, tmp20, tmp21] = items6;

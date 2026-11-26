@@ -1,6 +1,6 @@
-// === Module 12695: ? ===
+// === Module 12740: ? ===
 
-// Module 12695
+// Module 12740
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_01_baddie_sunset.webp.js");

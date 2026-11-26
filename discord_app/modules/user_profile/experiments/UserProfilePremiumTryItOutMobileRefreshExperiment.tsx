@@ -1,7 +1,7 @@
-// === Module 9110: UserProfilePremiumTryItOutMobileRefreshExperiment ===
+// === Module 9152: UserProfilePremiumTryItOutMobileRefreshExperiment ===
 
-// Module 9110 (UserProfilePremiumTryItOutMobileRefreshExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 9152 (UserProfilePremiumTryItOutMobileRefreshExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-user-profile-premium-try-it-out-mobile-refresh", kind: "user", defaultConfig: { enabled: false }, variations: null };

@@ -1,20 +1,20 @@
-// === Module 19174: RestrictedMessagePreviewHeader ===
+// === Module 19237: RestrictedMessagePreviewHeader ===
 
-// Module 19174 (RestrictedMessagePreviewHeader)
+// Module 19237 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import ToastUtils from "ToastUtils" /* 5693 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6102 */;
-import ClipboardUtils from "ClipboardUtils" /* 7507 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import ToastUtils from "ToastUtils" /* 5724 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
+import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(13374).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(13426).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 }, avatar: null };
 let obj3 = { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
 obj2.avatar = { marginBottom: nativeDefault.space.PX_4 };
@@ -43,16 +43,16 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13547, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13599, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
-        const result = channel(6351).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = channel(6351);
-        channel(8558).transitionToGuild(arg0);
-        const obj2 = channel(8558);
-        user(5226).hideActionSheet();
-        const obj3 = user(5226);
-        user(6099).popWithKey(closure_1_5);
+        const result = channel(6382).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = channel(6382);
+        channel(8600).transitionToGuild(arg0);
+        const obj2 = channel(8600);
+        user(5257).hideActionSheet();
+        const obj3 = user(5257);
+        user(6130).popWithKey(closure_1_5);
       }
     });
   }, items2);

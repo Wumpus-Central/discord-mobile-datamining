@@ -1,9 +1,9 @@
-// === Module 13175: VoicePanelControlsUtils ===
+// === Module 13227: VoicePanelControlsUtils ===
 
-// Module 13175 (VoicePanelControlsUtils)
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11732 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11734 */;
-import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11737 */;
+// Module 13227 (VoicePanelControlsUtils)
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11780 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11782 */;
+import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11785 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function getControlsDefaultWidth_VoicePanelControlsUtilsTsx1(windowWidth,safeAreaLeft,safeAreaRight){let[EDGE_GUTTER,CONTROLS_MAX_WIDTH]=this.__closure;safeAreaLeft=Math.max(safeAreaLeft,EDGE_GUTTER);safeAreaRight=Math.max(safeAreaRight,EDGE_GUTTER);return Math.min(windowWidth-safeAreaLeft-safeAreaRight,CONTROLS_MAX_WIDTH);})" }, VoicePanelCardConstants.EDGE_GUTTER, VoicePanelControlsConstants.CONTROLS_MAX_WIDTH];

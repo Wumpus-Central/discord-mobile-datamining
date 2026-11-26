@@ -1,20 +1,20 @@
-// === Module 10794: StickerPackDetailActionSheet ===
+// === Module 10840: StickerPackDetailActionSheet ===
 
-// Module 10794 (StickerPackDetailActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10800 */;
+// Module 10840 (StickerPackDetailActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10846 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const StickerPickerConstants = fn(10754);
+const StickerPickerConstants = fn(10800);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: closure_6 } = StickerPickerConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(5241).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5272).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
-let closure_12 = createStyles.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "analyticsLocations" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
+const createStyles = fn(5043);
+let closure_12 = createStyles.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "sa" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPackDetailActionSheet.tsx");
 

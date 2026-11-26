@@ -1,6 +1,6 @@
-// === Module 6731: ? ===
+// === Module 6762: ? ===
 
-// Module 6731
+// Module 6762
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/aura/witchy.png.js");

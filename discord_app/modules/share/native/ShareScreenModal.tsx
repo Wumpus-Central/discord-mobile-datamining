@@ -1,19 +1,19 @@
-// === Module 15255: ShareScreenModal ===
+// === Module 15305: ShareScreenModal ===
 
-// Module 15255 (ShareScreenModal)
+// Module 15305 (ShareScreenModal)
 import LoggerDefault from "Logger" /* 3 */;
 import ChannelTypes from "ChannelTypes" /* 1092 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
 
 require = fn;
 function onClose() {
   ModalActionCreatorsDefault.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
-const SHARE_SCREEN_MODAL_KEY = fn(15205).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15255).SHARE_SCREEN_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_9 = new LoggerDefault("ShareScreenModal");
 const size = fn(2);
@@ -44,7 +44,7 @@ export default function ShareScreenModal(text) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -129,7 +129,7 @@ export default function ShareScreenModal(text) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {

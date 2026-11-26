@@ -1,20 +1,20 @@
-// === Module 17742: HappeningNowCardPlaceholder ===
+// === Module 17799: HappeningNowCardPlaceholder ===
 
-// Module 17742 (HappeningNowCardPlaceholder)
+// Module 17799 (HappeningNowCardPlaceholder)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5222 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import timing_timing from "timing/timing" /* 5253 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(16856).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(16907).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { placeholderContainer: { flexDirection: "row", alignItems: "center" }, placeholderIcon: null, placeholderContent: null, placeholderText: null, placeholderTextTop: null, placeholderTextBottom: null };
 let size = { height: HAPPENING_NOW_CONTENT_HEIGHT, width: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.placeholderIcon = size;
@@ -37,10 +37,10 @@ export function HappeningNowCardPlaceholder(panelVariant) {
   _require = 1000;
   importDefault = 0.6;
   let sharedValue;
-  sharedValue = require("module_1653").useSharedValue(0.3);
+  sharedValue = require("module_1654").useSharedValue(0.3);
   items = [sharedValue, 1000, 0.6];
   const effect = noop.useEffect(() => {
-    items = [closure_8, sharedValue, _mod1653.withRepeat, timing_timing.withTiming, c1, c0, _mod1653.Easing];
+    items = [closure_8, sharedValue, _mod1654.withRepeat, timing_timing.withTiming, c1, c0, _mod1654.Easing];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -59,9 +59,9 @@ export function HappeningNowCardPlaceholder(panelVariant) {
     HappeningNowCardPlaceholderTsx1.__closure = items1;
     HappeningNowCardPlaceholderTsx1.__workletHash = 2445184542345;
     HappeningNowCardPlaceholderTsx1.__initData = tmp;
-    _mod1706.scheduleOnUI(HappeningNowCardPlaceholderTsx1);
+    _mod1707.scheduleOnUI(HappeningNowCardPlaceholderTsx1);
   }, items);
-  const obj = require("module_1653");
+  const obj = require("module_1654");
   let items1 = [closure_9, sharedValue];
   _require = undefined;
   [tmp5, tmp6] = items1;
@@ -75,9 +75,9 @@ export function HappeningNowCardPlaceholder(panelVariant) {
   HappeningNowCardPlaceholderTsx2.__closure = items2;
   HappeningNowCardPlaceholderTsx2.__workletHash = 8479372261668;
   HappeningNowCardPlaceholderTsx2.__initData = tmp5;
-  const animatedStyle = require("module_1653").useAnimatedStyle(HappeningNowCardPlaceholderTsx2);
+  const animatedStyle = require("module_1654").useAnimatedStyle(HappeningNowCardPlaceholderTsx2);
   let str = "medium";
-  const obj2 = require("module_1653");
+  const obj2 = require("module_1654");
   const tmp9 = importDefault;
   if (panelVariant.fullWidth) {
     str = "full";

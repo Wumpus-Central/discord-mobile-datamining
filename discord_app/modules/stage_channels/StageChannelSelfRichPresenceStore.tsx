@@ -1,23 +1,23 @@
-// === Module 14709: StageChannelSelfRichPresenceStore ===
+// === Module 14762: StageChannelSelfRichPresenceStore ===
 
-// Module 14709 (StageChannelSelfRichPresenceStore)
+// Module 14762 (StageChannelSelfRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef1343 from "module_1343" /* 1343 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4949 */;
-import useChannelName from "useChannelName" /* 5628 */;
-import ActivityTypes2 from "ActivityTypes" /* 5984 */;
-import StageMediaHooks from "StageMediaHooks" /* 6780 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6824 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11332 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import UserStore from "UserStore" /* 1386 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6781 */;
-import StageInstanceStore from "StageInstanceStore" /* 4866 */;
+import _modDef1344 from "module_1344" /* 1344 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
+import useChannelName from "useChannelName" /* 5659 */;
+import ActivityTypes2 from "ActivityTypes" /* 6015 */;
+import StageMediaHooks from "StageMediaHooks" /* 6811 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6855 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11378 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import UserStore from "UserStore" /* 1387 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6812 */;
+import StageInstanceStore from "StageInstanceStore" /* 4897 */;
 
 require = fn;
 function handleUpdateActivity() {
@@ -110,7 +110,7 @@ function handleUpdateActivity() {
       }
     }
   }
-  const tmp30 = _modDef1343(tmp2, obj);
+  const tmp30 = _modDef1344(tmp2, obj);
   let flag = !tmp30;
   if (!tmp30) {
     obj = tmp2;
@@ -118,7 +118,7 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6769).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6800).STAGE_APPLICATION_ID;
 const Constants = fn(1071);
 ({ GuildFeatures: map1, Permissions: closure_14, RTCConnectionStates: closure_15 } = Constants);
 let obj = null;

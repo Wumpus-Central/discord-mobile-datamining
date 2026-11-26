@@ -1,12 +1,12 @@
-// === Module 8077: ForumPostMessagesStore ===
+// === Module 8119: ForumPostMessagesStore ===
 
-// Module 8077 (ForumPostMessagesStore)
+// Module 8119 (ForumPostMessagesStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6362 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7599 */;
-import UserStore from "UserStore" /* 1386 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6393 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7630 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function handleLoadThreadsSuccess(arg0) {

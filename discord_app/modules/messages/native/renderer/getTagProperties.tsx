@@ -1,12 +1,12 @@
-// === Module 14360: getTagProperties ===
+// === Module 14412: getTagProperties ===
 
-// Module 14360 (getTagProperties)
+// Module 14412 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1112 */;
-import MessageConstants from "MessageConstants" /* 5017 */;
-import isCrosspostDefault from "isCrosspost" /* 12141 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 12142 */;
-import _modDef14361 from "module_14361" /* 14361 */;
+import MessageConstants from "MessageConstants" /* 5048 */;
+import isCrosspostDefault from "isCrosspost" /* 12191 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 12192 */;
+import _modDef14413 from "module_14413" /* 14413 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef14361).uri;
+            uri = Image.resolveAssetSource(_modDef14413).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "__workletHash", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "<string:843049582>", opTagBackgroundColor: "<string:309237645>" };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "channel_id", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: -0.0000000000000000000000000000000000000000000024368963265596648, opTagBackgroundColor: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000038040856761515677 };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

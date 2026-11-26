@@ -1,20 +1,20 @@
-// === Module 12992: AppLauncherNavigator ===
+// === Module 13044: AppLauncherNavigator ===
 
-// Module 12992 (AppLauncherNavigator)
+// Module 13044 (AppLauncherNavigator)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["initialRouteName"];
-const AppLauncherRouteName = fn(1499).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1500).AppLauncherRouteName;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const NativeStackNavigator = fn(9005);
+const NativeStackNavigator = fn(9047);
 let closure_10 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { navigator: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingTop: 16, overflow: "visible", flex: 1 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingTop: 16, overflow: "visible", flex: 1 };

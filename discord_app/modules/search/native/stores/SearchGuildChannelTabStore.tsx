@@ -1,14 +1,14 @@
-// === Module 13267: SearchGuildChannelTabStore ===
+// === Module 13319: SearchGuildChannelTabStore ===
 
-// Module 13267 (SearchGuildChannelTabStore)
+// Module 13319 (SearchGuildChannelTabStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6838 */;
-import autocompleter_AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 6955 */;
-import GuildChannelStore from "GuildChannelStore" /* 4942 */;
-import ReadStateStore from "ReadStateStore" /* 6901 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6869 */;
+import autocompleter_AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 6986 */;
+import GuildChannelStore from "GuildChannelStore" /* 4973 */;
+import ReadStateStore from "ReadStateStore" /* 6932 */;
 import size from "module_2" /* 2 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;

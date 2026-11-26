@@ -1,24 +1,24 @@
-// === Module 14146: AnnouncementMarkup ===
+// === Module 14198: AnnouncementMarkup ===
 
-// Module 14146 (AnnouncementMarkup)
-import SentryUtilsDefault from "SentryUtils" /* 1241 */;
-import _modDef2068 from "module_2068" /* 2068 */;
-import CustomMarkup from "CustomMarkup" /* 6088 */;
-import Spoiler from "Spoiler" /* 6091 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 7036 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 14151 */;
+// Module 14198 (AnnouncementMarkup)
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import _modDef2069 from "module_2069" /* 2069 */;
+import CustomMarkup from "CustomMarkup" /* 6119 */;
+import Spoiler from "Spoiler" /* 6122 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 7067 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 14203 */;
 import noop from "module_19" /* 19 */;
 import apply_mod from "apply" /* 12 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let apply = apply_mod;
 let closure_6 = apply.once(() => CustomMarkup.createRules({}));
 let apply = apply_mod;
 let closure_7 = apply.once(() => MarkupUtilsDefault.reactParserFor(closure_6()));
 let apply = apply_mod;
-let closure_8 = apply.once(() => _modDef2068.outputFor(closure_6(), "react"));
+let closure_8 = apply.once(() => _modDef2069.outputFor(closure_6(), "react"));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/AnnouncementMarkup.tsx");
 

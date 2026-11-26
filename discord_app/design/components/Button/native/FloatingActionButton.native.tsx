@@ -1,18 +1,18 @@
-// === Module 8454: FloatingActionButton ===
+// === Module 8496: FloatingActionButton ===
 
-// Module 8454 (FloatingActionButton)
+// Module 8496 (FloatingActionButton)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import ButtonConstants from "ButtonConstants" /* 5616 */;
-import BaseIconButton from "BaseIconButton" /* 6117 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import ButtonConstants from "ButtonConstants" /* 5647 */;
+import BaseIconButton from "BaseIconButton" /* 6148 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const styles = createStyles.createStyles(() => {
   const obj = { button: null, iconButtonPill: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -60,7 +60,7 @@ export function FloatingActionButton(icon) {
   FloatingActionButtonNativeTsx1.__closure = items1;
   FloatingActionButtonNativeTsx1.__workletHash = 14949608342118;
   FloatingActionButtonNativeTsx1.__initData = tmp5;
-  const animatedStyle = _mod1653.useAnimatedStyle(FloatingActionButtonNativeTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(FloatingActionButtonNativeTsx1);
   const obj2 = { style: animatedStyle, children: null };
   const obj5 = {};
   const merged1 = Object.assign(merged);
@@ -75,5 +75,5 @@ export function FloatingActionButton(icon) {
   obj5.icon = cloneElementResult;
   ({ button: obj3.style, iconButtonPill: obj3.pillStyle } = tmp2);
   obj2.children = jsx(BaseIconButton.BaseIconButton, {});
-  return jsx(_modDef1653.View, { style: animatedStyle, children: null });
+  return jsx(_modDef1654.View, { style: animatedStyle, children: null });
 }

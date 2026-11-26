@@ -1,17 +1,17 @@
-// === Module 15980: useProfileSelection ===
+// === Module 16057: useProfileSelection ===
 
-// Module 15980 (useProfileSelection)
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9397 */;
+// Module 16057 (useProfileSelection)
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9439 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9395 */;
-import SortedGuildStore from "SortedGuildStore" /* 6133 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9437 */;
+import SortedGuildStore from "SortedGuildStore" /* 6164 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_6 = fn(1081).ProfileCustomizationSubsection;
-const UserProfileSections = fn(6106).UserProfileSections;
+const UserProfileSections = fn(6137).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/useProfileSelection.tsx");
 

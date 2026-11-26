@@ -1,11 +1,11 @@
-// === Module 6375: CheckpointMessageComponentUtils ===
+// === Module 6406: CheckpointMessageComponentUtils ===
 
-// Module 6375 (CheckpointMessageComponentUtils)
+// Module 6406 (CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1112 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4958 */;
-import CheckpointUtils from "CheckpointUtils" /* 6376 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4989 */;
+import CheckpointUtils from "CheckpointUtils" /* 6407 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/checkpoint/2025/CheckpointMessageComponentUtils.tsx");

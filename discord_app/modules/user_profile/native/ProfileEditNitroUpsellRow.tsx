@@ -1,15 +1,15 @@
-// === Module 16007: ProfileEditNitroUpsellRow ===
+// === Module 16037: ProfileEditNitroUpsellRow ===
 
-// Module 16007 (ProfileEditNitroUpsellRow)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9552 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9555 */;
+// Module 16037 (ProfileEditNitroUpsellRow)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9594 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9597 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6, UpsellTypes: metroImportDefault } = Constants);
-const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1389).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/ProfileEditNitroUpsellRow.tsx");

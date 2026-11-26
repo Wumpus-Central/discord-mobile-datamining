@@ -1,7 +1,7 @@
-// === Module 8482: useCreateChannelSubmit ===
+// === Module 8524: useCreateChannelSubmit ===
 
-// Module 8482 (useCreateChannelSubmit)
-import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 8483 */;
+// Module 8524 (useCreateChannelSubmit)
+import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 8525 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ export default function useCreateChannelSubmit(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ export default function useCreateChannelSubmit(arg0) {
             return obj5;
           } else {
             if (closure_131_3 === constants3.PREMIUM_CHANNEL) {
-              const obj6 = { id: closure_131_4, type: closure_0(2117).PermissionOverwriteType.ROLE, deny: constants2.VIEW_CHANNEL, allow: closure_2(1083).getFlag(0) };
+              const obj6 = { id: closure_131_4, type: closure_0(2118).PermissionOverwriteType.ROLE, deny: constants2.VIEW_CHANNEL, allow: closure_2(1083).getFlag(0) };
               closure_131_0.push(obj6);
               const obj10 = closure_2(1083);
             }
@@ -100,7 +100,7 @@ export default function useCreateChannelSubmit(arg0) {
           if (3 === tmp8) {
             c6 = 1;
             closure_131_14 = closure_5;
-            const AccessibilityAnnouncer = closure_0(5019).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(5050).AccessibilityAnnouncer;
             const intl = closure_0(1112).intl;
             AccessibilityAnnouncer.announce(intl.string(closure_0(1112).t["0SbUzm"]));
             const body = closure_131_14.body;
@@ -131,7 +131,7 @@ export default function useCreateChannelSubmit(arg0) {
               id = closure_131_11.id;
               guild_id = closure_131_11.guild_id;
               if (null != id) {
-                const AccessibilityAnnouncer2 = closure_0(5019).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer2 = closure_0(5050).AccessibilityAnnouncer;
                 const intl2 = closure_0(1112).intl;
                 const obj9 = { name: closure_131_5 };
                 AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1112).t.Wke70b, obj9));

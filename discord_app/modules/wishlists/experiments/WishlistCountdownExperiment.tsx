@@ -1,13 +1,13 @@
-// === Module 15003: WishlistCountdownExperiment ===
+// === Module 15053: WishlistCountdownExperiment ===
 
-// Module 15003 (WishlistCountdownExperiment)
-import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
+// Module 15053 (WishlistCountdownExperiment)
+import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1450);
+const ApexExperiment = fn(1451);
 const obj2 = { name: "2026-11-wishlist-countdown", kind: "user", defaultConfig: { labelsEnabled: false, reorderEnabled: false }, variations: null };
 const obj3 = { 1: null, 2: { labelsEnabled: true, reorderEnabled: false } };
 obj3[2] = { labelsEnabled: true, reorderEnabled: true };

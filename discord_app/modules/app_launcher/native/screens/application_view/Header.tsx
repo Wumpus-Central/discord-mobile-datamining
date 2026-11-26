@@ -1,31 +1,31 @@
-// === Module 13038: application_view/Header ===
+// === Module 13090: application_view/Header ===
 
-// Module 13038 (application_view/Header)
+// Module 13090 (application_view/Header)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import ToastUtils from "ToastUtils" /* 5693 */;
-import useAvatarColorDefault from "useAvatarColor" /* 6338 */;
-import ClipboardUtils from "ClipboardUtils" /* 7507 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 10045 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 13039 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 13040 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import ToastUtils from "ToastUtils" /* 5724 */;
+import useAvatarColorDefault from "useAvatarColor" /* 6369 */;
+import ClipboardUtils from "ClipboardUtils" /* 7538 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 10087 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 13091 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 13092 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
-import AppLauncherStore from "AppLauncherStore" /* 10046 */;
+import UserStore from "UserStore" /* 1387 */;
+import AppLauncherStore from "AppLauncherStore" /* 10088 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AppLauncherNativeConstants = fn(1499);
+const AppLauncherNativeConstants = fn(1500);
 ({ DEFAULT_CONTENT_PADDING, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const xl = nativeDefault.radii.xl;
 let c10 = 105;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 }, expandedHeaderBanner: { height: 105 }, appIconMask: null, collapsedHeaderBanner: null, collapsedHeaderBannerOverlay: null, loadingIcon: null, actionsWrapper: null };
 const rect = { position: "absolute", padding: 4, bottom: -40, left: 16, backgroundColor: SCREEN_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xl + 4 };
 obj2.appIconMask = rect;
@@ -56,8 +56,8 @@ export default function Header(application) {
   const tmp3 = closure_11();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(12962).getAppLauncherIconSource(application);
-    const tmpResult = tmp(12962);
+    appLauncherIconSource = tmp(13014).getAppLauncherIconSource(application);
+    const tmpResult = tmp(13014);
   }
   let obj = require("initialize");
   let str = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -76,14 +76,14 @@ export default function Header(application) {
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_7(tmp5(12967), obj2);
+    let tmp12 = closure_7(tmp5(13019), obj2);
     let tmp13 = closure_7;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
     tmp12 = closure_7(id, obj3);
     tmp13 = closure_7;
   }
-  let items1 = [closure_12, require("module_1653").interpolate, scrollOffsetY, c10];
+  let items1 = [closure_12, require("module_1654").interpolate, scrollOffsetY, c10];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -107,9 +107,9 @@ export default function Header(application) {
   HeaderTsx1.__closure = items2;
   HeaderTsx1.__workletHash = 2041267875989;
   HeaderTsx1.__initData = tmp17;
-  const animatedStyle = require("module_1653").useAnimatedStyle(HeaderTsx1);
-  const tmpResult10 = require("module_1653");
-  const items3 = [closure_13, require("module_1653").interpolate, scrollOffsetY, c10];
+  const animatedStyle = require("module_1654").useAnimatedStyle(HeaderTsx1);
+  const tmpResult10 = require("module_1654");
+  const items3 = [closure_13, require("module_1654").interpolate, scrollOffsetY, c10];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -133,9 +133,9 @@ export default function Header(application) {
   HeaderTsx2.__closure = items4;
   HeaderTsx2.__workletHash = 12593717419899;
   HeaderTsx2.__initData = tmp22;
-  const animatedStyle1 = require("module_1653").useAnimatedStyle(HeaderTsx2);
-  const tmpResult11 = require("module_1653");
-  const items5 = [closure_14, require("module_1653").interpolate, scrollOffsetY, c10];
+  const animatedStyle1 = require("module_1654").useAnimatedStyle(HeaderTsx2);
+  const tmpResult11 = require("module_1654");
+  const items5 = [closure_14, require("module_1654").interpolate, scrollOffsetY, c10];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -162,9 +162,9 @@ export default function Header(application) {
   HeaderTsx3.__closure = items6;
   HeaderTsx3.__workletHash = 17390115934490;
   HeaderTsx3.__initData = tmp27;
-  const animatedStyle2 = require("module_1653").useAnimatedStyle(HeaderTsx3);
-  const tmpResult12 = require("module_1653");
-  const items7 = [closure_15, require("module_1653").interpolate, scrollOffsetY, c10];
+  const animatedStyle2 = require("module_1654").useAnimatedStyle(HeaderTsx3);
+  const tmpResult12 = require("module_1654");
+  const items7 = [closure_15, require("module_1654").interpolate, scrollOffsetY, c10];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -184,18 +184,18 @@ export default function Header(application) {
   HeaderTsx4.__workletHash = 5671647822967;
   HeaderTsx4.__initData = tmp32;
   let str2 = "";
-  const animatedStyle3 = require("module_1653").useAnimatedStyle(HeaderTsx4);
+  const animatedStyle3 = require("module_1654").useAnimatedStyle(HeaderTsx4);
   if (null != application) {
-    str2 = tmp(10045).getSectionName(application);
-    const tmpResult14 = tmp(10045);
+    str2 = tmp(10087).getSectionName(application);
+    const tmpResult14 = tmp(10087);
   }
   let result = null != application;
   if (result) {
     result = "flags" in application;
   }
   if (result) {
-    result = tmp(2150).supportsEmbeddedSurface(application, tmp(5656).EmbeddedSurfaceType.MAIN);
-    const tmpResult15 = tmp(2150);
+    result = tmp(2151).supportsEmbeddedSurface(application, tmp(5687).EmbeddedSurfaceType.MAIN);
+    const tmpResult15 = tmp(2151);
   }
   dependencyMap = result;
   id = UserStore.getCurrentUser();
@@ -212,14 +212,14 @@ export default function Header(application) {
   const obj8 = { style: null, pointerEvents: "none" };
   const items13 = [tmp3.collapsedHeaderBannerOverlay, animatedStyle3];
   obj8.style = items13;
-  const items14 = [tmp13(_modDef1653.View, obj8), tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }), , ];
+  const items14 = [tmp13(_modDef1654.View, obj8), tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }), , ];
   let obj6 = { style: tmp3.appIconMask, children: tmp12 };
   const tmp39 = id;
-  const tmpResult13 = require("module_1653");
-  items14[2] = tmp13(_modDef1653.View, { style: animatedStyle2, pointerEvents: "none", children: tmp13(require("Text/Text").Heading, { variant: "heading-lg/semibold", color: "text-overlay-light", children: str2 }) });
+  const tmpResult13 = require("module_1654");
+  items14[2] = tmp13(_modDef1654.View, { style: animatedStyle2, pointerEvents: "none", children: tmp13(require("Text/Text").Heading, { variant: "heading-lg/semibold", color: "text-overlay-light", children: str2 }) });
   items14[3] = tmp13(require("native").Spacer, { size: 32, pointerEvents: "none" });
   obj7.children = items14;
-  items11[1] = closure_8(_modDef1653.View, obj7);
+  items11[1] = closure_8(_modDef1654.View, obj7);
   let tmp38Result = null;
   if (null != application) {
     tmp38Result = null;
@@ -228,7 +228,7 @@ export default function Header(application) {
       const obj11 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: tmp5(5709),
+        icon: tmp5(5740),
         onPress() {
               AnalyticsUtilsDefault.track(AnalyticEvents.APP_LAUNCHER_APPLICATION_LINK_COPIED, { application_id: _undefined.id, source });
               const obj2 = { application_id: _undefined.id, source };
@@ -256,17 +256,17 @@ export default function Header(application) {
       };
       const intl = tmp(1112).intl;
       obj11.accessibilityLabel = intl.string(tmp(1112).t.XWDihq);
-      const items15 = [tmp13(tmp(7910).IconButton, obj11), ];
+      const items15 = [tmp13(tmp(7944).IconButton, obj11), ];
       const obj12 = { application, onAddAppMenuClick };
-      items15[1] = tmp13(tmp5(13041), obj12);
+      items15[1] = tmp13(tmp5(13093), obj12);
       obj10.children = items15;
       tmp38Result = closure_8(tmp39, obj10);
     }
-    tmpResult16 = tmp(10045);
+    tmpResult16 = tmp(10087);
   }
   items11[2] = tmp38Result;
   obj4.children = items11;
-  return closure_8(_modDef1653.View, obj4);
+  return closure_8(_modDef1654.View, obj4);
 };
 export const SHEET_HANDLE_CONTAINER_HEIGHT = 16;
 export const EXPANDED_HEADER_HEIGHT = 161;

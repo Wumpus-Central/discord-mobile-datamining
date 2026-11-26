@@ -1,20 +1,20 @@
-// === Module 8510: PinotExperiment ===
+// === Module 8552: PinotExperiment ===
 
-// Module 8510 (PinotExperiment)
-import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
+// Module 8552 (PinotExperiment)
+import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let ApexExperiment = fn(1450);
+let ApexExperiment = fn(1451);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-10-pinot-admin", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1450);
+ApexExperiment = fn(1451);
 const apexExperiment1 = ApexExperiment.createApexExperiment({ name: "2026-10-pinot-summary-management", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1450);
+ApexExperiment = fn(1451);
 const apexExperiment2 = ApexExperiment.createApexExperiment({ name: "2026-10-pinot-member", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1450);
+ApexExperiment = fn(1451);
 const apexExperiment3 = ApexExperiment.createApexExperiment({ name: "2026-10-pinot-member-notice", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1450);
+ApexExperiment = fn(1451);
 const apexExperiment4 = ApexExperiment.createApexExperiment({ name: "2026-10-pinot-channel-discoverable", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/PinotExperiment.tsx");

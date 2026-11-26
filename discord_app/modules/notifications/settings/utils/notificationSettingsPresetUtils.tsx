@@ -1,9 +1,9 @@
-// === Module 8129: notificationSettingsPresetUtils ===
+// === Module 8171: notificationSettingsPresetUtils ===
 
-// Module 8129 (notificationSettingsPresetUtils)
+// Module 8171 (notificationSettingsPresetUtils)
 import Constants from "Constants" /* 1071 */;
-import _mod5805 from "module_5805" /* 5805 */;
-import ReadStateConstants from "ReadStateConstants" /* 6137 */;
+import _mod5836 from "module_5836" /* 5836 */;
+import ReadStateConstants from "ReadStateConstants" /* 6168 */;
 import size from "module_2" /* 2 */;
 
 const UserNotificationSettings = Constants.UserNotificationSettings;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/notifications/settings/utils/
 export { Presets };
 export function presetFromSettings(guildUnreadSetting, UserGuildSettingsStore) {
   items = [UserGuildSettingsStore, guildUnreadSetting];
-  const match = _mod5805.match(items);
+  const match = _mod5836.match(items);
   const items1 = [UserNotificationSettings.ALL_MESSAGES, UnreadSetting.ALL_MESSAGES];
   const items2 = [UserNotificationSettings.ONLY_MENTIONS, UnreadSetting.UNSET];
   const withResult = match.with(items1, () => constants.ALL_MESSAGES);

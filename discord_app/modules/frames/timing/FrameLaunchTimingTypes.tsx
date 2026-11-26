@@ -1,6 +1,6 @@
-// === Module 7654: FrameLaunchTimingTypes ===
+// === Module 7685: FrameLaunchTimingTypes ===
 
-// Module 7654 (FrameLaunchTimingTypes)
+// Module 7685 (FrameLaunchTimingTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/timing/FrameLaunchTimingTypes.tsx");

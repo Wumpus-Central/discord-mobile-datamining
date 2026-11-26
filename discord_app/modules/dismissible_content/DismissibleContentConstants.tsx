@@ -1,6 +1,6 @@
-// === Module 4858: DismissibleContentConstants ===
+// === Module 4889: DismissibleContentConstants ===
 
-// Module 4858 (DismissibleContentConstants)
+// Module 4889 (DismissibleContentConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentConstants.tsx");

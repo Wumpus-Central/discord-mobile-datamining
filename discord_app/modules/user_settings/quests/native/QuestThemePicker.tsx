@@ -1,8 +1,8 @@
-// === Module 16716: QuestThemePicker ===
+// === Module 16767: QuestThemePicker ===
 
-// Module 16716 (QuestThemePicker)
+// Module 16767 (QuestThemePicker)
 import nativeDefault from "native" /* 575 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16561 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16612 */;
 import noop from "module_19" /* 19 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
@@ -133,11 +133,11 @@ class QuestThemePicker {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-let closure_8 = fn(1239).LEGACY_STANDARD_BACKGROUND_THEMES;
+let closure_8 = fn(1240).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1082).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { themeSection: { marginBottom: nativeDefault.space.PX_8 }, themeSelector: null, themeOption: null, themeCircle: null, themeCircleSelected: null, themeLabel: null, resetButton: null, resetIcon: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.themeSelector = { flexDirection: "row", gap: nativeDefault.space.PX_12 };

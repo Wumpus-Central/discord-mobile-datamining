@@ -1,10 +1,10 @@
-// === Module 13526: GuildBoostingSubscribeButton ===
+// === Module 13578: GuildBoostingSubscribeButton ===
 
-// Module 13526 (GuildBoostingSubscribeButton)
-import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 13476 */;
+// Module 13578 (GuildBoostingSubscribeButton)
+import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 13528 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10322 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10364 */;
 
 require = fn;
 let closure_14 = async function _handleBoostPress() {
@@ -21,7 +21,7 @@ let closure_14 = async function _handleBoostPress() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ let closure_14 = async function _handleBoostPress() {
         } else {
           closure_131_0(closure_131_2[10]).closeApplyBoostModal();
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp10) {
         c5 = tmp;
@@ -69,10 +69,10 @@ let closure_14 = async function _handleBoostPress() {
   })();
 };
 let View = fn(17).View;
-let closure_7 = fn(6835).PremiumGuildSubscribeModalScenes;
+let closure_7 = fn(6866).PremiumGuildSubscribeModalScenes;
 const Constants = fn(1071);
 ({ AnalyticsObjects: closure_8, AnalyticsObjectTypes: closure_9, AnalyticsPages: closure_10, NOOP: closure_11 } = Constants);
-const FractionalPremiumStates = fn(1388).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1389).FractionalPremiumStates;
 let jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");

@@ -1,6 +1,6 @@
-// === Module 17966: InterestGuildProfileSheetLayout ===
+// === Module 18023: InterestGuildProfileSheetLayout ===
 
-// Module 17966 (InterestGuildProfileSheetLayout)
+// Module 18023 (InterestGuildProfileSheetLayout)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildProfileSheetLayout.tsx");

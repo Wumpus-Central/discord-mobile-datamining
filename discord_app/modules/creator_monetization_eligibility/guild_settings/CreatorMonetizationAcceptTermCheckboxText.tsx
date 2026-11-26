@@ -1,9 +1,9 @@
-// === Module 20138: CreatorMonetizationAcceptTermCheckboxText ===
+// === Module 20202: CreatorMonetizationAcceptTermCheckboxText ===
 
-// Module 20138 (CreatorMonetizationAcceptTermCheckboxText)
+// Module 20202 (CreatorMonetizationAcceptTermCheckboxText)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;

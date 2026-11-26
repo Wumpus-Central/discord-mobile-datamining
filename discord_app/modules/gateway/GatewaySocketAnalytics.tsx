@@ -1,11 +1,11 @@
-// === Module 15065: GatewaySocketAnalytics ===
+// === Module 15115: GatewaySocketAnalytics ===
 
-// Module 15065 (GatewaySocketAnalytics)
+// Module 15115 (GatewaySocketAnalytics)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 function prettyPrintTrace_(calls, arg1) {
   if (null == calls) {

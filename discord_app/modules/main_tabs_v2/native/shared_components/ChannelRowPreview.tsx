@@ -1,23 +1,23 @@
-// === Module 10593: ChannelRowPreview ===
+// === Module 10638: ChannelRowPreview ===
 
-// Module 10593 (ChannelRowPreview)
-import UserSettings from "UserSettings" /* 4837 */;
-import createStyles from "createStyles" /* 5012 */;
-import useToken from "useToken" /* 5576 */;
-import LinkIcon from "LinkIcon" /* 5708 */;
-import ImageIcon from "ImageIcon" /* 7122 */;
-import RowGeneratorDefault from "RowGenerator" /* 8181 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8185 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8796 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 8980 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8982 */;
-import AttachmentIcon from "AttachmentIcon" /* 9576 */;
-import MusicIcon from "MusicIcon" /* 10267 */;
-import VideoIcon from "VideoIcon" /* 10594 */;
-import StickerIcon from "StickerIcon" /* 10596 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10603 */;
+// Module 10638 (ChannelRowPreview)
+import UserSettings from "UserSettings" /* 4868 */;
+import createStyles from "createStyles" /* 5043 */;
+import useToken from "useToken" /* 5607 */;
+import LinkIcon from "LinkIcon" /* 5739 */;
+import ImageIcon from "ImageIcon" /* 7153 */;
+import RowGeneratorDefault from "RowGenerator" /* 8223 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8227 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8838 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 9022 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9024 */;
+import AttachmentIcon from "AttachmentIcon" /* 9618 */;
+import MusicIcon from "MusicIcon" /* 10309 */;
+import VideoIcon from "VideoIcon" /* 10639 */;
+import StickerIcon from "StickerIcon" /* 10641 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10648 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
 
 const require = globalThis.__r;
 

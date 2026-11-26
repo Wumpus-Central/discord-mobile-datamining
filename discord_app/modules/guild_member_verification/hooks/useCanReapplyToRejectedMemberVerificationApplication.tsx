@@ -1,11 +1,11 @@
-// === Module 6979: useCanReapplyToRejectedMemberVerificationApplication ===
+// === Module 7010: useCanReapplyToRejectedMemberVerificationApplication ===
 
-// Module 6979 (useCanReapplyToRejectedMemberVerificationApplication)
+// Module 7010 (useCanReapplyToRejectedMemberVerificationApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5731 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5046 */;
+import InviteStore from "InviteStore" /* 5762 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5077 */;
 
 const require = globalThis.__r;
 
@@ -37,7 +37,7 @@ export function useCanReapplyToRejectedMemberVerificationApplication(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -77,7 +77,7 @@ export function useCanReapplyToRejectedMemberVerificationApplication(guildId) {
         c4 = 0;
         tmp3(false);
         c5 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       } catch (tmp18) {
         closure_3 = tmp18;
         if (tmp4 === c4) {

@@ -1,16 +1,16 @@
-// === Module 11165: CollectiblesShopCardV2 ===
+// === Module 11211: CollectiblesShopCardV2 ===
 
-// Module 11165 (CollectiblesShopCardV2)
+// Module 11211 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import v1 from "v1" /* 1268 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 11168 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 11224 */;
+import v1 from "v1" /* 1269 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 11214 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 11270 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6280 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6311 */;
 
 require = fn;
 function CollectiblesShopCardInternalV2(product) {
@@ -310,7 +310,7 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { card: null, topRowOverlay: null, badge: null, badgePill: null, badgeOverrideText: null, badgePillDarkMode: null, badgePillLightMode: null, wishlistButton: null };
 let size = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.card = size;

@@ -1,15 +1,15 @@
-// === Module 11608: SlayerStorefrontDisclaimerUtils ===
+// === Module 11656: SlayerStorefrontDisclaimerUtils ===
 
-// Module 11608 (SlayerStorefrontDisclaimerUtils)
+// Module 11656 (SlayerStorefrontDisclaimerUtils)
 import util from "util" /* 1112 */;
-import _modDef4144 from "module_4144" /* 4144 */;
-import LocaleStore from "LocaleStore" /* 2188 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7559 */;
+import _modDef4145 from "module_4145" /* 4145 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7590 */;
 
 require = fn;
 const MarketingURLs = fn(1071).MarketingURLs;
-let closure_6 = { [fn(11609).StorefrontPlatform.DESKTOP]: "PC", [fn(11609).StorefrontPlatform.XBOX]: "Xbox", [fn(11609).StorefrontPlatform.PLAYSTATION]: "PlayStation", [fn(11609).StorefrontPlatform.SWITCH]: "Switch", [fn(11609).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [fn(11609).StorefrontPlatform.NETFLIX]: "Netflix", [fn(11609).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
-let items = [fn(11609).StorefrontPlatform.PLAYSTATION];
+let closure_6 = { [fn(11657).StorefrontPlatform.DESKTOP]: "PC", [fn(11657).StorefrontPlatform.XBOX]: "Xbox", [fn(11657).StorefrontPlatform.PLAYSTATION]: "PlayStation", [fn(11657).StorefrontPlatform.SWITCH]: "Switch", [fn(11657).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [fn(11657).StorefrontPlatform.NETFLIX]: "Netflix", [fn(11657).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
+let items = [fn(11657).StorefrontPlatform.PLAYSTATION];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx");
 
@@ -28,7 +28,7 @@ export function getNotSupportedSentence(id) {
     const listFormat = new Intl.ListFormat(LocaleStore.locale);
     obj.platforms = listFormat.format(arr.map((item) => closure_1_6[item]));
     obj.count = arr.length;
-    str = intl.formatToPlainString(_modDef4144["5h8p5P"], obj);
+    str = intl.formatToPlainString(_modDef4145["5h8p5P"], obj);
   }
   return str;
 }
@@ -52,9 +52,9 @@ export function getCheckoutDisclaimerMessageForApplication(id) {
     const listFormat = new Intl.ListFormat(LocaleStore.locale);
     obj.platforms = listFormat.format(arr.map((item) => closure_1_6[item]));
     obj.count = arr.length;
-    platforms_info = intl2.formatToPlainString(_modDef4144["5h8p5P"], obj);
+    platforms_info = intl2.formatToPlainString(_modDef4145["5h8p5P"], obj);
   }
-  return intl.format(_modDef4144.Q0dHYO, { platforms_info });
+  return intl.format(_modDef4145.Q0dHYO, { platforms_info });
 }
 export function getFinePrintMessageForApplication(name, shouldAppendDisclaimer) {
   let str;
@@ -87,11 +87,11 @@ export function getFinePrintMessageForApplication(name, shouldAppendDisclaimer) 
       const listFormat = new Intl.ListFormat(LocaleStore.locale);
       obj3.platforms = listFormat.format(arr.map((item) => closure_1_6[item]));
       obj3.count = arr.length;
-      str2 = intl3.formatToPlainString(_modDef4144["5h8p5P"], obj3);
+      str2 = intl3.formatToPlainString(_modDef4145["5h8p5P"], obj3);
     }
     const obj4 = { platforms_info: str2 };
-    obj2.platforms_info = intl2.format(_modDef4144.Q0dHYO, obj4);
-    let formatResult = format(_modDef4144["3ah/a2"], obj2);
+    obj2.platforms_info = intl2.format(_modDef4145.Q0dHYO, obj4);
+    let formatResult = format(_modDef4145["3ah/a2"], obj2);
   } else {
     const obj = { applicationName: str };
     formatResult = format(util.t.CVITgq, obj);
@@ -109,7 +109,7 @@ export function getMobileFinePrintMessageForApplication(getOrFetchApplication, s
   const obj = { buyButtonLabel: stringResult, paidServiceTermURL: MarketingURLs.PAID_TERMS, applicationName: str };
   const intl = util.intl;
   const format = intl.format;
-  const tmp4 = _modDef4144;
+  const tmp4 = _modDef4145;
   if (shouldAppendDisclaimer.shouldAppendDisclaimer) {
     let id;
     if (getOrFetchApplication != null) {
@@ -129,12 +129,12 @@ export function getMobileFinePrintMessageForApplication(getOrFetchApplication, s
       const listFormat = new Intl.ListFormat(LocaleStore.locale);
       obj2.platforms = listFormat.format(arr2.map((item) => closure_1_6[item]));
       obj2.count = arr2.length;
-      str2 = intl3.formatToPlainString(_modDef4144["5h8p5P"], obj2);
+      str2 = intl3.formatToPlainString(_modDef4145["5h8p5P"], obj2);
     }
     const obj3 = { platforms_info: str2 };
     items = [format(tmp4.Q0dHYO, obj3), ];
     const intl2 = util.intl;
-    items[1] = intl2.format(_modDef4144.Ufm9XX, obj);
+    items[1] = intl2.format(_modDef4145.Ufm9XX, obj);
     let items1 = items;
   } else {
     items1 = [format(tmp4.Ufm9XX, obj)];
@@ -159,13 +159,13 @@ export function getRedeemPurchaseDescriptionForApplication(applicationName) {
     const listFormat = new Intl.ListFormat(LocaleStore.locale);
     obj2.platforms = listFormat.format(arr.map((item) => closure_1_6[item]));
     obj2.count = arr.length;
-    str = intl2.formatToPlainString(_modDef4144["5h8p5P"], obj2);
+    str = intl2.formatToPlainString(_modDef4145["5h8p5P"], obj2);
   }
   obj.platforms_info = str;
-  return intl.format(_modDef4144.fO4b1C, obj);
+  return intl.format(_modDef4145.fO4b1C, obj);
 }
 export function getGiftLinkAccountDescriptionForApplication(applicationName, hasAlreadyLinked) {
-  const tmp3 = _modDef4144;
+  const tmp3 = _modDef4145;
   if (hasAlreadyLinked.hasAlreadyLinked) {
     let vyAtfo = tmp3.yqAKVO;
     let tmp4 = importDefault;
@@ -190,7 +190,7 @@ export function getGiftLinkAccountDescriptionForApplication(applicationName, has
     const listFormat = new Intl.ListFormat(LocaleStore.locale);
     obj2.platforms = listFormat.format(arr.map((item) => closure_1_6[item]));
     obj2.count = arr.length;
-    str = intl2.formatToPlainString(tmp4(4144)["5h8p5P"], obj2);
+    str = intl2.formatToPlainString(tmp4(4145)["5h8p5P"], obj2);
   }
   obj.platforms_info = str;
   return intl.format(vyAtfo, obj);

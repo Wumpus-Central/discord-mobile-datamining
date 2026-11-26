@@ -1,14 +1,14 @@
-// === Module 2066: parse ===
+// === Module 2067: parse ===
 
-// Module 2066 (parse)
-import _modDef2029 from "module_2029" /* 2029 */;
-import _modDef2068 from "module_2068" /* 2068 */;
-import markdownRules from "markdownRules" /* 2069 */;
-import i18n_updateRules from "i18n/updateRules" /* 2070 */;
+// Module 2067 (parse)
+import _modDef2030 from "module_2030" /* 2030 */;
+import _modDef2069 from "module_2069" /* 2069 */;
+import markdownRules from "markdownRules" /* 2070 */;
+import i18n_updateRules from "i18n/updateRules" /* 2071 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const Constants = fn(2067);
+const Constants = fn(2068);
 ({ FORMAT_RE: closure_6, MARKDOWN_RE: metroImportDefault, UNSAFE_RE: closure_8, UNSAFE_RE_ALL: closure_9 } = Constants);
 class FormattedMessage {
   constructor(arg0, arg1, arg2) {
@@ -34,7 +34,7 @@ prototype["format"] = function format(_2d) {
     const first = tmp2[0];
     const intlMessage2 = self.intlMessage;
     const formatResult = intlMessage2.format(first);
-    if (typeof f122487 === "function") {
+    if (typeof f122874 === "function") {
       const hasItem = formatResult.includes("\n\n");
       let text = formatResult;
       if (hasItem) {
@@ -54,7 +54,7 @@ prototype["format"] = function format(_2d) {
 };
 prototype["astFormat"] = function astFormat(_2d) {
   const tmp = _slicedToArray(this.getContext(_2d), 2);
-  if (typeof f122488 === "function") {
+  if (typeof f122875 === "function") {
     const obj = { inline: false, context: tmp[0], unsafeContext: tmp[1] };
     return closure_132_0(tmp2 + "\n\n", obj);
   } else {
@@ -95,10 +95,10 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/pa
 export { FormattedMessage };
 export function setUpdateRules(fn) {
   const rules = markdownRules.rules;
-  _modDef2068.parserFor(fn(rules));
-  const obj2 = _modDef2068;
-  closure_1 = obj2.reactFor(_modDef2068.ruleOutput(rules, "react"));
-  f122487 = (arr, context, unsafeContext) => {
+  _modDef2069.parserFor(fn(rules));
+  const obj2 = _modDef2069;
+  closure_1 = obj2.reactFor(_modDef2069.ruleOutput(rules, "react"));
+  f122874 = (arr, context, unsafeContext) => {
     const hasItem = arr.includes("\n\n");
     let text = arr;
     if (hasItem) {
@@ -108,19 +108,19 @@ export function setUpdateRules(fn) {
     }
     return closure_1(closure_0(text, { inline: !hasItem, context, unsafeContext }));
   };
-  closure_0 = _modDef2068.parserFor(markdownRules.rules);
-  f122488 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
+  closure_0 = _modDef2069.parserFor(markdownRules.rules);
+  f122875 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
 }
 export function getMessage(str, arg1) {
   if (null == str) {
     return "";
   } else {
-    if (null == f122487) {
+    if (null == f122874) {
       const rules = markdownRules.rules;
-      _modDef2068.parserFor(i18n_updateRules.default(rules));
-      const obj2 = _modDef2068;
-      closure_1 = obj2.reactFor(_modDef2068.ruleOutput(rules, "react"));
-      f122487 = (arr, context, unsafeContext) => {
+      _modDef2069.parserFor(i18n_updateRules.default(rules));
+      const obj2 = _modDef2069;
+      closure_1 = obj2.reactFor(_modDef2069.ruleOutput(rules, "react"));
+      f122874 = (arr, context, unsafeContext) => {
         const hasItem = arr.includes("\n\n");
         let text = arr;
         if (hasItem) {
@@ -130,8 +130,8 @@ export function getMessage(str, arg1) {
         }
         return closure_1(closure_0(text, { inline: !hasItem, context, unsafeContext }));
       };
-      closure_0 = _modDef2068.parserFor(markdownRules.rules);
-      f122488 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
+      closure_0 = _modDef2069.parserFor(markdownRules.rules);
+      f122875 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
     }
     const str2 = "".replace(/^\n+|\n+$/g, "");
     const isMatch = regex.test(str2);
@@ -145,7 +145,7 @@ export function getMessage(str, arg1) {
         const obj5 = Object.create(FormattedMessage.prototype);
         obj5.message = replaced;
         obj5.hasMarkdown = isMatch1;
-        const tmp15 = new _modDef2029(obj5.message, arg1);
+        const tmp15 = new _modDef2030(obj5.message, arg1);
         obj5.intlMessage = tmp15;
         let tmp5 = obj5;
       } else {

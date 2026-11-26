@@ -1,12 +1,12 @@
-// === Module 14056: useShareChatInputActions ===
+// === Module 14108: useShareChatInputActions ===
 
-// Module 14056 (useShareChatInputActions)
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9495 */;
+// Module 14108 (useShareChatInputActions)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9537 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiIntention = fn(1389).EmojiIntention;
+const EmojiIntention = fn(1390).EmojiIntention;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");
 

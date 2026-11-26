@@ -1,14 +1,14 @@
-// === Module 15168: useHasXboxMonthlyOrbsPerk ===
+// === Module 15218: useHasXboxMonthlyOrbsPerk ===
 
-// Module 15168 (useHasXboxMonthlyOrbsPerk)
+// Module 15218 (useHasXboxMonthlyOrbsPerk)
 import initialize from "initialize" /* 504 */;
-import PerksStateUtils from "PerksStateUtils" /* 1392 */;
-import user from "user" /* 1399 */;
-import PremiumUtils from "PremiumUtils" /* 2173 */;
-import UserStore from "UserStore" /* 1386 */;
+import PerksStateUtils from "PerksStateUtils" /* 1393 */;
+import user from "user" /* 1400 */;
+import PremiumUtils from "PremiumUtils" /* 2174 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
-const PremiumTypes = fn(1388).PremiumTypes;
+const PremiumTypes = fn(1389).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
 

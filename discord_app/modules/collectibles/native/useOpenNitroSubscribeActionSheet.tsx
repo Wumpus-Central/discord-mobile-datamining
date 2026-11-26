@@ -1,12 +1,12 @@
-// === Module 11579: useOpenNitroSubscribeActionSheet ===
+// === Module 11627: useOpenNitroSubscribeActionSheet ===
 
-// Module 11579 (useOpenNitroSubscribeActionSheet)
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9074 */;
+// Module 11627 (useOpenNitroSubscribeActionSheet)
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9116 */;
 import noop from "module_19" /* 19 */;
 
 const Constants = fn(1071);
 ({ AnalyticsPages: c3, AnalyticsSections: closure_4 } = Constants);
-const PremiumTypes = fn(1388).PremiumTypes;
+const PremiumTypes = fn(1389).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useOpenNitroSubscribeActionSheet.tsx");
 

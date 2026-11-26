@@ -1,12 +1,12 @@
-// === Module 10582: InAppNotificationConstants ===
+// === Module 10627: InAppNotificationConstants ===
 
-// Module 10582 (InAppNotificationConstants)
+// Module 10627 (InAppNotificationConstants)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
+import _mod1654 from "module_1654" /* 1654 */;
 import size from "module_2" /* 2 */;
 
 const obj = { duration: 220, easing: null };
-const Easing = _mod1653.Easing;
+const Easing = _mod1654.Easing;
 obj.easing = Easing.bezier(0.16, 1, 0.3, 1);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationConstants.tsx");
 

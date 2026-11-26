@@ -1,17 +1,17 @@
-// === Module 17440: CollectiblesShopFeaturedPage ===
+// === Module 17497: CollectiblesShopFeaturedPage ===
 
-// Module 17440 (CollectiblesShopFeaturedPage)
+// Module 17497 (CollectiblesShopFeaturedPage)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import generated_NoResults from "generated/NoResults" /* 11548 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 17441 */;
+import generated_NoResults from "generated/NoResults" /* 11596 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 17498 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const constants = fn(1073).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopFeaturedPage.tsx");

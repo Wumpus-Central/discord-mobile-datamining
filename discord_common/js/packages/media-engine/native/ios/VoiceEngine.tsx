@@ -1,9 +1,9 @@
-// === Module 2134: VoiceEngine ===
+// === Module 2135: VoiceEngine ===
 
-// Module 2134 (VoiceEngine)
+// Module 2135 (VoiceEngine)
 import logger_Logger from "logger/Logger" /* 4 */;
 import _mod17 from "module_17" /* 17 */;
-import VoiceEngineModule from "VoiceEngineModule" /* 2135 */;
+import VoiceEngineModule from "VoiceEngineModule" /* 2136 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

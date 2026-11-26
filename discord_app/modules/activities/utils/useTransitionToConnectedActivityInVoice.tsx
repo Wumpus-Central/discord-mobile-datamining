@@ -1,11 +1,11 @@
-// === Module 19373: useTransitionToConnectedActivityInVoice ===
+// === Module 19436: useTransitionToConnectedActivityInVoice ===
 
-// Module 19373 (useTransitionToConnectedActivityInVoice)
+// Module 19436 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 
 require = fn;
 const ComponentActions = fn(1071).ComponentActions;
@@ -41,7 +41,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else {
           try {
@@ -76,20 +76,20 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  embeddedActivityLocationChannelId = handler(4933).getEmbeddedActivityLocationChannelId(_location2);
+                  embeddedActivityLocationChannelId = handler(4964).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(5659)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(5690)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(10085)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(10127)(obj5), done: false };
                         return obj6;
                       }
                     }
                   }
                   c4 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: "+95" };
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
@@ -107,7 +107,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(9965)(closure_1_3, _location);
+                closure_3_1(10007)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

@@ -1,24 +1,24 @@
-// === Module 17669: useMainTabsPanelsGesture ===
+// === Module 17726: useMainTabsPanelsGesture ===
 
-// Module 17669 (useMainTabsPanelsGesture)
-import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import timingPresets from "timingPresets" /* 5225 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11911 */;
+// Module 17726 (useMainTabsPanelsGesture)
+import PlatformUtils2 from "PlatformUtils" /* 1379 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import timingPresets from "timingPresets" /* 5256 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11959 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const LaunchPadGestureRefContextDefault = tmp(17671);
+const LaunchPadGestureRefContextDefault = tmp(17728);
 require = fn;
-const LaunchPadTypes = fn(11910).LaunchPadTypes;
-let PlatformUtils = fn(1378);
+const LaunchPadTypes = fn(11958).LaunchPadTypes;
+let PlatformUtils = fn(1379);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(17670);
+const PanelsConfig = fn(17727);
 let closure_6 = PlatformUtils ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
 let closure_7 = { code: "(function useMainTabsPanelsGestureTsx1(width){let[isDragging,translateX,IS_ANDROID,withTiming,timingInstant,isFoldChange,timingStandard]=this.__closure;if(isDragging.get())return;if(translateX.get()===0)return;if(IS_ANDROID){translateX.set(withTiming(width,timingInstant,'animate-always'));}else{translateX.set(isFoldChange?withTiming(width,timingStandard,'respect-motion-settings'):width);}})" };
 let closure_8 = { code: "(function handleAnimationFinish_useMainTabsPanelsGestureTsx2(finished){let[onVisibilityChange,scheduleOnRN,show]=this.__closure;if(!finished)return;if(onVisibilityChange!=null){scheduleOnRN(onVisibilityChange,show);}})" };
@@ -71,20 +71,20 @@ export default function useMainTabsPanelsGesture(canDrag) {
   if (!canDrag.startShown) {
     num = openWidth;
   }
-  const sharedValue = require("module_1653").useSharedValue(num);
+  const sharedValue = require("module_1654").useSharedValue(num);
   c8 = sharedValue;
-  const obj = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(false);
+  const obj = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(false);
   c9 = sharedValue1;
   ref = noop.useRef(false);
   items = [ref];
   callback = noop.useCallback((current) => {
     ref.current = current;
   }, items);
-  const tmp5Result = require("module_1653");
-  sharedValue2 = require("module_1653").useSharedValue(false);
-  const tmp5Result6 = require("module_1653");
-  sharedValue3 = require("module_1653").useSharedValue(false);
+  const tmp5Result = require("module_1654");
+  sharedValue2 = require("module_1654").useSharedValue(false);
+  const tmp5Result6 = require("module_1654");
+  sharedValue3 = require("module_1654").useSharedValue(false);
   ref = noop.useRef(foldSeam);
   let items1 = [foldSeam, sharedValue1, sharedValue, openWidth];
   const effect = noop.useEffect(() => {
@@ -117,9 +117,9 @@ export default function useMainTabsPanelsGesture(canDrag) {
     useMainTabsPanelsGestureTsx1.__closure = items1;
     useMainTabsPanelsGestureTsx1.__workletHash = 6120850630646;
     useMainTabsPanelsGestureTsx1.__initData = tmp;
-    _mod1706.scheduleOnUI(useMainTabsPanelsGestureTsx1, c7);
+    _mod1707.scheduleOnUI(useMainTabsPanelsGestureTsx1, c7);
   }, items1);
-  let items2 = [c9, sharedValue, openWidth, onVisibilityChange, require("module_1706").scheduleOnRN, onPreMovement, c6, c8, require("PanelsConfig").isTimingConfig, require("timing/timing").withTiming, require("spring/spring").withSpring];
+  let items2 = [c9, sharedValue, openWidth, onVisibilityChange, require("module_1707").scheduleOnRN, onPreMovement, c6, c8, require("PanelsConfig").isTimingConfig, require("timing/timing").withTiming, require("spring/spring").withSpring];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -188,9 +188,9 @@ export default function useMainTabsPanelsGesture(canDrag) {
   useMainTabsPanelsGestureTsx3.__initData = tmp13;
   let items4 = [onVisibilityChange, onPreMovement, sharedValue, openWidth];
   callback1 = noop.useCallback(useMainTabsPanelsGestureTsx3, items4);
-  const tmp5Result7 = require("module_1653");
-  sharedValue4 = require("module_1653").useSharedValue(false);
-  const tmp5Result8 = require("module_1653");
+  const tmp5Result7 = require("module_1654");
+  sharedValue4 = require("module_1654").useSharedValue(false);
+  const tmp5Result8 = require("module_1654");
   let items5 = [ref, sharedValue2];
   [tmp26, tmp27] = items5;
   function useMainTabsPanelsGestureTsx4() {
@@ -214,9 +214,9 @@ export default function useMainTabsPanelsGesture(canDrag) {
   useMainTabsPanelsGestureTsx5.__closure = items8;
   useMainTabsPanelsGestureTsx5.__workletHash = 10653285139228;
   useMainTabsPanelsGestureTsx5.__initData = tmp28;
-  const animatedReaction = require("module_1653").useAnimatedReaction(useMainTabsPanelsGestureTsx4, useMainTabsPanelsGestureTsx5);
-  const tmp5Result9 = require("module_1653");
-  sharedValue5 = require("module_1653").useSharedValue({ x: 0, y: 0 });
+  const animatedReaction = require("module_1654").useAnimatedReaction(useMainTabsPanelsGestureTsx4, useMainTabsPanelsGestureTsx5);
+  const tmp5Result9 = require("module_1654");
+  sharedValue5 = require("module_1654").useSharedValue({ x: 0, y: 0 });
   context = obj3.useContext(LaunchPadGestureRefContextDefault);
   let items9 = [tmp4, sharedValue, openWidth, width, sharedValue1, callback1, onDragStart, canDrag, sharedValue5, tmp3, cancelOnSwipeRightFromStart, sharedValue2, sharedValue3, callback, context, sharedValue4];
   memo = obj3.useMemo(() => {
@@ -298,7 +298,7 @@ export default function useMainTabsPanelsGesture(canDrag) {
     useMainTabsPanelsGestureTsx7.__workletHash = 6803230960781;
     useMainTabsPanelsGestureTsx7.__initData = tmp13;
     const onTouchesDownResult = result.manualActivation(PlatformUtils2.isAndroid()).hitSlop(rect).onTouchesDown(useMainTabsPanelsGestureTsx6);
-    const items4 = [closure_14, c9, _mod1706.scheduleOnRN, callback, c1];
+    const items4 = [closure_14, c9, _mod1707.scheduleOnRN, callback, c1];
     [tmp27, tmp28, tmp29, tmp30, tmp31] = items4;
     function useMainTabsPanelsGestureTsx8() {
       const result = _undefined.set(true);
@@ -335,7 +335,7 @@ export default function useMainTabsPanelsGesture(canDrag) {
     useMainTabsPanelsGestureTsx9.__workletHash = 13482277131208;
     useMainTabsPanelsGestureTsx9.__initData = tmp33;
     const onStartResult = result.manualActivation(PlatformUtils2.isAndroid()).hitSlop(rect).onTouchesDown(useMainTabsPanelsGestureTsx6).onTouchesMove(useMainTabsPanelsGestureTsx7).onStart(useMainTabsPanelsGestureTsx8);
-    const items8 = [closure_16, tmp25, sharedValue2, sharedValue4, _mod1706.scheduleOnRN, callback, _undefined7, callback1, c8, c7];
+    const items8 = [closure_16, tmp25, sharedValue2, sharedValue4, _mod1707.scheduleOnRN, callback, _undefined7, callback1, c8, c7];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -380,6 +380,6 @@ export default function useMainTabsPanelsGesture(canDrag) {
     return result.manualActivation(PlatformUtils2.isAndroid()).hitSlop(rect).onTouchesDown(useMainTabsPanelsGestureTsx6).onTouchesMove(useMainTabsPanelsGestureTsx7).onStart(useMainTabsPanelsGestureTsx8).onChange(useMainTabsPanelsGestureTsx9).onFinalize(useMainTabsPanelsGestureTsx10);
   }, items9);
   const items10 = [memo, sharedValue2, sharedValue3, sharedValue];
-  const tmp5Result10 = require("module_1653");
+  const tmp5Result10 = require("module_1654");
   return { gesture: memo, panelGestureContext: noop.useMemo(() => ({ gesture: memo, disallowGesture: sharedValue2, edgeSwipeOnly: sharedValue3, translateX }), items10), isDragging: sharedValue1, translateX: sharedValue, movePanel: callback1, maxWidth: openWidth, isDraggingRef: ref };
 };

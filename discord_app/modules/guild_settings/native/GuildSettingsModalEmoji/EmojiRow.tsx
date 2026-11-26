@@ -1,24 +1,24 @@
-// === Module 19923: GuildSettingsModalEmoji/EmojiRow ===
+// === Module 19987: GuildSettingsModalEmoji/EmojiRow ===
 
-// Module 19923 (GuildSettingsModalEmoji/EmojiRow)
+// Module 19987 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 575 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4962 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5242 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9719 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 19924 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4993 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5273 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9761 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 19988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import UserStore from "UserStore" /* 1386 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { flex: { flex: 1 }, flexCenterRow: { flexDirection: "row", alignItems: "center" }, nameContainer: { paddingVertical: 4, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" }, activeNameContainer: null, usernameContainer: null, emojiText: null, colon: null, username: null, emojiImage: null, overflowIcon: null };
-let PlatformUtils = fn(1378);
+let PlatformUtils = fn(1379);
 let num = 4;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -26,7 +26,7 @@ if (PlatformUtils.isAndroid()) {
 let obj3 = { paddingVertical: 4, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 obj2.activeNameContainer = { padding: num, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 obj2.usernameContainer = { marginRight: 8, maxWidth: 150, flexShrink: 1 };
-PlatformUtils = fn(1378);
+PlatformUtils = fn(1379);
 let num2;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;

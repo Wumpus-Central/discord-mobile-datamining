@@ -1,17 +1,17 @@
-// === Module 11669: ForLaterScreen ===
+// === Module 11717: ForLaterScreen ===
 
-// Module 11669 (ForLaterScreen)
+// Module 11717 (ForLaterScreen)
 import nativeDefault from "native" /* 575 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import springPresets from "springPresets" /* 5614 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6085 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6348 */;
-import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 11671 */;
-import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 11675 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import springPresets from "springPresets" /* 5645 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6116 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
+import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 11719 */;
+import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 11723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11670 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11718 */;
 
 const require = globalThis.__r;
 
@@ -29,16 +29,16 @@ function ForLaterPage(type) {
   items = [SavedMessagesStore];
   const stateFromStoresObject = throttledNow(504).useStateFromStoresObject(items, () => ({ overdueReminderCount: SavedMessagesStore.getOverdueMessageReminderCount(), bookmarkCount: SavedMessagesStore.getBookmarkCount() }));
   ({ overdueReminderCount, bookmarkCount } = stateFromStoresObject);
-  if (type !== throttledNow(11666).SavedMessageSortTypes.BOOKMARK) {
+  if (type !== throttledNow(11714).SavedMessageSortTypes.BOOKMARK) {
     bookmarkCount = savedMessages.length;
   }
-  const tmp6 = fetchState === throttledNow(11666).BookmarksFetchState.LOADING;
+  const tmp6 = fetchState === throttledNow(11714).BookmarksFetchState.LOADING;
   const obj = throttledNow(504);
-  const analyticsLocations = useAnalyticsLocationsDefault(tmp(6349).FOR_LATER_POPOUT).analyticsLocations;
+  const analyticsLocations = useAnalyticsLocationsDefault(tmp(6380).FOR_LATER_POPOUT).analyticsLocations;
   const obj2 = { type: null, name: null, properties: null };
   const tmpResult = useAnalyticsLocationsDefault;
-  obj2.type = throttledNow(1263).ImpressionTypes.MODAL;
-  obj2.name = throttledNow(1263).ImpressionNames.FOR_LATER_LIST_VIEWED;
+  obj2.type = throttledNow(1264).ImpressionTypes.MODAL;
+  obj2.name = throttledNow(1264).ImpressionNames.FOR_LATER_LIST_VIEWED;
   obj2.properties = { tab_type: type, total_count: bookmarkCount, overdue_count: overdueReminderCount };
   const items1 = [bookmarkCount, overdueReminderCount];
   useTrackImpressionDefault(obj2, {}, items1);
@@ -53,11 +53,11 @@ function ForLaterPage(type) {
   [][0] = throttledNow;
   if (0 === savedMessages.length) {
     if (!tmp6) {
-      if (fetchState !== tmp4(11666).BookmarksFetchState.LOADED_HAS_MORE) {
+      if (fetchState !== tmp4(11714).BookmarksFetchState.LOADED_HAS_MORE) {
         const obj3 = { value: analyticsLocations, children: null };
         const obj4 = { type };
-        obj3.children = closure_8(tmp(11691), obj4);
-        let tmp18 = closure_8(tmp4(6348).AnalyticsLocationProvider, obj3);
+        obj3.children = closure_8(tmp(11739), obj4);
+        let tmp18 = closure_8(tmp4(6379).AnalyticsLocationProvider, obj3);
       }
     }
     const obj5 = { style: null };
@@ -74,9 +74,9 @@ function ForLaterPage(type) {
       tmp22Result = closure_8(closure_5, obj9);
     }
     obj8.ListFooterComponent = tmp22Result;
-    obj7.children = closure_8(tmp4(7451).FlashList, obj8);
+    obj7.children = closure_8(tmp4(7482).FlashList, obj8);
     obj6.children = closure_8(closure_6, obj7);
-    return closure_8(tmp4(6348).AnalyticsLocationProvider, obj6);
+    return closure_8(tmp4(6379).AnalyticsLocationProvider, obj6);
   }
   const date = new Date();
 }
@@ -84,7 +84,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 }, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
 let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.headerBorder = size;
@@ -100,7 +100,7 @@ let result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterS
 export default noop.memo(function ForLaterScreen(type) {
   _require = undefined;
   const tmp = closure_10();
-  const sharedValue = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(0);
   _require = sharedValue;
   items = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
@@ -110,7 +110,7 @@ export default noop.memo(function ForLaterScreen(type) {
     }
     const result = _undefined.set(spring_spring.withSpring(num, springPresets.Reanimated3DefaultSpringConfig));
   }, items);
-  let obj = require("module_1653");
+  let obj = require("module_1654");
   const items1 = [closure_11, sharedValue];
   _require = undefined;
   [tmp5, tmp6] = items1;
@@ -125,11 +125,11 @@ export default noop.memo(function ForLaterScreen(type) {
   ForLaterScreenTsx1.__workletHash = 10104767508797;
   ForLaterScreenTsx1.__initData = tmp5;
   const obj3 = { style: tmp.container, children: null };
-  const animatedStyle = require("module_1653").useAnimatedStyle(ForLaterScreenTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(ForLaterScreenTsx1);
   const obj4 = { style: null };
   const items3 = [tmp.headerBorder, animatedStyle];
   obj4.style = items3;
-  const items4 = [closure_8(_modDef1653.View, obj4), closure_8(ForLaterPage, { type: type.type, handleScroll: callback })];
+  const items4 = [closure_8(_modDef1654.View, obj4), closure_8(ForLaterPage, { type: type.type, handleScroll: callback })];
   obj3.children = items4;
   return closure_9(closure_6, obj3);
 });

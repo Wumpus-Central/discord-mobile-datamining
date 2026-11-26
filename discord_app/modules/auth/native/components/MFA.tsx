@@ -1,8 +1,8 @@
-// === Module 17630: components/MFA ===
+// === Module 17687: components/MFA ===
 
-// Module 17630 (components/MFA)
+// Module 17687 (components/MFA)
 import applyDefault from "apply" /* 12 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6808 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6839 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -21,11 +21,11 @@ export default function ConnectedMFA() {
     obj = {};
   }
   ({ inContainer, isMultiAccount } = obj);
-  const navigation = isMultiAccount(1500).useNavigation();
+  const navigation = isMultiAccount(1501).useNavigation();
   if (inContainer) {
-    inContainer = navigation(7277)();
+    inContainer = navigation(7308)();
   }
-  const obj2 = isMultiAccount(1500);
+  const obj2 = isMultiAccount(1501);
   items = [AuthenticationStore];
   const items1 = [isMultiAccount];
   const stateFromStores = isMultiAccount(504).useStateFromStores(items, () => ({ ticket: AuthenticationStore.getMFATicket(), methods: AuthenticationStore.getMFAMethods() }), [], statesAreEqual);
@@ -56,15 +56,15 @@ export default function ConnectedMFA() {
       tmp13 = obj4;
     }
     obj3.headerRightContainerStyle = tmp13;
-    return jsx(isMultiAccount(17243).MFAModal, obj3);
+    return jsx(isMultiAccount(17294).MFAModal, obj3);
   } else {
-    const tmpResult2 = isMultiAccount(1358);
+    const tmpResult2 = isMultiAccount(1359);
     tmp4(575).space;
-    const isAndroidResult = isMultiAccount(1358).isAndroid();
+    const isAndroidResult = isMultiAccount(1359).isAndroid();
     const space = { paddingLeft: null, paddingTop: null };
-    space.paddingLeft = isMultiAccount(1358).isAndroid() ? space.PX_8 : space.PX_16;
+    space.paddingLeft = isMultiAccount(1359).isAndroid() ? space.PX_8 : space.PX_16;
     space.paddingTop = tmp4(575).space.PX_12;
-    const tmp11 = isMultiAccount(1358).isAndroid() ? space.PX_8 : space.PX_16;
+    const tmp11 = isMultiAccount(1359).isAndroid() ? space.PX_8 : space.PX_16;
   }
   const tmpResult = isMultiAccount(504);
 };

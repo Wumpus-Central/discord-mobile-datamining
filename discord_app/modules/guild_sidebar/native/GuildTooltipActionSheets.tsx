@@ -1,28 +1,28 @@
-// === Module 17912: GuildTooltipActionSheets ===
+// === Module 17969: GuildTooltipActionSheets ===
 
-// Module 17912 (GuildTooltipActionSheets)
-import _mod1706 from "module_1706" /* 1706 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import dismissible_content from "dismissible_content" /* 4845 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11029 */;
-import DismissibleActionSheet from "DismissibleActionSheet" /* 11030 */;
-import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 17922 */;
-import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 17923 */;
+// Module 17969 (GuildTooltipActionSheets)
+import _mod1707 from "module_1707" /* 1707 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import dismissible_content from "dismissible_content" /* 4876 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11075 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 11076 */;
+import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 17979 */;
+import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 17980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(17913, dependencyMap.paths);
+  return asyncRequireImpl(17970, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(17915, dependencyMap.paths);
+  return asyncRequireImpl(17972, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(17918, dependencyMap.paths);
+  return asyncRequireImpl(17975, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(17920, dependencyMap.paths);
+  return asyncRequireImpl(17977, dependencyMap.paths);
 }
 class GuildTooltipActionSheets {
   constructor(arg0) {
@@ -71,7 +71,7 @@ class GuildTooltipActionSheets {
     return jsx(tmp4(tmp2[14]), obj1);
   }
 }
-const hasOwnProperty = fn(4858).DismissibleContentGroupName;
+const hasOwnProperty = fn(4889).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const GuildTooltipActionSheet = "GuildTooltipActionSheet";
 let closure_13 = { code: "(function GuildTooltipActionSheetsTsx1(){let[scheduleOnRN,setShouldRender]=this.__closure;return scheduleOnRN(setShouldRender,true);})" };
@@ -81,7 +81,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildToo
 export default function GuildTooltipActionSheetsGuard(arg0) {
   [tmp2, require] = noop.useState(false);
   const effect = noop.useEffect(() => {
-    items = [closure_13, _mod1706.scheduleOnRN, closure_1_0];
+    items = [closure_13, _mod1707.scheduleOnRN, closure_1_0];
     c0 = undefined;
     c1 = undefined;
     [tmp, tmp2, tmp3] = items;
@@ -94,7 +94,7 @@ export default function GuildTooltipActionSheetsGuard(arg0) {
     GuildTooltipActionSheetsTsx1.__closure = items1;
     GuildTooltipActionSheetsTsx1.__workletHash = 14288497747211;
     GuildTooltipActionSheetsTsx1.__initData = tmp;
-    _mod1706.scheduleOnUI(GuildTooltipActionSheetsTsx1);
+    _mod1707.scheduleOnUI(GuildTooltipActionSheetsTsx1);
   }, []);
   let tmp4 = null;
   if (tmp2) {

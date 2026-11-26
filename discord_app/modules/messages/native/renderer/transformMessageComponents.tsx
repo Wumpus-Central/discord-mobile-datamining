@@ -1,21 +1,21 @@
-// === Module 8780: transformMessageComponents ===
+// === Module 8822: transformMessageComponents ===
 
-// Module 8780 (transformMessageComponents)
+// Module 8822 (transformMessageComponents)
 import DurationsDefault from "Durations" /* 1088 */;
-import URLUtilsDefault from "URLUtils" /* 1379 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6364 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6372 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8796 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8806 */;
+import URLUtilsDefault from "URLUtils" /* 1380 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6395 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6403 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8838 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8848 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import priv from "priv" /* 1454 */;
+import priv from "priv" /* 1455 */;
 
 const util = tmp4(1112);
-const FlagUtils = tmp4(1404);
-const MediaTypes = tmp4(6371);
-const AgeVerificationUtils = tmp4(6794);
-const ExplicitMediaUtils = tmp4(8795);
-const sanitizeMediaDimension = tmp4(8807);
+const FlagUtils = tmp4(1405);
+const MediaTypes = tmp4(6402);
+const AgeVerificationUtils = tmp4(6825);
+const ExplicitMediaUtils = tmp4(8837);
+const sanitizeMediaDimension = tmp4(8849);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -101,31 +101,30 @@ function transformToRowGeneratedComponent(message, accessory) {
         if (tmp(tmp2[6]).ComponentType.MENTIONABLE_SELECT !== type) {
           if (tmp(tmp2[6]).ComponentType.CHANNEL_SELECT !== type) {
             if (tmp(tmp2[6]).ComponentType.SECTION === type) {
-              const tmp65 = transformToRowGeneratedComponent(message, accessory.accessory);
-              let tmp67 = null;
-              if (null != tmp65) {
-                tmp67 = tmp65;
+              let tmp65 = null;
+              if (null != accessory.accessory) {
+                const tmp67 = transformToRowGeneratedComponent(message, accessory.accessory);
+                let tmp68 = null;
+                if (null != tmp67) {
+                  tmp68 = tmp67;
+                }
+                tmp65 = tmp68;
               }
-              let tmp68 = null;
-              if (null != tmp67) {
-                let obj6 = {};
-                const merged3 = Object.assign(accessory);
-                const components1 = accessory.components;
-                const mapped2 = components1.map((item) => {
-                  const tmp = transformToRowGeneratedComponent(closure_0, item);
-                  let tmp2 = null;
-                  if (null != tmp) {
-                    tmp2 = tmp;
-                  }
-                  return tmp2;
-                });
-                obj6.components = mapped2.filter(tmp(tmp2[5]).isNotNullish);
-                obj6.accessory = tmp67;
-                obj6.errorText = tmp(tmp2[7]).getLayoutComponentErrorText(interaction, message, accessory);
-                tmp68 = obj6;
-                const tmpResult36 = tmp(tmp2[7]);
-              }
-              return tmp68;
+              let obj6 = {};
+              const merged3 = Object.assign(accessory);
+              const components1 = accessory.components;
+              const mapped2 = components1.map((item) => {
+                const tmp = transformToRowGeneratedComponent(closure_0, item);
+                let tmp2 = null;
+                if (null != tmp) {
+                  tmp2 = tmp;
+                }
+                return tmp2;
+              });
+              obj6.components = mapped2.filter(tmp(tmp2[5]).isNotNullish);
+              obj6.accessory = tmp65;
+              obj6.errorText = tmp(tmp2[7]).getLayoutComponentErrorText(interaction, message, accessory);
+              return obj6;
             } else if (tmp(tmp2[6]).ComponentType.TEXT_DISPLAY === type) {
               const obj7 = {};
               const merged4 = Object.assign(accessory);
@@ -554,8 +553,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(6365).CheckpointVersions;
-let closure_7 = fn(8781).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(6396).CheckpointVersions;
+let closure_7 = fn(8823).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -563,12 +562,12 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  const obj = { type: "textDisplayComponent", parserState: obj3(8776).getInitialParserStateFromMessage(message.message, closure_7) };
+  const obj = { type: "textDisplayComponent", parserState: obj3(8818).getInitialParserStateFromMessage(message.message, closure_7) };
   obj3 = {};
   const merged = Object.assign(message);
   obj3.markdownConfigs = { textDisplayComponent: obj };
   const mapped = arr.map((item) => transformToRowGeneratedComponent(obj3, item));
-  return mapped.filter(obj3(1254).isNotNullish);
+  return mapped.filter(obj3(1255).isNotNullish);
 };
 export function getUnfurledMediaItemType(media) {
   ({ width, height, contentType } = media);

@@ -1,9 +1,9 @@
-// === Module 10290: HandRequestSpeakListIcon ===
+// === Module 10332: HandRequestSpeakListIcon ===
 
-// Module 10290 (HandRequestSpeakListIcon)
+// Module 10332 (HandRequestSpeakListIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5698 */;
-import _mod10291 from "module_10291" /* 10291 */;
+import BaseIconImage from "BaseIconImage" /* 5729 */;
+import _mod10333 from "module_10333" /* 10333 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HandRequestSpeakListIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10291, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10333, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

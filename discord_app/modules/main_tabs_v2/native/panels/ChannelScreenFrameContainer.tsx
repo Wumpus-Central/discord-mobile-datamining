@@ -1,13 +1,13 @@
-// === Module 18326: ChannelScreenFrameContainer ===
+// === Module 18385: ChannelScreenFrameContainer ===
 
-// Module 18326 (ChannelScreenFrameContainer)
+// Module 18385 (ChannelScreenFrameContainer)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import useToken from "useToken" /* 5576 */;
-import useAppFrameDefault from "useAppFrame" /* 17664 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import useToken from "useToken" /* 5607 */;
+import useAppFrameDefault from "useAppFrame" /* 17721 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function FramedContainer(translateX) {
@@ -40,7 +40,7 @@ function FramedContainer(translateX) {
   ChannelScreenFrameContainerTsx1.__closure = items1;
   ChannelScreenFrameContainerTsx1.__workletHash = 6281290789316;
   ChannelScreenFrameContainerTsx1.__initData = tmp8;
-  const animatedStyle = _mod1653.useAnimatedStyle(ChannelScreenFrameContainerTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(ChannelScreenFrameContainerTsx1);
   const items2 = [closure_10, translateX, nativeDefault, token];
   c0 = undefined;
   c1 = undefined;
@@ -61,7 +61,7 @@ function FramedContainer(translateX) {
   ChannelScreenFrameContainerTsx2.__closure = items3;
   ChannelScreenFrameContainerTsx2.__workletHash = 4924901768105;
   ChannelScreenFrameContainerTsx2.__initData = tmp13;
-  const animatedStyle1 = _mod1653.useAnimatedStyle(ChannelScreenFrameContainerTsx2);
+  const animatedStyle1 = _mod1654.useAnimatedStyle(ChannelScreenFrameContainerTsx2);
   const obj3 = {};
   const merged1 = Object.assign(merged);
   const items4 = [StyleSheet.absoluteFill, , ];
@@ -73,13 +73,13 @@ function FramedContainer(translateX) {
   items4[2] = animatedStyle;
   obj3.style = items4;
   obj3.children = children;
-  const children1 = [hasOwnProperty(_modDef1653.View, obj3), ];
+  const children1 = [hasOwnProperty(_modDef1654.View, obj3), ];
   let tmp20Result = null;
   if (tmp5) {
     const obj4 = { pointerEvents: "none", style: null };
     const items6 = [tmp2.border, animatedStyle1];
     obj4.style = items6;
-    tmp20Result = hasOwnProperty(_modDef1653.View, obj4);
+    tmp20Result = hasOwnProperty(_modDef1654.View, obj4);
   }
   children1[1] = tmp20Result;
   return metroImportDefault(timestampProducer, { children: children1 });
@@ -89,7 +89,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { clip: { overflow: "hidden" }, border: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

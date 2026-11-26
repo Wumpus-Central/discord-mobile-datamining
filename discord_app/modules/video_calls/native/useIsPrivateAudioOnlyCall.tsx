@@ -1,12 +1,12 @@
-// === Module 9968: useIsPrivateAudioOnlyCall ===
+// === Module 10010: useIsPrivateAudioOnlyCall ===
 
-// Module 9968 (useIsPrivateAudioOnlyCall)
+// Module 10010 (useIsPrivateAudioOnlyCall)
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6902 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import VoiceStateStore from "VoiceStateStore" /* 5660 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
+import VoiceStateStore from "VoiceStateStore" /* 5691 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ function areParticipantStatesEqual(arg0, arg1) {
   [, tmp2] = arg1;
   return tmp === tmp2;
 }
-const isActivityParticipant = fn(5662).isActivityParticipant;
+const isActivityParticipant = fn(5693).isActivityParticipant;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
 

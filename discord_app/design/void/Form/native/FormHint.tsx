@@ -1,16 +1,16 @@
-// === Module 8053: FormHint ===
+// === Module 8095: FormHint ===
 
-// Module 8053 (FormHint)
+// Module 8095 (FormHint)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import RedesignCompat from "RedesignCompat" /* 7221 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import RedesignCompat from "RedesignCompat" /* 7252 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { formHintText: { fontSize: 14, marginBottom: 0, color: nativeDefault.colors.TEXT_MUTED }, redesignHorizontalPadding: { paddingHorizontal: 12 }, horizonatalPadding: { paddingHorizontal: 16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

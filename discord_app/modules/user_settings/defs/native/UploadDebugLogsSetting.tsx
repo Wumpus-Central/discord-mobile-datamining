@@ -1,9 +1,9 @@
-// === Module 17110: UploadDebugLogsSetting ===
+// === Module 17161: UploadDebugLogsSetting ===
 
-// Module 17110 (UploadDebugLogsSetting)
+// Module 17161 (UploadDebugLogsSetting)
 import util from "util" /* 1112 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import DebugUploadManager from "DebugUploadManager" /* 10648 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import DebugUploadManager from "DebugUploadManager" /* 10693 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -35,7 +35,7 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
           closure_1 = tmp4;
           closure_0 = tmp4;
           (function onUploadDebugLogsRequestStart() {
-            closure_1_0(1262).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+            closure_1_0(1263).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
           })();
           let uploadDebugLogFiles = DebugLogCategory;
           if (obj8.isIOS()) {
@@ -53,7 +53,7 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
       } else if (1 === tmp8) {
         c3 = 0;
         (function onUploadDebugLogsRequestFinish() {
-          closure_1_0(1262).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1263).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         throw dependencyMap;
@@ -67,7 +67,7 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
           closure_129_1(closure_129_2[8]).open("USER_SETTINGS_CACHES_CLEARED", obj5);
           c3 = 0;
           (function onUploadDebugLogsRequestFinish() {
-            closure_1_0(1262).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            closure_1_0(1263).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
           })();
           c5 = 3;
@@ -86,7 +86,7 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
         }
         c3 = 0;
         (function onUploadDebugLogsRequestFinish() {
-          closure_1_0(1262).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1263).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         c5 = 3;
@@ -111,14 +111,14 @@ const DebugLogCategory = fn(1071).DebugLogCategory;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_7 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11914);
+const SettingBuilders = fn(11962);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.aY1OH2);
   },
   parent: null,
-  IconComponent: fn(5716).CircleInformationIcon,
+  IconComponent: fn(5747).CircleInformationIcon,
   onPress: function handleUploadDebugLogSettingPress() {
     const self = this;
     const apply = closure_8.apply;

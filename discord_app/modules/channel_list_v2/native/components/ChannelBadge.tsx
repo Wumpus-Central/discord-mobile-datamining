@@ -1,11 +1,11 @@
-// === Module 13187: components/ChannelBadge ===
+// === Module 13239: components/ChannelBadge ===
 
-// Module 13187 (components/ChannelBadge)
+// Module 13239 (components/ChannelBadge)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import NumberUtils from "NumberUtils" /* 2025 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import renderChannelBadge from "renderChannelBadge" /* 13186 */;
+import NumberUtils from "NumberUtils" /* 2026 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import renderChannelBadge from "renderChannelBadge" /* 13238 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

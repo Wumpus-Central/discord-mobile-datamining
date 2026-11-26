@@ -1,25 +1,25 @@
-// === Module 15093: LocalVoiceStateManager ===
+// === Module 15143: LocalVoiceStateManager ===
 
-// Module 15093 (LocalVoiceStateManager)
-import FlagUtils from "FlagUtils" /* 1404 */;
-import UserSettings from "UserSettings" /* 4837 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6785 */;
-import isClipsEnabled from "isClipsEnabled" /* 14304 */;
-import StreamDrawingChannel from "StreamDrawingChannel" /* 15094 */;
-import StreamDrawingExperiment from "StreamDrawingExperiment" /* 15095 */;
-import PassTheControllerStore from "PassTheControllerStore" /* 5819 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5998 */;
+// Module 15143 (LocalVoiceStateManager)
+import FlagUtils from "FlagUtils" /* 1405 */;
+import UserSettings from "UserSettings" /* 4868 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
+import isClipsEnabled from "isClipsEnabled" /* 14356 */;
+import StreamDrawingChannel from "StreamDrawingChannel" /* 15144 */;
+import StreamDrawingExperiment from "StreamDrawingExperiment" /* 15145 */;
+import PassTheControllerStore from "PassTheControllerStore" /* 5850 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6029 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import RTCRegionStore from "RTCRegionStore" /* 5911 */;
-import StateManager from "StateManager" /* 15091 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
+import RTCRegionStore from "RTCRegionStore" /* 5942 */;
+import StateManager from "StateManager" /* 15141 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_9, VoiceFlags: closure_10 } = Constants);
-const StreamTypes = fn(6783).StreamTypes;
+const StreamTypes = fn(6814).StreamTypes;
 class LocalVoiceStateManager extends tmp3 {
   constructor(arg0) {
     tmp = new LocalVoiceStateManager(new.target);

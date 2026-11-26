@@ -1,13 +1,14 @@
-// === Module 18404: useConjureStartPublish ===
+// === Module 18463: useConjureStartPublish ===
 
-// Module 18404 (useConjureStartPublish)
-import useConjurePublishAction from "useConjurePublishAction" /* 11412 */;
-import conjurePublishReview from "conjurePublishReview" /* 18405 */;
-import openConjurePublishReview from "openConjurePublishReview" /* 18406 */;
+// Module 18463 (useConjureStartPublish)
+import useConjurePublishAction from "useConjurePublishAction" /* 11459 */;
+import conjurePublishReview from "conjurePublishReview" /* 18464 */;
+import conjureViewPlacement from "conjureViewPlacement" /* 18465 */;
+import openConjurePublishReview from "openConjurePublishReview" /* 18467 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7675 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7706 */;
 
 const require = globalThis.__r;
 
@@ -27,22 +28,42 @@ let closure_6 = async function _publishNow(arg0) {
 };
 function startConjurePublish(projectId, entryPoint, context) {
   const project = ConjureProjectStore.getProject(projectId);
-  let tmp2 = null != project;
-  if (tmp2) {
-    tmp2 = true !== context.busy;
+  let flag = false;
+  if (null != project) {
+    flag = false;
+    if (true !== context.busy) {
+      flag = false;
+      if (!obj6.approvalPending(projectId)) {
+        flag = false;
+        if (!ConjurePublishStatusStore.isProjectPublishing(projectId)) {
+          const publishStatus = ConjurePublishStatusStore.getPublishStatus(projectId);
+          let tmp3 = null != conjurePublishReview.conjurePublishReviewReason(project, publishStatus);
+          if (!tmp3) {
+            let safetyHold;
+            if (publishStatus != null) {
+              safetyHold = publishStatus.safetyHold;
+            }
+            let result = true !== safetyHold;
+            if (result) {
+              let views;
+              if (publishStatus != null) {
+                views = publishStatus.views;
+              }
+              result = conjureViewPlacement.conjureViewPlacementNeeded(views);
+              const tmp11Result2 = conjureViewPlacement;
+            }
+            tmp3 = result;
+          }
+          flag = tmp3;
+          const tmp11Result = conjurePublishReview;
+        }
+      }
+      obj6 = useConjurePublishAction;
+    }
   }
-  if (tmp2) {
-    tmp2 = !useConjurePublishAction.approvalPending(projectId);
-  }
-  if (tmp2) {
-    tmp2 = !ConjurePublishStatusStore.isProjectPublishing(projectId);
-  }
-  if (tmp2) {
-    tmp2 = null != conjurePublishReview.conjurePublishReviewReason(project, ConjurePublishStatusStore.getPublishStatus(projectId));
-  }
-  if (tmp2) {
-    const obj4 = { projectId, publishOptions: context, entryPoint };
-    const result = openConjurePublishReview.openConjurePublishReview(obj4);
+  if (flag) {
+    const obj2 = { projectId, publishOptions: context, entryPoint };
+    const result1 = openConjurePublishReview.openConjurePublishReview(obj2);
   } else {
     (function publishNow() {
       const self = this;

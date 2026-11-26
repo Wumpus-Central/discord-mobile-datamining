@@ -1,13 +1,13 @@
-// === Module 12939: ChatInputContentCallbacks ===
+// === Module 12991: ChatInputContentCallbacks ===
 
-// Module 12939 (ChatInputContentCallbacks)
+// Module 12991 (ChatInputContentCallbacks)
 import applyDefault from "apply" /* 12 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9598 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 12037 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 12038 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9640 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 12085 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 12086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7622 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7653 */;
 
 require = fn;
 let c6 = "@here";
@@ -67,9 +67,9 @@ export function useHereMentionCallback(arg0, arg1, arg2) {
       if (!(arr.length < 5 || arr.length > closure_1_3)) {
         let flag = -1 !== arr.indexOf(memo);
         if (flag) {
-          closure_0(12037).subscribeChannel(closure_1_1, dependencyMap, closure_0(12038).DEFAULT_RANGES);
+          closure_0(12085).subscribeChannel(closure_1_1, dependencyMap, closure_0(12086).DEFAULT_RANGES);
           flag = true;
-          const obj = closure_0(12037);
+          const obj = closure_0(12085);
         }
         tmp9 = flag;
       }

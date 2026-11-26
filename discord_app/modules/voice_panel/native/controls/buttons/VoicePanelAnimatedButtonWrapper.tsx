@@ -1,20 +1,20 @@
-// === Module 19502: VoicePanelAnimatedButtonWrapper ===
+// === Module 19565: VoicePanelAnimatedButtonWrapper ===
 
-// Module 19502 (VoicePanelAnimatedButtonWrapper)
+// Module 19565 (VoicePanelAnimatedButtonWrapper)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import spring_spring from "spring/spring" /* 5613 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import spring_spring from "spring/spring" /* 5644 */;
 import noop from "module_19" /* 19 */;
-import module_1653 from "module_1653" /* 1653 */;
+import module_1654 from "module_1654" /* 1654 */;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(11734).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11782).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { pressableWrapper: { justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG } };
 let closure_6 = createStyles.createStyles(obj2);
-let closure_7 = module_1653.createAnimatedComponent(fn(17).Pressable);
+let closure_7 = module_1654.createAnimatedComponent(fn(17).Pressable);
 let closure_8 = { code: "(function VoicePanelAnimatedButtonWrapperTsx1(values){let[offsetFromCenter,withSpring,MODE_CHANGE_PHYSICS,withTiming]=this.__closure;offsetFromCenter.set(values.windowWidth/2-values.targetGlobalOriginX-values.targetWidth/2);return{initialValues:{originX:values.targetOriginX+offsetFromCenter.get(),opacity:0,transform:[{scale:0.5}]},animations:{originX:withSpring(values.targetOriginX,MODE_CHANGE_PHYSICS),opacity:withTiming(1,{duration:100}),transform:[{scale:withSpring(1,MODE_CHANGE_PHYSICS)}]}};})" };
 let closure_9 = { code: "(function VoicePanelAnimatedButtonWrapperTsx2(values){let[withSpring,offsetFromCenter,MODE_CHANGE_PHYSICS,withTiming]=this.__closure;return{initialValues:{originX:values.currentOriginX,opacity:1,transform:[{scale:1}]},animations:{originX:withSpring(values.currentOriginX+offsetFromCenter.get(),MODE_CHANGE_PHYSICS),opacity:withTiming(0,{duration:100}),transform:[{scale:withSpring(0.5,MODE_CHANGE_PHYSICS)}]}};})" };
 let size = fn(2);

@@ -1,20 +1,20 @@
-// === Module 14446: InviteEmbed ===
+// === Module 14498: InviteEmbed ===
 
-// Module 14446 (InviteEmbed)
-import InviteTypeUtils from "InviteTypeUtils" /* 5743 */;
-import invite_GuildInvite from "invite/GuildInvite" /* 14447 */;
-import GroupDMInvite from "GroupDMInvite" /* 14451 */;
-import FriendInvite from "FriendInvite" /* 14453 */;
-import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 14454 */;
-import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 14457 */;
-import GuildProfileInvite from "GuildProfileInvite" /* 14459 */;
-import InviteStore from "InviteStore" /* 5731 */;
-import UserStore from "UserStore" /* 1386 */;
+// Module 14498 (InviteEmbed)
+import InviteTypeUtils from "InviteTypeUtils" /* 5774 */;
+import invite_GuildInvite from "invite/GuildInvite" /* 14499 */;
+import GroupDMInvite from "GroupDMInvite" /* 14503 */;
+import FriendInvite from "FriendInvite" /* 14505 */;
+import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 14506 */;
+import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 14509 */;
+import GuildProfileInvite from "GuildProfileInvite" /* 14511 */;
+import InviteStore from "InviteStore" /* 5762 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ InviteStates: closure_4, AbortCodes: hasOwnProperty } = Constants);
-const InviteTypes = fn(5745).InviteTypes;
+const InviteTypes = fn(5776).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx");
 

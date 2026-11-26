@@ -1,15 +1,15 @@
-// === Module 13316: ApplicationSectionHeader ===
+// === Module 13368: ApplicationSectionHeader ===
 
-// Module 13316 (ApplicationSectionHeader)
+// Module 13368 (ApplicationSectionHeader)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { applicationHeaderWrapper: { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 }, applicationIcon: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.sm, marginRight: 8 };
 obj2.applicationIcon = size;
@@ -34,7 +34,7 @@ export default function ApplicationSectionHeader(section) {
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(13132).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(13184).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -50,9 +50,9 @@ export default function ApplicationSectionHeader(section) {
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(5699), obj4);
+    tmp9 = closure_5(guildId(5730), obj4);
   }
-  const items1 = [tmp9, closure_5(section(5603).Text, { variant: "body-sm/medium", color: "interactive-text-default", children: name })];
+  const items1 = [tmp9, closure_5(section(5634).Text, { variant: "body-sm/medium", color: "interactive-text-default", children: name })];
   obj3.children = items1;
   return closure_6(View, obj3);
 };

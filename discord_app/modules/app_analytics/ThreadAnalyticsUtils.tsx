@@ -1,14 +1,14 @@
-// === Module 8127: ThreadAnalyticsUtils ===
+// === Module 8169: ThreadAnalyticsUtils ===
 
-// Module 8127 (ThreadAnalyticsUtils)
+// Module 8169 (ThreadAnalyticsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1098 */;
-import ThreadMembersStore from "ThreadMembersStore" /* 8080 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 8081 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
+import ThreadMembersStore from "ThreadMembersStore" /* 8122 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8123 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 require = fn;
-const THREAD_CHANNEL_TYPES = fn(4865).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4896).THREAD_CHANNEL_TYPES;
 const Permissions = fn(1071).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");

@@ -1,6 +1,6 @@
-// === Module 7276: NativeDeviceSettingsModule ===
+// === Module 7307: NativeDeviceSettingsModule ===
 
-// Module 7276 (NativeDeviceSettingsModule)
+// Module 7307 (NativeDeviceSettingsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

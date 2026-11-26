@@ -1,26 +1,26 @@
-// === Module 18142: useVoicePanelVideoToggle ===
+// === Module 18201: useVoicePanelVideoToggle ===
 
-// Module 18142 (useVoicePanelVideoToggle)
+// Module 18201 (useVoicePanelVideoToggle)
 import util from "util" /* 1112 */;
-import useAlertStore from "useAlertStore" /* 6017 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6792 */;
-import CallsUtils from "CallsUtils" /* 8594 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 10002 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14034 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18143 */;
+import useAlertStore from "useAlertStore" /* 6048 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6823 */;
+import CallsUtils from "CallsUtils" /* 8636 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 10044 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14086 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18202 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9980 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10022 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 const require = globalThis.__r;
 const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 const VoicePanelNoVideoPermissionsAlertDefault = VoicePanelNoVideoPermissionsAlert;
 
 require = fn;
-const Features = fn(5824).Features;
+const Features = fn(5855).Features;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/useVoicePanelVideoToggle.tsx");

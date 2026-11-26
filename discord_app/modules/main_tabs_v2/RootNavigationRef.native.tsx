@@ -1,7 +1,7 @@
-// === Module 5189: RootNavigationRef ===
+// === Module 5220: RootNavigationRef ===
 
-// Module 5189 (RootNavigationRef)
-import Link from "Link" /* 1501 */;
+// Module 5220 (RootNavigationRef)
+import Link from "Link" /* 1502 */;
 import size from "module_2" /* 2 */;
 
 let ready = Link.createNavigationContainerRef();

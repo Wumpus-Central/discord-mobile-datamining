@@ -1,8 +1,8 @@
-// === Module 5699: FastImage ===
+// === Module 5730: FastImage ===
 
-// Module 5699 (FastImage)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5700 */;
+// Module 5730 (FastImage)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5731 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

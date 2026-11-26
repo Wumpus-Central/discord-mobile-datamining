@@ -1,10 +1,10 @@
-// === Module 19916: useConjureServerApplicationIds ===
+// === Module 19980: useConjureServerApplicationIds ===
 
-// Module 19916 (useConjureServerApplicationIds)
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6938 */;
-import prefetchConjureApplicationDefault from "prefetchConjureApplication" /* 11513 */;
+// Module 19980 (useConjureServerApplicationIds)
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6969 */;
+import prefetchConjureApplicationDefault from "prefetchConjureApplication" /* 11561 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 const require = globalThis.__r;
 

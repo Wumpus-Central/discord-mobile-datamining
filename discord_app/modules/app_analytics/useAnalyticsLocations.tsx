@@ -1,8 +1,8 @@
-// === Module 6348: useAnalyticsLocations ===
+// === Module 6379: useAnalyticsLocations ===
 
-// Module 6348 (useAnalyticsLocations)
+// Module 6379 (useAnalyticsLocations)
 import applyDefault from "apply" /* 12 */;
-import _modDef1343 from "module_1343" /* 1343 */;
+import _modDef1344 from "module_1344" /* 1344 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -43,7 +43,7 @@ export default function useAnalyticsLocations() {
   }, items2);
   const items3 = [items, first];
   const effect = context.useEffect(() => {
-    if (!_modDef1343(items, first)) {
+    if (!_modDef1344(items, first)) {
       closure_2(items);
     }
   }, items3);

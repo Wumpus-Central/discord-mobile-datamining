@@ -1,15 +1,15 @@
-// === Module 9476: Banner ===
+// === Module 9518: Banner ===
 
-// Module 9476 (Banner)
+// Module 9518 (Banner)
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
-import FastImageDefault from "FastImage" /* 5699 */;
+import FastImageDefault from "FastImage" /* 5730 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const BANNER_HEIGHT = fn(1071).BANNER_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/Banner.tsx");

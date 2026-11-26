@@ -1,10 +1,10 @@
-// === Module 14458: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 14510: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 14458 (useEmbeddedActivityParticipantAvatarUris)
-import GlobalUtils from "GlobalUtils" /* 1254 */;
+// Module 14510 (useEmbeddedActivityParticipantAvatarUris)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
-import UserStore from "UserStore" /* 1386 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const size = fn(2);

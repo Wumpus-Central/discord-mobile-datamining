@@ -1,23 +1,23 @@
-// === Module 12927: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 12979: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 12927 (CustomTypingIndicatorAnimatedEmoji)
-import user from "user" /* 1399 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import EmojiDefault from "Emoji" /* 7457 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 12928 */;
+// Module 12979 (CustomTypingIndicatorAnimatedEmoji)
+import user from "user" /* 1400 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import EmojiDefault from "Emoji" /* 7488 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 12980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 2118 */;
+import AppStateStore from "AppStateStore" /* 2119 */;
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const AppStates = fn(1071).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: { width, height: width, alignItems: "center", justifyContent: "center" }, textEmoji: null, imageEmoji: { width, height: width } };
   const size = { width: 18 * width / 14, height: 18 * width / 14, textAlign: "center", fontSize: 12 * width / 14, lineHeight: 18 * width / 14 };
@@ -59,12 +59,12 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
     closure_6(name);
   }, items);
   const tmp7 = useCanPlayAnimatedEmojiDefault();
-  sharedValue = require("module_1653").useSharedValue(1);
-  const tmp2Result = require("module_1653");
-  sharedValue1 = require("module_1653").useSharedValue(0);
-  const tmp2Result5 = require("module_1653");
-  sharedValue2 = require("module_1653").useSharedValue(0);
-  const tmp2Result6 = require("module_1653");
+  sharedValue = require("module_1654").useSharedValue(1);
+  const tmp2Result = require("module_1654");
+  sharedValue1 = require("module_1654").useSharedValue(0);
+  const tmp2Result5 = require("module_1654");
+  sharedValue2 = require("module_1654").useSharedValue(0);
+  const tmp2Result6 = require("module_1654");
   const items1 = [name];
   stateFromStores = require("initialize").useStateFromStores(items1, () => name.getState() === closure_6.ACTIVE);
   const items2 = [animation, index, emojiCount, enabled, stateFromStores, sharedValue1, sharedValue, sharedValue2, num];
@@ -78,9 +78,9 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
           const result3 = c0 * duration;
           const result4 = duration * (c1 - 1);
           if (user.TypingIndicatorAnimation.PULSE === c3) {
-            const tmp5Result = _mod1653;
-            const tmp5Result15 = _mod1653;
-            const tmp5Result16 = _mod1653;
+            const tmp5Result = _mod1654;
+            const tmp5Result15 = _mod1654;
+            const tmp5Result16 = _mod1654;
             const obj4 = { duration };
             const tmp5Result17 = timing_timing;
             const withTimingResult = timing_timing.withTiming(1.16, obj4);
@@ -91,18 +91,18 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
             const result5 = sharedValue.set(tmp5Result.withDelay(result3, tmp5Result15.withRepeat(tmp5Result16.withSequence(withTimingResult, withTimingResult1, timing_timing.withTiming(1, obj6)), -1)));
             const tmp5Result19 = timing_timing;
           } else if (user.TypingIndicatorAnimation.RING === c3) {
-            const tmp5Result20 = _mod1653;
-            const tmp5Result21 = _mod1653;
+            const tmp5Result20 = _mod1654;
+            const tmp5Result21 = _mod1654;
             const _Math = Math;
             const obj7 = { duration: 1600, easing: null };
             const result6 = 2 * Math.PI;
-            obj7.easing = _mod1653.Easing.linear;
+            obj7.easing = _mod1654.Easing.linear;
             const result7 = sharedValue1.set(tmp5Result20.withDelay(result3, tmp5Result21.withRepeat(timing_timing.withTiming(result6, obj7), -1)));
             const tmp5Result22 = timing_timing;
           } else if (user.TypingIndicatorAnimation.WAVE === c3) {
-            const tmp5Result23 = _mod1653;
-            const tmp5Result24 = _mod1653;
-            const tmp5Result25 = _mod1653;
+            const tmp5Result23 = _mod1654;
+            const tmp5Result24 = _mod1654;
+            const tmp5Result25 = _mod1654;
             const obj8 = { duration };
             const tmp5Result26 = timing_timing;
             const withTimingResult2 = timing_timing.withTiming(-0.12 * c2, obj8);
@@ -114,11 +114,11 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
             const tmp5Result28 = timing_timing;
           }
           return () => {
-            c0(1653).cancelAnimation(sharedValue);
-            const obj = c0(1653);
-            c0(1653).cancelAnimation(sharedValue1);
-            const obj2 = c0(1653);
-            c0(1653).cancelAnimation(sharedValue2);
+            c0(1654).cancelAnimation(sharedValue);
+            const obj = c0(1654);
+            c0(1654).cancelAnimation(sharedValue1);
+            const obj2 = c0(1654);
+            c0(1654).cancelAnimation(sharedValue2);
           };
         }
       }
@@ -154,11 +154,11 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
   CustomTypingIndicatorAnimatedEmojiTsx1.__closure = items4;
   CustomTypingIndicatorAnimatedEmojiTsx1.__workletHash = 1185511828923;
   CustomTypingIndicatorAnimatedEmojiTsx1.__initData = tmp13;
-  const animatedStyle = require("module_1653").useAnimatedStyle(CustomTypingIndicatorAnimatedEmojiTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(CustomTypingIndicatorAnimatedEmojiTsx1);
   let obj2 = { style: animatedStyle, children: null };
   let obj3 = { style: tmp.emojiContainer, name: null, src: null, fastImageStyle: null, textEmojiStyle: null, onError: null };
   let str = "\u{1F615}";
-  const tmp2Result8 = require("module_1653");
+  const tmp2Result8 = require("module_1654");
   if (tmp4[0] !== name) {
     let str2 = "";
     if (null == emoji.id) {
@@ -180,13 +180,13 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
       }
       obj4.animated = animated;
       obj4.size = num;
-      emojiURL = tmp6(1412).getEmojiURL(obj4);
-      const tmp6Result2 = tmp6(1412);
+      emojiURL = tmp6(1413).getEmojiURL(obj4);
+      const tmp6Result2 = tmp6(1413);
     }
   }
   obj3.src = emojiURL;
   ({ imageEmoji: obj8.fastImageStyle, textEmoji: obj8.textEmojiStyle } = tmp);
   obj3.onError = callback;
   obj2.children = sharedValue(EmojiDefault, obj3, emojiCount.emojisKey);
-  return sharedValue(_modDef1653.View, obj2);
+  return sharedValue(_modDef1654.View, obj2);
 };

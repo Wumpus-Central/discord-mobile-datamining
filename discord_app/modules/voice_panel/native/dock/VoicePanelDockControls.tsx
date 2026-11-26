@@ -1,23 +1,23 @@
-// === Module 18166: VoicePanelDockControls ===
+// === Module 18225: VoicePanelDockControls ===
 
-// Module 18166 (VoicePanelDockControls)
+// Module 18225 (VoicePanelDockControls)
 import native from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import HapticUtils from "HapticUtils" /* 5228 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6766 */;
-import IconButton from "IconButton" /* 7910 */;
-import _modDef8983 from "module_8983" /* 8983 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 10457 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
-import _modDef13464 from "module_13464" /* 13464 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 18163 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 18167 */;
-import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton" /* 18187 */;
-import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 18190 */;
+import HapticUtils from "HapticUtils" /* 5259 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6797 */;
+import IconButton from "IconButton" /* 7944 */;
+import _modDef9025 from "module_9025" /* 9025 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 10502 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
+import _modDef13516 from "module_13516" /* 13516 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 18222 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 18226 */;
+import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton" /* 18246 */;
+import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 18249 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import VoicePanelStore from "VoicePanelStore" /* 6934 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
+import VoicePanelStore from "VoicePanelStore" /* 6965 */;
 
 const nativeDefault = native;
 const useSoundboardConfigDefault = useSoundboardConfig;
@@ -79,16 +79,16 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1112).intl;
   obj.accessibilityLabel = intl.string(channelId(1112).t["6vrfgt"]);
-  obj.icon = _modDef8983;
+  obj.icon = _modDef9025;
   obj.onPress = callback;
-  return closure_9(channelId(7910).IconButton, obj);
+  return closure_9(channelId(7944).IconButton, obj);
 }
 function DockSoundboardButton(arg0) {
   ({ onPress, disabled, disabledAccessibilityHint } = arg0);
   const obj = { accessibilityLabel: null, variant: "secondary", size: "sm", icon: null, onPress: null, disabled: null, accessibilityHint: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef13464;
+  obj.icon = _modDef13516;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;
@@ -98,8 +98,8 @@ const View = fn(17).View;
 const InputModes = fn(1071).InputModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
-let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11757).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
+const createStyles = fn(5043);
+let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11805).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
 const size = fn(2);

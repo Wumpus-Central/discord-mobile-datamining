@@ -1,11 +1,11 @@
-// === Module 19432: useTapGestures ===
+// === Module 19495: useTapGestures ===
 
-// Module 19432 (useTapGestures)
-import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import HapticUtils from "HapticUtils" /* 5228 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import spring_spring from "spring/spring" /* 5613 */;
+// Module 19495 (useTapGestures)
+import _mod1707 from "module_1707" /* 1707 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import HapticUtils from "HapticUtils" /* 5259 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import spring_spring from "spring/spring" /* 5644 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useTap
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11733)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11781)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   closure_4 = tmp2;
@@ -75,7 +75,7 @@ export default function useTapGestures(onSingleTap) {
     useTapGesturesTsx1.__workletHash = 2872964709820;
     useTapGesturesTsx1.__initData = tmp5;
     const numberOfTapsResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2);
-    const items2 = [closure_5, _mod1706.scheduleOnRN, handleEvent];
+    const items2 = [closure_5, _mod1707.scheduleOnRN, handleEvent];
     c0 = undefined;
     c1 = undefined;
     [tmp7, tmp8, tmp9] = items2;
@@ -95,7 +95,7 @@ export default function useTapGestures(onSingleTap) {
     }
     const TapResult1 = Gesture3.Tap();
     const enabledResult1 = Gesture3.Tap().enabled(tmp11);
-    const items4 = [closure_6, _mod1706.scheduleOnRN, handleEvent];
+    const items4 = [closure_6, _mod1707.scheduleOnRN, handleEvent];
     c0 = undefined;
     c1 = undefined;
     [tmp12, tmp13, tmp14] = items4;
@@ -139,7 +139,7 @@ export default function useTapGestures(onSingleTap) {
     useTapGesturesTsx5.__workletHash = 13921288921257;
     useTapGesturesTsx5.__initData = tmp21;
     const onBeginResult = Gesture4.LongPress().enabled(tmp3).minDuration(500).onBegin(useTapGesturesTsx4);
-    const items10 = [closure_9, _mod1706.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, handleEvent];
+    const items10 = [closure_9, _mod1707.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, handleEvent];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;

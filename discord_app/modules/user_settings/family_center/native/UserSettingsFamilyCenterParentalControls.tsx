@@ -1,20 +1,20 @@
-// === Module 16389: UserSettingsFamilyCenterParentalControls ===
+// === Module 16440: UserSettingsFamilyCenterParentalControls ===
 
-// Module 16389 (UserSettingsFamilyCenterParentalControls)
+// Module 16440 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef2846 from "module_2846" /* 2846 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8172 */;
+import _modDef2847 from "module_2847" /* 2847 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8214 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-const FamilyCenterSubPages = fn(8171).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(8213).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };
@@ -24,18 +24,18 @@ const result = size.fileFinishedImporting("modules/user_settings/family_center/n
 
 export default function FamilyCenterParentalControlsSettings() {
   let tmp = closure_10();
-  stackNavigation = stackNavigation(1500).useStackNavigation();
-  let obj = stackNavigation(1500);
-  const analyticsLocations = selectedSubPage(6348)(selectedSubPage(6349).FAMILY_CENTER).analyticsLocations;
-  const tmp7 = selectedSubPage(8444)();
+  stackNavigation = stackNavigation(1501).useStackNavigation();
+  let obj = stackNavigation(1501);
+  const analyticsLocations = selectedSubPage(6379)(selectedSubPage(6380).FAMILY_CENTER).analyticsLocations;
+  const tmp7 = selectedSubPage(8486)();
   const width = tmp7.width;
   let num = 0;
   ({ ref, onLayout } = tmp7);
   if (undefined !== width) {
     num = width;
   }
-  const tmp6 = selectedSubPage(6348);
-  const settingNavigationRoute = stackNavigation(7319).useSettingNavigationRoute();
+  const tmp6 = selectedSubPage(6379);
+  const settingNavigationRoute = stackNavigation(7350).useSettingNavigationRoute();
   const params = settingNavigationRoute.params;
   selectedSubPage = undefined;
   if (params != null) {
@@ -50,13 +50,13 @@ export default function FamilyCenterParentalControlsSettings() {
     autoOpenCreate = params2.autoOpenCreate;
   }
   dependencyMap = tmp12;
-  const tmp2Result = stackNavigation(7319);
-  const selectedTeenUser = stackNavigation(16349).useSelectedTeenUser();
+  const tmp2Result = stackNavigation(7350);
+  const selectedTeenUser = stackNavigation(16400).useSelectedTeenUser();
   let id;
   if (selectedTeenUser != null) {
     id = selectedTeenUser.id;
   }
-  const tmp15 = selectedSubPage(16368)();
+  const tmp15 = selectedSubPage(16419)();
   closure_4 = tmp15;
   ref = id.useRef(false);
   items = [true === autoOpenCreate, id, stackNavigation];
@@ -81,7 +81,7 @@ export default function FamilyCenterParentalControlsSettings() {
       if (null != id) {
         let obj = { title: null, headerRight: null };
         let intl = util.intl;
-        obj.title = intl.string(_modDef2846["1Op+NP"]);
+        obj.title = intl.string(_modDef2847["1Op+NP"]);
         let fn;
         if (!closure_4) {
           fn = (arg0) => {
@@ -92,29 +92,29 @@ export default function FamilyCenterParentalControlsSettings() {
             };
             const intl = stackNavigation(1112).intl;
             obj.label = intl.string(stackNavigation(1112).t.OYkgVk);
-            return closure_2_8(stackNavigation(8962).HeaderTextButton, obj);
+            return closure_2_8(stackNavigation(9004).HeaderTextButton, obj);
           };
         }
         obj.headerRight = fn;
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "Array", headerRight: "analyticsLocations" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "channel_id" });
   }, items1);
   const obj2 = { label: null, id: null, page: null };
   let intl = tmp2(1112).intl;
   obj2.label = intl.string(stackNavigation(1112).t["+o1pDZ"]);
   obj2.id = FamilyCenterSubPages.CONTENT_AND_SOCIAL;
-  obj2.page = closure_8(selectedSubPage(16390), {});
+  obj2.page = closure_8(selectedSubPage(16441), {});
   const items2 = [obj2, ];
   const obj3 = { label: null, id: null, page: null };
   const intl2 = tmp2(1112).intl;
   obj3.label = intl2.string(stackNavigation(1112).t.OAuOHD);
   obj3.id = FamilyCenterSubPages.DATA_AND_PRIVACY;
-  obj3.page = closure_8(selectedSubPage(16391), {});
+  obj3.page = closure_8(selectedSubPage(16442), {});
   items2[1] = obj3;
-  const tmp2Result3 = stackNavigation(16349);
-  const tmp2Result4 = stackNavigation(8574);
+  const tmp2Result3 = stackNavigation(16400);
+  const tmp2Result4 = stackNavigation(8616);
   const segmentedControlState = tmp2Result4.useSegmentedControlState({
     items: items2,
     onPageChange(arg0) {
@@ -128,8 +128,8 @@ export default function FamilyCenterParentalControlsSettings() {
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { bottom: true, style: tmp.content, children: null };
     const obj8 = { readOnly: tmp15 };
-    obj7.children = closure_8(tmp5(16392), obj8);
-    obj6.children = closure_8(tmp2(7449).SafeAreaPaddingView, obj7);
+    obj7.children = closure_8(tmp5(16443), obj8);
+    obj6.children = closure_8(tmp2(7480).SafeAreaPaddingView, obj7);
     obj5.children = closure_8(ref, obj6);
     let obj9 = obj5;
   } else {
@@ -137,18 +137,18 @@ export default function FamilyCenterParentalControlsSettings() {
     const obj10 = { style: tmp.container, ref, onLayout, children: null };
     const obj11 = { style: tmp.segmentedControlContainer, children: null };
     const obj12 = { state: segmentedControlState };
-    obj11.children = closure_8(tmp2(8575).SegmentedControl, obj12);
+    obj11.children = closure_8(tmp2(8617).SegmentedControl, obj12);
     const items3 = [closure_8(closure_4, obj11), ];
     const obj13 = { style: tmp.container, children: null };
     const obj14 = { children: null };
     const obj15 = { bottom: true, style: tmp.content, children: null };
     const obj16 = { state: segmentedControlState };
-    obj15.children = closure_8(tmp2(13563).SegmentedControlPages, obj16);
-    obj14.children = closure_8(tmp2(7449).SafeAreaPaddingView, obj15);
+    obj15.children = closure_8(tmp2(13615).SegmentedControlPages, obj16);
+    obj14.children = closure_8(tmp2(7480).SafeAreaPaddingView, obj15);
     obj13.children = closure_8(ref, obj14);
     items3[1] = closure_8(closure_4, obj13);
     obj10.children = items3;
     obj9.children = closure_9(closure_4, obj10);
   }
-  return closure_8(stackNavigation(6348).AnalyticsLocationProvider, obj9);
+  return closure_8(stackNavigation(6379).AnalyticsLocationProvider, obj9);
 };

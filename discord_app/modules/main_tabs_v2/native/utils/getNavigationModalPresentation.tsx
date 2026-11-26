@@ -1,11 +1,11 @@
-// === Module 11372: getNavigationModalPresentation ===
+// === Module 11418: getNavigationModalPresentation ===
 
-// Module 11372 (getNavigationModalPresentation)
-import useWindowDimensions from "useWindowDimensions" /* 1494 */;
-import DeviceUtils from "DeviceUtils" /* 4969 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 7278 */;
-import DeviceOrientation from "DeviceOrientation" /* 8868 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1378 */;
+// Module 11418 (getNavigationModalPresentation)
+import useWindowDimensions from "useWindowDimensions" /* 1495 */;
+import DeviceUtils from "DeviceUtils" /* 5000 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 7309 */;
+import DeviceOrientation from "DeviceOrientation" /* 8910 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 let PlatformUtils = PlatformUtils_mod;

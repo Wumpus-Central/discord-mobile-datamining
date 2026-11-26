@@ -1,20 +1,20 @@
-// === Module 10234: GlobalStageChannelStatus ===
+// === Module 10276: GlobalStageChannelStatus ===
 
-// Module 10234 (GlobalStageChannelStatus)
+// Module 10276 (GlobalStageChannelStatus)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import useMountEffectDefault from "useMountEffect" /* 5573 */;
-import useChannelNameDefault from "useChannelName" /* 5628 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7805 */;
-import StatusBarDefault from "StatusBar" /* 9976 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9999 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10224 */;
-import PushNotificationDefault from "PushNotification" /* 10235 */;
+import useMountEffectDefault from "useMountEffect" /* 5604 */;
+import useChannelNameDefault from "useChannelName" /* 5659 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7839 */;
+import StatusBarDefault from "StatusBar" /* 10018 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10041 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10266 */;
+import PushNotificationDefault from "PushNotification" /* 10277 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5227 */;
-import StageInstanceStore from "StageInstanceStore" /* 4866 */;
+import ActionSheetStore from "ActionSheetStore" /* 5258 */;
+import StageInstanceStore from "StageInstanceStore" /* 4897 */;
 
 require = fn;
 class StageChannelRaiseHandAck {
@@ -34,7 +34,7 @@ class StageChannelRaiseHandAck {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -50,18 +50,18 @@ class StageChannelRaiseHandAck {
             } else {
               if (null != id) {
                 if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                  const obj5 = { entryPoint: tmp3(6797).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                  const result = v2(7836).showAgeVerificationGetStartedModal(obj5);
-                  const obj4 = v2(7836);
+                  const obj5 = { entryPoint: tmp3(6828).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                  const result = v2(7870).showAgeVerificationGetStartedModal(obj5);
+                  const obj4 = v2(7870);
                 } else {
                   dependencyMap(true);
                   dependencyMap = 1;
                   v2 = 2;
                   c4 = 1;
-                  const obj6 = { value: tmp3(7805).audienceAckRequestToSpeak(id, false), done: false };
+                  const obj6 = { value: tmp3(7839).audienceAckRequestToSpeak(id, false), done: false };
                   return obj6;
                 }
-                obj9 = tmp3(6823);
+                obj9 = tmp3(6854);
               }
               c4 = 3;
             }
@@ -76,8 +76,8 @@ class StageChannelRaiseHandAck {
             dependencyMap = 0;
             closure_128_3(false);
             if (null == key.getKey()) {
-              tmp29(7801).openStageChannel(closure_128_0);
-              const obj8 = tmp29(7801);
+              tmp29(7835).openStageChannel(closure_128_0);
+              const obj8 = tmp29(7835);
             }
           }
           dependencyMap = 0;
@@ -222,7 +222,7 @@ const View = fn(17).View;
 const Fonts = fn(1071).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { invitedContainer: { paddingHorizontal: nativeDefault.space.PX_8 }, icon: null, activeSpeakerIcon: null, activeStageIcon: null, topic: null, channel: null, invitedHeaderText: null, noticeContainer: null, row: null, buttonWrapper: null, declineButtonPill: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_8 };
 obj2.icon = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.colors.TEXT_DEFAULT };
@@ -272,7 +272,7 @@ export default function GlobalStageChannelStatus(arg0) {
   }
   if (!invitedHeaderText) {
     if (!tmp7) {
-      tmp8(5034);
+      tmp8(5065);
       let str = "dark-content";
     }
     if (null != channel) {
@@ -294,7 +294,7 @@ export default function GlobalStageChannelStatus(arg0) {
           const obj3 = { style: tmp.noticeContainer, children: null };
           const obj4 = { animated: true, barStyle: str };
           const items2 = [closure_10(StatusBarDefault, obj4), , ];
-          const obj5 = { style: activeSpeakerIcon, size: tmp8(1186).Icon.Sizes.REFRESH_SMALL_16, source: tmp8(7065).getChannelIconWithGuild(channel, guild) };
+          const obj5 = { style: activeSpeakerIcon, size: tmp8(1186).Icon.Sizes.REFRESH_SMALL_16, source: tmp8(7096).getChannelIconWithGuild(channel, guild) };
           items2[1] = closure_10(tmp8(1186).Icon, obj5);
           let tmp13Result = "" !== str2;
           if (tmp13Result) {
@@ -333,7 +333,7 @@ export default function GlobalStageChannelStatus(arg0) {
           items2[2] = closure_11(tmp8(1186).LegacyText, obj8);
           obj3.children = items2;
           tmp13Result2 = closure_11(View, obj3);
-          const tmp8Result2 = tmp8(7065);
+          const tmp8Result2 = tmp8(7096);
         }
         return tmp13Result2;
       }

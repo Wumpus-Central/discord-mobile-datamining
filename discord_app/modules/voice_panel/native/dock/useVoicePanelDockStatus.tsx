@@ -1,24 +1,24 @@
-// === Module 19398: useVoicePanelDockStatus ===
+// === Module 19461: useVoicePanelDockStatus ===
 
-// Module 19398 (useVoicePanelDockStatus)
+// Module 19461 (useVoicePanelDockStatus)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6902 */;
-import SoundboardStore from "SoundboardStore" /* 6892 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
+import SoundboardStore from "SoundboardStore" /* 6923 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
-import SpeakingStore from "SpeakingStore" /* 6821 */;
-import UserStore from "UserStore" /* 1386 */;
-import VoiceStateStore from "VoiceStateStore" /* 5660 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
+import SpeakingStore from "SpeakingStore" /* 6852 */;
+import UserStore from "UserStore" /* 1387 */;
+import VoiceStateStore from "VoiceStateStore" /* 5691 */;
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(18161);
+const VoicePanelDockStatusStore = fn(18220);
 ({ releaseDockStatus: closure_12, initDockStatus: map1, setDockActiveSpeakers: closure_14, setDockHasStreamers: closure_15, showVoiceMoment: closure_16 } = VoicePanelDockStatusStore);
-const ParticipantTypes = fn(5662).ParticipantTypes;
-let result = fn(6894).MAX_SOUND_LENGTH_SECONDS * DurationsDefault.Millis.SECOND;
+const ParticipantTypes = fn(5693).ParticipantTypes;
+let result = fn(6925).MAX_SOUND_LENGTH_SECONDS * DurationsDefault.Millis.SECOND;
 let closure_18 = result + 3 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 let result1 = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockStatus.tsx");

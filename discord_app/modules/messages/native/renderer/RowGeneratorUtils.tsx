@@ -1,25 +1,25 @@
-// === Module 8806: RowGeneratorUtils ===
+// === Module 8848: RowGeneratorUtils ===
 
-// Module 8806 (RowGeneratorUtils)
+// Module 8848 (RowGeneratorUtils)
 import nativeDefault from "native" /* 575 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1493 */;
-import ColorUtils from "ColorUtils" /* 5009 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6362 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7595 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import NativeMediaManagerModule from "NativeMediaManagerModule" /* 1442 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1494 */;
+import ColorUtils from "ColorUtils" /* 5040 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6393 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7626 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import NativeMediaManagerModule from "NativeMediaManagerModule" /* 1443 */;
 
 require = fn;
-const MessageConstants = fn(5017);
+const MessageConstants = fn(5048);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: metroImportDefault } = MessageConstants);
-const SwipeActionsType = fn(8182).SwipeActionsType;
+const SwipeActionsType = fn(8224).SwipeActionsType;
 const Constants = fn(1071);
 ({ MessageFlags: closure_9, MessageTypes: closure_10 } = Constants);
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 const result = createStyles.experimental_createToken(() => ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.1));
-createStyles = fn(5012);
+createStyles = fn(5043);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({ ephemeralBackgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, ephemeralGutterColor: nativeDefault.colors.BACKGROUND_BRAND, giftIntentEphemeralBackgroundColor: result, mentionedBackgroundColor: nativeDefault.colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT, mentionedGutterColor: nativeDefault.unsafe_rawColors.YELLOW_300, automodBlockedBackgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, automodBlockedGutterColor: nativeDefault.unsafe_rawColors.RED_345, editingColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT });
 const set = new Set(NativeMediaManagerModule.getConstants().supportedExtensions);
 const size = fn(2);

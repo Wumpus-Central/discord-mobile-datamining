@@ -1,8 +1,8 @@
-// === Module 19619: VoiceChannelHoistingExperiment ===
+// === Module 19682: VoiceChannelHoistingExperiment ===
 
-// Module 19619 (VoiceChannelHoistingExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 5630 */;
-import createExperiment from "module_6013" /* 6013 */;
+// Module 19682 (VoiceChannelHoistingExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 5661 */;
+import createExperiment from "module_6044" /* 6044 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2025-12_voice_channel_hoisting", label: "Voice Channel Hoisting", commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enableWaveformIcon: false, enableHighlight: false }, treatments: null };

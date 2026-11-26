@@ -1,11 +1,11 @@
-// === Module 16756: QuestDockBountyBackground ===
+// === Module 16807: QuestDockBountyBackground ===
 
-// Module 16756 (QuestDockBountyBackground)
+// Module 16807 (QuestDockBountyBackground)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import AssetUtils from "AssetUtils" /* 9861 */;
+import AssetUtils from "AssetUtils" /* 9903 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16627 */;
+import QuestDockStore from "QuestDockStore" /* 16678 */;
 
 const require = globalThis.__r;
 
@@ -17,8 +17,8 @@ function QuestDockBackgroundSmokeArt() {
   const stateFromStores = width(563).useStateFromStores(items, () => QuestDockStore.prevRestingQuestDockMode);
   const obj = width(563);
   const tmp5 = height;
-  const tmp7 = height(16746)(QuestDockMode.EXPANDED);
-  let size = width(16748).useSmokeArtSize();
+  const tmp7 = height(16797)(QuestDockMode.EXPANDED);
+  let size = width(16799).useSmokeArtSize();
   width = size.width;
   height = size.height;
   const items1 = [width, height];
@@ -27,18 +27,18 @@ function QuestDockBackgroundSmokeArt() {
     const obj3 = { style: null, children: null };
     const items2 = [tmp.smokeArtWrapper, tmp8];
     obj3.style = items2;
-    const obj4 = { surface: tmp2(16748).QuestDockBountySmokeSurface.EXPANDED, paused: stateFromStores !== QuestDockMode.EXPANDED };
-    obj3.children = jsx(tmp5(16748), { surface: tmp2(16748).QuestDockBountySmokeSurface.EXPANDED, paused: stateFromStores !== QuestDockMode.EXPANDED });
+    const obj4 = { surface: tmp2(16799).QuestDockBountySmokeSurface.EXPANDED, paused: stateFromStores !== QuestDockMode.EXPANDED };
+    obj3.children = jsx(tmp5(16799), { surface: tmp2(16799).QuestDockBountySmokeSurface.EXPANDED, paused: stateFromStores !== QuestDockMode.EXPANDED });
     tmp9 = <View style={null}>{null}</View>;
-    const tmp5Result = tmp5(16748);
+    const tmp5Result = tmp5(16799);
   }
   return tmp9;
 }
 const View = fn(17).View;
-const QuestDockMode = fn(6840).QuestDockMode;
-const expandedHeight = fn(16629).QUEST_DOCK_PORTRAIT_MEDIA_EXPANDED_HEIGHT;
+const QuestDockMode = fn(6871).QuestDockMode;
+const expandedHeight = fn(16680).QUEST_DOCK_PORTRAIT_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({ smokeArtWrapper: { position: "absolute", left: 0, bottom: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBackground.tsx");
@@ -63,5 +63,5 @@ export default noop.memo(function QuestDockBountyBackground(imageUrl) {
   obj4.backdropColor = memo1;
   obj4.expandedHeight = expandedHeight;
   obj4.foregroundContent = <QuestDockBackgroundSmokeArt />;
-  return jsx(token(16745), { imageUrl: imageUrl.previewImageUrl, videoUrl: pickBountyPreviewUrlResult, videoMimetype: memo, collapsedMediaMode: null, gradientBaseColor: null, backdropColor: null, expandedHeight: null, foregroundContent: null });
+  return jsx(token(16796), { imageUrl: imageUrl.previewImageUrl, videoUrl: pickBountyPreviewUrlResult, videoMimetype: memo, collapsedMediaMode: null, gradientBaseColor: null, backdropColor: null, expandedHeight: null, foregroundContent: null });
 });

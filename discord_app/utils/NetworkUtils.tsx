@@ -1,7 +1,7 @@
-// === Module 1478: NetworkUtils ===
+// === Module 1479: NetworkUtils ===
 
-// Module 1478 (NetworkUtils)
-import utils_NetworkUtils from "utils/NetworkUtils" /* 1479 */;
+// Module 1479 (NetworkUtils)
+import utils_NetworkUtils from "utils/NetworkUtils" /* 1480 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = [];
@@ -22,11 +22,11 @@ obj.awaitOnline = function awaitOnline() {
       closure_2.push(fn);
       if (!c3) {
         c3 = true;
-        tmp(1479).default.addOnlineCallback(whenOnline);
-        const _default2 = tmp(1479).default;
+        tmp(1480).default.addOnlineCallback(whenOnline);
+        const _default2 = tmp(1480).default;
       }
     }
-    _default = whenOnline(1479).default;
+    _default = whenOnline(1480).default;
     tmp = whenOnline;
   });
 };

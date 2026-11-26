@@ -1,6 +1,6 @@
-// === Module 1233: ProtoUtils ===
+// === Module 1234: ProtoUtils ===
 
-// Module 1233 (ProtoUtils)
+// Module 1234 (ProtoUtils)
 import _mod1196 from "module_1196" /* 1196 */;
 import size from "module_2" /* 2 */;
 

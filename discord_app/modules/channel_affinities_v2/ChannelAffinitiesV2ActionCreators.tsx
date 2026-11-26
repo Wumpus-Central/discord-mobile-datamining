@@ -1,10 +1,10 @@
-// === Module 18008: ChannelAffinitiesV2ActionCreators ===
+// === Module 18067: ChannelAffinitiesV2ActionCreators ===
 
-// Module 18008 (ChannelAffinitiesV2ActionCreators)
+// Module 18067 (ChannelAffinitiesV2ActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import ConsentStore from "ConsentStore" /* 6810 */;
-import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 18006 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import ConsentStore from "ConsentStore" /* 6841 */;
+import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 18065 */;
 
 require = fn;
 const Constants = fn(1071);

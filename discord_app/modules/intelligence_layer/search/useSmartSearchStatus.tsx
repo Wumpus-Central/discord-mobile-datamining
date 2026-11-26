@@ -1,9 +1,9 @@
-// === Module 18877: useSmartSearchStatus ===
+// === Module 18940: useSmartSearchStatus ===
 
-// Module 18877 (useSmartSearchStatus)
-import SmartSearchUtils from "SmartSearchUtils" /* 13237 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13238 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13239 */;
+// Module 18940 (useSmartSearchStatus)
+import SmartSearchUtils from "SmartSearchUtils" /* 13289 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13290 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 13291 */;
 
 const require = globalThis.__r;
 

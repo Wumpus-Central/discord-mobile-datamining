@@ -1,25 +1,25 @@
-// === Module 19274: LaunchPadPullTab ===
+// === Module 19337: LaunchPadPullTab ===
 
-// Module 19274 (LaunchPadPullTab)
+// Module 19337 (LaunchPadPullTab)
 import nativeDefault from "native" /* 575 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12944 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18388 */;
-import showLaunchPadDefault from "showLaunchPad" /* 19195 */;
-import useLaunchPadPullTabMinimizedDefault from "useLaunchPadPullTabMinimized" /* 19275 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12996 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18447 */;
+import showLaunchPadDefault from "showLaunchPad" /* 19258 */;
+import useLaunchPadPullTabMinimizedDefault from "useLaunchPadPullTabMinimized" /* 19338 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(11910);
+const LaunchPadConstants = fn(11958);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({ LAUNCH_PAD_PULL_TAB_HIT_SLOP: metroImportDefault, LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_9, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: closure_10, LAUNCH_PAD_PULL_TAB_WIDTH, LAUNCH_PAD_SPRING_CONFIG: closure_11 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(12908).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12960).CHAT_INPUT_HEIGHT;
 let jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };
 let size = { position: "absolute", right: 0, width: LAUNCH_PAD_PULL_TAB_WIDTH, height: LAUNCH_PAD_PULL_TAB_HEIGHT, borderTopLeftRadius: LAUNCH_PAD_PULL_TAB_BORDER_RADIUS, borderBottomLeftRadius: LAUNCH_PAD_PULL_TAB_BORDER_RADIUS, borderWidth: 1, borderTopWidth: 1, borderColor: "rgba(0, 0, 0, 0.08)" };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
@@ -42,7 +42,7 @@ export default noop.memo(function LaunchPadPullTab(gestureState) {
   const tmp = closure_14();
   let tmp4 = useWindowDimensionsSharedValueDefault();
   const tmp5 = useLaunchPadPullTabMinimizedDefault({ launchPadSharedState, launchPadPullTabState });
-  items = [closure_17, tmp5, gestureState.gestureState, c8, require("module_1653").interpolate, launchPadSharedState, tmp4, launchPadPullTabState, c5, require("module_1653").interpolateColor, c4, tmp.pullTabClosed.backgroundColor, tmp.pullTabOpened.backgroundColor, require("spring/spring").withSpring, c11];
+  items = [closure_17, tmp5, gestureState.gestureState, c8, require("module_1654").interpolate, launchPadSharedState, tmp4, launchPadPullTabState, c5, require("module_1654").interpolateColor, c4, tmp.pullTabClosed.backgroundColor, tmp.pullTabOpened.backgroundColor, require("spring/spring").withSpring, c11];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -134,12 +134,12 @@ export default noop.memo(function LaunchPadPullTab(gestureState) {
   LaunchPadPullTabTsx3.__closure = items1;
   LaunchPadPullTabTsx3.__workletHash = 9280703221520;
   LaunchPadPullTabTsx3.__initData = tmp8;
-  const animatedStyle = require("module_1653").useAnimatedStyle(LaunchPadPullTabTsx3);
-  const obj = require("module_1653");
+  const animatedStyle = require("module_1654").useAnimatedStyle(LaunchPadPullTabTsx3);
+  const obj = require("module_1654");
   const tmp7 = c4;
   const tmp24 = useAnimatedKeyboardHeightDefault();
-  const sharedValue = require("module_1653").useSharedValue(undefined);
-  const tmp6Result = require("module_1653");
+  const sharedValue = require("module_1654").useSharedValue(undefined);
+  const tmp6Result = require("module_1654");
   let items2 = [closure_15, tmp24];
   _require = undefined;
   [tmp26, tmp27] = items2;
@@ -232,7 +232,7 @@ export default noop.memo(function LaunchPadPullTab(gestureState) {
   LaunchPadPullTabTsx2.__closure = items5;
   LaunchPadPullTabTsx2.__workletHash = 14150743699512;
   LaunchPadPullTabTsx2.__initData = tmp28;
-  const animatedReaction = require("module_1653").useAnimatedReaction(LaunchPadPullTabTsx1, LaunchPadPullTabTsx2);
+  const animatedReaction = require("module_1654").useAnimatedReaction(LaunchPadPullTabTsx1, LaunchPadPullTabTsx2);
   const obj2 = { style: null, children: null };
   const items6 = [tmp.pullTab, animatedStyle];
   obj2.style = items6;
@@ -247,5 +247,5 @@ export default noop.memo(function LaunchPadPullTab(gestureState) {
   obj3.onPress = showLaunchPadDefault;
   obj3.children = jsx(require("ChannelListMagnifyingGlassIcon").ChannelListMagnifyingGlassIcon, { size: "xs" });
   obj2.children = <c3 accessibilityRole="button" accessibilityLabel={null} hitSlop={null} style={null} onTouchStart={null} onPress={null}>{null}</c3>;
-  return jsx(_modDef1653.View, { style: null, children: null });
+  return jsx(_modDef1654.View, { style: null, children: null });
 });

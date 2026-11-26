@@ -1,15 +1,15 @@
-// === Module 11213: useOrderSigning ===
+// === Module 11259: useOrderSigning ===
 
-// Module 11213 (useOrderSigning)
-import BillingErrorDefault from "BillingError" /* 5763 */;
-import ClientBillingError2 from "ClientBillingError" /* 5777 */;
+// Module 11259 (useOrderSigning)
+import BillingErrorDefault from "BillingError" /* 5794 */;
+import ClientBillingError2 from "ClientBillingError" /* 5808 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: closure_6 } = noop);
-const OrderStatus = fn(5729).OrderStatus;
+const OrderStatus = fn(5760).OrderStatus;
 const prototype = function OrderSigningFailedError(arg0) {
   const tmp2 = new tmp(concat(arg0), concat);
   tmp2.name = "OrderSigningFailed";
@@ -74,7 +74,7 @@ export function useOrderSigning(order) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

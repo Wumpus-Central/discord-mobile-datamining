@@ -1,21 +1,21 @@
-// === Module 16116: UserProfileEditFormTabs ===
+// === Module 16169: UserProfileEditFormTabs ===
 
-// Module 16116 (UserProfileEditFormTabs)
+// Module 16169 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import ChatInputUtils from "ChatInputUtils" /* 5197 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6140 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8444 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9445 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14505 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 14952 */;
-import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15016 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16115 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16117 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import ChatInputUtils from "ChatInputUtils" /* 5228 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6171 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8486 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9487 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14557 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15002 */;
+import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15066 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16168 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16170 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9395 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9437 */;
 
 const require = globalThis.__r;
 
@@ -26,11 +26,11 @@ function MainPage() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const UserProfileSections = fn(6106).UserProfileSections;
-const PROFILE_SIDE_PADDING = fn(7526).PROFILE_SIDE_PADDING;
+const UserProfileSections = fn(6137).UserProfileSections;
+const PROFILE_SIDE_PADDING = fn(7557).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { tabbedContainer: { marginHorizontal: -PROFILE_SIDE_PADDING }, stickyTabs: { zIndex: 1, paddingTop: nativeDefault.space.PX_12 }, page: null };
 let obj3 = { zIndex: 1, paddingTop: nativeDefault.space.PX_12 };
 obj.page = { paddingHorizontal: PROFILE_SIDE_PADDING, paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
@@ -88,8 +88,8 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   UserProfileEditFormTabsTsx1.__closure = items2;
   UserProfileEditFormTabsTsx1.__workletHash = 9996648724256;
   UserProfileEditFormTabsTsx1.__initData = tmp9;
-  const animatedStyle = require("module_1653").useAnimatedStyle(UserProfileEditFormTabsTsx1);
-  let tmp2Result = require("module_1653");
+  const animatedStyle = require("module_1654").useAnimatedStyle(UserProfileEditFormTabsTsx1);
+  let tmp2Result = require("module_1654");
   const items3 = [closure_15, stickyTranslateY];
   _require = undefined;
   [tmp12, tmp13] = items3;
@@ -106,7 +106,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   UserProfileEditFormTabsTsx2.__closure = items4;
   UserProfileEditFormTabsTsx2.__workletHash = 5290718826457;
   UserProfileEditFormTabsTsx2.__initData = tmp12;
-  const animatedStyle1 = require("module_1653").useAnimatedStyle(UserProfileEditFormTabsTsx2);
+  const animatedStyle1 = require("module_1654").useAnimatedStyle(UserProfileEditFormTabsTsx2);
   const tmp16 = UserProfileSharedStylesDefault();
   card = tmp16;
   const tmp17 = useMeasuredLayoutDefault();
@@ -123,11 +123,11 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   const tmp6Result = tmp6(first.useState(num2), 2);
   first = tmp6Result[0];
   absoluteFill = tmp6Result[1];
-  arr5 = tmp15(14514)(userId);
+  arr5 = tmp15(14566)(userId);
   closure_7 = tmp20;
   const items5 = [arr5];
   const memo = first.useMemo(() => arr5.filter(UserProfileGameWidgetTypes.isGameWidget), items5);
-  const tmp2Result6 = require("module_1653");
+  const tmp2Result6 = require("module_1654");
   const fetchSuggestedGames = require("SuggestedGameHooks").useFetchSuggestedGames(true, memo);
   const items6 = [first];
   const layoutEffect = first.useLayoutEffect(() => {
@@ -204,7 +204,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   UserProfileEditFormTabsTsx4.__closure = items11;
   UserProfileEditFormTabsTsx4.__workletHash = 2474607394788;
   UserProfileEditFormTabsTsx4.__initData = tmp31;
-  const animatedReaction = require("module_1653").useAnimatedReaction(UserProfileEditFormTabsTsx3, UserProfileEditFormTabsTsx4);
+  const animatedReaction = require("module_1654").useAnimatedReaction(UserProfileEditFormTabsTsx3, UserProfileEditFormTabsTsx4);
   let obj3 = { style: tmp.tabbedContainer, ref, onLayout, children: null };
   let obj4 = { style: null, onLayout: onStickyTabsLayout, children: null };
   const items12 = [tmp.stickyTabs, animatedStyle];
@@ -212,7 +212,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   let obj5 = { pointerEvents: "none", style: null };
   const items13 = [absoluteFill.absoluteFill, { backgroundColor: tmp8 }, animatedStyle1];
   obj5.style = items13;
-  const items14 = [closure_9(_modDef1653.View, obj5), ];
+  const items14 = [closure_9(_modDef1654.View, obj5), ];
   let obj6 = { state: segmentedControlState, variant: null };
   let str;
   if (hasCustomProfileTheme) {
@@ -221,7 +221,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   obj6.variant = str;
   items14[1] = closure_9(require("Tabs/Tabs").Tabs, obj6);
   obj4.children = items14;
-  const items15 = [closure_11(_modDef1653.View, obj4), closure_9(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
+  const items15 = [closure_11(_modDef1654.View, obj4), closure_9(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
   obj3.children = items15;
   return closure_11(arr5, obj3);
 });

@@ -1,17 +1,17 @@
-// === Module 12478: GuildAutomodActionCreators ===
+// === Module 12527: GuildAutomodActionCreators ===
 
-// Module 12478 (GuildAutomodActionCreators)
+// Module 12527 (GuildAutomodActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
-import AutomodFeedback from "AutomodFeedback" /* 8199 */;
-import DataUtils from "DataUtils" /* 12479 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
+import AutomodFeedback from "AutomodFeedback" /* 8241 */;
+import DataUtils from "DataUtils" /* 12528 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleStore from "GuildRoleStore" /* 4918 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
+import GuildRoleStore from "GuildRoleStore" /* 4949 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 const require = globalThis.__r;
 
@@ -132,7 +132,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -195,7 +195,7 @@ let closure_19 = async function _executeAlertAction() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -228,7 +228,7 @@ let closure_19 = async function _executeAlertAction() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       } catch (tmp8) {
         c3 = tmp;
         throw tmp8;

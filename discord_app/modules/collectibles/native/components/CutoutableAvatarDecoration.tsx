@@ -1,9 +1,9 @@
-// === Module 9377: CutoutableAvatarDecoration ===
+// === Module 9419: CutoutableAvatarDecoration ===
 
-// Module 9377 (CutoutableAvatarDecoration)
-import AvatarUtils from "AvatarUtils" /* 1412 */;
+// Module 9419 (CutoutableAvatarDecoration)
+import AvatarUtils from "AvatarUtils" /* 1413 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 require = fn;
 const jsx = fn(21).jsx;

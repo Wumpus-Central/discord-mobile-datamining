@@ -1,12 +1,12 @@
-// === Module 14528: UserProfileWidgetEditOptionsActionSheet ===
+// === Module 14580: UserProfileWidgetEditOptionsActionSheet ===
 
-// Module 14528 (UserProfileWidgetEditOptionsActionSheet)
+// Module 14580 (UserProfileWidgetEditOptionsActionSheet)
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = fn;
-let closure_5 = fn(6106).TrackUserProfileEditActions;
-const widgetShowsGameDetails = fn(6141).widgetShowsGameDetails;
+let closure_5 = fn(6137).TrackUserProfileEditActions;
+const widgetShowsGameDetails = fn(6172).widgetShowsGameDetails;
 const jsx = fn(21).jsx;
 const constants = { REORDER_GAMES: "reorder-games", REMOVE: "remove-widget" };
 const size = fn(2);
@@ -64,43 +64,43 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
           if (constants2.REORDER_GAMES === label.key) {
             if (obj.isGameWidget(widget)) {
               closure_3.current = false;
-              closure_1_1(5226).hideActionSheet(label(14527).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              let obj2 = closure_1_1(5226);
+              closure_1_1(5257).hideActionSheet(label(14579).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              let obj2 = closure_1_1(5257);
               const tmp9 = closure_1_6(widget.type);
-              const openLazy = closure_1_1(5226).openLazy;
-              const tmp2Result = label(2119);
+              const openLazy = closure_1_1(5257).openLazy;
+              const tmp2Result = label(2120);
               if (tmp9) {
                 const obj3 = { widgetType: widget.type, returnFocusRef };
-                openLazy(tmp2Result(14529, dependencyMap.paths), "UserProfileWidgetGameDetailsReorderActionSheet", obj3);
+                openLazy(tmp2Result(14581, dependencyMap.paths), "UserProfileWidgetGameDetailsReorderActionSheet", obj3);
               } else {
                 const obj4 = { widgetType: widget.type, returnFocusRef };
-                openLazy(tmp2Result(14545, dependencyMap.paths), "UserProfileWidgetGameCoverGridReorderActionSheet", obj4);
+                openLazy(tmp2Result(14597, dependencyMap.paths), "UserProfileWidgetGameCoverGridReorderActionSheet", obj4);
               }
-              const tmp10 = closure_1_1(5226);
+              const tmp10 = closure_1_1(5257);
             }
-            obj = label(6140);
+            obj = label(6171);
           } else if (tmp.REMOVE === key) {
             closure_3.current = false;
-            closure_1_1(5226).hideActionSheet(label(14527).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-            const obj5 = closure_1_1(5226);
+            closure_1_1(5257).hideActionSheet(label(14579).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            const obj5 = closure_1_1(5257);
             const obj7 = {
               widgetName: widgetTitle,
               onConfirm() {
-                  const result = profileEditAnalyticsOptions(14518).removeWidgetFromPending(profileEditAnalyticsOptions);
-                  const obj = profileEditAnalyticsOptions(14518);
-                  const obj2 = profileEditAnalyticsOptions(6351);
+                  const result = profileEditAnalyticsOptions(14570).removeWidgetFromPending(profileEditAnalyticsOptions);
+                  const obj = profileEditAnalyticsOptions(14570);
+                  const obj2 = profileEditAnalyticsOptions(6382);
                   const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                   const result1 = obj2.trackUserProfileEditAction({ userId: id.getId(), action: constants.WIDGET_REMOVED });
-                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5021).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5052).AccessibilityAnnouncer;
                   const intl = profileEditAnalyticsOptions(1112).intl;
                   AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1112).t.zzsK7h));
                 },
               onDismissWithoutRemoving() {
-                  return profileEditAnalyticsOptions(6078).setAccessibilityFocus({ ref, delay: 100 });
+                  return profileEditAnalyticsOptions(6109).setAccessibilityFocus({ ref, delay: 100 });
                 }
             };
-            label(13566).confirmRemoveWidget(obj7);
-            const obj6 = label(13566);
+            label(13618).confirmRemoveWidget(obj7);
+            const obj6 = label(13618);
           }
         }
       };
@@ -113,43 +113,43 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
           if (constants2.REORDER_GAMES === label.key) {
             if (obj.isGameWidget(widget)) {
               closure_3.current = false;
-              closure_1_1(5226).hideActionSheet(label(14527).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              let obj2 = closure_1_1(5226);
+              closure_1_1(5257).hideActionSheet(label(14579).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              let obj2 = closure_1_1(5257);
               const tmp9 = closure_1_6(widget.type);
-              const openLazy = closure_1_1(5226).openLazy;
-              const tmp2Result = label(2119);
+              const openLazy = closure_1_1(5257).openLazy;
+              const tmp2Result = label(2120);
               if (tmp9) {
                 const obj3 = { widgetType: widget.type, returnFocusRef };
-                openLazy(tmp2Result(14529, dependencyMap.paths), "UserProfileWidgetGameDetailsReorderActionSheet", obj3);
+                openLazy(tmp2Result(14581, dependencyMap.paths), "UserProfileWidgetGameDetailsReorderActionSheet", obj3);
               } else {
                 const obj4 = { widgetType: widget.type, returnFocusRef };
-                openLazy(tmp2Result(14545, dependencyMap.paths), "UserProfileWidgetGameCoverGridReorderActionSheet", obj4);
+                openLazy(tmp2Result(14597, dependencyMap.paths), "UserProfileWidgetGameCoverGridReorderActionSheet", obj4);
               }
-              const tmp10 = closure_1_1(5226);
+              const tmp10 = closure_1_1(5257);
             }
-            obj = label(6140);
+            obj = label(6171);
           } else if (tmp.REMOVE === key) {
             closure_3.current = false;
-            closure_1_1(5226).hideActionSheet(label(14527).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-            const obj5 = closure_1_1(5226);
+            closure_1_1(5257).hideActionSheet(label(14579).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            const obj5 = closure_1_1(5257);
             const obj7 = {
               widgetName: widgetTitle,
               onConfirm() {
-                  const result = profileEditAnalyticsOptions(14518).removeWidgetFromPending(profileEditAnalyticsOptions);
-                  const obj = profileEditAnalyticsOptions(14518);
-                  const obj2 = profileEditAnalyticsOptions(6351);
+                  const result = profileEditAnalyticsOptions(14570).removeWidgetFromPending(profileEditAnalyticsOptions);
+                  const obj = profileEditAnalyticsOptions(14570);
+                  const obj2 = profileEditAnalyticsOptions(6382);
                   const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                   const result1 = obj2.trackUserProfileEditAction({ userId: id.getId(), action: constants.WIDGET_REMOVED });
-                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5021).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5052).AccessibilityAnnouncer;
                   const intl = profileEditAnalyticsOptions(1112).intl;
                   AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1112).t.zzsK7h));
                 },
               onDismissWithoutRemoving() {
-                  return profileEditAnalyticsOptions(6078).setAccessibilityFocus({ ref, delay: 100 });
+                  return profileEditAnalyticsOptions(6109).setAccessibilityFocus({ ref, delay: 100 });
                 }
             };
-            label(13566).confirmRemoveWidget(obj7);
-            const obj6 = label(13566);
+            label(13618).confirmRemoveWidget(obj7);
+            const obj6 = label(13618);
           }
         }
       }, label.key);

@@ -1,11 +1,11 @@
-// === Module 19287: shared/renderChannelBadge ===
+// === Module 19350: shared/renderChannelBadge ===
 
-// Module 19287 (shared/renderChannelBadge)
+// Module 19350 (shared/renderChannelBadge)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import NumberUtils from "NumberUtils" /* 2025 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import NewBadgeDefault from "NewBadge" /* 13191 */;
+import NumberUtils from "NumberUtils" /* 2026 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import NewBadgeDefault from "NewBadge" /* 13243 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

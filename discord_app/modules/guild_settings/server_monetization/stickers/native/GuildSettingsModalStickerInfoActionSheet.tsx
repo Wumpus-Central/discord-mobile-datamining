@@ -1,11 +1,11 @@
-// === Module 19944: GuildSettingsModalStickerInfoActionSheet ===
+// === Module 20008: GuildSettingsModalStickerInfoActionSheet ===
 
-// Module 19944 (GuildSettingsModalStickerInfoActionSheet)
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 19936 */;
+// Module 20008 (GuildSettingsModalStickerInfoActionSheet)
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 20000 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6896 */;
+import StickersStore from "StickersStore" /* 6927 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ export default noop.memo(function GuildSettingsModalStickerInfoActionSheet(arg0)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

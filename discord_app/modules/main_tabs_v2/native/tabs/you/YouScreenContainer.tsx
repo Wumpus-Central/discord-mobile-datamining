@@ -1,21 +1,21 @@
-// === Module 19044: YouScreenContainer ===
+// === Module 19107: YouScreenContainer ===
 
-// Module 19044 (YouScreenContainer)
+// Module 19107 (YouScreenContainer)
 import nativeDefault from "native" /* 575 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import useChatLayoutDefault from "useChatLayout" /* 5191 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17684 */;
-import AppFrameContainerDefault from "AppFrameContainer" /* 19043 */;
-import YouScreenDefault from "YouScreen" /* 19045 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import useChatLayoutDefault from "useChatLayout" /* 5222 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17741 */;
+import AppFrameContainerDefault from "AppFrameContainer" /* 19106 */;
+import YouScreenDefault from "YouScreen" /* 19108 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(9387).RootNavigatorScreen;
+const RootNavigatorScreen = fn(9429).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center" }, androidContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none }, wrapper: { flex: 1 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };

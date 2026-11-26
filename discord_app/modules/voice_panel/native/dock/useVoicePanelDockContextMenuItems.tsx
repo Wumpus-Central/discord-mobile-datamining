@@ -1,18 +1,18 @@
-// === Module 18138: useVoicePanelDockContextMenuItems ===
+// === Module 18197: useVoicePanelDockContextMenuItems ===
 
-// Module 18138 (useVoicePanelDockContextMenuItems)
+// Module 18197 (useVoicePanelDockContextMenuItems)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import util from "util" /* 1112 */;
-import _modDef3430 from "module_3430" /* 3430 */;
-import UserPlusIcon from "UserPlusIcon" /* 5702 */;
-import ChatIcon from "ChatIcon" /* 7106 */;
-import SettingsIcon from "SettingsIcon" /* 10409 */;
-import VideoIcon2 from "VideoIcon" /* 10594 */;
-import VideoSlashIcon from "VideoSlashIcon" /* 14901 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18144 */;
-import MobilePhoneXIcon from "MobilePhoneXIcon" /* 18145 */;
-import MobilePhoneShareIcon2 from "MobilePhoneShareIcon" /* 18147 */;
-import ActivitiesIcon from "ActivitiesIcon" /* 18149 */;
+import _modDef3431 from "module_3431" /* 3431 */;
+import UserPlusIcon from "UserPlusIcon" /* 5733 */;
+import ChatIcon from "ChatIcon" /* 7137 */;
+import SettingsIcon from "SettingsIcon" /* 10454 */;
+import VideoIcon2 from "VideoIcon" /* 10639 */;
+import VideoSlashIcon from "VideoSlashIcon" /* 14951 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18203 */;
+import MobilePhoneXIcon from "MobilePhoneXIcon" /* 18204 */;
+import MobilePhoneShareIcon2 from "MobilePhoneShareIcon" /* 18206 */;
+import ActivitiesIcon from "ActivitiesIcon" /* 18208 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -127,7 +127,7 @@ export default function useVoicePanelDockContextMenuItems(id, arg1) {
         let onPress2 = closure_7;
         const intl2 = util.intl;
         const string = intl2.string;
-        const tmp23 = _modDef3430;
+        const tmp23 = _modDef3431;
         if (closure_7.isVideoEnabled) {
           let stringResult = string(tmp23.q0eP6a);
         } else {

@@ -1,14 +1,14 @@
-// === Module 9963: IntlLink ===
+// === Module 10005: IntlLink ===
 
-// Module 9963 (IntlLink)
+// Module 10005 (IntlLink)
 import nativeDefault from "native" /* 575 */;
-import _modDef2068 from "module_2068" /* 2068 */;
-import LinkingDefault from "Linking" /* 5691 */;
+import _modDef2069 from "module_2069" /* 2069 */;
+import LinkingDefault from "Linking" /* 5722 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -26,7 +26,7 @@ export function IntlLink(children) {
   if (typeof target === "string") {
     let fn = function y() {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef2068.sanitizeUrl(target));
+      return obj.openURL(_modDef2069.sanitizeUrl(target));
     };
     let str = "link";
   } else {
@@ -46,6 +46,6 @@ export function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(5026).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1186).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(5026).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = closure_5(noop.useContext(target(5057).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1186).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(5057).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 }

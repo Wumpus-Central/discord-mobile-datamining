@@ -1,11 +1,11 @@
-// === Module 17687: HomeDrawerStore ===
+// === Module 17744: HomeDrawerStore ===
 
-// Module 17687 (HomeDrawerStore)
+// Module 17744 (HomeDrawerStore)
 import Constants from "Constants" /* 1071 */;
-import _mod4927 from "module_4927" /* 4927 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17688 */;
-import identity from "module_1257" /* 1257 */;
+import _mod4958 from "module_4958" /* 4958 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17745 */;
+import identity from "module_1258" /* 1258 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -14,16 +14,16 @@ const DM_WIDTH = Constants.DM_WIDTH;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   dependencyMap = arg1;
-  let obj = { panelX: require("module_1653").makeMutable(0), snapX: null, isOpenTarget: null, gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
-  const obj2 = require("module_1653");
-  obj.snapX = require("module_1653").makeMutable(0);
-  let obj3 = require("module_1653");
-  obj.isOpenTarget = require("module_1653").makeMutable(false);
-  const obj4 = require("module_1653");
-  obj.gestureState = require("module_1653").makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
+  let obj = { panelX: require("module_1654").makeMutable(0), snapX: null, isOpenTarget: null, gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
+  const obj2 = require("module_1654");
+  obj.snapX = require("module_1654").makeMutable(0);
+  let obj3 = require("module_1654");
+  obj.isOpenTarget = require("module_1654").makeMutable(false);
+  const obj4 = require("module_1654");
+  obj.gestureState = require("module_1654").makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
   obj.lastInteractionAt = { current: 0 };
-  const obj5 = require("module_1653");
-  obj.isPanelTouchActive = require("module_1653").makeMutable(false);
+  const obj5 = require("module_1654");
+  obj.isPanelTouchActive = require("module_1654").makeMutable(false);
   obj.setPanelX = function setPanelX(arg0) {
     const tmp = closure_1();
     ({ panelX, snapX, isOpenTarget, gestureState } = tmp);
@@ -49,7 +49,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     closure_1().lastInteractionAt.current = Date.now();
   };
   return obj;
-}, _mod4927.shallow);
+}, _mod4958.shallow);
 let result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;

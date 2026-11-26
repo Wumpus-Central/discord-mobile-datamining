@@ -1,16 +1,16 @@
-// === Module 10787: stickers/StickersUtils ===
+// === Module 10833: stickers/StickersUtils ===
 
-// Module 10787 (stickers/StickersUtils)
-import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+// Module 10833 (stickers/StickersUtils)
+import KeyboardTypes from "KeyboardTypes" /* 1627 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import UserStore from "UserStore" /* 1386 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10788).useStickerPickerStore;
+const useStickerPickerStore = fn(10834).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1071).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
 const size = fn(2);

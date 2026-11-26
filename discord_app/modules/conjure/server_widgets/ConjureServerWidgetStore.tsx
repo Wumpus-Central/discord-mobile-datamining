@@ -1,9 +1,9 @@
-// === Module 14942: ConjureServerWidgetStore ===
+// === Module 14992: ConjureServerWidgetStore ===
 
-// Module 14942 (ConjureServerWidgetStore)
+// Module 14992 (ConjureServerWidgetStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6904 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;
 
 require = fn;
 function offersServerWidget(install_scope) {

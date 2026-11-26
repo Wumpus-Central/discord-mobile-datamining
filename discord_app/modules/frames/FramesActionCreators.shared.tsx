@@ -1,14 +1,14 @@
-// === Module 9956: _launchFrame ===
+// === Module 9998: _launchFrame ===
 
-// Module 9956 (_launchFrame)
+// Module 9998 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getChannelIdForEmbeddedSurface from "getChannelIdForEmbeddedSurface" /* 6908 */;
-import createProxyTicket from "createProxyTicket" /* 7657 */;
-import leaveFrame from "leaveFrame" /* 7660 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9957 */;
+import getChannelIdForEmbeddedSurface from "getChannelIdForEmbeddedSurface" /* 6939 */;
+import createProxyTicket from "createProxyTicket" /* 7688 */;
+import leaveFrame from "leaveFrame" /* 7691 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9999 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 6905 */;
+import FramesStore from "FramesStore" /* 6936 */;
 
 require = fn;
 let closure_13 = async function _launchFrame(arg0) {
@@ -27,7 +27,7 @@ let closure_13 = async function _launchFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -115,11 +115,11 @@ let closure_13 = async function _launchFrame(arg0) {
                 closure_0 = closure_1_4(function*(arg0) {
                   closure_2 = tmp5;
                   closure_129_0 = closure_0;
-                  const proxyTicketChannelId = closure_0(6908).getProxyTicketChannelId(tmp2);
-                  yield closure_0(7657).takeProxyTicket(closure_0, proxyTicketChannelId, tmp2.type, closure_1_6);
+                  const proxyTicketChannelId = closure_0(6939).getProxyTicketChannelId(tmp2);
+                  yield closure_0(7688).takeProxyTicket(closure_0, proxyTicketChannelId, tmp2.type, closure_1_6);
                   closure_129_1 = value;
                   if (closure_129_1.prefetched) {
-                    closure_129_0.setStatus(closure_0(7654).StepStatus.PREFETCHED);
+                    closure_129_0.setStatus(closure_0(7685).StepStatus.PREFETCHED);
                   }
                   return closure_129_1.ticket;
                 });
@@ -258,7 +258,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(7660);
+    obj2 = obj2(7691);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -281,7 +281,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -391,9 +391,9 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(6906);
+const FramesConstants = fn(6937);
 ({ FrameIntent: closure_6, FrameLayoutModes: metroImportDefault, getFrameIntentForSurface: closure_8, isLaunched: closure_9, makeFrameId: closure_10 } = FramesConstants);
-const ActivityPanelModes = fn(5638).ActivityPanelModes;
+const ActivityPanelModes = fn(5669).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");

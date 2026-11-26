@@ -1,11 +1,11 @@
-// === Module 7649: loadEmbeddedAppCSPForLaunch ===
+// === Module 7680: loadEmbeddedAppCSPForLaunch ===
 
-// Module 7649 (loadEmbeddedAppCSPForLaunch)
-import getURLForApplication from "getURLForApplication" /* 5653 */;
-import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 7651 */;
-import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 7652 */;
+// Module 7680 (loadEmbeddedAppCSPForLaunch)
+import getURLForApplication from "getURLForApplication" /* 5684 */;
+import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 7682 */;
+import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 7683 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 7650 */;
+import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 7681 */;
 
 const getURLForApplicationDefault = getURLForApplication;
 
@@ -21,7 +21,7 @@ let closure_6 = async function _loadEmbeddedAppCSPForLaunch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

@@ -1,11 +1,11 @@
-// === Module 18799: ConjureHomeTargetPicker ===
+// === Module 18862: ConjureHomeTargetPicker ===
 
-// Module 18799 (ConjureHomeTargetPicker)
+// Module 18862 (ConjureHomeTargetPicker)
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import components_Button_Button from "components/Button/Button" /* 5610 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9774 */;
-import UserIcon from "UserIcon" /* 12359 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import components_Button_Button from "components/Button/Button" /* 5641 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9816 */;
+import UserIcon from "UserIcon" /* 12409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function ConjureHomeTargetPicker(target) {
       },
       ...guilds.map((label) => ({
         label: label.name,
-        IconComponent: target(11399).ServerIcon,
+        IconComponent: target(11445).ServerIcon,
         action() {
           return dependencyMap(label.id);
         }
@@ -63,7 +63,7 @@ export default function ConjureHomeTargetPicker(target) {
     ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
     const obj = { ref, variant: "tertiary", size: "sm", shrink: true, text: name, icon: jsx(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs" }), iconPosition: "end", onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
     const intl = util.intl;
-    obj.accessibilityLabel = intl.formatToPlainString(_modDef4244.Lyx6pW, { name });
+    obj.accessibilityLabel = intl.formatToPlainString(_modDef4245.Lyx6pW, { name });
     obj.accessibilityActions = accessibilityActions;
     obj.onAccessibilityAction = onAccessibilityAction;
     return jsx(components_Button_Button.Button, { ref, variant: "tertiary", size: "sm", shrink: true, text: name, icon: jsx(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs" }), iconPosition: "end", onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null });

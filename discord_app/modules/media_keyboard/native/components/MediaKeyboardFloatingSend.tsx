@@ -1,14 +1,14 @@
-// === Module 18566: MediaKeyboardFloatingSend ===
+// === Module 18629: MediaKeyboardFloatingSend ===
 
-// Module 18566 (MediaKeyboardFloatingSend)
+// Module 18629 (MediaKeyboardFloatingSend)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import LinearGradientDefault from "LinearGradient" /* 5567 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8082 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8124 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { sendContainer: null, gradient: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -53,8 +53,8 @@ export default noop.memo(function MediaKeyboardFloatingSendInner(arg0) {
   const items1 = [channelId, draftType];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UploadAttachmentStore.getUploadCount(c0, c1) > 0, items1);
   let obj2 = require("initialize");
-  const sharedValue = require("module_1653").useSharedValue(false);
-  const obj3 = require("module_1653");
+  const sharedValue = require("module_1654").useSharedValue(false);
+  const obj3 = require("module_1654");
   const items2 = [closure_9, animatedIndex, 0.7, stateFromStores];
   _require = undefined;
   importDefault = undefined;
@@ -83,8 +83,8 @@ export default noop.memo(function MediaKeyboardFloatingSendInner(arg0) {
   MediaKeyboardFloatingSendTsx2.__closure = items5;
   MediaKeyboardFloatingSendTsx2.__workletHash = 6688752148537;
   MediaKeyboardFloatingSendTsx2.__initData = tmp13;
-  const animatedReaction = require("module_1653").useAnimatedReaction(MediaKeyboardFloatingSendTsx1, MediaKeyboardFloatingSendTsx2);
-  const obj4 = require("module_1653");
+  const animatedReaction = require("module_1654").useAnimatedReaction(MediaKeyboardFloatingSendTsx1, MediaKeyboardFloatingSendTsx2);
+  const obj4 = require("module_1654");
   const items6 = [closure_11, bottom, nativeDefault, require("spring/spring").withSpring, sharedValue, require("springPresets").Reanimated3DefaultSpringConfig];
   _require = undefined;
   importDefault = undefined;
@@ -108,8 +108,8 @@ export default noop.memo(function MediaKeyboardFloatingSendInner(arg0) {
   MediaKeyboardFloatingSendTsx3.__closure = items7;
   MediaKeyboardFloatingSendTsx3.__workletHash = 13845638317384;
   MediaKeyboardFloatingSendTsx3.__initData = tmp16;
-  const animatedStyle = require("module_1653").useAnimatedStyle(MediaKeyboardFloatingSendTsx3);
-  const tmp6Result = require("module_1653");
+  const animatedStyle = require("module_1654").useAnimatedStyle(MediaKeyboardFloatingSendTsx3);
+  const tmp6Result = require("module_1654");
   const items8 = [closure_12, sharedValue];
   _require = undefined;
   [tmp23, tmp24] = items8;
@@ -127,7 +127,7 @@ export default noop.memo(function MediaKeyboardFloatingSendInner(arg0) {
   MediaKeyboardFloatingSendTsx4.__workletHash = 6914604421188;
   MediaKeyboardFloatingSendTsx4.__initData = tmp23;
   const items10 = [tmp.gradient.color];
-  const animatedProps = require("module_1653").useAnimatedProps(MediaKeyboardFloatingSendTsx4);
+  const animatedProps = require("module_1654").useAnimatedProps(MediaKeyboardFloatingSendTsx4);
   const memo = obj.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
     const obj2 = _modDef671(_undefined.gradient.color);
@@ -142,7 +142,7 @@ export default noop.memo(function MediaKeyboardFloatingSendInner(arg0) {
   const items11 = [animatedStyle, tmp.sendContainer];
   obj5.style = items11;
   const obj6 = { style: tmp.gradient };
-  const tmp6Result2 = require("module_1653");
+  const tmp6Result2 = require("module_1654");
   const merged = Object.assign(memo);
   obj6.pointerEvents = "none";
   const items12 = [closure_6(LinearGradientDefault, obj6), ];
@@ -154,5 +154,5 @@ export default noop.memo(function MediaKeyboardFloatingSendInner(arg0) {
   obj7.positionBottom = bottom;
   items12[1] = closure_6(require("FloatingActionButton").FloatingActionButton, obj7);
   obj5.children = items12;
-  return closure_7(_modDef1653.View, obj5);
+  return closure_7(_modDef1654.View, obj5);
 });

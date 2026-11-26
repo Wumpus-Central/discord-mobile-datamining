@@ -1,28 +1,28 @@
-// === Module 12803: CheckpointIntroScreen ===
+// === Module 12848: CheckpointIntroScreen ===
 
-// Module 12803 (CheckpointIntroScreen)
+// Module 12848 (CheckpointIntroScreen)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import _modDef3494 from "module_3494" /* 3494 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12589 */;
-import CheckpointTextDefault from "CheckpointText" /* 12590 */;
-import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12804 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12805 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import _modDef3495 from "module_3495" /* 3495 */;
+import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12849 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12850 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12851 */;
+import CheckpointTextDefault from "CheckpointText" /* 12852 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6365);
+const CheckpointConstants = fn(6396);
 ({ CHECKPOINT_CONTROL_SIZE: metroImportDefault, CHECKPOINT_INTRODUCTION_FADE_IN_DURATION_MS: closure_8, CHECKPOINT_INTRODUCTION_REVEAL_DURATION_MS: closure_9, CHECKPOINT_NAV_HEIGHT: closure_10 } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flexGrow: 1, justifyContent: "flex-end", gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_64 }, year: null, yearRow: null, globe: null, descriptions: null, landscapeContent: null, landscapeContainer: null };
 let obj3 = { flexGrow: 1, justifyContent: "flex-end", gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_64 };
 obj2.year = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
@@ -57,7 +57,7 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
     return () => clearTimeout(closure_0);
   }, []);
   const tmp10 = _slicedToArray(noop.useState(require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion)), 2);
-  const items1 = [closure_15, closure_8, require("module_1653").Easing, require("timing/timing").withTiming, tmp11, PX_12];
+  const items1 = [closure_15, closure_8, require("module_1654").Easing, require("timing/timing").withTiming, tmp11, PX_12];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -89,9 +89,9 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   CheckpointIntroScreenTsx1.__closure = items2;
   CheckpointIntroScreenTsx1.__workletHash = 8997086399243;
   CheckpointIntroScreenTsx1.__initData = tmp13;
-  const animatedStyle = require("module_1653").useAnimatedStyle(CheckpointIntroScreenTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(CheckpointIntroScreenTsx1);
   let tmp22 = landscapeContainer;
-  let obj2 = require("module_1653");
+  let obj2 = require("module_1654");
   if (landscapeContainer) {
     const items3 = [tmp.landscapeContent, ];
     const obj3 = { paddingTop: bound, paddingRight: rect.right + tmp2(575).space.PX_24, paddingBottom: bound };
@@ -127,31 +127,31 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   let tmp20Result = !tmp8;
   if (!tmp8) {
     const obj8 = { style: tmp.globe };
-    tmp20Result = closure_11(tmp2(12806), obj8);
+    tmp20Result = closure_11(tmp2(12853), obj8);
   }
   items6[1] = tmp20Result;
   obj7.children = items6;
-  obj6.children = closure_12(_modDef1653.View, obj7);
+  obj6.children = closure_12(_modDef1654.View, obj7);
   const items7 = [closure_11(View, obj6), ];
   const obj9 = { style: null, children: null };
   const items8 = [tmp.descriptions, animatedStyle];
   obj9.style = items8;
   const tmp2Result = CheckpointScreenDefault;
   const intl = tmp9(1112).intl;
-  const tmp2Result5 = _modDef3494;
+  const tmp2Result5 = _modDef3495;
   const tmp2Result4 = CheckpointTextDefault;
   const items9 = [closure_11(tmp2Result4, { variant: "heading-lg/medium", children: intl.string(tmp8 ? tmp2Result5["7YmUVu"] : tmp2Result5["Fyr+NW"]) }), ];
   let tmp20Result2 = !tmp8;
   if (!tmp8) {
     const obj11 = { variant: "heading-lg/medium", children: null };
     const intl2 = tmp9(1112).intl;
-    obj11.children = intl2.string(tmp2(3494)["2GRr6H"]);
-    tmp20Result2 = closure_11(tmp2(12590), obj11);
-    const tmp2Result6 = tmp2(12590);
+    obj11.children = intl2.string(tmp2(3495)["2GRr6H"]);
+    tmp20Result2 = closure_11(tmp2(12852), obj11);
+    const tmp2Result6 = tmp2(12852);
   }
   items9[1] = tmp20Result2;
   obj9.children = items9;
-  items7[1] = closure_12(_modDef1653.View, obj9);
+  items7[1] = closure_12(_modDef1654.View, obj9);
   obj5.children = items7;
   obj4.children = closure_12(View, obj5);
   return closure_11(tmp2Result, obj4);

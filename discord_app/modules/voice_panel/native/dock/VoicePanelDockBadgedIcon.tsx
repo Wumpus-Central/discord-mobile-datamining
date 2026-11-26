@@ -1,9 +1,9 @@
-// === Module 18164: VoicePanelDockBadgedIcon ===
+// === Module 18223: VoicePanelDockBadgedIcon ===
 
-// Module 18164 (VoicePanelDockBadgedIcon)
-import _mod1706 from "module_1706" /* 1706 */;
-import native from "native" /* 5073 */;
-import timing_timing from "timing/timing" /* 5222 */;
+// Module 18223 (VoicePanelDockBadgedIcon)
+import _mod1707 from "module_1707" /* 1707 */;
+import native from "native" /* 5104 */;
+import timing_timing from "timing/timing" /* 5253 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ function StreamBadge(progress) {
   const effect = noop.useEffect(() => {
     if (state === native.TransitionStates.YEETED) {
       const tmpResult = timing_timing;
-      items = [closure_14, _mod1706.scheduleOnRN, cleanUp];
+      items = [closure_14, _mod1707.scheduleOnRN, cleanUp];
       c0 = undefined;
       c1 = undefined;
       [tmp11, tmp12, tmp13] = items;
@@ -54,7 +54,7 @@ function StreamBadge(progress) {
   obj.children = tmp3Result;
   return closure_5(state(cleanUp[10]).View, obj);
 }
-const VoicePanelDockConstants = fn(11757);
+const VoicePanelDockConstants = fn(11805);
 ({ DOCK_FADE_TIMING: closure_4, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -64,9 +64,9 @@ const sum2 = fn(1186).BADGE_SIZE + 4;
 let closure_9 = sum2 / 2;
 let closure_10 = sum + fn(1186).BADGE_SIZE / 2;
 let closure_11 = sum1 + fn(1186).BADGE_SIZE / 2;
-const GuildsBarActivityIndicator = fn(18058);
+const GuildsBarActivityIndicator = fn(18117);
 const mediaIcon = GuildsBarActivityIndicator.getMediaIcon({ audio: false, video: false, screenshare: true, isCurrentUserConnected: true });
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj3 = { clip: null, badge: null, badgeIndicator: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj3.clip = {};
@@ -89,10 +89,10 @@ export default function VoicePanelDockBadgedIcon(children) {
   if (streaming) {
     num = 1;
   }
-  const sharedValue = require("module_1653").useSharedValue(num);
+  const sharedValue = require("module_1654").useSharedValue(num);
   _require = sharedValue;
-  let obj = require("module_1653");
-  items = [closure_16, require("module_1653").interpolate, sharedValue, 0.7, require("module_1653").Extrapolation, 0.8];
+  let obj = require("module_1654");
+  items = [closure_16, require("module_1654").interpolate, sharedValue, 0.7, require("module_1654").Extrapolation, 0.8];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -119,9 +119,9 @@ export default function VoicePanelDockBadgedIcon(children) {
   VoicePanelDockBadgedIconTsx2.__closure = items1;
   VoicePanelDockBadgedIconTsx2.__workletHash = 13214924592294;
   VoicePanelDockBadgedIconTsx2.__initData = tmp5;
-  const animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelDockBadgedIconTsx2);
-  const tmp2Result = require("module_1653");
-  const items2 = [closure_17, sharedValue, require("module_1653").interpolate, 0.7, require("module_1653").Extrapolation, 0.8, c8, require("ClipView").CutoutShape, closure_10, closure_11, c9];
+  const animatedStyle = require("module_1654").useAnimatedStyle(VoicePanelDockBadgedIconTsx2);
+  const tmp2Result = require("module_1654");
+  const items2 = [closure_17, sharedValue, require("module_1654").interpolate, 0.7, require("module_1654").Extrapolation, 0.8, c8, require("ClipView").CutoutShape, closure_10, closure_11, c9];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -180,7 +180,7 @@ export default function VoicePanelDockBadgedIcon(children) {
   VoicePanelDockBadgedIconTsx3.__workletHash = 6139173483455;
   VoicePanelDockBadgedIconTsx3.__initData = tmp12;
   const items4 = [animatedStyle, sharedValue];
-  const animatedProps = require("module_1653").useAnimatedProps(VoicePanelDockBadgedIconTsx3);
+  const animatedProps = require("module_1654").useAnimatedProps(VoicePanelDockBadgedIconTsx3);
   const callback = noop.useCallback((id, arg1, state, cleanUp) => hasOwnProperty(StreamBadge, { progress, animatedBadgeStyle, state, cleanUp }, id), items4);
   const items5 = [c5(require("ClipView").ClipViewAnimated, { style: tmp.clip, animatedProps, children: children.children }), ];
   const obj3 = { children: null };

@@ -1,25 +1,25 @@
-// === Module 15001: UserProfileWishlistGrid ===
+// === Module 15051: UserProfileWishlistGrid ===
 
-// Module 15001 (UserProfileWishlistGrid)
+// Module 15051 (UserProfileWishlistGrid)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import native from "native" /* 5073 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6279 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import WishlistShopUnpublishUtils from "WishlistShopUnpublishUtils" /* 11121 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import native from "native" /* 5104 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import WishlistShopUnpublishUtils from "WishlistShopUnpublishUtils" /* 11167 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6280 */;
-import SentGiftsStore from "SentGiftsStore" /* 11619 */;
-import WishlistStore from "WishlistStore" /* 11070 */;
-import UserStore from "UserStore" /* 1386 */;
-import SKUStore from "SKUStore" /* 6329 */;
-import UserProfileStore from "UserProfileStore" /* 6132 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6311 */;
+import SentGiftsStore from "SentGiftsStore" /* 11667 */;
+import WishlistStore from "WishlistStore" /* 11116 */;
+import UserStore from "UserStore" /* 1387 */;
+import SKUStore from "SKUStore" /* 6360 */;
+import UserProfileStore from "UserProfileStore" /* 6163 */;
 
 const require = globalThis.__r;
 
@@ -50,19 +50,19 @@ class WishlistEmptyState {
   }
 }
 const View = fn(17).View;
-let closure_10 = fn(11073).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(11071).getWishlistProductLines;
-let Constants = fn(6106);
+let closure_10 = fn(11119).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(11117).getWishlistProductLines;
+let Constants = fn(6137);
 ({ TrackUserProfileWishlistActions: closure_15, UserProfileSections: closure_16 } = Constants);
 Constants = fn(1071);
 ({ Routes: closure_17, SKUProductLines: closure_18 } = Constants);
 let closure_19 = fn(1073).CollectiblesMobileShopScreen;
-const PremiumConstants = fn(1388);
+const PremiumConstants = fn(1389);
 ({ GiftingOrigin: closure_20, PremiumSubscriptionSKUToPremiumType: closure_21, SubscriptionIntervalTypes: closure_22 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
 let closure_26 = new LoggerDefault("UserProfileWishlistGrid");
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { headerRow: null, headerButtons: null, gridWrapper: null, itemsContainer: null, emptyState: null, emptyStateText: null, disclaimer: null, disclaimerTop: null };
 const tmp6 = new LoggerDefault("UserProfileWishlistGrid");
 obj2.headerRow = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: nativeDefault.space.PX_12 };
@@ -276,7 +276,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -329,7 +329,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                 obj7.analyticsSource = c1(context[47]).USER_PROFILE_WISHLIST;
                                 obj7.screen = constants3.FEATURED_PAGE;
                                 obj7.onNavigateAway = function onNavigateAway() {
-                                  closure_1(6102)({ userId: user.id, initialSection: constants.WISHLIST });
+                                  closure_1(6133)({ userId: user.id, initialSection: constants.WISHLIST });
                                 };
                                 const result = wishlistId(context[54]).openCollectiblesShopMobile(obj7);
                                 const obj28 = wishlistId(context[54]);
@@ -429,7 +429,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                             obj29.lockedRecipientUser = lockedRecipientUser;
                             obj29.giftingOrigin = constants2.USER_PROFILE_WISHLIST;
                             obj29.onGiftModalDismiss = function onGiftModalDismiss() {
-                              closure_1(6102)({ userId: user.id, initialSection: constants.WISHLIST });
+                              closure_1(6133)({ userId: user.id, initialSection: constants.WISHLIST });
                             };
                             const result4 = wishlistId(context[51]).openSocialLayerStorefrontGiftModal(obj29);
                             const obj55 = wishlistId(context[51]);
@@ -585,7 +585,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     }
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15009, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15059, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
     const obj3 = { wishlistId, analyticsContext: context, analyticsLocations };
   }, items15);
   const callback1 = obj12.useCallback(() => {

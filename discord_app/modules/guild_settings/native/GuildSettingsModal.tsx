@@ -1,15 +1,15 @@
-// === Module 19837: GuildSettingsModal ===
+// === Module 19901: GuildSettingsModal ===
 
-// Module 19837 (GuildSettingsModal)
+// Module 19901 (GuildSettingsModal)
 import util from "util" /* 1112 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
-import NavigatorHeader from "NavigatorHeader" /* 7160 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8531 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17814 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
+import NavigatorHeader from "NavigatorHeader" /* 7191 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17871 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8532 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
 
 const require = globalThis.__r;
 

@@ -1,16 +1,16 @@
-// === Module 16058: EditProfileFrameActionSheet ===
+// === Module 16116: EditProfileFrameActionSheet ===
 
-// Module 16058 (EditProfileFrameActionSheet)
+// Module 16116 (EditProfileFrameActionSheet)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6278 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import useShopProductItems from "useShopProductItems" /* 9389 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11898 */;
-import EditProfileFrameSection from "EditProfileFrameSection" /* 16060 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import useShopProductItems from "useShopProductItems" /* 9431 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11946 */;
+import EditProfileFrameSection from "EditProfileFrameSection" /* 16118 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 6298 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 6329 */;
 
 const require = globalThis.__r;
 
@@ -106,7 +106,7 @@ function ProfileFrameSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(14406)(previewSkuId);
+  const tmp2 = purchase(14458)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -130,21 +130,21 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11241), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
+  const items1 = [closure_9(purchase(11287), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5567), obj2);
+  items1[1] = closure_9(purchase(5598), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileFrameRecord = fn(6287).isProfileFrameRecord;
+const isProfileFrameRecord = fn(6318).isProfileFrameRecord;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flex: 1 }, previewContainer: { overflow: "hidden", height: 300, alignItems: "center" }, previewGradient: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

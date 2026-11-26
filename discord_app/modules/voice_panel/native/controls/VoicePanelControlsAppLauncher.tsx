@@ -1,25 +1,25 @@
-// === Module 19540: VoicePanelControlsAppLauncher ===
+// === Module 19603: VoicePanelControlsAppLauncher ===
 
-// Module 19540 (VoicePanelControlsAppLauncher)
+// Module 19603 (VoicePanelControlsAppLauncher)
 import _modDef38 from "module_38" /* 38 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8577 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12992 */;
-import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 13176 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8619 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 13044 */;
+import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 13228 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsConstants = fn(11732);
+const VoicePanelControlsConstants = fn(11780);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1071).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_10 = createStyles.createStyles({ container: { width: "100%", paddingTop: CONTROLS_DRAWER_HEADER_SIZE } });
 let closure_11 = { code: "(function VoicePanelControlsAppLauncherTsx1(){let[gestureSpecs]=this.__closure;return gestureSpecs.get().active;})" };
 let closure_12 = { code: "(function VoicePanelControlsAppLauncherTsx2(){let[gestureSpecs]=this.__closure;return gestureSpecs.get().isDrawer;})" };
@@ -56,10 +56,10 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   const obj4 = require("AppLauncherContext");
   const ref = noop.useRef(require("AppLauncherContext").AppLauncherKeyboardCloseReason.DISMISSED);
   const ref1 = noop.useRef(undefined);
-  const sharedValue = require("module_1653").useSharedValue(0);
-  const obj5 = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(0);
-  const obj6 = require("module_1653");
+  const sharedValue = require("module_1654").useSharedValue(0);
+  const obj5 = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(0);
+  const obj6 = require("module_1654");
   const items2 = [closure_11, gestureSpecs];
   _require = undefined;
   [tmp17, tmp18] = items2;
@@ -72,8 +72,8 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   VoicePanelControlsAppLauncherTsx1.__closure = items3;
   VoicePanelControlsAppLauncherTsx1.__workletHash = 16735872110268;
   VoicePanelControlsAppLauncherTsx1.__initData = tmp17;
-  const derivedValue = require("module_1653").useDerivedValue(VoicePanelControlsAppLauncherTsx1);
-  const obj7 = require("module_1653");
+  const derivedValue = require("module_1654").useDerivedValue(VoicePanelControlsAppLauncherTsx1);
+  const obj7 = require("module_1654");
   const items4 = [closure_12, gestureSpecs];
   _require = undefined;
   [tmp20, tmp21] = items4;
@@ -86,8 +86,8 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   VoicePanelControlsAppLauncherTsx2.__closure = items5;
   VoicePanelControlsAppLauncherTsx2.__workletHash = 13454461717534;
   VoicePanelControlsAppLauncherTsx2.__initData = tmp20;
-  const derivedValue1 = require("module_1653").useDerivedValue(VoicePanelControlsAppLauncherTsx2);
-  const tmp2Result = require("module_1653");
+  const derivedValue1 = require("module_1654").useDerivedValue(VoicePanelControlsAppLauncherTsx2);
+  const tmp2Result = require("module_1654");
   const items6 = [closure_13, derivedValue, derivedValue1, tmp7, rect];
   _require = undefined;
   importDefault = undefined;
@@ -112,11 +112,11 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   VoicePanelControlsAppLauncherTsx3.__workletHash = 7444393630336;
   VoicePanelControlsAppLauncherTsx3.__initData = tmp23;
   const obj8 = { children: null };
-  const animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelControlsAppLauncherTsx3);
+  const animatedStyle = require("module_1654").useAnimatedStyle(VoicePanelControlsAppLauncherTsx3);
   const obj9 = { style: null, children: null };
   const items8 = [tmp.container, gradientTop, animatedStyle];
   obj9.style = items8;
-  const tmp2Result2 = require("module_1653");
+  const tmp2Result2 = require("module_1654");
   const items9 = [closure_7(AppLauncherNavigatorDefault, { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: require("AppLauncherTypes").AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
   const obj11 = { title: null, disablePill: true };
   const obj10 = { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: require("AppLauncherTypes").AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth };
@@ -124,6 +124,6 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   obj11.title = intl.string(require("util").t.shUONg);
   items9[1] = closure_7(VoicePanelControlsDrawerTitleDefault, obj11);
   obj9.children = items9;
-  obj8.children = closure_8(_modDef1653.View, obj9);
+  obj8.children = closure_8(_modDef1654.View, obj9);
   return closure_7(closure_9, obj8);
 });

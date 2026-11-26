@@ -1,6 +1,6 @@
-// === Module 1626: KeyboardTypes ===
+// === Module 1627: KeyboardTypes ===
 
-// Module 1626 (KeyboardTypes)
+// Module 1627 (KeyboardTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/keyboard/native/KeyboardTypes.tsx");

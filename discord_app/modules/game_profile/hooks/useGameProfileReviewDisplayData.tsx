@@ -1,11 +1,11 @@
-// === Module 14130: useGameProfileReviewDisplayData ===
+// === Module 14182: useGameProfileReviewDisplayData ===
 
-// Module 14130 (useGameProfileReviewDisplayData)
+// Module 14182 (useGameProfileReviewDisplayData)
 import util from "util" /* 1112 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2161 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 8724 */;
-import calculateSteamReviewScoreDescription from "calculateSteamReviewScoreDescription" /* 14120 */;
-import GameProfileReviewUtils from "GameProfileReviewUtils" /* 14121 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2162 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 8766 */;
+import calculateSteamReviewScoreDescription from "calculateSteamReviewScoreDescription" /* 14172 */;
+import GameProfileReviewUtils from "GameProfileReviewUtils" /* 14173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

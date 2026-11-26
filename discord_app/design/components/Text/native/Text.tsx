@@ -1,17 +1,17 @@
-// === Module 5603: Text/Text ===
+// === Module 5634: Text/Text ===
 
-// Module 5603 (Text/Text)
+// Module 5634 (Text/Text)
 import applyDefault from "apply" /* 12 */;
 import NativeText2 from "NativeText" /* 299 */;
 import nativeDefault from "native" /* 575 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
-import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 5605 */;
-import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5607 */;
-import PlainTextEligibility from "PlainTextEligibility" /* 5608 */;
-import _modDef5609 from "module_5609" /* 5609 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
+import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 5636 */;
+import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5638 */;
+import PlainTextEligibility from "PlainTextEligibility" /* 5639 */;
+import _modDef5640 from "module_5640" /* 5640 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import module_1653 from "module_1653" /* 1653 */;
+import module_1654 from "module_1654" /* 1654 */;
 
 require = fn;
 class Text {
@@ -137,7 +137,7 @@ const Text2 = get_ActivityIndicator.Text;
 let closure_7 = get_ActivityIndicator.unstable_TextAncestorContext;
 const Fonts = fn(1082).Fonts;
 const jsx = fn(21).jsx;
-let closure_9 = module_1653.createAnimatedComponent(Text2);
+let closure_9 = module_1654.createAnimatedComponent(Text2);
 let items = [{ includeFontPadding: true }];
 let closure_11 = [];
 const keys = Object.keys(nativeDefault.colors);
@@ -152,7 +152,7 @@ obj3[700] = Fonts.GINTO_DISCORD_NORD_BOLD;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj5[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj5[900] } = Fonts);
 const dependencyMap = { nitro: obj3, primary: { 400: null, 500: null, 600: null, 700: null, 800: null }, code: { 400: null, 700: null } };
 let closure_14 = { nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(5604).TextVariantsFlat;
+const TextVariantsFlat = fn(5635).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((fontSize) => {
   const letterSpacing = fontSize.letterSpacing;
   items = [fontSize.name, ];
@@ -188,9 +188,9 @@ const mapped = TextVariantsFlat.map((fontSize) => {
   }
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(5605);
+const useManaTextMigrationHighlight = fn(5636);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_16 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {

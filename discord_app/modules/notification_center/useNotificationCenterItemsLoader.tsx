@@ -1,19 +1,19 @@
-// === Module 18203: useNotificationCenterItemsLoader ===
+// === Module 18262: useNotificationCenterItemsLoader ===
 
-// Module 18203 (useNotificationCenterItemsLoader)
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7436 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18204 */;
+// Module 18262 (useNotificationCenterItemsLoader)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7467 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 18263 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 6946 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6917 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18202 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 6977 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6948 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18261 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6137).ReadStateTypes;
+const ReadStateTypes = fn(6168).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemsLoader.tsx");
 
@@ -126,7 +126,7 @@ export function useNotificationCenterItemsLoader(isFocused) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

@@ -1,28 +1,28 @@
-// === Module 8751: GameProfileHeader ===
+// === Module 8793: GameProfileHeader ===
 
-// Module 8751 (GameProfileHeader)
+// Module 8793 (GameProfileHeader)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import LinearGradientDefault from "LinearGradient" /* 5567 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import SKUUtils from "SKUUtils" /* 8752 */;
-import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 8753 */;
-import GameCoverArt from "GameCoverArt" /* 8754 */;
-import GameProfileRankPillDefault from "GameProfileRankPill" /* 8756 */;
-import _modDef8759 from "module_8759" /* 8759 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import LinearGradientDefault from "LinearGradient" /* 5598 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import SKUUtils from "SKUUtils" /* 8794 */;
+import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 8795 */;
+import GameCoverArt from "GameCoverArt" /* 8796 */;
+import GameProfileRankPillDefault from "GameProfileRankPill" /* 8798 */;
+import _modDef8801 from "module_8801" /* 8801 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(8749);
+const GameProfileConstants = fn(8791);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, titleContainer: null, titleRow: null, title: null, wavingWumpus: null, textShadow: null };
 const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefault.space.PX_80, left: 0, right: 0 };
 obj2.artHero = rect;
@@ -50,7 +50,7 @@ const result = size.fileFinishedImporting("modules/game_profile/native/component
 export default function GameProfileHeader(arg0) {
   ({ game, scrollY, onHeightMeasured } = arg0);
   const tmp = closure_8();
-  const sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(0);
   items = [closure_9, ];
   if (scrollY == null) {
     scrollY = sharedValue;
@@ -68,7 +68,7 @@ export default function GameProfileHeader(arg0) {
   GameProfileHeaderTsx1.__workletHash = 14790445044571;
   GameProfileHeaderTsx1.__initData = tmp5;
   const genres = game.genres;
-  const animatedStyle = _mod1653.useAnimatedStyle(GameProfileHeaderTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(GameProfileHeaderTsx1);
   const mapped = genres.map(SKUUtils.getGenreText);
   const joined = mapped.join(", ");
   const l30Rank = game.l30Rank;
@@ -100,7 +100,7 @@ export default function GameProfileHeader(arg0) {
   obj7.colors = items5;
   items4[1] = timestampProducer(LinearGradientDefault, obj7);
   obj4.children = items4;
-  const items6 = [metroImportDefault(_modDef1653.View, obj4), ];
+  const items6 = [metroImportDefault(_modDef1654.View, obj4), ];
   const obj8 = { style: tmp.headerContent, children: null };
   const obj9 = { style: tmp.shadowContainer, children: null };
   const obj10 = { game, imageSize: 114, size: null, style: null };
@@ -123,7 +123,7 @@ export default function GameProfileHeader(arg0) {
   const items10 = [timestampProducer(Text_Text.Text, obj14), ];
   let tmp15Result3 = game.id === hasOwnProperty;
   if (tmp15Result3) {
-    const obj15 = { source: _modDef8759, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj15 = { source: _modDef8801, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp15Result3 = timestampProducer(FastImageDefault, obj15);
     const tmp9Result2 = FastImageDefault;
   }

@@ -1,9 +1,9 @@
-// === Module 7321: SettingSearchSessionAnalyticsManager ===
+// === Module 7352: SettingSearchSessionAnalyticsManager ===
 
-// Module 7321 (SettingSearchSessionAnalyticsManager)
+// Module 7352 (SettingSearchSessionAnalyticsManager)
 import Constants from "Constants" /* 1071 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import v1 from "v1" /* 1268 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import v1 from "v1" /* 1269 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

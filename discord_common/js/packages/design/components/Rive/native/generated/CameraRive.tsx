@@ -1,8 +1,8 @@
-// === Module 5143: CameraRive ===
+// === Module 5174: CameraRive ===
 
-// Module 5143 (CameraRive)
-import BaseRive from "BaseRive" /* 5081 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5134 */;
+// Module 5174 (CameraRive)
+import BaseRive from "BaseRive" /* 5112 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5165 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

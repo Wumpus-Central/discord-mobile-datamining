@@ -1,31 +1,31 @@
-// === Module 7478: GuildOnboardingConnectionPrompt ===
+// === Module 7509: GuildOnboardingConnectionPrompt ===
 
-// Module 7478 (GuildOnboardingConnectionPrompt)
+// Module 7509 (GuildOnboardingConnectionPrompt)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7423 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7430 */;
-import ConnectionCardDefault from "ConnectionCard" /* 7479 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7454 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7461 */;
+import ConnectionCardDefault from "ConnectionCard" /* 7510 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7004 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6358 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7431 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7424 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7035 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6389 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7455 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const OnboardingConnectionType = fn(7425).OnboardingConnectionType;
-let closure_12 = fn(7421).GuildOnboardingModalStates;
+const OnboardingConnectionType = fn(7456).OnboardingConnectionType;
+let closure_12 = fn(7452).GuildOnboardingModalStates;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5012);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5566).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, header: null, title: null, description: null, connectionsList: null, footer: null, footerContent: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5566).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(5043);
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5597).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, header: null, title: null, description: null, connectionsList: null, footer: null, footerContent: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5597).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollContainer = { display: "flex", flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { display: "flex", flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.header = { marginBottom: nativeDefault.space.PX_24 };

@@ -1,12 +1,12 @@
-// === Module 18088: GuildsBarDragPreview ===
+// === Module 18147: GuildsBarDragPreview ===
 
-// Module 18088 (GuildsBarDragPreview)
+// Module 18147 (GuildsBarDragPreview)
 import nativeDefault from "native" /* 575 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import _mod4927 from "module_4927" /* 4927 */;
-import native from "native" /* 5073 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import _mod4958 from "module_4958" /* 4958 */;
+import native from "native" /* 5104 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18015 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18074 */;
 
 require = fn;
 function PreviewItem(overState) {
@@ -39,8 +39,8 @@ function PreviewItem(overState) {
   GuildsBarDragPreviewTsx1.__closure = items1;
   GuildsBarDragPreviewTsx1.__workletHash = 1882650321947;
   GuildsBarDragPreviewTsx1.__initData = tmp5;
-  const derivedValue = require("module_1653").useDerivedValue(GuildsBarDragPreviewTsx1);
-  const obj2 = require("module_1653");
+  const derivedValue = require("module_1654").useDerivedValue(GuildsBarDragPreviewTsx1);
+  const obj2 = require("module_1654");
   const items2 = [closure_12, scrollPosition, windowSize, listInsets, dragRegion, draggedHeight];
   _require = undefined;
   importDefault = undefined;
@@ -72,9 +72,9 @@ function PreviewItem(overState) {
   GuildsBarDragPreviewTsx2.__closure = items3;
   GuildsBarDragPreviewTsx2.__workletHash = 14975465511473;
   GuildsBarDragPreviewTsx2.__initData = tmp10;
-  const derivedValue1 = require("module_1653").useDerivedValue(GuildsBarDragPreviewTsx2);
-  const tmp2Result = require("module_1653");
-  const items4 = [closure_14, dropPosition, scrollPosition, gestureState, draggedHeight, derivedValue, derivedValue1, windowSize, require("spring/spring").withSpring, c10, closure_13, require("module_1706").scheduleOnRN, dropComplete];
+  const derivedValue1 = require("module_1654").useDerivedValue(GuildsBarDragPreviewTsx2);
+  const tmp2Result = require("module_1654");
+  const items4 = [closure_14, dropPosition, scrollPosition, gestureState, draggedHeight, derivedValue, derivedValue1, windowSize, require("spring/spring").withSpring, c10, closure_13, require("module_1707").scheduleOnRN, dropComplete];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -163,11 +163,11 @@ function PreviewItem(overState) {
   GuildsBarDragPreviewTsx4.__workletHash = 1941615705344;
   GuildsBarDragPreviewTsx4.__initData = tmp17;
   const items6 = [overState, overNode];
-  const animatedStyle = require("module_1653").useAnimatedStyle(GuildsBarDragPreviewTsx4);
+  const animatedStyle = require("module_1654").useAnimatedStyle(GuildsBarDragPreviewTsx4);
   const memo = noop.useMemo(() => {
     if ("convert-after" === c1) {
       if (null != c0) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Path", name: "Array", color: "analyticsLocations", expanded: true, children: true };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Path", name: "Array", color: "analyticsLocations", expanded: null, children: null };
         items = [tmp2];
         element.children = items;
         return element;
@@ -190,7 +190,7 @@ function PreviewItem(overState) {
   obj4.items = items8;
   obj4.getItemKey = getItemPreviewKey;
   obj3.children = jsx(require("native").TransitionGroup, obj4);
-  return jsx(_modDef1653.View, obj3);
+  return jsx(_modDef1654.View, obj3);
 }
 function getItemPreviewKey(id) {
   return "" + id.id;
@@ -211,14 +211,14 @@ function AnimatedItemPreview(cleanUp) {
   if (transitionState === require("native").TransitionStates.ENTERED) {
     num = 0;
   }
-  const sharedValue = require("module_1653").useSharedValue(num);
+  const sharedValue = require("module_1654").useSharedValue(num);
   importDefault = sharedValue;
   if (isHomeDrawerEnabled) {
     isHomeDrawerEnabled = !tmp9;
   }
-  let obj3 = require("module_1653");
+  let obj3 = require("module_1654");
   const tmp8 = GuildsNodeType;
-  items = [closure_19, node.type === GuildsNodeType.FOLDER, sharedValue, require("spring/spring").withSpring, closure_10, closure_18, transitionState, require("native").TransitionStates, require("module_1706").scheduleOnRN, cleanUp.cleanUp];
+  items = [closure_19, node.type === GuildsNodeType.FOLDER, sharedValue, require("spring/spring").withSpring, closure_10, closure_18, transitionState, require("native").TransitionStates, require("module_1707").scheduleOnRN, cleanUp.cleanUp];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -339,7 +339,7 @@ function AnimatedItemPreview(cleanUp) {
   GuildsBarDragPreviewTsx6.__closure = items1;
   GuildsBarDragPreviewTsx6.__workletHash = 9452285169812;
   GuildsBarDragPreviewTsx6.__initData = tmp10;
-  const animatedStyle = require("module_1653").useAnimatedStyle(GuildsBarDragPreviewTsx6);
+  const animatedStyle = require("module_1654").useAnimatedStyle(GuildsBarDragPreviewTsx6);
   const effect = noop.useEffect(() => {
     let num = 1;
     if (c0 === native.TransitionStates.YEETED) {
@@ -359,26 +359,26 @@ function AnimatedItemPreview(cleanUp) {
     let obj5 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(18023), obj5);
+    let tmp22Result = tmp22(tmp4(18082), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
     if (isHomeDrawerEnabled) {
-      tmp25 = transitionState === tmp2(5073).TransitionStates.YEETED;
+      tmp25 = transitionState === tmp2(5104).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(18043), obj6);
-    const tmp4Result = tmp4(18043);
+    tmp22Result = tmp22(tmp4(18102), obj6);
+    const tmp4Result = tmp4(18102);
   }
   obj4.children = tmp22Result;
-  return jsx(_modDef1653.View, obj4);
+  return jsx(_modDef1654.View, obj4);
 }
-let GuildsNodeType = fn(6133).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(18012).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6164).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(18071).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -422,7 +422,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET", scrollPosition: "USER_PROFILE_SETTINGS_SET_GUILD", dragRegion: null, windowSize: "heading-lg/semibold", dropComplete: "interactive-text-active", listInsets: null };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: true, scrollPosition: "/assets/design/components/Icon/native/redesign/generated/images", dragRegion: 24, windowSize: 24, dropComplete: null, listInsets: "38f7d2f2d427a5f45efdf121101c72d6" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;
@@ -441,7 +441,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4927.shallow);
+  }, _mod4958.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

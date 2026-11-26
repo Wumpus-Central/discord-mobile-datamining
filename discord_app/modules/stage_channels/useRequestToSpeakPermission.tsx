@@ -1,10 +1,10 @@
-// === Module 10281: useRequestToSpeakPermission ===
+// === Module 10323: useRequestToSpeakPermission ===
 
-// Module 10281 (useRequestToSpeakPermission)
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7805 */;
+// Module 10323 (useRequestToSpeakPermission)
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7839 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
 
 const require = globalThis.__r;
 
@@ -19,8 +19,8 @@ export function useRequestToSpeakPermission(id) {
   const items1 = [id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0), items1);
   let obj = require("initialize");
-  const canEveryoneRoleResult = stateFromStores(4949).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4949);
+  const canEveryoneRoleResult = stateFromStores(4980).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(4980);
   [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

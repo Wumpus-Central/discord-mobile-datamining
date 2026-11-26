@@ -1,19 +1,19 @@
-// === Module 17488: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 17545: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 17488 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 17545 (CollectiblesShopViewAllCategoryItemsHeader)
 import util from "util" /* 1112 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import HeaderShared from "HeaderShared" /* 8962 */;
-import _modDef8966 from "module_8966" /* 8966 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13861 */;
+import useNavigation from "useNavigation" /* 1501 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import HeaderShared from "HeaderShared" /* 9004 */;
+import _modDef9008 from "module_9008" /* 9008 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 12, paddingLeft: 8 }, backButton: { flex: 1 }, logo: { flex: 2, height: 36 }, dummyRightButton: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx");
@@ -29,7 +29,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj4.paddingTop = youBarSettingsCustomHeaderPaddingTop;
   obj3.style = obj4;
   const obj5 = { style: tmp.backButton, children: null };
-  const obj6 = { source: _modDef8966, color: buttonColor, accessibilityLabel: null, onPress: null };
+  const obj6 = { source: _modDef9008, color: buttonColor, accessibilityLabel: null, onPress: null };
   const intl = util.intl;
   obj6.accessibilityLabel = intl.string(util.t["13/7kX"]);
   obj6.onPress = function onPress() {

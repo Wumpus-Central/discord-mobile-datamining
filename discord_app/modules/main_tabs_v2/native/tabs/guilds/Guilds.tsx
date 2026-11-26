@@ -1,18 +1,18 @@
-// === Module 17683: guilds/Guilds ===
+// === Module 17740: guilds/Guilds ===
 
-// Module 17683 (guilds/Guilds)
+// Module 17740 (guilds/Guilds)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5188 */;
-import RootNavigationRef from "RootNavigationRef" /* 5189 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5194 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5219 */;
+import RootNavigationRef from "RootNavigationRef" /* 5220 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5818 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
 
 require = fn;
-const YouBarNavigatorScreens = fn(9387).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(9429).YouBarNavigatorScreens;
 const ComponentActions = fn(1071).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -21,11 +21,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx");
 
 export default noop.memo(function GuildsOnly() {
-  const trackTabPerformance = enabled(17684).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
-  let obj = enabled(17684);
-  const tmp5 = isChatBesideChannelList(5184)();
-  const isEligibleForQuests = enabled(9851).getIsEligibleForQuests();
-  const GuildsRenderExperiment = enabled(17685).GuildsRenderExperiment;
+  const trackTabPerformance = enabled(17741).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
+  let obj = enabled(17741);
+  const tmp5 = isChatBesideChannelList(5215)();
+  const isEligibleForQuests = enabled(9893).getIsEligibleForQuests();
+  const GuildsRenderExperiment = enabled(17742).GuildsRenderExperiment;
   enabled = GuildsRenderExperiment.useConfig({ location: "GuildsOnly" }).enabled;
   isChatBesideChannelList = undefined;
   dependencyMap = undefined;
@@ -83,7 +83,7 @@ export default noop.memo(function GuildsOnly() {
       let ComponentDispatch = enabled(1107).ComponentDispatch;
       const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
       let obj = isChatBesideChannelList(572);
-      let rootNavigationRef = enabled(5189).getRootNavigationRef();
+      let rootNavigationRef = enabled(5220).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }
@@ -101,21 +101,21 @@ export default noop.memo(function GuildsOnly() {
     }
   }, items);
   if (!isChatBesideChannelList) {
-    isChatBesideChannelList = isChatBesideChannelList(5191)().isChatBesideChannelList;
+    isChatBesideChannelList = isChatBesideChannelList(5222)().isChatBesideChannelList;
   }
   if (!enabled) {
     const obj3 = { gradient: tmp5, children: null };
-    const items1 = [closure_8(tmp4(17686), {}), closure_8(tmp4(18091), {}), closure_8(tmp4(18134), { placement: "channel-list" }), , ];
+    const items1 = [closure_8(tmp4(17743), {}), closure_8(tmp4(18150), {}), closure_8(tmp4(18193), { placement: "channel-list" }), , ];
     let tmp10Result = isEligibleForQuests;
     if (isEligibleForQuests) {
-      tmp10Result = closure_8(tmp4(16720), {});
+      tmp10Result = closure_8(tmp4(16771), {});
     }
     const obj4 = { children: null };
     items1[3] = tmp10Result;
-    items1[4] = closure_8(tmp(17668).BackgroundChatHost, {});
+    items1[4] = closure_8(tmp(17725).BackgroundChatHost, {});
     obj4.children = items1;
-    obj3.children = closure_9(tmp(16633).QuestDockExternalCoordinationContextProvider, obj4);
-    let tmp10Result2 = closure_8(tmp(5073).ThemeContextProvider, obj3);
+    obj3.children = closure_9(tmp(16684).QuestDockExternalCoordinationContextProvider, obj4);
+    let tmp10Result2 = closure_8(tmp(5104).ThemeContextProvider, obj3);
   } else {
     tmp10Result2 = null;
   }

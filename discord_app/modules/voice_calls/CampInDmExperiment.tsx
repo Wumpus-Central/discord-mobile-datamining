@@ -1,7 +1,7 @@
-// === Module 19607: CampInDmExperiment ===
+// === Module 19670: CampInDmExperiment ===
 
-// Module 19607 (CampInDmExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 19670 (CampInDmExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-camp-in-dm", defaultConfig: { disableIdleDisconnect: false }, variations: null };

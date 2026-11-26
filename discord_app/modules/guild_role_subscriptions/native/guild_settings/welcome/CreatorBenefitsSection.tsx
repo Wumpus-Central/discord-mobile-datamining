@@ -1,17 +1,17 @@
-// === Module 20106: CreatorBenefitsSection ===
+// === Module 20170: CreatorBenefitsSection ===
 
-// Module 20106 (CreatorBenefitsSection)
+// Module 20170 (CreatorBenefitsSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import shared from "shared" /* 5019 */;
-import useThemeDefault from "useTheme" /* 5221 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import AvatarRoseExample from "AvatarRoseExample" /* 20107 */;
-import AvatarLokyExample from "AvatarLokyExample" /* 20111 */;
-import AvatarGraggleExample from "AvatarGraggleExample" /* 20115 */;
-import AvatarMoatmonsturrExample from "AvatarMoatmonsturrExample" /* 20119 */;
-import StarKeySpotIllustration from "StarKeySpotIllustration" /* 20123 */;
-import StarCoinsSpotIllustration from "StarCoinsSpotIllustration" /* 20127 */;
+import shared from "shared" /* 5050 */;
+import useThemeDefault from "useTheme" /* 5252 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import AvatarRoseExample from "AvatarRoseExample" /* 20171 */;
+import AvatarLokyExample from "AvatarLokyExample" /* 20175 */;
+import AvatarGraggleExample from "AvatarGraggleExample" /* 20179 */;
+import AvatarMoatmonsturrExample from "AvatarMoatmonsturrExample" /* 20183 */;
+import StarKeySpotIllustration from "StarKeySpotIllustration" /* 20187 */;
+import StarCoinsSpotIllustration from "StarCoinsSpotIllustration" /* 20191 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -101,10 +101,10 @@ function BenefitAvatar(Avatar) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(16765).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(16816).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { horizontalContainer: { flex: 1, flexDirection: "row" }, benefitAvatarContainer: { padding: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, benefitCard: null, benefitAvatar: null, benefitAvatars: null, benefitCardTitle: null, earningMetricsShadowContainer: null, earningMetricsShadowContainerDarkMode: null, earningMetrics: null, earningMetricsDarkMode: null, earningMetricsLightMode: null, greenTextDarkMode: null, greenTextLightMode: null, starKeyIllo: null, revenueShare: null, revenueShareContainer: null, revenueShareIllo: null, revenueShareDescription: null };
 let obj3 = { padding: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.benefitCard = { marginVertical: 6, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };

@@ -1,7 +1,7 @@
-// === Module 13057: useIsAppDM ===
+// === Module 13109: useIsAppDM ===
 
-// Module 13057 (useIsAppDM)
-import UserStore from "UserStore" /* 1386 */;
+// Module 13109 (useIsAppDM)
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 

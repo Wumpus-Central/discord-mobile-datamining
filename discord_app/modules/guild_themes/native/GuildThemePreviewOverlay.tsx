@@ -1,7 +1,7 @@
-// === Module 17830: GuildThemePreviewOverlay ===
+// === Module 17887: GuildThemePreviewOverlay ===
 
-// Module 17830 (GuildThemePreviewOverlay)
-import inlineStyles from "inlineStyles" /* 7912 */;
+// Module 17887 (GuildThemePreviewOverlay)
+import inlineStyles from "inlineStyles" /* 7946 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

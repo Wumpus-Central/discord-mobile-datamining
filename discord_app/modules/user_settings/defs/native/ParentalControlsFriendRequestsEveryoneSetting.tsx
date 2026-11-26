@@ -1,26 +1,26 @@
-// === Module 17541: ParentalControlsFriendRequestsEveryoneSetting ===
+// === Module 17598: ParentalControlsFriendRequestsEveryoneSetting ===
 
-// Module 17541 (ParentalControlsFriendRequestsEveryoneSetting)
+// Module 17598 (ParentalControlsFriendRequestsEveryoneSetting)
 import util from "util" /* 1112 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7320 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16273 */;
-import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16277 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7351 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16324 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16328 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8170 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8212 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
-const SettingBuilders = fn(11914);
+const SettingBuilders = fn(11962);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(9513).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(9555).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const selectedTeenId = controlledSetting(8175).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(16273).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8217).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(16324).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;

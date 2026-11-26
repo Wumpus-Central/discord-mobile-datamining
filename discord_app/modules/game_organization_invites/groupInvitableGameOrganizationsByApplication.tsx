@@ -1,6 +1,6 @@
-// === Module 12086: groupInvitableGameOrganizationsByApplication ===
+// === Module 12136: groupInvitableGameOrganizationsByApplication ===
 
-// Module 12086 (groupInvitableGameOrganizationsByApplication)
+// Module 12136 (groupInvitableGameOrganizationsByApplication)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/game_organization_invites/groupInvitableGameOrganizationsByApplication.tsx");

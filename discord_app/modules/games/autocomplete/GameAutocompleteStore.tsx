@@ -1,11 +1,11 @@
-// === Module 7143: GameAutocompleteStore ===
+// === Module 7174: GameAutocompleteStore ===
 
-// Module 7143 (GameAutocompleteStore)
+// Module 7174 (GameAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import privDefault from "priv" /* 1454 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 7144 */;
+import privDefault from "priv" /* 1455 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 7175 */;
 
 require = fn;
 function getCacheKey(arg0, arg1) {
@@ -61,8 +61,8 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(result, filter_g
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp(7144).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + closure_0 + ":" + arg0));
-      const tmpResult = tmp(7144);
+      result1 = tmp(7175).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + closure_0 + ":" + arg0));
+      const tmpResult = tmp(7175);
     }
     return result1;
   }

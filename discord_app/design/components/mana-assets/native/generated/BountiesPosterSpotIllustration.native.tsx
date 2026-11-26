@@ -1,19 +1,19 @@
-// === Module 16535: BountiesPosterSpotIllustration ===
+// === Module 16586: BountiesPosterSpotIllustration ===
 
-// Module 16535 (BountiesPosterSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7230 */;
-import _modDef16536 from "module_16536" /* 16536 */;
-import _modDef16537 from "module_16537" /* 16537 */;
-import _modDef16538 from "module_16538" /* 16538 */;
+// Module 16586 (BountiesPosterSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7261 */;
+import _modDef16587 from "module_16587" /* 16587 */;
+import _modDef16588 from "module_16588" /* 16588 */;
+import _modDef16589 from "module_16589" /* 16589 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16536 }, 3: null };
-let obj2 = { uri: _modDef16536 };
-obj[2] = { uri: _modDef16537 };
-const obj3 = { uri: _modDef16537 };
-obj[3] = { uri: _modDef16538 };
+let obj = { 1: null, 2: { uri: _modDef16587 }, 3: null };
+let obj2 = { uri: _modDef16587 };
+obj[2] = { uri: _modDef16588 };
+const obj3 = { uri: _modDef16588 };
+obj[3] = { uri: _modDef16589 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx");
 

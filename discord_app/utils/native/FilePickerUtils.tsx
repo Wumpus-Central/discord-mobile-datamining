@@ -1,6 +1,6 @@
-// === Module 10656: FilePickerUtils ===
+// === Module 10701: FilePickerUtils ===
 
-// Module 10656 (FilePickerUtils)
+// Module 10701 (FilePickerUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _handleDocumentSelection() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -34,6 +34,7 @@ let closure_5 = async function _handleDocumentSelection() {
           closure_129_0 = undefined;
           closure_129_1 = undefined;
           closure_129_2 = undefined;
+          closure_129_3 = undefined;
           let obj6 = closure_0;
           if (closure_0 === undefined) {
             obj6 = {};
@@ -43,9 +44,13 @@ let closure_5 = async function _handleDocumentSelection() {
             flag = true;
           }
           closure_129_0 = flag;
-          ({ extensions: closure_129_1, types: closure_129_2 } = obj6);
-          closure_129_3 = undefined;
+          ({ extensions: closure_129_1, types: closure_129_2, iosMode } = obj6);
+          if (iosMode === undefined) {
+            iosMode = "open";
+          }
+          closure_129_3 = iosMode;
           closure_129_4 = undefined;
+          closure_129_5 = undefined;
           c5 = 1;
           c6 = 1;
           return { value: "Path", done: true };
@@ -63,22 +68,21 @@ let closure_5 = async function _handleDocumentSelection() {
             if (closure_129_2.length > 0) {
               let tmp56 = closure_129_2;
             }
-            closure_129_3 = tmp56;
+            closure_129_4 = tmp56;
             c4 = 1;
             let pick = closure_130_0(closure_130_2[2]).pick;
             const tmp66 = closure_130_0(closure_130_2[2]);
-            if (obj9.isIOS()) {
-              let obj10 = { mode: "open" };
-            } else {
-              obj10 = { mode: "import" };
+            if (!obj9.isIOS()) {
+              let obj10 = { mode: "import" };
+              const obj11 = {};
+              const merged = Object.assign(obj10);
+              obj11.allowMultiSelection = closure_129_0;
+              obj11.type = closure_129_4;
+              pick = pick(obj11);
+              c5 = 3;
+              c6 = 1;
             }
-            const obj11 = {};
-            const merged = Object.assign(obj10);
-            obj11.allowMultiSelection = closure_129_0;
-            obj11.type = closure_129_3;
-            pick = pick(obj11);
-            c5 = 3;
-            c6 = 1;
+            obj10 = { mode: "open" };
             obj9 = closure_130_0(closure_130_2[3]);
           }
           if (null != closure_129_1) {
@@ -118,17 +122,17 @@ let closure_5 = async function _handleDocumentSelection() {
         }
       } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_5 = closure_3;
-        if (obj4.isErrorWithCode(closure_129_5)) {
-          if (closure_129_5.code === closure_130_0(closure_130_2[2]).errorCodes.OPERATION_CANCELED) {
+        closure_129_6 = closure_3;
+        if (obj4.isErrorWithCode(closure_129_6)) {
+          if (closure_129_6.code === closure_130_0(closure_130_2[2]).errorCodes.OPERATION_CANCELED) {
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         }
         obj4 = closure_130_0(closure_130_2[2]);
         const obj12 = { error_message: null };
         const _JSON = JSON;
-        obj12.error_message = JSON.stringify(closure_129_5);
+        obj12.error_message = JSON.stringify(closure_129_6);
         closure_130_0(closure_130_2[6]).trackWithMetadata(closure_130_4.MOBILE_FILE_PICKER_ERROR, obj12);
         const obj5 = closure_130_0(closure_130_2[6]);
         const obj13 = { title: null, body: null };
@@ -138,7 +142,7 @@ let closure_5 = async function _handleDocumentSelection() {
         obj13.body = intl4.string(closure_130_0(closure_130_2[5]).t.fZRH9P);
         closure_130_1(closure_130_2[4]).show(obj13);
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -148,8 +152,8 @@ let closure_5 = async function _handleDocumentSelection() {
         const obj14 = { value, done: true };
         return obj14;
       } else {
-        closure_129_4 = value;
-        if (closure_129_4.some((size) => 0 === size.size)) {
+        closure_129_5 = value;
+        if (closure_129_5.some((size) => 0 === size.size)) {
           const obj15 = { title: null, body: null };
           const intl = closure_130_0(closure_130_2[5]).intl;
           obj15.title = intl.string(closure_130_0(closure_130_2[5]).t.B3vFdU);
@@ -161,11 +165,11 @@ let closure_5 = async function _handleDocumentSelection() {
         c4 = 0;
         c6 = 3;
       }
-    } catch (tmp75) {
-      closure_3 = tmp75;
+    } catch (tmp77) {
+      closure_3 = tmp77;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp75;
+        throw tmp77;
       } else {
         c5 = tmp;
       }

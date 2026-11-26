@@ -1,12 +1,12 @@
-// === Module 11657: ForumPostDataLoader ===
+// === Module 11705: ForumPostDataLoader ===
 
-// Module 11657 (ForumPostDataLoader)
+// Module 11705 (ForumPostDataLoader)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8077 */;
-import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 10692 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8119 */;
+import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 10737 */;
 
 const require = globalThis.__r;
 
@@ -32,7 +32,7 @@ let closure_13 = async function _loadForumPostData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -104,7 +104,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -131,7 +131,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
             c4 = 0;
             refs.finishRequesting(closure_0, nextBatch);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           } else {
             channel = channel.getChannel(closure_0);
             let guild_id;
@@ -143,7 +143,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
               c4 = 0;
               refs.finishRequesting(closure_0, nextBatch);
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             } else {
               const HTTP = require("HTTPUtils").HTTP;
               const request = { url: Endpoints.FORUM_POSTS(closure_0), body: null, rejectWithError: true };
@@ -195,7 +195,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
     }
   }
 };
-const computeThreadIdsSnapshot = fn(8986).computeThreadIdsSnapshot;
+const computeThreadIdsSnapshot = fn(9028).computeThreadIdsSnapshot;
 const Endpoints = fn(1071).Endpoints;
 class DefaultDict {
   constructor(arg0) {

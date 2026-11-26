@@ -1,20 +1,20 @@
-// === Module 17952: useWaterwheelsActions ===
+// === Module 18009: useWaterwheelsActions ===
 
-// Module 17952 (useWaterwheelsActions)
+// Module 18009 (useWaterwheelsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 7846 */;
-import GameActionCreators from "GameActionCreators" /* 8678 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8890 */;
-import NotificationUtilsDefault from "NotificationUtils" /* 13337 */;
-import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 17953 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6991 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 7880 */;
+import GameActionCreators from "GameActionCreators" /* 8720 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8932 */;
+import NotificationUtilsDefault from "NotificationUtils" /* 13389 */;
+import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 18010 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2140 */;
+import GameStore from "GameStore" /* 2141 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13329 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13381 */;
 
 require = fn;
 function openErrorToast(text) {
@@ -41,7 +41,7 @@ let closure_16 = async function _openWaterwheelsGame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -595,7 +595,7 @@ let closure_18 = async function _requestNotifications() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -625,7 +625,7 @@ let closure_18 = async function _requestNotifications() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp10) {
       c0 = tmp;
       throw tmp10;
@@ -660,7 +660,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -734,7 +734,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                 }
               }
               c14 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           break;
           case 1:
@@ -763,7 +763,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: "+95" };
                   }
                 } else {
                   try {
@@ -903,7 +903,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
             let isValidResult1 = closure_138_10.isValid();
             if (isValidResult1) {
               isValidResult1 = !(function isJoinFailureAlreadyShown(body) {
-                if (body instanceof closure_1_0(6964).JoinGuildRefusedError) {
+                if (body instanceof closure_1_0(6995).JoinGuildRefusedError) {
                   return true;
                 } else {
                   let code;
@@ -949,7 +949,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: "+95" };
                   }
                 } else {
                   try {
@@ -1088,7 +1088,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: "+95" };
                       }
                     } else {
                       try {
@@ -1235,7 +1235,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "HermesInternal", done: "HermesInternal" };
+                              return { value: "HermesInternal", done: "+95" };
                             }
                           } else {
                             try {
@@ -1362,10 +1362,10 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         c14 = 1;
                         const obj19 = {
                           value: closure_137_0(closure_137_2[27]).withDiscoverRequestDeadline(closure_138_14, () => {
-                                                const HTTP = closure_0(1284).HTTP;
-                                                const obj = { url: closure_9.GUILD_MEMBER_REQUEST_TO_JOIN(closure_1_1), rejectWithError: closure_0(1284).rejectWithMigratedError(), signal: signal.signal, timeout: null };
-                                                const obj2 = closure_0(1284);
-                                                obj.timeout = { deadline: closure_0(8883).DISCOVER_REQUEST_DEADLINE_MS };
+                                                const HTTP = closure_0(1285).HTTP;
+                                                const obj = { url: closure_9.GUILD_MEMBER_REQUEST_TO_JOIN(closure_1_1), rejectWithError: closure_0(1285).rejectWithMigratedError(), signal: signal.signal, timeout: null };
+                                                const obj2 = closure_0(1285);
+                                                obj.timeout = { deadline: closure_0(8925).DISCOVER_REQUEST_DEADLINE_MS };
                                                 return HTTP.get(obj);
                                               }),
                           done: false
@@ -1417,7 +1417,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: "+95" };
                         }
                       } else {
                         try {
@@ -1584,7 +1584,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               return obj29;
             } else {
               c14 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           break;
           case 10:
@@ -1678,7 +1678,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: "+95" };
                     }
                   } else {
                     try {
@@ -1871,7 +1871,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: "+95" };
                       }
                     } else {
                       try {
@@ -2037,7 +2037,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               return obj60;
             } else {
               c14 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           break;
           case 21:
@@ -2199,13 +2199,13 @@ let closure_23 = async function _runGuarded(arg0) {
 };
 const Constants = fn(1071);
 ({ AbortCodes, Endpoints: closure_9, PlatformTypes } = Constants);
-let closure_10 = fn(7838).NotificationAuthorizationStatus;
+let closure_10 = fn(7872).NotificationAuthorizationStatus;
 let items = [, , ];
 ({ USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED: arr[0], TOO_MANY_USER_GUILDS: arr[1], GUILD_AT_CAPACITY: arr[2] } = AbortCodes);
 const set = new Set(items);
 const set1 = new Set(Object.values(PlatformTypes));
 const waterwheels = "waterwheels";
-const set2 = new Set(Object.values(fn(5048).GuildJoinRequestApplicationStatuses));
+const set2 = new Set(Object.values(fn(5079).GuildJoinRequestApplicationStatuses));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/actions/native/useWaterwheelsActions.tsx");
 
@@ -2218,30 +2218,30 @@ export function useWaterwheelsActions(callback) {
     if (WaterwheelsCardTypes.WaterwheelsActionType.JOIN_GUILD === type) {
       return joinWaterwheelsGuild(ref.current, type.value.guild_id, arg1, type);
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD === type) {
-      return runGuarded(() => type(8893).startLurking(type.value.guild_id, {}), () => {
+      return runGuarded(() => type(8935).startLurking(type.value.guild_id, {}), () => {
         const intl = type(1112).intl;
-        return intl.string(ref(2654).d6U01J);
+        return intl.string(ref(2655).d6U01J);
       });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_CONNECTION === type) {
       return runGuarded(() => {
         const provider = type.value.provider;
         if (set.has(provider)) {
           const obj = { platformType: provider, location: _location };
-          closure_1(7713)(obj);
+          closure_1(7747)(obj);
         }
       }, () => {
         const intl = type(1112).intl;
-        return intl.string(ref(2654)["rdTp+3"]);
+        return intl.string(ref(2655)["rdTp+3"]);
       });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_URI === type) {
-      return runGuarded(() => type(7778).handleClick({ href: type.value.url }), () => {
+      return runGuarded(() => type(7812).handleClick({ href: type.value.url }), () => {
         const intl = type(1112).intl;
-        return intl.string(ref(2654)["4a9Wgk"]);
+        return intl.string(ref(2655)["4a9Wgk"]);
       });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_NUDGE === type) {
       return runGuarded(requestNotifications, () => {
         const intl = type(1112).intl;
-        return intl.string(ref(2654)["4BoMhv"]);
+        return intl.string(ref(2655)["4BoMhv"]);
       });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GAME === type) {
       return openWaterwheelsGame(type.value.game_id, arg1);

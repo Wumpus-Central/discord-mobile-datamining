@@ -1,19 +1,19 @@
-// === Module 17486: CollectiblesShopViewAllCategoryItems ===
+// === Module 17543: CollectiblesShopViewAllCategoryItems ===
 
-// Module 17486 (CollectiblesShopViewAllCategoryItems)
+// Module 17543 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import springPresets from "springPresets" /* 5614 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 6333 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11199 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import springPresets from "springPresets" /* 5645 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 6364 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11245 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5606 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 11234 */;
-import IAPStore from "IAPStore" /* 9062 */;
+import DevSettingsStore from "DevSettingsStore" /* 5637 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 11280 */;
+import IAPStore from "IAPStore" /* 9104 */;
 
 require = fn;
 function CategoryItemsBySku(categorySkuId) {
@@ -220,7 +220,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj8 = { logoUrl, buttonColor: "Array", categoryName: 1018840830874056800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+  const obj8 = { logoUrl, buttonColor: "Array", categoryName: false };
   let name;
   if (category != null) {
     name = category.name;
@@ -274,7 +274,7 @@ function CategoryItemsContent(category) {
   const filteredAndSortedProducts = require("useFilteredAndSortedProducts").useFilteredAndSortedProducts({ products: category.products });
   let obj = require("useFilteredAndSortedProducts");
   let obj2 = { products: category.products };
-  const sharedValue = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(0);
   const items1 = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -283,7 +283,7 @@ function CategoryItemsContent(category) {
     }
     const result = sharedValue.set(spring_spring.withSpring(num, springPresets.Reanimated3DefaultSpringConfig));
   }, items1);
-  let obj3 = require("module_1653");
+  let obj3 = require("module_1654");
   const items2 = [closure_20, sharedValue];
   _require = undefined;
   [tmp9, tmp10] = items2;
@@ -298,7 +298,7 @@ function CategoryItemsContent(category) {
   CollectiblesShopViewAllCategoryItemsTsx1.__workletHash = 3426078799765;
   CollectiblesShopViewAllCategoryItemsTsx1.__initData = tmp9;
   let sessionId;
-  const animatedStyle = require("module_1653").useAnimatedStyle(CollectiblesShopViewAllCategoryItemsTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(CollectiblesShopViewAllCategoryItemsTsx1);
   if (analyticsContext != null) {
     sessionId = analyticsContext.sessionId;
   }
@@ -333,7 +333,7 @@ function CategoryItemsContent(category) {
   const obj12 = { logoUrl, buttonColor: null, categoryName: null };
   let toHexStringResult;
   const obj11 = { source: { uri: mobileBgUrl }, style: absoluteFill.absoluteFill };
-  const obj5 = require("module_1653");
+  const obj5 = require("module_1654");
   if (backgroundColors != null) {
     const label = backgroundColors.label;
     toHexStringResult = label.toHexString();
@@ -372,7 +372,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, UserSettingsSections: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, border: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.border = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

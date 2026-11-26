@@ -1,11 +1,11 @@
-// === Module 19918: openGuildSettingsRemoveAppAlert ===
+// === Module 19982: openGuildSettingsRemoveAppAlert ===
 
-// Module 19918 (openGuildSettingsRemoveAppAlert)
-import useAlertStore from "useAlertStore" /* 6017 */;
+// Module 19982 (openGuildSettingsRemoveAppAlert)
+import useAlertStore from "useAlertStore" /* 6048 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 require = fn;
 function RemoveAppAlert(guildId) {
@@ -25,7 +25,7 @@ function RemoveAppAlert(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -63,7 +63,7 @@ function RemoveAppAlert(guildId) {
           c3 = 0;
           closure_128_6.current = null;
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp20) {
         if (tmp4 === c3) {
@@ -101,7 +101,7 @@ function RemoveAppAlert(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -144,7 +144,7 @@ function RemoveAppAlert(guildId) {
         } else {
           dependencyMap = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp23) {
         if (tmp4 === dependencyMap) {

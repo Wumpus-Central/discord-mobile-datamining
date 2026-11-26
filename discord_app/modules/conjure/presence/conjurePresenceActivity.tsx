@@ -1,7 +1,7 @@
-// === Module 7635: conjurePresenceActivity ===
+// === Module 7666: conjurePresenceActivity ===
 
-// Module 7635 (conjurePresenceActivity)
-import ActivityTypes from "ActivityTypes" /* 5984 */;
+// Module 7666 (conjurePresenceActivity)
+import ActivityTypes from "ActivityTypes" /* 6015 */;
 import size from "module_2" /* 2 */;
 
 const Conjuring = "Conjuring";

@@ -1,8 +1,8 @@
-// === Module 6123: useIOSPressEffects ===
+// === Module 6154: useIOSPressEffects ===
 
-// Module 6123 (useIOSPressEffects)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+// Module 6154 (useIOSPressEffects)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -22,13 +22,13 @@ export function useIOSPressEffects(arg0) {
   }
   noop = undefined;
   const width = useWindowDimensionsDefault().width;
-  const sharedValue = require("module_1653").useSharedValue(1 - arg0 / width);
+  const sharedValue = require("module_1654").useSharedValue(1 - arg0 / width);
   items = [width, arg0, sharedValue];
   const effect = noop.useEffect(() => {
     const result = _undefined3.set(1 - c0 / c1);
   }, items);
-  const obj = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(0);
+  const obj = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(0);
   noop = sharedValue1;
   let items1 = [sharedValue1];
   let items2 = [sharedValue1];
@@ -46,8 +46,8 @@ export function useIOSPressEffects(arg0) {
     }
     return isIOSResult;
   }, items2);
-  let obj2 = require("module_1653");
-  const items3 = [c5, require("spring/spring").withSpring, require("module_1653").interpolate, sharedValue1, sharedValue, c4, flag];
+  let obj2 = require("module_1654");
+  const items3 = [c5, require("spring/spring").withSpring, require("module_1654").interpolate, sharedValue1, sharedValue, c4, flag];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -78,6 +78,6 @@ export function useIOSPressEffects(arg0) {
   useIOSPressEffectsTsx1.__closure = items4;
   useIOSPressEffectsTsx1.__workletHash = 16251534857998;
   useIOSPressEffectsTsx1.__initData = tmp6;
-  let obj3 = require("module_1653");
-  return { sharedPressState: sharedValue1, onPressOut: callback1, onPressIn: callback, pressableStyles: require("module_1653").useAnimatedStyle(useIOSPressEffectsTsx1) };
+  let obj3 = require("module_1654");
+  return { sharedPressState: sharedValue1, onPressOut: callback1, onPressIn: callback, pressableStyles: require("module_1654").useAnimatedStyle(useIOSPressEffectsTsx1) };
 }

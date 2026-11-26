@@ -1,10 +1,10 @@
-// === Module 20080: useGuildApplication ===
+// === Module 20144: useGuildApplication ===
 
-// Module 20080 (useGuildApplication)
+// Module 20144 (useGuildApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ export default function useGuildApplication(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

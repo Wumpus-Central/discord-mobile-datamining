@@ -1,7 +1,7 @@
-// === Module 20227: AutoclipsExperiment ===
+// === Module 20291: AutoclipsExperiment ===
 
-// Module 20227 (AutoclipsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 20291 (AutoclipsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-09-autoclips", defaultConfig: { enabled: false, marketingEnabled: false }, variations: null };

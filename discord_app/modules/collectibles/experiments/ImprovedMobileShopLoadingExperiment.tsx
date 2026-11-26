@@ -1,9 +1,9 @@
-// === Module 11219: ImprovedMobileShopLoadingExperiment ===
+// === Module 11265: ImprovedMobileShopLoadingExperiment ===
 
-// Module 11219 (ImprovedMobileShopLoadingExperiment)
+// Module 11265 (ImprovedMobileShopLoadingExperiment)
 import noop from "module_19" /* 19 */;
 
-const ApexExperiment = fn(1450);
+const ApexExperiment = fn(1451);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-improved-mobile-shop-loading", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const context = noop.createContext(false);
 const size = fn(2);

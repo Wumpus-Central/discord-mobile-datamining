@@ -1,15 +1,15 @@
-// === Module 12020: contentHandlers ===
+// === Module 12068: contentHandlers ===
 
-// Module 12020 (contentHandlers)
+// Module 12068 (contentHandlers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import ToastUtils from "ToastUtils" /* 5693 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6015 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6102 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import ClipboardUtils from "ClipboardUtils" /* 7507 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 12018 */;
-import showEmojiActionSheetDefault from "showEmojiActionSheet" /* 12091 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import ToastUtils from "ToastUtils" /* 5724 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import ClipboardUtils from "ClipboardUtils" /* 7538 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 12066 */;
+import showEmojiActionSheetDefault from "showEmojiActionSheet" /* 12141 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -48,7 +48,7 @@ let closure_6 = asyncGeneratorStep(async (arg0) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -139,7 +139,7 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -310,7 +310,7 @@ obj.onLongPressAttachmentLink = function onLongPressAttachmentLink() {
   return applyArgumentsResult;
 };
 obj.onTapMention = function onTapMention(nativeEvent) {
-  const nativeSyntheticEventData = parsedUserId(11977).getNativeSyntheticEventData(nativeEvent);
+  const nativeSyntheticEventData = parsedUserId(12025).getNativeSyntheticEventData(nativeEvent);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
   if (null != userId) {
@@ -322,21 +322,21 @@ obj.onTapMention = function onTapMention(nativeEvent) {
     if (null != roleId) {
       if (null != guildId) {
         const obj3 = { guildId, roleId, channelId };
-        ActionSheetActionCreatorsDefault.openLazy(parsedUserId(2119)(12035, dependencyMap.paths), "RoleMembersActionSheet", obj3);
+        ActionSheetActionCreatorsDefault.openLazy(parsedUserId(2120)(12083, dependencyMap.paths), "RoleMembersActionSheet", obj3);
       }
     }
     if ("@everyone" === roleName) {
       if (null != guildId) {
         const obj5 = { guildId, roleId: null, channelId: null };
         const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = parsedUserId(2119)(12035, dependencyMap.paths);
+        const tmp10 = parsedUserId(2120)(12083, dependencyMap.paths);
         obj5.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj5.channelId = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj5);
       }
     }
     if (null == roleName) {
-      const DeveloperMode = parsedUserId(4837).DeveloperMode;
+      const DeveloperMode = parsedUserId(4868).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj7 = { secondaryConfirmText: null, onConfirmSecondary: null };
@@ -361,7 +361,7 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       obj11 = {};
     }
   }
-  let obj = parsedUserId(11977);
+  let obj = parsedUserId(12025);
 };
 obj.onTapTimestamp = function onTapTimestamp(nativeEvent) {
   ToastUtils.presentTimestamp(nativeEvent.nativeEvent.node.full);

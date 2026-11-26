@@ -1,15 +1,15 @@
-// === Module 17396: UserSettingsDesignSystemBackdrop ===
+// === Module 17447: UserSettingsDesignSystemBackdrop ===
 
-// Module 17396 (UserSettingsDesignSystemBackdrop)
-import _mod1653 from "module_1653" /* 1653 */;
-import Backdrop from "Backdrop" /* 5578 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import components_Button_Button from "components/Button/Button" /* 5610 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import springPresets from "springPresets" /* 5614 */;
-import Dialog from "Dialog" /* 6074 */;
-import Stack_Stack from "Stack/Stack" /* 6084 */;
-import Card from "Card" /* 6114 */;
+// Module 17447 (UserSettingsDesignSystemBackdrop)
+import _mod1654 from "module_1654" /* 1654 */;
+import Backdrop from "Backdrop" /* 5609 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import components_Button_Button from "components/Button/Button" /* 5641 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import springPresets from "springPresets" /* 5645 */;
+import Dialog from "Dialog" /* 6105 */;
+import Stack_Stack from "Stack/Stack" /* 6115 */;
+import Card from "Card" /* 6145 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -78,7 +78,7 @@ export default function UserSettingsDesignSystemBackdrop() {
   UserSettingsDesignSystemBackdropTsx1.__workletHash = 10294771591742;
   UserSettingsDesignSystemBackdropTsx1.__initData = tmp10;
   const obj2 = { contentContainerStyle: tmp.container, children: null };
-  const animatedStyle = _mod1653.useAnimatedStyle(UserSettingsDesignSystemBackdropTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(UserSettingsDesignSystemBackdropTsx1);
   const obj3 = { spacing: 24, children: null };
   const items2 = [timestampProducer(BackdropCard, { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp4, setBlurAmount: tmp7 }), timestampProducer(BackdropCard, { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp4, setBlurAmount: tmp7 }), timestampProducer(BackdropCard, { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp4, setBlurAmount: tmp7 })];
   obj3.children = items2;

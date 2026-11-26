@@ -1,11 +1,11 @@
-// === Module 7150: TableCheckboxRow ===
+// === Module 7181: TableCheckboxRow ===
 
-// Module 7150 (TableCheckboxRow)
-import _mod1653 from "module_1653" /* 1653 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5074 */;
-import TableRow from "TableRow" /* 6113 */;
-import TableRowBadge from "TableRowBadge" /* 6130 */;
-import FormCheckbox from "FormCheckbox" /* 7151 */;
+// Module 7181 (TableCheckboxRow)
+import _mod1654 from "module_1654" /* 1654 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5105 */;
+import TableRow from "TableRow" /* 6144 */;
+import TableRowBadge from "TableRowBadge" /* 6161 */;
+import FormCheckbox from "FormCheckbox" /* 7182 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,8 +20,9 @@ export function TableCheckboxRow(checked) {
     disabled = false;
   }
   const onPress = checked.onPress;
-  const merged = Object.assign(checked, Object.assign({ checked: 0, label: 0, subLabel: 0, badge: 0, disabled: 0, onPress: 0, accessibilityHint: 0 }));
-  const sharedValue = _mod1653.useSharedValue(0);
+  let accessibilityLabel = checked.accessibilityLabel;
+  const merged = Object.assign(checked, Object.assign({ checked: 0, label: 0, subLabel: 0, badge: 0, disabled: 0, onPress: 0, accessibilityLabel: 0, accessibilityHint: 0 }));
+  const sharedValue = _mod1654.useSharedValue(0);
   items = [sharedValue];
   const items1 = [onPress, sharedValue, checked];
   const callback = noop.useCallback(() => {
@@ -43,7 +44,11 @@ export function TableCheckboxRow(checked) {
   obj3.accessibilityState = accessibilityState;
   obj3.accessible = true;
   obj3.accessibilityRole = accessibilityRole;
-  obj3.accessibilityLabel = TableRowBadge.getTableRowAccessibilityLabel(label, subLabel, badge);
+  if (accessibilityLabel == null) {
+    accessibilityLabel = TableRowBadge.getTableRowAccessibilityLabel(label, subLabel, badge);
+    const tmp2Result = TableRowBadge;
+  }
+  obj3.accessibilityLabel = accessibilityLabel;
   obj3.accessibilityHint = checked.accessibilityHint;
   obj3.onPressIn = callback;
   obj3.onPress = callback1;

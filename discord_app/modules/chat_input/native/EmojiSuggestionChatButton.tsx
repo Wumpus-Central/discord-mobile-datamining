@@ -1,12 +1,12 @@
-// === Module 13352: EmojiSuggestionChatButton ===
+// === Module 13404: EmojiSuggestionChatButton ===
 
-// Module 13352 (EmojiSuggestionChatButton)
+// Module 13404 (EmojiSuggestionChatButton)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13345 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
@@ -16,11 +16,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1227).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_12 = createStyles.createStyles((height, marginVertical) => {
   const obj = { swipeArea: { marginVertical: -marginVertical, paddingVertical: marginVertical }, wrapper: { height, width: height }, glyphOverlay: null, glyphButton: null, image: null, surrogates: null };
   const obj2 = {};
@@ -90,7 +90,7 @@ export function EmojiSuggestionChatButton(arg0) {
   if (null != first) {
     num = 1;
   }
-  sharedValue = require("module_1653").useSharedValue(num);
+  sharedValue = require("module_1654").useSharedValue(num);
   items = [emojiIdentity];
   const effect = obj6.useEffect(() => {
     if (null != first) {
@@ -99,7 +99,7 @@ export function EmojiSuggestionChatButton(arg0) {
     } else {
       const obj2 = spring_spring;
       const ITEM_ENTRANCE_SPRING_CONFIG = EmojiSuggestionBarUtils.ITEM_ENTRANCE_SPRING_CONFIG;
-      items = [closure_13, _mod1706.scheduleOnRN, _undefined2];
+      items = [closure_13, _mod1707.scheduleOnRN, _undefined2];
       c0 = undefined;
       c1 = undefined;
       [tmp2, tmp3, tmp4] = items;
@@ -120,7 +120,7 @@ export function EmojiSuggestionChatButton(arg0) {
       const result1 = sharedValue.set(obj2.withSpring(0, ITEM_ENTRANCE_SPRING_CONFIG, "respect-motion-settings", EmojiSuggestionChatButtonTsx1));
     }
   }, items);
-  const tmp2Result5 = require("module_1653");
+  const tmp2Result5 = require("module_1654");
   let items1 = [closure_14, sharedValue];
   _require = undefined;
   [tmp16, tmp17] = items1;
@@ -138,8 +138,8 @@ export function EmojiSuggestionChatButton(arg0) {
   EmojiSuggestionChatButtonTsx2.__closure = items2;
   EmojiSuggestionChatButtonTsx2.__workletHash = 5109148724809;
   EmojiSuggestionChatButtonTsx2.__initData = tmp16;
-  const animatedStyle = require("module_1653").useAnimatedStyle(EmojiSuggestionChatButtonTsx2);
-  const tmp2Result6 = require("module_1653");
+  const animatedStyle = require("module_1654").useAnimatedStyle(EmojiSuggestionChatButtonTsx2);
+  const tmp2Result6 = require("module_1654");
   let items3 = [closure_15, sharedValue];
   _require = undefined;
   [tmp19, tmp20] = items3;
@@ -154,7 +154,7 @@ export function EmojiSuggestionChatButton(arg0) {
   EmojiSuggestionChatButtonTsx3.__workletHash = 9498675997018;
   EmojiSuggestionChatButtonTsx3.__initData = tmp19;
   const items5 = [dismissCoachmark, onPress, unlockedEmojis, lockedEmojis];
-  const animatedStyle1 = require("module_1653").useAnimatedStyle(EmojiSuggestionChatButtonTsx3);
+  const animatedStyle1 = require("module_1654").useAnimatedStyle(EmojiSuggestionChatButtonTsx3);
   const items6 = [first, handlePress];
   const callback = obj6.useCallback(() => {
     dismissCoachmark(ContentDismissActionType.TAKE_ACTION);
@@ -188,7 +188,7 @@ export function EmojiSuggestionChatButton(arg0) {
     const applyResult = Gesture.Pan().enabled(null != first).blocksExternalGesture.apply(items1);
     const activeOffsetXResult = Gesture.Pan().enabled(null != first).blocksExternalGesture.apply(items1).activeOffsetX(-15);
     const failOffsetXResult = Gesture.Pan().enabled(null != first).blocksExternalGesture.apply(items1).activeOffsetX(-15).failOffsetX(15);
-    const items2 = [closure_16, _mod1706.scheduleOnRN, callback1];
+    const items2 = [closure_16, _mod1707.scheduleOnRN, callback1];
     c0 = undefined;
     c1 = undefined;
     [tmp3, tmp4, tmp5] = items2;

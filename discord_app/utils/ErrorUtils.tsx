@@ -1,6 +1,6 @@
-// === Module 9264: ErrorUtils ===
+// === Module 9306: ErrorUtils ===
 
-// Module 9264 (ErrorUtils)
+// Module 9306 (ErrorUtils)
 import size from "module_2" /* 2 */;
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {

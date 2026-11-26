@@ -1,7 +1,7 @@
-// === Module 14132: useGameProfileSummaryExpansion ===
+// === Module 14184: useGameProfileSummaryExpansion ===
 
-// Module 14132 (useGameProfileSummaryExpansion)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8712 */;
+// Module 14184 (useGameProfileSummaryExpansion)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8754 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

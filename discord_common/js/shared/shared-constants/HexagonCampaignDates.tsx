@@ -1,6 +1,6 @@
-// === Module 5039: HexagonCampaignDates ===
+// === Module 5070: HexagonCampaignDates ===
 
-// Module 5039 (HexagonCampaignDates)
+// Module 5070 (HexagonCampaignDates)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/HexagonCampaignDates.tsx");

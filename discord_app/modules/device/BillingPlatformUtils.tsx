@@ -1,8 +1,8 @@
-// === Module 2185: BillingPlatformUtils ===
+// === Module 2186: BillingPlatformUtils ===
 
-// Module 2185 (BillingPlatformUtils)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1625 */;
+// Module 2186 (BillingPlatformUtils)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1626 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");

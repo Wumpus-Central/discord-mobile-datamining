@@ -1,18 +1,18 @@
-// === Module 13715: HubEmailConnectionDescriptionActionsheet ===
+// === Module 13767: HubEmailConnectionDescriptionActionsheet ===
 
-// Module 13715 (HubEmailConnectionDescriptionActionsheet)
+// Module 13767 (HubEmailConnectionDescriptionActionsheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5240 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7476 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5271 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

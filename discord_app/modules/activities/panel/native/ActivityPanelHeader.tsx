@@ -1,21 +1,21 @@
-// === Module 19344: ActivityPanelHeader ===
+// === Module 19407: ActivityPanelHeader ===
 
-// Module 19344 (ActivityPanelHeader)
+// Module 19407 (ActivityPanelHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import native from "native" /* 5073 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7484 */;
-import LeaveActivityButtonDefault from "LeaveActivityButton" /* 19191 */;
-import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19341 */;
-import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 19345 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 19346 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19350 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19351 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import native from "native" /* 5104 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7515 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 19254 */;
+import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19404 */;
+import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 19408 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 19409 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19413 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19414 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 
 require = fn;
 function useBaseActivityPanelHeaderContent(landscape) {
@@ -67,7 +67,7 @@ function useBaseActivityPanelHeaderContent(landscape) {
     items[2] = obj;
     return items;
   }, items1);
-  items2[1] = require("module_1706").scheduleOnRN;
+  items2[1] = require("module_1707").scheduleOnRN;
   items2[2] = setMode;
   items2[3] = closure_10;
   _require = undefined;
@@ -136,12 +136,12 @@ class BaseActivityPanelContent {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(5638);
+const ActivityPanelConstants = fn(5669);
 ({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9, ActivityPanelModes: closure_10 } = ActivityPanelConstants);
 const ThemeTypes = fn(1082).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let obj = { panelHeader: null, panelLandscape: null, headerContainer: null, pullIndicator: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -156,7 +156,7 @@ let size = { backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDe
 obj.pullIndicator = size;
 let closure_14 = createStyles.createStyles(obj);
 let closure_15 = { code: "(function ActivityPanelHeaderTsx1(){let[scheduleOnRN,setMode,ActivityPanelModes]=this.__closure;scheduleOnRN(setMode,ActivityPanelModes.PIP);})" };
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj4 = { buttonContainer: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 }, buttonContainerLandscape: { flexDirection: "column-reverse" } };
 const styles = createStyles.createStyles(obj4);
 let closure_19 = noop.memo(function ActivityPanelHeaderContentInner(wrapperOffset) {
@@ -227,7 +227,7 @@ export default noop.memo(function ActivityPanelHeader() {
   let wrapperDimensions;
   const tmp2 = closure_14();
   const headerContainer = tmp2;
-  const context = noop.useContext(wrapperDimensions(19336));
+  const context = noop.useContext(wrapperDimensions(19399));
   wrapperDimensions = context.wrapperDimensions;
   items = [tmp2.headerContainer, wrapperDimensions.isWindowLandscape];
   ({ setMode, wrapperOffset, pipState } = context);

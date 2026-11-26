@@ -1,23 +1,23 @@
-// === Module 10591: MessagePreviewText ===
+// === Module 10636: MessagePreviewText ===
 
-// Module 10591 (MessagePreviewText)
+// Module 10636 (MessagePreviewText)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1093 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5626 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5673 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import useMessageAuthor from "useMessageAuthor" /* 6739 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10581 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10592 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10593 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 10613 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 10618 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10619 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5657 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5704 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import useMessageAuthor from "useMessageAuthor" /* 6770 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10626 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10637 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10638 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 10658 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 10663 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10664 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
 
 require = fn;
 function NativeMessagePreviewContent(arg0) {
@@ -133,16 +133,16 @@ function EmbedCard(embed) {
   return React6(View, obj2);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10582);
+const InAppNotificationConstants = fn(10627);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportDefault } = InAppNotificationConstants);
 const Fonts = fn(1082).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5012);
-const PlatformUtils = fn(1358);
+let createStyles = fn(5043);
+const PlatformUtils = fn(1359);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 const refs = createStyles.createStyles(obj3);
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
@@ -150,7 +150,7 @@ let obj7 = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.spa
 obj6.embedAccentBar = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 let obj8 = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 obj6.embedTextContainer = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "channel_id" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "HermesInternal" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

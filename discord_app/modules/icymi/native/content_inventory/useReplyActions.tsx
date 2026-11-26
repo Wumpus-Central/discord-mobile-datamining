@@ -1,23 +1,23 @@
-// === Module 18296: useReplyActions ===
+// === Module 18355: useReplyActions ===
 
-// Module 18296 (useReplyActions)
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5594 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8548 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8881 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9495 */;
+// Module 18355 (useReplyActions)
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5625 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8590 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8923 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9537 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import UserStore from "UserStore" /* 1386 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(8075).DraftType;
-const EmojiIntention = fn(1389).EmojiIntention;
-const MessageSendLocation = fn(5017).MessageSendLocation;
+const DraftType = fn(8117).DraftType;
+const EmojiIntention = fn(1390).EmojiIntention;
+const MessageSendLocation = fn(5048).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -74,7 +74,7 @@ export function useReplyActions(content) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -229,7 +229,7 @@ export function useReplyActions(content) {
         const obj3 = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18297, dependencyMap.paths), "ReactActionSheet", obj5);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18356, dependencyMap.paths), "ReactActionSheet", obj5);
       }
     }, items6);
     obj2.openEmojiPicker = callback2;

@@ -1,17 +1,17 @@
-// === Module 11182: WishlistButton ===
+// === Module 11228: WishlistButton ===
 
-// Module 11182 (WishlistButton)
+// Module 11228 (WishlistButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import native from "native" /* 5073 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 11172 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import native from "native" /* 5104 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 11218 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 class WishlistButtonBase {
@@ -129,7 +129,7 @@ class WishlistButtonBase {
         let result = sharedValue.set(0);
         const _requestAnimationFrame = requestAnimationFrame;
         closure_0 = requestAnimationFrame(() => {
-          items = [closure_2_18, c0(1706).scheduleOnRN, closure_1_12];
+          items = [closure_2_18, c0(1707).scheduleOnRN, closure_1_12];
           c0 = undefined;
           c1 = undefined;
           [tmp3, tmp4, tmp5] = items;
@@ -148,8 +148,8 @@ class WishlistButtonBase {
           WishlistButtonTsx1.__closure = items1;
           WishlistButtonTsx1.__workletHash = 12515096529687;
           WishlistButtonTsx1.__initData = tmp3;
-          const result = sharedValue.set(c0(5222).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
-          obj = c0(5222);
+          const result = sharedValue.set(c0(5253).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
+          obj = c0(5253);
         });
         return () => cancelAnimationFrame(closure_0);
       }
@@ -450,11 +450,11 @@ const ThemeTypes = fn(1082).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { duration: 400, easing: null };
-const Easing = fn(1653).Easing;
+const Easing = fn(1654).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-let obj2 = { sm: fn(5616).SMALL_BUTTON_HEIGHT, md: fn(5616).MEDIUM_BUTTON_HEIGHT };
+let obj2 = { sm: fn(5647).SMALL_BUTTON_HEIGHT, md: fn(5647).MEDIUM_BUTTON_HEIGHT };
 let value = { sm: "sm", md: "md" };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_17 = createStyles.createStyles((arg0) => {
   obj = { button: null, light: null, lightPressed: null, dark: null, darkPressed: null, midnight: null, disabled: null, iconContainer: null, animationFill: null };
   const size = { width: obj2[arg0], height: obj2[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };

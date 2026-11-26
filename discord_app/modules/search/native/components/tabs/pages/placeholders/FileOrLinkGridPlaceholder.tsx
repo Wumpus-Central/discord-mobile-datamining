@@ -1,10 +1,10 @@
-// === Module 18917: FileOrLinkGridPlaceholder ===
+// === Module 18980: FileOrLinkGridPlaceholder ===
 
-// Module 18917 (FileOrLinkGridPlaceholder)
-import _modDef1653 from "module_1653" /* 1653 */;
-import useFontScale from "useFontScale" /* 5618 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18893 */;
-import SearchListCard from "SearchListCard" /* 18918 */;
+// Module 18980 (FileOrLinkGridPlaceholder)
+import _modDef1654 from "module_1654" /* 1654 */;
+import useFontScale from "useFontScale" /* 5649 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18956 */;
+import SearchListCard from "SearchListCard" /* 18981 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,5 +26,5 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   const obj3 = { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) };
   const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
   obj3.style = items1;
-  return jsx(_modDef1653.View, { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) });
+  return jsx(_modDef1654.View, { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) });
 };

@@ -1,10 +1,11 @@
-// === Module 5777: ClientBillingError ===
+// === Module 5808: ClientBillingError ===
 
-// Module 5777 (ClientBillingError)
+// Module 5808 (ClientBillingError)
 import LoggerDefault from "Logger" /* 3 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import BillingUtils from "BillingUtils" /* 4825 */;
-import BillingErrorDefault from "BillingError" /* 5763 */;
+import util from "util" /* 1112 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import BillingUtils from "BillingUtils" /* 4856 */;
+import BillingErrorDefault from "BillingError" /* 5794 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -388,6 +389,18 @@ prototype["isStripeWalletSelected"] = function isStripeWalletSelected() {
     BooleanResult = this.source.selectedElementType === PaymentSourceTypes.PAYMENT_REQUEST;
   }
   return BooleanResult;
+};
+prototype["getApiError"] = function getApiError() {
+  const classification = this.classification;
+  const shape = classification.shape;
+  if ("billing_error" === shape) {
+    return classification.error;
+  } else if ("http_error" === shape) {
+    const tmp6 = new BillingErrorDefault(classification.error);
+    return tmp6;
+  } else {
+    return null;
+  }
 };
 prototype["getErrorTags"] = function getErrorTags() {
   const classification = this.classification;
@@ -841,6 +854,21 @@ prototype["getRawErrorExtra"] = function getRawErrorExtra() {
     }
     return fromEntriesResult;
   }
+};
+prototype["getUserFacingMessage"] = function getUserFacingMessage() {
+  const apiError = this.getApiError();
+  let status;
+  if (apiError != null) {
+    status = apiError.status;
+  }
+  if (null != status) {
+    if (apiError.status < 500) {
+      let message = apiError.message;
+    }
+    return message;
+  }
+  const intl = util.intl;
+  message = intl.string(util.t["5mlOCW"]);
 };
 prototype["getSentryOptions"] = function getSentryOptions(arg0) {
   const self = this;

@@ -1,6 +1,6 @@
-// === Module 2137: RosterUpdate ===
+// === Module 2138: RosterUpdate ===
 
-// Module 2137 (RosterUpdate)
+// Module 2138 (RosterUpdate)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/RosterUpdate.tsx");

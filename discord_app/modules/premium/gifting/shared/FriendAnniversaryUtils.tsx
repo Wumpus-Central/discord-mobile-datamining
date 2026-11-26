@@ -1,7 +1,7 @@
-// === Module 11972: FriendAnniversaryUtils ===
+// === Module 12020: FriendAnniversaryUtils ===
 
-// Module 11972 (FriendAnniversaryUtils)
-import _modDef2168 from "module_2168" /* 2168 */;
+// Module 12020 (FriendAnniversaryUtils)
+import _modDef2169 from "module_2169" /* 2169 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/shared/FriendAnniversaryUtils.tsx");
@@ -19,10 +19,10 @@ export function isFriendAnniversary(date) {
     let date1 = new Date(date);
     let tmp7 = date1;
     let setFullYearResult = date1.setFullYear(fullYear + tmp2);
-    let obj4 = _modDef2168(date1);
+    let obj4 = _modDef2169(date1);
     if (!obj4.isSame(date, "day")) {
       let _Math = Math;
-      let obj5 = _modDef2168(date);
+      let obj5 = _modDef2169(date);
       if (Math.abs(obj5.diff(tmp7, "days")) <= 7) {
         obj2.return();
         let flag = true;
@@ -34,7 +34,7 @@ export function isFriendAnniversary(date) {
   return false;
 }
 export function yearsSince(friendsSince) {
-  return Math.round(_modDef2168().diff(friendsSince, "months") / 12);
+  return Math.round(_modDef2169().diff(friendsSince, "months") / 12);
 }
 export function categorizeFriendAnniversariesByAffinity(arr, fn, flag) {
   const highestAffinity = new Set();

@@ -1,6 +1,6 @@
-// === Module 8553: ShareEventUtils ===
+// === Module 8595: ShareEventUtils ===
 
-// Module 8553 (ShareEventUtils)
+// Module 8595 (ShareEventUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/ShareEventUtils.tsx");

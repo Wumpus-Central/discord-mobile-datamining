@@ -1,12 +1,12 @@
-// === Module 5188: NavigationRouteUtils ===
+// === Module 5219: NavigationRouteUtils ===
 
-// Module 5188 (NavigationRouteUtils)
-import v1 from "v1" /* 1268 */;
-import Link from "Link" /* 1501 */;
-import RootNavigationRef from "RootNavigationRef" /* 5189 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5195 */;
-import Types from "Types" /* 5196 */;
-import ChatInputUtils from "ChatInputUtils" /* 5197 */;
+// Module 5219 (NavigationRouteUtils)
+import v1 from "v1" /* 1269 */;
+import Link from "Link" /* 1502 */;
+import RootNavigationRef from "RootNavigationRef" /* 5220 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5226 */;
+import Types from "Types" /* 5227 */;
+import ChatInputUtils from "ChatInputUtils" /* 5228 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -266,7 +266,7 @@ export function navigateToChannel(openChannel) {
   return false;
 }
 export function navigateToRootTab(drawerOpen) {
-  const rootNavigationRef = icymiScreen(5189).getRootNavigationRef();
+  const rootNavigationRef = icymiScreen(5220).getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -285,21 +285,21 @@ export function navigateToRootTab(drawerOpen) {
             const obj2 = { screen, params: null };
             const obj3 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             obj2.params = obj3;
-            const rootNavigationRef1 = tmp(5189).getRootNavigationRef();
+            const rootNavigationRef1 = tmp(5220).getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
                 if (tmp3) {
                   const rootState = rootNavigationRef1.getRootState();
                   const obj4 = { name: "tabs", key: null, params: null };
-                  const tmpResult3 = tmp(5190);
+                  const tmpResult3 = tmp(5221);
                   const _HermesInternal = HermesInternal;
-                  obj4.key = "tabs-" + tmp(1268).v4();
+                  obj4.key = "tabs-" + tmp(1269).v4();
                   obj4.params = obj2;
                   items = [obj4];
                   const items1 = [];
-                  const tmpResult4 = tmp(1268);
+                  const tmpResult4 = tmp(1269);
                   HermesBuiltin.arraySpread(modalRoutesAboveMain(rootState.routes), HermesBuiltin.arraySpread(tmpResult3.wrapRouteForRootNavigator(items), 0));
-                  let CommonActions = tmp(1501).CommonActions;
+                  let CommonActions = tmp(1502).CommonActions;
                   const obj5 = {};
                   const merged = Object.assign(rootState);
                   obj5.routes = items1;
@@ -311,7 +311,7 @@ export function navigateToRootTab(drawerOpen) {
                 }
               }
             }
-            const tmpResult = tmp(5189);
+            const tmpResult = tmp(5220);
           } else {
             const obj6 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             rootNavigationRef.setParams(obj6);
@@ -685,16 +685,16 @@ export function coerceModalRoute(name) {
   }
 }
 export { isModalOpen };
-export function useIsModalOpen(SHARE_PREPARING_MODAL_KEY) {
-  closure_0 = SHARE_PREPARING_MODAL_KEY;
+export function useIsModalOpen(CHECKPOINT_MODAL_KEY) {
+  closure_0 = CHECKPOINT_MODAL_KEY;
   const tmp = _slicedToArray(closure_5(() => isModalOpen(closure_0)), 2);
   closure_1 = tmp[1];
-  items = [SHARE_PREPARING_MODAL_KEY];
+  items = [CHECKPOINT_MODAL_KEY];
   closure_4(() => {
     const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        closure_1_1(isModalOpen(SHARE_PREPARING_MODAL_KEY));
+        closure_1_1(isModalOpen(CHECKPOINT_MODAL_KEY));
       });
     }
   }, items);
@@ -729,7 +729,7 @@ export function getOpenModalKey() {
 }
 export function useOpenModalKey() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(5189).getRootNavigationRef();
+    const rootNavigationRef = closure_0(5220).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -762,7 +762,7 @@ export function useOpenModalKey() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(5189).getRootNavigationRef();
+        const rootNavigationRef = closure_0(5220).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -789,7 +789,7 @@ export function useOpenModalKey() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(5189);
+        const obj = closure_0(5220);
       });
     }
   }, []);
@@ -810,7 +810,7 @@ export function getCurrentNavigationRouteName() {
 }
 export function useCurrentNavigationRouteName() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(5189).getRootNavigationRef();
+    const rootNavigationRef = closure_0(5220).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -829,7 +829,7 @@ export function useCurrentNavigationRouteName() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(5189).getRootNavigationRef();
+        const rootNavigationRef = closure_0(5220).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -842,7 +842,7 @@ export function useCurrentNavigationRouteName() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(5189);
+        const obj = closure_0(5220);
       });
     }
   }, []);

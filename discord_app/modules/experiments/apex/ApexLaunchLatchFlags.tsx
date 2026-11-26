@@ -1,7 +1,7 @@
-// === Module 1251: ApexLaunchLatchFlags ===
+// === Module 1252: ApexLaunchLatchFlags ===
 
-// Module 1251 (ApexLaunchLatchFlags)
-import ApexUnitUtils from "ApexUnitUtils" /* 1252 */;
+// Module 1252 (ApexLaunchLatchFlags)
+import ApexUnitUtils from "ApexUnitUtils" /* 1253 */;
 import size from "module_2" /* 2 */;
 
 let obj = { writer: true, reads: false, exposures: false, suppressions: false };

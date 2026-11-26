@@ -1,8 +1,8 @@
-// === Module 9084: ColorConstants ===
+// === Module 9126: ColorConstants ===
 
-// Module 9084 (ColorConstants)
+// Module 9126 (ColorConstants)
 import nativeDefault from "native" /* 575 */;
-import PremiumConstants from "PremiumConstants" /* 1388 */;
+import PremiumConstants from "PremiumConstants" /* 1389 */;
 import size from "module_2" /* 2 */;
 
 const PremiumTypes = PremiumConstants.PremiumTypes;

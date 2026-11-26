@@ -1,12 +1,13 @@
-// === Module 1245: ApexExperimentStore ===
+// === Module 1246: ApexExperimentStore ===
 
-// Module 1245 (ApexExperimentStore)
+// Module 1246 (ApexExperimentStore)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1375 */;
-import ApexLaunchLatch from "ApexLaunchLatch" /* 1385 */;
+import ApexUnitUtils from "ApexUnitUtils" /* 1253 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1376 */;
+import ApexLaunchLatch from "ApexLaunchLatch" /* 1386 */;
 import _slicedToArray from "module_32" /* 32 */;
-import BaseApexExperimentStore from "BaseApexExperimentStore" /* 1246 */;
+import BaseApexExperimentStore from "BaseApexExperimentStore" /* 1247 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -86,7 +87,9 @@ class ApexExperimentStore extends tmp2 {
     return tmp1;
   }
   trackCommonTriggerPointExposures(arg0) {
-    result = super.trackCommonTriggerPointExposures(global, closure_4.getId());
+    id = closure_4.getId();
+    obj = closure_0(closure_2[8]);
+    result = super.trackCommonTriggerPointExposures(global, id, obj.getInstallationUnitId());
     return;
   }
   handleLogout(arg0) {
@@ -110,6 +113,9 @@ prototype["initialize"] = function initialize(version) {
   const storedState = this.loadStoredState(version, BuildOverrideUtils.getBuildOverrideExperiments());
   const result = this.initializeLaunchLatch();
   const result1 = this.updateLaunchLatchUnits();
+};
+prototype["getInstallationUnitIdForSuppression"] = function getInstallationUnitIdForSuppression() {
+  return ApexUnitUtils.getInstallationUnitId();
 };
 prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEvent() {
   const self = this;
@@ -196,4 +202,4 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/apex/ApexExperimentStore.tsx");
 
 export default apexExperimentStore;
-export const ExperimentAssignment = fn(1246).ExperimentAssignment;
+export const ExperimentAssignment = fn(1247).ExperimentAssignment;

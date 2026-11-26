@@ -1,6 +1,6 @@
-// === Module 11831: PinotMemberNoticeAckStore ===
+// === Module 11879: PinotMemberNoticeAckStore ===
 
-// Module 11831 (PinotMemberNoticeAckStore)
+// Module 11879 (PinotMemberNoticeAckStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

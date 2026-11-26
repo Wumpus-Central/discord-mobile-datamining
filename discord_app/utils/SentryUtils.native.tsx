@@ -1,11 +1,11 @@
-// === Module 1241: SentryUtils ===
+// === Module 1242: SentryUtils ===
 
-// Module 1241 (SentryUtils)
+// Module 1242 (SentryUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
 import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 673 */;
 import _modAll674 from "module_674" /* 674 */;
-import SentryInitUtils_mod from "SentryInitUtils" /* 1242 */;
+import SentryInitUtils_mod from "SentryInitUtils" /* 1243 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -220,7 +220,7 @@ export default {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "UUID" };
+                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: null };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";
                 if (typeof origin === "string") {

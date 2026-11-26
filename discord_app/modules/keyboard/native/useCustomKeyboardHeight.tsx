@@ -1,8 +1,8 @@
-// === Module 5588: useCustomKeyboardHeight ===
+// === Module 5619: useCustomKeyboardHeight ===
 
-// Module 5588 (useCustomKeyboardHeight)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1497 */;
-import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1498 */;
+// Module 5619 (useCustomKeyboardHeight)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1498 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1499 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");

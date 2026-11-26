@@ -1,6 +1,6 @@
-// === Module 5953: device/DeviceState ===
+// === Module 5984: device/DeviceState ===
 
-// Module 5953 (device/DeviceState)
+// Module 5984 (device/DeviceState)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_5 = async function _getDeviceState() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

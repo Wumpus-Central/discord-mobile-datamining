@@ -1,14 +1,14 @@
-// === Module 18824: ConjurePerfTraceStatusDot ===
+// === Module 18887: ConjurePerfTraceStatusDot ===
 
-// Module 18824 (ConjurePerfTraceStatusDot)
+// Module 18887 (ConjurePerfTraceStatusDot)
 import nativeDefault from "native" /* 575 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 18820 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 18883 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { dot: { width: 8, height: 8, borderRadius: 4 }, running: { backgroundColor: nativeDefault.colors.STATUS_WARNING }, ok: null, error: null };
 const obj3 = { backgroundColor: nativeDefault.colors.STATUS_WARNING };
 obj2.ok = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE };

@@ -1,12 +1,12 @@
-// === Module 14216: useConjureWandStatus ===
+// === Module 14268: useConjureWandStatus ===
 
-// Module 14216 (useConjureWandStatus)
+// Module 14268 (useConjureWandStatus)
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import useMountEffectDefault from "useMountEffect" /* 5573 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7636 */;
-import useConjureTitleBarStatusDefault from "useConjureTitleBarStatus" /* 14217 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import useMountEffectDefault from "useMountEffect" /* 5604 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7667 */;
+import useConjureTitleBarStatusDefault from "useConjureTitleBarStatus" /* 14269 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 
 require = fn;
 const size = fn(2);
@@ -31,11 +31,11 @@ export default function useConjureWandStatus() {
   }
   obj.hasBadge = hasUnread;
   const intl = util.intl;
-  items = [intl.string(_modDef4244.uk6jhJ), , , ];
+  items = [intl.string(_modDef4245.uk6jhJ), , , ];
   let stringResult = null;
   if ("working" === kind) {
     const intl2 = util.intl;
-    stringResult = intl2.string(_modDef4244["Y8pS+n"]);
+    stringResult = intl2.string(_modDef4245["Y8pS+n"]);
   }
   items[1] = stringResult;
   let kind1;
@@ -45,7 +45,7 @@ export default function useConjureWandStatus() {
   let stringResult1 = null;
   if ("needs_input" === kind1) {
     const intl3 = util.intl;
-    stringResult1 = intl3.string(_modDef4244.hfIuc7);
+    stringResult1 = intl3.string(_modDef4245.hfIuc7);
   }
   items[2] = stringResult1;
   let kind2;
@@ -55,7 +55,7 @@ export default function useConjureWandStatus() {
   let stringResult2 = null;
   if ("unread" === kind2) {
     const intl4 = util.intl;
-    stringResult2 = intl4.string(_modDef4244["6XGnHJ"]);
+    stringResult2 = intl4.string(_modDef4245["6XGnHJ"]);
   }
   items[3] = stringResult2;
   const found = items.filter((item) => null != item);

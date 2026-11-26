@@ -1,24 +1,24 @@
-// === Module 19962: GuildSettingsModalServerTagCustomize ===
+// === Module 20026: GuildSettingsModalServerTagCustomize ===
 
-// Module 19962 (GuildSettingsModalServerTagCustomize)
+// Module 20026 (GuildSettingsModalServerTagCustomize)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8502 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8531 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8544 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8532 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(8500).GuildProfileFetchStatus;
-const BADGES = fn(8537).BADGES;
+let GuildProfileFetchStatus = fn(8542).GuildProfileFetchStatus;
+const BADGES = fn(8579).BADGES;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flex: 1 }, containerContent: { paddingTop: 16, paddingHorizontal: PX_16 }, warning: { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "flex-start", marginTop: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, warningText: { flex: 1 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);

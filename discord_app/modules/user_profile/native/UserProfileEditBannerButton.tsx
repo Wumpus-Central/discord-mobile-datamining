@@ -1,18 +1,18 @@
-// === Module 16017: UserProfileEditBannerButton ===
+// === Module 16047: UserProfileEditBannerButton ===
 
-// Module 16017 (UserProfileEditBannerButton)
+// Module 16047 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 575 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6102 */;
-import Pressables from "Pressables" /* 6121 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6351 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8444 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 9468 */;
-import PencilIcon from "PencilIcon" /* 9582 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 14797 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
+import Pressables from "Pressables" /* 6152 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6382 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8486 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 9510 */;
+import PencilIcon from "PencilIcon" /* 9624 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 14850 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9395 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9437 */;
 
-const EditButtonDefault = tmp(16018);
+const EditButtonDefault = tmp(16048);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -47,10 +47,10 @@ function EditButton(disabled) {
   return metroImportDefault(Pressables.PressableOpacity, obj);
 }
 const View = fn(17).View;
-let closure_6 = fn(6106).TrackUserProfileEditActions;
+let closure_6 = fn(6137).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { position: "relative" }, editButton: null, previewButton: null, refreshEditButtonContainer: null };
 let size = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round };
 obj2.editButton = size;

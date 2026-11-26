@@ -1,13 +1,13 @@
-// === Module 2139: RunningGameStore ===
+// === Module 2140: RunningGameStore ===
 
-// Module 2139 (RunningGameStore)
+// Module 2140 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SocialSdkGameResolver from "SocialSdkGameResolver" /* 14711 */;
-import OverlayTypes from "OverlayTypes" /* 15432 */;
-import GameStore from "GameStore" /* 2140 */;
-import DetectableGameStore from "DetectableGameStore" /* 2158 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2162 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 14764 */;
+import OverlayTypes from "OverlayTypes" /* 15483 */;
+import GameStore from "GameStore" /* 2141 */;
+import DetectableGameStore from "DetectableGameStore" /* 2159 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2163 */;
 
 require = fn;
 const Store = initializeDefault.Store;

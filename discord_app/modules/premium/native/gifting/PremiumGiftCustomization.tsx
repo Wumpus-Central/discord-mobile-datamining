@@ -1,6 +1,6 @@
-// === Module 11626: PremiumGiftCustomization ===
+// === Module 11674: PremiumGiftCustomization ===
 
-// Module 11626 (PremiumGiftCustomization)
+// Module 11674 (PremiumGiftCustomization)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,10 +9,10 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const PremiumTypes = fn(1388).PremiumTypes;
+const PremiumTypes = fn(1389).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollViewContainer: null, senderHeaderTitle: null };
 const obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollViewContainer = { paddingBottom: nativeDefault.space.PX_24 };

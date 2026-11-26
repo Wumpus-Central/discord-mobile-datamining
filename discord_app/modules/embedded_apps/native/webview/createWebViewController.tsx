@@ -1,17 +1,17 @@
-// === Module 10164: createWebViewController ===
+// === Module 10206: createWebViewController ===
 
-// Module 10164 (createWebViewController)
+// Module 10206 (createWebViewController)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
-import SentryUtilsDefault from "SentryUtils" /* 1241 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 10170 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 10212 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(10165).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
+let closure_4 = fn(10207).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
 let ComponentActions = fn(1071).ComponentActions;
-const Constants = fn(5766);
+const Constants = fn(5797);
 ({ MAX_POST_MESSAGE_STRING_LENGTH: closure_6, TransportTypes: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/native/webview/createWebViewController.tsx");
@@ -31,13 +31,13 @@ export default function createWebViewController(id, contextSource) {
   }
   ComponentActions = async function _postMessageToWebView(arg0) {
     closure_3 = tmp3;
-    await webViewProxy.injectJavaScript(closure_1(10166)(closure_0, closure_1));
+    await webViewProxy.injectJavaScript(closure_1(10208)(closure_0, closure_1));
     if (1 === tmp7) {
       c5 = 0;
       closure_130_0 = closure_4;
-      closure_1(1241).captureException(closure_130_0);
+      closure_1(1242).captureException(closure_130_0);
       c7 = 3;
-      closure_1(1241);
+      closure_1(1242);
     } else if (arg0 === 1) {
       c7 = 3;
       throw value;

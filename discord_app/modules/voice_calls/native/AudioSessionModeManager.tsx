@@ -1,17 +1,17 @@
-// === Module 19599: AudioSessionModeManager ===
+// === Module 19662: AudioSessionModeManager ===
 
-// Module 19599 (AudioSessionModeManager)
-import VoicePermissionManager from "VoicePermissionManager" /* 19600 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6822 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
+// Module 19662 (AudioSessionModeManager)
+import VoicePermissionManager from "VoicePermissionManager" /* 19663 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6853 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import VoiceStateStore from "VoiceStateStore" /* 5660 */;
-import AppStateStore from "AppStateStore" /* 2118 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import VoiceStateStore from "VoiceStateStore" /* 5691 */;
+import AppStateStore from "AppStateStore" /* 2119 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
 function handleAVAudioSessionMode() {
@@ -52,7 +52,7 @@ function handleAVAudioSessionMode() {
   }
 }
 const AppStates = fn(1071).AppStates;
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 if (PlatformUtils.isAndroid()) {
   let obj2 = {
     setAVAudioSessionMode() {

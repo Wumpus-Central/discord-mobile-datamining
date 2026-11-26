@@ -1,18 +1,18 @@
-// === Module 9826: BadgeDirectoryScreen ===
+// === Module 9868: BadgeDirectoryScreen ===
 
-// Module 9826 (BadgeDirectoryScreen)
+// Module 9868 (BadgeDirectoryScreen)
 import nativeDefault from "native" /* 575 */;
-import NavigatorHeader from "NavigatorHeader" /* 7160 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 9825 */;
+import NavigatorHeader from "NavigatorHeader" /* 7191 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 9867 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let c6 = "badge-directory";
-const createStyles = fn(5012);
-let obj2 = { sheetHeader: { height: fn(5566).NAV_BAR_HEIGHT }, view: null };
-let obj3 = { height: fn(5566).NAV_BAR_HEIGHT };
+const createStyles = fn(5043);
+let obj2 = { sheetHeader: { height: fn(5597).NAV_BAR_HEIGHT }, view: null };
+let obj3 = { height: fn(5597).NAV_BAR_HEIGHT };
 obj2.view = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -74,10 +74,10 @@ export default function BadgeDirectoryScreen(targetUserId) {
       if (tmp2Result.isBadgeDirectoryIOSPageSheet()) {
         const obj4 = { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null };
         ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-        let tmp9Result = jsx(tmp2(7324).Navigator, { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null });
+        let tmp9Result = jsx(tmp2(7355).Navigator, { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null });
       } else {
         const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-        tmp9Result = jsx(tmp2(11570).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+        tmp9Result = jsx(tmp2(11618).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
       }
       return tmp9Result;
     }

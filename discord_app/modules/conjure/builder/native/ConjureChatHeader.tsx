@@ -1,19 +1,19 @@
-// === Module 18545: ConjureChatHeader ===
+// === Module 18608: ConjureChatHeader ===
 
-// Module 18545 (ConjureChatHeader)
+// Module 18608 (ConjureChatHeader)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8964 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8971 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9006 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(8963).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9005).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = { header: { flexDirection: "row", alignItems: "center", flexShrink: 0, paddingTop, minHeight: paddingTop + MIN_HEADER_HEIGHT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, title: null, actions: null, border: null };
   const obj2 = { flexDirection: "row", alignItems: "center", flexShrink: 0, paddingTop, minHeight: paddingTop + MIN_HEADER_HEIGHT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

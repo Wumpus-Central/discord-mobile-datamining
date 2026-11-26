@@ -1,10 +1,10 @@
-// === Module 13163: useVoiceMessageBottomInset ===
+// === Module 13215: useVoiceMessageBottomInset ===
 
-// Module 13163 (useVoiceMessageBottomInset)
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5587 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7018 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11764 */;
+// Module 13215 (useVoiceMessageBottomInset)
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5618 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7049 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11812 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,12 +20,12 @@ export default function useVoiceMessageBottomInset() {
   const channelDockHeight = require("VoicePanelDockLayout").useChannelDockHeight();
   _require = channelDockHeight;
   const obj = require("VoicePanelDockLayout");
-  const sharedValue = require("module_1653").useSharedValue(channelDockHeight);
+  const sharedValue = require("module_1654").useSharedValue(channelDockHeight);
   items = [sharedValue, channelDockHeight];
   const effect = noop.useEffect(() => {
     const result = _undefined2.set(spring_spring.withSpring(c0, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG));
   }, items);
-  const obj2 = require("module_1653");
+  const obj2 = require("module_1654");
   const items1 = [closure_4, tmp, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -38,6 +38,6 @@ export default function useVoiceMessageBottomInset() {
   useVoiceMessageBottomInsetTsx1.__closure = items2;
   useVoiceMessageBottomInsetTsx1.__workletHash = 9835465598919;
   useVoiceMessageBottomInsetTsx1.__initData = tmp5;
-  const obj3 = require("module_1653");
-  return { bottomInset: require("module_1653").useDerivedValue(useVoiceMessageBottomInsetTsx1), targetBottomInset: Math.max(insets.bottom, channelDockHeight) };
+  const obj3 = require("module_1654");
+  return { bottomInset: require("module_1654").useDerivedValue(useVoiceMessageBottomInsetTsx1), targetBottomInset: Math.max(insets.bottom, channelDockHeight) };
 };

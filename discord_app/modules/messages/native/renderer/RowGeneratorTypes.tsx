@@ -1,6 +1,6 @@
-// === Module 8796: RowGeneratorTypes ===
+// === Module 8838: RowGeneratorTypes ===
 
-// Module 8796 (RowGeneratorTypes)
+// Module 8838 (RowGeneratorTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorTypes.tsx");

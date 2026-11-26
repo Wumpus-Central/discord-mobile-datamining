@@ -1,14 +1,14 @@
-// === Module 8424: ScheduleUtils ===
+// === Module 8466: ScheduleUtils ===
 
-// Module 8424 (ScheduleUtils)
+// Module 8466 (ScheduleUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import apply from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
-import _modDef2168 from "module_2168" /* 2168 */;
-import DateUtils from "DateUtils" /* 4834 */;
-import m from "m" /* 8426 */;
-import UserStore from "UserStore" /* 1386 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import DateUtils from "DateUtils" /* 4865 */;
+import m from "m" /* 8468 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function getRRule(byWeekday) {
@@ -90,16 +90,16 @@ function getValidWeekends(toDate) {
   }
   return tmp5;
 }
-const RecurrenceOptions = fn(8425).RecurrenceOptions;
-const GuildScheduledEventsConstants = fn(4867);
+const RecurrenceOptions = fn(8467).RecurrenceOptions;
+const GuildScheduledEventsConstants = fn(4898);
 ({ GuildScheduledEventEntityTypes: hasOwnProperty, GuildScheduledEventStatus: closure_6 } = GuildScheduledEventsConstants);
-let items = [fn(8426).RRule.MO.weekday, fn(8426).RRule.TU.weekday, fn(8426).RRule.WE.weekday, fn(8426).RRule.TH.weekday, fn(8426).RRule.FR.weekday];
-let items1 = [fn(8426).RRule.SU.weekday, fn(8426).RRule.MO.weekday, fn(8426).RRule.TU.weekday, fn(8426).RRule.WE.weekday, fn(8426).RRule.TH.weekday];
-let items2 = [fn(8426).RRule.TU.weekday, fn(8426).RRule.WE.weekday, fn(8426).RRule.TH.weekday, fn(8426).RRule.FR.weekday, fn(8426).RRule.SA.weekday];
-let items3 = [fn(8426).RRule.SA.weekday, fn(8426).RRule.SU.weekday];
-const items4 = [fn(8426).RRule.FR.weekday, fn(8426).RRule.SA.weekday];
-const items5 = [fn(8426).RRule.SU.weekday, fn(8426).RRule.MO.weekday];
-const items6 = [fn(8426).RRule.SU.weekday, fn(8426).RRule.MO.weekday, fn(8426).RRule.TU.weekday, fn(8426).RRule.WE.weekday, fn(8426).RRule.TH.weekday, fn(8426).RRule.FR.weekday, fn(8426).RRule.SA.weekday];
+let items = [fn(8468).RRule.MO.weekday, fn(8468).RRule.TU.weekday, fn(8468).RRule.WE.weekday, fn(8468).RRule.TH.weekday, fn(8468).RRule.FR.weekday];
+let items1 = [fn(8468).RRule.SU.weekday, fn(8468).RRule.MO.weekday, fn(8468).RRule.TU.weekday, fn(8468).RRule.WE.weekday, fn(8468).RRule.TH.weekday];
+let items2 = [fn(8468).RRule.TU.weekday, fn(8468).RRule.WE.weekday, fn(8468).RRule.TH.weekday, fn(8468).RRule.FR.weekday, fn(8468).RRule.SA.weekday];
+let items3 = [fn(8468).RRule.SA.weekday, fn(8468).RRule.SU.weekday];
+const items4 = [fn(8468).RRule.FR.weekday, fn(8468).RRule.SA.weekday];
+const items5 = [fn(8468).RRule.SU.weekday, fn(8468).RRule.MO.weekday];
+const items6 = [fn(8468).RRule.SU.weekday, fn(8468).RRule.MO.weekday, fn(8468).RRule.TU.weekday, fn(8468).RRule.WE.weekday, fn(8468).RRule.TH.weekday, fn(8468).RRule.FR.weekday, fn(8468).RRule.SA.weekday];
 const set = new Set([0, 6]);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/ScheduleUtils.tsx");
@@ -156,43 +156,43 @@ export function getRecurrenceOptions(startDate) {
   return items;
 }
 export function getInitialEventStartDate() {
-  const addResult = _modDef2168().add(1, "hour");
+  const addResult = _modDef2169().add(1, "hour");
   const hourResult = addResult.hour();
   let sum = hourResult;
   if (addResult.minutes() >= 30) {
     sum = hourResult + 1;
   }
-  const obj = _modDef2168();
+  const obj = _modDef2169();
   const hourResult1 = addResult.hour(sum);
   return addResult.hour(sum).minutes(0).seconds(0);
 }
 export function getInitialEventEndDate(arg0) {
   if (null != arg0) {
-    let obj = _modDef2168(arg0);
+    let obj = _modDef2169(arg0);
     let tmp = importDefault;
   } else {
     tmp = importDefault;
-    obj = _modDef2168();
+    obj = _modDef2169();
   }
   const addResult = obj.add(1, "hour");
   const result = addResult.minutes() % 60;
-  const obj3 = tmp(2168)(addResult);
-  return tmp(2168)(addResult).add(60 - result, "minutes").seconds(0);
+  const obj3 = tmp(2169)(addResult);
+  return tmp(2169)(addResult).add(60 - result, "minutes").seconds(0);
 }
 export function getNextBucketedTime(minutes, arg1) {
   const diff = arg1 - minutes.minutes() % arg1;
-  const obj = _modDef2168(minutes);
-  return _modDef2168(minutes).add(diff, "minutes").seconds(0);
+  const obj = _modDef2169(minutes);
+  return _modDef2169(minutes).add(diff, "minutes").seconds(0);
 }
 export function getEventTimeData(scheduled_start_time, toISOStringResult1, arg2) {
   let obj = arg2;
   if (null == arg2) {
-    obj = _modDef2168();
+    obj = _modDef2169();
   }
-  const obj2 = _modDef2168(scheduled_start_time);
+  const obj2 = _modDef2169(scheduled_start_time);
   if (null != toISOStringResult1) {
     if ("" !== toISOStringResult1) {
-      const obj3 = _modDef2168(toISOStringResult1);
+      const obj3 = _modDef2169(toISOStringResult1);
     }
   }
   let isSameResult = null != toISOStringResult1;
@@ -215,9 +215,9 @@ export function getEventTimeData(scheduled_start_time, toISOStringResult1, arg2)
     if (null == obj3) {
       obj5.endDateTimeString = undefined;
       obj5.currentOrPastEvent = obj2 <= obj;
-      obj5.upcomingEvent = obj2 <= _modDef2168().add(1, "hour");
-      const obj10 = _modDef2168();
-      obj5.withinStartWindow = obj2 <= _modDef2168().add(15, "minute");
+      obj5.upcomingEvent = obj2 <= _modDef2169().add(1, "hour");
+      const obj10 = _modDef2169();
+      obj5.withinStartWindow = obj2 <= _modDef2169().add(15, "minute");
       obj5.diffMinutes = obj2.diff(obj, "minutes");
       return obj5;
     } else if (isSameResult) {
@@ -249,14 +249,14 @@ export function getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, guildEvent
   ({ scheduled_start_time, scheduled_end_time } = guildEvent);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef2168(scheduled_start_time), endDate: "Array" };
+    const obj = { startDate: _modDef2169(scheduled_start_time), endDate: "Array" };
     tmp = obj;
     if (null != scheduled_end_time) {
-      obj.endDate = _modDef2168(scheduled_end_time);
+      obj.endDate = _modDef2169(scheduled_end_time);
       tmp = obj;
     }
   }
-  const tmp4 = _modDef2168;
+  const tmp4 = _modDef2169;
   const startDate = tmp4(SnowflakeUtilsDefault.extractTimestamp(nextRecurrenceIdInEvent));
   let endDate1;
   if (tmp != null) {
@@ -279,14 +279,14 @@ export function getScheduleForRecurrenceWithException(baseScheduleForRecurrence,
       endDate = baseScheduleForRecurrence.endDate;
     }
     if (null != scheduled_end_time.scheduled_start_time) {
-      let startDate = _modDef2168(scheduled_end_time.scheduled_start_time);
+      let startDate = _modDef2169(scheduled_end_time.scheduled_start_time);
     } else {
       startDate = baseScheduleForRecurrence.startDate;
     }
     const obj = { startDate, endDate: null };
     let tmp3;
     if (null != endDate) {
-      tmp3 = _modDef2168(endDate);
+      tmp3 = _modDef2169(endDate);
     }
     obj.endDate = tmp3;
     return obj;
@@ -296,10 +296,10 @@ export function getScheduleFromEventData(arg0) {
   ({ scheduledStartTime, scheduledEndTime } = arg0);
   let tmp;
   if (null != scheduledStartTime) {
-    const obj = { startDate: _modDef2168(scheduledStartTime), endDate: "Array" };
+    const obj = { startDate: _modDef2169(scheduledStartTime), endDate: "Array" };
     tmp = obj;
     if (null != scheduledEndTime) {
-      obj.endDate = _modDef2168(scheduledEndTime);
+      obj.endDate = _modDef2169(scheduledEndTime);
       tmp = obj;
     }
   }
@@ -309,10 +309,10 @@ export function getScheduleFromEvent(arg0) {
   ({ scheduled_start_time, scheduled_end_time } = arg0);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef2168(scheduled_start_time), endDate: "Array" };
+    const obj = { startDate: _modDef2169(scheduled_start_time), endDate: "Array" };
     tmp = obj;
     if (null != scheduled_end_time) {
-      obj.endDate = _modDef2168(scheduled_end_time);
+      obj.endDate = _modDef2169(scheduled_end_time);
       tmp = obj;
     }
   }
@@ -322,7 +322,7 @@ export function hasValidSchedule(arg0, arg1) {
   ({ startDate, endDate } = arg0);
   let tmp = null != startDate;
   if (tmp) {
-    let tmp4 = startDate >= _modDef2168();
+    let tmp4 = startDate >= _modDef2169();
     if (tmp4) {
       let tmp6 = !tmp5;
       if (!(null != endDate && endDate < startDate)) {

@@ -1,10 +1,10 @@
-// === Module 18003: useFavoritesPruneInactiveThreads ===
+// === Module 18062: useFavoritesPruneInactiveThreads ===
 
-// Module 18003 (useFavoritesPruneInactiveThreads)
+// Module 18062 (useFavoritesPruneInactiveThreads)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5818 */;
-import FavoriteStore from "FavoriteStore" /* 4864 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
+import FavoriteStore from "FavoriteStore" /* 4895 */;
 
 const require = fn;
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function useFavoritesPruneInactiveThreads() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -52,7 +52,7 @@ export default function useFavoritesPruneInactiveThreads() {
           } else if (1 === tmp6) {
             c2 = 0;
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
@@ -64,7 +64,7 @@ export default function useFavoritesPruneInactiveThreads() {
           } else {
             c2 = 0;
             v3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp9) {
           if (tmp3 === c2) {

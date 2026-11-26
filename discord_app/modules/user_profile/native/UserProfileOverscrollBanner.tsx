@@ -1,17 +1,17 @@
-// === Module 14804: UserProfileOverscrollBanner ===
+// === Module 14857: UserProfileOverscrollBanner ===
 
-// Module 14804 (UserProfileOverscrollBanner)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 9468 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 10436 */;
+// Module 14857 (UserProfileOverscrollBanner)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 9510 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 10481 */;
 import noop from "module_19" /* 19 */;
-import module_1653 from "module_1653" /* 1653 */;
+import module_1654 from "module_1654" /* 1654 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const VisualEffectViewThemed = module_1653.createAnimatedComponent(VisualEffectViewThemedDefault);
+const VisualEffectViewThemed = module_1654.createAnimatedComponent(VisualEffectViewThemedDefault);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
 
@@ -30,6 +30,6 @@ export default function UserProfileOverscrollBanner(arg0) {
   }
   items[1] = tmp2Result;
   obj2.children = items;
-  obj.children = hasOwnProperty(module_1653.View, obj2);
-  return React4(module_1653.View, obj);
+  obj.children = hasOwnProperty(module_1654.View, obj2);
+  return React4(module_1654.View, obj);
 };

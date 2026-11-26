@@ -1,12 +1,12 @@
-// === Module 7770: CrunchyrollLinkDiscordConsent ===
+// === Module 7804: CrunchyrollLinkDiscordConsent ===
 
-// Module 7770 (CrunchyrollLinkDiscordConsent)
+// Module 7804 (CrunchyrollLinkDiscordConsent)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_3 = fn(7762).CrunchyrollLinkModalScenes;
+let closure_3 = fn(7796).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1071).PlatformTypes;
-const CrunchyrollConnectionConstants = fn(7768);
+const CrunchyrollConnectionConstants = fn(7802);
 ({ CRUNCHYROLL_CLIENT_ID: hasOwnProperty, CRUNCHYROLL_CLIENT_SCOPES: closure_6 } = CrunchyrollConnectionConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 export default function CrunchyrollLinkDiscordConsent(arg0) {
   let navigation;
   ({ callbackCode, callbackState } = arg0);
-  navigation = navigation(1500).useNavigation();
+  navigation = navigation(1501).useNavigation();
   items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
@@ -24,5 +24,5 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR);
   }, items1);
-  return jsx(navigation(7735).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: callback, onError: callback1 });
+  return jsx(navigation(7769).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: callback, onError: callback1 });
 };

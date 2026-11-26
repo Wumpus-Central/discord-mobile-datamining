@@ -1,8 +1,8 @@
-// === Module 17582: RedesignSettingsReactionsChoiceScreen ===
+// === Module 17639: RedesignSettingsReactionsChoiceScreen ===
 
-// Module 17582 (RedesignSettingsReactionsChoiceScreen)
-import _modDef3206 from "module_3206" /* 3206 */;
-import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 17575 */;
+// Module 17639 (RedesignSettingsReactionsChoiceScreen)
+import _modDef3207 from "module_3207" /* 3207 */;
+import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 17632 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,9 +11,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsReactionsChoiceScreen.tsx");
 
 export default noop.memo(function RedesignSettingsReactionsChoiceScreen() {
-  stackNavigation = stackNavigation(1500).useStackNavigation();
+  stackNavigation = stackNavigation(1501).useStackNavigation();
   const intl = stackNavigation(1112).intl;
-  const stringResult = intl.string(_modDef3206.XIPvOz);
+  const stringResult = intl.string(_modDef3207.XIPvOz);
   importDefault = stringResult;
   items = [stackNavigation, stringResult];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -21,8 +21,8 @@ export default noop.memo(function RedesignSettingsReactionsChoiceScreen() {
   }, items);
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
-    const obj = stackNavigation(11914);
-    items = [stackNavigation(17569).buildReactionsChoiceSettingsSection()];
+    const obj = stackNavigation(11962);
+    items = [stackNavigation(17626).buildReactionsChoiceSettingsSection()];
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);

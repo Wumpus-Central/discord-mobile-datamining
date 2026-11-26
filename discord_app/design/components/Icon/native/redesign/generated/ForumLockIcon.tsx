@@ -1,9 +1,9 @@
-// === Module 7121: ForumLockIcon ===
+// === Module 7152: ForumLockIcon ===
 
-// Module 7121 (ForumLockIcon)
+// Module 7152 (ForumLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5698 */;
-import _mod7101 from "module_7101" /* 7101 */;
+import BaseIconImage from "BaseIconImage" /* 5729 */;
+import _mod7132 from "module_7132" /* 7132 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ForumLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7101, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7132, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

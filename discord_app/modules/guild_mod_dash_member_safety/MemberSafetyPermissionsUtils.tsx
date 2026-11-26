@@ -1,18 +1,18 @@
-// === Module 7591: MemberSafetyPermissionsUtils ===
+// === Module 7622: MemberSafetyPermissionsUtils ===
 
-// Module 7591 (MemberSafetyPermissionsUtils)
+// Module 7622 (MemberSafetyPermissionsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import BulkRoleActionsExperimentDefault from "BulkRoleActionsExperiment" /* 7592 */;
+import BulkRoleActionsExperimentDefault from "BulkRoleActionsExperiment" /* 7623 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import UserStore from "UserStore" /* 1386 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(4879).isGuildOwner;
-let closure_9 = fn(4948).MemberSafetyPagePermissions;
+const isGuildOwner = fn(4910).isGuildOwner;
+let closure_9 = fn(4979).MemberSafetyPagePermissions;
 const Constants = fn(1071);
 ({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);

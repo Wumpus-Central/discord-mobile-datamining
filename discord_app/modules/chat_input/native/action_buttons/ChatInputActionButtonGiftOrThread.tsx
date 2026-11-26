@@ -1,12 +1,12 @@
-// === Module 13146: ChatInputActionButtonGiftOrThread ===
+// === Module 13198: ChatInputActionButtonGiftOrThread ===
 
-// Module 13146 (ChatInputActionButtonGiftOrThread)
+// Module 13198 (ChatInputActionButtonGiftOrThread)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5073 */;
-import useToken from "useToken" /* 5576 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13140 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13147 */;
-import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift" /* 13149 */;
+import native from "native" /* 5104 */;
+import useToken from "useToken" /* 5607 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13192 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13199 */;
+import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift" /* 13201 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function renderChatInputActionButtonGiftAndThread(key, styleButton, state, clean
     const intl = onPress(1112).intl;
     obj2.accessibilityLabel = intl.string(onPress(1112).t["4WNcpu"]);
     obj2.disabled = !canStartThreads;
-    obj2.IconComponent = onPress(13138).ThreadPlusIcon;
+    obj2.IconComponent = onPress(13190).ThreadPlusIcon;
     obj2.onPress = function onPress(arg0) {
       return onPress(arg0, ChatInputActionType.THREAD);
     };
@@ -42,9 +42,9 @@ function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   return str;
 }
 const View = fn(17).View;
-const ChatInputActionType = fn(12908).ChatInputActionType;
+const ChatInputActionType = fn(12960).ChatInputActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles((height, arg1) => {
   const obj = { container: null };
   const size = { width: height + 2 * arg1, height };

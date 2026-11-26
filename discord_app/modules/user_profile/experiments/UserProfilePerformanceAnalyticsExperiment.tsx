@@ -1,7 +1,7 @@
-// === Module 14791: UserProfilePerformanceAnalyticsExperiment ===
+// === Module 14844: UserProfilePerformanceAnalyticsExperiment ===
 
-// Module 14791 (UserProfilePerformanceAnalyticsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 14844 (UserProfilePerformanceAnalyticsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-04-user-profile-performance-analytics", defaultConfig: { performanceAnalyticsEnabled: false }, variations: { 0: { performanceAnalyticsEnabled: false }, 1: { performanceAnalyticsEnabled: true } } });

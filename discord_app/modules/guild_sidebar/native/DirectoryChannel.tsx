@@ -1,20 +1,20 @@
-// === Module 17874: DirectoryChannel ===
+// === Module 17931: DirectoryChannel ===
 
-// Module 17874 (DirectoryChannel)
+// Module 17931 (DirectoryChannel)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11360 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11406 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildChannelStore from "GuildChannelStore" /* 4942 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildChannelStore from "GuildChannelStore" /* 4973 */;
 
 require = fn;
-const UnreadSetting = fn(6137).UnreadSetting;
+const UnreadSetting = fn(6168).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
-let obj = { container: { marginVertical: fn(6092).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5043);
+let obj = { container: { marginVertical: fn(6123).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj);
-let obj3 = { marginVertical: fn(6092).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(6123).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/DirectoryChannel.tsx");
 
@@ -47,14 +47,14 @@ export default noop.memo(function DirectoryChannel(guildId) {
   if (null != stateFromStores) {
     const obj2 = { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null };
     const obj3 = { channel: stateFromStores };
-    obj2.accessibilityLabel = id(8545)(obj3);
+    obj2.accessibilityLabel = id(8587)(obj3);
     const obj4 = { selected };
     obj2.accessibilityState = obj4;
     obj2.channel = stateFromStores;
     obj2.selected = selected;
     obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(17787), { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
-    const tmp10 = id(17787);
+    tmp7 = jsx(id(17844), { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
+    const tmp10 = id(17844);
   }
   return tmp7;
 });

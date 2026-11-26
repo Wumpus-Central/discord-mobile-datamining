@@ -1,6 +1,6 @@
-// === Module 12288: AcceptStep ===
+// === Module 12338: AcceptStep ===
 
-// Module 12288 (AcceptStep)
+// Module 12338 (AcceptStep)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -8,12 +8,12 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const GameOrganizationInviteConstants = fn(11869);
+const GameOrganizationInviteConstants = fn(11917);
 ({ GameOrganizationCharacterMode: metroImportDefault, GameOrganizationInviteAcceptStatus: closure_8 } = GameOrganizationInviteConstants);
-const onPress = fn(12283).closeGameOrganizationJoinModal;
+const onPress = fn(12333).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { text: { textAlign: "center" }, buttonGroup: { paddingVertical: 0 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,7 +37,7 @@ export function AcceptStep(code) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

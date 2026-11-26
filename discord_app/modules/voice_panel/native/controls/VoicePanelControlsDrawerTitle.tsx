@@ -1,21 +1,21 @@
-// === Module 13176: VoicePanelControlsDrawerTitle ===
+// === Module 13228: VoicePanelControlsDrawerTitle ===
 
-// Module 13176 (VoicePanelControlsDrawerTitle)
+// Module 13228 (VoicePanelControlsDrawerTitle)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import NativeViewDefault from "NativeView" /* 7024 */;
-import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 13177 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import NativeViewDefault from "NativeView" /* 7055 */;
+import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 13229 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
-let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(11732).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
+const createStyles = fn(5043);
+let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(11780).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
 obj.titlePillBG = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_6 = createStyles.createStyles(obj);
@@ -31,7 +31,7 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   }
   ({ style, blurStyle } = children);
   const tmp = closure_6();
-  const sharedValue = _mod1653.useSharedValue(true);
+  const sharedValue = _mod1654.useSharedValue(true);
   items = [closure_7, shown, sharedValue, disablePill, tmp.titlePillBG.backgroundColor];
   c0 = undefined;
   c1 = undefined;
@@ -62,7 +62,7 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   VoicePanelControlsDrawerTitleTsx1.__closure = items1;
   VoicePanelControlsDrawerTitleTsx1.__workletHash = 6652044620822;
   VoicePanelControlsDrawerTitleTsx1.__initData = tmp5;
-  const animatedStyle = _mod1653.useAnimatedStyle(VoicePanelControlsDrawerTitleTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(VoicePanelControlsDrawerTitleTsx1);
   const obj3 = { style: null, children: null };
   const items2 = [tmp.titleWrapper, style];
   obj3.style = items2;
@@ -74,7 +74,7 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   const obj5 = { style: null, children: React4(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: children.title }) };
   const items4 = [tmp.titlePill, animatedStyle];
   obj5.style = items4;
-  items3[1] = React4(_modDef1653.View, obj5);
+  items3[1] = React4(_modDef1654.View, obj5);
   obj3.children = items3;
   return hasOwnProperty(tmp13, obj3);
 });

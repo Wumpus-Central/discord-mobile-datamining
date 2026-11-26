@@ -1,15 +1,15 @@
-// === Module 13703: InviteRolesList ===
+// === Module 13755: InviteRolesList ===
 
-// Module 13703 (InviteRolesList)
-import GuildRoleUtils from "GuildRoleUtils" /* 4922 */;
-import RolePillDefault from "RolePill" /* 11395 */;
+// Module 13755 (InviteRolesList)
+import GuildRoleUtils from "GuildRoleUtils" /* 4953 */;
+import RolePillDefault from "RolePill" /* 11441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({ rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/accept_invite/native/InviteRolesList.tsx");
@@ -40,11 +40,11 @@ export default function InviteRolesList(invite) {
       const obj2 = { variant: "body-sm/semibold", color: "text-default", children: null };
       const intl = guild(1112).intl;
       obj2.children = intl.string(guild(1112).t.stcSfI);
-      const items1 = [closure_5(guild(5603).Text, obj2), ];
+      const items1 = [closure_5(guild(5634).Text, obj2), ];
       const obj3 = { style: tmp.rolesRow, children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)) };
       items1[1] = closure_5(View, obj3);
       obj.children = items1;
-      tmp2 = closure_6(guild(6084).Stack, obj);
+      tmp2 = closure_6(guild(6115).Stack, obj);
     }
   }
   return tmp2;

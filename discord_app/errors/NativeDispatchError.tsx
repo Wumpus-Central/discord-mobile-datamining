@@ -1,7 +1,7 @@
-// === Module 5765: NativeDispatchError ===
+// === Module 5796: NativeDispatchError ===
 
-// Module 5765 (NativeDispatchError)
-import Constants from "Constants" /* 5766 */;
+// Module 5796 (NativeDispatchError)
+import Constants from "Constants" /* 5797 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

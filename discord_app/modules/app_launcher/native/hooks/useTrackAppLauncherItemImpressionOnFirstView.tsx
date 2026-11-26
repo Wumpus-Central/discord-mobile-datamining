@@ -1,8 +1,8 @@
-// === Module 13011: useTrackAppLauncherItemImpressionOnFirstView ===
+// === Module 13063: useTrackAppLauncherItemImpressionOnFirstView ===
 
-// Module 13011 (useTrackAppLauncherItemImpressionOnFirstView)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
-import useTrackImpression from "useTrackImpression" /* 6085 */;
+// Module 13063 (useTrackAppLauncherItemImpressionOnFirstView)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
+import useTrackImpression from "useTrackImpression" /* 6116 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
 
 export function useTrackAppLauncherItemImpressionOnFirstView() {
-  entrypoint = entrypoint(12095).useAppLauncherContext().entrypoint;
-  let obj = entrypoint(12095);
+  entrypoint = entrypoint(12145).useAppLauncherContext().entrypoint;
+  let obj = entrypoint(12145);
   dependencyMap = noop.useRef(new Set());
   set = new Set();
-  const focusEffect = entrypoint(1501).useFocusEffect(noop.useCallback(() => {
+  const focusEffect = entrypoint(1502).useFocusEffect(noop.useCallback(() => {
     const current = ref.current;
     current.clear();
   }, []));

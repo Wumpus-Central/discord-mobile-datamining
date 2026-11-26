@@ -1,16 +1,16 @@
-// === Module 18070: CheckpointGuildsBarEntrypoint ===
+// === Module 18129: CheckpointGuildsBarEntrypoint ===
 
-// Module 18070 (CheckpointGuildsBarEntrypoint)
+// Module 18129 (CheckpointGuildsBarEntrypoint)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef3494 from "module_3494" /* 3494 */;
-import LinearGradientDefault from "LinearGradient" /* 5567 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18024 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 18036 */;
-import _modDef18071 from "module_18071" /* 18071 */;
+import _modDef3495 from "module_3495" /* 3495 */;
+import LinearGradientDefault from "LinearGradient" /* 5598 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18083 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 18095 */;
+import _modDef18130 from "module_18130" /* 18130 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18015 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18074 */;
 
 const require = globalThis.__r;
 
@@ -19,15 +19,15 @@ function ExpandedChildren() {
   const obj = { title: null, subtitle: null };
   const obj2 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3494["8hclXY"]);
+  obj2.children = intl.string(_modDef3495["8hclXY"]);
   obj.title = refs(Text_Text.Text, obj2);
   return refs(HomeDrawerShared.HomeDrawerSharedItem, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6365).CHECKPOINT_PRIMARY;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
-const GUILD_ITEM_INSET_LEFT = fn(18012).GUILD_ITEM_INSET_LEFT;
+const CHECKPOINT_PRIMARY = fn(6396).CHECKPOINT_PRIMARY;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
+const GUILD_ITEM_INSET_LEFT = fn(18071).GUILD_ITEM_INSET_LEFT;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const colors = ["#000000", "rgba(0, 0, 0, 0.5)", "#000000"];
@@ -35,7 +35,7 @@ const start = { x: 1, y: 1 };
 const end = { x: 0, y: 0 };
 let closure_15 = { code: "(function CheckpointGuildsBarEntrypointTsx1(){let[scrollPosition]=this.__closure;return scrollPosition.get();})" };
 let closure_16 = { code: "(function CheckpointGuildsBarEntrypointTsx2(current){let[dismissed,initialScrollPosition,DISMISS_SCROLL_DISTANCE,scheduleOnRN,onScroll]=this.__closure;if(dismissed.get())return;const initial=initialScrollPosition.get();if(initial==null){initialScrollPosition.set(current);return;}if(Math.abs(current-initial)>=DISMISS_SCROLL_DISTANCE){dismissed.set(true);scheduleOnRN(onScroll);}})" };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_17 = createStyles.createStyles((width) => {
   const obj = { container: { position: "relative" }, itemShape: { backgroundColor: CHECKPOINT_PRIMARY }, coachmarkAnchor: null };
   const size = { position: "absolute", top: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, left: GUILD_ITEM_INSET_LEFT, width, height: width };
@@ -75,10 +75,10 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
   const callback1 = noop.useCallback(() => _undefined(ContentDismissActionType.USER_DISMISS), items2);
   const obj2 = require("GuildsBarAnimatedItemWrapper");
   const tmp10 = GuildsBarDnDStore((scrollPosition) => scrollPosition.scrollPosition);
-  const sharedValue = require("module_1653").useSharedValue(null);
-  const obj4 = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(false);
-  const obj5 = require("module_1653");
+  const sharedValue = require("module_1654").useSharedValue(null);
+  const obj4 = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(false);
+  const obj5 = require("module_1654");
   const items3 = [closure_15, tmp10];
   _require = undefined;
   [tmp13, tmp14] = items3;
@@ -91,7 +91,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
   CheckpointGuildsBarEntrypointTsx1.__closure = items4;
   CheckpointGuildsBarEntrypointTsx1.__workletHash = 1024720770114;
   CheckpointGuildsBarEntrypointTsx1.__initData = tmp13;
-  const items5 = [closure_16, sharedValue1, sharedValue, 8, require("module_1706").scheduleOnRN, callback1];
+  const items5 = [closure_16, sharedValue1, sharedValue, 8, require("module_1707").scheduleOnRN, callback1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -128,23 +128,23 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
   CheckpointGuildsBarEntrypointTsx2.__closure = items6;
   CheckpointGuildsBarEntrypointTsx2.__workletHash = 1045220900980;
   CheckpointGuildsBarEntrypointTsx2.__initData = tmp15;
-  const animatedReaction = require("module_1653").useAnimatedReaction(CheckpointGuildsBarEntrypointTsx1, CheckpointGuildsBarEntrypointTsx2);
-  const obj6 = require("module_1653");
+  const animatedReaction = require("module_1654").useAnimatedReaction(CheckpointGuildsBarEntrypointTsx1, CheckpointGuildsBarEntrypointTsx2);
+  const obj6 = require("module_1654");
   isModalOpen = require("NavigationRouteUtils").useIsModalOpen();
   const items7 = [markAsDismissed, callback, isModalOpen];
   const memo2 = obj3.useMemo(() => {
     const obj = { title: null, description: null, visible: null, position: "bottom", offsetY: 24, graphic: null, onDismiss: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3494.tgYaeZ);
+    obj.title = intl.string(_modDef3495.tgYaeZ);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef3494.BFc4lY);
+    obj.description = intl2.string(_modDef3495.BFc4lY);
     obj.visible = !isModalOpen;
-    obj.graphic = { type: "image", src: _modDef18071, aspectRatio: "16/9" };
+    obj.graphic = { type: "image", src: _modDef18130, aspectRatio: "16/9" };
     obj.onDismiss = function onDismiss() {
       return _undefined(constants.USER_DISMISS);
     };
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(_modDef3494.UjtEWE);
+    obj.buttonLabel = intl3.string(_modDef3495.UjtEWE);
     obj.onButtonPress = _undefined4;
     return obj;
   }, items7);
@@ -156,10 +156,10 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
   const callback2 = obj3.useCallback(() => {
     coachmark(false);
   }, items8);
-  const obj8 = { selected: false, circle: false, unread: false, styles: memo, overState: "y", config: memo1, label: "woman_farmer_light_skin_tone", expandedChildren: null, children: null };
+  const obj8 = { selected: false, circle: false, unread: false, styles: memo, overState: "y", config: memo1, label: "voice_activity_default", expandedChildren: "default", children: "systemMessages" };
   const tmpResult2 = require("useCoachmark");
   let intl = tmp(1112).intl;
-  obj8.label = intl.string(_modDef3494["8hclXY"]);
+  obj8.label = intl.string(_modDef3495["8hclXY"]);
   obj8.expandedChildren = closure_10(ExpandedChildren, {});
   const items9 = [closure_10(LinearGradientDefault, { colors, start, end, style: isModalOpen.absoluteFill, pointerEvents: "none" }), ];
   const obj9 = { colors, start, end, style: isModalOpen.absoluteFill, pointerEvents: "none" };

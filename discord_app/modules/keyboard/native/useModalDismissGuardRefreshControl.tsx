@@ -1,7 +1,7 @@
-// === Module 9702: useModalDismissGuardRefreshControl ===
+// === Module 9744: useModalDismissGuardRefreshControl ===
 
-// Module 9702 (useModalDismissGuardRefreshControl)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
+// Module 9744 (useModalDismissGuardRefreshControl)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
 import noop_mod from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/useModalDismissGuardRefreshControl.tsx");
 
 export function useModalDismissGuardRefreshControl() {
-  isPortalKeyboardInModal = isPortalKeyboardInModal(9703).useIsPortalKeyboardInModal();
+  isPortalKeyboardInModal = isPortalKeyboardInModal(9745).useIsPortalKeyboardInModal();
   items = [isPortalKeyboardInModal];
   return noop.useMemo(() => {
     let tmp;

@@ -1,11 +1,11 @@
-// === Module 16795: GuildRoleSubscriptionCard ===
+// === Module 16846: GuildRoleSubscriptionCard ===
 
-// Module 16795 (GuildRoleSubscriptionCard)
+// Module 16846 (GuildRoleSubscriptionCard)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16785 */;
-import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 16798 */;
-import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 16801 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16836 */;
+import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 16849 */;
+import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 16852 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { section: { gap: 14 }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: nativeDefault.space.PX_24 };
 obj2.separator = size;
@@ -46,7 +46,7 @@ export function Content(arg0) {
   const obj7 = { children: null };
   const intl = guildId(1112).intl;
   obj7.children = intl.string(guildId(1112).t["DJ+bGu"]);
-  items = [closure_6(SectionTitle, obj7), closure_6(guildId(1186).Spacer, { size: 8 }), closure_6(guildId(16797).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+  items = [closure_6(SectionTitle, obj7), closure_6(guildId(1186).Spacer, { size: 8 }), closure_6(guildId(16848).GuildRoleSubscriptionMemberPreview, { guildId, role })];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , , ];
   let tmp5Result = null;
@@ -92,5 +92,5 @@ export function Content(arg0) {
   }
   items1[3] = tmp5Result4;
   obj5.children = items1;
-  return closure_8(guildId(16796).SeparatedList, obj5);
+  return closure_8(guildId(16847).SeparatedList, obj5);
 }

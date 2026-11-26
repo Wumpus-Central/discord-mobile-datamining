@@ -1,9 +1,9 @@
-// === Module 12585: useCheckpointForegroundTracking ===
+// === Module 12651: useCheckpointForegroundTracking ===
 
-// Module 12585 (useCheckpointForegroundTracking)
-import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12570 */;
+// Module 12651 (useCheckpointForegroundTracking)
+import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 12619 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 2118 */;
+import AppStateStore from "AppStateStore" /* 2119 */;
 
 const require = fn;
 const AppStates = fn(1071).AppStates;

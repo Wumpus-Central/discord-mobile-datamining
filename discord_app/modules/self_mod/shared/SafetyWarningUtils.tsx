@@ -1,8 +1,8 @@
-// === Module 11778: SafetyWarningUtils ===
+// === Module 11826: SafetyWarningUtils ===
 
-// Module 11778 (SafetyWarningUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import UserStore from "UserStore" /* 1386 */;
+// Module 11826 (SafetyWarningUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);

@@ -1,14 +1,14 @@
-// === Module 13999: GiftPurchaseButton ===
+// === Module 14051: GiftPurchaseButton ===
 
-// Module 13999 (GiftPurchaseButton)
+// Module 14051 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 2178 */;
-import IAPStore from "IAPStore" /* 9062 */;
+import SubscriptionStore from "SubscriptionStore" /* 2179 */;
+import IAPStore from "IAPStore" /* 9104 */;
 
 const require = fn;
 const View = fn(17).View;
-const PRICE_PLACEHOLDER = fn(1388).PRICE_PLACEHOLDER;
+const PRICE_PLACEHOLDER = fn(1389).PRICE_PLACEHOLDER;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/GiftPurchaseButton.tsx");
@@ -51,17 +51,17 @@ export default function GiftPurchaseButton(style) {
   const callback = analyticsLocations.useCallback(productIdForGift(function*() {
     yield createOrReuseGiftOrder({ planId, recipientUserId, productId: productIdForGift });
     closure_128_0 = value;
-    const premiumTypeFromPlanId = planId(2173).getPremiumTypeFromPlanId(closure_129_0);
+    const premiumTypeFromPlanId = planId(2174).getPremiumTypeFromPlanId(closure_129_0);
     const premiumType = premiumTypeFromPlanId.premiumType;
     const planInterval = premiumTypeFromPlanId.planInterval;
-    planId(11067).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
+    planId(11113).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
     yield "HermesInternal";
     const obj7 = { title: null, body: null };
     const intl = planId(1112).intl;
     obj7.title = intl.string(planId(1112).t.R0RpRX);
     const intl2 = planId(1112).intl;
     obj7.body = intl2.string(planId(1112).t.CKsXk3);
-    tmp3(6016).show(obj7);
+    tmp3(6047).show(obj7);
   }), items3);
   const obj9 = { style: obj, basePlanId: planId, isCurrentPlan: tmp13, isGift: true, product: stateFromStores2, priceString: null };
   let priceString;

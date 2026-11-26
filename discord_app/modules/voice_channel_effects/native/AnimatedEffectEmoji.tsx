@@ -1,13 +1,13 @@
-// === Module 10147: AnimatedEffectEmoji ===
+// === Module 10189: AnimatedEffectEmoji ===
 
-// Module 10147 (AnimatedEffectEmoji)
+// Module 10189 (AnimatedEffectEmoji)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import native from "native" /* 1186 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import FastImageDefault from "FastImage" /* 5699 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import FastImageDefault from "FastImage" /* 5730 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_7 = 6 * DurationsDefault.Millis.SECOND;
 let closure_8 = 2 * DurationsDefault.Millis.SECOND;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { voiceChannelEffectEmojiContainer: null, voiceChannelEffectEmojiContainerTileNotch: null, voiceChannelEffectEmoji: null, textEmoji: null, imageEmoji: null };
 const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, position: "absolute", right: 16, top: 16 };
 obj2.voiceChannelEffectEmojiContainer = rect;
@@ -75,8 +75,8 @@ export default function AnimatedEffectEmoji(onComplete) {
       }
     };
   }, items1);
-  require("module_1653");
-  const items2 = [closure_11, require("module_1653").withSequence, require("timing/timing").withTiming, -120, require("module_1653").withDelay, stateFromStores, require("native").STANDARD_EASING];
+  require("module_1654");
+  const items2 = [closure_11, require("module_1654").withSequence, require("timing/timing").withTiming, -120, require("module_1654").withDelay, stateFromStores, require("native").STANDARD_EASING];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -128,12 +128,12 @@ export default function AnimatedEffectEmoji(onComplete) {
     const obj3 = { style: tmp.voiceChannelEffectEmoji, children: null };
     const obj4 = { url: null, surrogates: null };
     let tmp2Result = tmp2(1186);
-    obj4.url = tmp2(10117).getEffectUrl(emoji);
+    obj4.url = tmp2(10159).getEffectUrl(emoji);
     obj4.surrogates = emoji.name;
     obj3.children = <Emoji url={null} surrogates={null} />;
     obj2.children = <c4 style={tmp.voiceChannelEffectEmoji}>{null}</c4>;
-    tmp16Result = jsx(_modDef1653.View, { style: null, children: null });
-    const tmp2Result2 = tmp2(10117);
+    tmp16Result = jsx(_modDef1654.View, { style: null, children: null });
+    const tmp2Result2 = tmp2(10159);
   }
   return tmp16Result;
 };

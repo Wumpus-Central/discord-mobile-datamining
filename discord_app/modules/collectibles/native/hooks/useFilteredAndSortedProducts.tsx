@@ -1,8 +1,8 @@
-// === Module 16542: useFilteredAndSortedProducts ===
+// === Module 16593: useFilteredAndSortedProducts ===
 
-// Module 16542 (useFilteredAndSortedProducts)
+// Module 16593 (useFilteredAndSortedProducts)
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = fn;
 let closure_5 = fn(1073).CollectiblesMobileShopScreen;

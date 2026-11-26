@@ -1,85 +1,116 @@
-// === Module 19636: EmbeddedAppShimManager ===
+// === Module 19699: EmbeddedAppShimManager ===
 
-// Module 19636 (EmbeddedAppShimManager)
+// Module 19699 (EmbeddedAppShimManager)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
-import EmbeddedAppShimActionCreators from "EmbeddedAppShimActionCreators" /* 10168 */;
-import protocol from "protocol" /* 19637 */;
-import embeddedAppShimKeybindsDefault from "embeddedAppShimKeybinds" /* 19640 */;
-import _slicedToArray from "module_32" /* 32 */;
-import FramesStore from "FramesStore" /* 6905 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+import EmbeddedAppShimActionCreators from "EmbeddedAppShimActionCreators" /* 10210 */;
+import protocol from "protocol" /* 19700 */;
+import embeddedAppShimKeybindsDefault from "embeddedAppShimKeybinds" /* 19703 */;
+import parseLaunchTimingsDefault from "parseLaunchTimings" /* 19704 */;
+import FramesStore from "FramesStore" /* 6936 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
-function createParentStateMessage(iframeId) {
+function sendParentState(iframeId) {
+  iframeId = iframeId.iframeId;
   const frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
-  if (null == frameByIframeId) {
-    value = map1.get(iframeId);
-    if (value == null) {
-      value = closure_6;
-    }
-    let obj = value;
+  if (null != frameByIframeId) {
+    const obj = { muted: frameByIframeId.data.muted };
+    let tmp4 = obj;
   } else {
-    obj = { muted: frameByIframeId.data.muted };
+    value = map.get(iframeId);
+    tmp4 = null != value ? value.parentState : closure_5;
   }
-  const result = map1.set(iframeId, obj);
-  return { type: protocol.ParentToChildEvent.STATE_UPDATED, state: obj };
+  iframeId.parentState = tmp4;
+  const host = iframeId.host;
+  host.dispatch({ type: protocol.ParentToChildEvent.STATE_UPDATED, state: iframeId.parentState });
+  const obj2 = { type: protocol.ParentToChildEvent.STATE_UPDATED, state: iframeId.parentState };
 }
 function createKeybindsMessage() {
   const obj = { type: protocol.ParentToChildEvent.KEYBINDS_UPDATED, keybinds: embeddedAppShimKeybindsDefault.getKeybinds() };
   return obj;
 }
+function cancelUnansweredLaunchTimingsRequests(launchTimingsRequests) {
+  launchTimingsRequests = launchTimingsRequests.launchTimingsRequests;
+  items = [...launchTimingsRequests.values()];
+  const launchTimingsRequests2 = launchTimingsRequests.launchTimingsRequests;
+  launchTimingsRequests2.clear();
+  const iter = items[Symbol.iterator]();
+  while (iter !== undefined) {
+    let tmp2 = iter.next()(null);
+    continue;
+  }
+}
 function handleShimPipeOpen(iframeId) {
   iframeId = iframeId.iframeId;
   value = map.get(iframeId);
   if (null != value) {
-    value.offer(iframeId.pipe);
+    let host = value.host;
+    host.offer(iframeId.pipe);
   } else {
-    let obj2 = {
-      onConnect(dispatch) {
+    let obj2 = { iframeId, host: null, parentState: null, connected: false, launchTimingsRequests: null };
+    let obj3 = {
+      onConnect() {
+          obj2.connected = true;
+          cancelUnansweredLaunchTimingsRequests(obj2);
+          const iframeId = obj2.iframeId;
           const frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
-          if (null == frameByIframeId) {
-            value = map1.get(iframeId);
-            if (value == null) {
-              value = closure_6;
-            }
-            let obj = value;
+          if (null != frameByIframeId) {
+            const obj = { muted: frameByIframeId.data.muted };
+            let tmp6 = obj;
           } else {
-            obj = { muted: frameByIframeId.data.muted };
+            value = map.get(iframeId);
+            tmp6 = null != value ? value.parentState : closure_5;
           }
-          const result = map1.set(iframeId, obj);
-          dispatch.dispatch({ type: protocol.ParentToChildEvent.STATE_UPDATED, state: obj });
-          const obj3 = { type: protocol.ParentToChildEvent.KEYBINDS_UPDATED, keybinds: null };
-          const obj2 = { type: protocol.ParentToChildEvent.STATE_UPDATED, state: obj };
-          obj3.keybinds = embeddedAppShimKeybindsDefault.getKeybinds();
-          dispatch.dispatch(obj3);
+          obj2.parentState = tmp6;
+          const host = tmp.host;
+          obj2 = { type: protocol.ParentToChildEvent.STATE_UPDATED, state: obj2.parentState };
+          host.dispatch(obj2);
+          const host2 = tmp.host;
+          const obj3 = { type: protocol.ParentToChildEvent.KEYBINDS_UPDATED, keybinds: embeddedAppShimKeybindsDefault.getKeybinds() };
+          host2.dispatch(obj3);
+          EmbeddedAppShimActionCreators.shimConnected(obj2.iframeId);
         },
       onMessage(type) {
           if (type.type === protocol.ChildToParentEvent.STATE_UPDATED) {
-            EmbeddedAppShimActionCreators.updateShimState(iframeId, type.state);
+            EmbeddedAppShimActionCreators.updateShimState(tmp.iframeId, type.state);
             const tmp2Result = EmbeddedAppShimActionCreators;
           } else if (type.type === protocol.ChildToParentEvent.DISCONNECTED) {
-            embeddedAppShimKeybindsDefault.releaseHeldKeys(iframeId);
-            EmbeddedAppShimActionCreators.disconnectShim(iframeId);
+            tmp.connected = false;
+            cancelUnansweredLaunchTimingsRequests(tmp);
+            obj2 = embeddedAppShimKeybindsDefault;
+            obj2.releaseHeldKeys(tmp.iframeId);
+            EmbeddedAppShimActionCreators.disconnectShim(tmp.iframeId);
             const tmp2Result2 = EmbeddedAppShimActionCreators;
           } else if (type.type === protocol.ChildToParentEvent.KEYBIND_CAPTURED) {
-            const result = embeddedAppShimKeybindsDefault.replayCapturedKeybind(iframeId, type.keybind);
+            const result = embeddedAppShimKeybindsDefault.replayCapturedKeybind(tmp.iframeId, type.keybind);
+          } else if (type.type === protocol.ChildToParentEvent.LAUNCH_TIMINGS_RESPONSE) {
+            const launchTimingsRequests = tmp.launchTimingsRequests;
+            value = launchTimingsRequests.get(type.nonce);
+            const launchTimingsRequests2 = tmp.launchTimingsRequests;
+            launchTimingsRequests2.delete(type.nonce);
+            if (null != value) {
+              value(parseLaunchTimingsDefault(type.timingsJson));
+            }
           }
         }
     };
-    const embeddedAppShimHost = iframeId(19641).createEmbeddedAppShimHost(obj2);
-    let result = map.set(iframeId, embeddedAppShimHost);
-    let frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
-    if (null == frameByIframeId) {
-      let value2 = map1.get(iframeId);
-      if (value2 == null) {
-        value2 = closure_6;
-      }
-      let obj3 = value2;
+    obj2.host = obj2(19705).createEmbeddedAppShimHost(obj3);
+    let muted = FramesStore.getFrameByIframeId(iframeId);
+    if (null != muted) {
+      let obj5 = { muted: null };
+      muted = muted.data.muted;
+      obj5.muted = muted;
+      let tmp3 = obj5;
     } else {
-      obj3 = { muted: frameByIframeId.data.muted };
+      const value2 = obj.get(iframeId);
+      tmp3 = null != value2 ? value2.parentState : closure_5;
     }
-    const result1 = map1.set(iframeId, obj3);
-    let obj4 = iframeId(19641);
+    obj2.parentState = tmp3;
+    const _Map = Map;
+    map = new Map();
+    obj2.launchTimingsRequests = map;
+    let result = obj.set(iframeId, obj2);
+    let obj4 = obj2(19705);
   }
 }
 function handleIFrameUnmount(id) {
@@ -87,37 +118,37 @@ function handleIFrameUnmount(id) {
   value = map.get(id);
   if (null != value) {
     map.delete(id);
-    map1.delete(id);
-    value.close();
+    const host = value.host;
+    host.close();
   }
 }
 function updateKeybinds() {
   const values = map.values();
   for (const item10010 of values) {
-    let dispatchResult = item10010.dispatch(tmp);
+    let host = item10010.host;
+    let dispatchResult = host.dispatch(tmp);
     continue;
   }
 }
 function updateParentStates() {
+  const values = map.values();
   while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    let obj = tmp5[1];
-    let dispatchResult = obj.dispatch(createParentStateMessage(tmp5[0]));
+    let tmp5 = sendParentState(tmp3);
     continue;
   }
-  tmp2 = map[Symbol.iterator]();
+  tmp2 = values[Symbol.iterator]();
 }
 const ComponentActions = fn(1071).ComponentActions;
-let closure_6 = { muted: false };
-const map = new Map();
-const map1 = new Map();
-class EmbeddedAppShimManager extends tmp4 {
+let closure_5 = { muted: false };
+let map = new Map();
+let c7 = 0;
+class EmbeddedAppShimManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     obj = { EMBEDDED_APP_SHIM_PIPE_OPEN: handleShimPipeOpen };
     applyArgumentsResult.actions = obj;
     map = new Map();
-    applyArgumentsResult.stores = map.set(closure_4, updateParentStates);
+    applyArgumentsResult.stores = map.set(closure_3, updateParentStates);
     applyArgumentsResult._unsubscribeKeybinds = null;
     return applyArgumentsResult;
   }
@@ -139,7 +170,8 @@ prototype["_terminate"] = function _terminate() {
   self._unsubscribeKeybinds = null;
   const values = map.values();
   for (const item10021 of values) {
-    let closeResult = item10021.close();
+    let host = item10021.host;
+    let closeResult = host.close();
     continue;
   }
   map.clear();
@@ -149,3 +181,22 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/shim_host/EmbeddedAppShimManager.tsx");
 
 export default embeddedAppShimManager;
+export function requestShimLaunchTimings(arg0, markPrefixes) {
+  value = map.get(arg0);
+  importDefault = value;
+  if (null != value) {
+    if (value.connected) {
+      const _String = String;
+      const nonce = String(closure_7);
+      closure_7 = closure_7 + 1;
+      const promise = new Promise((arg0) => {
+        const launchTimingsRequests = value.launchTimingsRequests;
+        const result = launchTimingsRequests.set(nonce, arg0);
+        const host = value.host;
+        host.dispatch({ type: protocol.ParentToChildEvent.LAUNCH_TIMINGS_REQUEST, nonce, markPrefixes });
+      });
+      return promise;
+    }
+  }
+  return Promise.resolve(null);
+}

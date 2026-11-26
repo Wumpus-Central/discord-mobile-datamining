@@ -1,10 +1,10 @@
-// === Module 10184: PostMessageProxySocket ===
+// === Module 10226: PostMessageProxySocket ===
 
-// Module 10184 (PostMessageProxySocket)
+// Module 10226 (PostMessageProxySocket)
 import Constants from "Constants" /* 1071 */;
-import RPCErrorDefault from "RPCError" /* 7613 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 10173 */;
-import BaseSocket from "BaseSocket" /* 10185 */;
+import RPCErrorDefault from "RPCError" /* 7644 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 10215 */;
+import BaseSocket from "BaseSocket" /* 10227 */;
 import size from "module_2" /* 2 */;
 
 const RPCCloseCodes = Constants.RPCCloseCodes;

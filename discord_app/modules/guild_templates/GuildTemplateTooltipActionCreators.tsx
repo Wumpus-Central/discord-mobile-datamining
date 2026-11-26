@@ -1,9 +1,9 @@
-// === Module 7830: GuildTemplateTooltipActionCreators ===
+// === Module 7864: GuildTemplateTooltipActionCreators ===
 
-// Module 7830 (GuildTemplateTooltipActionCreators)
+// Module 7864 (GuildTemplateTooltipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 const Permissions = fn(1071).Permissions;
 const size = fn(2);
@@ -23,7 +23,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -55,7 +55,7 @@ export default {
             return obj;
           }
           guildId = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         } catch (tmp7) {
           guildId = tmp;
           throw tmp7;

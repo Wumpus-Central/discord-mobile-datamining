@@ -1,15 +1,15 @@
-// === Module 19515: VoicePanelScreenshareButton ===
+// === Module 19578: VoicePanelScreenshareButton ===
 
-// Module 19515 (VoicePanelScreenshareButton)
+// Module 19578 (VoicePanelScreenshareButton)
 import util from "util" /* 1112 */;
-import NativeViewDefault from "NativeView" /* 7024 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
-import useVoicePanelScreenshareToggleDefault from "useVoicePanelScreenshareToggle" /* 18141 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 19501 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19502 */;
-import MobilePhoneDenyIcon2 from "MobilePhoneDenyIcon" /* 19516 */;
+import NativeViewDefault from "NativeView" /* 7055 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
+import useVoicePanelScreenshareToggleDefault from "useVoicePanelScreenshareToggle" /* 18200 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 19564 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19565 */;
+import MobilePhoneDenyIcon2 from "MobilePhoneDenyIcon" /* 19579 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
 
 require = fn;
 function ScreenshareButtonInner(arg0) {
@@ -57,13 +57,13 @@ function ScreenshareButtonInner(arg0) {
   return <tmp5Result onPress={tmp6.onPress} disabled={tmp7} props={props} accessibilityLabel={null} style={null}>{null}</tmp5Result>;
 }
 const jsx = fn(21).jsx;
-const MetaQuestUtils = fn(1625);
+const MetaQuestUtils = fn(1626);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13467).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13519).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18147).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18206).MobilePhoneShareIcon;
 }
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");

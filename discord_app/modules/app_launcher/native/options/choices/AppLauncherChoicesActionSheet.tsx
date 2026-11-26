@@ -1,16 +1,16 @@
-// === Module 13079: AppLauncherChoicesActionSheet ===
+// === Module 13131: AppLauncherChoicesActionSheet ===
 
-// Module 13079 (AppLauncherChoicesActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6838 */;
-import _mod7451 from "module_7451" /* 7451 */;
+// Module 13131 (AppLauncherChoicesActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6869 */;
+import _mod7482 from "module_7482" /* 7482 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod7451;
+  const tmp3 = _mod7482;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
@@ -22,7 +22,7 @@ function FlashListWrapper(scrollable) {
   }
   return tmp2Result;
 }
-const DEFAULT_CONTENT_PADDING = fn(1499).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1500).DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);

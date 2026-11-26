@@ -1,7 +1,7 @@
-// === Module 16550: useIsCarouselInView ===
+// === Module 16601: useIsCarouselInView ===
 
-// Module 16550 (useIsCarouselInView)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+// Module 16601 (useIsCarouselInView)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

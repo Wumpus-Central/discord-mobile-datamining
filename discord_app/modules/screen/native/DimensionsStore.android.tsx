@@ -1,15 +1,15 @@
-// === Module 1495: DimensionsStore ===
+// === Module 1496: DimensionsStore ===
 
-// Module 1495 (DimensionsStore)
+// Module 1496 (DimensionsStore)
 import _mod17 from "module_17" /* 17 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1628 */;
-import AppEntryKey from "AppEntryKey" /* 1641 */;
-import readAppEntryWindowMetrics from "readAppEntryWindowMetrics" /* 2020 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 2021 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1496 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
+import AppEntryKey from "AppEntryKey" /* 1642 */;
+import readAppEntryWindowMetrics from "readAppEntryWindowMetrics" /* 2021 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 2022 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1497 */;
 import module_560 from "module_560" /* 560 */;
-import SafeAreaStore from "SafeAreaStore" /* 1629 */;
+import SafeAreaStore from "SafeAreaStore" /* 1630 */;
 import size from "module_2" /* 2 */;
 
 function getDimensionsStoreStateForEntry(appEntryKey, arg1) {

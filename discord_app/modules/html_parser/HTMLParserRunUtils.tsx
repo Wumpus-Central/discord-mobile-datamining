@@ -1,6 +1,6 @@
-// === Module 9934: HTMLParserRunUtils ===
+// === Module 9976: HTMLParserRunUtils ===
 
-// Module 9934 (HTMLParserRunUtils)
+// Module 9976 (HTMLParserRunUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/html_parser/HTMLParserRunUtils.tsx");

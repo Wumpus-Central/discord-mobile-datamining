@@ -1,9 +1,9 @@
-// === Module 7145: useGameProfileObscured ===
+// === Module 7176: useGameProfileObscured ===
 
-// Module 7145 (useGameProfileObscured)
+// Module 7176 (useGameProfileObscured)
 import initialize from "initialize" /* 504 */;
-import utils from "utils" /* 5641 */;
-import UserStore from "UserStore" /* 1386 */;
+import utils from "utils" /* 5672 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const size = fn(2);

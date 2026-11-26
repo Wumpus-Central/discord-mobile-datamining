@@ -1,8 +1,8 @@
-// === Module 16070: UserProfileLegacyUsernameSwitch ===
+// === Module 16128: UserProfileLegacyUsernameSwitch ===
 
-// Module 16070 (UserProfileLegacyUsernameSwitch)
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7307 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11898 */;
+// Module 16128 (UserProfileLegacyUsernameSwitch)
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7338 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11946 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDisabled) {
   pendingLegacyUsernameDisabled = pendingLegacyUsernameDisabled.pendingLegacyUsernameDisabled;
   let setting;
-  const LegacyUsernameDisabled = setting(4837).LegacyUsernameDisabled;
+  const LegacyUsernameDisabled = setting(4868).LegacyUsernameDisabled;
   setting = LegacyUsernameDisabled.useSetting();
   let tmp4 = setting;
   if (undefined !== pendingLegacyUsernameDisabled) {
@@ -40,5 +40,5 @@ export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDis
       UserProfileSettingsActionCreators.setPendingChanges(obj2);
     }
   };
-  return jsx(setting(16031).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
+  return jsx(setting(16089).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
 };

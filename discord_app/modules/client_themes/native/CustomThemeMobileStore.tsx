@@ -1,15 +1,15 @@
-// === Module 1237: CustomThemeMobileStore ===
+// === Module 1238: CustomThemeMobileStore ===
 
-// Module 1237 (CustomThemeMobileStore)
+// Module 1238 (CustomThemeMobileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1238 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 5071 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 5102 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 function reset() {
@@ -96,7 +96,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "Array", customTheme: "analyticsLocations" };
+    obj = { theme: "Array", customTheme: "channel_id" };
   }
   return obj;
 };

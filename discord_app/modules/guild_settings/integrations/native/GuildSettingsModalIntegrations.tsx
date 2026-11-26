@@ -1,12 +1,12 @@
-// === Module 19915: GuildSettingsModalIntegrations ===
+// === Module 19979: GuildSettingsModalIntegrations ===
 
-// Module 19915 (GuildSettingsModalIntegrations)
+// Module 19979 (GuildSettingsModalIntegrations)
 import nativeDefault from "native" /* 575 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8531 */;
-import openGuildSettingsRemoveAppAlertDefault from "openGuildSettingsRemoveAppAlert" /* 19918 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
+import openGuildSettingsRemoveAppAlertDefault from "openGuildSettingsRemoveAppAlert" /* 19982 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8532 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let items = [, ];
 ({ TWITCH: arr[0], YOUTUBE: arr[1] } = PlatformTypes);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, screenContent: null, platformIcon: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.screenContent = { paddingTop: nativeDefault.space.PX_16 };

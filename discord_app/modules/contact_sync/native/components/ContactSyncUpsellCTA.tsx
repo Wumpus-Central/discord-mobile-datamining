@@ -1,18 +1,18 @@
-// === Module 15210: ContactSyncUpsellCTA ===
+// === Module 15260: ContactSyncUpsellCTA ===
 
-// Module 15210 (ContactSyncUpsellCTA)
+// Module 15260 (ContactSyncUpsellCTA)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13618 */;
-import _modDef15211 from "module_15211" /* 15211 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13670 */;
+import _modDef15261 from "module_15261" /* 15261 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const dismissUpsellCTA = fn(13621).dismissUpsellCTA;
+const dismissUpsellCTA = fn(13673).dismissUpsellCTA;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -46,10 +46,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       items = [obj3];
       obj2.options = items;
-      const result = location(7512).showSimpleActionSheet(obj2);
+      const result = location(7543).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef15211,
+    iconSource: _modDef15261,
     title: null,
     subtitle: null
   };
@@ -59,7 +59,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
   obj.title = intl.string(location(1112).t.T6Rfd9);
   const intl2 = location(1112).intl;
   obj.subtitle = intl2.string(location(1112).t.c6KIpg);
-  return jsx(location(8046).FormCTA, {
+  return jsx(location(8088).FormCTA, {
     onPress: function handleOpen() {
       const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = location;
@@ -84,10 +84,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       items = [obj3];
       obj2.options = items;
-      const result = location(7512).showSimpleActionSheet(obj2);
+      const result = location(7543).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef15211,
+    iconSource: _modDef15261,
     title: null,
     subtitle: null
   });

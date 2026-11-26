@@ -1,8 +1,8 @@
-// === Module 19255: HexagonCampaignExpiredPromoSheet ===
+// === Module 19318: HexagonCampaignExpiredPromoSheet ===
 
-// Module 19255 (HexagonCampaignExpiredPromoSheet)
-import _modDef4662 from "module_4662" /* 4662 */;
-import Text_Text from "Text/Text" /* 5603 */;
+// Module 19318 (HexagonCampaignExpiredPromoSheet)
+import _modDef4663 from "module_4663" /* 4663 */;
+import Text_Text from "Text/Text" /* 5634 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignExpiredPromoSheet.tsx");
@@ -37,7 +37,7 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -133,7 +133,7 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -185,16 +185,16 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
     callback(ContentDismissActionType.USER_DISMISS);
   }, items2);
   noop = noop.useCallback(() => {
-    const obj = closure_0(15983);
-    const result = obj.trackHexagonCampaignContentClicked({ content: closure_0(6843).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8350).QuestContentCTA.LEARN_MORE });
-    const obj2 = { content: closure_0(6843).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8350).QuestContentCTA.LEARN_MORE };
-    const result1 = closure_0(16036).openHexagonCampaignLearnMore();
+    const obj = closure_0(16060);
+    const result = obj.trackHexagonCampaignContentClicked({ content: closure_0(6874).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8392).QuestContentCTA.LEARN_MORE });
+    const obj2 = { content: closure_0(6874).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8392).QuestContentCTA.LEARN_MORE };
+    const result1 = closure_0(16094).openHexagonCampaignLearnMore();
   }, []);
   let obj3 = { illustration: jsx(require("BundleAbstractUI").BundleAbstractUI, { accessible: false }), title: null, description: null, onDismiss: null, actions: null };
   let intl = require("util").intl;
-  obj3.title = intl.string(_modDef4662.bZTNDw);
+  obj3.title = intl.string(_modDef4663.bZTNDw);
   const intl2 = require("util").intl;
-  obj3.description = intl2.format(_modDef4662.uL0TOA, {
+  obj3.description = intl2.format(_modDef4663.uL0TOA, {
     learnMoreHook(children, key) {
       return jsx(Text_Text.Text, { variant: "heading-md/medium", color: "text-link", accessibilityRole: "link", onPress, children }, key);
     }

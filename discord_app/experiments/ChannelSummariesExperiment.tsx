@@ -1,10 +1,10 @@
-// === Module 11750: ChannelSummariesExperiment ===
+// === Module 11798: ChannelSummariesExperiment ===
 
-// Module 11750 (ChannelSummariesExperiment)
-import ChannelConstants from "ChannelConstants" /* 4868 */;
-import GuildRecord from "GuildRecord" /* 4879 */;
-import FavoritesUtils from "FavoritesUtils" /* 4886 */;
-import GuildStore from "GuildStore" /* 4883 */;
+// Module 11798 (ChannelSummariesExperiment)
+import ChannelConstants from "ChannelConstants" /* 4899 */;
+import GuildRecord from "GuildRecord" /* 4910 */;
+import FavoritesUtils from "FavoritesUtils" /* 4917 */;
+import GuildStore from "GuildStore" /* 4914 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

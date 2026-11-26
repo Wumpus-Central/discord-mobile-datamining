@@ -1,23 +1,23 @@
-// === Module 11308: UsersFastList ===
+// === Module 11354: UsersFastList ===
 
-// Module 11308 (UsersFastList)
+// Module 11354 (UsersFastList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import TableRow from "TableRow" /* 6113 */;
-import Pressables from "Pressables" /* 6121 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8971 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10546 */;
-import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 11309 */;
-import UserRowDefault from "UserRow" /* 11310 */;
-import GroupDMRowDefault from "GroupDMRow" /* 11357 */;
-import ChannelRowDefault from "ChannelRow" /* 11359 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import TableRow from "TableRow" /* 6144 */;
+import Pressables from "Pressables" /* 6152 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9013 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10591 */;
+import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 11355 */;
+import UserRowDefault from "UserRow" /* 11356 */;
+import GroupDMRowDefault from "GroupDMRow" /* 11403 */;
+import ChannelRowDefault from "ChannelRow" /* 11405 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function Placeholder(arg0) {
@@ -35,11 +35,11 @@ function PlaceholderSection() {
   return metroImportDefault(View, {});
 }
 const View = fn(17).View;
-const UsersFastListConstants = fn(10685);
+const UsersFastListConstants = fn(10730);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { sectionHeader: { flex: 1, overflow: "hidden" }, stickySectionContent: { top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING }, stickyHeader: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, list: null, emptySection: null, section: null, interactiveSection: null, titlePressable: null, titleRow: null, badgeWrapper: null, badge: null };
 let obj3 = { top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -116,7 +116,7 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   UsersFastListTsx1.__closure = items3;
   UsersFastListTsx1.__workletHash = 5651317094590;
   UsersFastListTsx1.__initData = tmp7;
-  const derivedValue = _mod1653.useDerivedValue(UsersFastListTsx1);
+  const derivedValue = _mod1654.useDerivedValue(UsersFastListTsx1);
   const items4 = [closure_14, derivedValue, tmp];
   c0 = undefined;
   c1 = undefined;
@@ -135,13 +135,13 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   UsersFastListTsx2.__closure = items5;
   UsersFastListTsx2.__workletHash = 3082250653169;
   UsersFastListTsx2.__initData = tmp11;
-  animatedStyle = _mod1653.useAnimatedStyle(UsersFastListTsx2);
+  animatedStyle = _mod1654.useAnimatedStyle(UsersFastListTsx2);
   const items6 = [tmp.sectionHeader, animatedStyle];
   const memo2 = noop.useMemo(() => {
     items = [closure_3.sectionHeader, animatedStyle];
     return items;
   }, items6);
-  const tmp3Result = _mod1653;
+  const tmp3Result = _mod1654;
   const items7 = [closure_15, derivedValue];
   c0 = undefined;
   [tmp16, tmp17] = items7;
@@ -158,7 +158,7 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   UsersFastListTsx3.__closure = items8;
   UsersFastListTsx3.__workletHash = 4870088856322;
   UsersFastListTsx3.__initData = tmp16;
-  const animatedStyle1 = _mod1653.useAnimatedStyle(UsersFastListTsx3);
+  const animatedStyle1 = _mod1654.useAnimatedStyle(UsersFastListTsx3);
   if (null == title) {
     if (null == actionTitle) {
       const obj4 = { style: tmp.emptySection };
@@ -216,11 +216,11 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
     let tmp35 = !disableThemedGradient;
     if (!disableThemedGradient) {
       const obj15 = { style: animatedStyle1, children: metroImportDefault(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: true }) };
-      tmp35 = metroImportDefault(_modDef1653.View, obj15);
+      tmp35 = metroImportDefault(_modDef1654.View, obj15);
     }
     const items12 = [tmp35, tmp19Result5];
     obj14.children = items12;
-    tmp19Result6 = React5(_modDef1653.View, obj14);
+    tmp19Result6 = React5(_modDef1654.View, obj14);
   }
   return tmp19Result6;
 });

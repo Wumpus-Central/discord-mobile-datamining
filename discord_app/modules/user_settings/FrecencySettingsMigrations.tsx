@@ -1,13 +1,13 @@
-// === Module 15810: FrecencySettingsMigrations ===
+// === Module 15861: FrecencySettingsMigrations ===
 
-// Module 15810 (FrecencySettingsMigrations)
+// Module 15861 (FrecencySettingsMigrations)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import Constants from "Constants" /* 1071 */;
-import frecency_user_settings from "frecency_user_settings" /* 1231 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1232 */;
+import frecency_user_settings from "frecency_user_settings" /* 1232 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1081 */;
 import size from "module_2" /* 2 */;
 

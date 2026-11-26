@@ -1,7 +1,7 @@
-// === Module 4889: FluxApi ===
+// === Module 4920: FluxApi ===
 
-// Module 4889 (FluxApi)
-import shim_mod from "js_shim/shim" /* 1364 */;
+// Module 4920 (FluxApi)
+import shim_mod from "js_shim/shim" /* 1365 */;
 import size from "module_2" /* 2 */;
 
 let shim = shim_mod;

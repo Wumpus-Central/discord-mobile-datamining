@@ -1,12 +1,12 @@
-// === Module 12354: ComponentEmojiIcon ===
+// === Module 12404: ComponentEmojiIcon ===
 
-// Module 12354 (ComponentEmojiIcon)
+// Module 12404 (ComponentEmojiIcon)
 import nativeDefault from "native" /* 575 */;
-import EmojiDefault from "Emoji" /* 7457 */;
+import EmojiDefault from "Emoji" /* 7488 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { emojiWrapper: { flexShrink: 0, borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, textEmoji: null, fastImageEmoji: null };
 const obj3 = { flexShrink: 0, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj2.textEmoji = { fontSize: 16, color: nativeDefault.colors.TEXT_DEFAULT };

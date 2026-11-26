@@ -1,35 +1,35 @@
-// === Module 11956: MessagesRenderer ===
+// === Module 12004: MessagesRenderer ===
 
-// Module 11956 (MessagesRenderer)
+// Module 12004 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import SentryUtilsDefault from "SentryUtils" /* 1241 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import KeyboardTypes from "KeyboardTypes" /* 1626 */;
-import CodedLink from "CodedLink" /* 5734 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 5743 */;
-import Client from "Client" /* 6753 */;
-import QuestTypes from "QuestTypes" /* 6843 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8202 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9047 */;
-import QuestActionCreators from "QuestActionCreators" /* 9852 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11932 */;
-import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11939 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11957 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11960 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11962 */;
-import computeScrollData from "computeScrollData" /* 11966 */;
-import MessagesHandlers from "MessagesHandlers" /* 11970 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11977 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12517 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12901 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 12902 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import KeyboardTypes from "KeyboardTypes" /* 1627 */;
+import CodedLink from "CodedLink" /* 5765 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 5774 */;
+import Client from "Client" /* 6784 */;
+import QuestTypes from "QuestTypes" /* 6874 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9089 */;
+import QuestActionCreators from "QuestActionCreators" /* 9894 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11980 */;
+import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11987 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 12005 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 12008 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 12010 */;
+import computeScrollData from "computeScrollData" /* 12014 */;
+import MessagesHandlers from "MessagesHandlers" /* 12018 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 12025 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12566 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12953 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 12954 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import ReadStateStore from "ReadStateStore" /* 6901 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import ReadStateStore from "ReadStateStore" /* 6932 */;
 
 require = fn;
 function handleTapShowAltText(description) {
@@ -54,9 +54,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9048).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(4924).getUserCommunicationDisabledVersion;
-const Changeset = fn(8182).Changeset;
+let closure_6 = fn(9090).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(4955).getUserCommunicationDisabledVersion;
+const Changeset = fn(8224).Changeset;
 const Constants = fn(1071);
 ({ ActivityActionTypes: closure_11, MAX_MESSAGES_PER_CHANNEL: closure_12, MessageFlags: map1, MessageTypes: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);
@@ -131,7 +131,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -164,7 +164,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[19]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: "+95" };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[16]).scrollTo(ref.current, tmp26, obj8);

@@ -1,6 +1,6 @@
-// === Module 17433: ShopHomeSortType ===
+// === Module 17490: ShopHomeSortType ===
 
-// Module 17433 (ShopHomeSortType)
+// Module 17490 (ShopHomeSortType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ShopHomeSortType.tsx");

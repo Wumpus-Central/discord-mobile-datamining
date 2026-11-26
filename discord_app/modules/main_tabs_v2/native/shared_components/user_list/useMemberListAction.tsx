@@ -1,27 +1,27 @@
-// === Module 12039: useMemberListAction ===
+// === Module 12087: useMemberListAction ===
 
-// Module 12039 (useMemberListAction)
-import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 12040 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 12050 */;
+// Module 12087 (useMemberListAction)
+import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 12088 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 12098 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import UserStore from "UserStore" /* 1386 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10685).USERS_LIST_PADDING_BETWEEN_SECTIONS;
+const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10730).USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const Constants = fn(1071);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "Array", listActionHeight: "analyticsLocations" };
+let closure_16 = { listActionRenderer: "Array", listActionHeight: "channel_id" };
 let closure_17 = [];
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_18 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
@@ -281,7 +281,7 @@ export default function useMemberListAction(channel) {
           tmp42Result2 = null;
           if (null != recipientId) {
             const obj8 = { icon: null, onPress: null, label: null, subLabel: null, disabled: null, arrow: true };
-            const obj9 = { IconComponent: channel(stateFromStores[34]).GameControllerIcon };
+            const obj9 = { IconComponent: channel(stateFromStores[34]).ExperimentalBannerPlusIcon };
             obj8.icon = closure_14(channel(stateFromStores[33]).RowButton.Icon, obj9);
             obj8.onPress = function onPress() {
               return height(stateFromStores[35])(recipientId);

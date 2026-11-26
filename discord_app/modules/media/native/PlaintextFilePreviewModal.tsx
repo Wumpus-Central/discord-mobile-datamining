@@ -1,16 +1,16 @@
-// === Module 12022: PlaintextFilePreviewModal ===
+// === Module 12070: PlaintextFilePreviewModal ===
 
-// Module 12022 (PlaintextFilePreviewModal)
+// Module 12070 (PlaintextFilePreviewModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7016 */;
-import NavigatorHeader from "NavigatorHeader" /* 7160 */;
-import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7460 */;
-import openPlaintextFilePreview from "openPlaintextFilePreview" /* 12021 */;
-import useDownloadedFile from "useDownloadedFile" /* 12025 */;
-import PlaintextFileMarkdownPreviewDefault from "PlaintextFileMarkdownPreview" /* 12026 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7047 */;
+import NavigatorHeader from "NavigatorHeader" /* 7191 */;
+import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7491 */;
+import openPlaintextFilePreview from "openPlaintextFilePreview" /* 12069 */;
+import useDownloadedFile from "useDownloadedFile" /* 12073 */;
+import PlaintextFileMarkdownPreviewDefault from "PlaintextFileMarkdownPreview" /* 12074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -68,7 +68,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let closure_8 = { PREVIEW: "PREVIEW" };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" }, scroller: { flex: 1 }, scrollerContent: null, code: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollerContent = { padding: nativeDefault.space.PX_16 };
@@ -90,7 +90,7 @@ export default function PlaintextFilePreviewModal(url) {
   const tmp2 = first(noop.useState(true), 2);
   first = tmp2[0];
   noop = tmp2[1];
-  const MARKDOWN_LANGUAGES = url(12034).MARKDOWN_LANGUAGES;
+  const MARKDOWN_LANGUAGES = url(12082).MARKDOWN_LANGUAGES;
   const parts = str.split(".");
   const hasItem = MARKDOWN_LANGUAGES.has(parts.slice(-1)[0]);
   const tmp7 = first(noop.useState(true), 2);
@@ -162,12 +162,12 @@ export default function PlaintextFilePreviewModal(url) {
           items,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { IconComponent: url(7711).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+            const obj = { IconComponent: url(7745).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
             const intl = url(1112).intl;
             obj.accessibilityLabel = intl.string(url(1112).t.PdRCRg);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return renderMarkdown(url(7717).HeaderActionButton, obj);
+            return renderMarkdown(url(7751).HeaderActionButton, obj);
           }
         });
       },
@@ -179,5 +179,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[memo.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return first1(url(11570).Modal, { screens: memo1, initialRouteName: memo.PREVIEW });
+  return first1(url(11618).Modal, { screens: memo1, initialRouteName: memo.PREVIEW });
 };

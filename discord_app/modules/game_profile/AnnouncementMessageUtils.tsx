@@ -1,11 +1,11 @@
-// === Module 14143: AnnouncementMessageUtils ===
+// === Module 14195: AnnouncementMessageUtils ===
 
-// Module 14143 (AnnouncementMessageUtils)
+// Module 14195 (AnnouncementMessageUtils)
 import util from "util" /* 1112 */;
-import URLUtilsDefault from "URLUtils" /* 1379 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1447 */;
-import MessageRecord from "MessageRecord" /* 4955 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 12185 */;
+import URLUtilsDefault from "URLUtils" /* 1380 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1448 */;
+import MessageRecord from "MessageRecord" /* 4986 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 12235 */;
 import size from "module_2" /* 2 */;
 
 const isMessageComponentsV2 = MessageRecord.isMessageComponentsV2;
@@ -159,18 +159,27 @@ export function toAnnouncementMessages(messages) {
             tmp32 = tmp34;
           }
         }
-        const obj7 = { id: tmp2Result.id, media: result, title, body, content: joined, timestamp: reactions.timestamp, reactionCount: num5, embedSource: tmp32, poll: tmp2Result.poll };
+        const obj7 = { id: tmp2Result.id, media: result, title, body, content: joined, timestamp: reactions.timestamp, reactionCount: num5, embedSource: tmp32, attachmentFilenames: null, poll: null };
+        let mapped1;
+        if (null == result) {
+          if (0 === joined.trim().length) {
+            const attachments = tmp2Result.attachments;
+            mapped1 = attachments.map((filename) => filename.filename);
+          }
+        }
+        obj7.attachmentFilenames = mapped1;
+        obj7.poll = tmp2Result.poll;
         return obj7;
       }
     }
-    const attachments = tmp2Result.attachments;
-    const found2 = attachments.find((content_type) => found4(found6[3]).isImageContentType(content_type.content_type));
+    const attachments1 = tmp2Result.attachments;
+    const found2 = attachments1.find((content_type) => found4(found6[3]).isImageContentType(content_type.content_type));
     if (null != found2) {
       result = tmp3(tmp[2]).messageAttachmentToMediaItem(found2, tmp2Result);
       const tmp3Result8 = tmp3(tmp[2]);
     } else {
-      const attachments1 = tmp2Result.attachments;
-      const found3 = attachments1.find((content_type) => found4(found6[3]).isVideoContentType(content_type.content_type));
+      const attachments2 = tmp2Result.attachments;
+      const found3 = attachments2.find((content_type) => found4(found6[3]).isVideoContentType(content_type.content_type));
       if (null != found3) {
         result = tmp3(tmp[2]).messageAttachmentToMediaItem(found3, tmp2Result);
         const tmp3Result9 = tmp3(tmp[2]);

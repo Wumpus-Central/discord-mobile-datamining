@@ -1,7 +1,7 @@
-// === Module 14939: MobileWidgetEditingExperiment ===
+// === Module 14989: MobileWidgetEditingExperiment ===
 
-// Module 14939 (MobileWidgetEditingExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 14989 (MobileWidgetEditingExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-mobile-widget-editing", kind: "user", defaultConfig: { enabled: false }, variations: null };

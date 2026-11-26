@@ -1,11 +1,11 @@
-// === Module 14195: GameDetectionReportModal ===
+// === Module 14247: GameDetectionReportModal ===
 
-// Module 14195 (GameDetectionReportModal)
+// Module 14247 (GameDetectionReportModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import NavigatorHeader from "NavigatorHeader" /* 7160 */;
-import Navigator from "Navigator" /* 7324 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8712 */;
+import NavigatorHeader from "NavigatorHeader" /* 7191 */;
+import Navigator from "Navigator" /* 7355 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8754 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -124,7 +124,7 @@ function ReportContent(applicationId) {
           }, 100);
         },
       hasIcons: null,
-      children: "THREEDS_UNSUPPORTED_VERSION"
+      children: "VENMO_MOBILE_POLLING_TOKENIZATION_CANCELED"
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[12]).intl;
@@ -229,7 +229,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null, submitContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };

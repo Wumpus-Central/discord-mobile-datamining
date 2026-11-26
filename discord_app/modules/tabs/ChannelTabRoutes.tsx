@@ -1,13 +1,13 @@
-// === Module 11481: ChannelTabRoutes ===
+// === Module 11528: ChannelTabRoutes ===
 
-// Module 11481 (ChannelTabRoutes)
+// Module 11528 (ChannelTabRoutes)
 import _mod1099 from "module_1099" /* 1099 */;
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import matchPathCompat from "matchPathCompat" /* 5050 */;
-import RouteUtils from "RouteUtils" /* 5063 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import matchPathCompat from "matchPathCompat" /* 5081 */;
+import RouteUtils from "RouteUtils" /* 5094 */;
 import Constants from "Constants" /* 1071 */;
-import ChannelConstants from "ChannelConstants" /* 4868 */;
+import ChannelConstants from "ChannelConstants" /* 4899 */;
 import size from "module_2" /* 2 */;
 
 function getRouteTabForLocation(location) {
@@ -47,7 +47,7 @@ function getRouteTabForLocation(location) {
       const _HermesInternal = HermesInternal;
       obj7.routePath = "" + pathname + search + str;
       const intl = util.intl;
-      obj7.routeLabel = intl.string(_modDef4244.uk6jhJ);
+      obj7.routeLabel = intl.string(_modDef4245.uk6jhJ);
       tmp5 = obj7;
     }
     obj = matchPathCompat;

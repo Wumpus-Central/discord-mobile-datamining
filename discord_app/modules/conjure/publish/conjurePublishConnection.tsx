@@ -1,16 +1,17 @@
-// === Module 11414: conjurePublishConnection ===
+// === Module 11461: conjurePublishConnection ===
 
-// Module 11414 (conjurePublishConnection)
+// Module 11461 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 7642 */;
-import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 11415 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 11417 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11423 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11424 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7673 */;
+import conjureViewsStatus from "conjureViewsStatus" /* 7707 */;
+import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 11462 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 11464 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11470 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7675 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7706 */;
 
 const require = globalThis.__r;
 
@@ -40,7 +41,7 @@ function rejectPendingPublishOptions(arg0, arg1) {
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
-let set = new Set(fn(11428).CONJURE_PUBLISH_PROGRESS_STAGES);
+let set = new Set(fn(11475).CONJURE_PUBLISH_PROGRESS_STAGES);
 const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map3 = new Map();
 const size = fn(2);
@@ -155,7 +156,7 @@ export function failPendingSafetyRecheck(projectId) {
                             closure_2_7.delete(closure_1_0);
                             if ("pending" === obj2.status) {
                               let _setTimeout = setTimeout;
-                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F99682 */ function() { ... }, 180000));
+                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F99973 */ function() { ... }, 180000));
                             }
                             let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
                             closure_2_1(closure_2_2[4]).dispatch(obj3);
@@ -270,7 +271,7 @@ export function requestConjureSafetyRecheck(projectId) {
                             closure_2_7.delete(closure_1_0);
                             if ("pending" === obj2.status) {
                               let _setTimeout = setTimeout;
-                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F99682 */ function() { ... }, 180000));
+                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F99973 */ function() { ... }, 180000));
                             }
                             let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
                             closure_2_1(closure_2_2[4]).dispatch(obj3);
@@ -399,7 +400,7 @@ export const publishStepHandlers = {
                                 closure_2_7.delete(closure_1_0);
                                 if ("pending" === obj2.status) {
                                   let _setTimeout = setTimeout;
-                                  let result = closure_2_7.set(closure_1_0, setTimeout(/* F99682 */ function() { ... }, 180000));
+                                  let result = closure_2_7.set(closure_1_0, setTimeout(/* F99973 */ function() { ... }, 180000));
                                 }
                                 let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
                                 closure_2_1(closure_2_2[4]).dispatch(obj3);
@@ -510,7 +511,7 @@ export const publishStepHandlers = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -527,7 +528,7 @@ export const publishStepHandlers = {
               if (obj7.validPublishApproval(tmp2.approval_url, tmp2.approval_kind)) {
                 if (publishApprovalUrl.getPublishApprovalUrl(projectId) === tmp2.approval_url) {
                   c2 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: "+95" };
                 } else {
                   const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
                   v1(tmp21[4]).dispatch(obj5);
@@ -603,7 +604,7 @@ export const publishStepHandlers = {
   },
   publish_status(publish_state, projectId) {
     DispatcherDefault;
-    let obj = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, publishState: null, surface: null, previewAppChannels: null, newAppChannels: null, previewDevicePermissions: null, publishedRevision: null, publishedAt: null, publishing: null, patchNotesSent: null, newUiUnpublished: null, safetyHold: null, voiceChannelPin: null };
+    let obj = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, publishState: null, surface: null, previewAppChannels: null, newAppChannels: null, previewDevicePermissions: null, publishedRevision: null, publishedAt: null, publishing: null, patchNotesSent: null, newUiUnpublished: null, safetyHold: null, voiceChannelPin: null, views: null };
     if (typeof publish_state.publish_state === "string") {
       if ("" !== publish_state.publish_state) {
         let str = publish_state.publish_state;
@@ -680,6 +681,7 @@ export const publishStepHandlers = {
       obj.newUiUnpublished = true === publish_state.new_ui_unpublished;
       obj.safetyHold = true === publish_state.safety_hold;
       obj.voiceChannelPin = conjureVoiceChannelPin.parseVoiceChannelPinOutcome(publish_state.voice_channel_pin);
+      obj.views = conjureViewsStatus.parseConjureViewsStatus(publish_state);
       tmp3(obj);
     }
     if (true !== publish_state.published) {
@@ -763,9 +765,8 @@ export function preparePublish(projectId) {
 }
 export function publishProject(projectId, arg1, arg2) {
   closure_1 = arg1;
-  let flag = arg2;
   if (arg2 === undefined) {
-    flag = false;
+    let obj = {};
   }
   c3 = false;
   const promise = new Promise((resolve, reject) => {
@@ -781,7 +782,8 @@ export function publishProject(projectId, arg1, arg2) {
           resolve,
           reject,
           timeout: setTimeout(() => {
-                closure_1(flag[4]).dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
+                obj = closure_1(obj[4]);
+                obj.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
                 value = map3.get(projectId);
                 if (null != value) {
                   map3.delete(projectId);
@@ -800,7 +802,6 @@ export function publishProject(projectId, arg1, arg2) {
                   const error1 = new Error("Publish timed out");
                   value2.reject(error1);
                 }
-                const obj = closure_1(flag[4]);
                 const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
               }, 900000)
         };
@@ -809,7 +810,7 @@ export function publishProject(projectId, arg1, arg2) {
         const obj6 = { type: "CONJURE_PROJECT_PUBLISH_START", projectId };
         DispatcherDefault.dispatch(obj6);
         try {
-          conjureSocket.sendPublish(closure_1, flag);
+          conjureSocket.sendPublish(closure_1, obj);
         } catch (error1) {
           obj2.delete(tmp4);
           obj.clearTimeout(tmp3);
@@ -838,7 +839,8 @@ export function publishProject(projectId, arg1, arg2) {
           resolve,
           reject,
           timeout: setTimeout(() => {
-                closure_1(flag[4]).dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
+                obj = closure_1(obj[4]);
+                obj.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
                 value = map3.get(projectId);
                 if (null != value) {
                   map3.delete(projectId);
@@ -857,7 +859,6 @@ export function publishProject(projectId, arg1, arg2) {
                   const error1 = new Error("Publish timed out");
                   value2.reject(error1);
                 }
-                const obj = closure_1(flag[4]);
                 const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
               }, 900000)
         };
@@ -866,7 +867,7 @@ export function publishProject(projectId, arg1, arg2) {
         const obj6 = { type: "CONJURE_PROJECT_PUBLISH_START", projectId };
         DispatcherDefault.dispatch(obj6);
         try {
-          conjureSocket.sendPublish(closure_1, flag);
+          conjureSocket.sendPublish(closure_1, obj);
         } catch (error1) {
           obj2.delete(tmp4);
           obj.clearTimeout(tmp3);

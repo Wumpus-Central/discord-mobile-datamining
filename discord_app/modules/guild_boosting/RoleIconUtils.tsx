@@ -1,11 +1,11 @@
-// === Module 7506: RoleIconUtils ===
+// === Module 7537: RoleIconUtils ===
 
-// Module 7506 (RoleIconUtils)
-import AvatarUtils from "AvatarUtils" /* 1412 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1447 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4958 */;
+// Module 7537 (RoleIconUtils)
+import AvatarUtils from "AvatarUtils" /* 1413 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1448 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4989 */;
 import Constants from "Constants" /* 1071 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 ({ Endpoints: c3, GuildFeatures: closure_4 } = Constants);

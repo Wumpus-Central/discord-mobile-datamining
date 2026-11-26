@@ -1,9 +1,9 @@
-// === Module 11395: RolePill ===
+// === Module 11441: RolePill ===
 
-// Module 11395 (RolePill)
+// Module 11441 (RolePill)
 import nativeDefault from "native" /* 575 */;
-import ToastUtils from "ToastUtils" /* 5693 */;
-import ClipboardUtils from "ClipboardUtils" /* 7507 */;
+import ToastUtils from "ToastUtils" /* 5724 */;
+import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const Constants = fn(1071);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, MAX_VISUAL_ROLE_LENGTH: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { container: { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs }, pill: null, bubble: null, verifiedContainer: null, roleIcon: null };
 let obj3 = { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs };
 obj2.pill = { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -28,9 +28,9 @@ const result = size.fileFinishedImporting("components_native/common/RolePill.tsx
 export default function RolePill(role) {
   role = role.role;
   ({ guildId, color } = role);
-  const DeveloperMode = role(4837).DeveloperMode;
+  const DeveloperMode = role(4868).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  const roleIconProps = role(7505).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
+  const roleIconProps = role(7536).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
   let name = role.name;
   let combined = name;
   if (role.name.length > closure_5) {
@@ -70,8 +70,8 @@ export default function RolePill(role) {
     }
     obj5.guildId = guildId;
     obj5.roleColor = color;
-    let tmp10Result = closure_6(combined(7521), obj5);
-    const tmp15 = combined(7521);
+    let tmp10Result = closure_6(combined(7552), obj5);
+    const tmp15 = combined(7552);
   } else {
     items = [tmp9.bubble, ];
     if (null != color) {
@@ -91,13 +91,13 @@ export default function RolePill(role) {
     const obj9 = { style: tmp9.roleIcon, children: null };
     const obj10 = {};
     const merged = Object.assign(roleIconProps);
-    obj9.children = closure_6(combined(7523), obj10);
+    obj9.children = closure_6(combined(7554), obj10);
     tmp10Result2 = closure_6(View, obj9);
-    const tmp18 = combined(7523);
+    const tmp18 = combined(7554);
   }
   items1[1] = tmp10Result2;
-  items1[2] = closure_6(role(5603).Text, { variant: "body-xs/semibold", color: "interactive-text-active", children: name });
+  items1[2] = closure_6(role(5634).Text, { variant: "body-xs/semibold", color: "interactive-text-active", children: name });
   obj4.children = items1;
   obj3.children = closure_7(View, obj4);
-  return closure_6(role(6121).PressableHighlight, obj3);
+  return closure_6(role(6152).PressableHighlight, obj3);
 };

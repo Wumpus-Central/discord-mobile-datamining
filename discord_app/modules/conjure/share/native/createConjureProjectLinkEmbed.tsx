@@ -1,18 +1,18 @@
-// === Module 14472: createConjureProjectLinkEmbed ===
+// === Module 14524: createConjureProjectLinkEmbed ===
 
-// Module 14472 (createConjureProjectLinkEmbed)
+// Module 14524 (createConjureProjectLinkEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 11511 */;
-import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 11947 */;
-import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11948 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12335 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 12883 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12885 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 14316 */;
-import createStyles from "createStyles" /* 5012 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 11559 */;
+import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 11995 */;
+import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11996 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12385 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 12935 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12937 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 14368 */;
+import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -40,9 +40,9 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
     if (tmp4) {
       const intl7 = util.intl;
       if ("expired" === conjureProjectLinkCard.type) {
-        let mQma36 = _modDef4244.wahvH2;
+        let mQma36 = _modDef4245.wahvH2;
       } else {
-        mQma36 = _modDef4244.mQma36;
+        mQma36 = _modDef4245.mQma36;
       }
       const stringResult = intl7.string(mQma36);
       const obj3 = {};
@@ -110,7 +110,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
         }
         obj6.linkColor = defaultUsernameColor;
         obj5.nameOnClick = obj6;
-        formatToPartsResult = intl.formatToParts(_modDef4244.dMdop9, obj5);
+        formatToPartsResult = intl.formatToParts(_modDef4245.dMdop9, obj5);
       }
       obj4.creatorContent = formatToPartsResult;
       let creatorAvatarUrl = null;
@@ -131,7 +131,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       let stringResult1 = null;
       if ("ready" !== conjureProjectLinkCard.type) {
         const intl2 = util.intl;
-        stringResult1 = intl2.string(_modDef4244["2DSRxV"]);
+        stringResult1 = intl2.string(_modDef4245["2DSRxV"]);
       }
       obj4.noticeText = stringResult1;
       obj4.iconUrl = iconURL;
@@ -165,14 +165,14 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       let stringResult2 = null;
       if (canRemix) {
         const intl3 = util.intl;
-        stringResult2 = intl3.string(_modDef4244.XWgAfc);
+        stringResult2 = intl3.string(_modDef4245.XWgAfc);
       }
       obj4.installLabel = stringResult2;
       obj4.remixLabel = null;
       obj4.coverAction = coverAction;
       if ("launch" === coverAction) {
         const intl5 = util.intl;
-        let stringResult3 = intl5.string(_modDef4244["1cF7L4"]);
+        let stringResult3 = intl5.string(_modDef4245["1cF7L4"]);
       } else {
         stringResult3 = null;
         if ("open" === coverAction) {
@@ -183,7 +183,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       obj4.coverActionLabel = stringResult3;
       const intl6 = util.intl;
       const obj8 = { name: application.name };
-      obj4.accessibilityLabel = intl6.formatToPlainString(_modDef4244.c8DqSD, obj8);
+      obj4.accessibilityLabel = intl6.formatToPlainString(_modDef4245.c8DqSD, obj8);
       return obj4;
     }
   }

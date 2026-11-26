@@ -1,9 +1,9 @@
-// === Module 15842: resolveGameForProfile ===
+// === Module 15893: resolveGameForProfile ===
 
-// Module 15842 (resolveGameForProfile)
+// Module 15893 (resolveGameForProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
-import GameStore from "GameStore" /* 2140 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import GameStore from "GameStore" /* 2141 */;
 
 const require = fn;
 let closure_6 = async function _resolveGameForProfile(arg0) {
@@ -17,7 +17,7 @@ let closure_6 = async function _resolveGameForProfile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

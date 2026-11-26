@@ -1,10 +1,10 @@
-// === Module 13371: ChatInputGuardMessageRequest ===
+// === Module 13423: ChatInputGuardMessageRequest ===
 
-// Module 13371 (ChatInputGuardMessageRequest)
-import ChatInputGuardDefault from "ChatInputGuard" /* 13379 */;
+// Module 13423 (ChatInputGuardMessageRequest)
+import ChatInputGuardDefault from "ChatInputGuard" /* 13431 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -26,7 +26,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -57,7 +57,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
         } else {
           channel(c2[10]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -76,7 +76,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -105,7 +105,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp9) {
         c1 = tmp;
@@ -113,14 +113,14 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
       }
     }
   };
-  importDefault = channel(1500).useNavigation();
-  let obj = channel(1500);
-  const isMessageRequestRestrictedViewer = channel(13372).useIsMessageRequestRestrictedViewer();
-  let obj2 = channel(13372);
+  importDefault = channel(1501).useNavigation();
+  let obj = channel(1501);
+  const isMessageRequestRestrictedViewer = channel(13424).useIsMessageRequestRestrictedViewer();
+  let obj2 = channel(13424);
   items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(13373).useMessageRequestActions({
+  const messageRequestActions = channel(13425).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
@@ -147,7 +147,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     tmp6 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  let obj4 = channel(13373);
+  let obj4 = channel(13425);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {

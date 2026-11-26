@@ -1,15 +1,15 @@
-// === Module 14042: GroupDMNitroCapCoachmark ===
+// === Module 14094: GroupDMNitroCapCoachmark ===
 
-// Module 14042 (GroupDMNitroCapCoachmark)
+// Module 14094 (GroupDMNitroCapCoachmark)
 import util from "util" /* 1112 */;
-import _modDef10503 from "module_10503" /* 10503 */;
+import _modDef10548 from "module_10548" /* 10548 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(12053).MAX_GROUP_DM_NITRO_PARTICIPANTS;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+let closure_6 = fn(12101).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapCoachmark.tsx");
@@ -20,16 +20,16 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(12051).useGroupDMNitroAudience();
-  const obj2 = channelId(12051);
-  channelId(9519);
+  const groupDMNitroAudience = channelId(12099).useGroupDMNitroAudience();
+  const obj2 = channelId(12099);
+  channelId(9561);
   if (obj3.useConfig({ location: _location }).enabled) {
     if ("entitled" === groupDMNitroAudience) {
-      items = [tmp2(4845).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
+      items = [tmp2(4876).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
     }
     const tmp9 = _slicedToArray(tmp6([]), 2);
     dependencyMap = tmp10;
-    const tmp11 = tmp9[0] === tmp2(4845).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
+    const tmp11 = tmp9[0] === tmp2(4876).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
     _slicedToArray = tmp11;
     const items1 = [tmp11, tmp9[1], channelId, _location];
     const memo = noop.useMemo(() => {
@@ -44,16 +44,16 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       };
       const intl3 = util.intl;
       obj.buttonLabel = intl3.string(util.t.yZOtoD);
-      obj.buttonIcon = _modDef10503;
+      obj.buttonIcon = _modDef10548;
       obj.onButtonPress = function onButtonPress() {
-        _location(12050)(channelId, closure_1_1);
+        _location(12098)(channelId, closure_1_1);
         dependencyMap(constants.TAKE_ACTION);
       };
       return obj;
     }, items1);
-    const coachmark = tmp2(9526).useCoachmark(ref, memo);
+    const coachmark = tmp2(9568).useCoachmark(ref, memo);
     const obj4 = { ref, collapsable: false, children: channelId.children };
     return <View ref={ref} collapsable={false}>{channelId.children}</View>;
   }
-  obj3 = _location(12054);
+  obj3 = _location(12102);
 };

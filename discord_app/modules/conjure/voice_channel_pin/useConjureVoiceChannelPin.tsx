@@ -1,23 +1,23 @@
-// === Module 18642: useConjureVoiceChannelPin ===
+// === Module 18705: useConjureVoiceChannelPin ===
 
-// Module 18642 (useConjureVoiceChannelPin)
-import useChannelName from "useChannelName" /* 5628 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11423 */;
+// Module 18705 (useConjureVoiceChannelPin)
+import useChannelName from "useChannelName" /* 5659 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11470 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildChannelStore from "GuildChannelStore" /* 4942 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
-import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 7679 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildChannelStore from "GuildChannelStore" /* 4973 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import UserStore from "UserStore" /* 1387 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
+import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 7712 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4942).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4973).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1071);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);
@@ -109,7 +109,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

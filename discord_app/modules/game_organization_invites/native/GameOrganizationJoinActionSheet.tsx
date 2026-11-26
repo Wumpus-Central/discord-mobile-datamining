@@ -1,20 +1,20 @@
-// === Module 12317: GameOrganizationJoinActionSheet ===
+// === Module 12367: GameOrganizationJoinActionSheet ===
 
-// Module 12317 (GameOrganizationJoinActionSheet)
+// Module 12367 (GameOrganizationJoinActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import openGameOrganizationJoinModalDefault from "openGameOrganizationJoinModal" /* 12274 */;
-import prefetchGameOrganizationAccountLinkStateDefault from "prefetchGameOrganizationAccountLinkState" /* 12318 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import openGameOrganizationJoinModalDefault from "openGameOrganizationJoinModal" /* 12324 */;
+import prefetchGameOrganizationAccountLinkStateDefault from "prefetchGameOrganizationAccountLinkState" /* 12368 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
-import UserStore from "UserStore" /* 1386 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(11869).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
+let closure_7 = fn(11917).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { loading: { paddingVertical: nativeDefault.space.PX_32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -91,7 +91,7 @@ export default function GameOrganizationJoinActionSheet(code) {
               const intl3 = tmp6(tmp3[18]).intl;
               obj11.text = intl3.string(tmp2(tmp3[19]).qD9GKX);
               const obj12 = { size: "sm", color: tmp2(tmp3[7]).colors.WHITE };
-              obj11.icon = closure_8(tmp6(tmp3[25]).GameControllerIcon, obj12);
+              obj11.icon = closure_8(tmp6(tmp3[25]).ExperimentalGameControllerLinkIcon, obj12);
               obj11.onPress = tmp11;
               obj3.actions = closure_8(tmp6(tmp3[24]).Button, obj11);
               return closure_8(tmp6(tmp3[17]).PromoSheet, obj3);

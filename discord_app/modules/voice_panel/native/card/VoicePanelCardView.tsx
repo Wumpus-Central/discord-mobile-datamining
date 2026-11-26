@@ -1,17 +1,17 @@
-// === Module 19424: VoicePanelCardView ===
+// === Module 19487: VoicePanelCardView ===
 
-// Module 19424 (VoicePanelCardView)
+// Module 19487 (VoicePanelCardView)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5021 */;
-import native from "native" /* 5073 */;
-import Suspender from "Suspender" /* 6046 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 19425 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
+import native from "native" /* 5104 */;
+import Suspender from "Suspender" /* 6077 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 19488 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6902 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 
 const require = globalThis.__r;
 
@@ -73,7 +73,7 @@ function CardContentFreezer(children) {
   VoicePanelCardViewTsx4.__closure = items1;
   VoicePanelCardViewTsx4.__workletHash = 13976123982266;
   VoicePanelCardViewTsx4.__initData = tmp11;
-  const items2 = [closure_24, require("module_1706").scheduleOnRN, tmp9];
+  const items2 = [closure_24, require("module_1707").scheduleOnRN, tmp9];
   _require = undefined;
   importDefault = undefined;
   [tmp19, tmp20, tmp21] = items2;
@@ -91,7 +91,7 @@ function CardContentFreezer(children) {
   VoicePanelCardViewTsx5.__closure = items3;
   VoicePanelCardViewTsx5.__workletHash = 5067780860290;
   VoicePanelCardViewTsx5.__initData = tmp19;
-  const animatedReaction = require("module_1653").useAnimatedReaction(VoicePanelCardViewTsx4, VoicePanelCardViewTsx5);
+  const animatedReaction = require("module_1654").useAnimatedReaction(VoicePanelCardViewTsx4, VoicePanelCardViewTsx5);
   require("VoicePanelPIPCardThaw");
   if (!isDockEnabled) {
     tmp8 = obj.usePIPState().mode === VoicePanelPIPModes.IN_APP && !tmp24;
@@ -119,7 +119,7 @@ function CardContentFreezer(children) {
     }
   }, items4);
   const tmp29 = tmp8 && require("useRefValue")(ref);
-  const obj3 = require("module_1653");
+  const obj3 = require("module_1654");
   const tmp10 = c10;
   let tmp30 = tmp29;
   if (tmp29) {
@@ -271,23 +271,23 @@ function CardContentFreezer(children) {
   VoicePanelCardViewTsx3.__closure = items7;
   VoicePanelCardViewTsx3.__workletHash = 14589964706813;
   VoicePanelCardViewTsx3.__initData = tmp35;
-  animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelCardViewTsx3);
+  animatedStyle = require("module_1654").useAnimatedStyle(VoicePanelCardViewTsx3);
   const items8 = [animatedStyle, tmp29, children];
   return noop.useMemo(() => {
     obj = { style: animatedStyle, children: null };
     const obj2 = { freeze, children: <timestampProducer collapsable={false} style={hasOwnProperty.absoluteFill}>{children}</timestampProducer> };
     obj.children = jsx(Suspender.Freeze, { freeze, children: <timestampProducer collapsable={false} style={hasOwnProperty.absoluteFill}>{children}</timestampProducer> });
-    return jsx(_modDef1653.View, { style: animatedStyle, children: null });
+    return jsx(_modDef1654.View, { style: animatedStyle, children: null });
   }, items8);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11734);
+const VoicePanelConstants = fn(11782);
 ({ LAYOUT_PHYSICS: closure_9, VoicePanelModes: closure_10, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11732).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19320).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11737).EDGE_GUTTER;
-const isUserParticipant = fn(5662).isUserParticipant;
+const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19383).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11785).EDGE_GUTTER;
+const isUserParticipant = fn(5693).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);
@@ -333,7 +333,7 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   VoicePanelCardViewTsx1.__closure = items1;
   VoicePanelCardViewTsx1.__workletHash = 4293143028920;
   VoicePanelCardViewTsx1.__initData = tmp6;
-  const items2 = [closure_21, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, require("module_1706").scheduleOnRN, callback];
+  const items2 = [closure_21, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, require("module_1707").scheduleOnRN, callback];
   _require = undefined;
   chunkedParticipants = undefined;
   stateFromStoresArray = undefined;
@@ -354,8 +354,8 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   VoicePanelCardViewTsx2.__closure = items3;
   VoicePanelCardViewTsx2.__workletHash = 9848593615087;
   VoicePanelCardViewTsx2.__initData = tmp8;
-  const animatedReaction = require("module_1653").useAnimatedReaction(VoicePanelCardViewTsx1, VoicePanelCardViewTsx2);
-  let obj2 = require("module_1653");
+  const animatedReaction = require("module_1654").useAnimatedReaction(VoicePanelCardViewTsx1, VoicePanelCardViewTsx2);
+  let obj2 = require("module_1654");
   chunkedParticipants = require("useVoicePanelParticipants").useChunkedParticipants(channelId, tmp3);
   const tmp5Result = require("useVoicePanelParticipants");
   const items4 = [ChannelRTCStore];

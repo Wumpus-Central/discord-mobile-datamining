@@ -1,20 +1,20 @@
-// === Module 19269: LaunchPadContainer ===
+// === Module 19332: LaunchPadContainer ===
 
-// Module 19269 (LaunchPadContainer)
-import _mod1653 from "module_1653" /* 1653 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import OverlayViewDefault from "OverlayView" /* 6022 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8577 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11911 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12944 */;
-import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 17671 */;
-import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19270 */;
-import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19271 */;
-import useLaunchPadStateDefault from "useLaunchPadState" /* 19299 */;
+// Module 19332 (LaunchPadContainer)
+import _mod1654 from "module_1654" /* 1654 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import OverlayViewDefault from "OverlayView" /* 6053 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8619 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11959 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12996 */;
+import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 17728 */;
+import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19333 */;
+import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19334 */;
+import useLaunchPadStateDefault from "useLaunchPadState" /* 19362 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function LaunchPadOverlay(shown) {
@@ -32,11 +32,11 @@ function LaunchPadOverlay(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11910);
+const LaunchPadConstants = fn(11958);
 ({ LAUNCH_PAD_SPRING_CONFIG: hasOwnProperty, LaunchPadTypes: closure_6 } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { wrapper: null, container: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -93,8 +93,8 @@ export default function LaunchPadContainer(children) {
   LaunchPadContainerTsx2.__closure = items3;
   LaunchPadContainerTsx2.__workletHash = 8587684116006;
   LaunchPadContainerTsx2.__initData = tmp12;
-  const animatedReaction = _mod1653.useAnimatedReaction(LaunchPadContainerTsx1, LaunchPadContainerTsx2);
-  const items4 = [closure_13, _mod1653.interpolate, launchPadSharedState, spring_spring.withSpring, tmp8, hasOwnProperty];
+  const animatedReaction = _mod1654.useAnimatedReaction(LaunchPadContainerTsx1, LaunchPadContainerTsx2);
+  const items4 = [closure_13, _mod1654.interpolate, launchPadSharedState, spring_spring.withSpring, tmp8, hasOwnProperty];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -122,7 +122,7 @@ export default function LaunchPadContainer(children) {
   LaunchPadContainerTsx3.__closure = items5;
   LaunchPadContainerTsx3.__workletHash = 13015105508497;
   LaunchPadContainerTsx3.__initData = tmp15;
-  const animatedStyle = _mod1653.useAnimatedStyle(LaunchPadContainerTsx3);
+  const animatedStyle = _mod1654.useAnimatedStyle(LaunchPadContainerTsx3);
   let obj2 = { value: gestureRef, children: null };
   const obj3 = { gesture, children: null };
   const obj4 = { style: tmp.wrapper, children: null };
@@ -141,7 +141,7 @@ export default function LaunchPadContainer(children) {
   }
   obj5.importantForAccessibility = str;
   obj5.children = children.children;
-  obj4.children = metroImportDefault(_modDef1653.View, obj5);
+  obj4.children = metroImportDefault(_modDef1654.View, obj5);
   obj3.children = metroImportDefault(React3, obj4);
   const items7 = [metroImportDefault(LegacyBaseButton.GestureDetector, obj3), ];
   let tmp23Result;

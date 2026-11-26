@@ -1,6 +1,6 @@
-// === Module 2116: isActivityParticipantValidGuildMember ===
+// === Module 2117: isActivityParticipantValidGuildMember ===
 
-// Module 2116 (isActivityParticipantValidGuildMember)
+// Module 2117 (isActivityParticipantValidGuildMember)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/isActivityParticipantValidGuildMember.tsx");

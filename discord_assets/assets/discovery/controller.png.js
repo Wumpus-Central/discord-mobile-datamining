@@ -1,6 +1,6 @@
-// === Module 19052: ? ===
+// === Module 19115: ? ===
 
-// Module 19052
+// Module 19115
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/discovery/controller.png.js");

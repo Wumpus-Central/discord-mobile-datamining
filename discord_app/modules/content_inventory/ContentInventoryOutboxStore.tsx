@@ -1,9 +1,9 @@
-// === Module 11091: ContentInventoryOutboxStore ===
+// === Module 11137: ContentInventoryOutboxStore ===
 
-// Module 11091 (ContentInventoryOutboxStore)
+// Module 11137 (ContentInventoryOutboxStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import matchUtils from "matchUtils" /* 8714 */;
+import matchUtils from "matchUtils" /* 8756 */;
 
 require = fn;
 let map = new Map();

@@ -1,15 +1,15 @@
-// === Module 13220: GuildDirectoryTemplatesIcons ===
+// === Module 13272: GuildDirectoryTemplatesIcons ===
 
-// Module 13220 (GuildDirectoryTemplatesIcons)
-import _modDef13221 from "module_13221" /* 13221 */;
-import _modDef13222 from "module_13222" /* 13222 */;
-import _modDef13223 from "module_13223" /* 13223 */;
-import _modDef13224 from "module_13224" /* 13224 */;
-import _modDef13225 from "module_13225" /* 13225 */;
-import _modDef13226 from "module_13226" /* 13226 */;
-import _modDef13227 from "module_13227" /* 13227 */;
+// Module 13272 (GuildDirectoryTemplatesIcons)
+import _modDef13273 from "module_13273" /* 13273 */;
+import _modDef13274 from "module_13274" /* 13274 */;
+import _modDef13275 from "module_13275" /* 13275 */;
+import _modDef13276 from "module_13276" /* 13276 */;
+import _modDef13277 from "module_13277" /* 13277 */;
+import _modDef13278 from "module_13278" /* 13278 */;
+import _modDef13279 from "module_13279" /* 13279 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryTemplatesIcons.tsx");
 
-export const GUILD_TEMPLATE_ICONS = { CREATE: _modDef13221, HUB_SCHOOL_CLUB: _modDef13222, HUB_STUDY: _modDef13223, HUB_CLASS: _modDef13224, HUB_SOCIAL: _modDef13225, HUB_MAJOR: _modDef13226, HUB_DORM: _modDef13227 };
+export const GUILD_TEMPLATE_ICONS = { CREATE: _modDef13273, HUB_SCHOOL_CLUB: _modDef13274, HUB_STUDY: _modDef13275, HUB_CLASS: _modDef13276, HUB_SOCIAL: _modDef13277, HUB_MAJOR: _modDef13278, HUB_DORM: _modDef13279 };

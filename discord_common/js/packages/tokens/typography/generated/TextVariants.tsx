@@ -1,6 +1,6 @@
-// === Module 5604: TextVariants ===
+// === Module 5635: TextVariants ===
 
-// Module 5604 (TextVariants)
+// Module 5635 (TextVariants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/tokens/typography/generated/TextVariants.tsx");

@@ -1,24 +1,24 @@
-// === Module 6946: RecentMentionsStore ===
+// === Module 6977: RecentMentionsStore ===
 
-// Module 6946 (RecentMentionsStore)
+// Module 6977 (RecentMentionsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TimeUtils from "TimeUtils" /* 5796 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6362 */;
-import isMessageMentioned from "isMessageMentioned" /* 6744 */;
-import AgeGateUtils from "AgeGateUtils" /* 6802 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6947 */;
-import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 6948 */;
-import MessageRecord from "MessageRecord" /* 4955 */;
+import TimeUtils from "TimeUtils" /* 5827 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6393 */;
+import isMessageMentioned from "isMessageMentioned" /* 6775 */;
+import AgeGateUtils from "AgeGateUtils" /* 6833 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6978 */;
+import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 6979 */;
+import MessageRecord from "MessageRecord" /* 4986 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import MessageStore from "MessageStore" /* 6360 */;
-import ReadStateStore from "ReadStateStore" /* 6901 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
-import UserStore from "UserStore" /* 1386 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import MessageStore from "MessageStore" /* 6391 */;
+import ReadStateStore from "ReadStateStore" /* 6932 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const isMessageMentionedDefault = isMessageMentioned;
 

@@ -1,10 +1,10 @@
-// === Module 11518: Pile ===
+// === Module 11566: Pile ===
 
-// Module 11518 (Pile)
+// Module 11566 (Pile)
 import apply from "apply" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import ClipView from "ClipView" /* 9378 */;
-import PileOverflow from "PileOverflow" /* 11519 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import ClipView from "ClipView" /* 9420 */;
+import PileOverflow from "PileOverflow" /* 11567 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -12,16 +12,16 @@ const ClipViewDefault = ClipView;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ pile: { flexDirection: "row" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");
 
-export function Pile(aria_label) {
-  ({ shape: require, size } = aria_label);
-  ({ gap: dependencyMap, depthX: noop, depthY: View, children } = aria_label);
+export function Pile(arg0) {
+  ({ aria-label: tmp, shape: require, size } = arg0);
+  ({ gap: dependencyMap, depthX: noop, depthY: View, children } = arg0);
   const Children = noop.Children;
-  const tmp = closure_6();
+  const tmp2 = closure_6();
   length = Children.toArray(children).filter(GlobalUtils.isNotNullish).length;
   const toArrayResult = Children.toArray(children);
   if (obj.isArray(size)) {
@@ -31,7 +31,14 @@ export function Pile(aria_label) {
       throw error;
     }
   }
-  let obj2 = { style: tmp.pile, accessible: true, "aria-label": aria_label["aria-label"], children: null };
+  let obj2 = { style: tmp2.pile, accessible: "" !== tmp, "aria-label": null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+  let tmp7;
+  if ("" !== tmp) {
+    tmp7 = tmp;
+  }
+  obj2["aria-label"] = tmp7;
+  obj2.accessibilityElementsHidden = "" === tmp;
+  obj2.importantForAccessibility = "no-hide-descendants";
   const Children1 = noop.Children;
   obj2.children = Children1.map(children, (type, key) => {
     if (noop.isValidElement(type)) {

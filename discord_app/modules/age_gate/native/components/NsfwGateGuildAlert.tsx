@@ -1,12 +1,12 @@
-// === Module 12103: NsfwGateGuildAlert ===
+// === Module 12153: NsfwGateGuildAlert ===
 
-// Module 12103 (NsfwGateGuildAlert)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import useAlertStore from "useAlertStore" /* 6017 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7539 */;
+// Module 12153 (NsfwGateGuildAlert)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import useAlertStore from "useAlertStore" /* 6048 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7570 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import UserStore from "UserStore" /* 1386 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 class NsfwGateGuildAlert {
@@ -50,8 +50,8 @@ class NsfwGateGuildAlert {
     intl3 = guildId(closure_2[9]).intl;
     obj1.text = intl3.string(guildId(closure_2[9]).t.wi6hPV);
     obj1.onPress = function onPress() {
-      const obj = currentUser(5691);
-      return obj.openURL(currentUser(2187).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
+      const obj = currentUser(5722);
+      return obj.openURL(currentUser(2188).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
     };
     items1 = [, ];
     items1[0] = jsx(guildId(closure_2[8]).AlertActionButton, obj1, "help-center");
@@ -63,7 +63,7 @@ class NsfwGateGuildAlert {
     return jsx(guildId(closure_2[8]).AlertModal, obj);
   }
 }
-const NsfwGateSource = fn(7538).NsfwGateSource;
+const NsfwGateSource = fn(7569).NsfwGateSource;
 const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;

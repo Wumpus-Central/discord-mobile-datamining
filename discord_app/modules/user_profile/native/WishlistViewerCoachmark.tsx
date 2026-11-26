@@ -1,9 +1,9 @@
-// === Module 15029: WishlistViewerCoachmark ===
+// === Module 15079: WishlistViewerCoachmark ===
 
-// Module 15029 (WishlistViewerCoachmark)
+// Module 15079 (WishlistViewerCoachmark)
 import util from "util" /* 1112 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import _modDef15030 from "module_15030" /* 15030 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import _modDef15080 from "module_15080" /* 15080 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,16 +11,16 @@ function CoachmarkImage() {
   const tmp = closure_7();
   const obj = { style: tmp.imageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef15030 };
+  const obj3 = { uri: _modDef15080 };
   obj2.source = obj3;
   obj2.style = tmp.image;
   obj.children = jsx(FastImageDefault, { source: null, style: null });
   return <View style={tmp.imageContainer}>{null}</View>;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");

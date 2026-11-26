@@ -1,8 +1,8 @@
-// === Module 5925: DesktopGamePerfExperiment ===
+// === Module 5956: DesktopGamePerfExperiment ===
 
-// Module 5925 (DesktopGamePerfExperiment)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 5956 (DesktopGamePerfExperiment)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-10-desktop-game-perf", kind: "user", defaultConfig: { nativeSystemCpuTimes: false, overlayOnlyAnimatesItself: false, fullscreenPopupOcclusion: false, overlayHiddenWavePaused: false, renderOverlayWhileMinimized: false, notificationIconCpuCanvas: false }, variations: { 0: { nativeSystemCpuTimes: false, overlayOnlyAnimatesItself: false, fullscreenPopupOcclusion: false, overlayHiddenWavePaused: false, renderOverlayWhileMinimized: false, notificationIconCpuCanvas: false }, 1: { nativeSystemCpuTimes: true, overlayOnlyAnimatesItself: true, fullscreenPopupOcclusion: true, overlayHiddenWavePaused: true, renderOverlayWhileMinimized: true, notificationIconCpuCanvas: true } } });

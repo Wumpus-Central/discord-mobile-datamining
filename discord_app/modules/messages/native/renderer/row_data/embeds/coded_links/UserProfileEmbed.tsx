@@ -1,11 +1,11 @@
-// === Module 14471: UserProfileEmbed ===
+// === Module 14523: UserProfileEmbed ===
 
-// Module 14471 (UserProfileEmbed)
+// Module 14523 (UserProfileEmbed)
 import util from "util" /* 1112 */;
-import Constants from "Constants" /* 5745 */;
-import UserProfileEmbedCard from "UserProfileEmbedCard" /* 11925 */;
-import UserProfileEmbedRenderingMobileExperiment from "UserProfileEmbedRenderingMobileExperiment" /* 11926 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12335 */;
+import Constants from "Constants" /* 5776 */;
+import UserProfileEmbedCard from "UserProfileEmbedCard" /* 11973 */;
+import UserProfileEmbedRenderingMobileExperiment from "UserProfileEmbedRenderingMobileExperiment" /* 11974 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12385 */;
 import size from "module_2" /* 2 */;
 
 const InviteTypes = Constants.InviteTypes;

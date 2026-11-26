@@ -1,15 +1,15 @@
-// === Module 18183: SoundboardSoundPreviewActionSheet ===
+// === Module 18242: SoundboardSoundPreviewActionSheet ===
 
-// Module 18183 (SoundboardSoundPreviewActionSheet)
+// Module 18242 (SoundboardSoundPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import SoundboardUtils from "SoundboardUtils" /* 10359 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 10361 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import SoundboardUtils from "SoundboardUtils" /* 10404 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 10406 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import UserStore from "UserStore" /* 1386 */;
-import SoundboardStore from "SoundboardStore" /* 6892 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import UserStore from "UserStore" /* 1387 */;
+import SoundboardStore from "SoundboardStore" /* 6923 */;
 
 require = fn;
 const View = fn(17).View;
@@ -17,14 +17,14 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { soundPresentation: { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 }, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
 let obj3 = { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 };
 obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 obj2.emoji = size;
 obj2.emojiFastImage = { width: 128, height: 128 };
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 60;

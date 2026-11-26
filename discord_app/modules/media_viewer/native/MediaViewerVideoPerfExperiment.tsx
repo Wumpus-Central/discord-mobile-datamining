@@ -1,8 +1,8 @@
-// === Module 8813: MediaViewerVideoPerfExperiment ===
+// === Module 8855: MediaViewerVideoPerfExperiment ===
 
-// Module 8813 (MediaViewerVideoPerfExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
+// Module 8855 (MediaViewerVideoPerfExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-media-viewer-video-perf-android", kind: "user", defaultConfig: { enabled: false }, variations: null };

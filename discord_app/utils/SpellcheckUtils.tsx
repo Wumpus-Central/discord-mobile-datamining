@@ -1,8 +1,8 @@
-// === Module 6987: SpellcheckUtils ===
+// === Module 7018: SpellcheckUtils ===
 
-// Module 6987 (SpellcheckUtils)
-import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import DiscordNativeDefault from "DiscordNative" /* 4823 */;
+// Module 7018 (SpellcheckUtils)
+import PlatformUtils2 from "PlatformUtils" /* 1379 */;
+import DiscordNativeDefault from "DiscordNative" /* 4854 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_7 = async function _setEnabled(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -52,7 +52,7 @@ let closure_7 = async function _setEnabled(arg0) {
           closure_129_1.enabled = closure_129_0;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -71,7 +71,7 @@ let closure_8 = async function _setLearnedWords(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -106,7 +106,7 @@ let closure_8 = async function _setLearnedWords(arg0) {
           closure_129_1.setLearnedWords(closure_129_0);
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp14) {
       c3 = tmp;
@@ -125,7 +125,7 @@ let closure_9 = async function _isMisspelled(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -201,7 +201,7 @@ let closure_10 = async function _getCorrections(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -283,7 +283,7 @@ let closure_11 = async function _getCachedMisspelling() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -366,7 +366,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -402,7 +402,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
           closure_130_2.replaceMisspelling(closure_130_0, closure_130_1);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp16) {
       c4 = tmp;
@@ -410,8 +410,8 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     }
   }
 };
-fn(5816).addPostConnectionCallback;
-let PlatformUtils = fn(1378);
+fn(5847).addPostConnectionCallback;
+let PlatformUtils = fn(1379);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {
   const importDefaultResult = DiscordNativeDefault;

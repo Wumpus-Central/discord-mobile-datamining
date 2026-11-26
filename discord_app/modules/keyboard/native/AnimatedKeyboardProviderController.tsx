@@ -1,22 +1,22 @@
-// === Module 15968: AnimatedKeyboardProviderController ===
+// === Module 16019: AnimatedKeyboardProviderController ===
 
-// Module 15968 (AnimatedKeyboardProviderController)
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1642 */;
-import _mod1653 from "module_1653" /* 1653 */;
+// Module 16019 (AnimatedKeyboardProviderController)
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1643 */;
+import _mod1654 from "module_1654" /* 1654 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-let module_1653 = fn(1653);
-const mutable = module_1653.makeMutable(0);
-module_1653 = fn(1653);
-const mutable1 = module_1653.makeMutable(fn(1653).KeyboardState.UNKNOWN);
+let module_1654 = fn(1654);
+const mutable = module_1654.makeMutable(0);
+module_1654 = fn(1654);
+const mutable1 = module_1654.makeMutable(fn(1654).KeyboardState.UNKNOWN);
 let closure_6 = { code: "(function AnimatedKeyboardProviderControllerTsx1(e){let[animatedKeyboardState,KeyboardState]=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);})" };
 let closure_7 = { code: "(function AnimatedKeyboardProviderControllerTsx2(e){let[animatedKeyboardHeight]=this.__closure;animatedKeyboardHeight.set(e.height);})" };
 let closure_8 = { code: "(function AnimatedKeyboardProviderControllerTsx3(e){let[animatedKeyboardState,KeyboardState,animatedKeyboardHeight]=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);animatedKeyboardHeight.set(e.height);})" };
 let closure_9 = noop.memo(function ComponentInner() {
-  items = [closure_6, mutable1, _mod1653.KeyboardState];
+  items = [closure_6, mutable1, _mod1654.KeyboardState];
   c0 = undefined;
   c1 = undefined;
   [tmp4, tmp5, tmp6] = items;
@@ -54,7 +54,7 @@ let closure_9 = noop.memo(function ComponentInner() {
   AnimatedKeyboardProviderControllerTsx2.__workletHash = 2792046606466;
   AnimatedKeyboardProviderControllerTsx2.__initData = tmp8;
   obj2.onMove = AnimatedKeyboardProviderControllerTsx2;
-  const items4 = [closure_8, mutable1, _mod1653.KeyboardState, mutable];
+  const items4 = [closure_8, mutable1, _mod1654.KeyboardState, mutable];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;

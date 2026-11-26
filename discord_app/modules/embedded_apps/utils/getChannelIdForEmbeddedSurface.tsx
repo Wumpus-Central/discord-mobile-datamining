@@ -1,7 +1,7 @@
-// === Module 6908: getChannelIdForEmbeddedSurface ===
+// === Module 6939: getChannelIdForEmbeddedSurface ===
 
-// Module 6908 (getChannelIdForEmbeddedSurface)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5656 */;
+// Module 6939 (getChannelIdForEmbeddedSurface)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5687 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx");

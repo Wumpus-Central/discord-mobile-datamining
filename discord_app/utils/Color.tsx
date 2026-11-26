@@ -1,6 +1,6 @@
-// === Module 5010: utils/Color ===
+// === Module 5041: utils/Color ===
 
-// Module 5010 (utils/Color)
+// Module 5041 (utils/Color)
 import _slicedToArray from "module_32" /* 32 */;
 
 function hslToRgb(alpha) {

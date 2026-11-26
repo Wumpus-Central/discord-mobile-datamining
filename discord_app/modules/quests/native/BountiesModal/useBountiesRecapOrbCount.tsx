@@ -1,9 +1,9 @@
-// === Module 16481: useBountiesRecapOrbCount ===
+// === Module 16532: useBountiesRecapOrbCount ===
 
-// Module 16481 (useBountiesRecapOrbCount)
-import _mod1653 from "module_1653" /* 1653 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import useBountiesRecapScroll from "useBountiesRecapScroll" /* 16480 */;
+// Module 16532 (useBountiesRecapOrbCount)
+import _mod1654 from "module_1654" /* 1654 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import useBountiesRecapScroll from "useBountiesRecapScroll" /* 16531 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -72,7 +72,7 @@ export function useBountiesRecapOrbCount(arg0) {
   useBountiesRecapOrbCountTsx2.__closure = items1;
   useBountiesRecapOrbCountTsx2.__workletHash = 758066957163;
   useBountiesRecapOrbCountTsx2.__initData = tmp7;
-  const items2 = [_undefined4, _mod1706.scheduleOnRN, callback1, callback];
+  const items2 = [_undefined4, _mod1707.scheduleOnRN, callback1, callback];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -88,6 +88,6 @@ export function useBountiesRecapOrbCount(arg0) {
   useBountiesRecapOrbCountTsx3.__closure = items3;
   useBountiesRecapOrbCountTsx3.__workletHash = 6766118779745;
   useBountiesRecapOrbCountTsx3.__initData = tmp16;
-  const animatedReaction = _mod1653.useAnimatedReaction(useBountiesRecapOrbCountTsx2, useBountiesRecapOrbCountTsx3);
+  const animatedReaction = _mod1654.useAnimatedReaction(useBountiesRecapOrbCountTsx2, useBountiesRecapOrbCountTsx3);
   return tmp2;
 }

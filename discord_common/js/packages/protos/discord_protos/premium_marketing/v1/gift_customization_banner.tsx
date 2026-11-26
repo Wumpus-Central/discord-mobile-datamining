@@ -1,10 +1,10 @@
-// === Module 9140: gift_customization_banner ===
+// === Module 9182: gift_customization_banner ===
 
-// Module 9140 (gift_customization_banner)
+// Module 9182 (gift_customization_banner)
 import _mod1196 from "module_1196" /* 1196 */;
-import localized_string from "localized_string" /* 9127 */;
-import theme_aware_asset from "theme_aware_asset" /* 9131 */;
-import gradient from "gradient" /* 9137 */;
+import localized_string from "localized_string" /* 9169 */;
+import theme_aware_asset from "theme_aware_asset" /* 9173 */;
+import gradient from "gradient" /* 9179 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

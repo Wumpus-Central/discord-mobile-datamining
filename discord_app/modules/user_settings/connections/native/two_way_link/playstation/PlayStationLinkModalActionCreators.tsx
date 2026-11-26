@@ -1,8 +1,8 @@
-// === Module 7749: PlayStationLinkModalActionCreators ===
+// === Module 7783: PlayStationLinkModalActionCreators ===
 
-// Module 7749 (PlayStationLinkModalActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
+// Module 7783 (PlayStationLinkModalActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "USER_SETTINGS_CONNECTIONS_PS_LINK_MODAL_KEY";
@@ -18,7 +18,7 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7750, dependencyMap.paths), { locationStack, platformType, startAtSignIn: flag }, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7784, dependencyMap.paths), { locationStack, platformType, startAtSignIn: flag }, c3);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(c3);

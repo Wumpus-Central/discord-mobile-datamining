@@ -1,18 +1,18 @@
-// === Module 12502: useAgeVerificationMethods ===
+// === Module 12551: useAgeVerificationMethods ===
 
-// Module 12502 (useAgeVerificationMethods)
+// Module 12551 (useAgeVerificationMethods)
 import util from "util" /* 1112 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5780 */;
-import MetricEvents from "MetricEvents" /* 5785 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7850 */;
-import GoogleWalletExperiment from "GoogleWalletExperiment" /* 12503 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5811 */;
+import MetricEvents from "MetricEvents" /* 5816 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7884 */;
+import GoogleWalletExperiment from "GoogleWalletExperiment" /* 12552 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 6795 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 6826 */;
 
 require = fn;
-const AgeVerificationConstants = fn(6796);
+const AgeVerificationConstants = fn(6827);
 ({ VERIFICATION_METHOD_TITLE_MAP: metroImportDefault, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
@@ -85,7 +85,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: "+95" };
                 }
               } else {
                 try {
@@ -99,8 +99,8 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(6797);
-                      const result = obj5.trackAgeVerificationModalClicked(id, id(6797).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(6797).AgeVerificationModalCta.METHOD_SELECT, id);
+                      const obj5 = id(6828);
+                      const result = obj5.trackAgeVerificationModalClicked(id, id(6828).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(6828).AgeVerificationModalCta.METHOD_SELECT, id);
                       v1 = 1;
                       c1 = 1;
                       const obj4 = { value: v1(id), done: false };
@@ -115,7 +115,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                     return obj;
                   } else {
                     c1 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: "+95" };
                   }
                 } catch (tmp5) {
                   c1 = tmp;

@@ -1,17 +1,17 @@
-// === Module 7557: SlayerStorefrontUtils ===
+// === Module 7588: SlayerStorefrontUtils ===
 
-// Module 7557 (SlayerStorefrontUtils)
+// Module 7588 (SlayerStorefrontUtils)
 import applyDefault from "apply" /* 12 */;
-import URLUtilsDefault from "URLUtils" /* 1379 */;
-import keysSorter from "keysSorter" /* 5751 */;
-import StoreUtils from "StoreUtils" /* 5772 */;
-import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 7561 */;
-import StorefrontUtils from "StorefrontUtils" /* 7562 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
-import ApplicationRecord from "ApplicationRecord" /* 2142 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7559 */;
+import URLUtilsDefault from "URLUtils" /* 1380 */;
+import keysSorter from "keysSorter" /* 5782 */;
+import StoreUtils from "StoreUtils" /* 5803 */;
+import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 7592 */;
+import StorefrontUtils from "StorefrontUtils" /* 7593 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ApplicationRecord from "ApplicationRecord" /* 2143 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7590 */;
 
 const require = globalThis.__r;
 
@@ -159,14 +159,14 @@ function getSKUShareURL(guildId, applicationId) {
   }
   combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + gesture.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7558).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7560);
+let closure_4 = fn(7589).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7591);
 ({ BLOONS_TD6_SPLIT_TENDER_PROMOTION_ID: closure_9, getChannelsGameShopPrefix: closure_10, STOREFRONT_MARKETING_GUILD_ID: closure_11, STOREFRONT_MARKETING_GUILD_ID_TEST: closure_12 } = SocialLayerStorefrontConstants);
 const Constants = fn(1071);
 ({ GuildFeatures: map1, Routes: closure_14, SKUProductLines: closure_15 } = Constants);
 const CollectibleShopTab = fn(1073).CollectibleShopTab;
 let str = "jpg";
-if (fn(5772).SUPPORTS_WEBP) {
+if (fn(5803).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getRequiredSubscriptionPlanIds(arr) {
@@ -433,7 +433,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, id) {
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "analyticsLocations" };
+          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "channel_id" };
         } else {
           const obj3 = StoreUtils;
           obj4 = { primaryIconAsset: URLUtilsDefault.toURLSafe(obj3.getAssetURL(id, first.labelIconAssetId, num, "webp")), primaryIconLabel: first.label };
@@ -443,7 +443,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, id) {
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "analyticsLocations" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "channel_id" };
 }
 export function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

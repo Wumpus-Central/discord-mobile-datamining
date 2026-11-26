@@ -1,9 +1,9 @@
-// === Module 7128: AnnouncementsLockIcon ===
+// === Module 7159: AnnouncementsLockIcon ===
 
-// Module 7128 (AnnouncementsLockIcon)
+// Module 7159 (AnnouncementsLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5698 */;
-import _mod7102 from "module_7102" /* 7102 */;
+import BaseIconImage from "BaseIconImage" /* 5729 */;
+import _mod7133 from "module_7133" /* 7133 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function AnnouncementsLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7102, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7133, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

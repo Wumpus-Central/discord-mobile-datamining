@@ -1,21 +1,21 @@
-// === Module 5182: client_themes/ClientThemesUtils ===
+// === Module 5213: client_themes/ClientThemesUtils ===
 
-// Module 5182 (client_themes/ClientThemesUtils)
+// Module 5213 (client_themes/ClientThemesUtils)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1240 */;
-import ColorUtils from "ColorUtils" /* 5009 */;
-import utils_ColorDefault from "utils/Color" /* 5010 */;
-import shared from "shared" /* 5019 */;
-import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5183 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5184 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5218 */;
-import useThemeDefault from "useTheme" /* 5221 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
+import ColorUtils from "ColorUtils" /* 5040 */;
+import utils_ColorDefault from "utils/Color" /* 5041 */;
+import shared from "shared" /* 5050 */;
+import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5214 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5215 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5249 */;
+import useThemeDefault from "useTheme" /* 5252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5036 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1237 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5067 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 
 require = fn;
 function getGradientColorByPercentage(type, MID) {

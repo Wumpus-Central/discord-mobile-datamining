@@ -1,20 +1,20 @@
-// === Module 19964: GuildSettingsServerTagBadgeGrid ===
+// === Module 20028: GuildSettingsServerTagBadgeGrid ===
 
-// Module 19964 (GuildSettingsServerTagBadgeGrid)
+// Module 20028 (GuildSettingsServerTagBadgeGrid)
 import nativeDefault from "native" /* 575 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13414 */;
-import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 19965 */;
-import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 19966 */;
-import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 19967 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13466 */;
+import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 20029 */;
+import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 20030 */;
+import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 20031 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(8537).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8579).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, upsellCard: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, upsellPreview: null, upsellText: null };
 const obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj2.upsellPreview = { width: 128, flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
@@ -36,7 +36,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   const obj2 = { variant: "body-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
   const intl = guildId(1112).intl;
   obj2.children = intl.string(guildId(1112).t.wRnfnY);
-  const items1 = [closure_7(guildId(5603).Text, obj2), , ];
+  const items1 = [closure_7(guildId(5634).Text, obj2), , ];
   const tmp4 = useGuildTagBadgeCollectionDefault();
   items1[1] = closure_7(closure_5, {
     accessibilityRole: "radiogroup",
@@ -52,7 +52,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
         children: null
       };
       size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-      obj.children = closure_1_7(guildId(15274).GuildBadge, size);
+      obj.children = closure_1_7(guildId(15324).GuildBadge, size);
       return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
     })
   });
@@ -67,19 +67,19 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     const substr = lockedBadges.slice(0, 10);
     obj5.children = substr.map((badge) => {
       size = { badge: badge.kind, width: 21, height: 21 };
-      return closure_1_7(guildId(15274).GuildBadge, size, badge.kind);
+      return closure_1_7(guildId(15324).GuildBadge, size, badge.kind);
     });
     const items2 = [closure_7(closure_5, obj5), , ];
     const obj6 = { variant: "body-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };
     const intl3 = tmp7(1112).intl;
     obj6.children = intl3.string(tmp7(1112).t.U5p3GZ);
-    items2[1] = closure_7(tmp7(5603).Text, obj6);
+    items2[1] = closure_7(tmp7(5634).Text, obj6);
     const obj7 = { size: "md", color: nativeDefault.colors.ICON_SUBTLE };
-    items2[2] = closure_7(tmp7(7527).ChevronSmallRightIcon, obj7);
+    items2[2] = closure_7(tmp7(7558).ChevronSmallRightIcon, obj7);
     obj4.children = items2;
     tmp6Result = closure_8(closure_4, obj4);
   }
   items1[2] = tmp6Result;
   obj.children = items1;
-  return closure_8(guildId(6084).Stack, obj);
+  return closure_8(guildId(6115).Stack, obj);
 };

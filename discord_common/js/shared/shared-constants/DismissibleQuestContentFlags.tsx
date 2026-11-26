@@ -1,6 +1,6 @@
-// === Module 6849: DismissibleQuestContentFlags ===
+// === Module 6880: DismissibleQuestContentFlags ===
 
-// Module 6849 (DismissibleQuestContentFlags)
+// Module 6880 (DismissibleQuestContentFlags)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/DismissibleQuestContentFlags.tsx");

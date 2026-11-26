@@ -1,10 +1,10 @@
-// === Module 19053: useReferralProgramCoachmark ===
+// === Module 19116: useReferralProgramCoachmark ===
 
-// Module 19053 (useReferralProgramCoachmark)
+// Module 19116 (useReferralProgramCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import _modDef19054 from "module_19054" /* 19054 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import _modDef19117 from "module_19117" /* 19117 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,15 +14,15 @@ require = fn;
 function ReferralProgramCoachmarkImg() {
   const tmp = closure_9();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
-  const obj2 = { source: _modDef19054, style: tmp.coachmarkImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef19054, style: tmp.coachmarkImage });
+  const obj2 = { source: _modDef19117, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef19117, style: tmp.coachmarkImage });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1071).UserSettingsSections;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 200, height: 112 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx");
@@ -40,11 +40,11 @@ export function useReferralProgramCoachmark(disabled) {
   require("useSelectedDismissibleContent");
   if (isEligibleSenderForReferralProgram) {
     if (!disabled) {
-      items = [tmp(4845).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];
+      items = [tmp(4876).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];
     }
     const tmp8 = _slicedToArray(tmp6(items), 2);
     _require = tmp9;
-    const tmp10 = tmp8[0] === tmp(4845).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK;
+    const tmp10 = tmp8[0] === tmp(4876).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK;
     visible = tmp10;
     const items1 = [tmp10, tmp8[1]];
     let tmp13 = null;

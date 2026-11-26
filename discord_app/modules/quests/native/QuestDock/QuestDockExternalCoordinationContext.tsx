@@ -1,32 +1,32 @@
-// === Module 16633: QuestDockExternalCoordinationContext ===
+// === Module 16684: QuestDockExternalCoordinationContext ===
 
-// Module 16633 (QuestDockExternalCoordinationContext)
+// Module 16684 (QuestDockExternalCoordinationContext)
 import DurationsDefault from "Durations" /* 1088 */;
-import QuestActionCreators from "QuestActionCreators" /* 9852 */;
+import QuestActionCreators from "QuestActionCreators" /* 9894 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16627 */;
+import QuestDockStore from "QuestDockStore" /* 16678 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(6840);
+const QuestConstants = fn(6871);
 const QuestDockMode = QuestConstants.QuestDockMode;
 let QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
-let closure_6 = fn(16629).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+let closure_6 = fn(16680).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = { restingQuestDockMode: null, setRestingQuestDockMode: null, lastScrollEventSourceId: null, questDockOffset: null };
-let ReanimatedHelperTypes = fn(7398);
+let ReanimatedHelperTypes = fn(7429);
 obj.restingQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj.setRestingQuestDockMode = function setRestingQuestDockMode() {
 
 };
-ReanimatedHelperTypes = fn(7398);
+ReanimatedHelperTypes = fn(7429);
 obj.lastScrollEventSourceId = ReanimatedHelperTypes.createFakeSharedValue(null);
-ReanimatedHelperTypes = fn(7398);
+ReanimatedHelperTypes = fn(7429);
 obj.questDockOffset = ReanimatedHelperTypes.createFakeSharedValue(0);
 let context = noop.createContext(obj);
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = { code: "(function QuestDockExternalCoordinationContextTsx1(){let[restingQuestDockMode]=this.__closure;return restingQuestDockMode.get();})" };
 let closure_12 = { code: "(function QuestDockExternalCoordinationContextTsx2(nextMode,prevMode){let[scheduleOnRN,cancelReopenQuestDock]=this.__closure;if(nextMode!==prevMode){scheduleOnRN(cancelReopenQuestDock);}})" };
@@ -69,7 +69,7 @@ export function useExternalScrollEventHandler(id) {
   const MobileQuestDockClosedStateExperiment = require("MobileQuestDockClosedStateExperiment").MobileQuestDockClosedStateExperiment;
   const autoCloseEnabled = MobileQuestDockClosedStateExperiment.useConfig({ location: QuestsExperimentLocations.QUESTS_BAR_MOBILE }, { autoTrackExposure: false }).autoCloseEnabled;
   noop = autoCloseEnabled;
-  const sharedValue = require("module_1653").useSharedValue(autoCloseEnabled);
+  const sharedValue = require("module_1654").useSharedValue(autoCloseEnabled);
   c3 = sharedValue;
   items = [autoCloseEnabled, sharedValue];
   const effect = noop.useEffect(() => {
@@ -95,7 +95,7 @@ export function useExternalScrollEventHandler(id) {
     }
   }, []);
   const obj2 = { location: QuestsExperimentLocations.QUESTS_BAR_MOBILE };
-  const obj3 = require("module_1653");
+  const obj3 = require("module_1654");
   const items2 = [c11, restingQuestDockMode];
   _require = undefined;
   [tmp8, tmp9] = items2;
@@ -108,7 +108,7 @@ export function useExternalScrollEventHandler(id) {
   QuestDockExternalCoordinationContextTsx1.__closure = items3;
   QuestDockExternalCoordinationContextTsx1.__workletHash = 4531016347305;
   QuestDockExternalCoordinationContextTsx1.__initData = tmp8;
-  const items4 = [c12, require("module_1706").scheduleOnRN, callback1];
+  const items4 = [c12, require("module_1707").scheduleOnRN, callback1];
   _require = undefined;
   dependencyMap = undefined;
   [tmp10, tmp11, tmp12] = items4;
@@ -126,11 +126,11 @@ export function useExternalScrollEventHandler(id) {
   QuestDockExternalCoordinationContextTsx2.__closure = items5;
   QuestDockExternalCoordinationContextTsx2.__workletHash = 3450868736561;
   QuestDockExternalCoordinationContextTsx2.__initData = tmp10;
-  const animatedReaction = require("module_1653").useAnimatedReaction(QuestDockExternalCoordinationContextTsx1, QuestDockExternalCoordinationContextTsx2);
-  const obj4 = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(0);
-  const tmp2Result = require("module_1653");
-  const sharedValue2 = require("module_1653").useSharedValue(false);
+  const animatedReaction = require("module_1654").useAnimatedReaction(QuestDockExternalCoordinationContextTsx1, QuestDockExternalCoordinationContextTsx2);
+  const obj4 = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(0);
+  const tmp2Result = require("module_1654");
+  const sharedValue2 = require("module_1654").useSharedValue(false);
   const items6 = [sharedValue2];
   const effect1 = obj.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -140,7 +140,7 @@ export function useExternalScrollEventHandler(id) {
       clearTimeout(closure_0);
     };
   }, items6);
-  const items7 = [closure_13, sharedValue2, restingQuestDockMode, c4, sharedValue1, lastScrollEventSourceId, id, require("module_1706").scheduleOnRN, callback1, c10, callback, setRestingQuestDockMode, sharedValue, c6];
+  const items7 = [closure_13, sharedValue2, restingQuestDockMode, c4, sharedValue1, lastScrollEventSourceId, id, require("module_1707").scheduleOnRN, callback1, c10, callback, setRestingQuestDockMode, sharedValue, c6];
   _require = undefined;
   dependencyMap = undefined;
   noop = undefined;

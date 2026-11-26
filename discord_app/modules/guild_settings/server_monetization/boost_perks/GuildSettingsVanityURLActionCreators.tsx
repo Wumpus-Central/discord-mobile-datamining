@@ -1,9 +1,9 @@
-// === Module 8538: GuildSettingsVanityURLActionCreators ===
+// === Module 8580: GuildSettingsVanityURLActionCreators ===
 
-// Module 8538 (GuildSettingsVanityURLActionCreators)
+// Module 8580 (GuildSettingsVanityURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,23 +1,23 @@
-// === Module 19957: SoundboardWaveformTrimHandles ===
+// === Module 20021: SoundboardWaveformTrimHandles ===
 
-// Module 19957 (SoundboardWaveformTrimHandles)
+// Module 20021 (SoundboardWaveformTrimHandles)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let c8 = 0.05;
-let closure_9 = 1 / fn(19947).WAVEFORM_BAR_COUNT;
+let closure_9 = 1 / fn(20011).WAVEFORM_BAR_COUNT;
 let items = [{ name: "increment" }, { name: "decrement" }];
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { position: "absolute", top: 0, left: 0 }, touchTarget: { position: "absolute", top: 0, bottom: 0, width: 44, alignItems: "center", justifyContent: "center" }, handle: null, disabled: null };
 let size = { width: 6, height: "100%", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.handle = size;
@@ -48,14 +48,14 @@ export default function SoundboardWaveformTrimHandles(height) {
   }
   c9 = undefined;
   const tmp = closure_11();
-  const sharedValue = require("module_1653").useSharedValue(0);
-  const obj = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(0);
-  const obj2 = require("module_1653");
-  const sharedValue2 = require("module_1653").useSharedValue(0);
-  const obj3 = require("module_1653");
-  const sharedValue3 = require("module_1653").useSharedValue(1);
-  const obj4 = require("module_1653");
+  const sharedValue = require("module_1654").useSharedValue(0);
+  const obj = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(0);
+  const obj2 = require("module_1654");
+  const sharedValue2 = require("module_1654").useSharedValue(0);
+  const obj3 = require("module_1654");
+  const sharedValue3 = require("module_1654").useSharedValue(1);
+  const obj4 = require("module_1654");
   const obj5 = { start: startRatio.get(), end: endRatio.get() };
   [tmp9, c9] = onChange(flag.useState({ start: startRatio.get(), end: endRatio.get() }), 2);
   items = [onChange, startRatio, endRatio];
@@ -87,7 +87,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx1.__initData = tmp6;
     const enabledResult = Gesture.Pan().enabled(!flag);
     const tmp4 = c1;
-    const items2 = [closure_13, sharedValue, c0, c2, c8, tmp4, sharedValue2, closure_9, _mod1653.runOnJS, callback];
+    const items2 = [closure_13, sharedValue, c0, c2, c8, tmp4, sharedValue2, closure_9, _mod1654.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -118,7 +118,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx2.__workletHash = 284697789328;
     SoundboardWaveformTrimHandlesTsx2.__initData = tmp11;
     const onBeginResult = Gesture.Pan().enabled(!flag).onBegin(SoundboardWaveformTrimHandlesTsx1);
-    const items4 = [closure_14, _mod1653.runOnJS, callback];
+    const items4 = [closure_14, _mod1654.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     [tmp21, tmp22, tmp23] = items4;
@@ -155,7 +155,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx4.__initData = tmp6;
     const enabledResult = Gesture.Pan().enabled(!flag);
     const tmp4 = c2;
-    const items2 = [closure_16, sharedValue1, c0, c1, c8, tmp4, sharedValue3, closure_9, _mod1653.runOnJS, callback];
+    const items2 = [closure_16, sharedValue1, c0, c1, c8, tmp4, sharedValue3, closure_9, _mod1654.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -186,7 +186,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     SoundboardWaveformTrimHandlesTsx5.__workletHash = 16740779483743;
     SoundboardWaveformTrimHandlesTsx5.__initData = tmp11;
     const onBeginResult = Gesture.Pan().enabled(!flag).onBegin(SoundboardWaveformTrimHandlesTsx4);
-    const items4 = [closure_17, _mod1653.runOnJS, callback];
+    const items4 = [closure_17, _mod1654.runOnJS, callback];
     c0 = undefined;
     c1 = undefined;
     [tmp21, tmp22, tmp23] = items4;
@@ -218,8 +218,8 @@ export default function SoundboardWaveformTrimHandles(height) {
   SoundboardWaveformTrimHandlesTsx7.__closure = items4;
   SoundboardWaveformTrimHandlesTsx7.__workletHash = 13043813667435;
   SoundboardWaveformTrimHandlesTsx7.__initData = tmp13;
-  const animatedStyle = require("module_1653").useAnimatedStyle(SoundboardWaveformTrimHandlesTsx7);
-  const obj6 = require("module_1653");
+  const animatedStyle = require("module_1654").useAnimatedStyle(SoundboardWaveformTrimHandlesTsx7);
+  const obj6 = require("module_1654");
   let items5 = [closure_19, endRatio, width, 44];
   _require = undefined;
   importDefault = undefined;
@@ -237,7 +237,7 @@ export default function SoundboardWaveformTrimHandles(height) {
   SoundboardWaveformTrimHandlesTsx8.__initData = tmp18;
   const items7 = [tmp.container, { width, height: height.height }, ];
   let disabled = null;
-  const animatedStyle1 = require("module_1653").useAnimatedStyle(SoundboardWaveformTrimHandlesTsx8);
+  const animatedStyle1 = require("module_1654").useAnimatedStyle(SoundboardWaveformTrimHandlesTsx8);
   if (flag) {
     disabled = tmp.disabled;
   }
@@ -273,7 +273,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     }
   };
   obj9.children = sharedValue1(sharedValue, { style: tmp.handle });
-  obj8.children = sharedValue1(_modDef1653.View, obj9);
+  obj8.children = sharedValue1(_modDef1654.View, obj9);
   const items9 = [sharedValue1(require("LegacyBaseButton").GestureDetector, obj8), ];
   const obj11 = { gesture: memo1, children: null };
   const obj12 = { style: null, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, accessibilityState: null, accessibilityValue: null, accessibilityActions: null, onAccessibilityAction: null, children: null };
@@ -300,7 +300,7 @@ export default function SoundboardWaveformTrimHandles(height) {
     }
   };
   obj12.children = sharedValue1(sharedValue, { style: tmp.handle });
-  obj11.children = sharedValue1(_modDef1653.View, obj12);
+  obj11.children = sharedValue1(_modDef1654.View, obj12);
   items9[1] = sharedValue1(require("LegacyBaseButton").GestureDetector, obj11);
   obj7.children = items9;
   return sharedValue2(sharedValue, obj7);

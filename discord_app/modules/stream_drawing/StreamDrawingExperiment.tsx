@@ -1,17 +1,17 @@
-// === Module 15095: StreamDrawingExperiment ===
+// === Module 15145: StreamDrawingExperiment ===
 
-// Module 15095 (StreamDrawingExperiment)
-import StreamDrawingChannel from "StreamDrawingChannel" /* 15094 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
+// Module 15145 (StreamDrawingExperiment)
+import StreamDrawingChannel from "StreamDrawingChannel" /* 15144 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
-let ApexExperiment = fn(1450);
+let ApexExperiment = fn(1451);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-11-stream-drawing", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1450);
+ApexExperiment = fn(1451);
 const apexExperiment1 = ApexExperiment.createApexExperiment({ name: "2026-11-stream-drawing-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stream_drawing/StreamDrawingExperiment.tsx");

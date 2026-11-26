@@ -1,11 +1,11 @@
-// === Module 20057: GuildSettingsModalAnalytics ===
+// === Module 20121: GuildSettingsModalAnalytics ===
 
-// Module 20057 (GuildSettingsModalAnalytics)
+// Module 20121 (GuildSettingsModalAnalytics)
 import nativeDefault from "native" /* 575 */;
-import GuildSettingsAnalyticsCardDefault from "GuildSettingsAnalyticsCard" /* 20077 */;
+import GuildSettingsAnalyticsCardDefault from "GuildSettingsAnalyticsCard" /* 20141 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2188 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
@@ -13,7 +13,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, RelativeMarketingURLs: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flex: 1 }, content: { padding: nativeDefault.space.PX_16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -25,7 +25,7 @@ export default function GuildSettingsModalAnalytics(guildId) {
   items = [LocaleStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => locale.locale);
   let obj = guildId(504);
-  const guildAnalyticsOverview = guildId(20058).useGuildAnalyticsOverview(guildId);
+  const guildAnalyticsOverview = guildId(20122).useGuildAnalyticsOverview(guildId);
   ({ analytics, notice } = guildAnalyticsOverview);
   const items1 = [guildId];
   let obj3 = { style: tmp.container, contentContainerStyle: null, children: null };
@@ -42,7 +42,7 @@ export default function GuildSettingsModalAnalytics(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -57,12 +57,12 @@ export default function GuildSettingsModalAnalytics(guildId) {
             return obj3;
           } else {
             const obj4 = { guild_id: guildId };
-            v1(1255).track(constants.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, obj4);
-            const obj5 = v1(1255);
+            v1(1256).track(constants.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, obj4);
+            const obj5 = v1(1256);
             const result = closure_1_8.DEVELOPER_PORTAL_GUILD_ANALYTICS(guildId);
             v1 = 1;
             v3 = 1;
-            const obj6 = { value: v1(11583).redirectDeveloperPortalWithHandoffToken(result, v3(11587).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
+            const obj6 = { value: v1(11631).redirectDeveloperPortalWithHandoffToken(result, v3(11635).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -74,7 +74,7 @@ export default function GuildSettingsModalAnalytics(guildId) {
           return obj;
         } else {
           v3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp5) {
         v3 = tmp;
@@ -85,25 +85,25 @@ export default function GuildSettingsModalAnalytics(guildId) {
   let obj4 = { spacing: nativeDefault.space.PX_16, children: null };
   let obj5 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = guildId(1112).intl;
-  let obj2 = guildId(20058);
+  let obj2 = guildId(20122);
   obj5.children = intl.string(guildId(1112).t.NIZ60a).trim();
-  const items3 = [closure_9(guildId(5603).Text, obj5), , , , ];
+  const items3 = [closure_9(guildId(5634).Text, obj5), , , , ];
   let tmp9Result = null;
   if (null != notice) {
     ({ type: obj6.type, message: obj6.message, role: obj6.role } = notice);
-    tmp9Result = closure_9(tmp2(7907).InlineNotice, { type: null, message: null, role: null });
+    tmp9Result = closure_9(tmp2(7941).InlineNotice, { type: null, message: null, role: null });
     const obj7 = { type: null, message: null, role: null };
   }
   items3[1] = tmp9Result;
   const obj8 = { variant: "body-sm/medium", color: "text-muted", children: null };
   const intl2 = tmp2(1112).intl;
   obj8.children = intl2.string(guildId(1112).t.A5vswv);
-  items3[2] = closure_9(guildId(5603).Text, obj8);
+  items3[2] = closure_9(guildId(5634).Text, obj8);
   const obj9 = { text: null, onPress: null };
   const intl3 = tmp2(1112).intl;
   obj9.text = intl3.string(guildId(1112).t.Uskgxx);
   obj9.onPress = callback;
-  items3[3] = closure_9(guildId(5610).Button, obj9);
+  items3[3] = closure_9(guildId(5641).Button, obj9);
   let tmp7Result = null;
   if (null != analytics) {
     const obj10 = { spacing: nativeDefault.space.PX_8, children: null };
@@ -113,42 +113,42 @@ export default function GuildSettingsModalAnalytics(guildId) {
     const intl5 = tmp2(1112).intl;
     obj11.description = intl5.string(tmp2(1112).t.KiRbLJ);
     const tmp11Result = GuildSettingsAnalyticsCardDefault;
-    const merged = Object.assign(tmp2(20058).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
+    const merged = Object.assign(tmp2(20122).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
     const items4 = [closure_9(tmp11Result, obj11), , , ];
     const obj12 = { metricKey: "communicators", title: null, description: null };
-    const tmp2Result = tmp2(20058);
+    const tmp2Result = tmp2(20122);
     const intl6 = tmp2(1112).intl;
     obj12.title = intl6.string(tmp2(1112).t.DDAHdQ);
     const intl7 = tmp2(1112).intl;
     obj12.description = intl7.string(tmp2(1112).t.HxWUkU);
     const tmp11Result4 = GuildSettingsAnalyticsCardDefault;
-    const merged1 = Object.assign(tmp2(20058).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
+    const merged1 = Object.assign(tmp2(20122).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
     items4[1] = closure_9(tmp11Result4, obj12);
     const obj13 = { metricKey: "new_members", title: null };
-    const tmp2Result4 = tmp2(20058);
+    const tmp2Result4 = tmp2(20122);
     const intl8 = tmp2(1112).intl;
     obj13.title = intl8.string(tmp2(1112).t.hYeOqC);
     const tmp11Result5 = GuildSettingsAnalyticsCardDefault;
-    const merged2 = Object.assign(tmp2(20058).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
+    const merged2 = Object.assign(tmp2(20122).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
     items4[2] = closure_9(tmp11Result5, obj13);
     const obj14 = { metricKey: "new_member_retention", title: null, description: null };
-    const tmp2Result5 = tmp2(20058);
+    const tmp2Result5 = tmp2(20122);
     const intl9 = tmp2(1112).intl;
     obj14.title = intl9.string(tmp2(1112).t.jj7OPw);
     const intl10 = tmp2(1112).intl;
     obj14.description = intl10.string(tmp2(1112).t.MQCslz);
-    const tmp2Result6 = tmp2(20058);
+    const tmp2Result6 = tmp2(20122);
     const merged3 = Object.assign(tmp2Result6.getGuildAnalyticsCardProps(analytics.pctRetained, analytics.pctRetainedChange, stateFromStores, true));
     items4[3] = closure_9(GuildSettingsAnalyticsCardDefault, obj14);
     obj10.children = items4;
-    tmp7Result = closure_10(tmp2(6084).Stack, obj10);
+    tmp7Result = closure_10(tmp2(6115).Stack, obj10);
     const tmp11Result6 = GuildSettingsAnalyticsCardDefault;
   }
   const obj15 = { children: null };
   items3[4] = tmp7Result;
   obj4.children = items3;
-  obj3.children = closure_10(guildId(6084).Stack, obj4);
-  const items5 = [closure_9(ScrollView, obj3), closure_9(guildId(5586).NavScrim, {})];
+  obj3.children = closure_10(guildId(6115).Stack, obj4);
+  const items5 = [closure_9(ScrollView, obj3), closure_9(guildId(5617).NavScrim, {})];
   obj15.children = items5;
   return closure_10(closure_11, obj15);
 };

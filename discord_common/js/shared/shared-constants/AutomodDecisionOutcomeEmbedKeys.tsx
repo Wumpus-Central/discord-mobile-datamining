@@ -1,6 +1,6 @@
-// === Module 8195: AutomodDecisionOutcomeEmbedKeys ===
+// === Module 8237: AutomodDecisionOutcomeEmbedKeys ===
 
-// Module 8195 (AutomodDecisionOutcomeEmbedKeys)
+// Module 8237 (AutomodDecisionOutcomeEmbedKeys)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodDecisionOutcomeEmbedKeys.tsx");

@@ -1,7 +1,7 @@
-// === Module 15051: PassTheControllerExperiment ===
+// === Module 15101: PassTheControllerExperiment ===
 
-// Module 15051 (PassTheControllerExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 15101 (PassTheControllerExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-11-pass-the-controller", kind: "guild", defaultConfig: { enabled: false, allowWrestling: false }, variations: null };

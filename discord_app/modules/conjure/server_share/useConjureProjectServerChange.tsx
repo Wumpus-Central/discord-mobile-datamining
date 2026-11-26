@@ -1,13 +1,13 @@
-// === Module 18445: useConjureProjectServerChange ===
+// === Module 18508: useConjureProjectServerChange ===
 
-// Module 18445 (useConjureProjectServerChange)
-import conjureServerProject from "conjureServerProject" /* 7544 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7636 */;
-import conjureChangeRows from "conjureChangeRows" /* 18447 */;
+// Module 18508 (useConjureProjectServerChange)
+import conjureServerProject from "conjureServerProject" /* 7575 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7667 */;
+import conjureChangeRows from "conjureChangeRows" /* 18510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 
 const require = globalThis.__r;
 
@@ -117,7 +117,7 @@ export default function useConjureProjectServerChange(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -185,12 +185,13 @@ export default function useConjureProjectServerChange(id) {
           } else {
             c3 = 0;
             closure_129_9(false);
-            let tmp9 = null == closure_129_1;
-            if (!tmp9) {
-              tmp9 = closure_129_2;
-            }
-            if (!tmp9) {
-              tmp3(tmp50[12])(closure_129_1, "added");
+            if (null != closure_129_1) {
+              str = "added";
+              if (closure_129_2) {
+                str = "moved";
+              }
+              tmp3(tmp50[12])(closure_129_1, str);
+              const tmp11 = tmp3(tmp50[12]);
             }
             const intl = id(tmp50[10]).intl;
             let obj = tmp3(tmp50[11]);

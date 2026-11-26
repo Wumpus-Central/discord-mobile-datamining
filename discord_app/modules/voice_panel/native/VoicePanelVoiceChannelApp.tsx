@@ -1,17 +1,17 @@
-// === Module 19462: VoicePanelVoiceChannelApp ===
+// === Module 19525: VoicePanelVoiceChannelApp ===
 
-// Module 19462 (VoicePanelVoiceChannelApp)
+// Module 19525 (VoicePanelVoiceChannelApp)
 import nativeDefault from "native" /* 575 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 2021 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11733 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18189 */;
-import useControlsLockDefault from "useControlsLock" /* 19395 */;
-import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 19420 */;
-import VoiceChannelAppSurfaceDefault from "VoiceChannelAppSurface" /* 19464 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 2022 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18248 */;
+import useControlsLockDefault from "useControlsLock" /* 19458 */;
+import useVoiceChannelAppSurface from "useVoiceChannelAppSurface" /* 19483 */;
+import VoiceChannelAppSurfaceDefault from "VoiceChannelAppSurface" /* 19527 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import VoicePanelStore from "VoicePanelStore" /* 6934 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import VoicePanelStore from "VoicePanelStore" /* 6965 */;
 
 require = fn;
 function VoiceChannelAppLayer(applicationId) {
@@ -41,7 +41,7 @@ function VoiceChannelAppLayer(applicationId) {
   VoicePanelVoiceChannelAppTsx1.__closure = items2;
   VoicePanelVoiceChannelAppTsx1.__workletHash = 3536903528120;
   VoicePanelVoiceChannelAppTsx1.__initData = tmp10;
-  const items3 = [closure_10, require("voiceChannelAppLayerLayout").shouldRestoreVoiceChannelAppControls, require("module_1706").scheduleOnRN, showControls];
+  const items3 = [closure_10, require("voiceChannelAppLayerLayout").shouldRestoreVoiceChannelAppControls, require("module_1707").scheduleOnRN, showControls];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -60,8 +60,8 @@ function VoiceChannelAppLayer(applicationId) {
   VoicePanelVoiceChannelAppTsx2.__closure = items4;
   VoicePanelVoiceChannelAppTsx2.__workletHash = 6881977336877;
   VoicePanelVoiceChannelAppTsx2.__initData = tmp12;
-  const animatedReaction = require("module_1653").useAnimatedReaction(VoicePanelVoiceChannelAppTsx1, VoicePanelVoiceChannelAppTsx2);
-  const obj2 = require("module_1653");
+  const animatedReaction = require("module_1654").useAnimatedReaction(VoicePanelVoiceChannelAppTsx1, VoicePanelVoiceChannelAppTsx2);
+  const obj2 = require("module_1654");
   const items5 = [closure_11, require("voiceChannelAppLayerLayout").getVoiceChannelAppLayerInsets, safeArea, token, controlsSpecs, tmp7];
   _require = undefined;
   importDefault = undefined;
@@ -79,11 +79,11 @@ function VoiceChannelAppLayer(applicationId) {
   VoicePanelVoiceChannelAppTsx3.__closure = items6;
   VoicePanelVoiceChannelAppTsx3.__workletHash = 7326712047373;
   VoicePanelVoiceChannelAppTsx3.__initData = tmp17;
-  const animatedStyle = require("module_1653").useAnimatedStyle(VoicePanelVoiceChannelAppTsx3);
+  const animatedStyle = require("module_1654").useAnimatedStyle(VoicePanelVoiceChannelAppTsx3);
   const obj3 = { style: null, children: jsx(VoiceChannelAppSurfaceDefault, { applicationId: applicationId.applicationId, channelId: channel.id, guildId: channel.guild_id }) };
   const items7 = [tmp.layer, animatedStyle];
   obj3.style = items7;
-  return jsx(_modDef1653.View, { style: null, children: jsx(VoiceChannelAppSurfaceDefault, { applicationId: applicationId.applicationId, channelId: channel.id, guildId: channel.guild_id }) });
+  return jsx(_modDef1654.View, { style: null, children: jsx(VoiceChannelAppSurfaceDefault, { applicationId: applicationId.applicationId, channelId: channel.id, guildId: channel.guild_id }) });
 }
 function VoicePanelVoiceChannelAppForChannel(channel) {
   channel = channel.channel;
@@ -103,9 +103,9 @@ function VoicePanelVoiceChannelAppForChannel(channel) {
   }
   return tmp5;
 }
-const VoicePanelControlsModes = fn(11732).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { layer: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

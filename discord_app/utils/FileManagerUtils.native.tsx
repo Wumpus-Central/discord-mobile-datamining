@@ -1,6 +1,6 @@
-// === Module 9452: FileManagerUtils ===
+// === Module 9494: FileManagerUtils ===
 
-// Module 9452 (FileManagerUtils)
+// Module 9494 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1148 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_5 = async function _readFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -41,7 +41,7 @@ let closure_5 = async function _readFile(arg0) {
               if (!obj.isAndroid()) {
                 return closure_1_1(1148).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1378);
+              obj = closure_1_0(1379);
             }
             if ("cache" === arg0) {
               let DocumentsDirPath = closure_1_1(1148).getConstants().CacheDirPath;

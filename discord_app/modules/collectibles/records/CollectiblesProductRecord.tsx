@@ -1,13 +1,13 @@
-// === Module 6282: CollectiblesProductRecord ===
+// === Module 6313: CollectiblesProductRecord ===
 
-// Module 6282 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 2169 */;
+// Module 6313 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 2170 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 6283 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 6289 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 6314 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 6320 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(6284);
+const CollectiblesItemRecord = fn(6315);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } = CollectiblesItemRecord);
 let closure_7 = fn(1073).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1071);
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "channel_id", items: "en-SI", categorySkuId: "en-150", categoryWillUnpublishAt: "embed", isCategoryReward: false, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: null, isFirstParty: "en-Shaw" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "id", items: "<string:3511748795>", categorySkuId: "<string:1376133514>", categoryWillUnpublishAt: "<string:146483657>", isCategoryReward: "__sentry_template_values__", prices: "<string:961675520>", previewAssets: "<string:1359526767>", googleSkuIds: "<string:1375808805>", eligibleOffers: "<string:146481663>", variants: "<string:22156369>", bundledProducts: "<string:17032785>", isFirstParty: "<string:3144510290>" };
               let str;
               if (first != null) {
                 str = first.optionValue;

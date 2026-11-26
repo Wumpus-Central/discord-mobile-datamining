@@ -1,16 +1,16 @@
-// === Module 7579: CreatorMonetizationRestrictionsHooks ===
+// === Module 7610: CreatorMonetizationRestrictionsHooks ===
 
-// Module 7579 (CreatorMonetizationRestrictionsHooks)
-import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7580 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7581 */;
+// Module 7610 (CreatorMonetizationRestrictionsHooks)
+import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7611 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7612 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4937 */;
-import GuildStore from "GuildStore" /* 4883 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4968 */;
+import GuildStore from "GuildStore" /* 4914 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(4937).FetchState;
+const FetchState = fn(4968).FetchState;
 const Constants = fn(1071);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, GuildFeatures: closure_9 } = Constants);
 const size = fn(2);
@@ -95,8 +95,8 @@ export function useShouldHideGuildPurchaseEntryPoints(id2) {
     }
     let result = flag;
   } else {
-    result = tmp(4936).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
-    const tmpResult4 = tmp(4936);
+    result = tmp(4967).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
+    const tmpResult4 = tmp(4967);
   }
   const tmpResult3 = require("initialize");
 }
@@ -162,8 +162,8 @@ export function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
     }
     let result = flag;
   } else {
-    result = tmp(4936).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
-    const tmpResult4 = tmp(4936);
+    result = tmp(4967).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
+    const tmpResult4 = tmp(4967);
   }
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;

@@ -1,14 +1,14 @@
-// === Module 16149: useSettingSearchResults ===
+// === Module 16200: useSettingSearchResults ===
 
-// Module 16149 (useSettingSearchResults)
+// Module 16200 (useSettingSearchResults)
 import debounceDefault from "debounce" /* 551 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16143 */;
-import UserSettingSearchManagerDefault from "UserSettingSearchManager" /* 16150 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16194 */;
+import UserSettingSearchManagerDefault from "UserSettingSearchManager" /* 16201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2188 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16141 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 15974 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16192 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 16025 */;
 
 require = fn;
 let closure_8 = [];
@@ -35,10 +35,10 @@ export function useSettingSearchResults() {
     scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
     const found = scoredSearchResults.filter((setting) => {
       setting = setting.setting;
-      const isBlockedResult = scoredSearchResults(16144).isBlocked(setting, closure_0);
+      const isBlockedResult = scoredSearchResults(16195).isBlocked(setting, closure_0);
       let tmp3 = !isBlockedResult;
       if (!isBlockedResult) {
-        tmp3 = !stateFromStores(15975).SETTING_RENDERER_CONFIG[setting].unsearchable;
+        tmp3 = !stateFromStores(16026).SETTING_RENDERER_CONFIG[setting].unsearchable;
       }
       return tmp3;
     });

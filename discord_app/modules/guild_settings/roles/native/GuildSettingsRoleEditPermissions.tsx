@@ -1,28 +1,28 @@
-// === Module 20008: GuildSettingsRoleEditPermissions ===
+// === Module 20072: GuildSettingsRoleEditPermissions ===
 
-// Module 20008 (GuildSettingsRoleEditPermissions)
+// Module 20072 (GuildSettingsRoleEditPermissions)
 import nativeDefault from "native" /* 575 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4949 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import UserStore from "UserStore" /* 1386 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, Keyboard: metroImportDefault, SectionList: closure_8 } = get_ActivityIndicator);
-let isGuildOwner = fn(4879).isGuildOwner;
+let isGuildOwner = fn(4910).isGuildOwner;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { emptyState: { backgroundColor: "transparent", paddingTop: 40 }, sectionSeparator: { height: nativeDefault.space.PX_24 }, emptyStateText: null, subLabel: null };
 let obj3 = { height: nativeDefault.space.PX_24 };
 obj2.emptyStateText = { color: nativeDefault.colors.TEXT_DEFAULT };
@@ -78,17 +78,17 @@ export default function GuildSettingsRoleEditPermission(guild) {
       onClick: function handleTemplateOpen() {
           metroImportDefault.dismiss();
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(20009, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
+          obj.openLazy(asyncRequireImpl(20073, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
         },
       accessibilityRole: "button"
     };
     obj5.onTemplateOpen = obj6;
     obj4.children = intl.format(guild(1112).t.ZhSOBy, obj5);
-    tmp18Result = closure_14(guild(5603).Text, obj4);
+    tmp18Result = closure_14(guild(5634).Text, obj4);
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(18728).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(18791).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -101,9 +101,9 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(20006), { role }), , , ];
+  const children = [closure_14(role(20070), { role }), , , ];
   const obj7 = {
-    children: closure_14(guild(7375).SearchBar, {
+    children: closure_14(guild(7406).SearchBar, {
       size: "md",
       onChange: function handleSearchQuery(str) {
         closure_8(str);
@@ -190,7 +190,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     let tmp18Result4 = closure_14(closure_8, obj9);
   } else {
-    const obj10 = { Illustration: tmp27(8523).NoResultsAlt, style: null, bodyStyle: null, body: null };
+    const obj10 = { Illustration: tmp27(8565).NoResultsAlt, style: null, bodyStyle: null, body: null };
     ({ emptyState: obj11.style, emptyStateText: obj11.bodyStyle } = tmp);
     const intl2 = tmp27(1112).intl;
     const obj12 = { query };

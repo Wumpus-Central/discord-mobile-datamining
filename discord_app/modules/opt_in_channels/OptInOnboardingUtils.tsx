@@ -1,15 +1,15 @@
-// === Module 11987: OptInOnboardingUtils ===
+// === Module 12035: OptInOnboardingUtils ===
 
-// Module 11987 (OptInOnboardingUtils)
+// Module 12035 (OptInOnboardingUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import FlagUtils from "FlagUtils" /* 1404 */;
-import isOptInEnabled from "isOptInEnabled" /* 6944 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7429 */;
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7439 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4942 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import isOptInEnabled from "isOptInEnabled" /* 6975 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7460 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7470 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4973 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
 
 require = fn;
 function optIntoAllChannelsForExistingMember(id, arg1) {
@@ -43,10 +43,10 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   const obj2 = GuildOnboardingActionCreatorsDefault;
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
-let GuildChannelStore = fn(4942);
+let GuildChannelStore = fn(4973);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_4, GUILD_VOCAL_CHANNELS_KEY: hasOwnProperty } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const GuildMemberFlags = fn(4930).GuildMemberFlags;
+const GuildMemberFlags = fn(4961).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
 

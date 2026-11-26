@@ -1,22 +1,22 @@
-// === Module 17100: HexagonCampaignAppIconSection ===
+// === Module 17151: HexagonCampaignAppIconSection ===
 
-// Module 17100 (HexagonCampaignAppIconSection)
+// Module 17151 (HexagonCampaignAppIconSection)
 import nativeDefault from "native" /* 575 */;
-import _modDef4662 from "module_4662" /* 4662 */;
-import AppIconTypes from "AppIconTypes" /* 5038 */;
-import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16034 */;
-import HexagonCampaignDaysLeftBadgeDefault from "HexagonCampaignDaysLeftBadge" /* 16040 */;
-import AppIconDefault from "AppIcon" /* 16566 */;
+import _modDef4663 from "module_4663" /* 4663 */;
+import AppIconTypes from "AppIconTypes" /* 5069 */;
+import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16092 */;
+import HexagonCampaignDaysLeftBadgeDefault from "HexagonCampaignDaysLeftBadge" /* 16098 */;
+import AppIconDefault from "AppIcon" /* 16617 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const HexagonCampaignConstants = fn(5037);
+const HexagonCampaignConstants = fn(5068);
 ({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: hasOwnProperty, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: closure_6, HexagonCampaignPerk: metroImportDefault, HexagonCampaignPerkAvailability: closure_8 } = HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { section: { gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_16, paddingBottom: 0 }, header: null, row: null, icon: null, label: null, legal: null };
 let obj3 = { gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_16, paddingBottom: 0 };
 obj2.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -38,22 +38,22 @@ export default function HexagonCampaignAppIconSection(isPending) {
   }
   const onSelect = isPending.onSelect;
   const tmp = closure_11();
-  const hexagonCampaignPerkAvailability = onSelect(5042).useHexagonCampaignPerkAvailability(constants.APP_ICON, "HexagonCampaignAppIconSection");
-  const obj = onSelect(5042);
-  const trackHexagonCampaignContentViewed = onSelect(15983).useTrackHexagonCampaignContentViewed(onSelect(6843).QuestContent.APP_ICON_SETTINGS, onSelect(15983).HexagonCampaignContentSurface.APP_ICON_PICKER, true);
-  const tmp7 = isPending.currentAppIcon === onSelect(5038).LimitedTimeAppIconIds.HEXAGON;
-  const obj2 = onSelect(15983);
-  const radioA11yNative = onSelect(5074).useRadioA11yNative({ selected: tmp7, busy: flag });
+  const hexagonCampaignPerkAvailability = onSelect(5073).useHexagonCampaignPerkAvailability(constants.APP_ICON, "HexagonCampaignAppIconSection");
+  const obj = onSelect(5073);
+  const trackHexagonCampaignContentViewed = onSelect(16060).useTrackHexagonCampaignContentViewed(onSelect(6874).QuestContent.APP_ICON_SETTINGS, onSelect(16060).HexagonCampaignContentSurface.APP_ICON_PICKER, true);
+  const tmp7 = isPending.currentAppIcon === onSelect(5069).LimitedTimeAppIconIds.HEXAGON;
+  const obj2 = onSelect(16060);
+  const radioA11yNative = onSelect(5105).useRadioA11yNative({ selected: tmp7, busy: flag });
   const intl = onSelect(1112).intl;
-  const stringResult = intl.string(_modDef4662.JC4Pii);
-  const obj3 = onSelect(5074);
+  const stringResult = intl.string(_modDef4663.JC4Pii);
+  const obj3 = onSelect(5105);
   const obj5 = { style: tmp.section, children: null };
   const obj6 = { style: tmp.header, children: null };
-  const token = onSelect(5576).useToken(nativeDefault.colors.WHITE);
+  const token = onSelect(5607).useToken(nativeDefault.colors.WHITE);
   const obj7 = { variant: "body-sm/semibold", color: "text-subtle", children: null };
   const intl2 = onSelect(1112).intl;
-  obj7.children = intl2.string(_modDef4662["2UCcmW"]);
-  items = [closure_9(onSelect(5603).Text, obj7), ];
+  obj7.children = intl2.string(_modDef4663["2UCcmW"]);
+  items = [closure_9(onSelect(5634).Text, obj7), ];
   let tmp14Result = hexagonCampaignPerkAvailability !== constants2.LOCKED;
   if (tmp14Result) {
     const obj8 = { perk: constants.APP_ICON };
@@ -62,7 +62,7 @@ export default function HexagonCampaignAppIconSection(isPending) {
   items[1] = tmp14Result;
   obj6.children = items;
   const items1 = [closure_10(closure_4, obj6), ];
-  const obj9 = { theme: onSelect(16033).ThemeTypes.DARK, children: null };
+  const obj9 = { theme: onSelect(16091).ThemeTypes.DARK, children: null };
   const obj10 = {
     onPress() {
       return onSelect(AppIconTypes.LimitedTimeAppIconIds.HEXAGON);
@@ -73,34 +73,34 @@ export default function HexagonCampaignAppIconSection(isPending) {
   obj10.accessibilityLabel = stringResult;
   const items2 = [closure_9(HexagonCampaignPromoGradientDefault, { angle: 164 }), , , ];
   const obj11 = { id: null, size: 48, style: null };
-  const obj4 = onSelect(5576);
-  obj11.id = onSelect(5038).LimitedTimeAppIconIds.HEXAGON;
+  const obj4 = onSelect(5607);
+  obj11.id = onSelect(5069).LimitedTimeAppIconIds.HEXAGON;
   obj11.style = tmp.icon;
   items2[1] = closure_9(AppIconDefault, obj11);
-  items2[2] = closure_9(onSelect(5603).Text, { variant: "body-md/semibold", color: "text-strong", style: tmp.label, children: stringResult });
+  items2[2] = closure_9(onSelect(5634).Text, { variant: "body-md/semibold", color: "text-strong", style: tmp.label, children: stringResult });
   if (flag) {
     const obj13 = { size: "small", color: token };
-    let tmp14Result2 = closure_9(tmp2(7016).ActivityIndicator, obj13);
+    let tmp14Result2 = closure_9(tmp2(7047).ActivityIndicator, obj13);
   } else {
     const obj14 = { selected: tmp7 };
-    tmp14Result2 = closure_9(tmp2(7223).FormRadio, obj14);
+    tmp14Result2 = closure_9(tmp2(7254).FormRadio, obj14);
   }
   const obj15 = { children: null };
   items2[3] = tmp14Result2;
   obj10.children = items2;
   obj9.children = closure_10(closure_3, obj10);
-  const items3 = [closure_9(onSelect(5073).ThemeContextProvider, obj9), ];
+  const items3 = [closure_9(onSelect(5104).ThemeContextProvider, obj9), ];
   const obj16 = { style: tmp.legal, children: null };
   const obj17 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1112).intl;
-  obj17.children = intl3.format(_modDef4662.y2YmJv, {
+  obj17.children = intl3.format(_modDef4663.y2YmJv, {
     nonPremiumEndDate,
     premiumEndDate,
     learnMoreHook(children, arg1) {
-      return closure_1_9(onSelect(5603).Text, { variant: "body-xs/medium", color: "text-link", accessibilityRole: "link", onPress: onSelect(16036).openHexagonCampaignLearnMore, children }, arg1);
+      return closure_1_9(onSelect(5634).Text, { variant: "body-xs/medium", color: "text-link", accessibilityRole: "link", onPress: onSelect(16094).openHexagonCampaignLearnMore, children }, arg1);
     }
   });
-  obj16.children = closure_9(onSelect(5603).Text, obj17);
+  obj16.children = closure_9(onSelect(5634).Text, obj17);
   items3[1] = closure_9(closure_4, obj16);
   obj15.children = items3;
   items1[1] = closure_10(closure_4, obj15);

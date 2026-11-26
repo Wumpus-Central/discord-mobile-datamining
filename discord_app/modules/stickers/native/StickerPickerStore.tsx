@@ -1,6 +1,6 @@
-// === Module 10788: StickerPickerStore ===
+// === Module 10834: StickerPickerStore ===
 
-// Module 10788 (StickerPickerStore)
+// Module 10834 (StickerPickerStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

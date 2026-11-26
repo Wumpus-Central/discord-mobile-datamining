@@ -1,6 +1,6 @@
-// === Module 12754: ? ===
+// === Module 12799: ? ===
 
-// Module 12754
+// Module 12799
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_13_knight_iron.webp.js");

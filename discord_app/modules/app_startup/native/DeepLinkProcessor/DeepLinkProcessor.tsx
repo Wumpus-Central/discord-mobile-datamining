@@ -1,7 +1,7 @@
-// === Module 20324: DeepLinkProcessor ===
+// === Module 20388: DeepLinkProcessor ===
 
-// Module 20324 (DeepLinkProcessor)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
+// Module 20388 (DeepLinkProcessor)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_startup/native/DeepLinkProcessor/DeepLinkProcessor.tsx");

@@ -1,16 +1,16 @@
-// === Module 17050: InAppNotificationsSetting ===
+// === Module 17101: InAppNotificationsSetting ===
 
-// Module 17050 (InAppNotificationsSetting)
+// Module 17101 (InAppNotificationsSetting)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _modDef3206 from "module_3206" /* 3206 */;
-import UserSettings from "UserSettings" /* 4837 */;
-import SettingsConstants from "SettingsConstants" /* 9513 */;
-import FocusModeUtils from "FocusModeUtils" /* 10572 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15802 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17051 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11914 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _modDef3207 from "module_3207" /* 3207 */;
+import UserSettings from "UserSettings" /* 4868 */;
+import SettingsConstants from "SettingsConstants" /* 9555 */;
+import FocusModeUtils from "FocusModeUtils" /* 10617 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15853 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17102 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11962 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -57,13 +57,13 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef3206.sH5mu9);
+  return intl.string(_modDef3207.sH5mu9);
 };
 obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
   const intl = util.intl;
   const string = intl.string;
-  const tmp2 = _modDef3206;
+  const tmp2 = _modDef3207;
   if (focusModeEnabled) {
     let stringResult = string(tmp2.Zt0MV8);
   } else {

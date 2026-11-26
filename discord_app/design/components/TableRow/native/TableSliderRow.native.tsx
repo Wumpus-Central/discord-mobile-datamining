@@ -1,10 +1,10 @@
-// === Module 14892: TableSliderRow ===
+// === Module 14945: TableSliderRow ===
 
-// Module 14892 (TableSliderRow)
-import Text_Text from "Text/Text" /* 5603 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6112 */;
-import Card from "Card" /* 6114 */;
-import Slider from "Slider" /* 14893 */;
+// Module 14945 (TableSliderRow)
+import Text_Text from "Text/Text" /* 5634 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6143 */;
+import Card from "Card" /* 6145 */;
+import Slider from "Slider" /* 10398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }, label: { flexShrink: 1 }, slider: { marginStart: -4, marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableSliderRow.native.tsx");

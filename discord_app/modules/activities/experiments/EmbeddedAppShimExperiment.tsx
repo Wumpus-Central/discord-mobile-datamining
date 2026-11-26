@@ -1,7 +1,7 @@
-// === Module 10192: EmbeddedAppShimExperiment ===
+// === Module 10234: EmbeddedAppShimExperiment ===
 
-// Module 10192 (EmbeddedAppShimExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 10234 (EmbeddedAppShimExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-embedded-app-shim-v2", kind: "user", defaultConfig: { enabled: false }, variations: null };

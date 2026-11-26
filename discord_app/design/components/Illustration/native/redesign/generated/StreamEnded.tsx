@@ -1,9 +1,9 @@
-// === Module 19481: StreamEnded ===
+// === Module 19544: StreamEnded ===
 
-// Module 19481 (StreamEnded)
-import shared from "shared" /* 5019 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import _mod8524 from "module_8524" /* 8524 */;
+// Module 19544 (StreamEnded)
+import shared from "shared" /* 5050 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import _mod8566 from "module_8566" /* 8566 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,43 +14,43 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamEnded.tsx");
 
 export function getStreamEndedSource(theme) {
-  return _mod8524.getIllustrationSource(theme, {
+  return _mod8566.getIllustrationSource(theme, {
     dark() {
-      return require("module_19482");
+      return require("module_19545");
     },
     darker() {
-      return require("module_19483");
+      return require("module_19546");
     }
   });
 }
 export function useStreamEndedSource() {
   const obj = shared;
-  return _mod8524.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8566.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19482");
+      return require("module_19545");
     },
     darker() {
-      return require("module_19483");
+      return require("module_19546");
     }
   });
 }
 export function StreamEnded(arg0) {
   const obj = shared;
-  const illustrationSource = _mod8524.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8566.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19482");
+      return require("module_19545");
     },
     darker() {
-      return require("module_19483");
+      return require("module_19546");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_19482");
+      return require("module_19545");
     },
     darker() {
-      return require("module_19483");
+      return require("module_19546");
     }
   };
   const merged = Object.assign(arg0);

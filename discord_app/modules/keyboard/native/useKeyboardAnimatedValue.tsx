@@ -1,28 +1,28 @@
-// === Module 7018: useKeyboardAnimatedValue ===
+// === Module 7049: useKeyboardAnimatedValue ===
 
-// Module 7018 (useKeyboardAnimatedValue)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 7019 */;
+// Module 7049 (useKeyboardAnimatedValue)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 7050 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Easing = fn(1653).Easing;
+const Easing = fn(1654).Easing;
 const bezierResult = Easing.bezier(0.2, 0, 0, 1);
 let c3 = bezierResult;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/useKeyboardAnimatedValue.tsx");
 
-export default function useKeyboardAnimatedValue(UNDETERMINED) {
-  _require = UNDETERMINED;
+export default function useKeyboardAnimatedValue(point) {
+  _require = point;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  const sharedValue = require("module_1653").useSharedValue(UNDETERMINED);
-  items = [sharedValue, UNDETERMINED, flag];
+  const sharedValue = require("module_1654").useSharedValue(point);
+  items = [sharedValue, point, flag];
   const effect = sharedValue.useEffect(() => {
     if (flag) {
       if (!obj.isAndroid()) {

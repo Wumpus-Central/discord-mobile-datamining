@@ -1,6 +1,6 @@
-// === Module 15044: DatagramEvent ===
+// === Module 15094: DatagramEvent ===
 
-// Module 15044 (DatagramEvent)
+// Module 15094 (DatagramEvent)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/webtransport_datagrams/DatagramEvent.tsx");

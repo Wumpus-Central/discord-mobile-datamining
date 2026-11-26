@@ -1,19 +1,19 @@
-// === Module 17540: ParentalControlsMessageRequests ===
+// === Module 17597: ParentalControlsMessageRequests ===
 
-// Module 17540 (ParentalControlsMessageRequests)
+// Module 17597 (ParentalControlsMessageRequests)
 import util from "util" /* 1112 */;
-import _modDef2846 from "module_2846" /* 2846 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6797 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7836 */;
-import useSelectedTeen from "useSelectedTeen" /* 8175 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16272 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16273 */;
-import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16277 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 17526 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8170 */;
+import _modDef2847 from "module_2847" /* 2847 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6828 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7870 */;
+import useSelectedTeen from "useSelectedTeen" /* 8217 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16323 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16324 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16328 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 17583 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8212 */;
 
 require = fn;
-const SettingBuilders = fn(11914);
+const SettingBuilders = fn(11962);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -21,9 +21,9 @@ const toggle = SettingBuilders.createToggle({
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2846["7aYkh1"]);
+    return intl.string(_modDef2847["7aYkh1"]);
   },
-  parent: fn(9513).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(9555).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();

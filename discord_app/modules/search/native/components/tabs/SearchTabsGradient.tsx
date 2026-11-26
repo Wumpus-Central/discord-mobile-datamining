@@ -1,9 +1,9 @@
-// === Module 18983: SearchTabsGradient ===
+// === Module 19046: SearchTabsGradient ===
 
-// Module 18983 (SearchTabsGradient)
+// Module 19046 (SearchTabsGradient)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5009 */;
-import TabsGradientDefault from "TabsGradient" /* 13747 */;
+import ColorUtils from "ColorUtils" /* 5040 */;
+import TabsGradientDefault from "TabsGradient" /* 13799 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/tabs
 
 export default function SearchTabsGradient(state) {
   let token;
-  token = token(5576).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  token = token(5607).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   items = [token];
   colors = noop.useMemo(() => {
     items = [token, ColorUtils.hexWithOpacity(token, 0)];

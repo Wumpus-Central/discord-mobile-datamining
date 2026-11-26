@@ -1,26 +1,26 @@
-// === Module 11948: conjureSharedProjectSurfaces ===
+// === Module 11996: conjureSharedProjectSurfaces ===
 
-// Module 11948 (conjureSharedProjectSurfaces)
+// Module 11996 (conjureSharedProjectSurfaces)
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6904 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;
 import size from "module_2" /* 2 */;
 
-const items = [ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL, _modDef4244.bHLrO8];
+const items = [ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL, _modDef4245.bHLrO8];
 const items1 = [items, , , , , , , ];
-const items2 = [ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY, _modDef4244["hp+8nc"]];
+const items2 = [ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY, _modDef4245["hp+8nc"]];
 items1[1] = items2;
-const items3 = [ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL, _modDef4244["4V2QWl"]];
+const items3 = [ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL, _modDef4245["4V2QWl"]];
 items1[2] = items3;
-const items4 = [ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET, _modDef4244.oJ06Po];
+const items4 = [ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET, _modDef4245.oJ06Po];
 items1[3] = items4;
-const items5 = [ConjureProjectTypes.ConjureSupportedSurface.OVERLAY, _modDef4244.Qbnej2];
+const items5 = [ConjureProjectTypes.ConjureSupportedSurface.OVERLAY, _modDef4245.Qbnej2];
 items1[4] = items5;
-const items6 = [ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS, _modDef4244.pEwndv];
+const items6 = [ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS, _modDef4245.pEwndv];
 items1[5] = items6;
-const items7 = [ConjureProjectTypes.ConjureSupportedSurface.BOT, _modDef4244.HWOzBW];
+const items7 = [ConjureProjectTypes.ConjureSupportedSurface.BOT, _modDef4245.HWOzBW];
 items1[6] = items7;
-const items8 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD, _modDef4244.gsIXM9];
+const items8 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD, _modDef4245.gsIXM9];
 items1[7] = items8;
 const items9 = [ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL, ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY, ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL];
 const items10 = ["app", items9];
@@ -37,7 +37,7 @@ items11[3] = items17;
 const items18 = [ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD];
 const items19 = ["automod", items18];
 items11[4] = items19;
-const obj = { app: _modDef4244.BM4Ymz, overlay: _modDef4244["0mGHfU"], profile_widget: _modDef4244.Jipr29, bot: _modDef4244.EbvC13, automod: _modDef4244.tiMvei };
+const obj = { app: _modDef4245.BM4Ymz, overlay: _modDef4245["0mGHfU"], profile_widget: _modDef4245.Jipr29, bot: _modDef4245.EbvC13, automod: _modDef4245.tiMvei };
 const result = size.fileFinishedImporting("modules/conjure/share/conjureSharedProjectSurfaces.tsx");
 
 export function conjureSharedProjectSurfaceLabels(supported_surfaces) {

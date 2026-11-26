@@ -1,14 +1,14 @@
-// === Module 13566: UserProfileAlertUtils ===
+// === Module 13618: UserProfileAlertUtils ===
 
-// Module 13566 (UserProfileAlertUtils)
-import useAlertStore from "useAlertStore" /* 6017 */;
-import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 13567 */;
-import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 13568 */;
-import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 13569 */;
-import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 13570 */;
-import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 13571 */;
-import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 13572 */;
-import UserProfileConfirmRemoveWidgetDefault from "UserProfileConfirmRemoveWidget" /* 13573 */;
+// Module 13618 (UserProfileAlertUtils)
+import useAlertStore from "useAlertStore" /* 6048 */;
+import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 13619 */;
+import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 13620 */;
+import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 13621 */;
+import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 13622 */;
+import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 13623 */;
+import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 13624 */;
+import UserProfileConfirmRemoveWidgetDefault from "UserProfileConfirmRemoveWidget" /* 13625 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

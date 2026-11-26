@@ -1,8 +1,8 @@
-// === Module 11214: OrderSigningDeferral ===
+// === Module 11260: OrderSigningDeferral ===
 
-// Module 11214 (OrderSigningDeferral)
-import Stripe3DSChallenge from "Stripe3DSChallenge" /* 11215 */;
-import StripeNextAction from "StripeNextAction" /* 11216 */;
+// Module 11260 (OrderSigningDeferral)
+import Stripe3DSChallenge from "Stripe3DSChallenge" /* 11261 */;
+import StripeNextAction from "StripeNextAction" /* 11262 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -32,7 +32,7 @@ let closure_8 = async function _performSigningDeferralAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -87,14 +87,14 @@ let closure_8 = async function _performSigningDeferralAction(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp15) {
       c1 = tmp;
       throw tmp15;
     }
   }
 };
-const OrderStatus = fn(5729).OrderStatus;
+const OrderStatus = fn(5760).OrderStatus;
 const prototype = function PaymentRedirectUrlMissingError() {
   const tmp2 = new tmp("Payment redirect context has no redirect url", new.target);
   tmp2.name = "PaymentRedirectUrlMissing";

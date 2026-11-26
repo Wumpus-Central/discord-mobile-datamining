@@ -1,12 +1,12 @@
-// === Module 7704: oauth2/actions ===
+// === Module 7738: oauth2/actions ===
 
-// Module 7704 (oauth2/actions)
+// Module 7738 (oauth2/actions)
 import utils_PathUtils from "utils/PathUtils" /* 1080 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6808 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 
 require = fn;
 function getLocationContextServer() {
@@ -48,7 +48,7 @@ let closure_9 = async function _authorize(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -152,7 +152,7 @@ let closure_10 = async function _fetchAuthorization(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -237,7 +237,7 @@ let closure_11 = async function _startSamsungAuthorization() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -270,7 +270,7 @@ let closure_11 = async function _startSamsungAuthorization() {
           return obj;
         } else {
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp5) {
         c5 = tmp;

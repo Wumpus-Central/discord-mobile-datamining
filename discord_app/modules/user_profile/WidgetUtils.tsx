@@ -1,19 +1,19 @@
-// === Module 14518: WidgetUtils ===
+// === Module 14570: WidgetUtils ===
 
-// Module 14518 (WidgetUtils)
+// Module 14570 (WidgetUtils)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
-import utils from "utils" /* 5641 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6140 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 6142 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 6144 */;
-import useGame2 from "useGame" /* 8677 */;
-import WidgetGameTag from "WidgetGameTag" /* 14508 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14520 */;
+import utils from "utils" /* 5672 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6171 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 6173 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 6175 */;
+import useGame2 from "useGame" /* 8719 */;
+import WidgetGameTag from "WidgetGameTag" /* 14560 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14572 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1386 */;
-import UserProfileStore from "UserProfileStore" /* 6132 */;
-import WidgetStore from "WidgetStore" /* 14513 */;
+import UserStore from "UserStore" /* 1387 */;
+import UserProfileStore from "UserProfileStore" /* 6163 */;
+import WidgetStore from "WidgetStore" /* 14565 */;
 
 require = fn;
 function getCurrentWidgets() {
@@ -139,8 +139,8 @@ function reorderMovableWidgets(isBoardWidget, arg1, arg2) {
     }
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(6141).WIDGET_TITLES_BY_TYPE;
-let closure_8 = fn(14519).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(6172).WIDGET_TITLES_BY_TYPE;
+let closure_8 = fn(14571).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -926,6 +926,38 @@ export function reorderGamesInWidget(widgetType, arg1, arg2) {
           }
         }
       }
+    }
+  }
+}
+export function setGameOrderInWidget(widgetType, arr) {
+  const tmp = findGameWidget(widgetType);
+  if (null != tmp) {
+    if (null != tmp.games) {
+      const _Map = Map;
+      const map = new Map(applyDefault.uniqBy(tmp.games, "gameId").map((gameId) => {
+        items = [gameId.gameId, gameId];
+        return items;
+      }));
+      const flatMapResult = arr.flatMap((item) => {
+        items = map.get(item);
+        if (items == null) {
+          items = [];
+        }
+        return items;
+      });
+      if (flatMapResult.length === map.size) {
+        const _Set = Set;
+        set = new Set(arr);
+        if (set.size === arr.length) {
+          const obj = {};
+          const merged = Object.assign(tmp);
+          obj.games = flatMapResult;
+          const baseGameWidget = new UserProfileGameWidgetTypes.BaseGameWidget(obj);
+          WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(baseGameWidget));
+          const tmp15Result = WidgetActionCreatorsDefault;
+        }
+      }
+      const uniqByResult = applyDefault.uniqBy(tmp.games, "gameId");
     }
   }
 }

@@ -1,15 +1,15 @@
-// === Module 20240: MessageSendFailureNotificationManager ===
+// === Module 20304: MessageSendFailureNotificationManager ===
 
-// Module 20240 (MessageSendFailureNotificationManager)
+// Module 20304 (MessageSendFailureNotificationManager)
 import util from "util" /* 1112 */;
-import PushNotificationDefault from "PushNotification" /* 10235 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10581 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10583 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserStore from "UserStore" /* 1386 */;
-import AppStateStore from "AppStateStore" /* 2118 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+import PushNotificationDefault from "PushNotification" /* 10277 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10626 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10628 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
+import UserStore from "UserStore" /* 1387 */;
+import AppStateStore from "AppStateStore" /* 2119 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
 function handleMessageSendFailure(shouldNotify) {
@@ -76,7 +76,7 @@ function handleMessageCreate(message) {
 }
 const Constants = fn(1071);
 ({ InAppNotificationTypes: metroImportDefault, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(7694).LocalNotificationTypes;
+const LocalNotificationTypes = fn(7728).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

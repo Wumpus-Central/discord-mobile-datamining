@@ -1,19 +1,19 @@
-// === Module 15356: Menu ===
+// === Module 15406: Menu ===
 
-// Module 15356 (Menu)
+// Module 15406 (Menu)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5021 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6078 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6079 */;
-import PassthroughTouchViewDefault from "PassthroughTouchView" /* 15359 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6110 */;
+import PassthroughTouchViewDefault from "PassthroughTouchView" /* 15409 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,8 +25,8 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1071).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25 };
-let obj = { duration: 250, easing: fn(15357).STANDARD_EASING };
-const createStyles = fn(5012);
+let obj = { duration: 250, easing: fn(15407).STANDARD_EASING };
+const createStyles = fn(5043);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -35,7 +35,7 @@ obj2.backdrop = obj4;
 obj2.menu = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, width: 220 };
 let closure_10 = createStyles.createStyles(obj2);
 const context = noop.createContext({ menuClose: NOOP, menuDismiss: NOOP });
-let items = [{ code: "(function measureButtonRef_MenuTsx1(ref,setDimensions){let[measure,scheduleOnRN]=this.__closure;const measurements=measure(ref);if(measurements==null)return;scheduleOnRN(setDimensions,measurements);})" }, fn(1653).measure, fn(1706).scheduleOnRN];
+let items = [{ code: "(function measureButtonRef_MenuTsx1(ref,setDimensions){let[measure,scheduleOnRN]=this.__closure;const measurements=measure(ref);if(measurements==null)return;scheduleOnRN(setDimensions,measurements);})" }, fn(1654).measure, fn(1707).scheduleOnRN];
 let closure_129_0;
 let closure_129_1;
 [tmp5, tmp6, tmp7] = items;
@@ -92,11 +92,11 @@ export function Menu(toggleButtonRef) {
   importDefault = noop.useRef(null);
   [size2, _slicedToArray] = noop.useState(null);
   dependencyMap = size2;
-  const sharedValue = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(0);
   noop = sharedValue;
-  let obj2 = require("module_1653");
+  let obj2 = require("module_1654");
   const tmp5 = _slicedToArray;
-  const sharedValue1 = require("module_1653").useSharedValue({ width: 0, height: 0 });
+  const sharedValue1 = require("module_1654").useSharedValue({ width: 0, height: 0 });
   c5 = sharedValue1;
   items = [toggleButtonRef, size2];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -109,7 +109,7 @@ export function Menu(toggleButtonRef) {
       tmp3 = null == c2;
     }
     if (tmp3) {
-      _mod1706.scheduleOnUI(measureButtonRef, ref, c3);
+      _mod1707.scheduleOnUI(measureButtonRef, ref, c3);
     }
   }, items);
   if (onClose == null) {
@@ -118,7 +118,7 @@ export function Menu(toggleButtonRef) {
   let items1 = [onClose, sharedValue];
   menuClose = obj.useCallback(() => {
     obj = timing_timing;
-    items = [closure_14, _mod1706.scheduleOnRN, onClose];
+    items = [closure_14, _mod1707.scheduleOnRN, onClose];
     c0 = undefined;
     c1 = undefined;
     [tmp3, tmp4, tmp5] = items;
@@ -146,8 +146,8 @@ export function Menu(toggleButtonRef) {
   useBackPressHandlerDefault(callback2);
   const items4 = [menuClose, callback1];
   const memo = obj.useMemo(() => ({ menuClose, menuDismiss: callback1 }), items4);
-  const obj3 = require("module_1653");
-  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(15358).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+  const obj3 = require("module_1654");
+  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(15408).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
   if ("left" === position) {
     let str2 = "column";
   } else {
@@ -231,7 +231,7 @@ export function Menu(toggleButtonRef) {
   const tmp2Result = require("Shadows");
   [tmp27, tmp28, tmp29] = tmp5(items5, 3);
   const tmp5Result = tmp5(items5, 3);
-  const items6 = [closure_15, sharedValue, noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled, require("module_1653").interpolate, tmp28, sharedValue1, offsetAnimated, tmp29];
+  const items6 = [closure_15, sharedValue, noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled, require("module_1654").interpolate, tmp28, sharedValue1, offsetAnimated, tmp29];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -325,16 +325,16 @@ export function Menu(toggleButtonRef) {
   MenuTsx4.__closure = items7;
   MenuTsx4.__workletHash = 14672287725499;
   MenuTsx4.__initData = tmp30;
-  const animatedStyle = require("module_1653").useAnimatedStyle(MenuTsx4);
+  const animatedStyle = require("module_1654").useAnimatedStyle(MenuTsx4);
   let obj5 = { style: tmp.backdrop, accessibilityViewIsModal: true, importantForAccessibility: "yes", onTouchDown: callback1, onAccessibilityEscape: callback1, children: null };
-  const tmp2Result2 = require("module_1653");
+  const tmp2Result2 = require("module_1654");
   let obj6 = {
     accessibilityRole: "list",
     style: null,
     onLayout: function handleOpen(nativeEvent) {
       const size = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
       const result = _undefined2.set(size);
-      items = [closure_13, _mod1706.scheduleOnRN, c6];
+      items = [closure_13, _mod1707.scheduleOnRN, c6];
       c0 = undefined;
       c1 = undefined;
       [tmp4, tmp5, tmp6] = items;
@@ -369,6 +369,6 @@ export function Menu(toggleButtonRef) {
   });
   obj7.children = onClose(context.Provider, obj8);
   obj6.children = onClose(c5, obj7);
-  obj5.children = onClose(_modDef1653.View, obj6);
+  obj5.children = onClose(_modDef1654.View, obj6);
   return onClose(PassthroughTouchViewDefault, obj5);
 }

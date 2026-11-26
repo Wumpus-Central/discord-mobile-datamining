@@ -1,19 +1,19 @@
-// === Module 17534: InGameDMsSetting ===
+// === Module 17591: InGameDMsSetting ===
 
-// Module 17534 (InGameDMsSetting)
+// Module 17591 (InGameDMsSetting)
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import UserSettings from "UserSettings" /* 4837 */;
+import UserSettings from "UserSettings" /* 4868 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11914);
+const SettingBuilders = fn(11962);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
   },
-  parent: fn(9513).MobileUserSettings.CONNECTED_GAMES,
+  parent: fn(9555).MobileUserSettings.CONNECTED_GAMES,
   useOptions: function useInGameDMsSettingOptions() {
     return noop.useMemo(() => {
       const obj = { value: preloaded_user_settings.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL, label: null };

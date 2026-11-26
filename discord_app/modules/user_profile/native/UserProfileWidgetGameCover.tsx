@@ -1,12 +1,12 @@
-// === Module 14533: UserProfileWidgetGameCover ===
+// === Module 14585: UserProfileWidgetGameCover ===
 
-// Module 14533 (UserProfileWidgetGameCover)
+// Module 14585 (UserProfileWidgetGameCover)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14532 */;
-import GameCoverImageDefault from "GameCoverImage" /* 14534 */;
-import UserProfileWidgetRemoveGameButtonDefault from "UserProfileWidgetRemoveGameButton" /* 14535 */;
-import useWidgetGamePressDefault from "useWidgetGamePress" /* 14536 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14584 */;
+import GameCoverImageDefault from "GameCoverImage" /* 14586 */;
+import UserProfileWidgetRemoveGameButtonDefault from "UserProfileWidgetRemoveGameButton" /* 14587 */;
+import useWidgetGamePressDefault from "useWidgetGamePress" /* 14588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { removeGameButton: { position: "absolute", top: nativeDefault.space.PX_4, end: nativeDefault.space.PX_4 } };
 let closure_8 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function UserProfileWidgetGameCoverContent(game) {

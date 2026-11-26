@@ -1,26 +1,26 @@
-// === Module 13002: RecommendationsBanner ===
+// === Module 13054: RecommendationsBanner ===
 
-// Module 13002 (RecommendationsBanner)
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 6131 */;
-import useAvatarColorDefault from "useAvatarColor" /* 6338 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 9468 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10209 */;
+// Module 13054 (RecommendationsBanner)
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 6162 */;
+import useAvatarColorDefault from "useAvatarColor" /* 6369 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 9510 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10251 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1405 */;
+import UserRecord from "UserRecord" /* 1406 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(12095);
-  heroMediaDimensions = heroMediaDimensions(12994).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(12145);
+  heroMediaDimensions = heroMediaDimensions(13046).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   items = [heroMediaDimensions, tmp4];

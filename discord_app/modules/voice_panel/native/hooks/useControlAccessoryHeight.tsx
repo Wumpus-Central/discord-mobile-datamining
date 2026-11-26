@@ -1,7 +1,7 @@
-// === Module 19525: useControlAccessoryHeight ===
+// === Module 19588: useControlAccessoryHeight ===
 
-// Module 19525 (useControlAccessoryHeight)
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19496 */;
+// Module 19588 (useControlAccessoryHeight)
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19559 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ export default function useControlAccessoryHeight() {
   const channelId = sharedValue1.useContext(require("VoicePanelStateContext")).channelId;
   const isConnectingOrConnectedToConsole = require("useConsoleConnectingInfo")(channelId).isConnectingOrConnectedToConsole;
   _require = isConnectingOrConnectedToConsole;
-  const sharedValue = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(0);
   items = [sharedValue, isConnectingOrConnectedToConsole];
   const effect = sharedValue1.useEffect(() => {
     let num = 0;
@@ -24,11 +24,11 @@ export default function useControlAccessoryHeight() {
     }
     const result = _undefined2.set(num);
   }, items);
-  const obj = require("module_1653");
+  const obj = require("module_1654");
   shouldShowFloatingCTA = require("VoicePanelFloatingCTAUtils").useShouldShowFloatingCTA(channelId);
   const obj2 = require("VoicePanelFloatingCTAUtils");
-  sharedValue1 = require("module_1653").useSharedValue(0);
-  const obj3 = require("module_1653");
+  sharedValue1 = require("module_1654").useSharedValue(0);
+  const obj3 = require("module_1654");
   const floatingCTATotalViewHeight = require("VoicePanelFloatingCTAContainer").getFloatingCTATotalViewHeight();
   const items1 = [sharedValue1, shouldShowFloatingCTA, floatingCTATotalViewHeight];
   const effect1 = sharedValue1.useEffect(() => {
@@ -51,5 +51,5 @@ export default function useControlAccessoryHeight() {
   useControlAccessoryHeightTsx1.__closure = items3;
   useControlAccessoryHeightTsx1.__workletHash = 1979848822852;
   useControlAccessoryHeightTsx1.__initData = tmp7;
-  return require("module_1653").useDerivedValue(useControlAccessoryHeightTsx1);
+  return require("module_1654").useDerivedValue(useControlAccessoryHeightTsx1);
 };

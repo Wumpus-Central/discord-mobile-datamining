@@ -1,12 +1,12 @@
-// === Module 8437: EditGuildEventUtils ===
+// === Module 8479: EditGuildEventUtils ===
 
-// Module 8437 (EditGuildEventUtils)
-import ScheduleUtils from "ScheduleUtils" /* 8424 */;
-import EntityUtils from "EntityUtils" /* 8438 */;
+// Module 8479 (EditGuildEventUtils)
+import ScheduleUtils from "ScheduleUtils" /* 8466 */;
+import EntityUtils from "EntityUtils" /* 8480 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4867);
+const GuildScheduledEventsConstants = fn(4898);
 ({ GuildScheduledEventEntityTypes: c3, GuildScheduledEventStatus: closure_4, GuildScheduledEventPrivacyLevel: hasOwnProperty, FAKE_EVENT_ID: closure_6 } = GuildScheduledEventsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/EditGuildEventUtils.tsx");

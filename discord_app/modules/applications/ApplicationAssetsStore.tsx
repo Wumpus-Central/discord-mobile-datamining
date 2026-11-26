@@ -1,6 +1,6 @@
-// === Module 7621: ApplicationAssetsStore ===
+// === Module 7652: ApplicationAssetsStore ===
 
-// Module 7621 (ApplicationAssetsStore)
+// Module 7652 (ApplicationAssetsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

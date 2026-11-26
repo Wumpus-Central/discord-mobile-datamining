@@ -1,7 +1,7 @@
-// === Module 8029: AppStoreAgeSignalActionCreators ===
+// === Module 8075: AppStoreAgeSignalActionCreators ===
 
-// Module 8029 (AppStoreAgeSignalActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1284 */;
+// Module 8075 (AppStoreAgeSignalActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -29,7 +29,7 @@ let closure_6 = async function _requestAgeSignalChallenge() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ let closure_6 = async function _requestAgeSignalChallenge() {
             }
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp12) {
         c4 = tmp;
@@ -121,7 +121,7 @@ let closure_8 = async function _submitAgeSignal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

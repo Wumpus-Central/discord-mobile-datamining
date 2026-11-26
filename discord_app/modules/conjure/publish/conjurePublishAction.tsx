@@ -1,10 +1,10 @@
-// === Module 11435: conjurePublishAction ===
+// === Module 11482: conjurePublishAction ===
 
-// Module 11435 (conjurePublishAction)
+// Module 11482 (conjurePublishAction)
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 11410 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 11428 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 11457 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 11475 */;
 import size from "module_2" /* 2 */;
 
 function resolveConjurePublishAction(input) {
@@ -57,7 +57,7 @@ function resolveConjurePublishAction(input) {
         str3 = "";
       }
       const obj5 = { server: str3 };
-      formatResult = intl.format(_modDef4244.N4NkyR, obj5);
+      formatResult = intl.format(_modDef4245.N4NkyR, obj5);
     }
   }
   const obj7 = { installScope: input.installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
@@ -82,7 +82,7 @@ function resolveConjurePublishAction(input) {
   let result = conjurePreviewModes.requiresPermissionReview(obj7);
   const obj8 = { label: null, intent: null, permissionsChanged: null, isUpdate: null, upToDate: null, disabledReason: null, confirmReason: null, missingSurface: null };
   const intl2 = util.intl;
-  obj8.label = intl2.string(_modDef4244["120EFN"]);
+  obj8.label = intl2.string(_modDef4245["120EFN"]);
   let str4 = "publish";
   if (result) {
     str4 = "consent_then_publish";
@@ -120,7 +120,7 @@ function resolveConjurePublishAction(input) {
             str6 = "";
           }
           const obj9 = { server: str6 };
-          formatResult1 = intl3.format(_modDef4244.eHYXFg, obj9);
+          formatResult1 = intl3.format(_modDef4245.eHYXFg, obj9);
         }
       }
     }

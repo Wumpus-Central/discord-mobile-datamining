@@ -1,7 +1,7 @@
-// === Module 11053: useMediaKeyboardItemsPerRow ===
+// === Module 11099: useMediaKeyboardItemsPerRow ===
 
-// Module 11053 (useMediaKeyboardItemsPerRow)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5192 */;
+// Module 11099 (useMediaKeyboardItemsPerRow)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5223 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowSizeClassifierDefault = useWindowSizeClassifier;

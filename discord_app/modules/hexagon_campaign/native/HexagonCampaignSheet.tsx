@@ -1,13 +1,13 @@
-// === Module 16557: HexagonCampaignSheet ===
+// === Module 16608: HexagonCampaignSheet ===
 
-// Module 16557 (HexagonCampaignSheet)
+// Module 16608 (HexagonCampaignSheet)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
-import UserStore from "UserStore" /* 1386 */;
-import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15779 */;
+import UserStore from "UserStore" /* 1387 */;
+import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15830 */;
 
 const require = globalThis.__r;
 
@@ -35,20 +35,20 @@ function ScaledPreview(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6, StyleSheet } = get_ActivityIndicator);
-const HexagonCampaignConstants = fn(5037);
+const HexagonCampaignConstants = fn(5068);
 const HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT = HexagonCampaignConstants.HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT;
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
-let closure_13 = fn(5241).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
-const HEXAGON_GRADIENT_PRESET = fn(1239).HEXAGON_GRADIENT_PRESET;
+let closure_13 = fn(5272).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const HEXAGON_GRADIENT_PRESET = fn(1240).HEXAGON_GRADIENT_PRESET;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let size = Math.round(66.3);
-let obj = { fontId: fn(1396).DisplayNameFont.DEFAULT, effectId: fn(1397).DisplayNameEffect.SOLID, colors: [] };
-let PRIMARY_SEMIBOLD = fn(8671).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT];
+let obj = { fontId: fn(1397).DisplayNameFont.DEFAULT, effectId: fn(1398).DisplayNameEffect.SOLID, colors: [] };
+let PRIMARY_SEMIBOLD = fn(8713).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT];
 if (PRIMARY_SEMIBOLD == null) {
   PRIMARY_SEMIBOLD = fn(1082).Fonts.PRIMARY_SEMIBOLD;
 }
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj3 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, card: null, cardShade: null, previewArea: null, scaledPreviewContainer: null, scaledPreview: null, previewAppIcon: null, rows: null, rowIcon: null, fontRowIcon: null, fontRowIconText: null, badgeRow: null, footer: null, legal: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj3.card = { borderRadius: nativeDefault.radii.xl, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -96,7 +96,7 @@ export default function HexagonCampaignSheet() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -119,7 +119,7 @@ export default function HexagonCampaignSheet() {
                 didApply = false;
                 dependencyMap = 1;
                 const obj7 = { selection, displayNameStyles, premiumType: tmp67.premiumType, isThemeSynced, analyticsLocations };
-                const result = stateFromStores(16558).applyHexagonCampaignPerks(obj7);
+                const result = stateFromStores(16609).applyHexagonCampaignPerks(obj7);
                 HexagonCampaignPersistedStore.current = result;
                 c3 = 2;
                 c4 = 1;
@@ -151,30 +151,30 @@ export default function HexagonCampaignSheet() {
             const obj11 = { text: null };
             const intl = stateFromStores(1112).intl;
             obj11.text = intl.string(stateFromStores(1112).t.F8FvUy);
-            tmp3(5694).open("HEXAGON_CAMPAIGN_APPLY_ERROR", obj11);
-            const obj2 = tmp3(5694);
+            tmp3(5725).open("HEXAGON_CAMPAIGN_APPLY_ERROR", obj11);
+            const obj2 = tmp3(5725);
           }
         }
         obj12 = { perks: null, content: null, sourceQuestContent: null };
         const _Object = Object;
         const values = Object.values(result2);
         obj12.perks = values.filter((item) => closure_1_5[item]);
-        obj12.content = stateFromStores(6843).QuestContent.AD_PERK_MODAL;
-        obj12.sourceQuestContent = stateFromStores(6843).QuestContent.QUEST_HOME_MOBILE;
-        const result1 = stateFromStores(15983).trackHexagonCampaignPerkAction(obj12);
-        const obj4 = stateFromStores(15983);
-        tmp3(5226).hideActionSheet(stateFromStores(16556).HEXAGON_CAMPAIGN_SHEET_KEY);
+        obj12.content = stateFromStores(6874).QuestContent.AD_PERK_MODAL;
+        obj12.sourceQuestContent = stateFromStores(6874).QuestContent.QUEST_HOME_MOBILE;
+        const result1 = stateFromStores(16060).trackHexagonCampaignPerkAction(obj12);
+        const obj4 = stateFromStores(16060);
+        tmp3(5257).hideActionSheet(stateFromStores(16607).HEXAGON_CAMPAIGN_SHEET_KEY);
         const _Object2 = Object;
         const values2 = Object.values(closure_129_5);
         const _Boolean = Boolean;
         if (values2.some(Boolean)) {
           const obj13 = { text: null, variant: "success" };
           const intl2 = stateFromStores(1112).intl;
-          obj13.text = intl2.string(tmp3(4662).fX2UkH);
-          tmp3(5694).open("HEXAGON_CAMPAIGN_THEME_EQUIPPED", obj13);
-          const obj8 = tmp3(5694);
+          obj13.text = intl2.string(tmp3(4663).fX2UkH);
+          tmp3(5725).open("HEXAGON_CAMPAIGN_THEME_EQUIPPED", obj13);
+          const obj8 = tmp3(5725);
         }
-        const obj6 = tmp3(5226);
+        const obj6 = tmp3(5257);
       } catch (tmp59) {
         if (tmp4 === dependencyMap) {
           c4 = tmp2;
@@ -327,8 +327,8 @@ export default function HexagonCampaignSheet() {
         const obj7 = { text: null };
         const intl = tmp2(1112).intl;
         obj7.text = intl.string(tmp2(1112).t.F8FvUy);
-        closure_1(5694).open("HEXAGON_CAMPAIGN_APPLY_ERROR", obj7);
-        closure_1(5694);
+        closure_1(5725).open("HEXAGON_CAMPAIGN_APPLY_ERROR", obj7);
+        closure_1(5725);
       }
     }
     return value;

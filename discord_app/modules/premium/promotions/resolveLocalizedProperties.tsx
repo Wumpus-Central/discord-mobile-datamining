@@ -1,6 +1,6 @@
-// === Module 9175: resolveLocalizedProperties ===
+// === Module 9217: resolveLocalizedProperties ===
 
-// Module 9175 (resolveLocalizedProperties)
+// Module 9217 (resolveLocalizedProperties)
 import _slicedToArray from "module_32" /* 32 */;
 
 function isLocalizedStringLike(localizations) {

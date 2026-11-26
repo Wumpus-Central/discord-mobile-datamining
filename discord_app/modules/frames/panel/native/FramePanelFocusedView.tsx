@@ -1,23 +1,23 @@
-// === Module 19362: FramePanelFocusedView ===
+// === Module 19425: FramePanelFocusedView ===
 
-// Module 19362 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9954 */;
-import FrameStackLevel from "FrameStackLevel" /* 15905 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 18556 */;
-import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 18854 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19343 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19359 */;
-import PlayableActivityFrameHeaderDefault from "PlayableActivityFrameHeader" /* 19364 */;
-import FramePanelHeaderDefault from "FramePanelHeader" /* 19366 */;
-import PlayableFrameImpressionTrackerDefault from "PlayableFrameImpressionTracker" /* 19368 */;
-import PlayableFrameBannerDefault from "PlayableFrameBanner" /* 19369 */;
+// Module 19425 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9996 */;
+import FrameStackLevel from "FrameStackLevel" /* 15956 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 18619 */;
+import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 18917 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19406 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19422 */;
+import PlayableActivityFrameHeaderDefault from "PlayableActivityFrameHeader" /* 19427 */;
+import FramePanelHeaderDefault from "FramePanelHeader" /* 19429 */;
+import PlayableFrameImpressionTrackerDefault from "PlayableFrameImpressionTracker" /* 19431 */;
+import PlayableFrameBannerDefault from "PlayableFrameBanner" /* 19432 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6905 */;
+import FramesStore from "FramesStore" /* 6936 */;
 
 require = fn;
-const FramesConstants = fn(6906);
+const FramesConstants = fn(6937);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
-const ActivityPanelModes = fn(5638).ActivityPanelModes;
+const ActivityPanelModes = fn(5669).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

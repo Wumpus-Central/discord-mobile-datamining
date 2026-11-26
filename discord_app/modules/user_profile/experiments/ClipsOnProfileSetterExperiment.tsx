@@ -1,7 +1,7 @@
-// === Module 14947: ClipsOnProfileSetterExperiment ===
+// === Module 14997: ClipsOnProfileSetterExperiment ===
 
-// Module 14947 (ClipsOnProfileSetterExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 14997 (ClipsOnProfileSetterExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-clips-on-profile-setter", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

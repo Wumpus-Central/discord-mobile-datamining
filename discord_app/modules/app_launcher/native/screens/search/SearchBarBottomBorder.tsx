@@ -1,17 +1,17 @@
-// === Module 13007: SearchBarBottomBorder ===
+// === Module 13059: SearchBarBottomBorder ===
 
-// Module 13007 (SearchBarBottomBorder)
+// Module 13059 (SearchBarBottomBorder)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import springPresets from "springPresets" /* 5614 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import springPresets from "springPresets" /* 5645 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 let closure_6 = { code: "(function SearchBarBottomBorderTsx1(){let[withSpring,scrollPosition,triggerScrollHeight,springStandard]=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};})" };
@@ -24,7 +24,7 @@ export function usePinnedSearchBarBottomBorder(arg0) {
     triggerScrollHeight = 1;
   }
   const tmp = closure_5();
-  const sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(0);
   items = [key, sharedValue];
   const effect = noop.useEffect(() => {
     const result = _undefined.set(0);
@@ -55,10 +55,10 @@ export function usePinnedSearchBarBottomBorder(arg0) {
   SearchBarBottomBorderTsx1.__workletHash = 6638827003107;
   SearchBarBottomBorderTsx1.__initData = tmp6;
   const obj3 = { scrollHandler: callback, bottomBorderComponent: null };
-  const animatedStyle = _mod1653.useAnimatedStyle(SearchBarBottomBorderTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(SearchBarBottomBorderTsx1);
   const obj4 = { style: null };
   const items4 = [tmp.border, animatedStyle];
   obj4.style = items4;
-  obj3.bottomBorderComponent = jsx(_modDef1653.View, { style: null }, key);
+  obj3.bottomBorderComponent = jsx(_modDef1654.View, { style: null }, key);
   return obj3;
 }

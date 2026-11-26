@@ -1,7 +1,7 @@
-// === Module 11465: SelfModInappropriateConversationExperiment ===
+// === Module 11512: SelfModInappropriateConversationExperiment ===
 
-// Module 11465 (SelfModInappropriateConversationExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1451 */;
+// Module 11512 (SelfModInappropriateConversationExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1452 */;
 
 const tmp2 = apex_ApexExperimentDefault({ name: "2026-04-inappropriate-conversations-prescan", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;

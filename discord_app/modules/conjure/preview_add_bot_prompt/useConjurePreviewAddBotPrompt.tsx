@@ -1,11 +1,11 @@
-// === Module 18394: useConjurePreviewAddBotPrompt ===
+// === Module 18453: useConjurePreviewAddBotPrompt ===
 
-// Module 18394 (useConjurePreviewAddBotPrompt)
-import conjurePreviewAddBotPromptConnection from "conjurePreviewAddBotPromptConnection" /* 14695 */;
+// Module 18453 (useConjurePreviewAddBotPrompt)
+import conjurePreviewAddBotPromptConnection from "conjurePreviewAddBotPromptConnection" /* 14748 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePreviewAddBotPromptStore from "ConjurePreviewAddBotPromptStore" /* 7674 */;
+import ConjurePreviewAddBotPromptStore from "ConjurePreviewAddBotPromptStore" /* 7705 */;
 
 const require = globalThis.__r;
 
@@ -47,7 +47,7 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -67,7 +67,7 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
                 c3 = 1;
                 dependencyMap = 2;
                 c4 = 1;
-                const obj6 = { value: tmp3(11412).requestConjureInstallConsent(tmp3, closure_1), done: false };
+                const obj6 = { value: tmp3(11459).requestConjureInstallConsent(tmp3, closure_1), done: false };
                 return obj6;
               }
             }
@@ -84,10 +84,10 @@ export function useConjurePreviewAddBotPrompt(projectId, guildId) {
           c3 = 0;
           closure_128_4(false);
           if (obj.conjurePreviewBotAdded(closure_128_0)) {
-            const result = tmp3(14695).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
-            const obj2 = tmp3(14695);
+            const result = tmp3(14748).answerConjurePreviewAddBotPrompt(closure_128_0, closure_128_5, "added");
+            const obj2 = tmp3(14748);
           }
-          obj = tmp3(14695);
+          obj = tmp3(14748);
         }
         c3 = 0;
         closure_128_4(false);

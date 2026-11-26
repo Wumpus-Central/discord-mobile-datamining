@@ -1,21 +1,21 @@
-// === Module 18995: ChannelNameHeader ===
+// === Module 19058: ChannelNameHeader ===
 
-// Module 18995 (ChannelNameHeader)
+// Module 19058 (ChannelNameHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import _modDef4180 from "module_4180" /* 4180 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import transitionToChannel from "transitionToChannel" /* 6095 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6102 */;
-import ChannelUtils from "ChannelUtils" /* 6770 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7065 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 9574 */;
+import _modDef4181 from "module_4181" /* 4181 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import transitionToChannel from "transitionToChannel" /* 6126 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
+import ChannelUtils from "ChannelUtils" /* 6801 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 7096 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 9616 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import PresenceStore from "PresenceStore" /* 5983 */;
-import UserStore from "UserStore" /* 1386 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import PresenceStore from "PresenceStore" /* 6014 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function DirectMessageIcon(channel) {
@@ -105,16 +105,16 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(5603).Text, obj2);
+        tmp8 = closure_12(tmp(5634).Text, obj2);
       }
     }
     return tmp8;
   } else if (channel.isGameInvitesChannel()) {
     const intl = tmp(1112).intl;
-    let stringResult = intl.string(_modDef4180["D+2/QP"]);
+    let stringResult = intl.string(_modDef4181["D+2/QP"]);
   } else {
-    stringResult = tmp(6770).channelTypeString(channel);
-    const tmpResult = tmp(6770);
+    stringResult = tmp(6801).channelTypeString(channel);
+    const tmpResult = tmp(6801);
   }
   let obj = channel(504);
 }
@@ -218,7 +218,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6348)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6379)().analyticsLocations;
   items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -230,7 +230,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(6121).PressableOpacity, obj);
+  return closure_12(channel(6152).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -245,7 +245,7 @@ const Constants = fn(1071);
 ({ Permissions: closure_10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" }, channelTypeBox: null, channelData: null, statusStyle: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj.channelTypeBox = { borderRadius: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_ICON_RADIUS, borderWidth: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };

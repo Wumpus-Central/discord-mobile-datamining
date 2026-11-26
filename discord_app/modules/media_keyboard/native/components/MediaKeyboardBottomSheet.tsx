@@ -1,18 +1,18 @@
-// === Module 18567: MediaKeyboardBottomSheet ===
+// === Module 18630: MediaKeyboardBottomSheet ===
 
-// Module 18567 (MediaKeyboardBottomSheet)
+// Module 18630 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5184 */;
-import ChatInputUtils from "ChatInputUtils" /* 5197 */;
-import HapticUtils from "HapticUtils" /* 5228 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5229 */;
-import BottomSheetModalDefault from "BottomSheetModal" /* 5244 */;
-import useMountEffectDefault from "useMountEffect" /* 5573 */;
-import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12990 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5215 */;
+import ChatInputUtils from "ChatInputUtils" /* 5228 */;
+import HapticUtils from "HapticUtils" /* 5259 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5260 */;
+import BottomSheetModalDefault from "BottomSheetModal" /* 5275 */;
+import useMountEffectDefault from "useMountEffect" /* 5604 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 13042 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,16 +29,16 @@ function MediaKeyboardBackground(arg0) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const MediaKeyboardConstants = fn(1624);
+const MediaKeyboardConstants = fn(1625);
 ({ HEADER_HANDLE_HEIGHT: closure_6, MediaPickerActionSheetEngagedActions: metroImportDefault } = MediaKeyboardConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const MetaQuestUtils = fn(1625);
+const MetaQuestUtils = fn(1626);
 let closure_11 = MetaQuestUtils.isMetaQuest();
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let closure_12 = PlatformUtils.isIOS();
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
 let closure_13 = createStyles.createStyles(obj);
 let closure_15 = { code: "(function MediaKeyboardBottomSheetTsx1(){let[animatedIndex]=this.__closure;return animatedIndex.get()>=0;})" };
@@ -141,7 +141,7 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
   MediaKeyboardBottomSheetTsx1.__closure = items3;
   MediaKeyboardBottomSheetTsx1.__workletHash = 5695849548059;
   MediaKeyboardBottomSheetTsx1.__initData = tmp18;
-  const items4 = [closure_16, closure_12, require("module_1706").scheduleOnRN, callback3];
+  const items4 = [closure_16, closure_12, require("module_1707").scheduleOnRN, callback3];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -169,8 +169,8 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
   MediaKeyboardBottomSheetTsx2.__closure = items5;
   MediaKeyboardBottomSheetTsx2.__workletHash = 6228277612359;
   MediaKeyboardBottomSheetTsx2.__initData = tmp20;
-  const animatedReaction = require("module_1653").useAnimatedReaction(MediaKeyboardBottomSheetTsx1, MediaKeyboardBottomSheetTsx2);
-  const tmp5Result = require("module_1653");
+  const animatedReaction = require("module_1654").useAnimatedReaction(MediaKeyboardBottomSheetTsx1, MediaKeyboardBottomSheetTsx2);
+  const tmp5Result = require("module_1654");
   const items6 = [closure_17, animatedIndex];
   _require = undefined;
   [tmp25, tmp26] = items6;
@@ -183,7 +183,7 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
   MediaKeyboardBottomSheetTsx3.__closure = items7;
   MediaKeyboardBottomSheetTsx3.__workletHash = 4645791951827;
   MediaKeyboardBottomSheetTsx3.__initData = tmp25;
-  const items8 = [closure_18, require("module_1706").scheduleOnRN, tmp15];
+  const items8 = [closure_18, require("module_1707").scheduleOnRN, tmp15];
   _require = undefined;
   importDefault = undefined;
   [tmp27, tmp28, tmp29] = items8;
@@ -201,7 +201,7 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
   MediaKeyboardBottomSheetTsx4.__closure = items9;
   MediaKeyboardBottomSheetTsx4.__workletHash = 10381616509048;
   MediaKeyboardBottomSheetTsx4.__initData = tmp27;
-  const animatedReaction1 = require("module_1653").useAnimatedReaction(MediaKeyboardBottomSheetTsx3, MediaKeyboardBottomSheetTsx4);
+  const animatedReaction1 = require("module_1654").useAnimatedReaction(MediaKeyboardBottomSheetTsx3, MediaKeyboardBottomSheetTsx4);
   useMountEffectDefault(() => () => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
@@ -231,12 +231,12 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
       }
     }
   }, items10);
-  const tmp5Result2 = require("module_1653");
+  const tmp5Result2 = require("module_1654");
   ({ left, right } = useSafeAreaInsetsDefault());
   let obj3 = { gradient: tmp7, children: null };
   const obj4 = { style: { marginLeft: left, marginRight: right }, BodyComponent: null, ref: null, animationConfigs: null, animatedIndex: null, animatedPosition: null, enableContentPanningGesture: null, enableHandlePanningGesture: null, handleComponent: null, backgroundComponent: null, backgroundStyle: null, backdropComponent: null, onAnimate: null, handleHeight: null, onClose: null };
   const tmp33 = useSafeAreaInsetsDefault();
-  obj4.BodyComponent = _modDef1653.View;
+  obj4.BodyComponent = _modDef1654.View;
   obj4.ref = bottomSheetRef;
   obj4.animationConfigs = animationConfigs;
   obj4.animatedIndex = animatedIndex;

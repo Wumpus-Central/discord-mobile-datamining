@@ -1,7 +1,7 @@
-// === Module 10744: ApplicationCommandsConstants ===
+// === Module 10790: ApplicationCommandsConstants ===
 
-// Module 10744 (ApplicationCommandsConstants)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
+// Module 10790 (ApplicationCommandsConstants)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 let num = 56;

@@ -1,8 +1,8 @@
-// === Module 7639: conjureProjectMute ===
+// === Module 7670: conjureProjectMute ===
 
-// Module 7639 (conjureProjectMute)
+// Module 7670 (conjureProjectMute)
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 const require = globalThis.__r;
 

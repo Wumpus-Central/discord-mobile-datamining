@@ -1,9 +1,9 @@
-// === Module 15915: screenCaptureEvents ===
+// === Module 15966: screenCaptureEvents ===
 
-// Module 15915 (screenCaptureEvents)
+// Module 15966 (screenCaptureEvents)
 import Constants2 from "Constants" /* 1071 */;
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15814 */;
-import Constants from "Constants" /* 5766 */;
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15865 */;
+import Constants from "Constants" /* 5797 */;
 import size from "module_2" /* 2 */;
 
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);

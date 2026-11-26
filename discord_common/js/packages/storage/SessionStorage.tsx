@@ -1,6 +1,6 @@
-// === Module 1359: SessionStorage ===
+// === Module 1360: SessionStorage ===
 
-// Module 1359 (SessionStorage)
+// Module 1360 (SessionStorage)
 import storage_Storage from "storage/Storage" /* 511 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 7005: MemberVerificationFormConstants ===
+// === Module 7036: MemberVerificationFormConstants ===
 
-// Module 7005 (MemberVerificationFormConstants)
+// Module 7036 (MemberVerificationFormConstants)
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 0.5625;

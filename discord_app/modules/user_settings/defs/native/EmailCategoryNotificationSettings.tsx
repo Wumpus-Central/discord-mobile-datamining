@@ -1,11 +1,11 @@
-// === Module 17063: EmailCategoryNotificationSettings ===
+// === Module 17114: EmailCategoryNotificationSettings ===
 
-// Module 17063 (EmailCategoryNotificationSettings)
+// Module 17114 (EmailCategoryNotificationSettings)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
-import _modDef3206 from "module_3206" /* 3206 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 17060 */;
-import EmailSettingsStore from "EmailSettingsStore" /* 15179 */;
+import _modDef3207 from "module_3207" /* 3207 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 17111 */;
+import EmailSettingsStore from "EmailSettingsStore" /* 15229 */;
 
 require = fn;
 function useMarketingEmailsDisabled() {
@@ -44,7 +44,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
     obj4.onValueChange = function onValueChange(arg0) {
       return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
     };
-    obj.communication = COMMUNICATION(11914).createToggle(obj4);
+    obj.communication = COMMUNICATION(11962).createToggle(obj4);
     const SOCIAL = EmailCategories.SOCIAL;
     closure_129_0 = SOCIAL;
     const found1 = closure_6.find((category) => category.category === COMMUNICATION);
@@ -73,7 +73,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
       obj6.onValueChange = function onValueChange(arg0) {
         return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
       };
-      obj.social = tmp6(11914).createToggle(obj6);
+      obj.social = tmp6(11962).createToggle(obj6);
       const UPDATES_AND_ANNOUNCEMENTS = EmailCategories.UPDATES_AND_ANNOUNCEMENTS;
       closure_130_0 = UPDATES_AND_ANNOUNCEMENTS;
       const found2 = closure_6.find((category) => category.category === COMMUNICATION);
@@ -102,7 +102,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
         obj8.onValueChange = function onValueChange(arg0) {
           return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
         };
-        obj.updatesAndAnnouncements = tmp6(11914).createToggle(obj8);
+        obj.updatesAndAnnouncements = tmp6(11962).createToggle(obj8);
         const TIPS = EmailCategories.TIPS;
         closure_131_0 = TIPS;
         const found3 = closure_6.find((category) => category.category === COMMUNICATION);
@@ -131,7 +131,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
           obj10.onValueChange = function onValueChange(arg0) {
             return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
           };
-          obj.tips = tmp6(11914).createToggle(obj10);
+          obj.tips = tmp6(11962).createToggle(obj10);
           const RECOMMENDATIONS_AND_EVENTS = EmailCategories.RECOMMENDATIONS_AND_EVENTS;
           closure_132_0 = RECOMMENDATIONS_AND_EVENTS;
           const found4 = closure_6.find((category) => category.category === COMMUNICATION);
@@ -160,14 +160,14 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
             obj12.onValueChange = function onValueChange(arg0) {
               return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
             };
-            obj.recommendationsAndEvents = tmp6(11914).createToggle(obj12);
+            obj.recommendationsAndEvents = tmp6(11962).createToggle(obj12);
             closure_133_0 = EMAIL_NOTIFICATIONS;
-            const tmp6Result7 = tmp6(11914);
+            const tmp6Result7 = tmp6(11962);
             const obj13 = {
               useTitle() {
                           const intl = util.intl;
                           if (COMMUNICATION === MobileUserSettings.REDESIGN_EMAIL_NOTIFICATIONS) {
-                            let Ra9Pwk = _modDef3206.tNdxQ1;
+                            let Ra9Pwk = _modDef3207.tNdxQ1;
                           } else {
                             Ra9Pwk = util.t.Ra9Pwk;
                           }
@@ -176,73 +176,73 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
               parent: EMAIL_NOTIFICATIONS,
               variant: "danger",
               useIsDisabled: useMarketingEmailsDisabled,
-              onPress: tmp6(17060).updateMarketingEmailSettings
+              onPress: tmp6(17111).updateMarketingEmailSettings
             };
-            obj.unsubscribeFromAllMarketing = tmp6(11914).createPressable(obj13);
+            obj.unsubscribeFromAllMarketing = tmp6(11962).createPressable(obj13);
             return obj;
           }
-          const tmp6Result6 = tmp6(11914);
+          const tmp6Result6 = tmp6(11962);
         }
-        const tmp6Result5 = tmp6(11914);
+        const tmp6Result5 = tmp6(11962);
       }
-      const tmp6Result = tmp6(11914);
+      const tmp6Result = tmp6(11962);
     }
-    const obj2 = COMMUNICATION(11914);
+    const obj2 = COMMUNICATION(11962);
   }
 }
-const MobileUserSettings = fn(9513).MobileUserSettings;
-const EmailSettingsConstants = fn(17061);
+const MobileUserSettings = fn(9555).MobileUserSettings;
+const EmailSettingsConstants = fn(17112);
 const EmailCategories = EmailSettingsConstants.EmailCategories;
 ({ EmailCategoriesList: closure_6, MarketingEmailCategories: metroImportDefault } = EmailSettingsConstants);
 const dependencyMap = {
   [EmailCategories.COMMUNICATION]: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3206.KcqVQg);
+      return intl.string(_modDef3207.KcqVQg);
     },
     subLabel() {
       const intl = util.intl;
-      return intl.string(_modDef3206.rjpJyr);
+      return intl.string(_modDef3207.rjpJyr);
     }
   },
   [EmailCategories.SOCIAL]: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3206.ZtaadX);
+      return intl.string(_modDef3207.ZtaadX);
     },
     subLabel() {
       const intl = util.intl;
-      return intl.string(_modDef3206.oBkSU3);
+      return intl.string(_modDef3207.oBkSU3);
     }
   },
   [EmailCategories.UPDATES_AND_ANNOUNCEMENTS]: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3206.gsNOLn);
+      return intl.string(_modDef3207.gsNOLn);
     },
     subLabel() {
       const intl = util.intl;
-      return intl.string(_modDef3206.VKva4A);
+      return intl.string(_modDef3207.VKva4A);
     }
   },
   [EmailCategories.TIPS]: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3206.KniwB2);
+      return intl.string(_modDef3207.KniwB2);
     },
     subLabel() {
       const intl = util.intl;
-      return intl.string(_modDef3206.KpbEAR);
+      return intl.string(_modDef3207.KpbEAR);
     }
   },
   [EmailCategories.RECOMMENDATIONS_AND_EVENTS]: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3206.WEPL42);
+      return intl.string(_modDef3207.WEPL42);
     },
     subLabel() {
       const intl = util.intl;
-      return intl.string(_modDef3206.AmcFNU);
+      return intl.string(_modDef3207.AmcFNU);
     }
   }
 };

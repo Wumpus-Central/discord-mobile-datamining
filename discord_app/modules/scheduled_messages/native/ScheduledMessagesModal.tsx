@@ -1,23 +1,23 @@
-// === Module 9569: ScheduledMessagesModal ===
+// === Module 9611: ScheduledMessagesModal ===
 
-// Module 9569 (ScheduledMessagesModal)
+// Module 9611 (ScheduledMessagesModal)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import util from "util" /* 1112 */;
-import PremiumUtils from "PremiumUtils" /* 2173 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import springPresets from "springPresets" /* 5614 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6348 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import HeaderShared from "HeaderShared" /* 8962 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9544 */;
-import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 9571 */;
-import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 9572 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9591 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 9592 */;
+import PremiumUtils from "PremiumUtils" /* 2174 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import springPresets from "springPresets" /* 5645 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import HeaderShared from "HeaderShared" /* 9004 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9586 */;
+import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 9613 */;
+import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 9614 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9633 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 9634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ScheduledMessageStore from "ScheduledMessageStore" /* 9570 */;
+import ScheduledMessageStore from "ScheduledMessageStore" /* 9612 */;
 
 const require = globalThis.__r;
 
@@ -121,12 +121,12 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
 }
 const View = fn(17).View;
 const AnalyticsPages = fn(1071).AnalyticsPages;
-const PremiumTypes = fn(1388).PremiumTypes;
-const premiumMax = fn(9554).MAX_SCHEDULED_MESSAGES_PER_USER;
+const PremiumTypes = fn(1389).PremiumTypes;
+const premiumMax = fn(9596).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" }, headerLeftContainer: null, headerRightContainer: null, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
 obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
@@ -147,7 +147,7 @@ export default function ScheduledMessagesModal() {
   const intl = require("util").intl;
   const stringResult = intl.string(require("util").t.SZVs3K);
   _require = stringResult;
-  const sharedValue = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(0);
   items = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -156,7 +156,7 @@ export default function ScheduledMessagesModal() {
     }
     const result = sharedValue.set(spring_spring.withSpring(num, springPresets.Reanimated3DefaultSpringConfig));
   }, items);
-  let obj = require("module_1653");
+  let obj = require("module_1654");
   const items1 = [closure_15, sharedValue];
   _require = undefined;
   [tmp8, tmp9] = items1;
@@ -171,7 +171,7 @@ export default function ScheduledMessagesModal() {
   ScheduledMessagesModalTsx1.__workletHash = 3464659373430;
   ScheduledMessagesModalTsx1.__initData = tmp8;
   const obj3 = { style: tmp.modal, children: null };
-  const animatedStyle = require("module_1653").useAnimatedStyle(ScheduledMessagesModalTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(ScheduledMessagesModalTsx1);
   const obj5 = {
     title: stringResult,
     headerTitle() {
@@ -183,20 +183,20 @@ export default function ScheduledMessagesModal() {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null
   };
-  const obj2 = require("module_1653");
+  const obj2 = require("module_1654");
   let num = 0;
   if (!tmp4Result.isIOS()) {
-    num = sharedValue(1628)().top;
+    num = sharedValue(1629)().top;
   }
   obj5.headerStatusBarHeight = num + sharedValue(575).space.PX_8;
   tmp4Result = require("PlatformUtils");
-  obj5.headerLeft = require("NavigatorHeader").getHeaderCloseButton(sharedValue(6099).pop);
+  obj5.headerLeft = require("NavigatorHeader").getHeaderCloseButton(sharedValue(6130).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items3 = [closure_10(require("module_7167").Header, obj5), , ];
+  const items3 = [closure_10(require("module_7198").Header, obj5), , ];
   const obj6 = { style: null };
   const items4 = [tmp.headerBorder, animatedStyle];
   obj6.style = items4;
-  items3[1] = closure_10(sharedValue(1653).View, obj6);
+  items3[1] = closure_10(sharedValue(1654).View, obj6);
   items3[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
   obj3.children = items3;
   return closure_11(View, obj3);

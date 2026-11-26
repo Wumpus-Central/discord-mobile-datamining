@@ -1,8 +1,8 @@
-// === Module 11950: conjureSharedProjectHome ===
+// === Module 11998: conjureSharedProjectHome ===
 
-// Module 11950 (conjureSharedProjectHome)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6904 */;
-import GuildStore from "GuildStore" /* 4883 */;
+// Module 11998 (conjureSharedProjectHome)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;
+import GuildStore from "GuildStore" /* 4914 */;
 
 require = fn;
 const size = fn(2);

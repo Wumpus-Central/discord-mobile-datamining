@@ -1,8 +1,8 @@
-// === Module 12191: useVoteReactors ===
+// === Module 12241: useVoteReactors ===
 
-// Module 12191 (useVoteReactors)
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5594 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 12182 */;
+// Module 12241 (useVoteReactors)
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5625 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 12232 */;
 
 require = fn;
 let closure_4 = fn(1071).DEFAULT_NUM_REACTION_USERS;

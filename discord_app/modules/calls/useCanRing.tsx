@@ -1,10 +1,10 @@
-// === Module 7829: useCanRing ===
+// === Module 7863: useCanRing ===
 
-// Module 7829 (useCanRing)
+// Module 7863 (useCanRing)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6909 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
+import CallStore from "CallStore" /* 6940 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
 
 const require = globalThis.__r;
 

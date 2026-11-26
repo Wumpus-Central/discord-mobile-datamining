@@ -1,9 +1,9 @@
-// === Module 15936: getVolumeForSound ===
+// === Module 15987: getVolumeForSound ===
 
-// Module 15936 (getVolumeForSound)
-import UserSettings from "UserSettings" /* 4837 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5973 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
+// Module 15987 (getVolumeForSound)
+import UserSettings from "UserSettings" /* 4868 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6004 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 
 require = fn;
 const size = fn(2);

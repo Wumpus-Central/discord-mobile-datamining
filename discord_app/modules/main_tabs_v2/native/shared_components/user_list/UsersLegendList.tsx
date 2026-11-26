@@ -1,8 +1,8 @@
-// === Module 11521: UsersLegendList ===
+// === Module 11569: UsersLegendList ===
 
-// Module 11521 (UsersLegendList)
-import BottomSheetModal from "BottomSheetModal" /* 5244 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7389 */;
+// Module 11569 (UsersLegendList)
+import BottomSheetModal from "BottomSheetModal" /* 5275 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7420 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ function renderBottomSheetScrollComponent(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({ row: { overflow: "hidden" } });
 let closure_9 = { code: "(function UsersLegendListTsx1(event){let[scrollPosValue,onScroll,scheduleOnRN]=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){scheduleOnRN(onScroll,{nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}})" };
 let size = fn(2);
@@ -49,12 +49,12 @@ export default noop.memo(function UsersLegendList(insetStart) {
   let tmp = renderSectionHeader();
   const row = tmp;
   const ref1 = onContentLengthChange.useRef(null);
-  const sharedValue = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(0);
   items = [sharedValue];
   const memo = onContentLengthChange.useMemo(() => ({ scrollOffset: sharedValue }), items);
-  let obj2 = require("module_1653");
+  let obj2 = require("module_1654");
   let tmp3 = _require;
-  const items1 = [sectionHeaderSize, sharedValue, onScroll, require("module_1706").scheduleOnRN];
+  const items1 = [sectionHeaderSize, sharedValue, onScroll, require("module_1707").scheduleOnRN];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -88,7 +88,7 @@ export default noop.memo(function UsersLegendList(insetStart) {
   UsersLegendListTsx1.__closure = items2;
   UsersLegendListTsx1.__workletHash = 11972523223881;
   UsersLegendListTsx1.__initData = tmp7;
-  let obj3 = require("module_1653");
+  let obj3 = require("module_1654");
   if (typeof listHeaderSize === "function") {
     num3 = listHeaderSize();
   } else {
@@ -274,7 +274,7 @@ export default noop.memo(function UsersLegendList(insetStart) {
   }
   obj4.onContentSizeChange = tmp22;
   obj4.onLayout = onLayout;
-  obj4.onScroll = require("module_1653").useAnimatedScrollHandler(UsersLegendListTsx1);
+  obj4.onScroll = require("module_1654").useAnimatedScrollHandler(UsersLegendListTsx1);
   obj4.renderItem = callback;
   let tmp23;
   if (true === insetStart.inActionSheet) {
@@ -284,5 +284,5 @@ export default noop.memo(function UsersLegendList(insetStart) {
   obj4.sharedValues = memo;
   obj4.stickyHeaderIndices = memo1.stickyHeaderIndices;
   obj4.style = style;
-  return renderListHeader(tmp3(11522).AnimatedLegendList, obj4);
+  return renderListHeader(tmp3(11570).AnimatedLegendList, obj4);
 });

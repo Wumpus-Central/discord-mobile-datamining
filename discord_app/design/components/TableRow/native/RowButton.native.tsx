@@ -1,12 +1,12 @@
-// === Module 8048: RowButton ===
+// === Module 8090: RowButton ===
 
-// Module 8048 (RowButton)
+// Module 8090 (RowButton)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import TableRow from "TableRow" /* 6113 */;
-import Card from "Card" /* 6114 */;
-import TableRowIcon from "TableRowIcon" /* 6124 */;
-import BackgroundBlurView from "BackgroundBlurView" /* 8049 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import TableRow from "TableRow" /* 6144 */;
+import Card from "Card" /* 6145 */;
+import TableRowIcon from "TableRowIcon" /* 6155 */;
+import BackgroundBlurView from "BackgroundBlurView" /* 8091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ function RowButtonWrapper(experimental_withBlurBackground) {
   ({ onPress, disabled, children } = experimental_withBlurBackground);
   const merged = Object.assign(experimental_withBlurBackground, Object.assign({ experimental_withBlurBackground: 0, onPress: 0, disabled: 0, children: 0 }));
   const tmp2 = closure_5();
-  const sharedValue = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(0);
   items = [sharedValue];
   closure_2 = noop.useCallback(() => {
     const result = sharedValue.set(1);
@@ -113,7 +113,7 @@ function RowButtonWrapper(experimental_withBlurBackground) {
   return jsx(Card.InternalCard, obj4);
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { card: null, cardWithBlur: null };
   const obj2 = { padding: "y", borderTopStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
@@ -121,9 +121,9 @@ let closure_5 = createStyles.createStyles(() => {
   obj.cardWithBlur = { overflow: "hidden" };
   return obj;
 });
-RowButton.Icon = fn(6124).TableRowIcon;
+RowButton.Icon = fn(6155).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(6124).TableRowIconProps;
+export const RowButtonIconProps = fn(6155).TableRowIconProps;
 export { RowButton };

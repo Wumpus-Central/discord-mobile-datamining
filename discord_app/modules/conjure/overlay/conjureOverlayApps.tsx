@@ -1,7 +1,7 @@
-// === Module 15124: conjureOverlayApps ===
+// === Module 15174: conjureOverlayApps ===
 
-// Module 15124 (conjureOverlayApps)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6904 */;
+// Module 15174 (conjureOverlayApps)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/overlay/conjureOverlayApps.tsx");

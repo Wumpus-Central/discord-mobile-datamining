@@ -1,20 +1,20 @@
-// === Module 12625: CheckpointFadeLayer ===
+// === Module 12669: CheckpointFadeLayer ===
 
-// Module 12625 (CheckpointFadeLayer)
-import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import useStableCallbackDefault from "useStableCallback" /* 7297 */;
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12586 */;
+// Module 12669 (CheckpointFadeLayer)
+import _mod1654 from "module_1654" /* 1654 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import useStableCallbackDefault from "useStableCallback" /* 7328 */;
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const Easing = fn(1653).Easing;
-let closure_7 = Easing.inOut(fn(1653).Easing.quad);
+const Easing = fn(1654).Easing;
+let closure_7 = Easing.inOut(fn(1654).Easing.quad);
 let closure_8 = { code: "(function CheckpointFadeLayerTsx1(finished){let[visible,runOnJS,handleEnterComplete,handleExitComplete]=this.__closure;if(finished!==true)return;if(visible)runOnJS(handleEnterComplete)();else runOnJS(handleExitComplete)();})" };
 let closure_9 = { code: "(function CheckpointFadeLayerTsx2(){let[opacity,hiddenScale,scale]=this.__closure;return{opacity:opacity.get(),transform:hiddenScale===1?undefined:[{scale:scale.get()}]};})" };
 const size = fn(2);
@@ -58,20 +58,20 @@ export default function CheckpointFadeLayer(visible) {
   if (visible) {
     num2 = 1;
   }
-  sharedValue = require("module_1653").useSharedValue(num2);
-  let obj2 = require("module_1653");
+  sharedValue = require("module_1654").useSharedValue(num2);
+  let obj2 = require("module_1654");
   let num3 = 1;
   if (!visible) {
     num3 = num;
   }
-  sharedValue1 = require("module_1653").useSharedValue(num3);
+  sharedValue1 = require("module_1654").useSharedValue(num3);
   const tmp6 = keepMounted(num.useState(visible), 2);
   first = tmp6[0];
   closure_10 = tmp6[1];
   const tmp8 = keepMounted(num.useState(visible), 2);
   first1 = tmp8[0];
   closure_12 = tmp8[1];
-  const tmpResult = require("module_1653");
+  const tmpResult = require("module_1654");
   let currentWhen = require("usePrevious").useCurrentWhen({ value: children, shouldUpdate: visible });
   closure_13 = useStableCallbackDefault(() => {
     closure_10(false);
@@ -162,7 +162,7 @@ export default function CheckpointFadeLayer(visible) {
         if (tmp) {
           num2 = 1;
         }
-        items = [closure_8, tmp, _mod1653.runOnJS, closure_14, closure_13];
+        items = [closure_8, tmp, _mod1654.runOnJS, closure_14, closure_13];
         c0 = undefined;
         c1 = undefined;
         c2 = undefined;
@@ -188,10 +188,10 @@ export default function CheckpointFadeLayer(visible) {
         CheckpointFadeLayerTsx1.__closure = items1;
         CheckpointFadeLayerTsx1.__workletHash = 11865216228706;
         CheckpointFadeLayerTsx1.__initData = tmp22;
-        const result = sharedValue.set(_mod1653.withDelay(num, obj3.withTiming(num2, obj, "respect-motion-settings", CheckpointFadeLayerTsx1)));
+        const result = sharedValue.set(_mod1654.withDelay(num, obj3.withTiming(num2, obj, "respect-motion-settings", CheckpointFadeLayerTsx1)));
         let num4 = 1;
         if (1 !== num) {
-          const tmp16Result = _mod1653;
+          const tmp16Result = _mod1654;
           if (!tmp) {
             num4 = tmp32;
           }
@@ -212,7 +212,7 @@ export default function CheckpointFadeLayer(visible) {
       }
     }
   }, items3);
-  require("module_1653");
+  require("module_1654");
   const items4 = [first, sharedValue, num, sharedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -258,8 +258,8 @@ export default function CheckpointFadeLayer(visible) {
       currentWhen = children;
     }
     obj5.children = currentWhen;
-    obj3.children = stateFromStores(tmp11(12586).Provider, obj5);
-    let tmp27Result = tmp27(tmp11(1653).View, obj3);
+    obj3.children = stateFromStores(tmp11(12670).Provider, obj5);
+    let tmp27Result = tmp27(tmp11(1654).View, obj3);
   } else {
     tmp27Result = null;
   }

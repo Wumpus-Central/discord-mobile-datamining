@@ -1,15 +1,15 @@
-// === Module 19457: GameTagChiplet ===
+// === Module 19520: GameTagChiplet ===
 
-// Module 19457 (GameTagChiplet)
-import FastImageDefault from "FastImage" /* 5699 */;
-import GuildTag from "GuildTag" /* 8680 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8703 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8712 */;
+// Module 19520 (GameTagChiplet)
+import FastImageDefault from "FastImage" /* 5730 */;
+import GuildTag from "GuildTag" /* 8722 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8745 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_4 = createStyles.createStyles({ container: { flexShrink: 1, minWidth: 0, overflow: "hidden" }, text: { flexShrink: 1, minWidth: 0 }, image: { width: 12, height: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameTagChiplet.tsx");

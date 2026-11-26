@@ -1,14 +1,14 @@
-// === Module 8278: UserSearchItems ===
+// === Module 8320: UserSearchItems ===
 
-// Module 8278 (UserSearchItems)
+// Module 8320 (UserSearchItems)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4890 */;
-import UserSearchUtils from "UserSearchUtils" /* 8282 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4921 */;
+import UserSearchUtils from "UserSearchUtils" /* 8324 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 8279 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8280 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import UserStore from "UserStore" /* 1386 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 8321 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8322 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const RelationshipTypes = fn(1071).RelationshipTypes;
@@ -40,7 +40,7 @@ prototype["getAll"] = function getAll() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

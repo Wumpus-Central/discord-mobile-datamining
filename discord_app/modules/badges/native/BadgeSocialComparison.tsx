@@ -1,19 +1,19 @@
-// === Module 13805: BadgeSocialComparison ===
+// === Module 13857: BadgeSocialComparison ===
 
-// Module 13805 (BadgeSocialComparison)
+// Module 13857 (BadgeSocialComparison)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import StringUtils from "StringUtils" /* 2152 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import BadgeId from "BadgeId" /* 6107 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 9814 */;
-import BadgeUtils from "BadgeUtils" /* 9828 */;
-import BadgeUnit from "BadgeUnit" /* 13806 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import StringUtils from "StringUtils" /* 2153 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import BadgeId from "BadgeId" /* 6138 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 9856 */;
+import BadgeUtils from "BadgeUtils" /* 9870 */;
+import BadgeUnit from "BadgeUnit" /* 13858 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6352 */;
+import UserStore from "UserStore" /* 1387 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;
 
 require = fn;
 function getActivityStatCount(badge) {
@@ -66,8 +66,8 @@ function EligibleBadgeSocialComparison(arg0) {
   BadgeSocialComparisonTsx1.__closure = items1;
   BadgeSocialComparisonTsx1.__workletHash = 17178513634755;
   BadgeSocialComparisonTsx1.__initData = tmp5;
-  const animatedStyle = require("module_1653").useAnimatedStyle(BadgeSocialComparisonTsx1);
-  const obj2 = require("module_1653");
+  const animatedStyle = require("module_1654").useAnimatedStyle(BadgeSocialComparisonTsx1);
+  const obj2 = require("module_1654");
   const items2 = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items2, () => currentUser.getCurrentUser());
   const tmp2Result = require("initialize");
@@ -128,14 +128,14 @@ function EligibleBadgeSocialComparison(arg0) {
         items7[1] = closure_6(closure_10, obj6);
         obj4.children = items7;
         obj3.children = closure_7(View, obj4);
-        tmp13Result = closure_6(_modDef1653.View, obj3);
+        tmp13Result = closure_6(_modDef1654.View, obj3);
       } else {
         tmp13Result = null;
         if (null != getActivityStatCount(viewerBadge)) {
           tmp13Result = null;
         }
       }
-      tmp11 = badge_id === tmp2(6107).BadgeId.GAME_VARIETY || badge_id === tmp2(6107).BadgeId.STREAMING || badge_id === tmp2(6107).BadgeId.GAME_TIME;
+      tmp11 = badge_id === tmp2(6138).BadgeId.GAME_VARIETY || badge_id === tmp2(6138).BadgeId.STREAMING || badge_id === tmp2(6138).BadgeId.GAME_TIME;
     }
   }
   return tmp13Result;
@@ -143,7 +143,7 @@ function EligibleBadgeSocialComparison(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { wrapper: { marginBottom: -nativeDefault.space.PX_12 }, comparison: null, card: null, label: null, metric: null, user: null, username: null, avatar: null };
 let obj3 = { marginBottom: -nativeDefault.space.PX_12 };
 obj.comparison = { flexDirection: "row", gap: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_8 };

@@ -1,10 +1,10 @@
-// === Module 14452: getChannelIcon ===
+// === Module 14504: getChannelIcon ===
 
-// Module 14452 (getChannelIcon)
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+// Module 14504 (getChannelIcon)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const ChannelTypes = fn(1071).ChannelTypes;

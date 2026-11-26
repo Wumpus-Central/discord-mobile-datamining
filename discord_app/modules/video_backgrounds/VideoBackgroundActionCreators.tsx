@@ -1,13 +1,13 @@
-// === Module 5978: VideoBackgroundActionCreators ===
+// === Module 6009: VideoBackgroundActionCreators ===
 
-// Module 5978 (VideoBackgroundActionCreators)
+// Module 6009 (VideoBackgroundActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 5981 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5987 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 6012 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6018 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import UserStore from "UserStore" /* 1386 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 let closure_7 = async function _fetchVideoFilterAssets() {
@@ -21,7 +21,7 @@ let closure_7 = async function _fetchVideoFilterAssets() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -96,7 +96,7 @@ let closure_8 = async function _uploadVideoFilterAsset() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -177,7 +177,7 @@ let closure_9 = async function _deleteVideoFilterAsset(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -223,7 +223,7 @@ let closure_9 = async function _deleteVideoFilterAsset(arg0) {
           const obj9 = { type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: closure_129_0 };
           closure_130_1(closure_130_2[5]).dispatch(obj9);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp20) {
         c4 = tmp;
@@ -256,7 +256,7 @@ let closure_11 = async function _saveLastUsedBackgroundOption() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

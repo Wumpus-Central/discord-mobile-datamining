@@ -1,9 +1,9 @@
-// === Module 12600: CheckpointCharacterComposite ===
+// === Module 12636: CheckpointCharacterComposite ===
 
-// Module 12600 (CheckpointCharacterComposite)
+// Module 12636 (CheckpointCharacterComposite)
 import jsxProd from "jsxProd" /* 21 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 5012 */;
+import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
 
 ({ StyleSheet: c2, View: c3 } = get_ActivityIndicator);

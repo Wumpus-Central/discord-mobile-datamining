@@ -1,7 +1,7 @@
-// === Module 12811: useIsCheckpointWide ===
+// === Module 12860: useIsCheckpointWide ===
 
-// Module 12811 (useIsCheckpointWide)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+// Module 12860 (useIsCheckpointWide)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/checkpoint/native/useIsCheckpointWide.tsx");

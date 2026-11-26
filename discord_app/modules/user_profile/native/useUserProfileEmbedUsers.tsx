@@ -1,14 +1,14 @@
-// === Module 11923: useUserProfileEmbedUsers ===
+// === Module 11971: useUserProfileEmbedUsers ===
 
-// Module 11923 (useUserProfileEmbedUsers)
-import UserProfileEmbedUsers from "UserProfileEmbedUsers" /* 11924 */;
+// Module 11971 (useUserProfileEmbedUsers)
+import UserProfileEmbedUsers from "UserProfileEmbedUsers" /* 11972 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import UserStore from "UserStore" /* 1386 */;
-import UserProfileStore from "UserProfileStore" /* 6132 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import UserStore from "UserStore" /* 1387 */;
+import UserProfileStore from "UserProfileStore" /* 6163 */;
 
 const require = globalThis.__r;
 

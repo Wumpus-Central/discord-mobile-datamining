@@ -1,16 +1,16 @@
-// === Module 12878: FinalizeTraitTabs ===
+// === Module 12929: FinalizeTraitTabs ===
 
-// Module 12878 (FinalizeTraitTabs)
+// Module 12929 (FinalizeTraitTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import CheckpointPressable from "CheckpointPressable" /* 12816 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 12821 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import CheckpointPressable from "CheckpointPressable" /* 12865 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 12870 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 const CheckpointPressableDefault = CheckpointPressable;
 
@@ -89,12 +89,12 @@ function TraitTab(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CheckpointConstants = fn(6365);
+const CheckpointConstants = fn(6396);
 ({ CHECKPOINT_DARK_CYAN: metroImportDefault, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { scroll: { flexGrow: 0 }, scrollContent: { paddingHorizontal: PX_16 }, row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, tabContainerActive: { paddingRight: 0, paddingBottom: 0 }, tab: null, tabActive: null, tabDisabled: null, tabLabel: null, tabLabelActive: null, tabLabelDisabled: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.tab = { backgroundColor: CHECKPOINT_PRIMARY, borderWidth: 1, borderColor: nativeDefault.colors.BLACK };
@@ -161,22 +161,22 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
     const obj = { x: layout.x, width: layout.width };
   }
   const tmp = ref();
-  let tmp4 = activeCustomizationOption(6734).CUSTOMIZATION_OPTION_TO_TRAIT[activeCustomizationOption];
+  let tmp4 = activeCustomizationOption(6765).CUSTOMIZATION_OPTION_TO_TRAIT[activeCustomizationOption];
   closure_5 = tmp4;
   let nitroLockedMessage;
   if (isCurrentTraitBlocked) {
     if (!flag) {
-      nitroLockedMessage = tmp2(6734).getNitroLockedMessage(tmp4);
-      const tmp2Result = tmp2(6734);
+      nitroLockedMessage = tmp2(6765).getNitroLockedMessage(tmp4);
+      const tmp2Result = tmp2(6765);
     }
   }
-  const sum = tmp2(6734).FINALIZE_TAB_OPTIONS.length + 1;
+  const sum = tmp2(6765).FINALIZE_TAB_OPTIONS.length + 1;
   c7 = sum;
-  const FINALIZE_MORE_OPTIONS = tmp2(6734).FINALIZE_MORE_OPTIONS;
+  const FINALIZE_MORE_OPTIONS = tmp2(6765).FINALIZE_MORE_OPTIONS;
   const hasItem = FINALIZE_MORE_OPTIONS.includes(activeCustomizationOption);
   if (null != moreTabOption) {
-    const customizationOptionName = tmp2(6734).getCustomizationOptionName(moreTabOption);
-    const tmp2Result6 = tmp2(6734);
+    const customizationOptionName = tmp2(6765).getCustomizationOptionName(moreTabOption);
+    const tmp2Result6 = tmp2(6765);
   }
   closure_8 = tmp9;
   str = "more";
@@ -218,7 +218,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
   isCurrentTraitBlocked.useRef(0);
   const items1 = [str, stateFromStores];
   const effect = isCurrentTraitBlocked.useEffect(scrollActiveTabIntoView, items1);
-  activeCustomizationOption(5576);
+  activeCustomizationOption(5607);
   if (isCurrentTraitBlocked) {
     let obj = {
       ref,
@@ -271,13 +271,13 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
     const tmp19 = flag;
     const tmp20 = stateFromStores;
     const tmp21 = closure_5;
-    tmp2Result9 = tmp2(1378);
+    tmp2Result9 = tmp2(1379);
     let str3;
     if (tmp2Result10.isAndroid()) {
       str3 = "tablist";
     }
     obj2.accessibilityRole = str3;
-    const FINALIZE_TAB_OPTIONS = tmp2(6734).FINALIZE_TAB_OPTIONS;
+    const FINALIZE_TAB_OPTIONS = tmp2(6765).FINALIZE_TAB_OPTIONS;
     const items2 = [
       FINALIZE_TAB_OPTIONS.map((item, index) => {
           closure_0 = item;
@@ -310,12 +310,12 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
     if (null != customizationOptionName) {
       const intl2 = tmp2(1112).intl;
       const obj5 = { category: customizationOptionName };
-      let formatToPlainStringResult = intl2.formatToPlainString(moreTabOption(3494).QX1VPx, obj5);
+      let formatToPlainStringResult = intl2.formatToPlainString(moreTabOption(3495).QX1VPx, obj5);
       let tmp23 = moreTabOption;
     } else {
       const intl = tmp2(1112).intl;
       tmp23 = moreTabOption;
-      formatToPlainStringResult = intl.string(moreTabOption(3494).jepsQ6);
+      formatToPlainStringResult = intl.string(moreTabOption(3495).jepsQ6);
     }
     obj3.accessibilityLabel = formatToPlainStringResult;
     obj3.isActive = hasItem;
@@ -325,7 +325,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
       let stringResult;
       if (tmp9) {
         const intl3 = tmp2(1112).intl;
-        stringResult = intl3.string(tmp23(3494)["8cGmXF"]);
+        stringResult = intl3.string(tmp23(3495)["8cGmXF"]);
       }
       nitroLockedMessage = stringResult;
     }
@@ -336,7 +336,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
           showNitroLockedToastDefault(closure_5);
         } else if (closure_8) {
           const obj = { selectedOption: activeCustomizationOption, onSelectOption };
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12879, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12930, dependencyMap.paths), "CheckpointFinalizeTraitPicker", obj);
         } else if (null != moreTabOption) {
           onSelectOption(tmp3);
         }
@@ -346,7 +346,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
       handleTabLayout("more", nativeEvent);
     };
     const obj6 = { color: tmp15, size: "xs" };
-    obj3.trailing = str(tmp2(9774).ChevronSmallDownIcon, obj6);
+    obj3.trailing = str(tmp2(9816).ChevronSmallDownIcon, obj6);
     items2[1] = str(ref2, obj3);
     obj2.children = items2;
     obj.children = tmp20(tmp21, obj2);

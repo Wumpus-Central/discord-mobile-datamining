@@ -1,15 +1,15 @@
-// === Module 18428: ConjureAppIdentity ===
+// === Module 18490: ConjureAppIdentity ===
 
-// Module 18428 (ConjureAppIdentity)
+// Module 18490 (ConjureAppIdentity)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import Card from "Card" /* 6114 */;
-import ImagePickerDefault from "ImagePicker" /* 8095 */;
-import UploadIcon from "UploadIcon" /* 9660 */;
-import MagicWandIcon from "MagicWandIcon" /* 11438 */;
-import ImagePlusIcon from "ImagePlusIcon" /* 18430 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import Card from "Card" /* 6145 */;
+import ImagePickerDefault from "ImagePicker" /* 8137 */;
+import UploadIcon from "UploadIcon" /* 9702 */;
+import MagicWandIcon from "MagicWandIcon" /* 11485 */;
+import ImagePlusIcon from "ImagePlusIcon" /* 18492 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -26,7 +26,7 @@ let closure_12 = async function _pickConjureAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ class ConjureAppIconTile {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -206,7 +206,7 @@ class ConjureAppIconTile {
           } else if (1 === tmp7) {
             c2 = 0;
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -255,7 +255,7 @@ class ConjureAppIconTile {
         items = [obj, ];
         const obj2 = { label: null, IconComponent: null, action: null };
         const intl2 = util.intl;
-        obj2.label = intl2.string(_modDef4244["oAG/BY"]);
+        obj2.label = intl2.string(_modDef4245["oAG/BY"]);
         obj2.IconComponent = MagicWandIcon.MagicWandIcon;
         obj2.action = tmp;
         items[1] = obj2;
@@ -345,7 +345,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { nameRow: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16 }, tileFrame: { alignSelf: "flex-start" }, tile: { padding: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" }, tileEmpty: { borderStyle: "dashed" }, tileImage: { width: "100%", height: "100%" }, editIcon: null, nameField: null };
 const rect = { position: "absolute", top: -nativeDefault.space.PX_4, right: -nativeDefault.space.PX_4, pointerEvents: "none" };
 obj2.editIcon = rect;
@@ -380,13 +380,13 @@ export function ConjureAppIdentitySection(nameError) {
   const obj3 = { style: tmp.nameField, onLayout: callback, children: null };
   const obj4 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
   const intl = nameError(1112).intl;
-  obj4.label = intl.string(_modDef4244.GWBCF9);
+  obj4.label = intl.string(_modDef4245.GWBCF9);
   obj4.value = name;
   obj4.onChange = onNameChange;
-  obj4.maxLength = nameError(6904).MAX_PROJECT_NAME_LENGTH;
+  obj4.maxLength = nameError(6935).MAX_PROJECT_NAME_LENGTH;
   obj4.disabled = flag;
   obj4.errorMessage = nameError;
-  obj3.children = closure_7(nameError(7243).TextInput, obj4);
+  obj3.children = closure_7(nameError(7274).TextInput, obj4);
   items1[1] = closure_7(View, obj3);
   obj2.children = items1;
   const items2 = [closure_8(View, obj2), ];
@@ -394,23 +394,23 @@ export function ConjureAppIdentitySection(nameError) {
   if (null != first) {
     const obj5 = { accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "body-xs/normal", color: "text-feedback-critical", children: first };
-    obj5.children = closure_7(tmp8(5603).Text, obj6);
+    obj5.children = closure_7(tmp8(5634).Text, obj6);
     tmp12Result = closure_7(View, obj5);
   }
   const obj7 = { children: null };
   items2[1] = tmp12Result;
   obj.children = items2;
-  const items3 = [closure_8(nameError(6084).Stack, obj), ];
+  const items3 = [closure_8(nameError(6115).Stack, obj), ];
   const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = tmp8(1112).intl;
-  obj8.label = intl2.string(_modDef4244.ynaGa1);
+  obj8.label = intl2.string(_modDef4245.ynaGa1);
   const intl3 = tmp8(1112).intl;
-  obj8.placeholder = intl3.string(_modDef4244["I+3UTL"]);
+  obj8.placeholder = intl3.string(_modDef4245["I+3UTL"]);
   obj8.value = description;
   obj8.onChange = onDescriptionChange;
-  obj8.maxLength = nameError(6904).MAX_APP_DESCRIPTION_LENGTH;
+  obj8.maxLength = nameError(6935).MAX_APP_DESCRIPTION_LENGTH;
   obj8.disabled = flag;
-  items3[1] = closure_7(nameError(7409).TextArea, obj8);
+  items3[1] = closure_7(nameError(7440).TextArea, obj8);
   obj7.children = items3;
   return closure_8(closure_9, obj7);
 }

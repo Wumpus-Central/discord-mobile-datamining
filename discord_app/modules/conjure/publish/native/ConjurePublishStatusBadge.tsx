@@ -1,30 +1,30 @@
-// === Module 18548: ConjurePublishStatusBadge ===
+// === Module 18611: ConjurePublishStatusBadge ===
 
-// Module 18548 (ConjurePublishStatusBadge)
+// Module 18611 (ConjurePublishStatusBadge)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import ProgressCircleDefault from "ProgressCircle" /* 13532 */;
-import ConjureHeaderIconButton from "ConjureHeaderIconButton" /* 18547 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import ProgressCircleDefault from "ProgressCircle" /* 13584 */;
+import ConjureHeaderIconButton from "ConjureHeaderIconButton" /* 18610 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function ConjurePublishSpinner() {
   const tmp = closure_6();
   const token = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BRAND);
   let obj = require("useToken");
-  const sharedValue = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(0);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1653;
+    const obj = _mod1654;
     const obj2 = timing_timing;
-    const result = _undefined.set(obj.withRepeat(obj2.withTiming(360, { duration: 800, easing: _mod1653.Easing.linear }), -1, false));
+    const result = _undefined.set(obj.withRepeat(obj2.withTiming(360, { duration: 800, easing: _mod1654.Easing.linear }), -1, false));
     return () => c0(dependencyMap[7]).cancelAnimation(_undefined);
   }, items);
-  let obj2 = require("module_1653");
+  let obj2 = require("module_1654");
   const items1 = [closure_7, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items1;
@@ -42,17 +42,17 @@ function ConjurePublishSpinner() {
   ConjurePublishStatusBadgeTsx1.__closure = items2;
   ConjurePublishStatusBadgeTsx1.__workletHash = 4407393143037;
   ConjurePublishStatusBadgeTsx1.__initData = tmp7;
-  const animatedStyle = require("module_1653").useAnimatedStyle(ConjurePublishStatusBadgeTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(ConjurePublishStatusBadgeTsx1);
   const obj4 = { style: null, children: jsx(ProgressCircleDefault, { percent: 70, size: 12, strokeWidth: 2, color: token, style: tmp.spinner }) };
   const items3 = [tmp.spinner, animatedStyle];
   obj4.style = items3;
-  return jsx(_modDef1653.View, { style: null, children: jsx(ProgressCircleDefault, { percent: 70, size: 12, strokeWidth: 2, color: token, style: tmp.spinner }) });
+  return jsx(_modDef1654.View, { style: null, children: jsx(ProgressCircleDefault, { percent: 70, size: 12, strokeWidth: 2, color: token, style: tmp.spinner }) });
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { dot: null, spinner: null };
-let size = { width: fn(18547).CONJURE_HEADER_BADGE_SIZE, height: fn(18547).CONJURE_HEADER_BADGE_SIZE, borderRadius: fn(18547).CONJURE_HEADER_BADGE_SIZE / 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+let size = { width: fn(18610).CONJURE_HEADER_BADGE_SIZE, height: fn(18610).CONJURE_HEADER_BADGE_SIZE, borderRadius: fn(18610).CONJURE_HEADER_BADGE_SIZE / 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.dot = size;
 obj2.spinner = { width: 12, height: 12 };
 let closure_6 = createStyles.createStyles(obj2);

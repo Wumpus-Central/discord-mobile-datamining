@@ -1,17 +1,17 @@
-// === Module 15996: ProfileCustomizationSettingScreen ===
+// === Module 16074: ProfileCustomizationSettingScreen ===
 
-// Module 15996 (ProfileCustomizationSettingScreen)
+// Module 16074 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5982 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9397 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15997 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16121 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9439 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16075 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16174 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9395 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 6345 */;
-import WidgetStore from "WidgetStore" /* 14513 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9437 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 6376 */;
+import WidgetStore from "WidgetStore" /* 14565 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: { height: "100%" }, controls: { paddingTop: 4 }, page: { flex: 1 }, profileSelector: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_17 = createStyles.createStyles(obj);
 let items = [

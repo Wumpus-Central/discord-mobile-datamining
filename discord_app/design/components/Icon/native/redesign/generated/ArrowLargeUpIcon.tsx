@@ -1,9 +1,9 @@
-// === Module 11855: ArrowLargeUpIcon ===
+// === Module 11903: ArrowLargeUpIcon ===
 
-// Module 11855 (ArrowLargeUpIcon)
+// Module 11903 (ArrowLargeUpIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5698 */;
-import _mod11856 from "module_11856" /* 11856 */;
+import BaseIconImage from "BaseIconImage" /* 5729 */;
+import _mod11904 from "module_11904" /* 11904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ArrowLargeUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11856, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11904, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

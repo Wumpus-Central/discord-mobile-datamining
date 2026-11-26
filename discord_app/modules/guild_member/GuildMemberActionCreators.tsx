@@ -1,10 +1,10 @@
-// === Module 7446: GuildMemberActionCreators ===
+// === Module 7477: GuildMemberActionCreators ===
 
-// Module 7446 (GuildMemberActionCreators)
+// Module 7477 (GuildMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import ImpersonateActionCreators from "ImpersonateActionCreators" /* 6985 */;
-import ImpersonateStore from "ImpersonateStore" /* 4917 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import ImpersonateActionCreators from "ImpersonateActionCreators" /* 7016 */;
+import ImpersonateStore from "ImpersonateStore" /* 4948 */;
 
 require = fn;
 const Endpoints = fn(1071).Endpoints;

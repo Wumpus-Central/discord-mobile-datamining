@@ -1,29 +1,29 @@
-// === Module 12809: CheckpointOverlay ===
+// === Module 12858: CheckpointOverlay ===
 
-// Module 12809 (CheckpointOverlay)
+// Module 12858 (CheckpointOverlay)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1112 */;
-import _modDef3462 from "module_3462" /* 3462 */;
-import _modDef3494 from "module_3494" /* 3494 */;
-import CheckpointConstants from "CheckpointConstants" /* 6365 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6736 */;
-import ChatIcon from "ChatIcon" /* 7106 */;
-import GameControllerIcon from "GameControllerIcon" /* 7722 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 10459 */;
-import ServerIcon from "ServerIcon" /* 11399 */;
-import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 12601 */;
-import CheckpointWelcomeScreenDefault from "CheckpointWelcomeScreen" /* 12810 */;
-import CheckpointCharacterUnavailableScreenDefault from "CheckpointCharacterUnavailableScreen" /* 12825 */;
-import CheckpointStatsIntroScreenDefault from "CheckpointStatsIntroScreen" /* 12826 */;
-import CheckpointVoiceStatsScreenDefault from "CheckpointVoiceStatsScreen" /* 12827 */;
-import CheckpointMessagesStatsScreenDefault from "CheckpointMessagesStatsScreen" /* 12834 */;
-import CheckpointServersStatsScreenDefault from "CheckpointServersStatsScreen" /* 12837 */;
-import CheckpointTopServerStatsScreenDefault from "CheckpointTopServerStatsScreen" /* 12843 */;
-import CheckpointEmojiStatsScreenDefault from "CheckpointEmojiStatsScreen" /* 12844 */;
-import CheckpointGamesStatsScreenDefault from "CheckpointGamesStatsScreen" /* 12849 */;
-import CheckpointGameTimeStatsScreenDefault from "CheckpointGameTimeStatsScreen" /* 12851 */;
-import CheckpointFriendsStatsScreenDefault from "CheckpointFriendsStatsScreen" /* 12854 */;
-import CheckpointSummaryStatsScreenDefault from "CheckpointSummaryStatsScreen" /* 12862 */;
+import _modDef3463 from "module_3463" /* 3463 */;
+import _modDef3495 from "module_3495" /* 3495 */;
+import CheckpointConstants from "CheckpointConstants" /* 6396 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6767 */;
+import ChatIcon from "ChatIcon" /* 7137 */;
+import GameControllerIcon from "GameControllerIcon" /* 7756 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 10504 */;
+import ServerIcon from "ServerIcon" /* 11445 */;
+import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 12637 */;
+import CheckpointWelcomeScreenDefault from "CheckpointWelcomeScreen" /* 12859 */;
+import CheckpointCharacterUnavailableScreenDefault from "CheckpointCharacterUnavailableScreen" /* 12874 */;
+import CheckpointStatsIntroScreenDefault from "CheckpointStatsIntroScreen" /* 12876 */;
+import CheckpointVoiceStatsScreenDefault from "CheckpointVoiceStatsScreen" /* 12877 */;
+import CheckpointMessagesStatsScreenDefault from "CheckpointMessagesStatsScreen" /* 12884 */;
+import CheckpointServersStatsScreenDefault from "CheckpointServersStatsScreen" /* 12887 */;
+import CheckpointTopServerStatsScreenDefault from "CheckpointTopServerStatsScreen" /* 12893 */;
+import CheckpointEmojiStatsScreenDefault from "CheckpointEmojiStatsScreen" /* 12894 */;
+import CheckpointGamesStatsScreenDefault from "CheckpointGamesStatsScreen" /* 12899 */;
+import CheckpointGameTimeStatsScreenDefault from "CheckpointGameTimeStatsScreen" /* 12901 */;
+import CheckpointFriendsStatsScreenDefault from "CheckpointFriendsStatsScreen" /* 12904 */;
+import CheckpointSummaryStatsScreenDefault from "CheckpointSummaryStatsScreen" /* 12912 */;
 import size from "module_2" /* 2 */;
 
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
@@ -44,9 +44,9 @@ export default function CheckpointOverlay(route) {
       const obj3 = { size: "xs", color: CHECKPOINT_PRIMARY };
       obj2.icon = jsx(MicrophoneIcon.MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY });
       const intl9 = util.intl;
-      obj2.title = intl9.string(_modDef3494["/7XYsa"]);
+      obj2.title = intl9.string(_modDef3495["/7XYsa"]);
       const intl10 = util.intl;
-      obj2.description = intl10.string(_modDef3494["X8/G/o"]);
+      obj2.description = intl10.string(_modDef3495["X8/G/o"]);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.VOICE === statsScreen) {
       return jsx(CheckpointVoiceStatsScreenDefault, {});
@@ -55,9 +55,9 @@ export default function CheckpointOverlay(route) {
       const obj5 = { size: "xs", color: CHECKPOINT_PRIMARY };
       obj4.icon = jsx(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY });
       const intl7 = util.intl;
-      obj4.title = intl7.string(_modDef3494["2BuyVC"]);
+      obj4.title = intl7.string(_modDef3495["2BuyVC"]);
       const intl8 = util.intl;
-      obj4.description = intl8.string(_modDef3494["kF+Y3a"]);
+      obj4.description = intl8.string(_modDef3495["kF+Y3a"]);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.MESSAGES === statsScreen) {
       return jsx(CheckpointMessagesStatsScreenDefault, {});
@@ -66,9 +66,9 @@ export default function CheckpointOverlay(route) {
       const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
       obj6.icon = jsx(ServerIcon.ServerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY });
       const intl5 = util.intl;
-      obj6.title = intl5.string(_modDef3462.F0fkrh);
+      obj6.title = intl5.string(_modDef3463.F0fkrh);
       const intl6 = util.intl;
-      obj6.description = intl6.string(_modDef3494.Xg82Gy);
+      obj6.description = intl6.string(_modDef3495.Xg82Gy);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.SERVERS === statsScreen) {
       return jsx(CheckpointServersStatsScreenDefault, {});
@@ -79,9 +79,9 @@ export default function CheckpointOverlay(route) {
       const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
       obj8.icon = jsx(EmojiSlightlySmilingFaceIcon.EmojiSlightlySmilingFaceIcon, { size: "xs", color: CHECKPOINT_PRIMARY });
       const intl3 = util.intl;
-      obj8.title = intl3.string(_modDef3494.ZTDCIv);
+      obj8.title = intl3.string(_modDef3495.ZTDCIv);
       const intl4 = util.intl;
-      obj8.description = intl4.string(_modDef3494.y8Sr8J);
+      obj8.description = intl4.string(_modDef3495.y8Sr8J);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.EMOJI === statsScreen) {
       return jsx(CheckpointEmojiStatsScreenDefault, {});
@@ -90,9 +90,9 @@ export default function CheckpointOverlay(route) {
       const obj11 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
       obj10.icon = jsx(GameControllerIcon.GameControllerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY });
       const intl = util.intl;
-      obj10.title = intl.string(_modDef3494.HM2fjf);
+      obj10.title = intl.string(_modDef3495.HM2fjf);
       const intl2 = util.intl;
-      obj10.description = intl2.string(_modDef3494.LQiFqJ);
+      obj10.description = intl2.string(_modDef3495.LQiFqJ);
       return jsx(CheckpointStatsIntroScreenDefault, { icon: null, title: null, description: null });
     } else if (CheckpointNavigation.CheckpointStatsScreen.GAMES === statsScreen) {
       return jsx(CheckpointGamesStatsScreenDefault, {});

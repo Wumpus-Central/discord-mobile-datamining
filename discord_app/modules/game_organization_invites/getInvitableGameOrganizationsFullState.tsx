@@ -1,9 +1,9 @@
-// === Module 12048: getInvitableGameOrganizationsFullState ===
+// === Module 12096: getInvitableGameOrganizationsFullState ===
 
-// Module 12048 (getInvitableGameOrganizationsFullState)
+// Module 12096 (getInvitableGameOrganizationsFullState)
 import util from "util" /* 1112 */;
-import _modDef2650 from "module_2650" /* 2650 */;
-import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12049 */;
+import _modDef2651 from "module_2651" /* 2651 */;
+import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12097 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -41,7 +41,7 @@ export function getGameOrganizationFullSubLabel(data) {
     str = "other";
   }
   obj.displayNoun = str;
-  return intl.formatToPlainString(_modDef2650.xuM052, obj);
+  return intl.formatToPlainString(_modDef2651.xuM052, obj);
 }
 export function getInvitableGameOrganizationsFullSubLabel(kind) {
   kind = kind.kind;
@@ -57,10 +57,10 @@ export function getInvitableGameOrganizationsFullSubLabel(kind) {
         str2 = "other";
       }
       obj.displayNoun = str2;
-      return intl2.formatToPlainString(_modDef2650.xuM052, obj);
+      return intl2.formatToPlainString(_modDef2651.xuM052, obj);
     } else if ("all_full" === kind) {
       const intl = util.intl;
-      return intl.string(_modDef2650.bY80Jh);
+      return intl.string(_modDef2651.bY80Jh);
     }
   }
 }

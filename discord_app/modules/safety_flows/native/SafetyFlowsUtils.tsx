@@ -1,15 +1,15 @@
-// === Module 20292: SafetyFlowsUtils ===
+// === Module 20356: SafetyFlowsUtils ===
 
-// Module 20292 (SafetyFlowsUtils)
+// Module 20356 (SafetyFlowsUtils)
 import util from "util" /* 1112 */;
-import _modDef3174 from "module_3174" /* 3174 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
-import types from "types" /* 20286 */;
-import constants from "constants" /* 20287 */;
+import _modDef3175 from "module_3175" /* 3175 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
+import types from "types" /* 20350 */;
+import constants from "constants" /* 20351 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 
@@ -39,7 +39,7 @@ function navigateToScreenForTask(arr, task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
     const obj3 = { text: null, variant: "success" };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef3174["/fHz9S"]);
+    obj3.text = intl.string(_modDef3175["/fHz9S"]);
     ToastActionCreatorsDefault.open("SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", obj3);
   } else {
     task_type = task_type.task_type;
@@ -115,7 +115,7 @@ export function useOnTaskComplete() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ export function useOnTaskComplete() {
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp15) {
           c4 = tmp;

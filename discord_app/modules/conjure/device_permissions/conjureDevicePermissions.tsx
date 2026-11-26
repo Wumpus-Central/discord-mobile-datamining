@@ -1,9 +1,9 @@
-// === Module 11417: conjureDevicePermissions ===
+// === Module 11464: conjureDevicePermissions ===
 
-// Module 11417 (conjureDevicePermissions)
+// Module 11464 (conjureDevicePermissions)
 import util from "util" /* 1112 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import _modDef4244 from "module_4244" /* 4244 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import _modDef4245 from "module_4245" /* 4245 */;
 import size from "module_2" /* 2 */;
 
 const obj = {
@@ -11,7 +11,7 @@ const obj = {
     isSupported: PlatformUtils.isDesktop,
     getLabel() {
       const intl = util.intl;
-      return intl.string(_modDef4244["2KIefJ"]);
+      return intl.string(_modDef4245["2KIefJ"]);
     }
   },
   connect_user_to_voice: {
@@ -20,7 +20,7 @@ const obj = {
     },
     getLabel() {
       const intl = util.intl;
-      return intl.string(_modDef4244["5Hp3Nx"]);
+      return intl.string(_modDef4245["5Hp3Nx"]);
     }
   }
 };
@@ -44,5 +44,5 @@ export function getConjureDevicePermissionLabel(permission) {
 }
 export function getConjureDevicePermissionPromptTitle(app) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef4244.vBSfKU, { app });
+  return intl.formatToPlainString(_modDef4245.vBSfKU, { app });
 }

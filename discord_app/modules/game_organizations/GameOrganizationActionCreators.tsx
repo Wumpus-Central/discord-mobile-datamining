@@ -1,10 +1,10 @@
-// === Module 15322: GameOrganizationActionCreators ===
+// === Module 15372: GameOrganizationActionCreators ===
 
-// Module 15322 (GameOrganizationActionCreators)
+// Module 15372 (GameOrganizationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationRecord from "ApplicationRecord" /* 2142 */;
+import ApplicationRecord from "ApplicationRecord" /* 2143 */;
 
 require = fn;
 let closure_6 = async function _fetchGameOrganization() {
@@ -22,7 +22,7 @@ let closure_6 = async function _fetchGameOrganization() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -120,7 +120,7 @@ let closure_7 = async function _fetchLinkableGameOrganizations(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

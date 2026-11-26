@@ -1,7 +1,7 @@
-// === Module 14862: isOnMetaQuest ===
+// === Module 14915: isOnMetaQuest ===
 
-// Module 14862 (isOnMetaQuest)
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7734 */;
+// Module 14915 (isOnMetaQuest)
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7768 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/isOnMetaQuest.tsx");

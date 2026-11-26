@@ -1,15 +1,15 @@
-// === Module 12352: StringSelectComponentActionSheet ===
+// === Module 12402: StringSelectComponentActionSheet ===
 
-// Module 12352 (StringSelectComponentActionSheet)
-import Server from "Server" /* 2117 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import Text_Text from "Text/Text" /* 5603 */;
+// Module 12402 (StringSelectComponentActionSheet)
+import Server from "Server" /* 2118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import Text_Text from "Text/Text" /* 5634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ selectionOptionItemWithDescription: { minHeight: 64 }, selectionOptionItemDescription: { marginTop: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/components/StringSelectComponentActionSheet.tsx");
@@ -23,8 +23,8 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(8790);
-  let tmp3 = first(noop.useState(new Set(selectionActionComponent(8790).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
+  let obj = selectionActionComponent(8832);
+  let tmp3 = first(noop.useState(new Set(selectionActionComponent(8832).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
   first = tmp3[0];
   noop = tmp3[1];
   items = [selectionActionComponent];
@@ -107,7 +107,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     channelId: null,
     allowEmpty: null
   };
-  set = new Set(selectionActionComponent(8790).getInitialStringSelectOptions(selectionActionComponent, containerId));
+  set = new Set(selectionActionComponent(8832).getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
   if (selectionOptionItemWithDescription) {
     selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;
@@ -132,5 +132,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(12353), obj2);
+  return tmp9(onSubmit(12403), obj2);
 };

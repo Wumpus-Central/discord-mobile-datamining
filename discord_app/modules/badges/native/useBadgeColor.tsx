@@ -1,8 +1,8 @@
-// === Module 13801: useBadgeColor ===
+// === Module 13853: useBadgeColor ===
 
-// Module 13801 (useBadgeColor)
+// Module 13853 (useBadgeColor)
 import nativeDefault from "native" /* 575 */;
-import privDefault from "priv" /* 1454 */;
+import privDefault from "priv" /* 1455 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 const NEUTRAL_35 = nativeDefault.unsafe_rawColors.NEUTRAL_35;
 let closure_7 = new privDefault({ max: 50 });
-const promiseDeduper = new fn(5132).PromiseDeduper();
+const promiseDeduper = new fn(5163).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/useBadgeColor.tsx");
 
@@ -32,7 +32,7 @@ export function useBadgeColor(rasterUrl) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {
@@ -56,9 +56,9 @@ export function useBadgeColor(rasterUrl) {
               const obj4 = {
                 value: promiseDeduper.one(uri, asyncGeneratorStep(async () => {
                           closure_3 = tmp2;
-                          const tmp14 = value(13802);
+                          const tmp14 = value(13854);
                           const pickBadgeColor = tmp14.pickBadgeColor;
-                          await pickBadgeColor(2023).getDominantColors({ uri });
+                          await pickBadgeColor(2024).getDominantColors({ uri });
                           const tmp8 = pickBadgeColor(value);
                           value = tmp8;
                           if (tmp8 == null) {
@@ -90,7 +90,7 @@ export function useBadgeColor(rasterUrl) {
               closure_1(closure_129_0);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } catch (tmp23) {
           if (tmp4 === c3) {

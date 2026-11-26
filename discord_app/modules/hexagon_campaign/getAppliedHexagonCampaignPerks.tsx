@@ -1,13 +1,13 @@
-// === Module 16559: getAppliedHexagonCampaignPerks ===
+// === Module 16610: getAppliedHexagonCampaignPerks ===
 
-// Module 16559 (getAppliedHexagonCampaignPerks)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5040 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5036 */;
+// Module 16610 (getAppliedHexagonCampaignPerks)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5071 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5067 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
-const HexagonCampaignPerk = fn(5037).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5068).HexagonCampaignPerk;
 const SystemTheme = fn(1194).SystemTheme;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/getAppliedHexagonCampaignPerks.tsx");

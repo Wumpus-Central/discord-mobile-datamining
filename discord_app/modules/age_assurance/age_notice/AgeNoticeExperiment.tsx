@@ -1,7 +1,7 @@
-// === Module 6806: AgeNoticeExperiment ===
+// === Module 6837: AgeNoticeExperiment ===
 
-// Module 6806 (AgeNoticeExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 6837 (AgeNoticeExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-08-tiny-bronco", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,14 +1,14 @@
-// === Module 9358: PromotionsActionCreators ===
+// === Module 9400: PromotionsActionCreators ===
 
-// Module 9358 (PromotionsActionCreators)
+// Module 9400 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import wrappers from "wrappers" /* 1226 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9174 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9216 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2188 */;
-import UserStore from "UserStore" /* 1386 */;
-import PromotionsStore from "PromotionsStore" /* 9120 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import UserStore from "UserStore" /* 1387 */;
+import PromotionsStore from "PromotionsStore" /* 9162 */;
 
 require = fn;
 function fetchActivePromotions() {
@@ -82,11 +82,11 @@ function dismissOutboundPromotionNotice() {
   DispatcherDefault.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
   const lastDismissedOutboundPromotionStartDate = PromotionsStore.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
-    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(4842).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(4873).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("userContent", async (arg0) => {
       const StringValue = wrappers.StringValue;
       arg0.lastDismissedOutboundPromotionStartDate = StringValue.create({ value: lastDismissedOutboundPromotionStartDate });
-    }, lastDismissedOutboundPromotionStartDate(4842).UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, lastDismissedOutboundPromotionStartDate(4873).UserSettingsDelay.INFREQUENT_USER_ACTION);
   }
 }
 function fetchClaimedOutboundPromotionCodes() {
@@ -110,7 +110,7 @@ let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -173,7 +173,7 @@ let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
 function addClaimedOutboundPromotionCode(claimedOutboundPromotionCode) {
   DispatcherDefault.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode });
 }
-let closure_7 = fn(1388).PREMIUM_SUBSCRIPTION_APPLICATION;
+let closure_7 = fn(1389).PREMIUM_SUBSCRIPTION_APPLICATION;
 const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionsActionCreators.tsx");

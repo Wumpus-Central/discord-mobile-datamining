@@ -1,19 +1,19 @@
-// === Module 17129: CopyClientInfoSetting ===
+// === Module 17180: CopyClientInfoSetting ===
 
-// Module 17129 (CopyClientInfoSetting)
+// Module 17180 (CopyClientInfoSetting)
 import util from "util" /* 1112 */;
-import DeviceUtils from "DeviceUtils" /* 4969 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import ToastUtils from "ToastUtils" /* 5693 */;
-import CopyIcon from "CopyIcon" /* 5712 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7476 */;
-import ClipboardUtils from "ClipboardUtils" /* 7507 */;
-import ActionSheet from "ActionSheet" /* 7515 */;
-import ActionSheetRow from "ActionSheetRow" /* 7517 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 8296 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12267 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11866 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1377 */;
+import DeviceUtils from "DeviceUtils" /* 5000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import ToastUtils from "ToastUtils" /* 5724 */;
+import CopyIcon from "CopyIcon" /* 5743 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
+import ClipboardUtils from "ClipboardUtils" /* 7538 */;
+import ActionSheet from "ActionSheet" /* 7546 */;
+import ActionSheetRow from "ActionSheetRow" /* 7548 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 8338 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12317 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11914 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1378 */;
 
 require = fn;
 function getClientInfo() {
@@ -159,18 +159,18 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11914);
+const SettingBuilders = fn(11962);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6971).ClipboardListIcon,
+  IconComponent: fn(7002).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ClientClientInfoActionSheet }), "ClientClientInfoActionSheet");
   },
-  usePredicate: fn(4837).DeveloperMode.useSetting,
+  usePredicate: fn(4868).DeveloperMode.useSetting,
   withArrow: true
 });
 const size = fn(2);

@@ -1,11 +1,11 @@
-// === Module 4864: FavoriteStore ===
+// === Module 4895: FavoriteStore ===
 
-// Module 4864 (FavoriteStore)
+// Module 4895 (FavoriteStore)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 function initializeFromUserSettings() {
@@ -120,8 +120,8 @@ function initializeFromUserSettings() {
     return flag3;
   }
 }
-const createChannelRecord = fn(4865).createChannelRecord;
-const FavoritesConstants = fn(4874);
+const createChannelRecord = fn(4896).createChannelRecord;
+const FavoritesConstants = fn(4905);
 const FAVORITES_AUTO_ADD_THREADS_NEVER = FavoritesConstants.FAVORITES_AUTO_ADD_THREADS_NEVER;
 ({ FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: hasOwnProperty, FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_6, FAVORITES_PRUNE_SCOPE_ALL: metroImportDefault, FAVORITES_PRUNE_SCOPE_AUTO_ADDED } = FavoritesConstants);
 const FAVORITES_PRUNE_WHEN_ARCHIVED = FavoritesConstants.FAVORITES_PRUNE_WHEN_ARCHIVED;

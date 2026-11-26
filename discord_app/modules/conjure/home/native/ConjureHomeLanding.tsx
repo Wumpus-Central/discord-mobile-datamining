@@ -1,18 +1,18 @@
-// === Module 18778: ConjureHomeLanding ===
+// === Module 18841: ConjureHomeLanding ===
 
-// Module 18778 (ConjureHomeLanding)
+// Module 18841 (ConjureHomeLanding)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 7628 */;
+import ConjureChatStore from "ConjureChatStore" /* 7659 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const sendUserMessage = fn(7662).sendUserMessage;
+const sendUserMessage = fn(7693).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const prototype = function ConjureHomeUploadError() {
@@ -21,7 +21,7 @@ const prototype = function ConjureHomeUploadError() {
 class prototype extends Error {
 }
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, content: null, hero: null, badgeRow: null, carousel: null, showcase: null, showcaseTitle: null, error: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_32, gap: PX_32 };
@@ -30,7 +30,7 @@ obj2.hero = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.sp
 obj2.badgeRow = { flexDirection: "row" };
 let obj6 = { marginBottom: null };
 const diff = nativeDefault.space.PX_48 - PX_32;
-obj6.marginBottom = diff - fn(18779).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
+obj6.marginBottom = diff - fn(18842).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
 obj2.carousel = obj6;
 let obj5 = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_32 };
 obj2.showcase = { gap: nativeDefault.space.PX_16 };
@@ -77,10 +77,10 @@ export default function ConjureHomeLanding(focusRequest) {
   ConjureHomeLandingTsx1.__closure = items1;
   ConjureHomeLandingTsx1.__workletHash = 1190769444170;
   ConjureHomeLandingTsx1.__initData = tmp8;
-  const animatedStyle = require("module_1653").useAnimatedStyle(ConjureHomeLandingTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(ConjureHomeLandingTsx1);
   const tmp13 = _slicedToArray(noop.useState(require("conjureTarget").CONJURE_TARGET_USER), 2);
   first = tmp13[0];
-  let obj2 = require("module_1653");
+  let obj2 = require("module_1654");
   const conjureEligibleGuilds = require("useConjureProjects").useConjureEligibleGuilds("ConjureHomeLanding");
   CONJURE_TARGET_USER = first;
   if (first !== require("conjureTarget").CONJURE_TARGET_USER) {
@@ -136,7 +136,7 @@ export default function ConjureHomeLanding(focusRequest) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -231,7 +231,7 @@ export default function ConjureHomeLanding(focusRequest) {
                     closure_0 = fn;
                     function check() {
                       const messages = ref.getMessages(closure_0);
-                      if (messages.some(/* F142598 */ function() { ... })) {
+                      if (messages.some(/* F143063 */ function() { ... })) {
                         ref.removeChangeListener(check);
                         const _clearTimeout = clearTimeout;
                         clearTimeout(timerId);

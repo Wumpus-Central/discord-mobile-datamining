@@ -1,17 +1,17 @@
-// === Module 19050: ConsoleConnectionActionSheet ===
+// === Module 19113: ConsoleConnectionActionSheet ===
 
-// Module 19050 (ConsoleConnectionActionSheet)
+// Module 19113 (ConsoleConnectionActionSheet)
 import util from "util" /* 1112 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import TableRowGroup from "TableRowGroup" /* 6109 */;
-import TableRow from "TableRow" /* 6113 */;
-import PlatformsDefault from "Platforms" /* 6147 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7476 */;
-import ActionSheet from "ActionSheet" /* 7515 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 7714 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 7749 */;
-import XboxNeutralIcon from "XboxNeutralIcon" /* 8741 */;
-import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 14174 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import TableRowGroup from "TableRowGroup" /* 6140 */;
+import TableRow from "TableRow" /* 6144 */;
+import PlatformsDefault from "Platforms" /* 6178 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
+import ActionSheet from "ActionSheet" /* 7546 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 7748 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 7783 */;
+import XboxNeutralIcon from "XboxNeutralIcon" /* 8783 */;
+import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 14226 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ function connectXbox() {
 const PlatformTypes = fn(1071).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(19051).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
+let items = [fn(19114).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/console_coachmark/native/ConsoleConnectionActionSheet.tsx");
 

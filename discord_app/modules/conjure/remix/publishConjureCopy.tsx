@@ -1,12 +1,12 @@
-// === Module 11409: publishConjureCopy ===
+// === Module 11456: publishConjureCopy ===
 
-// Module 11409 (publishConjureCopy)
+// Module 11456 (publishConjureCopy)
 import router_utils from "router_utils" /* 1098 */;
-import transitionToGuild from "transitionToGuild" /* 8558 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 11410 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11412 */;
+import transitionToGuild from "transitionToGuild" /* 8600 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 11457 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11459 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 
 require = fn;
 function needsInstallConsent(arg0) {
@@ -51,7 +51,7 @@ let closure_7 = async function _publishConjureCopy(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

@@ -1,15 +1,15 @@
-// === Module 17021: SettingsChatScreen ===
+// === Module 17072: SettingsChatScreen ===
 
-// Module 17021 (SettingsChatScreen)
+// Module 17072 (SettingsChatScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7316 */;
-import _modDef10797 from "module_10797" /* 10797 */;
-import SettingBuilders from "SettingBuilders" /* 11914 */;
-import SettingLayoutDefault from "SettingLayout" /* 16139 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7347 */;
+import _modDef10843 from "module_10843" /* 10843 */;
+import SettingBuilders from "SettingBuilders" /* 11962 */;
+import SettingLayoutDefault from "SettingLayout" /* 16190 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
-import SubscriptionStore from "SubscriptionStore" /* 2178 */;
+import UserStore from "UserStore" /* 1387 */;
+import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 
 require = fn;
 function VideoUploadQualityNitroUpsell() {
@@ -31,7 +31,7 @@ function VideoUploadQualityNitroUpsell() {
     const obj4 = { style: tmp3.card, children: null };
     const obj5 = { border: "none", shadow: "none", children: null };
     const obj6 = { style: tmp3.cardContent, children: null };
-    const obj7 = { style: tmp3.cardIcon, source: _modDef10797, size: tmp(1186).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+    const obj7 = { style: tmp3.cardIcon, source: _modDef10843, size: tmp(1186).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
     const items2 = [closure_9(tmp(1186).Icon, obj7), ];
     const obj8 = { variant: "body-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1112).intl;
@@ -42,21 +42,21 @@ function VideoUploadQualityNitroUpsell() {
         }
     };
     obj8.children = intl2.format(tmp(1112).t.uW1zul, obj9);
-    items2[1] = closure_9(tmp(5603).Text, obj8);
+    items2[1] = closure_9(tmp(5634).Text, obj8);
     obj6.children = items2;
     obj5.children = closure_10(View, obj6);
-    obj4.children = closure_9(tmp(6114).Card, obj5);
+    obj4.children = closure_9(tmp(6145).Card, obj5);
     tmp7Result = closure_9(View, obj4);
   }
   children[1] = tmp7Result;
   return closure_10(View, { children });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(9513).MobileUserSettings;
+const MobileUserSettings = fn(9555).MobileUserSettings;
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { card: { marginTop: 8, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, cardContent: { flexDirection: "row", alignItems: "center" }, cardIcon: { marginEnd: 8 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);

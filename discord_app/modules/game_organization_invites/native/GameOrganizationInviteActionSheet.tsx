@@ -1,15 +1,15 @@
-// === Module 15323: GameOrganizationInviteActionSheet ===
+// === Module 15373: GameOrganizationInviteActionSheet ===
 
-// Module 15323 (GameOrganizationInviteActionSheet)
+// Module 15373 (GameOrganizationInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
-import _modDef2650 from "module_2650" /* 2650 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 10393 */;
-import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 15324 */;
-import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 15325 */;
-import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 15326 */;
-import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 15327 */;
+import _modDef2651 from "module_2651" /* 2651 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 10438 */;
+import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 15374 */;
+import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 15375 */;
+import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 15376 */;
+import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 15377 */;
 import noop from "module_19" /* 19 */;
-import GameOrganizationStore from "GameOrganizationStore" /* 15268 */;
+import GameOrganizationStore from "GameOrganizationStore" /* 15318 */;
 
 const require = fn;
 function Loading() {
@@ -25,7 +25,7 @@ function Loading() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -38,8 +38,8 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   const tmp4 = useGameOrganizationInviteSuggestionsDefault();
   ({ getSendState, handleInvite } = useLinkedGameOrganizationInviteSenderDefault(guildId));
   const tmp5 = useLinkedGameOrganizationInviteSenderDefault(guildId);
-  const data = guildId(15321).useLinkedGameOrganization(guildId).data;
-  const obj = guildId(15321);
+  const data = guildId(15371).useLinkedGameOrganization(guildId).data;
+  const obj = guildId(15371);
   items = [GameOrganizationStore];
   const items1 = [guildId];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GameOrganizationStore.getDisplayNounByGuildId(guildId), items1);
@@ -51,7 +51,7 @@ export default function GameOrganizationInviteActionSheet(guildId) {
       str2 = "other";
     }
     obj3.displayNoun = str2;
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef2650.VGOQ4v, obj3);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef2651.VGOQ4v, obj3);
   } else {
     const intl = tmp6(1112).intl;
     let str = stateFromStores;
@@ -59,7 +59,7 @@ export default function GameOrganizationInviteActionSheet(guildId) {
       str = "other";
     }
     const obj4 = { displayNoun: str };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef2650.BBk7Qw, obj4);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef2651.BBk7Qw, obj4);
   }
   const obj5 = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   const intl3 = tmp6(1112).intl;
@@ -72,20 +72,20 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   if (stateFromStores == null) {
     str3 = "other";
   }
-  obj8.children = intl4.formatToPlainString(_modDef2650.EnTIIr, { displayNoun: str3 });
-  const items2 = [closure_5(guildId(5603).Heading, obj8), closure_5(guildId(5603).Text, { variant: "body-sm/medium", color: "text-muted", style: tmp.centeredText, children: formatToPlainStringResult })];
+  obj8.children = intl4.formatToPlainString(_modDef2651.EnTIIr, { displayNoun: str3 });
+  const items2 = [closure_5(guildId(5634).Heading, obj8), closure_5(guildId(5634).Text, { variant: "body-sm/medium", color: "text-muted", style: tmp.centeredText, children: formatToPlainStringResult })];
   obj7.children = items2;
-  const items3 = [closure_6(guildId(6084).Stack, obj7), ];
+  const items3 = [closure_6(guildId(6115).Stack, obj7), ];
   const obj10 = { size: "md", round: true, onChange: search, placeholder: null };
   const intl5 = tmp6(1112).intl;
   let str4 = stateFromStores;
   if (stateFromStores == null) {
     str4 = "other";
   }
-  obj10.placeholder = intl5.formatToPlainString(_modDef2650.cRK6SQ, { displayNoun: str4 });
-  items3[1] = closure_5(guildId(7375).SearchBar, obj10);
+  obj10.placeholder = intl5.formatToPlainString(_modDef2651.cRK6SQ, { displayNoun: str4 });
+  items3[1] = closure_5(guildId(7406).SearchBar, obj10);
   obj6.children = items3;
-  obj5.header = closure_6(guildId(6084).Stack, obj6);
+  obj5.header = closure_6(guildId(6115).Stack, obj6);
   if (isLoading) {
     let tmp9Result = closure_5(Loading, {});
   } else if (hasNoFriends) {
@@ -96,5 +96,5 @@ export default function GameOrganizationInviteActionSheet(guildId) {
     tmp9Result = closure_5(GameOrganizationInviteListDefault, obj12);
   }
   obj5.children = tmp9Result;
-  return closure_5(guildId(7515).ActionSheet, obj5);
+  return closure_5(guildId(7546).ActionSheet, obj5);
 };

@@ -1,14 +1,14 @@
-// === Module 18041: useFavoritesGuildUnreads ===
+// === Module 18100: useFavoritesGuildUnreads ===
 
-// Module 18041 (useFavoritesGuildUnreads)
+// Module 18100 (useFavoritesGuildUnreads)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6900 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4946 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6945 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import ReadStateStore from "ReadStateStore" /* 6901 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6931 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4977 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6976 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import ReadStateStore from "ReadStateStore" /* 6932 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
 
 const require = globalThis.__r;
 

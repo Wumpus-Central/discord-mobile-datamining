@@ -1,19 +1,19 @@
-// === Module 7857: ShieldSpotIllustration ===
+// === Module 7891: ShieldSpotIllustration ===
 
-// Module 7857 (ShieldSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7230 */;
-import _modDef7858 from "module_7858" /* 7858 */;
-import _modDef7859 from "module_7859" /* 7859 */;
-import _modDef7860 from "module_7860" /* 7860 */;
+// Module 7891 (ShieldSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7261 */;
+import _modDef7892 from "module_7892" /* 7892 */;
+import _modDef7893 from "module_7893" /* 7893 */;
+import _modDef7894 from "module_7894" /* 7894 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7858 }, 3: null };
-let obj2 = { uri: _modDef7858 };
-obj[2] = { uri: _modDef7859 };
-const obj3 = { uri: _modDef7859 };
-obj[3] = { uri: _modDef7860 };
+let obj = { 1: null, 2: { uri: _modDef7892 }, 3: null };
+let obj2 = { uri: _modDef7892 };
+obj[2] = { uri: _modDef7893 };
+const obj3 = { uri: _modDef7893 };
+obj[3] = { uri: _modDef7894 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ShieldSpotIllustration.native.tsx");
 

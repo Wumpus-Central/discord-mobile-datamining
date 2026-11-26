@@ -1,11 +1,11 @@
-// === Module 12275: checkGameOrganizationJoinEligibility ===
+// === Module 12325: checkGameOrganizationJoinEligibility ===
 
-// Module 12275 (checkGameOrganizationJoinEligibility)
-import withGameOrganizationJoinFlowPendingDefault from "withGameOrganizationJoinFlowPending" /* 12277 */;
+// Module 12325 (checkGameOrganizationJoinEligibility)
+import withGameOrganizationJoinFlowPendingDefault from "withGameOrganizationJoinFlowPending" /* 12327 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import GameOrganizationCharacterEligibilityStore from "GameOrganizationCharacterEligibilityStore" /* 12276 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11868 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import GameOrganizationCharacterEligibilityStore from "GameOrganizationCharacterEligibilityStore" /* 12326 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11916 */;
 
 const require = fn;
 let closure_10 = async function _checkGameOrganizationJoinEligibility(arg0) {
@@ -19,7 +19,7 @@ let closure_10 = async function _checkGameOrganizationJoinEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -92,7 +92,7 @@ let closure_10 = async function _checkGameOrganizationJoinEligibility(arg0) {
     }
   }
 };
-const GameOrganizationInviteConstants = fn(11869);
+const GameOrganizationInviteConstants = fn(11917);
 ({ GameOrganizationCharacterMode: metroImportDefault, GameOrganizationCantJoinReasons: closure_8, GameOrganizationInviteStates: closure_9 } = GameOrganizationInviteConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/checkGameOrganizationJoinEligibility.tsx");

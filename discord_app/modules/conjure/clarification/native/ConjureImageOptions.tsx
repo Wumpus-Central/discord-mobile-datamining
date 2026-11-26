@@ -1,22 +1,22 @@
-// === Module 18743: clarification/ConjureImageOptions ===
+// === Module 18806: clarification/ConjureImageOptions ===
 
-// Module 18743 (clarification/ConjureImageOptions)
+// Module 18806 (clarification/ConjureImageOptions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5074 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import TrashIcon from "TrashIcon" /* 5719 */;
-import Card from "Card" /* 6114 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 7116 */;
-import FormCheckbox from "FormCheckbox" /* 7151 */;
-import FormRadio from "FormRadio" /* 7223 */;
-import IconButton from "IconButton" /* 7910 */;
-import openMediaModal from "openMediaModal" /* 8762 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 18471 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 18741 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 18744 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5105 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import TrashIcon from "TrashIcon" /* 5750 */;
+import Card from "Card" /* 6145 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 7147 */;
+import FormCheckbox from "FormCheckbox" /* 7182 */;
+import FormRadio from "FormRadio" /* 7254 */;
+import IconButton from "IconButton" /* 7944 */;
+import openMediaModal from "openMediaModal" /* 8804 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 18534 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 18804 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 18807 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -44,7 +44,7 @@ function ImageOptionPicture(onMeasured) {
     const items1 = [React5(ImageWarningIcon.ImageWarningIcon, obj4), ];
     const obj5 = { variant: "body-xs/medium", color: "text-muted", style: tmp.brokenText, children: null };
     const intl = util.intl;
-    obj5.children = intl.string(_modDef4244.lhgD88);
+    obj5.children = intl.string(_modDef4245.lhgD88);
     items1[1] = React5(Text_Text.Text, obj5);
     obj3.children = items1;
     obj2.children = React6(metroImportDefault, obj3);
@@ -109,11 +109,11 @@ function ImageOptionTile(option) {
   obj6.disabled = tmp11;
   ({ accessibilityRole: obj5.accessibilityRole, accessibilityState: obj5.accessibilityState } = radioA11yNative);
   const intl2 = util.intl;
-  obj6.accessibilityLabel = intl2.formatToPlainString(_modDef4244.AQbxhf, { answer: option.label });
+  obj6.accessibilityLabel = intl2.formatToPlainString(_modDef4245.AQbxhf, { answer: option.label });
   if (null != onRemove) {
     const obj8 = { name: "remove", label: null };
     const intl3 = util.intl;
-    obj8.label = intl3.string(_modDef4244.HQEXJM);
+    obj8.label = intl3.string(_modDef4245.HQEXJM);
     const items1 = [obj8];
     let tmp12 = items1;
   } else if (null != option.image) {
@@ -179,7 +179,7 @@ function ImageOptionTile(option) {
           obj16.onPress = onRemove;
           const intl4 = util.intl;
           const obj17 = { answer: option.label };
-          obj16.accessibilityLabel = intl4.formatToPlainString(_modDef4244.JGjZMs, obj17);
+          obj16.accessibilityLabel = intl4.formatToPlainString(_modDef4245.JGjZMs, obj17);
           obj14.children = tmp13(IconButton.IconButton, obj16);
           tmp13Result = tmp13(metroImportDefault, obj14);
         }
@@ -200,13 +200,13 @@ function ImageOptionTile(option) {
   obj18.children = tmp13Result3;
   tmp13(metroImportDefault, obj18);
   const obj7 = { answer: option.label };
-  stringResult = intl.string(_modDef4244["4/eeDD"]);
+  stringResult = intl.string(_modDef4245["4/eeDD"]);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, own: null, galleryContent: null, rowTile: null, card: null, ring: null, ringSelected: null, frame: null, frameInert: null, image: null, broken: null, brokenText: null, indicator: null, caption: null, view: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.own = { marginTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
@@ -401,7 +401,7 @@ export default function ConjureImageOptions(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -420,7 +420,7 @@ export default function ConjureImageOptions(projectId) {
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(18745).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(18808).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -434,11 +434,11 @@ export default function ConjureImageOptions(projectId) {
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(18745).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(18745);
+            closure_129_4.onUpload(tmp2(18808).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(18808);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp16) {
         c3 = tmp;

@@ -1,14 +1,14 @@
-// === Module 1493: utils/ImageUtils ===
+// === Module 1494: utils/ImageUtils ===
 
-// Module 1493 (utils/ImageUtils)
-import AvatarUtils from "AvatarUtils" /* 1412 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1415 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1448 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1449 */;
-import _modDef1488 from "module_1488" /* 1488 */;
-import useWindowDimensions from "useWindowDimensions" /* 1494 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2022 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2023 */;
+// Module 1494 (utils/ImageUtils)
+import AvatarUtils from "AvatarUtils" /* 1413 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1416 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1449 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1450 */;
+import _modDef1489 from "module_1489" /* 1489 */;
+import useWindowDimensions from "useWindowDimensions" /* 1495 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2023 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2024 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function getSrcWithWidthAndHeight(animated) {
   }
   [tmp4, tmp5] = src.split("?");
   const tmp3 = _slicedToArray(src.split("?"), 2);
-  const parsed = _modDef1488.parse(tmp5);
+  const parsed = _modDef1489.parse(tmp5);
   delete tmp2[tmp];
   items = [tmp4, parsed];
   [tmp10, tmp11] = items;
@@ -72,7 +72,7 @@ function getSrcWithWidthAndHeight(animated) {
   const tmp9 = _slicedToArray(items, 2);
   let text = tmp10;
   if (!tmp6Result.isEmpty(tmp11)) {
-    _modDef1488;
+    _modDef1489;
     text = `${tmp10}?${obj6.stringify(tmp11)}`;
   }
   return text;

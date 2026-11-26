@@ -1,10 +1,10 @@
-// === Module 12884: ContentClassificationVisibility ===
+// === Module 12936: ContentClassificationVisibility ===
 
-// Module 12884 (ContentClassificationVisibility)
+// Module 12936 (ContentClassificationVisibility)
 import initialize from "initialize" /* 504 */;
-import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5642 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5644 */;
-import UserStore from "UserStore" /* 1386 */;
+import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5673 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5675 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const ContentClassificationVisibility = { DISPLAY: "display", BLOCK_UNDERAGE: "block_underage", BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction" };

@@ -1,9 +1,9 @@
-// === Module 19553: updateRules ===
+// === Module 19616: updateRules ===
 
-// Module 19553 (updateRules)
+// Module 19616 (updateRules)
 import native from "native" /* 1186 */;
-import _modDef2068 from "module_2068" /* 2068 */;
-import LinkingDefault from "Linking" /* 5691 */;
+import _modDef2069 from "module_2069" /* 2069 */;
+import LinkingDefault from "Linking" /* 5722 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ class I18nLink {
     if (null == obj.onClick) {
       obj.onClick = () => {
         const obj = LinkingDefault;
-        return obj.openURL(_modDef2068.sanitizeUrl(node.target));
+        return obj.openURL(_modDef2069.sanitizeUrl(node.target));
       };
     }
     obj1 = { accessible: true, accessibilityRole: "link", onPress: obj.onClick, style: memo, children: output(node.content, state) };

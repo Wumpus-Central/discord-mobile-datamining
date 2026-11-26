@@ -1,12 +1,12 @@
-// === Module 12321: handleTapConjureProjectEmbed ===
+// === Module 12371: handleTapConjureProjectEmbed ===
 
-// Module 12321 (handleTapConjureProjectEmbed)
-import openFrameDefault from "openFrame" /* 10061 */;
-import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11949 */;
-import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12322 */;
+// Module 12371 (handleTapConjureProjectEmbed)
+import openFrameDefault from "openFrame" /* 10103 */;
+import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11997 */;
+import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12372 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11946 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11994 */;
 
 const require = fn;
 function runConjureSharedProjectCoverAction(applicationId, arg1, channelId) {
@@ -69,7 +69,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -160,7 +160,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
     }
   }
 };
-const canRemixProject = fn(6903).canRemixProject;
+const canRemixProject = fn(6934).canRemixProject;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/share/native/handleTapConjureProjectEmbed.tsx");
 

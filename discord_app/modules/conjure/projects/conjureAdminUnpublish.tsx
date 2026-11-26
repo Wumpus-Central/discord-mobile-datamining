@@ -1,16 +1,16 @@
-// === Module 18535: conjureAdminUnpublish ===
+// === Module 18598: conjureAdminUnpublish ===
 
-// Module 18535 (conjureAdminUnpublish)
-import conjureAppInServer from "conjureAppInServer" /* 7661 */;
+// Module 18598 (conjureAdminUnpublish)
+import conjureAppInServer from "conjureAppInServer" /* 7692 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
-import UserProfileStore from "UserProfileStore" /* 6132 */;
-import GuildChannelStore from "GuildChannelStore" /* 4942 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import UserProfileStore from "UserProfileStore" /* 6163 */;
+import GuildChannelStore from "GuildChannelStore" /* 4973 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import UserStore from "UserStore" /* 1387 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 
 const require = globalThis.__r;
 
@@ -71,7 +71,7 @@ let closure_13 = async function _loadConjureAdminUnpublishLookup(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_13 = async function _loadConjureAdminUnpublishLookup(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -132,7 +132,7 @@ let closure_15 = async function _loadBotServers(arg0) {
   }
   return value;
 };
-const isProjectOwner = fn(6903).isProjectOwner;
+const isProjectOwner = fn(6934).isProjectOwner;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/conjureAdminUnpublish.tsx");
 

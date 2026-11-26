@@ -1,10 +1,10 @@
-// === Module 14060: MosaicMediaType ===
+// === Module 14112: MosaicMediaType ===
 
-// Module 14060 (MosaicMediaType)
+// Module 14112 (MosaicMediaType)
 import Constants from "Constants" /* 1071 */;
-import FlagUtils from "FlagUtils" /* 1404 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6372 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 12034 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6403 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 12082 */;
 import size from "module_2" /* 2 */;
 
 const MessageAttachmentFlags = Constants.MessageAttachmentFlags;

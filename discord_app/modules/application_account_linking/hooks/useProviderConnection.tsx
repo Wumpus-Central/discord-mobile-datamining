@@ -1,10 +1,10 @@
-// === Module 7500: useProviderConnection ===
+// === Module 7531: useProviderConnection ===
 
-// Module 7500 (useProviderConnection)
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7501 */;
+// Module 7531 (useProviderConnection)
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7532 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7431 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
 
 const require = globalThis.__r;
 
@@ -40,7 +40,7 @@ export function useProviderConnection(provider_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

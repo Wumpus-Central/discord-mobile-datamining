@@ -1,8 +1,8 @@
-// === Module 9103: UserDiscountOfferRecord ===
+// === Module 9145: UserDiscountOfferRecord ===
 
-// Module 9103 (UserDiscountOfferRecord)
-import Record from "Record" /* 1406 */;
-import DiscountRecord from "DiscountRecord" /* 9098 */;
+// Module 9145 (UserDiscountOfferRecord)
+import Record from "Record" /* 1407 */;
+import DiscountRecord from "DiscountRecord" /* 9140 */;
 
 let UserDiscountOfferRecord;
 class UserDiscountOfferRecord extends tmp2 {

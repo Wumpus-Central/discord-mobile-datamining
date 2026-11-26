@@ -1,10 +1,10 @@
-// === Module 14007: MessagePreviewReactions ===
+// === Module 14059: MessagePreviewReactions ===
 
-// Module 14007 (MessagePreviewReactions)
+// Module 14059 (MessagePreviewReactions)
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 8260 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 8263 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8894 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8302 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 8305 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8936 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -27,13 +27,13 @@ export default function MessagePreviewReactions(emoji) {
     return null != message ? message.reactions : closure_7;
   }, items1);
   const obj = channelId(504);
-  const obj2 = { value: messageId(6348)(messageId(6349).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
+  const obj2 = { value: messageId(6379)(messageId(6380).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     const obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(12192).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
+    let tmp4Result = jsx(channelId(12242).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
   } else {
-    tmp4Result = jsx(channelId(12192).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(12242).MessageReactionsEmpty, {});
   }
   obj2.children = tmp4Result;
-  return jsx(channelId(6348).AnalyticsLocationProvider, { value: messageId(6348)(messageId(6349).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
+  return jsx(channelId(6379).AnalyticsLocationProvider, { value: messageId(6379)(messageId(6380).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
 };

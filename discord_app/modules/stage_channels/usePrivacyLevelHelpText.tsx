@@ -1,16 +1,16 @@
-// === Module 14279: usePrivacyLevelHelpText ===
+// === Module 14331: usePrivacyLevelHelpText ===
 
-// Module 14279 (usePrivacyLevelHelpText)
+// Module 14331 (usePrivacyLevelHelpText)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4949 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
-const constants = fn(4867).GuildScheduledEventPrivacyLevel;
+const constants = fn(4898).GuildScheduledEventPrivacyLevel;
 const Permissions = fn(1082).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");

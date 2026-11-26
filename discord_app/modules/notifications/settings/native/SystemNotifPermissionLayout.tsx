@@ -1,16 +1,16 @@
-// === Module 17570: SystemNotifPermissionLayout ===
+// === Module 17627: SystemNotifPermissionLayout ===
 
-// Module 17570 (SystemNotifPermissionLayout)
+// Module 17627 (SystemNotifPermissionLayout)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _modDef3206 from "module_3206" /* 3206 */;
-import openNotificationSettingsDefault from "openNotificationSettings" /* 10239 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13331 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _modDef3207 from "module_3207" /* 3207 */;
+import openNotificationSettingsDefault from "openNotificationSettings" /* 10281 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13383 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13329 */;
-import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17571 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13381 */;
+import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17628 */;
 
 require = fn;
 function SystemNotifPermissionHeader() {
@@ -127,15 +127,15 @@ function SystemNotifPermissionHeader() {
 }
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
-let closure_10 = fn(7838).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13330);
+let closure_10 = fn(7872).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13382);
 ({ EventActionLocation: closure_11, EventActionType: closure_12, NotificationNudgeAnalyticsAction: map1, NotificationNudgeSurface: closure_14 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let obj = { "111_realtime": _modDef3206.dF4FmA, "222_social": _modDef3206.tgF0IR, "333_server": _modDef3206.rwJXCw, "444_other": _modDef3206["8gfmjs"] };
-let obj2 = { "111_realtime": _modDef3206.CPpRtR, "222_social": _modDef3206.UbGSlJ, "333_server": _modDef3206.Jweb0a, "444_other": _modDef3206.XJ1gEw };
+let obj = { "111_realtime": _modDef3207.dF4FmA, "222_social": _modDef3207.tgF0IR, "333_server": _modDef3207.rwJXCw, "444_other": _modDef3207["8gfmjs"] };
+let obj2 = { "111_realtime": _modDef3207.CPpRtR, "222_social": _modDef3207.UbGSlJ, "333_server": _modDef3207.Jweb0a, "444_other": _modDef3207.XJ1gEw };
 const redux = noop.createContext(undefined);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj3 = { container: { paddingTop: nativeDefault.space.PX_16 }, card: null, iconCircle: null, centeredText: null, button: null };
 let obj5 = { paddingTop: nativeDefault.space.PX_16 };
 obj3.card = { padding: nativeDefault.space.PX_20 };
@@ -157,7 +157,7 @@ export default function SystemNotifPermissionLayout(node) {
   const effect = noop.useEffect(() => {
     closure_1 = async function _loadPermissionStatus() {
       closure_1 = tmp3;
-      await closure_2_1(7845).getNotificationAuthorizationStatus();
+      await closure_2_1(7879).getNotificationAuthorizationStatus();
       if (1 === tmp7) {
         c2 = 0;
         if (closure_129_0) {
@@ -171,15 +171,15 @@ export default function SystemNotifPermissionLayout(node) {
         closure_128_0 = value;
         if (closure_129_0) {
           if (null != closure_128_0) {
-            const result = node(13332).updateNotificationAuthorizationStatus(closure_128_0);
-            node(13332);
+            const result = node(13384).updateNotificationAuthorizationStatus(closure_128_0);
+            node(13384);
           }
           v2(true);
           c2 = 0;
         } else {
           c2 = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       }
       return value;

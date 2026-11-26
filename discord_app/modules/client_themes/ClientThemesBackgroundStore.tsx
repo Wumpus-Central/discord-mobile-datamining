@@ -1,20 +1,20 @@
-// === Module 5036: ClientThemesBackgroundStore ===
+// === Module 5067: ClientThemesBackgroundStore ===
 
-// Module 5036 (ClientThemesBackgroundStore)
+// Module 5067 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1238 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
-import dismissible_content from "dismissible_content" /* 4845 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
-import UserUtils from "UserUtils" /* 5068 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5072 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import dismissible_content from "dismissible_content" /* 4876 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5075 */;
+import UserUtils from "UserUtils" /* 5099 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5103 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function getAppliedHexagonCampaignPreset() {
@@ -175,9 +175,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4865).isGuildTextChannelType;
-const dependencyMap = fn(1239).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5037).HexagonCampaignPerk;
+const isGuildTextChannelType = fn(4896).isGuildTextChannelType;
+const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
+const HexagonCampaignPerk = fn(5068).HexagonCampaignPerk;
 const SystemThemeState = fn(1194).SystemThemeState;
 let closure_15 = true;
 let c16 = false;

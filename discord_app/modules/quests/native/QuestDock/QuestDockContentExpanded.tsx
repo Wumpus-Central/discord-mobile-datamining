@@ -1,20 +1,20 @@
-// === Module 16724: QuestDockContentExpanded ===
+// === Module 16775: QuestDockContentExpanded ===
 
-// Module 16724 (QuestDockContentExpanded)
-import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11760 */;
-import QuestDockUtils from "QuestDockUtils" /* 16628 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 16630 */;
+// Module 16775 (QuestDockContentExpanded)
+import _mod1654 from "module_1654" /* 1654 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11808 */;
+import QuestDockUtils from "QuestDockUtils" /* 16679 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 16681 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
-const QuestDockMode = fn(6840).QuestDockMode;
-let closure_5 = fn(16629).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6871).QuestDockMode;
+let closure_5 = fn(16680).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj = { wrapper: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -77,9 +77,9 @@ export default noop.memo(function QuestDockContentExpanded(arg0) {
   QuestDockContentExpandedTsx1.__closure = items1;
   QuestDockContentExpandedTsx1.__workletHash = 5435658496809;
   QuestDockContentExpandedTsx1.__initData = tmp6;
-  const animatedStyle = _mod1653.useAnimatedStyle(QuestDockContentExpandedTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(QuestDockContentExpandedTsx1);
   const obj2 = { pointerEvents: "box-none", style: null, children };
   const items2 = [tmp.wrapper, animatedStyle];
   obj2.style = items2;
-  return jsx(_modDef1653.View, { pointerEvents: "box-none", style: null, children });
+  return jsx(_modDef1654.View, { pointerEvents: "box-none", style: null, children });
 });

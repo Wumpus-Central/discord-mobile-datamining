@@ -1,21 +1,21 @@
-// === Module 14808: GuildInviteUtils ===
+// === Module 14861: GuildInviteUtils ===
 
-// Module 14808 (GuildInviteUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6957 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7785 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 10385 */;
+// Module 14861 (GuildInviteUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6988 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7819 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 10430 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4942 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5633 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import SortedGuildStore from "SortedGuildStore" /* 6133 */;
-import UserStore from "UserStore" /* 1386 */;
+import GuildChannelStore from "GuildChannelStore" /* 4973 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5664 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import SortedGuildStore from "SortedGuildStore" /* 6164 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_16 = async function _sendGuildInvite(arg0) {
     obj7.inviteAnalyticsMetadata = { source: closure_131_2 };
     closure_132_1(closure_132_2[22]).enqueue(obj7, () => {
       closure_2_12(closure_1_0, closure_1_1, constants.SENT);
-      const AccessibilityAnnouncer = closure_0(5021).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_0(5052).AccessibilityAnnouncer;
       const intl = closure_0(1112).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1112).t.PuLLzP));
     });
@@ -60,8 +60,8 @@ let closure_16 = async function _sendGuildInvite(arg0) {
   }
   return value;
 };
-const setSendState = fn(14809).setSendState;
-const InviteSendStates = fn(5745).InviteSendStates;
+const setSendState = fn(14862).setSendState;
+const InviteSendStates = fn(5776).InviteSendStates;
 const Constants = fn(1071);
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = Constants);
 const size = fn(2);
@@ -71,7 +71,7 @@ export function showGuildInviteActionSheet(id, newestAnalyticsLocation) {
   AnalyticsUtilsDefault.track(constants2.OPEN_POPOUT, { type: "Invite to Guilds", source: newestAnalyticsLocation });
   const obj2 = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   const obj3 = ActionSheetActionCreatorsDefault;
-  obj3.openLazy(asyncRequireImpl(14810, dependencyMap.paths), "invite-to-guilds-" + id, { recipientId: id, source: newestAnalyticsLocation });
+  obj3.openLazy(asyncRequireImpl(14863, dependencyMap.paths), "invite-to-guilds-" + id, { recipientId: id, source: newestAnalyticsLocation });
 }
 export function useServerInviteRows(id, query) {
   _require = id;

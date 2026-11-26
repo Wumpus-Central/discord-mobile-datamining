@@ -1,18 +1,18 @@
-// === Module 18747: ConjureClarificationProjectSheet ===
+// === Module 18810: ConjureClarificationProjectSheet ===
 
-// Module 18747 (ConjureClarificationProjectSheet)
+// Module 18810 (ConjureClarificationProjectSheet)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import BottomSheetModal from "BottomSheetModal" /* 5244 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7476 */;
-import ActionSheet from "ActionSheet" /* 7515 */;
-import ActionSheetRow from "ActionSheetRow" /* 7517 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import BottomSheetModal from "BottomSheetModal" /* 5275 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
+import ActionSheet from "ActionSheet" /* 7546 */;
+import ActionSheetRow from "ActionSheetRow" /* 7548 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { paddingBottom: nativeDefault.space.PX_16 + arg0 } };
   return obj;

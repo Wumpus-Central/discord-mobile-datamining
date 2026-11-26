@@ -1,9 +1,9 @@
-// === Module 19718: setupLoadFromMessageManagerHandlers ===
+// === Module 19782: setupLoadFromMessageManagerHandlers ===
 
-// Module 19718 (setupLoadFromMessageManagerHandlers)
+// Module 19782 (setupLoadFromMessageManagerHandlers)
 import DurationsDefault from "Durations" /* 1088 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6921 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6952 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 
 let closure_2 = 5 * DurationsDefault.Millis.SECOND;
 const size = fn(2);

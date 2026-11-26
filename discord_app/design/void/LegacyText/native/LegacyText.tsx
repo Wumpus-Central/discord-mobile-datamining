@@ -1,13 +1,13 @@
-// === Module 8063: LegacyText/LegacyText ===
+// === Module 8105: LegacyText/LegacyText ===
 
-// Module 8063 (LegacyText/LegacyText)
-import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8064 */;
+// Module 8105 (LegacyText/LegacyText)
+import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_4 = createStyles.createStyles({ text: { fontFamily: fn(1071).Fonts.PRIMARY_MEDIUM, includeFontPadding: false } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/LegacyText/native/LegacyText.tsx");

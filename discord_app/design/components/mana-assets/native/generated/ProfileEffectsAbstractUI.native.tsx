@@ -1,19 +1,19 @@
-// === Module 9606: ProfileEffectsAbstractUI ===
+// === Module 9648: ProfileEffectsAbstractUI ===
 
-// Module 9606 (ProfileEffectsAbstractUI)
-import assetHelpers from "assetHelpers" /* 7230 */;
-import _modDef9607 from "module_9607" /* 9607 */;
-import _modDef9608 from "module_9608" /* 9608 */;
-import _modDef9609 from "module_9609" /* 9609 */;
+// Module 9648 (ProfileEffectsAbstractUI)
+import assetHelpers from "assetHelpers" /* 7261 */;
+import _modDef9649 from "module_9649" /* 9649 */;
+import _modDef9650 from "module_9650" /* 9650 */;
+import _modDef9651 from "module_9651" /* 9651 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9607 }, 3: null };
-let obj2 = { uri: _modDef9607 };
-obj[2] = { uri: _modDef9608 };
-const obj3 = { uri: _modDef9608 };
-obj[3] = { uri: _modDef9609 };
+let obj = { 1: null, 2: { uri: _modDef9649 }, 3: null };
+let obj2 = { uri: _modDef9649 };
+obj[2] = { uri: _modDef9650 };
+const obj3 = { uri: _modDef9650 };
+obj[3] = { uri: _modDef9651 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ProfileEffectsAbstractUI.native.tsx");
 

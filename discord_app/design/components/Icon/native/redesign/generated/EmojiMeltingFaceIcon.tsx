@@ -1,9 +1,9 @@
-// === Module 16941: EmojiMeltingFaceIcon ===
+// === Module 16992: EmojiMeltingFaceIcon ===
 
-// Module 16941 (EmojiMeltingFaceIcon)
+// Module 16992 (EmojiMeltingFaceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5698 */;
-import _mod16942 from "module_16942" /* 16942 */;
+import BaseIconImage from "BaseIconImage" /* 5729 */;
+import _mod16993 from "module_16993" /* 16993 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiMeltingFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16942, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16993, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

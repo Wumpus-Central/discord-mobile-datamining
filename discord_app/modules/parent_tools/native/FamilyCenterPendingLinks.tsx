@@ -1,24 +1,24 @@
-// === Module 16383: FamilyCenterPendingLinks ===
+// === Module 16434: FamilyCenterPendingLinks ===
 
-// Module 16383 (FamilyCenterPendingLinks)
+// Module 16434 (FamilyCenterPendingLinks)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import _modDef2846 from "module_2846" /* 2846 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
-import useUserLinks from "useUserLinks" /* 8169 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8174 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12545 */;
-import _modDef14455 from "module_14455" /* 14455 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 16377 */;
-import _modDef16382 from "module_16382" /* 16382 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import _modDef2847 from "module_2847" /* 2847 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
+import useUserLinks from "useUserLinks" /* 8211 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8216 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12594 */;
+import _modDef14507 from "module_14507" /* 14507 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 16428 */;
+import _modDef16433 from "module_16433" /* 16433 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FamilyCenterPendingLinkRow(otherUser) {
   const tmp = closure_9();
-  otherUser.otherUser(8169);
+  otherUser.otherUser(8211);
   if (undefined === otherUser.otherUser) {
     return null;
   } else {
@@ -30,14 +30,14 @@ function FamilyCenterPendingLinkRow(otherUser) {
       }
       const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
       const obj3 = { name: str1 };
-      obj2.accessibilityLabel = intl3.formatToPlainString(_modDef2846.oUpA6X, obj3);
+      obj2.accessibilityLabel = intl3.formatToPlainString(_modDef2847.oUpA6X, obj3);
       obj2.onPress = function handleCancel() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16386, dependencyMap.paths), { otherUser: str });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16437, dependencyMap.paths), { otherUser: str });
       };
       obj2.style = tmp.actionButton;
-      const obj4 = { size: tmp5(1186).Icon.Sizes.SMALL, disableColor: true, source: _modDef16382 };
+      const obj4 = { size: tmp5(1186).Icon.Sizes.SMALL, disableColor: true, source: _modDef16433 };
       obj2.children = closure_5(tmp5(1186).Icon, obj4);
-      let tmp8Result = closure_5(tmp5(6121).PressableOpacity, obj2);
+      let tmp8Result = closure_5(tmp5(6152).PressableOpacity, obj2);
       let tmp14 = closure_5;
     } else {
       let tmp12Result = null;
@@ -49,16 +49,16 @@ function FamilyCenterPendingLinkRow(otherUser) {
         }
         const obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
         const obj5 = { name: str2 };
-        obj.accessibilityLabel = intl.formatToPlainString(_modDef2846.jc1Ip7, obj5);
+        obj.accessibilityLabel = intl.formatToPlainString(_modDef2847.jc1Ip7, obj5);
         obj.onPress = function handleAccept() {
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16384, dependencyMap.paths), { otherUser: str });
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16435, dependencyMap.paths), { otherUser: str });
         };
         items = [, ];
         ({ actionButton: arr[0], actionButtonFirst: arr[1] } = tmp);
         obj.style = items;
-        const obj6 = { size: tmp5(1186).Icon.Sizes.SMALL, disableColor: true, source: _modDef14455 };
+        const obj6 = { size: tmp5(1186).Icon.Sizes.SMALL, disableColor: true, source: _modDef14507 };
         obj.children = closure_5(tmp5(1186).Icon, obj6);
-        tmp12Result = closure_5(tmp5(6121).PressableOpacity, obj);
+        tmp12Result = closure_5(tmp5(6152).PressableOpacity, obj);
       }
       const items1 = [tmp12Result, ];
       tmp14 = closure_5;
@@ -70,14 +70,14 @@ function FamilyCenterPendingLinkRow(otherUser) {
       const obj7 = { children: null };
       const obj8 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
       const obj9 = { name: str3 };
-      obj8.accessibilityLabel = intl2.formatToPlainString(_modDef2846["4GtllP"], obj9);
+      obj8.accessibilityLabel = intl2.formatToPlainString(_modDef2847["4GtllP"], obj9);
       obj8.onPress = function handleDecline() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16385, dependencyMap.paths), { otherUser: str });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16436, dependencyMap.paths), { otherUser: str });
       };
       obj8.style = tmp.actionButton;
-      const obj10 = { size: tmp5(1186).Icon.Sizes.SMALL, disableColor: true, source: _modDef16382 };
+      const obj10 = { size: tmp5(1186).Icon.Sizes.SMALL, disableColor: true, source: _modDef16433 };
       obj8.children = tmp14(tmp5(1186).Icon, obj10);
-      items1[1] = tmp14(tmp5(6121).PressableOpacity, obj8);
+      items1[1] = tmp14(tmp5(6152).PressableOpacity, obj8);
       obj7.children = items1;
       tmp8Result = closure_6(closure_7, obj7);
     }
@@ -87,13 +87,13 @@ function FamilyCenterPendingLinkRow(otherUser) {
   tmp4 = useIsInAdultAgeGroupDefault();
 }
 const View = fn(17).View;
-const UserLinkStatus = fn(8171).UserLinkStatus;
+const UserLinkStatus = fn(8213).UserLinkStatus;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let obj2 = { container: { marginTop: 24 }, content: { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md }, header: { marginBottom: 10 } };
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj5 = { actionButton: null, actionButtonFirst: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj5.actionButton = size;
@@ -108,7 +108,7 @@ export default function FamilyCenterPendingLinks() {
   const usersForLinkStatus = useUserLinks.useUsersForLinkStatus(UserLinkStatus.PENDING);
   useAgeSpecificText;
   const intl = util.intl;
-  intl.formatToPlainString(_modDef2846.IkAgkG, { count: usersForLinkStatus.length });
+  intl.formatToPlainString(_modDef2847.IkAgkG, { count: usersForLinkStatus.length });
   const intl2 = util.intl;
   let tmp7 = null;
   if (0 !== usersForLinkStatus.length) {

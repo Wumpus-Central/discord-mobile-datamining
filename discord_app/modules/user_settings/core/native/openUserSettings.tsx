@@ -1,10 +1,10 @@
-// === Module 8067: openUserSettings ===
+// === Module 8109: openUserSettings ===
 
-// Module 8067 (openUserSettings)
+// Module 8109 (openUserSettings)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
-import RootNavigationRef from "RootNavigationRef" /* 5189 */;
-import UserSettingsAccountStore from "UserSettingsAccountStore" /* 8068 */;
+import RootNavigationRef from "RootNavigationRef" /* 5220 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 8110 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;

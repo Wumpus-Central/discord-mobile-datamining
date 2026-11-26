@@ -1,8 +1,8 @@
-// === Module 19110: ChannelPermissionOverwriteEditUtils ===
+// === Module 19173: ChannelPermissionOverwriteEditUtils ===
 
-// Module 19110 (ChannelPermissionOverwriteEditUtils)
+// Module 19173 (ChannelPermissionOverwriteEditUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import PermissionUtils from "PermissionUtils" /* 4949 */;
+import PermissionUtils from "PermissionUtils" /* 4980 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel_permissions/ChannelPermissionOverwriteEditUtils.tsx");

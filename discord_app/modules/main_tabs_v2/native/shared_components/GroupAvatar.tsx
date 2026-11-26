@@ -1,12 +1,12 @@
-// === Module 14887: GroupAvatar ===
+// === Module 14940: GroupAvatar ===
 
-// Module 14887 (GroupAvatar)
+// Module 14940 (GroupAvatar)
 import nativeDefault from "native" /* 575 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import FastImageDefault from "FastImage" /* 5699 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5730 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 require = fn;
 function AnimatedContainer(children) {
@@ -29,28 +29,28 @@ function AnimatedContainer(children) {
   if (animateOnMount) {
     num = 0;
   }
-  const sharedValue = require("module_1653").useSharedValue(num);
+  const sharedValue = require("module_1654").useSharedValue(num);
   noop = sharedValue;
-  const obj2 = require("module_1653");
+  const obj2 = require("module_1654");
   let num2 = 0;
   if (!animateOnMount) {
     num2 = translateY;
   }
-  const sharedValue1 = require("module_1653").useSharedValue(num2);
+  const sharedValue1 = require("module_1654").useSharedValue(num2);
   c4 = sharedValue1;
-  const tmp2Result = require("module_1653");
+  const tmp2Result = require("module_1654");
   let num3 = 0;
   if (!animateOnMount) {
     num3 = translateX;
   }
-  const sharedValue2 = require("module_1653").useSharedValue(num3);
+  const sharedValue2 = require("module_1654").useSharedValue(num3);
   c5 = sharedValue2;
-  const tmp2Result4 = require("module_1653");
+  const tmp2Result4 = require("module_1654");
   let result = scale;
   if (animateOnMount) {
     result = scale / 2;
   }
-  const sharedValue3 = require("module_1653").useSharedValue(result);
+  const sharedValue3 = require("module_1654").useSharedValue(result);
   items1 = [sharedValue, sharedValue3, sharedValue1, sharedValue2, scale, translateY, translateX];
   const effect = noop.useEffect(() => {
     const result = _undefined3.set(1);
@@ -58,7 +58,7 @@ function AnimatedContainer(children) {
     const result2 = _undefined4.set(c2);
     const result3 = _undefined5.set(c1);
   }, items1);
-  const tmp2Result5 = require("module_1653");
+  const tmp2Result5 = require("module_1654");
   const items2 = [closure_14, require("timing/timing").withTiming, sharedValue, stateFromStores, sharedValue2, require("spring/spring").withSpring, closure_11, sharedValue1, sharedValue3, closure_10];
   _require = undefined;
   importDefault = undefined;
@@ -113,11 +113,11 @@ function AnimatedContainer(children) {
   GroupAvatarTsx1.__closure = items3;
   GroupAvatarTsx1.__workletHash = 10803845888973;
   GroupAvatarTsx1.__initData = tmp11;
-  const animatedStyle = require("module_1653").useAnimatedStyle(GroupAvatarTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(GroupAvatarTsx1);
   const obj3 = { style: null, children: children.children };
   const items4 = [tmp.avatarContainer, animatedStyle];
   obj3.style = items4;
-  return c6(_modDef1653.View, obj3);
+  return c6(_modDef1654.View, obj3);
 }
 function GroupMemberCount(count) {
   count = count.count;
@@ -163,7 +163,7 @@ const createElement = fn(19).createElement;
 let c9 = 38;
 let closure_10 = { damping: 30, stiffness: 400 };
 let closure_11 = { damping: 30, stiffness: 400 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { groupContainer: { position: "relative" }, shadowContainer: { borderRadius: nativeDefault.radii.sm }, shadowContainerBackground: {}, shadowContainerBackgroundLight: { opacity: 0.4 }, shadowContainerBackgroundDark: { opacity: 0.15 }, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
   const size = { width: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, height: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: nativeDefault.radii.sm };

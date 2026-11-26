@@ -1,28 +1,28 @@
-// === Module 10589: InAppNotificationContainer ===
+// === Module 10634: InAppNotificationContainer ===
 
-// Module 10589 (InAppNotificationContainer)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import useMountEffectDefault from "useMountEffect" /* 5573 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10581 */;
-import MessageNotificationDefault from "MessageNotification" /* 10590 */;
-import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 10639 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10642 */;
-import BugReporterNotification from "BugReporterNotification" /* 10643 */;
-import AlertNotificationDefault from "AlertNotification" /* 10688 */;
-import ReactionNotificationDefault from "ReactionNotification" /* 10689 */;
-import ReminderNotificationDefault from "ReminderNotification" /* 11664 */;
-import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 11701 */;
-import MessageRequestNotificationDefault from "MessageRequestNotification" /* 11704 */;
-import StageSpeakInviteNotificationDefault from "StageSpeakInviteNotification" /* 11705 */;
+// Module 10634 (InAppNotificationContainer)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import useMountEffectDefault from "useMountEffect" /* 5604 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10626 */;
+import MessageNotificationDefault from "MessageNotification" /* 10635 */;
+import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 10684 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10687 */;
+import BugReporterNotification from "BugReporterNotification" /* 10688 */;
+import AlertNotificationDefault from "AlertNotification" /* 10733 */;
+import ReactionNotificationDefault from "ReactionNotification" /* 10734 */;
+import ReminderNotificationDefault from "ReminderNotification" /* 11712 */;
+import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 11749 */;
+import MessageRequestNotificationDefault from "MessageRequestNotification" /* 11752 */;
+import StageSpeakInviteNotificationDefault from "StageSpeakInviteNotification" /* 11753 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10232 */;
+import NativeMenuStore from "NativeMenuStore" /* 10274 */;
 
 const require = globalThis.__r;
 
-const _modDef1653 = tmp17(1653);
+const _modDef1654 = tmp17(1654);
 require = fn;
 function NotificationWrapper(notification) {
   notification = notification.notification;
@@ -67,15 +67,15 @@ function NotificationWrapper(notification) {
   }
 }
 let StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(10582);
+const InAppNotificationConstants = fn(10627);
 ({ DEFAULT_ANIMATION_TIMING: metroImportDefault, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: closure_9, MIN_SWIPE_VELOCITY: closure_10, PAN_INPUT_RANGE: closure_11, NOTIFICATION_CONTAINER_MARGIN } = InAppNotificationConstants);
 const Constants = fn(1071);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);
 const jsx = fn(21).jsx;
 let obj = { duration: 200, easing: null };
-const Easing = fn(1653).Easing;
-obj.easing = Easing.in(fn(1653).Easing.ease);
-const createStyles = fn(5012);
+const Easing = fn(1654).Easing;
+obj.easing = Easing.in(fn(1654).Easing.ease);
+const createStyles = fn(5043);
 let closure_16 = createStyles.createStyles({ safeAreaContainer: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8, top: 0, bottom: 0 }, animatedContainer: { marginLeft: NOTIFICATION_CONTAINER_MARGIN, marginRight: NOTIFICATION_CONTAINER_MARGIN } });
 let closure_18 = { code: "(function InAppNotificationContainerTsx1(){let[scheduleOnRN,setInitialized]=this.__closure;return scheduleOnRN(setInitialized,true);})" };
 let closure_19 = { code: "(function InAppNotificationContainerTsx2(){let[startY,notificationGestureY,velocityY,scheduleOnRN,setPanning]=this.__closure;startY.set(notificationGestureY.get());velocityY.set(0);scheduleOnRN(setPanning,true);})" };
@@ -104,8 +104,8 @@ export default function InAppNotificationContainer(notification) {
   const tmp = closure_16();
   let isIOSResult = require("utils/PlatformUtils").isIOS();
   if (isIOSResult) {
-    isIOSResult = tmp2(11707).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
-    const tmp2Result = tmp2(11707);
+    isIOSResult = tmp2(11755).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
+    const tmp2Result = tmp2(11755);
   }
   items = [notification];
   const memo = noop.useMemo(() => InAppNotificationUtils.extractMetadataFromNotification(c0), items);
@@ -118,15 +118,15 @@ export default function InAppNotificationContainer(notification) {
   noop = channelType;
   obj = require("utils/PlatformUtils");
   const obj3 = noop;
-  const sharedValue = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(0);
   StyleSheet = sharedValue;
-  const tmp2Result7 = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(0);
+  const tmp2Result7 = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(0);
   c6 = sharedValue1;
-  const tmp2Result8 = require("module_1653");
-  const sharedValue2 = require("module_1653").useSharedValue(0);
-  const tmp2Result9 = require("module_1653");
-  const sharedValue3 = require("module_1653").useSharedValue(0);
+  const tmp2Result8 = require("module_1654");
+  const sharedValue2 = require("module_1654").useSharedValue(0);
+  const tmp2Result9 = require("module_1654");
+  const sharedValue3 = require("module_1654").useSharedValue(0);
   c7 = sharedValue3;
   const tmp10 = c3(noop.useState(false), 2);
   let first = tmp10[0];
@@ -135,7 +135,7 @@ export default function InAppNotificationContainer(notification) {
   const tmp12 = c3(noop.useState(false), 2);
   const first1 = tmp12[0];
   c10 = first1;
-  const tmp2Result10 = require("module_1653");
+  const tmp2Result10 = require("module_1654");
   let items1 = [c6];
   const items2 = [notification, guildId, channelId, messageId];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => velocityY.isOpen());
@@ -152,7 +152,7 @@ export default function InAppNotificationContainer(notification) {
   c11 = callback;
   useMountEffectDefault(() => {
     obj = timing_timing;
-    items = [closure_18, _mod1706.scheduleOnRN, c9];
+    items = [closure_18, _mod1707.scheduleOnRN, c9];
     c0 = undefined;
     c1 = undefined;
     [tmp3, tmp4, tmp5] = items;
@@ -175,9 +175,9 @@ export default function InAppNotificationContainer(notification) {
       AnalyticsUtilsDefault.track(constants2.IN_APP_NOTIFICATION_SHOWN, obj2);
     }
   }, items3);
-  const Gesture = tmp2(5272).Gesture;
+  const Gesture = tmp2(5303).Gesture;
   const tmp2Result11 = require("initialize");
-  const items4 = [closure_19, sharedValue2, sharedValue, sharedValue1, require("module_1706").scheduleOnRN, tmp12[1]];
+  const items4 = [closure_19, sharedValue2, sharedValue, sharedValue1, require("module_1707").scheduleOnRN, tmp12[1]];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -215,7 +215,7 @@ export default function InAppNotificationContainer(notification) {
   InAppNotificationContainerTsx3.__workletHash = 8301292753596;
   InAppNotificationContainerTsx3.__initData = tmp26;
   const onBeginResult = Gesture.Pan().onBegin(InAppNotificationContainerTsx2);
-  const items8 = [closure_22, sharedValue1, c10, c9, sharedValue, require("timing/timing").withTiming, c11, c7, closure_21, require("module_1706").scheduleOnRN, callback, tmp12[1], require("spring/spring").withSpring];
+  const items8 = [closure_22, sharedValue1, c10, c9, sharedValue, require("timing/timing").withTiming, c11, c7, closure_21, require("module_1707").scheduleOnRN, callback, tmp12[1], require("spring/spring").withSpring];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -295,7 +295,7 @@ export default function InAppNotificationContainer(notification) {
   InAppNotificationContainerTsx5.__initData = tmp31;
   const onUpdateResult = Gesture.Pan().onBegin(InAppNotificationContainerTsx2).onUpdate(InAppNotificationContainerTsx3);
   const tmp30 = c11;
-  const items10 = [closure_23, require("module_1706").scheduleOnRN, tmp12[1]];
+  const items10 = [closure_23, require("module_1707").scheduleOnRN, tmp12[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp44, tmp45, tmp46] = items10;
@@ -311,7 +311,7 @@ export default function InAppNotificationContainer(notification) {
   InAppNotificationContainerTsx6.__initData = tmp44;
   const onEndResult = Gesture.Pan().onBegin(InAppNotificationContainerTsx2).onUpdate(InAppNotificationContainerTsx3).onEnd(InAppNotificationContainerTsx5);
   const onFinalizeResult = Gesture.Pan().onBegin(InAppNotificationContainerTsx2).onUpdate(InAppNotificationContainerTsx3).onEnd(InAppNotificationContainerTsx5).onFinalize(InAppNotificationContainerTsx6);
-  const items12 = [closure_24, sharedValue, sharedValue3, first, require("module_1653").interpolate, tmp30, c8, isIOSResult];
+  const items12 = [closure_24, sharedValue, sharedValue3, first, require("module_1654").interpolate, tmp30, c8, isIOSResult];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -358,7 +358,7 @@ export default function InAppNotificationContainer(notification) {
   InAppNotificationContainerTsx7.__workletHash = 9732012167849;
   InAppNotificationContainerTsx7.__initData = tmp48;
   const items14 = [callback, first, sharedValue, sharedValue1, first1];
-  const animatedStyle = require("module_1653").useAnimatedStyle(InAppNotificationContainerTsx7);
+  const animatedStyle = require("module_1654").useAnimatedStyle(InAppNotificationContainerTsx7);
   const memo1 = obj3.useMemo(() => ({ notificationGestureY, velocityY, initialized, handleDismissNotification, panning }), items14);
   let obj2 = { style: StyleSheet.absoluteFill, pointerEvents: "box-none", children: null };
   const rect = { top: true, bottom: true, left: true, right: true, style: tmp.safeAreaContainer, pointerEvents: "box-none", importantForAccessibility: null, children: null };
@@ -372,7 +372,7 @@ export default function InAppNotificationContainer(notification) {
   const obj6 = { style: null, pointerEvents: "box-none", children: <NotificationWrapper notification={notification} /> };
   const items15 = [tmp.animatedContainer, animatedStyle];
   obj6.style = items15;
-  obj5.children = jsx(_modDef1653.View, { style: null, pointerEvents: "box-none", children: <NotificationWrapper notification={notification} /> });
+  obj5.children = jsx(_modDef1654.View, { style: null, pointerEvents: "box-none", children: <NotificationWrapper notification={notification} /> });
   obj4.children = jsx(require("LegacyBaseButton").GestureDetector, { gesture: onFinalizeResult, children: null });
   rect.children = jsx(require("InAppNotificationContext").InAppNotificationContext.Provider, { value: memo1, children: null });
   obj2.children = jsx(require("common/SafeAreaView").SafeAreaPaddingView, { top: true, bottom: true, left: true, right: true, style: tmp.safeAreaContainer, pointerEvents: "box-none", importantForAccessibility: null, children: null });

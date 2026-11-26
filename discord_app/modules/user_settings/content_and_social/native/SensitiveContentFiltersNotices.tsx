@@ -1,17 +1,17 @@
-// === Module 16279: SensitiveContentFiltersNotices ===
+// === Module 16330: SensitiveContentFiltersNotices ===
 
-// Module 16279 (SensitiveContentFiltersNotices)
+// Module 16330 (SensitiveContentFiltersNotices)
 import util from "util" /* 1112 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
-import LinkingDefault from "Linking" /* 5691 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7836 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16137 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
+import LinkingDefault from "Linking" /* 5722 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7870 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16188 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SafetySettingsNoticeType = fn(7806).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7840).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");
@@ -21,7 +21,7 @@ export function SensitiveContentFiltersTeenNotice() {
   let obj = require("AgeNoticeSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isAgeNoticeSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(16270).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(16321).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
       label: tmp(1112).t.EUo0yj,

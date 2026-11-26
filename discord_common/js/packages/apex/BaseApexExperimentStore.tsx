@@ -1,10 +1,10 @@
-// === Module 1246: BaseApexExperimentStore ===
+// === Module 1247: BaseApexExperimentStore ===
 
-// Module 1246 (BaseApexExperimentStore)
+// Module 1247 (BaseApexExperimentStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import ApexTypes from "ApexTypes" /* 1248 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1250 */;
+import ApexTypes from "ApexTypes" /* 1249 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -40,15 +40,6 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-function getHash(arg0) {
-  let tmp2 = dependencyMap4[arg0];
-  if (null == tmp2) {
-    const v3Result = MurmurHashV3Default.v3(arg0);
-    tmp[arg0] = v3Result;
-    tmp2 = v3Result;
-  }
-  return tmp2;
-}
 const WebAnalyticsEvents = fn(1082).WebAnalyticsEvents;
 const logger = new fn(4).Logger("ApexExperimentStore");
 let tmp3 = typeof window === "undefined";
@@ -62,9 +53,9 @@ if (typeof window !== "undefined") {
   tmp3 = tmp4;
 }
 if (!tmp3) {
-  fn(1247);
+  fn(1248);
 }
-let items = [fn(1248).UnitType.User, fn(1248).UnitType.Installation];
+let items = [fn(1249).UnitType.User, fn(1249).UnitType.Installation];
 let closure_10 = {};
 let clientOverrides = {};
 const dependencyMap2 = {};
@@ -415,9 +406,9 @@ prototype["getServerAssignment"] = function getServerAssignment(kind, id, name) 
   }
   return null != obj[kind][id] ? obj[kind][id].assignments[tmp2] : undefined;
 };
-prototype["getEvaluation"] = function getEvaluation(user, arg1) {
+prototype["getEvaluation"] = function getEvaluation(installation, installation_id) {
   let evaluationId;
-  if (obj[user][arg1] != null) {
+  if (obj[installation][installation_id] != null) {
     evaluationId = tmp.evaluationId;
   }
   return evaluationId;
@@ -521,32 +512,35 @@ prototype["trackExperimentExposure"] = function trackExperimentExposure(evaluati
     self.withExposureTracking(tmp3, () => self.track(WebAnalyticsEvents.EXPERIMENT_GUILD_EVALUATION_EXPOSED, { evaluation_id, guild_id, experiment, exposure_location, unit_type, tracked_variation_id, revision }, { flush: true }));
   }
 };
-prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPointExposures(exposure_location, arg1) {
+prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPointExposures(exposure_location, installation_id, installation_id) {
   const self = this;
-  const evaluation = this.getEvaluation("user", arg1);
+  importDefault = exposure_location;
+  dependencyMap = installation_id;
+  const evaluation = this.getEvaluation("user", installation_id);
   if (null != evaluation) {
     const _HermesInternal = HermesInternal;
-    self.withExposureTracking(getHash("" + evaluation + "|" + exposure_location), () => self.track(WebAnalyticsEvents.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: evaluation, exposure_location, unit_type: "user" }, { flush: true }));
-  }
-  function _loop(evaluationId, unitId) {
-    const evaluation_id = evaluationId;
-    exposure_location = unitId;
-    const combined = "" + evaluationId + "|" + exposure_location;
-    let tmp3 = dependencyMap4[combined];
-    if (null == tmp3) {
-      const v3Result = exposure_location(self[6]).v3(combined);
-      tmp2[combined] = v3Result;
-      tmp3 = v3Result;
-      obj = exposure_location(self[6]);
+    const combined = "" + evaluation + "|" + exposure_location;
+    let tmp5 = dependencyMap4[combined];
+    if (null == tmp5) {
+      const v3Result = MurmurHashV3Default.v3(combined);
+      tmp4[combined] = v3Result;
+      tmp5 = v3Result;
     }
-    self.withExposureTracking(tmp3, () => self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED, { evaluation_id, exposure_location: unitId, unit_type: "installation", installation_id: unitId }, { flush: true }));
+    self.withExposureTracking(tmp5, () => self.track(WebAnalyticsEvents.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: evaluation, exposure_location, unit_type: "user" }, { flush: true }));
   }
-  const result = self.evaluationsWithUnitIds("installation");
-  const iter = result[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let _loopResult = _loop(nextResult.evaluationId, nextResult.unitId);
-    continue;
+  if (null != installation_id) {
+    const evaluation1 = self.getEvaluation("installation", installation_id);
+    if (null != evaluation1) {
+      const _HermesInternal2 = HermesInternal;
+      const combined1 = "" + evaluation1 + "|" + exposure_location;
+      let tmp14 = dependencyMap4[combined1];
+      if (null == tmp14) {
+        const v3Result1 = MurmurHashV3Default.v3(combined1);
+        tmp13[combined1] = v3Result1;
+        tmp14 = v3Result1;
+      }
+      self.withExposureTracking(tmp14, () => self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED, { evaluation_id: evaluation1, exposure_location, unit_type: "installation", installation_id }, { flush: true }));
+    }
   }
 };
 prototype["withExposureTracking"] = function withExposureTracking(v3Result, fn) {
@@ -558,44 +552,38 @@ prototype["withExposureTracking"] = function withExposureTracking(v3Result, fn) 
     self.saveTrackedExposures(closure_19);
   }
 };
+prototype["getInstallationUnitIdForSuppression"] = function getInstallationUnitIdForSuppression() {
+  let first = Object.keys(obj.installation)[0];
+  if (first == null) {
+    first = null;
+  }
+  return first;
+};
 prototype["trackExposureSuppression"] = function trackExposureSuppression(experiment, suppression_source) {
   if (null != closure_10[experiment]) {
     const self = this;
     if ("user" === tmp.kind) {
-      obj = { experiment, unit_type: tmp.kind, suppression_source };
-      self.track(WebAnalyticsEvents.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, obj, { flush: true });
+      const obj2 = { experiment, unit_type: tmp.kind, suppression_source };
+      self.track(WebAnalyticsEvents.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, obj2, { flush: true });
     } else if ("installation" === tmp.kind) {
-      const _Object = Object;
-      const first = Object.keys(obj.installation)[0];
-      if (null != first) {
-        const obj2 = { experiment, unit_type: tmp.kind, suppression_source, installation_id: first };
-        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj2, { flush: true });
+      const installationUnitIdForSuppression = self.getInstallationUnitIdForSuppression();
+      let tmp3 = null != installationUnitIdForSuppression;
+      if (tmp3) {
+        tmp3 = null != obj.installation[installationUnitIdForSuppression];
+      }
+      if (tmp3) {
+        obj = { experiment, unit_type: tmp.kind, suppression_source, installation_id: installationUnitIdForSuppression };
+        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj, { flush: true });
       }
     } else if ("guild" === tmp.kind) {
-      const _Object2 = Object;
-      const first1 = Object.keys(obj.guild)[0];
-      if (null != first1) {
-        const obj3 = { experiment, unit_type: tmp.kind, suppression_source, guild_id: first1 };
+      const _Object = Object;
+      const first = Object.keys(obj.guild)[0];
+      if (null != first) {
+        const obj3 = { experiment, unit_type: tmp.kind, suppression_source, guild_id: first };
         self.track(WebAnalyticsEvents.EXPERIMENT_GUILD_EXPOSURE_SUPPRESSED, obj3, { flush: true });
       }
     }
   }
-};
-prototype["evaluationIds"] = function evaluationIds(arg0) {
-  const values = Object.values(obj[arg0]);
-  const mapped = values.map((evaluationId) => evaluationId.evaluationId);
-  return mapped.filter((item) => null != item);
-};
-prototype["evaluationsWithUnitIds"] = function evaluationsWithUnitIds(installation) {
-  const entries = Object.entries(obj[installation]);
-  const found = entries.filter((item) => {
-    [, tmp] = item;
-    return null != tmp.evaluationId;
-  });
-  return found.map((item) => {
-    [tmp, tmp2] = item;
-    return { evaluationId: tmp2.evaluationId, unitId: tmp };
-  });
 };
 prototype["shouldTrackExposure"] = function shouldTrackExposure(v3Result) {
   let tmp2 = null == tmp;
@@ -710,7 +698,7 @@ prototype["handleFetchSuccess"] = function handleFetchSuccess(arg0, apexExperime
   if (null != id) {
     if (null != apexExperiments) {
       const assignments = {};
-      function _loop2() {
+      function _loop() {
         apexExperiments = apexExperiments(self[5]).UnitTypeToKind[closure_4];
         if (null == apexExperiments.assignments[closure_4]) {
           return 1;
@@ -735,7 +723,7 @@ prototype["handleFetchSuccess"] = function handleFetchSuccess(arg0, apexExperime
       const iter = items[Symbol.iterator]();
       while (iter !== undefined) {
         closure_4 = iter.next();
-        let _loop2Result = _loop2();
+        let _loopResult = _loop();
         continue;
       }
       const obj2 = {};

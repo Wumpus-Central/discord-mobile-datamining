@@ -1,12 +1,12 @@
-// === Module 8765: useVideoControls ===
+// === Module 8807: useVideoControls ===
 
-// Module 8765 (useVideoControls)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8763 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8766 */;
+// Module 8807 (useVideoControls)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8805 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8808 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let obj4 = module_560.create(() => ({ controls: "Path", paused: true }));
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");

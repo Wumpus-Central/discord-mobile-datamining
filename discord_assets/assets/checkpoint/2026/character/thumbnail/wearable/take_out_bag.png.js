@@ -1,6 +1,6 @@
-// === Module 6687: ? ===
+// === Module 6718: ? ===
 
-// Module 6687
+// Module 6718
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/wearable/take_out_bag.png.js");

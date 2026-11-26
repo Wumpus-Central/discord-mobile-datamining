@@ -1,8 +1,8 @@
-// === Module 8840: MediaPlaybackExperiment ===
+// === Module 8882: MediaPlaybackExperiment ===
 
-// Module 8840 (MediaPlaybackExperiment)
-import NativeMediaPlaybackModuleDefault from "NativeMediaPlaybackModule" /* 8841 */;
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 8882 (MediaPlaybackExperiment)
+import NativeMediaPlaybackModuleDefault from "NativeMediaPlaybackModule" /* 8883 */;
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-10-mobile-media-playback", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

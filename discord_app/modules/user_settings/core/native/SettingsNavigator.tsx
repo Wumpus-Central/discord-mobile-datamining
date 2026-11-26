@@ -1,17 +1,17 @@
-// === Module 19181: SettingsNavigator ===
+// === Module 19244: SettingsNavigator ===
 
-// Module 19181 (SettingsNavigator)
+// Module 19244 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7320 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16143 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 19182 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7351 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16194 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 19245 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2188 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16141 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16192 */;
 
 require = fn;
 function SettingHeaderBadge(badge) {
@@ -44,9 +44,9 @@ const Constants = fn(1071);
 ({ AnalyticsPages: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const NativeStackNavigator = fn(9005);
+const NativeStackNavigator = fn(9047);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.headerContainer = { width: "100%", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };

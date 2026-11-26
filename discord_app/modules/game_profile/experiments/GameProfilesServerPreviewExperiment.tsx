@@ -1,7 +1,7 @@
-// === Module 15344: GameProfilesServerPreviewExperiment ===
+// === Module 15394: GameProfilesServerPreviewExperiment ===
 
-// Module 15344 (GameProfilesServerPreviewExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 15394 (GameProfilesServerPreviewExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { enabled: false };

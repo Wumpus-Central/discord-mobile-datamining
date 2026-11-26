@@ -1,19 +1,19 @@
-// === Module 18177: SoundButton ===
+// === Module 18236: SoundButton ===
 
-// Module 18177 (SoundButton)
+// Module 18236 (SoundButton)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import EmojiDefault from "Emoji" /* 7457 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12564 */;
-import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 18182 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import EmojiDefault from "Emoji" /* 7488 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12613 */;
+import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 18241 */;
 import noop from "module_19" /* 19 */;
 
-const module_1653_mod = _mod1653;
+const module_1654_mod = _mod1654;
 
 require = fn;
 function useAnimation(arg0) {
-  items = [closure_11, arg0, _mod1653.withDelay, spring_spring.withSpring, _mod1653.interpolate, closure_8];
+  items = [closure_11, arg0, _mod1654.withDelay, spring_spring.withSpring, _mod1654.interpolate, closure_8];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -73,7 +73,7 @@ function useAnimation(arg0) {
   SoundButtonTsx1.__closure = items1;
   SoundButtonTsx1.__workletHash = 3937789014357;
   SoundButtonTsx1.__initData = tmp;
-  return _mod1653.useAnimatedStyle(SoundButtonTsx1);
+  return _mod1654.useAnimatedStyle(SoundButtonTsx1);
 }
 function SoundButtonEmoji(arg0) {
   ({ sound, sharedValues } = arg0);
@@ -97,21 +97,21 @@ function SoundButtonEmoji(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let module_1653 = module_1653_mod;
-let closure_7 = module_1653.createAnimatedComponent(View);
+let module_1654 = module_1654_mod;
+let closure_7 = module_1654.createAnimatedComponent(View);
 let closure_8 = { damping: 10, stiffness: 300, mass: 1 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { button: null, buttonPressed: null, buttonDisabled: null, buttonPlaying: null, playingBackground: null, emoji: null, emojiWrapper: null, text: null, textPlaying: null, lock: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-obj.button = { marginTop: 4, height: fn(18171).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
-let obj2 = { marginTop: 4, height: fn(18171).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+obj.button = { marginTop: 4, height: fn(18230).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+let obj2 = { marginTop: 4, height: fn(18230).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
 obj.buttonPressed = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
 obj.buttonDisabled = { opacity: 0.5 };
 let obj4 = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
 obj.buttonPlaying = { borderStyle: "solid", borderWidth: 2, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 const rect = { position: "absolute", top: 0, bottom: 0, start: 0, end: 0, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG, borderRadius: nativeDefault.radii.lg - 2 };
 obj.playingBackground = rect;
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 24;
@@ -124,8 +124,8 @@ obj.textPlaying = { marginHorizontal: 6 };
 const size1 = { position: "absolute", top: nativeDefault.space.PX_12, end: nativeDefault.space.PX_12, width: 12, height: 12, tintColor: nativeDefault.colors.WHITE };
 obj.lock = size1;
 let closure_9 = createStyles.createStyles(obj);
-let module_1653 = module_1653_mod;
-let closure_10 = module_1653.createAnimatedComponent(fn(6121).PressableOpacity);
+let module_1654 = module_1654_mod;
+let closure_10 = module_1654.createAnimatedComponent(fn(6152).PressableOpacity);
 let closure_11 = { code: "(function SoundButtonTsx1(){let[animationConfig,withDelay,withSpring,interpolate,SPRING_CONFIG]=this.__closure;var _animationConfig$play,_animationConfig$pres,_animationConfig;const isNotPressed=animationConfig.sharedValues.pressed.get()===0;const isPlaying=animationConfig.sharedValues.playing.get()>0;const shouldDoPlayingAnimation=isNotPressed&&isPlaying;const playingAnimationScaleValue=withDelay((_animationConfig$play=animationConfig.playingAnimationDelay)!==null&&_animationConfig$play!==void 0?_animationConfig$play:0,withSpring(interpolate(animationConfig.sharedValues.playing.get(),[0,1],[1,animationConfig.scaleFactors.playing]),SPRING_CONFIG));const pressedAnimationScaleValue=withSpring(interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[1,animationConfig.scaleFactors.pressed]),SPRING_CONFIG);const rotationScaleValue=interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[0,(_animationConfig$pres=(_animationConfig=animationConfig)===null||_animationConfig===void 0?void 0:_animationConfig.pressedRotationDegrees)!==null&&_animationConfig$pres!==void 0?_animationConfig$pres:0]);return{transform:[{scale:shouldDoPlayingAnimation?playingAnimationScaleValue:pressedAnimationScaleValue},{rotate:rotationScaleValue+\"deg\"}]};})" };
 let obj5 = { borderStyle: "solid", borderWidth: 2, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 size = fn(2);

@@ -1,16 +1,16 @@
-// === Module 7153: UserVerification ===
+// === Module 7184: UserVerification ===
 
-// Module 7153 (UserVerification)
+// Module 7184 (UserVerification)
 import util from "util" /* 1112 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 7154 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5079 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 7185 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/UserVerification.tsx");

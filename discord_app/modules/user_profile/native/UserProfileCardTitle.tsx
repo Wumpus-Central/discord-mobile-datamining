@@ -1,8 +1,8 @@
-// === Module 7528: UserProfileCardTitle ===
+// === Module 7559: UserProfileCardTitle ===
 
-// Module 7528 (UserProfileCardTitle)
+// Module 7559 (UserProfileCardTitle)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5603 */;
+import Text_Text from "Text/Text" /* 5634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { title: { flexDirection: "row", alignItems: "center", flexShrink: 1, minWidth: 0, gap: nativeDefault.space.PX_4 }, text: { flexShrink: 1, minWidth: 0 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

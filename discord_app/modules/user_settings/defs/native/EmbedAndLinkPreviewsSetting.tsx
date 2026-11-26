@@ -1,10 +1,10 @@
-// === Module 17029: EmbedAndLinkPreviewsSetting ===
+// === Module 17080: EmbedAndLinkPreviewsSetting ===
 
-// Module 17029 (EmbedAndLinkPreviewsSetting)
+// Module 17080 (EmbedAndLinkPreviewsSetting)
 import util from "util" /* 1112 */;
-import UserSettings from "UserSettings" /* 4837 */;
-import SettingsConstants from "SettingsConstants" /* 9513 */;
-import SettingBuilders from "SettingBuilders" /* 11914 */;
+import UserSettings from "UserSettings" /* 4868 */;
+import SettingsConstants from "SettingsConstants" /* 9555 */;
+import SettingBuilders from "SettingBuilders" /* 11962 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

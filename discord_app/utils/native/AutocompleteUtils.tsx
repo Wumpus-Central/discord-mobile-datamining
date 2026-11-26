@@ -1,6 +1,6 @@
-// === Module 6956: utils/AutocompleteUtils ===
+// === Module 6987: utils/AutocompleteUtils ===
 
-// Module 6956 (utils/AutocompleteUtils)
+// Module 6987 (utils/AutocompleteUtils)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import size from "module_2" /* 2 */;

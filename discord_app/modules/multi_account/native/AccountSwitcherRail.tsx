@@ -1,24 +1,24 @@
-// === Module 19003: AccountSwitcherRail ===
+// === Module 19066: AccountSwitcherRail ===
 
-// Module 19003 (AccountSwitcherRail)
+// Module 19066 (AccountSwitcherRail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import SettingsIcon from "SettingsIcon" /* 10409 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13336 */;
-import openManageAccountsModalDefault from "openManageAccountsModal" /* 18107 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import SettingsIcon from "SettingsIcon" /* 10454 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13388 */;
+import openManageAccountsModalDefault from "openManageAccountsModal" /* 18166 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1405 */;
-import StreamerModeStore from "StreamerModeStore" /* 5069 */;
-import UserStore from "UserStore" /* 1386 */;
-import MultiAccountStore from "MultiAccountStore" /* 13333 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15054 */;
+import UserRecord from "UserRecord" /* 1406 */;
+import StreamerModeStore from "StreamerModeStore" /* 5100 */;
+import UserStore from "UserStore" /* 1387 */;
+import MultiAccountStore from "MultiAccountStore" /* 13385 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15104 */;
 
-const CircleInformationIcon = CheckmarkSmallIcon(5716);
-const CheckmarkSmallIcon2 = CheckmarkSmallIcon(7460);
+const CircleInformationIcon = CheckmarkSmallIcon(5747);
+const CheckmarkSmallIcon2 = CheckmarkSmallIcon(7491);
 require = fn;
 function RailButton(arg0) {
   closure_0 = closure_22();
@@ -40,9 +40,9 @@ function AccountButton(user) {
   const selected = user.selected;
   ({ disabled, onSelect: importAll } = user);
   dependencyMap = closure_22();
-  const radioA11yNative = user(5074).useRadioA11yNative({ selected, disabled });
+  const radioA11yNative = user(5105).useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  let obj = user(5074);
+  let obj = user(5105);
   closure_4 = tmp5;
   let obj2 = { accessibilityRole, accessibilityState, accessibilityLabel: null, accessibilityHint: null, disabled: null, onPress: null, children: null };
   const tmp4 = new UserRecord(user);
@@ -50,7 +50,7 @@ function AccountButton(user) {
   if (user.hidePersonalInformation) {
     str = "never";
   }
-  obj2.accessibilityLabel = selected(5068).getUserTag(tmp4, { mode: "username", identifiable: str });
+  obj2.accessibilityLabel = selected(5099).getUserTag(tmp4, { mode: "username", identifiable: str });
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
     const intl2 = tmp(1112).intl;
     let stringResult = intl2.string(tmp(1112).t.tYX2ps);
@@ -231,22 +231,22 @@ function AccountSwitcherRailContent() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(13333).MultiAccountTokenStatus;
-let Constants = fn(13334);
+const MultiAccountTokenStatus = fn(13385).MultiAccountTokenStatus;
+let Constants = fn(13386);
 ({ MAX_ACCOUNTS: map1, MultiAccountSwitchLocation: closure_14 } = Constants);
 Constants = fn(1071);
 ({ AnalyticEvents: closure_15, AuthStates: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
 const diff = 41 - 2 * nativeDefault.space.PX_4;
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let closure_21 = createStyles.createStyles((width, bottom) => {
   const obj = { gutter: null };
   const rect = { position: "absolute", right: nativeDefault.space.PX_6, bottom, width, alignItems: "center" };
   obj.gutter = rect;
   return obj;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj = { accounts: { gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 }, button: null, pressed: null, avatar: null, circle: null, neutralCircle: null, accountRing: null, activeRing: null, indicator: null, invalidIndicator: null, manageIcon: null };
 let size = { width: 44, height: 44, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round };
 obj.button = size;

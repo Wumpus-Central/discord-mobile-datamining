@@ -1,10 +1,10 @@
-// === Module 14959: LibraryApplicationStatisticsActionCreators ===
+// === Module 15009: LibraryApplicationStatisticsActionCreators ===
 
-// Module 14959 (LibraryApplicationStatisticsActionCreators)
+// Module 15009 (LibraryApplicationStatisticsActionCreators)
 import DurationsDefault from "Durations" /* 1088 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 14958 */;
+import LibraryApplicationStatisticsStore from "LibraryApplicationStatisticsStore" /* 15008 */;
 
 require = fn;
 let closure_7 = async function _fetchActivityStatistics() {
@@ -18,7 +18,7 @@ let closure_7 = async function _fetchActivityStatistics() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

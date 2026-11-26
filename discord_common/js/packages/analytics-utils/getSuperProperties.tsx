@@ -1,19 +1,19 @@
-// === Module 1348: getSuperProperties ===
+// === Module 1349: getSuperProperties ===
 
-// Module 1348 (getSuperProperties)
+// Module 1349 (getSuperProperties)
 import Storage7 from "Storage" /* 510 */;
-import encodeProperties from "encodeProperties" /* 1346 */;
-import getSystemLocale2 from "getSystemLocale" /* 1349 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1350 */;
-import getOSVersionProperties from "getOSVersionProperties" /* 1351 */;
-import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1352 */;
-import clientLaunchId from "clientLaunchId" /* 1353 */;
-import formatDefault from "format" /* 1354 */;
-import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1355 */;
-import NativeClientInfoModule from "NativeClientInfoModule" /* 1356 */;
-import DesignIds from "DesignIds" /* 1357 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
-import SessionStorage3 from "SessionStorage" /* 1359 */;
+import encodeProperties from "encodeProperties" /* 1347 */;
+import getSystemLocale2 from "getSystemLocale" /* 1350 */;
+import NativeDeviceModule from "NativeDeviceModule" /* 1351 */;
+import getOSVersionProperties from "getOSVersionProperties" /* 1352 */;
+import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1353 */;
+import clientLaunchId from "clientLaunchId" /* 1354 */;
+import formatDefault from "format" /* 1355 */;
+import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1356 */;
+import NativeClientInfoModule from "NativeClientInfoModule" /* 1357 */;
+import DesignIds from "DesignIds" /* 1358 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
+import SessionStorage3 from "SessionStorage" /* 1360 */;
 import size from "module_2" /* 2 */;
 
 function getOS() {
@@ -249,7 +249,7 @@ function extendSuperProperties(arg0) {
   closure_5 = encodeProperties.encodeProperties(obj);
 }
 let result = extendSuperProperties((function getContextualSuperProperties() {
-  obj = { client_build_number: parseInt("35720300000000", 10) };
+  obj = { client_build_number: parseInt("35720400000000", 10) };
   let buildNumber;
   if (DiscordNative != null) {
     const app = DiscordNative.app;

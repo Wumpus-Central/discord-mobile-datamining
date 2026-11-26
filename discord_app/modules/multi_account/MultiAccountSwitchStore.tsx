@@ -1,13 +1,13 @@
-// === Module 15054: MultiAccountSwitchStore ===
+// === Module 15104: MultiAccountSwitchStore ===
 
-// Module 15054 (MultiAccountSwitchStore)
+// Module 15104 (MultiAccountSwitchStore)
 import LoggerDefault from "Logger" /* 3 */;
 import fast_connect from "fast_connect" /* 15 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import TokenManagerAll from "TokenManager" /* 1097 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import MultiAccountStore from "MultiAccountStore" /* 13333 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import MultiAccountStore from "MultiAccountStore" /* 13385 */;
 
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;
@@ -91,8 +91,8 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
           obj3.is_user_mismatch = tmp8;
           logger.log("Token mismatch on account switch connection open", obj3);
           const obj5 = id2(15);
-          token2(1255).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, obj3);
-          const obj6 = token2(1255);
+          token2(1256).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, obj3);
+          const obj6 = token2(1256);
         }
       }
       let tmp26 = from_user_id !== user.id;
@@ -101,7 +101,7 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
       obj7.linked_user_ids = users1.map((id) => id.id);
       obj7.has_ever_connected = has_ever_connected;
       obj7.switch_origin = switch_origin;
-      let tmp35 = token2(1255);
+      let tmp35 = token2(1256);
       const track = tmp35.track;
       let obj9 = AnalyticEvents;
       if (tmp26) {
@@ -171,8 +171,8 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
             obj13.is_already_corrupted = tmp46;
             logger.log("setToken about to introduce per-user token collision", obj13);
             const obj17 = id2(15);
-            token2(1255).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, obj13);
-            const obj12 = token2(1255);
+            token2(1256).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, obj13);
+            const obj12 = token2(1256);
           }
         }
         TokenManagerAll.setToken(token2, user.id);

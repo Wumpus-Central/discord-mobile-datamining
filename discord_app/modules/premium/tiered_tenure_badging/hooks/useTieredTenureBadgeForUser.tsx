@@ -1,10 +1,10 @@
-// === Module 9809: useTieredTenureBadgeForUser ===
+// === Module 9851: useTieredTenureBadgeForUser ===
 
-// Module 9809 (useTieredTenureBadgeForUser)
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 6145 */;
-import PremiumPerkGates from "PremiumPerkGates" /* 9779 */;
-import UserProfileStore from "UserProfileStore" /* 6132 */;
-import UserStore from "UserStore" /* 1386 */;
+// Module 9851 (useTieredTenureBadgeForUser)
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 6176 */;
+import PremiumPerkGates from "PremiumPerkGates" /* 9821 */;
+import UserProfileStore from "UserProfileStore" /* 6163 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 

@@ -1,6 +1,6 @@
-// === Module 18007: ChannelAffinitiesV2Constants ===
+// === Module 18066: ChannelAffinitiesV2Constants ===
 
-// Module 18007 (ChannelAffinitiesV2Constants)
+// Module 18066 (ChannelAffinitiesV2Constants)
 import DurationsDefault from "Durations" /* 1088 */;
 
 const result = 12 * DurationsDefault.Millis.HOUR;

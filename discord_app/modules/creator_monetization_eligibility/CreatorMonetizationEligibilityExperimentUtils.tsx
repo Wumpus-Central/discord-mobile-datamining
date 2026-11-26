@@ -1,9 +1,9 @@
-// === Module 7587: CreatorMonetizationEligibilityExperimentUtils ===
+// === Module 7618: CreatorMonetizationEligibilityExperimentUtils ===
 
-// Module 7587 (CreatorMonetizationEligibilityExperimentUtils)
+// Module 7618 (CreatorMonetizationEligibilityExperimentUtils)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1386 */;
-import BillingInfoStore from "BillingInfoStore" /* 2174 */;
+import UserStore from "UserStore" /* 1387 */;
+import BillingInfoStore from "BillingInfoStore" /* 2175 */;
 
 require = fn;
 const GuildFeatures = fn(1071).GuildFeatures;

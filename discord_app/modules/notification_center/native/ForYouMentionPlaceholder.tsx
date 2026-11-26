@@ -1,10 +1,10 @@
-// === Module 18207: ForYouMentionPlaceholder ===
+// === Module 18266: ForYouMentionPlaceholder ===
 
-// Module 18207 (ForYouMentionPlaceholder)
+// Module 18266 (ForYouMentionPlaceholder)
 import nativeDefault from "native" /* 575 */;
-import _modDef1653 from "module_1653" /* 1653 */;
+import _modDef1654 from "module_1654" /* 1654 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { placeholder: { flexDirection: "row", marginBottom: 16, marginHorizontal: 24 }, placeholderImage: null, placeholderText: null, placeholderTextContainer: null, placeholderBody: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, height: 52, width: 52, borderRadius: 26, marginEnd: 12 };
 obj2.placeholderImage = size;
@@ -32,12 +32,12 @@ export function ForYouMentionPlaceholder() {
   items = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = require("initialize");
-  const sharedValue = require("module_1653").useSharedValue(0.3);
-  const obj2 = require("module_1653");
-  const obj4 = require("module_1653");
+  const sharedValue = require("module_1654").useSharedValue(0.3);
+  const obj2 = require("module_1654");
+  const obj4 = require("module_1654");
   const obj3 = { duration: 1000, easing: null };
-  const Easing = require("module_1653").Easing;
-  obj3.easing = Easing.inOut(require("module_1653").Easing.ease);
+  const Easing = require("module_1654").Easing;
+  obj3.easing = Easing.inOut(require("module_1654").Easing.ease);
   const result = sharedValue.set(obj4.withRepeat(require("timing/timing").withTiming(0.7, obj3), -1, true));
   const obj5 = require("timing/timing");
   const items1 = [closure_9, stateFromStores, sharedValue];
@@ -58,13 +58,13 @@ export function ForYouMentionPlaceholder() {
   ForYouMentionPlaceholderTsx1.__closure = items2;
   ForYouMentionPlaceholderTsx1.__workletHash = 12937076119429;
   ForYouMentionPlaceholderTsx1.__initData = tmp5;
-  const animatedStyle = require("module_1653").useAnimatedStyle(ForYouMentionPlaceholderTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(ForYouMentionPlaceholderTsx1);
   const obj6 = { style: null, children: null };
   const items3 = [tmp.placeholder, animatedStyle];
   obj6.style = items3;
   const items4 = [closure_5(View, { style: tmp.placeholderImage }), ];
   const obj9 = { children: null };
-  const obj7 = require("module_1653");
+  const obj7 = require("module_1654");
   const obj8 = { style: tmp.placeholderImage };
   const items5 = [
     closure_5(View, {
@@ -85,5 +85,5 @@ export function ForYouMentionPlaceholder() {
   obj9.children = items5;
   items4[1] = closure_6(View, obj9);
   obj6.children = items4;
-  return closure_6(_modDef1653.View, obj6);
+  return closure_6(_modDef1654.View, obj6);
 }

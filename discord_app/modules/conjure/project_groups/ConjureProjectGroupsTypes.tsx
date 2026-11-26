@@ -1,6 +1,6 @@
-// === Module 14241: ConjureProjectGroupsTypes ===
+// === Module 14293: ConjureProjectGroupsTypes ===
 
-// Module 14241 (ConjureProjectGroupsTypes)
+// Module 14293 (ConjureProjectGroupsTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/project_groups/ConjureProjectGroupsTypes.tsx");

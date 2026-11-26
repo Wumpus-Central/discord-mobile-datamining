@@ -1,21 +1,21 @@
-// === Module 5693: ToastUtils ===
+// === Module 5724: ToastUtils ===
 
-// Module 5693 (ToastUtils)
+// Module 5724 (ToastUtils)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import v1 from "v1" /* 1268 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5694 */;
-import FriendsIcon from "FriendsIcon" /* 5697 */;
-import UserPlatformIcon from "UserPlatformIcon" /* 5704 */;
-import UserMinusIcon from "UserMinusIcon" /* 5706 */;
-import LinkIcon from "LinkIcon" /* 5708 */;
-import SendMessageIcon from "SendMessageIcon" /* 5710 */;
-import CopyIcon from "CopyIcon" /* 5712 */;
-import DownloadIcon from "DownloadIcon" /* 5714 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5716 */;
-import TrashIcon from "TrashIcon" /* 5719 */;
-import ClockIcon from "ClockIcon" /* 5721 */;
+import v1 from "v1" /* 1269 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
+import FriendsIcon from "FriendsIcon" /* 5728 */;
+import UserPlatformIcon from "UserPlatformIcon" /* 5735 */;
+import UserMinusIcon from "UserMinusIcon" /* 5737 */;
+import LinkIcon from "LinkIcon" /* 5739 */;
+import SendMessageIcon from "SendMessageIcon" /* 5741 */;
+import CopyIcon from "CopyIcon" /* 5743 */;
+import DownloadIcon from "DownloadIcon" /* 5745 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5747 */;
+import TrashIcon from "TrashIcon" /* 5750 */;
+import ClockIcon from "ClockIcon" /* 5752 */;
 import size from "module_2" /* 2 */;
 
 const VerificationCriteria = Constants.VerificationCriteria;
@@ -40,8 +40,8 @@ export function presentFriendRequestAcceptedToast(dependencyMap) {
     stringResult = intl.formatToPlainString(util.t.b3eoD4, obj2);
   }
   const obj = ToastActionCreatorsDefault;
-  obj.open("TOAST_FRIEND_REQUEST_ACCEPTED", { text: stringResult, icon: tmp2(5702).UserPlusIcon, iconColor: "status-positive" });
-  const obj3 = { text: stringResult, icon: tmp2(5702).UserPlusIcon, iconColor: "status-positive" };
+  obj.open("TOAST_FRIEND_REQUEST_ACCEPTED", { text: stringResult, icon: tmp2(5733).UserPlusIcon, iconColor: "status-positive" });
+  const obj3 = { text: stringResult, icon: tmp2(5733).UserPlusIcon, iconColor: "status-positive" };
 }
 export function presentGameFriendRequestAcceptedToast() {
   const obj2 = { text: null, icon: null, iconColor: "status-positive" };

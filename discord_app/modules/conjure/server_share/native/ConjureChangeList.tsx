@@ -1,10 +1,10 @@
-// === Module 18451: ConjureChangeList ===
+// === Module 18514: ConjureChangeList ===
 
-// Module 18451 (ConjureChangeList)
+// Module 18514 (ConjureChangeList)
 import nativeDefault from "native" /* 575 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import Stack_Stack from "Stack/Stack" /* 6084 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import Stack_Stack from "Stack/Stack" /* 6115 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { bots: fn(12220).RobotIcon, channels: fn(7141).AppsIcon, test_app: fn(17157).BeakerIcon, profile_widget: fn(7891).IdCardIcon, overlay: fn(7722).GameControllerIcon, automod: fn(10036).ShieldIcon, collaboration: fn(7124).GroupIcon, only_you: fn(12359).UserIcon, location: fn(11438).MagicWandIcon, server: fn(11399).ServerIcon, settings: fn(10409).SettingsIcon };
-const createStyles = fn(5012);
+let obj = { bots: fn(12270).RobotIcon, channels: fn(7172).AppsIcon, test_app: fn(17208).BeakerIcon, profile_widget: fn(7925).IdCardIcon, overlay: fn(7756).GameControllerIcon, automod: fn(10078).ShieldIcon, collaboration: fn(7155).GroupIcon, only_you: fn(12409).UserIcon, location: fn(11485).MagicWandIcon, server: fn(11445).ServerIcon, settings: fn(10454).SettingsIcon };
+const createStyles = fn(5043);
 let obj3 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, rowText: { flex: 1 } };
 let closure_7 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function ConjureChangeList(rows) {
   obj = { spacing: 8, children: null };
   const obj2 = { variant: "body-md/semibold", color: "text-strong", children: null };
   const intl = require("util").intl;
-  obj2.children = intl.string(_modDef4244["kG/2e8"]);
+  obj2.children = intl.string(_modDef4245["kG/2e8"]);
   items = [closure_4(require("Text/Text").Text, obj2), ];
   const obj3 = {
     style: tmp.box,

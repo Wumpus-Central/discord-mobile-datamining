@@ -1,9 +1,9 @@
-// === Module 2161: GameDetectionTypes ===
+// === Module 2162: GameDetectionTypes ===
 
-// Module 2161 (GameDetectionTypes)
-import Record from "Record" /* 1406 */;
+// Module 2162 (GameDetectionTypes)
+import Record from "Record" /* 1407 */;
 
-const createExecutable = fn(2142).createExecutable;
+const createExecutable = fn(2143).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
 class DetectableGameRecord extends tmp2 {

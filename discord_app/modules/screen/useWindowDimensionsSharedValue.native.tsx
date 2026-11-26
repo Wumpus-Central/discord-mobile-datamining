@@ -1,20 +1,20 @@
-// === Module 12944: useWindowDimensionsSharedValue ===
+// === Module 12996: useWindowDimensionsSharedValue ===
 
-// Module 12944 (useWindowDimensionsSharedValue)
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11738 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12945 */;
-import module_1653_mod from "module_1653" /* 1653 */;
-import useWindowDimensions_mod from "useWindowDimensions" /* 1494 */;
+// Module 12996 (useWindowDimensionsSharedValue)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11786 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12997 */;
+import module_1654_mod from "module_1654" /* 1654 */;
+import useWindowDimensions_mod from "useWindowDimensions" /* 1495 */;
 import size from "module_2" /* 2 */;
 
-let module_1653 = module_1653_mod;
+let module_1654 = module_1654_mod;
 let useWindowDimensions = useWindowDimensions_mod;
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());
-const mutable = module_1653.makeMutable({});
-let module_1653 = module_1653_mod;
+const mutable = module_1654.makeMutable({});
+let module_1654 = module_1654_mod;
 let useWindowDimensions = useWindowDimensions_mod;
 const merged1 = Object.assign(useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }));
-const mutable1 = module_1653.makeMutable({});
+const mutable1 = module_1654.makeMutable({});
 subscribeToWindowDimensionsDefault((arg0, arg1) => {
   updateSharedValueIfChangedDefault(mutable, arg0);
   updateSharedValueIfChangedDefault(mutable1, arg1);

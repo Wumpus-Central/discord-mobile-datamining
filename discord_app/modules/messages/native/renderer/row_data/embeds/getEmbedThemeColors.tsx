@@ -1,18 +1,18 @@
-// === Module 12335: getEmbedThemeColors ===
+// === Module 12385: getEmbedThemeColors ===
 
-// Module 12335 (getEmbedThemeColors)
+// Module 12385 (getEmbedThemeColors)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5009 */;
-import shared from "shared" /* 5019 */;
+import ColorUtils from "ColorUtils" /* 5040 */;
+import shared from "shared" /* 5050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 const result = createStyles.experimental_createToken((theme) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 const result1 = createStyles.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
     let PRIMARY_600 = nativeDefault.unsafe_rawColors.PRIMARY_600;
@@ -22,22 +22,22 @@ const result1 = createStyles.experimental_createToken((theme) => {
   }
   return PRIMARY_600;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 const result2 = createStyles.experimental_createToken((theme) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 const result3 = createStyles.experimental_createToken((theme) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 const result4 = createStyles.experimental_createToken((theme) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 const result5 = createStyles.experimental_createToken((theme) => {
   const isThemeDarkResult = shared.isThemeDark(theme.theme);
   const hexWithOpacity = ColorUtils.hexWithOpacity;
@@ -49,12 +49,12 @@ const result5 = createStyles.experimental_createToken((theme) => {
   }
   return hexWithOpacityResult;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 const result6 = createStyles.experimental_createToken((theme) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_100;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 const result7 = createStyles.experimental_createToken((theme) => {
   let str = "#666b73";
   if (!obj.isThemeDark(theme.theme)) {
@@ -62,7 +62,7 @@ const result7 = createStyles.experimental_createToken((theme) => {
   }
   return str;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 const result8 = createStyles.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
     let PRIMARY_600 = nativeDefault.unsafe_rawColors.PRIMARY_600;
@@ -72,7 +72,7 @@ const result8 = createStyles.experimental_createToken((theme) => {
   }
   return PRIMARY_600;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let closure_4 = createStyles.createNativeStyleProperties({ acceptBlurpleLabelBackgroundColor: nativeDefault.colors.BACKGROUND_BRAND, acceptLabelGreenBackgroundColor: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT, acceptLabelGreenColor: nativeDefault.unsafe_rawColors.WHITE, backgroundColor: nativeDefault.colors.MOBILE_EMBED_BACKGROUND_DEFAULT, bodyTextColor: nativeDefault.colors.TEXT_DEFAULT, clearLabelRedBackgroundColor: nativeDefault.unsafe_rawColors.RED_400, clearLabelRedColor: nativeDefault.unsafe_rawColors.WHITE, headerColor: nativeDefault.colors.TEXT_SUBTLE, subtitleColor: nativeDefault.colors.TEXT_SUBTLE, titleColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, acceptLabelActiveBackgroundColor: result, acceptLabelDisabledBackgroundColor: result1, acceptLabelDisabledBorderColor: result2, acceptLabelDisabledTextColor: result3, acceptLabelDisabledColor: result4, borderColor: result5, resolvingGradientEnd: result6, resolvingGradientStart: result7, thumbnailBackgroundColor: result8 });
 const size = fn(2);
 const result9 = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx");

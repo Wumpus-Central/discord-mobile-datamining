@@ -1,7 +1,7 @@
-// === Module 17685: GuildsRenderExperiment ===
+// === Module 17742: GuildsRenderExperiment ===
 
-// Module 17685 (GuildsRenderExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 17742 (GuildsRenderExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-guilds-render-experiment", kind: "user", defaultConfig: { enabled: false }, variations: null };

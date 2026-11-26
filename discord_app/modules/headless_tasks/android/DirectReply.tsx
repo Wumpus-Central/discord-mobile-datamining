@@ -1,11 +1,11 @@
-// === Module 20365: DirectReply ===
+// === Module 20429: DirectReply ===
 
-// Module 20365 (DirectReply)
+// Module 20429 (DirectReply)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const NativeModules = fn(17).NativeModules;
-const MessageSendLocation = fn(5017).MessageSendLocation;
+const MessageSendLocation = fn(5048).MessageSendLocation;
 let closure_5 = new LoggerDefault("DirectReply");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");
@@ -29,7 +29,7 @@ export default (arg0) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else {
           try {
@@ -75,7 +75,7 @@ export default (arg0) => {
               }
               closure_0(true);
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           } catch (tmp20) {
             c4 = tmp;

@@ -1,12 +1,12 @@
-// === Module 11556: StorefrontProductActionCreators ===
+// === Module 11604: StorefrontProductActionCreators ===
 
-// Module 11556 (StorefrontProductActionCreators)
-import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 11554 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 11557 */;
+// Module 11604 (StorefrontProductActionCreators)
+import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 11602 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 11605 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2188 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 11553 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 6302 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 11601 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 6333 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -20,7 +20,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -179,8 +179,8 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
             closure_129_4 = closure_129_0.filter((item) => {
               let storefrontPricingKey = closure_1_3;
               if (closure_1_3 === undefined) {
-                storefrontPricingKey = closure_0(11554).getStorefrontPricingKey();
-                const obj = closure_0(11554);
+                storefrontPricingKey = closure_0(11602).getStorefrontPricingKey();
+                const obj = closure_0(11602);
               }
               let diff = globalThis;
               let flag = false;
@@ -193,9 +193,9 @@ let closure_9 = async function _maybeFetchProductsBySkuIds(arg0) {
                     flag = true;
                     if (null != fetchedAtForSku) {
                       if ("error" === fetchStateForSku) {
-                        let TWELVE_HOURS_MS = closure_0(11557).ERROR_STALE_THRESHOLD_MS;
+                        let TWELVE_HOURS_MS = closure_0(11605).ERROR_STALE_THRESHOLD_MS;
                       } else {
-                        TWELVE_HOURS_MS = closure_0(11557).TWELVE_HOURS_MS;
+                        TWELVE_HOURS_MS = closure_0(11605).TWELVE_HOURS_MS;
                       }
                       const _Date = diff.Date;
                       diff = _Date.now() - fetchedAtForSku;

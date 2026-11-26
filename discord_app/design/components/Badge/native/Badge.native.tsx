@@ -1,15 +1,15 @@
-// === Module 6128: Badge ===
+// === Module 6159: Badge ===
 
-// Module 6128 (Badge)
+// Module 6159 (Badge)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import LinearGradientDefault from "LinearGradient" /* 5567 */;
-import useToken from "useToken" /* 5576 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import BadgeShared from "BadgeShared" /* 6129 */;
+import LinearGradientDefault from "LinearGradient" /* 5598 */;
+import useToken from "useToken" /* 5607 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import BadgeShared from "BadgeShared" /* 6160 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5012 */;
+import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
 
 function getBadgeColors(variant) {

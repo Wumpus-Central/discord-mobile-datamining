@@ -1,6 +1,6 @@
-// === Module 6614: ? ===
+// === Module 6645: ? ===
 
-// Module 6614
+// Module 6645
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/magical_citrine.png.js");

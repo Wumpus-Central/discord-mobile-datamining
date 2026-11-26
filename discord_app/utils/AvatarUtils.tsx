@@ -1,20 +1,20 @@
-// === Module 1412: AvatarUtils ===
+// === Module 1413: AvatarUtils ===
 
-// Module 1412 (AvatarUtils)
+// Module 1413 (AvatarUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
-import Url from "Url" /* 1381 */;
-import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1413 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1415 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1447 */;
-import _modDef1488 from "module_1488" /* 1488 */;
-import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 2024 */;
-import NumberUtils from "NumberUtils" /* 2025 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2104 */;
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2106 */;
-import _modDef2107 from "module_2107" /* 2107 */;
+import Url from "Url" /* 1382 */;
+import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1414 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1416 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1448 */;
+import _modDef1489 from "module_1489" /* 1489 */;
+import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 2025 */;
+import NumberUtils from "NumberUtils" /* 2026 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2105 */;
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2107 */;
+import _modDef2108 from "module_2108" /* 2108 */;
 import Constants from "Constants" /* 1071 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 function getAvatarURL(canAnimate) {
@@ -111,7 +111,7 @@ function getAvatarURL(canAnimate) {
           obj4.animated = true;
         }
         const _HermesInternal2 = HermesInternal;
-        return combined + "?" + _modDef1488.stringify(obj4);
+        return combined + "?" + _modDef1489.stringify(obj4);
       }
     }
   }
@@ -245,7 +245,7 @@ function getGuildMemberAvatarURLSimple(size) {
   if (tmp20) {
     obj.animated = true;
   }
-  return combined + "?" + _modDef1488.stringify(obj);
+  return combined + "?" + _modDef1489.stringify(obj);
 }
 function getGuildBannerURL(guild) {
   ({ id, banner } = guild);
@@ -302,7 +302,7 @@ function getGuildBannerURL(guild) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1488.stringify(obj);
+    return combined + "?" + _modDef1489.stringify(obj);
   }
 }
 function getApplicationIconURL(guildMember) {
@@ -357,7 +357,7 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp6;
     if (fallbackAvatar) {
-      tmp6 = _modDef2107;
+      tmp6 = _modDef2108;
     }
     return tmp6;
   }
@@ -561,7 +561,7 @@ function getUserBannerURL(arg0) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1488.stringify(obj);
+    return combined + "?" + _modDef1489.stringify(obj);
   }
 }
 function getAvatarDecorationURL(canAnimate) {
@@ -667,7 +667,7 @@ function getGuildMemberBannerURL(arg0) {
         obj.animated = true;
       }
       const _HermesInternal2 = HermesInternal;
-      return combined + "?" + _modDef1488.stringify(obj);
+      return combined + "?" + _modDef1489.stringify(obj);
     }
   }
 }

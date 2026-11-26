@@ -1,6 +1,6 @@
-// === Module 4948: MemberSafetyConstants ===
+// === Module 4979: MemberSafetyConstants ===
 
-// Module 4948 (MemberSafetyConstants)
+// Module 4979 (MemberSafetyConstants)
 import Constants from "Constants" /* 1071 */;
 import BigFlagUtils from "BigFlagUtils" /* 1083 */;
 import size from "module_2" /* 2 */;

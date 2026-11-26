@@ -1,7 +1,7 @@
-// === Module 9190: AndroidNitroGiftOrdersExperiment ===
+// === Module 9232: AndroidNitroGiftOrdersExperiment ===
 
-// Module 9190 (AndroidNitroGiftOrdersExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 9232 (AndroidNitroGiftOrdersExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-11-android-nitro-gift-orders", kind: "user", defaultConfig: { enabled: false }, variations: null };

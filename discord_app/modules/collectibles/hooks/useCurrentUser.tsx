@@ -1,9 +1,9 @@
-// === Module 9373: useCurrentUser ===
+// === Module 9415: useCurrentUser ===
 
-// Module 9373 (useCurrentUser)
+// Module 9415 (useCurrentUser)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 18449: conjureSendToProject ===
+// === Module 18512: conjureSendToProject ===
 
-// Module 18449 (conjureSendToProject)
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7643 */;
+// Module 18512 (conjureSendToProject)
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7674 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_3 = async function _sendConjureMessageToProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_3 = async function _sendConjureMessageToProject(arg0) {
         clearTimeout(closure_131_2);
         closure_131_6.close();
         c8 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp31) {
       url = tmp31;

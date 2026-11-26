@@ -1,19 +1,19 @@
-// === Module 4962: EmojiUtils ===
+// === Module 4993: EmojiUtils ===
 
-// Module 4962 (EmojiUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import ImageUtils from "ImageUtils" /* 1491 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
-import EmojiTypes from "EmojiTypes" /* 4961 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4968 */;
+// Module 4993 (EmojiUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import ImageUtils from "ImageUtils" /* 1492 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import EmojiTypes from "EmojiTypes" /* 4992 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4999 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiPackStore from "EmojiPackStore" /* 4963 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import UserStore from "UserStore" /* 1386 */;
+import EmojiPackStore from "EmojiPackStore" /* 4994 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import UserStore from "UserStore" /* 1387 */;
 
-const PremiumTypeUtils = isPremiumResult(2108);
-const CreatorMonetizationRestrictionsUtils = isPremiumResult(4936);
-const RoleSubscriptionEmojiUtils = isPremiumResult(4966);
+const PremiumTypeUtils = isPremiumResult(2109);
+const CreatorMonetizationRestrictionsUtils = isPremiumResult(4967);
+const RoleSubscriptionEmojiUtils = isPremiumResult(4997);
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   ({ emoji, channel, guildId } = forceIncludeExternalGuilds);
@@ -178,13 +178,13 @@ let closure_21 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(4865);
+const ChannelRecord = fn(4896);
 ({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: closure_6 } = ChannelRecord);
 const Permissions = fn(1071).Permissions;
-const EmojiConstants = fn(1389);
+const EmojiConstants = fn(1390);
 ({ EMOJI_MAX_FILESIZE: closure_10, EMOJI_MAX_LENGTH: closure_11, EMOJI_RE: closure_12, EmojiDisabledReasons } = EmojiConstants);
 ({ EmojiIntention: closure_14, isExternalEmojiAllowedForIntention: closure_15 } = EmojiConstants);
-const PremiumTypes = fn(1388).PremiumTypes;
+const PremiumTypes = fn(1389).PremiumTypes;
 const items = [, ];
 ({ PREMIUM_LOCKED: arr[0], ROLE_SUBSCRIPTION_LOCKED: arr[1] } = EmojiDisabledReasons);
 const set = new Set(items);

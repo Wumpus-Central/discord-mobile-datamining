@@ -1,6 +1,6 @@
-// === Module 20103: ? ===
+// === Module 20167: ? ===
 
-// Module 20103
+// Module 20167
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CoinsAndBagSpotIllustration-1x.png.js");

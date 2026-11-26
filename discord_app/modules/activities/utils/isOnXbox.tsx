@@ -1,8 +1,8 @@
-// === Module 14847: isOnXbox ===
+// === Module 14900: isOnXbox ===
 
-// Module 14847 (isOnXbox)
-import Constants from "Constants" /* 2144 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7734 */;
+// Module 14900 (isOnXbox)
+import Constants from "Constants" /* 2145 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7768 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Constants.XBOX_ACTIVITY_APPLICATION_ID;

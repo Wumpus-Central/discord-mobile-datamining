@@ -1,21 +1,21 @@
-// === Module 12580: useCheckpointGuildsBarEntrypoint ===
+// === Module 12629: useCheckpointGuildsBarEntrypoint ===
 
-// Module 12580 (useCheckpointGuildsBarEntrypoint)
-import dismissible_content from "dismissible_content" /* 4845 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
-import CheckpointExperiments from "CheckpointExperiments" /* 6738 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9519 */;
+// Module 12629 (useCheckpointGuildsBarEntrypoint)
+import dismissible_content from "dismissible_content" /* 4876 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5075 */;
+import CheckpointExperiments from "CheckpointExperiments" /* 6769 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9561 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const guilds_bar = "guilds_bar";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/useCheckpointGuildsBarEntrypoint.tsx");
 
 export const CHECKPOINT_GUILDS_BAR_SOURCE = "guilds_bar";
-export function dismissCheckpointIntro(arg0) {
-  if (arg0 === guilds_bar) {
+export function dismissCheckpointIntro(devtools) {
+  if (devtools === guilds_bar) {
     let INDIRECT_ACTION = ContentDismissActionType.TAKE_ACTION;
   } else {
     INDIRECT_ACTION = ContentDismissActionType.INDIRECT_ACTION;

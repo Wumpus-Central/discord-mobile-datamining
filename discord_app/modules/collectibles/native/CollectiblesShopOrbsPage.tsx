@@ -1,17 +1,17 @@
-// === Module 17480: CollectiblesShopOrbsPage ===
+// === Module 17537: CollectiblesShopOrbsPage ===
 
-// Module 17480 (CollectiblesShopOrbsPage)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 11224 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 17441 */;
+// Module 17537 (CollectiblesShopOrbsPage)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 11270 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 17498 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6280 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6311 */;
 
 require = fn;
 const View = fn(17).View;
 let closure_6 = fn(1073).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_8 = createStyles.createStyles({ container: { display: "flex", flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopOrbsPage.tsx");

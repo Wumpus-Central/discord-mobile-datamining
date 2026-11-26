@@ -1,6 +1,6 @@
-// === Module 9397: GuildIdentityActionCreators ===
+// === Module 9439: GuildIdentityActionCreators ===
 
-// Module 9397 (GuildIdentityActionCreators)
+// Module 9439 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

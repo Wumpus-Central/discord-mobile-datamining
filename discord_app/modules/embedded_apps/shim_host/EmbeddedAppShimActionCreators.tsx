@@ -1,6 +1,6 @@
-// === Module 10168: EmbeddedAppShimActionCreators ===
+// === Module 10210: EmbeddedAppShimActionCreators ===
 
-// Module 10168 (EmbeddedAppShimActionCreators)
+// Module 10210 (EmbeddedAppShimActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
@@ -8,6 +8,9 @@ const result = size.fileFinishedImporting("modules/embedded_apps/shim_host/Embed
 
 export function shimPipeOpened(pipeId, pipe) {
   DispatcherDefault.dispatch({ type: "EMBEDDED_APP_SHIM_PIPE_OPEN", iframeId: pipeId, pipe });
+}
+export function shimConnected(iframeId) {
+  DispatcherDefault.dispatch({ type: "EMBEDDED_APP_SHIM_CONNECT", iframeId });
 }
 export function updateShimState(iframeId, state) {
   DispatcherDefault.dispatch({ type: "EMBEDDED_APP_SHIM_STATE_UPDATE", iframeId, state });

@@ -1,23 +1,23 @@
-// === Module 19551: NativeAppStartup ===
+// === Module 19614: NativeAppStartup ===
 
-// Module 19551 (NativeAppStartup)
+// Module 19614 (NativeAppStartup)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import Storage4 from "Storage" /* 510 */;
 import TokenManagerAll from "TokenManager" /* 1097 */;
-import SentryUtilsDefault from "SentryUtils" /* 1241 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4907 */;
-import timeRequireDefault from "timeRequire" /* 8224 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15577 */;
-import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20323 */;
-import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20324 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 4938 */;
+import timeRequireDefault from "timeRequire" /* 8266 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15628 */;
+import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20387 */;
+import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import AppStateStore from "AppStateStore" /* 2118 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import AppStateStore from "AppStateStore" /* 2119 */;
 
 require = fn;
 function linkFromAppsFlyer(url) {
@@ -251,7 +251,7 @@ let closure_27 = async function _trackFirstLaunched() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -411,7 +411,7 @@ let closure_39 = async function _init(_payload) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -487,7 +487,7 @@ let closure_40 = async function _initializeApp() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -620,7 +620,7 @@ let closure_40 = async function _initializeApp() {
           closure_129_0(closure_129_3[69]);
           const sessionHeartbeatScheduler = closure_129_0(closure_129_3[70]).initSessionHeartbeatScheduler();
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
         if (closure_128_0) {
           let resolved = Promise.resolve();
@@ -702,11 +702,11 @@ let closure_40 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[45])(paths[55], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[56]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(15790).updateSaturation(closure_0(5013).default.saturation);
-            obj = closure_0(15790);
-            closure_0(19267).updateVisualRefresh(true);
-            const obj2 = closure_0(19267);
-            closure_0(19268).updateTheme(closure_0(1191).default.theme);
+            closure_0(15841).updateSaturation(closure_0(5044).default.saturation);
+            obj = closure_0(15841);
+            closure_0(19330).updateVisualRefresh(true);
+            const obj2 = closure_0(19330);
+            closure_0(19331).updateTheme(closure_0(1191).default.theme);
             closure_1_0();
           }));
         });
@@ -751,7 +751,7 @@ let closure_41 = async function _initHeadlessTask() {
       obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -850,14 +850,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_19552 = fn(19552);
-const superagentPatch = fn(19554);
+const module_19615 = fn(19615);
+const superagentPatch = fn(19617);
 get_ActivityIndicator = fn(17);
 ({ AppState: closure_6, NativeEventEmitter: metroImportDefault, Linking: closure_8, LogBox: closure_9, NativeModules: closure_10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(19578);
-let closure_11 = fn(2189).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(6763);
-const ManagerRegistry = fn(19579);
+const logThirdPartyImportsDone = fn(19641);
+let closure_11 = fn(2190).subscribeToIntlLoadingSuccess;
+const AnalyticsTrackingStore = fn(6794);
+const ManagerRegistry = fn(19642);
 const Constants = fn(1071);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -880,7 +880,7 @@ let closure_25 = new DeepLinkProcessorDefault(function handleLinkingEventURL(url
     const mapDeepLinkEventResult = DeepLinkEventMapping.mapDeepLinkEvent(url, closure_1, tmp8);
   });
 });
-const future = new fn(10008).Future();
+const future = new fn(10050).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

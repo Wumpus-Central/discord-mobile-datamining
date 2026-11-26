@@ -1,6 +1,6 @@
-// === Module 12639: ? ===
+// === Module 12684: ? ===
 
-// Module 12639
+// Module 12684
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_aura_11_radioactive.webp.js");

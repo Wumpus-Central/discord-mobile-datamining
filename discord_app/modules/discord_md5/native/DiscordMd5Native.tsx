@@ -1,8 +1,8 @@
-// === Module 8101: DiscordMd5Native ===
+// === Module 8143: DiscordMd5Native ===
 
-// Module 8101 (DiscordMd5Native)
+// Module 8143 (DiscordMd5Native)
 import NativeFileModuleDefault from "NativeFileModule" /* 1148 */;
-import DiscordMd5 from "DiscordMd5" /* 7309 */;
+import DiscordMd5 from "DiscordMd5" /* 7340 */;
 
 const prototype = function DiscordMd5Native() {
   return HermesBuiltin.applyArguments(new.target, new.target);

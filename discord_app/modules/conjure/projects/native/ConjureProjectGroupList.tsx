@@ -1,29 +1,29 @@
-// === Module 14236: ConjureProjectGroupList ===
+// === Module 14288: ConjureProjectGroupList ===
 
-// Module 14236 (ConjureProjectGroupList)
+// Module 14288 (ConjureProjectGroupList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2018 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import TableRowGroup from "TableRowGroup" /* 6109 */;
-import getTimestampStringDefault from "getTimestampString" /* 6377 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7016 */;
-import GuildIcon from "GuildIcon" /* 7021 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7527 */;
-import conjureServerProject from "conjureServerProject" /* 7544 */;
-import native from "native" /* 8447 */;
-import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 9774 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11440 */;
-import useConjureProjectGroupsDefault from "useConjureProjectGroups" /* 14228 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 14235 */;
-import openConjureProject from "openConjureProject" /* 14237 */;
-import useConjureProjectGroupState from "useConjureProjectGroupState" /* 14239 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2019 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import TableRowGroup from "TableRowGroup" /* 6140 */;
+import getTimestampStringDefault from "getTimestampString" /* 6408 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7047 */;
+import GuildIcon from "GuildIcon" /* 7052 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7558 */;
+import conjureServerProject from "conjureServerProject" /* 7575 */;
+import native from "native" /* 8489 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 9816 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11487 */;
+import useConjureProjectGroupsDefault from "useConjureProjectGroups" /* 14280 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 14287 */;
+import openConjureProject from "openConjureProject" /* 14289 */;
+import useConjureProjectGroupState from "useConjureProjectGroupState" /* 14291 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7675 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7706 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -94,7 +94,7 @@ function ProjectGroup(arg0) {
   items1[1] = tmp12Result3;
   const obj11 = { scaleAmountInPx: 4, hitSlop: PX_8, accessibilityRole: "button", accessibilityState: { expanded: !collapsed }, accessibilityLabel: null, onPress: null, children: null };
   const intl = util.intl;
-  const tmp19 = _modDef4244;
+  const tmp19 = _modDef4245;
   if (collapsed) {
     let bEFqlW = tmp19.bEFqlW;
     let tmp21 = importDefault;
@@ -143,7 +143,7 @@ function ServerProjectGroup(guildId) {
   }
   if (name == null) {
     const intl = guildId(1112).intl;
-    name = intl.string(_modDef4244["6bhivN"]);
+    name = intl.string(_modDef4245["6bhivN"]);
   }
   obj2.title = name;
   obj2.guild = stateFromStores;
@@ -159,7 +159,7 @@ function ServerProjectGroup(guildId) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { state: { alignItems: "center", gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 }, trailingIndicator: null, subLabel: null, shareTargetIcon: null, userIconWrapper: null, shareTargetLabel: null, unreadDot: null, group: null, groupHeader: null, groupTitle: null, groupIcon: null, groupName: null };
 let size = { width: nativeDefault.space.PX_20, height: nativeDefault.space.PX_20, alignItems: "center", justifyContent: "center" };
 obj.trailingIndicator = size;
@@ -190,8 +190,8 @@ let closure_15 = noop.memo(function ProjectRow(project) {
     hideServer = false;
   }
   let tmp = closure_11();
-  const conjureHomeProjectState = project(14218).useConjureHomeProjectState(project.id);
-  let obj = project(14218);
+  const conjureHomeProjectState = project(14270).useConjureHomeProjectState(project.id);
+  let obj = project(14270);
   items = [ConjurePublishStatusStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(items, () => {
@@ -206,11 +206,11 @@ let closure_15 = noop.memo(function ProjectRow(project) {
     return publishState;
   }, items1);
   let obj2 = project(504);
-  let result = project(14218).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
-  let obj3 = project(14218);
-  let result1 = project(14218).conjureProjectLastActivityTime(project);
-  let obj4 = project(14218);
-  const conjureProjectShareTargetDetails = project(14238).useConjureProjectShareTargetDetails(project);
+  let result = project(14270).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
+  let obj3 = project(14270);
+  let result1 = project(14270).conjureProjectLastActivityTime(project);
+  let obj4 = project(14270);
+  const conjureProjectShareTargetDetails = project(14290).useConjureProjectShareTargetDetails(project);
   if (!hideServer) {
     let tmp11 = conjureProjectShareTargetDetails;
   } else {
@@ -222,20 +222,20 @@ let closure_15 = noop.memo(function ProjectRow(project) {
   }
   let tmp14Result = null;
   if (null != result1) {
-    const obj6 = { since: result1, getFormatter: tmp2(6377).getAbbreviatedFormatter, includeWeeks: true };
+    const obj6 = { since: result1, getFormatter: tmp2(6408).getAbbreviatedFormatter, includeWeeks: true };
     tmp14Result = getTimestampStringDefault(obj6);
   }
   let stringResult = null;
   if (result) {
     const intl = tmp2(1112).intl;
-    stringResult = intl.string(_modDef4244.CSAaT0);
+    stringResult = intl.string(_modDef4245.CSAaT0);
   }
   if ("deleting" === conjureHomeProjectState) {
     const intl4 = tmp2(1112).intl;
-    let stringResult1 = intl4.string(_modDef4244.Yh5pAc);
+    let stringResult1 = intl4.string(_modDef4245.Yh5pAc);
   } else if ("in_progress" === conjureHomeProjectState) {
     const intl3 = tmp2(1112).intl;
-    stringResult1 = intl3.string(_modDef4244["Y8pS+n"]);
+    stringResult1 = intl3.string(_modDef4245["Y8pS+n"]);
   } else {
     const items2 = [tmp14Result, , ];
     let label;
@@ -246,10 +246,10 @@ let closure_15 = noop.memo(function ProjectRow(project) {
       let stringResult2 = null;
       if (tmp2Result.isConjureProjectWithoutServer(project)) {
         const intl2 = tmp2(1112).intl;
-        stringResult2 = intl2.string(_modDef4244.poYQxw);
+        stringResult2 = intl2.string(_modDef4245.poYQxw);
       }
       label = stringResult2;
-      tmp2Result = tmp2(14238);
+      tmp2Result = tmp2(14290);
     }
     items2[1] = label;
     items2[2] = stringResult;
@@ -260,7 +260,7 @@ let closure_15 = noop.memo(function ProjectRow(project) {
   let stringResult3 = null;
   if ("unread" === conjureHomeProjectState) {
     const intl5 = tmp2(1112).intl;
-    stringResult3 = intl5.string(_modDef4244["N+3Pzk"]);
+    stringResult3 = intl5.string(_modDef4245["N+3Pzk"]);
   }
   items3[2] = stringResult3;
   const found1 = items3.filter((item) => {
@@ -285,12 +285,12 @@ let closure_15 = noop.memo(function ProjectRow(project) {
         }
         const items4 = [tmp28Result, , , ];
         if ("guild" === tmp11.kind) {
-          const obj10 = { guild: tmp11.guild, size: tmp2(7021).GuildIconSizes.XXSMALL, selected: false, style: tmp.shareTargetIcon };
+          const obj10 = { guild: tmp11.guild, size: tmp2(7052).GuildIconSizes.XXSMALL, selected: false, style: tmp.shareTargetIcon };
           let tmp28Result4 = closure_8(GuildIconDefault, obj10);
         } else {
           const obj11 = { style: tmp.userIconWrapper, children: null };
           const obj12 = { size: "xxs", color: nativeDefault.colors.TEXT_SUBTLE };
-          obj11.children = closure_8(tmp2(12359).UserIcon, obj12);
+          obj11.children = closure_8(tmp2(12409).UserIcon, obj12);
           tmp28Result4 = closure_8(View, obj11);
         }
         items4[1] = tmp28Result4;
@@ -343,7 +343,7 @@ let closure_15 = noop.memo(function ProjectRow(project) {
     tmp41 = stringResult1;
   }
   tmp45Result = tmp41;
-  const obj5 = project(14238);
+  const obj5 = project(14290);
 });
 size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectGroupList.tsx");
@@ -364,34 +364,34 @@ export default function ConjureProjectGroupList(query) {
           const obj2 = { style: tmp.state, children: null };
           const obj3 = { variant: "body-sm/normal", color: "text-subtle", children: null };
           const intl4 = tmp5(1112).intl;
-          obj3.children = intl4.string(_modDef4244.X37fkR);
-          obj2.children = closure_8(tmp5(5603).Text, obj3);
+          obj3.children = intl4.string(_modDef4245.X37fkR);
+          obj2.children = closure_8(tmp5(5634).Text, obj3);
           let tmp14Result1 = closure_8(View, obj2);
         } else if ("error" === stateFromStores) {
           const obj4 = { style: tmp.state, children: null };
           const obj5 = { variant: "body-sm/normal", color: "text-muted", children: null };
           const intl2 = tmp5(1112).intl;
-          obj5.children = intl2.string(_modDef4244.DJAPMO);
-          const items1 = [closure_8(tmp5(5603).Text, obj5), ];
+          obj5.children = intl2.string(_modDef4245.DJAPMO);
+          const items1 = [closure_8(tmp5(5634).Text, obj5), ];
           const obj6 = { variant: "secondary", size: "sm", text: null, onPress: null };
           const intl3 = tmp5(1112).intl;
-          obj6.text = intl3.string(_modDef4244["WFJ/vb"]);
+          obj6.text = intl3.string(_modDef4245["WFJ/vb"]);
           obj6.onPress = function onPress() {
             return forceExpanded(dependencyMap[33]).listProjects();
           };
-          items1[1] = closure_8(tmp5(5610).Button, obj6);
+          items1[1] = closure_8(tmp5(5641).Button, obj6);
           obj4.children = items1;
           tmp14Result1 = closure_9(View, obj4);
         } else {
           if ("success" !== stateFromStores) {
-            const obj7 = { style: tmp.state, children: closure_8(tmp5(7016).ActivityIndicator, {}) };
+            const obj7 = { style: tmp.state, children: closure_8(tmp5(7047).ActivityIndicator, {}) };
             let obj8 = obj7;
           } else {
             obj8 = { style: tmp.state, children: null };
             const obj9 = { variant: "body-sm/normal", color: "text-subtle", children: null };
             const intl = tmp5(1112).intl;
-            obj9.children = intl.string(_modDef4244["9/5sLV"]);
-            obj8.children = closure_8(tmp5(5603).Text, obj9);
+            obj9.children = intl.string(_modDef4245["9/5sLV"]);
+            obj8.children = closure_8(tmp5(5634).Text, obj9);
           }
           tmp14Result1 = closure_8(View, obj8);
         }
@@ -403,14 +403,14 @@ export default function ConjureProjectGroupList(query) {
     const obj10 = { style: tmp.group, children: null };
     const obj11 = { title: null, hasIcons: true, children: null };
     const intl5 = tmp5(1112).intl;
-    obj11.title = intl5.string(_modDef4244.w9wAEy);
+    obj11.title = intl5.string(_modDef4245.w9wAEy);
     obj11.children = personal.map((project) => closure_1_8(closure_1_15, { project }, project.id));
-    const items2 = [closure_8(tmp5(6109).TableRowGroup, obj11), ];
+    const items2 = [closure_8(tmp5(6140).TableRowGroup, obj11), ];
     let tmp18Result = null;
     if (collaborating.length > 0) {
-      const obj12 = { groupKey: tmp5(14241).CONJURE_COLLABORATING_GROUP_KEY, title: null, projects: null, forceExpanded: null };
+      const obj12 = { groupKey: tmp5(14293).CONJURE_COLLABORATING_GROUP_KEY, title: null, projects: null, forceExpanded: null };
       const intl6 = tmp5(1112).intl;
-      obj12.title = intl6.string(_modDef4244.dOfCq0);
+      obj12.title = intl6.string(_modDef4245.dOfCq0);
       obj12.projects = collaborating;
       obj12.forceExpanded = tmp7;
       tmp18Result = closure_8(ProjectGroup, obj12);

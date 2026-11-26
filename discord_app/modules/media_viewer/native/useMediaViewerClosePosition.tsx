@@ -1,7 +1,7 @@
-// === Module 14109: useMediaViewerClosePosition ===
+// === Module 14161: useMediaViewerClosePosition ===
 
-// Module 14109 (useMediaViewerClosePosition)
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 14105 */;
+// Module 14161 (useMediaViewerClosePosition)
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 14157 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -59,7 +59,7 @@ export default function useMediaViewerClosePosition(index) {
   useMediaViewerClosePositionTsx1.__closure = items2;
   useMediaViewerClosePositionTsx1.__workletHash = 7521936949267;
   useMediaViewerClosePositionTsx1.__initData = tmp6;
-  const items3 = [closure_7, require("module_1706").scheduleOnRN, callback];
+  const items3 = [closure_7, require("module_1707").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   [tmp8, tmp9, tmp10] = items3;
@@ -70,7 +70,7 @@ export default function useMediaViewerClosePosition(index) {
   useMediaViewerClosePositionTsx2.__closure = items4;
   useMediaViewerClosePositionTsx2.__workletHash = 6277806213986;
   useMediaViewerClosePositionTsx2.__initData = tmp8;
-  const animatedReaction = require("module_1653").useAnimatedReaction(useMediaViewerClosePositionTsx1, useMediaViewerClosePositionTsx2);
+  const animatedReaction = require("module_1654").useAnimatedReaction(useMediaViewerClosePositionTsx1, useMediaViewerClosePositionTsx2);
   const items5 = [callback, index];
   const effect = noop.useEffect(() => {
     callback(_undefined.get());

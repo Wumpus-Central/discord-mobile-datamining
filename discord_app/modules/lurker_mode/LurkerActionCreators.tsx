@@ -1,10 +1,10 @@
-// === Module 14646: LurkerActionCreators ===
+// === Module 14699: LurkerActionCreators ===
 
-// Module 14646 (LurkerActionCreators)
+// Module 14699 (LurkerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
-import LurkingStore from "LurkingStore" /* 4945 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
+import LurkingStore from "LurkingStore" /* 4976 */;
 
 const require = fn;
 function stopLurkingAll() {
@@ -31,7 +31,7 @@ let closure_8 = async function _stopLurkingAll() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ let closure_8 = async function _stopLurkingAll() {
                                 _null = null;
                               }
                               closure_130_1 = _null;
-                              const HTTP = closure_0(1284).HTTP;
+                              const HTTP = closure_0(1285).HTTP;
                               const request = { url: closure_2_6.GUILD_LEAVE(closure_0), body: { lurking: true }, oldFormErrors: true, rejectWithError: true };
                               yield HTTP.del(request);
                               if (1 === tmp8) {
@@ -110,7 +110,7 @@ let closure_8 = async function _stopLurkingAll() {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       } catch (tmp13) {
         c1 = tmp;
         throw tmp13;

@@ -1,8 +1,8 @@
-// === Module 7657: createProxyTicket ===
+// === Module 7688: createProxyTicket ===
 
-// Module 7657 (createProxyTicket)
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5653 */;
+// Module 7688 (createProxyTicket)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5684 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -32,7 +32,7 @@ let closure_9 = async function _takeProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -152,7 +152,7 @@ let closure_10 = async function _prefetchProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

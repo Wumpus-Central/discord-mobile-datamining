@@ -1,9 +1,9 @@
-// === Module 9323: BoostGemIcon ===
+// === Module 9365: BoostGemIcon ===
 
-// Module 9323 (BoostGemIcon)
+// Module 9365 (BoostGemIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5698 */;
-import _mod9324 from "module_9324" /* 9324 */;
+import BaseIconImage from "BaseIconImage" /* 5729 */;
+import _mod9366 from "module_9366" /* 9366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BoostGemIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9324, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9366, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

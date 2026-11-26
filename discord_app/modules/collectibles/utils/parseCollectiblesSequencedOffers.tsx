@@ -1,6 +1,6 @@
-// === Module 6337: parseCollectiblesSequencedOffers ===
+// === Module 6368: parseCollectiblesSequencedOffers ===
 
-// Module 6337 (parseCollectiblesSequencedOffers)
+// Module 6368 (parseCollectiblesSequencedOffers)
 import size from "module_2" /* 2 */;
 
 function parseSequencedOffer(assets) {

@@ -1,17 +1,17 @@
-// === Module 9690: EmojiPickerListRow ===
+// === Module 9732: EmojiPickerListRow ===
 
-// Module 9690 (EmojiPickerListRow)
+// Module 9732 (EmojiPickerListRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import native from "native" /* 1186 */;
-import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import shared from "shared" /* 5019 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import Pressables from "Pressables" /* 6121 */;
-import LockIcon from "LockIcon" /* 7130 */;
-import _modDef7459 from "module_7459" /* 7459 */;
-import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 9691 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 9692 */;
+import PlatformUtils2 from "PlatformUtils" /* 1379 */;
+import shared from "shared" /* 5050 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import Pressables from "Pressables" /* 6152 */;
+import LockIcon from "LockIcon" /* 7161 */;
+import _modDef7490 from "module_7490" /* 7490 */;
+import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 9733 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 9734 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
@@ -92,14 +92,14 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9498);
+const EmojiPickerListConstants = fn(9540);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1227).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let num = 28;
 if (PlatformUtils.isAndroid()) {
   num = 26;

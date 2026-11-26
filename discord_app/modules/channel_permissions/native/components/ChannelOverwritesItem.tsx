@@ -1,19 +1,19 @@
-// === Module 8513: ChannelOverwritesItem ===
+// === Module 8555: ChannelOverwritesItem ===
 
-// Module 8513 (ChannelOverwritesItem)
+// Module 8555 (ChannelOverwritesItem)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5074 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import AlertModal from "AlertModal" /* 6021 */;
-import TableRow from "TableRow" /* 6113 */;
-import FormCheckbox from "FormCheckbox" /* 7151 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8484 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8514 */;
-import _modDef8516 from "module_8516" /* 8516 */;
-import _modDef8517 from "module_8517" /* 8517 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5105 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import AlertModal from "AlertModal" /* 6052 */;
+import TableRow from "TableRow" /* 6144 */;
+import FormCheckbox from "FormCheckbox" /* 7182 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8526 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8556 */;
+import _modDef8558 from "module_8558" /* 8558 */;
+import _modDef8559 from "module_8559" /* 8559 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function RemoveIcon(item) {
@@ -55,8 +55,8 @@ function RemoveIcon(item) {
       prop = tmp.rowRemoveIconDisabled;
     }
     let obj2 = { style: prop };
-    obj.children = closure_7(item(7253).CircleXIcon, obj2);
-    tmp3Result = closure_7(item(6121).PressableOpacity, obj);
+    obj.children = closure_7(item(7284).CircleXIcon, obj2);
+    tmp3Result = closure_7(item(6152).PressableOpacity, obj);
   }
   return tmp3Result;
 }
@@ -94,7 +94,7 @@ function MemberItem(arg0) {
   const items1 = [metroImportDefault(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8516, disableColor: true, style: tmp.ownerIcon };
+    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8558, disableColor: true, style: tmp.ownerIcon };
     tmp4Result = metroImportDefault(native.Icon, obj3);
   }
   items1[1] = tmp4Result;
@@ -127,7 +127,7 @@ function EmptyRoleItem(item) {
   item = item.item;
   const obj = { icon: null, label: null };
   const tmp = closure_9();
-  obj.icon = metroImportDefault(native.Icon, { source: _modDef8517, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
+  obj.icon = metroImportDefault(native.Icon, { source: _modDef8559, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
   obj.label = item.name;
   return metroImportDefault(TableRow.TableRow, obj);
 }
@@ -173,10 +173,10 @@ class ChannelOverwritesItem {
   }
 }
 const View = fn(17).View;
-const RowType = fn(7808).RowType;
+const RowType = fn(7842).RowType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_permissions/native/components/ChannelOverwritesItem.tsx");

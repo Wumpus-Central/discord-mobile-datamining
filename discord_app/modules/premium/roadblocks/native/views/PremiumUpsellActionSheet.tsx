@@ -1,20 +1,20 @@
-// === Module 9553: PremiumUpsellActionSheet ===
+// === Module 9595: PremiumUpsellActionSheet ===
 
-// Module 9553 (PremiumUpsellActionSheet)
+// Module 9595 (PremiumUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import PremiumUtils from "PremiumUtils" /* 2173 */;
-import ChatInputUtils from "ChatInputUtils" /* 5197 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import LinearGradientDefault from "LinearGradient" /* 5567 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9552 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import PremiumUtils from "PremiumUtils" /* 2174 */;
+import ChatInputUtils from "ChatInputUtils" /* 5228 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import LinearGradientDefault from "LinearGradient" /* 5598 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9594 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserStore from "UserStore" /* 1386 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function PremiumUpsellImage(arg0) {
@@ -53,15 +53,15 @@ function PremiumUpsellHero(arg0) {
   return tmp13;
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1388);
+const PremiumConstants = fn(1389);
 ({ PremiumSubscriptionSKUs: closure_10, PremiumTypes: closure_11, PremiumUpsellTypes: closure_12 } = PremiumConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
-const ApplicationStreamFPS = fn(5912).ApplicationStreamFPS;
-const premiumMax = fn(9554).MAX_SCHEDULED_MESSAGES_PER_USER;
+const ApplicationStreamFPS = fn(5943).ApplicationStreamFPS;
+const premiumMax = fn(9596).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 }, image: { width: 240, height: 144 }, text: { alignSelf: "center", textAlign: "center" }, betaTag: { marginLeft: 0 }, description: null, textContainer: null, buttonContainer: null, imageGradientBackgroundContainer: null, imageGradientBackground: null, imageInGradientBackground: null };
 let obj3 = { alignSelf: "center", marginTop: nativeDefault.space.PX_16 };
 obj2.description = { marginHorizontal: nativeDefault.space.PX_16 };

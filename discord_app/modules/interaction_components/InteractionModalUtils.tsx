@@ -1,25 +1,25 @@
-// === Module 12370: InteractionModalUtils ===
+// === Module 12420: InteractionModalUtils ===
 
-// Module 12370 (InteractionModalUtils)
+// Module 12420 (InteractionModalUtils)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import Server from "Server" /* 2117 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5653 */;
-import ComponentStateContext from "ComponentStateContext" /* 8782 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10020 */;
-import stageAttachmentFilesDefault from "stageAttachmentFiles" /* 10055 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import Server from "Server" /* 2118 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5684 */;
+import ComponentStateContext from "ComponentStateContext" /* 8824 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10062 */;
+import stageAttachmentFilesDefault from "stageAttachmentFiles" /* 10097 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8082 */;
-import InteractionModalStore from "InteractionModalStore" /* 12371 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8783 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8124 */;
+import InteractionModalStore from "InteractionModalStore" /* 12421 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8825 */;
 
 const require = globalThis.__r;
 
@@ -55,7 +55,7 @@ function getData(arg0, arr, arg2) {
                   let components = type.components;
                   closure_0 = closure_1_0;
                   uploads = closure_1_1;
-                  obj4.components = components.map(/* F102038 */ function() { ... });
+                  obj4.components = components.map(/* F102333 */ function() { ... });
                   return obj4;
                 } else if (closure_2_0(closure_2_2[13]).ComponentType.TEXT_INPUT === type) {
                   let iter3 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -85,7 +85,7 @@ function getData(arg0, arr, arg2) {
                   ({ type: obj8.type, customId: obj8.custom_id } = type);
                   let mapped;
                   if (uploadIds != null) {
-                    mapped = uploadIds.map(/* F128337 */ function() { ... });
+                    mapped = uploadIds.map(/* F128733 */ function() { ... });
                   }
                   if (mapped == null) {
                     mapped = null;
@@ -119,7 +119,7 @@ function getData(arg0, arr, arg2) {
                             let items = [type.component];
                             closure_0 = closure_1_0;
                             uploads = closure_1_1;
-                            obj21.component = items.map(/* F102038 */ function() { ... })[0];
+                            obj21.component = items.map(/* F102333 */ function() { ... })[0];
                             return obj21;
                           } else if (closure_2_0(closure_2_2[13]).ComponentType.RADIO_GROUP === type) {
                             let iter2 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -176,7 +176,7 @@ function getData(arg0, arr, arg2) {
                   let mapped1 = null;
                   if (type7 === type.type) {
                     let selectedOptions = interactionComponentState3.selectedOptions;
-                    mapped1 = selectedOptions.map(/* F128338 */ function() { ... });
+                    mapped1 = selectedOptions.map(/* F128734 */ function() { ... });
                   }
                   obj24.values = mapped1;
                   return obj24;
@@ -214,7 +214,7 @@ function getData(arg0, arr, arg2) {
                 mapped = uploadIds.map((item) => {
                   closure_0 = item;
                   uploads = uploads.uploads;
-                  return uploads.findIndex(/* F138327 */ function() { ... });
+                  return uploads.findIndex(/* F138777 */ function() { ... });
                 });
               }
               if (mapped == null) {
@@ -256,7 +256,7 @@ function getData(arg0, arr, arg2) {
                             let components = type.components;
                             closure_0 = closure_1_0;
                             uploads = closure_1_1;
-                            obj4.components = components.map(/* F102038 */ function() { ... });
+                            obj4.components = components.map(/* F102333 */ function() { ... });
                             return obj4;
                           } else if (closure_2_0(closure_2_2[13]).ComponentType.TEXT_INPUT === type) {
                             let iter3 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -286,7 +286,7 @@ function getData(arg0, arr, arg2) {
                             ({ type: obj8.type, customId: obj8.custom_id } = type);
                             let mapped;
                             if (uploadIds != null) {
-                              mapped = uploadIds.map(/* F128337 */ function() { ... });
+                              mapped = uploadIds.map(/* F128733 */ function() { ... });
                             }
                             if (mapped == null) {
                               mapped = null;
@@ -320,7 +320,7 @@ function getData(arg0, arr, arg2) {
                                       let items = [type.component];
                                       closure_0 = closure_1_0;
                                       uploads = closure_1_1;
-                                      obj21.component = items.map(/* F102038 */ function() { ... })[0];
+                                      obj21.component = items.map(/* F102333 */ function() { ... })[0];
                                       return obj21;
                                     } else if (closure_2_0(closure_2_2[13]).ComponentType.RADIO_GROUP === type) {
                                       let iter2 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -377,7 +377,7 @@ function getData(arg0, arr, arg2) {
                             let mapped1 = null;
                             if (type7 === type.type) {
                               let selectedOptions = interactionComponentState3.selectedOptions;
-                              mapped1 = selectedOptions.map(/* F128338 */ function() { ... });
+                              mapped1 = selectedOptions.map(/* F128734 */ function() { ... });
                             }
                             obj24.values = mapped1;
                             return obj24;
@@ -526,7 +526,7 @@ function getData(arg0, arr, arg2) {
                             let components = type.components;
                             closure_0 = closure_1_0;
                             uploads = closure_1_1;
-                            obj4.components = components.map(/* F102038 */ function() { ... });
+                            obj4.components = components.map(/* F102333 */ function() { ... });
                             return obj4;
                           } else if (closure_2_0(closure_2_2[13]).ComponentType.TEXT_INPUT === type) {
                             let iter3 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -556,7 +556,7 @@ function getData(arg0, arr, arg2) {
                             ({ type: obj8.type, customId: obj8.custom_id } = type);
                             let mapped;
                             if (uploadIds != null) {
-                              mapped = uploadIds.map(/* F128337 */ function() { ... });
+                              mapped = uploadIds.map(/* F128733 */ function() { ... });
                             }
                             if (mapped == null) {
                               mapped = null;
@@ -590,7 +590,7 @@ function getData(arg0, arr, arg2) {
                                       let items = [type.component];
                                       closure_0 = closure_1_0;
                                       uploads = closure_1_1;
-                                      obj21.component = items.map(/* F102038 */ function() { ... })[0];
+                                      obj21.component = items.map(/* F102333 */ function() { ... })[0];
                                       return obj21;
                                     } else if (closure_2_0(closure_2_2[13]).ComponentType.RADIO_GROUP === type) {
                                       let iter2 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -647,7 +647,7 @@ function getData(arg0, arr, arg2) {
                             let mapped1 = null;
                             if (type7 === type.type) {
                               let selectedOptions = interactionComponentState3.selectedOptions;
-                              mapped1 = selectedOptions.map(/* F128338 */ function() { ... });
+                              mapped1 = selectedOptions.map(/* F128734 */ function() { ... });
                             }
                             obj24.values = mapped1;
                             return obj24;
@@ -685,7 +685,7 @@ function getData(arg0, arr, arg2) {
                           mapped = uploadIds.map((item) => {
                             closure_0 = item;
                             uploads = uploads.uploads;
-                            return uploads.findIndex(/* F138327 */ function() { ... });
+                            return uploads.findIndex(/* F138777 */ function() { ... });
                           });
                         }
                         if (mapped == null) {
@@ -727,7 +727,7 @@ function getData(arg0, arr, arg2) {
                                       let components = type.components;
                                       closure_0 = closure_1_0;
                                       uploads = closure_1_1;
-                                      obj4.components = components.map(/* F102038 */ function() { ... });
+                                      obj4.components = components.map(/* F102333 */ function() { ... });
                                       return obj4;
                                     } else if (closure_2_0(closure_2_2[13]).ComponentType.TEXT_INPUT === type) {
                                       let iter3 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -757,7 +757,7 @@ function getData(arg0, arr, arg2) {
                                       ({ type: obj8.type, customId: obj8.custom_id } = type);
                                       let mapped;
                                       if (uploadIds != null) {
-                                        mapped = uploadIds.map(/* F128337 */ function() { ... });
+                                        mapped = uploadIds.map(/* F128733 */ function() { ... });
                                       }
                                       if (mapped == null) {
                                         mapped = null;
@@ -791,7 +791,7 @@ function getData(arg0, arr, arg2) {
                                                 let items = [type.component];
                                                 closure_0 = closure_1_0;
                                                 uploads = closure_1_1;
-                                                obj21.component = items.map(/* F102038 */ function() { ... })[0];
+                                                obj21.component = items.map(/* F102333 */ function() { ... })[0];
                                                 return obj21;
                                               } else if (closure_2_0(closure_2_2[13]).ComponentType.RADIO_GROUP === type) {
                                                 let iter2 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -848,7 +848,7 @@ function getData(arg0, arr, arg2) {
                                       let mapped1 = null;
                                       if (type7 === type.type) {
                                         let selectedOptions = interactionComponentState3.selectedOptions;
-                                        mapped1 = selectedOptions.map(/* F128338 */ function() { ... });
+                                        mapped1 = selectedOptions.map(/* F128734 */ function() { ... });
                                       }
                                       obj24.values = mapped1;
                                       return obj24;
@@ -1066,7 +1066,7 @@ function getData(arg0, arr, arg2) {
                             let components = type.components;
                             closure_0 = closure_1_0;
                             uploads = closure_1_1;
-                            obj4.components = components.map(/* F102038 */ function() { ... });
+                            obj4.components = components.map(/* F102333 */ function() { ... });
                             return obj4;
                           } else if (closure_2_0(closure_2_2[13]).ComponentType.TEXT_INPUT === type) {
                             let iter3 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -1096,7 +1096,7 @@ function getData(arg0, arr, arg2) {
                             ({ type: obj8.type, customId: obj8.custom_id } = type);
                             let mapped;
                             if (uploadIds != null) {
-                              mapped = uploadIds.map(/* F128337 */ function() { ... });
+                              mapped = uploadIds.map(/* F128733 */ function() { ... });
                             }
                             if (mapped == null) {
                               mapped = null;
@@ -1130,7 +1130,7 @@ function getData(arg0, arr, arg2) {
                                       let items = [type.component];
                                       closure_0 = closure_1_0;
                                       uploads = closure_1_1;
-                                      obj21.component = items.map(/* F102038 */ function() { ... })[0];
+                                      obj21.component = items.map(/* F102333 */ function() { ... })[0];
                                       return obj21;
                                     } else if (closure_2_0(closure_2_2[13]).ComponentType.RADIO_GROUP === type) {
                                       let iter2 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -1187,7 +1187,7 @@ function getData(arg0, arr, arg2) {
                             let mapped1 = null;
                             if (type7 === type.type) {
                               let selectedOptions = interactionComponentState3.selectedOptions;
-                              mapped1 = selectedOptions.map(/* F128338 */ function() { ... });
+                              mapped1 = selectedOptions.map(/* F128734 */ function() { ... });
                             }
                             obj24.values = mapped1;
                             return obj24;
@@ -1225,7 +1225,7 @@ function getData(arg0, arr, arg2) {
                           mapped = uploadIds.map((item) => {
                             closure_0 = item;
                             uploads = uploads.uploads;
-                            return uploads.findIndex(/* F138327 */ function() { ... });
+                            return uploads.findIndex(/* F138777 */ function() { ... });
                           });
                         }
                         if (mapped == null) {
@@ -1267,7 +1267,7 @@ function getData(arg0, arr, arg2) {
                                       let components = type.components;
                                       closure_0 = closure_1_0;
                                       uploads = closure_1_1;
-                                      obj4.components = components.map(/* F102038 */ function() { ... });
+                                      obj4.components = components.map(/* F102333 */ function() { ... });
                                       return obj4;
                                     } else if (closure_2_0(closure_2_2[13]).ComponentType.TEXT_INPUT === type) {
                                       let iter3 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -1297,7 +1297,7 @@ function getData(arg0, arr, arg2) {
                                       ({ type: obj8.type, customId: obj8.custom_id } = type);
                                       let mapped;
                                       if (uploadIds != null) {
-                                        mapped = uploadIds.map(/* F128337 */ function() { ... });
+                                        mapped = uploadIds.map(/* F128733 */ function() { ... });
                                       }
                                       if (mapped == null) {
                                         mapped = null;
@@ -1331,7 +1331,7 @@ function getData(arg0, arr, arg2) {
                                                 let items = [type.component];
                                                 closure_0 = closure_1_0;
                                                 uploads = closure_1_1;
-                                                obj21.component = items.map(/* F102038 */ function() { ... })[0];
+                                                obj21.component = items.map(/* F102333 */ function() { ... })[0];
                                                 return obj21;
                                               } else if (closure_2_0(closure_2_2[13]).ComponentType.RADIO_GROUP === type) {
                                                 let iter2 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -1388,7 +1388,7 @@ function getData(arg0, arr, arg2) {
                                       let mapped1 = null;
                                       if (type7 === type.type) {
                                         let selectedOptions = interactionComponentState3.selectedOptions;
-                                        mapped1 = selectedOptions.map(/* F128338 */ function() { ... });
+                                        mapped1 = selectedOptions.map(/* F128734 */ function() { ... });
                                       }
                                       obj24.values = mapped1;
                                       return obj24;
@@ -1537,7 +1537,7 @@ function getData(arg0, arr, arg2) {
                                       let components = type.components;
                                       closure_0 = closure_1_0;
                                       uploads = closure_1_1;
-                                      obj4.components = components.map(/* F102038 */ function() { ... });
+                                      obj4.components = components.map(/* F102333 */ function() { ... });
                                       return obj4;
                                     } else if (closure_2_0(closure_2_2[13]).ComponentType.TEXT_INPUT === type) {
                                       let iter3 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -1567,7 +1567,7 @@ function getData(arg0, arr, arg2) {
                                       ({ type: obj8.type, customId: obj8.custom_id } = type);
                                       let mapped;
                                       if (uploadIds != null) {
-                                        mapped = uploadIds.map(/* F128337 */ function() { ... });
+                                        mapped = uploadIds.map(/* F128733 */ function() { ... });
                                       }
                                       if (mapped == null) {
                                         mapped = null;
@@ -1601,7 +1601,7 @@ function getData(arg0, arr, arg2) {
                                                 let items = [type.component];
                                                 closure_0 = closure_1_0;
                                                 uploads = closure_1_1;
-                                                obj21.component = items.map(/* F102038 */ function() { ... })[0];
+                                                obj21.component = items.map(/* F102333 */ function() { ... })[0];
                                                 return obj21;
                                               } else if (closure_2_0(closure_2_2[13]).ComponentType.RADIO_GROUP === type) {
                                                 let iter2 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -1658,7 +1658,7 @@ function getData(arg0, arr, arg2) {
                                       let mapped1 = null;
                                       if (type7 === type.type) {
                                         let selectedOptions = interactionComponentState3.selectedOptions;
-                                        mapped1 = selectedOptions.map(/* F128338 */ function() { ... });
+                                        mapped1 = selectedOptions.map(/* F128734 */ function() { ... });
                                       }
                                       obj24.values = mapped1;
                                       return obj24;
@@ -1696,7 +1696,7 @@ function getData(arg0, arr, arg2) {
                                     mapped = uploadIds.map((item) => {
                                       closure_0 = item;
                                       uploads = uploads.uploads;
-                                      return uploads.findIndex(/* F138327 */ function() { ... });
+                                      return uploads.findIndex(/* F138777 */ function() { ... });
                                     });
                                   }
                                   if (mapped == null) {
@@ -1738,7 +1738,7 @@ function getData(arg0, arr, arg2) {
                                                 let components = type.components;
                                                 closure_0 = closure_1_0;
                                                 uploads = closure_1_1;
-                                                obj4.components = components.map(/* F102038 */ function() { ... });
+                                                obj4.components = components.map(/* F102333 */ function() { ... });
                                                 return obj4;
                                               } else if (closure_2_0(closure_2_2[13]).ComponentType.TEXT_INPUT === type) {
                                                 let iter3 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -1768,7 +1768,7 @@ function getData(arg0, arr, arg2) {
                                                 ({ type: obj8.type, customId: obj8.custom_id } = type);
                                                 let mapped;
                                                 if (uploadIds != null) {
-                                                  mapped = uploadIds.map(/* F128337 */ function() { ... });
+                                                  mapped = uploadIds.map(/* F128733 */ function() { ... });
                                                 }
                                                 if (mapped == null) {
                                                   mapped = null;
@@ -1802,7 +1802,7 @@ function getData(arg0, arr, arg2) {
                                                           let items = [type.component];
                                                           closure_0 = closure_1_0;
                                                           uploads = closure_1_1;
-                                                          obj21.component = items.map(/* F102038 */ function() { ... })[0];
+                                                          obj21.component = items.map(/* F102333 */ function() { ... })[0];
                                                           return obj21;
                                                         } else if (closure_2_0(closure_2_2[13]).ComponentType.RADIO_GROUP === type) {
                                                           let iter2 = closure_2_14.getInteractionComponentState(closure_1_0, type.id);
@@ -1859,7 +1859,7 @@ function getData(arg0, arr, arg2) {
                                                 let mapped1 = null;
                                                 if (type7 === type.type) {
                                                   let selectedOptions = interactionComponentState3.selectedOptions;
-                                                  mapped1 = selectedOptions.map(/* F128338 */ function() { ... });
+                                                  mapped1 = selectedOptions.map(/* F128734 */ function() { ... });
                                                 }
                                                 obj24.values = mapped1;
                                                 return obj24;
@@ -2085,7 +2085,7 @@ let closure_19 = async function _submitModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -2179,7 +2179,7 @@ let closure_19 = async function _submitModal(arg0) {
         closure_131_7 = send;
         send();
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp10) {
       c6 = tmp;
@@ -2187,8 +2187,8 @@ let closure_19 = async function _submitModal(arg0) {
     }
   }
 };
-const DraftType = fn(8075).DraftType;
-const InteractionModalState = fn(12371).InteractionModalState;
+const DraftType = fn(8117).DraftType;
+const InteractionModalState = fn(12421).InteractionModalState;
 const Endpoints = fn(1071).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/InteractionModalUtils.tsx");
@@ -2206,14 +2206,22 @@ export function useIsFirstTextInputInModal(id) {
   if (first != null) {
     type = first.type;
   }
-  let tmp6 = type === Server.ComponentType.ACTION_ROW && first.components[0].id === id;
+  let tmp6 = type === Server.ComponentType.ACTION_ROW;
+  if (tmp6) {
+    const first1 = first.components[0];
+    id = undefined;
+    if (first1 != null) {
+      id = first1.id;
+    }
+    tmp6 = id === id;
+  }
   if (!tmp6) {
     let type1;
     if (first != null) {
       type1 = first.type;
     }
     tmp6 = type1 === Server.ComponentType.LABEL && first.component.id === id;
-    const tmp8 = type1 === Server.ComponentType.LABEL && first.component.id === id;
+    const tmp10 = type1 === Server.ComponentType.LABEL && first.component.id === id;
   }
   return tmp6;
 }
@@ -2246,7 +2254,7 @@ export function useModalState(channelId, onClose) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -2289,7 +2297,7 @@ export function useModalState(channelId, onClose) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       } catch (tmp13) {
         c0 = tmp;
         throw tmp13;

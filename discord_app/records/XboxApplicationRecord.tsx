@@ -1,8 +1,8 @@
-// === Module 15192: XboxApplicationRecord ===
+// === Module 15242: XboxApplicationRecord ===
 
-// Module 15192 (XboxApplicationRecord)
-import PlatformsDefault from "Platforms" /* 6147 */;
-import ApplicationRecord from "ApplicationRecord" /* 2142 */;
+// Module 15242 (XboxApplicationRecord)
+import PlatformsDefault from "Platforms" /* 6178 */;
+import ApplicationRecord from "ApplicationRecord" /* 2143 */;
 
 let c2 = "xbox:";
 const size = fn(2);

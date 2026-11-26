@@ -1,7 +1,7 @@
-// === Module 17516: useDMPermissionsOverrideCount ===
+// === Module 17573: useDMPermissionsOverrideCount ===
 
-// Module 17516 (useDMPermissionsOverrideCount)
-import GuildStore from "GuildStore" /* 4883 */;
+// Module 17573 (useDMPermissionsOverrideCount)
+import GuildStore from "GuildStore" /* 4914 */;
 
 const require = fn;
 const size = fn(2);

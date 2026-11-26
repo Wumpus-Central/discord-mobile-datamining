@@ -1,10 +1,10 @@
-// === Module 18973: ThreadListTableRow ===
+// === Module 19036: ThreadListTableRow ===
 
-// Module 18973 (ThreadListTableRow)
-import TableRow from "TableRow" /* 6113 */;
-import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 18974 */;
+// Module 19036 (ThreadListTableRow)
+import TableRow from "TableRow" /* 6144 */;
+import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 19037 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
 
 require = fn;
 function ThreadListTableRow(thread) {
@@ -23,7 +23,7 @@ function ThreadListTableRow(thread) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ subLabel: { maxWidth: "100%", marginTop: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListTableRow.tsx");

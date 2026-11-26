@@ -1,12 +1,12 @@
-// === Module 5723: BrowserManager ===
+// === Module 5754: BrowserManager ===
 
-// Module 5723 (BrowserManager)
+// Module 5754 (BrowserManager)
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import LinkingDefault from "Linking" /* 5691 */;
-import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 5724 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5725 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import PlatformUtils2 from "PlatformUtils" /* 1379 */;
+import LinkingDefault from "Linking" /* 5722 */;
+import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 5755 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5756 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const NativeBrowserManagerModuleDefault = NativeBrowserManagerModule;
@@ -23,7 +23,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -54,7 +54,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;
@@ -62,7 +62,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
   }
 };
 const AppState = fn(17).AppState;
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = NativeBrowserManagerModuleDefault;
 } else {

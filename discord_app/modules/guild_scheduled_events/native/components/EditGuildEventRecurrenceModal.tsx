@@ -1,17 +1,17 @@
-// === Module 8433: EditGuildEventRecurrenceModal ===
+// === Module 8475: EditGuildEventRecurrenceModal ===
 
-// Module 8433 (EditGuildEventRecurrenceModal)
+// Module 8475 (EditGuildEventRecurrenceModal)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2018 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import useEventExceptionDefault from "useEventException" /* 8428 */;
-import LazyAPIPromiseDefault from "LazyAPIPromise" /* 8434 */;
-import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 8435 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8437 */;
-import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8442 */;
-import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 8443 */;
-import GuildEventScheduleDefault from "GuildEventSchedule" /* 8445 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2019 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import useEventExceptionDefault from "useEventException" /* 8470 */;
+import LazyAPIPromiseDefault from "LazyAPIPromise" /* 8476 */;
+import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 8477 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8479 */;
+import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8484 */;
+import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 8485 */;
+import GuildEventScheduleDefault from "GuildEventSchedule" /* 8487 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -48,7 +48,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -106,10 +106,10 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(8424).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(8424);
-  const scheduleForRecurrenceWithException = guildEvent(8424).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
-  let obj2 = guildEvent(8424);
+  const baseScheduleForRecurrence = guildEvent(8466).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(8466);
+  const scheduleForRecurrenceWithException = guildEvent(8466).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
+  let obj2 = guildEvent(8466);
   [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
   [first, closure_8] = noop.useState(null);
   const tmp9 = _slicedToArray(LazyAPIPromiseDefault(() => {
@@ -143,10 +143,10 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     return applyArgumentsResult;
   };
   obj3.disabled = null != first;
-  const action = closure_8(guildEvent(5610).Button, obj3);
+  const action = closure_8(guildEvent(5641).Button, obj3);
   let obj5 = {
     style: null,
-    children: closure_8(guildEvent(7324).Navigator, {
+    children: closure_8(guildEvent(7355).Navigator, {
       screens: {
         [closure_11.TIME]: {
           title: "",

@@ -1,14 +1,14 @@
-// === Module 16520: BountiesModalEndedCtaButtons ===
+// === Module 16571: BountiesModalEndedCtaButtons ===
 
-// Module 16520 (BountiesModalEndedCtaButtons)
+// Module 16571 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 575 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import QuestContent from "QuestContent" /* 6845 */;
-import AdCreativeType from "AdCreativeType" /* 6847 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8350 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9888 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import QuestContent from "QuestContent" /* 6876 */;
+import AdCreativeType from "AdCreativeType" /* 6878 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9930 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5012 */;
+import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -54,7 +54,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   BountiesModalEndedCtaButtonsTsx1.__closure = items1;
   BountiesModalEndedCtaButtonsTsx1.__workletHash = 17030874897727;
   BountiesModalEndedCtaButtonsTsx1.__initData = tmp4;
-  const animatedStyle = require("module_1653").useAnimatedStyle(BountiesModalEndedCtaButtonsTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(BountiesModalEndedCtaButtonsTsx1);
   require("AdvertiserCtaHelpers");
   if (visible) {
     const obj3 = { style: null, children: null };
@@ -71,7 +71,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
           const result = obj.openAdGameLinkDirectly(obj2, { content: QuestContent.QuestContent.VIDEO_MODAL_END_CARD, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: _undefined2(), sourceQuestContent });
         }
     };
-    const items3 = [closure_3(tmp2(5610).Button, obj4), ];
+    const items3 = [closure_3(tmp2(5641).Button, obj4), ];
     let tmp13Result = null;
     if (showCloseButton) {
       const obj5 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
@@ -79,11 +79,11 @@ export default function BountiesModalEndedCtaButtons(bounty) {
       obj5.text = intl.string(tmp2(1112).t.cpT0Cq);
       obj5.disabled = flag;
       obj5.onPress = bounty.onClose;
-      tmp13Result = closure_3(tmp2(5610).Button, obj5);
+      tmp13Result = closure_3(tmp2(5641).Button, obj5);
     }
     items3[1] = tmp13Result;
     obj3.children = items3;
-    visible = closure_4(_modDef1653.View, obj3);
+    visible = closure_4(_modDef1654.View, obj3);
   }
   return visible;
 };

@@ -1,11 +1,11 @@
-// === Module 14922: BadgeDirectoryNuxCoachmark ===
+// === Module 14972: BadgeDirectoryNuxCoachmark ===
 
-// Module 14922 (BadgeDirectoryNuxCoachmark)
+// Module 14972 (BadgeDirectoryNuxCoachmark)
 import nativeDefault from "native" /* 575 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 9814 */;
-import _modDef14923 from "module_14923" /* 14923 */;
-import _modDef14924 from "module_14924" /* 14924 */;
-import _modDef14925 from "module_14925" /* 14925 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 9856 */;
+import _modDef14973 from "module_14973" /* 14973 */;
+import _modDef14974 from "module_14974" /* 14974 */;
+import _modDef14975 from "module_14975" /* 14975 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -16,13 +16,13 @@ function NoProgressGraphic() {
   obj.style = items;
   const obj2 = { url: null, height: 44 };
   const tmp = closure_9();
-  obj2.url = _modDef14923;
+  obj2.url = _modDef14973;
   const items1 = [timestampProducer(BadgeArtImageDefault, obj2), , ];
   const obj3 = { url: null, height: 72 };
-  obj3.url = _modDef14924;
+  obj3.url = _modDef14974;
   items1[1] = timestampProducer(BadgeArtImageDefault, obj3);
   const obj4 = { url: null, height: 44 };
-  obj4.url = _modDef14925;
+  obj4.url = _modDef14975;
   items1[2] = timestampProducer(BadgeArtImageDefault, obj4);
   obj.children = items1;
   return metroImportDefault(View, obj);
@@ -33,7 +33,7 @@ function ProgressGraphic(badgeIconUrls) {
   const badgeDirectoryNuxGraphicLayout = require("BadgeDirectoryNuxGraphicUtils").getBadgeDirectoryNuxGraphicLayout(badgeIconUrls.badgeIconUrls);
   if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
     const obj2 = { style: tmp.graphicRow, children: null };
-    items = [closure_6(tmp2(14926).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(14930).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(14934).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
+    items = [closure_6(tmp2(14976).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(14980).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(14984).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
     obj2.children = items;
     return closure_7(View, obj2);
   } else {
@@ -49,11 +49,11 @@ function ProgressGraphic(badgeIconUrls) {
   const obj = require("BadgeDirectoryNuxGraphicUtils");
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { single: [80], pair: [80, 80], trio: [44, 72, 44] };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { graphicRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 60, gap: nativeDefault.space.PX_8 }, badgeGraphicRow: null };
 let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 60, gap: nativeDefault.space.PX_8 };
 obj2.badgeGraphicRow = { height: "auto", gap: nativeDefault.space.PX_0 };

@@ -1,9 +1,9 @@
-// === Module 7124: GroupIcon ===
+// === Module 7155: GroupIcon ===
 
-// Module 7124 (GroupIcon)
+// Module 7155 (GroupIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5698 */;
-import _mod7071 from "module_7071" /* 7071 */;
+import BaseIconImage from "BaseIconImage" /* 5729 */;
+import _mod7102 from "module_7102" /* 7102 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function GroupIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7071, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7102, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

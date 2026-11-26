@@ -1,14 +1,14 @@
-// === Module 17893: getChannelAppLaunchTarget ===
+// === Module 17950: getChannelAppLaunchTarget ===
 
-// Module 17893 (getChannelAppLaunchTarget)
-import getURLForApplicationDefault from "getURLForApplication" /* 5653 */;
-import AgeGateUtils from "AgeGateUtils" /* 6802 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6818 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
+// Module 17950 (getChannelAppLaunchTarget)
+import getURLForApplicationDefault from "getURLForApplication" /* 5684 */;
+import AgeGateUtils from "AgeGateUtils" /* 6833 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6849 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 require = fn;
-const FramesConstants = fn(6906);
+const FramesConstants = fn(6937);
 ({ getFrameSurfaceForChannel: hasOwnProperty, makeFrameId: closure_6 } = FramesConstants);
 const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, Permissions: closure_8 } = Constants);

@@ -1,8 +1,8 @@
-// === Module 18161: VoicePanelDockStatusStore ===
+// === Module 18220: VoicePanelDockStatusStore ===
 
-// Module 18161 (VoicePanelDockStatusStore)
-import _mod4927 from "module_4927" /* 4927 */;
-import UserStore from "UserStore" /* 1386 */;
+// Module 18220 (VoicePanelDockStatusStore)
+import _mod4958 from "module_4958" /* 4958 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function endMoment() {
@@ -30,7 +30,7 @@ let closure_3 = { joined: 3000, left: 1500, streaming: 3000 };
 let c4 = null;
 let closure_5 = [];
 let c6 = null;
-const identity = fn(1257);
+const identity = fn(1258);
 let closure_7 = identity.createWithEqualityFn(() => {
   const obj = { channelId: null, moment: null, speakerUserId: null, hasStreamers: false, playingSoundboardSounds: new Map() };
   return obj;
@@ -68,7 +68,7 @@ export function useDockSubject(arg0) {
         moment = obj;
       }
     }
-  }, _mod4927.shallow);
+  }, _mod4958.shallow);
 }
 export function useDockHasStreamers(arg0) {
   closure_0 = arg0;

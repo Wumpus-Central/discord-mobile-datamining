@@ -1,25 +1,25 @@
-// === Module 15151: GuildMediaStateStore ===
+// === Module 15201: GuildMediaStateStore ===
 
-// Module 15151 (GuildMediaStateStore)
+// Module 15201 (GuildMediaStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ChannelTypes from "ChannelTypes" /* 1092 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4933 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 15152 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5744 */;
-import StageInstanceStore from "StageInstanceStore" /* 4866 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4964 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 15202 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5775 */;
+import StageInstanceStore from "StageInstanceStore" /* 4897 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
-import VoiceStateStore from "VoiceStateStore" /* 5660 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
+import VoiceStateStore from "VoiceStateStore" /* 5691 */;
 
 require = fn;
 function markAllStale() {
@@ -245,7 +245,7 @@ function computeGuildMediaState(id) {
           const basicChannel = ChannelStore.getBasicChannel(item);
           let tmp2 = null != basicChannel;
           if (tmp2) {
-            tmp2 = closure_1(6779)(basicChannel, PermissionStore);
+            tmp2 = closure_1(6810)(basicChannel, PermissionStore);
           }
           return tmp2;
         });
@@ -256,12 +256,12 @@ function computeGuildMediaState(id) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp29Result = tmp29(10066);
+        let tmp29Result = tmp29(10108);
         if (tmp29Result.isActivitiesInTextEnabled(ChannelStore.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
         } else {
           someResult2 = found.some((location) => {
-            const channel = ChannelStore.getChannel(id(4933).getEmbeddedActivityLocationChannelId(location.location));
+            const channel = ChannelStore.getChannel(id(4964).getEmbeddedActivityLocationChannelId(location.location));
             let tmp2 = null != channel;
             if (tmp2) {
               tmp2 = isVoiceChannel(channel.type);
@@ -270,7 +270,7 @@ function computeGuildMediaState(id) {
           });
         }
         let obj4 = { audio: flag2, video: flag, screenshare: someResult, liveStage: someResult1, activeEvent: null, activity: null, isCurrentUserConnected: false };
-        let tmp29Result2 = tmp29(8421);
+        let tmp29Result2 = tmp29(8463);
         obj4.activeEvent = null != tmp29Result2.getGuildActiveEvent(arg0);
         obj4.activity = someResult2;
         return obj4;
@@ -309,7 +309,7 @@ function handleSelectedChannelChange() {
   }
   return tmp2;
 }
-const isVoiceChannel = fn(4865).isVoiceChannel;
+const isVoiceChannel = fn(4896).isVoiceChannel;
 const Constants = fn(1071);
 ({ BasicPermissions: closure_18, ME: closure_19 } = Constants);
 let closure_20 = Object.freeze({ audio: false, video: false, screenshare: false, liveStage: false, activeEvent: false, activity: false, isCurrentUserConnected: false });

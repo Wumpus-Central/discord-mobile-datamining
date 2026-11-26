@@ -1,17 +1,17 @@
-// === Module 19337: ActivityPanelUI ===
+// === Module 19400: ActivityPanelUI ===
 
-// Module 19337 (ActivityPanelUI)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18189 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19336 */;
-import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 19356 */;
+// Module 19400 (ActivityPanelUI)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18248 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19399 */;
+import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 19419 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 function renderActivityOrPIP(id, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 19338;
+    let tmp4 = 19401;
   } else {
-    tmp4 = 19343;
+    tmp4 = 19406;
   }
   return metroImportDefault(importDefault(tmp4), { transitionState, transitionCleanUp }, id);
 }
@@ -52,7 +52,7 @@ class BaseActivityPanelUI {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const ActivityPanelModes = fn(5638).ActivityPanelModes;
+const ActivityPanelModes = fn(5669).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_12 = [];

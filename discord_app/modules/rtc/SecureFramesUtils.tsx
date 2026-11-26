@@ -1,27 +1,27 @@
-// === Module 8638: SecureFramesUtils ===
+// === Module 8680: SecureFramesUtils ===
 
-// Module 8638 (SecureFramesUtils)
+// Module 8680 (SecureFramesUtils)
 import _modDef38 from "module_38" /* 38 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
-import _modDef2168 from "module_2168" /* 2168 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6015 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6776 */;
-import _mod8623 from "module_8623" /* 8623 */;
-import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 8640 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 8641 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8642 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
+import UserUtilsDefault from "UserUtils" /* 5099 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6807 */;
+import _mod8665 from "module_8665" /* 8665 */;
+import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 8682 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 8683 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8361 */;
-import UserStore from "UserStore" /* 1386 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5830 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8403 */;
+import UserStore from "UserStore" /* 1387 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5861 */;
 
 const require = globalThis.__r;
 
@@ -73,7 +73,7 @@ let closure_21 = async function _isPublicKeyMatch(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -151,7 +151,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -215,7 +215,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
         const result = closure_130_1(closure_130_2[11]).addUploadedKeyVersion(closure_129_0);
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -243,7 +243,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -271,7 +271,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -289,7 +289,7 @@ let closure_26 = async function _isCurrentUserPublicKeyMatch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -419,7 +419,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(8639);
+const SecureFramesConstants = fn(8681);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } = SecureFramesConstants);
 const Constants = fn(1071);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = Constants);
@@ -449,7 +449,7 @@ export function deleteVerification(userId, arg1, isOtherUserKeyPersistent) {
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod8623.serializeKey(uint8Array);
+    const serializeKeyResult = _mod8665.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);
@@ -485,8 +485,8 @@ export function deleteUserPersistentVerifications(userId) {
   let result = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj3);
 }
 export function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  const tmp3 = _modDef2168(timestamp);
-  const diffResult = _modDef2168().diff(tmp3, "s");
+  const tmp3 = _modDef2169(timestamp);
+  const diffResult = _modDef2169().diff(tmp3, "s");
   if (diffResult > 12 * DurationsDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * DurationsDefault.Seconds.DAYS_30));
@@ -528,7 +528,7 @@ export function getSecureFramesUserVerifiedTimestamp(timestamp) {
     const obj8 = { count: diffResult };
     return intl.formatToPlainString(util.t["/w0Qpw"], obj8);
   }
-  const obj = _modDef2168();
+  const obj = _modDef2169();
 }
 export function getUserVerificationDeeplink(userId, arg1) {
   return "" + location.protocol + "//" + location.host + gesture.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) + "?userId=" + userId + "&fingerprint=" + encodeURIComponent(arg1);

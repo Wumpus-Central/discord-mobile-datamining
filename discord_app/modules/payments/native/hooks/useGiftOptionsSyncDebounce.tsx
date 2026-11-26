@@ -1,8 +1,8 @@
-// === Module 11098: useGiftOptionsSyncDebounce ===
+// === Module 11144: useGiftOptionsSyncDebounce ===
 
-// Module 11098 (useGiftOptionsSyncDebounce)
+// Module 11144 (useGiftOptionsSyncDebounce)
 import applyDefault from "apply" /* 12 */;
-import useInitialValueDefault from "useInitialValue" /* 5591 */;
+import useInitialValueDefault from "useInitialValue" /* 5622 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

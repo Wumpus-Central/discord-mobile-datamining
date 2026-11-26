@@ -1,16 +1,16 @@
-// === Module 10386: utils/InstantInviteUtils ===
+// === Module 10431: utils/InstantInviteUtils ===
 
-// Module 10386 (utils/InstantInviteUtils)
+// Module 10431 (utils/InstantInviteUtils)
 import util from "util" /* 1112 */;
-import canViewInviteModal from "canViewInviteModal" /* 8552 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4942 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
+import canViewInviteModal from "canViewInviteModal" /* 8594 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4973 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4942);
+let GuildChannelStore = fn(4973);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Permissions = fn(1071).Permissions;

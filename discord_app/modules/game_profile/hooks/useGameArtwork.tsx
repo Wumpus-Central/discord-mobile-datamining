@@ -1,7 +1,7 @@
-// === Module 8755: useGameArtwork ===
+// === Module 8797: useGameArtwork ===
 
-// Module 8755 (useGameArtwork)
-import getGameMediaRefURL from "getGameMediaRefURL" /* 2151 */;
+// Module 8797 (useGameArtwork)
+import getGameMediaRefURL from "getGameMediaRefURL" /* 2152 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,8 +1,8 @@
-// === Module 4857: isActionRequired ===
+// === Module 4888: isActionRequired ===
 
-// Module 4857 (isActionRequired)
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4854 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4855 */;
+// Module 4888 (isActionRequired)
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4885 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4886 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/core/isActionRequired.tsx");

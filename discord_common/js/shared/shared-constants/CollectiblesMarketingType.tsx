@@ -1,6 +1,6 @@
-// === Module 6305: CollectiblesMarketingType ===
+// === Module 6336: CollectiblesMarketingType ===
 
-// Module 6305 (CollectiblesMarketingType)
+// Module 6336 (CollectiblesMarketingType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesMarketingType.tsx");

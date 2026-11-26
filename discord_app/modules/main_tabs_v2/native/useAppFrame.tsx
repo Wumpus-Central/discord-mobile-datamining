@@ -1,12 +1,12 @@
-// === Module 17664: useAppFrame ===
+// === Module 17721: useAppFrame ===
 
-// Module 17664 (useAppFrame)
+// Module 17721 (useAppFrame)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import DeviceUtils from "DeviceUtils" /* 4969 */;
-import useChatLayoutDefault from "useChatLayout" /* 5191 */;
-import createStyles from "createStyles" /* 5012 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import DeviceUtils from "DeviceUtils" /* 5000 */;
+import useChatLayoutDefault from "useChatLayout" /* 5222 */;
+import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
 
 const StyleSheet = _mod17.StyleSheet;

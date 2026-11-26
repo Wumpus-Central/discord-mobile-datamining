@@ -1,23 +1,23 @@
-// === Module 13767: ActivitiesPrivateChannelCallTooltip ===
+// === Module 13819: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 13767 (ActivitiesPrivateChannelCallTooltip)
+// Module 13819 (ActivitiesPrivateChannelCallTooltip)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import components_Button_Button from "components/Button/Button" /* 5610 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import components_Button_Button from "components/Button/Button" /* 5641 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const View = fn(17).View;
-const helpdeskUrl = fn(2144).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
+const helpdeskUrl = fn(2145).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
 const jsx = fn(21).jsx;
 let closure_7 = { duration: 500 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { arrow: null, tooltip: { padding: 16 }, tooltipContainer: { position: "absolute", width: 280, zIndex: 2, right: -48, top: -8 }, tooltipText: { textAlign: "center", fontSize: 14 }, closeButtonWrapper: { marginTop: 14 } };
 let obj3 = { marginLeft: 200, top: 9, position: "relative", borderTopWidth: 0, borderRightWidth: 0, borderBottomWidth: 16, borderLeftWidth: 16, transform: null };
 let items = [{ rotateZ: "225deg" }];
@@ -36,7 +36,7 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
     num = 0;
   }
   obj = initialize;
-  const items1 = [closure_9, _mod1653.withRepeat, _mod1653.withSequence, timing_timing.withTiming, 40, num, closure_7];
+  const items1 = [closure_9, _mod1654.withRepeat, _mod1654.withSequence, timing_timing.withTiming, 40, num, closure_7];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -61,7 +61,7 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   ActivitiesPrivateChannelCallTooltipTsx1.__closure = items2;
   ActivitiesPrivateChannelCallTooltipTsx1.__workletHash = 7430937794191;
   ActivitiesPrivateChannelCallTooltipTsx1.__initData = tmp4;
-  const animatedStyle = _mod1653.useAnimatedStyle(ActivitiesPrivateChannelCallTooltipTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(ActivitiesPrivateChannelCallTooltipTsx1);
   let obj2 = { style: null, children: null };
   const items3 = [tmp.tooltipContainer, animatedStyle];
   obj2.style = items3;
@@ -78,5 +78,5 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   obj5.children = jsx(components_Button_Button.Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj3.children = <View style={tmp.closeButtonWrapper}>{null}</View>;
   obj2.children = jsx(native.Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: tmp.arrow, label: null, title: null, children: null });
-  return jsx(_modDef1653.View, { style: null, children: null });
+  return jsx(_modDef1654.View, { style: null, children: null });
 };

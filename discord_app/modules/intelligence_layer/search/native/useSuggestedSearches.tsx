@@ -1,8 +1,8 @@
-// === Module 18880: useSuggestedSearches ===
+// === Module 18943: useSuggestedSearches ===
 
-// Module 18880 (useSuggestedSearches)
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13262 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13264 */;
+// Module 18943 (useSuggestedSearches)
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13314 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13316 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

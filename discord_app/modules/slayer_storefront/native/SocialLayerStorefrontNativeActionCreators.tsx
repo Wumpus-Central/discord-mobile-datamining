@@ -1,20 +1,20 @@
-// === Module 11597: SocialLayerStorefrontNativeActionCreators ===
+// === Module 11645: SocialLayerStorefrontNativeActionCreators ===
 
-// Module 11597 (SocialLayerStorefrontNativeActionCreators)
+// Module 11645 (SocialLayerStorefrontNativeActionCreators)
 import util from "util" /* 1112 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2185 */;
-import _modDef4144 from "module_4144" /* 4144 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6016 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 9366 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 11077 */;
-import redirectToSlayerStorefrontWebDefault from "redirectToSlayerStorefrontWeb" /* 11602 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2186 */;
+import _modDef4145 from "module_4145" /* 4145 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 9408 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 11123 */;
+import redirectToSlayerStorefrontWebDefault from "redirectToSlayerStorefrontWeb" /* 11650 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserProfileStore from "UserProfileStore" /* 6132 */;
-import WishlistStore from "WishlistStore" /* 11070 */;
+import UserProfileStore from "UserProfileStore" /* 6163 */;
+import WishlistStore from "WishlistStore" /* 11116 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SKUStore from "SKUStore" /* 6329 */;
+import SKUStore from "SKUStore" /* 6360 */;
 
 require = fn;
 let closure_11 = async function _toggleSocialLayerStorefrontWishlist(arg0) {
@@ -28,7 +28,7 @@ let closure_11 = async function _toggleSocialLayerStorefrontWishlist(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_11 = async function _toggleSocialLayerStorefrontWishlist(arg0) {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp12) {
       c1 = tmp;
@@ -100,9 +100,9 @@ export const SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY = "social-l
 export function openSocialLayerStorefrontUnsupportedOnMobileAlert() {
   const obj2 = { title: null, body: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef4144.XjhkM5);
+  obj2.title = intl.string(_modDef4145.XjhkM5);
   const intl2 = util.intl;
-  obj2.body = intl2.string(_modDef4144.NBFa62);
+  obj2.body = intl2.string(_modDef4145.NBFa62);
   actions_AlertActionCreatorsDefault.show(obj2);
 }
 export function toggleSocialLayerStorefrontWishlist() {
@@ -117,14 +117,14 @@ export function toggleSocialLayerStorefrontWishlist() {
 }
 export function openSocialLayerStorefrontProductDetailsModal(merged) {
   const socialLayerStorefrontConfig = SocialLayerStorefrontActionCreators.fetchSocialLayerStorefrontConfig();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11598, dependencyMap.paths), merged, c9, { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11646, dependencyMap.paths), merged, c9, { presentation: "modal" });
 }
 export function closeSocialLayerStorefrontProductDetailsModal() {
   ModalActionCreatorsDefault.popWithKey(c9);
 }
 export function openSocialLayerStorefrontGiftModal(skuId) {
   if (obj.isSocialLayerStorefrontGiftingSupported()) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11610, dependencyMap.paths), skuId, c10);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11658, dependencyMap.paths), skuId, c10);
     const tmp3Result = ModalActionCreatorsDefault;
   } else {
     value = SKUStore.get(skuId.skuId);
@@ -145,7 +145,7 @@ export function openSocialLayerStorefrontProductSelfPurchaseSuccessModal(arg0) {
   closure_0 = arg0;
   return actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11613, dependencyMap.paths).then((SocialLayerStorefrontProductSelfPurchaseSuccessModal) => {
+      return asyncRequireImpl(11661, dependencyMap.paths).then((SocialLayerStorefrontProductSelfPurchaseSuccessModal) => {
         closure_0 = SocialLayerStorefrontProductSelfPurchaseSuccessModal.SocialLayerStorefrontProductSelfPurchaseSuccessModal;
         return (arg0) => {
           const merged = Object.assign(closure_2_0);
@@ -161,7 +161,7 @@ export function openSocialLayerStorefrontProductGiftPurchaseSuccessModal(arg0) {
   closure_0 = arg0;
   return actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11613, dependencyMap.paths).then((SocialLayerStorefrontProductGiftPurchaseSuccessModal) => {
+      return asyncRequireImpl(11661, dependencyMap.paths).then((SocialLayerStorefrontProductGiftPurchaseSuccessModal) => {
         closure_0 = SocialLayerStorefrontProductGiftPurchaseSuccessModal.SocialLayerStorefrontProductGiftPurchaseSuccessModal;
         return (arg0) => {
           const merged = Object.assign(closure_2_0);

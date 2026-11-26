@@ -1,13 +1,13 @@
-// === Module 14803: useUserProfileOverscrollStyles ===
+// === Module 14856: useUserProfileOverscrollStyles ===
 
-// Module 14803 (useUserProfileOverscrollStyles)
+// Module 14856 (useUserProfileOverscrollStyles)
 import initialize from "initialize" /* 504 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import _mod1706 from "module_1706" /* 1706 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import _mod1707 from "module_1707" /* 1707 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 require = fn;
 let closure_6 = { code: "(function useUserProfileOverscrollStylesTsx1(){let[position]=this.__closure;return position.get()<=0;})" };
@@ -33,7 +33,7 @@ export default function useUserProfileOverscrollStyles(arg0) {
   if (scrollPosition == null) {
     scrollPosition = obj2.useSharedValue(0);
   }
-  obj2 = _mod1653;
+  obj2 = _mod1654;
   let items1 = [closure_6, scrollPosition];
   [tmp4, tmp5] = items1;
   function useUserProfileOverscrollStylesTsx1() {
@@ -43,8 +43,8 @@ export default function useUserProfileOverscrollStyles(arg0) {
   useUserProfileOverscrollStylesTsx1.__closure = items2;
   useUserProfileOverscrollStylesTsx1.__workletHash = 921106787598;
   useUserProfileOverscrollStylesTsx1.__initData = tmp4;
-  const derivedValue = _mod1653.useDerivedValue(useUserProfileOverscrollStylesTsx1);
-  const tmp2Result = _mod1653;
+  const derivedValue = _mod1654.useDerivedValue(useUserProfileOverscrollStylesTsx1);
+  const tmp2Result = _mod1654;
   let items3 = [closure_7, derivedValue, scrollPosition];
   [tmp7, tmp8, tmp9] = items3;
   function useUserProfileOverscrollStylesTsx2() {
@@ -61,9 +61,9 @@ export default function useUserProfileOverscrollStyles(arg0) {
   useUserProfileOverscrollStylesTsx2.__closure = items4;
   useUserProfileOverscrollStylesTsx2.__workletHash = 3658505627420;
   useUserProfileOverscrollStylesTsx2.__initData = tmp7;
-  const bannerAnimatedStyle = _mod1653.useAnimatedStyle(useUserProfileOverscrollStylesTsx2);
-  const tmp2Result6 = _mod1653;
-  const items5 = [closure_8, _mod1653.interpolate, scrollPosition, -bannerHeight, 1.5, 0.125 * bannerHeight, derivedValue];
+  const bannerAnimatedStyle = _mod1654.useAnimatedStyle(useUserProfileOverscrollStylesTsx2);
+  const tmp2Result6 = _mod1654;
+  const items5 = [closure_8, _mod1654.interpolate, scrollPosition, -bannerHeight, 1.5, 0.125 * bannerHeight, derivedValue];
   c5 = undefined;
   [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17] = items5;
   function useUserProfileOverscrollStylesTsx3() {
@@ -87,8 +87,8 @@ export default function useUserProfileOverscrollStyles(arg0) {
   useUserProfileOverscrollStylesTsx3.__closure = items6;
   useUserProfileOverscrollStylesTsx3.__workletHash = 1116167089549;
   useUserProfileOverscrollStylesTsx3.__initData = tmp11;
-  const bannerImageAnimatedStyle = _mod1653.useAnimatedStyle(useUserProfileOverscrollStylesTsx3);
-  const tmp2Result7 = _mod1653;
+  const bannerImageAnimatedStyle = _mod1654.useAnimatedStyle(useUserProfileOverscrollStylesTsx3);
+  const tmp2Result7 = _mod1654;
   const items7 = [closure_9, derivedValue, scrollPosition, stateFromStores];
   [tmp19, tmp20, tmp21, tmp22] = items7;
   function useUserProfileOverscrollStylesTsx4() {
@@ -105,9 +105,9 @@ export default function useUserProfileOverscrollStyles(arg0) {
   useUserProfileOverscrollStylesTsx4.__closure = items8;
   useUserProfileOverscrollStylesTsx4.__workletHash = 2257948482275;
   useUserProfileOverscrollStylesTsx4.__initData = tmp19;
-  const contentAnimatedStyle = _mod1653.useAnimatedStyle(useUserProfileOverscrollStylesTsx4);
-  const tmp2Result8 = _mod1653;
-  const items9 = [closure_10, _mod1653.clamp, _mod1653.interpolate, scrollPosition, useWindowDimensionsDefault().height, stateFromStores];
+  const contentAnimatedStyle = _mod1654.useAnimatedStyle(useUserProfileOverscrollStylesTsx4);
+  const tmp2Result8 = _mod1654;
+  const items9 = [closure_10, _mod1654.clamp, _mod1654.interpolate, scrollPosition, useWindowDimensionsDefault().height, stateFromStores];
   c2 = undefined;
   c3 = undefined;
   c4 = undefined;
@@ -122,8 +122,8 @@ export default function useUserProfileOverscrollStyles(arg0) {
   useUserProfileOverscrollStylesTsx5.__closure = items10;
   useUserProfileOverscrollStylesTsx5.__workletHash = 2283448470325;
   useUserProfileOverscrollStylesTsx5.__initData = tmp24;
-  const blurAnimatedProps = _mod1653.useAnimatedProps(useUserProfileOverscrollStylesTsx5);
-  const tmp2Result9 = _mod1653;
+  const blurAnimatedProps = _mod1654.useAnimatedProps(useUserProfileOverscrollStylesTsx5);
+  const tmp2Result9 = _mod1654;
   [tmp32, tmp33] = noop.useState(scrollPosition.get() < 0);
   const tmp31 = _slicedToArray(noop.useState(scrollPosition.get() < 0), 2);
   const items11 = [closure_11, scrollPosition];
@@ -135,7 +135,7 @@ export default function useUserProfileOverscrollStyles(arg0) {
   useUserProfileOverscrollStylesTsx6.__closure = items12;
   useUserProfileOverscrollStylesTsx6.__workletHash = 4981140014420;
   useUserProfileOverscrollStylesTsx6.__initData = tmp34;
-  const items13 = [closure_12, _mod1706.scheduleOnRN, tmp33];
+  const items13 = [closure_12, _mod1707.scheduleOnRN, tmp33];
   c0 = undefined;
   c1 = undefined;
   [tmp36, tmp37, tmp38] = items13;
@@ -150,6 +150,6 @@ export default function useUserProfileOverscrollStyles(arg0) {
   useUserProfileOverscrollStylesTsx7.__closure = items14;
   useUserProfileOverscrollStylesTsx7.__workletHash = 9246370536613;
   useUserProfileOverscrollStylesTsx7.__initData = tmp36;
-  const animatedReaction = _mod1653.useAnimatedReaction(useUserProfileOverscrollStylesTsx6, useUserProfileOverscrollStylesTsx7);
+  const animatedReaction = _mod1654.useAnimatedReaction(useUserProfileOverscrollStylesTsx6, useUserProfileOverscrollStylesTsx7);
   return { bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur };
 };

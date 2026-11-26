@@ -1,8 +1,8 @@
-// === Module 20284: SafetyFlowsManager ===
+// === Module 20348: SafetyFlowsManager ===
 
-// Module 20284 (SafetyFlowsManager)
-import openSafetyFlow from "openSafetyFlow" /* 20285 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+// Module 20348 (SafetyFlowsManager)
+import openSafetyFlow from "openSafetyFlow" /* 20349 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
 function handleConnectionOpenSupplemental() {

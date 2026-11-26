@@ -1,6 +1,6 @@
-// === Module 15838: createSocketGate ===
+// === Module 15889: createSocketGate ===
 
-// Module 15838 (createSocketGate)
+// Module 15889 (createSocketGate)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const size = fn(2);
@@ -59,7 +59,7 @@ export default function createSocketGate(cooldownMs) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } else {
         try {

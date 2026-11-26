@@ -1,23 +1,23 @@
-// === Module 14433: ExecutedCommand ===
+// === Module 14485: ExecutedCommand ===
 
-// Module 14433 (ExecutedCommand)
+// Module 14485 (ExecutedCommand)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1415 */;
-import InteractionTypes from "InteractionTypes" /* 6369 */;
-import useMessageAuthor from "useMessageAuthor" /* 6739 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8141 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9037 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 10045 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 10066 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 11953 */;
-import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 12111 */;
-import UserRecord from "UserRecord" /* 1405 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import UserStore from "UserStore" /* 1386 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1416 */;
+import InteractionTypes from "InteractionTypes" /* 6400 */;
+import useMessageAuthor from "useMessageAuthor" /* 6770 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8183 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9079 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 10087 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 10108 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 12001 */;
+import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 12161 */;
+import UserRecord from "UserRecord" /* 1406 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import UserStore from "UserStore" /* 1387 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;

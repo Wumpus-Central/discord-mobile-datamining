@@ -1,25 +1,25 @@
-// === Module 19045: YouScreen ===
+// === Module 19108: YouScreen ===
 
-// Module 19045 (YouScreen)
+// Module 19108 (YouScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1112 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1358 */;
-import RootNavigationRef from "RootNavigationRef" /* 5189 */;
-import Pressables from "Pressables" /* 6121 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6278 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 10436 */;
-import YouBannerDecorations from "YouBannerDecorations" /* 14208 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 15991 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
+import RootNavigationRef from "RootNavigationRef" /* 5220 */;
+import Pressables from "Pressables" /* 6152 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 10481 */;
+import YouBannerDecorations from "YouBannerDecorations" /* 14260 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 16069 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 6132 */;
-import LocaleStore from "LocaleStore" /* 2188 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16141 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6945 */;
-import UserStore from "UserStore" /* 1386 */;
-import module_1653_mod from "module_1653" /* 1653 */;
+import UserProfileStore from "UserProfileStore" /* 6163 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16192 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6976 */;
+import UserStore from "UserStore" /* 1387 */;
+import module_1654_mod from "module_1654" /* 1654 */;
 
 require = fn;
 function handleBackButtonPress() {
@@ -93,8 +93,8 @@ function UnconnectedYouScreen(isCard) {
   ({ theme, primaryColor, secondaryColor } = navigateToShop(tmp2[31])({ user, displayProfile: obj2 }));
   const tmp11 = navigateToShop(tmp2[31])({ user, displayProfile: obj2 });
   const tmp12 = navigateToShop(tmp2[32])();
-  const sharedValue = require("module_1653").useSharedValue(0);
-  const obj3 = require("module_1653");
+  const sharedValue = require("module_1654").useSharedValue(0);
+  const obj3 = require("module_1654");
   items = [closure_29, sharedValue];
   _require = undefined;
   [tmp14, tmp15] = items;
@@ -108,8 +108,8 @@ function UnconnectedYouScreen(isCard) {
   YouScreenTsx1.__closure = items1;
   YouScreenTsx1.__workletHash = 11467832296045;
   YouScreenTsx1.__initData = tmp14;
-  const obj4 = require("module_1653");
-  const animatedScrollHandler = require("module_1653").useAnimatedScrollHandler(YouScreenTsx1);
+  const obj4 = require("module_1654");
+  const animatedScrollHandler = require("module_1654").useAnimatedScrollHandler(YouScreenTsx1);
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = navigateToShop(tmp2[33])({ scrollPosition: sharedValue, bannerHeight: tmpResultResult }));
   const size = navigateToShop(tmp2[35])();
   let num2 = 0;
@@ -531,18 +531,18 @@ function UnconnectedYouScreen(isCard) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(18103);
+const YouConstants = fn(18162);
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YouConstants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
 let closure_17 = fn(1073).CollectiblesMobileShopScreen;
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
-const Constants = fn(7526);
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
+const Constants = fn(7557);
 ({ BANNER_ASPECT_RATIO: closure_19, UserProfileThemeTypes: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
-let module_1653 = module_1653_mod;
-const VisualEffectViewThemed = module_1653.createAnimatedComponent(VisualEffectViewThemedDefault);
-let createStyles = fn(5012);
+let module_1654 = module_1654_mod;
+const VisualEffectViewThemed = module_1654.createAnimatedComponent(VisualEffectViewThemedDefault);
+let createStyles = fn(5043);
 let closure_24 = createStyles.createStyles(() => {
   let xl;
   if (obj.isIOS()) {
@@ -585,13 +585,13 @@ let closure_24 = createStyles.createStyles(() => {
   obj3.cardDecorations = obj10;
   return obj3;
 });
-createStyles = fn(5012);
+createStyles = fn(5043);
 let closure_25 = createStyles.createStyles(() => {
   const obj = { backButton: { position: "absolute", marginTop: nativeDefault.space.PX_4, left: nativeDefault.space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" } };
   return obj;
 });
-let module_1653 = module_1653_mod;
-let closure_26 = module_1653.createAnimatedComponent(ScrollView);
+let module_1654 = module_1654_mod;
+let closure_26 = module_1654.createAnimatedComponent(ScrollView);
 let closure_29 = { code: "(function YouScreenTsx1(e){let[scrollPosition]=this.__closure;scrollPosition.set(e.contentOffset.y);})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreen.tsx");

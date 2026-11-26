@@ -1,7 +1,7 @@
-// === Module 14960: WidgetEmptyStateSuggestionUtils ===
+// === Module 15010: WidgetEmptyStateSuggestionUtils ===
 
-// Module 14960 (WidgetEmptyStateSuggestionUtils)
-import ApplicationWidgetConstants from "ApplicationWidgetConstants" /* 14961 */;
+// Module 15010 (WidgetEmptyStateSuggestionUtils)
+import ApplicationWidgetConstants from "ApplicationWidgetConstants" /* 15011 */;
 import size from "module_2" /* 2 */;
 
 ({ MARVEL_RIVALS_APPLICATION_ID: c2, WUTHERING_WAVES_APPLICATION_ID: c3 } = ApplicationWidgetConstants);
@@ -24,7 +24,7 @@ export function getWidgetEmptyStateSuggestions(addableWidgets) {
     }
     return isConnected;
   });
-  const substr = found.toSorted((isConnected, isConnected2) => {
+  const sorted = found.sort((isConnected, isConnected2) => {
     if (isConnected.isConnected !== isConnected2.isConnected) {
       let num4 = 1;
       if (isConnected.isConnected) {
@@ -46,7 +46,8 @@ export function getWidgetEmptyStateSuggestions(addableWidgets) {
       }
       return diff;
     }
-  }).slice(0, 2);
+  });
+  const substr = sorted.slice(0, 2);
   const mapped = substr.map((applicationId) => applicationId.applicationId);
   const item = mapped.forEach(function appendByApplicationId(item) {
     closure_0 = item;

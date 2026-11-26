@@ -1,19 +1,19 @@
-// === Module 16371: WizardHatAndBookSpotIllustration ===
+// === Module 16422: WizardHatAndBookSpotIllustration ===
 
-// Module 16371 (WizardHatAndBookSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7230 */;
-import _modDef16372 from "module_16372" /* 16372 */;
-import _modDef16373 from "module_16373" /* 16373 */;
-import _modDef16374 from "module_16374" /* 16374 */;
+// Module 16422 (WizardHatAndBookSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7261 */;
+import _modDef16423 from "module_16423" /* 16423 */;
+import _modDef16424 from "module_16424" /* 16424 */;
+import _modDef16425 from "module_16425" /* 16425 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16372 }, 3: null };
-let obj2 = { uri: _modDef16372 };
-obj[2] = { uri: _modDef16373 };
-const obj3 = { uri: _modDef16373 };
-obj[3] = { uri: _modDef16374 };
+let obj = { 1: null, 2: { uri: _modDef16423 }, 3: null };
+let obj2 = { uri: _modDef16423 };
+obj[2] = { uri: _modDef16424 };
+const obj3 = { uri: _modDef16424 };
+obj[3] = { uri: _modDef16425 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WizardHatAndBookSpotIllustration.native.tsx");
 

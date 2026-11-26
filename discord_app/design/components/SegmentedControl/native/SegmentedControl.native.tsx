@@ -1,6 +1,6 @@
-// === Module 8575: SegmentedControl ===
+// === Module 8617: SegmentedControl ===
 
-// Module 8575 (SegmentedControl)
+// Module 8617 (SegmentedControl)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles((borderRadius, paddingVertical) => {
   const obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" }, indicatorContainer: { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" }, indicator: null };
   const obj2 = { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
@@ -61,13 +61,13 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   c7 = tmp4;
   c8 = length;
   let obj = require("useToken");
-  const sharedValue = require("module_1653").useSharedValue(-1);
-  const obj2 = require("module_1653");
-  const sharedValue1 = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(-1);
+  const obj2 = require("module_1654");
+  const sharedValue1 = require("module_1654").useSharedValue(0);
   c9 = sharedValue1;
-  const obj3 = require("module_1653");
-  const sharedValue2 = require("module_1653").useSharedValue(0);
-  const obj4 = require("module_1653");
+  const obj3 = require("module_1654");
+  const sharedValue2 = require("module_1654").useSharedValue(0);
+  const obj4 = require("module_1654");
   let items1 = [c10, sharedValue1];
   _require = undefined;
   [tmp8, tmp9] = items1;
@@ -96,16 +96,16 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   SegmentedControlNativeTsx2.__closure = items4;
   SegmentedControlNativeTsx2.__workletHash = 4382534066101;
   SegmentedControlNativeTsx2.__initData = tmp10;
-  const animatedReaction = require("module_1653").useAnimatedReaction(SegmentedControlNativeTsx1, SegmentedControlNativeTsx2);
+  const animatedReaction = require("module_1654").useAnimatedReaction(SegmentedControlNativeTsx1, SegmentedControlNativeTsx2);
   const items5 = [sharedValue1];
   const callback = noop.useCallback((nativeEvent) => {
     const result = _undefined7.set(nativeEvent.nativeEvent.layout.width);
   }, items5);
   c10 = callback;
-  const obj5 = require("module_1653");
-  const sharedValue3 = require("module_1653").useSharedValue(activeIndex.get());
+  const obj5 = require("module_1654");
+  const sharedValue3 = require("module_1654").useSharedValue(activeIndex.get());
   c11 = sharedValue3;
-  const tmp2Result = require("module_1653");
+  const tmp2Result = require("module_1654");
   const items6 = [animatedStyle, activeIndex, items.length];
   _require = undefined;
   importDefault = undefined;
@@ -119,8 +119,8 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   SegmentedControlNativeTsx3.__closure = items7;
   SegmentedControlNativeTsx3.__workletHash = 609070730457;
   SegmentedControlNativeTsx3.__initData = tmp15;
-  const derivedValue = require("module_1653").useDerivedValue(SegmentedControlNativeTsx3);
-  const tmp2Result6 = require("module_1653");
+  const derivedValue = require("module_1654").useDerivedValue(SegmentedControlNativeTsx3);
+  const tmp2Result6 = require("module_1654");
   const items8 = [c13, derivedValue, sharedValue3, sharedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -137,9 +137,9 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   SegmentedControlNativeTsx4.__closure = items9;
   SegmentedControlNativeTsx4.__workletHash = 2708340331974;
   SegmentedControlNativeTsx4.__initData = tmp19;
-  const derivedValue1 = require("module_1653").useDerivedValue(SegmentedControlNativeTsx4);
-  const tmp2Result7 = require("module_1653");
-  const items10 = [closure_14, derivedValue1, pressedIndex, derivedValue, 0.04, sharedValue1, state.scrollOverflow, require("module_1653").interpolate, 50, 0.9, num, items.length, sharedValue2, require("spring/spring").withSpring, c8];
+  const derivedValue1 = require("module_1654").useDerivedValue(SegmentedControlNativeTsx4);
+  const tmp2Result7 = require("module_1654");
+  const items10 = [closure_14, derivedValue1, pressedIndex, derivedValue, 0.04, sharedValue1, state.scrollOverflow, require("module_1654").interpolate, 50, 0.9, num, items.length, sharedValue2, require("spring/spring").withSpring, c8];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -270,7 +270,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   SegmentedControlNativeTsx5.__closure = items11;
   SegmentedControlNativeTsx5.__workletHash = 11542678716522;
   SegmentedControlNativeTsx5.__initData = tmp24;
-  animatedStyle = require("module_1653").useAnimatedStyle(SegmentedControlNativeTsx5);
+  animatedStyle = require("module_1654").useAnimatedStyle(SegmentedControlNativeTsx5);
   const items12 = [items, sharedValue3, callback, tmp4.indicator, animatedStyle];
   const items13 = [items, items.length, num, state, pressedIndex, "experimental_Large" === str, str, setActiveIndex];
   const memo = obj6.useMemo(() => _undefined3.map((id, index) => {
@@ -337,8 +337,8 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
     obj.variant = variant;
     return _undefined6(state(_undefined3[8]).SegmentedControlItem, obj, id);
   }), items13);
-  const Gesture = tmp2(5272).Gesture;
-  const tmp2Result8 = require("module_1653");
+  const Gesture = tmp2(5303).Gesture;
+  const tmp2Result8 = require("module_1654");
   const items16 = [closure_16, sharedValue, activeIndex];
   _require = undefined;
   importDefault = undefined;
@@ -355,7 +355,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   SegmentedControlNativeTsx7.__initData = tmp47;
   const PanResult = Gesture.Pan();
   const onStartResult = Gesture.Pan().onStart(SegmentedControlNativeTsx7);
-  const items18 = [closure_17, sharedValue, activeIndex, require("module_1706").scheduleOnRN, setActiveIndex];
+  const items18 = [closure_17, sharedValue, activeIndex, require("module_1707").scheduleOnRN, setActiveIndex];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -397,7 +397,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   let tmp56Result = tmp56(tmp58, { horizontal: true, accessibilityRole: str4, alwaysBounceHorizontal: false, contentContainerStyle: tmp4.scrollContentContainer, keyboardShouldPersistTaps: keyboardShouldPersistTaps.keyboardShouldPersistTaps, children: tmp57 });
   if ("experimental_Large" === str) {
     const obj10 = { gesture: onEndResult, children: tmp57 };
-    tmp56Result = tmp56(tmp2(5272).GestureDetector, obj10);
+    tmp56Result = tmp56(tmp2(5303).GestureDetector, obj10);
   }
   return tmp56Result;
 }

@@ -1,8 +1,8 @@
-// === Module 6285: AvatarDecorationRecord ===
+// === Module 6316: AvatarDecorationRecord ===
 
-// Module 6285 (AvatarDecorationRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 2112 */;
-import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 2111 */;
+// Module 6316 (AvatarDecorationRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 2113 */;
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 2112 */;
 
 require = fn;
 const prototype = function AvatarDecorationRecord(arg0) {

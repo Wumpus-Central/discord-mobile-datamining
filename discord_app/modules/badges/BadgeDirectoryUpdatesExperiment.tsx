@@ -1,7 +1,7 @@
-// === Module 9822: BadgeDirectoryUpdatesExperiment ===
+// === Module 9864: BadgeDirectoryUpdatesExperiment ===
 
-// Module 9822 (BadgeDirectoryUpdatesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 9864 (BadgeDirectoryUpdatesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-10-badge-directory-updates", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

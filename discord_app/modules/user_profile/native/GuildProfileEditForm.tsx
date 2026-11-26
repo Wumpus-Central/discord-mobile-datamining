@@ -1,29 +1,29 @@
-// === Module 16125: GuildProfileEditForm ===
+// === Module 16178: GuildProfileEditForm ===
 
-// Module 16125 (GuildProfileEditForm)
+// Module 16178 (GuildProfileEditForm)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2173 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 6344 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6348 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 6357 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9059 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 9110 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9544 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9653 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11898 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16017 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16046 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16106 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 6375 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 6388 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 9152 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9586 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9695 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11946 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16047 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16104 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16162 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6352 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import UserProfileStore from "UserProfileStore" /* 6132 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import UserProfileStore from "UserProfileStore" /* 6163 */;
 
 require = fn;
 function EditGuildProfileBanner(user) {
@@ -41,27 +41,26 @@ function EditGuildProfileBanner(user) {
   obj3.showEditButton = result;
   obj3.onPressEdit = function handleEditBanner() {
     if (c4) {
-      let obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null, onGifBannerSelect: null };
+      let obj = { user, analyticsLocations, guildId, showRemoveBanner: null, onBannerChange: null, onGifBannerSelect: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(16002, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(16032, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
       }
       obj.showRemoveBanner = ProfileCustomizationUtils.showRemoveBanner(pendingBanner, banner);
-      const intl = util.intl;
-      obj.removeText = intl.string(util.t.jHlJNS);
       obj.onBannerChange = function onBannerChange(banner) {
-        return user(dependencyMap[18]).setPendingChanges({ guildId, banner });
+        return user(dependencyMap[17]).setPendingChanges({ guildId, banner });
       };
       obj.onGifBannerSelect = function openGifPicker() {
-        ActionSheetActionCreatorsDefault.hideActionSheet();
+        guildId(dependencyMap[13]).hideActionSheet();
+        const obj = guildId(dependencyMap[13]);
         const obj3 = { profileAssetType: null, selectionContext: null, guildId: null };
-        const obj2 = ActionSheetActionCreatorsDefault;
-        obj3.profileAssetType = user(dependencyMap[20]).ProfileAssetType.BANNER;
-        obj3.selectionContext = user(dependencyMap[20]).GIFSelectionContext.PROFILE_EDIT;
+        const obj2 = guildId(dependencyMap[13]);
+        obj3.profileAssetType = user(dependencyMap[19]).ProfileAssetType.BANNER;
+        obj3.selectionContext = user(dependencyMap[19]).GIFSelectionContext.PROFILE_EDIT;
         obj3.guildId = guildId;
-        obj2.openLazy(user(dependencyMap[15])(dependencyMap[19], dependencyMap.paths), "Select GIF Banner", obj3);
+        obj2.openLazy(user(dependencyMap[15])(dependencyMap[18], dependencyMap.paths), "Select GIF Banner", obj3);
       };
       tmpResult.openLazy(tmp13, "Change Banner", obj);
     } else {
@@ -75,11 +74,11 @@ function EditGuildProfileBanner(user) {
       const tmpResult2 = PremiumUpsellUtilsDefault;
     }
   };
-  let intl = tmp5(1112).intl;
+  const intl = tmp5(1112).intl;
   obj3.editButtonAccessibilityLabel = intl.string(user(1112).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(6348).AnalyticsLocationProvider, obj2);
+  return closure_17(user(6379).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;
@@ -118,7 +117,7 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1071);
 ({ AnalyticsObjects: closure_11, AnalyticsSections } = Constants);
 ({ DISPLAY_NAME_MAX_LENGTH: map1, PRONOUNS_MAX_LENGTH: closure_14, UpsellTypes: closure_15, AnalyticsPages } = Constants);
-const PremiumUpsellTypes = fn(1388).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1389).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = [1];
@@ -383,8 +382,8 @@ export default function GuildProfileEditForm(currentUser) {
             const _Object = Object;
             let stringResult = null;
             if (Object.keys(tmp34).length > 0) {
-              const intl = tmp5(tmp2[17]).intl;
-              stringResult = intl.string(tmp5(tmp2[17]).t.s35OuK);
+              const intl = tmp5(tmp2[21]).intl;
+              stringResult = intl.string(tmp5(tmp2[21]).t.s35OuK);
             }
             first3 = stringResult;
           }
@@ -403,8 +402,8 @@ export default function GuildProfileEditForm(currentUser) {
       }
       const items13 = [tmp50, , , , , , , , , ];
       const obj31 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, disabled: null };
-      const intl2 = tmp5(tmp2[17]).intl;
-      obj31.label = intl2.string(tmp5(tmp2[17]).t.me1lRk);
+      const intl2 = tmp5(tmp2[21]).intl;
+      obj31.label = intl2.string(tmp5(tmp2[21]).t.me1lRk);
       obj31.errorMessage = first;
       if (pendingNickname == null) {
         pendingNickname = str;
@@ -431,11 +430,11 @@ export default function GuildProfileEditForm(currentUser) {
       items13[2] = tmp63Result6;
       const obj33 = { inputRef: ref2, label: null, errorMessage: null, description: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, spellCheck: false, autoCorrect: false, disabled: null };
       const tmpResult14 = tmp(tmp2[51]);
-      const intl3 = tmp5(tmp2[17]).intl;
-      obj33.label = intl3.string(tmp5(tmp2[17]).t["+T3RI/"]);
+      const intl3 = tmp5(tmp2[21]).intl;
+      obj33.label = intl3.string(tmp5(tmp2[21]).t["+T3RI/"]);
       obj33.errorMessage = first1;
-      const intl4 = tmp5(tmp2[17]).intl;
-      obj33.description = intl4.string(tmp5(tmp2[17]).t.NZqtIp);
+      const intl4 = tmp5(tmp2[21]).intl;
+      obj33.description = intl4.string(tmp5(tmp2[21]).t.NZqtIp);
       obj33.value = pendingPronouns;
       obj33.onFocus = onFocus;
       obj33.onChange = function onChange(pronouns) {
@@ -448,11 +447,11 @@ export default function GuildProfileEditForm(currentUser) {
       let tmp63Result7 = null;
       if (result) {
         const obj34 = { inputRef: ref3, label: null, errorMessage: null, description: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, numberOfLines: 5, disabled: null };
-        const intl5 = tmp5(tmp2[17]).intl;
-        obj34.label = intl5.string(tmp5(tmp2[17]).t.ZzAR2Y);
+        const intl5 = tmp5(tmp2[21]).intl;
+        obj34.label = intl5.string(tmp5(tmp2[21]).t.ZzAR2Y);
         obj34.errorMessage = first2;
-        const intl6 = tmp5(tmp2[17]).intl;
-        obj34.description = intl6.string(tmp5(tmp2[17]).t.S5O8U2);
+        const intl6 = tmp5(tmp2[21]).intl;
+        obj34.description = intl6.string(tmp5(tmp2[21]).t.S5O8U2);
         if (pendingBio == null) {
           pendingBio = str4;
         }

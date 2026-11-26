@@ -1,28 +1,28 @@
-// === Module 16356: FamilyCenterActivityRow ===
+// === Module 16407: FamilyCenterActivityRow ===
 
-// Module 16356 (FamilyCenterActivityRow)
+// Module 16407 (FamilyCenterActivityRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
-import _modDef2846 from "module_2846" /* 2846 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import GuildIconDefault from "GuildIcon" /* 7021 */;
-import GuildBadgeDefault from "GuildBadge" /* 7025 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8176 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 16357 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16360 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 16361 */;
+import _modDef2847 from "module_2847" /* 2847 */;
+import UserUtilsDefault from "UserUtils" /* 5099 */;
+import GuildIconDefault from "GuildIcon" /* 7052 */;
+import GuildBadgeDefault from "GuildBadge" /* 7056 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8218 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 16408 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16411 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 16412 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8170 */;
+import UserStore from "UserStore" /* 1387 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8212 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(8171).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(8213).ACTION_TO_TEXT;
 const GuildFeatures = fn(1071).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let obj = { container: { display: "flex", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, avatar: null, avatarContainer: null, textContainer: null, text: null };
 let obj3 = { display: "flex", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
 obj.avatar = { borderRadius: fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -50,13 +50,13 @@ const memoResult = noop.memo((action) => {
     const obj6 = { style: tmp.text, variant: "body-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     const tmp3Result = SnowflakeUtilsDefault;
     obj6.children = UserUtilsDefault.getName(stateFromStores);
-    const items2 = [closure_8(tmp6(5603).Text, obj6), ];
+    const items2 = [closure_8(tmp6(5634).Text, obj6), ];
     const obj7 = { variant: "body-xs/medium", color: "channels-default", children: null };
     const tmp3Result2 = UserUtilsDefault;
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj7.children = tmp6(8176).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
-    items2[1] = closure_8(tmp6(5603).Text, obj7);
+    obj7.children = tmp6(8218).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    items2[1] = closure_8(tmp6(5634).Text, obj7);
     obj5.children = items2;
     items1[1] = closure_9(View, obj5);
     obj2.children = items1;
@@ -65,7 +65,7 @@ const memoResult = noop.memo((action) => {
   const obj = action(563);
 });
 memoResult.displayName = "FamilyCenterActivityRowUser";
-createStyles = fn(5012);
+createStyles = fn(5043);
 let obj5 = { container: null, avatar: null, avatarText: null, text: null, headerContainer: null, badge: null, header: null, headerAndIconContainer: null };
 let obj4 = { borderRadius: fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj5.container = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
@@ -99,7 +99,7 @@ const memoResult1 = noop.memo((action) => {
     const obj4 = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
     obj4.guild = stateFromStores;
-    obj4.size = tmp2(7021).GuildIconSizes.NORMAL;
+    obj4.size = tmp2(7052).GuildIconSizes.NORMAL;
     const items1 = [closure_8(GuildIconDefault, obj4), ];
     const obj5 = { style: tmp.text, children: null };
     const obj6 = { style: tmp.headerContainer, children: null };
@@ -112,7 +112,7 @@ const memoResult1 = noop.memo((action) => {
     }
     const items2 = [tmp11Result, ];
     const obj9 = { style: tmp.header, variant: "body-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: stateFromStores.name };
-    items2[1] = closure_8(tmp2(5603).Text, obj9);
+    items2[1] = closure_8(tmp2(5634).Text, obj9);
     obj7.children = items2;
     obj6.children = closure_9(View, obj7);
     const items3 = [closure_8(View, obj6), ];
@@ -121,8 +121,8 @@ const memoResult1 = noop.memo((action) => {
       const obj10 = { variant: "body-xs/medium", color: "channels-default", children: null };
       const intl = tmp2(1112).intl;
       const obj19 = { members: stateFromStores.approximateMemberCount };
-      obj10.children = intl.format(_modDef2846["5JmNgg"], obj19);
-      tmp11Result2 = closure_8(tmp2(5603).Text, obj10);
+      obj10.children = intl.format(_modDef2847["5JmNgg"], obj19);
+      tmp11Result2 = closure_8(tmp2(5634).Text, obj10);
     }
     items3[1] = tmp11Result2;
     obj5.children = items3;

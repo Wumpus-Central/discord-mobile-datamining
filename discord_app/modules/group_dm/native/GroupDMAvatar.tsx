@@ -1,10 +1,10 @@
-// === Module 9574: GroupDMAvatar ===
+// === Module 9616: GroupDMAvatar ===
 
-// Module 9574 (GroupDMAvatar)
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import ClipView from "ClipView" /* 9378 */;
+// Module 9616 (GroupDMAvatar)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import ClipView from "ClipView" /* 9420 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 class FacepileGroupDMAvatar {
@@ -70,7 +70,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj11);
     items3 = [, ];
     items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
-    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "sm" };
+    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Add Friend Modal" };
     obj12.animate = animate;
     if (null == users) {
       obj13 = { source: null };
@@ -98,7 +98,7 @@ obj[fn(1186).AvatarSizes.REFRESH_MEDIUM_32] = fn(1186).AvatarSizes.XSMALL_20;
 obj[fn(1186).AvatarSizes.XSMALL] = fn(1186).AvatarSizes.SIZE_16;
 obj[fn(1186).AvatarSizes.SIZE_16] = fn(1186).AvatarSizes.XXSMALL_10;
 obj[fn(1186).AvatarSizes.NORMAL] = fn(1186).AvatarSizes.XSMALL;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const React5 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");

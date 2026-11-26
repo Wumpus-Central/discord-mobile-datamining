@@ -1,10 +1,10 @@
-// === Module 9470: VideoBackground ===
+// === Module 9512: VideoBackground ===
 
-// Module 9470 (VideoBackground)
+// Module 9512 (VideoBackground)
 import native from "native" /* 1186 */;
-import LinearGradientDefault from "LinearGradient" /* 5567 */;
-import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 9472 */;
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 9473 */;
+import LinearGradientDefault from "LinearGradient" /* 5598 */;
+import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 9514 */;
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 9515 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import apply from "apply" /* 12 */;
@@ -18,11 +18,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(9471)();
+  const tmp5 = first(9513)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(9472).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(9514).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(575).unsafe_rawColors.PRIMARY_800);
@@ -41,11 +41,11 @@ function useDominantRGBFromImage(arg0, arg1) {
       let nextPromise = dependencyMap;
       if (null == VideoBackgroundManagerDefault.cachedDominantColors[closure_0]) {
         if (typeof first === "number") {
-          const dominantColorsLocalAsset = getDominantColorsLocalAsset(2023);
+          const dominantColorsLocalAsset = getDominantColorsLocalAsset(2024);
           getDominantColorsLocalAsset = dominantColorsLocalAsset.getDominantColorsLocalAsset;
           let dominantColorsLocalAsset1 = getDominantColorsLocalAsset(timestampProducer.resolveAssetSource(first));
         } else {
-          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(2023);
+          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(2024);
           dominantColorsLocalAsset1 = dominantColorsLocalAsset2.getDominantColors(timestampProducer.resolveAssetSource(first));
         }
         nextPromise = dominantColorsLocalAsset1.then((result) => {
@@ -53,13 +53,13 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
             closure_1_3(obj);
-            first(9472).cachedDominantColors[closure_1_0] = obj;
+            first(9514).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = closure_3(result[0], 3);
           }
         });
         nextPromise.catch(NOOP);
       } else {
-        closure_3(getDominantColorsLocalAsset(9472).cachedDominantColors[tmp4]);
+        closure_3(getDominantColorsLocalAsset(9514).cachedDominantColors[tmp4]);
       }
     }
   }, items);
@@ -166,7 +166,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const refs = createStyles.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
 const memoizeResult = apply.memoize((uri) => {
   let tmp = null;

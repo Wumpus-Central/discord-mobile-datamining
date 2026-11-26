@@ -1,10 +1,10 @@
-// === Module 9060: PremiumModal ===
+// === Module 9102: PremiumModal ===
 
-// Module 9060 (PremiumModal)
-import NavigatorHeader from "NavigatorHeader" /* 7160 */;
-import UserSettingsPremiumDefault from "UserSettingsPremium" /* 9061 */;
-import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 13951 */;
-import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 13967 */;
+// Module 9102 (PremiumModal)
+import NavigatorHeader from "NavigatorHeader" /* 7191 */;
+import UserSettingsPremiumDefault from "UserSettingsPremium" /* 9103 */;
+import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 14003 */;
+import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 14019 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

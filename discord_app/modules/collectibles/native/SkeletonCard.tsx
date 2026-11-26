@@ -1,17 +1,17 @@
-// === Module 14168: SkeletonCard ===
+// === Module 14220: SkeletonCard ===
 
-// Module 14168 (SkeletonCard)
+// Module 14220 (SkeletonCard)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5222 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import timing_timing from "timing/timing" /* 5253 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_5 = createStyles.createStyles((width, height) => {
   const obj = { skeletonCard: null };
   const size = { width, height, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm };
@@ -33,14 +33,14 @@ export default function _default(width) {
     COLLECTIBLES_SHOP_CARD_HEIGHT = require("CollectiblesShopCardV2").COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
   const tmp3Result = closure_5(COLLECTIBLES_SHOP_CARD_WIDTH, COLLECTIBLES_SHOP_CARD_HEIGHT);
-  const sharedValue = require("module_1653").useSharedValue(0.3);
+  const sharedValue = require("module_1654").useSharedValue(0.3);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1653;
+    const obj = _mod1654;
     const result = _undefined.set(obj.withRepeat(timing_timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = require("module_1653");
+  let obj = require("module_1654");
   const items1 = [closure_6, sharedValue];
   _require = undefined;
   [tmp10, tmp11] = items1;
@@ -54,9 +54,9 @@ export default function _default(width) {
   SkeletonCardTsx1.__closure = items2;
   SkeletonCardTsx1.__workletHash = 5075628150833;
   SkeletonCardTsx1.__initData = tmp10;
-  const animatedStyle = require("module_1653").useAnimatedStyle(SkeletonCardTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(SkeletonCardTsx1);
   const obj3 = { style: null };
   const items3 = [tmp3Result.skeletonCard, width.style, animatedStyle];
   obj3.style = items3;
-  return jsx(_modDef1653.View, { style: null });
+  return jsx(_modDef1654.View, { style: null });
 };

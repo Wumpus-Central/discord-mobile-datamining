@@ -1,23 +1,23 @@
-// === Module 16528: BountiesModalContent ===
+// === Module 16579: BountiesModalContent ===
 
-// Module 16528 (BountiesModalContent)
+// Module 16579 (BountiesModalContent)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import timingPresets from "timingPresets" /* 5225 */;
-import QuestContent from "QuestContent" /* 6845 */;
-import AdCreativeType from "AdCreativeType" /* 6847 */;
-import QuestDataUtils from "QuestDataUtils" /* 8319 */;
-import AnalyticsActions from "AnalyticsActions" /* 8340 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8350 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 9889 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 9947 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13790 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16471 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import timingPresets from "timingPresets" /* 5256 */;
+import QuestContent from "QuestContent" /* 6876 */;
+import AdCreativeType from "AdCreativeType" /* 6878 */;
+import QuestDataUtils from "QuestDataUtils" /* 8361 */;
+import AnalyticsActions from "AnalyticsActions" /* 8382 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 9931 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 9989 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13842 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16522 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 8322 */;
+import BountyStore from "BountyStore" /* 8373 */;
 
 require = fn;
 function BountiesModalContentInner(bounty) {
@@ -117,7 +117,7 @@ function BountiesModalContentInner(bounty) {
         let obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -180,15 +180,15 @@ function BountiesModalContentInner(bounty) {
                 if (obj.isAndroid()) {
                   num = 0.15;
                 }
-                obj = closure_1_0(1378);
-                const tmpResult = closure_1_0(1378);
+                obj = closure_1_0(1379);
+                const tmpResult = closure_1_0(1379);
                 items = [];
                 let num3 = 0;
                 let num4 = 0;
                 do {
                   let _Math = Math;
                   let result = arr[num3] / tmp4;
-                  let rounded = Math.round(result * (closure_1_0(9411).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
+                  let rounded = Math.round(result * (closure_1_0(9453).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
                   let obj2 = { time: num4, type: "continuous", duration: rounded, intensity: num + tmp5 * (num3 / 5), sharpness: 0.5 };
                   let arr4 = items.push(obj2);
                   sum = num4 + rounded;
@@ -198,13 +198,13 @@ function BountiesModalContentInner(bounty) {
                 items.push({ time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 });
                 arr = Array.from({ length: 6 }, (arg0, arg1) => 6 - arg1);
                 const obj3 = { time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 };
-                closure_1_0(5230).triggerPattern(items);
-                const tmp7Result = closure_1_0(5230);
+                closure_1_0(5261).triggerPattern(items);
+                const tmp7Result = closure_1_0(5261);
               })();
             }
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp39) {
         if (tmp4 === c3) {
@@ -412,9 +412,9 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_17(height(sharedValue[42]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestConstants = fn(6840);
+const QuestConstants = fn(6871);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16475);
+const BountiesModalConstants = fn(16526);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -423,7 +423,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let c18 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_20 = createStyles.createStyles(() => {
   const obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: { position: "absolute", bottom: nativeDefault.space.PX_24, justifyContent: "flex-end" }, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
   const rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };

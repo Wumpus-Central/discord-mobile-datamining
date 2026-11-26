@@ -1,11 +1,11 @@
-// === Module 7681: ConjureAnalytics ===
+// === Module 7714: ConjureAnalytics ===
 
-// Module 7681 (ConjureAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
-import ConjureUtils from "ConjureUtils" /* 7571 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+// Module 7714 (ConjureAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
+import ConjureUtils from "ConjureUtils" /* 7602 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 
 require = fn;
 function projectFields(project_id) {
@@ -86,7 +86,7 @@ function conjureLocation(project_id, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
-const isProjectOwner = fn(6903).isProjectOwner;
+const isProjectOwner = fn(6934).isProjectOwner;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");

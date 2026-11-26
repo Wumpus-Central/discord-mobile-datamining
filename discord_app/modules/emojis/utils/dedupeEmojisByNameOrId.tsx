@@ -1,7 +1,7 @@
-// === Module 6857: dedupeEmojisByNameOrId ===
+// === Module 6888: dedupeEmojisByNameOrId ===
 
-// Module 6857 (dedupeEmojisByNameOrId)
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4958 */;
+// Module 6888 (dedupeEmojisByNameOrId)
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4989 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");

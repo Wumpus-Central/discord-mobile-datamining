@@ -1,38 +1,38 @@
-// === Module 8362: StreamRTCConnection ===
+// === Module 8404: StreamRTCConnection ===
 
-// Module 8362 (StreamRTCConnection)
+// Module 8404 (StreamRTCConnection)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5018 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5837 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5939 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5999 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6785 */;
-import SoundshareStatsAggregatorDefault from "SoundshareStatsAggregator" /* 8364 */;
-import VideoStreamStatsDefault from "VideoStreamStats" /* 8365 */;
-import combineFragmentVideoStatsDefault from "combineFragmentVideoStats" /* 8366 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 8367 */;
-import getSoundshareAnalyticsContextDefault from "getSoundshareAnalyticsContext" /* 8373 */;
-import getStreamSourceMetadataDefault from "getStreamSourceMetadata" /* 8374 */;
-import ClipsStore from "ClipsStore" /* 2138 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5998 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5049 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5868 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5970 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 6030 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
+import SoundshareStatsAggregatorDefault from "SoundshareStatsAggregator" /* 8406 */;
+import VideoStreamStatsDefault from "VideoStreamStats" /* 8407 */;
+import combineFragmentVideoStatsDefault from "combineFragmentVideoStats" /* 8408 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 8409 */;
+import getSoundshareAnalyticsContextDefault from "getSoundshareAnalyticsContext" /* 8415 */;
+import getStreamSourceMetadataDefault from "getStreamSourceMetadata" /* 8416 */;
+import ClipsStore from "ClipsStore" /* 2139 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6029 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import HookErrorStore from "HookErrorStore" /* 8363 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import NetworkStore from "NetworkStore" /* 5950 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
-import RTCRegionStore from "RTCRegionStore" /* 5911 */;
-import RTCConnection from "RTCConnection" /* 5826 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import HookErrorStore from "HookErrorStore" /* 8405 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
+import NetworkStore from "NetworkStore" /* 5981 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
+import RTCRegionStore from "RTCRegionStore" /* 5942 */;
+import RTCConnection from "RTCConnection" /* 5857 */;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(5831).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5862).getSystemAnalyticsInfo;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, MediaEngineHookTypes: closure_15, RTCConnectionStates: closure_16 } = Constants);
-const MediaEngineContextTypes = fn(5824).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5855).MediaEngineContextTypes;
 let closure_18 = 5 * DurationsDefault.Millis.SECOND;
 let closure_19 = { DETACHED: 0, [0]: "DETACHED", WAITING: 1, [1]: "WAITING", ATTACHED: 2, [2]: "ATTACHED", STARTED: 3, [3]: "STARTED", PLAYING: 4, [4]: "PLAYING", SILENCE: 5, [5]: "SILENCE" };
 class StreamRTCConnection extends tmp3 {
@@ -321,15 +321,15 @@ prototype["initializeEvents"] = function initializeEvents() {
             obj3.share_game_distributor = share_game_distributor;
             obj3.hdr_frames_capable = hdr_frames_capable;
             obj3.hdr_frames = hdr_frames;
-            const obj2 = self(1255);
-            obj3.discord_is_elevated = self(5018).getDiscordIsElevated();
+            const obj2 = self(1256);
+            obj3.discord_is_elevated = self(5049).getDiscordIsElevated();
             obj3.target_window_elevated = target_window_elevated;
             obj3.pipewire_frames = pipewire_frames;
             obj3.x11_frames = x11_frames;
             obj3.videohook_backend = videohook_backend;
             const merged = Object.assign(tmp);
             obj2.track(constants.SCREENSHARE_FINISHED, obj3);
-            const tmp2Result = self(5018);
+            const tmp2Result = self(5049);
           });
         });
       }
@@ -343,15 +343,15 @@ prototype["initializeEvents"] = function initializeEvents() {
           }
           if (null != desktopSource) {
             let desktopSource1;
-            const obj = self(1255);
+            const obj = self(1256);
             if (goLiveSource != null) {
               desktopSource1 = goLiveSource.desktopSource;
             }
             const obj2 = {};
-            const merged = Object.assign(self(8373)(desktopSource1));
+            const merged = Object.assign(self(8415)(desktopSource1));
             const merged1 = Object.assign(closure_1_1.getSoundshareAnalyticsProperties());
             obj.track(constants.SOUNDSHARE_ATTACHED, obj2);
-            const tmp6 = self(8373);
+            const tmp6 = self(8415);
           }
         });
       }
@@ -377,19 +377,19 @@ prototype["initializeEvents"] = function initializeEvents() {
           }
           if (null != desktopSource) {
             let desktopSource1;
-            const obj3 = self(1255);
+            const obj3 = self(1256);
             if (goLiveSource != null) {
               desktopSource1 = goLiveSource.desktopSource;
             }
             const obj = {};
-            const merged = Object.assign(self(8373)(desktopSource1));
+            const merged = Object.assign(self(8415)(desktopSource1));
             const merged1 = Object.assign(closure_1_1.getSoundshareAnalyticsProperties());
             obj3.track(constants.SOUNDSHARE_TRANSMITTING, obj);
             if (null != hookError.getHookError(constants2.SOUND)) {
               self(572).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" });
               const tmp13Result = self(572);
             }
-            const tmp16 = self(8373);
+            const tmp16 = self(8415);
           }
         });
       }
@@ -452,9 +452,9 @@ prototype["initializeEvents"] = function initializeEvents() {
             ({ guild_id: obj3.guild_id, channel_id: obj3.channel_id, rtc_connection_id: obj3.rtc_connection_id, media_session_id: obj3.media_session_id, parent_media_session_id: obj3.parent_media_session_id } = streamAnalyticsProperties);
             obj5.num_viewers = closure_1_1.analyticsContext.numViewers;
             obj5.time_connected_to_first_frame_delivered = closure_1_1.getDuration();
-            const obj2 = self(1255);
-            const obj4 = c0(5796);
-            obj5.time_total_to_first_frame = c0(5796).now() - closure_1_1.getCreatedTime();
+            const obj2 = self(1256);
+            const obj4 = c0(5827);
+            obj5.time_total_to_first_frame = c0(5827).now() - closure_1_1.getCreatedTime();
             let NumberResult = null;
             if (undefined !== remoteVideoStreamCreatedTimestamp.remoteVideoStreamCreatedTimestamp) {
               NumberResult = null;
@@ -519,7 +519,7 @@ prototype["initializeEvents"] = function initializeEvents() {
             }
             obj5.time_remote_user_to_first_frame_decrypted = NumberResult6;
             obj2.track(constants.RECEIVER_FIRST_FRAME_DELIVERED, obj5);
-            const nowResult = c0(5796).now();
+            const nowResult = c0(5827).now();
           }
         });
       }
@@ -573,7 +573,7 @@ prototype["initializeEvents"] = function initializeEvents() {
             }
           }
           obj2.time_local_user_to_first_frame_encrypted = NumberResult4;
-          self(1255).track(constants.STREAMER_FIRST_FRAME_ENCRYPTED, obj2);
+          self(1256).track(constants.STREAMER_FIRST_FRAME_ENCRYPTED, obj2);
         });
       }
       const _connection7 = self._connection;
@@ -608,7 +608,7 @@ prototype["initializeEvents"] = function initializeEvents() {
     const obj2 = { type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", guildId, channelId, senderUserId, maxResolution: null, maxFrameRate: null, context: null };
     let tmp4 = arg3;
     if (senderUserId === id) {
-      tmp4 = self(5999)("StreamRTCConnection", guildId, arg3, maxFrameRate);
+      tmp4 = self(6030)("StreamRTCConnection", guildId, arg3, maxFrameRate);
     }
     obj2.maxResolution = tmp4;
     obj2.maxFrameRate = maxFrameRate;

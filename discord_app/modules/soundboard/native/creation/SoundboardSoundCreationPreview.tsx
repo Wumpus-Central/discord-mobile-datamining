@@ -1,17 +1,17 @@
-// === Module 19955: SoundboardSoundCreationPreview ===
+// === Module 20019: SoundboardSoundCreationPreview ===
 
-// Module 19955 (SoundboardSoundCreationPreview)
+// Module 20019 (SoundboardSoundCreationPreview)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import useToken from "useToken" /* 5576 */;
-import _modDef8844 from "module_8844" /* 8844 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import useToken from "useToken" /* 5607 */;
+import _modDef8886 from "module_8886" /* 8886 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function PlayheadLine(arg0) {
@@ -40,18 +40,18 @@ function PlayheadLine(arg0) {
   SoundboardSoundCreationPreviewTsx1.__closure = items1;
   SoundboardSoundCreationPreviewTsx1.__workletHash = 710320565142;
   SoundboardSoundCreationPreviewTsx1.__initData = tmp5;
-  const animatedStyle = _mod1653.useAnimatedStyle(SoundboardSoundCreationPreviewTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(SoundboardSoundCreationPreviewTsx1);
   const obj3 = { pointerEvents: "none", style: null };
   const items2 = [tmp.playheadLine, animatedStyle, { backgroundColor: token }];
   obj3.style = items2;
-  return refs(_modDef1653.View, obj3);
+  return refs(_modDef1654.View, obj3);
 }
 const View = fn(17).View;
-const MAX_SOUND_LENGTH_SECONDS = fn(6894).MAX_SOUND_LENGTH_SECONDS;
-const SoundOutputChannel = fn(5970).SoundOutputChannel;
+const MAX_SOUND_LENGTH_SECONDS = fn(6925).MAX_SOUND_LENGTH_SECONDS;
+const SoundOutputChannel = fn(6001).SoundOutputChannel;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { waveformCard: { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 }, waveformContainer: { height: 96, justifyContent: "center" }, playheadLine: null, trimError: null, previewButton: null, hiddenPlayer: null };
 let size = { position: "absolute", top: 0, width: 3, height: 96, borderRadius: nativeDefault.radii.sm };
 obj2.playheadLine = size;
@@ -62,12 +62,12 @@ obj2.previewButton = { marginBottom: nativeDefault.space.PX_16 };
 obj2.hiddenPlayer = { width: 0, height: 0 };
 let closure_13 = createStyles.createStyles(obj2);
 let closure_14 = { code: "(function SoundboardSoundCreationPreviewTsx1(){let[width,PLAYHEAD_WIDTH,progress]=this.__closure;return{left:Math.max(0,Math.min(width-PLAYHEAD_WIDTH,progress.get()*width-PLAYHEAD_WIDTH/2)),opacity:progress.get()<0?0:1};})" };
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let closure_16 = PlatformUtils.isIOS() ? (function VideoPreviewPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   ({ uri, volume, onEnd, onError } = onLoad);
   const tmp = closure_13();
-  return refs(_modDef8844, {
+  return refs(_modDef8886, {
     source: { uri },
     audioOnly: true,
     paused: false,
@@ -84,11 +84,11 @@ let closure_16 = PlatformUtils.isIOS() ? (function VideoPreviewPlayer(onLoad) {
   uri = uri.uri;
   let volume = uri.volume;
   ({ onLoad, onEnd, onError } = uri);
-  const tmp = volume(7297)(onLoad);
+  const tmp = volume(7328)(onLoad);
   dependencyMap = tmp;
-  const tmp2 = volume(7297)(onEnd);
+  const tmp2 = volume(7328)(onEnd);
   closure_3 = tmp2;
-  const tmp3 = volume(7297)(onError);
+  const tmp3 = volume(7328)(onError);
   closure_4 = tmp3;
   items = [uri, volume, tmp, tmp2, tmp3];
   const effect = noop.useEffect(() => {
@@ -174,7 +174,7 @@ export default function SoundboardSoundCreationPreview(source) {
   const effect = obj.useEffect(() => {
     closure_1 = async function _load() {
       closure_1 = tmp3;
-      await closure_2_0(19947).loadSoundboardAudioPreview(c4, closure_2_0(19947).WAVEFORM_BAR_COUNT);
+      await closure_2_0(20011).loadSoundboardAudioPreview(c4, closure_2_0(20011).WAVEFORM_BAR_COUNT);
       if (1 === tmp7) {
         c2 = 0;
         if (!closure_129_0) {
@@ -275,7 +275,7 @@ export default function SoundboardSoundCreationPreview(source) {
     }
     if (!tmp2) {
       const result = sharedValue.set(first.fromRatio);
-      const obj2 = { duration: first.durationMs, easing: _mod1653.Easing.linear };
+      const obj2 = { duration: first.durationMs, easing: _mod1654.Easing.linear };
       const result1 = sharedValue.set(timing_timing.withTiming(first.toRatio, obj2));
     }
   }, items5);
@@ -297,7 +297,7 @@ export default function SoundboardSoundCreationPreview(source) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -388,7 +388,7 @@ export default function SoundboardSoundCreationPreview(source) {
                 closure_129_12(false);
               }
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: "+95" };
             }
           }
           c3 = 0;

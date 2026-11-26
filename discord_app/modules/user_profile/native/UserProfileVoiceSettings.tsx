@@ -1,19 +1,19 @@
-// === Module 14891: UserProfileVoiceSettings ===
+// === Module 14944: UserProfileVoiceSettings ===
 
-// Module 14891 (UserProfileVoiceSettings)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5965 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5973 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8642 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13566 */;
-import completeStreamVolumeMovedTutorialDefault from "completeStreamVolumeMovedTutorial" /* 14898 */;
+// Module 14944 (UserProfileVoiceSettings)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5996 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6004 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8684 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13618 */;
+import completeStreamVolumeMovedTutorialDefault from "completeStreamVolumeMovedTutorial" /* 14948 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 6892 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6782 */;
-import MediaEngineStore from "MediaEngineStore" /* 2131 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5820 */;
+import SoundboardStore from "SoundboardStore" /* 6923 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
+import MediaEngineStore from "MediaEngineStore" /* 2132 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 
 require = fn;
 function UserVoiceSettings(user) {
@@ -246,8 +246,8 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = closure_15();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(6350).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(6350);
+  const trackUserProfileAction = channel(6381).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(6381);
   items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -280,9 +280,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(8615).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(8657).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10459).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10504).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -290,11 +290,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_13(tmp2(7525).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_13(tmp2(7525).UserProfileCardRows, obj6);
+    obj6.children = closure_13(tmp2(7556).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_13(tmp2(7556).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_13(trackUserProfileAction(7525), obj4);
-    const tmp6Result = trackUserProfileAction(7525);
+    closure_13(trackUserProfileAction(7556), obj4);
+    const tmp6Result = trackUserProfileAction(7556);
   }
   return tmp8;
 }
@@ -302,10 +302,10 @@ const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, VideoToggleState: closure_10 } = Constants);
 const Permissions = fn(1082).Permissions;
-const maxValue = fn(5824).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+const maxValue = fn(5855).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_15 = createStyles.createStyles({ card: { paddingBottom: 0 }, cardTitle: { marginBottom: 0 }, volumeSlider: { paddingVertical: 20 }, disableVideoSublabel: { flexDirection: "row", alignItems: "center", gap: 4 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileVoiceSettings.tsx");

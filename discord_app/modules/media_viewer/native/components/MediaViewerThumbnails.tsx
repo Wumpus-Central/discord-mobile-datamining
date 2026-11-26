@@ -1,12 +1,12 @@
-// === Module 14076: MediaViewerThumbnails ===
+// === Module 14128: MediaViewerThumbnails ===
 
-// Module 14076 (MediaViewerThumbnails)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import useToken from "useToken" /* 5576 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5580 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14077 */;
+// Module 14128 (MediaViewerThumbnails)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import useToken from "useToken" /* 5607 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5611 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14129 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ function ObscuredView(source) {
       }
       const obj3 = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
       obj2.children = React5(tmp7Result, obj3);
-      tmp10Result = React5(_modDef1653.View, obj2);
+      tmp10Result = React5(_modDef1654.View, obj2);
       tmpResult = PlatformUtils;
     } else {
       tmp10Result = null;
@@ -40,11 +40,11 @@ function ObscuredView(source) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const Constants = fn(8831);
+const Constants = fn(8873);
 ({ THUMBNAIL_WIDTH_MARGIN: metroImportDefault, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_11 = createStyles.createStyles({ containerPortrait: { height: 60 }, thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 }, thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" } });
 let closure_12 = noop.memo(function MediaThumbnail(source) {
   source = source.source;
@@ -73,7 +73,7 @@ let closure_12 = noop.memo(function MediaThumbnail(source) {
   const items3 = [React5(FastImageDefault, { style: tmp.thumbnailImagePortrait, source: memo, enableAnimation: false }), React5(ObscuredView, { source, index })];
   obj2.children = items3;
   obj.children = React6(hasOwnProperty, obj2);
-  return React5(_modDef1653.View, obj);
+  return React5(_modDef1654.View, obj);
 });
 let closure_13 = { code: "(function MediaViewerThumbnailsTsx1(){let[scrollEnabled]=this.__closure;return{scrollEnabled:scrollEnabled.get()};})" };
 const size = fn(2);
@@ -133,11 +133,11 @@ export default function MediaViewerThumbnails(syncer) {
   MediaViewerThumbnailsTsx1.__workletHash = 12189184507540;
   MediaViewerThumbnailsTsx1.__initData = tmp9;
   const items5 = [headerBufferStyle];
-  const animatedProps = require("module_1653").useAnimatedProps(MediaViewerThumbnailsTsx1);
+  const animatedProps = require("module_1654").useAnimatedProps(MediaViewerThumbnailsTsx1);
   const items6 = [footerBufferStyle];
-  const callback1 = obj.useCallback(() => React5(_modDef1653.View, { style: headerBufferStyle }), items5);
+  const callback1 = obj.useCallback(() => React5(_modDef1654.View, { style: headerBufferStyle }), items5);
   const items7 = [index];
-  const callback2 = obj.useCallback(() => React5(_modDef1653.View, { style: footerBufferStyle }), items6);
+  const callback2 = obj.useCallback(() => React5(_modDef1654.View, { style: footerBufferStyle }), items6);
   const memo2 = obj.useMemo(() => index.get(), items7);
   return selectedIndex(tmp4(tmp5[14]).AnimatedFastList, { ref, style: tmp.containerPortrait, sections: memo1, stickyHeaderFooter: true, disableContentWrappers: true, automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, initialScrollOrientation: "center", initialScrollItem: memo2, itemSize, renderItem: callback, onScroll, horizontal: true, headerSize: headerBufferSize, footerSize: footerBufferSize, renderHeader: callback1, renderFooter: callback2, onEndReached, endReachedThreshold: onEndReachedThreshold, chunkBase: screenWidth, snapToOffsets: memo, animatedProps });
 };

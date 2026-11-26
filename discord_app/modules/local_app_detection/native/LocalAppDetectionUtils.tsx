@@ -1,9 +1,9 @@
-// === Module 15156: LocalAppDetectionUtils ===
+// === Module 15206: LocalAppDetectionUtils ===
 
-// Module 15156 (LocalAppDetectionUtils)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 15155 */;
+// Module 15206 (LocalAppDetectionUtils)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 15205 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConsentStore from "ConsentStore" /* 6810 */;
+import ConsentStore from "ConsentStore" /* 6841 */;
 
 require = fn;
 function getDetectableApp(arg0) {
@@ -59,7 +59,7 @@ let closure_8 = async function _detectLocalApps(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       while (true) {
@@ -107,7 +107,7 @@ let closure_8 = async function _detectLocalApps(arg0) {
             obj7.result = closure_131_0;
             let dispatchResult = obj6.dispatch(obj7);
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           }
         } else if (1 === tmp5) {
           c6 = 0;

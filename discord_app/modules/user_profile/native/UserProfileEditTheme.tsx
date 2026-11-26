@@ -1,10 +1,10 @@
-// === Module 16048: UserProfileEditTheme ===
+// === Module 16106: UserProfileEditTheme ===
 
-// Module 16048 (UserProfileEditTheme)
+// Module 16106 (UserProfileEditTheme)
 import nativeDefault from "native" /* 575 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import _modDef5902 from "module_5902" /* 5902 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import _modDef5933 from "module_5933" /* 5933 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, labelRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, overflowMenu: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.overflowMenu = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
@@ -57,7 +57,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       tmp4 = onChangeColors;
     }
     onProfileThemeColorsChanged(tmp4);
-    tmp = _modDef5902;
+    tmp = _modDef5933;
   }, items);
   require("useOpenThemeColorPickerActionSheet")({ primaryColor, secondaryColor, avatarColors, onChangeColors });
   let tmp15Result = null;
@@ -75,7 +75,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl2 = onProfileThemeColorsChanged(tmp3[11]).intl;
         obj5.accessibilityLabel = intl2.string(onProfileThemeColorsChanged(tmp3[11]).t["+1H47t"]);
         obj5.onPress = function handleOverflowMenuPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16050, dependencyMap.paths), "Profile Theme", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16108, dependencyMap.paths), "Profile Theme", {
             onResetTheme() {
               return onChangeColors([null, null]);
             }

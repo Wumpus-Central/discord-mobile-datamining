@@ -1,8 +1,8 @@
-// === Module 5930: DesktopGeneralPerfExperiment ===
+// === Module 5961: DesktopGeneralPerfExperiment ===
 
-// Module 5930 (DesktopGeneralPerfExperiment)
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 5961 (DesktopGeneralPerfExperiment)
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-10-desktop-general-perf", kind: "user", defaultConfig: { skipSilentDelayEstimatorFfts: false, processPollingPerf: false, keepRendererLogFileOpen: false, questRingVisibleSteps: false }, variations: { 0: { skipSilentDelayEstimatorFfts: false, processPollingPerf: false, keepRendererLogFileOpen: false, questRingVisibleSteps: false }, 1: { skipSilentDelayEstimatorFfts: true, processPollingPerf: true, keepRendererLogFileOpen: true, questRingVisibleSteps: true } } });

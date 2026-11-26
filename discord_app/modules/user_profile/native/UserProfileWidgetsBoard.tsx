@@ -1,29 +1,29 @@
-// === Module 14505: UserProfileWidgetsBoard ===
+// === Module 14557: UserProfileWidgetsBoard ===
 
-// Module 14505 (UserProfileWidgetsBoard)
+// Module 14557 (UserProfileWidgetsBoard)
 import nativeDefault from "native" /* 575 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6078 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6143 */;
-import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 14506 */;
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 14511 */;
-import WidgetUtils from "WidgetUtils" /* 14518 */;
-import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 14531 */;
-import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 14533 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 14555 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 6174 */;
+import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 14558 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 14563 */;
+import WidgetUtils from "WidgetUtils" /* 14570 */;
+import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 14583 */;
+import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 14585 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 14608 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function AddGameButton(ref) {
   ref = ref.ref;
   const widgetType = ref.widgetType;
-  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(ref(11222).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
+  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(ref(11268).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
   const intl = ref(1112).intl;
   obj.accessibilityLabel = intl.string(ref(1112).t.E3l3Zx);
   obj.disabled = ref.disabled;
   obj.onPress = function onPress() {
     return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });
   };
-  return closure_8(ref(7910).IconButton, obj);
+  return closure_8(ref(7944).IconButton, obj);
 }
 function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle, isEditing } = arg0);
@@ -37,17 +37,17 @@ function WidgetRenderer(arg0) {
   return tmp2Result;
 }
 const View = fn(17).View;
-const UserProfileSections = fn(6106).UserProfileSections;
-const UserProfileWidgetConstants = fn(6141);
+const UserProfileSections = fn(6137).UserProfileSections;
+const UserProfileWidgetConstants = fn(6172);
 ({ widgetSupportsComment: closure_6, widgetSupportsTags: metroImportDefault } = UserProfileWidgetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { board: { gap: nativeDefault.space.PX_16 }, emptyState: null, singleGameEmptyState: null, singleGameEmptyStateText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj.emptyState = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
-obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(14506).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
+obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(14558).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
 obj.singleGameEmptyStateText = { flex: 1 };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function WidgetSection(userId) {

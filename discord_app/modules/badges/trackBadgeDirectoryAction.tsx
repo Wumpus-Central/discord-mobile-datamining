@@ -1,9 +1,9 @@
-// === Module 9824: trackBadgeDirectoryAction ===
+// === Module 9866: trackBadgeDirectoryAction ===
 
-// Module 9824 (trackBadgeDirectoryAction)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import UserStore from "UserStore" /* 1386 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6352 */;
+// Module 9866 (trackBadgeDirectoryAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import UserStore from "UserStore" /* 1387 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;
 
 function trackBadgeDirectoryAction(arg0) {
   ({ badge, displayedUserId } = arg0);

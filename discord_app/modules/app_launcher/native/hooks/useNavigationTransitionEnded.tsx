@@ -1,12 +1,12 @@
-// === Module 13036: useNavigationTransitionEnded ===
+// === Module 13088: useNavigationTransitionEnded ===
 
-// Module 13036 (useNavigationTransitionEnded)
-import Link from "Link" /* 1501 */;
+// Module 13088 (useNavigationTransitionEnded)
+import Link from "Link" /* 1502 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useAppLauncherNavigation = fn(1499).useAppLauncherNavigation;
+const useAppLauncherNavigation = fn(1500).useAppLauncherNavigation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
 

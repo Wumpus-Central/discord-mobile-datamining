@@ -1,8 +1,8 @@
-// === Module 7875: AgeVerificationModal ===
+// === Module 7909: AgeVerificationModal ===
 
-// Module 7875 (AgeVerificationModal)
+// Module 7909 (AgeVerificationModal)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5691 */;
+import LinkingDefault from "Linking" /* 5722 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -98,7 +98,7 @@ function AgeVerifyScreen(onComplete) {
 }
 let jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

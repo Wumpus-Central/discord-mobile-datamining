@@ -1,11 +1,11 @@
-// === Module 17892: preloadChannelAppFrame ===
+// === Module 17949: preloadChannelAppFrame ===
 
-// Module 17892 (preloadChannelAppFrame)
-import frameLaunchSteps from "frameLaunchSteps" /* 7648 */;
-import FrameLaunchTimingTypes from "FrameLaunchTimingTypes" /* 7654 */;
-import FrameLaunchTimingManager from "FrameLaunchTimingManager" /* 7656 */;
-import getChannelAppLaunchTargetDefault from "getChannelAppLaunchTarget" /* 17893 */;
-import FramesStore from "FramesStore" /* 6905 */;
+// Module 17949 (preloadChannelAppFrame)
+import frameLaunchSteps from "frameLaunchSteps" /* 7679 */;
+import FrameLaunchTimingTypes from "FrameLaunchTimingTypes" /* 7685 */;
+import FrameLaunchTimingManager from "FrameLaunchTimingManager" /* 7687 */;
+import getChannelAppLaunchTargetDefault from "getChannelAppLaunchTarget" /* 17950 */;
+import FramesStore from "FramesStore" /* 6936 */;
 
 require = fn;
 const size = fn(2);

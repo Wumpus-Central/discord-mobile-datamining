@@ -1,16 +1,16 @@
-// === Module 14962: useAddProfileWidget ===
+// === Module 15012: useAddProfileWidget ===
 
-// Module 14962 (useAddProfileWidget)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5188 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6351 */;
-import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9394 */;
-import WidgetUtils from "WidgetUtils" /* 14518 */;
+// Module 15012 (useAddProfileWidget)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5219 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6382 */;
+import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9436 */;
+import WidgetUtils from "WidgetUtils" /* 14570 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const Constants = fn(6106);
+const Constants = fn(6137);
 ({ TrackUserProfileEditActions: hasOwnProperty, UserProfileSections: closure_6 } = Constants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const size = fn(2);

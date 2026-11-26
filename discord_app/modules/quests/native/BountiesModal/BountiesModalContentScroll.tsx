@@ -1,31 +1,31 @@
-// === Module 16474: BountiesModalContentScroll ===
+// === Module 16525: BountiesModalContentScroll ===
 
-// Module 16474 (BountiesModalContentScroll)
+// Module 16525 (BountiesModalContentScroll)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import native from "native" /* 5073 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import timingPresets from "timingPresets" /* 5225 */;
-import QuestContent from "QuestContent" /* 6845 */;
-import AdCreativeType from "AdCreativeType" /* 6847 */;
-import QuestDataUtils from "QuestDataUtils" /* 8319 */;
-import AnalyticsActions from "AnalyticsActions" /* 8340 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8350 */;
-import QuestActionCreators from "QuestActionCreators" /* 9852 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 9889 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 9947 */;
-import shared_ThemeTypes from "shared/ThemeTypes" /* 16033 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16471 */;
-import BountiesScrollVideoItem from "BountiesScrollVideoItem" /* 16482 */;
-import BountiesScrollRecapPage from "BountiesScrollRecapPage" /* 16522 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import native from "native" /* 5104 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import timingPresets from "timingPresets" /* 5256 */;
+import QuestContent from "QuestContent" /* 6876 */;
+import AdCreativeType from "AdCreativeType" /* 6878 */;
+import QuestDataUtils from "QuestDataUtils" /* 8361 */;
+import AnalyticsActions from "AnalyticsActions" /* 8382 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
+import QuestActionCreators from "QuestActionCreators" /* 9894 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 9931 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 9989 */;
+import shared_ThemeTypes from "shared/ThemeTypes" /* 16091 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16522 */;
+import BountiesScrollVideoItem from "BountiesScrollVideoItem" /* 16533 */;
+import BountiesScrollRecapPage from "BountiesScrollRecapPage" /* 16573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 8322 */;
+import BountyStore from "BountyStore" /* 8373 */;
 
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 function ItemSeparator(trailingItem) {
@@ -43,7 +43,7 @@ function BountiesRecapPullZone(height) {
 }
 function BountiesScrollVideoItemContainer(arg0) {
   ({ index, slotHeight, scrollY, style, isPeekEnabled, children } = arg0);
-  items = [closure_31, scrollY, index, slotHeight, isPeekEnabled, 0.8, _mod1653.interpolate, 0.3, _mod1653.Extrapolation];
+  items = [closure_31, scrollY, index, slotHeight, isPeekEnabled, 0.8, _mod1654.interpolate, 0.3, _mod1654.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -83,11 +83,11 @@ function BountiesScrollVideoItemContainer(arg0) {
   BountiesModalContentScrollTsx2.__closure = items1;
   BountiesModalContentScrollTsx2.__workletHash = 5598409177263;
   BountiesModalContentScrollTsx2.__initData = tmp2;
-  const animatedStyle = _mod1653.useAnimatedStyle(BountiesModalContentScrollTsx2);
+  const animatedStyle = _mod1654.useAnimatedStyle(BountiesModalContentScrollTsx2);
   const obj2 = { style: null, children };
   const items2 = [style, animatedStyle];
   obj2.style = items2;
-  return closure_1_17(_modDef1653.View, obj2);
+  return closure_1_17(_modDef1654.View, obj2);
 }
 function BountiesModalContentScrollInner(initialBountyId) {
   initialBountyId = initialBountyId.initialBountyId;
@@ -168,8 +168,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   }, items1);
   adContentId = c8;
   let obj2 = require("hooks/QuestHooks");
-  const sharedValue = require("module_1653").useSharedValue(0);
-  let obj3 = require("module_1653");
+  const sharedValue = require("module_1654").useSharedValue(0);
+  let obj3 = require("module_1654");
   [tmp16, c11] = c3(noop.useState(null), 2);
   const ref = noop.useRef(null);
   noop.useRef(0);
@@ -245,11 +245,11 @@ function BountiesModalContentScrollInner(initialBountyId) {
   const first3 = tmp43[0];
   closure_29 = tmp43[1];
   const tmp40 = c3(noop.useState(false), 2);
-  sharedValue1 = require("module_1653").useSharedValue(false);
-  const obj7 = require("module_1653");
-  const sharedValue2 = require("module_1653").useSharedValue(false);
-  const obj8 = require("module_1653");
-  const sharedValue3 = require("module_1653").useSharedValue(0);
+  sharedValue1 = require("module_1654").useSharedValue(false);
+  const obj7 = require("module_1654");
+  const sharedValue2 = require("module_1654").useSharedValue(false);
+  const obj8 = require("module_1654");
+  const sharedValue3 = require("module_1654").useSharedValue(0);
   const memo6 = noop.useMemo(() => bountyId(_undefined[27]).v4(), []);
   const ref3 = noop.useRef(0);
   const ref4 = noop.useRef(0);
@@ -292,7 +292,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     callback3(arg0);
     tmp = 0 === first3 && arg0 > 0 && hasRecurringSwipeUpNux;
   }, items12);
-  const obj9 = require("module_1653");
+  const obj9 = require("module_1654");
   const orbAmount = require("useBountiesRecapOrbCount").useBountiesRecapOrbCount({ scrollY: sharedValue3, lastBountyScrollOffset: result, recapRevealHeight: height3, targetOrbAmount: stateFromStores, enabled: tmp28 });
   const items13 = [first, first3];
   const effect2 = noop.useEffect(() => {
@@ -407,7 +407,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx5.__workletHash = 13193066516406;
   BountiesModalContentScrollTsx5.__initData = tmp63;
   obj12.onEndDrag = BountiesModalContentScrollTsx5;
-  const items22 = [orbAmount, stateFromStores > 0, require("module_1706").scheduleOnRN, obj6.useBountiesRecapScroll({ listRef: ref, enabled: stateFromStores > 0, offsets: memo4 }).handleRecapMomentumEnd, sharedValue1];
+  const items22 = [orbAmount, stateFromStores > 0, require("module_1707").scheduleOnRN, obj6.useBountiesRecapScroll({ listRef: ref, enabled: stateFromStores > 0, offsets: memo4 }).handleRecapMomentumEnd, sharedValue1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -430,8 +430,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx6.__workletHash = 11833509470853;
   BountiesModalContentScrollTsx6.__initData = tmp67;
   obj12.onMomentumEnd = BountiesModalContentScrollTsx6;
-  const obj11 = require("module_1653");
-  const animatedScrollHandler = require("module_1653").useAnimatedScrollHandler(obj12);
+  const obj11 = require("module_1654");
+  const animatedScrollHandler = require("module_1654").useAnimatedScrollHandler(obj12);
   const items24 = [onClose, sharedValue3, sum, diff];
   _require = undefined;
   importDefault = undefined;
@@ -446,7 +446,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx7.__closure = items25;
   BountiesModalContentScrollTsx7.__workletHash = 15263335344329;
   BountiesModalContentScrollTsx7.__initData = tmp73;
-  const items26 = [animatedStyle, require("module_1706").scheduleOnRN, callback4];
+  const items26 = [animatedStyle, require("module_1707").scheduleOnRN, callback4];
   _require = undefined;
   importDefault = undefined;
   [tmp77, tmp78, tmp79] = items26;
@@ -464,8 +464,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx8.__closure = items27;
   BountiesModalContentScrollTsx8.__workletHash = 7117021770762;
   BountiesModalContentScrollTsx8.__initData = tmp77;
-  const animatedReaction = require("module_1653").useAnimatedReaction(BountiesModalContentScrollTsx7, BountiesModalContentScrollTsx8);
-  const tmp5Result = require("module_1653");
+  const animatedReaction = require("module_1654").useAnimatedReaction(BountiesModalContentScrollTsx7, BountiesModalContentScrollTsx8);
+  const tmp5Result = require("module_1654");
   const items28 = [first4, stateFromStores > 0, sharedValue3, result, require("useBountiesRecapScroll").RECAP_SNAP_EPSILON];
   _require = undefined;
   importDefault = undefined;
@@ -488,7 +488,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx9.__closure = items29;
   BountiesModalContentScrollTsx9.__workletHash = 1510735356441;
   BountiesModalContentScrollTsx9.__initData = tmp81;
-  const items30 = [memo10, require("module_1706").scheduleOnRN, tmp42];
+  const items30 = [memo10, require("module_1707").scheduleOnRN, tmp42];
   _require = undefined;
   importDefault = undefined;
   [tmp86, tmp87, tmp88] = items30;
@@ -506,8 +506,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx10.__closure = items31;
   BountiesModalContentScrollTsx10.__workletHash = 9911843745367;
   BountiesModalContentScrollTsx10.__initData = tmp86;
-  const animatedReaction1 = require("module_1653").useAnimatedReaction(BountiesModalContentScrollTsx9, BountiesModalContentScrollTsx10);
-  const tmp5Result12 = require("module_1653");
+  const animatedReaction1 = require("module_1654").useAnimatedReaction(BountiesModalContentScrollTsx9, BountiesModalContentScrollTsx10);
+  const tmp5Result12 = require("module_1654");
   const items32 = [isPeekEnabled, stateFromStores > 0, sharedValue3, result];
   _require = undefined;
   importDefault = undefined;
@@ -528,7 +528,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx11.__closure = items33;
   BountiesModalContentScrollTsx11.__workletHash = 6652015407036;
   BountiesModalContentScrollTsx11.__initData = tmp90;
-  const items34 = [hasRecurringSwipeUpNux, require("module_1706").scheduleOnRN, tmp33[1]];
+  const items34 = [hasRecurringSwipeUpNux, require("module_1707").scheduleOnRN, tmp33[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp94, tmp95, tmp96] = items34;
@@ -546,8 +546,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx12.__closure = items35;
   BountiesModalContentScrollTsx12.__workletHash = 7535649681310;
   BountiesModalContentScrollTsx12.__initData = tmp94;
-  const animatedReaction2 = require("module_1653").useAnimatedReaction(BountiesModalContentScrollTsx11, BountiesModalContentScrollTsx12);
-  const tmp5Result13 = require("module_1653");
+  const animatedReaction2 = require("module_1654").useAnimatedReaction(BountiesModalContentScrollTsx11, BountiesModalContentScrollTsx12);
+  const tmp5Result13 = require("module_1654");
   const items36 = [closure_43, stateFromStores > 0, sharedValue3, sum1, require("useBountiesRecapScroll").RECAP_SNAP_EPSILON];
   _require = undefined;
   importDefault = undefined;
@@ -570,7 +570,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx13.__closure = items37;
   BountiesModalContentScrollTsx13.__workletHash = 2596573002466;
   BountiesModalContentScrollTsx13.__initData = tmp98;
-  const items38 = [closure_44, require("module_1706").scheduleOnRN, tmp35[1]];
+  const items38 = [closure_44, require("module_1707").scheduleOnRN, tmp35[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp103, tmp104, tmp105] = items38;
@@ -588,7 +588,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx14.__closure = items39;
   BountiesModalContentScrollTsx14.__workletHash = 9994976909562;
   BountiesModalContentScrollTsx14.__initData = tmp103;
-  const animatedReaction3 = require("module_1653").useAnimatedReaction(BountiesModalContentScrollTsx13, BountiesModalContentScrollTsx14);
+  const animatedReaction3 = require("module_1654").useAnimatedReaction(BountiesModalContentScrollTsx13, BountiesModalContentScrollTsx14);
   const items40 = [height3, stateFromStores > 0];
   const memo7 = obj.useMemo(() => {
     let tmp = null;
@@ -598,7 +598,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     }
     return tmp;
   }, items40);
-  const tmp5Result14 = require("module_1653");
+  const tmp5Result14 = require("module_1654");
   const items41 = [closure_45, sharedValue, ref, memo1, c11, memo, 97];
   _require = undefined;
   importDefault = undefined;
@@ -625,7 +625,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx15.__closure = items42;
   BountiesModalContentScrollTsx15.__workletHash = 11345166526440;
   BountiesModalContentScrollTsx15.__initData = tmp108;
-  animatedStyle = require("module_1653").useAnimatedStyle(BountiesModalContentScrollTsx15);
+  animatedStyle = require("module_1654").useAnimatedStyle(BountiesModalContentScrollTsx15);
   const items43 = [animatedStyle, tmp.listWrapper, , ];
   ({ left: arr45[2], width: arr45[3] } = memo);
   const memo8 = obj.useMemo(() => {
@@ -637,7 +637,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   }, items43);
   const tmp6Result = tmp6(noop.useState(false), 2);
   first4 = tmp6Result[0];
-  const tmp5Result15 = require("module_1653");
+  const tmp5Result15 = require("module_1654");
   const items44 = [closure_46, sharedValue];
   _require = undefined;
   [tmp119, tmp120] = items44;
@@ -650,7 +650,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx16.__closure = items45;
   BountiesModalContentScrollTsx16.__workletHash = 13605926420267;
   BountiesModalContentScrollTsx16.__initData = tmp119;
-  const items46 = [closure_47, require("module_1706").scheduleOnRN, tmp6Result[1]];
+  const items46 = [closure_47, require("module_1707").scheduleOnRN, tmp6Result[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp121, tmp122, tmp123] = items46;
@@ -668,7 +668,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx17.__closure = items47;
   BountiesModalContentScrollTsx17.__workletHash = 2131624119443;
   BountiesModalContentScrollTsx17.__initData = tmp121;
-  const animatedReaction4 = require("module_1653").useAnimatedReaction(BountiesModalContentScrollTsx16, BountiesModalContentScrollTsx17);
+  const animatedReaction4 = require("module_1654").useAnimatedReaction(BountiesModalContentScrollTsx16, BountiesModalContentScrollTsx17);
   const items48 = [first4, memo.top];
   const items49 = [, ];
   ({ width: arr51[0], height: arr51[1] } = memo);
@@ -711,7 +711,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     items[1] = size;
     return items;
   }, items51);
-  const tmp5Result16 = require("module_1653");
+  const tmp5Result16 = require("module_1654");
   const items52 = [closure_48, require("useBountiesRecapScroll").getRevealProgress, sharedValue3, result, height3];
   _require = undefined;
   importDefault = undefined;
@@ -727,9 +727,9 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx18.__closure = items53;
   BountiesModalContentScrollTsx18.__workletHash = 3609524767718;
   BountiesModalContentScrollTsx18.__initData = tmp129;
-  const derivedValue = require("module_1653").useDerivedValue(BountiesModalContentScrollTsx18);
-  const tmp5Result17 = require("module_1653");
-  const items54 = [closure_49, require("module_1653").interpolate, derivedValue, require("module_1653").Extrapolation];
+  const derivedValue = require("module_1654").useDerivedValue(BountiesModalContentScrollTsx18);
+  const tmp5Result17 = require("module_1654");
+  const items54 = [closure_49, require("module_1654").interpolate, derivedValue, require("module_1654").Extrapolation];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -744,9 +744,9 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx19.__closure = items55;
   BountiesModalContentScrollTsx19.__workletHash = 12052812104767;
   BountiesModalContentScrollTsx19.__initData = tmp135;
-  const animatedStyle1 = require("module_1653").useAnimatedStyle(BountiesModalContentScrollTsx19);
-  const tmp5Result18 = require("module_1653");
-  const items56 = [closure_50, require("module_1653").interpolate, derivedValue, 0.05, 0.1, require("module_1653").Extrapolation];
+  const animatedStyle1 = require("module_1654").useAnimatedStyle(BountiesModalContentScrollTsx19);
+  const tmp5Result18 = require("module_1654");
+  const items56 = [closure_50, require("module_1654").interpolate, derivedValue, 0.05, 0.1, require("module_1654").Extrapolation];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -767,9 +767,9 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx20.__closure = items57;
   BountiesModalContentScrollTsx20.__workletHash = 12251993225876;
   BountiesModalContentScrollTsx20.__initData = tmp140;
-  const animatedStyle2 = require("module_1653").useAnimatedStyle(BountiesModalContentScrollTsx20);
-  const tmp5Result19 = require("module_1653");
-  const items58 = [closure_51, sharedValue3, result, sum, derivedValue, require("useBountiesRecapScroll").getRevealProgress, height3, require("module_1653").interpolate, 0.05, 0.1, require("module_1653").Extrapolation];
+  const animatedStyle2 = require("module_1654").useAnimatedStyle(BountiesModalContentScrollTsx20);
+  const tmp5Result19 = require("module_1654");
+  const items58 = [closure_51, sharedValue3, result, sum, derivedValue, require("useBountiesRecapScroll").getRevealProgress, height3, require("module_1654").interpolate, 0.05, 0.1, require("module_1654").Extrapolation];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -807,7 +807,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx21.__initData = tmp147;
   const items60 = [tmp.peekGradient, , , , ];
   ({ left: arr62[1], width: arr62[2], top: arr62[3], height: arr62[4] } = memo);
-  const animatedStyle3 = require("module_1653").useAnimatedStyle(BountiesModalContentScrollTsx21);
+  const animatedStyle3 = require("module_1654").useAnimatedStyle(BountiesModalContentScrollTsx21);
   let tmp160 = tmp24;
   const memo13 = obj.useMemo(() => {
     items = [_undefined.peekGradient, ];
@@ -825,8 +825,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   if (hasRecurringSwipeUpNux) {
     hasRecurringSwipeUpNux = tmp24;
   }
-  const tmp5Result20 = require("module_1653");
-  const items61 = [closure_52, require("module_1653").interpolate, sharedValue3, sum, require("module_1653").Extrapolation];
+  const tmp5Result20 = require("module_1654");
+  const items61 = [closure_52, require("module_1654").interpolate, sharedValue3, sum, require("module_1654").Extrapolation];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -845,8 +845,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx22.__closure = items62;
   BountiesModalContentScrollTsx22.__workletHash = 7822704338666;
   BountiesModalContentScrollTsx22.__initData = tmp161;
-  const animatedStyle4 = require("module_1653").useAnimatedStyle(BountiesModalContentScrollTsx22);
-  const tmp5Result21 = require("module_1653");
+  const animatedStyle4 = require("module_1654").useAnimatedStyle(BountiesModalContentScrollTsx22);
+  const tmp5Result21 = require("module_1654");
   const items63 = [closure_53, derivedValue, 0.1];
   _require = undefined;
   importDefault = undefined;
@@ -860,7 +860,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx23.__closure = items64;
   BountiesModalContentScrollTsx23.__workletHash = 4049505759859;
   BountiesModalContentScrollTsx23.__initData = tmp167;
-  const items65 = [closure_54, require("module_1706").scheduleOnRN, tmp39];
+  const items65 = [closure_54, require("module_1707").scheduleOnRN, tmp39];
   _require = undefined;
   importDefault = undefined;
   [tmp170, tmp171, tmp172] = items65;
@@ -878,7 +878,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx24.__closure = items66;
   BountiesModalContentScrollTsx24.__workletHash = 16546668186590;
   BountiesModalContentScrollTsx24.__initData = tmp170;
-  const animatedReaction5 = require("module_1653").useAnimatedReaction(BountiesModalContentScrollTsx23, BountiesModalContentScrollTsx24);
+  const animatedReaction5 = require("module_1654").useAnimatedReaction(BountiesModalContentScrollTsx23, BountiesModalContentScrollTsx24);
   const items67 = [sum, sharedValue3, memo10, tmp160, hasRecurringSwipeUpNux, sourceQuestContent, , , , , , ];
   ({ width: arr69[6], height: arr69[7] } = memo);
   items67[8] = first3;
@@ -921,7 +921,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp178 = null;
     if (tmp41) {
       const obj13 = { orbAmount: stateFromStores };
-      tmp178 = callback2(tmp5(16521).BountiesScrollRecapFooter, obj13);
+      tmp178 = callback2(tmp5(16572).BountiesScrollRecapFooter, obj13);
     }
     const obj14 = { value: memo3, children: null };
     const obj15 = { style: tmp.root, children: null };
@@ -937,16 +937,16 @@ function BountiesModalContentScrollInner(initialBountyId) {
       obj16.pointerEvents = str;
       const obj17 = {
         adContentId,
-        adCreativeType: tmp5(6847).AdCreativeType.BOUNTY,
-        questContent: tmp5(6845).QuestContent.BOUNTIES_END_INTERSTITIAL,
+        adCreativeType: tmp5(6878).AdCreativeType.BOUNTY,
+        questContent: tmp5(6876).QuestContent.BOUNTIES_END_INTERSTITIAL,
         overrideVisibility: first2,
         sourceQuestContent,
         children() {
               return closure_2_17(BountiesScrollRecapPage.BountiesScrollRecapPage, { orbAmount, onClose, style: { flex: 1 } });
             }
       };
-      obj16.children = tmp179(tmp5(13790).QuestContentImpressionTrackerNative, obj17);
-      tmp179Result = tmp179(tmp2(1653).View, obj16);
+      obj16.children = tmp179(tmp5(13842).QuestContentImpressionTrackerNative, obj17);
+      tmp179Result = tmp179(tmp2(1654).View, obj16);
     }
     const items70 = [tmp179Result, , , , , ];
     const obj18 = { style: memo8, children: null };
@@ -971,13 +971,13 @@ function BountiesModalContentScrollInner(initialBountyId) {
       scrollEnabled: !tmp17,
       contentContainerStyle: memo9
     };
-    obj18.children = callback2(tmp5(7451).AnimatedFlashList, obj19);
-    items70[1] = callback2(tmp2(1653).View, obj18);
+    obj18.children = callback2(tmp5(7482).AnimatedFlashList, obj19);
+    items70[1] = callback2(tmp2(1654).View, obj18);
     let tmp179Result4 = null;
     if (null != tmp16) {
       const obj20 = { metadata: tmp16.metadata, sheetHeight: memo2, revealProgress: sharedValue, onDismiss: callback2, onInstallPress: null, onOverlaySurfaceClick: null, onCarouselScroll: null };
       ({ onInstallPress: obj32.onInstallPress, onOverlaySurfaceClick: obj32.onOverlaySurfaceClick, onCarouselScroll: obj32.onCarouselScroll } = tmp16);
-      tmp179Result4 = tmp179(tmp2(16526), obj20);
+      tmp179Result4 = tmp179(tmp2(16577), obj20);
     }
     items70[2] = tmp179Result4;
     let tmp179Result5 = null;
@@ -988,8 +988,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
         const items71 = [memo13, animatedStyle4];
         obj21.style = items71;
         const obj22 = { colors: first1, style: absoluteFill.absoluteFill };
-        obj21.children = tmp179(tmp2(5567), obj22);
-        tmp179Result5 = tmp179(tmp2(1653).View, obj21);
+        obj21.children = tmp179(tmp2(5598), obj22);
+        tmp179Result5 = tmp179(tmp2(1654).View, obj21);
       }
     }
     items70[3] = tmp179Result5;
@@ -1004,30 +1004,30 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp179Result6 = null;
     if (tmp38) {
       const obj24 = { onPress: callback5 };
-      tmp179Result6 = tmp179(tmp2(16527), obj24);
+      tmp179Result6 = tmp179(tmp2(16578), obj24);
     }
     obj23.children = tmp179Result6;
-    items70[4] = callback2(tmp2(1653).View, obj23);
+    items70[4] = callback2(tmp2(1654).View, obj23);
     const obj25 = { visible: tmp41, onContentLayout: callback, zIndex: height3, opacityStyle: animatedStyle3, children: tmp178 };
-    items70[5] = callback2(tmp2(16476), obj25);
+    items70[5] = callback2(tmp2(16527), obj25);
     obj15.children = items70;
     obj14.children = hasRecurringSwipeUpNux(questHomeBounties, obj15);
-    return callback2(tmp5(16485).BountyVideoEndAppStoreProvider, obj14);
+    return callback2(tmp5(16536).BountyVideoEndAppStoreProvider, obj14);
   }
-  const tmp5Result22 = require("module_1653");
+  const tmp5Result22 = require("module_1654");
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const QuestConstants = fn(6840);
+const QuestConstants = fn(6871);
 ({ BOUNTY_ORB_AMOUNT: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16475);
+const BountiesModalConstants = fn(16526);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekClipHeight: closure_11, getBountyVideoEndPeekScale: closure_12, getBountyVideoEndPeekTargetScale: map1 } = BountiesModalConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, ComponentActions: closure_15 } = Constants);
-const ContentDismissActionType = fn(4858).ContentDismissActionType;
+const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const PlatformUtils = fn(1358);
+const PlatformUtils = fn(1359);
 let closure_19 = PlatformUtils.isAndroid();
 let c20 = 0;
 let c21 = 1;
@@ -1043,7 +1043,7 @@ function isScrollEventInBounds(contentOffset) {
 }
 isScrollEventInBounds.__workletHash = 3579964422615;
 isScrollEventInBounds.__initData = tmp7;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_30 = createStyles.createStyles(() => {
   const obj = { root: { flex: 1 }, recapPage: { position: "absolute", zIndex }, listWrapper: { position: "absolute", zIndex: zIndex2, overflow: "hidden" }, closeButton: { position: "absolute", zIndex: zIndex4 }, peekGradient: { position: "absolute", zIndex: zIndex3 } };
   return obj;

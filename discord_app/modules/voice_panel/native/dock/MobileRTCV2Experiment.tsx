@@ -1,7 +1,7 @@
-// === Module 12910: MobileRTCV2Experiment ===
+// === Module 12962: MobileRTCV2Experiment ===
 
-// Module 12910 (MobileRTCV2Experiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 12962 (MobileRTCV2Experiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-mobile-rtc-v2", defaultConfig: { enabled: false, animateSpeakerLevels: false }, variations: null };

@@ -1,15 +1,15 @@
-// === Module 8038: ManualReviewDecidedTeenAlertModal ===
+// === Module 8080: ManualReviewDecidedTeenAlertModal ===
 
-// Module 8038 (ManualReviewDecidedTeenAlertModal)
+// Module 8080 (ManualReviewDecidedTeenAlertModal)
 import util from "util" /* 1112 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1263 */;
-import _modDef3594 from "module_3594" /* 3594 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import AlertModal from "AlertModal" /* 6021 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
+import _modDef3595 from "module_3595" /* 3595 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import AlertModal from "AlertModal" /* 6052 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6796).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6827).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -21,19 +21,19 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
       variant: "body-md/normal",
       color: "text-link",
       onPress() {
-        const obj = closure_1_1(7836);
+        const obj = closure_1_1(7870);
         const intl = closure_1_0(1112).intl;
-        return obj.openUrl(closure_1_1(2187).getArticleURL(intl.string(closure_1_1(3594).agiNYw)));
+        return obj.openUrl(closure_1_1(2188).getArticleURL(intl.string(closure_1_1(3595).agiNYw)));
       },
       children
     }, key);
   }
   let obj = { title: null, content: null, actions: null, trackingProps: null };
   let intl = util.intl;
-  obj.title = intl.string(_modDef3594.AA3xYb);
+  obj.title = intl.string(_modDef3595.AA3xYb);
   const intl2 = util.intl;
   const format = intl2.format;
-  const tmp4 = _modDef3594;
+  const tmp4 = _modDef3595;
   if (teenAgeRange.decidedPassed) {
     if (teenAgeRange == null) {
       teenAgeRange = FALLBACK_TEEN_AGE_RANGE;

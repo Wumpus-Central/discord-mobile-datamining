@@ -1,19 +1,19 @@
-// === Module 6985: ImpersonateActionCreators ===
+// === Module 7016: ImpersonateActionCreators ===
 
-// Module 6985 (ImpersonateActionCreators)
+// Module 7016 (ImpersonateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1098 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import ImpersonateTypes from "ImpersonateTypes" /* 4923 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5982 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildChannelStore from "GuildChannelStore" /* 4942 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import GuildRoleStore from "GuildRoleStore" /* 4918 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
-import ImpersonateStore from "ImpersonateStore" /* 4917 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import ImpersonateTypes from "ImpersonateTypes" /* 4954 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildChannelStore from "GuildChannelStore" /* 4973 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import GuildRoleStore from "GuildRoleStore" /* 4949 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
+import ImpersonateStore from "ImpersonateStore" /* 4948 */;
 
 require = fn;
 function updateImpersonating(guildId, type) {
@@ -47,7 +47,7 @@ function updateImpersonating(guildId, type) {
 }
 const Constants = fn(1071);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(4868).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4899).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 9999: useCanSpeakInChannel ===
+// === Module 10041: useCanSpeakInChannel ===
 
-// Module 9999 (useCanSpeakInChannel)
+// Module 10041 (useCanSpeakInChannel)
 import initialize from "initialize" /* 504 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6772 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6803 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;

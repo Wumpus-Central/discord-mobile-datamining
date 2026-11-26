@@ -1,6 +1,6 @@
-// === Module 16881: RemoteFetchData ===
+// === Module 16932: RemoteFetchData ===
 
-// Module 16881 (RemoteFetchData)
+// Module 16932 (RemoteFetchData)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const FetchStatus = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };
@@ -102,7 +102,7 @@ prototype["try"] = function try(nextWantsResult, arrayResult) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

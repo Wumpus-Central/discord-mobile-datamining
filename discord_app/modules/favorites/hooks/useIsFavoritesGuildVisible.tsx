@@ -1,9 +1,9 @@
-// === Module 16886: useIsFavoritesGuildVisible ===
+// === Module 16937: useIsFavoritesGuildVisible ===
 
-// Module 16886 (useIsFavoritesGuildVisible)
-import FavoritesUtils from "FavoritesUtils" /* 4886 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import FavoriteStore from "FavoriteStore" /* 4864 */;
+// Module 16937 (useIsFavoritesGuildVisible)
+import FavoritesUtils from "FavoritesUtils" /* 4917 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
+import FavoriteStore from "FavoriteStore" /* 4895 */;
 
 require = fn;
 const size = fn(2);

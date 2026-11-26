@@ -1,20 +1,20 @@
-// === Module 7151: FormCheckbox ===
+// === Module 7182: FormCheckbox ===
 
-// Module 7151 (FormCheckbox)
+// Module 7182 (FormCheckbox)
 import nativeDefault from "native" /* 575 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5026 */;
-import IconDefault from "Icon" /* 5612 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import springPresets from "springPresets" /* 5614 */;
-import _modDef7152 from "module_7152" /* 7152 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5057 */;
+import IconDefault from "Icon" /* 5643 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import springPresets from "springPresets" /* 5645 */;
+import _modDef7183 from "module_7183" /* 7183 */;
 import noop from "module_19" /* 19 */;
 
-const module_1653 = _mod1653;
+const module_1654 = _mod1654;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT };
 obj2.checkbox = size;
@@ -24,7 +24,7 @@ obj2.selected = { borderColor: nativeDefault.colors.CHECKBOX_BORDER_SELECTED_DEF
 const obj4 = { borderColor: nativeDefault.colors.CHECKBOX_BORDER_SELECTED_DEFAULT, backgroundColor: nativeDefault.colors.CHECKBOX_BACKGROUND_SELECTED_DEFAULT };
 obj2.checkmark = { tintColor: nativeDefault.colors.CHECKBOX_ICON_ACTIVE };
 let closure_5 = createStyles.createStyles(obj2);
-const Icon = module_1653.createAnimatedComponent(IconDefault);
+const Icon = module_1654.createAnimatedComponent(IconDefault);
 let closure_7 = { code: "(function FormCheckboxNativeTsx1(){let[withSpring,checked,selected,unselected,SUBTLE_SPRING]=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,'animate-always')};return defaultAnimation;})" };
 let closure_8 = { code: "(function FormCheckboxNativeTsx2(){let[useReducedMotion,withSpring,checked,SUBTLE_SPRING]=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};})" };
 size = fn(2);
@@ -70,7 +70,7 @@ export function FormCheckbox(checked) {
   FormCheckboxNativeTsx1.__closure = items1;
   FormCheckboxNativeTsx1.__workletHash = 16653690425039;
   FormCheckboxNativeTsx1.__initData = tmp5;
-  const animatedStyle = _mod1653.useAnimatedStyle(FormCheckboxNativeTsx1);
+  const animatedStyle = _mod1654.useAnimatedStyle(FormCheckboxNativeTsx1);
   const items2 = [closure_8, noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled, spring_spring.withSpring, checked, springPresets.SUBTLE_SPRING];
   c0 = undefined;
   c1 = undefined;
@@ -106,13 +106,13 @@ export function FormCheckbox(checked) {
   FormCheckboxNativeTsx2.__closure = items3;
   FormCheckboxNativeTsx2.__workletHash = 5917557474474;
   FormCheckboxNativeTsx2.__initData = tmp12;
-  const animatedStyle1 = _mod1653.useAnimatedStyle(FormCheckboxNativeTsx2);
+  const animatedStyle1 = _mod1654.useAnimatedStyle(FormCheckboxNativeTsx2);
   const obj2 = { style: null, children: null };
   const items4 = [tmp.checkbox, animatedStyle];
   obj2.style = items4;
-  const obj3 = { source: _modDef7152, size: IconDefault.Sizes.SMALL_20, style: null };
+  const obj3 = { source: _modDef7183, size: IconDefault.Sizes.SMALL_20, style: null };
   const items5 = [tmp.checkmark, animatedStyle1];
   obj3.style = items5;
-  obj2.children = <Icon source={_modDef7152} size={IconDefault.Sizes.SMALL_20} style={null} />;
-  return jsx(module_1653.View, { style: null, children: null });
+  obj2.children = <Icon source={_modDef7183} size={IconDefault.Sizes.SMALL_20} style={null} />;
+  return jsx(module_1654.View, { style: null, children: null });
 }

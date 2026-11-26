@@ -1,9 +1,9 @@
-// === Module 4833: errors/V6OrEarlierAPIError ===
+// === Module 4864: errors/V6OrEarlierAPIError ===
 
-// Module 4833 (errors/V6OrEarlierAPIError)
+// Module 4864 (errors/V6OrEarlierAPIError)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import size from "module_2" /* 2 */;
 
 const Links = Constants.Links;

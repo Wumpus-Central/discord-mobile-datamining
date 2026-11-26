@@ -1,19 +1,19 @@
-// === Module 12454: conjureServerAppRemoval ===
+// === Module 12503: conjureServerAppRemoval ===
 
-// Module 12454 (conjureServerAppRemoval)
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6940 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
-import ConjureUtils from "ConjureUtils" /* 7571 */;
-import conjureAppInServer from "conjureAppInServer" /* 7661 */;
+// Module 12503 (conjureServerAppRemoval)
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6971 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6991 */;
+import ConjureUtils from "ConjureUtils" /* 7602 */;
+import conjureAppInServer from "conjureAppInServer" /* 7692 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
-import GuildChannelStore from "GuildChannelStore" /* 4942 */;
-import GuildMemberStore from "GuildMemberStore" /* 4924 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import UserStore from "UserStore" /* 1386 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import GuildChannelStore from "GuildChannelStore" /* 4973 */;
+import GuildMemberStore from "GuildMemberStore" /* 4955 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 
@@ -259,7 +259,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -293,14 +293,14 @@ let closure_22 = async function _loadMissingApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
     }
   }
 };
-let closure_7 = fn(4942).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4973).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1071).Permissions;
 let c14 = " (Preview)";
 const size = fn(2);

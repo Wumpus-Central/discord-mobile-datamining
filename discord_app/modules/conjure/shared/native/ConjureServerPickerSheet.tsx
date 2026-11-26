@@ -1,16 +1,16 @@
-// === Module 11408: ConjureServerPickerSheet ===
+// === Module 11454: ConjureServerPickerSheet ===
 
-// Module 11408 (ConjureServerPickerSheet)
+// Module 11454 (ConjureServerPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import GuildIcon from "GuildIcon" /* 7021 */;
-import TableRadioGroup from "TableRadioGroup" /* 7220 */;
-import TableRadioRow from "TableRadioRow" /* 7222 */;
-import Search_SearchBar from "Search/SearchBar" /* 7375 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7476 */;
-import ActionSheet from "ActionSheet" /* 7515 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import GuildIcon from "GuildIcon" /* 7052 */;
+import TableRadioGroup from "TableRadioGroup" /* 7251 */;
+import TableRadioRow from "TableRadioRow" /* 7253 */;
+import Search_SearchBar from "Search/SearchBar" /* 7406 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
+import ActionSheet from "ActionSheet" /* 7546 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { scroll: { flex: 1, minHeight: 0 }, list: { paddingBottom: nativeDefault.space.PX_64 }, empty: null };
 let obj3 = { paddingBottom: nativeDefault.space.PX_64 };
 obj2.empty = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
@@ -64,9 +64,9 @@ export default function ConjureServerPickerSheet(selectedGuildId) {
   let obj = { scrollable: true, startExpanded: true, keyboardShouldPersistTaps: "handled", header: closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }), children: null };
   let obj2 = { size: "md", round: true, grow: false, accessibilityLabel: null, placeholder: null, onChange: null };
   const intl = util.intl;
-  obj2.accessibilityLabel = intl.string(guilds(4244)["+g5NWE"]);
+  obj2.accessibilityLabel = intl.string(guilds(4245)["+g5NWE"]);
   const intl2 = util.intl;
-  obj2.placeholder = intl2.string(guilds(4244)["+g5NWE"]);
+  obj2.placeholder = intl2.string(guilds(4245)["+g5NWE"]);
   obj2.onChange = tmp4;
   const items1 = [closure_6(Search_SearchBar.SearchBar, obj2), ];
   const obj3 = { style: tmp2.scroll, contentContainerStyle: tmp2.list, keyboardShouldPersistTaps: "handled", children: null };
@@ -125,7 +125,7 @@ export default function ConjureServerPickerSheet(selectedGuildId) {
     ...memo.map((guild) => {
       const obj = { value: guild.id, label: guild.name, labelLineClamp: 1, icon: null };
       const obj2 = { guild, size: GuildIcon.GuildIconSizes.SMALL_32 };
-      obj.icon = closure_1_6(guilds(7021), obj2);
+      obj.icon = closure_1_6(guilds(7052), obj2);
       return closure_1_6(TableRadioRow.TableRadioRow, obj, guild.id);
     })
   ];

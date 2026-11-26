@@ -1,8 +1,8 @@
-// === Module 18725: useConjureProjectGuild ===
+// === Module 18788: useConjureProjectGuild ===
 
-// Module 18725 (useConjureProjectGuild)
-import GuildStore from "GuildStore" /* 4883 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+// Module 18788 (useConjureProjectGuild)
+import GuildStore from "GuildStore" /* 4914 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 
 const require = globalThis.__r;
 

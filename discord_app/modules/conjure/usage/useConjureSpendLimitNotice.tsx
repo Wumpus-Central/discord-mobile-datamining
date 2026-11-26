@@ -1,9 +1,9 @@
-// === Module 18571: useConjureSpendLimitNotice ===
+// === Module 18634: useConjureSpendLimitNotice ===
 
-// Module 18571 (useConjureSpendLimitNotice)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 7678 */;
+// Module 18634 (useConjureSpendLimitNotice)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 7711 */;
 
 const require = globalThis.__r;
 
@@ -29,11 +29,11 @@ export default function useConjureSpendLimitNotice(arg0) {
       if (null == formatResult) {
         const intl2 = tmp(1112).intl;
         const obj3 = { helpdeskURL: submitRequestURL };
-        let formatResult1 = intl2.format(_modDef4244["bw/n4C"], obj3);
+        let formatResult1 = intl2.format(_modDef4245["bw/n4C"], obj3);
       } else {
         const intl = tmp(1112).intl;
         const obj4 = { limit: formatResult, helpdeskURL: submitRequestURL };
-        formatResult1 = intl.format(_modDef4244.GYqJXH, obj4);
+        formatResult1 = intl.format(_modDef4245.GYqJXH, obj4);
       }
       const obj5 = { blocked: true, message: formatResult1 };
       return obj5;
@@ -47,7 +47,7 @@ export default function useConjureSpendLimitNotice(arg0) {
             const bound = Math.min(99, Math.floor(stateFromStores.spentUsd / stateFromStores.limitUsd * 100));
             const intl3 = tmp(1112).intl;
             const obj7 = { percent: bound, limit: formatResult };
-            obj6.message = intl3.formatToPlainString(_modDef4244.GHgG2B, obj7);
+            obj6.message = intl3.formatToPlainString(_modDef4245.GHgG2B, obj7);
             return obj6;
           }
         }

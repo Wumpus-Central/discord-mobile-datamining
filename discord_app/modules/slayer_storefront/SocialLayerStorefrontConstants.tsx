@@ -1,9 +1,9 @@
-// === Module 7560: SocialLayerStorefrontConstants ===
+// === Module 7591: SocialLayerStorefrontConstants ===
 
-// Module 7560 (SocialLayerStorefrontConstants)
+// Module 7591 (SocialLayerStorefrontConstants)
 import Constants from "Constants" /* 1071 */;
-import UserStoreConstants from "UserStoreConstants" /* 1403 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2187 */;
+import UserStoreConstants from "UserStoreConstants" /* 1404 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;

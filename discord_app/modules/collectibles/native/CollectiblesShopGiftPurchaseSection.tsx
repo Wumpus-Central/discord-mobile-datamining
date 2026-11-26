@@ -1,27 +1,27 @@
-// === Module 11527: CollectiblesShopGiftPurchaseSection ===
+// === Module 11575: CollectiblesShopGiftPurchaseSection ===
 
-// Module 11527 (CollectiblesShopGiftPurchaseSection)
+// Module 11575 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6016 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6352 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(9076).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(9118).useNativeCheckoutStore;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
-const PremiumConstants = fn(1388);
+const PremiumConstants = fn(1389);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -176,7 +176,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {

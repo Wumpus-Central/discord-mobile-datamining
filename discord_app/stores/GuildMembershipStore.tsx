@@ -1,6 +1,6 @@
-// === Module 4863: GuildMembershipStore ===
+// === Module 4894: GuildMembershipStore ===
 
-// Module 4863 (GuildMembershipStore)
+// Module 4894 (GuildMembershipStore)
 import initializeDefault from "initialize" /* 504 */;
 import Dispatcher2 from "Dispatcher" /* 572 */;
 

@@ -1,10 +1,10 @@
-// === Module 5187: useRoutedActiveGuildTheme ===
+// === Module 5218: useRoutedActiveGuildTheme ===
 
-// Module 5187 (useRoutedActiveGuildTheme)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5188 */;
-import RootNavigationRef from "RootNavigationRef" /* 5189 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5214 */;
-import GuildThemeResolver from "GuildThemeResolver" /* 5215 */;
+// Module 5218 (useRoutedActiveGuildTheme)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5219 */;
+import RootNavigationRef from "RootNavigationRef" /* 5220 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5245 */;
+import GuildThemeResolver from "GuildThemeResolver" /* 5246 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

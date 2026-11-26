@@ -1,10 +1,10 @@
-// === Module 12609: CheckpointShareCardFooter ===
+// === Module 12645: CheckpointShareCardFooter ===
 
-// Module 12609 (CheckpointShareCardFooter)
+// Module 12645 (CheckpointShareCardFooter)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import inlineStyles from "inlineStyles" /* 7912 */;
-import CheckpointShareCardContext from "CheckpointShareCardContext" /* 12607 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import inlineStyles from "inlineStyles" /* 7946 */;
+import CheckpointShareCardContext from "CheckpointShareCardContext" /* 12643 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let size = { width: 121, height: 28 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { footer: null, portraitFooter: null, characterAndStatsFooter: null, footerTitle: null };
 const obj3 = {};
 const merged = Object.assign(size);

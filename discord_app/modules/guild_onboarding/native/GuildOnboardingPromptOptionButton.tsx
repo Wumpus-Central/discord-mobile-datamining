@@ -1,29 +1,29 @@
-// === Module 7453: GuildOnboardingPromptOptionButton ===
+// === Module 7484: GuildOnboardingPromptOptionButton ===
 
-// Module 7453 (GuildOnboardingPromptOptionButton)
+// Module 7484 (GuildOnboardingPromptOptionButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5021 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7454 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7485 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
-import EmojiStore from "EmojiStore" /* 6852 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
+import EmojiStore from "EmojiStore" /* 6883 */;
 
 const require = globalThis.__r;
-const _modDef1653 = _mod1653;
+const _modDef1654 = _mod1654;
 
 require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1390).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let obj = { duration: 200, easing: null };
-let Easing = fn(1653).Easing;
-obj.easing = Easing.out(fn(1653).Easing.ease);
-const createStyles = fn(5012);
+let Easing = fn(1654).Easing;
+obj.easing = Easing.out(fn(1654).Easing.ease);
+const createStyles = fn(5043);
 let obj3 = { container: { borderRadius: nativeDefault.radii.md, borderWidth: 2, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 8 }, optionButton: { paddingVertical: 12, paddingHorizontal: 16, display: "flex", flexDirection: "row", alignItems: "center" }, optionTextEmoji: { fontSize: 24, lineHeight: 24, marginRight: 12, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24, marginRight: 12 }, optionText: { flexShrink: 1 }, checkIcon: null, newBadgeWrapper: null, newBadge: null, roleCount: null };
 let size = { position: "absolute", top: -6, right: -6, width: 20, height: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" };
 obj3.checkIcon = size;
@@ -79,7 +79,7 @@ export default function PromptOptionButton(option) {
   let items1 = [c6];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => _undefined7.useReducedMotion);
   let obj2 = require("initialize");
-  let items2 = [closure_13, selected, require("timing/timing").withTiming, require("module_1653").Easing, stateFromStores1, require("module_1653").withSequence, require("spring/spring").withSpring];
+  let items2 = [closure_13, selected, require("timing/timing").withTiming, require("module_1654").Easing, stateFromStores1, require("module_1654").withSequence, require("spring/spring").withSpring];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -120,7 +120,7 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx1.__closure = items3;
   GuildOnboardingPromptOptionButtonTsx1.__workletHash = 7034596428204;
   GuildOnboardingPromptOptionButtonTsx1.__initData = tmp6;
-  const animatedStyle = require("module_1653").useAnimatedStyle(GuildOnboardingPromptOptionButtonTsx1);
+  const animatedStyle = require("module_1654").useAnimatedStyle(GuildOnboardingPromptOptionButtonTsx1);
   const tmp15 = useGuildRoleMemberCountsDefault(option.guildId);
   noop = tmp15;
   let num = 0;
@@ -173,9 +173,9 @@ export default function PromptOptionButton(option) {
       ref.current = false;
     }
   }, items6);
-  let obj3 = require("module_1653");
+  let obj3 = require("module_1654");
   let obj4 = noop;
-  const items7 = [closure_14, first, require("module_1653").withDelay, require("timing/timing").withTiming, require("module_1653").Easing, stateFromStores1];
+  const items7 = [closure_14, first, require("module_1654").withDelay, require("timing/timing").withTiming, require("module_1654").Easing, stateFromStores1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -223,9 +223,9 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx2.__closure = items8;
   GuildOnboardingPromptOptionButtonTsx2.__workletHash = 13064995616524;
   GuildOnboardingPromptOptionButtonTsx2.__initData = tmp25;
-  const animatedStyle1 = require("module_1653").useAnimatedStyle(GuildOnboardingPromptOptionButtonTsx2);
-  const tmp2Result = require("module_1653");
-  sharedValue = require("module_1653").useSharedValue(1);
+  const animatedStyle1 = require("module_1654").useAnimatedStyle(GuildOnboardingPromptOptionButtonTsx2);
+  const tmp2Result = require("module_1654");
+  sharedValue = require("module_1654").useSharedValue(1);
   let isUnseen = canBeNew;
   if (canBeNew) {
     isUnseen = option.isUnseen;
@@ -293,7 +293,7 @@ export default function PromptOptionButton(option) {
       title = _undefined.title;
     }
   }, items9);
-  const tmp2Result11 = require("module_1653");
+  const tmp2Result11 = require("module_1654");
   const token = require("useToken").useToken(tmp14(575).colors.BORDER_SUBTLE);
   const tmp2Result12 = require("useToken");
   const token1 = require("useToken").useToken(tmp14(575).colors.BACKGROUND_BRAND);
@@ -321,8 +321,8 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx3.__closure = items11;
   GuildOnboardingPromptOptionButtonTsx3.__workletHash = 16230189294602;
   GuildOnboardingPromptOptionButtonTsx3.__initData = tmp43;
-  const derivedValue = require("module_1653").useDerivedValue(GuildOnboardingPromptOptionButtonTsx3);
-  const tmp2Result16 = require("module_1653");
+  const derivedValue = require("module_1654").useDerivedValue(GuildOnboardingPromptOptionButtonTsx3);
+  const tmp2Result16 = require("module_1654");
   const tmp42 = closure_11;
   const items12 = [closure_16, require("timing/timing").withTiming, isUnseen, tmp42];
   _require = undefined;
@@ -343,9 +343,9 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx4.__closure = items13;
   GuildOnboardingPromptOptionButtonTsx4.__workletHash = 4904550127725;
   GuildOnboardingPromptOptionButtonTsx4.__initData = tmp48;
-  const derivedValue1 = require("module_1653").useDerivedValue(GuildOnboardingPromptOptionButtonTsx4);
-  const tmp2Result17 = require("module_1653");
-  const items14 = [closure_17, require("module_1653").interpolateColor, derivedValue1, token, token1, derivedValue, token2, token3];
+  const derivedValue1 = require("module_1654").useDerivedValue(GuildOnboardingPromptOptionButtonTsx4);
+  const tmp2Result17 = require("module_1654");
+  const items14 = [closure_17, require("module_1654").interpolateColor, derivedValue1, token, token1, derivedValue, token2, token3];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -375,8 +375,8 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx5.__closure = items15;
   GuildOnboardingPromptOptionButtonTsx5.__workletHash = 8397718874501;
   GuildOnboardingPromptOptionButtonTsx5.__initData = tmp53;
-  const animatedStyle2 = require("module_1653").useAnimatedStyle(GuildOnboardingPromptOptionButtonTsx5);
-  const tmp2Result18 = require("module_1653");
+  const animatedStyle2 = require("module_1654").useAnimatedStyle(GuildOnboardingPromptOptionButtonTsx5);
+  const tmp2Result18 = require("module_1654");
   const items16 = [closure_18, stateFromStores1, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -401,8 +401,8 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx6.__closure = items17;
   GuildOnboardingPromptOptionButtonTsx6.__workletHash = 14710088829666;
   GuildOnboardingPromptOptionButtonTsx6.__initData = tmp62;
-  const animatedStyle3 = require("module_1653").useAnimatedStyle(GuildOnboardingPromptOptionButtonTsx6);
-  const tmp2Result19 = require("module_1653");
+  const animatedStyle3 = require("module_1654").useAnimatedStyle(GuildOnboardingPromptOptionButtonTsx6);
+  const tmp2Result19 = require("module_1654");
   const checkboxA11yNative = require("useA11yRolesNative").useCheckboxA11yNative({ checked: selected });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   let obj5 = { style: null, children: null };
@@ -418,17 +418,17 @@ export default function PromptOptionButton(option) {
       }
     },
     onPressIn() {
-      obj = _mod1653;
+      obj = _mod1654;
       const withTimingResult = timing_timing.withTiming(1, { duration: 0 });
       const obj4 = { duration: 200, easing: null };
-      const Easing = _mod1653.Easing;
-      obj4.easing = Easing.out(_mod1653.Easing.ease);
+      const Easing = _mod1654.Easing;
+      obj4.easing = Easing.out(_mod1654.Easing.ease);
       const result = sharedValue.set(obj.withSequence(withTimingResult, timing_timing.withTiming(1.02, obj4)));
     },
     onPressOut() {
       const obj2 = { duration: 100, easing: null };
-      const Easing = _mod1653.Easing;
-      obj2.easing = Easing.out(_mod1653.Easing.ease);
+      const Easing = _mod1654.Easing;
+      obj2.easing = Easing.out(_mod1654.Easing.ease);
       const result = sharedValue.set(timing_timing.withTiming(1, obj2));
     },
     accessibilityRole,
@@ -463,8 +463,8 @@ export default function PromptOptionButton(option) {
       const obj9 = { id: null, animated: null, size: null };
       ({ id: obj21.id, animated: obj21.animated } = stateFromStores);
       obj9.size = size;
-      emojiURL = tmp14(1412).getEmojiURL(obj9);
-      const tmp14Result2 = tmp14(1412);
+      emojiURL = tmp14(1413).getEmojiURL(obj9);
+      const tmp14Result2 = tmp14(1413);
     }
     obj8.src = emojiURL;
     let str;
@@ -478,9 +478,9 @@ export default function PromptOptionButton(option) {
       str = "";
     }
     obj8.name = str;
-    obj7.children = ref(tmp14(7457), obj8);
+    obj7.children = ref(tmp14(7488), obj8);
     tmp71Result = tmp71(c5, obj7);
-    const tmp14Result = tmp14(7457);
+    const tmp14Result = tmp14(7488);
   }
   const items19 = [tmp71Result, ];
   const obj10 = { style: tmp.optionText, children: null };
@@ -488,7 +488,7 @@ export default function PromptOptionButton(option) {
   let tmp77Result = null != option.description && option.description.length > 0;
   if (tmp77Result) {
     const obj12 = { variant: "body-xs/medium", color: "text-default", children: option.description };
-    tmp77Result = tmp77(tmp2(5603).Text, obj12);
+    tmp77Result = tmp77(tmp2(5634).Text, obj12);
   }
   items20[1] = tmp77Result;
   obj10.children = items20;
@@ -504,8 +504,8 @@ export default function PromptOptionButton(option) {
     let intl = tmp2(1112).intl;
     const obj15 = { memberCount: num };
     obj14.children = intl.format(tmp2(1112).t.EgKsZA, obj15);
-    obj13.children = tmp77(tmp2(5603).Text, obj14);
-    tmp77Result2 = tmp77(tmp14(1653).View, obj13);
+    obj13.children = tmp77(tmp2(5634).Text, obj14);
+    tmp77Result2 = tmp77(tmp14(1654).View, obj13);
   }
   items21[1] = tmp77Result2;
   const obj16 = { style: null, children: null };
@@ -514,7 +514,7 @@ export default function PromptOptionButton(option) {
   const obj11 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: option.title };
   const tmp2Result20 = require("useA11yRolesNative");
   obj16.children = ref(require("CheckmarkSmallIcon").CheckmarkSmallIcon, { size: "xs", color: nativeDefault.colors.WHITE });
-  items21[2] = ref(_modDef1653.View, obj16);
+  items21[2] = ref(_modDef1654.View, obj16);
   if (canBeNew) {
     canBeNew = !selected;
   }
@@ -530,5 +530,5 @@ export default function PromptOptionButton(option) {
   }
   items21[3] = canBeNew;
   obj5.children = items21;
-  return sharedValue(_modDef1653.View, obj5);
+  return sharedValue(_modDef1654.View, obj5);
 };

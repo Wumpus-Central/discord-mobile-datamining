@@ -1,10 +1,10 @@
-// === Module 5971: AudioSettingsUtils ===
+// === Module 6002: AudioSettingsUtils ===
 
-// Module 5971 (AudioSettingsUtils)
+// Module 6002 (AudioSettingsUtils)
 import UserSettingsConstants from "UserSettingsConstants" /* 1081 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5837 */;
-import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 5972 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5973 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5868 */;
+import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 6003 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6004 */;
 import size from "module_2" /* 2 */;
 
 const constants = UserSettingsConstants.ProtoAudioSettingsContextTypes;

@@ -1,14 +1,14 @@
-// === Module 18434: useCanShareConjureProject ===
+// === Module 18497: useCanShareConjureProject ===
 
-// Module 18434 (useCanShareConjureProject)
-import ConjurePublishTypes from "ConjurePublishTypes" /* 11428 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7675 */;
+// Module 18497 (useCanShareConjureProject)
+import ConjurePublishTypes from "ConjurePublishTypes" /* 11475 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7706 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6903).isProjectOwner;
+const isProjectOwner = fn(6934).isProjectOwner;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/useCanShareConjureProject.tsx");
 

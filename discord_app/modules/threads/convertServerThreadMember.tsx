@@ -1,6 +1,6 @@
-// === Module 8146: convertServerThreadMember ===
+// === Module 8188: convertServerThreadMember ===
 
-// Module 8146 (convertServerThreadMember)
+// Module 8188 (convertServerThreadMember)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/threads/convertServerThreadMember.tsx");

@@ -1,17 +1,17 @@
-// === Module 15896: conjureBackgroundFrames ===
+// === Module 15947: conjureBackgroundFrames ===
 
-// Module 15896 (conjureBackgroundFrames)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5656 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6908 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 7646 */;
-import leaveFrame from "leaveFrame" /* 7660 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9954 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 15814 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 15897 */;
-import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 15899 */;
+// Module 15947 (conjureBackgroundFrames)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5687 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6939 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7677 */;
+import leaveFrame from "leaveFrame" /* 7691 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9996 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 15865 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 15948 */;
+import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 15950 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6905 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
+import FramesStore from "FramesStore" /* 6936 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
 
 require = fn;
 function isRunningInBackground(surface) {
@@ -68,7 +68,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6906);
+const FramesConstants = fn(6937);
 ({ FrameIntent: closure_6, makeFrameId: metroImportDefault } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrames.tsx");

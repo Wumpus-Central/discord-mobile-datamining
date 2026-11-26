@@ -1,16 +1,16 @@
-// === Module 19836: NewTermsModal ===
+// === Module 19900: NewTermsModal ===
 
-// Module 19836 (NewTermsModal)
+// Module 19900 (NewTermsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6085 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6808 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7512 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6116 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6839 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7543 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4855 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4886 */;
 
 require = fn;
 function handleTouch() {
@@ -34,7 +34,7 @@ const Constants = fn(1071);
 ({ MarketingURLs: closure_10, UserRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { contentContainer: { paddingHorizontal: nativeDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" }, scrollView: { flex: 1 }, container: null, description: null, agreementDescription: null, navbarRight: null, stickyFooter: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" };
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -57,7 +57,7 @@ export default function NewTermsModal() {
   const memo = noop.useMemo(() => action.getAction(), []);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
-  memo(7166).useNavigatorBackPressHandler(memo(6079).BackPressHandler.minimize);
+  memo(7197).useNavigatorBackPressHandler(memo(6110).BackPressHandler.minimize);
   dependencyMap = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -69,7 +69,7 @@ export default function NewTermsModal() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -101,7 +101,7 @@ export default function NewTermsModal() {
           closure_128_0 = value;
           closure_129_1(closure_128_0);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         }
       } catch (tmp15) {
         c3 = tmp;
@@ -110,9 +110,9 @@ export default function NewTermsModal() {
     }
   }), []);
   const obj2 = { type: null, name: null, properties: null };
-  let obj = memo(7166);
-  obj2.type = memo(1263).ImpressionTypes.VIEW;
-  obj2.name = memo(1263).ImpressionNames.USER_AGREEMENTS;
+  let obj = memo(7197);
+  obj2.type = memo(1264).ImpressionTypes.VIEW;
+  obj2.name = memo(1264).ImpressionNames.USER_AGREEMENTS;
   obj2.properties = { required_action: memo };
   useTrackImpressionDefault(obj2, {}, []);
   let tmp10 = null;
@@ -128,36 +128,36 @@ export default function NewTermsModal() {
     const obj7 = { maxFontSizeMultiplier: 2, variant: "heading-xxl/semibold", children: null };
     const intl = tmp6(1112).intl;
     obj7.children = intl.string(tmp6(1112).t["7glvXu"]);
-    const items1 = [closure_12(tmp6(5603).Text, obj7), , , , , , ];
+    const items1 = [closure_12(tmp6(5634).Text, obj7), , , , , , ];
     const obj8 = { variant: "body-md/normal", style: tmp.description, children: null };
     const intl2 = tmp6(1112).intl;
     const obj9 = { url: constants.TERMS_SUMMARY };
     obj8.children = intl2.format(tmp6(1112).t.CN0Hvb, obj9);
-    items1[1] = closure_12(tmp6(5603).Text, obj8);
+    items1[1] = closure_12(tmp6(5634).Text, obj8);
     const obj10 = { variant: "body-md/normal", children: null };
     const intl3 = tmp6(1112).intl;
     const obj11 = { url: constants.TERMS };
     obj10.children = intl3.format(tmp6(1112).t.iw0hFi, obj11);
-    items1[2] = closure_12(tmp6(5603).Text, obj10);
+    items1[2] = closure_12(tmp6(5634).Text, obj10);
     const obj12 = { variant: "body-md/normal", children: null };
     const intl4 = tmp6(1112).intl;
     const obj13 = { url: constants.PAID_TERMS };
     obj12.children = intl4.format(tmp6(1112).t["36klnD"], obj13);
-    items1[3] = closure_12(tmp6(5603).Text, obj12);
+    items1[3] = closure_12(tmp6(5634).Text, obj12);
     const obj14 = { variant: "body-md/normal", children: null };
     const intl5 = tmp6(1112).intl;
     const obj15 = { url: constants.PRIVACY };
     obj14.children = intl5.format(tmp6(1112).t.TquFBF, obj15);
-    items1[4] = closure_12(tmp6(5603).Text, obj14);
+    items1[4] = closure_12(tmp6(5634).Text, obj14);
     const obj16 = { variant: "body-md/normal", children: null };
     const intl6 = tmp6(1112).intl;
     const obj17 = { url: constants.GUIDELINES };
     obj16.children = intl6.format(tmp6(1112).t.ia96Tb, obj17);
-    items1[5] = closure_12(tmp6(5603).Text, obj16);
+    items1[5] = closure_12(tmp6(5634).Text, obj16);
     const obj18 = { variant: "body-md/normal", style: tmp.agreementDescription, children: null };
     const intl7 = tmp6(1112).intl;
     obj18.children = intl7.string(tmp6(1112).t["+USXQE"]);
-    items1[6] = closure_12(tmp6(5603).Text, obj18);
+    items1[6] = closure_12(tmp6(5634).Text, obj18);
     obj6.children = items1;
     const items2 = [closure_13(closure_8, obj6), , ];
     const obj19 = { style: tmp.stickyFooter, children: null };
@@ -172,22 +172,22 @@ export default function NewTermsModal() {
     };
     const intl8 = tmp6(1112).intl;
     obj20.text = intl8.string(tmp6(1112).t["+TBKL1"]);
-    obj19.children = closure_12(tmp6(5610).Button, obj20);
+    obj19.children = closure_12(tmp6(5641).Button, obj20);
     items2[1] = closure_12(closure_6, obj19);
     const obj21 = { style: null, source: null, color: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null };
     const items3 = [tmp.navbarRight, ];
     const obj41 = { top };
     items3[1] = obj41;
     obj21.style = items3;
-    obj21.source = tmp2(8583);
+    obj21.source = tmp2(8625);
     obj21.color = tmp.navbarRight.tintColor;
     obj21.onPress = handleMoreActions;
     const intl9 = tmp6(1112).intl;
     obj21.accessibilityLabel = intl9.string(tmp6(1112).t["UKOtz+"]);
-    items2[2] = closure_12(tmp2(12490), obj21);
+    items2[2] = closure_12(tmp2(12539), obj21);
     obj3.children = items2;
     tmp10 = closure_13(closure_6, obj3);
-    const tmp2Result = tmp2(12490);
+    const tmp2Result = tmp2(12539);
   }
   return tmp10;
 };

@@ -1,9 +1,9 @@
-// === Module 6343: DisplayProfile ===
+// === Module 6374: DisplayProfile ===
 
-// Module 6343 (DisplayProfile)
-import PremiumConstants from "PremiumConstants" /* 1388 */;
-import AvatarUtils from "AvatarUtils" /* 1412 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 6344 */;
+// Module 6374 (DisplayProfile)
+import PremiumConstants from "PremiumConstants" /* 1389 */;
+import AvatarUtils from "AvatarUtils" /* 1413 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 6375 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -302,8 +302,8 @@ prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
   obj2.guildId = this.guildId;
   return ProfileCustomizationUtils.getProfilePreviewValue(obj2);
 };
-prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
-  const obj2 = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
+prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingPronouns) {
+  const obj2 = { pendingValue: pendingPronouns, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let pronouns;
   if (_guildMemberProfile != null) {

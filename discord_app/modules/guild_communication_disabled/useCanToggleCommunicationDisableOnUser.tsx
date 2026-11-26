@@ -1,12 +1,12 @@
-// === Module 10039: useCanToggleCommunicationDisableOnUser ===
+// === Module 10081: useCanToggleCommunicationDisableOnUser ===
 
-// Module 10039 (useCanToggleCommunicationDisableOnUser)
+// Module 10081 (useCanToggleCommunicationDisableOnUser)
 import Constants from "Constants" /* 1071 */;
-import GuildRecord from "GuildRecord" /* 4879 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4949 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import UserStore from "UserStore" /* 1386 */;
+import GuildRecord from "GuildRecord" /* 4910 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import UserStore from "UserStore" /* 1387 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

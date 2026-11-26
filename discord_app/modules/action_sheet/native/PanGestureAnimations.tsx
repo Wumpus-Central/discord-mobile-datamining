@@ -1,11 +1,11 @@
-// === Module 13768: PanGestureAnimations ===
+// === Module 13820: PanGestureAnimations ===
 
-// Module 13768 (PanGestureAnimations)
+// Module 13820 (PanGestureAnimations)
 import native from "native" /* 1186 */;
-import _mod1653 from "module_1653" /* 1653 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import spring_spring from "spring/spring" /* 5613 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import spring_spring from "spring/spring" /* 5644 */;
 import size from "module_2" /* 2 */;
 
 let obj = { duration: 500, easing: native.STANDARD_EASING };
@@ -141,8 +141,8 @@ export default function usePanGesture(swipeVelocityThreshold) {
     vertical = true;
   }
   const isGestureInProgress = swipeVelocityThreshold.isGestureInProgress;
-  const sharedValue = _mod1653.useSharedValue(0);
-  const sharedValue1 = _mod1653.useSharedValue(0);
+  const sharedValue = _mod1654.useSharedValue(0);
+  const sharedValue1 = _mod1654.useSharedValue(0);
   const Gesture = LegacyBaseButton.Gesture;
   items = [_undefined6, sharedValue, translate, sharedValue1, isGestureInProgress, onStart];
   c0 = undefined;

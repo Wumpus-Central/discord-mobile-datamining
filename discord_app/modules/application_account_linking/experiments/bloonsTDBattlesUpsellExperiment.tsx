@@ -1,8 +1,8 @@
-// === Module 19251: bloonsTDBattlesUpsellExperiment ===
+// === Module 19314: bloonsTDBattlesUpsellExperiment ===
 
-// Module 19251 (bloonsTDBattlesUpsellExperiment)
-import accountLinkUpsellExperimentConfig from "accountLinkUpsellExperimentConfig" /* 19252 */;
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 19314 (bloonsTDBattlesUpsellExperiment)
+import accountLinkUpsellExperimentConfig from "accountLinkUpsellExperimentConfig" /* 19315 */;
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { 0: { enabled: true, orbQuantity: 100 }, 1: { enabled: true, orbQuantity: 200 } };

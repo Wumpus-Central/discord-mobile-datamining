@@ -1,16 +1,16 @@
-// === Module 15019: UserProfileIncomingFriendRequest ===
+// === Module 15069: UserProfileIncomingFriendRequest ===
 
-// Module 15019 (UserProfileIncomingFriendRequest)
+// Module 15069 (UserProfileIncomingFriendRequest)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

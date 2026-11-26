@@ -1,8 +1,8 @@
-// === Module 10564: GuildRoleSubscriptionSystemMessageConstants ===
+// === Module 10609: GuildRoleSubscriptionSystemMessageConstants ===
 
-// Module 10564 (GuildRoleSubscriptionSystemMessageConstants)
+// Module 10609 (GuildRoleSubscriptionSystemMessageConstants)
 import util from "util" /* 1112 */;
-import StickersTypes from "StickersTypes" /* 6749 */;
+import StickersTypes from "StickersTypes" /* 6780 */;
 import size from "module_2" /* 2 */;
 
 let items = [{ id: "781323471249604648", format_type: StickersTypes.StickerFormat.APNG, description: "Cheerful Choco jumps out of gift box", name: "Surprise" }, , , , ];

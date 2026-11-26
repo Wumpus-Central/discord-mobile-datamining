@@ -1,11 +1,11 @@
-// === Module 20178: FormChannelPicker ===
+// === Module 20242: FormChannelPicker ===
 
-// Module 20178 (FormChannelPicker)
-import asyncRequireImpl from "asyncRequireImpl" /* 2119 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import useChannelNameDefault from "useChannelName" /* 5628 */;
+// Module 20242 (FormChannelPicker)
+import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import useChannelNameDefault from "useChannelName" /* 5659 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -21,17 +21,17 @@ export default function FormChannelPicker(channelId) {
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp5Result = useChannelNameDefault(stateFromStores);
   if (null != stateFromStores) {
-    let TextIcon = tmp(16802).getChannelIconComponentOrDefault(stateFromStores);
-    const tmpResult = tmp(16802);
+    let TextIcon = tmp(16853).getChannelIconComponentOrDefault(stateFromStores);
+    const tmpResult = tmp(16853);
   } else {
-    TextIcon = tmp(7115).TextIcon;
+    TextIcon = tmp(7146).TextIcon;
   }
-  let obj2 = { icon: jsx(channelId(6113).TableRow.Icon, { IconComponent: TextIcon }), label: null, arrow: true, onPress: null };
+  let obj2 = { icon: jsx(channelId(6144).TableRow.Icon, { IconComponent: TextIcon }), label: null, arrow: true, onPress: null };
   if (tmp5Result == null) {
     const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp(1112).intl;
     obj3.children = intl.string(tmp(1112).t.r2ptsz);
-    tmp5Result = jsx(tmp(5603).Text, { variant: "body-md/medium", color: "text-muted", children: null });
+    tmp5Result = jsx(tmp(5634).Text, { variant: "body-md/medium", color: "text-muted", children: null });
   }
   obj2.label = tmp5Result;
   obj2.onPress = function handleSelectChannel() {
@@ -43,7 +43,7 @@ export default function FormChannelPicker(channelId) {
     }
     obj2.selectedChannelId = id;
     obj2.onChannelSelected = onChannelSelected;
-    obj.openLazy(asyncRequireImpl(20179, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(20243, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
   };
-  return jsx(channelId(6113).TableRow, { icon: jsx(channelId(6113).TableRow.Icon, { IconComponent: TextIcon }), label: null, arrow: true, onPress: null });
+  return jsx(channelId(6144).TableRow, { icon: jsx(channelId(6144).TableRow.Icon, { IconComponent: TextIcon }), label: null, arrow: true, onPress: null });
 };

@@ -1,18 +1,18 @@
-// === Module 19917: GuildSettingsModalIntegrationsApps ===
+// === Module 19981: GuildSettingsModalIntegrationsApps ===
 
-// Module 19917 (GuildSettingsModalIntegrationsApps)
+// Module 19981 (GuildSettingsModalIntegrationsApps)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import TableRowGroup from "TableRowGroup" /* 6109 */;
-import TableRow from "TableRow" /* 6113 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6127 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import TableRowGroup from "TableRowGroup" /* 6140 */;
+import TableRow from "TableRow" /* 6144 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 6158 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { icon: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.xs };
 obj2.icon = size;

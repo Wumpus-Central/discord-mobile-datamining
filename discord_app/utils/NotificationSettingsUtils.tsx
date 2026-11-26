@@ -1,19 +1,19 @@
-// === Module 7440: NotificationSettingsUtils ===
+// === Module 7471: NotificationSettingsUtils ===
 
-// Module 7440 (NotificationSettingsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import FlagUtils from "FlagUtils" /* 1404 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5982 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7441 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import MessageStore from "MessageStore" /* 6360 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6136 */;
+// Module 7471 (NotificationSettingsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7472 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import MessageStore from "MessageStore" /* 6391 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
 
 require = fn;
 const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, UserNotificationSettings } = Constants);
-const constants2 = fn(4957).NotificationSettingsUpdateType;
-const UnreadSetting = fn(6137).UnreadSetting;
+const constants2 = fn(4988).NotificationSettingsUpdateType;
+const UnreadSetting = fn(6168).UnreadSetting;
 const UserSettingsConstants = fn(1081);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 const NotificationLabels = { ForumThreadsCreatedOn: "enabled forum thread created notifs", ForumThreadsCreatedOff: "disabled forum thread created notifs", SuppressEveryoneOn: "enabled suppress everyone", SuppressEveryoneOff: "disabled suppress everyone", SuppressRolesOn: "enabled suppress roles", SuppressRolesOff: "disabled suppress roles", HighlightsOn: "enabled highlights", HighlightsOff: "disabled highlights", MobilePushOn: "enabled mobile push notifications", MobilePushOff: "disabled mobile push notifications", UnreadsAll: "unreads set to all messages", UnreadsMentions: "unreads set to mentions", UnreadsDefault: "unreads set to the default", NotificationsAll: "notifications set to all messages", NotificationsMentions: "notifications set to mentions", NotificationsNothing: "notifications set to nothing", NotificationsDefault: "notifications set to the default", OptedIn: "opted in to entity", OptedOut: "opted out from entity", Favorited: "favorited", UnFavorited: "unfavorited", Muted: "muted", Unmuted: "unmuted", MutedScheduledEvents: "muted scheduled events", UnmutedScheduledEvents: "unmuted scheduled events", OverrideDeleted: "channel override deleted" };
@@ -312,7 +312,7 @@ export function trackChannelNotificationSettingsUpdate(updateType) {
   }
   const isChannelMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, channelId);
   const tmp12 = num2 ^ num;
-  const obj4 = guildId(1404);
+  const obj4 = guildId(1405);
   const lastMessage = MessageStore.getLastMessage(channelId);
   let type;
   if (lastMessage != null) {
@@ -321,7 +321,7 @@ export function trackChannelNotificationSettingsUpdate(updateType) {
   if (type == null) {
     type = null;
   }
-  const removeFlagsResult = guildId(1404).removeFlags(tmp12, constants3.FAVORITED, constants3.OPT_IN_ENABLED);
+  const removeFlagsResult = guildId(1405).removeFlags(tmp12, constants3.FAVORITED, constants3.OPT_IN_ENABLED);
   const obj3 = {};
   const merged = Object.assign(computeResult1);
   const merged1 = Object.assign(LastMentionTimestampStore.getStats(guildId));

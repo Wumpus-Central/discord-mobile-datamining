@@ -1,15 +1,15 @@
-// === Module 17698: MessagesHeader ===
+// === Module 17755: MessagesHeader ===
 
-// Module 17698 (MessagesHeader)
+// Module 17755 (MessagesHeader)
 import nativeDefault from "native" /* 575 */;
-import _modDef1653 from "module_1653" /* 1653 */;
-import ButtonConstants from "ButtonConstants" /* 5616 */;
-import _modDef5703 from "module_5703" /* 5703 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6093 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7161 */;
-import _modDef7377 from "module_7377" /* 7377 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13101 */;
-import MessageRequestsButtonDefault from "MessageRequestsButton" /* 17699 */;
+import _modDef1654 from "module_1654" /* 1654 */;
+import ButtonConstants from "ButtonConstants" /* 5647 */;
+import _modDef5734 from "module_5734" /* 5734 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6124 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7192 */;
+import _modDef7408 from "module_7408" /* 7408 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13153 */;
+import MessageRequestsButtonDefault from "MessageRequestsButton" /* 17756 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -22,12 +22,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { headerPanel: { position: "relative", padding: PX_16, paddingBottom: nativeDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM }, headerPanelTitle: null, headerPanelButtons: null, headerBorder: null };
 let obj3 = { position: "relative", padding: PX_16, paddingBottom: nativeDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM };
 obj.headerPanelTitle = { paddingBottom: PX_8, flexDirection: "row", gap: nativeDefault.space.PX_8, justifyContent: "space-between" };
 let obj4 = { paddingBottom: PX_8, flexDirection: "row", gap: nativeDefault.space.PX_8, justifyContent: "space-between" };
-obj.headerPanelButtons = { height: fn(5616).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+obj.headerPanelButtons = { height: fn(5647).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 let obj6 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj6.backgroundColor = nativeDefault.colors.BORDER_SUBTLE;
@@ -36,7 +36,7 @@ obj6.height = 1;
 obj.headerBorder = obj6;
 let closure_10 = createStyles.createStyles(obj);
 let closure_11 = { code: "(function MessagesHeaderTsx1(){let[withSpring,scrollPosition,Reanimated3DefaultSpringConfig]=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0,Reanimated3DefaultSpringConfig)};})" };
-let obj5 = { height: fn(5616).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+let obj5 = { height: fn(5647).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx");
 
@@ -69,8 +69,8 @@ export default noop.memo(function MessagesHeader(height) {
   MessagesHeaderTsx1.__closure = items2;
   MessagesHeaderTsx1.__workletHash = 7032090280260;
   MessagesHeaderTsx1.__initData = tmp5;
-  const animatedStyle = require("module_1653").useAnimatedStyle(MessagesHeaderTsx1);
-  let obj2 = require("module_1653");
+  const animatedStyle = require("module_1654").useAnimatedStyle(MessagesHeaderTsx1);
+  let obj2 = require("module_1654");
   const isHomeDrawerEnabled = require("useHomeDrawerGesture").useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(_undefined2[13]).getRootNavigationRef();
@@ -125,11 +125,11 @@ export default noop.memo(function MessagesHeader(height) {
   obj6.children = closure_6(require("Text/Text").Text, { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: stringResult });
   const items3 = [closure_6(closure_4, obj6), , , ];
   const obj7 = { style: tmp.headerPanelButtons, children: null };
-  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7377, accessibilityLabel: null };
+  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7408, accessibilityLabel: null };
   const intl3 = tmp3(1112).intl;
   obj8.accessibilityLabel = intl3.string(require("util").t["5h0QOP"]);
   const items4 = [closure_6(require("IconButton").IconButton, obj8), closure_6(MessageRequestsButtonDefault, { noMargin: true, onPress: callback, alternateVariant: true }), , ];
-  const obj9 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: _modDef5703, onPress: callback1, maxFontSizeMultiplier: 1, text: null };
+  const obj9 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: _modDef5734, onPress: callback1, maxFontSizeMultiplier: 1, text: null };
   const intl4 = tmp3(1112).intl;
   obj9.text = intl4.string(require("util").t.zIJnA6);
   items4[2] = closure_6(require("components/Button/Button").Button, obj9);
@@ -139,7 +139,7 @@ export default noop.memo(function MessagesHeader(height) {
   const obj10 = { style: null };
   const items5 = [tmp.headerBorder, animatedStyle];
   obj10.style = items5;
-  items3[2] = closure_6(_modDef1653.View, obj10);
+  items3[2] = closure_6(_modDef1654.View, obj10);
   items3[3] = tmp16;
   obj5.children = items3;
   return closure_7(closure_4, obj5);

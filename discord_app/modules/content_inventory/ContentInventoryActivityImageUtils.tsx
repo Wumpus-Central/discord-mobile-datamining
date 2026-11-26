@@ -1,23 +1,23 @@
-// === Module 14840: ContentInventoryActivityImageUtils ===
+// === Module 14893: ContentInventoryActivityImageUtils ===
 
-// Module 14840 (ContentInventoryActivityImageUtils)
+// Module 14893 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1112 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import Constants2 from "Constants" /* 2144 */;
-import PlatformsDefault from "Platforms" /* 6147 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7484 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7620 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 7635 */;
-import useGame from "useGame" /* 8677 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8715 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8718 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11332 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 14841 */;
-import isOnXboxDefault from "isOnXbox" /* 14847 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 14848 */;
-import ApplicationStore from "ApplicationStore" /* 2164 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import Constants2 from "Constants" /* 2145 */;
+import PlatformsDefault from "Platforms" /* 6178 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7515 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7651 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 7666 */;
+import useGame from "useGame" /* 8719 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8757 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8760 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11378 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 14894 */;
+import isOnXboxDefault from "isOnXbox" /* 14900 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 14901 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 
@@ -214,7 +214,7 @@ function useRichImageForActivity(activity, activityApplication) {
   }
   const data = useGame.useGame(canonicalGameId).data;
   if (null == activity) {
-    return { largeImage: "Array", smallImage: "analyticsLocations" };
+    return { largeImage: "Array", smallImage: "channel_id" };
   } else {
     let large_image;
     if (activity != null) {

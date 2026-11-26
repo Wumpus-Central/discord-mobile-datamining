@@ -1,17 +1,17 @@
-// === Module 12504: AgeVerificationMethodsContainer ===
+// === Module 12553: AgeVerificationMethodsContainer ===
 
-// Module 12504 (AgeVerificationMethodsContainer)
+// Module 12553 (AgeVerificationMethodsContainer)
 import nativeDefault from "native" /* 575 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5780 */;
-import MetricEvents from "MetricEvents" /* 5785 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5811 */;
+import MetricEvents from "MetricEvents" /* 5816 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VerificationMethod = fn(6796).VerificationMethod;
-const SafetyHubLinks = fn(7852).SafetyHubLinks;
+const VerificationMethod = fn(6827).VerificationMethod;
+const SafetyHubLinks = fn(7886).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { content: { marginTop: nativeDefault.space.PX_8 }, errorContainer: null, noMethodsText: null, buttonGroup: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
 obj2.errorContainer = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
@@ -26,7 +26,7 @@ export function AgeVerificationMethodsContainer(ageVerificationMethods) {
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
   const tmp = closure_8();
-  const isSuspendedUser = prop(7851).useIsSuspendedUser();
+  const isSuspendedUser = prop(7885).useIsSuspendedUser();
   items = [prop];
   const effect = noop.useEffect(() => {
     let someResult;
@@ -42,10 +42,10 @@ export function AgeVerificationMethodsContainer(ageVerificationMethods) {
   let obj3 = { type: "info", message: null, role: "none" };
   const intl = prop(1112).intl;
   obj3.message = intl.string(prop(1112).t.El4aXl);
-  const items1 = [closure_6(prop(7907).InlineNotice, obj3), ];
+  const items1 = [closure_6(prop(7941).InlineNotice, obj3), ];
   if (null != prop) {
     if (0 !== prop.length) {
-      let mapped = prop.map((label) => closure_1_6(prop(6113).TableRow, {
+      let mapped = prop.map((label) => closure_1_6(prop(6144).TableRow, {
         label: label.title,
         subLabel: label.description,
         onPress() {
@@ -57,37 +57,37 @@ export function AgeVerificationMethodsContainer(ageVerificationMethods) {
     const obj4 = { hasIcons: false, children: mapped };
     items1[1] = closure_6(tmp8, obj4);
     obj2.children = items1;
-    const items2 = [closure_7(prop(6084).Stack, obj2), ];
+    const items2 = [closure_7(prop(6115).Stack, obj2), ];
     let tmp7Result = isSuspendedUser;
     if (isSuspendedUser) {
       const obj5 = { variant: "body-xs/medium", children: null };
       const intl4 = tmp2(1112).intl;
       const obj6 = {
         handleOnHelpUrlHook() {
-              modalSessionId(7836).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
+              modalSessionId(7870).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
             }
       };
-      obj5.children = intl4.format(modalSessionId(3498).htWh1G, obj6);
-      tmp7Result = closure_6(tmp2(5603).Text, obj5);
+      obj5.children = intl4.format(modalSessionId(3499).htWh1G, obj6);
+      tmp7Result = closure_6(tmp2(5634).Text, obj5);
     }
     const obj7 = { spacing: 8, align: "center", children: null };
     items2[1] = tmp7Result;
     obj7.children = items2;
-    return closure_7(prop(6084).Stack, obj7);
+    return closure_7(prop(6115).Stack, obj7);
   }
   const obj8 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: null };
   const obj9 = { variant: "body-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
   const intl2 = tmp2(1112).intl;
-  obj9.children = intl2.string(modalSessionId(3498).cR6336);
-  const items3 = [closure_6(prop(5603).Text, obj9), ];
+  obj9.children = intl2.string(modalSessionId(3499).cR6336);
+  const items3 = [closure_6(prop(5634).Text, obj9), ];
   const obj10 = { style: tmp.buttonGroup, children: null };
   const obj11 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = tmp2(1112).intl;
-  obj11.text = intl3.string(modalSessionId(3498).hDvmYP);
-  obj11.onPress = prop(7850).getAgeVerificationMethods;
-  obj10.children = closure_6(prop(5610).Button, obj11);
-  items3[1] = closure_6(prop(6832).ButtonGroup, obj10);
+  obj11.text = intl3.string(modalSessionId(3499).hDvmYP);
+  obj11.onPress = prop(7884).getAgeVerificationMethods;
+  obj10.children = closure_6(prop(5641).Button, obj11);
+  items3[1] = closure_6(prop(6863).ButtonGroup, obj10);
   obj8.children = items3;
-  mapped = closure_7(tmp2(6084).Stack, obj8);
-  const obj = prop(7851);
+  mapped = closure_7(tmp2(6115).Stack, obj8);
+  const obj = prop(7885);
 }

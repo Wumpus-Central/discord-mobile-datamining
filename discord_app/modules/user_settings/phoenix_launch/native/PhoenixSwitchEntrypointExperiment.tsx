@@ -1,7 +1,7 @@
-// === Module 17327: PhoenixSwitchEntrypointExperiment ===
+// === Module 17378: PhoenixSwitchEntrypointExperiment ===
 
-// Module 17327 (PhoenixSwitchEntrypointExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 17378 (PhoenixSwitchEntrypointExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-11-phoenix-switch-entrypoint", kind: "user", defaultConfig: { enabled: false, requiresNitro: true }, variations: null };

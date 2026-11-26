@@ -1,7 +1,7 @@
-// === Module 19842: SoundboardMobileCreationExperiment ===
+// === Module 19906: SoundboardMobileCreationExperiment ===
 
-// Module 19842 (SoundboardMobileCreationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 19906 (SoundboardMobileCreationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", name: "2026-11-mobile-soundboard-sound-creation", defaultConfig: { enabled: false }, variations: null };

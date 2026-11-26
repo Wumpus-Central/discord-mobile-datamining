@@ -1,10 +1,10 @@
-// === Module 1385: ApexLaunchLatch ===
+// === Module 1386: ApexLaunchLatch ===
 
-// Module 1385 (ApexLaunchLatch)
+// Module 1386 (ApexLaunchLatch)
 import Storage2 from "Storage" /* 510 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1250 */;
-import ApexLaunchLatchFlags from "ApexLaunchLatchFlags" /* 1251 */;
-import ApexUnitUtils from "ApexUnitUtils" /* 1252 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
+import ApexLaunchLatchFlags from "ApexLaunchLatchFlags" /* 1252 */;
+import ApexUnitUtils from "ApexUnitUtils" /* 1253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -753,7 +753,7 @@ prototype3["trackExposureSuppression"] = function trackExposureSuppression(exper
   }
 };
 
-export const SHADOW_LATCH_FLAGS = fn(1251).SHADOW_LATCH_FLAGS;
+export const SHADOW_LATCH_FLAGS = fn(1252).SHADOW_LATCH_FLAGS;
 export { StorageLaunchLatchBackend };
 export { ApexLaunchLatch };
 export { ApexLaunchLatchController };

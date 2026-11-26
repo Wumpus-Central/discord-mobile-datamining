@@ -1,9 +1,9 @@
-// === Module 11501: useFrameRunsInBackground ===
+// === Module 11549: useFrameRunsInBackground ===
 
-// Module 11501 (useFrameRunsInBackground)
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 7659 */;
+// Module 11549 (useFrameRunsInBackground)
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 7690 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
-import FramesStore from "FramesStore" /* 6905 */;
+import FramesStore from "FramesStore" /* 6936 */;
 
 const require = globalThis.__r;
 

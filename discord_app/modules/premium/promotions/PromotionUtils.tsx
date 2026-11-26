@@ -1,16 +1,16 @@
-// === Module 9359: PromotionUtils ===
+// === Module 9401: PromotionUtils ===
 
-// Module 9359 (PromotionUtils)
+// Module 9401 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import PlatformUtils from "PlatformUtils" /* 1378 */;
-import FlagUtils from "FlagUtils" /* 1404 */;
-import dismissible_content from "dismissible_content" /* 4845 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4846 */;
-import constants from "constants" /* 9169 */;
+import PlatformUtils from "PlatformUtils" /* 1379 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import dismissible_content from "dismissible_content" /* 4876 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4877 */;
+import constants from "constants" /* 9211 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1230 */;
-import PromotionRecord from "PromotionRecord" /* 9121 */;
-import PromotionsStore from "PromotionsStore" /* 9120 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import PromotionRecord from "PromotionRecord" /* 9163 */;
+import PromotionsStore from "PromotionsStore" /* 9162 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -27,7 +27,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -110,7 +110,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1388).PromotionFlags;
+const PromotionFlags = fn(1389).PromotionFlags;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: closure_10 } = Constants);
 const size = fn(2);

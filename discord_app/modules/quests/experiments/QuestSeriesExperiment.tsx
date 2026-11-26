@@ -1,7 +1,7 @@
-// === Module 9880: QuestSeriesExperiment ===
+// === Module 9922: QuestSeriesExperiment ===
 
-// Module 9880 (QuestSeriesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 9922 (QuestSeriesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-11-multiquest-client", kind: "user", defaultConfig: { enabled: false }, variations: null };

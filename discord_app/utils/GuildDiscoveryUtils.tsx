@@ -1,13 +1,13 @@
-// === Module 8893: GuildDiscoveryUtils ===
+// === Module 8935: GuildDiscoveryUtils ===
 
-// Module 8893 (GuildDiscoveryUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
-import HTTPUtils from "HTTPUtils" /* 1284 */;
-import _modDef1488 from "module_1488" /* 1488 */;
+// Module 8935 (GuildDiscoveryUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import _modDef1489 from "module_1489" /* 1489 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4945 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5633 */;
-import GuildStore from "GuildStore" /* 4883 */;
+import LurkingStore from "LurkingStore" /* 4976 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5664 */;
+import GuildStore from "GuildStore" /* 4914 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
@@ -171,7 +171,7 @@ let closure_13 = async function _getDiscoverableGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -193,7 +193,7 @@ let closure_13 = async function _getDiscoverableGuild() {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
             const obj4 = { guild_ids };
-            request.query = _modDef1488.stringify(obj4);
+            request.query = _modDef1489.stringify(obj4);
             c5 = 2;
             c6 = 1;
             const obj5 = { value: HTTP.get(request), done: false };
@@ -251,7 +251,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {

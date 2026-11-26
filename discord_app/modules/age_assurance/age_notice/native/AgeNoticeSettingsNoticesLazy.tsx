@@ -1,7 +1,7 @@
-// === Module 16270: AgeNoticeSettingsNoticesLazy ===
+// === Module 16321: AgeNoticeSettingsNoticesLazy ===
 
-// Module 16270 (AgeNoticeSettingsNoticesLazy)
-import AgeNoticeSettingsNotices from "AgeNoticeSettingsNotices" /* 16271 */;
+// Module 16321 (AgeNoticeSettingsNoticesLazy)
+import AgeNoticeSettingsNotices from "AgeNoticeSettingsNotices" /* 16322 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/AgeNoticeSettingsNoticesLazy.tsx");

@@ -1,7 +1,7 @@
-// === Module 12274: openGameOrganizationJoinModal ===
+// === Module 12324: openGameOrganizationJoinModal ===
 
-// Module 12274 (openGameOrganizationJoinModal)
-import checkGameOrganizationJoinEligibilityDefault from "checkGameOrganizationJoinEligibility" /* 12275 */;
+// Module 12324 (openGameOrganizationJoinModal)
+import checkGameOrganizationJoinEligibilityDefault from "checkGameOrganizationJoinEligibility" /* 12325 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ let closure_5 = async function _openGameOrganizationJoinModal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -63,7 +63,7 @@ let closure_5 = async function _openGameOrganizationJoinModal(arg0) {
     }
   }
 };
-let closure_4 = fn(11869).GAME_ORGANIZATION_JOIN_MODAL_KEY;
+let closure_4 = fn(11917).GAME_ORGANIZATION_JOIN_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/openGameOrganizationJoinModal.tsx");
 

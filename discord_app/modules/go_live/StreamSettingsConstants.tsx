@@ -1,9 +1,9 @@
-// === Module 5912: StreamSettingsConstants ===
+// === Module 5943: StreamSettingsConstants ===
 
-// Module 5912 (StreamSettingsConstants)
+// Module 5943 (StreamSettingsConstants)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
-import PremiumConstants from "PremiumConstants" /* 1388 */;
+import PremiumConstants from "PremiumConstants" /* 1389 */;
 import size from "module_2" /* 2 */;
 
 const BoostedGuildTiers = Constants.BoostedGuildTiers;

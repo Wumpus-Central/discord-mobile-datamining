@@ -1,21 +1,21 @@
-// === Module 20280: NativeIntentsManager ===
+// === Module 20344: NativeIntentsManager ===
 
-// Module 20280 (NativeIntentsManager)
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import UserUtilsDefault from "UserUtils" /* 5068 */;
-import useChannelName from "useChannelName" /* 5628 */;
-import getChannelIcon from "getChannelIcon" /* 14452 */;
-import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 20281 */;
-import IntentsBindingsDefault from "IntentsBindings" /* 20282 */;
+// Module 20344 (NativeIntentsManager)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import UserUtilsDefault from "UserUtils" /* 5099 */;
+import useChannelName from "useChannelName" /* 5659 */;
+import getChannelIcon from "getChannelIcon" /* 14504 */;
+import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 20345 */;
+import IntentsBindingsDefault from "IntentsBindings" /* 20346 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import UserStore from "UserStore" /* 1386 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import UserStore from "UserStore" /* 1387 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
 function indexingEnabled() {

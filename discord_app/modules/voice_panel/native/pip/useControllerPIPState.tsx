@@ -1,25 +1,25 @@
-// === Module 19387: useControllerPIPState ===
+// === Module 19450: useControllerPIPState ===
 
-// Module 19387 (useControllerPIPState)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4933 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 10066 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18189 */;
-import useSelfHasVideoDefault from "useSelfHasVideo" /* 19389 */;
-import calculatePIPStateDefault from "calculatePIPState" /* 19390 */;
+// Module 19450 (useControllerPIPState)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4964 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 10108 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18248 */;
+import useSelfHasVideoDefault from "useSelfHasVideo" /* 19452 */;
+import calculatePIPStateDefault from "calculatePIPState" /* 19453 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4860 */;
-import FramesStore from "FramesStore" /* 6905 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 15183 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
+import FramesStore from "FramesStore" /* 6936 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 15233 */;
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19391);
+const useExternalPipSelectedTileDefault = tmp6(19454);
 require = fn;
-const VoicePanelModes = fn(11734).VoicePanelModes;
-const ActivityPanelModes = fn(5638).ActivityPanelModes;
-const asLaunched = fn(6906).asLaunched;
+const VoicePanelModes = fn(11782).VoicePanelModes;
+const ActivityPanelModes = fn(5669).ActivityPanelModes;
+const asLaunched = fn(6937).asLaunched;
 let closure_12 = { code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})" };
 let closure_13 = { code: "(function useControllerPIPStateTsx2(current){let[clampPIPScale,pipState,scale]=this.__closure;const newScale=clampPIPScale({scale:current.scale,width:pipState.width,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,windowDimensions:current.windowDimensions,safeArea:current.safeArea,pipAvoidanceSpecs:current.pipAvoidanceSpecs});if(current.scale!==newScale){scale.set(newScale);}})" };
 const size = fn(2);
@@ -35,9 +35,9 @@ export function useControllerPIPState(channelId) {
   const mode = channelId.mode;
   _slicedToArray = undefined;
   ({ windowDimensions, pipAvoidanceSpecs, safeArea } = channelId);
-  let obj = require("module_1653");
+  let obj = require("module_1654");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
-  const ref = noop.useRef({ id: "displayName", mode: "isArray", width: false, height: null, containerHeight: "sku", showSecondaryPIP: null, scale: sharedValue });
+  const ref = noop.useRef({ id: "displayName", mode: "isArray", width: false, height: null, containerHeight: "transparent", showSecondaryPIP: null, scale: sharedValue });
   const obj2 = require("VoicePanelPIPScaleCache");
   items = [PIPSpeakerStore];
   closure_129_0 = channelId;
@@ -150,7 +150,7 @@ export function useControllerPIPState(channelId) {
   useControllerPIPStateTsx2.__closure = items6;
   useControllerPIPStateTsx2.__workletHash = 16873305114518;
   useControllerPIPStateTsx2.__initData = tmp24;
-  const animatedReaction = require("module_1653").useAnimatedReaction(useControllerPIPStateTsx1, useControllerPIPStateTsx2);
+  const animatedReaction = require("module_1654").useAnimatedReaction(useControllerPIPStateTsx1, useControllerPIPStateTsx2);
   const items7 = [focusedId, layoutManager, tmp11];
   const effect1 = noop.useEffect(() => {
     _undefined3((safeAreaState) => {

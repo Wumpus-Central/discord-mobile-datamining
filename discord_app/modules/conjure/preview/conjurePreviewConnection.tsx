@@ -1,23 +1,23 @@
-// === Module 7690: conjurePreviewConnection ===
+// === Module 7724: conjurePreviewConnection ===
 
-// Module 7690 (conjurePreviewConnection)
+// Module 7724 (conjurePreviewConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7636 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 7642 */;
-import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 7645 */;
-import conjureChatConnection from "conjureChatConnection" /* 7680 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7691 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 7693 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11424 */;
-import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 14613 */;
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 14684 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 14689 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 14692 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 14693 */;
-import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 14694 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7667 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7673 */;
+import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 7676 */;
+import conjureChatConnection from "conjureChatConnection" /* 7713 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7725 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 7727 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11471 */;
+import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 14666 */;
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 14737 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 14742 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 14745 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 14746 */;
+import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 14747 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1386 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6903 */;
+import UserStore from "UserStore" /* 1387 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 
 require = fn;
 let closure_6 = async function _refetchWidgetData() {
@@ -31,7 +31,7 @@ let closure_6 = async function _refetchWidgetData() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -171,7 +171,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -203,7 +203,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
         closure_129_0 = value;
         if (closure_129_0.ok) {
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: "+95" };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;

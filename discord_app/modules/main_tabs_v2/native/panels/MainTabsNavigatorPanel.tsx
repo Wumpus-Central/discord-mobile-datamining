@@ -1,15 +1,15 @@
-// === Module 17665: MainTabsNavigatorPanel ===
+// === Module 17722: MainTabsNavigatorPanel ===
 
-// Module 17665 (MainTabsNavigatorPanel)
+// Module 17722 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
-import RootNavigationRef from "RootNavigationRef" /* 5189 */;
-import ChatInputUtils from "ChatInputUtils" /* 5197 */;
-import transitionToChannel from "transitionToChannel" /* 6095 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7813 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17666 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17667 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17672 */;
+import RootNavigationRef from "RootNavigationRef" /* 5220 */;
+import ChatInputUtils from "ChatInputUtils" /* 5228 */;
+import transitionToChannel from "transitionToChannel" /* 6126 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17723 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17724 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,11 +20,11 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1071);
 ({ ComponentActions: closure_8, ME: closure_9 } = Constants);
-const isStaticChannelRoute = fn(4868).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4899).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -86,11 +86,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(17667);
+        obj = obj(17724);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(5197).dismissKeyboard();
-        const objResult = obj(5197);
+        obj(5228).dismissKeyboard();
+        const objResult = obj(5228);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

@@ -1,17 +1,17 @@
-// === Module 9485: UserProfileCustomStatusBubble ===
+// === Module 9527: UserProfileCustomStatusBubble ===
 
-// Module 9485 (UserProfileCustomStatusBubble)
+// Module 9527 (UserProfileCustomStatusBubble)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import UserSettings from "UserSettings" /* 4837 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5226 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6349 */;
-import EmojiDefault from "Emoji" /* 7457 */;
-import inlineStyles from "inlineStyles" /* 7912 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 9487 */;
+import PlatformUtils2 from "PlatformUtils" /* 1379 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import UserSettings from "UserSettings" /* 4868 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
+import EmojiDefault from "Emoji" /* 7488 */;
+import inlineStyles from "inlineStyles" /* 7946 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 9529 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -144,16 +144,16 @@ function EmojiOnlyStatusContent(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const EMOJI_URL_BASE_SIZE = fn(1389).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1390).EMOJI_URL_BASE_SIZE;
 const Fonts = fn(1082).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let str = "";
 if (PlatformUtils.isAndroid()) {
   str = "\u00A0";
 }
-let createStyles = fn(5012);
+let createStyles = fn(5043);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = { container: { position: "relative" }, bubble: null, statusBubble: null, statusBubbleMeasureable: null, smallCircle: null, largeCircle: null, addStatusIconSpacer: null, statusBubbleLeftAligned: null };
   colors = nativeDefault.colors;
@@ -182,8 +182,8 @@ let closure_13 = createStyles.createStyles((arg0) => {
   return obj;
 });
 let closure_15 = { textVariant: "body-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-let closure_16 = { [fn(7526).UserProfileThemeTypes.PREVIEW]: { textVariant: "body-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
-createStyles = fn(5012);
+let closure_16 = { [fn(7557).UserProfileThemeTypes.PREVIEW]: { textVariant: "body-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+createStyles = fn(5043);
 let closure_19 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");

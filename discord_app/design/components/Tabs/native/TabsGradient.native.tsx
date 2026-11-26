@@ -1,12 +1,12 @@
-// === Module 13747: TabsGradient ===
+// === Module 13799: TabsGradient ===
 
-// Module 13747 (TabsGradient)
-import _mod1653 from "module_1653" /* 1653 */;
-import LinearGradientDefault from "LinearGradient" /* 5567 */;
-import spring_spring from "spring/spring" /* 5613 */;
+// Module 13799 (TabsGradient)
+import _mod1654 from "module_1654" /* 1654 */;
+import LinearGradientDefault from "LinearGradient" /* 5598 */;
+import spring_spring from "spring/spring" /* 5644 */;
 import noop from "module_19" /* 19 */;
 
-const module_1653 = _mod1653;
+const module_1654 = _mod1654;
 
 require = fn;
 function useGradientAnimatedStyle(tmpResult) {
@@ -30,14 +30,14 @@ function useGradientAnimatedStyle(tmpResult) {
   TabsGradientNativeTsx1.__closure = items1;
   TabsGradientNativeTsx1.__workletHash = 15771419844398;
   TabsGradientNativeTsx1.__initData = tmp;
-  return _mod1653.useAnimatedStyle(TabsGradientNativeTsx1);
+  return _mod1654.useAnimatedStyle(TabsGradientNativeTsx1);
 }
 const HorizontalGradient = fn(1071).HorizontalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const LinearGradient = module_1653.createAnimatedComponent(LinearGradientDefault);
+const LinearGradient = module_1654.createAnimatedComponent(LinearGradientDefault);
 let closure_8 = { mass: 1, damping: 30, stiffness: 250 };
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles({ gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 }, left: { left: 0 }, right: { right: 0 } });
 let closure_10 = { code: "(function TabsGradientNativeTsx1(){let[withSpring,visible,SPRING_CONFIG]=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};})" };
 let closure_12 = { code: "(function TabsGradientNativeTsx2(){let[itemDimensions,state]=this.__closure;const items=itemDimensions.get();const itemWidths=items.reduce(function(s,layout){var _layout$width;return s+((_layout$width=layout===null||layout===void 0?void 0:layout.width)!==null&&_layout$width!==void 0?_layout$width:0);},0);const itemsSpacing=items.length*state.itemSpacing;return itemWidths+itemsSpacing;})" };
@@ -72,7 +72,7 @@ export default function TabsGradient(arg0) {
   TabsGradientNativeTsx2.__closure = items1;
   TabsGradientNativeTsx2.__workletHash = 829705063742;
   TabsGradientNativeTsx2.__initData = tmp3;
-  const derivedValue = _mod1653.useDerivedValue(TabsGradientNativeTsx2);
+  const derivedValue = _mod1654.useDerivedValue(TabsGradientNativeTsx2);
   const items2 = [closure_13, scrollOffset, derivedValue, pageWidth];
   c0 = undefined;
   c1 = undefined;
@@ -93,8 +93,8 @@ export default function TabsGradient(arg0) {
   TabsGradientNativeTsx3.__closure = items3;
   TabsGradientNativeTsx3.__workletHash = 2315316338857;
   TabsGradientNativeTsx3.__initData = tmp7;
-  const tmpResult = _mod1653;
-  const tmp12 = useGradientAnimatedStyle(_mod1653.useDerivedValue(TabsGradientNativeTsx3));
+  const tmpResult = _mod1654;
+  const tmp12 = useGradientAnimatedStyle(_mod1654.useDerivedValue(TabsGradientNativeTsx3));
   const items4 = [closure_14, scrollOffset, derivedValue, pageWidth];
   c0 = undefined;
   c1 = undefined;
@@ -112,7 +112,7 @@ export default function TabsGradient(arg0) {
   TabsGradientNativeTsx4.__closure = items5;
   TabsGradientNativeTsx4.__workletHash = 2346791353228;
   TabsGradientNativeTsx4.__initData = tmp13;
-  const tmpResult2 = _mod1653;
+  const tmpResult2 = _mod1654;
   const tmp18 = closure_9();
   const items6 = [colors];
   const obj2 = { children: null };
@@ -129,7 +129,7 @@ export default function TabsGradient(arg0) {
   const obj4 = { start: HorizontalGradient.START, end: HorizontalGradient.END, colors: memo, style: null, pointerEvents: "none" };
   const items9 = [, , ];
   ({ right: arr10[0], gradient: arr10[1] } = tmp18);
-  items9[2] = useGradientAnimatedStyle(_mod1653.useDerivedValue(TabsGradientNativeTsx4));
+  items9[2] = useGradientAnimatedStyle(_mod1654.useDerivedValue(TabsGradientNativeTsx4));
   obj4.style = items9;
   items8[1] = React4(LinearGradient, obj4);
   obj2.children = items8;

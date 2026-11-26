@@ -1,15 +1,15 @@
-// === Module 18854: ConjureFrameUpdateBar ===
+// === Module 18917: ConjureFrameUpdateBar ===
 
-// Module 18854 (ConjureFrameUpdateBar)
+// Module 18917 (ConjureFrameUpdateBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import Pressables from "Pressables" /* 6121 */;
-import restartFrames from "restartFrames" /* 14019 */;
-import RefreshIcon from "RefreshIcon" /* 14025 */;
+import _modDef4245 from "module_4245" /* 4245 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import Pressables from "Pressables" /* 6152 */;
+import restartFrames from "restartFrames" /* 14071 */;
+import RefreshIcon from "RefreshIcon" /* 14077 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6905 */;
+import FramesStore from "FramesStore" /* 6936 */;
 
 require = fn;
 class ConjureFrameUpdateBarContent {
@@ -32,10 +32,10 @@ class ConjureFrameUpdateBarContent {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(18850).useConjureFrameUpdateAvailable;
+let closure_6 = fn(18913).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flex: 1 }, bar: null, text: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, zIndex: 100, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, flexDirection: "row", alignItems: "center", minHeight: 45, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.bar = rect;

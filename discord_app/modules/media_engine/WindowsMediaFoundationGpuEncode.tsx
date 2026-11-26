@@ -1,7 +1,7 @@
-// === Module 15498: WindowsMediaFoundationGpuEncode ===
+// === Module 15549: WindowsMediaFoundationGpuEncode ===
 
-// Module 15498 (WindowsMediaFoundationGpuEncode)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 15549 (WindowsMediaFoundationGpuEncode)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-12-wmf-gpu-encode", kind: "user", defaultConfig: { enabled: false }, variations: null };

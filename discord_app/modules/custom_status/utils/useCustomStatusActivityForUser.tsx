@@ -1,8 +1,8 @@
-// === Module 9763: useCustomStatusActivityForUser ===
+// === Module 9805: useCustomStatusActivityForUser ===
 
-// Module 9763 (useCustomStatusActivityForUser)
+// Module 9805 (useCustomStatusActivityForUser)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5983 */;
+import PresenceStore from "PresenceStore" /* 6014 */;
 
 const require = globalThis.__r;
 

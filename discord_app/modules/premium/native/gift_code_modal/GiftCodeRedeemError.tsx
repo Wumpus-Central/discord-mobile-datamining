@@ -1,16 +1,16 @@
-// === Module 11904: GiftCodeRedeemError ===
+// === Module 11952: GiftCodeRedeemError ===
 
-// Module 11904 (GiftCodeRedeemError)
+// Module 11952 (GiftCodeRedeemError)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Link from "Link" /* 1501 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import components_Button_Button from "components/Button/Button" /* 5610 */;
-import FastImageDefault from "FastImage" /* 5699 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6099 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7449 */;
-import _modDef11905 from "module_11905" /* 11905 */;
-import _modDef11906 from "module_11906" /* 11906 */;
+import Link from "Link" /* 1502 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import components_Button_Button from "components/Button/Button" /* 5641 */;
+import FastImageDefault from "FastImage" /* 5730 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7480 */;
+import _modDef11953 from "module_11953" /* 11953 */;
+import _modDef11954 from "module_11954" /* 11954 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 let obj2 = { container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 }, header: { marginTop: 32, textAlign: "center" }, message: { marginTop: 8, textAlign: "center" }, footer: { paddingHorizontal: 24 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -30,9 +30,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp8Result = _modDef11905;
+    let tmp8Result = _modDef11953;
   } else {
-    tmp8Result = _modDef11906;
+    tmp8Result = _modDef11954;
   }
   items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), , ];
   const obj4 = { variant: "heading-xl/semibold", style: tmp.header, children: null };

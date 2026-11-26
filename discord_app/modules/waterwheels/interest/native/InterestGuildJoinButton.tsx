@@ -1,18 +1,18 @@
-// === Module 17968: InterestGuildJoinButton ===
+// === Module 18025: InterestGuildJoinButton ===
 
-// Module 17968 (InterestGuildJoinButton)
+// Module 18025 (InterestGuildJoinButton)
 import nativeDefault from "native" /* 575 */;
-import _modDef2654 from "module_2654" /* 2654 */;
-import useGetIsMountedDefault from "useGetIsMounted" /* 9471 */;
+import _modDef2655 from "module_2655" /* 2655 */;
+import useGetIsMountedDefault from "useGetIsMounted" /* 9513 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 4863 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 4894 */;
 
 const require = fn;
 const View = fn(17).View;
 let jsx = fn(21).jsx;
-const createStyles = fn(5012);
+const createStyles = fn(5043);
 const obj2 = { button: { width: nativeDefault.space.PX_64 + nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -40,7 +40,7 @@ export default function InterestGuildJoinButton(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -105,12 +105,12 @@ export default function InterestGuildJoinButton(guildId) {
   const items1 = [guildId];
   let stateFromStores = guildId(504).useStateFromStores(items, () => GuildMembershipStore.isMember(guildId), items1);
   let obj = guildId(504);
-  const currentUserGuildJoinRequest = guildId(6978).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(7009).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  const tmp7 = applicationStatus === guildId(5048).GuildJoinRequestApplicationStatuses.SUBMITTED;
+  const tmp7 = applicationStatus === guildId(5079).GuildJoinRequestApplicationStatuses.SUBMITTED;
   _slicedToArray = tmp7;
   [loading, closure_6] = loading.useState(false);
   closure_7 = useGetIsMountedDefault();
@@ -121,17 +121,17 @@ export default function InterestGuildJoinButton(guildId) {
     let stringResult = string(t.cEnaWx);
     const intl4 = tmp2(1112).intl;
     let obj3 = { guild: guildName };
-    let formatToPlainStringResult = intl4.formatToPlainString(_modDef2654.t1du0D, obj3);
+    let formatToPlainStringResult = intl4.formatToPlainString(_modDef2655.t1du0D, obj3);
   } else if (tmp7) {
     stringResult = string(t.tQqnak);
     const intl3 = tmp2(1112).intl;
     let obj4 = { guild: guildName };
-    formatToPlainStringResult = intl3.formatToPlainString(_modDef2654.nQnkb3, obj4);
+    formatToPlainStringResult = intl3.formatToPlainString(_modDef2655.nQnkb3, obj4);
   } else {
     stringResult = string(t.VJlc0S);
     const intl2 = tmp2(1112).intl;
     let obj5 = { guild: guildName };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef2654.NOfX8z, obj5);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef2655.NOfX8z, obj5);
   }
   let button;
   if (!fullWidth) {
@@ -167,6 +167,6 @@ export default function InterestGuildJoinButton(guildId) {
     }
     return applyArgumentsResult;
   };
-  obj6.children = jsx(guildId(5610).Button, obj7);
+  obj6.children = jsx(guildId(5641).Button, obj7);
   return jsx(closure_6, obj6);
 };

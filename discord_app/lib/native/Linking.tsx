@@ -1,8 +1,8 @@
-// === Module 5691: Linking ===
+// === Module 5722: Linking ===
 
-// Module 5691 (Linking)
+// Module 5722 (Linking)
 import _mod17 from "module_17" /* 17 */;
-import handleURL from "handleURL" /* 5688 */;
+import handleURL from "handleURL" /* 5719 */;
 import size from "module_2" /* 2 */;
 
 const Linking = _mod17.Linking;
@@ -14,6 +14,7 @@ export default {
     if (arg2 === undefined) {
       flag = true;
     }
+    const merged = Object.assign(arg3);
     handleURL.default(arg0, arg1, { allowExternal: flag });
   },
   openURLExternally(href, SAFARI) {

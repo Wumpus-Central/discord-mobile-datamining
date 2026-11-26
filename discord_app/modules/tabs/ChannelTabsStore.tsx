@@ -1,16 +1,15 @@
-// === Module 11480: ChannelTabsStore ===
+// === Module 11527: ChannelTabsStore ===
 
-// Module 11480 (ChannelTabsStore)
+// Module 11527 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5828 */;
-import TabsExperimentDefault from "TabsExperiment" /* 11482 */;
+import FrecencyDefault from "Frecency" /* 5859 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1245 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5049 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4915 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
-import UserStore from "UserStore" /* 1386 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5080 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
+import UserStore from "UserStore" /* 1387 */;
 
 let handleChannelSelect = fn;
 function pruneOpenedChannels() {
@@ -39,7 +38,7 @@ function recordClosedTab(id) {
 function createTab(routeTabForLocation, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    tmp = c12;
+    tmp = c11;
   }
   handleChannelSelect = tmp;
   let tmp2;
@@ -66,12 +65,12 @@ function createTab(routeTabForLocation, arg1) {
     items[HermesBuiltin.arraySpread(mapped, 0)] = routeTabForLocation;
     let substr1 = items.slice(-11);
   } else {
-    handleChannelSelect(11481);
+    handleChannelSelect(11528);
     substr1 = mapped;
   }
   const obj2 = { id: null };
-  closure_14 = tmp12 + 1;
-  obj2.id = String(+closure_14);
+  closure_13 = tmp12 + 1;
+  obj2.id = String(+closure_13);
   let merged = Object.assign(routeTabForLocation);
   obj2.pinned = false;
   obj2.entries = substr1;
@@ -79,23 +78,26 @@ function createTab(routeTabForLocation, arg1) {
   return obj2;
 }
 function navigateTo(routeTabForLocation1) {
-  if (enabled) {
-    closure_15 = null;
+  if (tabsExperimentEnabled) {
+    closure_14 = null;
+    c15 = null;
     if (null == routeTabForLocation1) {
       return false;
     } else if (0 === tabs.length) {
-      const tmp30 = createTab(routeTabForLocation1);
-      items = [tmp30];
+      const tmp32 = createTab(routeTabForLocation1);
+      items = [tmp32];
       tabs = items;
-      let id = tmp30.id;
+      id = tmp32.id;
     } else {
       const found = tabs.find((id) => id.id === id);
       let tmp5 = null != found;
       if (tmp5) {
-        tmp5 = !handleChannelSelect(11481).isSameTabLocation(found, routeTabForLocation1);
-        const obj = handleChannelSelect(11481);
+        tmp5 = !handleChannelSelect(11528).isSameTabLocation(found, routeTabForLocation1);
+        const obj = handleChannelSelect(11528);
       }
-      if (tmp5) {
+      if (!tmp5) {
+        return tmp5;
+      } else {
         let hasItem = null != id;
         if (hasItem) {
           let tabId;
@@ -110,64 +112,10 @@ function navigateTo(routeTabForLocation1) {
         if (!hasItem) {
           obj2 = null;
         }
-        if (found.pinned) {
-          const currentUser = UserStore.getCurrentUser();
-          let isStaffResult;
-          if (currentUser != null) {
-            isStaffResult = currentUser.isStaff();
-          }
-          let num = 9;
-          if (true === isStaffResult) {
-            num = 25;
-          }
-          if (tabs.length >= num) {
-            if (null != id) {
-              closure_15 = id;
-              handleChannelSelect = id;
-              const mapped = tabs.map((id) => {
-                let tmp = id;
-                if (id.id === routeTabForLocation1) {
-                  const obj = {};
-                  const merged = Object.assign(id);
-                  obj.pinned = false;
-                  tmp = obj;
-                }
-                return tmp;
-              });
-              const items1 = [];
-              HermesBuiltin.arraySpread(mapped.filter((pinned) => !pinned.pinned), HermesBuiltin.arraySpread(mapped.filter((pinned) => pinned.pinned), 0));
-              closure_129_0 = routeTabForLocation1;
-              tabs = items1.map((id) => {
-                if (id.id !== c12) {
-                  return id;
-                } else {
-                  const entries = id.entries;
-                  items = [];
-                  items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = routeTabForLocation1;
-                  const substr = items.slice(-50);
-                  const obj = { id: id.id, pinned: true === id.pinned };
-                  const diff = substr.length - 1;
-                  const merged = Object.assign(routeTabForLocation1);
-                  obj.entries = substr;
-                  obj.index = diff;
-                  return obj;
-                }
-              });
-              const arraySpreadResult = HermesBuiltin.arraySpread(mapped.filter((pinned) => pinned.pinned), 0);
-            }
-          }
-          const tmp18 = createTab(routeTabForLocation1);
-          const items2 = [];
-          items2[HermesBuiltin.arraySpread(tabs, 0)] = tmp18;
-          tabs = items2;
-          if (null != id) {
-            obj2 = { tabId: tmp18.id, openerId: id, survivesSwitchToOpener: true };
-          }
-          id = tmp18.id;
-        } else {
+        if (!found.pinned) {
           handleChannelSelect = routeTabForLocation1;
           tabs = tabs.map((id) => {
-            if (id.id !== c12) {
+            if (id.id !== c11) {
               return id;
             } else {
               const entries = id.entries;
@@ -183,8 +131,64 @@ function navigateTo(routeTabForLocation1) {
             }
           });
         }
+        closure_129_0 = routeTabForLocation1;
+        const found1 = tabs.find((item) => handleChannelSelect(11528).isSameTabLocation(item, closure_0));
+        if (null != found1) {
+          ({ id: c15, id } = found1);
+        } else {
+          const currentUser = UserStore.getCurrentUser();
+          let isStaffResult;
+          if (currentUser != null) {
+            isStaffResult = currentUser.isStaff();
+          }
+          let num = 9;
+          if (true === isStaffResult) {
+            num = 25;
+          }
+          if (tabs.length < num) {
+            const tmp18 = createTab(routeTabForLocation1);
+            const items1 = [];
+            items1[HermesBuiltin.arraySpread(tabs, 0)] = tmp18;
+            tabs = items1;
+            if (null != id) {
+              obj2 = { tabId: tmp18.id, openerId: id, survivesSwitchToOpener: true };
+            }
+            id = tmp18.id;
+          }
+        }
+        closure_14 = id;
+        handleChannelSelect = id;
+        const mapped = tabs.map((id) => {
+          let tmp = id;
+          if (id.id === routeTabForLocation1) {
+            const obj = {};
+            const merged = Object.assign(id);
+            obj.pinned = false;
+            tmp = obj;
+          }
+          return tmp;
+        });
+        const items2 = [];
+        HermesBuiltin.arraySpread(mapped.filter((pinned) => !pinned.pinned), HermesBuiltin.arraySpread(mapped.filter((pinned) => pinned.pinned), 0));
+        closure_130_0 = routeTabForLocation1;
+        tabs = items2.map((id) => {
+          if (id.id !== c11) {
+            return id;
+          } else {
+            const entries = id.entries;
+            items = [];
+            items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = routeTabForLocation1;
+            const substr = items.slice(-50);
+            const obj = { id: id.id, pinned: true === id.pinned };
+            const diff = substr.length - 1;
+            const merged = Object.assign(routeTabForLocation1);
+            obj.entries = substr;
+            obj.index = diff;
+            return obj;
+          }
+        });
+        const arraySpreadResult = HermesBuiltin.arraySpread(mapped.filter((pinned) => pinned.pinned), 0);
       }
-      return tmp5;
     }
   } else {
     return false;
@@ -194,7 +198,7 @@ function initializeTabs() {
   if (c17) {
     if (0 === tabs.length) {
       const _window2 = window;
-      let routeTabForLocation = routeTabForLocation1(11481).getRouteTabForLocation(window.location);
+      let routeTabForLocation = routeTabForLocation1(11528).getRouteTabForLocation(window.location);
       if (null == routeTabForLocation) {
         const currentlySelectedChannelId = SelectedChannelStore.getCurrentlySelectedChannelId();
         let tmp40 = null;
@@ -221,7 +225,7 @@ function initializeTabs() {
         flag3 = true;
       }
       let tmp32 = flag3;
-      const obj7 = routeTabForLocation1(11481);
+      const obj7 = routeTabForLocation1(11528);
     } else {
       tmp32 = trimToMaxTabs();
     }
@@ -230,7 +234,7 @@ function initializeTabs() {
     c17 = true;
     const tmp2 = trimToMaxTabs();
     const _window = window;
-    routeTabForLocation1 = routeTabForLocation1(11481).getRouteTabForLocation(window.location);
+    routeTabForLocation1 = routeTabForLocation1(11528).getRouteTabForLocation(window.location);
     if (null == routeTabForLocation1) {
       const currentlySelectedChannelId1 = SelectedChannelStore.getCurrentlySelectedChannelId();
       let tmp10 = null;
@@ -250,8 +254,8 @@ function initializeTabs() {
     }
     if (routeTabForLocation1 == null) {
       const obj4 = { pathname: DefaultRouteStore.defaultRoute };
-      routeTabForLocation1 = tmp3(11481).getRouteTabForLocation(obj4);
-      const tmp3Result = tmp3(11481);
+      routeTabForLocation1 = tmp3(11528).getRouteTabForLocation(obj4);
+      const tmp3Result = tmp3(11528);
     }
     let flag2 = false;
     if (null != routeTabForLocation1) {
@@ -292,7 +296,7 @@ function initializeTabs() {
         flag2 = true;
         if (!tmp3Result2.isSameTabLocation(atResult, routeTabForLocation1)) {
           tabs = tabs.map((id) => {
-            if (id.id !== c12) {
+            if (id.id !== c11) {
               return id;
             } else {
               const entries = id.entries;
@@ -309,7 +313,7 @@ function initializeTabs() {
           });
           flag2 = true;
         }
-        tmp3Result2 = tmp3(11481);
+        tmp3Result2 = tmp3(11528);
       }
     }
     if (!flag2) {
@@ -354,14 +358,14 @@ function trimToMaxTabs() {
 function handleChannelDelete(channel) {
   channel = channel.channel;
   let isStrandedBackgroundTab;
-  if (enabled) {
+  if (tabsExperimentEnabled) {
     isStrandedBackgroundTab = function isStrandedBackgroundTab(kind) {
       let tmp = "channel" === kind.kind;
       if (tmp) {
         tmp = kind.channelId === channel.id;
       }
       if (tmp) {
-        tmp = kind.id !== c12;
+        tmp = kind.id !== c11;
       }
       return tmp;
     };
@@ -387,7 +391,7 @@ function handleChannelDelete(channel) {
             tmp2 = kind.channelId === channel.id;
           }
           if (tmp2) {
-            tmp2 = kind.id !== c12;
+            tmp2 = kind.id !== c11;
           }
           return !tmp2;
         } else {
@@ -402,15 +406,16 @@ function handleChannelDelete(channel) {
   }
 }
 const Routes = fn(1071).Routes;
-const isStaticChannelRoute = fn(4868).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4899).isStaticChannelRoute;
 let tabs = [];
+let c11 = null;
 let c12 = null;
-let c13 = null;
-let closure_14 = 1;
+let closure_13 = 1;
+let c14 = null;
 let c15 = null;
 let c16 = false;
 let c17 = false;
-let enabled = false;
+let tabsExperimentEnabled = false;
 let closure_19 = [];
 let set = new Set();
 let frequently = null;
@@ -435,17 +440,14 @@ prototype["initialize"] = function initialize(tabs) {
   this.waitFor(ApexExperimentStore, DefaultRouteStore, SelectedChannelStore, SelectedGuildStore, UserStore);
   items = [ApexExperimentStore];
   this.syncWith(items, () => {
-    enabled = handleChannelSelect(dependencyMap[10]).isDesktop();
-    if (enabled) {
-      enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore.syncWith" }).enabled;
-    }
-    let flag = enabled !== enabled;
+    tabsExperimentEnabled = handleChannelSelect(dependencyMap[10]).getTabsExperimentEnabled("ChannelTabsStore.syncWith");
+    let flag = tabsExperimentEnabled !== tabsExperimentEnabled;
     if (flag) {
-      if (enabled) {
-        enabled = closure_1_16;
+      if (tabsExperimentEnabled) {
+        tabsExperimentEnabled = closure_1_16;
       }
       flag = true;
-      if (enabled) {
+      if (tabsExperimentEnabled) {
         initializeTabs();
         flag = true;
       }
@@ -501,8 +503,8 @@ prototype["initialize"] = function initialize(tabs) {
   if (activeTabId == null) {
     activeTabId = null;
   }
-  c12 = activeTabId;
-  closure_14 = tabs.reduce((acc, id) => {
+  c11 = activeTabId;
+  closure_13 = tabs.reduce((acc, id) => {
     const NumberResult = Number(id.id);
     let tmp2 = acc;
     if (Number.isFinite(NumberResult)) {
@@ -513,7 +515,7 @@ prototype["initialize"] = function initialize(tabs) {
     }
     return tmp2;
   }, 0) + 1;
-  let someResult = null == c12;
+  let someResult = null == c11;
   if (!someResult) {
     someResult = tabs.some((id) => id.id === _null);
   }
@@ -526,7 +528,7 @@ prototype["initialize"] = function initialize(tabs) {
     if (id == null) {
       id = null;
     }
-    c12 = id;
+    c11 = id;
   }
   let openedChannels;
   if (tabs != null) {
@@ -580,19 +582,16 @@ prototype["initialize"] = function initialize(tabs) {
     return obj;
   })(openedChannels));
   pruneOpenedChannels();
-  enabled = handleChannelSelect(1358).isDesktop();
-  if (enabled) {
-    enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore.initialize" }).enabled;
-  }
-  if (enabled !== enabled) {
-    if (enabled) {
-      enabled = c16;
+  tabsExperimentEnabled = handleChannelSelect(11529).getTabsExperimentEnabled("ChannelTabsStore.initialize");
+  if (tabsExperimentEnabled !== tabsExperimentEnabled) {
+    if (tabsExperimentEnabled) {
+      tabsExperimentEnabled = c16;
     }
-    if (enabled) {
+    if (tabsExperimentEnabled) {
       initializeTabs();
     }
   }
-  let obj = handleChannelSelect(1358);
+  let obj = handleChannelSelect(11529);
 };
 prototype["getState"] = function getState() {
   const obj = {};
@@ -607,10 +606,10 @@ prototype["getState"] = function getState() {
   return { tabs, activeTabId: _null, openedChannels: obj };
 };
 prototype["getTabs"] = function getTabs() {
-  return closure_11;
+  return closure_10;
 };
 prototype["getActiveTabId"] = function getActiveTabId() {
-  return c12;
+  return c11;
 };
 prototype["getActiveTab"] = function getActiveTab() {
   let found = tabs.find((id) => id.id === _null);
@@ -619,17 +618,14 @@ prototype["getActiveTab"] = function getActiveTab() {
   }
   return found;
 };
-prototype["isEnabled"] = function isEnabled() {
-  return enabled;
-};
-prototype["isTabBarVisible"] = function isTabBarVisible() {
-  let tmp = enabled;
-  if (enabled) {
-    tmp = tabs.length > 0;
-  }
-  return tmp;
-};
 prototype["getTabUnpinnedAtLimit"] = function getTabUnpinnedAtLimit() {
+  let found = tabs.find((id) => id.id === closure_1_14);
+  if (found == null) {
+    found = null;
+  }
+  return found;
+};
+prototype["getTabRefocusedFromPinned"] = function getTabRefocusedFromPinned() {
   let found = tabs.find((id) => id.id === closure_1_15);
   if (found == null) {
     found = null;
@@ -640,7 +636,7 @@ prototype["getOtherTabsToClose"] = function getOtherTabsToClose(tabId, mode) {
   closure_0 = tabId;
   closure_1 = mode;
   const findIndexResult = tabs.findIndex((id) => id.id === set);
-  dependencyMap = findIndexResult;
+  _slicedToArray = findIndexResult;
   if (-1 === findIndexResult) {
     items = [];
   } else {
@@ -666,7 +662,7 @@ prototype["getCloseOtherTabsCount"] = function getCloseOtherTabsCount(arg0) {
   closure_0 = arg0;
   const all = "all";
   const findIndexResult = tabs.findIndex((id) => id.id === set);
-  dependencyMap = findIndexResult;
+  _slicedToArray = findIndexResult;
   if (-1 === findIndexResult) {
     items = [];
   } else {
@@ -692,7 +688,7 @@ prototype["getCloseTabsToRightCount"] = function getCloseTabsToRightCount(arg0) 
   closure_0 = arg0;
   const right = "right";
   const findIndexResult = tabs.findIndex((id) => id.id === set);
-  dependencyMap = findIndexResult;
+  _slicedToArray = findIndexResult;
   if (-1 === findIndexResult) {
     items = [];
   } else {
@@ -808,7 +804,7 @@ handleChannelSelect = function handleChannelSelect(arg0) {
 };
 const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
   CHANNEL_TABS_OPEN: function handleOpenTab(location) {
-    if (enabled) {
+    if (tabsExperimentEnabled) {
       const currentUser = UserStore.getCurrentUser();
       let isStaffResult;
       if (currentUser != null) {
@@ -836,7 +832,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
           _null = tmp23Result.id;
         } else if (true !== location.background) {
           const obj7 = { tabId: tmp23Result.id, openerId: _null, survivesSwitchToOpener: false };
-          c13 = obj7;
+          c12 = obj7;
           _null = tmp23Result.id;
         }
         if ("route" === tmp23Result.kind) {
@@ -862,7 +858,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
   CHANNEL_TABS_CLOSE: function handleCloseTab(tabId) {
     tabId = tabId.tabId;
     let channelId = tabId;
-    if (enabled) {
+    if (tabsExperimentEnabled) {
       const findIndexResult = tabs.findIndex((id) => id.id === channelId);
       if (-1 === findIndexResult) {
         return false;
@@ -958,12 +954,12 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
     } else {
       const _Set = Set;
       set = new Set(items.map((id) => id.id));
-      let hasItem = null != c12;
+      let hasItem = null != c11;
       if (hasItem) {
-        hasItem = set.has(c12);
+        hasItem = set.has(c11);
       }
       if (hasItem) {
-        c12 = tabId;
+        c11 = tabId;
       }
       tabs = tabs.filter((id) => !set.has(id.id));
       let tmp7 = null != _null2;
@@ -983,17 +979,17 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
   },
   CHANNEL_TABS_SET_ACTIVE: function handleSetActiveTab(tabId) {
     tabId = tabId.tabId;
-    if (enabled) {
-      if (c12 !== tabId) {
+    if (tabsExperimentEnabled) {
+      if (c11 !== tabId) {
         if (null == tabs.find((id) => id.id === tabId)) {
           return false;
         } else {
           if (null != _null2) {
-            let tmp5 = c12 === _null2.tabId;
+            let tmp5 = c11 === _null2.tabId;
             if (tmp5) {
               let tmp8 = tabId === _null2.openerId;
             } else {
-              tmp8 = c12 === _null2.openerId;
+              tmp8 = c11 === _null2.openerId;
               if (tmp8) {
                 tmp8 = tabId === _null2.tabId;
               }
@@ -1009,7 +1005,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
               _null2 = null;
             }
           }
-          c12 = tabId;
+          c11 = tabId;
         }
       }
     }
@@ -1017,7 +1013,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
   },
   CHANNEL_TABS_MOVE: function handleMoveTab(tabId) {
     tabId = tabId.tabId;
-    if (enabled) {
+    if (tabsExperimentEnabled) {
       const findIndexResult = tabs.findIndex((id) => id.id === tabId);
       if (-1 === findIndexResult) {
         return false;
@@ -1049,7 +1045,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
   CHANNEL_TABS_SET_PINNED: function handleSetPinned(arg0) {
     ({ tabId: handleChannelSelect, pinned } = arg0);
     const found = tabs.find((id) => id.id === handleChannelSelect);
-    if (enabled) {
+    if (tabsExperimentEnabled) {
       if (null != found) {
         if (found.pinned !== pinned) {
           const found1 = tabs.filter((id) => id.id !== found.id);
@@ -1182,36 +1178,33 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
   CHANNEL_DELETE: handleChannelDelete,
   CONNECTION_OPEN: function handleConnectionOpen() {
     c16 = true;
-    enabled = handleChannelSelect(1358).isDesktop();
-    if (enabled) {
-      enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore.handleConnectionOpen" }).enabled;
-    }
-    let flag = enabled !== enabled;
+    tabsExperimentEnabled = handleChannelSelect(11529).getTabsExperimentEnabled("ChannelTabsStore.handleConnectionOpen");
+    let flag = tabsExperimentEnabled !== tabsExperimentEnabled;
     if (flag) {
-      if (enabled) {
-        enabled = c16;
+      if (tabsExperimentEnabled) {
+        tabsExperimentEnabled = c16;
       }
       flag = true;
-      if (enabled) {
+      if (tabsExperimentEnabled) {
         initializeTabs();
         flag = true;
       }
     }
-    let tmp5 = flag;
-    if (!tmp5) {
-      let tmp6 = enabled;
-      if (enabled) {
-        tmp6 = initializeTabs();
+    let tmp4 = flag;
+    if (!tmp4) {
+      let tmp5 = tabsExperimentEnabled;
+      if (tabsExperimentEnabled) {
+        tmp5 = initializeTabs();
       }
-      tmp5 = tmp6;
+      tmp4 = tmp5;
     }
-    return tmp5;
+    return tmp4;
   },
   THREAD_DELETE: handleChannelDelete,
   LOGOUT: function handleLogout() {
-    closure_11 = [];
+    closure_10 = [];
+    c11 = null;
     c12 = null;
-    c13 = null;
     set = new Set();
     closure_19 = [];
     closure_23.overwriteHistory({});

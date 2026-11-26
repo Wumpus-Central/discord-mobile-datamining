@@ -1,26 +1,81 @@
-// === Module 8320: AdDeliveryStore ===
+// === Module 8362: AdDeliveryStore ===
 
-// Module 8320 (AdDeliveryStore)
+// Module 8362 (AdDeliveryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import AdPlacement from "AdPlacement" /* 6846 */;
-import AdCreativeType from "AdCreativeType" /* 6847 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 8321 */;
+import AdPlacement from "AdPlacement" /* 6877 */;
+import AdCreativeType from "AdCreativeType" /* 6878 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 8363 */;
+import QuestServerUtils from "QuestServerUtils" /* 8364 */;
+import _toArray from "_toArray" /* 717 */;
 
 require = fn;
-let closure_9 = [];
-let closure_10 = 30 * DurationsDefault.Millis.SECOND;
-let closure_11 = 10 * DurationsDefault.Millis.MINUTE;
+function updateQuestSeriesRewardUserStatus(fn, fn2) {
+  const QUEST_HOME_BANNER_DESKTOP = AdPlacement.AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+  let items1 = map1.get(QUEST_HOME_BANNER_DESKTOP);
+  if (items1 == null) {
+    items1 = [];
+  }
+  const arr2 = _toArray(items1);
+  const first = arr2[0];
+  const substr = arr2.slice(1);
+  let creative;
+  if (first != null) {
+    creative = first.creative;
+  }
+  let type;
+  if (creative != null) {
+    type = creative.type;
+  }
+  if (type !== AdCreativeType.AdCreativeType.QUEST_HOME_HERO) {
+    return false;
+  } else {
+    const questHomeHero = creative.questHomeHero;
+    const questSeries = questHomeHero.questSeries;
+    if (null != questSeries) {
+      if (fn(questSeries.rewardQuest, questHomeHero)) {
+        const obj = {};
+        const merged = Object.assign(questSeries.rewardQuest);
+        obj.userStatus = fn2(questSeries.rewardQuest);
+        const _Map = Map;
+        map = new Map(map1);
+        const obj2 = {};
+        const merged1 = Object.assign(first);
+        const obj3 = {};
+        const merged2 = Object.assign(creative);
+        const obj4 = {};
+        const merged3 = Object.assign(questHomeHero);
+        const obj5 = {};
+        const merged4 = Object.assign(questSeries);
+        obj5.rewardQuest = obj;
+        obj4.questSeries = obj5;
+        obj3.questHomeHero = obj4;
+        obj2.creative = obj3;
+        items = [obj2];
+        HermesBuiltin.arraySpread(substr, 1);
+        const result = map.set(QUEST_HOME_BANNER_DESKTOP, items);
+        return true;
+      }
+    }
+    return false;
+  }
+}
+let closure_10 = [];
+let closure_11 = 30 * DurationsDefault.Millis.SECOND;
+let closure_12 = 10 * DurationsDefault.Millis.MINUTE;
+new Set();
 new Map();
 let closure_4 = 0;
 let map1 = new Map();
 let map = new Map();
 let map3 = new Map();
 let map4 = new Map();
-let closure_12 = null;
-let c13 = false;
+let closure_13 = null;
+let c14 = false;
+let map2 = new Map();
+let set = new Set();
 const Store = initializeDefault.Store;
 class AdDeliveryStore extends Store {
 }
@@ -62,7 +117,7 @@ Object.defineProperty(prototype, "deliveryAdDecisionByPlacement", {
 prototype["getAdDecisionsForPlacement"] = function getAdDecisionsForPlacement(QUEST_HOME_BANNER_DESKTOP) {
   value = map1.get(QUEST_HOME_BANNER_DESKTOP);
   if (value == null) {
-    value = closure_9;
+    value = closure_10;
   }
   return value;
 };
@@ -81,10 +136,10 @@ prototype["getNoFillForPlacement"] = function getNoFillForPlacement(arg0) {
   return tmp2;
 };
 prototype["isFetchingQuestHomeHero"] = function isFetchingQuestHomeHero() {
-  return c13;
+  return c14;
 };
 prototype["getLastFetchedQuestHomeHero"] = function getLastFetchedQuestHomeHero() {
-  return closure_12;
+  return closure_13;
 };
 prototype["getQuestHomeHero"] = function getQuestHomeHero() {
   const first = this.getAdDecisionsForPlacement(AdPlacement.AdPlacement.QUEST_HOME_BANNER_DESKTOP)[0];
@@ -102,6 +157,9 @@ prototype["getQuestHomeHero"] = function getQuestHomeHero() {
   }
   return questHomeHero;
 };
+prototype["isClaimingQuestSeriesReward"] = function isClaimingQuestSeriesReward(arg0) {
+  return set.has(arg0);
+};
 AdDeliveryStore.displayName = "AdDeliveryStore";
 const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
@@ -111,8 +169,9 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     map = new Map();
     map3 = new Map();
     map4 = new Map();
-    closure_12 = null;
-    c13 = false;
+    closure_13 = null;
+    c14 = false;
+    set = new Set();
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: function handleFetchQuestToDeliverBegin(placement) {
     map = new Map(map);
@@ -164,7 +223,7 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     const result = map1.set(placement, false);
     value = map3.get(placement);
     if (null == value) {
-      const tmp9 = new BackoffDefault(closure_10, closure_11);
+      const tmp9 = new BackoffDefault(closure_11, closure_12);
       const result1 = map3.set(placement, tmp9);
       value = tmp9;
     }
@@ -184,13 +243,13 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     map1 = map;
   },
   QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function handleFetchQuestHomeHeroBegin(placement) {
-    c13 = true;
+    c14 = true;
     map = new Map(map);
     const result = map.set(placement.placement, true);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function handleFetchQuestHomeHeroSuccess(fetchedAt) {
-    c13 = false;
-    closure_12 = Date.now();
+    c14 = false;
+    closure_13 = Date.now();
     map = new Map(map);
     const result = map.set(fetchedAt.placement, false);
     value = map3.get(fetchedAt.placement);
@@ -211,17 +270,52 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
   },
   QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function handleFetchQuestHomeHeroFailure(placement) {
     placement = placement.placement;
-    c13 = false;
+    c14 = false;
     map = new Map(map);
     const result = map.set(placement, false);
     value = map3.get(placement);
     if (null == value) {
-      const tmp8 = new BackoffDefault(closure_10, closure_11);
+      const tmp8 = new BackoffDefault(closure_11, closure_12);
       const result1 = map3.set(placement, tmp8);
       value = tmp8;
     }
     const timestamp = Date.now();
     const result2 = map4.set(placement, timestamp + value.fail());
+  },
+  QUEST_SERIES_CLAIM_REWARD_BEGIN: function handleQuestSeriesClaimRewardBegin(heroId) {
+    set = new Set(set);
+    set.add(heroId.heroId);
+  },
+  QUEST_SERIES_CLAIM_REWARD_SUCCESS: function handleQuestSeriesClaimRewardSuccess(heroId) {
+    heroId = heroId.heroId;
+    const entitlements = heroId.entitlements;
+    set = new Set(set);
+    set.delete(heroId);
+    updateQuestSeriesRewardUserStatus((arg0, id) => {
+      let tmp2 = id.id === heroId;
+      if (tmp2) {
+        tmp2 = null != tmp;
+      }
+      return tmp2;
+    }, (userStatus) => {
+      userStatus = userStatus.userStatus;
+      let tmp = null;
+      if (null != userStatus) {
+        const obj = {};
+        const merged = Object.assign(userStatus);
+        obj.claimedAt = entitlements.claimedAt;
+        tmp = obj;
+      }
+      return tmp;
+    });
+  },
+  QUEST_SERIES_CLAIM_REWARD_FAILURE: function handleQuestSeriesClaimRewardFailure(heroId) {
+    set = new Set(set);
+    set.delete(heroId.heroId);
+  },
+  QUESTS_USER_STATUS_UPDATE: function handleQuestUserStatusUpdate(user_status) {
+    user_status = user_status.user_status;
+    return updateQuestSeriesRewardUserStatus((id) => id.id === user_status.quest_id, () => QuestServerUtils.questUserStatusFromServer(user_status));
   }
 });
 const size = fn(2);

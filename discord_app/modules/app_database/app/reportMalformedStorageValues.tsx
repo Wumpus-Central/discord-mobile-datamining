@@ -1,8 +1,8 @@
-// === Module 19648: reportMalformedStorageValues ===
+// === Module 19712: reportMalformedStorageValues ===
 
-// Module 19648 (reportMalformedStorageValues)
-import SentryUtilsDefault from "SentryUtils" /* 1241 */;
-import _mod4891 from "module_4891" /* 4891 */;
+// Module 19712 (reportMalformedStorageValues)
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import _mod4922 from "module_4922" /* 4922 */;
 import size from "module_2" /* 2 */;
 
 let c3 = false;
@@ -10,9 +10,9 @@ const result = size.fileFinishedImporting("modules/app_database/app/reportMalfor
 
 export default function reportMalformedStorageValues(source) {
   if (!c3) {
-    const Stats = _mod4891.Stats;
+    const Stats = _mod4922.Stats;
     const malformedValueCountResult = Stats.malformedValueCount();
-    const Stats2 = _mod4891.Stats;
+    const Stats2 = _mod4922.Stats;
     const malformedEntryCountResult = Stats2.malformedEntryCount();
     if (!tmp5) {
       c3 = true;

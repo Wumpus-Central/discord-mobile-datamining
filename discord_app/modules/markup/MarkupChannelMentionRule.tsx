@@ -1,22 +1,22 @@
-// === Module 7049: MarkupChannelMentionRule ===
+// === Module 7080: MarkupChannelMentionRule ===
 
-// Module 7049 (MarkupChannelMentionRule)
+// Module 7080 (MarkupChannelMentionRule)
 import util from "util" /* 1112 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1412 */;
-import _modDef2068 from "module_2068" /* 2068 */;
-import StringUtils from "StringUtils" /* 2152 */;
-import useChannelName from "useChannelName" /* 5628 */;
-import LinkUtils from "LinkUtils" /* 5635 */;
-import ChannelUtils from "ChannelUtils" /* 6770 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 7048 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 7050 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 7051 */;
-import GatedChannelStore from "GatedChannelStore" /* 4916 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4944 */;
-import RelationshipStore from "RelationshipStore" /* 4954 */;
-import UserStore from "UserStore" /* 1386 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
+import _modDef2069 from "module_2069" /* 2069 */;
+import StringUtils from "StringUtils" /* 2153 */;
+import useChannelName from "useChannelName" /* 5659 */;
+import LinkUtils from "LinkUtils" /* 5666 */;
+import ChannelUtils from "ChannelUtils" /* 6801 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 7079 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 7081 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 7082 */;
+import GatedChannelStore from "GatedChannelStore" /* 4947 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
+import RelationshipStore from "RelationshipStore" /* 4985 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 function getChannel(id, arr) {
@@ -326,7 +326,7 @@ let obj2 = {
   }
 };
 obj.channelOrMessageUrl = {
-  order: _modDef2068.defaultRules.url.order - 0.5,
+  order: _modDef2069.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -386,7 +386,7 @@ obj.channelOrMessageUrl = {
   }
 };
 let obj3 = {
-  order: _modDef2068.defaultRules.url.order - 0.5,
+  order: _modDef2069.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -446,7 +446,7 @@ let obj3 = {
   }
 };
 obj.mediaPostLink = {
-  order: _modDef2068.defaultRules.url.order - 0.5,
+  order: _modDef2069.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;

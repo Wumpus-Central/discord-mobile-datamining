@@ -1,14 +1,14 @@
-// === Module 12872: useTraitPicker ===
+// === Module 12923: useTraitPicker ===
 
-// Module 12872 (useTraitPicker)
-import CheckpointActionCreators from "CheckpointActionCreators" /* 12579 */;
-import useTraitPickerSelection from "useTraitPickerSelection" /* 12873 */;
-import useTraitPickerOptions from "useTraitPickerOptions" /* 12874 */;
-import useAutoSelectTraitOption from "useAutoSelectTraitOption" /* 12875 */;
+// Module 12923 (useTraitPicker)
+import CheckpointActionCreators from "CheckpointActionCreators" /* 12628 */;
+import useTraitPickerSelection from "useTraitPickerSelection" /* 12924 */;
+import useTraitPickerOptions from "useTraitPickerOptions" /* 12925 */;
+import useAutoSelectTraitOption from "useAutoSelectTraitOption" /* 12926 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const rarityOrder = fn(6365).CHECKPOINT_RARITY_ORDER_MOBILE;
+const rarityOrder = fn(6396).CHECKPOINT_RARITY_ORDER_MOBILE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/useTraitPicker.tsx");
 

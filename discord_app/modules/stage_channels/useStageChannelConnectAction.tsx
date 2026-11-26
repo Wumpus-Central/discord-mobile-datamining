@@ -1,8 +1,8 @@
-// === Module 10220: useStageChannelConnectAction ===
+// === Module 10262: useStageChannelConnectAction ===
 
-// Module 10220 (useStageChannelConnectAction)
-import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 7803 */;
-import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 10219 */;
+// Module 10262 (useStageChannelConnectAction)
+import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 7837 */;
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 10261 */;
 import size from "module_2" /* 2 */;
 
 const ChannelConnectAction = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };

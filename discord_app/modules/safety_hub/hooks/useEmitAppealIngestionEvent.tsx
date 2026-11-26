@@ -1,12 +1,12 @@
-// === Module 12508: useEmitAppealIngestionEvent ===
+// === Module 12557: useEmitAppealIngestionEvent ===
 
-// Module 12508 (useEmitAppealIngestionEvent)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1255 */;
+// Module 12557 (useEmitAppealIngestionEvent)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7878 */;
+import SafetyHubStore from "SafetyHubStore" /* 7912 */;
 
 const require = fn;
-let closure_5 = fn(7852).SafetyHubAnalyticsActionSource;
+let closure_5 = fn(7886).SafetyHubAnalyticsActionSource;
 const Constants = fn(1071);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const size = fn(2);

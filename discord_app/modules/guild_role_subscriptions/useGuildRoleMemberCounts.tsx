@@ -1,9 +1,9 @@
-// === Module 7454: useGuildRoleMemberCounts ===
+// === Module 7485: useGuildRoleMemberCounts ===
 
-// Module 7454 (useGuildRoleMemberCounts)
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7456 */;
+// Module 7485 (useGuildRoleMemberCounts)
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7487 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7455 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7486 */;
 
 const require = globalThis.__r;
 

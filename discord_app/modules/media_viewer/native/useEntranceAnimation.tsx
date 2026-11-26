@@ -1,9 +1,9 @@
-// === Module 14106: useEntranceAnimation ===
+// === Module 14158: useEntranceAnimation ===
 
-// Module 14106 (useEntranceAnimation)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1262 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import timing_timing from "timing/timing" /* 5222 */;
+// Module 14158 (useEntranceAnimation)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import timing_timing from "timing/timing" /* 5253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ export function useEntranceAnimation(entranceAnimationDriver) {
   const handleLoadStart = noop.useCallback(() => {
     obj = ReactBatchUpdates;
     obj.batchUpdates(() => state.setState({ isComplete: false }));
-    items = [closure_7, _mod1706.scheduleOnRN, setUseEntranceAnimationState];
+    items = [closure_7, _mod1707.scheduleOnRN, setUseEntranceAnimationState];
     c0 = undefined;
     c1 = undefined;
     [tmp4, tmp5, tmp6] = items;
@@ -48,7 +48,7 @@ export function useEntranceAnimation(entranceAnimationDriver) {
     if (1 !== entranceAnimationDriver.get()) {
       ReactBatchUpdates.batchUpdates(() => state.setState({ isComplete: false }));
       const obj3 = timing_timing;
-      items = [closure_8, _mod1706.scheduleOnRN, setUseEntranceAnimationState, callback];
+      items = [closure_8, _mod1707.scheduleOnRN, setUseEntranceAnimationState, callback];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;

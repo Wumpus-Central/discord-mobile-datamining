@@ -1,18 +1,18 @@
-// === Module 9025: ContextMenu ===
+// === Module 9067: ContextMenu ===
 
-// Module 9025 (ContextMenu)
+// Module 9067 (ContextMenu)
 import util from "util" /* 1112 */;
-import PlatformUtils2 from "PlatformUtils" /* 1378 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import shared from "shared" /* 5019 */;
-import HapticUtils from "HapticUtils" /* 5228 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5242 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5272 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6078 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9026 */;
-import ContextMenuState from "ContextMenuState" /* 9027 */;
-import UID from "UID" /* 9028 */;
+import PlatformUtils2 from "PlatformUtils" /* 1379 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import shared from "shared" /* 5050 */;
+import HapticUtils from "HapticUtils" /* 5259 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5273 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9068 */;
+import ContextMenuState from "ContextMenuState" /* 9069 */;
+import UID from "UID" /* 9070 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty } = jsxProd);
-const PlatformUtils = fn(1378);
+const PlatformUtils = fn(1379);
 let closure_6 = PlatformUtils.isIOS();
 let closure_7 = { code: "(function autoPositionHorizontal_ContextMenuNativeTsx1(){let[CONTEXT_MENU_EDGE_OFFSET,screenWidth,CONTEXT_MENU_MIN_WIDTH,pageX,minimumRightPosition]=this.__closure;const maxOffset=Math.max(CONTEXT_MENU_EDGE_OFFSET,screenWidth-CONTEXT_MENU_EDGE_OFFSET-CONTEXT_MENU_MIN_WIDTH);const fitsLeft=pageX<=maxOffset;const fitsRight=minimumRightPosition<=maxOffset;const distanceFromLeftEdge=pageX-CONTEXT_MENU_EDGE_OFFSET;const distanceFromRightEdge=screenWidth-CONTEXT_MENU_EDGE_OFFSET-(pageX+CONTEXT_MENU_MIN_WIDTH);let positionX='left';let x=pageX;if(fitsLeft!==fitsRight?fitsRight:distanceFromLeftEdge>distanceFromRightEdge){positionX='right';x=minimumRightPosition;}return{x:Math.min(x,maxOffset),positionX:positionX};})" };
 let closure_8 = { code: "(function alignedPositionHorizontal_ContextMenuNativeTsx2(){let[menuAlign,pageX,width,CONTEXT_MENU_OFFSET,minimumRightPosition]=this.__closure;const positionX=menuAlign==='left'?'right':'left';const x=positionX==='left'?pageX+width+CONTEXT_MENU_OFFSET:minimumRightPosition+width+CONTEXT_MENU_OFFSET;return{x:x,positionX:positionX};})" };
@@ -92,8 +92,8 @@ export function ContextMenu(triggerOnLongPress) {
     buttonRef = obj.useAnimatedRef();
   }
   c10 = buttonRef;
-  obj = require("module_1653");
-  const sharedValue = require("module_1653").useSharedValue(-1);
+  obj = require("module_1654");
+  const sharedValue = require("module_1654").useSharedValue(-1);
   c11 = sharedValue;
   let items1 = [buttonRef, sharedValue];
   const effect = noop.useEffect(() => _undefined4.observe((arg0) => {
@@ -122,8 +122,8 @@ export function ContextMenu(triggerOnLongPress) {
   c12 = items3;
   let dividerIndexes = memo.dividerIndexes;
   c13 = dividerIndexes;
-  let tmpResult = require("module_1653");
-  const scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(tmp(9026).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT);
+  let tmpResult = require("module_1654");
+  const scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(tmp(9068).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT);
   c14 = scaledTextLineHeight;
   let items4 = [items3, scaledTextLineHeight];
   const memo1 = noop.useMemo(() => {
@@ -183,9 +183,9 @@ export function ContextMenu(triggerOnLongPress) {
   const tmpResult10 = require("useFontScale");
   const isContextMenuActive = require("ContextMenuState").useIsContextMenuActive(contextMenuState);
   const tmpResult11 = require("ContextMenuState");
-  let result = (tmp(9026).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9026).CONTEXT_MENU_ITEM_PADDING) * fontScale;
-  let result1 = 2 * tmp(9026).CONTEXT_MENU_ITEM_PADDING;
-  const sharedValue1 = require("module_1653").useSharedValue(Math.max(result + result1, tmp(9026).CONTEXT_MENU_ITEM_BASE_HEIGHT));
+  let result = (tmp(9068).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9068).CONTEXT_MENU_ITEM_PADDING) * fontScale;
+  let result1 = 2 * tmp(9068).CONTEXT_MENU_ITEM_PADDING;
+  const sharedValue1 = require("module_1654").useSharedValue(Math.max(result + result1, tmp(9068).CONTEXT_MENU_ITEM_BASE_HEIGHT));
   obj3.useRef(items3);
   let items5 = [isContextMenuActive, contextMenuState];
   const layoutEffect = obj3.useLayoutEffect(() => {
@@ -225,7 +225,7 @@ export function ContextMenu(triggerOnLongPress) {
     }
     obj4 = PlatformUtils2;
   }, items8);
-  let items9 = [c10, c6, sharedValue, require("FWOMeasureUtils").measureInWindowForFWO, require("module_1653").measure, buttonRef, width, require("ContextMenuConstants").CONTEXT_MENU_EDGE_OFFSET, c7, require("ContextMenuConstants").CONTEXT_MENU_MIN_WIDTH, c8, str, require("ContextMenuConstants").CONTEXT_MENU_OFFSET, title, items3.length, dividerIndexes, memo1, sharedValue1, require("ContextMenuConstants").CONTEXT_MENU_DIVIDER_HEIGHT, scaledTextLineHeight, height, c9, require("module_1706").scheduleOnRN, callback2];
+  let items9 = [c10, c6, sharedValue, require("FWOMeasureUtils").measureInWindowForFWO, require("module_1654").measure, buttonRef, width, require("ContextMenuConstants").CONTEXT_MENU_EDGE_OFFSET, c7, require("ContextMenuConstants").CONTEXT_MENU_MIN_WIDTH, c8, str, require("ContextMenuConstants").CONTEXT_MENU_OFFSET, title, items3.length, dividerIndexes, memo1, sharedValue1, require("ContextMenuConstants").CONTEXT_MENU_DIVIDER_HEIGHT, scaledTextLineHeight, height, c9, require("module_1707").scheduleOnRN, callback2];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -485,7 +485,7 @@ export function ContextMenu(triggerOnLongPress) {
   const items12 = [flag, flag2, callback, flag5, contextMenuState, callback3];
   const items13 = [items3];
   const memo2 = obj3.useMemo(() => {
-    items = [closure_11, c15, _mod1706.scheduleOnRN, c19];
+    items = [closure_11, c15, _mod1707.scheduleOnRN, c19];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -522,7 +522,7 @@ export function ContextMenu(triggerOnLongPress) {
       const LongPressResult = Gesture3.LongPress();
       const enabledResult1 = Gesture3.LongPress().enabled(c9);
       const result = Gesture3.LongPress().enabled(c9).minDuration(ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS).shouldCancelWhenOutside(false);
-      const items4 = [closure_13, _mod1706.scheduleOnRN, HapticUtils.triggerHapticFeedback, ContextMenuConstants.CONTEXT_MENU_OPEN_HAPTIC, callback3];
+      const items4 = [closure_13, _mod1707.scheduleOnRN, HapticUtils.triggerHapticFeedback, ContextMenuConstants.CONTEXT_MENU_OPEN_HAPTIC, callback3];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;
@@ -568,7 +568,7 @@ export function ContextMenu(triggerOnLongPress) {
         const enabledResult2 = Gesture.Tap().enabled(c9);
       } else {
         const PanResult1 = Gesture.Pan();
-        const items8 = [closure_15, _mod1706.scheduleOnRN, HapticUtils.triggerHapticFeedback, ContextMenuConstants.CONTEXT_MENU_OPEN_HAPTIC, ];
+        const items8 = [closure_15, _mod1707.scheduleOnRN, HapticUtils.triggerHapticFeedback, ContextMenuConstants.CONTEXT_MENU_OPEN_HAPTIC, ];
         class ContextMenuNativeTsx8 {
           constructor() {
             tmp = closure_0();
@@ -658,8 +658,8 @@ export function ContextMenu(triggerOnLongPress) {
       const tmpResult = useIsScreenReaderEnabled;
     }
     if (isAndroidResult) {
-      _mod1706.scheduleOnUI(callback3);
-      const tmpResult2 = _mod1706;
+      _mod1707.scheduleOnUI(callback3);
+      const tmpResult2 = _mod1707;
     }
   }, items15);
   let obj4 = { ref: buttonRef, onPress: callback5, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null };
@@ -677,7 +677,7 @@ export function ContextMenu(triggerOnLongPress) {
     let tmp51Result = tmp51(c4, obj5);
   } else {
     const obj6 = { gesture: memo2, children: children(obj4) };
-    tmp51Result = tmp51(tmp(5272).GestureDetector, obj6);
+    tmp51Result = tmp51(tmp(5303).GestureDetector, obj6);
   }
   return tmp51Result;
 }

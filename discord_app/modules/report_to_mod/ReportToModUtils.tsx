@@ -1,24 +1,24 @@
-// === Module 10725: ReportToModUtils ===
+// === Module 10771: ReportToModUtils ===
 
-// Module 10725 (ReportToModUtils)
+// Module 10771 (ReportToModUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4949 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7591 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7593 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 8251 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8769 */;
-import HarmTypeConfiguration from "HarmTypeConfiguration" /* 8772 */;
-import SelfModUtils from "SelfModUtils" /* 8896 */;
-import ReportUtils from "ReportUtils" /* 10727 */;
-import ForumChannelTypes from "ForumChannelTypes" /* 10728 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8077 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
-import GuildStore from "GuildStore" /* 4883 */;
-import MessageStore from "MessageStore" /* 6360 */;
-import UserStore from "UserStore" /* 1386 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7622 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7624 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 8293 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8811 */;
+import HarmTypeConfiguration from "HarmTypeConfiguration" /* 8814 */;
+import SelfModUtils from "SelfModUtils" /* 8938 */;
+import ReportUtils from "ReportUtils" /* 10773 */;
+import ForumChannelTypes from "ForumChannelTypes" /* 10774 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8119 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
+import GuildStore from "GuildStore" /* 4914 */;
+import MessageStore from "MessageStore" /* 6391 */;
+import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
-const ReportToModPermissions = fn(10726).ReportToModPermissions;
+const ReportToModPermissions = fn(10772).ReportToModPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 

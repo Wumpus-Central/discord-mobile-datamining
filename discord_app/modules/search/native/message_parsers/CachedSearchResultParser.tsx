@@ -1,6 +1,6 @@
-// === Module 18941: CachedSearchResultParser ===
+// === Module 19004: CachedSearchResultParser ===
 
-// Module 18941 (CachedSearchResultParser)
+// Module 19004 (CachedSearchResultParser)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/search/native/message_parsers/CachedSearchResultParser.tsx");

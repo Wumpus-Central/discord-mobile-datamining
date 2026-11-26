@@ -1,11 +1,11 @@
-// === Module 2189: IntlLoaderStore ===
+// === Module 2190: IntlLoaderStore ===
 
-// Module 2189 (IntlLoaderStore)
+// Module 2190 (IntlLoaderStore)
 import util from "util" /* 1112 */;
-import formatjs from "formatjs" /* 4762 */;
-import moment from "moment" /* 4793 */;
+import formatjs from "formatjs" /* 4793 */;
+import moment from "moment" /* 4824 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import module_2026 from "module_2026" /* 2026 */;
+import module_2027 from "module_2027" /* 2027 */;
 
 require = fn;
 let closure_5 = async function _setAppLocale(arg0) {
@@ -19,7 +19,7 @@ let closure_5 = async function _setAppLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -54,7 +54,7 @@ let closure_5 = async function _setAppLocale(arg0) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: "+95" };
               }
             } else {
               try {
@@ -71,7 +71,7 @@ let closure_5 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     dependencyMap = 1;
                     c2 = 1;
-                    const obj6 = { value: closure_0(2190).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2191).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -97,7 +97,7 @@ let closure_5 = async function _setAppLocale(arg0) {
                   return obj;
                 } else {
                   c2 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: "+95" };
                 }
               } catch (tmp11) {
                 c2 = tmp;
@@ -156,7 +156,7 @@ let closure_5 = async function _setAppLocale(arg0) {
       } else {
         closure_129_1.setLoadingSucceeded(closure_129_0);
         c3 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp10) {
       c3 = tmp;
@@ -175,7 +175,7 @@ let closure_6 = async function _loadDateFnsLocale() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -189,7 +189,7 @@ let closure_6 = async function _loadDateFnsLocale() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } catch (tmp4) {
       c0 = tmp;
@@ -208,7 +208,7 @@ let closure_7 = async function _loadFormatJsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -239,7 +239,7 @@ let closure_7 = async function _loadFormatJsLocale(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -257,7 +257,7 @@ let closure_8 = async function _setMomentLocale(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -308,14 +308,14 @@ let closure_8 = async function _setMomentLocale(arg0) {
       closure_129_1.push("en-US");
       closure_130_0(closure_130_1[8]).locale(closure_129_1);
       c4 = 3;
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     } catch (tmp26) {
       c4 = tmp;
       throw tmp26;
     }
   }
 };
-const identity = fn(1257);
+const identity = fn(1258);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
@@ -323,7 +323,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     isLoading: false,
     inProgressLocale: "y",
     error: "sa",
-    localeData: "isArray",
+    localeData: "T",
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },

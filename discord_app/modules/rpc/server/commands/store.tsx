@@ -1,9 +1,9 @@
-// === Module 15863: merged17 ===
+// === Module 15914: merged17 ===
 
-// Module 15863 (merged17)
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 6332 */;
-import RPCErrorDefault from "RPCError" /* 7613 */;
-import validateTransportType from "validateTransportType" /* 15865 */;
+// Module 15914 (merged17)
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 6363 */;
+import RPCErrorDefault from "RPCError" /* 7644 */;
+import validateTransportType from "validateTransportType" /* 15916 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -114,7 +114,7 @@ let closure_13 = async function _getSkusHandler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(5766);
+let Constants = fn(5797);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1071);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: closure_6, SKUTypes: metroImportDefault } = Constants);
@@ -276,7 +276,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(15822);
+let CONTEXT_MENU_ICON_NAMES = fn(15873);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -292,7 +292,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(15822);
+CONTEXT_MENU_ICON_NAMES = fn(15873);
 let obj7 = {
   scope: null,
   handler(arg0) {

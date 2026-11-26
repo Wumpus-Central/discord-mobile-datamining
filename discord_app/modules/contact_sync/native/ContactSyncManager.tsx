@@ -1,12 +1,12 @@
-// === Module 13623: ContactSyncManager ===
+// === Module 13675: ContactSyncManager ===
 
-// Module 13623 (ContactSyncManager)
+// Module 13675 (ContactSyncManager)
 import Storage3 from "Storage" /* 510 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13622 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13674 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7431 */;
-import UserStore from "UserStore" /* 1386 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
+import UserStore from "UserStore" /* 1387 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
 let closure_11 = async function _requestAndSyncContacts() {
@@ -20,7 +20,7 @@ let closure_11 = async function _requestAndSyncContacts() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "HermesInternal" };
+      return { value: "HermesInternal", done: "+95" };
     }
   } else {
     try {
@@ -97,7 +97,7 @@ let closure_11 = async function _requestAndSyncContacts() {
           if (null == phone) {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: "+95" };
           } else {
             c5 = 2;
             c6 = 1;
@@ -117,9 +117,9 @@ let closure_11 = async function _requestAndSyncContacts() {
     }
   }
 };
-const ContactSyncPersistedStore = fn(13621);
+const ContactSyncPersistedStore = fn(13673);
 ({ setStoredContacts: hasOwnProperty, deleteStoredContacts: closure_6, useContactSyncStore: metroImportDefault } = ContactSyncPersistedStore);
-const ContactPermissions = fn(13620).ContactPermissions;
+const ContactPermissions = fn(13672).ContactPermissions;
 const PlatformTypes = fn(1071).PlatformTypes;
 const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 const prototype = function ContactSyncLifecycleManager() {

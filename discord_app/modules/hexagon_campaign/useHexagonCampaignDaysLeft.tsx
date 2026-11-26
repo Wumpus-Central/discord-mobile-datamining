@@ -1,16 +1,16 @@
-// === Module 16041: useHexagonCampaignDaysLeft ===
+// === Module 16099: useHexagonCampaignDaysLeft ===
 
-// Module 16041 (useHexagonCampaignDaysLeft)
+// Module 16099 (useHexagonCampaignDaysLeft)
 import DurationsDefault from "Durations" /* 1088 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5040 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5071 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1386 */;
+import UserStore from "UserStore" /* 1387 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_5 = 60 * DurationsDefault.Millis.SECOND;
-let closure_6 = Object.values(fn(5037).HexagonCampaignPerk);
+let closure_6 = Object.values(fn(5068).HexagonCampaignPerk);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/useHexagonCampaignDaysLeft.tsx");
 
@@ -38,7 +38,7 @@ export function useHexagonCampaignDaysLeft(perk) {
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp3 = stateFromStores(9091)(memo, closure_5);
+  const tmp3 = stateFromStores(9133)(memo, closure_5);
   let num = 0;
   if (tmp3.hours > 0) {
     num = 1;

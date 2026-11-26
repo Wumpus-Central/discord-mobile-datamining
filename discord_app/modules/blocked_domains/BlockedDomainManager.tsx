@@ -1,9 +1,9 @@
-// === Module 19605: BlockedDomainManager ===
+// === Module 19668: BlockedDomainManager ===
 
-// Module 19605 (BlockedDomainManager)
-import GlobalUtils from "GlobalUtils" /* 1254 */;
-import js_shim_shim from "js_shim/shim" /* 1364 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+// Module 19668 (BlockedDomainManager)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import js_shim_shim from "js_shim/shim" /* 1365 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
 class BlockedDomainManager extends tmp2 {

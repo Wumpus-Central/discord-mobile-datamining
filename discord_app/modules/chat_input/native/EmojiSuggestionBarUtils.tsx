@@ -1,15 +1,15 @@
-// === Module 13345: EmojiSuggestionBarUtils ===
+// === Module 13397: EmojiSuggestionBarUtils ===
 
-// Module 13345 (EmojiSuggestionBarUtils)
-import _mod1653 from "module_1653" /* 1653 */;
-import _mod1706 from "module_1706" /* 1706 */;
-import native from "native" /* 5073 */;
-import timing_timing from "timing/timing" /* 5222 */;
-import spring_spring from "spring/spring" /* 5613 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9544 */;
+// Module 13397 (EmojiSuggestionBarUtils)
+import _mod1654 from "module_1654" /* 1654 */;
+import _mod1707 from "module_1707" /* 1707 */;
+import native from "native" /* 5104 */;
+import timing_timing from "timing/timing" /* 5253 */;
+import spring_spring from "spring/spring" /* 5644 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9586 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 const require = globalThis.__r;
 
@@ -82,7 +82,7 @@ export function EmojiEntranceAnimation(children) {
   _require = index;
   const reducedMotion = children.reducedMotion;
   let sharedValue;
-  sharedValue = require("module_1653").useSharedValue(0);
+  sharedValue = require("module_1654").useSharedValue(0);
   items = [sharedValue, index, reducedMotion];
   const effect = noop.useEffect(() => {
     let num = 0;
@@ -90,9 +90,9 @@ export function EmojiEntranceAnimation(children) {
       num = 20 * c0;
     }
     obj2 = spring_spring;
-    const result = sharedValue.set(_mod1653.withDelay(num, obj2.withSpring(1, obj2)));
+    const result = sharedValue.set(_mod1654.withDelay(num, obj2.withSpring(1, obj2)));
   }, items);
-  let obj = require("module_1653");
+  let obj = require("module_1654");
   const tmp = sharedValue;
   const items1 = [closure_11, sharedValue];
   _require = undefined;
@@ -111,7 +111,7 @@ export function EmojiEntranceAnimation(children) {
   EmojiSuggestionBarUtilsTsx1.__closure = items2;
   EmojiSuggestionBarUtilsTsx1.__workletHash = 4604680595350;
   EmojiSuggestionBarUtilsTsx1.__initData = tmp4;
-  const style = require("module_1653").useAnimatedStyle(EmojiSuggestionBarUtilsTsx1);
+  const style = require("module_1654").useAnimatedStyle(EmojiSuggestionBarUtilsTsx1);
   return jsx(reducedMotion(tmp[6]).View, { style, children: children.children });
 }
 export function useSuggestionBarHeight(transitionState, cleanUp, arg2, onOccupiedHeightChange) {
@@ -119,7 +119,7 @@ export function useSuggestionBarHeight(transitionState, cleanUp, arg2, onOccupie
   closure_1 = cleanUp;
   dependencyMap = arg2;
   closure_3 = onOccupiedHeightChange;
-  const sharedValue = require("module_1653").useSharedValue(0);
+  const sharedValue = require("module_1654").useSharedValue(0);
   items = [transitionState, sharedValue, cleanUp, arg2, onOccupiedHeightChange];
   const effect = sharedValue.useEffect(() => {
     if (transitionState === native.TransitionStates.YEETED) {
@@ -127,7 +127,7 @@ export function useSuggestionBarHeight(transitionState, cleanUp, arg2, onOccupie
         tmp11(0);
       }
       const tmpResult = timing_timing;
-      items = [closure_12, _mod1706.scheduleOnRN, closure_1];
+      items = [closure_12, _mod1707.scheduleOnRN, closure_1];
       c0 = undefined;
       c1 = undefined;
       [tmp19, tmp20, tmp21] = items;
@@ -174,21 +174,21 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
   items = [setDataImmediate];
   const stateFromStores = chatInputRef(504).useStateFromStores(items, () => setDataImmediate.useReducedMotion);
   obj2 = chatInputRef(504);
-  analyticsLocations = chatInputStateRef(6348)(chatInputStateRef(6349).EMOJI_SUGGESTIONS).analyticsLocations;
-  const tmp5 = chatInputStateRef(13311)(tmp[1], 16);
+  analyticsLocations = chatInputStateRef(6379)(chatInputStateRef(6380).EMOJI_SUGGESTIONS).analyticsLocations;
+  const tmp5 = chatInputStateRef(13363)(tmp[1], 16);
   setData = tmp5.setData;
   setDataImmediate = tmp5.setDataImmediate;
   const items1 = [setData];
   const imperativeHandle = setData.useImperativeHandle(ref, () => ({ setData }), items1);
   let obj3 = { channel, text, selectionStart, selectionEnd, enabled: null, maxCount: null, minUnlockedEmojis: null };
-  const tmp4 = chatInputStateRef(6348);
+  const tmp4 = chatInputStateRef(6379);
   if (focused) {
     focused = !suppressed;
   }
   obj3.enabled = focused;
   obj3.maxCount = MAX_SUGGESTIONS_LARGE;
   obj3.minUnlockedEmojis = minUnlockedEmojis;
-  const tmp7Result = chatInputStateRef(13346)(obj3);
+  const tmp7Result = chatInputStateRef(13398)(obj3);
   unlockedEmojis = tmp7Result.unlockedEmojis;
   queryEnd = tmp7Result.queryEnd;
   clear = tmp7Result.clear;
@@ -232,7 +232,7 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
       ref = queryEnd + combined.length;
     }
   }, items2);
-  const tmp7 = chatInputStateRef(13346);
+  const tmp7 = chatInputStateRef(13398);
   return {
     unlockedEmojis,
     lockedEmojis: tmp7Result.lockedEmojis,

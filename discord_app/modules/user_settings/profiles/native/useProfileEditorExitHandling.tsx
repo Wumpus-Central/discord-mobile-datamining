@@ -1,14 +1,14 @@
-// === Module 15988: useProfileEditorExitHandling ===
+// === Module 16066: useProfileEditorExitHandling ===
 
-// Module 15988 (useProfileEditorExitHandling)
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7307 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 9759 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14520 */;
+// Module 16066 (useProfileEditorExitHandling)
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7338 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 9801 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9395 */;
-import WidgetStore from "WidgetStore" /* 14513 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9437 */;
+import WidgetStore from "WidgetStore" /* 14565 */;
 
 require = fn;
 function discardPendingChanges() {
@@ -16,8 +16,8 @@ function discardPendingChanges() {
   WidgetActionCreatorsDefault.clearPendingWidgets();
 }
 let closure_8 = fn(1081).ProfileCustomizationSubsection;
-const RootNavigatorScreen = fn(9387).RootNavigatorScreen;
-const UserProfileSections = fn(6106).UserProfileSections;
+const RootNavigatorScreen = fn(9429).RootNavigatorScreen;
+const UserProfileSections = fn(6137).UserProfileSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useProfileEditorExitHandling.tsx");
 
@@ -32,10 +32,10 @@ export default function useProfileEditorExitHandling(location) {
   first = tmp2[0];
   closure_6 = tmp2[1];
   const effect = first.useEffect(() => () => {
-    const result = _location(7307).resetAndCloseUserProfileForm();
+    const result = _location(7338).resetAndCloseUserProfileForm();
     closure_1_6.resetState();
-    const obj = _location(7307);
-    hasUnsavedChanges(14520).clearPendingWidgets();
+    const obj = _location(7338);
+    hasUnsavedChanges(14572).clearPendingWidgets();
   }, []);
   items = [onSave];
   onSave = first.useCallback(onSave(function*() {

@@ -1,12 +1,12 @@
-// === Module 4925: useCommunicationDisabledNoticeStore ===
+// === Module 4956: useCommunicationDisabledNoticeStore ===
 
-// Module 4925 (useCommunicationDisabledNoticeStore)
-import _mod1257 from "module_1257" /* 1257 */;
-import _mod4927 from "module_4927" /* 4927 */;
+// Module 4956 (useCommunicationDisabledNoticeStore)
+import _mod1258 from "module_1258" /* 1258 */;
+import _mod4958 from "module_4958" /* 4958 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(4926).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(4957).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_561 = fn(561);
 let state = module_561.createStore((arg0, arg1) => {
   _require = arg0;
@@ -23,7 +23,7 @@ let state = module_561.createStore((arg0, arg1) => {
       notificationDismissedInGuilds.add(arg0);
       const Storage = notificationDismissedInGuilds(510).Storage;
       const result = Storage.set(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, notificationDismissedInGuilds);
-      notificationDismissedInGuilds(1262).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
+      notificationDismissedInGuilds(1263).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
     },
     resetNotification(arg0) {
       const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
@@ -31,8 +31,8 @@ let state = module_561.createStore((arg0, arg1) => {
         notificationDismissedInGuilds.delete(arg0);
         const Storage = notificationDismissedInGuilds(510).Storage;
         const result = Storage.set(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, notificationDismissedInGuilds);
-        notificationDismissedInGuilds(1262).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
-        const obj = notificationDismissedInGuilds(1262);
+        notificationDismissedInGuilds(1263).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
+        const obj = notificationDismissedInGuilds(1263);
       }
     }
   };
@@ -50,11 +50,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
 
 export function useCommunicationDisabledNoticeStore(arg0) {
-  const tmp = _slicedToArray(_mod1257.useStoreWithEqualityFn(closure_4, (arg0) => {
+  const tmp = _slicedToArray(_mod1258.useStoreWithEqualityFn(closure_4, (arg0) => {
     items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, _mod4927.shallow), 2);
+  }, _mod4958.shallow), 2);
   const first = tmp[0];
   items = [!first.has(arg0), tmp[1]];
   return items;

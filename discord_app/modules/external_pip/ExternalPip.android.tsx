@@ -1,8 +1,8 @@
-// === Module 5921: ExternalPip ===
+// === Module 5952: ExternalPip ===
 
-// Module 5921 (ExternalPip)
-import getExternalPipTileNativeId from "getExternalPipTileNativeId" /* 5923 */;
-import NativeExternalPipModule from "NativeExternalPipModule" /* 5922 */;
+// Module 5952 (ExternalPip)
+import getExternalPipTileNativeId from "getExternalPipTileNativeId" /* 5954 */;
+import NativeExternalPipModule from "NativeExternalPipModule" /* 5953 */;
 
 require = fn;
 const isSupported = NativeExternalPipModule.getConstants().isSupported;

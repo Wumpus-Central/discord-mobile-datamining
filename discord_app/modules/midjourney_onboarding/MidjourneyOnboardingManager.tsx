@@ -1,11 +1,11 @@
-// === Module 20229: MidjourneyOnboardingManager ===
+// === Module 20293: MidjourneyOnboardingManager ===
 
-// Module 20229 (MidjourneyOnboardingManager)
+// Module 20293 (MidjourneyOnboardingManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7444 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 const require = fn;
-const MIDJOURNEY_GUILD_ID = fn(15214).MIDJOURNEY_GUILD_ID;
+const MIDJOURNEY_GUILD_ID = fn(15264).MIDJOURNEY_GUILD_ID;
 const Routes = fn(1071).Routes;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
@@ -27,7 +27,7 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: "+95" };
       }
     } else {
       try {
@@ -44,19 +44,19 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
             if (obj6.isEligibleForMidjourneyRedirect(channel)) {
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp2(15213).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
+              const obj4 = { value: tmp2(15263).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
               return obj4;
             } else {
               dependencyMap = 3;
             }
-            obj6 = tmp2(15213);
+            obj6 = tmp2(15263);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          v1(7573)(Routes.CHANNEL(null, closure_128_0.id));
-          const tmp9 = v1(7573);
+          v1(7604)(Routes.CHANNEL(null, closure_128_0.id));
+          const tmp9 = v1(7604);
         }
         dependencyMap = 3;
         const obj = { value, done: true };

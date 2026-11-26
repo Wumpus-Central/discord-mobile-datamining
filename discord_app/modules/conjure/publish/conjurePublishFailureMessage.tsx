@@ -1,8 +1,8 @@
-// === Module 11429: conjurePublishFailureMessage ===
+// === Module 11476: conjurePublishFailureMessage ===
 
-// Module 11429 (conjurePublishFailureMessage)
+// Module 11476 (conjurePublishFailureMessage)
 import util from "util" /* 1112 */;
-import _modDef4244 from "module_4244" /* 4244 */;
+import _modDef4245 from "module_4245" /* 4245 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishFailureMessage.tsx");
@@ -19,10 +19,10 @@ export default function conjurePublishFailureMessage(detail) {
   }
   if (20088 === detail.code) {
     const intl2 = util.intl;
-    intl2.string(_modDef4244.UXEDPw);
+    intl2.string(_modDef4245.UXEDPw);
   } else {
     const intl = util.intl;
-    intl.string(_modDef4244.gMWZeG);
+    intl.string(_modDef4245.gMWZeG);
   }
 };
 export const PREVIEW_BOT_NOT_INSTALLED_CODE = 20088;

@@ -1,12 +1,12 @@
-// === Module 14986: UserProfilePrivateInfoBanner ===
+// === Module 15036: UserProfilePrivateInfoBanner ===
 
-// Module 14986 (UserProfilePrivateInfoBanner)
+// Module 15036 (UserProfilePrivateInfoBanner)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import Text_Text from "Text/Text" /* 5603 */;
-import createStyles from "createStyles" /* 5012 */;
+import Text_Text from "Text/Text" /* 5634 */;
+import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

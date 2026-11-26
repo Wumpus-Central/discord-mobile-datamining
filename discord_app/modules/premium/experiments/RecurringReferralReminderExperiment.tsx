@@ -1,7 +1,7 @@
-// === Module 19259: RecurringReferralReminderExperiment ===
+// === Module 19322: RecurringReferralReminderExperiment ===
 
-// Module 19259 (RecurringReferralReminderExperiment)
-import ApexExperiment from "ApexExperiment" /* 1450 */;
+// Module 19322 (RecurringReferralReminderExperiment)
+import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-recurring-referral-reminder", kind: "user", defaultConfig: { enabled: false, bottomSheetEnabled: false, notificationEnabled: false }, variations: null };

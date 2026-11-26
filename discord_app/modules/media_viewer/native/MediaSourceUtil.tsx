@@ -1,30 +1,30 @@
-// === Module 8768: MediaSourceUtil ===
+// === Module 8810: MediaSourceUtil ===
 
-// Module 8768 (MediaSourceUtil)
+// Module 8810 (MediaSourceUtil)
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import util from "util" /* 1112 */;
-import FlagUtils from "FlagUtils" /* 1404 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1442 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1493 */;
-import Server from "Server" /* 2117 */;
-import ToastUtils from "ToastUtils" /* 5693 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6016 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6364 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6372 */;
-import EmbedUtils from "EmbedUtils" /* 6746 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6818 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8577 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8764 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8769 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8774 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8775 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8776 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8779 */;
-import transformMessageComponents from "transformMessageComponents" /* 8780 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8796 */;
-import MediaModalPortal from "MediaModalPortal" /* 8808 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1443 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1494 */;
+import Server from "Server" /* 2118 */;
+import ToastUtils from "ToastUtils" /* 5724 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6395 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6403 */;
+import EmbedUtils from "EmbedUtils" /* 6777 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6849 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8619 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8806 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8811 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8816 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8817 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8818 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8821 */;
+import transformMessageComponents from "transformMessageComponents" /* 8822 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8838 */;
+import MediaModalPortal from "MediaModalPortal" /* 8850 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4861 */;
+import ChannelStore from "ChannelStore" /* 4892 */;
 
 const require = globalThis.__r;
 
@@ -805,7 +805,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
     return null;
   } else {
     const type = value.type;
-    if (tmp(2117).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(2118).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -826,9 +826,9 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
         }
         return tmp;
       });
-      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1254).isNotNullish) };
+      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1255).isNotNullish) };
       return obj2;
-    } else if (tmp(2117).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(2118).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {
