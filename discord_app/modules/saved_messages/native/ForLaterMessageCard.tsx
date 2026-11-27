@@ -108,7 +108,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -143,7 +143,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -159,7 +159,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       } else {
                         c1 = 1;
                         c2 = 1;
-                        const obj5 = { value: v3(11728).savedMessageJumpToMessage(tmp4, c1), done: false };
+                        const obj5 = { value: v3(11736).savedMessageJumpToMessage(tmp4, c1), done: false };
                         return obj5;
                       }
                     } else if (arg0 === 1) {
@@ -186,9 +186,9 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       }
                       obj8.message_author_id = id;
                       if (null != tmp4.saveData.dueAt) {
-                        let BOOKMARK = v3(11714).SavedMessageSortTypes.REMINDER;
+                        let BOOKMARK = v3(11722).SavedMessageSortTypes.REMINDER;
                       } else {
-                        BOOKMARK = v3(11714).SavedMessageSortTypes.BOOKMARK;
+                        BOOKMARK = v3(11722).SavedMessageSortTypes.BOOKMARK;
                       }
                       obj8.type = BOOKMARK;
                       let diffResult;
@@ -199,7 +199,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       obj8.due_duration = diffResult;
                       v1(1256).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
                       c2 = 3;
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp26) {
                     c2 = tmp;
@@ -223,7 +223,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp8) {
           c0 = tmp;
           throw tmp8;

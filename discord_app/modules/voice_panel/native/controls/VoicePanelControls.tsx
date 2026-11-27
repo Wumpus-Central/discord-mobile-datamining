@@ -39,7 +39,7 @@ const _modDef1654 = _mod1654;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11782);
+const VoicePanelConstants = fn(11790);
 ({
   UI_SHOW_HIDE_PHYSICS: metroImportDefault,
   MODE_CHANGE_PHYSICS: closure_8,
@@ -47,9 +47,9 @@ const VoicePanelConstants = fn(11782);
   PANEL_CONTROLS_HEIGHT_PHYSICS: closure_10,
   VoicePanelModes: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11785);
+const VoicePanelCardConstants = fn(11793);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(11780);
+const VoicePanelControlsConstants = fn(11788);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } =
   VoicePanelControlsConstants);
 const Constants = fn(1071);
@@ -423,7 +423,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(18203).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(18210).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "chat", source });
     }
@@ -433,7 +433,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(18203).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(18210).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "app_launcher", source });
     }
@@ -759,7 +759,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   closure_129_2 = sharedValue1;
   closure_129_3 = callback;
   ({ hiddenProps, hiddenStyles } = useControlsHiddenPresentationDefault(mode, sharedValue1));
-  const context1 = obj2.useContext(tmp4(11781));
+  const context1 = obj2.useContext(tmp4(11789));
   const controlsSpecs2 = context1.controlsSpecs;
   closure_129_4 = controlsSpecs2;
   const windowDimensions = context1.windowDimensions;
@@ -1362,7 +1362,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   const tmpResult25 = require("../../../../../_runtime/metro/01654__.js");
   const isScreenReaderEnabled1 = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const tmpResult26 = require("useIsScreenReaderEnabled");
-  const context2 = obj2.useContext(tmp4(11781));
+  const context2 = obj2.useContext(tmp4(11789));
   ({
     controlsSpecs: controlsSpecs3,
     windowDimensions: windowDimensions2,

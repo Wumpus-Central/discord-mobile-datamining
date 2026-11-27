@@ -8,7 +8,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(10496).useInstantInviteSendStates;
+let closure_4 = fn(10497).useInstantInviteSendStates;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/game_organization_invites/useLinkedGameOrganizationInviteSender.tsx",
@@ -30,7 +30,7 @@ export default function useLinkedGameOrganizationInviteSender(arg0) {
   });
   let tmp3 = null;
   if (null != stateFromStores) {
-    tmp3 = stateFromStores(12125)(stateFromStores);
+    tmp3 = stateFromStores(12133)(stateFromStores);
   }
   dependencyMap = tmp3;
   let tmp5 = closure_4((arg0) => {

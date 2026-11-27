@@ -57,7 +57,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(19218).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(19234).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };

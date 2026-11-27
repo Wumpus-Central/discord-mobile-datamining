@@ -11,7 +11,7 @@ function ConjurePublishBlockedSheet(onConfirm) {
   ({ reason, message } = onConfirm);
   const tmp = closure_7();
   const tmp2 = onConfirm;
-  const conjurePublishBlockedCopy = onConfirm(11469).getConjurePublishBlockedCopy(reason, message);
+  const conjurePublishBlockedCopy = onConfirm(11479).getConjurePublishBlockedCopy(reason, message);
   const obj2 = {
     header: closure_4(onConfirm(7507).BottomSheetTitleHeader, { title: conjurePublishBlockedCopy.title }),
     children: null,

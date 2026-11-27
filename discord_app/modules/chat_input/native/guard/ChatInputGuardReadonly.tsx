@@ -20,7 +20,7 @@ function sortChannelsByLastMessageId(id, id2) {
 }
 const isTextChannel = fn(4896).isTextChannel;
 let closure_6 = fn(4973).GUILD_SELECTABLE_CHANNELS_KEY;
-const TextAreaCta = fn(12960).TextAreaCta;
+const TextAreaCta = fn(12968).TextAreaCta;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;

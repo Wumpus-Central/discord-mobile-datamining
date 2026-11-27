@@ -96,8 +96,8 @@ export default function TraitOptionList(size) {
   closure_6 = size(504).useStateFromStores(items, () => closure_7.useReducedMotion);
   let obj = size(504);
   let tmp2 = size;
-  closure_7 = options(12665)(options(12895));
-  const tmp4 = options(12665);
+  closure_7 = options(12673)(options(12903));
+  const tmp4 = options(12673);
   const isScreenReaderEnabled = size(5273).useIsScreenReaderEnabled();
   noop.useRef(null);
   const ref = noop.useRef(false);
@@ -109,7 +109,7 @@ export default function TraitOptionList(size) {
   const tmp8 = options(5622)(bound);
   let obj2 = size(5273);
   [tmp10, c13] = disabled(noop.useState(options(1495)().width), 2);
-  const width = size(12919).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const width = size(12927).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + closure_11;
   c15 = sum;
   const ref1 = noop.useRef(null);
@@ -278,7 +278,7 @@ export default function TraitOptionList(size) {
       disabled: null,
       onPress: null,
     };
-    const tmp2 = options(12919);
+    const tmp2 = options(12927);
     obj.accessibilityLabel = size(6765).getAssetAccessibilityLabel(traitOption, {
       skipRarity: skipDescription,
       skipDescription,

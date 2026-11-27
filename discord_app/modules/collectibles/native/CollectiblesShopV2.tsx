@@ -8,7 +8,7 @@ import NativePaymentHooksDefault from "../../payments/native/hooks/NativePayment
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import ImprovedMobileShopLoadingExperiment from "../experiments/ImprovedMobileShopLoadingExperiment.tsx";
 import CollectiblesShopManager2 from "../CollectiblesShopManager.tsx";
-import takeWhileDefault from "../../../../_runtime/17491_takeWhile.js";
+import takeWhileDefault from "../../../../_runtime/17498_takeWhile.js";
 import ShopCategory from "ShopCategory.tsx";
 import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";

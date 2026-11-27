@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 let c7 = "heading-sm/semibold";
 let c8 = "body-sm/medium";
-let closure_9 = fn(16680).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+let closure_9 = fn(16687).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
 const createStyles = fn(5043);
 let closure_10 = createStyles.createStyles({
   wrapper: {

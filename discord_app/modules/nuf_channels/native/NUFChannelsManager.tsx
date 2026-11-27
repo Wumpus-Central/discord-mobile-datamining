@@ -83,7 +83,7 @@ class NUFChannelsManager extends tmp2 {
           }
           if (isNewUserResult) {
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(8453, dependencyMap.paths),
+              asyncRequireImpl(8454, dependencyMap.paths),
               "NUFChannelsActionSheet",
             );
             const Storage2 = Storage3.Storage;

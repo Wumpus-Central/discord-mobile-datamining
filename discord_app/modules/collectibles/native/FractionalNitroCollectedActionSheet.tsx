@@ -4,17 +4,17 @@ import util from "../../../intl/index.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef9248 from "../../../../_runtime/metro/09248__.js";
 import _modDef9249 from "../../../../_runtime/metro/09249__.js";
+import _modDef9250 from "../../../../_runtime/metro/09250__.js";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
-import _modDef11621 from "../../../../_runtime/metro/11621__.js";
+import _modDef11629 from "../../../../_runtime/metro/11629__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef11621 };
+  const obj2 = { source: _modDef11629 };
   items = [React6(FastImageDefault, obj2)];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = {
@@ -52,17 +52,17 @@ obj2.buttonContainer = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "st
 obj2.description = { textAlign: "center" };
 obj2.header = { height: 112, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 let size = {
-  width: fn(11235).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
-  height: fn(11235).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
+  width: fn(11236).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
+  height: fn(11236).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: null,
 };
 let obj5 = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "stretch" };
-let items = [{ translateX: -fn(11235).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }];
-const obj6 = { translateX: -fn(11235).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
-items[1] = { translateY: -fn(11235).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+let items = [{ translateX: -fn(11236).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }];
+const obj6 = { translateX: -fn(11236).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+items[1] = { translateY: -fn(11236).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
 size.transform = items;
 obj2.fractionNitroIcon = size;
 const size1 = {
@@ -100,9 +100,9 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
       const tmp10 = FastImageDefault;
       let obj3 = dependencyMap;
       if (obj2.isThemeDark(closure_3)) {
-        let tmp8Result = _modDef9248;
+        let tmp8Result = _modDef9249;
       } else {
-        tmp8Result = _modDef9249;
+        tmp8Result = _modDef9250;
       }
       obj3 = { source: tmp8Result };
       React6(tmp10, obj3);
@@ -150,7 +150,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   }, []);
   if (consumed) {
     let obj2 = { premiumType: TIER_2.TIER_2 };
-    let tmp12Result = closure_9(tmp2(9125), obj2);
+    let tmp12Result = closure_9(tmp2(9126), obj2);
     let tmp15 = closure_9;
   } else {
     let obj3 = { skuId };
@@ -161,7 +161,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   const items2 = [tmp12Result];
   const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
   let obj = skuId(6356);
-  obj5.children = tmp15(skuId(9462).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(575).colors.WHITE });
+  obj5.children = tmp15(skuId(9463).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(575).colors.WHITE });
   items2[1] = tmp15(skuId(6152).PressableOpacity, obj5);
   obj4.children = items2;
   const items3 = [closure_10(closure_11, obj4), ,];

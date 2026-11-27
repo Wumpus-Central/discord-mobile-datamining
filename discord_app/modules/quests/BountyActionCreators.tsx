@@ -90,7 +90,7 @@ let closure_14 = async function _fetchQuestHomeBounties(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_14 = async function _fetchQuestHomeBounties(arg0) {
               asyncGeneratorStep(async () => {
                 await tmp2(6795).getSession();
                 closure_128_0 = value;
-                const orRefreshAdSession = tmp2(8385).getOrRefreshAdSession();
+                const orRefreshAdSession = tmp2(8386).getOrRefreshAdSession();
                 const HTTP = tmp2(1285).HTTP;
                 const request = {
                   url: constants.QUESTS_GET_DECISIONS,
@@ -149,7 +149,7 @@ let closure_14 = async function _fetchQuestHomeBounties(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;
@@ -167,7 +167,7 @@ let closure_15 = async function _fetchBountyPreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -223,7 +223,7 @@ let closure_15 = async function _fetchBountyPreview(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c2 = tmp;
       throw tmp10;
@@ -241,7 +241,7 @@ let closure_16 = async function _fetchQuestBarCreativePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -536,7 +536,7 @@ let closure_17 = async function _claimBountyReward() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -668,7 +668,7 @@ let closure_18 = async function _dismissAdContent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -788,7 +788,7 @@ let closure_19 = async function _resetCreativePreviewDeliveryState(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -833,7 +833,7 @@ let closure_19 = async function _resetCreativePreviewDeliveryState(arg0) {
           const obj7 = { type: "ADS_CREATIVE_PREVIEW_DELIVERY_STATE_RESET", adCreativeId: closure_130_0 };
           closure_131_1(closure_131_2[9]).dispatch(obj7);
           c5 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         c5 = tmp;
@@ -856,7 +856,7 @@ let closure_20 = async function _resetPreviewDeliveryStateLookback() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -894,7 +894,7 @@ let closure_20 = async function _resetPreviewDeliveryStateLookback() {
         } else {
           closure_129_1(closure_129_2[9]).dispatch({ type: "ADS_PREVIEW_DELIVERY_STATE_LOOKBACK_RESET" });
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         c3 = tmp;

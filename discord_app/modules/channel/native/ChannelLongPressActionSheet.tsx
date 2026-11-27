@@ -83,7 +83,7 @@ let closure_35 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -454,7 +454,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj14.label = intl5.string(tmp5(tmp2[23]).t.OQ9MKu);
       obj14.IconComponent = tmp5(tmp2[32]).LinkIcon;
       obj14.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11424, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11425, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj14);
     }
@@ -837,7 +837,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj43.IconComponent = tmp5(tmp2[74]).ChatIcon;
             obj43.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11503, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11511, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons20.push(obj43);
@@ -871,7 +871,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -900,7 +900,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   } else {
                     value.openEndStageModal(closure_128_0);
                     paths = 3;
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp10) {
                   paths = tmp;
@@ -1227,7 +1227,7 @@ function ChannelLongPressActionSheetConnected(channel) {
   tmp70 = null != remixProject && null != guildId1;
   tmp72 = null != tmp52 && null != guildId1;
 }
-const SafetyWarningTypes = fn(11408).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11409).SafetyWarningTypes;
 const ChannelRecord = fn(4896);
 ({
   isGuildTextChannelType: closure_9,
@@ -1247,7 +1247,7 @@ const Constants = fn(1071);
   Permissions: closure_30,
   ZERO_STRING_GUILD_ID: closure_31,
 } = Constants);
-let closure_32 = fn(11409).ChannelDetailsNavigatorScreens;
+let closure_32 = fn(11410).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPressActionSheet.tsx");

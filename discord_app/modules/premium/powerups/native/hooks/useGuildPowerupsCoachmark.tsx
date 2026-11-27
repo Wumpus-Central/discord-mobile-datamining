@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import useGetGuildPowerupBannerImage from "../../hooks/useGetGuildPowerupBannerImage.tsx";
 import GuildPowerupsBoostGemDefault from "../GuildPowerupsBoostGem.tsx";
 import GuildPowerupsImageDefault from "../GuildPowerupsImage.tsx";
-import _modDef17894 from "../../../../../../discord_assets/assets/premium/powerups/level_background.png.js";
-import _modDef17895 from "../../../../../../discord_assets/assets/powerups/server-theme-powerup-static.png.js";
+import _modDef17901 from "../../../../../../discord_assets/assets/premium/powerups/level_background.png.js";
+import _modDef17902 from "../../../../../../discord_assets/assets/powerups/server-theme-powerup-static.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -12,7 +12,7 @@ import GuildStore from "../../../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(8297);
+const GuildPowerupsConstants = fn(8298);
 ({
   GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET: closure_6,
   GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET: metroImportDefault,
@@ -178,7 +178,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           obj9.visible = true;
           obj9.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef17894;
+              let str = _modDef17901;
             } else {
               str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
               if (str == null) {
@@ -251,7 +251,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
               true,
             );
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef17895;
+              guildPowerupBannerImage = _modDef17902;
             }
             const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             items = [,];

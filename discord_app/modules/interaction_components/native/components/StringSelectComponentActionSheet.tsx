@@ -26,10 +26,10 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(8832);
+  let obj = selectionActionComponent(8833);
   let tmp3 = first(
     noop.useState(
-      new Set(selectionActionComponent(8832).getInitialStringSelectOptions(selectionActionComponent, containerId)),
+      new Set(selectionActionComponent(8833).getInitialStringSelectOptions(selectionActionComponent, containerId)),
     ),
     2,
   );
@@ -125,7 +125,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     channelId: null,
     allowEmpty: null,
   };
-  set = new Set(selectionActionComponent(8832).getInitialStringSelectOptions(selectionActionComponent, containerId));
+  set = new Set(selectionActionComponent(8833).getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
   if (selectionOptionItemWithDescription) {
     selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;
@@ -154,5 +154,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(12403), obj2);
+  return tmp9(onSubmit(12411), obj2);
 }

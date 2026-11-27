@@ -2,7 +2,7 @@
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import leaveEmbeddedActivity from "../../leaveEmbeddedActivity.tsx";
-import _modDef10314 from "../../../../../_runtime/metro/10314__.js";
+import _modDef10315 from "../../../../../_runtime/metro/10315__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

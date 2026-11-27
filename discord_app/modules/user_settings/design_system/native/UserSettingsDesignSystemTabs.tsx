@@ -81,25 +81,25 @@ export default function UserSettingsDesignSystemTabs() {
     return items;
   }, items);
   const tmp13 = closure_9();
-  const segmentedControlState = first(8616).useSegmentedControlState({ items: memo, pageWidth: num, defaultIndex: 1 });
-  let obj = first(8616);
+  const segmentedControlState = first(8617).useSegmentedControlState({ items: memo, pageWidth: num, defaultIndex: 1 });
+  let obj = first(8617);
   const token = first(5607).useToken(tmp(575).colors.BACKGROUND_BASE_LOW);
   let items1 = [token];
   let obj2 = first(5607);
   items1[1] = first(5040).hexWithOpacity(token, 0);
   const obj4 = { style: tmp13.container, ref, onLayout, children: null };
-  const items2 = [closure_8(first(13612).Tabs, { state: segmentedControlState, grow: first1 })];
+  const items2 = [closure_8(first(13619).Tabs, { state: segmentedControlState, grow: first1 })];
   let tmp19Result = first2;
   if (first2) {
     const obj5 = { state: segmentedControlState, colors: items1 };
-    tmp19Result = closure_8(tmp(13799), obj5);
+    tmp19Result = closure_8(tmp(13806), obj5);
   }
   const obj6 = { children: null };
   const obj7 = { spacing: 24, children: null };
   items2[1] = tmp19Result;
   const items3 = [
     closure_7(closure_5, { children: items2 }),
-    closure_8(first(13615).SegmentedControlPages, { state: segmentedControlState }),
+    closure_8(first(13622).SegmentedControlPages, { state: segmentedControlState }),
     ,
   ];
   const obj8 = { spacing: 8, direction: "horizontal", children: null };

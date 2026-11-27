@@ -165,7 +165,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12537, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12545, dependencyMap.paths), {
         classificationId: id,
         source: React5.StandingTab,
       });

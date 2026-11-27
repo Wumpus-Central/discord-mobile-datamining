@@ -3,43 +3,43 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import _modDef2911 from "../../gifting/PremiumGifting.messages.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef11582 from "../../../../../_runtime/metro/11582__.js";
-import _modDef11583 from "../../../../../_runtime/metro/11583__.js";
-import _modDef11584 from "../../../../../_runtime/metro/11584__.js";
-import _modDef11585 from "../../../../../_runtime/metro/11585__.js";
-import _modDef11586 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import _modDef11587 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
-import _modDef11588 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";
-import _modDef11589 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_coffee.png.js";
-import _modDef11590 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js";
+import _modDef11590 from "../../../../../_runtime/metro/11590__.js";
+import _modDef11591 from "../../../../../_runtime/metro/11591__.js";
+import _modDef11592 from "../../../../../_runtime/metro/11592__.js";
+import _modDef11593 from "../../../../../_runtime/metro/11593__.js";
+import _modDef11594 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef11595 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
+import _modDef11596 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";
+import _modDef11597 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_coffee.png.js";
+import _modDef11598 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const PremiumGiftStyles = fn(1389).PremiumGiftStyles;
-const GIFT_STYLE_DESCRIPTIONS = fn(11581).GIFT_STYLE_DESCRIPTIONS;
+const GIFT_STYLE_DESCRIPTIONS = fn(11589).GIFT_STYLE_DESCRIPTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const GIFT_STYLE_IMG = {
-  [STANDARD_BOX]: _modDef11582,
-  [CAKE]: _modDef11583,
-  [CHEST]: _modDef11584,
-  [COFFEE]: _modDef11585,
+  [STANDARD_BOX]: _modDef11590,
+  [CAKE]: _modDef11591,
+  [CHEST]: _modDef11592,
+  [COFFEE]: _modDef11593,
 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef11586 };
+GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef11594 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SNOWGLOBE] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.BOX] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.CUP] = null;
-let obj2 = { uri: _modDef11586 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef11587 };
-let obj3 = { uri: _modDef11587 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef11588 };
-let obj4 = { uri: _modDef11588 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef11589 };
-const obj5 = { uri: _modDef11589 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef11590 };
+let obj2 = { uri: _modDef11594 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef11595 };
+let obj3 = { uri: _modDef11595 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef11596 };
+let obj4 = { uri: _modDef11596 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef11597 };
+const obj5 = { uri: _modDef11597 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef11598 };
 const createStyles = fn(5043);
 let closure_9 = createStyles.createStyles((arg0) => {
   const size = {

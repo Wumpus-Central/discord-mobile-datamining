@@ -12,7 +12,7 @@ import _modDef6157 from "../../../../../_runtime/metro/06157__.js";
 import _modDef7408 from "../../../../../_runtime/metro/07408__.js";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import native2 from "../../../../design/components/experimental/native.tsx";
-import _modDef10455 from "../../../../../_runtime/metro/10455__.js";
+import _modDef10456 from "../../../../../_runtime/metro/10456__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -189,7 +189,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   };
   const tmp3 = LinearGradientDefault;
   obj25.children = timestampProducer(RowButton.RowButton, {
-    icon: _modDef10455,
+    icon: _modDef10456,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -198,7 +198,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   obj24.children = timestampProducer(tmp3, obj25);
   items[5] = timestampProducer(native.ThemeContextProvider, obj24);
   const obj26 = {
-    icon: _modDef10455,
+    icon: _modDef10456,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -222,7 +222,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     children: timestampProducer(React3, { style: { padding: 48 } }),
   };
   items3[1] = timestampProducer(native2.CollapsibleFloatingActionButton, {
-    icon: _modDef10455,
+    icon: _modDef10456,
     onPress() {},
     positionBottom: 32,
     text: "Floating Action Button",

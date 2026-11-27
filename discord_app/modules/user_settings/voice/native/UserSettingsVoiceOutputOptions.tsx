@@ -84,5 +84,5 @@ export default function UserSettingsVoiceOutputOptions() {
   }
   items4[1] = tmp9Result;
   obj4.children = items4;
-  return closure_10(stateFromStores1(10388).UserSettingsTableRowGroup, obj4);
+  return closure_10(stateFromStores1(10389).UserSettingsTableRowGroup, obj4);
 }

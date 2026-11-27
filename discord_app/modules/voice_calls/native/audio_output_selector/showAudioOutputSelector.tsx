@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 export function showAudioOutputSelector(channelId, isConnectedToVoiceChannel) {
   if (obj.isAndroid()) {
     const obj3 = { channelId, isConnectedToVoiceChannel };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8645, dependencyMap.paths), closure_4, obj3);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8646, dependencyMap.paths), closure_4, obj3);
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;
     if (AudioRoutePicker != null) {

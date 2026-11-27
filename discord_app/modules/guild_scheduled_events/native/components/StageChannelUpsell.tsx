@@ -10,15 +10,15 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import _modDef7752 from "../../../../../_runtime/metro/07752__.js";
-import _modDef8520 from "../../../../../_runtime/metro/08520__.js";
+import _modDef8521 from "../../../../../_runtime/metro/08521__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const createChannelRecord = fn(4896).createChannelRecord;
-let closure_6 = fn(8519).useStageChannelUpsellCardStore;
-let closure_7 = fn(8474).CREATE_GUILD_EVENT_MODAL_KEY;
+let closure_6 = fn(8520).useStageChannelUpsellCardStore;
+let closure_7 = fn(8475).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1071).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -55,7 +55,7 @@ export default function StageChannelUpsell(arg0) {
     let obj3 = { source: _modDef7752 };
     obj2.children = closure_9(native.Icon, obj3);
     items = [closure_9(Pressables.PressableOpacity, obj2), , , , ,];
-    const obj4 = { source: _modDef8520, style: tmp.image };
+    const obj4 = { source: _modDef8521, style: tmp.image };
     items[1] = closure_9(FastImageDefault, obj4);
     const obj5 = {
       style: tmp.header,
@@ -90,7 +90,7 @@ export default function StageChannelUpsell(arg0) {
     obj10.onPress = function handleCreateChannel() {
       ModalActionCreatorsDefault.popWithKey(closure_7);
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(8521, dependencyMap.paths),
+        asyncRequireImpl(8522, dependencyMap.paths),
         {
           guildId,
           channelType: ChannelTypes.GUILD_STAGE_VOICE,

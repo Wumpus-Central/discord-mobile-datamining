@@ -459,7 +459,7 @@ function UnreadDotCutoutLayer(showDot) {
   const items1 = [tmp.cutoutLayerFill, showDot.style];
   obj2.style = items1;
   obj.children = closure_15(closure_6, obj2);
-  return closure_15(first(9420), obj);
+  return closure_15(first(9421), obj);
 }
 class ProfileBadgeRows {
   constructor(arg0) {
@@ -932,7 +932,7 @@ const getBadgeName = fn(6137).getBadgeName;
 const Constants = fn(7557);
 ({ DIVIDER_DOT: closure_10, PROFILE_SIDE_PADDING: closure_11, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-const GuildTagBadgeSize = fn(8579).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8580).GuildTagBadgeSize;
 const DEFAULT_PREMIUM_BADGE_ID = fn(6385).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);

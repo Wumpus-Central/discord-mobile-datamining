@@ -39,7 +39,7 @@ function startRemix(id, guildId, arg2, arg3) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -152,23 +152,20 @@ function startRemix(id, guildId, arg2, arg3) {
   c9 = false;
   let tmp5 = null;
   if (null != guildId) {
-    tmp5 = null;
-    if ("guild" === id.install_scope) {
-      guild = GuildStore.getGuild(guildId);
-      let tmp8 = null;
-      if (null != guild) {
-        tmp8 = null;
-        if (tmpResult.canStartConjureProject(guild, "ConjureRemix")) {
-          tmp8 = guildId;
-        }
-        tmpResult = copy(7602);
+    guild = GuildStore.getGuild(guildId);
+    let tmp8 = null;
+    if (null != guild) {
+      tmp8 = null;
+      if (tmpResult.canStartConjureProject(guild, "ConjureRemix")) {
+        tmp8 = guildId;
       }
-      tmp5 = tmp8;
+      tmpResult = copy(7602);
     }
+    tmp5 = tmp8;
   }
   closure_11 = tmp5;
   let obj = copy(7674);
-  nonce = copy(10070).createNonce();
+  nonce = copy(10071).createNonce();
   let result = map.set(nonce, (id, ws_ticket) => {
     map.delete(nonce);
     closure_7 = id;
@@ -184,7 +181,7 @@ function startRemix(id, guildId, arg2, arg3) {
       tmp9(id, closure_11);
     }
   });
-  const tmpResult3 = copy(10070);
+  const tmpResult3 = copy(10071);
   let obj3 = { name };
   if (null != tmp5) {
     let obj4 = { guild_id: tmp5 };
@@ -275,6 +272,9 @@ let result = size.fileFinishedImporting("modules/conjure/remix/ConjureRemix.tsx"
 export function isValidCopyName(str) {
   return str.trim().length >= ConjureProjectTypes.MIN_PROJECT_NAME_LENGTH;
 }
+export function conjureCopyChangesType(install_scope, id) {
+  return "guild" === install_scope.install_scope !== (null != id);
+}
 export function isConjureRemixCreating(c1) {
   return set.has(c1);
 }
@@ -293,7 +293,7 @@ export function createConjureRemix(project, arg1, shareTicket) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

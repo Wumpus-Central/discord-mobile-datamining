@@ -24,7 +24,7 @@ let closure_5 = fn(1073).CollectiblesMobileShopScreen;
 const UserSettingsSections = fn(1071).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const sum = 100 + fn(11211).COLLECTIBLES_SHOP_CARD_HEIGHT;
+const sum = 100 + fn(11212).COLLECTIBLES_SHOP_CARD_HEIGHT;
 const createStyles = fn(5043);
 let obj2 = {
   categoryContainer: { marginTop: nativeDefault.space.PX_16, marginBottom: 24, height: sum },
@@ -77,8 +77,8 @@ obj2.categoryHeaderSkeleton = {
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let size = {
-  width: fn(11211).COLLECTIBLES_SHOP_CARD_WIDTH,
-  height: fn(11211).COLLECTIBLES_SHOP_CARD_HEIGHT,
+  width: fn(11212).COLLECTIBLES_SHOP_CARD_WIDTH,
+  height: fn(11212).COLLECTIBLES_SHOP_CARD_HEIGHT,
   borderRadius: nativeDefault.radii.sm,
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
 };
@@ -156,20 +156,20 @@ export function ShopCategory(category) {
   dependencyMap = category(1501).useNavigation();
   const unpublishedAt = category.unpublishedAt;
   let obj = category(1501);
-  const filteredAndSortedProducts = category(16593).useFilteredAndSortedProducts({
+  const filteredAndSortedProducts = category(16600).useFilteredAndSortedProducts({
     products: category.products,
     bypassAndroidUnsyncedFilter: category.isOrbsExclusive,
   });
   const mobileBannerUrl = category.mobileBannerUrl;
-  let obj2 = category(16593);
+  let obj2 = category(16600);
   let obj3 = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
-  const collectiblesShopDeepLinkProps = category(17493).useCollectiblesShopDeepLinkProps({
+  const collectiblesShopDeepLinkProps = category(17500).useCollectiblesShopDeepLinkProps({
     products: filteredAndSortedProducts,
   });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
   const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   const ref = unpublishedAt.useRef(null);
-  const obj4 = category(17493);
+  const obj4 = category(17500);
   items = [category.storeListingId];
   const recyclingState = category(7482).useRecyclingState(null, items, () => {
     const current = ref.current;
@@ -182,24 +182,24 @@ export function ShopCategory(category) {
   if (tmp9) {
     tmp9 = productIndex > 0;
   }
-  const obj7 = category(17496);
+  const obj7 = category(17503);
   const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({
     shouldScroll: tmp9,
     initialScrollIndex: productIndex,
     flashListRef: ref,
-    afterMs: category(17496).INITIAL_SCROLL_DELAY_MS,
+    afterMs: category(17503).INITIAL_SCROLL_DELAY_MS,
     resetKey: category.storeListingId,
   });
   const obj8 = {
     shouldScroll: tmp9,
     initialScrollIndex: productIndex,
     flashListRef: ref,
-    afterMs: category(17496).INITIAL_SCROLL_DELAY_MS,
+    afterMs: category(17503).INITIAL_SCROLL_DELAY_MS,
     resetKey: category.storeListingId,
   };
-  collectiblesAnalyticsContext = category(11214).useCollectiblesAnalyticsContext();
-  const tmp4Result = category(11214);
-  isInImprovedMobileShopLoading = category(11265).useIsInImprovedMobileShopLoading();
+  collectiblesAnalyticsContext = category(11215).useCollectiblesAnalyticsContext();
+  const tmp4Result = category(11215);
+  isInImprovedMobileShopLoading = category(11266).useIsInImprovedMobileShopLoading();
   const items1 = [
     isInImprovedMobileShopLoading,
     initialProductSkuId,
@@ -255,7 +255,7 @@ export function ShopCategory(category) {
   const intl2 = tmp4(1112).intl;
   obj11.accessibilityHint = intl2.string(category(1112).t.F8ma9x);
   const obj12 = { category: category.name };
-  const tmp4Result2 = category(11265);
+  const tmp4Result2 = category(11266);
   obj11.androidRippleConfig = { radius: analyticsLocations(575).radii.lg };
   obj11.onPress = function onPress() {
     if (category.isOrbsExclusive) {
@@ -306,7 +306,7 @@ export function ShopCategory(category) {
   obj17.accessibilityLabel = intl3.formatToPlainString(category(1112).t.FNtLb3, { category: category.name });
   obj17.data = filteredAndSortedProducts;
   obj17.renderItem = callback;
-  obj17.snapToInterval = category(11211).COLLECTIBLES_SHOP_CARD_WIDTH + 12;
+  obj17.snapToInterval = category(11212).COLLECTIBLES_SHOP_CARD_WIDTH + 12;
   obj17.ListHeaderComponent = HeaderAndFooterSpacing;
   obj17.ListFooterComponent = HeaderAndFooterSpacing;
   obj17.ItemSeparatorComponent = Spacing;
@@ -314,5 +314,5 @@ export function ShopCategory(category) {
   items5[1] = ref(category(7482).FlashList, obj17);
   obj10.children = items5;
   obj9.children = collectiblesAnalyticsContext(filteredAndSortedProducts, obj10);
-  return ref(category(11214).CollectiblesAnalyticsProvider, obj9);
+  return ref(category(11215).CollectiblesAnalyticsProvider, obj9);
 }

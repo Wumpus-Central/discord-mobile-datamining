@@ -59,7 +59,7 @@ export default function FramePanelController(children) {
     }
   }, items1);
   let obj = mainFrameId(504);
-  return jsx(mainFrameId(19395).BaseActivityPanelController, {
+  return jsx(mainFrameId(19411).BaseActivityPanelController, {
     context: FramePanelStateContextDefault,
     orientationLockStateForApp,
     mode,

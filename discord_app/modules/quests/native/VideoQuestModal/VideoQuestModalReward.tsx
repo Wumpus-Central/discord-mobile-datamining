@@ -26,14 +26,14 @@ export default noop.memo(function VideoQuestModalReward(style) {
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  quest = quest(16719).useVideoQuestModalContext().quest;
-  const obj = quest(16719);
+  quest = quest(16726).useVideoQuestModalContext().quest;
+  const obj = quest(16726);
   items = [quest.id];
-  const questTaskDetails = quest(9892).useQuestTaskDetails(quest);
+  const questTaskDetails = quest(9893).useQuestTaskDetails(quest);
   const callback = noop.useCallback(() => {
     const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
   }, items);
-  const obj2 = quest(9892);
+  const obj2 = quest(9893);
   const obj3 = {
     justify: "center",
     align: "center",

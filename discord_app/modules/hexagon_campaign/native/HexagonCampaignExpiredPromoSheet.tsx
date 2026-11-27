@@ -39,7 +39,7 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -136,7 +136,7 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -190,16 +190,16 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
     callback(ContentDismissActionType.USER_DISMISS);
   }, items2);
   noop = noop.useCallback(() => {
-    const obj = closure_0(16060);
+    const obj = closure_0(16067);
     const result = obj.trackHexagonCampaignContentClicked({
       content: closure_0(6874).QuestContent.AD_PERK_MODAL,
-      questContentCTA: closure_0(8392).QuestContentCTA.LEARN_MORE,
+      questContentCTA: closure_0(8393).QuestContentCTA.LEARN_MORE,
     });
     const obj2 = {
       content: closure_0(6874).QuestContent.AD_PERK_MODAL,
-      questContentCTA: closure_0(8392).QuestContentCTA.LEARN_MORE,
+      questContentCTA: closure_0(8393).QuestContentCTA.LEARN_MORE,
     };
-    const result1 = closure_0(16094).openHexagonCampaignLearnMore();
+    const result1 = closure_0(16101).openHexagonCampaignLearnMore();
   }, []);
   let obj3 = {
     illustration: jsx(require("BundleAbstractUI").BundleAbstractUI, { accessible: false }),

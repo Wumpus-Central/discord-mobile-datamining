@@ -26,8 +26,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(8943).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(8944).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(8944).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(8945).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5043);
@@ -192,7 +192,7 @@ export default function ForwardModal(message) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -263,7 +263,7 @@ export default function ForwardModal(message) {
                     closure_0 = arg0;
                     closure_1_0(6048).openAlert(
                       "staff-to-non-staff-forward",
-                      closure_1_15(forwardOptions(8965), {
+                      closure_1_15(forwardOptions(8966), {
                         onConfirm() {
                           return closure_0(true);
                         },

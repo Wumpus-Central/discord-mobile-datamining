@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(9429).RootNavigatorScreen;
+const RootNavigatorScreen = fn(9430).RootNavigatorScreen;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let obj = {

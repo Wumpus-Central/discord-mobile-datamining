@@ -113,7 +113,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   });
 }
 const jsx = fn(21).jsx;
-const sum = fn(9540).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(9541).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 let closure_6 = sum + nativeDefault.space.PX_8;
 const createStyles = fn(5043);

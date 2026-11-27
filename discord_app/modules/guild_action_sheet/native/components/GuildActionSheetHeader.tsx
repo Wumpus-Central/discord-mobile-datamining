@@ -20,7 +20,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(11889).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(11897).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,
@@ -37,10 +37,10 @@ function CommunityPill(guildVisibility) {
       secondaryColor: ExperimentalWebIcon(575).colors.BADGE_INVERTED_TEXT,
       style: tmp.communityPillIcon,
     };
-    let tmp7Result = closure_9(tmp2(8736).ExperimentalWebBadgeIcon, obj2);
+    let tmp7Result = closure_9(tmp2(8737).ExperimentalWebBadgeIcon, obj2);
     let tmp10 = closure_9;
   } else {
-    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(8740), disableColor: true };
+    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(8741), disableColor: true };
     tmp7Result = closure_9(tmp2(1186).Icon, obj3);
     tmp10 = closure_9;
   }

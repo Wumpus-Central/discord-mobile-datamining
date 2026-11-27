@@ -7,7 +7,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ConjureMessageTime from "../ConjureMessageTime.tsx";
 import ConjureMessageActionSheet from "ConjureMessageActionSheet.tsx";
-import _modDef18693 from "../../../../../_runtime/metro/18693__.js";
+import _modDef18707 from "../../../../../_runtime/metro/18707__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -71,9 +71,9 @@ let obj2 = {
   agentAvatar: null,
 };
 let size = {
-  width: fn(18676).MESSAGE_AVATAR_SIZE,
-  height: fn(18676).MESSAGE_AVATAR_SIZE,
-  borderRadius: fn(18676).MESSAGE_AVATAR_SIZE / 2,
+  width: fn(18690).MESSAGE_AVATAR_SIZE,
+  height: fn(18690).MESSAGE_AVATAR_SIZE,
+  borderRadius: fn(18690).MESSAGE_AVATAR_SIZE / 2,
 };
 obj2.agentAvatar = size;
 const metroImportDefault = createStyles.createStyles(obj2);
@@ -84,8 +84,8 @@ export { ConjureMessageHeader };
 export function ConjureUserHeader(arg0) {
   let messageAuthorUser;
   ({ userId, at } = arg0);
-  messageAuthorUser = messageAuthorUser(11553).useMessageAuthorUser(userId);
-  let obj = messageAuthorUser(11553);
+  messageAuthorUser = messageAuthorUser(11561).useMessageAuthorUser(userId);
+  let obj = messageAuthorUser(11561);
   const name = messageAuthorUser(5099).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
@@ -111,7 +111,7 @@ export function ConjureUserAvatar(size) {
     NORMAL = messageAuthorUser(1186).AvatarSizes.NORMAL;
   }
   messageAuthorUser = undefined;
-  messageAuthorUser = messageAuthorUser(11553).useMessageAuthorUser(size.userId);
+  messageAuthorUser = messageAuthorUser(11561).useMessageAuthorUser(size.userId);
   items = [messageAuthorUser];
   const callback = noop.useCallback(() => {
     if (null != messageAuthorUser) {
@@ -138,7 +138,7 @@ export function ConjureUserAvatar(size) {
 export function ConjureAvatar() {
   const obj = { source: null, style: null };
   const tmp = closure_7();
-  obj.source = _modDef18693;
+  obj.source = _modDef18707;
   obj.style = tmp.agentAvatar;
   return hasOwnProperty(FastImageDefault, obj);
 }

@@ -221,14 +221,14 @@ function EmojiOptionsButton(channelId) {
   items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(12244)(stateFromStores);
+  const tmp3 = messageId(12252)(stateFromStores);
   const canRemoveReactions = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
   const obj2 = {
     onPress: noop.useCallback(() => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12245, dependencyMap.paths),
+        asyncRequireImpl(12253, dependencyMap.paths),
         "ReactionEmojiOptionsActionSheet",
         { channelId, messageId, reaction, canRemoveReactions },
         "replaceTopSheet",
@@ -281,12 +281,12 @@ function ReactionTabs(setReactionSelectedIndex) {
   };
   ({ tab: obj2.tabStyle, tabActive: obj2.tabStyleActive, tabSelected: obj2.tabStyleSelected } = tmp);
   items = [
-    closure_17(setReactionSelectedIndex(12246), obj3),
+    closure_17(setReactionSelectedIndex(12254), obj3),
     closure_17(setReactionSelectedIndex(8094), { outer: true }),
   ];
   const obj4 = { style: tmp.removeButtonContainer, children: null };
   const obj6 = { style: tmp.emojiTextIdentifier, variant: "body-sm/medium", color: "text-default", children: null };
-  const tmp2 = setReactionSelectedIndex(12246);
+  const tmp2 = setReactionSelectedIndex(12254);
   obj6.children = reactionSelectedIndex(4987).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
   const items1 = [closure_17(reactionSelectedIndex(5634).Text, obj6)];
   const merged = Object.assign(setReactionSelectedIndex);

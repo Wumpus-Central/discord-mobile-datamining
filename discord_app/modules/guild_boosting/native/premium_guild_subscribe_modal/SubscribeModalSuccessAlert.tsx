@@ -10,7 +10,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import BoostingActionCreators from "../../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../../../components_native/common/SequencedLottieAnimationView.tsx";
-import _mod14828 from "../../../../../_runtime/metro/14828__.js";
+import _mod14834 from "../../../../../_runtime/metro/14834__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -27,7 +27,7 @@ class PremiumPaymentGuildAnimation {
   }
 }
 const View = fn(17).View;
-const Gradients = fn(9126).Gradients;
+const Gradients = fn(9127).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5043);
@@ -125,9 +125,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = FastImageDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(14829);
+    let tmp8Result = tmp8(14835);
   } else {
-    tmp8Result = tmp8(14830);
+    tmp8Result = tmp8(14836);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_8(tmp15, obj6);

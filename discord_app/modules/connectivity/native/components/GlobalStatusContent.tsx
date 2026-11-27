@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(10268).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(10269).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1071).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const UsersFastListConstants = fn(10730);
+const UsersFastListConstants = fn(10731);
 ({ USERS_LIST_PADDING_BETWEEN_SECTIONS, USERS_LIST_SECTION_BOTTOM_PADDING } = UsersFastListConstants);
 const jsx = fn(21).jsx;
 const diff = USERS_LIST_PADDING_BETWEEN_SECTIONS - USERS_LIST_SECTION_BOTTOM_PADDING;
@@ -41,7 +41,7 @@ export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
       disableThemedGradient: true,
       listStyleOverride: tmp.list,
     };
-    obj2.children = jsx(guild_id(12084), {
+    obj2.children = jsx(guild_id(12092), {
       channelId,
       guildId: guild_id,
       headerShown: false,

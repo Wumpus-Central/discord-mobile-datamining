@@ -384,7 +384,7 @@ export default function ActivityPanelController(children) {
   let obj = mode(504);
   return (
     <BaseActivityPanelController
-      context={connectedActivityInTextChannelId(19399)}
+      context={connectedActivityInTextChannelId(19415)}
       orientationLockStateForApp={orientationLockStateForApp}
       mode={mode}
       hasConnectedActivity={hasConnectedActivity}

@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.tsx
-import _modDef9426 from "useMaybeFetchCollectiblesCategories.mobile.tsx";
+import _modDef9427 from "useMaybeFetchCollectiblesCategories.mobile.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.tsx");
 
-export default _modDef9426;
+export default _modDef9427;

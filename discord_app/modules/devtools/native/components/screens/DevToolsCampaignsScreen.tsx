@@ -19,7 +19,7 @@ const require = globalThis.__r;
 
 require = fn;
 function CampaignPicker() {
-  const tmp2 = loading(17343)();
+  const tmp2 = loading(17350)();
   ({ select: require, error, loading } = tmp2);
   ({ campaignsLoading, componentsLoading } = tmp2);
   ({ campaigns, selectedId, reload } = tmp2);
@@ -111,7 +111,7 @@ function CampaignPicker() {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -143,7 +143,7 @@ function CampaignPicker() {
                       const obj = disabled(dependencyMap[15]);
                     }
                     c2 = 3;
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp11) {
                   c2 = tmp;

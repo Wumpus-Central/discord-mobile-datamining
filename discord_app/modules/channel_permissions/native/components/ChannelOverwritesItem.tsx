@@ -8,8 +8,8 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import FormCheckbox from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
 import ChannelPermissionsUtilsAll from "../../ChannelPermissionsUtils.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import _modDef8558 from "../../../../../_runtime/metro/08558__.js";
 import _modDef8559 from "../../../../../_runtime/metro/08559__.js";
+import _modDef8560 from "../../../../../_runtime/metro/08560__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -141,7 +141,7 @@ function MemberItem(arg0) {
   if (item.rowType === RowType.OWNER) {
     const obj3 = {
       size: native.Icon.Sizes.REFRESH_SMALL_16,
-      source: _modDef8558,
+      source: _modDef8559,
       disableColor: true,
       style: tmp.ownerIcon,
     };
@@ -190,7 +190,7 @@ function EmptyRoleItem(item) {
   const obj = { icon: null, label: null };
   const tmp = closure_9();
   obj.icon = metroImportDefault(native.Icon, {
-    source: _modDef8559,
+    source: _modDef8560,
     color: item.colorString,
     size: native.IconSizes.MEDIUM,
     style: closure_9().roleIcon,

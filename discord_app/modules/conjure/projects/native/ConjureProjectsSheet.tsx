@@ -13,7 +13,7 @@ import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.
 import ConjureActionCreators from "../ConjureActionCreators.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import openConjureHomeScreenDefault from "../../home/native/openConjureHomeScreen.tsx";
-import _modDef11490 from "../../../../../_runtime/metro/11490__.js";
+import _modDef11498 from "../../../../../_runtime/metro/11498__.js";
 import useConjureEntryPointPlacementDefault from "../../title_bar/native/useConjureEntryPointPlacement.tsx";
 import confirmConjureYouBarPinDefault from "../../title_bar/native/confirmConjureYouBarPin.tsx";
 import ConjureProjectIcon from "ConjureProjectIcon.tsx";
@@ -52,7 +52,7 @@ export default function ConjureProjectsSheet() {
   obj.title = intl.string(_modDef4245.uk6jhJ);
   let tmp10Result;
   if ("you_screen" === placement) {
-    const obj2 = { icon: _modDef11490, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+    const obj2 = { icon: _modDef11498, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
     const intl2 = util.intl;
     obj2.accessibilityLabel = intl2.string(_modDef4245.qCBh6V);
     obj2.onPress = confirmPin;

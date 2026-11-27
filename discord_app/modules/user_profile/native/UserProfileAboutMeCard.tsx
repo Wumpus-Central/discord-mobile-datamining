@@ -147,7 +147,7 @@ function MemberJoinDates(userId) {
   obj8.style = items4;
   const obj9 = {
     themeType,
-    icon: closure_11(userId(11654).ClydeIcon, { size: "xs" }),
+    icon: closure_11(userId(11662).ClydeIcon, { size: "xs" }),
     accessibilityLabel: null,
     children: null,
   };

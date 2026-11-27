@@ -37,7 +37,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(12476).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(12484).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -80,7 +80,7 @@ function AddAppButton(application) {
       icon: null,
     });
   }
-  PlusSmallIcon = application(11268).PlusSmallIcon;
+  PlusSmallIcon = application(11269).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -102,7 +102,7 @@ function OpenAppButton(profileApplication) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -215,7 +215,7 @@ function OpenAppButton(profileApplication) {
   obj.onPress = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }
-const getSection = fn(10047).getSection;
+const getSection = fn(10048).getSection;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const AppLauncherRouteName = fn(1500).AppLauncherRouteName;
 const jsx = fn(21).jsx;

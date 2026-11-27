@@ -40,7 +40,7 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8224);
+const RowGeneratorConstants = fn(8225);
 ({ Changeset: closure_10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -285,8 +285,8 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "Promise",
           shouldInitialScroll: "Array",
-          animated: "2026-04-voice-gateway-protocol-version",
-          scrollPosition: "user",
+          animated: "open-zero-stats",
+          scrollPosition: null,
           focusTargetId: null,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
@@ -322,11 +322,11 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9040).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9041).setSelectedConversation(closure_1_0, roleStyle, {
             cacheType: "preview",
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9040);
+          const obj = applyArgumentsResult(9041);
           applyArgumentsResult(6126).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
@@ -365,8 +365,8 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "body-sm/semibold",
-        selectedChannelId: "text-subtle",
+        messageChannel: "CHANNEL_SELECT",
+        selectedChannelId: null,
         tapLinkData: null,
       };
       channel = applyArgumentsResult.props.channel;

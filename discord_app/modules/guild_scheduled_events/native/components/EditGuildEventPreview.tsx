@@ -57,7 +57,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1112).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(8587)(obj7);
+    obj6.channelName = tmp5(8588)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1112).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;

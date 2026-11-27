@@ -157,7 +157,7 @@ export default function GameProfileNavigationHeader(game) {
   if (null != name) {
     const obj4 = { style: tmp.headerContainer, children: null };
     const obj5 = { android_fallbackColor: token };
-    const items6 = [closure_6(tmp2(8489).BackgroundBlurFill, obj5)];
+    const items6 = [closure_6(tmp2(8490).BackgroundBlurFill, obj5)];
     const obj6 = { style: tmp.headerRow, children: null };
     let tmp21Result = null != memo;
     if (tmp21Result) {
@@ -195,7 +195,7 @@ export default function GameProfileNavigationHeader(game) {
       }
       obj12.importantForAccessibility = str2;
       const obj13 = { rank: game.l30Rank, compact: true };
-      obj12.children = closure_6(tmp4(8798), obj13);
+      obj12.children = closure_6(tmp4(8799), obj13);
       const items9 = [closure_6(closure_4, obj12)];
       const obj14 = { style: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
       const items10 = [StyleSheet.absoluteFill, animatedStyle1];
@@ -207,7 +207,7 @@ export default function GameProfileNavigationHeader(game) {
       }
       obj14.importantForAccessibility = str3;
       const obj15 = { rank: game.l30Rank };
-      obj14.children = closure_6(tmp4(8798), obj15);
+      obj14.children = closure_6(tmp4(8799), obj15);
       items9[1] = closure_6(tmp4(1654).View, obj14);
       obj11.children = items9;
       tmp19Result = closure_7(closure_4, obj11);

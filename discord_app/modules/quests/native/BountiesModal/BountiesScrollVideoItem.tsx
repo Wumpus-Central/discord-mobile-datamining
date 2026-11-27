@@ -129,7 +129,7 @@ function BountiesScrollVideoItemInner(bounty) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -184,7 +184,7 @@ function BountiesScrollVideoItemInner(bounty) {
               });
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp27) {
           if (tmp4 === c3) {
@@ -424,7 +424,7 @@ export function BountiesScrollVideoItem(bounty) {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(13842).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(13849).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(6878).AdCreativeType.BOUNTY,
     questContent: bounty(6876).QuestContent.VIDEO_MODAL_MOBILE,

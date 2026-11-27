@@ -10,9 +10,9 @@ const require = globalThis.__r;
 
 const _modDef1654 = tmp(1654);
 const isVoiceEmbeddedActivityDefault = tmp(5690);
-const EmbeddedActivityViewDefault = tmp(10200);
-const FrameRenderTargetDefault = tmp(18619);
-const getActivityContainerPIPStylesSpecDefault = tmp(19403);
+const EmbeddedActivityViewDefault = tmp(10201);
+const FrameRenderTargetDefault = tmp(18630);
+const getActivityContainerPIPStylesSpecDefault = tmp(19419);
 const require = fn;
 const ActivityPanelModes = fn(5669).ActivityPanelModes;
 const FramesConstants = fn(6937);
@@ -21,7 +21,7 @@ const FramesConstants = fn(6937);
   FrameLayoutModes: closure_9,
   getPipOrientationLockStateForFrame: closure_10,
 } = FramesConstants);
-const ActivityLayoutMode = fn(10191).ActivityLayoutMode;
+const ActivityLayoutMode = fn(10192).ActivityLayoutMode;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let closure_13 = createStyles.createStyles({

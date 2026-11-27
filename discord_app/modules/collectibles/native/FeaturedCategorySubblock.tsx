@@ -28,11 +28,11 @@ export default function _default(subblock) {
   const tmp = closure_9();
   importDefault = subblock(1501).useNavigation();
   let obj = subblock(1501);
-  dependencyMap = subblock(11214).useCollectiblesAnalyticsContext();
+  dependencyMap = subblock(11215).useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
-  let obj2 = subblock(11214);
-  closure_3 = subblock(11265).useIsInImprovedMobileShopLoading();
-  const obj3 = subblock(11265);
+  let obj2 = subblock(11215);
+  closure_3 = subblock(11266).useIsInImprovedMobileShopLoading();
+  const obj3 = subblock(11266);
   items = [closure_3];
   const stateFromStores = subblock(504).useStateFromStores(items, () =>
     CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId),
@@ -52,14 +52,14 @@ export default function _default(subblock) {
     date = new Date(unpublishedAt);
   }
   let obj6 = {
-    onChange: subblock(17507).useTrackProductCardImpression(
+    onChange: subblock(17514).useTrackProductCardImpression(
       subblock.categoryStoreListingId,
       "mobile_home",
       "featured_block",
     ).handleCardVisibilityChange,
     children: null,
   };
-  let obj5 = subblock(17507);
+  let obj5 = subblock(17514);
   const obj7 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -151,7 +151,7 @@ export default function _default(subblock) {
   let result = subblock(6323).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj12 = { style: tmp.limitedTimeBadge };
-    result = closure_7(tmp2(11224).LimitedTimeBadge, obj12);
+    result = closure_7(tmp2(11225).LimitedTimeBadge, obj12);
   }
   items1[1] = result;
   obj7.children = items1;

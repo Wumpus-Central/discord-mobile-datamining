@@ -6,8 +6,8 @@ import native from "../../../design/void/native.tsx";
 import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConnectionsUtils from "../ConnectionsUtils.tsx";
-import _modDef12057 from "../../../../_runtime/metro/12057__.js";
-import _modDef12058 from "../../../../_runtime/metro/12058__.js";
+import _modDef12065 from "../../../../_runtime/metro/12065__.js";
+import _modDef12066 from "../../../../_runtime/metro/12066__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -247,7 +247,7 @@ export function generateSteamMetadataItems(metadata) {
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef12057;
+    obj2.imageSrc = _modDef12065;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(VanityItem, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -257,7 +257,7 @@ export function generateSteamMetadataItems(metadata) {
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef12058;
+    obj4.imageSrc = _modDef12066;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(VanityItem, obj4, constants.STEAM_ITEM_COUNT_TF2));

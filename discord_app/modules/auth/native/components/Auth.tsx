@@ -12,7 +12,7 @@ import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import useShouldShowChooseAccountDefault from "../../../multi_account/useShouldShowChooseAccount.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import _mod17709 from "../../../../../_runtime/metro/17709__.js";
+import _mod17716 from "../../../../../_runtime/metro/17716__.js";
 import AuthManagerDefault from "../AuthManager.tsx";
 import useOrientationLockDefault from "../useOrientationLock.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -62,7 +62,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod17709;
+  obj3.backgroundImageSource = _mod17716;
   const children = [closure_9(BackgroundImageDefault, obj3), ,];
   let tmp18Result = null;
   if (tmp5) {
@@ -170,7 +170,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1071).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(17655);
+let RegistrationStepsUtils = fn(17662);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
@@ -273,7 +273,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[25]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(8249).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(8250).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, {

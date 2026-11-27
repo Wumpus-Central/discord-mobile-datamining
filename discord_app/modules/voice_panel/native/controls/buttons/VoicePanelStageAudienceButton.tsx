@@ -34,8 +34,8 @@ export default function StageAudienceButton(props) {
   props = props.props;
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp3 = closure_8();
-  const voicePanelButtonStyles = channelId(19564).useVoicePanelButtonStyles(props.wrapperSpecs);
-  const obj = channelId(19564);
+  const voicePanelButtonStyles = channelId(19580).useVoicePanelButtonStyles(props.wrapperSpecs);
+  const obj = channelId(19580);
   const canModerateRequestToSpeak = channelId(6809).useCanModerateRequestToSpeak(channelId);
   const obj2 = channelId(6809);
   let num = 0;

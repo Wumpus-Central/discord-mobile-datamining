@@ -11,7 +11,7 @@ function GameProfileButton(applicationId) {
   const guildId = applicationId.guildId;
   let obj = {
     applicationId: applicationId.applicationId,
-    source: guildId(8754).GameProfileSources.GuildActionSheet,
+    source: guildId(8755).GameProfileSources.GuildActionSheet,
     trackEntryPointImpression: true,
   };
   const tmp3Result = useOpenGameProfileModalDefault(obj, {

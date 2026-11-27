@@ -21,7 +21,7 @@ const _modDef1654 = _mod1654;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const SHARE_PREPARING_MODAL_KEY = fn(8693).SHARE_PREPARING_MODAL_KEY;
+const SHARE_PREPARING_MODAL_KEY = fn(8694).SHARE_PREPARING_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);
@@ -143,9 +143,9 @@ export function MediaModalOverlayHeader(arg0) {
           const obj = { accessibilityLabel: null, icon: null, ref: null };
           const intl = _undefined(1112).intl;
           obj.accessibilityLabel = intl.string(_undefined(1112).t.PdRCRg);
-          const tmp4 = _undefined2(8698);
+          const tmp4 = _undefined2(8699);
           if (obj2.isAndroid()) {
-            let tmp2Result = closure_1_6(_undefined(14132).MoreVerticalIcon, {
+            let tmp2Result = closure_1_6(_undefined(14139).MoreVerticalIcon, {
               size: "md",
               color: "interactive-text-active",
             });

@@ -465,7 +465,7 @@ export default function DisplayNameStylesEditScreen() {
       dismissCampaignFontBadge();
     }
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16950, dependencyMap.paths),
+      asyncRequireImpl(16957, dependencyMap.paths),
       "DisplayNameStylesFontPickerSheet",
       { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut },
     );
@@ -487,13 +487,13 @@ export default function DisplayNameStylesEditScreen() {
     if (stateFromStores != null) {
       id = stateFromStores.id;
     }
-    obj.openLazy(asyncRequireImpl(16954, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
+    obj.openLazy(asyncRequireImpl(16961, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
       userId: id,
       selectedEffectId: first1,
       onSelectEffect,
     });
     const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-    const tmp3 = asyncRequireImpl(16954, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(16961, dependencyMap.paths);
   }, items7);
   const callback7 = obj10.useCallback(() => {
     if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -504,7 +504,7 @@ export default function DisplayNameStylesEditScreen() {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(16955, dependencyMap.paths),
+        asyncRequireImpl(16962, dependencyMap.paths),
         "DisplayNameStylesGummyColorPickerSheet",
         obj2,
       );
@@ -519,10 +519,10 @@ export default function DisplayNameStylesEditScreen() {
             return callback(first1, arg0);
           },
         };
-        openLazy(tmp2Result(16965, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+        openLazy(tmp2Result(16972, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
       } else {
         const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-        openLazy(tmp2Result(16967, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+        openLazy(tmp2Result(16974, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
       }
     }
   }, items8);

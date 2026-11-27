@@ -18,7 +18,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -445,7 +445,7 @@ let closure_13 = async function _getVoiceChannelAppChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -533,7 +533,7 @@ let closure_14 = async function _getActivityChannelId() {
 const makeFrameId = fn(6937).makeFrameId;
 const Constants = fn(1071);
 ({ AbortCodes: closure_8, ChannelTypes: closure_9, RPCEvents: closure_10 } = Constants);
-const ActivityIntent = fn(10191).ActivityIntent;
+const ActivityIntent = fn(10192).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/joinFrameActivity.tsx");
 

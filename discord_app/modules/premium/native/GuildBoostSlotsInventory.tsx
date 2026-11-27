@@ -10,7 +10,7 @@ import actions_BillingActionCreatorsAll from "../../billing/actions/BillingActio
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
-import _modDef13963 from "../../../../_runtime/metro/13963__.js";
+import _modDef13970 from "../../../../_runtime/metro/13970__.js";
 import SubscriptionPlaceholderPattern from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
@@ -212,7 +212,7 @@ function BoostedGuildInfo(guild) {
     const items1 = [refs(Text_Text.Text, obj5)];
     const obj6 = { style: tmp.guildInfoRowBottom, children: null };
     const obj7 = { source: null, style: null };
-    obj7.source = _modDef13963;
+    obj7.source = _modDef13970;
     obj7.style = tmp.guildInfoRowIcon;
     const items2 = [refs(FastImageDefault, obj7)];
     const obj8 = {
@@ -272,7 +272,7 @@ function BoostedGuild(arg0) {
     tmp11Result = closure_10(View, obj8);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_10(guildBoostSlots(13968), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_10(guildBoostSlots(13975), { guild: stateFromStores, theme: stateFromStores1 });
   obj6.children = items3;
   const items4 = [
     closure_11(View, obj6),
@@ -370,7 +370,7 @@ export default function GuildBoostSlotsInventory() {
   const tmp = closure_13();
   const effect = noop.useEffect(() => {
     const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
-    const guildBoostSlots = valueResult(10366).fetchGuildBoostSlots();
+    const guildBoostSlots = valueResult(10367).fetchGuildBoostSlots();
   }, []);
   items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>

@@ -93,8 +93,8 @@ export default function useConjureViewPlacement(install_scope, views) {
       previewAppChannels = views.previewAppChannels;
     }
     obj4.buildAppChannels = previewAppChannels;
-    tmp11(tmp7(18465).initialConjureViewPlacement(views, obj4));
-    const tmp7Result = tmp7(18465);
+    tmp11(tmp7(18472).initialConjureViewPlacement(views, obj4));
+    const tmp7Result = tmp7(18472);
   }
   let views1;
   if (views != null) {
@@ -197,14 +197,14 @@ export default function useConjureViewPlacement(install_scope, views) {
           removeAppChannel(key) {
             closure_0 = key;
             return closure_10((appChannels) => {
-              const f140041 = () => null;
+              const f140497 = () => null;
               const obj = {};
               const merged = Object.assign(appChannels);
               appChannels = appChannels.appChannels;
               obj.appChannels = appChannels.flatMap((key) => {
                 let tmp = key;
                 if (key.key === closure_0) {
-                  items = f140043(key);
+                  items = f140499(key);
                   if (items == null) {
                     items = [];
                   }
@@ -219,10 +219,10 @@ export default function useConjureViewPlacement(install_scope, views) {
             closure_0 = key;
             closure_1 = arg1;
             return closure_10((appChannels) => {
-              const f140042 = (arg0) => {
+              const f140498 = (arg0) => {
                 const obj = {};
                 const merged = Object.assign(arg0);
-                obj.name = f140042;
+                obj.name = f140498;
                 return obj;
               };
               let obj = {};
@@ -231,7 +231,7 @@ export default function useConjureViewPlacement(install_scope, views) {
               obj.appChannels = appChannels.flatMap((key) => {
                 let tmp = key;
                 if (key.key === closure_0) {
-                  items = f140043(key);
+                  items = f140499(key);
                   if (items == null) {
                     items = [];
                   }
@@ -246,10 +246,10 @@ export default function useConjureViewPlacement(install_scope, views) {
             closure_0 = key;
             closure_1 = arg1;
             return closure_10((appChannels) => {
-              const f140043 = (arg0) => {
+              const f140499 = (arg0) => {
                 const obj = {};
                 const merged = Object.assign(arg0);
-                obj.view = f140043;
+                obj.view = f140499;
                 return obj;
               };
               let obj = {};
@@ -258,7 +258,7 @@ export default function useConjureViewPlacement(install_scope, views) {
               obj.appChannels = appChannels.flatMap((key) => {
                 let tmp = key;
                 if (key.key === closure_0) {
-                  items = f140043(key);
+                  items = f140499(key);
                   if (items == null) {
                     items = [];
                   }
@@ -345,7 +345,7 @@ export default function useConjureViewPlacement(install_scope, views) {
         obj5.unplacedNotice = formatToPlainStringResult1;
         obj5.isMissing = isMissing;
         obj5.blocked = memo.blocked;
-        obj5.wire = tmp7(18465).conjureViewPlacementWire(draft);
+        obj5.wire = tmp7(18472).conjureViewPlacementWire(draft);
         return obj5;
       }
     }

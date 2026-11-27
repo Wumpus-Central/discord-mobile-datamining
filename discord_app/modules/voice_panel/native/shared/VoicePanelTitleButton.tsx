@@ -18,7 +18,7 @@ import ShieldLockIcon from "../../../../design/components/Icon/native/redesign/g
 import VoicePanelSettingsActionCreators from "../header/VoicePanelSettingsActionCreators.tsx";
 import QuestActivityButtonDefault from "../../../frames/panel/native/QuestActivityButton.tsx";
 import VoicePanelHeaderUserState from "../header/VoicePanelHeaderUserState.tsx";
-import _modDef19472 from "../../../../../_runtime/metro/19472__.js";
+import _modDef19488 from "../../../../../_runtime/metro/19488__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import StageInstanceStore from "../../../stage_channels/StageInstanceStore.tsx";
@@ -43,7 +43,7 @@ function ChannelButton(channelId) {
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let str = useChannelNameDefault(stateFromStores);
   const obj = channelId(504);
-  const isCallSecureFramesVerified = channelId(8661).useIsCallSecureFramesVerified({ channelId });
+  const isCallSecureFramesVerified = channelId(8662).useIsCallSecureFramesVerified({ channelId });
   const obj3 = {
     accessibilityRole: "button",
     accessibilityHint: null,
@@ -68,7 +68,7 @@ function ChannelButton(channelId) {
   obj3.icon = tmp3Result;
   obj3.iconOpticalOffsetMargin = -nativeDefault.space.PX_4;
   obj3.onPress = channelId.onPress;
-  return closure_9(channelId(8489).HeaderButton, obj3);
+  return closure_9(channelId(8490).HeaderButton, obj3);
 }
 function StreamButton(arg0) {
   ({ participant, onPress } = arg0);
@@ -89,7 +89,7 @@ function StreamButton(arg0) {
   const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
   obj2.text = name;
-  obj2.icon = _modDef19472;
+  obj2.icon = _modDef19488;
   obj2.onPress = onPress;
   return React6(native.HeaderButton, obj2);
 }
@@ -122,7 +122,7 @@ function ActivityButton(participant) {
   obj3.icon = _modDef7101;
   obj3.onPress = participant.onPress;
   const items1 = [
-    closure_9(participant(8489).HeaderButton, obj3),
+    closure_9(participant(8490).HeaderButton, obj3),
     closure_9(QuestActivityButtonDefault, { applicationId: participant.applicationId }),
   ];
   obj2.children = items1;
@@ -217,9 +217,9 @@ function StageButton(channelId) {
   const stateFromStores1 = channelId(504).useStateFromStores(items2, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
   const tmp6 = useChannelNameDefault(stateFromStores1);
-  const isStageUnifiedCall = channelId(10271).useIsStageUnifiedCall(stateFromStores1, "VoicePanelTitleButton");
+  const isStageUnifiedCall = channelId(10272).useIsStageUnifiedCall(stateFromStores1, "VoicePanelTitleButton");
   let topic;
-  const obj3 = channelId(10271);
+  const obj3 = channelId(10272);
   if (stateFromStores != null) {
     topic = stateFromStores.topic;
   }
@@ -265,7 +265,7 @@ function StageButton(channelId) {
     obj6.icon = _modDef7105;
     obj6.onPress = onPress;
   }
-  return closure_9(channelId(8489).HeaderButton, obj6);
+  return closure_9(channelId(8490).HeaderButton, obj6);
 }
 const View = fn(17).View;
 const ParticipantTypes = fn(5693).ParticipantTypes;
@@ -289,18 +289,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelTitleButton.tsx");
 
 export default noop.memo(function VoicePanelTitleButton() {
-  const context = noop.useContext(channelId(11781));
+  const context = noop.useContext(channelId(11789));
   const guildId = context.guildId;
   channelId = context.channelId;
   ({ channelType, focused } = context);
-  const derivedStateFromSharedValue = guildId(8619).useDerivedStateFromSharedValue(focused, (id) => {
+  const derivedStateFromSharedValue = guildId(8620).useDerivedStateFromSharedValue(focused, (id) => {
     id = undefined;
     if (id != null) {
       id = id.id;
     }
     return id;
   });
-  const tmp3 = channelId(19468)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(19484)(derivedStateFromSharedValue, channelId, guildId);
   items = [guildId, channelId];
   const onPress = noop.useCallback(() => {
     const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

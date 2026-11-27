@@ -2,8 +2,8 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import VisualEffectViewDefault from "../modules/visual_effect_view/native/VisualEffectView.tsx";
 import FastImageDefault from "common/FastImage.tsx";
-import QRCodeDefault from "../../_runtime/10466_QRCode.js";
-import _mod10480 from "../../_runtime/metro/10480__.js";
+import QRCodeDefault from "../../_runtime/10467_QRCode.js";
+import _mod10481 from "../../_runtime/metro/10481__.js";
 import VisualEffectViewThemedDefault from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
 import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../_runtime/metro/00019__.js";
@@ -86,7 +86,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.qrCodeOverlay, timestampProducer.absoluteFill];
   obj3.style = items1;
-  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod10480 };
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod10481 };
   obj3.children = metroImportDefault(FastImageDefault, obj4);
   items[1] = metroImportDefault(hasOwnProperty, obj3);
   let tmp6Result = null;

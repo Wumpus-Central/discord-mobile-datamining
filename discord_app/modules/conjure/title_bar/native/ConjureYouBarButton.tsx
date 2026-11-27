@@ -13,7 +13,7 @@ require = fn;
 function confirmUnpin() {
   confirmConjureYouBarPinDefault(false);
 }
-const YOU_BAR_BUTTON_ICON_SIZE = fn(16683).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(16690).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let obj = {

@@ -370,10 +370,10 @@ function WrappedChannelNavButtons(channelId) {
 const View = fn(17).View;
 const ChannelRecord = fn(4896);
 ({ THREADED_CHANNEL_TYPES: hasOwnProperty, isChannelChatInSidebar: closure_6 } = ChannelRecord);
-let closure_9 = fn(9017).setIsChannelDetailsSearchActive;
+let closure_9 = fn(9018).setIsChannelDetailsSearchActive;
 const Constants = fn(1071);
 ({ ChannelTypes: closure_10, ChannelTypesSets: closure_11, ComponentActions: closure_12 } = Constants);
-let closure_13 = fn(9018).SearchEntrypointAnalyticsLocations;
+let closure_13 = fn(9019).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createElement = fn(19).createElement;
@@ -416,7 +416,7 @@ export default function ChannelActions(channelId) {
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = closure_14(tmp(14081).ForumChannelCloseSearchButton, obj4);
+    let tmp4Result = closure_14(tmp(14088).ForumChannelCloseSearchButton, obj4);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

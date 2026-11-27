@@ -272,7 +272,7 @@ function computeGuildMediaState(id) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp29Result = tmp29(10108);
+        let tmp29Result = tmp29(10109);
         if (tmp29Result.isActivitiesInTextEnabled(ChannelStore.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
         } else {
@@ -294,7 +294,7 @@ function computeGuildMediaState(id) {
           activity: null,
           isCurrentUserConnected: false,
         };
-        let tmp29Result2 = tmp29(8463);
+        let tmp29Result2 = tmp29(8464);
         obj4.activeEvent = null != tmp29Result2.getGuildActiveEvent(arg0);
         obj4.activity = someResult2;
         return obj4;

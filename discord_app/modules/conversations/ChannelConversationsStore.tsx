@@ -463,7 +463,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     set = undefined;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(8304).mapConversation);
+      const mapped = rawConversations.map(set(8305).mapConversation);
       const found = mapped.filter(set(1255).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

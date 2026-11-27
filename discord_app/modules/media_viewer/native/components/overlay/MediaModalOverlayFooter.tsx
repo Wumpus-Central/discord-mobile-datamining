@@ -22,7 +22,7 @@ const createStyles = fn(5043);
 let obj2 = {
   drawerContainer: { overflow: "hidden", backgroundColor: "analyticsLocations" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
-  drawerHeader: { backgroundColor: "r" },
+  drawerHeader: { backgroundColor: "top" },
   messagePreviewContainer: { marginLeft: 6 },
   thumbnailsContainer: { paddingTop: 8 },
 };
@@ -854,7 +854,7 @@ export function MediaModalOverlayFooter(channelId) {
     const items28 = [animatedStyle1, tmp.thumbnailsContainer];
     obj13.style = items28;
     const obj14 = { syncer };
-    obj13.children = tmp81(tmp53(14128), obj14);
+    obj13.children = tmp81(tmp53(14135), obj14);
     tmp81Result = tmp81(tmp53(1654).View, obj13);
   }
   const rect = { bottom: true, left: true, right: true, children: null };

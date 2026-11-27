@@ -260,7 +260,7 @@ let closure_3 = [
 ];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11963);
+const SettingRendererConstants = fn(11971);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -609,8 +609,8 @@ let closure_26 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(16196).useHighlightSettingItem(setting);
-  let obj = trailing(16196);
+  let highlightSettingItem = trailing(16203).useHighlightSettingItem(setting);
+  let obj = trailing(16203);
   items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => callback.locale);
   trailing = undefined;

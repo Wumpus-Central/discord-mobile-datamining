@@ -15,9 +15,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx");
 
 export default function AgeConfirmationNotice() {
-  sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(8209).useSensitiveContentFilterHelpArticle();
+  sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(8210).useSensitiveContentFilterHelpArticle();
   const effect = noop.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(16189).trackSafetySettingsNoticeAnalytics(
+    const result = sensitiveContentFilterHelpArticle(16196).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.VIEWED,
     );
@@ -41,7 +41,7 @@ export default function AgeConfirmationNotice() {
     const obj2 = {
       entryPoint: sensitiveContentFilterHelpArticle(6828).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
     };
-    const result1 = sensitiveContentFilterHelpArticle(16189).trackSafetySettingsNoticeAnalytics(
+    const result1 = sensitiveContentFilterHelpArticle(16196).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.CONFIRM_AGE,
     );

@@ -69,9 +69,9 @@ function StreamingUserRow(user) {
           }
         },
       };
-      obj4.children = closure_12(channel(10573), obj5);
+      obj4.children = closure_12(channel(10574), obj5);
       tmp10Result = closure_12(closure_3, obj4);
-      const tmp20 = channel(10573);
+      const tmp20 = channel(10574);
     }
     const obj6 = { children: null };
     items1[1] = tmp10Result;
@@ -237,12 +237,12 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
       onPress: 0,
     }),
   );
-  let obj = user(8650);
-  const result = obj.withLocalSelfMuteDeaf(user.voiceState, user(8650).useLocalSelfMuteDeaf());
+  let obj = user(8651);
+  const result = obj.withLocalSelfMuteDeaf(user.voiceState, user(8651).useLocalSelfMuteDeaf());
   const tmp4 = closure_15();
   const tmp5 = closure_16();
   const id = AuthenticationStore.getId();
-  const obj2 = user(8650);
+  const obj2 = user(8651);
   const obj3 = { userId: user.id };
   const tmp8 = channel(6943)({ userId: user.id });
   items = [SoundboardStore];
@@ -356,7 +356,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
       const obj11 = { style: tmp4.row, children: null };
       let tmp21Result = null;
       if (user.isSpectating) {
-        const obj12 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14347), style: tmp20 };
+        const obj12 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14354), style: tmp20 };
         tmp21Result = closure_12(tmp2(1186).Icon, obj12);
       }
       const items4 = [tmp21Result, , , ,];
@@ -364,7 +364,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
         items4[1] = null;
         let tmp21Result5 = null;
         if (tmp15) {
-          const obj13 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14344), style: tmp20 };
+          const obj13 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14351), style: tmp20 };
           tmp21Result5 = closure_12(tmp2(1186).Icon, obj13);
         }
         items4[2] = tmp21Result5;
@@ -382,21 +382,21 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
           if (localVideoDisabled) {
             const obj15 = {
               size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16,
-              source: channel(14345),
+              source: channel(14352),
               style: tmp4.voiceStatusIconMargin,
               disableColor: true,
             };
             let obj16 = obj15;
           } else {
-            obj16 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14346), style: tmp20 };
+            obj16 = { size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16, source: channel(14353), style: tmp20 };
           }
           closure_12(tmp2(1186).Icon, obj16);
         }
       } else {
         if (tmp2Result.isThemeDark(stateFromStores1)) {
-          let tmp7Result = channel(14342);
+          let tmp7Result = channel(14349);
         } else {
-          tmp7Result = channel(14343);
+          tmp7Result = channel(14350);
         }
         const obj17 = {
           size: tmp2(1186).Icon.Sizes.REFRESH_SMALL_16,
@@ -436,7 +436,7 @@ let closure_17 = noop.memo(function VoiceMemberUserRow(user) {
   obj18.label = closure_12(user(8088).FormRow.Label, obj21);
   if (localVideoAutoDisabled) {
     const obj22 = { style: tmp4.autoDisabledVideo, children: null };
-    const obj23 = { source: channel(10183), size: tmp2(1186).Icon.Sizes.EXTRA_SMALL, disableColor: true };
+    const obj23 = { source: channel(10184), size: tmp2(1186).Icon.Sizes.EXTRA_SMALL, disableColor: true };
     const items7 = [closure_12(tmp2(1186).Icon, obj23)];
     const obj24 = {
       variant: "body-xs/medium",

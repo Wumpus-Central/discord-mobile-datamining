@@ -491,10 +491,10 @@ prototype["initializeEvents"] = function initializeEvents() {
               desktopSource1 = goLiveSource.desktopSource;
             }
             const obj2 = {};
-            const merged = Object.assign(self(8415)(desktopSource1));
+            const merged = Object.assign(self(8416)(desktopSource1));
             const merged1 = Object.assign(closure_1_1.getSoundshareAnalyticsProperties());
             obj.track(constants.SOUNDSHARE_ATTACHED, obj2);
-            const tmp6 = self(8415);
+            const tmp6 = self(8416);
           }
         });
       }
@@ -525,14 +525,14 @@ prototype["initializeEvents"] = function initializeEvents() {
               desktopSource1 = goLiveSource.desktopSource;
             }
             const obj = {};
-            const merged = Object.assign(self(8415)(desktopSource1));
+            const merged = Object.assign(self(8416)(desktopSource1));
             const merged1 = Object.assign(closure_1_1.getSoundshareAnalyticsProperties());
             obj3.track(constants.SOUNDSHARE_TRANSMITTING, obj);
             if (null != hookError.getHookError(constants2.SOUND)) {
               self(572).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" });
               const tmp13Result = self(572);
             }
-            const tmp16 = self(8415);
+            const tmp16 = self(8416);
           }
         });
       }

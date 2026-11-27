@@ -23,15 +23,15 @@ const require = globalThis.__r;
 require = fn;
 function useStageCTAProps(stateFromStores) {
   _require = stateFromStores;
-  const context = noop.useContext(showControls(11781));
+  const context = noop.useContext(showControls(11789));
   showControls = context.showControls;
-  const tmp4 = showControls(18248)(context.channelId);
+  const tmp4 = showControls(18255)(context.channelId);
   const isStageUnifiedCall = require("StageChannelUnifiedCallExperiment").useIsStageUnifiedCall(
     stateFromStores,
     "VoicePanelFloatingCTA",
   );
   const obj2 = require("StageChannelUnifiedCallExperiment");
-  const tmp7 = showControls(10266)();
+  const tmp7 = showControls(10267)();
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -56,10 +56,10 @@ function useStageCTAProps(stateFromStores) {
     const intl = tmp5(1112).intl;
     obj4.label = intl.string(tmp5(1112).t.Ul1RJQ);
     if (stageBlockedUsersCount > 0) {
-      const tmp15 = tmp(10282)(stageBlockedUsersCount, stageIgnoredUsersCount);
+      const tmp15 = tmp(10283)(stageBlockedUsersCount, stageIgnoredUsersCount);
     }
     obj4.subLabel = tmp15;
-    const obj5 = { IconComponent: tmp5(10342).HandRequestSpeakIcon, variant: "translucent" };
+    const obj5 = { IconComponent: tmp5(10343).HandRequestSpeakIcon, variant: "translucent" };
     obj4.icon = closure_11(tmp5(8090).RowButton.Icon, obj5);
     const obj6 = { direction: "horizontal", spacing: tmp(575).space.PX_8, children: null };
     const obj7 = {
@@ -94,7 +94,7 @@ function useStageCTAProps(stateFromStores) {
   }
   closure_129_0 = stateFromStores;
   const tmp5Result = require("useStageBlockedUsersCount");
-  const tmp18 = showControls(18248)(noop.useContext(showControls(11781)).channelId);
+  const tmp18 = showControls(18255)(noop.useContext(showControls(11789)).channelId);
   const isStageUnifiedCall1 = require("StageChannelUnifiedCallExperiment").useIsStageUnifiedCall(
     stateFromStores,
     "VoicePanelFloatingCTA",
@@ -132,10 +132,10 @@ function useStageCTAProps(stateFromStores) {
   return tmp14;
 }
 function useFloatingCTAProps(stateFromStores) {
-  let tmp3 = setShowFloatingCTA(8619)(noop.useContext(setShowFloatingCTA(11781)).showFloatingCTA);
+  let tmp3 = setShowFloatingCTA(8620)(noop.useContext(setShowFloatingCTA(11789)).showFloatingCTA);
   _require = tmp3;
   setShowFloatingCTA = undefined;
-  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(11781)).setShowFloatingCTA;
+  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(11789)).setShowFloatingCTA;
   items = [setShowFloatingCTA, tmp3];
   let memo = noop.useMemo(() => {
     let tmp = null;
@@ -148,7 +148,7 @@ function useFloatingCTAProps(stateFromStores) {
   closure_129_1 = undefined;
   closure_129_2 = undefined;
   const tmp5 = setShowFloatingCTA(5252)();
-  const tmp6 = setShowFloatingCTA(18248)(noop.useContext(setShowFloatingCTA(11781)).channelId);
+  const tmp6 = setShowFloatingCTA(18255)(noop.useContext(setShowFloatingCTA(11789)).channelId);
   let id1;
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
@@ -191,7 +191,7 @@ function useFloatingCTAProps(stateFromStores) {
     id2 = stateFromStores.id;
   }
   const items3 = [stateFromStores, nextRecurrenceIdInEvent];
-  const tmpResult = setShowFloatingCTA(8603);
+  const tmpResult = setShowFloatingCTA(8604);
   [][0] = stateFromStores;
   const callback = noop.useCallback(() => {
     if (null != setShowFloatingCTA) {
@@ -205,13 +205,13 @@ function useFloatingCTAProps(stateFromStores) {
         if (!tmp12) {
           ({ scheduled_start_time, name, entity_type } = stateFromStores);
           const obj3 = { eventTimeData: null, isStage: null, theme: null, event: null };
-          const tmp7Result9 = tmp7(8605);
-          obj3.eventTimeData = tmp7(8466).getEventTimeData(scheduled_start_time);
+          const tmp7Result9 = tmp7(8606);
+          obj3.eventTimeData = tmp7(8467).getEventTimeData(scheduled_start_time);
           obj3.isStage = entity_type === constants.STAGE_INSTANCE;
           obj3.theme = tmp5;
           obj3.event = stateFromStores;
           const obj4 = { onPress: callback, icon: null, label: null, subLabel: null, trailing: null };
-          const obj5 = { IconComponent: tmp7(8608).CalendarIcon, variant: "translucent" };
+          const obj5 = { IconComponent: tmp7(8609).CalendarIcon, variant: "translucent" };
           obj4.icon = closure_11(tmp7(8090).RowButton.Icon, obj5);
           obj4.label = name;
           const intl = tmp7(1112).intl;
@@ -229,16 +229,16 @@ function useFloatingCTAProps(stateFromStores) {
           obj7.children = closure_11(tmp7(7247).XSmallIcon, { color: "interactive-icon-default" });
           obj4.trailing = closure_11(Pressable, obj7);
           const tmp21 = obj4;
-          const tmp7Result10 = tmp7(8466);
+          const tmp7Result10 = tmp7(8467);
         }
       }
     }
   }
   closure_130_0 = stateFromStores;
-  const context = noop.useContext(tmp(11781));
+  const context = noop.useContext(tmp(11789));
   ({ channelId, isDockEnabled } = context);
-  tmpResultResult = setShowFloatingCTA(8603)(guild_id, id2, nextRecurrenceIdInEvent);
-  const tmp27 = setShowFloatingCTA(18248)(channelId);
+  tmpResultResult = setShowFloatingCTA(8604)(guild_id, id2, nextRecurrenceIdInEvent);
+  const tmp27 = setShowFloatingCTA(18255)(channelId);
   const items4 = [ChannelRTCStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items4, () => {
     let id;
@@ -265,7 +265,7 @@ function useFloatingCTAProps(stateFromStores) {
             obj8.label = intl3.string(tmp7(1112).t.N4nebq);
             const intl4 = tmp7(1112).intl;
             obj8.subLabel = intl4.string(tmp7(1112).t.o2XPr2);
-            const obj9 = { IconComponent: tmp7(10549).GroupPlusIcon, variant: "translucent" };
+            const obj9 = { IconComponent: tmp7(10550).GroupPlusIcon, variant: "translucent" };
             obj8.icon = closure_11(tmp7(8090).RowButton.Icon, obj9);
             obj8.onPress = tmp30;
             const tmp31 = obj8;

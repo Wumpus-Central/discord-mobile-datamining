@@ -17,7 +17,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -126,10 +126,10 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
 };
 const identity = fn(1258);
 let closure_4 = identity.createWithEqualityFn(() => ({
-  isLightsEnabled: "Error",
-  isVibrationsEnabled: "names",
-  isSoundsEnabled: "category",
-  isNotifyEveryTime: "rejectWithError",
+  isLightsEnabled: "Array",
+  isVibrationsEnabled: "s",
+  isSoundsEnabled: "channel_id",
+  isNotifyEveryTime: "HTTP",
 }));
 const size = fn(2);
 let result = size.fileFinishedImporting(

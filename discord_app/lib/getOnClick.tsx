@@ -57,7 +57,7 @@ let closure_18 = async function _openInviteModal() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ let closure_18 = async function _openInviteModal() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c2 = tmp;
@@ -117,7 +117,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -256,7 +256,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
           return obj;
         }
         c7 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp66) {
         c7 = tmp;
         throw tmp66;
@@ -313,7 +313,7 @@ export default function getOnClick(assetURL) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "channel_id" };
+            result = { applicationId: "displayName", skuId: "isArray" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -434,7 +434,7 @@ export default function getOnClick(assetURL) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14712, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14719, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;
@@ -523,7 +523,7 @@ export default function getOnClick(assetURL) {
           return true;
         };
       }
-      tmp2Result = tmp2(9893);
+      tmp2Result = tmp2(9894);
     }
   }
   if (null != findCodedLinkResult) {
@@ -642,7 +642,7 @@ export default function getOnClick(assetURL) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(8839);
+    tmp2Result4 = tmp2(8840);
   }
   const tmp2Result3 = require("LinkUtils");
 }

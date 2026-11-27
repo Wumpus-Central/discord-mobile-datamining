@@ -25,7 +25,7 @@ function RaisedHandIcon(rtsState) {
   }
   const obj = {
     style: items,
-    children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(10339), color: PRIMARY_800 }),
+    children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(10340), color: PRIMARY_800 }),
   };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);

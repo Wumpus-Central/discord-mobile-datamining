@@ -14,7 +14,7 @@ import TableRadioRow from "../../../design/components/TableRow/native/TableRadio
 import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
 import StreamActionCreators from "../../../actions/StreamActionCreators.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
-import _modDef9635 from "../../../../_runtime/metro/09635__.js";
+import _modDef9636 from "../../../../_runtime/metro/09636__.js";
 import getStreamSettingsForPreset from "../utils/getStreamSettingsForPreset.tsx";
 import SpeedometerIcon from "../../../design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx";
 import ImageSparkleIcon from "../../../design/components/Icon/native/redesign/generated/ImageSparkleIcon.tsx";
@@ -233,7 +233,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         obj10.children = intl5.string(_modDef2587.nMcXo1);
         items = [gesture(Text_Text.Text, obj10)];
         const tmp8Result = NativeViewDefault;
-        items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef9635, size: "xs" });
+        items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef9636, size: "xs" });
         obj9.children = items;
         obj8.label = colors(tmp8Result, obj9);
         if (null != maxSettingsForPreset2) {
@@ -337,5 +337,5 @@ export function showMobileGoLiveActionSheet(location_stack) {
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(10358, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(10359, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 }

@@ -29,7 +29,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(16683);
+const YouBarConstants = fn(16690);
 ({
   YOU_BAR_HEIGHT: closure_10,
   YOU_BAR_PADDING: closure_11,
@@ -102,7 +102,7 @@ let closure_26 = noop.memo(function YouBar() {
     str = str2;
   }
   if (isMobileRTCV2Enabled) {
-    let DOCK_SPACE_SPRING_CONFIG = tmp2(11812).DOCK_SPACE_SPRING_CONFIG;
+    let DOCK_SPACE_SPRING_CONFIG = tmp2(11820).DOCK_SPACE_SPRING_CONFIG;
   } else {
     DOCK_SPACE_SPRING_CONFIG = closure_12;
   }
@@ -276,7 +276,7 @@ let closure_26 = noop.memo(function YouBar() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -310,7 +310,7 @@ let closure_26 = noop.memo(function YouBar() {
             const result1 = closure_128_0.showYouAccountActionSheet();
             const result2 = closure_129_2.set(false);
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c3 = tmp;
@@ -467,7 +467,7 @@ let closure_26 = noop.memo(function YouBar() {
   let tmp52Result = tmp34;
   if (null != nameplate) {
     const obj6 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp48 };
-    tmp52Result = closure_18(tmp27(18176), obj6);
+    tmp52Result = closure_18(tmp27(18183), obj6);
   }
   items12[1] = tmp52Result;
   const obj7 = { gesture: memo3, children: null };
@@ -510,12 +510,12 @@ let closure_26 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj11 = { hasNameplate: tmp34, canUnpin: tmp28.canPin };
-    let tmp52Result4 = closure_18(tmp27(18182), obj11);
+    let tmp52Result4 = closure_18(tmp27(18189), obj11);
   } else {
     tmp52Result4 = null;
     if (tmp26) {
       const obj12 = { hasNameplate: tmp34 };
-      tmp52Result4 = closure_18(tmp27(18184), obj12);
+      tmp52Result4 = closure_18(tmp27(18191), obj12);
     }
   }
   const items13 = [tmp52Result4, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];
@@ -530,7 +530,7 @@ let closure_26 = noop.memo(function YouBar() {
     obj13.style = items15;
     if (tmp52Result5) {
       const obj14 = { style: tmp.dockRim };
-      tmp52Result5 = closure_18(tmp27(13408), obj14);
+      tmp52Result5 = closure_18(tmp27(13416), obj14);
     }
     obj13.children = tmp52Result5;
     tmp52Result6 = closure_18(tmp27(1654).View, obj13);

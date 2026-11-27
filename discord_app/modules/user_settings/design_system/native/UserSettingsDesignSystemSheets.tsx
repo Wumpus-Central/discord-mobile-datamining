@@ -10,7 +10,7 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import _modDef17462 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
+import _modDef17469 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -36,7 +36,7 @@ function DemoActionSheet() {
   let tmp14Result = first;
   if (first) {
     const obj2 = { onPress: NOOP, label: tmp12 };
-    tmp14Result = metroImportDefault(tmp15(8507).ActionSheetHeaderPressableText, obj2);
+    tmp14Result = metroImportDefault(tmp15(8508).ActionSheetHeaderPressableText, obj2);
   }
   obj.leading = tmp14Result;
   let tmp14Result2 = tmp2;
@@ -114,7 +114,7 @@ function DemoPromoSheet() {
   };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = metroImportDefault(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef17462 };
+  obj3.src = { uri: _modDef17469 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
   return metroImportDefault(PromoSheet.PromoSheet, obj2);

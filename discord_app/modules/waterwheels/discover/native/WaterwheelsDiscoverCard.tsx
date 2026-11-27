@@ -108,9 +108,9 @@ function ServerIdentity(server) {
   let tmp14Result5 = null;
   if (null != result) {
     const obj12 = { guild: result, style: tmp4.badge };
-    tmp14Result5 = tmp14(onAction(8735), obj12);
+    tmp14Result5 = tmp14(onAction(8736), obj12);
   }
-  const tmp25 = stateFromStores === server(8932).WaterwheelsActionType.OPEN_GUILD;
+  const tmp25 = stateFromStores === server(8933).WaterwheelsActionType.OPEN_GUILD;
   items5[1] = tmp14Result5;
   let tmp14Result6 = null;
   if (tmp25) {
@@ -567,7 +567,7 @@ function GamePoster(game) {
   };
   const obj4 = {
     style: tmp.posterClip,
-    children: closure_11(game(18029).GameCoverFromURLs, {
+    children: closure_11(game(18036).GameCoverFromURLs, {
       gameId: game.gameId,
       name: game.name,
       coverUrl: game.coverUrl,
@@ -594,7 +594,7 @@ function GamePoster(game) {
     const obj10 = { rank: game.l30Rank };
     obj9.text = intl3.formatToPlainString(tmp2(1112).t.UA6RoE, obj10);
     obj8.type = obj9;
-    obj8.icon = tmp2(14303).FireIcon;
+    obj8.icon = tmp2(14310).FireIcon;
     obj7.children = closure_11(tmp2(6159).Badge, obj8);
     tmp9Result = closure_11(closure_7, obj7);
   }

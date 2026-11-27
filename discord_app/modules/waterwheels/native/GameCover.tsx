@@ -49,7 +49,7 @@ function NoCover(arg0) {
       }
     }
   }, items);
-  const tmp13 = tmp4(18031)(gameId, iconURL1);
+  const tmp13 = tmp4(18038)(gameId, iconURL1);
   let tmp14 = !compact;
   if (!compact) {
     tmp14 = tmp11;
@@ -135,9 +135,9 @@ function NoCover(arg0) {
       num3 = 2;
     }
     obj11.maxLines = num3;
-    obj10.children = React5(tmp4(18032), obj11);
+    obj10.children = React5(tmp4(18039), obj11);
     tmp26Result = React5(timestampProducer, obj10);
-    const tmp4Result = tmp4(18032);
+    const tmp4Result = tmp4(18039);
   }
   items2[3] = tmp26Result;
   obj2.children = items2;
@@ -284,7 +284,7 @@ function GameCoverImage(gameId) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const TILE_ASPECT_RATIO = fn(18030).TILE_ASPECT_RATIO;
+const TILE_ASPECT_RATIO = fn(18037).TILE_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
@@ -338,7 +338,7 @@ let obj4 = {
 obj2.icon = { borderRadius: nativeDefault.radii.xs };
 let obj6 = {};
 let merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.opacity = fn(18031).COVER_TEXTURE_OPACITY;
+obj6.opacity = fn(18038).COVER_TEXTURE_OPACITY;
 obj2.texture = obj6;
 const rect = {
   position: "absolute",

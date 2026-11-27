@@ -6,7 +6,7 @@ import LinearGradientDefault from "../../../../../_runtime/05598_LinearGradient.
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildsBarAnimatedItemWrapperDefault from "../../../guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx";
 import HomeDrawerShared from "../../../home_drawer/native/HomeDrawerShared.tsx";
-import _modDef18130 from "../../../../../_runtime/metro/18130__.js";
+import _modDef18137 from "../../../../../_runtime/metro/18137__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildsBarDnDStore from "../../../guilds_bar/native/GuildsBarDnDStore.tsx";
 
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const CHECKPOINT_PRIMARY = fn(6396).CHECKPOINT_PRIMARY;
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
-const GUILD_ITEM_INSET_LEFT = fn(18071).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(18078).GUILD_ITEM_INSET_LEFT;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const colors = ["#000000", "rgba(0, 0, 0, 0.5)", "#000000"];
@@ -172,7 +172,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     const intl2 = util.intl;
     obj.description = intl2.string(_modDef3495.BFc4lY);
     obj.visible = !isModalOpen;
-    obj.graphic = { type: "image", src: _modDef18130, aspectRatio: "16/9" };
+    obj.graphic = { type: "image", src: _modDef18137, aspectRatio: "16/9" };
     obj.onDismiss = function onDismiss() {
       return _undefined(constants.USER_DISMISS);
     };
@@ -196,9 +196,9 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     styles: memo,
     overState: "y",
     config: memo1,
-    label: "voice_activity_default",
-    expandedChildren: "default",
-    children: "systemMessages",
+    label: null,
+    expandedChildren: "\u{1F9CF}\u200D\u2642\uFE0F",
+    children: true,
   };
   const tmpResult2 = require("useCoachmark");
   let intl = tmp(1112).intl;

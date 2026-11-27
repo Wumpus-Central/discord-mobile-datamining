@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(9135).useNitroTrialCtaOverride();
+  let nitroTrialCtaOverride = analyticsLocations(9136).useNitroTrialCtaOverride();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   items = [analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -36,7 +36,7 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
     onButtonPress: null,
     onLayout: null,
   };
-  let obj = analyticsLocations(9135);
+  let obj = analyticsLocations(9136);
   const intl = analyticsLocations(1112).intl;
   obj2.text = intl.format(analyticsLocations(1112).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {

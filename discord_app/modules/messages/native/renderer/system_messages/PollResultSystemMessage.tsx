@@ -7,8 +7,8 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 const AvatarUtilsDefault = getEmojiURL(1413);
 const UnicodeEmojisDefault = getEmojiURL(4989);
-const formatUsernameOnClickDefault = getEmojiURL(14372);
-const createCommonMessageDefault = getEmojiURL(14373);
+const formatUsernameOnClickDefault = getEmojiURL(14379);
+const createCommonMessageDefault = getEmojiURL(14380);
 const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx",
@@ -61,7 +61,7 @@ export function createPollResultSystemMessage(message) {
           items = [];
           let id = tmp.victorEmoji;
           if (null == id) {
-            const parsePollMarkupResult = v9dPxsm(14417).parsePollMarkup(tmp.victorAnswerText, false);
+            const parsePollMarkupResult = v9dPxsm(14424).parsePollMarkup(tmp.victorAnswerText, false);
             if (null != parsePollMarkupResult) {
               const push = items.push;
               const _Array = Array;
@@ -81,7 +81,7 @@ export function createPollResultSystemMessage(message) {
             obj7.answerHook = () => obj8;
             obj7.percentage = messageAuthorWithProcessedColor;
             formatToPartsResult = intl.formatToParts(v9dPxsm(1112).t.zFwIxC, obj7);
-            const v9dPxsmResult = v9dPxsm(14417);
+            const v9dPxsmResult = v9dPxsm(14424);
           } else {
             if (null != id.id) {
               const obj10 = { id: null, type: "customEmoji", alt: null, src: null, frozenSrc: null };

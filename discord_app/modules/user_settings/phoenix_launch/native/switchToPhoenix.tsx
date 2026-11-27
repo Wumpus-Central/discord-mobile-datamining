@@ -54,7 +54,7 @@ let closure_8 = async function _switchToPhoenix() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_9 = async function _cancelSwitchToPhoenix() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -144,7 +144,7 @@ let closure_9 = async function _cancelSwitchToPhoenix() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c0 = tmp;

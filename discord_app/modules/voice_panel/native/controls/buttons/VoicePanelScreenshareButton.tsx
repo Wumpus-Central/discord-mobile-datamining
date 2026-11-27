@@ -68,9 +68,9 @@ function ScreenshareButtonInner(arg0) {
 const jsx = fn(21).jsx;
 const MetaQuestUtils = fn(1626);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13519).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13527).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18206).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18213).MobilePhoneShareIcon;
 }
 const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({

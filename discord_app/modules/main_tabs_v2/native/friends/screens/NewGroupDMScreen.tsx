@@ -57,7 +57,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: "+95" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } else {
                         try {
@@ -198,14 +198,14 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               } else {
                                 call(tmp9, false, true);
                               }
-                              v3(12298)(closure_128_3);
+                              v3(12306)(closure_128_3);
                               dependencyMap = 3;
                               tmp9 = closure_128_3;
                             }
                             closure_128_3 = value;
                             v3 = 3;
                             dependencyMap = 1;
-                            const obj10 = { value: id(8449).monkeyPatchCall(), done: false };
+                            const obj10 = { value: id(8450).monkeyPatchCall(), done: false };
                             return obj10;
                           }
                         } catch (tmp26) {
@@ -291,7 +291,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const UserRowModes = fn(8944).UserRowModes;
+const UserRowModes = fn(8945).UserRowModes;
 const Constants = fn(1071);
 ({
   InstantInviteSources: map1,
@@ -410,7 +410,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -799,7 +799,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/user_settings/voice/native/Us
 
 export default function SoundboardVolume() {
   const tmp = closure_8();
-  const amplitudinalSoundboardVolume = analyticsLocations(10404).getAmplitudinalSoundboardVolume();
+  const amplitudinalSoundboardVolume = analyticsLocations(10405).getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = analyticsLocations(1112).intl;
@@ -35,7 +35,7 @@ export default function SoundboardVolume() {
     },
     accessibilityLabel: null,
   };
-  const obj = analyticsLocations(10404);
+  const obj = analyticsLocations(10405);
   const intl3 = analyticsLocations(1112).intl;
   obj6.accessibilityLabel = intl3.string(analyticsLocations(1112).t.kbFsAD);
   obj5.children = closure_5(VolumeSliderDefault, obj6);
@@ -49,5 +49,5 @@ export default function SoundboardVolume() {
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
   obj2.children = closure_5(analyticsLocations(6144).TableRow, obj3);
-  return closure_5(analyticsLocations(10388).UserSettingsTableRowGroup, obj2);
+  return closure_5(analyticsLocations(10389).UserSettingsTableRowGroup, obj2);
 }

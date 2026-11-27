@@ -180,7 +180,7 @@ function IncomingGameFriendRequestRow(arg0) {
     />
   );
 }
-const UserRowModes = fn(8944).UserRowModes;
+const UserRowModes = fn(8945).UserRowModes;
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };

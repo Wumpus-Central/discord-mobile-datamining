@@ -37,7 +37,7 @@ function PoolIdInput(onSubmit) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -160,7 +160,7 @@ function UserActionSheet(pool) {
     hasIcons: true,
     children: usersForPool.map((id, index) => {
       const obj = {
-        icon: closure_1_10(pool(12409).UserIcon, { size: "md" }),
+        icon: closure_1_10(pool(12417).UserIcon, { size: "md" }),
         label: null,
         subLabel: null,
         onPress() {
@@ -214,25 +214,25 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let items = [
-  fn(12409).UserIcon,
-  fn(10078).ShieldIcon,
-  fn(11307).GiftIcon,
-  fn(17214).AchievementsIcon,
-  fn(12597).PiggyBankIcon,
-  fn(17216).TreehouseIcon,
-  fn(10375).SpeedometerIcon,
-  fn(17218).CompassIcon,
-  fn(15082).SignPostIcon,
-  fn(17220).CarIcon,
-  fn(17222).TrainIcon,
-  fn(17224).TeacupIcon,
-  fn(17226).InventoryIcon,
-  fn(9782).FoodIcon,
-  fn(17228).BurgerIcon,
-  fn(17230).MagicDoorIcon,
-  fn(17232).PawPrintIcon,
-  fn(17234).RecordPlayerIcon,
-  fn(10454).SettingsIcon,
+  fn(12417).UserIcon,
+  fn(10079).ShieldIcon,
+  fn(11308).GiftIcon,
+  fn(17221).AchievementsIcon,
+  fn(12605).PiggyBankIcon,
+  fn(17223).TreehouseIcon,
+  fn(10376).SpeedometerIcon,
+  fn(17225).CompassIcon,
+  fn(15089).SignPostIcon,
+  fn(17227).CarIcon,
+  fn(17229).TrainIcon,
+  fn(17231).TeacupIcon,
+  fn(17233).InventoryIcon,
+  fn(9783).FoodIcon,
+  fn(17235).BurgerIcon,
+  fn(17237).MagicDoorIcon,
+  fn(17239).PawPrintIcon,
+  fn(17241).RecordPlayerIcon,
+  fn(10455).SettingsIcon,
 ];
 const createStyles = fn(5043);
 let obj2 = {
@@ -271,7 +271,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c2 = tmp;

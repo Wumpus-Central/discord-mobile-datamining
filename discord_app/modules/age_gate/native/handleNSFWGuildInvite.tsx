@@ -5,16 +5,18 @@ import GuildRecord from "../../../records/GuildRecord.tsx";
 import RegionalFeatureConfigUtils from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeNoticeConstants from "../../age_assurance/age_notice/AgeNoticeConstants.tsx";
 import AgeNoticeExperiment from "../../age_assurance/age_notice/AgeNoticeExperiment.tsx";
+import AgeRestrictedContentSettingsUtils from "../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import NsfwGateGuildAlert from "components/NsfwGateGuildAlert.tsx";
 import NsfwServerInviteWarningAlert from "components/NsfwServerInviteWarningAlert.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
 const isGuildLurker = GuildRecord.isGuildLurker;
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
-let closure_5 = AgeNoticeConstants.AGE_NOTICE_NSFW_SERVER_LOCATION;
+let closure_6 = AgeNoticeConstants.AGE_NOTICE_NSFW_SERVER_LOCATION;
 const items = [,];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -54,29 +56,41 @@ export function handleNSFWGuildInvite(invite, arg1) {
   }
   if (set.has(nsfw_level)) {
     const guild1 = GuildStore.getGuild(id);
-    if (obj.isIOS()) {
-      let tmp10 = null != guild1;
-      if (tmp10) {
-        tmp10 = !isGuildLurker(guild1);
-      }
-      let flag6 = !tmp10;
-      if (!tmp10) {
-        const result = NsfwGateGuildAlert.showNsfwGateGuildAlert(id);
-        flag6 = true;
-        if (onCancel != null) {
-          onCancel();
-          flag6 = true;
+    const currentUser = UserStore.getCurrentUser();
+    let nsfwAllowed;
+    if (currentUser != null) {
+      nsfwAllowed = currentUser.nsfwAllowed;
+    }
+    let viewNsfwGuildsOrDefault = true === nsfwAllowed;
+    if (viewNsfwGuildsOrDefault) {
+      viewNsfwGuildsOrDefault = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();
+    }
+    if (obj2.isIOS()) {
+      if (!viewNsfwGuildsOrDefault) {
+        let tmp14 = null != guild1;
+        if (tmp14) {
+          tmp14 = !isGuildLurker(guild1);
         }
-        const tmp6Result = NsfwGateGuildAlert;
+        let flag3 = !tmp14;
+        if (!tmp14) {
+          const result = NsfwGateGuildAlert.showNsfwGateGuildAlert(id);
+          flag3 = true;
+          if (onCancel != null) {
+            onCancel();
+            flag3 = true;
+          }
+          const tmp12Result = NsfwGateGuildAlert;
+        }
+        return flag3;
       }
-      return flag6;
-    } else if (null != guild1) {
+    }
+    if (null != guild1) {
       return false;
     } else {
-      if (tmp6Result4.hasAgeGatedFeatures()) {
-        if (tmp6Result5.isAgeNoticeEnabled(closure_5)) {
+      if (tmp12Result4.hasAgeGatedFeatures()) {
+        if (tmp12Result5.isAgeNoticeEnabled(closure_6)) {
           c2 = false;
-          const obj2 = {
+          const obj3 = {
             onConfirm() {
               c2 = true;
               require();
@@ -89,18 +103,18 @@ export function handleNSFWGuildInvite(invite, arg1) {
               }
             },
           };
-          const result1 = NsfwServerInviteWarningAlert.showNsfwServerInviteWarningAlert(obj2);
+          const result1 = NsfwServerInviteWarningAlert.showNsfwServerInviteWarningAlert(obj3);
           return true;
         } else {
           return false;
         }
-        tmp6Result5 = AgeNoticeExperiment;
+        tmp12Result5 = AgeNoticeExperiment;
       } else {
         return false;
       }
-      tmp6Result4 = RegionalFeatureConfigUtils;
+      tmp12Result4 = RegionalFeatureConfigUtils;
     }
-    obj = PlatformUtils;
+    obj2 = PlatformUtils;
   } else {
     return false;
   }

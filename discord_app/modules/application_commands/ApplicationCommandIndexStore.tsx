@@ -104,7 +104,7 @@ let closure_32 = async function _getOrFetchApplicationCommandIndexForTarget(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -251,11 +251,11 @@ function handleFetchSuccess(arg0) {
           }
           let obj = {};
           let tmp19 = id;
-          let obj2 = id(8183);
+          let obj2 = id(8184);
           let merged = Object.assign(obj2.getApplicationCommandSection(toApplication(tmp6), false));
           let keyPermissionsResult;
           if (null != tmp6.permissions) {
-            let tmp19Result = tmp19(8184);
+            let tmp19Result = tmp19(8185);
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
           }
           let obj7 = { descriptor: null, commands: null };
@@ -277,7 +277,7 @@ function handleFetchSuccess(arg0) {
       const membersById = GuildActionCreatorsDefault.requestMembersById(target.guildId, items);
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(8183).buildApplicationCommands(
+    const applicationCommands = id(8184).buildApplicationCommands(
       application_commands.map((description_default) => {
         const obj = {};
         const merged = Object.assign(description_default);
@@ -339,7 +339,7 @@ function handleFetchSuccess(arg0) {
     obj8.result = obj9;
     obj8.fetchState = { fetching: false };
     updateIndex(target, obj8, flag);
-    const obj6 = id(8183);
+    const obj6 = id(8184);
     tmp32 = "guild" === target.type && set.size > 0;
     tmp64 = set;
   }
@@ -669,7 +669,7 @@ function useQueryState(type, commandTypes, allowFetch) {
 function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(10053).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(10054).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -685,7 +685,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(10053).ScoreMethod.NONE;
+    NONE = NONE(10054).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -704,10 +704,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(10053).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(10053).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = tmp9(10055).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = tmp9(10055);
+  if (builtIns !== NONE(10054).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(10054).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = tmp9(10056).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = tmp9(10056);
   } else {
     builtInCommands = [];
   }
@@ -888,7 +888,7 @@ function queryIndex(allowApplicationCommands) {
   });
   if (builtInCommands.length > 0) {
     const tmp87 = queryIndexSection(
-      NONE(10055).BUILT_IN_SECTIONS[constants.BUILT_IN],
+      NONE(10056).BUILT_IN_SECTIONS[constants.BUILT_IN],
       builtInCommands,
       true,
       true,
@@ -907,7 +907,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(10053).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(10054).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {

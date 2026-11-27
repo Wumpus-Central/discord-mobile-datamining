@@ -12,9 +12,9 @@ import CheckpointFadeLayerDefault from "CheckpointFadeLayer.tsx";
 import CheckpointTextDefault from "CheckpointText.tsx";
 import useIsCheckpointWideDefault from "../useIsCheckpointWide.tsx";
 import useCheckpointPressSoundDefault from "../useCheckpointPressSound.tsx";
-import _modDef12863 from "../../../../../discord_assets/assets/checkpoint/2026/sfx/next.mp3.js";
+import _modDef12871 from "../../../../../discord_assets/assets/checkpoint/2026/sfx/next.mp3.js";
 import CheckpointButton from "CheckpointButton.tsx";
-import _modDef12866 from "../../../../../discord_assets/assets/checkpoint/2026/sfx/back.mp3.js";
+import _modDef12874 from "../../../../../discord_assets/assets/checkpoint/2026/sfx/back.mp3.js";
 import ArrowSmallLeftIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallLeftIcon.tsx";
 import showNitroLockedToastDefault from "../showNitroLockedToast.tsx";
 import ShareIcon from "../../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx";
@@ -29,7 +29,7 @@ function HomeControls(onStart) {
   const tmp = closure_16();
   _require = tmp;
   const tmp4 = useIsCheckpointWideDefault();
-  let obj = { source: _modDef12863, onPress: onStart.onStart };
+  let obj = { source: _modDef12871, onPress: onStart.onStart };
   items = [tmp.homeControls];
   let wideHomeControls = tmp4;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
@@ -107,7 +107,7 @@ function BackButton(disabled) {
   }
   const obj2 = { source: null, onPress: null, disabled: null };
   obj = useToken;
-  obj2.source = _modDef12866;
+  obj2.source = _modDef12874;
   obj2.onPress = disabled.onPress;
   obj2.disabled = flag;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj2));
@@ -132,7 +132,7 @@ function ReplayButton(arg0) {
   ({ onPress, color, style } = arg0);
   const obj = { source: null, onPress: null };
   const tmp = closure_16();
-  obj.source = _modDef12863;
+  obj.source = _modDef12871;
   obj.onPress = onPress;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
   const obj2 = { onPressIn, onPress: onPressWithSound, accessibilityLabel: null, style: null, children: null };
@@ -152,7 +152,7 @@ function NextButton(disabled) {
   }
   const obj2 = { source: null, onPress: null, disabled: null };
   obj = useToken;
-  obj2.source = _modDef12863;
+  obj2.source = _modDef12871;
   obj2.onPress = onPress;
   obj2.disabled = disabled;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj2));
@@ -179,7 +179,7 @@ function NextButton(disabled) {
 }
 function DoneButton(onPress) {
   const tmp = closure_16();
-  const obj = { source: _modDef12863, onPress: onPress.onPress };
+  const obj = { source: _modDef12871, onPress: onPress.onPress };
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
   const obj2 = { onPressIn, onPress: onPressWithSound, accessibilityLabel: null, style: null, children: null };
   const intl = util.intl;
@@ -217,7 +217,7 @@ function FinalizeCharacterSaveButton(blockedTrait) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ function FinalizeCharacterSaveButton(blockedTrait) {
             const obj3 = tmp4(6442);
             c1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(12628).completeCheckpoint(characterFromTraits), done: false };
+            const obj6 = { value: tmp4(12636).completeCheckpoint(characterFromTraits), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -370,7 +370,7 @@ function RouteControls(arg0) {
   let checkpointRouteBlockedTrait;
   ({ isLastRoute, onSave, onReplay, onShare } = arg0);
   const tmp = closure_16();
-  const tmp4 = checkpointRouteBlockedTrait(12664)();
+  const tmp4 = checkpointRouteBlockedTrait(12672)();
   checkpointRouteBlockedTrait = onNext(6765).getCheckpointRouteBlockedTrait(activeRoute, tmp4);
   if (null != checkpointRouteBlockedTrait) {
     const nitroLockedMessage = onNext(6765).getNitroLockedMessage(checkpointRouteBlockedTrait);
@@ -435,7 +435,7 @@ get_ActivityIndicator = fn(17);
 const CheckpointConstants = fn(6396);
 ({ CHECKPOINT_CONTROL_ICON_SIZE, CHECKPOINT_PRIMARY } = CheckpointConstants);
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_WIDE_HOME_START_GAP } = CheckpointConstants);
-const CheckpointTransitionConstants = fn(12631);
+const CheckpointTransitionConstants = fn(12639);
 ({ CHECKPOINT_CHARACTER_PAGE_FADE_OUT: closure_8, CHECKPOINT_STATS_FADE_IN: closure_9 } =
   CheckpointTransitionConstants);
 const HelpdeskArticles = fn(1071).HelpdeskArticles;

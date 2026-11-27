@@ -100,8 +100,8 @@ export default function DevToolsTogglesScreen() {
   let tmp = closure_12();
   const tmp3 = _slicedToArray(noop.useState(""), 2);
   const query = tmp3[0];
-  const manaTextMigrationHighlightRestartNotice = query(15465).useManaTextMigrationHighlightRestartNotice();
-  let obj = query(15465);
+  const manaTextMigrationHighlightRestartNotice = query(15472).useManaTextMigrationHighlightRestartNotice();
+  let obj = query(15472);
   const tmp5 = query;
   items = [DesignTogglesStore];
   const items1 = [query];
@@ -140,9 +140,9 @@ export default function DevToolsTogglesScreen() {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(17351).clearAll();
-        const obj = first(17351);
-        first(17326).clearAll();
+        first(17358).clearAll();
+        const obj = first(17358);
+        first(17333).clearAll();
       },
       arrow: true,
     }),
@@ -155,9 +155,9 @@ export default function DevToolsTogglesScreen() {
     label: "Clear All",
     variant: "danger",
     onPress() {
-      first(17351).clearAll();
-      const obj = first(17351);
-      first(17326).clearAll();
+      first(17358).clearAll();
+      const obj = first(17358);
+      first(17333).clearAll();
     },
     arrow: true,
   };
@@ -180,7 +180,7 @@ export default function DevToolsTogglesScreen() {
             description: tmp3,
             value: tmp2,
             onValueChange(arg0) {
-              return first(17351).toggle(query, arg0);
+              return first(17358).toggle(query, arg0);
             },
           },
           tmp,

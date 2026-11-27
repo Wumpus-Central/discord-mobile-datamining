@@ -9,7 +9,7 @@ require = fn;
 function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
-  const tmp3 = onClose(11519)(category);
+  const tmp3 = onClose(11527)(category);
   dependencyMap = tmp3;
   const DeveloperMode = category(4868).DeveloperMode;
   const setting = DeveloperMode.useSetting();
@@ -21,7 +21,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   if (null != tmp3) {
     const obj2 = { hasIcons: true, children: null };
     const obj3 = { label: tmp3.label, icon: null, onPress: null };
-    const obj4 = { IconComponent: tmp4(9631).PlusLargeIcon };
+    const obj4 = { IconComponent: tmp4(9632).PlusLargeIcon };
     obj3.icon = closure_5(tmp4(7548).ActionSheetRow.Icon, obj4);
     obj3.onPress = function onPress() {
       closure_2.perform();
@@ -36,7 +36,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   const intl = tmp4(1112).intl;
   obj6.label = intl.string(category(1112).t.zdPFs9);
   const tmp2 = onClose(5659)(category, true);
-  obj6.icon = closure_5(category(7548).ActionSheetRow.Icon, { IconComponent: category(10454).SettingsIcon });
+  obj6.icon = closure_5(category(7548).ActionSheetRow.Icon, { IconComponent: category(10455).SettingsIcon });
   obj6.onPress = function onPress() {
     openFavoritesGuildCategorySettingsModalDefault(category.id);
     onClose();
@@ -49,7 +49,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     const obj9 = { label: null, icon: null, onPress: null };
     const intl2 = tmp4(1112).intl;
     obj9.label = intl2.string(tmp4(1112).t["2visC6"]);
-    const obj10 = { IconComponent: tmp4(11081).IdIcon };
+    const obj10 = { IconComponent: tmp4(11082).IdIcon };
     obj9.icon = closure_5(tmp4(7548).ActionSheetRow.Icon, obj10);
     obj9.onPress = function onPress() {
       ClipboardUtils.copy(category.id);

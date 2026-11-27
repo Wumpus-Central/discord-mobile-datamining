@@ -41,7 +41,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(20107), {});
+          return closure_1_4(closure_1_1(20165), {});
         },
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: {
@@ -50,7 +50,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(20119), {});
+          return closure_1_4(closure_1_1(20177), {});
         },
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: {
@@ -59,7 +59,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(20120), {});
+          return closure_1_4(closure_1_1(20178), {});
         },
       },
     };

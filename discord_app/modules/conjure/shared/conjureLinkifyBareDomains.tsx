@@ -36,8 +36,8 @@ const re2 = /^[("']+/;
 const re3 = /[.,!?;:)"']+$/;
 const result = size.fileFinishedImporting("modules/conjure/shared/conjureLinkifyBareDomains.tsx");
 
-export function linkifyBareDomains(text) {
-  let parts = text.split(re1);
+export function linkifyBareDomains(shortenConjureLinksResult) {
+  let parts = shortenConjureLinksResult.split(re1);
   let mapped = parts.map((item, index) => {
     let joined = item;
     if (index % 2 !== 1) {

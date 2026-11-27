@@ -26,7 +26,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ export default {
                 return obj7;
               } else {
                 constants = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (1 === tmp8) {
@@ -164,7 +164,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -252,7 +252,7 @@ export default {
             closure_131_1(closure_131_2[3]).dispatch(obj11);
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp41) {
           closure_4 = tmp41;

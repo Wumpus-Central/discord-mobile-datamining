@@ -38,7 +38,7 @@ function IgnoredInformationTable() {
 }
 const View = fn(17).View;
 const UserRemediationAction = fn(7851).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11843);
+const RestrictionConfirmationConstants = fn(11851);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: closure_10 } =
   RestrictionConfirmationConstants);
 const Constants = fn(1071);
@@ -286,7 +286,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       onPress: null,
       arrow: true,
     };
-    const obj19 = { size: tmp7(1186).Icon.Sizes.MEDIUM, source: tmp4(9077), color: tmp.destructiveIcon.color };
+    const obj19 = { size: tmp7(1186).Icon.Sizes.MEDIUM, source: tmp4(9078), color: tmp.destructiveIcon.color };
     obj18.icon = closure_13(tmp7(1186).Icon, obj19);
     const intl4 = tmp7(1112).intl;
     obj18.label = intl4.string(tmp7(1112).t.bwxY30);
@@ -303,7 +303,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       });
       const obj2 = { action: UserRemediationAction.GOTO_BLOCK, location: "user-profile-context-menu" };
       const obj3 = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(11844, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(11852, dependencyMap.paths);
       obj3.openLazy(
         tmp2,
         React6,

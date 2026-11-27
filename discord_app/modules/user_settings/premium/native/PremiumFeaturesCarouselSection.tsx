@@ -6,10 +6,10 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05598_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef13933 from "../../../../../_runtime/metro/13933__.js";
-import _modDef13934 from "../../../../../_runtime/metro/13934__.js";
-import _modDef13935 from "../../../../../_runtime/metro/13935__.js";
-import _modDef13936 from "../../../../../_runtime/metro/13936__.js";
+import _modDef13940 from "../../../../../_runtime/metro/13940__.js";
+import _modDef13941 from "../../../../../_runtime/metro/13941__.js";
+import _modDef13942 from "../../../../../_runtime/metro/13942__.js";
+import _modDef13943 from "../../../../../_runtime/metro/13943__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -69,7 +69,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef13933;
+    obj.imageSrc = _modDef13940;
     obj.imageStyle = first.emojiImage;
     items = [,];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -78,7 +78,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef13934;
+    obj2.imageSrc = _modDef13941;
     const items2 = [,];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     set = new Set(items);
@@ -87,7 +87,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef13935;
+    obj3.imageSrc = _modDef13942;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -95,7 +95,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef13936;
+    obj4.imageSrc = _modDef13943;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);
@@ -143,7 +143,7 @@ function PremiumFeaturesCarousel(arg0) {
         modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
         onSnapToItem: tmp7,
       };
-      let tmp19 = closure_10(currentIndex(11176), obj3);
+      let tmp19 = closure_10(currentIndex(11177), obj3);
     }
     let items3 = [tmp19];
     let obj4 = { containerStyle: tmp.indicators, numberOfItems: mapped.length, currentIndex };
@@ -179,7 +179,7 @@ function PremiumFeaturesCarousel(arg0) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const Gradients = fn(9126).Gradients;
+const Gradients = fn(9127).Gradients;
 const PremiumTypes = fn(1389).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -227,7 +227,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   const tmp = closure_14();
   const analyticsLocations = first(6379)().analyticsLocations;
   [first, dependencyMap] = noop.useState(false);
-  ({ width, ref, onLayout } = first(8486)());
+  ({ width, ref, onLayout } = first(8487)());
   if (undefined === width) {
     width = analyticsLocations(1495).getWindowDimensions().width;
     let obj2 = analyticsLocations(1495);

@@ -17,7 +17,7 @@ function AutocompleteFormDivider() {
 let closure_3 = fn(4896).isGuildSelectableChannelType;
 const Constants = fn(1071);
 ({ AutoCompleteResultTypes: metroImportDefault, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10790);
+const ApplicationCommandsConstants = fn(10791);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: closure_10 } = ApplicationCommandsConstants);
 const ChannelAutocompleteConstants = fn(7074);
 ({

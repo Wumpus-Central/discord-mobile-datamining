@@ -131,7 +131,7 @@ const Constants = fn(1071);
   WebBrowserType: closure_6,
   ActivityFlags: metroImportDefault,
 } = Constants);
-const ActivityIntent = fn(10191).ActivityIntent;
+const ActivityIntent = fn(10192).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
@@ -170,7 +170,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -160,7 +160,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(6120).AST_KEY.MENTION] = obj15;
   const obj16 = {};
   const merged13 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 6120).AST_KEY.CHANNEL_MENTION]);
-  obj16.react = num(10654).inlineChannelMentionReact;
+  obj16.react = num(10655).inlineChannelMentionReact;
   obj[num(6120).AST_KEY.CHANNEL_MENTION] = obj16;
   const obj17 = {};
   const merged14 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 6120).AST_KEY.ATTACHMENT_LINK]);
@@ -176,7 +176,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj18.react = defaultReactFn;
   obj[num(6120).AST_KEY.SOUNDBOARD] = obj18;
   obj[num(6120).AST_KEY.GUILD] = { react: defaultReactFn };
-  const obj19 = { react: num(10654).createInlineChannelReact("\u{1F4AC}") };
+  const obj19 = { react: num(10655).createInlineChannelReact("\u{1F4AC}") };
   obj[num(6120).AST_KEY.CHANNEL] = obj19;
   const obj21 = {};
   const merged16 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 6120).AST_KEY.COMMAND_MENTION]);

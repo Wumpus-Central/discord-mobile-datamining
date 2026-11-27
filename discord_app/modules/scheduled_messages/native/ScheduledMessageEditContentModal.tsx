@@ -68,7 +68,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -82,7 +82,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const obj5 = v1(8344);
+              const obj5 = v1(8345);
               const obj4 = {
                 content: obj5.parse(stateFromStores, first).content,
                 flags: scheduledMessage.createArgs.flags,
@@ -90,7 +90,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               v1 = 1;
               dependencyMap = 1;
               const obj7 = {
-                value: tmp4(9608).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
+                value: tmp4(9609).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
                 done: false,
               };
               return obj7;
@@ -108,7 +108,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               const arr = v1(6130);
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           dependencyMap = tmp;

@@ -52,8 +52,8 @@ function NameplateUser(arg0) {
       size: native.AvatarSizes.NORMAL,
       avatarDecoration,
       animate: !stateFromStores,
-      autoStatusCutout: "handshake_medium_light_skin_tone",
-      "aria-hidden": "1f3fc",
+      autoStatusCutout: null,
+      "aria-hidden": true,
     };
     return timestampProducer(native.Avatar, obj);
   }, items1);

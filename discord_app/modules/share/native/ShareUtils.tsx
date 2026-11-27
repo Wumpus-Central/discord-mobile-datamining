@@ -15,7 +15,7 @@ let closure_6 = async function _sendShareMessage(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -87,10 +87,10 @@ let closure_6 = async function _sendShareMessage(arg0) {
               const obj = { uploadError: { file, guildId: guildId.getGuildId(), code, reason } };
               closure_1_6.reject(obj);
               const obj2 = { file, guildId: guildId.getGuildId(), code, reason };
-              guildId(10062).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-              const obj3 = guildId(10062);
+              guildId(10063).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+              const obj3 = guildId(10063);
               const obj4 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-              guildId(8179).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+              guildId(8180).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
             },
           };
           c4 = 2;

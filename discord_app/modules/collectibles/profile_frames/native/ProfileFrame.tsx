@@ -124,7 +124,7 @@ function LiveProfileFrame(frame) {
   c9 = undefined;
   c10 = undefined;
   const tmp = c10();
-  const settled = frame(9507).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
+  const settled = frame(9508).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
   items = [frame.layers, frameOrder, profileThemeType, filterLayer];
   const memo = profileThemeType.useMemo(() => {
     const layers = frame.layers;
@@ -137,7 +137,7 @@ function LiveProfileFrame(frame) {
       return result;
     });
   }, items);
-  let obj = frame(9507);
+  let obj = frame(9508);
   let num = 0;
   if (settled) {
     num = 1;
@@ -159,7 +159,7 @@ function LiveProfileFrame(frame) {
           overflowTop: c8,
           overflowBottom: c9,
           overflowHorizontal: c10,
-        } = containerWidth(9504)(frame, containerWidth));
+        } = containerWidth(9505)(frame, containerWidth));
         const obj4 = { style: null, children: null };
         const items2 = [tmp.container];
         const obj5 = { opacity: sharedValue };
@@ -185,8 +185,8 @@ function LiveProfileFrame(frame) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(9492).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(9506);
+let closure_5 = fn(9493).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(9507);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: closure_6, PROFILE_FRAME_Z_INDEX: metroImportDefault } =
   ProfileFrameConstants);
 let jsx = fn(21).jsx;

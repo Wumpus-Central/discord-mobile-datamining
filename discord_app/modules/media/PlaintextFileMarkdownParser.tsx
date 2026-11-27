@@ -2,7 +2,7 @@
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
 import UnicodeSanitizationUtils from "../markup/UnicodeSanitizationUtils.tsx";
 import MarkupLinkRule from "../markup/MarkupLinkRule.tsx";
-import _modDef12076 from "../../../_runtime/metro/12076__.js";
+import _modDef12084 from "../../../_runtime/metro/12084__.js";
 
 require = fn;
 function createLinkNode(arr) {
@@ -356,7 +356,7 @@ function parseMarkdownTokens(children1, remaining) {
   }
   return items[0].children;
 }
-let closure_2 = new _modDef12076({ html: false, linkify: false, typographer: false }).use(fn(12081).dollarmathPlugin, {
+let closure_2 = new _modDef12084({ html: false, linkify: false, typographer: false }).use(fn(12089).dollarmathPlugin, {
   allow_space: false,
   allow_digits: false,
   allow_labels: false,

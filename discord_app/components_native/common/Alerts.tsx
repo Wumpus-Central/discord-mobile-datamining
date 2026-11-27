@@ -297,7 +297,7 @@ let closure_18 = {
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_11(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "radii", renderKey: "id", props: "clearTimeout" });
+let closure_23 = Object.freeze({ renderAlert: "Array", renderKey: "channel_id", props: "i" });
 const tmp6 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -329,7 +329,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "radii", renderKey: "id", props: "clearTimeout" };
+        return { renderAlert: "Array", renderKey: "channel_id", props: "i" };
       }
     }
   });

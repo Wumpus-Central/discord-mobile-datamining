@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventUtils.tsx
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef8503 from "../../../../../_runtime/metro/08503__.js";
+import _modDef8504 from "../../../../../_runtime/metro/08504__.js";
 import LocationIcon2 from "../../../../design/components/Icon/native/redesign/generated/LocationIcon.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/native
 
 export function getEventLocationIconSource(event, channel, stateFromStores2) {
   if (null != obj.getLocationFromEvent(event)) {
-    let tmp4 = _modDef8503;
+    let tmp4 = _modDef8504;
   } else {
     tmp4 = null;
     if (null != channel) {

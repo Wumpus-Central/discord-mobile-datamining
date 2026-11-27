@@ -7,7 +7,7 @@ import CheckpointStore from "../../../../CheckpointStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointTransitionConstants = fn(12631);
+const CheckpointTransitionConstants = fn(12639);
 ({
   CHECKPOINT_FRIENDS_CONTENT_FADE_OUT: closure_8,
   CHECKPOINT_SIDEKICK_CONTENT_FADE_IN: closure_9,
@@ -41,7 +41,7 @@ obj2.wideContainer = {
   alignItems: "center",
   alignSelf: "center",
   width: "100%",
-  maxWidth: fn(12860).CHECKPOINT_WIDE_MAX_WIDTH,
+  maxWidth: fn(12868).CHECKPOINT_WIDE_MAX_WIDTH,
 };
 obj2.wideScenePane = {
   width: "50%",

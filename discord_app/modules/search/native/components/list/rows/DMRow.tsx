@@ -3,10 +3,10 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import native from "../../../../../../design/void/native.tsx";
 import UserUtils from "../../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
-import _modDef8558 from "../../../../../../../_runtime/metro/08558__.js";
+import _modDef8559 from "../../../../../../../_runtime/metro/08559__.js";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef13963 from "../../../../../../../_runtime/metro/13963__.js";
+import _modDef13970 from "../../../../../../../_runtime/metro/13970__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -104,7 +104,7 @@ export default noop.memo(function DMRow(user) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -143,7 +143,7 @@ export default noop.memo(function DMRow(user) {
             c3 = 0;
             closure_128_8(false);
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp23) {
           closure_2 = tmp23;
@@ -187,7 +187,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8558, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8559, disableColor: true };
         obj4.children = state(native.Icon, obj5);
         tmp4Result = state(timestampProducer, obj4);
       }
@@ -195,7 +195,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13963, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13970, disableColor: true };
         obj6.children = state(native.Icon, obj7);
         tmp4Result3 = state(timestampProducer, obj6);
       }

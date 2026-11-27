@@ -34,11 +34,11 @@ function QuestActivityUnenrolledModalInner(quest) {
   dependencyMap = tmp5[1];
   let obj3 = quest(504);
   let obj4 = quest(7515);
-  const getOrFetchApplication = obj4.useGetOrFetchApplication(quest(8389).getActivityApplicationId(quest));
-  const obj5 = quest(8389);
-  const questTaskDetails = quest(9892).useQuestTaskDetails(quest);
-  let obj6 = quest(9892);
-  const obj7 = quest(13839);
+  const getOrFetchApplication = obj4.useGetOrFetchApplication(quest(8390).getActivityApplicationId(quest));
+  const obj5 = quest(8390);
+  const questTaskDetails = quest(9893).useQuestTaskDetails(quest);
+  let obj6 = quest(9893);
+  const obj7 = quest(13846);
   const items1 = [getOrFetchApplication];
   const questsInstructionsToWinReward = obj7.useQuestsInstructionsToWinReward({
     quest,
@@ -68,7 +68,7 @@ function QuestActivityUnenrolledModalInner(quest) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -84,12 +84,12 @@ function QuestActivityUnenrolledModalInner(quest) {
             } else {
               const obj4 = {
                 questContent: tmp4(6874).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
-                questContentCTA: tmp4(8392).QuestContentCTA.START_QUEST,
+                questContentCTA: tmp4(8393).QuestContentCTA.START_QUEST,
                 sourceQuestContent: tmp4(6874).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj6 = { value: tmp4(9894).enrollInQuest(quest.id, obj4), done: false };
+              const obj6 = { value: tmp4(9895).enrollInQuest(quest.id, obj4), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -102,7 +102,7 @@ function QuestActivityUnenrolledModalInner(quest) {
           } else {
             v1(6130).pop();
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           dependencyMap = tmp;
@@ -121,9 +121,9 @@ function QuestActivityUnenrolledModalInner(quest) {
   const checkboxA11yNative = quest(5105).useCheckboxA11yNative({ checked });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   const obj9 = quest(5105);
-  const isQuestAccessSuspended = quest(9892).useIsQuestAccessSuspended();
-  const obj10 = quest(9892);
-  trackQuestContentClickedWithImpression = quest(16602).useTrackQuestContentClickedWithImpression();
+  const isQuestAccessSuspended = quest(9893).useIsQuestAccessSuspended();
+  const obj10 = quest(9893);
+  trackQuestContentClickedWithImpression = quest(16609).useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = noop.useCallback(() => {
     trackQuestContentClickedWithImpression({
@@ -148,7 +148,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const items4 = [tmp18Result];
   const obj18 = { style: tmp4.rewardTileContainer, children: null };
   const size = { quest, height: 87, width: 87, style: tmp4.questRewardTile };
-  obj18.children = closure_11(checked(13835), size);
+  obj18.children = closure_11(checked(13842), size);
   items4[1] = closure_11(closure_7, obj18);
   obj15.children = items4;
   obj14.children = closure_12(closure_7, obj15);
@@ -393,7 +393,7 @@ export default function QuestActivityUnenrolledModal(questId) {
     };
     obj2[constants.MAIN] = obj3;
     const obj4 = { screens: obj2, initialRouteName: constants.MAIN };
-    return closure_11(tmp(11618).Modal, obj4);
+    return closure_11(tmp(11626).Modal, obj4);
   }
   let obj = questId(504);
   tmp = questId;

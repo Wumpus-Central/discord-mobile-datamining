@@ -156,7 +156,7 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
           return tmp !== labId;
         }),
       );
-      const f108160 = (arg0) => {
+      const f108403 = (arg0) => {
         currentUser = currentUser.getCurrentUser();
         let enabled;
         if (currentUser != null) {
@@ -174,7 +174,7 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
       const found = keys.filter((item) => {
         let tmp2 = !tmp;
         if (null == closure_10[item]) {
-          tmp2 = f108161(item);
+          tmp2 = f108404(item);
         }
         return tmp2;
       });
@@ -209,7 +209,7 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
     }
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate() {
-    const f108160 = (arg0) => {
+    const f108403 = (arg0) => {
       currentUser = currentUser.getCurrentUser();
       let enabled;
       if (currentUser != null) {
@@ -226,7 +226,7 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
     const found = keys.filter((item) => {
       let tmp2 = !tmp;
       if (null == closure_10[item]) {
-        tmp2 = f108161(item);
+        tmp2 = f108404(item);
       }
       return tmp2;
     });
@@ -238,12 +238,12 @@ const discordLabsStore = new DiscordLabsStore(DispatcherDefault, {
     return flag;
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const f108161 = () => true;
+    const f108404 = () => true;
     const keys = Object.keys(closure_11);
     const found = keys.filter((item) => {
       let tmp2 = !tmp;
       if (null == closure_10[item]) {
-        tmp2 = f108161(item);
+        tmp2 = f108404(item);
       }
       return tmp2;
     });

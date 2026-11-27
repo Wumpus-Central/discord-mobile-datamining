@@ -46,7 +46,7 @@ function PublishSheetBody(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ function PublishSheetBody(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ function PublishSheetBody(project) {
             v1(entryPoint[18])(closure_128_0.id);
           }
           entryPoint = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         entryPoint = tmp;
@@ -175,7 +175,7 @@ function PublishSheetBody(project) {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -209,7 +209,7 @@ function PublishSheetBody(project) {
           }
           if (!current) {
             c2 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else {
             hidePublishSheet();
             const appChannelsPrivate = closure_128_3.appChannelsPrivate;

@@ -6,9 +6,9 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import openPremiumModalDefault from "../../../premium/native/openPremiumModal.tsx";
-import _modDef10854 from "../../../../../_runtime/metro/10854__.js";
 import _modDef10855 from "../../../../../_runtime/metro/10855__.js";
 import _modDef10856 from "../../../../../_runtime/metro/10856__.js";
+import _modDef10857 from "../../../../../_runtime/metro/10857__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
@@ -49,7 +49,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef10854,
+    icon: _modDef10855,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -59,7 +59,7 @@ let items = [
   ,
 ];
 let obj = {
-  icon: _modDef10854,
+  icon: _modDef10855,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -67,21 +67,21 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE,
 };
 items[1] = {
-  icon: _modDef10855,
+  icon: _modDef10856,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 let obj2 = {
-  icon: _modDef10855,
+  icon: _modDef10856,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 items[2] = {
-  icon: _modDef10856,
+  icon: _modDef10857,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -103,7 +103,7 @@ let obj5 = {
   imageHeader: null,
 };
 let obj3 = {
-  icon: _modDef10856,
+  icon: _modDef10857,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -153,7 +153,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
       const obj = analyticsLocations(dependencyMap[14]);
     }
   }, []);
-  const tmp5 = analyticsLocations(9697)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(9698)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
@@ -208,7 +208,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   };
   const obj6 = { source: null, style: null };
   const obj4 = { source: analyticsLocations(7752) };
-  obj6.source = analyticsLocations(10857);
+  obj6.source = analyticsLocations(10858);
   obj6.style = tmp.imageHeader;
   const items2 = [closure_13(analyticsLocations(5730), obj6), ,];
   const obj7 = { style: tmp.description, variant: "body-md/medium", children: null };

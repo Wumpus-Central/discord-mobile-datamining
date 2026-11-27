@@ -130,14 +130,14 @@ function FloatingNav(navigation) {
   GameProfileFloatingNavTsx1.__initData = tmp11;
   if (isGameProfileCommunitiesMobileEnabled) {
     let obj3 = {
-      tab: tmp4(8786).GameProfileNavTab.OVERVIEW,
+      tab: tmp4(8787).GameProfileNavTab.OVERVIEW,
       IconComponent: tmp4(7756).GameControllerIcon,
       label: null,
     };
     const intl = tmp4(1112).intl;
     obj3.label = intl.string(tmp4(1112).t.qHmbyh);
     const items3 = [obj3];
-    let obj4 = { tab: tmp4(8786).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(7155).GroupIcon, label: null };
+    let obj4 = { tab: tmp4(8787).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(7155).GroupIcon, label: null };
     const intl2 = tmp4(1112).intl;
     obj4.label = intl2.string(tmp4(1112).t["3xFZEo"]);
     items3[1] = obj4;
@@ -148,7 +148,7 @@ function FloatingNav(navigation) {
     const obj8 = {
       style: tmp3.pillBlur,
       pointerEvents: "none",
-      children: closure_7(tmp4(8489).BackgroundBlurFill, {}),
+      children: closure_7(tmp4(8490).BackgroundBlurFill, {}),
     };
     const items5 = [closure_7(closure_5, obj8)];
     const obj9 = { style: tmp3.pillRow, children: null };
@@ -178,7 +178,7 @@ function FloatingNav(navigation) {
         );
       }),
     };
-    items7[1] = closure_7(tmp4(14276).YouScreenNavIconMeasurer, obj11);
+    items7[1] = closure_7(tmp4(14283).YouScreenNavIconMeasurer, obj11);
     obj9.children = items7;
     items5[1] = closure_8(closure_5, obj9);
     obj7.children = items5;

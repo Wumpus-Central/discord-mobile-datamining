@@ -5,13 +5,13 @@ import MobileVoiceOverlayActionCreatorsDefault from "../../../voice_overlay/nati
 import MobileVoiceOverlayStore from "../../../../stores/native/MobileVoiceOverlayStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["9CSZJm"]);
   },
-  parent: fn(9555).MobileUserSettings.VOICE,
+  parent: fn(9556).MobileUserSettings.VOICE,
   useValue: function useAndroidMobileOverlaySettingValue() {
     items = [MobileVoiceOverlayStore];
     return initialize.useStateFromStores(items, () => enabled.getEnabled());
@@ -21,7 +21,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.Wfoivk);
   },
-  usePredicate: fn(10389).isMobileOverlaySupported,
+  usePredicate: fn(10390).isMobileOverlaySupported,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");

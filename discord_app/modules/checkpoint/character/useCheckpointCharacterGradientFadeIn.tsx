@@ -1,5 +1,5 @@
 // discord_app/modules/checkpoint/character/useCheckpointCharacterGradientFadeIn.tsx
-import _mod12847 from "../../../../_runtime/metro/12847__.js";
+import _mod12855 from "../../../../_runtime/metro/12855__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -45,7 +45,7 @@ export function useCheckpointCharacterGradientFadeIn(dataBinding) {
       let _requestAnimationFrame = requestAnimationFrame;
       function handleAnimationFrame() {
         const bound = Math.max(Math.min(Date.now() - closure_0, hasOwnProperty), 0);
-        closure_3(_mod12847.easeOutCubic(bound, 0, 1, hasOwnProperty));
+        closure_3(_mod12855.easeOutCubic(bound, 0, 1, hasOwnProperty));
         if (bound < hasOwnProperty) {
           const _requestAnimationFrame = requestAnimationFrame;
           closure_1 = requestAnimationFrame(handleAnimationFrame);

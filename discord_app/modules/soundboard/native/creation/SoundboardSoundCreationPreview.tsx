@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _mod1654 from "../../../../../_runtime/metro/01654__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import _modDef8886 from "../../../../../_runtime/metro/08886__.js";
+import _modDef8887 from "../../../../../_runtime/metro/08887__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -85,7 +85,7 @@ let closure_16 = PlatformUtils.isIOS()
       onLoad = onLoad.onLoad;
       ({ uri, volume, onEnd, onError } = onLoad);
       const tmp = closure_13();
-      return refs(_modDef8886, {
+      return refs(_modDef8887, {
         source: { uri },
         audioOnly: true,
         paused: false,
@@ -198,7 +198,7 @@ export default function SoundboardSoundCreationPreview(source) {
   const effect = obj.useEffect(() => {
     closure_1 = async function _load() {
       closure_1 = tmp3;
-      await closure_2_0(20011).loadSoundboardAudioPreview(c4, closure_2_0(20011).WAVEFORM_BAR_COUNT);
+      await closure_2_0(20036).loadSoundboardAudioPreview(c4, closure_2_0(20036).WAVEFORM_BAR_COUNT);
       if (1 === tmp7) {
         c2 = 0;
         if (!closure_129_0) {
@@ -322,7 +322,7 @@ export default function SoundboardSoundCreationPreview(source) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -419,7 +419,7 @@ export default function SoundboardSoundCreationPreview(source) {
                   closure_129_12(false);
                 }
                 c5 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             }
             c3 = 0;

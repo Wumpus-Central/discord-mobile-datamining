@@ -87,14 +87,14 @@ function ContentRow(isNew) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { screen_capture: fn(13356).ScreenIcon, connect_user_to_voice: fn(7167).VoiceNormalIcon };
+let obj = { screen_capture: fn(13364).ScreenIcon, connect_user_to_voice: fn(7167).VoiceNormalIcon };
 let obj2 = { app_channel: fn(7172).AppsIcon };
-obj2[fn(6935).ConjureSupportedSurface.BOT] = fn(12270).RobotIcon;
-obj2[fn(6935).ConjureSupportedSurface.ACTIVITY] = fn(18208).ActivitiesIcon;
+obj2[fn(6935).ConjureSupportedSurface.BOT] = fn(12278).RobotIcon;
+obj2[fn(6935).ConjureSupportedSurface.ACTIVITY] = fn(18215).ActivitiesIcon;
 obj2[fn(6935).ConjureSupportedSurface.VOICE_CHANNEL] = fn(7167).VoiceNormalIcon;
-obj2[fn(6935).ConjureSupportedSurface.PROFILE_WIDGET] = fn(18484).BadgeIcon;
-obj2[fn(6935).ConjureSupportedSurface.AUTOMOD] = fn(10078).ShieldIcon;
-obj2[fn(6935).ConjureSupportedSurface.OVERLAY] = fn(18486).WindowTopIcon;
+obj2[fn(6935).ConjureSupportedSurface.PROFILE_WIDGET] = fn(18491).BadgeIcon;
+obj2[fn(6935).ConjureSupportedSurface.AUTOMOD] = fn(10079).ShieldIcon;
+obj2[fn(6935).ConjureSupportedSurface.OVERLAY] = fn(18493).WindowTopIcon;
 const createStyles = fn(5043);
 let obj4 = {
   section: { gap: nativeDefault.space.PX_4 },
@@ -179,12 +179,12 @@ export default function ConjurePublishReviewDetails(review) {
     let intl = appChannelsPrivate(1112).intl;
     obj.label = intl.string(appChannelsPrivate(4245).Td1mlg);
     ({ isPrivate: obj.checked, setPrivate: obj.onToggle } = appChannelsPrivate);
-    tmp5 = closure_4(appChannelsPrivate(12474).Checkbox, obj);
+    tmp5 = closure_4(appChannelsPrivate(12482).Checkbox, obj);
   }
   let tmp12 = null;
   if (review.managedCopy) {
     obj2 = { projectId: review.projectId };
-    tmp12 = closure_4(appChannelsPrivate(18488), obj2);
+    tmp12 = closure_4(appChannelsPrivate(18495), obj2);
   }
   items = [tmp12, , , , , , ,];
   const obj3 = { children: null };
@@ -204,7 +204,7 @@ export default function ConjurePublishReviewDetails(review) {
       },
       onConjure: review.onConjureIcon,
     };
-    const items1 = [closure_4(appChannelsPrivate(18490).ConjureAppIconTile, obj4), ,];
+    const items1 = [closure_4(appChannelsPrivate(18497).ConjureAppIconTile, obj4), ,];
     const obj5 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
     const intl2 = appChannelsPrivate(1112).intl;
     obj5.label = intl2.string(appChannelsPrivate(4245).knevPu);
@@ -256,7 +256,7 @@ export default function ConjurePublishReviewDetails(review) {
   let tmp21Result2 = null;
   if (null != review.placement) {
     ({ placement: obj12.placement, saving: obj12.disabled } = review);
-    tmp21Result2 = tmp21(appChannelsPrivate(18494), { placement: null, disabled: null });
+    tmp21Result2 = tmp21(appChannelsPrivate(18501), { placement: null, disabled: null });
     const obj15 = { placement: null, disabled: null };
   }
   items[2] = tmp21Result2;
@@ -283,11 +283,11 @@ export default function ConjurePublishReviewDetails(review) {
   obj32.rows = devicePermissions.map((item) => {
     obj = { icon: closure_1_7[item], label: null };
     const intl = appChannelsPrivate(1112).intl;
-    obj.label = intl.string(appChannelsPrivate(18464).CONJURE_REVIEW_PERMISSION_LABELS[item]);
+    obj.label = intl.string(appChannelsPrivate(18471).CONJURE_REVIEW_PERMISSION_LABELS[item]);
     return closure_1_4(ContentRow, obj, item);
   });
   items[6] = tmp21(RowSection, obj32);
-  items[7] = tmp21(appChannelsPrivate(18495), { remix: review.remix, disabled: review.saving });
+  items[7] = tmp21(appChannelsPrivate(18502), { remix: review.remix, disabled: review.saving });
   obj31.children = items;
   return closure_6(closure_5, obj31);
 }

@@ -19,10 +19,10 @@ import Form from "../../../design/void/Form/native/index.tsx";
 import ChannelSettingsActionCreators from "../../../actions/ChannelSettingsActionCreators.tsx";
 import FavoritesActionCreators from "../../favorites/FavoritesActionCreators.tsx";
 import ChannelSortingUtils from "../../channel_sorting/ChannelSortingUtils.tsx";
-import _modDef12315 from "../../../../_runtime/metro/12315__.js";
-import _modDef16910 from "../../../../_runtime/metro/16910__.js";
+import _modDef12323 from "../../../../_runtime/metro/12323__.js";
+import _modDef16917 from "../../../../_runtime/metro/16917__.js";
 import GuildSettingsModalChannelsActionCreatorsDefault from "../GuildSettingsModalChannelsActionCreators.tsx";
-import _modDef17875 from "../../../../_runtime/metro/17875__.js";
+import _modDef17882 from "../../../../_runtime/metro/17882__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -115,7 +115,7 @@ function ChannelItem(isFavoritesGuild) {
   if (stateFromStores) {
     tmp7Result2 = null;
     if (sortingEnabled) {
-      const obj10 = { source: tmp13(17873), style: actionIconStyle };
+      const obj10 = { source: tmp13(17880), style: actionIconStyle };
       tmp7Result2 = closure_16(channel(8088).FormRow.Icon, obj10);
     }
   }
@@ -154,20 +154,20 @@ function CreateButton(guild) {
       const intl2 = util.intl;
       obj4.label = intl2.string(util.t.vHCZwr);
       obj4.onPress = function onPress() {
-        bottom(8529).open(constants.GUILD_CATEGORY, user.id, null, null);
+        bottom(8530).open(constants.GUILD_CATEGORY, user.id, null, null);
       };
       items = [obj4];
       const obj5 = { label: null, onPress: null };
       const intl3 = util.intl;
       obj5.label = intl3.string(util.t.GK18KJ);
       obj5.onPress = function onPress() {
-        bottom(8529).open(null, user.id, null, null);
+        bottom(8530).open(null, user.id, null, null);
       };
       items[1] = obj5;
       obj2.options = items;
       const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
     };
-    obj3.icon = closure_16(tmp(11268).PlusSmallIcon, { color: "white" });
+    obj3.icon = closure_16(tmp(11269).PlusSmallIcon, { color: "white" });
     obj2.children = closure_16(tmp(5641).Button, obj3);
     tmp5 = closure_16(closure_5, obj2);
   }
@@ -290,7 +290,7 @@ Category.prototype["render"] = function render() {
   } else {
     tmp3Result = null;
     if (null != sortHandlers) {
-      const obj6 = { source: tmp11(17873), style: actionIconStyle };
+      const obj6 = { source: tmp11(17880), style: actionIconStyle };
       tmp3Result = closure_1_16(native.Icon, obj6);
     }
   }
@@ -423,18 +423,18 @@ class GuildSettingsModalChannels extends PureComponent3 {
         const obj = { label: null, icon: null, onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.ffgJrs);
-        obj.icon = _modDef17875;
+        obj.icon = _modDef17882;
         obj.onPress = function onPress() {
-          closure_1_1(17871).startReordering(constants.GUILD_CATEGORY);
+          closure_1_1(17878).startReordering(constants.GUILD_CATEGORY);
         };
         items.push(obj);
       }
       const obj2 = { label: null, icon: null, onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.nIfr0Y);
-      obj2.icon = _modDef12315;
+      obj2.icon = _modDef12323;
       obj2.onPress = function onPress() {
-        closure_1_1(17871).startReordering(
+        closure_1_1(17878).startReordering(
           constants.GUILD_TEXT,
           constants.GUILD_ANNOUNCEMENT,
           constants.GUILD_FORUM,
@@ -446,9 +446,9 @@ class GuildSettingsModalChannels extends PureComponent3 {
       const obj3 = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj3.label = intl3.string(util.t.CYnO4s);
-      obj3.icon = _modDef16910;
+      obj3.icon = _modDef16917;
       obj3.onPress = function onPress() {
-        closure_1_1(17871).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
+        closure_1_1(17878).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };
       items.push(obj3);
       const obj5 = { key: "GuildSettingsChannelsSort", header: null, options: null, hasIcons: true };
@@ -533,8 +533,8 @@ class GuildSettingsModalChannels extends PureComponent3 {
                           if (PermissionStore.can(constants2.MANAGE_ROLES, localChannel)) {
                             if (PermissionStore.can(constants2.MANAGE_ROLES, channel)) {
                               const appChannelBotUserId =
-                                applyArgumentsResult(12118).getAppChannelBotUserId(localChannel);
-                              const obj2 = applyArgumentsResult(12118);
+                                applyArgumentsResult(12126).getAppChannelBotUserId(localChannel);
+                              const obj2 = applyArgumentsResult(12126);
                               const areChannelsLockedResult = PermissionUtilsAll.areChannelsLocked(
                                 localChannel,
                                 channel,

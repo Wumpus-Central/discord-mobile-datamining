@@ -35,9 +35,9 @@ export { ConjurePlanCommandMention };
 export function ConjurePlanCommandText(text) {
   text = text.text;
   ({ commandNames, size } = text);
-  const conjurePlanCommandPattern = size(18781).useConjurePlanCommandPattern(commandNames);
-  const obj = size(18781);
-  const result = size(18781).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
+  const conjurePlanCommandPattern = size(18798).useConjurePlanCommandPattern(commandNames);
+  const obj = size(18798);
+  const result = size(18798).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
   if (null != result) {
     text = result.map((kind) => {
       if ("command" === kind.kind) {
@@ -117,7 +117,7 @@ export function ConjurePlanCommandMarkup(markup) {
                           size = closure_1;
                           const result = markup(size[6]).splitConjurePlanCommandText(mapped, size);
                           if (null != result) {
-                            mapped = result.map(/* F116175 */ function() { ... });
+                            mapped = result.map(/* F116467 */ function() { ... });
                           }
                           let cloneElementResult = mapped;
                           let obj = markup(size[6]);
@@ -127,7 +127,7 @@ export function ConjurePlanCommandMarkup(markup) {
                             cloneElementResult = mapped;
                             if (null != mapped.props.children) {
                               ({ Children, cloneElement } = conjurePlanCommandPattern);
-                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F116176 */ function() { ... }));
+                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F116468 */ function() { ... }));
                             }
                           }
                         }

@@ -18,7 +18,7 @@ let closure_3 = async function _repairConjureGuildHints(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -66,7 +66,7 @@ let closure_3 = async function _repairConjureGuildHints(arg0) {
           return obj;
         }
         c2 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp10) {
         c2 = tmp;
         throw tmp10;

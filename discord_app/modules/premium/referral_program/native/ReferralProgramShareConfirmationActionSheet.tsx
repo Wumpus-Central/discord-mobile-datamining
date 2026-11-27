@@ -15,7 +15,7 @@ function SharedUser(user) {
   user = user.user;
   const tmp = closure_8();
   const name = UserUtilsDefault.getName(user);
-  const tmp6 = user.trialCreationResult === user(9142).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(9143).CreateReferralStatus.FAIL;
   const obj2 = { style: tmp.recipientRow, children: null };
   items = [tmp.avatarContainer];
   let erroredAvatar = tmp6;
@@ -141,7 +141,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1112).t.AwGSWl, obj);
   items = [
-    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(13889).FistBumpSpotIllustration, {}) }),
+    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(13896).FistBumpSpotIllustration, {}) }),
     closure_5(tmp5(5634).Text, {
       variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
@@ -156,7 +156,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     }),
   ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(13889).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(13896).FistBumpSpotIllustration, {}) };
   const obj6 = {
     variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",

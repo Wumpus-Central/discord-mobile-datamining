@@ -387,11 +387,11 @@ export function useImminentUpcomingGuildEvents(id) {
   return noop.useMemo(
     () =>
       stateFromStores.filter((status) => {
-        const eventSchedule = id(8469).getEventSchedule(status);
+        const eventSchedule = id(8470).getEventSchedule(status);
         ({ startTime, endTime } = eventSchedule);
-        const obj = id(8469);
+        const obj = id(8470);
         let toISOStringResult1;
-        const obj2 = id(8466);
+        const obj2 = id(8467);
         if (endTime != null) {
           toISOStringResult1 = endTime.toISOString();
         }

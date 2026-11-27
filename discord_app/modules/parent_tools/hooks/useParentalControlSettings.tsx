@@ -117,8 +117,8 @@ export function useDefaultGuildsRestricted() {
   return controlledSetting1;
 }
 export function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(8217).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(16324).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(8218).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(16331).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -154,7 +154,7 @@ export function useParentalControlledConsent(PERSONALIZATION) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -180,10 +180,10 @@ export function useParentalControlledConsent(PERSONALIZATION) {
               items2 = [closure_0];
             }
             c4 = 1;
-            tmp3(8214).updateTeenConsents(tmp28, items1, items2);
+            tmp3(8215).updateTeenConsents(tmp28, items1, items2);
             c2 = 2;
             c5 = 1;
-            const obj3 = tmp3(8214);
+            const obj3 = tmp3(8215);
           }
         } else {
           if (1 === tmp7) {

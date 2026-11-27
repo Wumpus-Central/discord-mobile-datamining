@@ -21,7 +21,7 @@ export default noop.memo(function MediaModalYoutube(visible) {
   _slicedToArray = undefined;
   noop = undefined;
   ({ style, onError, onLoad, onLoadStart, onToggleOverlay } = visible);
-  [playerState, dependencyMap] = noop.useState(visible(8878).PlayerState.UNREADY);
+  [playerState, dependencyMap] = noop.useState(visible(8879).PlayerState.UNREADY);
   const tmp5 = _slicedToArray(noop.useState(undefined), 2);
   _slicedToArray = tmp5[1];
   let tmp7 = playerState(6831)(playerState);
@@ -30,7 +30,7 @@ export default noop.memo(function MediaModalYoutube(visible) {
   closure_5 = tmp8;
   const ref = noop.useRef(null);
   const effect = noop.useEffect(() => {
-    const MediaViewerAnalytics = visible(8806).MediaViewerAnalytics;
+    const MediaViewerAnalytics = visible(8807).MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({ platform: "youtube", action: "attempted" });
   }, []);
   items = [ref, visible, tmp8, tmp7, playerState];
@@ -154,18 +154,18 @@ export default noop.memo(function MediaModalYoutube(visible) {
       ref.current = null;
     }
   }, items1);
-  let youtubeVideoIdFromURI = visible(8810).getYoutubeVideoIdFromURI(source.uri);
+  let youtubeVideoIdFromURI = visible(8811).getYoutubeVideoIdFromURI(source.uri);
   if (youtubeVideoIdFromURI == null) {
-    youtubeVideoIdFromURI = tmp(8810).getYoutubeClipVideoIdFromURI(source.uri);
-    const tmpResult = tmp(8810);
+    youtubeVideoIdFromURI = tmp(8811).getYoutubeClipVideoIdFromURI(source.uri);
+    const tmpResult = tmp(8811);
   }
   if (null == youtubeVideoIdFromURI) {
     return null;
   } else {
-    if (playerState === tmp(8878).PlayerState.ERRORED) {
+    if (playerState === tmp(8879).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp5[0]) {
         let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
-        return jsx(tmp6(14143), { videoId: youtubeVideoIdFromURI.videoId });
+        return jsx(tmp6(14150), { videoId: youtubeVideoIdFromURI.videoId });
       }
     }
     const isAndroidResult = tmp(1379).isAndroid();
@@ -241,7 +241,7 @@ export default noop.memo(function MediaModalYoutube(visible) {
     }
     obj3.overScrollMode = str20;
     return jsx(
-      tmp6(8878),
+      tmp6(8879),
       {
         ref,
         style,
@@ -262,5 +262,5 @@ export default noop.memo(function MediaModalYoutube(visible) {
       youtubeVideoIdFromURI.videoId,
     );
   }
-  let obj = visible(8810);
+  let obj = visible(8811);
 });

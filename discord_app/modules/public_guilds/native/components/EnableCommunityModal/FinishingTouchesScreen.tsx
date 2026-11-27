@@ -9,7 +9,7 @@ import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const PublicGuildsConstants = fn(8576);
+const PublicGuildsConstants = fn(8577);
 ({ MODERATOR_PERMISSIONS: closure_9, MODERATOR_PERMISSIONS_FLAG: closure_10 } = PublicGuildsConstants);
 const Constants = fn(1071);
 ({ GuildFeatures: closure_11, HelpdeskArticles: closure_12, UserNotificationSettings: map1 } = Constants);
@@ -93,24 +93,24 @@ export default function FinishingTouchesScreen() {
         publicUpdatesChannelId: obj6.publicUpdatesChannelId,
         defaultMessageNotifications: obj6.defaultMessageNotifications,
       } = features);
-      first(8573).saveGuild(features.id, obj4);
+      first(8574).saveGuild(features.id, obj4);
       if (removeResult !== everyoneRole.permissions) {
         items = [obj2];
-        guild(20062).saveRoleSettings(features.id, items);
-        const obj = guild(20062);
+        guild(20120).saveRoleSettings(features.id, items);
+        const obj = guild(20120);
       }
-      const obj5 = first(8573);
+      const obj5 = first(8574);
     }
   }, []);
   const tmp11 = _slicedToArray(
     noop.useState(!closure_9.some((item) => PermissionUtilsAll.canEveryone(item, guild))),
     2,
   );
-  const tmp19 = defaultMessageNotifications(20109)();
-  const enableCommunitySharedStyles = guild(20108).useEnableCommunitySharedStyles();
+  const tmp19 = defaultMessageNotifications(20167)();
+  const enableCommunitySharedStyles = guild(20166).useEnableCommunitySharedStyles();
   let obj4 = {
     headerRef: ref,
-    currentStep: guild(20106).EnableCommunityModalSteps.STEP_3,
+    currentStep: guild(20164).EnableCommunityModalSteps.STEP_3,
     onSuccess: callback1,
     disableNextStep: !first1,
     buttonText: null,
@@ -150,7 +150,7 @@ export default function FinishingTouchesScreen() {
   const obj10 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
   const obj11 = { formSwitchDisabled: defaultMessageNotifications === constants2.ONLY_MENTIONS, children: null };
   const obj7 = { resizeMode: "contain", source: tmp19.finishingTouches };
-  const tmp2Result = guild(20108);
+  const tmp2Result = guild(20166);
   const obj12 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl5 = tmp2(1112).intl;
   obj12.label = intl5.format(guild(1112).t.K8Eg4P, {
@@ -167,14 +167,14 @@ export default function FinishingTouchesScreen() {
   obj12.disabled = defaultMessageNotifications === constants2.ONLY_MENTIONS;
   obj12.onValueChange = callback;
   obj11.children = closure_14(guild(7549).TableSwitchRow, obj12);
-  const items4 = [closure_14(defaultMessageNotifications(20118), obj11)];
+  const items4 = [closure_14(defaultMessageNotifications(20176), obj11)];
   const obj15 = { formSwitchDisabled: first2, children: null };
   const obj13 = {
     infoHook() {
       return null;
     },
   };
-  const tmp4Result = defaultMessageNotifications(20118);
+  const tmp4Result = defaultMessageNotifications(20176);
   const obj16 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl6 = tmp2(1112).intl;
   obj16.label = intl6.format(guild(1112).t.v8qCoG, {
@@ -186,7 +186,7 @@ export default function FinishingTouchesScreen() {
   obj16.disabled = first2;
   obj16.onValueChange = tmp13;
   obj15.children = closure_14(guild(7549).TableSwitchRow, obj16);
-  items4[1] = closure_14(defaultMessageNotifications(20118), obj15);
+  items4[1] = closure_14(defaultMessageNotifications(20176), obj15);
   obj14.children = items4;
   const items5 = [closure_15(guild(6140).TableRowGroup, obj14)];
   const obj18 = { title: null, hasIcons: false, children: null };
@@ -213,7 +213,7 @@ export default function FinishingTouchesScreen() {
       return null;
     },
   };
-  const tmp4Result4 = defaultMessageNotifications(20118);
+  const tmp4Result4 = defaultMessageNotifications(20176);
   obj21.communityGuidelines = defaultMessageNotifications(2188).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
   const tmp4Result5 = defaultMessageNotifications(2188);
   obj21.typesOfGuilds = defaultMessageNotifications(2188).getArticleURL(
@@ -222,5 +222,5 @@ export default function FinishingTouchesScreen() {
   obj20.children = intl9.format(guild(1112).t["BwbW/Q"], obj21);
   items3[2] = closure_14(guild(5634).Text, obj20);
   obj4.children = items3;
-  return closure_15(guild(20106).EnableCommunityModalScreen, obj4);
+  return closure_15(guild(20164).EnableCommunityModalScreen, obj4);
 }

@@ -467,7 +467,7 @@ export function visiblePerfTraceRows(key, arg1) {
 }
 export function overviewView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f91855 = (depth) => {
+  const f92083 = (depth) => {
     let tmp = depth.depth > 0;
     if (tmp) {
       const children = depth.children;
@@ -479,7 +479,7 @@ export function overviewView(children) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f91871(children);
+      tmp = f92099(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -508,7 +508,7 @@ export function extendView(collapsed, memo, current) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f91871(children);
+      tmp = f92099(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -543,12 +543,12 @@ export function perfTraceKeys(memo) {
 }
 export function expandedView(children) {
   const obj = { collapsed: new Set(), revealed: null };
-  const f91870 = () => true;
+  const f92098 = () => true;
   const set1 = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f91871(children);
+      tmp = f92099(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -564,12 +564,12 @@ export function expandedView(children) {
 }
 export function collapsedView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f91871 = (depth) => depth.depth > 0;
+  const f92099 = (depth) => depth.depth > 0;
   set = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f91871(children);
+      tmp = f92099(children);
     }
     if (tmp) {
       set.add(children.key);

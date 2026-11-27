@@ -15,8 +15,8 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const showStreamVolumeMovedHint = fn(14947).showStreamVolumeMovedHint;
-const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
+const showStreamVolumeMovedHint = fn(14954).showStreamVolumeMovedHint;
+const VoicePanelControlsModes = fn(11788).VoicePanelControlsModes;
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);

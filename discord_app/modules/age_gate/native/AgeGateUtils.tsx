@@ -22,21 +22,20 @@ export function shouldNSFWGateGuild(guildId) {
           PermissionStore.can(constants2.MANAGE_GUILD, guild) ||
           PermissionStore.can(constants2.KICK_MEMBERS, guild) ||
           PermissionStore.can(constants2.BAN_MEMBERS, guild);
+        let tmp11 = guild.nsfwLevel === constants.AGE_RESTRICTED || guild.nsfwLevel === tmp10.EXPLICIT;
         let nsfwAllowed = currentUser.nsfwAllowed;
         if (nsfwAllowed) {
           nsfwAllowed = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();
           const tmpResult = AgeRestrictedContentSettingsUtils;
         }
-        let tmp11 = !tmp9;
+        let tmp12 = !tmp9;
         if (!tmp9) {
-          let tmp12 = guild.nsfwLevel === constants.EXPLICIT;
-          if (!tmp12) {
-            tmp12 = guild.nsfwLevel === constants.AGE_RESTRICTED && !nsfwAllowed;
-            const tmp13 = guild.nsfwLevel === constants.AGE_RESTRICTED && !nsfwAllowed;
+          if (tmp11) {
+            tmp11 = !nsfwAllowed;
           }
-          tmp11 = tmp12;
+          tmp12 = tmp11;
         }
-        return tmp11;
+        return tmp12;
       }
     }
     return false;

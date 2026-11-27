@@ -128,8 +128,8 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
     found2 = null;
   }
   if (null != found2) {
-    let dismissibleContentShowing = tmp(9564).getDismissibleContentShowing(found2);
-    const tmpResult = tmp(9564);
+    let dismissibleContentShowing = tmp(9565).getDismissibleContentShowing(found2);
+    const tmpResult = tmp(9565);
   } else {
     dismissibleContentShowing = closure_12;
   }
@@ -150,7 +150,7 @@ function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpr
     if (tmpResult7.isGuildScopedDismissibleContent(found2)) {
       guildId = found2.scope.guildId;
     }
-    tmpResult7 = tmp(9564);
+    tmpResult7 = tmp(9565);
   }
   let content;
   if (found2 != null) {

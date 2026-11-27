@@ -168,15 +168,15 @@ prototype["start"] = function start(id) {
               );
               throw tmp15;
             }
-            tmp41Result2 = tmp41(15865);
+            tmp41Result2 = tmp41(15872);
           }
-          tmp41Result = tmp41(15865);
+          tmp41Result = tmp41(15872);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj13 = handleFrameLifecycleChange(15865);
+        obj13 = handleFrameLifecycleChange(15872);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -266,16 +266,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15867);
+    obj2 = obj2(15874);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15867).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15874).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15867);
+      const tmp11Result = tmp11(15874);
     }
     tmp11 = obj2;
   } else {
@@ -402,7 +402,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15868).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15875).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

@@ -22,7 +22,7 @@ const ChannelAutocompleteConstants = fn(7074);
   CHANNEL_SENTINEL: closure_14,
   COMMAND_SENTINEL: closure_15,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10870).AutocompleteTypes;
+const AutocompleteTypes = fn(10871).AutocompleteTypes;
 const EmojiConstants = fn(1390);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
@@ -306,7 +306,7 @@ export function getAutocompleteOptions(channel, arg1) {
                 const stickerPacks = StickersActionCreators.fetchStickerPacks();
               }
               const items2 = [query];
-              const items3 = [channel, (arg0, arg1) => arg1 === channel(10832).StickerSendability.SENDABLE];
+              const items3 = [channel, (arg0, arg1) => arg1 === channel(10833).StickerSendability.SENDABLE];
               items1 = AutocompleteUtilsDefault.queryStickers(items2, true, items3);
               const tmp2Result = AutocompleteUtilsDefault;
             }

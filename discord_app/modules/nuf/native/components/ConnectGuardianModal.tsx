@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const FamilyCenterAction = fn(8213).FamilyCenterAction;
+const FamilyCenterAction = fn(8214).FamilyCenterAction;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5043);
@@ -63,7 +63,7 @@ const result = size.fileFinishedImporting("modules/nuf/native/components/Connect
 export default function ConnectGuardianModal(route) {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  const connectGuardianGate = onComplete(19829).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(19845).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   items = [connectGuardianGate.state, onComplete];
   const effect = noop.useEffect(() => {
@@ -106,7 +106,7 @@ export default function ConnectGuardianModal(route) {
     obj8.children = intl3.string(tmp2(2847).Mi60fm);
     const items4 = [closure_7(tmp4(5634).Text, obj8)];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-    items4[1] = closure_7(tmp4(16388).ConnectGuardianCard, {
+    items4[1] = closure_7(tmp4(16395).ConnectGuardianCard, {
       shareActions: "compact",
       linkCode: null,
       expiresAt: null,

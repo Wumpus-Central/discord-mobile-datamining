@@ -21,7 +21,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const EmojiCategoryTypes = fn(6886).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9540).IMAGE_SIZE;
+const IMAGE_SIZE = fn(9541).IMAGE_SIZE;
 const Constants = fn(1071);
 ({
   AnalyticsObjects: closure_6,

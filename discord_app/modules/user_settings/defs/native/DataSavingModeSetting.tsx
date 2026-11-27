@@ -6,13 +6,13 @@ import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
 import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.ix8XIj);
   },
-  parent: fn(9555).MobileUserSettings.CHAT,
+  parent: fn(9556).MobileUserSettings.CHAT,
   useValue: function useDataSavingModeSettingValue() {
     items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);

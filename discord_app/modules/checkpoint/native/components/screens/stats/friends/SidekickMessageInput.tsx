@@ -71,7 +71,7 @@ export default function SidekickMessageInput(user) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

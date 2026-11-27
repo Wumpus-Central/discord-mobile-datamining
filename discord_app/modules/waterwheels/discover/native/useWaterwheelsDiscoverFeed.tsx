@@ -30,7 +30,7 @@ export default function useWaterwheelsDiscoverFeed(arg0) {
     discoverSnapshot.getDiscoverSnapshot(),
   );
   if (!arg0) {
-    EMPTY_DISCOVER_SNAPSHOT = tmp(8920).EMPTY_DISCOVER_SNAPSHOT;
+    EMPTY_DISCOVER_SNAPSHOT = tmp(8921).EMPTY_DISCOVER_SNAPSHOT;
   }
   const tmp3 = useWaterwheelsCardEligibilityDefault();
   importDefault = tmp3;
@@ -40,11 +40,11 @@ export default function useWaterwheelsDiscoverFeed(arg0) {
     items1,
   );
   const obj = EMPTY_DISCOVER_SNAPSHOT(504);
-  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(18018);
+  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(18025);
   return {
     snapshot: EMPTY_DISCOVER_SNAPSHOT,
     entries: memo,
-    status: EMPTY_DISCOVER_SNAPSHOT(18018).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length),
+    status: EMPTY_DISCOVER_SNAPSHOT(18025).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length),
     retry: requestWaterwheelsDiscover,
   };
 }
@@ -110,14 +110,14 @@ export function useWaterwheelsDiscoverInitialRequest(enabled, visible, snapshot)
                 hasRequestInFlight: null,
                 isPickerOpen: null,
               };
-              const obj = enabled(18018);
-              obj2.hasRequestInFlight = visible(8923).hasDiscoverRequestInFlight();
+              const obj = enabled(18025);
+              obj2.hasRequestInFlight = visible(8924).hasDiscoverRequestInFlight();
               obj2.isPickerOpen = InterestPickerSessionStore.isPickerOpen();
               if (obj.shouldRequestWaterwheelsDiscover(obj2)) {
-                const dehydrated = visible(8923).fetchDehydrated();
-                const tmp2Result = visible(8923);
+                const dehydrated = visible(8924).fetchDehydrated();
+                const tmp2Result = visible(8924);
               }
-              const obj3 = visible(8923);
+              const obj3 = visible(8924);
             }
             const result = ICYMIActionCreatorsDefault.subscribeDiscoverRequests(requestWhenReady);
             let obj3 = {

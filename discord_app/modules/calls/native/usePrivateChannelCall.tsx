@@ -74,7 +74,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -116,14 +116,14 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             isPrivateResult = channel.isPrivate();
           }
           if (isPrivateResult) {
-            tmp3(11357)(channel, closure_129_1).onPress();
-            const obj3 = tmp3(11357)(channel, closure_129_1);
+            tmp3(11358)(channel, closure_129_1).onPress();
+            const obj3 = tmp3(11358)(channel, closure_129_1);
           }
           if (closure_129_2 != null) {
             closure_129_2();
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp25) {
           c3 = tmp;
           throw tmp25;

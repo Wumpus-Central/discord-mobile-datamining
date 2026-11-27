@@ -46,13 +46,13 @@ export default function PremiumGuildSubscribeModal(arg0) {
           headerLeft: NavigatorHeader.getHeaderCloseButton(BoostingActionCreators.closeApplyBoostModal),
           headerRight: function renderSettingsButton() {
             if (obj.isThemeDark(theme.theme)) {
-              let tmp4Result = guildBoostSlots(14773);
+              let tmp4Result = guildBoostSlots(14779);
             } else {
-              tmp4Result = guildBoostSlots(14774);
+              tmp4Result = guildBoostSlots(14780);
             }
             let obj2 = {
               source: tmp4Result,
-              IconComponent: guildId(10454).SettingsIcon,
+              IconComponent: guildId(10455).SettingsIcon,
               accessibilityLabel: null,
               accessibilityHint: null,
               onPress: null,
@@ -88,7 +88,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
           },
           render(arg0) {
             const merged = Object.assign(arg0);
-            return closure_1_8(guildBoostSlots(14775), {});
+            return closure_1_8(guildBoostSlots(14781), {});
           },
         };
         obj5[constants.OVERVIEW] = obj7;
@@ -98,7 +98,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
         obj8.headerTitle = intl.string(util.t.VJEVbu);
         obj8.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(guildBoostSlots(14810), {});
+          return closure_1_8(guildBoostSlots(14816), {});
         };
         obj5[constants.CONFIRMATION] = obj8;
         obj4.screens = obj5;

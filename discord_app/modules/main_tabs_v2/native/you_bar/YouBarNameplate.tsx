@@ -12,7 +12,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 const _modDef1654 = _mod1654;
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(16683).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(16690).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 let closure_6 = {
   code: "(function YouBarNameplateTsx1(){let[withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG]=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};})",

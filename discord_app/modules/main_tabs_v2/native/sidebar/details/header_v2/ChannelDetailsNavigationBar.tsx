@@ -51,7 +51,7 @@ function MuteButton(channelId) {
   obj5.onPress = callback;
   obj5.variant = token1;
   obj5.size = token;
-  obj5.icon = tmp5(stateFromStores ? 11498 : 8598);
+  obj5.icon = tmp5(stateFromStores ? 11506 : 8599);
   return closure_15(channelId(7944).IconButton, obj5, constants.MUTE);
 }
 function SearchButton(channelId) {
@@ -132,7 +132,7 @@ function SettingsButton(channel) {
   obj4.onPress = callback;
   obj4.variant = token1;
   obj4.size = token;
-  obj4.icon = navigation(10455);
+  obj4.icon = navigation(10456);
   return closure_15(channel(7944).IconButton, obj4, constants.SETTINGS);
 }
 function SearchBar(channel) {
@@ -346,12 +346,12 @@ function getItemKey(arg0) {
   return arg0;
 }
 const View = fn(17).View;
-const ChannelDetailsStore = fn(9017);
+const ChannelDetailsStore = fn(9018);
 ({ setIsChannelDetailsSearchActive: closure_9, useIsChannelDetailsSearchActive: closure_10 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(11409);
+const ChannelDetailsConstants = fn(11410);
 ({ ChannelDetailsButtonTypes: closure_11, ChannelDetailsNavigatorScreens: closure_12 } = ChannelDetailsConstants);
 const ChannelSettingsSections = fn(1071).ChannelSettingsSections;
-let closure_14 = fn(9018).SearchEntrypointAnalyticsLocations;
+let closure_14 = fn(9019).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5043);
@@ -359,7 +359,7 @@ let obj = {
   container: {
     position: "relative",
     zIndex: 1,
-    height: fn(13334).SEARCH_BAR_HEIGHT,
+    height: fn(13342).SEARCH_BAR_HEIGHT,
     marginTop: nativeDefault.space.PX_8,
   },
   navigationHeader: null,
@@ -370,7 +370,7 @@ let obj = {
 let obj3 = {
   position: "relative",
   zIndex: 1,
-  height: fn(13334).SEARCH_BAR_HEIGHT,
+  height: fn(13342).SEARCH_BAR_HEIGHT,
   marginTop: nativeDefault.space.PX_8,
 };
 obj.navigationHeader = {
@@ -379,7 +379,7 @@ obj.navigationHeader = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13334).SEARCH_BAR_HEIGHT,
+  height: fn(13342).SEARCH_BAR_HEIGHT,
 };
 obj.backButton = { alignSelf: "stretch", justifyContent: "center" };
 let obj4 = {
@@ -388,7 +388,7 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13334).SEARCH_BAR_HEIGHT,
+  height: fn(13342).SEARCH_BAR_HEIGHT,
 };
 obj.buttonsContainer = {
   flex: 1,

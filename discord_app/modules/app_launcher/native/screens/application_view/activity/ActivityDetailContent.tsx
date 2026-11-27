@@ -104,13 +104,13 @@ function TryItOutButton(applicationId) {
     asyncGeneratorStep(async () => {
       v2(1256).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
         application_id: applicationId,
-        button_action: tmp3(10089).EntryPointCommandButtonActions.OPEN_APP_DM,
+        button_action: tmp3(10090).EntryPointCommandButtonActions.OPEN_APP_DM,
       });
       const _setTimeout = setTimeout;
       closure_3.current = setTimeout(() => {
         closure_1_2(true);
       }, 250);
-      await v2(12291).launch({ applicationId, analyticsLocations });
+      await v2(12299).launch({ applicationId, analyticsLocations });
       if (1 === tmp7) {
         dependencyMap = 0;
         const _clearTimeout = clearTimeout;
@@ -227,19 +227,19 @@ export default function ActivityDetailContent(application) {
   importDefault = undefined;
   ({ sectionName, onActivityItemSelected, hasCommands } = application);
   const tmp = closure_15();
-  const width = application(12145).useRequiredAppLauncherContext().width;
-  let obj = application(12145);
-  const getPrimaryAppCommand = application(10109).useGetPrimaryAppCommand(context, application.id);
-  const obj2 = application(10109);
+  const width = application(12153).useRequiredAppLauncherContext().width;
+  let obj = application(12153);
+  const getPrimaryAppCommand = application(10110).useGetPrimaryAppCommand(context, application.id);
+  const obj2 = application(10110);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
   [tmp8, c1] = noop.useState(undefined);
   const callback = noop.useCallback((nativeEvent) => {
     _undefined(roundToNearestPixelDefault(nativeEvent.nativeEvent.layout.width));
   }, []);
   const tmp7 = _slicedToArray(noop.useState(undefined), 2);
-  const isScreenLandscape = application(10042).useIsScreenLandscape();
-  let detailsContainerLandscape = entrypoint !== application(10089).AppLauncherEntrypoint.VOICE && isScreenLandscape;
-  const obj3 = application(10042);
+  const isScreenLandscape = application(10043).useIsScreenLandscape();
+  let detailsContainerLandscape = entrypoint !== application(10090).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+  const obj3 = application(10043);
   items = [DeveloperActivityShelfStore];
   const stateFromStoresObject = application(504).useStateFromStoresObject(items, () => ({
     isDeveloperOfThisApp: DeveloperActivityShelfStore.inDevModeForApplication(application.id),
@@ -292,15 +292,15 @@ export default function ActivityDetailContent(application) {
     }
     const tmp2Result8 = tmp2(7515);
     const obj9 = { context, applicationId: application.id };
-    const activityAction = tmp2(13020).useActivityAction(obj9);
-    const tmp2Result9 = tmp2(13020);
-    const delayedSwapToActivityActionLeave = tmp2(13106).useDelayedSwapToActivityActionLeave(activityAction);
+    const activityAction = tmp2(13028).useActivityAction(obj9);
+    const tmp2Result9 = tmp2(13028);
+    const delayedSwapToActivityActionLeave = tmp2(13114).useDelayedSwapToActivityActionLeave(activityAction);
     const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-    const tmp2Result10 = tmp2(13106);
-    ({ reason, disabled } = tmp5(13107)(obj10));
+    const tmp2Result10 = tmp2(13114);
+    ({ reason, disabled } = tmp5(13115)(obj10));
     const obj11 = { context, application, botUserId: null };
     let id;
-    tmp5(13108);
+    tmp5(13116);
     if (bot != null) {
       id = bot.id;
     }
@@ -349,8 +349,8 @@ export default function ActivityDetailContent(application) {
         isDeveloperOfThisApp = !hasCommands;
       }
       if (isDeveloperOfThisApp) {
-        isDeveloperOfThisApp = tmp2(10087).isActivityApp(application);
-        const tmp2Result11 = tmp2(10087);
+        isDeveloperOfThisApp = tmp2(10088).isActivityApp(application);
+        const tmp2Result11 = tmp2(10088);
       }
       if (isDeveloperOfThisApp) {
         const obj18 = { style: tmp.buttonContainer, children: null };
@@ -376,13 +376,13 @@ export default function ActivityDetailContent(application) {
     const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
     const obj25 = { applicationId: application.id, width: null, contentWidth: null };
     let result = width;
-    const tmp29 = tmp5(13107)(obj10);
+    const tmp29 = tmp5(13115)(obj10);
     if (detailsContainerLandscape) {
       result = (65 * width) / 100;
     }
     obj25.width = result;
     obj25.contentWidth = tmp8;
-    obj24.children = closure_11(tmp5(13046), obj25);
+    obj24.children = closure_11(tmp5(13054), obj25);
     const items4 = [closure_11(View, obj24)];
     const items5 = [tmp.details];
     if (detailsContainerLandscape) {
@@ -392,22 +392,22 @@ export default function ActivityDetailContent(application) {
     items5[1] = detailsContainerLandscape;
     obj26.style = items5;
     const obj27 = { application };
-    const items6 = [closure_11(tmp5(13110), obj27), , , ,];
+    const items6 = [closure_11(tmp5(13118), obj27), , , ,];
     const obj28 = { style: tmp.tagList, children: null };
     const obj29 = { icon: null, tagName: null, accessibilityLabel: null };
     const obj30 = { style: tmp.tagIcon, size: "xs" };
     obj29.icon = closure_11(tmp2(7155).GroupIcon, obj30);
-    const tmp5Result3 = tmp5(13046);
+    const tmp5Result3 = tmp5(13054);
     let num5 = num;
     if (num == null) {
       num5 = 0;
     }
-    obj29.tagName = tmp2(13112).getItemSubtitleForMaxPlayersShort(num5);
-    const tmp2Result12 = tmp2(13112);
+    obj29.tagName = tmp2(13120).getItemSubtitleForMaxPlayersShort(num5);
+    const tmp2Result12 = tmp2(13120);
     if (num == null) {
       num = 0;
     }
-    obj29.accessibilityLabel = tmp5(13112)(num);
+    obj29.accessibilityLabel = tmp5(13120)(num);
     const items7 = [closure_11(Tag, obj29, "participants")];
     const tags = application.tags;
     let mapped;
@@ -437,5 +437,5 @@ export default function ActivityDetailContent(application) {
     const error = new Error("ActivityDetailContent was passed the Built-in App, which is not supported.");
     throw error;
   }
-  tmp2Result7 = application(10087);
+  tmp2Result7 = application(10088);
 }

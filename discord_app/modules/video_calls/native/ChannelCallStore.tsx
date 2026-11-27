@@ -13,7 +13,7 @@ import apply from "../../../../_runtime/00012_apply.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10009);
+const ChannelCallConstants = fn(10010);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const ParticipantTypes = fn(5693).ParticipantTypes;
 const timeout = new fn(4887).Timeout();
@@ -29,8 +29,8 @@ let size = {
   x: "Array",
   y: "s",
   width: "channel_id",
-  height: "cix",
-  screenOrientation: fn(8910).OrientationType.PORTRAIT,
+  height: "HTTP",
+  screenOrientation: fn(8911).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: null,
   isInitialized: null,
   isVisible: null,
@@ -40,8 +40,8 @@ const size1 = {
   x: "Array",
   y: "s",
   width: "channel_id",
-  height: "cix",
-  screenOrientation: fn(8910).OrientationType.PORTRAIT,
+  height: "HTTP",
+  screenOrientation: fn(8911).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: null,
   isInitialized: null,
   isVisible: null,

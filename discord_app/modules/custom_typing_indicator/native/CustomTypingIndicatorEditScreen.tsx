@@ -113,7 +113,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const callback2 = noop.useCallback(() => {
     const obj2 = { initialValue: first2, presets: null, onChange: null, highlightedPresets: null, onDismiss: null };
     const obj = ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequireImpl(16973, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(16980, dependencyMap.paths);
     obj2.presets = CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionPresets(enabled);
     obj2.onChange = onChange;
     let prop;
@@ -130,7 +130,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   }, items5);
   const callback3 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16974, dependencyMap.paths),
+      asyncRequireImpl(16981, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );
@@ -171,7 +171,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -214,7 +214,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
                 }
               }
               c4 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c4 = 3;

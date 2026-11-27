@@ -9,7 +9,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const number = fn(12101).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(12109).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);

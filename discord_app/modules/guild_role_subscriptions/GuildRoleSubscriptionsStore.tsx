@@ -12,10 +12,10 @@ function makeGroupListingIndexSubscriptionListingTag(arg0) {
 function getSubscriptionGroupListingsForGuild(arg0) {
   return secondaryIndexMap.values("guild:" + arg0);
 }
-function saveGroupListing(groupListing) {
-  const result = secondaryIndexMap.set(groupListing.id, groupListing);
-  const result1 = map.set(groupListing.guild_id, groupListing.application_id);
-  let prop = groupListing.subscription_listings;
+function saveGroupListing(id) {
+  const result = secondaryIndexMap.set(id.id, id);
+  const result1 = map.set(id.guild_id, id.application_id);
+  let prop = id.subscription_listings;
   if (prop == null) {
     prop = [];
   }
@@ -84,13 +84,13 @@ prototype["getSubscriptionGroupListingsForGuild"] = function getSubscriptionGrou
   return secondaryIndexMap.values("guild:" + arg0);
 };
 prototype["getSubscriptionGroupListingForSubscriptionListing"] =
-  function getSubscriptionGroupListingForSubscriptionListing(id) {
-    const values = secondaryIndexMap.values("subscription_listing:" + id);
+  function getSubscriptionGroupListingForSubscriptionListing(arg0) {
+    const values = secondaryIndexMap.values("subscription_listing:" + arg0);
     _modDef38(values.length <= 1, "Found multiple group listings for listing");
     return values[0];
   };
-prototype["getSubscriptionListing"] = function getSubscriptionListing(editStateId) {
-  return secondaryIndexMap1.get(editStateId);
+prototype["getSubscriptionListing"] = function getSubscriptionListing(arg0) {
+  return secondaryIndexMap1.get(arg0);
 };
 prototype["getSubscriptionListingsForGuild"] = function getSubscriptionListingsForGuild(arg0) {
   const first = this.getSubscriptionGroupListingsForGuild(arg0)[0];

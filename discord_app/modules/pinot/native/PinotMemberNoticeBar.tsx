@@ -26,7 +26,7 @@ obj2.bar = {
   gap: nativeDefault.space.PX_12,
   paddingVertical: nativeDefault.space.PX_12,
   paddingHorizontal: nativeDefault.space.PX_16,
-  borderBottomWidth: fn(11897).PINOT_MEMBER_NOTICE_BORDER_WIDTH,
+  borderBottomWidth: fn(11905).PINOT_MEMBER_NOTICE_BORDER_WIDTH,
   borderBottomColor: nativeDefault.colors.INLINENOTICE_BORDER_INFO,
   backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
 };

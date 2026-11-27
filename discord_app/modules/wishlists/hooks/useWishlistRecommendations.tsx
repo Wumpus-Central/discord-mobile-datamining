@@ -256,7 +256,7 @@ const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistRe
 export function useWishlistRecommendationsForSingleUser(arg0) {
   ({ userId, numItems, source } = arg0);
   if (source === undefined) {
-    source = userId(11122).WishlistFetchSource.USER_PROFILE;
+    source = userId(11123).WishlistFetchSource.USER_PROFILE;
   }
   items = [userId];
   const effect = noop.useEffect(() => {
@@ -277,13 +277,13 @@ export function useWishlistRecommendationsForSingleUser(arg0) {
     source: null,
   };
   const obj = userId(504);
-  obj2.applicationIds = userId(11642).useWishlistApplicationIds(userId);
+  obj2.applicationIds = userId(11650).useWishlistApplicationIds(userId);
   obj2.numItems = numItems;
   obj2.source = source;
-  const obj3 = userId(11642);
+  const obj3 = userId(11650);
   ({ skusToUserAndReason, wishlistAndRecommendations, status } = useWishlistRecommendationsWithWishlists(obj2));
   const tmp4 = useWishlistRecommendationsWithWishlists(obj2);
-  const wishlistSkuFilter = userId(11643).useWishlistSkuFilter({
+  const wishlistSkuFilter = userId(11651).useWishlistSkuFilter({
     wishlistAndRecommendations,
     skusToUserAndReason,
     userId,
@@ -359,7 +359,7 @@ export function useRecommendationsForSingleUser(source) {
   userId = numItems;
   let USER_PROFILE = source.source;
   if (USER_PROFILE === undefined) {
-    USER_PROFILE = userId(11122).WishlistFetchSource.USER_PROFILE;
+    USER_PROFILE = userId(11123).WishlistFetchSource.USER_PROFILE;
   }
   const obj = { userIdsAndWishlistIds: null, applicationIds: null, numItems: null, source: null };
   items = [userId];
@@ -376,7 +376,7 @@ export function useRecommendationsForSingleUser(source) {
     return items;
   }, items2);
   const obj2 = userId(504);
-  obj.applicationIds = userId(11642).useWishlistApplicationIds(userId);
+  obj.applicationIds = userId(11650).useWishlistApplicationIds(userId);
   obj.numItems = numItems;
   obj.source = USER_PROFILE;
   const tmp4 = useWishlistRecommendationsWithWishlists(obj);

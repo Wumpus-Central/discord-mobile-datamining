@@ -105,7 +105,7 @@ function OverrideProfileFrameLayer(layer) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const ProfileFrameConstants = fn(9506);
+const ProfileFrameConstants = fn(9507);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: closure_4, PROFILE_FRAME_Z_INDEX: hasOwnProperty } =
   ProfileFrameConstants);
 const UserProfileThemeTypes = fn(7557).UserProfileThemeTypes;

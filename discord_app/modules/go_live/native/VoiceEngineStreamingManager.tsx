@@ -46,7 +46,7 @@ let closure_18 = async function _handleThumbnailUpload() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -166,7 +166,7 @@ prototype["_initialize"] = function _initialize() {
     const currentAppIntent = authStore.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(8419).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(8420).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = authStore.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
         const tmp2Result = closure_1(6129);
@@ -195,7 +195,7 @@ prototype["_initialize"] = function _initialize() {
         }
         const tmp9Result = tmp9(6816);
       }
-      const obj3 = currentUserActiveStream(8419);
+      const obj3 = currentUserActiveStream(8420);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");

@@ -70,7 +70,7 @@ function StageAudienceActionSheetContent(channel) {
   const sortedRequestToSpeakParticipants = channel(6861).useSortedRequestToSpeakParticipants(channel.id);
   closure_129_1 = sortedRequestToSpeakParticipants;
   let obj3 = channel(6861);
-  const throttledStageAudience = channel(10324).useThrottledStageAudience(channel.id);
+  const throttledStageAudience = channel(10325).useThrottledStageAudience(channel.id);
   closure_129_2 = throttledStageAudience;
   items = [canToggleRequestToSpeak, sortedRequestToSpeakParticipants, throttledStageAudience];
   const memo = noop.useMemo(() => {

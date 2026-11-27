@@ -56,7 +56,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -253,7 +253,7 @@ const items = [,];
 const set = new Set(items);
 let closure_10 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15873);
+let CONTEXT_MENU_ICON_NAMES = fn(15880);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -305,16 +305,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15873);
+CONTEXT_MENU_ICON_NAMES = fn(15880);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(10221).validatePostMessageTransport(socket.transport);
-    let obj = socket(10221);
+    let result = socket(10222).validatePostMessageTransport(socket.transport);
+    let obj = socket(10222);
     let tmp = socket;
-    const validateApplicationResult = socket(10221).validateApplication(socket.application);
+    const validateApplicationResult = socket(10222).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -347,7 +347,7 @@ let obj6 = {
       }
       tmpResult = tmp(2151);
     }
-    let obj2 = socket(10221);
+    let obj2 = socket(10222);
   },
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

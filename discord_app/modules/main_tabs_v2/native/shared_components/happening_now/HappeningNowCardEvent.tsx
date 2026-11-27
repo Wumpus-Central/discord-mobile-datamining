@@ -8,7 +8,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16907);
+const HappeningNowConstants = fn(16914);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({
   HappeningNowCardTrackingType: closure_8,
@@ -104,7 +104,7 @@ let obj5 = {
 };
 obj.avatarContainer = { width: fn(1186).AVATAR_SIZE_MAP[fn(undefined, 1186).AvatarSizes.XSMALL_20] };
 let closure_13 = createStyles.createStyles(obj);
-const point = { shape: fn(9420).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+const point = { shape: fn(9421).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 let items = [point];
 let closure_15 = noop.memo(function DottedLineSeparator() {
   const tmp = closure_13();

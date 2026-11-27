@@ -148,7 +148,7 @@ function EmbedCard(embed) {
   return React6(View, obj2);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10627);
+const InAppNotificationConstants = fn(10628);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportDefault } =
   InAppNotificationConstants);
 const Fonts = fn(1082).Fonts;

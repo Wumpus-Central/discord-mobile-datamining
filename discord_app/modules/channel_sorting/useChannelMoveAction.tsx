@@ -77,8 +77,8 @@ export default function useChannelMoveAction(getGuildId) {
     let _categories = categories._categories;
     let found = _categories.filter((channel) => channel.channel.id !== NULL_STRING_CHANNEL_ID);
   } else {
-    found = tmp(11545).getSectionSiblings(listChannel, categories);
-    const tmpResult5 = tmp(11545);
+    found = tmp(11553).getSectionSiblings(listChannel, categories);
+    const tmpResult5 = tmp(11553);
   }
   let id1 = null;
   if (found.length > 1) {

@@ -471,7 +471,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -518,7 +518,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: "+95" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } else {
                         try {
@@ -564,7 +564,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_16.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "r" }, done: true };
+                            const obj5 = { value: { v: "top" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {
@@ -576,7 +576,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                               return obj6;
                             } else {
                               c6 = 3;
-                              return { value: "HermesInternal", done: "+95" };
+                              return { value: "HermesInternal", done: null };
                             }
                           } else if (3 === tmp7) {
                             if (arg0 === 1) {
@@ -636,7 +636,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               }
             }
             c10 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp7) {
           c7 = 0;

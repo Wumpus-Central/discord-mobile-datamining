@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

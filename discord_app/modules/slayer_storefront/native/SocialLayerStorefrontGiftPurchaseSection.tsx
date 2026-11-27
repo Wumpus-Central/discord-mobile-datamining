@@ -11,7 +11,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(9118).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(9119).useNativeCheckoutStore;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const GiftingOrigin = fn(1389).GiftingOrigin;
 const jsxProd = fn(21);
@@ -176,7 +176,7 @@ export default function SocialLayerStorefrontGiftPurchaseSection(skuId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

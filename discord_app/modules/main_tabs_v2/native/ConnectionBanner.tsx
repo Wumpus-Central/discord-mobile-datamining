@@ -197,8 +197,8 @@ function ConnectionBannerInner() {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const constants = fn(15176).ConnectivityIndicatorState;
-const YouBarConstants = fn(16683);
+const constants = fn(15183).ConnectivityIndicatorState;
+const YouBarConstants = fn(16690);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1071).AnalyticEvents;
@@ -249,10 +249,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(15177).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(15184).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
-  let obj = stateFromStores(15177);
+  let obj = stateFromStores(15184);
   items = [ConnectivityIndicatorStateStore];
   stateFromStores = hidden(504).useStateFromStores(items, () => state.getState());
   dependencyMap = noop.useRef(null);

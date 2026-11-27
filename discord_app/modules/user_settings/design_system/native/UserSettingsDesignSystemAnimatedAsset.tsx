@@ -196,7 +196,7 @@ function AnimationPlayground(arg0) {
         _undefined2(false);
         closure_1_0(arg0);
       };
-      obj.openLazy(asyncRequireImpl(17470, dependencyMap.paths), sheetKey, obj2);
+      obj.openLazy(asyncRequireImpl(17477, dependencyMap.paths), sheetKey, obj2);
     };
     obj12.children = closure_7(require("TableRow").TableRow, obj13);
     items4[3] = closure_7(require("TableRowGroup").TableRowGroup, obj12);
@@ -313,7 +313,7 @@ let closure_13 = {
   "300 × 300": { width: 300, height: 300 },
   "340 × 120": { width: 340, height: 120 },
 };
-let closure_14 = { "Asset's own": "id", "1/1": "t", "16/9": "includes", "4/3": "t", "9/16": "ao" };
+let closure_14 = { "Asset's own": "id", "1/1": null, "16/9": null, "4/3": null, "9/16": null };
 let items = [
   "Asset default",
   "center",
@@ -328,10 +328,10 @@ let items = [
 ];
 let obj = {
   "Asset default": "id",
-  Transparent: null,
-  "Opaque #5865f2": null,
-  "Translucent #5865f280": null,
-  "Translucent red #ff000080": null,
+  Transparent: false,
+  "Opaque #5865f2": false,
+  "Translucent #5865f280": false,
+  "Translucent red #ff000080": false,
   "Token: background base low": nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
 const createStyles = fn(5043);

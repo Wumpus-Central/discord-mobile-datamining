@@ -141,9 +141,9 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestOrbMultiplie
 export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   multiplier = multiplier.multiplier;
   const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-  const result = multiplier(9911).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+  const result = multiplier(9912).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   dependencyMap = result;
-  let obj = multiplier(9911);
+  let obj = multiplier(9912);
   items = [orbMultiplierEligibility];
   const items1 = [result, orbMultiplierEligibility, multiplier];
   const memo = noop.useMemo(() => {
@@ -178,14 +178,14 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
   let obj3 = {
     visible:
-      orbMultiplierEligibility === multiplier(9911).QuestOrbMultiplierEligibilityType.NITRO ||
-      orbMultiplierEligibility === multiplier(9911).QuestOrbMultiplierEligibilityType.UPSELL,
+      orbMultiplierEligibility === multiplier(9912).QuestOrbMultiplierEligibilityType.NITRO ||
+      orbMultiplierEligibility === multiplier(9912).QuestOrbMultiplierEligibilityType.UPSELL,
     children: null,
   };
   const tmp4 =
-    orbMultiplierEligibility === multiplier(9911).QuestOrbMultiplierEligibilityType.NITRO ||
-    orbMultiplierEligibility === multiplier(9911).QuestOrbMultiplierEligibilityType.UPSELL;
+    orbMultiplierEligibility === multiplier(9912).QuestOrbMultiplierEligibilityType.NITRO ||
+    orbMultiplierEligibility === multiplier(9912).QuestOrbMultiplierEligibilityType.UPSELL;
   obj3.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj2.children = closure_8(orbMultiplierEligibility(16755), obj3);
+  obj2.children = closure_8(orbMultiplierEligibility(16762), obj3);
   return closure_8(multiplier(5271).BottomSheet, obj2);
 }

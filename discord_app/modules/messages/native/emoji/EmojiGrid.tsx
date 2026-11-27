@@ -51,7 +51,7 @@ export function EmojiGrid(numberToShow) {
     num2 = 5;
   }
   let obj = {};
-  const merged = Object.assign(doNotDisplayEmojiIds(9757).useSharedMessageEmojiStyles());
+  const merged = Object.assign(doNotDisplayEmojiIds(9758).useSharedMessageEmojiStyles());
   const merged1 = Object.assign(closure_4());
   let emojis;
   if (expressionSourceGuild != null) {
@@ -63,14 +63,14 @@ export function EmojiGrid(numberToShow) {
   const substr = emojis.slice(0, num + 1);
   const found = substr.filter((id) => !doNotDisplayEmojiIds.includes(id.id));
   const substr1 = found.slice(0, num);
-  const obj2 = doNotDisplayEmojiIds(9757);
+  const obj2 = doNotDisplayEmojiIds(9758);
   const tmp = doNotDisplayEmojiIds;
-  const arr4 = obj(9773)(substr1, num2);
+  const arr4 = obj(9774)(substr1, num2);
   return jsx(tmp(6115).Stack, {
     spacing: 8,
     align: "center",
     style: obj.emojiGridContainer,
-    children: obj(9773)(substr1, num2).map((arr, index) => {
+    children: obj(9774)(substr1, num2).map((arr, index) => {
       obj = {
         direction: "horizontal",
         spacing: 32,

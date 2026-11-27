@@ -33,7 +33,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -669,13 +669,13 @@ export function initSentry() {
               tunnel: `/error-reporting-proxy/${str2}`,
               autoInitializeNativeSdk: false,
               beforeSend,
-              dist: "35720400000000",
+              dist: "35720500000000",
               dsn: SentryStaffDsn,
               environment: ReleaseChannel,
               tracesSampleRate: 0,
               sampleRate: 1,
               ignoreErrors,
-              release: "discord_android@357.4.0-2+357204",
+              release: "discord_android@357.5.0-2+357205",
               tracePropagationTargets: null,
               integrations: null,
               beforeBreadcrumb: null,
@@ -710,7 +710,7 @@ export function initSentry() {
             };
             tmp15Result13.init(obj3);
             const tmp15Result16 = _mod674;
-            _mod674.setTag("buildNumber", "35720400000000");
+            _mod674.setTag("buildNumber", "35720500000000");
             const tmp15Result17 = _mod674;
             _mod674.setTag("appVersion", constants.Version);
             const tmp15Result18 = _mod674;

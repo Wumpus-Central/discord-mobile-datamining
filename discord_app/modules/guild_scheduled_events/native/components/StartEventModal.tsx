@@ -61,7 +61,7 @@ const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(4898);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: closure_10 } =
   GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(8474).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(8475).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(5043);
@@ -140,7 +140,7 @@ export default function StartEventModal(event) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -178,7 +178,7 @@ export default function StartEventModal(event) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp11) {
         c0 = tmp;
         throw tmp11;

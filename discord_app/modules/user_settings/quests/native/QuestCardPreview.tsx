@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/user_settings/quests/native/Q
 
 export function QuestCardPreview(quest) {
   quest = quest.quest;
-  return jsx(quest(13842).QuestContentImpressionTrackerNative, {
+  return jsx(quest(13849).QuestContentImpressionTrackerNative, {
     questOrQuests: quest,
     questContent: quest(6874).QuestContent.INTERNAL_PREVIEW_TOOL,
     sourceQuestContent: quest(6874).QuestContent.INTERNAL_PREVIEW_TOOL,

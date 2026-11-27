@@ -18,7 +18,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const DraftType = fn(8117).DraftType;
-let closure_11 = fn(9090).updateChatInputContainerHeight;
+let closure_11 = fn(9091).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const COMMAND_SENTINEL = fn(7074).COMMAND_SENTINEL;
 const MessageSendLocation = fn(5048).MessageSendLocation;
@@ -393,7 +393,7 @@ export default function useChatInputRefs(chatInputProps) {
                   const merged = Object.assign(ref.current);
                   obj4.chatInputRef = chatInputRef;
                   obj2.params = obj4;
-                  const result = threadCreationCallback(12431).chatInputSendApplicationCommand(obj2);
+                  const result = threadCreationCallback(12439).chatInputSendApplicationCommand(obj2);
                 },
               );
             }
@@ -418,8 +418,8 @@ export default function useChatInputRefs(chatInputProps) {
                     tmp8 = chatInputRef;
                     obj3.chatInputRef = chatInputRef;
                     obj2.params = obj3;
-                    const result = chatInputProps(12431).chatInputHandleSendText(obj2);
-                    const obj = chatInputProps(12431);
+                    const result = chatInputProps(12439).chatInputHandleSendText(obj2);
+                    const obj = chatInputProps(12439);
                   }
                   const keyboardType = chatInputProps(5230).getKeyboardType();
                   if (keyboardType === chatInputProps(1627).KeyboardTypes.SYSTEM) {

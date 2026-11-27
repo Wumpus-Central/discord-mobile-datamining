@@ -74,7 +74,7 @@ function TestView() {
         const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
         ActionSheetActionCreatorsDefault.hideActionSheet();
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17329, dependencyMap.paths),
+          asyncRequireImpl(17336, dependencyMap.paths),
           "SimpleRequestOTPActionSheet",
           obj,
         );

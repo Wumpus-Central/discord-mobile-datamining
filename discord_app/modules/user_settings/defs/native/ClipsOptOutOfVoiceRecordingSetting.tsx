@@ -15,7 +15,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
       } else {
         closure_129_1(closure_129_2[3]).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
         c3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -54,7 +54,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
     }
   }
 };
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -64,7 +64,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["wW9/zQ"]);
   },
-  parent: fn(9555).MobileUserSettings.CLIPS,
+  parent: fn(9556).MobileUserSettings.CLIPS,
   useValue: fn(4868).ClipsAllowVoiceRecording.useSetting,
   onValueChange: function updateClipsAllowVoiceRecording() {
     const self = this;

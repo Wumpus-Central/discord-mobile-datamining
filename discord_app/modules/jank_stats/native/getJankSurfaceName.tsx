@@ -83,7 +83,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(17733);
+const JankScreenConstants = fn(17740);
 ({
   CHANNEL_DETAILS_SCREEN: hasOwnProperty,
   INTERACTION_NONE: closure_6,

@@ -9,7 +9,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 const AccessibilityAnnouncer2 = trackUserProfileEditAction(5052);
 const UserProfileAnalyticsUtils = trackUserProfileEditAction(6382);
-const WidgetUtils = trackUserProfileEditAction(14570);
+const WidgetUtils = trackUserProfileEditAction(14577);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);

@@ -6,12 +6,12 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import _modDef5753 from "../../../../../_runtime/metro/05753__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import _modDef7449 from "../../../../../_runtime/metro/07449__.js";
-import _modDef9625 from "../../../../../_runtime/metro/09625__.js";
-import _modDef12044 from "../../../../../_runtime/metro/12044__.js";
-import _modDef12049 from "../../../../../_runtime/metro/12049__.js";
-import _modDef13812 from "../../../../../_runtime/metro/13812__.js";
-import _modDef17433 from "../../../../../_runtime/metro/17433__.js";
-import _modDef17434 from "../../../../../_runtime/metro/17434__.js";
+import _modDef9626 from "../../../../../_runtime/metro/09626__.js";
+import _modDef12052 from "../../../../../_runtime/metro/12052__.js";
+import _modDef12057 from "../../../../../_runtime/metro/12057__.js";
+import _modDef13819 from "../../../../../_runtime/metro/13819__.js";
+import _modDef17440 from "../../../../../_runtime/metro/17440__.js";
+import _modDef17441 from "../../../../../_runtime/metro/17441__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -51,7 +51,7 @@ function DemoContextMenu(align) {
             IconComponent: "a",
             iconSource: length2[index % length2.length],
             variant: true,
-            action: "handshake_tone2",
+            action: "getCellMetrics",
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -75,7 +75,7 @@ function DemoContextMenu(align) {
           IconComponent: "a",
           iconSource: length2[index % length2.length],
           variant: true,
-          action: "handshake_tone2",
+          action: "getCellMetrics",
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -110,14 +110,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [
-  _modDef13812,
+  _modDef13819,
   _modDef7449,
-  _modDef9625,
-  _modDef12049,
+  _modDef9626,
+  _modDef12057,
   _modDef5753,
-  _modDef17433,
-  _modDef17434,
-  _modDef12044,
+  _modDef17440,
+  _modDef17441,
+  _modDef12052,
 ];
 let closure_8 = [
   "Launch Probe!",

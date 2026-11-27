@@ -103,7 +103,7 @@ let closure_20 = async function _fetchStreamPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -392,7 +392,7 @@ export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(8448)(closure_1_1);
+          closure_1(8449)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);

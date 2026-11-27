@@ -126,7 +126,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -163,7 +163,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 );
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -217,8 +217,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9090).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8224);
+let closure_5 = fn(9091).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8225);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1071);
 ({

@@ -30,7 +30,7 @@ const require = globalThis.__r;
 require = fn;
 const QuestConstants = fn(6871);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_6, QuestDockMode: metroImportDefault } = QuestConstants);
-const QuestDockConstants = fn(16680);
+const QuestDockConstants = fn(16687);
 ({
   QUEST_DOCK_CLOSED_HEIGHT: closure_8,
   QUEST_DOCK_COLLAPSED_HEIGHT: closure_9,
@@ -342,7 +342,7 @@ export function useActionSheetPressHandler(questCreative) {
     obj2.impressionId = questImpressionId;
     obj.captureAdUserAction(obj2);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16689, dependencyMap.paths),
+      asyncRequireImpl(16696, dependencyMap.paths),
       "QuestDockContextMenuActionSheet",
       { creative, impressionId: questImpressionId },
     );

@@ -17,7 +17,7 @@ let closure_6 = async function _applyPhoenixRollout() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

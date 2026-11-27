@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef10346 from "../../../../../_runtime/metro/10346__.js";
+import _modDef10347 from "../../../../../_runtime/metro/10347__.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";

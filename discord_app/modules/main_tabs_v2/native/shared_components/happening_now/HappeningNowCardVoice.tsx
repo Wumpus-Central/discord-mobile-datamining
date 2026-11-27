@@ -36,7 +36,7 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(16907).HappeningNowCardTrackingType;
+let closure_8 = fn(16914).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

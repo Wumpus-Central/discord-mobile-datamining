@@ -25,7 +25,7 @@ export default function openUserProfileAddTagActionSheet(widgetEdited) {
     widgetEdited: widgetEdited.widgetType,
   };
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(14595, dependencyMap.paths),
+    asyncRequireImpl(14602, dependencyMap.paths),
     UserProfileAddTagActionSheet,
     widgetEdited,
   );

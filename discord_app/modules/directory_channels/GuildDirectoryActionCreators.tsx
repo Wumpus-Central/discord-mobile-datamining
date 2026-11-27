@@ -99,7 +99,7 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(13252).DirectoryEntryCategories;
+const DirectoryEntryCategories = fn(13260).DirectoryEntryCategories;
 let Endpoints = fn(1071).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;
@@ -183,7 +183,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

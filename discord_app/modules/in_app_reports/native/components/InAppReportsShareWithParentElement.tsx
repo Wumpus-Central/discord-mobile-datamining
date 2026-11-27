@@ -53,7 +53,7 @@ export default function _default(parents) {
     }
     obj3.parent3 = username3;
     obj.disabledTitle = intl.formatToPlainString(parents(1112).t.BlAMme, obj3);
-    obj.icon = jsx(parents(12871).ShareIcon, {});
+    obj.icon = jsx(parents(12879).ShareIcon, {});
     const intl2 = tmp15(1112).intl;
     obj.description = intl2.string(parents(1112).t["5l/hlt"]);
     obj.disabled = tmp[0];

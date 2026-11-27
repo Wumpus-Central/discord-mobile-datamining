@@ -144,7 +144,7 @@ function ChangeSpendingLimitScreen(teenId) {
       items4[1] = closure_7(tmp2(5641).Button, obj15);
       obj14.children = items4;
       obj13.children = closure_8(tmp2(6863).ButtonGroup, obj14);
-      items3[1] = closure_7(tmp2(11615).ModalFooter, obj13);
+      items3[1] = closure_7(tmp2(11623).ModalFooter, obj13);
       obj12.children = items3;
       return closure_8(tmp2(7888).ModalScreen, obj12);
     } else if (isOverspending) {
@@ -179,7 +179,7 @@ function ChangeSpendingLimitScreen(teenId) {
     obj26.text = intl.string(tmp2(1112).t["ETE/oC"]);
     obj26.onPress = ModalActionCreatorsDefault.pop;
     obj25.children = closure_7(tmp2(5641).Button, obj26);
-    items6[1] = closure_7(tmp2(11615).ModalFooter, obj25);
+    items6[1] = closure_7(tmp2(11623).ModalFooter, obj25);
     obj22.children = items6;
     return closure_8(tmp2(7888).ModalScreen, obj22);
   }
@@ -187,7 +187,7 @@ function ChangeSpendingLimitScreen(teenId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(8213).CHANGE_SPENDING_LIMIT_MODAL_KEY;
+let closure_6 = fn(8214).CHANGE_SPENDING_LIMIT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5043);
@@ -232,5 +232,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1112).intl;
   obj.headerBackTitle = intl.string(teenId(1112).t["13/7kX"]);
-  return closure_7(teenId(11618).Modal, obj);
+  return closure_7(teenId(11626).Modal, obj);
 }

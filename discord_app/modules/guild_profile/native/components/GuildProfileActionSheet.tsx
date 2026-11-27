@@ -36,9 +36,9 @@ export default function GuildProfileActionSheet(guildId) {
   const tmp = useThemeDefault();
   const backgroundColor = guildId(5607).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp);
   let obj = guildId(5607);
-  const bottomSheetRef = guildId(8724).useBottomSheetRef();
+  const bottomSheetRef = guildId(8725).useBottomSheetRef();
   ({ bottomSheetRef: c5, bottomSheetClose } = bottomSheetRef);
-  const obj2 = guildId(8724);
+  const obj2 = guildId(8725);
   const token = guildId(5607).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   items = [token];
   colors = noop.useMemo(() => {

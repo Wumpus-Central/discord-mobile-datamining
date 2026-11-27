@@ -62,7 +62,7 @@ class Content {
   }
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(16816);
+const GuildRoleSubscriptionsConstants = fn(16823);
 ({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault } =
   GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1071).UPLOAD_BANNER_SIZE;

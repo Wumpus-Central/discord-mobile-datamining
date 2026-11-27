@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
-import _modDef13688 from "../../../../../_runtime/metro/13688__.js";
+import _modDef13695 from "../../../../../_runtime/metro/13695__.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -61,7 +61,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -93,7 +93,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
               closure_128_0();
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           c2 = tmp;
@@ -103,7 +103,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
     }),
     items,
   );
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13688 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13695 };
   const items1 = [closure_7(FastImageDefault, obj3), , , ,];
   let obj4 = { style: tmp.title, variant: "heading-xl/semibold", children: null };
   const intl = onNext(1112).intl;

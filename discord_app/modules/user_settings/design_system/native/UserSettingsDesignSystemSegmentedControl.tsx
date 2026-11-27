@@ -68,13 +68,13 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     return items;
   }, items);
   const tmp5 = closure_9();
-  const segmentedControlState = first(8616).useSegmentedControlState({ items: memo, pageWidth: num, defaultIndex: 1 });
+  const segmentedControlState = first(8617).useSegmentedControlState({ items: memo, pageWidth: num, defaultIndex: 1 });
   let obj2 = { children: null };
   let obj3 = { style: tmp5.container, ref, onLayout, children: null };
   const obj4 = { spacing: 24, children: null };
   let items1 = [
-    closure_8(first(8617).SegmentedControl, { state: segmentedControlState }),
-    closure_8(first(13615).SegmentedControlPages, { state: segmentedControlState }),
+    closure_8(first(8618).SegmentedControl, { state: segmentedControlState }),
+    closure_8(first(13622).SegmentedControlPages, { state: segmentedControlState }),
   ];
   const obj5 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [

@@ -15,8 +15,8 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   ({ guildId: require, stickerId } = arg0);
   dependencyMap = undefined;
   c3 = undefined;
-  ({ onGoBack: c2, ref: c3 } = stickerId(11414)());
-  const tmp2 = stickerId(11414)();
+  ({ onGoBack: c2, ref: c3 } = stickerId(11415)());
+  const tmp2 = stickerId(11415)();
   const isFocused = Link.useIsFocused();
   stickerId(6110)(() => {
     onFinish(true);
@@ -29,7 +29,7 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   } else {
     tdhW5b = util.t["3DzNjU"];
   }
-  const tmp7 = stickerId(11417);
+  const tmp7 = stickerId(11418);
   return tmp6(tmp7, {
     screenKey: "guild-settings-sticker-create",
     title: intl.string(tdhW5b),

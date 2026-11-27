@@ -147,7 +147,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -164,7 +164,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                     c1 = 1;
                     c2 = 1;
                     const obj6 = {
-                      value: tmp2(12054).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                      value: tmp2(12062).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                       done: false,
                     };
                     return obj6;
@@ -179,7 +179,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                 }
                 GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                 c2 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               } catch (tmp16) {
                 c2 = tmp;
                 throw tmp16;
@@ -305,7 +305,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
     if (null != prop) {
       const obj23 = {
         size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16,
-        source: require("../../../../../_runtime/metro/09722__.js"),
+        source: require("../../../../../_runtime/metro/09723__.js"),
         "aria-label": null,
         style: null,
       };

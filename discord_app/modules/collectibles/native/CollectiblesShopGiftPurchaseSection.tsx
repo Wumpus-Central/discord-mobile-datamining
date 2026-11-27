@@ -12,7 +12,7 @@ import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(9118).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(9119).useNativeCheckoutStore;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
 const PremiumConstants = fn(1389);
@@ -193,7 +193,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

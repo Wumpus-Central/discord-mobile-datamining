@@ -61,7 +61,7 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     items1 = [];
   }
   let obj = tieredTenureBadgeData(6176);
-  const tmp5 = _slicedToArray(tieredTenureBadgeData(9561).useSelectedDismissibleContent(items1), 2);
+  const tmp5 = _slicedToArray(tieredTenureBadgeData(9562).useSelectedDismissibleContent(items1), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
   const items2 = [tmp5[1], first, tieredTenureBadgeData];
@@ -97,7 +97,7 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     obj.buttonLabel = intl3.string(util.t.RzWDqY);
     return obj;
   }, items2);
-  const tmpResult3 = tieredTenureBadgeData(9561);
-  const coachmark = tieredTenureBadgeData(9568).useCoachmark(targetRef, memo);
+  const tmpResult3 = tieredTenureBadgeData(9562);
+  const coachmark = tieredTenureBadgeData(9569).useCoachmark(targetRef, memo);
   return null;
 }

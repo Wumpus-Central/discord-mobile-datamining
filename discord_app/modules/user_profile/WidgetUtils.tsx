@@ -138,7 +138,7 @@ function reorderMovableWidgets(isBoardWidget, arg1, arg2) {
   }
 }
 const WIDGET_TITLES_BY_TYPE = fn(6172).WIDGET_TITLES_BY_TYPE;
-let closure_8 = fn(14571).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_8 = fn(14578).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

@@ -87,8 +87,8 @@ export function markReferralProgramPopoverSeen(promotionId) {
   }
 }
 export function useIsReferralProgramPopoverShowable() {
-  let isEligibleSenderForReferralProgram = stateFromStores1(9370).useIsEligibleSenderForReferralProgram(false);
-  let obj = stateFromStores1(9370);
+  let isEligibleSenderForReferralProgram = stateFromStores1(9371).useIsEligibleSenderForReferralProgram(false);
+  let obj = stateFromStores1(9371);
   items = [ReferralTrialStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () =>
     ReferralTrialStore.getReferralsRemaining(),

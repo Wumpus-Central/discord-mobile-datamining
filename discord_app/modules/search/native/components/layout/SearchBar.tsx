@@ -16,9 +16,9 @@ const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9019);
+const SearchConstants = fn(9020);
 ({ SEARCH_BAR_HEIGHT: closure_10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(9018).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9019).SearchFilterAddLocations;
 const SearchTypes = fn(1071).SearchTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);

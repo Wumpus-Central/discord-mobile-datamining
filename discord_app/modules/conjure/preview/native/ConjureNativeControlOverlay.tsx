@@ -226,10 +226,10 @@ export default function ConjureNativeControlOverlay(arg0) {
           return sharedValue.set(nativeEvent.nativeEvent.layout.height);
         };
         if (tmp8) {
-          let tmp46Result = closure_6(tmp2(15414).AILoader, { size: 12, color: "text-overlay-light" });
+          let tmp46Result = closure_6(tmp2(15421).AILoader, { size: 12, color: "text-overlay-light" });
         } else {
           const obj8 = { size: "sm", color: tmp25(575).colors.TEXT_OVERLAY_LIGHT };
-          tmp46Result = closure_6(tmp2(17452).SparklesIcon, obj8);
+          tmp46Result = closure_6(tmp2(17459).SparklesIcon, obj8);
         }
         const items11 = [tmp46Result, ,];
         const obj9 = {

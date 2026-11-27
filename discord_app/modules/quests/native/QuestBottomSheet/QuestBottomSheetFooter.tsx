@@ -366,12 +366,12 @@ export default function QuestBottomSheetFooter(quest) {
   ({ onBack, sourceQuestContent } = quest);
   ({ onConnectConsoleNext, onDefib, style, withSafeArea } = quest);
   const tmp = useQuestRewardClaimHandler({ quest, sourceQuestContent });
-  const questTaskDetails = quest(9892).useQuestTaskDetails(quest);
-  let obj = quest(9892);
-  const isQuestProgressing = quest(9892).useIsQuestProgressing(quest);
-  const obj2 = quest(9892);
-  const obj3 = quest(9892);
-  const xboxAndPlaystationAccounts = quest(9892).useConnectedAccounts().xboxAndPlaystationAccounts;
+  const questTaskDetails = quest(9893).useQuestTaskDetails(quest);
+  let obj = quest(9893);
+  const isQuestProgressing = quest(9893).useIsQuestProgressing(quest);
+  const obj2 = quest(9893);
+  const obj3 = quest(9893);
+  const xboxAndPlaystationAccounts = quest(9893).useConnectedAccounts().xboxAndPlaystationAccounts;
   items = [quest, xboxAndPlaystationAccounts];
   const memo = noop.useMemo(
     () =>
@@ -381,17 +381,17 @@ export default function QuestBottomSheetFooter(quest) {
       }),
     items,
   );
-  const obj4 = quest(9892);
-  const hasWatchVideoOnMobileTasks = quest(16674).useHasWatchVideoOnMobileTasks(quest.config);
-  const obj5 = quest(16674);
-  const mobileActivityQuest = quest(16674).useMobileActivityQuest(quest);
+  const obj4 = quest(9893);
+  const hasWatchVideoOnMobileTasks = quest(16681).useHasWatchVideoOnMobileTasks(quest.config);
+  const obj5 = quest(16681);
+  const mobileActivityQuest = quest(16681).useMobileActivityQuest(quest);
   ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-  const obj6 = quest(16674);
-  const primaryCtaCopy = quest(13839).usePrimaryCtaCopy({ quest, application: questApplication });
-  const obj7 = quest(13839);
+  const obj6 = quest(16681);
+  const primaryCtaCopy = quest(13846).usePrimaryCtaCopy({ quest, application: questApplication });
+  const obj7 = quest(13846);
   const userStatus = quest.userStatus;
   let completedAt;
-  const obj8 = quest(16716);
+  const obj8 = quest(16723);
   const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
@@ -401,23 +401,23 @@ export default function QuestBottomSheetFooter(quest) {
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
   }
-  const mobileActivityPressHandler = quest(16716).useMobileActivityPressHandler({
+  const mobileActivityPressHandler = quest(16723).useMobileActivityPressHandler({
     questId: quest.id,
     sourceQuestContent,
     launchMobileActivity,
   });
   const tmp11 = null != completedAt;
-  const isQuestAccessSuspended = quest(9892).useIsQuestAccessSuspended();
-  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16710) };
+  const isQuestAccessSuspended = quest(9893).useIsQuestAccessSuspended();
+  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16717) };
   let tmp40Result6 = null;
-  if (step !== quest(16712).QuestBottomSheetStep.TASK_SELECT) {
+  if (step !== quest(16719).QuestBottomSheetStep.TASK_SELECT) {
     const obj11 = { onLayout: quest.onLayout, ctaButton: null, backButton: null, style: null, withSafeArea: null };
-    if (tmp2(16712).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+    if (tmp2(16719).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
       const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
       let tmp40Result = closure_10(NextButton, obj12);
     } else {
       tmp40Result = null;
-      if (tmp2(16712).QuestBottomSheetStep.TASK_STATUS === step) {
+      if (tmp2(16719).QuestBottomSheetStep.TASK_STATUS === step) {
         if (tmp11) {
           const obj13 = {
             questId: quest.id,
@@ -455,7 +455,7 @@ export default function QuestBottomSheetFooter(quest) {
             size: "lg",
             onPress: mobileActivityPressHandler,
             text: primaryCtaCopy,
-            icon: tmp2(9889).getPrimaryCtaIcon(quest),
+            icon: tmp2(9890).getPrimaryCtaIcon(quest),
           };
           let tmp23 = null;
           if (isQuestAccessSuspended) {
@@ -463,7 +463,7 @@ export default function QuestBottomSheetFooter(quest) {
           }
           const merged2 = Object.assign(tmp23);
           tmp40Result4 = closure_10(tmp2(5641).Button, obj15);
-          const tmp2Result2 = tmp2(9889);
+          const tmp2Result2 = tmp2(9890);
         } else {
           if (
             _slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] ===

@@ -61,7 +61,7 @@ export default function useOpenChangeBannerActionSheet(user) {
         obj3,
       );
     };
-    obj.openLazy(asyncRequireImpl(16032, dependencyMap.paths), "Change Banner", obj2);
-    const tmp3 = asyncRequireImpl(16032, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(16039, dependencyMap.paths), "Change Banner", obj2);
+    const tmp3 = asyncRequireImpl(16039, dependencyMap.paths);
   }, items);
 }

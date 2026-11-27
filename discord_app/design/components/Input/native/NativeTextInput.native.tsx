@@ -90,8 +90,10 @@ export const NativeTextInput = function TextInput(ref) {
   ref(defaultValue[9]);
   if (null != iter.keyboardAppearance) {
     const obj3 = {};
-    const merged = Object.assign(tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "Array", defaultValue: "channel_id" }));
-    const obj4 = { value: "Array", defaultValue: "channel_id" };
+    const merged = Object.assign(
+      tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "displayName", defaultValue: "isArray" }),
+    );
+    const obj4 = { value: "displayName", defaultValue: "isArray" };
     const tmp6Result = tmp6(tmp3[10]);
     obj3.ref = tmp6(tmp3[10]).mergeRefs(ref, ref.ref);
     const tmp17 = closure_10(closure_5, obj3);

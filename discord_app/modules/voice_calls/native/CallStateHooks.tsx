@@ -11,7 +11,7 @@ const Constants = fn(1071);
 ({ EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault, RTCConnectionStates: closure_8 } = Constants);
 const ParticipantTypes = fn(5693).ParticipantTypes;
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "r" });
+const merged = Object.assign({ initialized: false, callId: "Array" });
 let obj2 = {
   DISCONNECTED: "disconneted",
   DISCONNECTING: "disconnecting",
@@ -68,7 +68,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(10269)();
+  const tmp3 = id(10270)();
   dependencyMap = tmp3;
   obj2 = require("initialize");
   const items2 = [RTCConnectionStore];

@@ -63,7 +63,7 @@ export function useGiftingBadgeCoachmarkVariant(location) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11157).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11158).GiftingBadgeCoachmarkAudienceExperiment;
   const enabled = GiftingBadgeCoachmarkAudienceExperiment.useConfig({ location: location.location }).enabled;
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {

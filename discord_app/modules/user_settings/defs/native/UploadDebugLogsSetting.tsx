@@ -16,7 +16,7 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -118,7 +118,7 @@ const DebugLogCategory = fn(1071).DebugLogCategory;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_7 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

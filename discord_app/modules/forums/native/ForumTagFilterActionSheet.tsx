@@ -46,7 +46,7 @@ function EmojiIcon(arg0) {
     name: null,
   });
 }
-const ForumChannelStore = fn(12439);
+const ForumChannelStore = fn(12447);
 ({ useForumChannelStore: closure_6, useForumChannelStoreApi: metroImportDefault } = ForumChannelStore);
 const Constants = fn(1071);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: closure_10 } = Constants);

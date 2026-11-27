@@ -22,7 +22,7 @@ function ConnectedAcceptGuildTemplate(code) {
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(12305)(stateFromStores);
+  stateFromStores(12313)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -48,7 +48,7 @@ function ConnectedAcceptGuildTemplate(code) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -83,7 +83,7 @@ function ConnectedAcceptGuildTemplate(code) {
             closure_129_5(base64);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -104,7 +104,7 @@ function ConnectedAcceptGuildTemplate(code) {
       );
     }
   };
-  obj3.children = jsx(stateFromStores(12306), {
+  obj3.children = jsx(stateFromStores(12314), {
     code,
     guildTemplate: stateFromStores,
     name,

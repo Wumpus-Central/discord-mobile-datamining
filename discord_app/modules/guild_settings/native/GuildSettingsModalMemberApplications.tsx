@@ -76,7 +76,7 @@ export default noop.memo(function GuildSettingsModalMemberApplications(guildId) 
   let onEndReached;
   let tmp = closure_10();
   dependencyMap = tmp;
-  let obj = guildId(18442);
+  let obj = guildId(18449);
   const tmp2 = applicationStatus;
   const guildJoinRequests = obj.useSortedMemberApplications({
     guildId,
@@ -84,8 +84,8 @@ export default noop.memo(function GuildSettingsModalMemberApplications(guildId) 
     sortOrder: guildId(5079).GuildJoinRequestSortOrders.TIMESTAMP_DESC,
   }).guildJoinRequests;
   let obj2 = { guildId, applicationStatus, sortOrder: guildId(5079).GuildJoinRequestSortOrders.TIMESTAMP_DESC };
-  const fetchNextPage = guildId(18443).usePaginatedMemberApplications({ guildId, guildJoinRequests }).fetchNextPage;
-  const obj3 = guildId(18443);
+  const fetchNextPage = guildId(18450).usePaginatedMemberApplications({ guildId, guildJoinRequests }).fetchNextPage;
+  const obj3 = guildId(18450);
   items = [onEndReached];
   const items1 = [guildId, applicationStatus];
   const stateFromStores = guildId(504).useStateFromStores(
@@ -156,7 +156,7 @@ export default noop.memo(function GuildSettingsModalMemberApplications(guildId) 
     };
     let tmp13Result = closure_7(tmp4(7482).FlashList, obj8);
   } else {
-    const obj10 = { Illustration: tmp4(11596).NoResults, body: stringResult };
+    const obj10 = { Illustration: tmp4(11604).NoResults, body: stringResult };
     tmp13Result = closure_7(tmp4(1186).EmptyState, obj10);
   }
   const obj11 = { children: null };

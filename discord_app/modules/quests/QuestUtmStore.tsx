@@ -7,8 +7,8 @@ let obj = module_560.create((arg0) => {
   obj = {
     utmSourceCurrent: "r",
     utmMediumCurrent: "__d",
-    utmCampaignCurrent: "w",
-    utmContentCurrent: "gap",
+    utmCampaignCurrent: "padding",
+    utmContentCurrent: "to",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
     },

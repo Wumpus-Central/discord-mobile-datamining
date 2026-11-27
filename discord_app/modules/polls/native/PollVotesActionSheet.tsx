@@ -13,8 +13,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import PollTextUtils from "../PollTextUtils.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import chat_formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12251 from "../../../../_runtime/metro/12251__.js";
-import _modDef12252 from "../../../../_runtime/metro/12252__.js";
+import _modDef12259 from "../../../../_runtime/metro/12259__.js";
+import _modDef12260 from "../../../../_runtime/metro/12260__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -180,7 +180,7 @@ function PollVotesHeader(message) {
             const obj = { value, done: true };
             return obj;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -273,7 +273,7 @@ function PollVotesHeader(message) {
                 }
                 closure_129_6.current = true;
                 v3 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             }
             const current2 = closure_129_4.current;
@@ -484,9 +484,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12251;
+    let tmp2Result = _modDef12259;
   } else {
-    tmp2Result = _modDef12252;
+    tmp2Result = _modDef12260;
   }
   obj2.source = tmp2Result;
   items = [state(tmp8, obj2), ,];

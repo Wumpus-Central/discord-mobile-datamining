@@ -60,24 +60,30 @@ function WebhookItem(avatar) {
   obj2.onPress = callback;
   return closure_18(avatar(guildId[14]).TableRow, obj2);
 }
-function ConnectedWebhookItem(arg0) {
-  ({ channelId: require, user: importDefault } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ channelId: 0, user: 0 }));
-  items = [UserStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => {
-    id = undefined;
-    if (id != null) {
-      id = id.id;
-    }
-    return UserStore.getUser(id);
-  });
-  const items1 = [ChannelStore];
-  const obj3 = {};
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => ChannelStore.getChannel(require));
-  const merged1 = Object.assign(merged);
-  obj3.user = stateFromStores;
-  obj3.channel = stateFromStores1;
-  return closure_18(WebhookItem, obj3);
+class ConnectedWebhookItem {
+  constructor(arg0) {
+    ({ channelId, user } = global);
+    merged = Object.assign(global, Object.assign({ channelId: 0, user: 0 }));
+    obj = channelId(closure_2[19]);
+    items = [];
+    items[0] = closure_11;
+    stateFromStores = obj.useStateFromStores(items, () => {
+      id = undefined;
+      if (id != null) {
+        id = id.id;
+      }
+      return UserStore.getUser(id);
+    });
+    obj2 = channelId(closure_2[19]);
+    items1 = [];
+    items1[0] = closure_5;
+    obj1 = {};
+    stateFromStores1 = obj2.useStateFromStores(items1, () => ChannelStore.getChannel(require));
+    merged1 = Object.assign(merged);
+    obj1.user = stateFromStores;
+    obj1.channel = stateFromStores1;
+    return jsx(WebhookItem, obj1);
+  }
 }
 function CreateWebhookButton(guild) {
   guild = guild.guild;
@@ -117,7 +123,7 @@ function CreateWebhookButton(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -248,7 +254,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(19186).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(19202).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1112).intl;
       dkHRkE = webhookType(1112).t.dkHRkE;
@@ -382,3 +388,4 @@ export default function ConnectedWebhooksOverview(channelId) {
   }
   return tmp9;
 }
+export { ConnectedWebhookItem };

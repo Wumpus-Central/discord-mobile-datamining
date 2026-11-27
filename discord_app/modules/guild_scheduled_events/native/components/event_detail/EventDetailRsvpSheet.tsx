@@ -7,7 +7,7 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
 import StageSparkleDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
-import _modDef8630 from "../../../../../../_runtime/metro/08630__.js";
+import _modDef8631 from "../../../../../../_runtime/metro/08631__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -19,7 +19,7 @@ function EmptyDisplay(arg0) {
   const obj = { style: null, children: null };
   items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  const obj2 = { icon: _modDef8630 };
+  const obj2 = { icon: _modDef8631 };
   const items1 = [metroImportDefault(StageSparkleDefault, obj2), children];
   obj.children = items1;
   return React5(View, obj);
@@ -54,7 +54,7 @@ function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
-  const obj3 = { source: _modDef8630, style: tmp.remainingUsersIcon };
+  const obj3 = { source: _modDef8631, style: tmp.remainingUsersIcon };
   obj2.children = metroImportDefault(FastImageDefault, obj3);
   obj.leading = metroImportDefault(View, obj2);
   const intl = util.intl;
@@ -154,7 +154,7 @@ const memoResult = noop.memo(function UserRow(eventUser) {
   }
   obj6.nick = nick;
   ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);
-  obj3.label = closure_7(analyticsLocations(8631), obj6);
+  obj3.label = closure_7(analyticsLocations(8632), obj6);
   obj3.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };

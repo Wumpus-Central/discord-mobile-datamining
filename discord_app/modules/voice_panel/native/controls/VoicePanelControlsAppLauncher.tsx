@@ -12,7 +12,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsConstants = fn(11780);
+const VoicePanelControlsConstants = fn(11788);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1071).ComponentActions;
 const jsxProd = fn(21);

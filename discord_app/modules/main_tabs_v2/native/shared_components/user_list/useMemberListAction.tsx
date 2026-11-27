@@ -12,12 +12,12 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10730).USERS_LIST_PADDING_BETWEEN_SECTIONS;
+const USERS_LIST_PADDING_BETWEEN_SECTIONS = fn(10731).USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const Constants = fn(1071);
 ({ Permissions: closure_11, AnalyticsSections: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = { listActionRenderer: "Array", listActionHeight: "channel_id" };
+let closure_16 = { listActionRenderer: "displayName", listActionHeight: "isArray" };
 let closure_17 = [];
 const createStyles = fn(5043);
 let closure_18 = createStyles.createStyles({ wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } });

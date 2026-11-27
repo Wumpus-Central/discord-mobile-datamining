@@ -182,7 +182,7 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
   const stateFromStores = chatInputRef(504).useStateFromStores(items, () => setDataImmediate.useReducedMotion);
   obj2 = chatInputRef(504);
   analyticsLocations = chatInputStateRef(6379)(chatInputStateRef(6380).EMOJI_SUGGESTIONS).analyticsLocations;
-  const tmp5 = chatInputStateRef(13363)(tmp[1], 16);
+  const tmp5 = chatInputStateRef(13371)(tmp[1], 16);
   setData = tmp5.setData;
   setDataImmediate = tmp5.setDataImmediate;
   const items1 = [setData];
@@ -195,7 +195,7 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
   obj3.enabled = focused;
   obj3.maxCount = MAX_SUGGESTIONS_LARGE;
   obj3.minUnlockedEmojis = minUnlockedEmojis;
-  const tmp7Result = chatInputStateRef(13398)(obj3);
+  const tmp7Result = chatInputStateRef(13406)(obj3);
   unlockedEmojis = tmp7Result.unlockedEmojis;
   queryEnd = tmp7Result.queryEnd;
   clear = tmp7Result.clear;
@@ -239,7 +239,7 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
       ref = queryEnd + combined.length;
     }
   }, items2);
-  const tmp7 = chatInputStateRef(13398);
+  const tmp7 = chatInputStateRef(13406);
   return {
     unlockedEmojis,
     lockedEmojis: tmp7Result.lockedEmojis,

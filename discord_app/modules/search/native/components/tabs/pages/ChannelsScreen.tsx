@@ -10,13 +10,13 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9019);
+const SearchConstants = fn(9020);
 ({
   EMPTY_VOICE_STATES: metroImportDefault,
   SearchListItemTypes: closure_8,
   CHANNELS_ESTIMATED_ITEM_SIZE: closure_9,
 } = SearchConstants);
-let closure_10 = fn(9018).SearchResultContentEntityTypes;
+let closure_10 = fn(9019).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ChannelsScreen.tsx");

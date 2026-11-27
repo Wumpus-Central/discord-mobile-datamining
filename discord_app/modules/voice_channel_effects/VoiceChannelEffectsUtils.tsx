@@ -4,7 +4,6 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
-import _modDef10161 from "../../../_runtime/metro/10161__.js";
 import _modDef10162 from "../../../_runtime/metro/10162__.js";
 import _modDef10163 from "../../../_runtime/metro/10163__.js";
 import _modDef10164 from "../../../_runtime/metro/10164__.js";
@@ -26,15 +25,15 @@ import _modDef10179 from "../../../_runtime/metro/10179__.js";
 import _modDef10180 from "../../../_runtime/metro/10180__.js";
 import _modDef10181 from "../../../_runtime/metro/10181__.js";
 import _modDef10182 from "../../../_runtime/metro/10182__.js";
+import _modDef10183 from "../../../_runtime/metro/10183__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import apply from "../../../_runtime/00012_apply.js";
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(10160);
+const VoiceChannelEffectsConstants = fn(10161);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef10161];
+const items = [_modDef10162];
 const items1 = [
-  _modDef10162,
   _modDef10163,
   _modDef10164,
   _modDef10165,
@@ -55,6 +54,7 @@ const items1 = [
   _modDef10180,
   _modDef10181,
   _modDef10182,
+  _modDef10183,
 ];
 const AnimationTypeToAnimations = {
   [VoiceChannelEffectAnimationType.BASIC]: items,

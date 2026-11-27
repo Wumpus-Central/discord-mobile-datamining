@@ -39,7 +39,7 @@ let closure_16 = async function _openWaterwheelsGame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -595,7 +595,7 @@ let closure_18 = async function _requestNotifications() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -625,7 +625,7 @@ let closure_18 = async function _requestNotifications() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c0 = tmp;
       throw tmp10;
@@ -660,7 +660,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -739,7 +739,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                 }
               }
               c14 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
             break;
           case 1:
@@ -768,7 +768,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -961,7 +961,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -1104,7 +1104,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -1257,7 +1257,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "HermesInternal", done: "+95" };
+                              return { value: "HermesInternal", done: null };
                             }
                           } else {
                             try {
@@ -1402,7 +1402,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                               timeout: null,
                             };
                             const obj2 = closure_0(1285);
-                            obj.timeout = { deadline: closure_0(8925).DISCOVER_REQUEST_DEADLINE_MS };
+                            obj.timeout = { deadline: closure_0(8926).DISCOVER_REQUEST_DEADLINE_MS };
                             return HTTP.get(obj);
                           }),
                           done: false,
@@ -1460,7 +1460,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: "+95" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } else {
                         try {
@@ -1633,7 +1633,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               return obj29;
             } else {
               c14 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
             break;
           case 10:
@@ -1727,7 +1727,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -1924,7 +1924,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -2096,7 +2096,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               return obj60;
             } else {
               c14 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
             break;
           case 21:
@@ -2282,7 +2282,7 @@ export function useWaterwheelsActions(callback) {
       return joinWaterwheelsGuild(ref.current, type.value.guild_id, arg1, type);
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD === type) {
       return runGuarded(
-        () => type(8935).startLurking(type.value.guild_id, {}),
+        () => type(8936).startLurking(type.value.guild_id, {}),
         () => {
           const intl = type(1112).intl;
           return intl.string(ref(2655).d6U01J);

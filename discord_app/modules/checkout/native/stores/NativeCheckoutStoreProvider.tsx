@@ -100,8 +100,8 @@ function NativeCheckoutStoreProvider(children) {
         const obj2 = { checkoutSucceeded: tmp2, order: null };
         ({ id: obj3.id, status: obj3.status } = orderRecord);
         obj2.order = { id: null, status: null };
-        checkoutInitParameters(9270).discardDraftOrder(obj2);
-        const obj = checkoutInitParameters(9270);
+        checkoutInitParameters(9271).discardDraftOrder(obj2);
+        const obj = checkoutInitParameters(9271);
         const obj5 = { id: null, status: null };
       }
     },
@@ -114,7 +114,7 @@ function NativeCheckoutStoreProvider(children) {
   );
 }
 const View = fn(17).View;
-const NativeCheckoutStore = fn(9118);
+const NativeCheckoutStore = fn(9119);
 ({
   createNativeStore: metroImportDefault,
   NativeCheckoutStoreContext: closure_8,

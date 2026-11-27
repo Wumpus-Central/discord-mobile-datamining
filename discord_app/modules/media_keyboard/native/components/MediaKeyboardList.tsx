@@ -243,8 +243,8 @@ export default noop.memo(function MediaKeyboardList(channel) {
   );
   const tmp9Result5 = require("../../../../../_runtime/metro/01654__.js");
   if (flag) {
-    flag = tmp9(8138).isImageCaptureIntentSupported();
-    const tmp9Result6 = tmp9(8138);
+    flag = tmp9(8139).isImageCaptureIntentSupported();
+    const tmp9Result6 = tmp9(8139);
   }
   let num;
   if (assets != null) {
@@ -453,7 +453,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
     obj8.onScroll = callback;
     const intl = tmp9(1112).intl;
     obj8.accessibilityLabel = intl.string(tmp9(1112).t.XONG6A);
-    obj8.footerSize = tmp9(11107).FOOTER_HEIGHT;
+    obj8.footerSize = tmp9(11108).FOOTER_HEIGHT;
     obj8.renderFooter = callback4;
     obj8.chunkBase = minimum;
     let prop;

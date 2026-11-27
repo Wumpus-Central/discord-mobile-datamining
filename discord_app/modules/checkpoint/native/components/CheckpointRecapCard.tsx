@@ -60,8 +60,8 @@ export default function CheckpointRecapCard(character) {
   const obj3 = character(6422);
   const obj6 = { path: null, x: null, color: null };
   const tmpResult = CheckpointCardFrameDefault;
-  obj6.path = character(12642).YEAR_PATH;
-  obj6.x = 200 - character(12642).YEAR_WIDTH;
+  obj6.path = character(12650).YEAR_PATH;
+  obj6.x = 200 - character(12650).YEAR_WIDTH;
   obj6.color = obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor;
   obj5.children = jsx(CheckpointShareCardYearDefault, { path: null, x: null, color: null });
   obj4.children = (

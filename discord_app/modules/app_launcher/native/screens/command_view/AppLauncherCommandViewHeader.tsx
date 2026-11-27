@@ -15,7 +15,7 @@ const AppLauncherNativeConstants = fn(1500);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = fn(13091).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(13099).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 let closure_8 = sum - 56;
 const createStyles = fn(5043);
 let obj2 = {
@@ -39,7 +39,7 @@ let obj2 = {
   icon: null,
   headerBannerOverlay: null,
 };
-let size = { width: fn(13091).BACK_BUTTON_SIZE, height: fn(13091).BACK_BUTTON_SIZE };
+let size = { width: fn(13099).BACK_BUTTON_SIZE, height: fn(13099).BACK_BUTTON_SIZE };
 obj2.overflowMenuContainer = size;
 const rect = {
   position: "absolute",

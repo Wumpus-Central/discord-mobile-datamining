@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8579).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8580).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5043);
@@ -58,8 +58,8 @@ let closure_11 = noop.memo(function Item(item) {
     if (profile != null) {
       badge = profile.badge;
     }
-    guildTagBadgeUrl = item(8578).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-    let obj = item(8578);
+    guildTagBadgeUrl = item(8579).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+    let obj = item(8579);
   }
   const radioA11yNative = item(5105).useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
@@ -118,7 +118,7 @@ let closure_11 = noop.memo(function Item(item) {
     obj10.guildTag = tag;
     obj10.guildBadge = guildTagBadgeUrl;
     obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_7(tmp7(8722).BaseGuildTagChiplet, obj10);
+    tmp10Result2 = closure_7(tmp7(8723).BaseGuildTagChiplet, obj10);
   }
   items = [tmp10Result2, closure_7(item(7254).FormRadio, { selected })];
   obj5.children = items;

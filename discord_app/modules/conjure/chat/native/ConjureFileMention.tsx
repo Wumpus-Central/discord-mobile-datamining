@@ -41,13 +41,13 @@ export default function ConjureFileMention(variant) {
   }
   let context;
   const tmp = closure_9();
-  context = noop.useContext(context(18528).ConjureFileMentionProjectContext);
-  const conjureStoredAttachment = context(18530).useConjureStoredAttachment(context, variant.attachmentId);
+  context = noop.useContext(context(18535).ConjureFileMentionProjectContext);
+  const conjureStoredAttachment = context(18537).useConjureStoredAttachment(context, variant.attachmentId);
   const obj2 = { style: tmp.chip, children: null };
   let obj3 = { projectId: context, file: conjureStoredAttachment, style: tmp.thumbnail, iconColor: null };
-  let obj = context(18530);
+  let obj = context(18537);
   obj3.iconColor = conjureStoredAttachment(575).colors.MENTION_FOREGROUND;
-  items = [closure_7(conjureStoredAttachment(18533), obj3)];
+  items = [closure_7(conjureStoredAttachment(18540), obj3)];
   let obj4 = { variant: str, style: tmp.name, children: null };
   let name;
   if (conjureStoredAttachment != null) {
@@ -65,7 +65,7 @@ export default function ConjureFileMention(variant) {
   if (null != context) {
     tmp8Result = tmp6Result;
     if (null != conjureStoredAttachment) {
-      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(18491).CONJURE_VIEWABLE_IMAGE_TYPES;
+      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(18498).CONJURE_VIEWABLE_IMAGE_TYPES;
       tmp8Result = tmp6Result;
       if (CONJURE_VIEWABLE_IMAGE_TYPES.has(conjureStoredAttachment.content_type)) {
         let obj5 = {
@@ -80,7 +80,7 @@ export default function ConjureFileMention(variant) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -127,7 +127,7 @@ export default function ConjureFileMention(variant) {
                   return obj;
                 } else {
                   c3 = 3;
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;

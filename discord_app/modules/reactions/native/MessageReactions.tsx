@@ -81,7 +81,7 @@ export default function MessageReactions(emoji) {
   if (items3.length > 0) {
     let obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst };
     let merged1 = Object.assign(merged);
-    let tmp9Result = jsx(tmp4(12242).MessageReactionsContent, {
+    let tmp9Result = jsx(tmp4(12250).MessageReactionsContent, {
       channelId,
       messageId,
       emoji: emoji.emoji,
@@ -89,7 +89,7 @@ export default function MessageReactions(emoji) {
       isSelectedBurst,
     });
   } else {
-    tmp9Result = jsx(tmp4(12242).MessageReactionsEmpty, {});
+    tmp9Result = jsx(tmp4(12250).MessageReactionsEmpty, {});
   }
   obj2.children = tmp9Result;
   return jsx(items3(6379).AnalyticsLocationProvider, {

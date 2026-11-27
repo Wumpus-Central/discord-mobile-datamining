@@ -33,11 +33,11 @@ export default function EditGuildEventChannelSelection(guild) {
   ({ recurrenceId: dependencyMap, onChangeChannel: View } = guild);
   const tmp = closure_13();
   closure_5 = tmp2;
-  closure_6 = guild(8515).useGetEventChannelsByType(guild.id, channelType);
-  let obj = guild(8515);
-  guild(8501).useChannelsUserCanStartStageIn(guild);
+  closure_6 = guild(8516).useGetEventChannelsByType(guild.id, channelType);
+  let obj = guild(8516);
+  guild(8502).useChannelsUserCanStartStageIn(guild);
   const tmp6 = channel(5659)(channel);
-  let obj2 = guild(8501);
+  let obj2 = guild(8502);
   items = [closure_5];
   closure_8 = guild(504).useStateFromStores(items, () => PermissionStore.can(constants2.MANAGE_CHANNELS, guild));
   let obj3 = guild(504);
@@ -52,13 +52,13 @@ export default function EditGuildEventChannelSelection(guild) {
     let channelIcon = tmp3(7096).getChannelIcon(channel);
     const tmp3Result = tmp3(7096);
   } else {
-    channelIcon = channel(8503);
+    channelIcon = channel(8504);
   }
   if (null != channel) {
     let LocationIcon = tmp3(7096).getChannelIconComponent(channel);
     const tmp3Result2 = tmp3(7096);
   } else {
-    LocationIcon = tmp3(8504).LocationIcon;
+    LocationIcon = tmp3(8505).LocationIcon;
   }
   let intl = tmp3(1112).intl;
   let string = intl.string;
@@ -109,8 +109,8 @@ export default function EditGuildEventChannelSelection(guild) {
           guildId: guild.id,
           onCreate(channel) {
             const obj2 = { channel, guildEvent, recurrenceId };
-            const result = guild(8473).openCreateOrEditGuildEventModal(closure_1_0, obj2);
-            const obj = guild(8473);
+            const result = guild(8474).openCreateOrEditGuildEventModal(closure_1_0, obj2);
+            const obj = guild(8474);
           },
         };
         tmp4 = closure_2_11(StageChannelUpsellDefault, obj2);
@@ -146,8 +146,8 @@ export default function EditGuildEventChannelSelection(guild) {
       id = channel.id;
     }
     obj4.selectedItem = id;
-    obj3.openLazy(asyncRequireImpl(8499, dependencyMap.paths), "SelectUpdatesChannel", obj4);
-    const tmp9 = asyncRequireImpl(8499, dependencyMap.paths);
+    obj3.openLazy(asyncRequireImpl(8500, dependencyMap.paths), "SelectUpdatesChannel", obj4);
+    const tmp9 = asyncRequireImpl(8500, dependencyMap.paths);
   };
   if (null != LocationIcon) {
     let tmp11Result = closure_11(LocationIcon, {});
@@ -168,7 +168,7 @@ export default function EditGuildEventChannelSelection(guild) {
     color: "text-subtle",
     children: stringResult,
   };
-  obj7.trailing = closure_11(guild(1186).Icon, { source: channel(8500) });
+  obj7.trailing = closure_11(guild(1186).Icon, { source: channel(8501) });
   items4[1] = closure_11(guild(6144).TableRow, obj7);
   obj5.children = items4;
   return closure_12(View, obj5);

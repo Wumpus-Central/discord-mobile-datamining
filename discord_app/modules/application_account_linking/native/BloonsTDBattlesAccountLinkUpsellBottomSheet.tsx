@@ -22,13 +22,13 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
     currentUser.getCurrentUser(),
   );
   const obj = BLOONS_TD_BATTLES_2_APPLICATION_ID(563);
-  const accountLinkBottomSheetStyles = BLOONS_TD_BATTLES_2_APPLICATION_ID(19313).useAccountLinkBottomSheetStyles();
+  const accountLinkBottomSheetStyles = BLOONS_TD_BATTLES_2_APPLICATION_ID(19329).useAccountLinkBottomSheetStyles();
   BLOONS_TD_BATTLES_2_APPLICATION_ID = closure_5.BLOONS_TD_BATTLES_2_APPLICATION_ID;
-  const obj2 = BLOONS_TD_BATTLES_2_APPLICATION_ID(19313);
+  const obj2 = BLOONS_TD_BATTLES_2_APPLICATION_ID(19329);
   const getOrFetchApplication = BLOONS_TD_BATTLES_2_APPLICATION_ID(7515).useGetOrFetchApplication(
     BLOONS_TD_BATTLES_2_APPLICATION_ID,
   );
-  const bloonsTDBattlesUpsellExperiment = BLOONS_TD_BATTLES_2_APPLICATION_ID(19314).bloonsTDBattlesUpsellExperiment;
+  const bloonsTDBattlesUpsellExperiment = BLOONS_TD_BATTLES_2_APPLICATION_ID(19330).bloonsTDBattlesUpsellExperiment;
   [][0] = BLOONS_TD_BATTLES_2_APPLICATION_ID;
   if (null != stateFromStores) {
     if (null != getOrFetchApplication) {
@@ -40,9 +40,9 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
         children: null,
       };
       const obj5 = { game: getOrFetchApplication, size: tmp(7519).GameIconSizes.LARGE };
-      const items1 = [closure_6(GameIconDefault, obj5), closure_6(tmp(19317).UnionOrbsIcon, {})];
-      const obj6 = { guildId: "a", user: stateFromStores, size: "context", "aria-label": "main-app" };
-      obj6.size = tmp(14931).AvatarSizes.XXLARGE;
+      const items1 = [closure_6(GameIconDefault, obj5), closure_6(tmp(19333).UnionOrbsIcon, {})];
+      const obj6 = { guildId: "a", user: stateFromStores, size: "context", "aria-label": "nl-SX" };
+      obj6.size = tmp(14938).AvatarSizes.XXLARGE;
       let username;
       if (stateFromStores != null) {
         username = stateFromStores.username;
@@ -84,7 +84,7 @@ export default function BloonsTDBattlesAccountLinkBottomSheet(markAsDismissed) {
         body: closure_7(tmp(6115).Stack, obj4),
         onSuccess: tmp6,
       };
-      return closure_6(tmp(19313).AccountLinkUpsellBottomSheet, obj12);
+      return closure_6(tmp(19329).AccountLinkUpsellBottomSheet, obj12);
     }
   }
   return null;

@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(18083);
+  let obj = id(18090);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(18083).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = id(18090).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: false,
   });
@@ -71,10 +71,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "HermesInternal",
     overState: "a",
-    preventClipping: true,
-    config: "/assets/images/platforms",
-    externalChildren: 255,
-    children: 255,
+    preventClipping: "reference",
+    config: "lheading",
+    externalChildren: "2.3.1",
+    children: null,
   };
   const obj3 = id(1654);
   obj4.id = "" + id;
@@ -89,10 +89,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(18082).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(18089).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(14674).HourglassIcon, {});
+  obj4.children = jsx(id(14681).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -105,9 +105,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "HermesInternal",
     overState: "a",
-    preventClipping: true,
-    config: "/assets/images/platforms",
-    externalChildren: 255,
-    children: 255,
+    preventClipping: "reference",
+    config: "lheading",
+    externalChildren: "2.3.1",
+    children: null,
   });
 });

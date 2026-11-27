@@ -6,24 +6,24 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const QuestsExperimentLocations = fn(6871).QuestsExperimentLocations;
-const expandedHeight = fn(16680).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const expandedHeight = fn(16687).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const NEUTRAL_79 = nativeDefault.unsafe_rawColors.NEUTRAL_79;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
 
 export default noop.memo(function QuestDockUnenrolledBackground() {
-  const questDockQuest = handleAcceptQuest(16714).useQuestDockQuest();
-  const obj = handleAcceptQuest(16714);
-  const questDockHeroAsset = handleAcceptQuest(16674).useQuestDockHeroAsset(questDockQuest);
+  const questDockQuest = handleAcceptQuest(16721).useQuestDockQuest();
+  const obj = handleAcceptQuest(16721);
+  const questDockHeroAsset = handleAcceptQuest(16681).useQuestDockHeroAsset(questDockQuest);
   ({ videoAsset, staticUrl } = questDockHeroAsset);
-  const QuestBarStartQuestOnClickExperiment = handleAcceptQuest(16795).QuestBarStartQuestOnClickExperiment;
+  const QuestBarStartQuestOnClickExperiment = handleAcceptQuest(16802).QuestBarStartQuestOnClickExperiment;
   let isEnrolling = QuestBarStartQuestOnClickExperiment.useConfig({
     location: QuestsExperimentLocations.QUESTS_BAR_MOBILE,
   }).enabled;
-  const obj2 = handleAcceptQuest(16674);
+  const obj2 = handleAcceptQuest(16681);
   const obj3 = { location: QuestsExperimentLocations.QUESTS_BAR_MOBILE };
-  const questDockAcceptQuest = handleAcceptQuest(16792).useQuestDockAcceptQuest();
+  const questDockAcceptQuest = handleAcceptQuest(16799).useQuestDockAcceptQuest();
   handleAcceptQuest = questDockAcceptQuest.handleAcceptQuest;
   items = [handleAcceptQuest];
   const callback = noop.useCallback(() => {
@@ -39,7 +39,7 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
     disabled: null,
   };
   let url;
-  const obj4 = handleAcceptQuest(16792);
+  const obj4 = handleAcceptQuest(16799);
   if (videoAsset != null) {
     url = videoAsset.url;
   }

@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(15415);
+const AILoaderConstants = fn(15422);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_6 } = AILoaderConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -82,8 +82,8 @@ export default noop.memo(function SmartSearchSkeleton(isCollapsed) {
   let obj = { style: tmp.block, children: null };
   let obj2 = { style: tmp.header, children: null };
   const items1 = [
-    closure_7(reducedMotion(15414).AILoader, { size: 12, color: "interactive-text-default" }),
-    closure_7(reducedMotion(15418).AIShimmer, {
+    closure_7(reducedMotion(15421).AILoader, { size: 12, color: "interactive-text-default" }),
+    closure_7(reducedMotion(15425).AIShimmer, {
       text: memo,
       variant: "body-sm/semibold",
       color: "interactive-text-default",

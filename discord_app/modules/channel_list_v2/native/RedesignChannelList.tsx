@@ -39,9 +39,9 @@ function GuildChannelsList(shouldRender) {
   const merged = Object.assign(shouldRender, Object.assign({ shouldRender: 0 }));
   let found1;
   dependencyMap = undefined;
-  const found = found1(17989)(merged.guild).filter(merged(17911).isMobileGuildActionRow);
+  const found = found1(17996)(merged.guild).filter(merged(17918).isMobileGuildActionRow);
   const hasItem = found.includes(ChannelListGuildActionRow.GUILD_CONJURE);
-  merged(11488);
+  merged(11463);
   found1 = found;
   if (hasItem) {
     found1 = found;
@@ -49,7 +49,7 @@ function GuildChannelsList(shouldRender) {
       found1 = found.filter((item) => item !== constants.GUILD_CONJURE);
     }
   }
-  const arr = found1(17989)(merged.guild);
+  const arr = found1(17996)(merged.guild);
   const tmp4 = merged;
   ({
     rows: c2,
@@ -57,8 +57,8 @@ function GuildChannelsList(shouldRender) {
     applicationAccountLinkMarkAsDismissed,
     startApplicationAccountLinkAuthorization,
     accountLinkApplication,
-  } = found1(17991)(merged.guild));
-  const tmp9 = found1(17991)(merged.guild);
+  } = found1(17998)(merged.guild));
+  const tmp9 = found1(17998)(merged.guild);
   items = [ChannelListStore];
   const stateFromStoresObject = tmp4(504).useStateFromStoresObject(items, () =>
     ChannelListStore.getGuild(merged.guild.id, { guildActionRows: found1, channelNoticeRows }),
@@ -101,7 +101,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj5.guild = stateFromStores;
           obj5.selectedChannelId = selectedChannelId;
           obj5.selectedVoiceChannelId = stateFromStores1;
-          return closure_16(tmp2(18060).default, obj5);
+          return closure_16(tmp2(18067).default, obj5);
         } else {
           if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
             const obj6 = { style: merged.style, guildId: selectedGuildId };
@@ -127,7 +127,7 @@ function ChannelsWrapper(selectedGuildId) {
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ EMPTY_NUX_SERVER: closure_12, MOBILE_GUILD_UPSELL_LIST: map1, WATERWHEELS: closure_14 } = Constants);
-const ChannelListGuildActionRow = fn(8292).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(8293).ChannelListGuildActionRow;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
 const memoResult = noop.memo(function ChannelList(gameClaimMarkAsDismissed) {

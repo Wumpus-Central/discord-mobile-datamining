@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(8579);
+const GuildTagConstants = fn(8580);
 ({
   GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6,
   GUILD_TAG_BADGE_PALETTE_PRESETS,

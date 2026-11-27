@@ -99,8 +99,8 @@ function DockPressTargetGuard(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11782).VoicePanelModes;
-const VoicePanelDockConstants = fn(11805);
+const VoicePanelModes = fn(11790).VoicePanelModes;
+const VoicePanelDockConstants = fn(11813);
 ({
   DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_8,
   DOCK_PULL_SNAP_DISTANCE: closure_9,
@@ -113,7 +113,7 @@ const VoicePanelDockConstants = fn(11805);
   DOCK_PADDING_TOP,
   DOCK_ROW_HEIGHT,
 } = VoicePanelDockConstants);
-const GestureConstants = fn(11806);
+const GestureConstants = fn(11814);
 ({
   FLING_MIN_DISTANCE: map1,
   FLING_MIN_VELOCITY: closure_14,

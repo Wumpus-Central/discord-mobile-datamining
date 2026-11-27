@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx
 import _modDef1654 from "../../../../../../_runtime/metro/01654__.js";
-import _modDef14507 from "../../../../../../_runtime/metro/14507__.js";
-import _modDef16433 from "../../../../../../_runtime/metro/16433__.js";
+import _modDef14514 from "../../../../../../_runtime/metro/14514__.js";
+import _modDef16440 from "../../../../../../_runtime/metro/16440__.js";
 import AddFriendsScreenUtils from "AddFriendsScreenUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -279,7 +279,7 @@ export function IncomingRequestRowActions(user) {
     c5(require("IconButton").IconButton, {
       size: "sm",
       variant: "tertiary",
-      icon: _modDef16433,
+      icon: _modDef16440,
       onPress: callback1,
       accessibilityLabel: ignoreRequestAccessibilityLabel,
       maxFontSizeMultiplier: 2,
@@ -288,7 +288,7 @@ export function IncomingRequestRowActions(user) {
   const obj9 = {
     size: "sm",
     variant: "tertiary",
-    icon: _modDef16433,
+    icon: _modDef16440,
     onPress: callback1,
     accessibilityLabel: ignoreRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,
@@ -296,7 +296,7 @@ export function IncomingRequestRowActions(user) {
   items13[1] = c5(require("IconButton").IconButton, {
     size: "sm",
     variant: "active",
-    icon: _modDef14507,
+    icon: _modDef14514,
     onPress: callback,
     accessibilityLabel: acceptRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,
@@ -331,7 +331,7 @@ export function IncomingRequestRowActions(user) {
   const obj10 = {
     size: "sm",
     variant: "active",
-    icon: _modDef14507,
+    icon: _modDef14514,
     onPress: callback,
     accessibilityLabel: acceptRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,

@@ -137,7 +137,7 @@ function Header(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const MainTabsV2Constants = fn(9005);
+const MainTabsV2Constants = fn(9006);
 ({ ONYX_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_6 } = MainTabsV2Constants);
 const Constants = fn(1071);
 ({

@@ -239,7 +239,7 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(19961).AuditLogChange;
+const AuditLogChange = fn(19977).AuditLogChange;
 const Constants = fn(1071);
 const AuditLogActions = Constants.AuditLogActions;
 const AuditLogChangeKeys = Constants.AuditLogChangeKeys;
@@ -259,7 +259,7 @@ const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
   AuditLogActionTypes: closure_29,
 } = Constants);
 const ChannelFlags = fn(4899).ChannelFlags;
-const AutomodTriggerType = fn(12522).AutomodTriggerType;
+const AutomodTriggerType = fn(12530).AutomodTriggerType;
 const GuildOnboardingMode = fn(7456).GuildOnboardingMode;
 const GuildScheduledEventsConstants = fn(4898);
 ({

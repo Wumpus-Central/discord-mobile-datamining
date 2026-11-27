@@ -27,7 +27,7 @@ export default function LocalSvg(asset) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ export default function LocalSvg(asset) {
               tmp5(closure_128_0);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp16) {
           c3 = tmp;

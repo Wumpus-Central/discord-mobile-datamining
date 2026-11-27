@@ -102,11 +102,11 @@ export default function transformEmbeds(arg0) {
                           obj2.height = sanitizeMediaDimension.sanitizeMediaDimension(height);
                           let imageSrc = proxyURL;
                           if (null != proxyURL) {
-                            const obj4Result = obj4(8848);
+                            const obj4Result = obj4(8849);
                             imageSrc = obj4Result.getImageSrc(proxyURL, width, height, !closure_1_1);
                           }
                           obj2.proxyURL = imageSrc;
-                          const obj4Result3 = obj4(8848);
+                          const obj4Result3 = obj4(8849);
                           if (proxyURL == null) {
                             proxyURL = thumbnail.url;
                           }
@@ -250,8 +250,8 @@ export default function transformEmbeds(arg0) {
                             const mapped1 = fields.map((rawName) => {
                               let result = null;
                               if (null != rawName.rawName) {
-                                result = channelId(14417).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                                const obj = channelId(14417);
+                                result = channelId(14424).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                                const obj = channelId(14424);
                               }
                               let result1 = null;
                               if (null != rawName.rawValue) {
@@ -264,8 +264,8 @@ export default function transformEmbeds(arg0) {
                                   showListsAndHeaders,
                                   showMaskedLinks,
                                 };
-                                result1 = channelId(14417).parseEmbedDescriptionMarkup(obj3);
-                                const obj2 = channelId(14417);
+                                result1 = channelId(14424).parseEmbedDescriptionMarkup(obj3);
+                                const obj2 = channelId(14424);
                               }
                               const obj4 = {};
                               const merged = Object.assign(rawName);
@@ -294,7 +294,7 @@ export default function transformEmbeds(arg0) {
                                 }
                                 let tmp64 = obj10;
                                 if (null != iconURL) {
-                                  const obj4Result4 = obj4(8848);
+                                  const obj4Result4 = obj4(8849);
                                   obj10.iconURL = obj4Result4.getImageSrc(iconURL, 16, 16, !closure_1_1);
                                   tmp64 = obj10;
                                 }
@@ -450,7 +450,7 @@ export default function transformEmbeds(arg0) {
                                 if (null != iconURL2) {
                                   const obj15 = {};
                                   const merged7 = Object.assign(type.author);
-                                  obj4 = obj4(8848);
+                                  obj4 = obj4(8849);
                                   obj15.iconURL = obj4.getImageSrc(iconURL2, 16, 16, !closure_1_1);
                                   let author = obj15;
                                 } else {

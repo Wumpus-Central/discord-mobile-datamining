@@ -24,7 +24,7 @@ function QuestDockPreviewTools(quest) {
   dependencyMap = undefined;
   c3 = undefined;
   c4 = undefined;
-  const questPreviewActions = quest(9892).useQuestPreviewActions(quest.id);
+  const questPreviewActions = quest(9893).useQuestPreviewActions(quest.id);
   ({
     handleComplete: c1,
     handleProgress: c2,
@@ -35,8 +35,8 @@ function QuestDockPreviewTools(quest) {
   const intl = quest(1112).intl;
   obj2.title = intl.string(quest(1112).t["Ape+mm"]);
   let obj3 = { icon: null, label: null, onPress: null };
-  let obj = quest(9892);
-  obj3.icon = closure_6(quest(7548).ActionSheetRow.Icon, { IconComponent: quest(8799).TrophyIcon });
+  let obj = quest(9893);
+  obj3.icon = closure_6(quest(7548).ActionSheetRow.Icon, { IconComponent: quest(8800).TrophyIcon });
   const obj5 = { text: null };
   const intl2 = quest(1112).intl;
   obj5.text = intl2.string(quest(1112).t.jQEfRT);
@@ -47,8 +47,8 @@ function QuestDockPreviewTools(quest) {
   };
   items = [closure_6(quest(7548).ActionSheetRow, obj3), , , , , ,];
   const obj6 = { icon: null, label: null, onPress: null };
-  const obj4 = { IconComponent: quest(8799).TrophyIcon };
-  obj6.icon = closure_6(quest(7548).ActionSheetRow.Icon, { IconComponent: quest(16693).RedoIcon });
+  const obj4 = { IconComponent: quest(8800).TrophyIcon };
+  obj6.icon = closure_6(quest(7548).ActionSheetRow.Icon, { IconComponent: quest(16700).RedoIcon });
   const obj8 = { text: null };
   const intl3 = quest(1112).intl;
   obj8.text = intl3.string(quest(1112).t.cKSLr4);
@@ -59,8 +59,8 @@ function QuestDockPreviewTools(quest) {
   };
   items[1] = closure_6(quest(7548).ActionSheetRow, obj6);
   const obj9 = { icon: null, label: null, onPress: null };
-  const obj7 = { IconComponent: quest(16693).RedoIcon };
-  obj9.icon = closure_6(quest(7548).ActionSheetRow.Icon, { IconComponent: quest(16695).UndoIcon });
+  const obj7 = { IconComponent: quest(16700).RedoIcon };
+  obj9.icon = closure_6(quest(7548).ActionSheetRow.Icon, { IconComponent: quest(16702).UndoIcon });
   const obj11 = { text: null };
   const intl4 = quest(1112).intl;
   obj11.text = intl4.string(quest(1112).t.taqkwK);
@@ -71,8 +71,8 @@ function QuestDockPreviewTools(quest) {
   };
   items[2] = closure_6(quest(7548).ActionSheetRow, obj9);
   const obj12 = { icon: null, label: null, onPress: null };
-  const obj10 = { IconComponent: quest(16695).UndoIcon };
-  obj12.icon = closure_6(quest(7548).ActionSheetRow.Icon, { IconComponent: quest(16697).UnsendIcon });
+  const obj10 = { IconComponent: quest(16702).UndoIcon };
+  obj12.icon = closure_6(quest(7548).ActionSheetRow.Icon, { IconComponent: quest(16704).UnsendIcon });
   const obj14 = { text: null };
   const intl5 = quest(1112).intl;
   obj14.text = intl5.string(quest(1112).t.JF6W66);
@@ -83,7 +83,7 @@ function QuestDockPreviewTools(quest) {
   };
   items[3] = closure_6(quest(7548).ActionSheetRow, obj12);
   const obj15 = { icon: null, label: null, onPress: null };
-  const obj13 = { IconComponent: quest(16697).UnsendIcon };
+  const obj13 = { IconComponent: quest(16704).UnsendIcon };
   obj15.icon = closure_6(quest(7548).ActionSheetRow.Icon, { IconComponent: quest(7290).EyeIcon });
   const obj17 = { text: null };
   const intl6 = quest(1112).intl;
@@ -154,7 +154,7 @@ function QuestDockShareRow(quest) {
 function QuestDockDisclosureRow(creative) {
   creative = creative.creative;
   let obj = {
-    icon: closure_6(creative(7548).ActionSheetRow.Icon, { IconComponent: creative(9462).CircleQuestionIcon }),
+    icon: closure_6(creative(7548).ActionSheetRow.Icon, { IconComponent: creative(9463).CircleQuestionIcon }),
     label: null,
     onPress: null,
   };
@@ -323,7 +323,7 @@ export default function QuestDockContextMenuActionSheet(creative) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -337,11 +337,11 @@ export default function QuestDockContextMenuActionSheet(creative) {
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            trackInternalClick(tmp2(8392).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT);
+            trackInternalClick(tmp2(8393).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT);
             const type = creative.type;
             if (tmp2(6878).AdCreativeType.QUEST === type) {
-              const obj7 = tmp2(9894);
-              const dismissQuestContentResult = tmp2(9894).dismissQuestContent(
+              const obj7 = tmp2(9895);
+              const dismissQuestContentResult = tmp2(9895).dismissQuestContent(
                 creative.quest.id,
                 tmp2(6874).QuestContent.QUEST_BAR_MOBILE,
               );
@@ -356,8 +356,8 @@ export default function QuestDockContextMenuActionSheet(creative) {
                   dependencyMap = 3;
                 }
               }
-              const obj4 = tmp2(13834);
-              const dismissAdContentResult = tmp2(13834).dismissAdContent(
+              const obj4 = tmp2(13841);
+              const dismissAdContentResult = tmp2(13841).dismissAdContent(
                 closure_1,
                 tmp2(6874).QuestContent.QUEST_BAR_MOBILE,
               );
@@ -373,8 +373,8 @@ export default function QuestDockContextMenuActionSheet(creative) {
             dependencyMap = 3;
             throw value;
           } else if (arg0 !== 2) {
-            const result = tmp2(16692).displayQuestDismissalToast();
-            const obj2 = tmp2(16692);
+            const result = tmp2(16699).displayQuestDismissalToast();
+            const obj2 = tmp2(16699);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;

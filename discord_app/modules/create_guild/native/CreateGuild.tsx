@@ -83,7 +83,7 @@ export default function CreateGuild(arg0) {
   }
   obj4.children = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(5634).Text, obj4);
-  items1[2] = closure_7(ref(12309), {
+  items1[2] = closure_7(ref(12317), {
     iconBackgroundColor: tmp.contentContainer.backgroundColor,
     style: tmp.iconUploader,
     onPress: onIconPress,

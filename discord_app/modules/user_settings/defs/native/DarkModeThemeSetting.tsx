@@ -6,13 +6,13 @@ import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
 const SystemTheme = fn(1194).SystemTheme;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(9555).MobileUserSettings.APPEARANCE,
+  parent: fn(9556).MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
     items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());

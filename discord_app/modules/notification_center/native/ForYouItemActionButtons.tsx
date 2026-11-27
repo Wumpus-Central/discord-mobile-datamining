@@ -525,7 +525,7 @@ export function useItemActionButtonPropsV2(
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -567,7 +567,7 @@ export function useItemActionButtonPropsV2(
           closure_128_1();
           focusChatInput(closure_128_0.message_channel_id);
           navigation = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp18) {
           navigation = tmp;
           throw tmp18;

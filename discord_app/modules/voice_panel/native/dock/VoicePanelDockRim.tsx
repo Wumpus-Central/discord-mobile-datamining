@@ -56,7 +56,7 @@ export default noop.memo(function VoicePanelDockRim(style) {
       end: { x: 1, y: 0.5 },
     }),
   };
-  obj3.children = jsx(tmp2(13409).VoicePanelDockRimLevel, {
+  obj3.children = jsx(tmp2(13417).VoicePanelDockRimLevel, {
     style: StyleSheet.absoluteFill,
     children: jsx(LinearGradientDefault, {
       style: StyleSheet.absoluteFill,

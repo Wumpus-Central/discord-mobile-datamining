@@ -30,7 +30,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -77,7 +77,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
                       closure_129_0 = undefined;
                       if (dependencyMap()) {
                         c6 = 3;
-                        const obj5 = { value: { v: "r" }, done: true };
+                        const obj5 = { value: { v: "top" }, done: true };
                         return obj5;
                       } else {
                         c4 = 1;
@@ -130,7 +130,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
                         return obj10;
                       } else if (closure_130_0()) {
                         c6 = 3;
-                        const obj11 = { value: { v: "r" }, done: true };
+                        const obj11 = { value: { v: "top" }, done: true };
                         return obj11;
                       } else {
                         c4 = 2;
@@ -173,7 +173,7 @@ let closure_10 = async function _loadWidgetConfigs(arg0, arg1) {
             closure_2 = dependencyMap[Symbol.iterator]();
             if (closure_2 === undefined) {
               c12 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             } else {
               c9 = 1;
               closure_136_3 = tmp33;
@@ -381,7 +381,7 @@ export default function useConjureServerWidgetOffers() {
       let found1;
       if (arr2 != null) {
         found1 = arr2.find(
-          (status) => status.status === stateFromStores2(14995).ApplicationWidgetConfigStatus.PUBLISHED,
+          (status) => status.status === stateFromStores2(15002).ApplicationWidgetConfigStatus.PUBLISHED,
         );
       }
       let tmp6 = found1;

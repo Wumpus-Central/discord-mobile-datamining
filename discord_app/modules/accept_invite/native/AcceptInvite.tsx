@@ -10,7 +10,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useEaseInEaseOutLayoutAnimationsDefault from "../../animations/native/useEaseInEaseOutLayoutAnimations.tsx";
 import InviteDetailsDefault from "InviteDetails.tsx";
 import InviteErrorDefault from "InviteError.tsx";
-import _modDef13761 from "../../../../_runtime/metro/13761__.js";
+import _modDef13768 from "../../../../_runtime/metro/13768__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const module_1654 = _mod1654;
@@ -159,7 +159,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef13761;
+    let guildSplashSource = _modDef13768;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

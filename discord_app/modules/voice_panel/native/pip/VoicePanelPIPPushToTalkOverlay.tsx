@@ -12,9 +12,9 @@ import module_1654_mod from "../../../../../_runtime/metro/01654__.js";
 
 const require = globalThis.__r;
 
-const _modDef19549 = tmp4(19549);
+const _modDef19565 = tmp4(19565);
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(11782).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(11790).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let module_1654 = module_1654_mod;
@@ -273,7 +273,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   obj8.children = closure_7(closure_11, {
     style: animatedStyle1,
     size: require("native").Icon.Sizes.SMALL_20,
-    source: _modDef19549,
+    source: _modDef19565,
     disableColor: true,
   });
   obj7.children = closure_7(NativeView, obj8);

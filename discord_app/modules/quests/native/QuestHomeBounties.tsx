@@ -31,7 +31,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
     showOrbShopPlaceholderCarousel = false;
   }
   let questHomeBounties;
-  questHomeBounties = questHomeBounties(9892).useQuestHomeBounties().questHomeBounties;
+  questHomeBounties = questHomeBounties(9893).useQuestHomeBounties().questHomeBounties;
   const tmp3 = closure_11();
   closure_129_0 = undefined;
   closure_129_1 = undefined;
@@ -42,8 +42,8 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   } else {
     items1 = [];
   }
-  const obj = questHomeBounties(9892);
-  const tmp4 = _slicedToArray(questHomeBounties(9561).useSelectedDismissibleContent(items1), 2);
+  const obj = questHomeBounties(9893);
+  const tmp4 = _slicedToArray(questHomeBounties(9562).useSelectedDismissibleContent(items1), 2);
   const first = tmp4[0];
   closure_129_0 = first;
   closure_129_1 = tmp6;
@@ -73,7 +73,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       };
     }
   }, items3);
-  const tmpResult = questHomeBounties(9561);
+  const tmpResult = questHomeBounties(9562);
   const items4 = [BountyStore];
   const items5 = [questHomeBounties];
   ({ placement, buttonVariant, clickable } = shopCarouselConfig.shopCarouselConfig);
@@ -91,9 +91,9 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       let tmp11 = "none" !== placement && obtainableOrbRewards > 0;
       if (tmp11) {
         tmp11 =
-          orbShopProducts.length >= tmp(16590).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          orbShopProducts.length >= tmp(16597).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         const tmp12 =
-          orbShopProducts.length >= tmp(16590).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          orbShopProducts.length >= tmp(16597).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
       }
       if (!tmp11) {
         const obj2 = { style: tmp3.container, children: null };

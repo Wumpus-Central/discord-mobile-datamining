@@ -51,7 +51,7 @@ export default function useConjureMakePersonal(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -96,7 +96,7 @@ export default function useConjureMakePersonal(id) {
           } else {
             dependencyMap = 0;
             closure_129_1(false);
-            tmp3(18511)(closure_129_0, "removed");
+            tmp3(11457)(closure_129_0, "removed");
             integrationStatus = integrationStatus.getIntegrationStatus(closure_129_0.id);
             let prop;
             if (integrationStatus != null) {
@@ -127,8 +127,8 @@ export default function useConjureMakePersonal(id) {
     items2,
   );
   if (null != target) {
-    result = tmp4(12508).conjureRemoveAppKeptChannels(target);
-    const tmp4Result = tmp4(12508);
+    result = tmp4(12516).conjureRemoveAppKeptChannels(target);
+    const tmp4Result = tmp4(12516);
   }
   obj3.keptChannels = result;
   obj3.error = tmp2[0];

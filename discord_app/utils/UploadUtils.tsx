@@ -157,7 +157,7 @@ export function getAttachmentPayload(id) {
     obj.title = id.clip.name;
     obj.application_id = id.clip.applicationId;
     obj.clip_created_at = clipPayloadUtils.getClipCreatedAt(id.clip.createdAt);
-    obj.clip_participant_ids = clipPayloadUtils.getClipParticipantIds(id.clip.users);
+    obj.clip_participant_ids = clipPayloadUtils.getClipParticipantIds(id.clip);
     obj.clip_remote_id = id.clip.remoteClipId;
     obj.clip_events_timeline = clipPayloadUtils.getClipEventsTimeline(id.clip);
     obj.clip_sync_timestamp = clipPayloadUtils.getClipSyncTimestamp(id.clip);

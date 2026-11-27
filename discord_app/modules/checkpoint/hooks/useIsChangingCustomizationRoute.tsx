@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 const require = fn;
-let closure_5 = fn(12631).CHECKPOINT_CHARACTER_STAGE_FADE;
+let closure_5 = fn(12639).CHECKPOINT_CHARACTER_STAGE_FADE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/hooks/useIsChangingCustomizationRoute.tsx");
 

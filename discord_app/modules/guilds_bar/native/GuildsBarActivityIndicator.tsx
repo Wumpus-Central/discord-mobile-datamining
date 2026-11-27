@@ -8,32 +8,32 @@ import StageIcon from "../../../design/components/Icon/native/redesign/generated
 import VoiceNormalIcon from "../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import _modDef8107 from "../../../../_runtime/metro/08107__.js";
-import _modDef8606 from "../../../../_runtime/metro/08606__.js";
+import _modDef8607 from "../../../../_runtime/metro/08607__.js";
 import CalendarIcon from "../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
 import useGuildsBarGuildMediaStateDefault from "../useGuildsBarGuildMediaState.tsx";
-import _modDef18118 from "../../../../_runtime/metro/18118__.js";
-import _modDef18119 from "../../../../_runtime/metro/18119__.js";
-import _modDef18120 from "../../../../_runtime/metro/18120__.js";
+import _modDef18125 from "../../../../_runtime/metro/18125__.js";
+import _modDef18126 from "../../../../_runtime/metro/18126__.js";
+import _modDef18127 from "../../../../_runtime/metro/18127__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef8606 };
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef8607 };
     let tmp6 = obj2;
   } else if (tmp4) {
     const obj3 = { icon: StageIcon.StageIcon, source: _modDef8107 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18118 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18125 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18119 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18126 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18120 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18127 };
     tmp6 = obj6;
   } else {
     tmp6 = null;

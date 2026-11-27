@@ -6,13 +6,13 @@ import BrowserManager from "../../../links/native/BrowserManager.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.HNqvOh);
   },
-  parent: fn(9555).MobileUserSettings.WEB_BROWSER,
+  parent: fn(9556).MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
     const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };
@@ -33,7 +33,7 @@ const pressable = SettingBuilders.createPressable({
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -65,7 +65,7 @@ const pressable = SettingBuilders.createPressable({
             obj7.text = intl.string(tmp4(1112).t["zaEQz+"]);
             v1(5725).open("web-browser-data-cleared", obj7);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp7) {
           dependencyMap = tmp;

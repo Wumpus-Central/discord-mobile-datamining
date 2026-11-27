@@ -99,15 +99,12 @@ function UserResult(user) {
     isMobileOnline,
     isVROnline,
     status: null,
-    streaming: "27e035ad5fa1ad1578afd576269792da",
-    style: "hu.messages.27e035ad5fa1ad1578afd576269792da.compiled.messages",
+    streaming: "64531c056858ca55f59d97d370d15b9a",
+    style: "nl.messages.64531c056858ca55f59d97d370d15b9a.compiled.messages",
     size: "jsona",
-    animate:
-      "(function pnpm_KeyframeTs1(){let[keyframes,delayFunction,delay,withTiming,Easing,withSequence,initialValues,makeKeyframeKey,callback]=this.__closure;const animations={};const addAnimation=function(key){const keyframePoints=keyframes[key];if(keyframePoints.length===0){return;}const animation=delayFunction(delay,keyframePoints.length===1?withTiming(keyframePoints[0].value,{duration:keyframePoints[0].duration,easing:keyframePoints[0].easing?keyframePoints[0].easing:Easing.linear}):withSequence(...keyframePoints.map(function(keyframePoint){return withTiming(keyframePoint.value,{duration:keyframePoint.duration,easing:keyframePoint.easing?keyframePoint.easing:Easing.linear});})));if(key.includes('transform')){if(!('transform'in animations)){animations.transform=[];}animations.transform.push({[key.split(':')[1]]:animation});}else{animations[key]=animation;}};Object.keys(initialValues).forEach(function(key){if(key.includes('transform')){initialValues[key].forEach(function(transformProp,index){Object.keys(transformProp).forEach(function(transformPropKey){addAnimation(makeKeyframeKey(index,transformPropKey));});});}else{addAnimation(key);}});return{animations:animations,initialValues:initialValues,callback:callback};})",
-    typing:
-      "(function pnpm_KeyframeTs2(delay,animation){let[withDelay,reduceMotion]=this.__closure;return withDelay(delay,animation,reduceMotion);})",
-    autoStatusCutout:
-      "(function pnpm_KeyframeTs3(_,animation){let[getReduceMotionFromConfig,reduceMotion]=this.__closure;animation.reduceMotion=getReduceMotionFromConfig(reduceMotion);return animation;})",
+    animate: "ConjureAppPictureInPicture",
+    typing: null,
+    autoStatusCutout: null,
   };
   let tmp19 = null;
   if (!user.isSystemUser()) {
@@ -157,7 +154,7 @@ function UserResult(user) {
         muted: flag,
         layout: tmp6(5704).ChannelListLayoutTypes.COMPACT,
       };
-      tmp14Result = closure_12(tmp6(10638).ChannelRowPreview, obj9);
+      tmp14Result = closure_12(tmp6(10639).ChannelRowPreview, obj9);
     }
   }
   const obj10 = { children: null };
@@ -189,7 +186,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(16929)(channel, { unread });
+  obj4.lastMessage = channel(16936)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

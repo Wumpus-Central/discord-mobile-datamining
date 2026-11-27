@@ -17,13 +17,13 @@ const obj = {
   wrapperOffset: null,
 };
 let ReanimatedHelperTypes = fn(7429);
-obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(15984).MediaPlaybackPanelModes.PIP);
+obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(15991).MediaPlaybackPanelModes.PIP);
 obj.setMode = function setMode() {
   const error = new Error("MediaPlaybackPanelModes.Provider.setMode: not called within a context provider");
   throw error;
 };
 ReanimatedHelperTypes = fn(7429);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11783).MorphablePanelModes.PIP);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11791).MorphablePanelModes.PIP);
 ReanimatedHelperTypes = fn(7429);
 obj.wrapperDimensions = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0 });
 ReanimatedHelperTypes = fn(7429);
@@ -32,7 +32,7 @@ ReanimatedHelperTypes = fn(7429);
 obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
 ReanimatedHelperTypes = fn(7429);
 obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-obj.dismissToPipGestureRef = { current: "r" };
+obj.dismissToPipGestureRef = { current: "top" };
 obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;

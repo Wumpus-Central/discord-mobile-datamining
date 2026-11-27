@@ -179,9 +179,9 @@ export function SearchAttachmentMediaImage(attachment) {
   const merged = Object.assign(attachment, Object.assign({ attachment: 0, channelId: 0, authorId: 0 }));
   dependencyMap = undefined;
   const enabledHarmTypesBitmaskForChannelAndAuthorId = attachment(
-    10680,
+    10681,
   ).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
-  const obj = attachment(10680);
+  const obj = attachment(10681);
   let num = attachment.flags;
   if (num == null) {
     num = 0;
@@ -204,7 +204,7 @@ export function SearchAttachmentMediaImage(attachment) {
   );
   const obj2 = attachment(1405);
   const obj3 = {};
-  const attachmentUrl = attachment(8810).getAttachmentUrl(attachment);
+  const attachmentUrl = attachment(8811).getAttachmentUrl(attachment);
   const merged1 = Object.assign(merged);
   obj3.channelId = channelId;
   obj3.obscureReason = memo;
@@ -216,8 +216,8 @@ export function SearchEmbedMediaImage(embed) {
   embed = embed.embed;
   ({ sources: importDefault, messageId: dependencyMap, channelId } = embed);
   const merged = Object.assign(embed, Object.assign({ embed: 0, sources: 0, messageId: 0, channelId: 0, authorId: 0 }));
-  closure_3 = embed(10680).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
-  const obj = embed(10680);
+  closure_3 = embed(10681).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
+  const obj = embed(10681);
   const tmp2 = embed;
   closure_4 = embed(6849).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
   const obj2 = embed(6849);
@@ -252,9 +252,9 @@ export function SearchEmbedMediaImage(embed) {
   let embedUrl = null;
   if (null != video) {
     ({ proxyURL: obj5.proxyURL, url: obj5.url } = video);
-    embedUrl = tmp2(8810).getEmbedUrl({ proxyURL: null, url: null });
+    embedUrl = tmp2(8811).getEmbedUrl({ proxyURL: null, url: null });
     const obj4 = { proxyURL: null, url: null };
-    let tmp2Result = tmp2(8810);
+    let tmp2Result = tmp2(8811);
   }
   let height;
   if (video != null) {

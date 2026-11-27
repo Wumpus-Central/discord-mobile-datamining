@@ -185,8 +185,8 @@ function PreviewItem(overState) {
           parentId: "Path",
           name: "Array",
           color: "analyticsLocations",
-          expanded: null,
-          children: null,
+          expanded: "r",
+          children: "isArray",
         };
         items = [tmp2];
         element.children = items;
@@ -398,7 +398,7 @@ function AnimatedItemPreview(cleanUp) {
     };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(18082), obj5);
+    let tmp22Result = tmp22(tmp4(18089), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
@@ -406,14 +406,14 @@ function AnimatedItemPreview(cleanUp) {
       tmp25 = transitionState === tmp2(5104).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(18102), obj6);
-    const tmp4Result = tmp4(18102);
+    tmp22Result = tmp22(tmp4(18109), obj6);
+    const tmp4Result = tmp4(18109);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1654.View, obj4);
 }
 let GuildsNodeType = fn(6164).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(18071).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(18078).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
 let createStyles = fn(5043);
 let closure_8 = createStyles.createStyles({
@@ -505,12 +505,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: true,
-            scrollPosition: "/assets/design/components/Icon/native/redesign/generated/images",
-            dragRegion: 24,
-            windowSize: 24,
-            dropComplete: null,
-            listInsets: "38f7d2f2d427a5f45efdf121101c72d6",
+            gestureState: "absolute",
+            scrollPosition: "50%",
+            dragRegion: "50%",
+            windowSize: -12,
+            dropComplete: -12,
+            listInsets: "row",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;

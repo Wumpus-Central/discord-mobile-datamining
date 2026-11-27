@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const TextInput_TextInputDefault = tmp18(8562);
+const TextInput_TextInputDefault = tmp18(8563);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
@@ -318,7 +318,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     BottomSheetScrollView = onChangeText;
   }
   if (inActionSheet) {
-    let BottomSheetTextInput = tmp2(8561).BottomSheetTextInput;
+    let BottomSheetTextInput = tmp2(8562).BottomSheetTextInput;
   } else {
     BottomSheetTextInput = TextInput_TextInputDefault;
   }

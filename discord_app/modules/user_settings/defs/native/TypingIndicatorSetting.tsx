@@ -11,7 +11,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 const TypingIndicatorSetting = "TypingIndicatorSetting";
-let DismissibleBadgeUtils = fn(16226);
+let DismissibleBadgeUtils = fn(16233);
 let closure_6 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
   fn(4876).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
   function useCanShowLaunchBadge() {
@@ -19,7 +19,7 @@ let closure_6 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
       .enabled;
   },
 );
-DismissibleBadgeUtils = fn(16226);
+DismissibleBadgeUtils = fn(16233);
 let closure_7 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
   fn(4876).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE,
   function useCanShowNewPresetsBadge() {
@@ -27,14 +27,14 @@ let closure_7 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
       .enabled;
   },
 );
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef4247["pT+BVM"]);
   },
   parent: null,
-  IconComponent: fn(16970).ChatDotsIcon,
+  IconComponent: fn(16977).ChatDotsIcon,
   useTrailing() {
     const obj = CustomTypingIndicatorNewPresetsExperiment;
     const DismissibleContent = dismissible_content.DismissibleContent;
@@ -50,7 +50,7 @@ const route = SettingBuilders.createRoute({
     );
   },
   usePreNavigationAction() {
-    enabled = enabled(16969).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
+    enabled = enabled(16976).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
     const tmp = closure_6();
     closure_1 = tmp;
     const tmp2 = closure_7();

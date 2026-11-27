@@ -73,7 +73,7 @@ function GuildInviteSuggestionRows(openInviteSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(10496).useInstantInviteSendStates;
+let closure_6 = fn(10497).useInstantInviteSendStates;
 const CreateGuildModalStates = fn(7335).CreateGuildModalStates;
 const Constants = fn(1071);
 ({

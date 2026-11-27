@@ -39,7 +39,7 @@ let closure_27 = async function _handleConnectionOpen(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -185,7 +185,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1071);
 ({ RTCConnectionStates: closure_17, AppStates: closure_18 } = Constants);
 const UserSettingsTypes = fn(1081).UserSettingsTypes;
-fn(15103).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(15110).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_21 = new LoggerDefault("ConnectionStore");
 let closure_22 = 0;
 let c23 = null;
@@ -538,9 +538,9 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(15103).socket;
+          const socket = closure_0(15110).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(15103).socket;
+            const socket2 = closure_0(15110).socket;
             socket2.streamDelete(item);
           }
         });

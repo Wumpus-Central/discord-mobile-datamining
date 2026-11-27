@@ -218,7 +218,7 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(8560), obj10);
+  obj9.children = closure_16(pendingAdditions(8561), obj10);
   const items5 = [closure_16(closure_7, obj9), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
@@ -241,7 +241,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(8565).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(8566).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1112).intl;
         const obj17 = { query: str };
@@ -262,7 +262,7 @@ export default function AddMembersBody(pendingAdditions) {
     sections: null,
     keyboardShouldPersistTaps: "always",
   };
-  const tmp4Result = pendingAdditions(8560);
+  const tmp4Result = pendingAdditions(8561);
   obj19.contentContainerStyle = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
     paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5618)(obj).insets.bottom,

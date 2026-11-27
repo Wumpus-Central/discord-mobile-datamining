@@ -23,7 +23,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1112).intl;
     obj.label = intl.string(entry(1112).t.XnuOvN);
-    obj.IconComponent = entry(9624).PencilIcon;
+    obj.IconComponent = entry(9625).PencilIcon;
     obj.action = function handleEdit() {
       GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
     };
@@ -68,7 +68,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     const obj3 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1112).intl;
     obj3.label = intl3.string(entry(1112).t.Aen9eh);
-    obj3.IconComponent = entry(9790).FlagIcon;
+    obj3.IconComponent = entry(9791).FlagIcon;
     obj3.action = function handleReport() {
       const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     };
@@ -90,7 +90,7 @@ export default function GuildDirectoryMoreMenu(entry) {
         return jsx(entry(7944).IconButton, { ref: ref.ref });
       },
     };
-    tmp9 = jsx(entry(9067).ContextMenu, {
+    tmp9 = jsx(entry(9068).ContextMenu, {
       items,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));

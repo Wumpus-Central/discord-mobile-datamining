@@ -32,30 +32,30 @@ export default noop.memo(function QuestDockPlayableBody() {
       closure_3 = tmp3;
       closure_4 = tmp19;
       const tmp25 = getQuestImpressionId();
-      recordPlayableLaunchResult(9857).captureAdUserAction({
-        type: recordPlayableLaunchResult(9861).AdUserActionType.CLICK_INTERNAL,
+      recordPlayableLaunchResult(9858).captureAdUserAction({
+        type: recordPlayableLaunchResult(9862).AdUserActionType.CLICK_INTERNAL,
         adCreativeType: recordPlayableLaunchResult(6878).AdCreativeType.PLAYABLE,
         adCreativeId: questDockPlayable.id,
-        questContentCTA: recordPlayableLaunchResult(8392).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+        questContentCTA: recordPlayableLaunchResult(8393).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
         surfaceId: recordPlayableLaunchResult(6874).QuestContent.QUEST_BAR_MOBILE,
         sourceQuestContent: recordPlayableLaunchResult(6874).QuestContent.QUEST_BAR_MOBILE,
         impressionId: tmp25,
       });
-      recordPlayableLaunchResult = recordPlayableLaunchResult(16810).recordPlayableLaunch(questDockPlayable, tmp25);
+      recordPlayableLaunchResult = recordPlayableLaunchResult(16817).recordPlayableLaunch(questDockPlayable, tmp25);
       closure_132_0 = recordPlayableLaunchResult;
       constants = 1;
       setRestingQuestDockMode(constants.COLLAPSED);
-      const tmp52 = recordPlayableLaunchResult(16810);
+      const tmp52 = recordPlayableLaunchResult(16817);
       const completePlayableLaunch = tmp52.completePlayableLaunch;
-      yield completePlayableLaunch(12291).launch({
+      yield completePlayableLaunch(12299).launch({
         applicationId: questDockPlayable.applicationId,
         analyticsLocations,
       });
       if (1 === tmp7) {
         constants = 0;
-        const result = recordPlayableLaunchResult(16810).completePlayableLaunch(closure_132_0, false);
+        const result = recordPlayableLaunchResult(16817).completePlayableLaunch(closure_132_0, false);
         c7 = 3;
-        recordPlayableLaunchResult(16810);
+        recordPlayableLaunchResult(16817);
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;

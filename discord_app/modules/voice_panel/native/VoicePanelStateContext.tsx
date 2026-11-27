@@ -3,8 +3,8 @@ import VoicePanelCardLayoutManagerDefault from "card/VoicePanelCardLayoutManager
 import VoicePanelPIPHandoffDefault from "pip/VoicePanelPIPHandoff.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const VoicePanelModes = fn(11782).VoicePanelModes;
-const VoicePanelControlsConstants = fn(11780);
+const VoicePanelModes = fn(11790).VoicePanelModes;
+const VoicePanelControlsConstants = fn(11788);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
 const obj = {
   channelId: "context-not-initialized",
@@ -60,12 +60,12 @@ const obj = {
   sheetExitProgress: null,
   showControls: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
   showFloatingCTA: null,
-  streamOutputSinkStack: "\u{1F418}",
-  windowDimensions: 6,
-  wrapperDimensions: 326,
-  useReducedMotion: "man_guard_tone4",
-  wrapperOffset: "man_guard_medium_dark_skin_tone",
-  pipHandoff: 1090584577,
+  streamOutputSinkStack: "\u{1F9AD}",
+  windowDimensions: 13,
+  wrapperDimensions: 318,
+  useReducedMotion: "/developers",
+  wrapperOffset: null,
+  pipHandoff: "/developers/teams",
 };
 let ReanimatedHelperTypes = fn(7429);
 obj.connected = ReanimatedHelperTypes.createFakeSharedValue(false);
@@ -115,7 +115,7 @@ obj.dockPressProgress = ReanimatedHelperTypes.createFakeSharedValue(0);
 ReanimatedHelperTypes = fn(7429);
 obj.dockPressed = ReanimatedHelperTypes.createFakeSharedValue(false);
 obj.dockPTTMeasureHostRef = { current: null };
-obj.dismissToPIPGestureRef = { current: "r" };
+obj.dismissToPIPGestureRef = { current: "top" };
 ReanimatedHelperTypes = fn(7429);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(7429);
@@ -142,7 +142,7 @@ obj.layoutManager = new VoicePanelCardLayoutManagerDefault("invalid");
 ReanimatedHelperTypes = fn(7429);
 obj.mode = ReanimatedHelperTypes.createFakeSharedValue(VoicePanelModes.PANEL);
 ReanimatedHelperTypes = fn(7429);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11783).MorphablePanelModes.PANEL);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11791).MorphablePanelModes.PANEL);
 const obj2 = {
   mode: VoicePanelControlsModes.FLOATING_DEFAULT,
   locked: false,

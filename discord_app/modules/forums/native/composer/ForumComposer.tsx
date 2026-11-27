@@ -131,7 +131,7 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(11077).TagIcon;
+      obj6.IconComponent = tmp2(11078).TagIcon;
       obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -161,12 +161,12 @@ function ActionBar(channel) {
             closure_1_7 !== channel(1627).KeyboardTypes.SYSTEM &&
             closure_1_7 !== channel(1627).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11699, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11707, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
       tmp10 = closure_29(tmp2(7751).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10786).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10787).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -178,7 +178,7 @@ function ActionBar(channel) {
       const intl3 = tmp2(1112).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1112).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(9704).ReactionIcon;
+      obj7.IconComponent = tmp2(9705).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
       tmp18 = closure_29(tmp2(7751).HeaderActionButton, obj7);
     }
@@ -218,7 +218,7 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11697).KeyboardIcon;
+      let ImageIcon = tmp2(11705).KeyboardIcon;
     } else {
       ImageIcon = tmp2(7153).ImageIcon;
     }
@@ -245,7 +245,7 @@ get_ActivityIndicator = fn(17);
   View: closure_9,
 } = get_ActivityIndicator);
 const DraftType = fn(8117).DraftType;
-const SlowmodeType = fn(8350).SlowmodeType;
+const SlowmodeType = fn(8351).SlowmodeType;
 let Constants = fn(1071);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(4899).ChannelFlags;
@@ -617,7 +617,7 @@ export default function ForumComposer(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -770,7 +770,7 @@ export default function ForumComposer(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

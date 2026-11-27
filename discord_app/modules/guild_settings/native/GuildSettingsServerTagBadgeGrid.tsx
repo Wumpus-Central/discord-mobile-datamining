@@ -9,7 +9,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(8579).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8580).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5043);
@@ -69,7 +69,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
         children: null,
       };
       size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-      obj.children = closure_1_7(guildId(15324).GuildBadge, size);
+      obj.children = closure_1_7(guildId(15331).GuildBadge, size);
       return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
     }),
   });
@@ -84,7 +84,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     const substr = lockedBadges.slice(0, 10);
     obj5.children = substr.map((badge) => {
       size = { badge: badge.kind, width: 21, height: 21 };
-      return closure_1_7(guildId(15324).GuildBadge, size, badge.kind);
+      return closure_1_7(guildId(15331).GuildBadge, size, badge.kind);
     });
     const items2 = [closure_7(closure_5, obj5), ,];
     const obj6 = { variant: "body-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };

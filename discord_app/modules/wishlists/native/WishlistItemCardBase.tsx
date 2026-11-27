@@ -25,7 +25,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9788).HeartIcon, {
+    children: closure_5(toastText(9789).HeartIcon, {
       color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
       size: "md",
     }),

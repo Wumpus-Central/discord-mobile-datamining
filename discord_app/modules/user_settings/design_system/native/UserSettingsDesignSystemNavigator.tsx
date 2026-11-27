@@ -180,7 +180,7 @@ function DemoNavigator(arg0) {
     obj7.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(7191).NavigatorHeader, {
         title: constants.ICON,
-        icon: closure_1_7(closure_1_0(17452).SparklesIcon, { size: "sm" }),
+        icon: closure_1_7(closure_1_0(17459).SparklesIcon, { size: "sm" }),
       });
     };
     obj7.render = function render() {

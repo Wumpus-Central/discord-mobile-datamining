@@ -25,7 +25,7 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1071).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(8947).AutocompleterResultTypes.USER];
+let items = [fn(8948).AutocompleterResultTypes.USER];
 const createStyles = fn(5043);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
@@ -104,7 +104,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(11436), obj4);
+    return closure_15(guildMember(11437), obj4);
   }
   const obj = guild(1501);
 });
@@ -306,7 +306,7 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(8625), accessibilityLabel: null, ref: null };
+            const obj = { source: closure_1_1(8626), accessibilityLabel: null, ref: null };
             const intl = closure_1_0(1112).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1112).t.ogxXGq);
             obj.ref = ref.ref;

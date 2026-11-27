@@ -46,7 +46,7 @@ export function ScheduleEventPrompt(isLive) {
       onPress: function handleScheduleEvent() {
         const result = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(closure_1_0, { channel });
       },
-      iconSource: channel(8609),
+      iconSource: channel(8610),
       iconStyle: tmp.promptIconStyle,
       completed: isLive.isLive,
       title: null,
@@ -61,7 +61,7 @@ export function ScheduleEventPrompt(isLive) {
       onPress: function handleScheduleEvent() {
         const result = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(closure_1_0, { channel });
       },
-      iconSource: channel(8609),
+      iconSource: channel(8610),
       iconStyle: tmp.promptIconStyle,
       completed: isLive.isLive,
       title: null,
@@ -83,7 +83,7 @@ export function StartEventPrompt(event) {
       onPress: function handleStartEvent() {
         const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
       },
-      iconSource: recurrenceId(8606),
+      iconSource: recurrenceId(8607),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -105,7 +105,7 @@ export function StartEventPrompt(event) {
       onPress: function handleStartEvent() {
         const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
       },
-      iconSource: recurrenceId(8606),
+      iconSource: recurrenceId(8607),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,

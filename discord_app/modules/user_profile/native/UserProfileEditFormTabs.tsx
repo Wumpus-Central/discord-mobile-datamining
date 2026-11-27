@@ -149,7 +149,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   const tmp6Result = tmp6(first.useState(num2), 2);
   first = tmp6Result[0];
   absoluteFill = tmp6Result[1];
-  arr5 = tmp15(14566)(userId);
+  arr5 = tmp15(14573)(userId);
   closure_7 = tmp20;
   const items5 = [arr5];
   const memo = first.useMemo(() => arr5.filter(UserProfileGameWidgetTypes.isGameWidget), items5);

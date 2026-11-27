@@ -124,7 +124,7 @@ function BountiesModalContentInner(bounty) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -196,7 +196,7 @@ function BountiesModalContentInner(bounty) {
                     let _Math = Math;
                     let result = arr[num3] / tmp4;
                     let rounded = Math.round(
-                      result * (closure_1_0(9453).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
+                      result * (closure_1_0(9454).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
                     );
                     let obj2 = {
                       time: num4,
@@ -219,7 +219,7 @@ function BountiesModalContentInner(bounty) {
               }
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp39) {
           if (tmp4 === c3) {
@@ -603,7 +603,7 @@ function BountiesModalContentWithAppStore(arg0) {
 const View = fn(17).View;
 const QuestConstants = fn(6871);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16526);
+const BountiesModalConstants = fn(16533);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } =
   BountiesModalConstants);
 const Constants = fn(1071);

@@ -19,8 +19,8 @@ export default function MessageRequestInAppNotification(notification) {
     return obj;
   }, items);
   const callback = noop.useCallback(() => {
-    numMutualGuilds(10628).clearNotification();
-    const obj = numMutualGuilds(10628);
+    numMutualGuilds(10629).clearNotification();
+    const obj = numMutualGuilds(10629);
     const rootNavigationRef = author(5220).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
@@ -36,10 +36,10 @@ export default function MessageRequestInAppNotification(notification) {
   const obj3 = { text: null };
   let intl = author(1112).intl;
   obj3.text = intl.string(author(1112).t["Bx4/Lf"]);
-  obj.children = jsx(author(10636).SystemMessageText, { text: null });
+  obj.children = jsx(author(10637).SystemMessageText, { text: null });
   obj.onPress = callback;
   obj.notification = notification;
-  return jsx(author(10675).NotificationPressable, {
+  return jsx(author(10676).NotificationPressable, {
     icon: jsx(author(1186).Avatar, { user: author, size: author(1186).AvatarSizes.NORMAL, guildId: "Array" }),
     header: memo,
     children: null,

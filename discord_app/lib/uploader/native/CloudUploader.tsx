@@ -39,7 +39,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -62,7 +62,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
             closure_130_5 = undefined;
             closure_130_6 = undefined;
             let uploadTarget;
-            closure_130_0 = files(10778).backgroundTaskIdentifierInvalid;
+            closure_130_0 = files(10779).backgroundTaskIdentifierInvalid;
             self.once(
               "start",
               tmp4(function* () {
@@ -76,7 +76,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -97,7 +97,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
                         const obj5 = { count: length.length };
                         obj4.content = intl2.formatToPlainString(closure_2_0(1112).t.D0noUt, obj5);
                         c2 = 1;
-                        const obj7 = { value: files(10778).startBackgroundTask(obj4), done: false };
+                        const obj7 = { value: files(10779).startBackgroundTask(obj4), done: false };
                         return obj7;
                       }
                     } else if (arg0 === 1) {
@@ -110,11 +110,11 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
                     } else {
                       closure_128_0 = value;
                       if (tmp2._aborted) {
-                        files(10778).endBackgroundTask(closure_128_0);
-                        const obj = files(10778);
+                        files(10779).endBackgroundTask(closure_128_0);
+                        const obj = files(10779);
                       }
                       c2 = 3;
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp13) {
                     c2 = tmp;
@@ -157,7 +157,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
             }
             self._file.attachmentsCount = arr.length;
             self._handleStart(undefined);
-            obj8 = _self(10780);
+            obj8 = _self(10781);
             closure_130_3 = obj8.shouldCheckUploadSizeOnlyAfterCompression();
             closure_130_4 = 0;
             files = self.files;
@@ -196,7 +196,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
           closure_131_0._file.totalPreCompressionSize = closure_130_4;
           closure_131_0._file.currentSize = closure_130_4;
           if (!closure_130_3) {
-            uploadTarget = _self(8157).getUploadTarget(closure_130_5.item.target);
+            uploadTarget = _self(8158).getUploadTarget(closure_130_5.item.target);
             if (closure_130_6 > uploadTarget.getMaxFileSize(closure_130_5.channelId)) {
               const obj6 = { code: tmp63.ENTITY_TOO_LARGE, reason: null };
               let obj7 = { type: constants.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE };
@@ -220,13 +220,13 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
               const obj14 = { value: closure_130_2, done: true };
               return obj14;
             }
-            let obj = _self(8157);
+            let obj = _self(8158);
           }
           c5 = 1;
           if (_self === undefined) {
             const _HermesInternal2 = HermesInternal;
             logger.log("" + closure_131_0.id + " queued");
-            files(10782).enqueue(() => {
+            files(10783).enqueue(() => {
               closure_1_0.startUpload();
               return closure_1_0;
             });
@@ -239,7 +239,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
             closure_130_5 = tmp49;
             constants = 3;
             logger = 1;
-            const obj16 = { value: _self(10781).getPreCompressionFileSize(closure_130_5.item), done: false };
+            const obj16 = { value: _self(10782).getPreCompressionFileSize(closure_130_5.item), done: false };
             return obj16;
           }
         }
@@ -269,7 +269,7 @@ prototype["startUpload"] = function startUpload() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -366,7 +366,7 @@ prototype["startUpload"] = function startUpload() {
             } else {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           }
           const _HermesInternal2 = HermesInternal;

@@ -374,14 +374,14 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         str4 = "";
       }
       obj15.nextTierName = str4;
-      const tmp4Result = tmp4(11175);
+      const tmp4Result = tmp4(11176);
       const tmp79 = currentIndex;
-      obj15.nextTierIcon = tmp(11156).getGiftingBadgeTierIconUrl(nextTier);
+      obj15.nextTierIcon = tmp(11157).getGiftingBadgeTierIconUrl(nextTier);
       obj15.analyticsLocation = tmp4(6380).PREMIUM_GIFT_PLAN_SELECTION;
       obj14.children = tmp74(tmp4Result, obj15);
       obj13.children = tmp74(tmp79, obj14);
       tmp74Result = tmp74(tmp75, obj13);
-      const tmpResult7 = tmp(11156);
+      const tmpResult7 = tmp(11157);
     }
     const items16 = [tmp74Result, ,];
     const obj16 = { style: tmp13.dmGiftingContent, children: null };
@@ -392,7 +392,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         let tmp74Result4 = null != recipientUser;
         if (tmp74Result4) {
           const obj17 = { giftRecipient: recipientUser };
-          tmp74Result4 = tmp74(tmp(11210).PremiumGiftWishlistBanner, obj17);
+          tmp74Result4 = tmp74(tmp(11211).PremiumGiftWishlistBanner, obj17);
         }
         items16[2] = tmp74Result4;
         obj11.children = items16;
@@ -434,13 +434,13 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       };
       size.customAnimation = callback3;
       size.onSnapToItem = tmp16;
-      tmp74Result6 = tmp74(tmp4(11176), size);
-      const tmp4Result5 = tmp4(11176);
+      tmp74Result6 = tmp74(tmp4(11177), size);
+      const tmp4Result5 = tmp4(11177);
     }
     tmp76 = callback2;
   } else {
     if (tmp18) {
-      tmp18 = c12(tmp4(10018), { animated: true, barStyle: "light-content" });
+      tmp18 = c12(tmp4(10019), { animated: true, barStyle: "light-content" });
     }
     const items17 = [tmp18, , , , ,];
     const obj21 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -460,7 +460,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     const items19 = [,];
     ({ headerImageContainer: arr20[0], headerImage: arr20[1] } = tmp13);
     obj25.style = items19;
-    obj25.source = tmp4(11671);
+    obj25.source = tmp4(11679);
     items17[2] = c12(tmp4(5730), obj25);
     const obj26 = { style: null };
     const items20 = [,];
@@ -517,12 +517,12 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
           str3 = "";
         }
         obj36.nextTierName = str3;
-        const tmp4Result7 = tmp4(11175);
-        obj36.nextTierIcon = tmp(11156).getGiftingBadgeTierIconUrl(nextTier);
+        const tmp4Result7 = tmp4(11176);
+        obj36.nextTierIcon = tmp(11157).getGiftingBadgeTierIconUrl(nextTier);
         obj36.analyticsLocation = tmp4(6380).PREMIUM_GIFT_PLAN_SELECTION;
         obj35.children = tmp56(tmp4Result7, obj36);
         tmp56Result = tmp56(tmp57, obj35);
-        const tmpResult8 = tmp(11156);
+        const tmpResult8 = tmp(11157);
       }
       items21[3] = tmp56Result;
       if (0 !== stateFromStoresArray.length) {
@@ -587,12 +587,12 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         size1.customAnimation = tmp70;
         size1.modeConfig = { parallaxScrollingScale: 1, parallaxScrollingOffset: 40 };
         size1.onSnapToItem = tmp16;
-        const items23 = [tmp56(tmp4(11176), size1)];
+        const items23 = [tmp56(tmp4(11177), size1)];
         const obj41 = { numberOfItems: arr14.length, currentIndex };
         items23[1] = tmp56(tmp(1186).CarouselPagination, obj41);
         obj40.children = items23;
         tmp56Result3 = tmp53(tmp54, obj40);
-        const tmp4Result8 = tmp4(11176);
+        const tmp4Result8 = tmp4(11177);
       }
     } else {
       const obj42 = { style: tmp13.avatar, guildId: "r", size: "Promise", user: null };

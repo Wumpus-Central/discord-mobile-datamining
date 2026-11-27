@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1263).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "text" }));
+      dropSpecs(1263).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -93,7 +93,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "top" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {

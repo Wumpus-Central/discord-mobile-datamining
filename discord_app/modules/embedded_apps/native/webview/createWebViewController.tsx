@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(10207).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
+let closure_4 = fn(10208).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
 let ComponentActions = fn(1071).ComponentActions;
 const Constants = fn(5797);
 ({ MAX_POST_MESSAGE_STRING_LENGTH: closure_6, TransportTypes: metroImportDefault } = Constants);
@@ -29,7 +29,7 @@ export default function createWebViewController(id, contextSource) {
   }
   ComponentActions = async function _postMessageToWebView(arg0) {
     closure_3 = tmp3;
-    await webViewProxy.injectJavaScript(closure_1(10208)(closure_0, closure_1));
+    await webViewProxy.injectJavaScript(closure_1(10209)(closure_0, closure_1));
     if (1 === tmp7) {
       c5 = 0;
       closure_130_0 = closure_4;

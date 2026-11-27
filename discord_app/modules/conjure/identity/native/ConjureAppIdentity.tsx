@@ -24,7 +24,7 @@ let closure_12 = async function _pickConjureAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -166,7 +166,7 @@ class ConjureAppIconTile {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -204,7 +204,7 @@ class ConjureAppIconTile {
           } else if (1 === tmp7) {
             c2 = 0;
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;

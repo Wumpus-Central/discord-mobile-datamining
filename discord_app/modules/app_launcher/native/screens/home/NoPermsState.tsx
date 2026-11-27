@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export default function EmptyState() {
   const tmp = closure_6();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 13075 : 13076);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 13083 : 13084);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
     AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
   );

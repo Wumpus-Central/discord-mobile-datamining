@@ -109,7 +109,7 @@ export default function useScreenshareUtils(arg0) {
         if (tmp11) {
           if (flag) {
             let fn = function l() {
-              return closure_0(10358).showMobileGoLiveActionSheet(closure_1);
+              return closure_0(10359).showMobileGoLiveActionSheet(closure_1);
             };
           } else {
             fn = tmp14;
@@ -125,17 +125,17 @@ export default function useScreenshareUtils(arg0) {
           const obj = closure_0(6035);
           obj.reportAVError({ type: closure_0(6035).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
           const obj2 = { type: closure_0(6035).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-          const result = closure_0(8636).showMinOSScreenshareRequirementAlert();
+          const result = closure_0(8637).showMinOSScreenshareRequirementAlert();
         };
       }
       obj.onPress = fn;
       if (obj2.isMetaQuest()) {
-        importDefault(tmp ? 10379 : 10380);
+        importDefault(tmp ? 10380 : 10381);
       } else {
         if (showMobileGoLiveUpsell) {
-          let tmp20 = 10381;
+          let tmp20 = 10382;
         } else {
-          tmp20 = tmp ? 10382 : 10381;
+          tmp20 = tmp ? 10383 : 10382;
         }
         obj.imgSource = importDefault(tmp20);
         return obj;
@@ -171,7 +171,7 @@ export function getStreamPressHandler(analyticsLocations) {
     if (hasPermission) {
       if (showMobileGoLiveUpsell) {
         let fn = function l() {
-          return closure_0(10358).showMobileGoLiveActionSheet(closure_1);
+          return closure_0(10359).showMobileGoLiveActionSheet(closure_1);
         };
       } else {
         fn = tmp;
@@ -187,7 +187,7 @@ export function getStreamPressHandler(analyticsLocations) {
       const obj = closure_0(6035);
       obj.reportAVError({ type: closure_0(6035).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
       const obj2 = { type: closure_0(6035).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-      const result = closure_0(8636).showMinOSScreenshareRequirementAlert();
+      const result = closure_0(8637).showMinOSScreenshareRequirementAlert();
     };
   }
   return fn;

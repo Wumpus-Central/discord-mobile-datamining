@@ -20,7 +20,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
           c3 = 0;
           closure_129_3(false);
           c5 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -169,7 +169,7 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       tmp7(6047).show(obj4);
       const tmp7Result4 = tmp7(6047);
     }
-    obj2 = onReset(9802);
+    obj2 = onReset(9803);
   } else {
     onContinue();
   }

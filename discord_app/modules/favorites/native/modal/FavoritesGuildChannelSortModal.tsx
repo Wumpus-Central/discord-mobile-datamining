@@ -19,9 +19,9 @@ export default function FavoritesGuildChannelSortModal() {
     items = [...closure_1_5];
     GuildSettingsModalChannelsActionCreatorsDefault.startReordering.apply(items);
     return () => {
-      closure_1_1(17871).stopReordering();
-      const obj = closure_1_1(17871);
-      closure_1_1(17871).terminate();
+      closure_1_1(17878).stopReordering();
+      const obj = closure_1_1(17878);
+      closure_1_1(17878).terminate();
     };
   }, []);
   const bottom = useSafeAreaInsetsDefault().bottom;
@@ -35,12 +35,12 @@ export default function FavoritesGuildChannelSortModal() {
       const obj = {
         guildId,
         contentContainerStyle: { paddingBottom: 16 + closure_1_0 },
-        onDone: bottom(17868).closeFavoritesGuildChannelSortModal,
+        onDone: bottom(17875).closeFavoritesGuildChannelSortModal,
       };
       return jsx(GuildSettingsModalChannelsDefault, {
         guildId,
         contentContainerStyle: { paddingBottom: 16 + closure_1_0 },
-        onDone: bottom(17868).closeFavoritesGuildChannelSortModal,
+        onDone: bottom(17875).closeFavoritesGuildChannelSortModal,
       });
     };
     obj.FAVORITES_GUILD_CHANNEL_SORT = obj2;

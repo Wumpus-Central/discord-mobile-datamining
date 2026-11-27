@@ -23,7 +23,7 @@ function ChannelRow(channel) {
   ({ selected, guild, start, end } = channel);
   let str = onChannelSelected(5659)(channel);
   items = [onChannelSelected, channel];
-  const channelIconComponentOrDefault = channel(16853).getChannelIconComponentOrDefault(channel, guild);
+  const channelIconComponentOrDefault = channel(16860).getChannelIconComponentOrDefault(channel, guild);
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onChannelSelected(channel);
@@ -171,7 +171,7 @@ export default function ChannelSelectorActionSheet(guildId) {
   if (!hideCreateChannel) {
     const obj7 = { style: tmp.createChannelRow, children: null };
     const obj8 = { start: true, end: true, icon: null, label: null, onPress: null };
-    const obj9 = { IconComponent: tmp6(13792).PlusMediumIcon };
+    const obj9 = { IconComponent: tmp6(13799).PlusMediumIcon };
     obj8.icon = closure_13(tmp6(6144).TableRow.Icon, obj9);
     const intl3 = tmp6(1112).intl;
     obj8.label = intl3.string(tmp6(1112).t.d7AN7W);
@@ -189,7 +189,7 @@ export default function ChannelSelectorActionSheet(guildId) {
         const obj = onChannelSelected(dependencyMap[30]);
       };
       obj2.pushLazy(
-        asyncRequireImpl(8521, dependencyMap.paths),
+        asyncRequireImpl(8522, dependencyMap.paths),
         obj3,
         CreateChannelModalActionCreatorsDefault.CREATE_CHANNEL_MODAL_KEY,
       );

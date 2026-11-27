@@ -59,7 +59,7 @@ get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, Pressable: closure_6, StyleSheet, View: metroImportDefault } = get_ActivityIndicator);
 const QuestConstants = fn(6871);
 ({ QuestDockMode: closure_9, QuestsExperimentLocations: closure_10 } = QuestConstants);
-const QuestDockConstants = fn(16680);
+const QuestDockConstants = fn(16687);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_11, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_12 } =
   QuestDockConstants);
 const VerticalGradient = fn(1071).VerticalGradient;
@@ -237,8 +237,8 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
     isRendered = null != videoUrl;
   }
   if (isRendered) {
-    isRendered = tmp4(9889).isHeroVideoSupported(imageUrl.videoMimetype);
-    const tmp4Result = tmp4(9889);
+    isRendered = tmp4(9890).isHeroVideoSupported(imageUrl.videoMimetype);
+    const tmp4Result = tmp4(9890);
   }
   if (isRendered) {
     let tmp28 = !tmp2;
@@ -249,7 +249,7 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
   }
   const tmp24 = _slicedToArray(noop.useState("active" !== c5.currentState), 2);
   const isAndroidResult = require("PlatformUtils").isAndroid();
-  const QuestBarAndroidVideoExperiment = tmp4(16798).QuestBarAndroidVideoExperiment;
+  const QuestBarAndroidVideoExperiment = tmp4(16805).QuestBarAndroidVideoExperiment;
   if (isRendered) {
     let tmp32 = !isAndroidResult;
     if (isAndroidResult) {
@@ -346,7 +346,7 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
       const obj5 = { uri: videoUrl };
       obj4.source = obj5;
       obj4.paused = tmp8 !== tmp12.EXPANDED;
-      tmp49 = closure_14(tmp4(8880).VideoComponent, obj4);
+      tmp49 = closure_14(tmp4(8881).VideoComponent, obj4);
     }
   }
   let tmp52 = tmp49;

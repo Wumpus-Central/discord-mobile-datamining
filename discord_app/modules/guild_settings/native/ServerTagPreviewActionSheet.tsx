@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(8542).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(8543).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/ServerT
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_8();
-  const guildProfile1 = guildId(8543).useGuildProfile(guildId);
+  const guildProfile1 = guildId(8544).useGuildProfile(guildId);
   let guildProfile = guildProfile1.guildProfile;
   items = [guildId];
   const effect = noop.useEffect(() => {

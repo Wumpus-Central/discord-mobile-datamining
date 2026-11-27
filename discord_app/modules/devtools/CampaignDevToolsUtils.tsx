@@ -6,7 +6,7 @@ import dismissible_content from "../../../discord_common/js/packages/protos/disc
 import MarketingSurfaceType from "../../../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx";
 import premium_marketing_component_properties from "../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx";
 import constants from "../premium/promotions/constants.tsx";
-import _mod9213 from "../../../_runtime/metro/09213__.js";
+import _mod9214 from "../../../_runtime/metro/09214__.js";
 import MarketingComponentPlatform from "../../../discord_common/js/shared/shared-constants/MarketingComponentPlatform.tsx";
 import resolveLocalizedProperties from "../premium/promotions/resolveLocalizedProperties.tsx";
 import MarketingStringFormat from "../premium/promotions/MarketingStringFormat.tsx";
@@ -237,30 +237,30 @@ let closure_6 = {
 };
 let obj2 = {};
 let items = [fn(4876).DismissibleContent.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL];
-obj2[fn(9166).MarketingSurfaceType.ANNOUNCEMENT_MODAL_VARIANT_1] = items;
+obj2[fn(9167).MarketingSurfaceType.ANNOUNCEMENT_MODAL_VARIANT_1] = items;
 let items1 = [fn(4876).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE];
-obj2[fn(9166).MarketingSurfaceType.PREMIUM_TAB] = items1;
+obj2[fn(9167).MarketingSurfaceType.PREMIUM_TAB] = items1;
 let items2 = [fn(4876).DismissibleContent.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL];
-obj2[fn(9166).MarketingSurfaceType.PREMIUM_TAB_POPOVER] = items2;
+obj2[fn(9167).MarketingSurfaceType.PREMIUM_TAB_POPOVER] = items2;
 let items3 = [fn(4876).DismissibleContent.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL];
-obj2[fn(9166).MarketingSurfaceType.NAGBAR] = items3;
+obj2[fn(9167).MarketingSurfaceType.NAGBAR] = items3;
 let items4 = [fn(4876).DismissibleContent.GIFTING_PROMOTION_REMINDER];
-obj2[fn(9166).MarketingSurfaceType.GIFT_REMINDER_COACHMARK] = items4;
+obj2[fn(9167).MarketingSurfaceType.GIFT_REMINDER_COACHMARK] = items4;
 let items5 = [fn(4876).DismissibleContent.GIFTING_PROMOTION_REMINDER];
-obj2[fn(9166).MarketingSurfaceType.GIFT_REMINDER_NAGBAR] = items5;
+obj2[fn(9167).MarketingSurfaceType.GIFT_REMINDER_NAGBAR] = items5;
 const items6 = [fn(4876).DismissibleContent.PREMIUM_SHOP_NAGBAR_NOTICE];
-obj2[fn(9166).MarketingSurfaceType.SHOP_NAGBAR] = items6;
+obj2[fn(9167).MarketingSurfaceType.SHOP_NAGBAR] = items6;
 const items7 = [fn(4876).DismissibleContent.SHOP_TAB_TOOLTIP];
-obj2[fn(9166).MarketingSurfaceType.SHOP_TAB_TOOLTIP] = items7;
+obj2[fn(9167).MarketingSurfaceType.SHOP_TAB_TOOLTIP] = items7;
 const items8 = [fn(4876).DismissibleContent.SHOP_TAB_TOOLTIP];
-obj2[fn(9166).MarketingSurfaceType.SHOP_COACHMARK] = items8;
+obj2[fn(9167).MarketingSurfaceType.SHOP_COACHMARK] = items8;
 const items9 = [fn(4876).DismissibleContent.GUILD_HEADER_COACHMARK];
-obj2[fn(9166).MarketingSurfaceType.GUILD_HEADER_COACHMARK] = items9;
+obj2[fn(9167).MarketingSurfaceType.GUILD_HEADER_COACHMARK] = items9;
 const items10 = [
   fn(4876).DismissibleContent.GUILD_BOOST_TAB_BANNER,
   fn(4876).DismissibleContent.GUILD_BOOST_TAB_HIGHLIGHT,
 ];
-obj2[fn(9166).MarketingSurfaceType.GUILD_BOOST_TAB_BANNER] = items10;
+obj2[fn(9167).MarketingSurfaceType.GUILD_BOOST_TAB_BANNER] = items10;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/CampaignDevToolsUtils.tsx");
 
@@ -273,7 +273,7 @@ export function filterCampaigns(campaigns, query, arg2) {
   };
   items = [arg2, "id"];
   obj2.keys = items;
-  return _mod9213.matchSorter(campaigns, query, obj2);
+  return _mod9214.matchSorter(campaigns, query, obj2);
 }
 export function groupCampaigns(arg0) {
   closure_0 = arg0;
@@ -375,17 +375,17 @@ export function resolveCampaignComponents(components, arg1, arg2, endDate, arg4)
           let premiumState = closure_1_0.premiumState;
         } else if (null === closure_1_3) {
           const obj3 = {
-            premiumSource: closure_0(9218).PremiumSource.NONE,
-            premiumSubscriptionType: closure_0(9219).PremiumSubscriptionType.NONE,
+            premiumSource: closure_0(9219).PremiumSource.NONE,
+            premiumSubscriptionType: closure_0(9220).PremiumSubscriptionType.NONE,
           };
           premiumState = obj3;
         } else {
           const obj4 = {};
-          obj4[MOBILE.TIER_0] = closure_0(9219).PremiumSubscriptionType.TIER_0;
-          obj4[MOBILE.TIER_1] = closure_0(9219).PremiumSubscriptionType.TIER_1;
-          obj4[MOBILE.TIER_2] = closure_0(9219).PremiumSubscriptionType.TIER_2;
+          obj4[MOBILE.TIER_0] = closure_0(9220).PremiumSubscriptionType.TIER_0;
+          obj4[MOBILE.TIER_1] = closure_0(9220).PremiumSubscriptionType.TIER_1;
+          obj4[MOBILE.TIER_2] = closure_0(9220).PremiumSubscriptionType.TIER_2;
           premiumState = {
-            premiumSource: closure_0(9218).PremiumSource.SUBSCRIPTION,
+            premiumSource: closure_0(9219).PremiumSource.SUBSCRIPTION,
             premiumSubscriptionType: obj4[closure_1_3],
           };
         }
@@ -419,10 +419,10 @@ export function resolveCampaignComponents(components, arg1, arg2, endDate, arg4)
       );
     }
     return found.map((id) => {
-      obj = closure_0(9217);
+      obj = closure_0(9218);
       let tmp3 = null;
       const localizedProperties = obj.resolveLocalizedProperties(
-        closure_0(1234).b64ToProto(closure_0(9167).PremiumMarketingComponentProperties, id.properties),
+        closure_0(1234).b64ToProto(closure_0(9168).PremiumMarketingComponentProperties, id.properties),
         closure_1_1,
       );
       if (null != dependencyMap) {
@@ -518,7 +518,7 @@ export function campaignDetails(found, stateFromStoresArray) {
   const map = new Map();
   found = stateFromStoresArray.filter(
     (properties) =>
-      !everyResult(1234).b64ToProto(everyResult(9167).PremiumMarketingComponentProperties, properties.properties)
+      !everyResult(1234).b64ToProto(everyResult(9168).PremiumMarketingComponentProperties, properties.properties)
         .isDefaultBase,
   );
   const everyResult = found.every((surface_id) => null != surface_id.surface_id);

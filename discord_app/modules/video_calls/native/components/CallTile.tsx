@@ -9,10 +9,10 @@ import showUserProfileActionSheetDefault from "../../../user_profile/native/show
 import _modDef7773 from "../../../../../_runtime/metro/07773__.js";
 import RevealProvider from "RevealProvider.tsx";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef10578 from "../../../../../_runtime/metro/10578__.js";
 import _modDef10579 from "../../../../../_runtime/metro/10579__.js";
 import _modDef10580 from "../../../../../_runtime/metro/10580__.js";
 import _modDef10581 from "../../../../../_runtime/metro/10581__.js";
+import _modDef10582 from "../../../../../_runtime/metro/10582__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -43,17 +43,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef10578;
+    let tmp3 = _modDef10579;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef10579;
+      tmp3 = _modDef10580;
     } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef7773;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef10580;
-    } else if (constants2.QUEST === voicePlatform) {
       tmp3 = _modDef10581;
+    } else if (constants2.QUEST === voicePlatform) {
+      tmp3 = _modDef10582;
     }
   }
   let tmp14 = null;
@@ -160,7 +160,7 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10008);
+const ChannelCallStore = fn(10009);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
 const CallConstants = fn(5693);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);

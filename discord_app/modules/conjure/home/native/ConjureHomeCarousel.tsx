@@ -29,10 +29,10 @@ const PX_24 = nativeDefault.space.PX_24;
 let obj = {
   games: fn(7756).GameControllerIcon,
   apps: fn(7172).AppsIcon,
-  profile_widget: fn(18843).WidgetsIcon,
-  overlay_widget: fn(13356).ScreenIcon,
-  automod: fn(10078).ShieldIcon,
-  chat_bot: fn(12270).RobotIcon,
+  profile_widget: fn(18859).WidgetsIcon,
+  overlay_widget: fn(13364).ScreenIcon,
+  automod: fn(10079).ShieldIcon,
+  chat_bot: fn(12278).RobotIcon,
 };
 const createStyles = fn(5043);
 let obj2 = {

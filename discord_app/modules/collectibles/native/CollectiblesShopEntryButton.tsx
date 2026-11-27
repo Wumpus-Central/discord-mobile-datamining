@@ -10,7 +10,7 @@ function CoachmarkVariant(shopButtonRef) {
   ({ marketing, navigateToShop } = shopButtonRef);
   shopButtonRef = shopButtonRef.shopButtonRef;
   const tmp = _slicedToArray(
-    navigateToShop(9561).useSelectedVersionedDismissibleContent(
+    navigateToShop(9562).useSelectedVersionedDismissibleContent(
       navigateToShop(4876).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING,
       marketing.version,
       undefined,
@@ -23,8 +23,8 @@ function CoachmarkVariant(shopButtonRef) {
   dependencyMap = tmp3;
   const obj2 = { children: null };
   const obj3 = { ref: shopButtonRef, IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
-  const obj = navigateToShop(9561);
-  obj3.IconComponent = navigateToShop(13102).ShopIcon;
+  const obj = navigateToShop(9562);
+  obj3.IconComponent = navigateToShop(13110).ShopIcon;
   const intl = navigateToShop(1112).intl;
   obj3.accessibilityLabel = intl.string(navigateToShop(1112).t.pWG4ze);
   obj3.onPress = function onPress() {
@@ -80,7 +80,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
       const markAsDismissed = openReplyActionSheet.markAsDismissed;
       const obj = {
         ref: markAsDismissed,
-        IconComponent: navigateToShop(13102).ShopIcon,
+        IconComponent: navigateToShop(13110).ShopIcon,
         accessibilityLabel: null,
         onPress: null,
         showRedDot: null,
@@ -94,7 +94,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         }
       };
       obj.showRedDot = null != visibleContent;
-      return closure_1_6(shopButtonRef(14274), obj);
+      return closure_1_6(shopButtonRef(14281), obj);
     }
     if (tmp4) {
       let type1;
@@ -115,7 +115,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
       }
       obj3.latestVersion = num;
       obj3.children = content;
-      let tmp15Result = closure_6(tmp(11075).SelectedVersionedDismissibleContent, obj3);
+      let tmp15Result = closure_6(tmp(11076).SelectedVersionedDismissibleContent, obj3);
     } else {
       let type2;
       if (stateFromStores != null) {
@@ -134,7 +134,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         tmp15Result = closure_6(tmp7, obj4);
       }
       items2 = [];
-      tmp7 = shopButtonRef(11075);
+      tmp7 = shopButtonRef(11076);
     }
     return tmp15Result;
   }

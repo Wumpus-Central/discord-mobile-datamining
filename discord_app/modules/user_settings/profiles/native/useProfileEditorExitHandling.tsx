@@ -14,7 +14,7 @@ function discardPendingChanges() {
   WidgetActionCreatorsDefault.clearPendingWidgets();
 }
 let closure_8 = fn(1081).ProfileCustomizationSubsection;
-const RootNavigatorScreen = fn(9429).RootNavigatorScreen;
+const RootNavigatorScreen = fn(9430).RootNavigatorScreen;
 const UserProfileSections = fn(6137).UserProfileSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useProfileEditorExitHandling.tsx");
@@ -34,7 +34,7 @@ export default function useProfileEditorExitHandling(location) {
       const result = _location(7338).resetAndCloseUserProfileForm();
       closure_1_6.resetState();
       const obj = _location(7338);
-      hasUnsavedChanges(14572).clearPendingWidgets();
+      hasUnsavedChanges(14579).clearPendingWidgets();
     },
     [],
   );

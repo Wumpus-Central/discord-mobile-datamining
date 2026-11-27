@@ -50,7 +50,7 @@ export function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11845, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11853, dependencyMap.paths);
         obj.openLazy(
           tmp,
           metroImportDefault,
@@ -100,7 +100,7 @@ export function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(11844, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11852, dependencyMap.paths);
       obj.openLazy(
         tmp,
         timestampProducer,
@@ -135,7 +135,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14878, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(14885, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {

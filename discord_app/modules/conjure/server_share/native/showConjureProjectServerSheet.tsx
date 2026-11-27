@@ -19,7 +19,7 @@ function ConjureProjectServerSheet(projectId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -57,7 +57,7 @@ function ConjureProjectServerSheet(projectId) {
             const obj2 = tmp5(5725);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         c3 = tmp;
@@ -65,7 +65,7 @@ function ConjureProjectServerSheet(projectId) {
       }
     }
   };
-  const tmp4 = pending(18508)(projectId.projectId);
+  const tmp4 = pending(18515)(projectId.projectId);
   _require = tmp4;
   ({ moving, guilds, guild, rows, pending } = tmp4);
   const error = tmp4.error;
@@ -93,7 +93,7 @@ function ConjureProjectServerSheet(projectId) {
   let tmp5Result3 = null;
   if (rows.length > 0) {
     let obj5 = { rows };
-    tmp5Result3 = closure_5(tmp2(18514), obj5);
+    tmp5Result3 = closure_5(tmp2(18519), obj5);
   }
   items[1] = tmp5Result3;
   let tmp5Result4 = null;

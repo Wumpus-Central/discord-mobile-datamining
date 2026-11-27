@@ -38,7 +38,7 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 require = fn;
 let closure_4 = ["code", "state"];
 fn(5847).addPostConnectionCallback;
-let closure_9 = fn(9115).handleMobileWebCheckoutStatus;
+let closure_9 = fn(9116).handleMobileWebCheckoutStatus;
 const Constants = fn(1071);
 ({
   AnalyticEvents: map1,
@@ -51,11 +51,11 @@ const Constants = fn(1071);
 const StaticChannelRoute = fn(4899).StaticChannelRoute;
 const StreamTypes = fn(6814).StreamTypes;
 const NativePermissionTypes = fn(7872).NativePermissionTypes;
-let closure_22 = fn(10112).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_23 = fn(8213).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_22 = fn(10113).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_23 = fn(8214).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5760).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15255).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(9555).MobileUserSettings;
+const SHARE_SCREEN_MODAL_KEY = fn(15262).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(9556).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -218,7 +218,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[31]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj24 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: false };
+      const obj24 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj26 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj24.navigationSettings = obj26;
       rootNavigationRef1(inviteCode[32])(obj24);
@@ -239,7 +239,7 @@ export default function handleSupportedURL(payload) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -257,7 +257,7 @@ export default function handleSupportedURL(payload) {
                 closure_128_1 = undefined;
                 closure_128_2 = undefined;
                 tmp2(6130).popAll();
-                const tmp42 = tmp3(11645);
+                const tmp42 = tmp3(11653);
                 const openSocialLayerStorefrontUnsupportedOnMobileAlert =
                   tmp42.openSocialLayerStorefrontUnsupportedOnMobileAlert;
                 closure_128_0 = openSocialLayerStorefrontUnsupportedOnMobileAlert;
@@ -268,7 +268,7 @@ export default function handleSupportedURL(payload) {
                   c2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp3(9408).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15262).default()),
+                    value: tmp3(9409).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15269).default()),
                     done: false,
                   };
                   return obj4;
@@ -388,7 +388,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15267, dependencyMap.paths),
+                    asyncRequireImpl(15274, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -457,7 +457,7 @@ export default function handleSupportedURL(payload) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -526,7 +526,7 @@ export default function handleSupportedURL(payload) {
                       const obj3 = payload(paths[55]);
                     }
                     c4 = 3;
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp35) {
                   c4 = tmp;
@@ -560,7 +560,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -619,7 +619,7 @@ export default function handleSupportedURL(payload) {
                     const obj4 = tmp4(paths[58]);
                   }
                   c2 = 3;
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp37) {
                   c2 = tmp;
                   throw tmp37;
@@ -700,7 +700,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -879,7 +879,7 @@ export default function handleSupportedURL(payload) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {

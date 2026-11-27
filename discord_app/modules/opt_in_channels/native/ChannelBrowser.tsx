@@ -49,7 +49,7 @@ if (PlatformUtils) {
   obj.channelMention = obj3;
   let obj4 = { react: fn(7178).smartOutput };
   obj.guild = obj4;
-  let obj5 = { react: fn(10654).inlineChannelReact };
+  let obj5 = { react: fn(10655).inlineChannelReact };
   obj.channel = obj5;
   let parseTopic = MarkupUtils.reactParserFor(obj);
 } else {

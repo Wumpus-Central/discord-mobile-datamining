@@ -25,7 +25,7 @@ export default function GameProfileGameClaimCta(trackAction) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -39,13 +39,13 @@ export default function GameProfileGameClaimCta(trackAction) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              trackAction(v3(8754).GameProfileTrackActionActions.ClaimGame);
+              trackAction(v3(8755).GameProfileTrackActionActions.ClaimGame);
               v1 = 1;
               v3 = 1;
               const obj4 = {
-                value: v1(11631).redirectDeveloperPortalWithHandoffToken(
+                value: v1(11639).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(11635).LoginHandoffSource.GAME_CLAIM,
+                  v3(11643).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };
@@ -60,7 +60,7 @@ export default function GameProfileGameClaimCta(trackAction) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v3 = tmp;

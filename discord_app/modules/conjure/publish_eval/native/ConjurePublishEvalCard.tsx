@@ -38,11 +38,11 @@ function ScoreRow(dimension) {
   dimension = dimension.dimension;
   ({ value: importDefault, disabled: dependencyMap, onChange: closure_3 } = dimension);
   const tmp = closure_7();
-  const result = dimension(11477).conjurePublishEvalDimensionLabel(dimension);
+  const result = dimension(11487).conjurePublishEvalDimensionLabel(dimension);
   const obj2 = { style: tmp.scoreRow, children: null };
   items = [closure_5(dimension(5634).Text, { variant: "body-sm/medium", color: "text-default", children: result })];
   const obj3 = { style: tmp.stars, accessibilityRole: "radiogroup", accessibilityLabel: result, children: null };
-  const prop = dimension(18835).CONJURE_PUBLISH_RATINGS;
+  const prop = dimension(18850).CONJURE_PUBLISH_RATINGS;
   obj3.children = prop.map((score) =>
     hasOwnProperty(ScoreStar, { dimension, score, value, disabled, onChange }, score),
   );
@@ -103,7 +103,7 @@ let result = size.fileFinishedImporting("modules/conjure/publish_eval/native/Con
 export default function ConjurePublishEvalCard(pending) {
   let conjurePublishEvalForm;
   const tmp = closure_7();
-  conjurePublishEvalForm = conjurePublishEvalForm(11477).useConjurePublishEvalForm(pending.pending);
+  conjurePublishEvalForm = conjurePublishEvalForm(11487).useConjurePublishEvalForm(pending.pending);
   const obj2 = { style: tmp.card, children: null };
   const obj3 = { style: tmp.header, children: null };
   const obj4 = { variant: "heading-md/semibold", children: null };
@@ -146,7 +146,7 @@ export default function ConjurePublishEvalCard(pending) {
   obj9.label = intl4.string(_modDef4245.d28g0o);
   const intl5 = conjurePublishEvalForm(1112).intl;
   obj9.placeholder = intl5.string(_modDef4245.EBB7lL);
-  obj9.maxLength = conjurePublishEvalForm(11480).CONJURE_PUBLISH_EVAL_FEEDBACK_MAX_LENGTH;
+  obj9.maxLength = conjurePublishEvalForm(11490).CONJURE_PUBLISH_EVAL_FEEDBACK_MAX_LENGTH;
   ({ feedback: obj8.value, setFeedback: obj8.onChange, submitting: obj8.disabled } = conjurePublishEvalForm);
   items1[2] = closure_5(conjurePublishEvalForm(7440).TextArea, obj9);
   let tmp7Result = null;

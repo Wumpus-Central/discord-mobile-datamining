@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestBottomShee
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   const obj = { hasIcons: true, children: null };
-  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(13356).ScreenIcon, {}), label: null, onPress: null };
+  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(13364).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1112).intl;
   obj2.label = intl.string(onTaskSelect(1112).t["QXc01+"]);
   obj2.onPress = function onPress() {

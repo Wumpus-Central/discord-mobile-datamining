@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/media/native/openPlaintextFil
 export const PLAINTEXT_FILE_PREVIEW_MODAL_KEY = "PlaintextFilePreview";
 export function openPlaintextFilePreview(merged) {
   return ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(12070, dependencyMap.paths),
+    asyncRequireImpl(12078, dependencyMap.paths),
     merged,
     PlaintextFilePreview,
   );

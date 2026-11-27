@@ -1,7 +1,7 @@
 // discord_app/modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
-const UserRowModes = fn(8944).UserRowModes;
+const UserRowModes = fn(8945).UserRowModes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx",

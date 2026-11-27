@@ -1,5 +1,5 @@
 // discord_app/modules/thumbhash/ThumbhashUtils.tsx
-import thumbHashToRGBA2 from "../../../_runtime/16788_thumbHashToRGBA.js";
+import thumbHashToRGBA2 from "../../../_runtime/16795_thumbHashToRGBA.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function thumbHashToRGBA(arg0) {

@@ -24,8 +24,8 @@ let obj = {
   selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedJoinSourceType: "channel_id",
-  selectedSourceInviteCode: "h",
-  selectedSort: "get",
+  selectedSourceInviteCode: "user",
+  selectedSort: "isArray",
 };
 let closure_4 = Object.freeze(obj);
 const size = fn(2);
@@ -44,8 +44,8 @@ class GuildMemberSafetySearch {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "channel_id",
-      selectedSourceInviteCode: "h",
-      selectedSort: "get",
+      selectedSourceInviteCode: "user",
+      selectedSort: "isArray",
     };
     set = new Set();
     obj.selectedRoleIds = set;
@@ -74,8 +74,8 @@ prototype["reset"] = function reset() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "channel_id",
-    selectedSourceInviteCode: "h",
-    selectedSort: "get",
+    selectedSourceInviteCode: "user",
+    selectedSort: "isArray",
   };
   this._searchState = obj;
   this.hasDefaultQuery = true;
@@ -102,8 +102,8 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "channel_id",
-      selectedSourceInviteCode: "h",
-      selectedSort: "get",
+      selectedSourceInviteCode: "user",
+      selectedSort: "isArray",
     };
     const _Set = Set;
     set = new Set();
@@ -300,8 +300,8 @@ export function getDefaultSearchState() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "channel_id",
-    selectedSourceInviteCode: "h",
-    selectedSort: "get",
+    selectedSourceInviteCode: "user",
+    selectedSort: "isArray",
   };
   return obj;
 }

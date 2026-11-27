@@ -22,11 +22,11 @@ export default noop.memo(function MediaTile(channel) {
   const participant = channel.participant;
   const size = channel.size;
   const tmp = closure_7();
-  const speakerTileStyles = channel(10561).useSpeakerTileStyles();
-  const obj = channel(10561);
+  const speakerTileStyles = channel(10562).useSpeakerTileStyles();
+  const obj = channel(10562);
   const tmp5 = participant;
-  const isScreenLandscape = channel(10042).useIsScreenLandscape();
-  const obj2 = channel(10042);
+  const isScreenLandscape = channel(10043).useIsScreenLandscape();
+  const obj2 = channel(10043);
   items = [ChannelRTCStore];
   const items1 = [channel.id, participant.id];
   const stateFromStores = channel(504).useStateFromStores(
@@ -39,9 +39,9 @@ export default noop.memo(function MediaTile(channel) {
     tmp8 = null;
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       const obj4 = { style: null, children: null };
-      const items2 = [tmp.container, tmp2(10561).getSizeStyle(size, speakerTileStyles)];
-      const tmp2Result = tmp2(10561);
-      items2[2] = tmp2(10561).getTileWidthStyle(size, participant(1495)().width, isScreenLandscape);
+      const items2 = [tmp.container, tmp2(10562).getSizeStyle(size, speakerTileStyles)];
+      const tmp2Result = tmp2(10562);
+      items2[2] = tmp2(10562).getTileWidthStyle(size, participant(1495)().width, isScreenLandscape);
       obj4.style = items2;
       const obj5 = {
         hasBottomSafeArea: false,
@@ -54,11 +54,11 @@ export default noop.memo(function MediaTile(channel) {
         shrinkStreamEmptyState: false,
         contentStyle: null,
       };
-      const tmp2Result2 = tmp2(10561);
+      const tmp2Result2 = tmp2(10562);
       obj5.avatarSize = tmp2(1186).AvatarSizes.XLARGE;
       obj5.channel = channel;
       obj5.contentStyle = tmp.media;
-      obj4.children = jsx(tmp5(10572), {
+      obj4.children = jsx(tmp5(10573), {
         hasBottomSafeArea: false,
         hasLeftSafeArea: false,
         hasRightSafeArea: false,
@@ -70,7 +70,7 @@ export default noop.memo(function MediaTile(channel) {
         contentStyle: null,
       });
       tmp8 = <View style={null}>{null}</View>;
-      const tmp5Result = tmp5(10572);
+      const tmp5Result = tmp5(10573);
     }
   }
   return tmp8;

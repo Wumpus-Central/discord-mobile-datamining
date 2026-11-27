@@ -79,7 +79,7 @@ const QuestConstants = fn(6871);
 const isLaunched = fn(6937).isLaunched;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
-const getQuestLogger = fn(8381);
+const getQuestLogger = fn(8382);
 const logger = getQuestLogger.getQuestLogger({ location: QuestsExperimentLocations.QUESTS_MANAGER });
 class QuestProgressManager extends tmp4 {
   constructor() {
@@ -99,7 +99,7 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = applyArgumentsResult(8389).getQuestTaskDetails(
+            const questTaskDetails = applyArgumentsResult(8390).getQuestTaskDetails(
               value,
               applyArgumentsResult(6879).FirstPartyQuestTaskTypesSets.DESKTOP,
             );
@@ -175,15 +175,15 @@ class QuestProgressManager extends tmp4 {
                   executablePath,
                   executableFingerprint: prop,
                 };
-                timerId(9894).sendHeartbeat(obj2);
-                const timerIdResult1 = timerId(9894);
+                timerId(9895).sendHeartbeat(obj2);
+                const timerIdResult1 = timerId(9895);
               }
             } else {
               const _HermesInternal2 = HermesInternal;
               logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
               const obj3 = { questId, applicationId, executablePath, executableFingerprint: prop };
-              timerId(9894).sendHeartbeat(obj3);
-              const timerIdResult2 = timerId(9894);
+              timerId(9895).sendHeartbeat(obj3);
+              const timerIdResult2 = timerId(9895);
             }
             prop = applyArgumentsResult.calculateHeartbeatDurationMs(questId);
             const _window = window;

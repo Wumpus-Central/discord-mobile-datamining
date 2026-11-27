@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
-import _modDef9817 from "../../../../../_runtime/metro/09817__.js";
+import _modDef9818 from "../../../../../_runtime/metro/09818__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -21,7 +21,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
     if ("" !== activityName) {
       const obj2 = { style: tmp2.buttonParent, children: null };
       const obj3 = {
-        icon: _modDef9817,
+        icon: _modDef9818,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -35,7 +35,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
       obj3.onPress = callback;
       obj3.text = activityName;
       obj2.children = jsx(setMode(5641).Button, {
-        icon: _modDef9817,
+        icon: _modDef9818,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -49,7 +49,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
     return tmp3;
   }
   const obj = {
-    icon: _modDef9817,
+    icon: _modDef9818,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",
@@ -60,7 +60,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
   obj.accessibilityLabel = intl.string(setMode(1112).t.brPQ5U);
   obj.onPress = callback;
   tmp3 = jsx(setMode(7944).IconButton, {
-    icon: _modDef9817,
+    icon: _modDef9818,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",

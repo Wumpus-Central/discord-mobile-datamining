@@ -18,7 +18,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const HubConstants = fn(13754);
+const HubConstants = fn(13761);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: closure_10 } = HubConstants);
 const MarketingURLs = fn(1071).MarketingURLs;
 const jsxProd = fn(21);
@@ -80,7 +80,7 @@ export default function HubEmailConnectionContent(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -10,7 +10,7 @@ import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBan
 import noop from "../../../../_runtime/metro/00019__.js";
 import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
 
-const EditButtonDefault = tmp(16048);
+const EditButtonDefault = tmp(16055);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;

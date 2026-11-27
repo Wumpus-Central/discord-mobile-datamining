@@ -16,7 +16,7 @@ function ConjureVoiceChannelPinForm(projectId) {
   channels = undefined;
   dependencyMap = undefined;
   const tmp = closure_10();
-  const conjureVoiceChannelPinForm = channels(18705).useConjureVoiceChannelPinForm(projectId.projectId);
+  const conjureVoiceChannelPinForm = channels(18720).useConjureVoiceChannelPinForm(projectId.projectId);
   ({ guildId, channels } = conjureVoiceChannelPinForm);
   const selected = conjureVoiceChannelPinForm.selected;
   ({ setPicked: c2, pinning } = conjureVoiceChannelPinForm);

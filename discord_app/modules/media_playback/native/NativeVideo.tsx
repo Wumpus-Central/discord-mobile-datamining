@@ -127,7 +127,7 @@ export default function NativeVideo(ref) {
           num = 100;
         }
         if (null != ref.current) {
-          const Commands = merged(8885).Commands;
+          const Commands = merged(8886).Commands;
           Commands.seek(tmp.current, arg0, num);
         }
       },
@@ -149,7 +149,7 @@ export default function NativeVideo(ref) {
           tmp3 = null != ref.current;
         }
         if (tmp3) {
-          const Commands = merged(8885).Commands;
+          const Commands = merged(8886).Commands;
           Commands.reset(ref.current);
         }
         dependencyMap((arg0) => {
@@ -367,7 +367,7 @@ export default function NativeVideo(ref) {
       }
     }
   };
-  const items2 = [ref(ref(8885), obj6)];
+  const items2 = [ref(ref(8886), obj6)];
   let tmp25Result = null != obj2.poster && tmp20 !== id;
   if (tmp25Result) {
     let obj8 = { accessible: false, style: tmp2.content, source: null, resizeMode: null };

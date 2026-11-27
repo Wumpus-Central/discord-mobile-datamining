@@ -66,7 +66,7 @@ function MediaInfo(message) {
           if (contentMessage.attachments.length > 0) {
             str2 = "";
             if (null != activeMediaPlayerSource.attachmentIndex) {
-              str2 = tmp4(8817)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
+              str2 = tmp4(8818)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
             }
           }
         }
@@ -93,7 +93,7 @@ function MediaInfo(message) {
         if (memo) {
           const obj6 = { style: { flex: 1 }, children: null };
           const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [closure_15(tmp2(19609).Marquee, obj7)];
+          const items3 = [closure_15(tmp2(19625).Marquee, obj7)];
           const obj8 = {
             start: { x: 0, y: 0 },
             end: { x: 1, y: 0 },
@@ -222,7 +222,7 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(19383).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(19399).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5043);

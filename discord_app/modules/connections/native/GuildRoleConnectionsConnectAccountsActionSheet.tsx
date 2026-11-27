@@ -25,10 +25,10 @@ import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import ConnectedAccountsActionCreatorsDefault from "../../../actions/ConnectedAccountsActionCreators.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
-import _modDef12044 from "../../../../_runtime/metro/12044__.js";
-import _modDef12045 from "../../../../_runtime/metro/12045__.js";
+import _modDef12052 from "../../../../_runtime/metro/12052__.js";
+import _modDef12053 from "../../../../_runtime/metro/12053__.js";
 import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
-import _modDef12049 from "../../../../_runtime/metro/12049__.js";
+import _modDef12057 from "../../../../_runtime/metro/12057__.js";
 import ConnectionsRoleActionCreators from "../ConnectionsRoleActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -476,7 +476,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef12044, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef12052, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1186).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
@@ -486,7 +486,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp22Result = closure_1_29(tmp15(5634).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef12045, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef12053, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1186).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
@@ -620,7 +620,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         children: null,
       };
       const obj17 = {
-        source: _modDef12049,
+        source: _modDef12057,
         size: tmp15(1186).Icon.Sizes.SMALL_20,
         style: closure_5.connectionsChecksGroupTextNameInfoIcon,
       };
@@ -964,7 +964,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -996,7 +996,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           c0 = tmp;
@@ -1272,7 +1272,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 };
                 let tmp7 = null;
                 const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(
-                  12050,
+                  12058,
                 ).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
@@ -1281,7 +1281,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(12050);
+                const obj3 = platformType(12058);
               },
               overrideUrl: null,
             };

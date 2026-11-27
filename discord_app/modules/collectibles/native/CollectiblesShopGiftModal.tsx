@@ -186,7 +186,7 @@ export default function CollectiblesShopGiftModal(skuId) {
   );
   const obj = skuId(504);
   const items2 = [];
-  const obj2 = skuId(11600);
+  const obj2 = skuId(11608);
   const obj3 = { needsCategory: false, seedCategoryStore: true, shouldFetchProduct: null == stateFromStores };
   const tmp5 = skuId1;
   const tmp6 = skuId1(6379);
@@ -228,8 +228,8 @@ export default function CollectiblesShopGiftModal(skuId) {
       const obj6 = { onDismiss: onGiftModalDismiss, title: null };
       const intl = tmp2(1112).intl;
       obj6.title = intl.string(tmp2(1112).t["JCFN/y"]);
-      tmp15Result = jsx(tmp5(11607), { onDismiss: onGiftModalDismiss, title: null });
-      const tmp5Result = tmp5(11607);
+      tmp15Result = jsx(tmp5(11615), { onDismiss: onGiftModalDismiss, title: null });
+      const tmp5Result = tmp5(11615);
     }
     tmp2Result = tmp2(2186);
   }

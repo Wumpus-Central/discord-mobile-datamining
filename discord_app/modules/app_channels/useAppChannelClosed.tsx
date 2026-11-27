@@ -12,7 +12,7 @@ export default function useAppChannelClosed(shouldStartClosed) {
   ({ applicationId, surface } = shouldStartClosed);
   first = undefined;
   let tmp = closure_5(applicationId, surface);
-  const tmp2 = first(14064)(applicationId, surface);
+  const tmp2 = first(14071)(applicationId, surface);
   [first] = noop.useState(null);
   dependencyMap = tmp5;
   let frameId;

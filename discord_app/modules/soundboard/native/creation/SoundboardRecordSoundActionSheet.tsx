@@ -35,7 +35,7 @@ let closure_15 = async function _startSoundboardRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_15 = async function _startSoundboardRecording(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp18) {
       closure_3 = tmp18;
@@ -123,7 +123,7 @@ function stopSoundboardRecording(arg0, items, arg2) {
 }
 const View = fn(17).View;
 const NativePermissionTypes = fn(7872).NativePermissionTypes;
-const VoiceMessageConstants = fn(12959);
+const VoiceMessageConstants = fn(12967);
 ({
   VOICE_RECORDING_MAX_DB: closure_9,
   VOICE_RECORDING_MIN_DURATION_MILLIS: closure_10,
@@ -242,7 +242,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -345,7 +345,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -497,7 +497,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
         c1 = false;
         mediaEngine = mediaEngine.getMediaEngine();
         mediaEngine.removeListener(guildId(5868).MediaEngineEvent.VoiceActivity, callback);
-        closure_2 = guildId(13212).generateBase64EncodedWaveform(items);
+        closure_2 = guildId(13220).generateBase64EncodedWaveform(items);
         new Promise((arg0) => {
           closure_0 = arg0;
           const reachedLimit = setTimeout(
@@ -510,7 +510,7 @@ export default function SoundboardRecordSoundActionSheet(arg0) {
             closure_0({ uri, durationSecs: arg1 / 1000, waveform, waveformLevels: items, reachedLimit });
           });
         });
-        const obj2 = guildId(13212);
+        const obj2 = guildId(13220);
       }
     },
     items4,

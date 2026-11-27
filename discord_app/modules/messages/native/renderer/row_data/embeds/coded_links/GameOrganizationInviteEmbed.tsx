@@ -8,7 +8,7 @@ import _modDef7437 from "../../../../../../../../_runtime/metro/07437__.js";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import renderer_EmbedUtils from "../../../EmbedUtils.tsx";
 import isGameOrganizationFullDefault from "../../../../../../game_organizations/isGameOrganizationFull.tsx";
-import _modDef12129 from "../../../../../../../../discord_assets/assets/mana/asset-library/generated/GuildFallbackAbstractUI-2x.png.js";
+import _modDef12137 from "../../../../../../../../discord_assets/assets/mana/asset-library/generated/GuildFallbackAbstractUI-2x.png.js";
 import canGoToGameOrganizationGuildDefault from "../../../../../../game_organization_invites/canGoToGameOrganizationGuild.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import getGameOrganizationInviteCtaStateDefault from "../../../../../../game_organization_invites/getGameOrganizationInviteCtaState.tsx";
@@ -16,8 +16,8 @@ import GameOrganizationInviteStore from "../../../../../../game_organization_inv
 import GuildStore from "../../../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(12935).CodedLinkExtendedType;
-const constants = fn(11917).GameOrganizationInviteStates;
+const CodedLinkExtendedType = fn(12943).CodedLinkExtendedType;
+const constants = fn(11925).GameOrganizationInviteStates;
 const InviteTypes = fn(5776).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -89,7 +89,7 @@ export function createGameOrganizationInviteEmbed(code, theme, id1) {
       obj6.headerText = intl6.formatToPlainString(_modDef2651["jKi+kc"], obj7);
       ({ name: obj13.titleText, iconUrl } = organization);
       if (iconUrl == null) {
-        iconUrl = _modDef12129;
+        iconUrl = _modDef12137;
       }
       obj6.thumbnailUrl = iconUrl;
       obj6.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

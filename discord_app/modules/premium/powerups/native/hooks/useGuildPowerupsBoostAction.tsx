@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotStore.tsx";
 
 const require = fn;
-const GuildPowerupsConstants = fn(8297);
+const GuildPowerupsConstants = fn(8298);
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: metroImportDefault } = GuildPowerupsConstants);
 const Constants = fn(1071);
 ({ AnalyticsObjects: closure_8, AnalyticsObjectTypes: closure_9 } = Constants);
@@ -43,7 +43,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -64,9 +64,9 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
                 tmp15 = dependencyMap;
                 if (dependencyMap > 0) {
                   if (!handleMobileWebRedirectCheckout.hasFetched) {
-                    items = [tmp2(9111).init()];
-                    let obj2 = tmp2(9111);
-                    items[1] = tmp3(10366).fetchGuildBoostSlots();
+                    items = [tmp2(9112).init()];
+                    let obj2 = tmp2(9112);
+                    items[1] = tmp3(10367).fetchGuildBoostSlots();
                     dependencyMap = 1;
                     c3 = 1;
                     const obj8 = { value: Promise.all(items), done: false };
@@ -91,7 +91,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
             PERK = constants.PERK;
           }
           closure_128_0 = PERK;
-          availableGuildBoostSlots = tmp3(10363).getAvailableGuildBoostSlots(
+          availableGuildBoostSlots = tmp3(10364).getAvailableGuildBoostSlots(
             handleMobileWebRedirectCheckout.boostSlots,
           );
           if (availableGuildBoostSlots.length >= closure_129_2) {
@@ -122,10 +122,10 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               }
               const obj = guildId(dependencyMap[9]);
             };
-            const result = tmp3(13528).launchGuildBoostFlowOrAlert(obj10);
-            const obj6 = tmp3(13528);
+            const result = tmp3(13536).launchGuildBoostFlowOrAlert(obj10);
+            const obj6 = tmp3(13536);
           }
-          const obj5 = tmp3(10363);
+          const obj5 = tmp3(10364);
         } catch (tmp50) {
           c3 = tmp;
           throw tmp50;

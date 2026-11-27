@@ -1110,7 +1110,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp178 = null;
     if (tmp41) {
       const obj13 = { orbAmount: stateFromStores };
-      tmp178 = callback2(tmp5(16572).BountiesScrollRecapFooter, obj13);
+      tmp178 = callback2(tmp5(16579).BountiesScrollRecapFooter, obj13);
     }
     const obj14 = { value: memo3, children: null };
     const obj15 = { style: tmp.root, children: null };
@@ -1138,7 +1138,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
           });
         },
       };
-      obj16.children = tmp179(tmp5(13842).QuestContentImpressionTrackerNative, obj17);
+      obj16.children = tmp179(tmp5(13849).QuestContentImpressionTrackerNative, obj17);
       tmp179Result = tmp179(tmp2(1654).View, obj16);
     }
     const items70 = [tmp179Result, , , , ,];
@@ -1182,7 +1182,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
         onOverlaySurfaceClick: obj32.onOverlaySurfaceClick,
         onCarouselScroll: obj32.onCarouselScroll,
       } = tmp16);
-      tmp179Result4 = tmp179(tmp2(16577), obj20);
+      tmp179Result4 = tmp179(tmp2(16584), obj20);
     }
     items70[2] = tmp179Result4;
     let tmp179Result5 = null;
@@ -1209,7 +1209,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp179Result6 = null;
     if (tmp38) {
       const obj24 = { onPress: callback5 };
-      tmp179Result6 = tmp179(tmp2(16578), obj24);
+      tmp179Result6 = tmp179(tmp2(16585), obj24);
     }
     obj23.children = tmp179Result6;
     items70[4] = callback2(tmp2(1654).View, obj23);
@@ -1220,10 +1220,10 @@ function BountiesModalContentScrollInner(initialBountyId) {
       opacityStyle: animatedStyle3,
       children: tmp178,
     };
-    items70[5] = callback2(tmp2(16527), obj25);
+    items70[5] = callback2(tmp2(16534), obj25);
     obj15.children = items70;
     obj14.children = hasRecurringSwipeUpNux(questHomeBounties, obj15);
-    return callback2(tmp5(16536).BountyVideoEndAppStoreProvider, obj14);
+    return callback2(tmp5(16543).BountyVideoEndAppStoreProvider, obj14);
   }
   const tmp5Result22 = require("../../../../../_runtime/metro/01654__.js");
 }
@@ -1231,7 +1231,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const QuestConstants = fn(6871);
 ({ BOUNTY_ORB_AMOUNT: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16526);
+const BountiesModalConstants = fn(16533);
 ({
   getBountyVideoEndAppStoreSheetHeight: closure_10,
   getBountyVideoEndPeekClipHeight: closure_11,

@@ -125,9 +125,9 @@ export default function UserProfileWidgetReorderActionSheet(returnFocusRef) {
   items = [AuthenticationStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => id.getId());
   const obj = stateFromStores(504);
-  const boardWidgets = stateFromStores(14677).useBoardWidgets(stateFromStores);
+  const boardWidgets = stateFromStores(14684).useBoardWidgets(stateFromStores);
   const obj3 = { dismissAccessibilityLabel: null, returnFocusRef: null, children: null };
-  const obj2 = stateFromStores(14677);
+  const obj2 = stateFromStores(14684);
   const intl = stateFromStores(1112).intl;
   obj3.dismissAccessibilityLabel = intl.string(stateFromStores(1112).t["+uBSeT"]);
   obj3.returnFocusRef = returnFocusRef.returnFocusRef;

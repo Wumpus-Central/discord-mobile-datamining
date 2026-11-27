@@ -214,7 +214,7 @@ function ClassificationPolicyCard(classificationDescription) {
   };
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(10078).ShieldIcon, {
+  obj3.children = closure_13(policyExplainerLink(10079).ShieldIcon, {
     size: "sm",
     color: nativeDefault.colors.TEXT_LINK,
   });

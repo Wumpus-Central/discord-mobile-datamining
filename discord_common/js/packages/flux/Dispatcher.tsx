@@ -267,7 +267,7 @@ class Dispatcher {
       _currentDispatchActionType: null,
       _actionHandlers: null,
       _sentryUtils: "Array",
-      functionCache: "a",
+      functionCache: "acrobat",
     });
     merged[0] = [];
     merged[1] = {};

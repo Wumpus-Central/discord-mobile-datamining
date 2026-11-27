@@ -53,7 +53,7 @@ export default function RedesignAddAvatarModal(route) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -74,7 +74,7 @@ export default function RedesignAddAvatarModal(route) {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8136).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8137).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -90,15 +90,15 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16034);
-              obj11.description = tmp2(9502).generateAvatarDescription();
+              const obj = tmp2(16041);
+              obj11.description = tmp2(9503).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(9502);
+              const obj3 = tmp2(9503);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(11946).setPendingChanges(obj12);
-            const obj4 = tmp2(11946);
+            tmp2(11954).setPendingChanges(obj12);
+            const obj4 = tmp2(11954);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";

@@ -4,12 +4,12 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import PremiumUpsellGradientBackground from "../../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
-import _modDef9731 from "../../../../../_runtime/metro/09731__.js";
+import _modDef9732 from "../../../../../_runtime/metro/09732__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerListConstants = fn(9540);
+const EmojiPickerListConstants = fn(9541);
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -57,7 +57,7 @@ const obj4 = {
 const memoResult = noop.memo(function EmojiPickerListNSFWRow() {
   const tmp = closure_6();
   const obj = { style: tmp.nsfwContainer, children: null };
-  items = [React4(native.Icon, { source: _modDef9731, size: native.Icon.Sizes.SMALL })];
+  items = [React4(native.Icon, { source: _modDef9732, size: native.Icon.Sizes.SMALL })];
   const obj3 = { style: tmp.nsfwText, variant: "body-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.SLzV5z);

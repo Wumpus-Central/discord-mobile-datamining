@@ -26,10 +26,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9017);
+const ChannelDetailsStore = fn(9018);
 ({ getIsChannelDetailsSearchActive: metroImportDefault, setIsChannelDetailsSearchActive: closure_8 } =
   ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9005).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9006).ONYX_BORDER_WIDTH;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -363,12 +363,12 @@ export default function _default(channelId) {
   gesture3 = undefined;
   disallowGesture2 = undefined;
   disallowGesture3 = undefined;
-  const context = obj.useContext(tmp2(11807));
+  const context = obj.useContext(tmp2(11815));
   const gesture2 = context.gesture;
   importDefault = gesture2;
   const disallowGesture = context.disallowGesture;
   dependencyMap = disallowGesture;
-  let context1 = obj.useContext(tmp12(11807).MainTabsChannelScreenStackContext);
+  let context1 = obj.useContext(tmp12(11815).MainTabsChannelScreenStackContext);
   if (context1 == null) {
     context1 = {};
   }
@@ -542,12 +542,12 @@ export default function _default(channelId) {
       position: translateX,
       openAt: 0,
       closedAt: maxWidth,
-      resolveOpenName: tmp12(17732).getBaseScreenName,
-      resolveClosedName: tmp12(17732).getBaseScreenName,
+      resolveOpenName: tmp12(17739).getBaseScreenName,
+      resolveClosedName: tmp12(17739).getBaseScreenName,
       onCoveringChange: callback2,
     };
-    tmp63 = navigation(tmp2(17735), obj4);
-    const tmp2Result = tmp2(17735);
+    tmp63 = navigation(tmp2(17742), obj4);
+    const tmp2Result = tmp2(17742);
   }
   const items30 = [tmp63];
   let obj5 = { gesture: memo2, children: null };

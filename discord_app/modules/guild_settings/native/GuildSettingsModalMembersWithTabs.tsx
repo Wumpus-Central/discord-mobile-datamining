@@ -127,7 +127,7 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: num2(8625), accessibilityLabel: null, ref: null };
+        const obj = { source: num2(8626), accessibilityLabel: null, ref: null };
         const intl = guildId(1112).intl;
         obj.accessibilityLabel = intl.string(guildId(1112).t.ogxXGq);
         obj.ref = ref.ref;

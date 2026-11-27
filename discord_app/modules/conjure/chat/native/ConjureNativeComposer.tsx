@@ -214,7 +214,7 @@ let obj11 = {
 obj5.input = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 let obj12 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 obj5.inputStacked = { paddingHorizontal: nativeDefault.space.PX_4 };
-obj5.draftCarousel = { marginTop: -fn(11084).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
+obj5.draftCarousel = { marginTop: -fn(11085).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
 let obj14 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj14.alignItems = "center";
@@ -690,7 +690,7 @@ export default function ConjureNativeComposer(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -708,9 +708,9 @@ export default function ConjureNativeComposer(projectId) {
               c1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: projectId(18808).pickConjurePhotos(
+                value: projectId(18826).pickConjurePhotos(
                   "mixed",
-                  projectId(18491).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                  projectId(18498).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                 ),
                 done: false,
               };
@@ -726,7 +726,7 @@ export default function ConjureNativeComposer(projectId) {
           } else {
             projectId(value);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -763,7 +763,7 @@ export default function ConjureNativeComposer(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -819,7 +819,7 @@ export default function ConjureNativeComposer(projectId) {
               );
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c4 = tmp;
@@ -936,7 +936,7 @@ export default function ConjureNativeComposer(projectId) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -951,13 +951,13 @@ export default function ConjureNativeComposer(projectId) {
               return obj5;
             } else {
               if (c43) {
-                const obj2 = tmp4(18687);
+                const obj2 = tmp4(18701);
                 const conjureTypedMentions = obj2.resolveConjureTypedMentions(
-                  tmp4(18837).encodeConjurePills(str, ref.current),
+                  tmp4(18853).encodeConjurePills(str, ref.current),
                   closure_34,
                 );
                 if (null == onSendFiles) {
-                  const result = tmp4(18647).takeConjureAttachmentRefs(tmp4, "chat");
+                  const result = tmp4(18662).takeConjureAttachmentRefs(tmp4, "chat");
                   if (onSend != null) {
                     let tmp21;
                     if (result.length > 0) {
@@ -966,7 +966,7 @@ export default function ConjureNativeComposer(projectId) {
                     tmp20(conjureTypedMentions, tmp21);
                   }
                   callback11();
-                  const tmp10Result = tmp4(18647);
+                  const tmp10Result = tmp4(18662);
                 } else {
                   c1 = 1;
                   dependencyMap = 1;
@@ -979,7 +979,7 @@ export default function ConjureNativeComposer(projectId) {
                   };
                   return obj6;
                 }
-                const obj3 = tmp4(18837);
+                const obj3 = tmp4(18853);
               }
               dependencyMap = 3;
             }

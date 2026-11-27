@@ -5,7 +5,7 @@ import SystemNotifPermissionLayoutDefault from "../SystemNotifPermissionLayout.t
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(9555).MobileUserSettings;
+const MobileUserSettings = fn(9556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

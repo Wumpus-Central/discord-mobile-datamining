@@ -16,7 +16,7 @@ import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageType
 import PollsIcon from "../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import PollCreationModalActionCreators from "PollCreationModalActionCreators.tsx";
-import _modDef13165 from "../../../../_runtime/metro/13165__.js";
+import _modDef13173 from "../../../../_runtime/metro/13173__.js";
 import PollAnswerInputDefault from "PollAnswerInput.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -97,11 +97,11 @@ function AddAnswerButton(onPress) {
     accessibilityLabel: null,
     children: null,
   };
-  const obj = { source: _modDef13165, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color };
+  const obj = { source: _modDef13173, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.B2Uvme);
   items = [
-    React6(native.Icon, { source: _modDef13165, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color }),
+    React6(native.Icon, { source: _modDef13173, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color }),
   ];
   const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
@@ -113,7 +113,7 @@ function AddAnswerButton(onPress) {
 function PollDurationSelectionRow(selectedDuration) {
   selectedDuration = selectedDuration.selectedDuration;
   const onChange = selectedDuration.onChange;
-  const tmp = onChange(13166)()[selectedDuration];
+  const tmp = onChange(13174)()[selectedDuration];
   let obj = {
     label: null,
     accessibilityLabel: null,
@@ -130,7 +130,7 @@ function PollDurationSelectionRow(selectedDuration) {
   obj.accessibilityHint = intl3.string(selectedDuration(1112).t.A4PJ1o);
   obj.onPress = function handlePollDurationPress() {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13167, dependencyMap.paths), React5, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13175, dependencyMap.paths), React5, {
       selectedDuration,
       onChange,
     });
@@ -144,7 +144,7 @@ function PollDurationSelectionRow(selectedDuration) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const PollsConstants = fn(12233);
+const PollsConstants = fn(12241);
 ({ MAX_POLL_QUESTION_LENGTH: metroImportDefault, POLL_CREATION_DURATION_ACTION_SHEET_KEY: closure_8 } = PollsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
@@ -258,7 +258,7 @@ export default function PollCreation(channel) {
       intl.formatToPlainString(channel(1112).t.BByGU4, { number: indexToRemove.indexToRemove + 1 }),
     );
   }, []);
-  const tmp10 = onCancel(13168)(channel, callback, callback1);
+  const tmp10 = onCancel(13176)(channel, callback, callback1);
   answers = tmp10.answers;
   ({ question: c4, allowMultiSelect } = tmp10);
   ({
@@ -275,8 +275,8 @@ export default function PollCreation(channel) {
   const setShouldFocusOnInvalidField = tmp10.setShouldFocusOnInvalidField;
   ({ handleQuestionChange, handleSubmitPoll, duration, setDuration } = tmp10);
   const tmp3 = onCancel(6116);
-  closure_18 = channel(13173).useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
-  let obj2 = channel(13173);
+  closure_18 = channel(13181).useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
+  let obj2 = channel(13181);
   channel(7197).useNavigatorBackPressHandler(() => {
     if (obj.isPollCreationEmpty(c4, answers)) {
       closure_18();
@@ -292,7 +292,7 @@ export default function PollCreation(channel) {
     }
     return flag;
   });
-  const obj5 = onCancel(13174)({
+  const obj5 = onCancel(13182)({
     onAddAnswer() {
       handleAddAnswer();
     },
@@ -356,7 +356,7 @@ export default function PollCreation(channel) {
   if (null != scheduledTimestamp) {
     TEXT_BRAND = tmp(575).colors.TEXT_BRAND;
   }
-  obj10.icon = c9(channel(9621).CalendarPlusIcon, { color: TEXT_BRAND });
+  obj10.icon = c9(channel(9622).CalendarPlusIcon, { color: TEXT_BRAND });
   obj10.onPress = function onPress() {
     const obj2 = { onSelect, currentTimestamp: scheduledTimestamp, onClear: null, entryPoint: null, channelId: null };
     let fn;
@@ -393,8 +393,8 @@ export default function PollCreation(channel) {
       anyErrorMessage = createPollError.getAnyErrorMessage();
     }
     const obj13 = { children: anyErrorMessage };
-    tmp13Result = tmp13(tmp(13175), obj13);
-    let tmpResult = tmp(13175);
+    tmp13Result = tmp13(tmp(13183), obj13);
+    let tmpResult = tmp(13183);
   }
   const items6 = [tmp13Result, ,];
   const obj14 = {

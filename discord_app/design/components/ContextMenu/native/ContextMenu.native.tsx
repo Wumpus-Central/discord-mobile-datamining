@@ -144,7 +144,7 @@ export function ContextMenu(triggerOnLongPress) {
   c13 = dividerIndexes;
   let tmpResult = require("../../../../../_runtime/metro/01654__.js");
   const scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(
-    tmp(9068).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT,
+    tmp(9069).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT,
   );
   c14 = scaledTextLineHeight;
   let items4 = [items3, scaledTextLineHeight];
@@ -207,10 +207,10 @@ export function ContextMenu(triggerOnLongPress) {
   const tmpResult10 = require("useFontScale");
   const isContextMenuActive = require("ContextMenuState").useIsContextMenuActive(contextMenuState);
   const tmpResult11 = require("ContextMenuState");
-  let result = (tmp(9068).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9068).CONTEXT_MENU_ITEM_PADDING) * fontScale;
-  let result1 = 2 * tmp(9068).CONTEXT_MENU_ITEM_PADDING;
+  let result = (tmp(9069).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9069).CONTEXT_MENU_ITEM_PADDING) * fontScale;
+  let result1 = 2 * tmp(9069).CONTEXT_MENU_ITEM_PADDING;
   const sharedValue1 = require("../../../../../_runtime/metro/01654__.js").useSharedValue(
-    Math.max(result + result1, tmp(9068).CONTEXT_MENU_ITEM_BASE_HEIGHT),
+    Math.max(result + result1, tmp(9069).CONTEXT_MENU_ITEM_BASE_HEIGHT),
   );
   obj3.useRef(items3);
   let items5 = [isContextMenuActive, contextMenuState];

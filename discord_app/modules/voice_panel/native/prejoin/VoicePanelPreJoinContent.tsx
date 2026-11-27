@@ -181,7 +181,7 @@ function ActivityInfo(activity) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -205,7 +205,7 @@ function ActivityInfo(activity) {
                   analyticsLocations: num3,
                 };
                 v3 = num3;
-                const obj7 = { value: v3(10199).maybeJoinEmbeddedActivity(obj6), done: false };
+                const obj7 = { value: v3(10200).maybeJoinEmbeddedActivity(obj6), done: false };
                 return obj7;
               }
             } else {
@@ -260,7 +260,7 @@ function ActivityInfo(activity) {
     const obj9 = { style: tmp.previewImage, children: null };
     const tmp2Result = tmp2(7055);
     const obj10 = { imageBackground: tmp19, aspectRatio: 1.7777777777777777 };
-    obj9.children = closure_25(tmp2(19507), obj10);
+    obj9.children = closure_25(tmp2(19523), obj10);
     const items7 = [closure_25(tmp2(7055), obj9)];
     const obj11 = { style: tmp.joinButtonWrapper, children: null };
     const tmp2Result3 = tmp2(7055);
@@ -562,18 +562,18 @@ function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
   return closure_1_25(PreJoinTransitioner, { transitionState, transitionCleanUp }, arg0);
 }
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(11782).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(11785).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(11790).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(11793).EDGE_GUTTER;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(15226).VoiceChannelWarningSurfaces;
+const constants4 = fn(15233).VoiceChannelWarningSurfaces;
 const Features = fn(5855).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
 const createStyles = fn(5043);
 let obj = {
   contentWrapper: {
-    paddingTop: EDGE_GUTTER + fn(11787).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+    paddingTop: EDGE_GUTTER + fn(11795).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
     gap: 24,
     paddingBottom: 16,
   },
@@ -589,7 +589,7 @@ let obj = {
   consolePreJoinPadding: null,
 };
 let obj3 = {
-  paddingTop: EDGE_GUTTER + fn(11787).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+  paddingTop: EDGE_GUTTER + fn(11795).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
   gap: 24,
   paddingBottom: 16,
 };
@@ -858,10 +858,10 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 
 export default noop.memo(function VoicePanelPreJoinWrapper() {
-  const context = noop.useContext(guildId(11781));
+  const context = noop.useContext(guildId(11789));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(18248)(channelId);
+  const tmp2 = guildId(18255)(channelId);
   dependencyMap = tmp2;
   items = [
     SortedVoiceStateStore,
@@ -911,7 +911,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(19524).areVoicePanelPreJoinContentPropsEqual,
+    channelId(19540).areVoicePanelPreJoinContentPropsEqual,
   );
   return closure_25(channelId(5104).TransitionItem, { item: stateFromStores, renderItem });
 });

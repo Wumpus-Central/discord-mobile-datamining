@@ -25,7 +25,7 @@ function openStageChannel(channel) {
       const tmpResult = PrivateChannelCallUtils;
       if (!tmpResult2.isModalOpen(voiceChannelKey)) {
         const obj3 = { channel };
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10014, dependencyMap.paths), obj3, voiceChannelKey);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10015, dependencyMap.paths), obj3, voiceChannelKey);
       }
       tmpResult2 = NavigationRouteUtils;
     }
@@ -61,7 +61,7 @@ export function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
   });
 }
 export function openEndStageModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14698, dependencyMap.paths), React5, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14705, dependencyMap.paths), React5, { channel });
 }
 export { openStageChannel };
 export function showPlatformUserProfile(arg0) {

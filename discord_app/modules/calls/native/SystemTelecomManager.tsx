@@ -173,7 +173,7 @@ class SystemTelecomManager {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -321,7 +321,7 @@ class SystemTelecomManager {
       }
     };
     obj.handleSessionStart = function handleSessionStart() {
-      obj = obj(15845);
+      obj = obj(15852);
       obj.flushCallPushToken();
     };
     obj.handleConnectionOpen = function handleConnectionOpen(user) {
@@ -429,7 +429,7 @@ class SystemTelecomManager {
       const item = voiceStates.forEach((channelId) => {
         channelId = channelId.channelId;
         ({ guildId, userId, sessionId, selfVideo } = channelId);
-        obj = obj(15846);
+        obj = obj(15853);
         if (obj.isSystemTelecomEnabledForChannel(guildId, channelId)) {
           if (null != channelId) {
             if (userId === currentUserId.currentUserId) {
@@ -572,7 +572,7 @@ prototype["startCall"] = function startCall(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -607,10 +607,10 @@ prototype["startCall"] = function startCall(arg0) {
                 const result = self.updateActiveCallStatus();
                 const obj9 = tmp5(1269);
                 const _HermesInternal = HermesInternal;
-                tmp29(10356).setRequestedBy("call:" + obj6.uuid);
-                const obj10 = tmp29(10356);
+                tmp29(10357).setRequestedBy("call:" + obj6.uuid);
+                const obj10 = tmp29(10357);
                 if (obj11.isSystemTelecomEnabled()) {
-                  const obj2 = tmp3(15844);
+                  const obj2 = tmp3(15851);
                   ({ uuid, handle } = obj6);
                   const tmp42Result = tmp5(5659);
                   const startOutgoingCallResult = obj2.startOutgoingCall(
@@ -619,14 +619,14 @@ prototype["startCall"] = function startCall(arg0) {
                     tmp5(5659).computeChannelName(obj6.channel, UserStore, RelationshipStore),
                     obj6.video,
                   );
-                  tmp3(15844).setCallMuted(obj6.uuid, obj6.muted);
+                  tmp3(15851).setCallMuted(obj6.uuid, obj6.muted);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
                   const obj7 = { value: startOutgoingCallResult, done: false };
                   return obj7;
                 }
-                obj11 = tmp5(15846);
+                obj11 = tmp5(15853);
               }
             }
           }

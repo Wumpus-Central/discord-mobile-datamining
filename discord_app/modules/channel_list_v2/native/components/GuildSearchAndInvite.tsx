@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import useStableCallbackDefault from "../../../../hooks/useStableCallback.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8609 from "../../../../../_runtime/metro/08609__.js";
+import _modDef8610 from "../../../../../_runtime/metro/08610__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import utils_InstantInviteUtils from "../../../../utils/native/InstantInviteUtils.tsx";
-import _modDef10548 from "../../../../../_runtime/metro/10548__.js";
+import _modDef10549 from "../../../../../_runtime/metro/10549__.js";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
 import SearchPlatformUtilsDefault from "../../../search/native/SearchPlatformUtils.tsx";
 import useEventsButtonPropsDefault from "../../../guild_scheduled_events/native/hooks/useEventsButtonProps.tsx";
@@ -70,7 +70,7 @@ function GuildSearchAndInvite(guildId) {
       const obj = {
         variant: "secondary",
         size: "sm",
-        icon: _modDef10548,
+        icon: _modDef10549,
         onPress: onInvitePress,
         onPressDisabled: handleInviteDisabledPress,
         accessibilityLabel: null,
@@ -195,8 +195,8 @@ export default noop.memo(function ConnectedGuildSearchAndInviteInner(guild) {
       constants2.GUILD_HEADER,
     );
   });
-  const shouldShowInvitesDisabledNotif = guild(13335).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(13335);
+  const shouldShowInvitesDisabledNotif = guild(13343).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(13343);
   const tmp5 = useEventsButtonPropsDefault(guild);
   const obj3 = {
     guildId: guild.id,

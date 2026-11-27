@@ -53,8 +53,8 @@ class WishlistEmptyState {
   }
 }
 const View = fn(17).View;
-let closure_10 = fn(11119).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(11117).getWishlistProductLines;
+let closure_10 = fn(11120).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(11118).getWishlistProductLines;
 let Constants = fn(6137);
 ({ TrackUserProfileWishlistActions: closure_15, UserProfileSections: closure_16 } = Constants);
 Constants = fn(1071);
@@ -358,7 +358,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -714,7 +714,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15059, dependencyMap.paths),
+      asyncRequireImpl(15066, dependencyMap.paths),
       "EditWishlistActionSheet",
       { wishlistId, analyticsContext: context, analyticsLocations },
       "stack",

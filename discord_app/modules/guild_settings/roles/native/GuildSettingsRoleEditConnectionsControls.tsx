@@ -245,7 +245,7 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(20078, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(20136, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
@@ -443,8 +443,8 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
         connectionType,
         connectionMetadataField: "Array",
         applicationId,
-        operator: "analyticsLocations",
-        value: true,
+        operator: "dispatch",
+        value: "isArray",
       };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {

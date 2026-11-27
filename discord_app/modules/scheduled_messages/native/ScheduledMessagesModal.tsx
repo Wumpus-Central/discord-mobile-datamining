@@ -145,7 +145,7 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
 const View = fn(17).View;
 const AnalyticsPages = fn(1071).AnalyticsPages;
 const PremiumTypes = fn(1389).PremiumTypes;
-const premiumMax = fn(9596).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(9597).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];

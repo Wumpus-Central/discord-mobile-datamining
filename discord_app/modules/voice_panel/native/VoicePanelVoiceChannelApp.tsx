@@ -137,7 +137,7 @@ function VoicePanelVoiceChannelAppForChannel(channel) {
   }
   return tmp5;
 }
-const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11788).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let obj2 = { layer: null };

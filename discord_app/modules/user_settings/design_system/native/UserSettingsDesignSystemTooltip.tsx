@@ -46,7 +46,7 @@ function Content() {
     items1,
   );
   const tmp8 = first2(items, 2);
-  const tooltip = visible(9569).useTooltip(ref, memo);
+  const tooltip = visible(9570).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
@@ -65,7 +65,7 @@ function Content() {
     closure_5(visible(7549).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }),
     ,
   ];
-  const obj2 = visible(9569);
+  const obj2 = visible(9570);
   const obj5 = {
     ref,
     onPress() {

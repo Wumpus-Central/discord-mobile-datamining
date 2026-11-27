@@ -10,7 +10,7 @@ import GuildOnboardingHomeSettingsStore from "../guild_onboarding_home/GuildOnbo
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(8292).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(8293).ChannelListGuildActionRow;
 const GuildFeatures = fn(1071).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");

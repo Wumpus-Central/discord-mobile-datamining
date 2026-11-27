@@ -130,7 +130,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1112).intl;
   obj11.text = intl3.string(markAsDismissed(1112).t.ItuabN);
   const obj6 = { size: "md", color: nativeDefault.colors.ICON_MUTED, accessible: false };
-  obj11.icon = closure_13(markAsDismissed(14103).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj11.icon = closure_13(markAsDismissed(14110).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj11.onPress = function handleConnect() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -156,7 +156,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 export function useShouldShowRobloxConnectionCoachmark() {
   items = [LocalAppDetectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-    appInstalled.isAppInstalled(stateFromStores(15205).DetectableAppNames.ROBLOX),
+    appInstalled.isAppInstalled(stateFromStores(15212).DetectableAppNames.ROBLOX),
   );
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];

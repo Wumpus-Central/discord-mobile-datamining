@@ -30,7 +30,7 @@ function RemoveMultiAccountUserButton(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -76,11 +76,11 @@ function RemoveMultiAccountUserButton(user) {
           return obj8;
         } else {
           if (value) {
-            v3(13388).removeAccount(closure_128_0.id);
-            const obj = v3(13388);
+            v3(13396).removeAccount(closure_128_0.id);
+            const obj = v3(13396);
           }
           v3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         v3 = tmp;
@@ -123,7 +123,7 @@ function RemoveMultiAccountUserButton(user) {
       return applyArgumentsResult;
     };
     let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj3.children = closure_18(tmp(16924).CircleMinusIcon, obj4);
+    obj3.children = closure_18(tmp(16931).CircleMinusIcon, obj4);
     return closure_18(tmp(6152).PressableOpacity, obj3);
   }
   let obj2 = user(504);
@@ -298,19 +298,19 @@ function ManageAccounts(isEditing) {
   return closure_18(require("common/SafeAreaView").SafeAreaPaddingView, obj5);
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13385).MultiAccountTokenStatus;
-let Constants = fn(13386);
+const MultiAccountTokenStatus = fn(13393).MultiAccountTokenStatus;
+let Constants = fn(13394);
 ({
   MANAGE_EDIT_TRANSITION_DURATION: closure_12,
   MAX_ACCOUNTS: map1,
   MultiAccountSwitchLocation: closure_14,
 } = Constants);
-const ManageAccountsScreens = fn(18168).ManageAccountsScreens;
+const ManageAccountsScreens = fn(18175).ManageAccountsScreens;
 Constants = fn(1071);
 ({ AnalyticEvents: closure_16, AuthStates: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const NativeStackNavigator = fn(9047);
+const NativeStackNavigator = fn(9048);
 let closure_20 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5043);
 let obj = {
@@ -400,7 +400,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return obj;
       },
       children() {
-        return closure_1_18(isEditing(17688), {
+        return closure_1_18(isEditing(17695), {
           handleLogin(login, password, undelete) {
             isEditing(6839).login({ login, password, undelete });
           },
@@ -425,7 +425,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(17687), { isMultiAccount: true });
+        return closure_1_18(isEditing(17694), { isMultiAccount: true });
       },
     }),
   ];

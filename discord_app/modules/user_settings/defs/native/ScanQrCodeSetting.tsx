@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 require = fn;
 const NativePermissionTypes = fn(7872).NativePermissionTypes;
 const apply = fn(12);
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const debounceResult = apply.debounce(
   asyncGeneratorStep(async () => {
     if (c3 === 2) {
@@ -20,7 +20,7 @@ const debounceResult = apply.debounce(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(16389).QrCodeIcon,
+  IconComponent: fn(16396).QrCodeIcon,
   onPress: apply.debounce(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {
@@ -101,7 +101,7 @@ const pressable = SettingBuilders.createPressable({
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

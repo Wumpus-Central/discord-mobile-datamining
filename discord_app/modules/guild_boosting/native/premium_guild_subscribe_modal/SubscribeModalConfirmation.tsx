@@ -7,8 +7,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
-import _modDef14811 from "../../../../../_runtime/metro/14811__.js";
-import _modDef14812 from "../../../../../_runtime/metro/14812__.js";
+import _modDef14817 from "../../../../../_runtime/metro/14817__.js";
+import _modDef14818 from "../../../../../_runtime/metro/14818__.js";
 import PremiumGuildPreviewDefault from "PremiumGuildPreview.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -33,7 +33,7 @@ function PendingCancellationWarning(slots) {
     tmp5 = null;
     if (null != stateFromStores) {
       const obj2 = { style: tmp.pendingCancellation, children: null };
-      const obj3 = { style: tmp.pendingCancellationIcon, source: _modDef14811 };
+      const obj3 = { style: tmp.pendingCancellationIcon, source: _modDef14817 };
       const items1 = [closure_1_17(FastImageDefault, obj3)];
       const obj4 = { style: tmp.pendingCancellationMessage, variant: "body-sm/medium", children: null };
       const intl = util.intl;
@@ -51,7 +51,7 @@ function SubscribeConfirmation(arg0) {
   ({ guild, isModifyingSubscription } = arg0);
   const tmp = closure_20();
   const obj = { children: null };
-  const obj2 = { style: tmp.subscribeImage, source: _modDef14812 };
+  const obj2 = { style: tmp.subscribeImage, source: _modDef14818 };
   items = [closure_1_17(FastImageDefault, obj2), , , , ,];
   const obj3 = {
     style: tmp.header,
@@ -89,8 +89,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = closure_20();
-  const guildSubscriptionRemovalSource = prop(14822).useGuildSubscriptionRemovalSource();
-  const obj = prop(14822);
+  const guildSubscriptionRemovalSource = prop(14828).useGuildSubscriptionRemovalSource();
+  const obj = prop(14828);
   items = [GuildStore];
   const stateFromStores = prop(504).useStateFromStores(items, () => {
     const found = prop.find((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription);
@@ -130,7 +130,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10.children = intl3.format(tmp2(1112).t["5zQYEz"], { guildCount: 1 });
     const items2 = [closure_17(tmp2(5634).Text, obj10), , ,];
     const obj11 = { style: tmp.guildPreview, guild: stateFromStores };
-    items2[1] = closure_17(onPremiumGuildSubscribe(14813), obj11);
+    items2[1] = closure_17(onPremiumGuildSubscribe(14819), obj11);
     const obj12 = { style: tmp.previewHeader, variant: "body-sm/medium", color: "text-default", children: null };
     const intl4 = tmp2(1112).intl;
     const obj13 = { slotCount: prop.length };
@@ -144,7 +144,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj14.end = tmp2(1091).HorizontalGradient.END;
     obj14.colors = Gradients.PREMIUM_GUILD;
     const obj15 = { guild };
-    obj14.children = closure_17(onPremiumGuildSubscribe(14813), obj15);
+    obj14.children = closure_17(onPremiumGuildSubscribe(14819), obj15);
     items2[3] = closure_17(onPremiumGuildSubscribe(5598), obj14);
     obj9.children = items2;
     items1[3] = closure_18(closure_6, obj9);
@@ -181,7 +181,7 @@ const Constants = fn(1071);
   AnalyticsSections: closure_14,
   GUILD_BOOST_APPLY_COOLDOWN_DAYS: closure_15,
 } = Constants);
-const Gradients = fn(9126).Gradients;
+const Gradients = fn(9127).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const createStyles = fn(5043);
@@ -245,7 +245,7 @@ export default function SubscribeModalConfirmation(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -6,13 +6,13 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import EllipsisDefault from "../../Ellipsis/native/Ellipsis.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef15594 from "../../../../../_runtime/metro/15594__.js";
-import _modDef15595 from "../../../../../_runtime/metro/15595__.js";
-import _modDef15596 from "../../../../../_runtime/metro/15596__.js";
-import _modDef15597 from "../../../../../_runtime/metro/15597__.js";
-import _modDef15598 from "../../../../../_runtime/metro/15598__.js";
-import _modDef15599 from "../../../../../_runtime/metro/15599__.js";
-import _modDef15600 from "../../../../../_runtime/metro/15600__.js";
+import _modDef15601 from "../../../../../_runtime/metro/15601__.js";
+import _modDef15602 from "../../../../../_runtime/metro/15602__.js";
+import _modDef15603 from "../../../../../_runtime/metro/15603__.js";
+import _modDef15604 from "../../../../../_runtime/metro/15604__.js";
+import _modDef15605 from "../../../../../_runtime/metro/15605__.js";
+import _modDef15606 from "../../../../../_runtime/metro/15606__.js";
+import _modDef15607 from "../../../../../_runtime/metro/15607__.js";
 import useFlashListAnimationDisabler from "../../../../modules/main_tabs_v2/native/shared_components/guild_channels/useFlashListAnimationDisabler.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1187).STATUS_PADDING;
 const StatusTypes = fn(1071).StatusTypes;
-const ChannelAnimationConstants = fn(14932);
+const ChannelAnimationConstants = fn(14939);
 ({
   TYPING_ENTERING: metroImportDefault,
   TYPING_EXITING: closure_8,
@@ -102,23 +102,23 @@ export default function Status(isMobileOnline) {
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef15594;
+    let tmp4Result = _modDef15601;
   } else if (flag2) {
-    tmp4Result = _modDef15595;
+    tmp4Result = _modDef15602;
   } else if (flag) {
-    tmp4Result = _modDef15596;
+    tmp4Result = _modDef15603;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef15597;
+    tmp4Result = _modDef15604;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef15598;
+    tmp4Result = _modDef15605;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef15600;
+        tmp4Result = _modDef15607;
       }
     }
-    tmp4Result = _modDef15599;
+    tmp4Result = _modDef15606;
   }
   obj2.source = tmp4Result;
   obj.children = refs(FastImageDefault, obj2);
@@ -234,23 +234,23 @@ export function StatusWithTyping(status) {
   const obj6 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
   const tmp5Result4 = _mod1654;
   if (streaming) {
-    let tmp3Result2 = _modDef15594;
+    let tmp3Result2 = _modDef15601;
   } else if (flag2) {
-    tmp3Result2 = _modDef15595;
+    tmp3Result2 = _modDef15602;
   } else if (flag) {
-    tmp3Result2 = _modDef15596;
+    tmp3Result2 = _modDef15603;
   } else if (StatusTypes.IDLE === status) {
-    tmp3Result2 = _modDef15597;
+    tmp3Result2 = _modDef15604;
   } else if (StatusTypes.DND === status) {
-    tmp3Result2 = _modDef15598;
+    tmp3Result2 = _modDef15605;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp3Result2 = _modDef15600;
+        tmp3Result2 = _modDef15607;
       }
     }
-    tmp3Result2 = _modDef15599;
+    tmp3Result2 = _modDef15606;
   }
   obj6.source = tmp3Result2;
   obj5.children = refs(FastImageDefault, obj6);

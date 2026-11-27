@@ -30,7 +30,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useTap
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11781)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11789)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   closure_4 = tmp2;

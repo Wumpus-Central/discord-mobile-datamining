@@ -108,7 +108,7 @@ function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) 
   return <EmojiSuggestionBarLargeAnimated key={key} />;
 }
 const View = fn(17).View;
-const IMAGE_SIZE = fn(9540).IMAGE_SIZE;
+const IMAGE_SIZE = fn(9541).IMAGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles((arg0) => {

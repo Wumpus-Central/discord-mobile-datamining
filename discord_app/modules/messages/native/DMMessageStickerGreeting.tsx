@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 const _modDef1654 = tmp5(1654);
 const LinearGradientDefault = tmp5(5598);
-const StickerDefault = tmp5(10681);
+const StickerDefault = tmp5(10682);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -86,8 +86,8 @@ export default function DMMessageStickerGreeting(channel) {
   }
   const intl2 = Text(1112).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(Text(1112).t.m0zYbV, { username: name });
-  const showConvoStarterInDM = Text(13222).useShowConvoStarterInDM(channel);
-  const TextResult = Text(13222);
+  const showConvoStarterInDM = Text(13230).useShowConvoStarterInDM(channel);
+  const TextResult = Text(13230);
   const items2 = [c7];
   const items3 = [showConvoStarterInDM];
   const stateFromStores2 = Text(504).useStateFromStores(
@@ -131,7 +131,7 @@ export default function DMMessageStickerGreeting(channel) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ export default function DMMessageStickerGreeting(channel) {
                   v2(false);
                   showErrorToast(tmp26);
                   c5 = 3;
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   c3 = 1;
                   const obj4 = { channelId: _undefined.id, source: "In-channel greet" };
@@ -290,7 +290,7 @@ export default function DMMessageStickerGreeting(channel) {
   const TextResult4 = Text(5607);
   const items10 = [Text(5040).hexWithOpacity(token, 0), token];
   const TextResult5 = Text(5040);
-  const shouldAnimateSticker = Text(10830).useShouldAnimateSticker(false);
+  const shouldAnimateSticker = Text(10831).useShouldAnimateSticker(false);
   if (!showConvoStarterInDM) {
     return null;
   } else {
@@ -346,5 +346,5 @@ export default function DMMessageStickerGreeting(channel) {
     obj5.children = items11;
     closure_11(_modDef1654.View, obj5);
   }
-  const TextResult6 = Text(10830);
+  const TextResult6 = Text(10831);
 }

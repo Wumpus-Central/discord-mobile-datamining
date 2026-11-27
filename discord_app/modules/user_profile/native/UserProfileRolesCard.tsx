@@ -127,29 +127,36 @@ class RoleItem {
     return tmp11Result;
   }
 }
-function RolesList(guildMemberRoleIds) {
-  guildMemberRoleIds = guildMemberRoleIds.guildMemberRoleIds;
-  const guildId = guildMemberRoleIds.guildId;
-  const tmp = closure_12();
-  items = [GuildRoleStore];
-  const items1 = [guildMemberRoleIds, guildId];
-  const stateFromStoresArray = guildMemberRoleIds(504).useStateFromStoresArray(
-    items,
-    () => {
-      const manyRoles = GuildRoleStore.getManyRoles(guildId, guildMemberRoleIds);
-      return manyRoles.sort(UserProfileRoleUtils.sortRolesByVerification);
-    },
-    items1,
-  );
-  let tmp2 = null;
-  if (0 !== stateFromStoresArray.length) {
-    const obj2 = {
-      style: tmp.roleContainer,
-      children: stateFromStoresArray.map((role) => React6(RoleItem, { role, guildId }, role.id)),
-    };
-    tmp2 = closure_9(View, obj2);
+class RolesList {
+  constructor(arg0) {
+    guildMemberRoleIds = global.guildMemberRoleIds;
+    guildId = global.guildId;
+    tmp = closure_12();
+    obj = guildMemberRoleIds(closure_2[19]);
+    items = [];
+    items[0] = closure_6;
+    items1 = [,];
+    items1[0] = guildMemberRoleIds;
+    items1[1] = guildId;
+    stateFromStoresArray = obj.useStateFromStoresArray(
+      items,
+      () => {
+        const manyRoles = GuildRoleStore.getManyRoles(guildId, guildMemberRoleIds);
+        return manyRoles.sort(UserProfileRoleUtils.sortRolesByVerification);
+      },
+      items1,
+    );
+    tmp2 = null;
+    if (0 !== stateFromStoresArray.length) {
+      tmp3 = jsx;
+      tmp4 = View;
+      obj1 = { style: null, children: null };
+      obj1.style = tmp.roleContainer;
+      obj1.children = stateFromStoresArray.map((role) => React6(RoleItem, { role, guildId }, role.id));
+      tmp2 = jsx(View, obj1);
+    }
+    return tmp2;
   }
-  return tmp2;
 }
 const View = fn(17).View;
 const Constants = fn(1071);
@@ -206,3 +213,4 @@ export default function UserProfileRolesCard(userId) {
   return tmp4;
 }
 export { RoleItem };
+export { RolesList };

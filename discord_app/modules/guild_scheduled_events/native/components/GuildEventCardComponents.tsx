@@ -151,7 +151,7 @@ class GuildEventJoinAndRSVPAction {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -476,7 +476,7 @@ export function GuildEventShareAction(event) {
   event = event.event;
   const tmp3 = useCanInviteForGuildEventDefault(event);
   importDefault = tmp3;
-  dependencyMap = event(8595).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
+  dependencyMap = event(8596).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
   const obj3 = { accessibilityLabel: null, onPress: null, icon: null, variant: "secondary" };
   const intl = event(1112).intl;
   obj3.accessibilityLabel = "" + intl.string(event(1112).t.RDE0Sc) + ", " + event.name;
@@ -490,7 +490,7 @@ export function GuildEventShareAction(event) {
       ToastUtils.presentLinkCopied();
     }
   };
-  obj3.icon = importDefault(tmp3 ? 8596 : 5740);
+  obj3.icon = importDefault(tmp3 ? 8597 : 5740);
   return closure_21(event(7944).IconButton, obj3);
 }
 export function GuildEventModeratorAction(event) {
@@ -562,7 +562,7 @@ export function GuildEventIndicateInterestAction(event) {
   if (first) {
     let BellIcon = tmp(7186).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(8597).BellIcon;
+    BellIcon = tmp(8598).BellIcon;
   }
   const obj2 = {
     accessibilityRole: "togglebutton",
@@ -987,14 +987,14 @@ export function GuildEventSimpleLocation(event) {
   let tmp7 = stateFromStores(5659)(stateFromStores);
   const obj2 = channel_id(504);
   const tmp6 = stateFromStores;
-  const locationFromEvent = channel_id(8480).getLocationFromEvent(event);
+  const locationFromEvent = channel_id(8481).getLocationFromEvent(event);
   if (null == stateFromStores) {
     if (null == locationFromEvent) {
       return null;
     }
   }
-  const obj3 = channel_id(8480);
-  const eventLocationIconComponent = channel_id(8586).getEventLocationIconComponent(
+  const obj3 = channel_id(8481);
+  const eventLocationIconComponent = channel_id(8587).getEventLocationIconComponent(
     event,
     stateFromStores,
     stateFromStores1,
@@ -1015,7 +1015,7 @@ export function GuildEventSimpleLocation(event) {
   };
   if (null != stateFromStores) {
     const obj7 = { channel: stateFromStores };
-    let combined = tmp6(8587)(obj7);
+    let combined = tmp6(8588)(obj7);
   } else if (null != locationFromEvent) {
     const intl = tmp2(1112).intl;
     const _HermesInternal = HermesInternal;
@@ -1026,8 +1026,8 @@ export function GuildEventSimpleLocation(event) {
     let result = null;
     if (null != locationFromEvent) {
       const obj8 = { guildId: event.guild_id };
-      result = tmp2(8591).guildEventLocationParser(locationFromEvent, true, obj8);
-      const tmp2Result2 = tmp2(8591);
+      result = tmp2(8592).guildEventLocationParser(locationFromEvent, true, obj8);
+      const tmp2Result2 = tmp2(8592);
     }
     tmp7 = result;
   }

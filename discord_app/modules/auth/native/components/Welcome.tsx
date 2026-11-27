@@ -12,8 +12,8 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import _modDef14513 from "../../../../../_runtime/metro/14513__.js";
-import _mod15266 from "../../../../../_runtime/metro/15266__.js";
+import _modDef14520 from "../../../../../_runtime/metro/14520__.js";
+import _mod15273 from "../../../../../_runtime/metro/15273__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -87,7 +87,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef14513 };
+  const obj2 = { source: _modDef14520 };
   const items1 = [closure_1_19(FastImageDefault, obj2)];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "body-sm/medium", color: "text-subtle", children: null };
@@ -116,7 +116,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15266 }), ,];
+  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15273 }), ,];
   const obj4 = {
     style: tmp4.header,
     lineClamp: null,

@@ -4,18 +4,18 @@ import util from "../../../../intl/index.native.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.iWTwu6);
   },
-  parent: fn(9555).MobileUserSettings.VOICE,
+  parent: fn(9556).MobileUserSettings.VOICE,
   useValue: function useEchoCancellationSettingValue() {
     items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
   },
-  onValueChange: fn(10417).handleEchoCancellationChange,
+  onValueChange: fn(10418).handleEchoCancellationChange,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/EchoCancellationSetting.tsx");

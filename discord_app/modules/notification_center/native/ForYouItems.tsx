@@ -127,11 +127,11 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(14424)(first);
+    const tmp15 = guild_id(14431)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(12231).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(12231);
+      result = tmp2(12239).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(12239);
     }
   } else if (stickers.length > 0) {
     const intl6 = tmp2(1112).intl;
@@ -245,7 +245,7 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(8818).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
+  const items5 = [item(8819).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj5.children = items5;
@@ -255,7 +255,7 @@ function ForYouMessagePreviewV2(item) {
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11696);
+      let tmp29 = guild_id(11704);
       const obj8 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1186).IconSizes.SMALL;
       obj8.size = SMALL;
@@ -269,9 +269,9 @@ function ForYouMessagePreviewV2(item) {
         tmp29 = guild_id(8085);
       }
     }
-    tmp29 = guild_id(10866);
+    tmp29 = guild_id(10867);
   }
-  const tmp2Result10 = item(8818);
+  const tmp2Result10 = item(8819);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
@@ -612,7 +612,7 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(18263).deleteNotificationCenterItem(tmp3);
+        yield tmp3(18270).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };

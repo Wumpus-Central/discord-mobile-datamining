@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef18125 from "../../../../_runtime/metro/18125__.js";
+import _modDef18132 from "../../../../_runtime/metro/18132__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
@@ -52,8 +52,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18125 };
-    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18125 });
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18132 };
+    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18132 });
     tmp5 = (
       <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
         {null}

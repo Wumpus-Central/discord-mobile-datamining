@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(9090).useChatInputContainerHeight;
+let closure_4 = fn(9091).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let obj = { placeholder: null };

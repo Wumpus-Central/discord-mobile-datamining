@@ -3,7 +3,7 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef8845 from "../../../../_runtime/metro/08845__.js";
+import _modDef8846 from "../../../../_runtime/metro/08846__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -263,7 +263,7 @@ export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
   let obj2 = {
-    icon: closure_9(activity(5641).Button.Icon, { source: _modDef8845 }),
+    icon: closure_9(activity(5641).Button.Icon, { source: _modDef8846 }),
     text: null,
     size: "sm",
     onPress: null,

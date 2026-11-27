@@ -169,7 +169,7 @@ export default function FileUploadActionComponent(maxValues) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -205,7 +205,7 @@ export default function FileUploadActionComponent(maxValues) {
               }
             }
             c8 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp5) {
           let v1 = 0;
@@ -313,7 +313,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(11088).hideMediaKeyboardActionSheet();
+        return InteractionModal(11089).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveUploadLimit,
       onSelectFiles(arg0) {
@@ -346,7 +346,7 @@ export default function FileUploadActionComponent(maxValues) {
           const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
           if (item.isIncluded) {
             const found = currentUploads.find((item) =>
-              InteractionModal(8134).doesImageMatchUpload(item.node.image, item),
+              InteractionModal(8135).doesImageMatchUpload(item.node.image, item),
             );
             if (null != found) {
               callback1(found.id);
@@ -367,9 +367,9 @@ export default function FileUploadActionComponent(maxValues) {
           obj.handleViewAllDialog(obj2);
         },
         onManageLimited() {
-          obj = InteractionModal(11087);
+          obj = InteractionModal(11088);
           const result = obj.handleLimitedPickerDialog({
-            onDismissKeyboard: InteractionModal(11088).hideMediaKeyboardActionSheet,
+            onDismissKeyboard: InteractionModal(11089).hideMediaKeyboardActionSheet,
             onRestoreKeyboard,
           });
         },

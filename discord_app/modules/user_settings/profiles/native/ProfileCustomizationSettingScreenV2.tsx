@@ -63,7 +63,7 @@ function ProfilePreviewBanner(user) {
   }
   const obj2 = { user, guildId, analyticsLocations, showRemoveBanner: null };
   const obj = user(504);
-  const tmpResult3 = guildId(16031);
+  const tmpResult3 = guildId(16038);
   obj2.showRemoveBanner = user(6375).showRemoveBanner(pendingBanner, banner);
   const tmp4Result = user(6375);
   const intl = tmp4(1112).intl;
@@ -90,7 +90,7 @@ function ProfilePreviewBanner(user) {
   obj4.onPressEdit = tmpResult1Result;
   obj4.editButtonAccessibilityLabel = stringResult;
   obj4.editDisabled = disabled;
-  obj3.children = closure_18(guildId(16047), obj4);
+  obj3.children = closure_18(guildId(16054), obj4);
   return closure_18(user(6379).AnalyticsLocationProvider, obj3);
 }
 function ProfilePreviewFrame(user) {
@@ -98,22 +98,22 @@ function ProfilePreviewFrame(user) {
   const guildId = user.guildId;
   ({ displayProfile, pendingChanges, disabled } = user);
   const tmp = closure_22();
-  const tmp4 = guildId(9487)();
-  const tmp5 = guildId(16049)();
-  const customStatusActivity = user(9488).useCustomStatusActivity();
-  const obj = user(9488);
-  const tmp8 = guildId(9503)(displayProfile);
+  const tmp4 = guildId(9488)();
+  const tmp5 = guildId(16056)();
+  const customStatusActivity = user(9489).useCustomStatusActivity();
+  const obj = user(9489);
+  const tmp8 = guildId(9504)(displayProfile);
   const themeContext = user(5104).useThemeContext();
   ({ primaryColor, theme, secondaryColor } = themeContext);
   const obj2 = user(5104);
-  const userProfileColors = user(9489).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const userProfileColors = user(9490).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const obj4 = { backgroundColor: userProfileColors.avatarBackground };
   let num = 0;
   if (null == customStatusActivity) {
     num = closure_17;
   }
-  const obj3 = user(9489);
-  const pendingAvatarSrc = user(9502).getPendingAvatarSrc({ userId: user.id, image: pendingChanges.pendingAvatar });
+  const obj3 = user(9490);
+  const pendingAvatarSrc = user(9503).getPendingAvatarSrc({ userId: user.id, image: pendingChanges.pendingAvatar });
   user(504);
   [][0] = GuildMemberStore;
   items = [guildId, user.id];
@@ -148,13 +148,13 @@ function ProfilePreviewFrame(user) {
   items2[2] = { paddingTop: num };
   items2[3] = tmp.previewContent;
   obj8.style = items2;
-  const obj9 = { style: null, children: closure_18(guildId(16050), { user, guildId, disabled, disableStatus: false, statusStyle: obj4, isUserProfileEditingRefresh: true }) };
+  const obj9 = { style: null, children: closure_18(guildId(16057), { user, guildId, disabled, disableStatus: false, statusStyle: obj4, isUserProfileEditingRefresh: true }) };
   const items3 = [, , , ];
   ({ avatarBackground: arr4[0], avatarPosition: arr4[1] } = tmp4);
   items3[2] = tmp5.avatarContainer;
   items3[3] = obj4;
   obj9.style = items3;
-  const items4 = [closure_18(closure_7, obj9), closure_18(guildId(9527), { customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: tmp4.customStatusBubble, emojiOnlyStyle: tmp4.emojiOnlyCustomStatusBubble }), closure_18(guildId(9807), { user, guildId, displayName: pendingGlobalName, pronouns: str2, badges: tmp8, badgeContainerBackground: userProfileColors.containerBackground, displayNameAccessibilityRole: "header", pendingDisplayNameStyles: pendingChanges.pendingDisplayNameStyles, canOpenBadgeDirectory: null == guildId, showsBadgeUnreadDot: null != guildId })];
+  const items4 = [closure_18(closure_7, obj9), closure_18(guildId(9528), { customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: tmp4.customStatusBubble, emojiOnlyStyle: tmp4.emojiOnlyCustomStatusBubble }), closure_18(guildId(9808), { user, guildId, displayName: pendingGlobalName, pronouns: str2, badges: tmp8, badgeContainerBackground: userProfileColors.containerBackground, displayNameAccessibilityRole: "header", pendingDisplayNameStyles: pendingChanges.pendingDisplayNameStyles, canOpenBadgeDirectory: null == guildId, showsBadgeUnreadDot: null != guildId })];
   obj8.children = items4;
   items1[1] = closure_19(closure_7, obj8);
   obj6.children = items1;
@@ -326,9 +326,9 @@ function ProfileCustomizationSettingScreenV2(currentUser) {
     const obj16 = { children: null };
     const obj17 = { style: tmp5.profileSelector, children: null };
     const obj18 = { guild: tmp23, onBeforeOpen: guardUnsavedChanges, onSelectMainProfile: handleSelectMainProfile, onSelectGuild: handleSelectGuild };
-    obj17.children = closure_18(tmp(16071), obj18);
+    obj17.children = closure_18(tmp(16078), obj18);
     obj16.children = closure_18(tmp47, obj17);
-    obj15.children = closure_18(tmp7(10589).DisableCustomTheme, obj16);
+    obj15.children = closure_18(tmp7(10590).DisableCustomTheme, obj16);
     tmp46Result = closure_18(tmp7(5104).ThemeContextProvider, obj15);
   }
   obj14.children = tmp46Result;

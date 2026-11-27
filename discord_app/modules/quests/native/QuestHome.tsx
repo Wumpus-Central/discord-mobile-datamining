@@ -95,7 +95,7 @@ function QuestsSectionHeader(onLayout) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6, StyleSheet } = get_ActivityIndicator);
-const QuestHomeSection = fn(9890).QuestHomeSection;
+const QuestHomeSection = fn(9891).QuestHomeSection;
 const QuestsExperimentLocations = fn(6871).QuestsExperimentLocations;
 const Constants = fn(1071);
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);

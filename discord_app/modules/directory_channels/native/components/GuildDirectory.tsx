@@ -16,7 +16,7 @@ import GuildDirectoryActionCreatorsAll from "../../GuildDirectoryActionCreators.
 import GuildDirectoryRowDefault from "GuildDirectoryRow.tsx";
 import GuildDirectoryPlaceholderRowDefault from "GuildDirectoryPlaceholderRow.tsx";
 import GuildDirectoryRowGenerator from "../GuildDirectoryRowGenerator.tsx";
-import _mod13665 from "../../../../../_runtime/metro/13665__.js";
+import _mod13672 from "../../../../../_runtime/metro/13672__.js";
 import HubProgressHeaderDefault from "../../../hub/native/components/progress_bar/HubProgressHeader.tsx";
 import PlusMediumIcon from "../../../../design/components/Icon/native/redesign/generated/PlusMediumIcon.tsx";
 import GuildDirectoryCategorySelectorDefault from "GuildDirectoryCategorySelector.tsx";
@@ -74,7 +74,7 @@ function GuildDirectoryHeader(guild) {
   const features = guild.features;
   const obj = { style: tmp.headerWrapper, children: null };
   const hasItem = features.has(constants3.HUB);
-  const obj2 = { source: _mod13665, style: tmp.backgroundImage };
+  const obj2 = { source: _mod13672, style: tmp.backgroundImage };
   items = [collapsedCategories(FastImageDefault, obj2)];
   const obj3 = { style: tmp.textWrapper, children: null };
   const obj4 = { style: tmp.headerTitle, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
@@ -141,8 +141,8 @@ function GuildDirectoryFooter(hideFooter) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, SectionList: closure_6, StyleSheet } = get_ActivityIndicator);
-const DirectoryEntryCategories = fn(13252).DirectoryEntryCategories;
-const GuildDirectoryConstants = fn(13257);
+const DirectoryEntryCategories = fn(13260).DirectoryEntryCategories;
+const GuildDirectoryConstants = fn(13265);
 const GUILD_DIRECTORY_BASE_HEADER_HEIGHT = GuildDirectoryConstants.GUILD_DIRECTORY_BASE_HEADER_HEIGHT;
 ({ GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT: closure_12, DirectoryChannelScrollBehavior: map1 } = GuildDirectoryConstants);
 const Constants = fn(1071);
@@ -220,17 +220,17 @@ export default function GuildDirectory(channel) {
   let handleTapSearch = channel(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   dependencyMap = noop.useRef(null);
   let obj = channel(504);
-  let bound = Math.max(guildId(1629)().bottom, channel(11804).useChatDockHeight());
-  let obj3 = channel(11804);
-  const hubProgressBarCompletedSteps = channel(13663).useHubProgressBarCompletedSteps(handleTapSearch);
-  const obj4 = channel(13663);
+  let bound = Math.max(guildId(1629)().bottom, channel(11812).useChatDockHeight());
+  let obj3 = channel(11812);
+  const hubProgressBarCompletedSteps = channel(13670).useHubProgressBarCompletedSteps(handleTapSearch);
+  const obj4 = channel(13670);
   if (null == obj5.getNextHubProgressStep(hubProgressBarCompletedSteps)) {
     let sum = ref2;
   } else {
     sum = _location + ref2;
   }
   noop = sum;
-  obj5 = channel(13663);
+  obj5 = channel(13670);
   const items1 = [categoryCounts];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items1, () => {
     currentCategoryId = GuildDirectoryStore.getCurrentCategoryId(channel.id);
@@ -363,10 +363,10 @@ export default function GuildDirectory(channel) {
         const obj9 = { style: tmp.border };
         const items9 = [closure_18(tmp20, obj9), ,];
         const obj10 = { guild: handleTapSearch, channel };
-        items9[1] = closure_18(tmp3(13793), obj10);
-        items9[2] = closure_18(tmp2(12571).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+        items9[1] = closure_18(tmp3(13800), obj10);
+        items9[2] = closure_18(tmp2(12579).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
         obj7.children = items9;
-        const items10 = [closure_19(tmp20, obj7), closure_18(tmp3(13797), {})];
+        const items10 = [closure_19(tmp20, obj7), closure_18(tmp3(13804), {})];
         obj6.children = items10;
       }
       closure_19(tmp20, obj6);
@@ -422,10 +422,10 @@ export default function GuildDirectory(channel) {
     const obj15 = { background: null };
     BACKGROUND_BASE_LOW = tmp3(575).colors.BACKGROUND_BASE_LOW;
     obj15.background = BACKGROUND_BASE_LOW;
-    items11[1] = closure_18(tmp3(13797), obj15);
+    items11[1] = closure_18(tmp3(13804), obj15);
     obj11.children = items11;
     obj6 = obj11;
-    const tmp3Result = tmp3(13797);
+    const tmp3Result = tmp3(13804);
   }
   const tmp2Result4 = channel(5087);
 }

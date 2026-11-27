@@ -162,7 +162,7 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   let tmp20Result = !tmp8;
   if (!tmp8) {
     const obj8 = { style: tmp.globe };
-    tmp20Result = closure_11(tmp2(12853), obj8);
+    tmp20Result = closure_11(tmp2(12861), obj8);
   }
   items6[1] = tmp20Result;
   obj7.children = items6;
@@ -186,8 +186,8 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
     const obj11 = { variant: "heading-lg/medium", children: null };
     const intl2 = tmp9(1112).intl;
     obj11.children = intl2.string(tmp2(3495)["2GRr6H"]);
-    tmp20Result2 = closure_11(tmp2(12852), obj11);
-    const tmp2Result6 = tmp2(12852);
+    tmp20Result2 = closure_11(tmp2(12860), obj11);
+    const tmp2Result6 = tmp2(12860);
   }
   items9[1] = tmp20Result2;
   obj9.children = items9;

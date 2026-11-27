@@ -8,7 +8,7 @@ import Constants from "../../instant_invite/Constants.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
 import OrbCheckoutUtils from "../../virtual_currency/checkout/OrbCheckoutUtils.tsx";
-import _modDef9455 from "../../../../_runtime/metro/09455__.js";
+import _modDef9456 from "../../../../_runtime/metro/09456__.js";
 import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice.android.tsx";
 import SocialLayerStorefrontMobileEmbedExperiment from "../experiments/SocialLayerStorefrontMobileEmbedExperiment.tsx";
 import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
@@ -128,7 +128,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 obj5.orbPriceText = StringResult;
                 let uri;
                 if (null != orbPriceFromPrices) {
-                  uri = Image.resolveAssetSource(_modDef9455).uri;
+                  uri = Image.resolveAssetSource(_modDef9456).uri;
                 }
                 obj5.orbIconUrl = uri;
                 ({ badgeText: obj14.overlayBadgeText, badgeIconUrl: obj14.overlayBadgeIconUrl } =
@@ -141,7 +141,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
                 obj5.backgroundColor =
                   socialLayerStorefrontEmbedColors.getSocialLayerStorefrontEmbedColors(theme).backgroundColor;
                 obj5.showWishlistButton = true;
-                obj5.wishlistButtonIconUrl = Image.resolveAssetSource(importDefault(hasSkuIdResult ? 9789 : 11230)).uri;
+                obj5.wishlistButtonIconUrl = Image.resolveAssetSource(importDefault(hasSkuIdResult ? 9790 : 11231)).uri;
                 const intl5 = util.intl;
                 const t = util.t;
                 obj5.wishlistButtonAccessibilityLabel = intl5.string(hasSkuIdResult ? t["19b82d"] : t.Hcgz2S);

@@ -60,7 +60,7 @@ function InviteDestinationIcon(invite) {
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: false };
+        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: true };
         const tmp14 = new UserRecord(invite.inviter);
         obj3.user = tmp14;
         obj3.size = native.AvatarSizes.XLARGE;
@@ -294,7 +294,7 @@ function InviteMemberCounts(invite) {
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, InviteStates: closure_10 } = Constants);
-let closure_11 = fn(13754).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(13761).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const createStyles = fn(5043);
@@ -396,11 +396,11 @@ export default function InviteDetails(invite) {
   if (tmp8Result) {
     const obj9 = { style: tmp.embedDetailsCard, children: null };
     const obj10 = { event: guild_scheduled_event };
-    const items3 = [closure_12(tmp4(8592).GuildEventCardHeader, obj10), ,];
+    const items3 = [closure_12(tmp4(8593).GuildEventCardHeader, obj10), ,];
     const obj11 = { event: guild_scheduled_event };
-    items3[1] = closure_12(tmp4(8592).GuildEventCardMetaInfo, obj11);
+    items3[1] = closure_12(tmp4(8593).GuildEventCardMetaInfo, obj11);
     const obj12 = { event: guild_scheduled_event };
-    items3[2] = closure_12(tmp4(8592).GuildEventCardGuildInfo, obj12);
+    items3[2] = closure_12(tmp4(8593).GuildEventCardGuildInfo, obj12);
     obj9.children = items3;
     tmp8Result = closure_13(View, obj9);
   }

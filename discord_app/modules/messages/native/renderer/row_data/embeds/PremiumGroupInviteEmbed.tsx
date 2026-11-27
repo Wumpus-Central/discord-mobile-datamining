@@ -5,7 +5,7 @@ import _modDef3691 from "../../../../../premium/premium_group/PremiumGroup.messa
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import PremiumGroupUtils from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
-import _modDef14430 from "../../../../../../../_runtime/metro/14430__.js";
+import _modDef14437 from "../../../../../../../_runtime/metro/14437__.js";
 import PremiumGroupConstants from "../../../../../premium/premium_group/PremiumGroupConstants.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
@@ -28,7 +28,7 @@ export function createPremiumGroupInviteEmbed(message, theme, id, channel) {
       createStyles.createNativeStyleProperties(obj2)(theme));
     const tmp9 = createStyles.createNativeStyleProperties(obj2)(theme);
     const author = message.author;
-    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14430);
+    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14437);
     const obj3 = { sender: author, channel, isSender: id === author.id, inviteState: constants.UNKNOWN };
     const premiumGroupInviteEmbedText = PremiumGroupUtils.getPremiumGroupInviteEmbedText(obj3);
     if (null != premiumGroupInviteEmbedText) {

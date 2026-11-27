@@ -398,11 +398,11 @@ let closure_35 = noop.memo(function LaunchPadHeader(tab) {
 });
 const results = [];
 let items = [
-  fn(8947).AutocompleterResultTypes.GUILD,
-  fn(8947).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(8947).AutocompleterResultTypes.GROUP_DM,
-  fn(8947).AutocompleterResultTypes.VOICE_CHANNEL,
-  fn(8947).AutocompleterResultTypes.USER,
+  fn(8948).AutocompleterResultTypes.GUILD,
+  fn(8948).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(8948).AutocompleterResultTypes.GROUP_DM,
+  fn(8948).AutocompleterResultTypes.VOICE_CHANNEL,
+  fn(8948).AutocompleterResultTypes.USER,
 ];
 let closure_39 = { code: "(function LaunchPadTsx3(){let[sharedState]=this.__closure;return sharedState.get()===0;})" };
 let closure_40 = {
@@ -892,14 +892,14 @@ export default noop.memo(function LaunchPad(arg0) {
       guildHistory: memo,
       visible,
     };
-    tmp59Result = closure_27(tmp43(19340), obj9);
+    tmp59Result = closure_27(tmp43(19356), obj9);
   }
   items20[1] = tmp59Result;
   const obj10 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp56) {
       const obj11 = { results, query: str };
-      let tmp59Result2 = closure_27(tmp16(19347).SearchResults, obj11);
+      let tmp59Result2 = closure_27(tmp16(19363).SearchResults, obj11);
     }
     obj10.children = tmp59Result2;
     items20[2] = closure_27(View, obj10);
@@ -932,13 +932,13 @@ export default noop.memo(function LaunchPad(arg0) {
     obj12.history = channelHistory;
     obj12.expandedHistory = tmp3;
     obj12.toggleExpandedHistory = callback;
-    tmp59Result2 = closure_27(tmp16(19347).InitialResults, obj12);
+    tmp59Result2 = closure_27(tmp16(19363).InitialResults, obj12);
   } else if (first3 === constants3.DEV_TOOLS) {
-    tmp59Result2 = closure_27(tmp43(17396), {});
+    tmp59Result2 = closure_27(tmp43(17403), {});
   } else if (first3 === constants3.MEMBERS) {
-    tmp59Result2 = closure_27(tmp43(19360), {});
+    tmp59Result2 = closure_27(tmp43(19376), {});
   } else {
-    tmp59Result2 = closure_27(tmp43(19361), {});
+    tmp59Result2 = closure_27(tmp43(19377), {});
   }
   tmp56 = str.trim().length > 0;
 });

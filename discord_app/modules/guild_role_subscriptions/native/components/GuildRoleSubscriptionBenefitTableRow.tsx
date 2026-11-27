@@ -33,7 +33,7 @@ function ChannelBenefitLabel(benefit) {
   return tmp8;
 }
 const View = fn(17).View;
-const constants = fn(16816).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(16823).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5043);

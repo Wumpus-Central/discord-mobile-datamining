@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_4 = fn(16072).PROFILE_SELECTOR_ACTION_SHEET_KEY;
+let closure_4 = fn(16079).PROFILE_SELECTOR_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let obj2 = {
@@ -51,11 +51,11 @@ export default function ProfileCustomizationProfileSelector(guild) {
     let tmp8 = importDefault;
   } else {
     const obj4 = { size: "md", color: nativeDefault.colors.ICON_DEFAULT };
-    tmpResult = jsx(tmp3(11654).ClydeIcon, { size: "md", color: nativeDefault.colors.ICON_DEFAULT });
+    tmpResult = jsx(tmp3(11662).ClydeIcon, { size: "md", color: nativeDefault.colors.ICON_DEFAULT });
     tmp8 = importDefault;
   }
   obj2.icon = tmpResult;
-  obj2.trailing = jsx(guild(9816).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
+  obj2.trailing = jsx(guild(9817).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
   const intl2 = tmp3(1112).intl;
   let name1;
   if (guild != null) {

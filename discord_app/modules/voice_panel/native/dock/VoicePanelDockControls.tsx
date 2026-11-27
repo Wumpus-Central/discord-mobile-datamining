@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9025 from "../../../../../_runtime/metro/09025__.js";
+import _modDef9026 from "../../../../../_runtime/metro/09026__.js";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
-import _modDef13516 from "../../../../../_runtime/metro/13516__.js";
+import _modDef13524 from "../../../../../_runtime/metro/13524__.js";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
 import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton.tsx";
@@ -89,7 +89,7 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1112).intl;
   obj.accessibilityLabel = intl.string(channelId(1112).t["6vrfgt"]);
-  obj.icon = _modDef9025;
+  obj.icon = _modDef9026;
   obj.onPress = callback;
   return closure_9(channelId(7944).IconButton, obj);
 }
@@ -106,7 +106,7 @@ function DockSoundboardButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef13516;
+  obj.icon = _modDef13524;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;
@@ -118,7 +118,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5043);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(11805).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(11813).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_11 = createStyles.createStyles(obj);

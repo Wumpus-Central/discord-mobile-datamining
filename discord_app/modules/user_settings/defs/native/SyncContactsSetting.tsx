@@ -7,13 +7,13 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const PlatformTypes = fn(1071).PlatformTypes;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSvEy7);
   },
-  parent: fn(9555).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9556).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useContactSyncSettingValue() {
     const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
     return ContactSyncUtils.isContactSyncEnabled(contactSyncAccount);

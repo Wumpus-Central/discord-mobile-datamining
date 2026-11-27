@@ -24,7 +24,7 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -61,7 +61,7 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
             const obj = tmp5(dependencyMap[4]);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp18) {
         c3 = tmp;
@@ -84,7 +84,7 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
   let tmp6Result = null;
   if (optionalItems.length > 0) {
     let obj = { items: [], optionalItems };
-    tmp6Result = closure_4(tmp(12505), obj);
+    tmp6Result = closure_4(tmp(12513), obj);
   }
   children[1] = tmp6Result;
   children[2] = notes.map((children) =>

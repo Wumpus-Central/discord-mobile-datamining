@@ -180,7 +180,7 @@ let closure_20 = async function _requestConjureInstallConsent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -361,7 +361,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2, arg3) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -498,13 +498,13 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2, arg3) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(11476).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                    if (ok.code === closure_0(11486).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                       project = closure_0(7667).getProject(projectId);
                       project.catch(() => {});
                       const tmp9Result = closure_0(7667);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(11476)(ok));
+                    const error = new Error(closure_1(11486)(ok));
                     throw error;
                   }
                 })
@@ -513,7 +513,7 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2, arg3) {
                     const channel_skipped = result;
                     const intl = project(1112).intl;
                     closure_5.showConfirmation(intl.string(closure_1_1(4245).S6Px3n));
-                    const conjurePublishEval = project(11477).requestConjurePublishEval(projectId);
+                    const conjurePublishEval = project(11487).requestConjurePublishEval(projectId);
                     if (null != channel_skipped.guildId) {
                       const tmpResult = project(6134);
                       const profile = tmpResult.fetchProfile(project(7692).conjureProductionBotUserId(closure_4), {
@@ -522,9 +522,9 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2, arg3) {
                       profile.catch(() => {});
                       const tmpResult3 = project(7692);
                     }
-                    const obj = project(11477);
-                    result = project(11471).refreshPublishedProject(projectId, { isPreview: false });
-                    const tmpResult4 = project(11471);
+                    const obj = project(11487);
+                    result = project(11481).refreshPublishedProject(projectId, { isPreview: false });
+                    const tmpResult4 = project(11481);
                     const catchPromise1 = result.catch(() => {});
                     const nextPromise = result
                       .catch(() => {})
@@ -596,13 +596,13 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2, arg3) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(11476).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                    if (ok.code === closure_0(11486).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                       project = closure_0(7667).getProject(projectId);
                       project.catch(() => {});
                       const tmp9Result = closure_0(7667);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(11476)(ok));
+                    const error = new Error(closure_1(11486)(ok));
                     throw error;
                   }
                 });
@@ -649,7 +649,7 @@ let closure_24 = async function _waitForAppChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -742,7 +742,7 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -996,7 +996,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1025,15 +1025,15 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
             if (!projectPublishing.isProjectPublishing(closure_0)) {
               if ("consent_then_publish" === intent.intent) {
                 const requestConsent = platform.requestConsent;
-                f138552 = requestConsent;
+                f139008 = requestConsent;
                 if (requestConsent == null) {
-                  f138552 = (arg0) => closure_2_19(arg0, closure_1_4);
+                  f139008 = (arg0) => closure_2_19(arg0, closure_1_4);
                 }
                 set.add(closure_0);
                 c8 = 2;
                 c9 = 3;
                 c10 = 1;
-                const obj4 = { value: f138552(closure_0), done: false };
+                const obj4 = { value: f139008(closure_0), done: false };
                 return obj4;
               } else {
                 closure_133_7 = closure_134_18(closure_133_0, closure_133_4);
@@ -1075,7 +1075,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
             return obj6;
           } else {
             c10 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (3 === tmp8) {
           if (arg0 === 1) {
@@ -1100,7 +1100,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
           return obj;
         }
         c10 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp49) {
         closure_7 = tmp49;
         if (tmp5 === c8) {

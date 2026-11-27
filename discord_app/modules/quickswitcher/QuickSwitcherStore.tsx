@@ -401,32 +401,32 @@ function handleUserSearchUpdate(arr, str) {
   if (!flag) {
     let DOWN = require;
     if (sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL !== queryMode) {
-      if (DOWN(8947).AutocompleterResultTypes.USER !== queryMode) {
-        if (DOWN(8947).AutocompleterResultTypes.TEXT_CHANNEL === queryMode) {
+      if (DOWN(8948).AutocompleterResultTypes.USER !== queryMode) {
+        if (DOWN(8948).AutocompleterResultTypes.TEXT_CHANNEL === queryMode) {
           const intl5 = DOWN(1112).intl;
-          arr.unshift(DOWN(8947).createHeaderResult(intl5.string(DOWN(1112).t.W26k4V)));
+          arr.unshift(DOWN(8948).createHeaderResult(intl5.string(DOWN(1112).t.W26k4V)));
           items = arr;
-          const DOWNResult = DOWN(8947);
-        } else if (DOWN(8947).AutocompleterResultTypes.VOICE_CHANNEL === queryMode) {
+          const DOWNResult = DOWN(8948);
+        } else if (DOWN(8948).AutocompleterResultTypes.VOICE_CHANNEL === queryMode) {
           const intl4 = DOWN(1112).intl;
-          arr.unshift(DOWN(8947).createHeaderResult(intl4.string(DOWN(1112).t.zUoI5C)));
+          arr.unshift(DOWN(8948).createHeaderResult(intl4.string(DOWN(1112).t.zUoI5C)));
           items = arr;
-          const DOWNResult1 = DOWN(8947);
-        } else if (DOWN(8947).AutocompleterResultTypes.GUILD === queryMode) {
+          const DOWNResult1 = DOWN(8948);
+        } else if (DOWN(8948).AutocompleterResultTypes.GUILD === queryMode) {
           const intl3 = DOWN(1112).intl;
-          arr.unshift(DOWN(8947).createHeaderResult(intl3.string(DOWN(1112).t.olADPs)));
+          arr.unshift(DOWN(8948).createHeaderResult(intl3.string(DOWN(1112).t.olADPs)));
           items = arr;
-          const DOWNResult2 = DOWN(8947);
-        } else if (DOWN(8947).AutocompleterResultTypes.APPLICATION === queryMode) {
+          const DOWNResult2 = DOWN(8948);
+        } else if (DOWN(8948).AutocompleterResultTypes.APPLICATION === queryMode) {
           const intl2 = DOWN(1112).intl;
-          arr.unshift(DOWN(8947).createHeaderResult(intl2.string(DOWN(1112).t.VwK1ld)));
+          arr.unshift(DOWN(8948).createHeaderResult(intl2.string(DOWN(1112).t.VwK1ld)));
           items = arr;
-          const DOWNResult3 = DOWN(8947);
-        } else if (DOWN(8947).AutocompleterResultTypes.GAME_PROFILE === queryMode) {
+          const DOWNResult3 = DOWN(8948);
+        } else if (DOWN(8948).AutocompleterResultTypes.GAME_PROFILE === queryMode) {
           const intl = DOWN(1112).intl;
-          arr.unshift(DOWN(8947).createHeaderResult(intl.string(DOWN(1112).t.gEp2SG)));
+          arr.unshift(DOWN(8948).createHeaderResult(intl.string(DOWN(1112).t.gEp2SG)));
           items = arr;
-          const DOWNResult4 = DOWN(8947);
+          const DOWNResult4 = DOWN(8948);
         } else {
           found = arr.filter((type) => type.type === sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE);
           const substr = found.slice(0, 3);
@@ -444,25 +444,25 @@ function handleUserSearchUpdate(arr, str) {
           c29 = str;
           const _Math = Math;
           c30 = Math.max(str.length, c30);
-          str = DOWN(8947).findNextSelectedResult;
-          DOWN = DOWN(8947).FindResultDirections.DOWN;
+          str = DOWN(8948).findNextSelectedResult;
+          DOWN = DOWN(8948).FindResultDirections.DOWN;
           selectedIndex = str(DOWN, -1, arr);
-          const DOWNResult5 = DOWN(8947);
+          const DOWNResult5 = DOWN(8948);
         } else {
           let tmp31 = null != tmp29;
           if (tmp31) {
-            tmp31 = tmp29.type === DOWN(8947).AutocompleterResultTypes.HEADER;
+            tmp31 = tmp29.type === DOWN(8948).AutocompleterResultTypes.HEADER;
           }
           if (tmp31) {
-            selectedIndex = DOWN(8947).findNextSelectedResult(DOWN(8947).FindResultDirections.DOWN, selectedIndex, arr);
-            const DOWNResult6 = DOWN(8947);
+            selectedIndex = DOWN(8948).findNextSelectedResult(DOWN(8948).FindResultDirections.DOWN, selectedIndex, arr);
+            const DOWNResult6 = DOWN(8948);
           }
         }
         quickSwitcherStoreClass.emitChange();
       }
     }
     guild = null;
-    if (queryMode !== DOWN(8947).AutocompleterResultTypes.USER_GLOBAL) {
+    if (queryMode !== DOWN(8948).AutocompleterResultTypes.USER_GLOBAL) {
       guild = GuildStore.getGuild(SelectedGuildStore.getGuildId());
     }
     if (null != guild) {
@@ -475,8 +475,8 @@ function handleUserSearchUpdate(arr, str) {
       const intl6 = DOWN(1112).intl;
       formatToPlainStringResult = intl6.string(DOWN(1112).t.XFYW1o);
     }
-    arr.unshift(DOWN(8947).createHeaderResult(formatToPlainStringResult));
-    const DOWNResult7 = DOWN(8947);
+    arr.unshift(DOWN(8948).createHeaderResult(formatToPlainStringResult));
+    const DOWNResult7 = DOWN(8948);
     length = arr;
   }
 }
@@ -678,7 +678,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(DispatcherDefault, {
         }
         _null.setLimit(num);
         const guildId = SelectedGuildStore.getGuildId();
-        if (queryMode === tmp6(8947).AutocompleterResultTypes.USER) {
+        if (queryMode === tmp6(8948).AutocompleterResultTypes.USER) {
           if (null != guildId) {
             const obj = { userFilters: null };
             const obj2 = { guild: guildId, friends: true };
@@ -686,7 +686,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(DispatcherDefault, {
             _null.setOptions(obj, true);
           }
         }
-        if (queryMode === tmp6(8947).AutocompleterResultTypes.VOICE_CHANNEL) {
+        if (queryMode === tmp6(8948).AutocompleterResultTypes.VOICE_CHANNEL) {
           _null.setOptions({ voiceChannelGuildFilter: null }, true);
         } else {
           _null.setOptions({ userFilters: null, voiceChannelGuildFilter: "Array" }, true);

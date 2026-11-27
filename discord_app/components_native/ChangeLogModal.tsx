@@ -7,10 +7,10 @@ import NavigatorHeader from "../design/components/Navigator/native/NavigatorHead
 import Navigator from "../design/components/Navigator/native/Navigator.native.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
-import _modDef10842 from "../../_runtime/metro/10842__.js";
+import _modDef10843 from "../../_runtime/metro/10843__.js";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
-import _modDef17166 from "../../_runtime/metro/17166__.js";
+import _modDef17173 from "../../_runtime/metro/17173__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -308,7 +308,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      items = [closure_7(_modDef17166, obj4)];
+      items = [closure_7(_modDef17173, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -358,7 +358,7 @@ prototype["renderVideo"] = function renderVideo() {
     const obj10 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef10842,
+      source: _modDef10843,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1186).IconSizes.CUSTOM,

@@ -50,7 +50,7 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
   }
 }
 const GUILD_VOCAL_CHANNELS_KEY = fn(4973).GUILD_VOCAL_CHANNELS_KEY;
-const PermissionsConstants = fn(8472);
+const PermissionsConstants = fn(8473);
 ({
   CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_6,
   CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: metroImportDefault,

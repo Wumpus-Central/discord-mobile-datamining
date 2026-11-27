@@ -102,11 +102,11 @@ export default noop.memo(function StageVoiceChannel(channel) {
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
   const tmp2Result = channel(6861);
-  const isConnectedToVoiceChannel = channel(10012).useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(10013).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  const tmp2Result2 = channel(10012);
+  const tmp2Result2 = channel(10013);
   const intl = tmp2(1112).intl;
   const tmp5Result = ChannelItemDefault;
   if (null != channel.userLimit) {

@@ -9,13 +9,13 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["TYyfO/"]);
   },
-  parent: fn(9555).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(9556).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },

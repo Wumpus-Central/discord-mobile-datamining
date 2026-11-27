@@ -22,7 +22,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -42,7 +42,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(19147)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(19163)(conjureServerApp), done: false };
                 return obj4;
               }
             }

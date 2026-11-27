@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const NotificationPermissionConstants = fn(13382);
+const NotificationPermissionConstants = fn(13390);
 ({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: closure_6 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const ContentDismissActionType = fn(4889).ContentDismissActionType;

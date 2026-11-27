@@ -75,7 +75,7 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   const items3 = [
     closure_6(View, {
       style: tmp.illustration,
-      children: closure_6(markAsDismissed(13909).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
+      children: closure_6(markAsDismissed(13916).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
     }),
     ,
   ];

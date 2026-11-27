@@ -62,7 +62,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -355,7 +355,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -468,7 +468,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "text" },
+      channel: { id, guild_id: "Array", parent_id: "isArray" },
       silent: flag2,
     });
     if (flag) {
@@ -482,7 +482,7 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "text" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1285).rejectWithMigratedError();
     const obj8 = flag3(1285);
@@ -651,7 +651,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -795,7 +795,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

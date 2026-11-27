@@ -16,7 +16,7 @@ function ICYMIGuildEventRow(event) {
   ({ channel, guild } = event);
   noop = undefined;
   const tmp = closure_13();
-  const tmp4 = guild(8469)(event, null);
+  const tmp4 = guild(8470)(event, null);
   const tmp5 = closure_7(event);
   dependencyMap = tmp5;
   let toISOStringResult;
@@ -27,14 +27,14 @@ function ICYMIGuildEventRow(event) {
   noop = toISOStringResult;
   items = [toISOStringResult, tmp5];
   const tmp7 = guild(5659)(channel);
-  const locationFromEvent = event(8480).getLocationFromEvent(event);
-  let obj = event(8480);
-  const eventLocationIconSource = event(8586).getEventLocationIconSource(event, channel, true);
-  let obj2 = event(8586);
-  const eventLocationIconComponent = event(8586).getEventLocationIconComponent(event, channel, true);
-  let obj3 = event(8586);
+  const locationFromEvent = event(8481).getLocationFromEvent(event);
+  let obj = event(8481);
+  const eventLocationIconSource = event(8587).getEventLocationIconSource(event, channel, true);
+  let obj2 = event(8587);
+  const eventLocationIconComponent = event(8587).getEventLocationIconComponent(event, channel, true);
+  let obj3 = event(8587);
   const items1 = [event];
-  const nextRecurrenceIdInEvent = event(8466).getNextRecurrenceIdInEvent(event);
+  const nextRecurrenceIdInEvent = event(8467).getNextRecurrenceIdInEvent(event);
   const items2 = [guild.id, event.id];
   const callback = noop.useCallback(() => {
     ICYMIActionCreatorsDefault.itemInteracted(event.id, "guild_event", "press_event");
@@ -92,7 +92,7 @@ function ICYMIGuildEventRow(event) {
     title = event.description.length > 0;
   }
   let guild_id;
-  const obj4 = event(8466);
+  const obj4 = event(8467);
   if (event != null) {
     guild_id = event.guild_id;
   }
@@ -100,7 +100,7 @@ function ICYMIGuildEventRow(event) {
   if (event != null) {
     id = event.id;
   }
-  const tmp2Result = guild(8603);
+  const tmp2Result = guild(8604);
   const obj5 = {
     actionLabel: null,
     id: null,
@@ -112,7 +112,7 @@ function ICYMIGuildEventRow(event) {
     onHeaderLongPress: null,
     children: null,
   };
-  const tmp2ResultResult = guild(8603)(guild_id, id, nextRecurrenceIdInEvent);
+  const tmp2ResultResult = guild(8604)(guild_id, id, nextRecurrenceIdInEvent);
   let intl = tmp8(1112).intl;
   obj5.actionLabel = intl.string(event(1112).t["6pFsLQ"]);
   obj5.id = event.id;
@@ -122,7 +122,7 @@ function ICYMIGuildEventRow(event) {
   }
   obj5.channelId = id1;
   obj5.guildId = guild.id;
-  const tmp2Result3 = guild(18344);
+  const tmp2Result3 = guild(18351);
   obj5.timestamp = guild(11).extractTimestamp(event.id);
   obj5.onHeaderPress = callback1;
   obj5.onHeaderLongPress = callback1;
@@ -160,9 +160,9 @@ function ICYMIGuildEventRow(event) {
   if (tmp19Result) {
     const obj9 = { variant: "body-md/normal", color: "text-subtle", lineClamp: 5, children: null };
     const obj10 = { guildId: guild.id };
-    obj9.children = tmp8(8591).guildEventDetailsParser(event.description, true, obj10);
+    obj9.children = tmp8(8592).guildEventDetailsParser(event.description, true, obj10);
     tmp19Result = closure_11(tmp8(5634).Text, obj9);
-    const tmp8Result = tmp8(8591);
+    const tmp8Result = tmp8(8592);
   }
   items3[2] = tmp19Result;
   items3[3] = closure_11(closure_5, { style: tmp.separator });
@@ -196,8 +196,8 @@ function ICYMIGuildEventRow(event) {
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
-      result = tmp8(8591).guildEventLocationParser(locationFromEvent, true);
-      const tmp8Result2 = tmp8(8591);
+      result = tmp8(8592).guildEventLocationParser(locationFromEvent, true);
+      const tmp8Result2 = tmp8(8592);
     }
     tmp27 = result;
   }
@@ -222,7 +222,7 @@ let GuildScheduledEventStore = fn(5775);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(18303);
+const createICYMIStyles = fn(18310);
 let closure_13 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     container: {

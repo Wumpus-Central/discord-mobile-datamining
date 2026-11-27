@@ -128,7 +128,7 @@ function SystemNotifPermissionHeader() {
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
 let closure_10 = fn(7872).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13382);
+const NotificationPermissionConstants = fn(13390);
 ({
   EventActionLocation: closure_11,
   EventActionType: closure_12,
@@ -200,15 +200,15 @@ export default function SystemNotifPermissionLayout(node) {
         closure_128_0 = value;
         if (closure_129_0) {
           if (null != closure_128_0) {
-            const result = node(13384).updateNotificationAuthorizationStatus(closure_128_0);
-            node(13384);
+            const result = node(13392).updateNotificationAuthorizationStatus(closure_128_0);
+            node(13392);
           }
           v2(true);
           c2 = 0;
         } else {
           c2 = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       }
       return value;

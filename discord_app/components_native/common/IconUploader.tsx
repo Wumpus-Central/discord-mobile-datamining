@@ -4,7 +4,7 @@ import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import FastImageDefault from "FastImage.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
-import _modDef11422 from "../../../_runtime/metro/11422__.js";
+import _modDef11423 from "../../../_runtime/metro/11423__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -48,7 +48,7 @@ export default function IconUploader(disabled) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp8];
   let tmp17 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef11422 };
+    let obj5 = { style: tmp.uploadIcon, source: _modDef11423 };
     tmp17 = closure_7(FastImageDefault, obj5);
   }
   items1[1] = tmp17;

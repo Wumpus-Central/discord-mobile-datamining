@@ -30,7 +30,7 @@ export function GuildRolesAndChannelsRow(guild) {
   const selected = guild.selected;
   let id;
   const tmp = closure_10();
-  const tmp4 = id(12029)(guild);
+  const tmp4 = id(12037)(guild);
   id = guild.id;
   const result = guild(5075).useIsDismissibleContentDismissed_UNSAFE(
     guild(4876).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
@@ -49,11 +49,11 @@ export function GuildRolesAndChannelsRow(guild) {
     () => NewChannelsStore.getNewChannelIds(guild.id).size > ChannelListState.MAX_NEW_CHANNELS_TO_SHOW,
   );
   const callback = noop.useCallback(() => {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12028, dependencyMap.paths), { guildId: id }, closure_7);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12036, dependencyMap.paths), { guildId: id }, closure_7);
   }, items2);
-  let SELECTED = guild(13343).ChannelModes.DEFAULT;
+  let SELECTED = guild(13351).ChannelModes.DEFAULT;
   if (selected) {
-    SELECTED = tmp5(13343).ChannelModes.SELECTED;
+    SELECTED = tmp5(13351).ChannelModes.SELECTED;
   }
   let tmp10 = !result;
   if (result) {
@@ -64,8 +64,8 @@ export function GuildRolesAndChannelsRow(guild) {
   }
   let tmp11 = null;
   if (tmp10) {
-    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13238).NewBadge, {}) };
-    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13238).NewBadge, {})}</View>;
+    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(13246).NewBadge, {}) };
+    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(13246).NewBadge, {})}</View>;
   }
   const obj5 = {
     onPress: callback,
@@ -98,11 +98,11 @@ export function GuildRolesAndChannelsRow(guild) {
   } else {
     string2Result = string2(t2.et6wav);
   }
-  obj5.name = jsx(guild(13343).BaseChannelName, { name: string2Result, mode: SELECTED });
-  const tmp2Result = tmp2(13343);
-  obj5.icon = jsx(guild(13343).BaseChannelIcon, {
+  obj5.name = jsx(guild(13351).BaseChannelName, { name: string2Result, mode: SELECTED });
+  const tmp2Result = tmp2(13351);
+  obj5.icon = jsx(guild(13351).BaseChannelIcon, {
     mode: SELECTED,
-    IconComponent: guild(15084).ChannelListMagnifyingGlassIcon,
+    IconComponent: guild(15091).ChannelListMagnifyingGlassIcon,
   });
   obj5.channelInfo = tmp11;
   return (

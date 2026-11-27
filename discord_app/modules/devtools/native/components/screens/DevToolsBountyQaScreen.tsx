@@ -40,7 +40,7 @@ export default function DevToolsBountyQaScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -60,12 +60,12 @@ export default function DevToolsBountyQaScreen() {
                 toast("No dock bounty in memory. Pick a lookback window.", "bounty-qa-missing-id");
                 dependencyMap = 0;
                 c3 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               } else {
                 c1 = 3;
                 c3 = 1;
                 const obj7 = {
-                  value: tmp3(13834).resetCreativePreviewDeliveryState(
+                  value: tmp3(13841).resetCreativePreviewDeliveryState(
                     tmp22,
                     tmp3(6874).AdPlacement.MOBILE_HOME_DOCK_AREA,
                   ),
@@ -78,7 +78,7 @@ export default function DevToolsBountyQaScreen() {
               const NumberResult = Number(tmp37);
               c1 = 2;
               c3 = 1;
-              const obj8 = { value: tmp3(13834).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+              const obj8 = { value: tmp3(13841).resetPreviewDeliveryStateLookback(NumberResult), done: false };
               return obj8;
             }
           }
@@ -102,13 +102,13 @@ export default function DevToolsBountyQaScreen() {
               const obj = { value, done: true };
               return obj;
             }
-            const questToDeliver = tmp3(9894).fetchQuestToDeliver(
+            const questToDeliver = tmp3(9895).fetchQuestToDeliver(
               tmp3(6874).AdPlacement.MOBILE_HOME_DOCK_AREA,
               "devTools-bountyQa",
             );
             toast("Reset delivery state and refreshing dock", "bounty-qa-reset-and-refresh");
             dependencyMap = 0;
-            const obj2 = tmp3(9894);
+            const obj2 = tmp3(9895);
           }
           dependencyMap = 0;
           c3 = 3;
@@ -139,7 +139,7 @@ export default function DevToolsBountyQaScreen() {
     if (first != null) {
       creative = first.creative;
     }
-    const deliveredBounty = stateFromStores(8363).getDeliveredBounty(creative);
+    const deliveredBounty = stateFromStores(8364).getDeliveredBounty(creative);
     let id;
     if (deliveredBounty != null) {
       id = deliveredBounty.id;
@@ -211,7 +211,7 @@ export default function DevToolsBountyQaScreen() {
       label: "Reset and re-serve",
       subLabel:
         "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-      icon: closure_8(stateFromStores(16695).UndoIcon, {}),
+      icon: closure_8(stateFromStores(16702).UndoIcon, {}),
       onPress: function handleResetAndRefresh() {
         const self = this;
         const apply = closure_2.apply;
@@ -229,7 +229,7 @@ export default function DevToolsBountyQaScreen() {
     label: "Reset and re-serve",
     subLabel:
       "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-    icon: closure_8(stateFromStores(16695).UndoIcon, {}),
+    icon: closure_8(stateFromStores(16702).UndoIcon, {}),
     onPress: function handleResetAndRefresh() {
       const self = this;
       const apply = closure_2.apply;
@@ -244,13 +244,13 @@ export default function DevToolsBountyQaScreen() {
   items6[1] = closure_8(stateFromStores(6144).TableRow, {
     label: "Refresh Organic Serve",
     subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-    icon: closure_8(stateFromStores(16693).RedoIcon, {}),
+    icon: closure_8(stateFromStores(16700).RedoIcon, {}),
     onPress: function handleRefreshOrganicServe() {
-      const questToDeliver = stateFromStores(9894).fetchQuestToDeliver(
+      const questToDeliver = stateFromStores(9895).fetchQuestToDeliver(
         stateFromStores(6874).AdPlacement.MOBILE_HOME_DOCK_AREA,
         "devTools-bountyQa",
       );
-      const obj = stateFromStores(9894);
+      const obj = stateFromStores(9895);
       str(5725).open("bounty-qa-refresh", { text: "Refreshing dock serve" });
     },
   });

@@ -83,7 +83,7 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
         obj5.onPress = onToggleExpanded;
         const obj7 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
         obj5.children = React4(ChevronSmallRightIcon, obj7);
-        tmp9Result = React4(tmp4(8489).PressableScale, obj5);
+        tmp9Result = React4(tmp4(8490).PressableScale, obj5);
       }
     }
     items1[1] = tmp9Result;

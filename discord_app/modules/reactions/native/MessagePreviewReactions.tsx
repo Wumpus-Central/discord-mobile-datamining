@@ -32,14 +32,14 @@ export default function MessagePreviewReactions(emoji) {
   const obj2 = { value: messageId(6379)(messageId(6380).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     const obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(12242).MessageReactionsContent, {
+    let tmp4Result = jsx(channelId(12250).MessageReactionsContent, {
       channelId,
       messageId,
       emoji: emoji.emoji,
       reactions: stateFromStores,
     });
   } else {
-    tmp4Result = jsx(channelId(12242).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(12250).MessageReactionsEmpty, {});
   }
   obj2.children = tmp4Result;
   return jsx(channelId(6379).AnalyticsLocationProvider, {

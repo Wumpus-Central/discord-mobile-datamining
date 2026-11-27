@@ -13,7 +13,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(8213).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(8214).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
@@ -127,7 +127,7 @@ export default function ParentalConsentConnectionScreen() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef3175.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef3175["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(16386, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(16393, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = {
     title: null,

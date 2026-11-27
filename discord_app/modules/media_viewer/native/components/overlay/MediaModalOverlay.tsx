@@ -39,7 +39,7 @@ function OverlayMuteButton(isMuted) {
     children: metroImportDefault(tmp5, {
       accessibilityRole: "button",
       accessibilityLabel: stringResult,
-      source: importDefault(isMuted ? 14124 : 10528),
+      source: importDefault(isMuted ? 14131 : 10529),
       color: nativeDefault.unsafe_rawColors.WHITE,
       onPress: isMuted.onToggleMute,
       style: tmp.overlayButton,
@@ -63,7 +63,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.UIsxUw);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(spoilerActive ? 14125 : 14126);
+  obj.source = importDefault(spoilerActive ? 14132 : 14133);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleObscure;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -73,7 +73,7 @@ function OverlayObscureToggleButton(arg0) {
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  const tmp2 = videoControls(8807)(index, source, videoControls);
+  const tmp2 = videoControls(8808)(index, source, videoControls);
   items = [index];
   const items1 = [videoControls];
   const callback = noop.useCallback(() => useMediaViewerSources.toggleSpoiler(index), items);
@@ -89,7 +89,7 @@ function MediaModalOverlay(getVideoControls) {
     flag = false;
   }
   obj2.obscure = flag;
-  obj2.spoilerActive = _slicedToArray(index(14129).useMediaItemSpoilerState(index), 1)[0];
+  obj2.spoilerActive = _slicedToArray(index(14136).useMediaItemSpoilerState(index), 1)[0];
   obj2.toggleObscure = callback;
   return closure_7(closure_13, obj2);
 }

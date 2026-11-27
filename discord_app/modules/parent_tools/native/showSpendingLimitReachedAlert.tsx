@@ -21,8 +21,8 @@ export function isSpendingLimitError(billingError) {
   return tmp3;
 }
 export function showSpendingLimitReachedAlert() {
-  activeLinkUserIds = activeLinkUserIds(8211).getActiveLinkUserIds();
-  const obj = activeLinkUserIds(8211);
+  activeLinkUserIds = activeLinkUserIds(8212).getActiveLinkUserIds();
+  const obj = activeLinkUserIds(8212);
   const obj3 = { title: null, body: null, isDismissable: true };
   let intl = activeLinkUserIds(1112).intl;
   obj3.title = intl.string(activeLinkUserIds(1112).t.QJKKrT);

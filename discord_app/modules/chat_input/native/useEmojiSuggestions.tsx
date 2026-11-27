@@ -100,7 +100,7 @@ function findWordSpan(text, selectionStart, selectionEnd) {
   }
 }
 const LoadState = fn(6883).LoadState;
-const EnglishEmojiSuggestionsConstants = fn(13399);
+const EnglishEmojiSuggestionsConstants = fn(13407);
 ({ QUERY_DENYLIST: metroImportDefault, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
 const EmojiIntention = fn(1390).EmojiIntention;
 const re10 = /(\S+)\s$/;

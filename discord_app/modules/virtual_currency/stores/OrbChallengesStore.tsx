@@ -17,10 +17,10 @@ function constructOrbChallengeItemFromUserAchievement(achievementIdentifier) {
 }
 const items = [
   null,
-  fn(15231).UserAchievementStatus.NONE,
-  fn(15231).UserAchievementStatus.IN_PROGRESS,
-  fn(15231).UserAchievementStatus.ELIGIBLE,
-  fn(15231).UserAchievementStatus.COMPLETED,
+  fn(15238).UserAchievementStatus.NONE,
+  fn(15238).UserAchievementStatus.IN_PROGRESS,
+  fn(15238).UserAchievementStatus.ELIGIBLE,
+  fn(15238).UserAchievementStatus.COMPLETED,
 ];
 const set = new Set(items);
 const ClientUnreadNotificationType = {
@@ -86,7 +86,7 @@ class OrbChallengesStore extends Store {
       nitroGatedOrbMultiplier: null,
       achievementUnreadState: null,
       lastFetchedPremiumType: "Path",
-      userOpenedWalletViaProfileDCF: "body-md/semibold",
+      userOpenedWalletViaProfileDCF: "QUESTS_DOCK_VISIBILITY_ELIGIBILITY_UPDATE",
     };
     tmp21.challengesForOrbWalletCache = null;
     return tmp21;
@@ -132,7 +132,7 @@ prototype["handleReset"] = function handleReset() {
     nitroGatedOrbMultiplier: null,
     achievementUnreadState: null,
     lastFetchedPremiumType: "Path",
-    userOpenedWalletViaProfileDCF: "body-md/semibold",
+    userOpenedWalletViaProfileDCF: "QUESTS_DOCK_VISIBILITY_ELIGIBILITY_UPDATE",
   };
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {

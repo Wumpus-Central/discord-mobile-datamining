@@ -95,7 +95,7 @@ function ImageInput(openImageInputActionSheet) {
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const DraftType = fn(8117).DraftType;
-const PollsConstants = fn(12233);
+const PollsConstants = fn(12241);
 ({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
 const EmojiIntention = fn(1390).EmojiIntention;
 const jsxProd = fn(21);
@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13179, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13187, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -208,14 +208,14 @@ export default function PollAnswerInput(answer) {
     blurOnSubmit: false,
     style: null,
     selectionColor: "channel_id",
-    textContentType: 12144899,
-    accessibilityLabel: 222429458,
-    accessibilityHint: -654310582,
-    maxLength: 1929380119,
-    returnKeyType: 1,
-    required: 74,
-    autoCorrect: 334,
-    "aria-invalid": 26907473,
+    textContentType: "kind",
+    accessibilityLabel: "a",
+    accessibilityHint: "channel_id",
+    maxLength: "next",
+    returnKeyType: "isArray",
+    required: "Icon",
+    autoCorrect: "Array",
+    "aria-invalid": "analyticsLocations",
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

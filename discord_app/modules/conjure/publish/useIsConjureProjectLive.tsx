@@ -32,8 +32,8 @@ export default function useIsConjureProjectLive(id) {
     items1,
   );
   if (null != stateFromStores) {
-    let isConjureLiveResult = id(11475).isConjureLive(stateFromStores);
-    const tmp2Result = id(11475);
+    let isConjureLiveResult = id(11485).isConjureLive(stateFromStores);
+    const tmp2Result = id(11485);
   } else {
     let num;
     if (id != null) {

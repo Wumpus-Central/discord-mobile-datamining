@@ -1,7 +1,7 @@
 // discord_app/modules/guild/native/InvitesDisabledBadge.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef13760 from "../../../../_runtime/metro/13760__.js";
+import _modDef13767 from "../../../../_runtime/metro/13767__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,7 +50,7 @@ export default noop.memo(function InvitesDisabledBadge(style) {
     children: jsx(native.ThemedIcon, {
       style: tmp.pause,
       themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-      source: _modDef13760,
+      source: _modDef13767,
     }),
   };
   obj.children = (
@@ -58,7 +58,7 @@ export default noop.memo(function InvitesDisabledBadge(style) {
       {jsx(native.ThemedIcon, {
         style: tmp.pause,
         themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-        source: _modDef13760,
+        source: _modDef13767,
       })}
     </View>
   );

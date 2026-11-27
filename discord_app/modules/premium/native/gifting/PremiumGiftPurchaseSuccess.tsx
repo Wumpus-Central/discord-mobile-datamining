@@ -37,9 +37,9 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(11142).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(11143).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(11142);
+  let obj = giftCodeRecord(11143);
   const giftCodeURL = giftCodeRecord(5790).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
@@ -64,7 +64,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     ClipboardUtils.copy(giftCodeURL);
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(11318), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(11319), { giftStyle });
   const items1 = [closure_8(View, obj3), , , ,];
   const obj6 = { style: tmp.title, variant: "heading-lg/semibold", children: null };
   const intl = tmp2(1112).intl;
@@ -86,7 +86,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   obj10.children = intl3.string(giftCodeRecord(1112).t["qS+yMo"]);
   const items2 = [closure_8(giftCodeRecord(5634).Text, obj10)];
   obj5 = giftCodeURL(2174);
-  items2[1] = closure_8(giftCodeRecord(8489).InputButton, {
+  items2[1] = closure_8(giftCodeRecord(8490).InputButton, {
     text: giftCodeURL,
     icon: tmp6(5744),
     iconPosition: "end",

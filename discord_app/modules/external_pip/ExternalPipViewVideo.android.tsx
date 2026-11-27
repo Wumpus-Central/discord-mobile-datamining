@@ -51,8 +51,8 @@ function ExternalPipViewVideoUser(userId) {
     avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
   }
   obj2.avatarURI = avatarURL;
-  const tmp7 = channelId(19379);
-  ({ gradientStops, backgroundColor } = channelId(19379)(obj2));
+  const tmp7 = channelId(19395);
+  ({ gradientStops, backgroundColor } = channelId(19395)(obj2));
   const items2 = [tmp.user, backgroundColor];
   const obj5 = {
     style: noop.useMemo(() => {
@@ -140,7 +140,7 @@ function ExternalPipViewVideoStream(streamId) {
     }
   }, items4);
   const children = [
-    closure_11(first(10151), {
+    closure_11(first(10152), {
       useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
       style: memo,
       streamId,

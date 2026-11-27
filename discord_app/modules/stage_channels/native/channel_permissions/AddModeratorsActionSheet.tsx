@@ -119,7 +119,7 @@ export default function AddModeratorsActionSheet(channel) {
         pendingAdditions,
         setPendingAdditions: tmp2[1],
       };
-      obj5.children = jsx(tmp7(8570), {
+      obj5.children = jsx(tmp7(8571), {
         inActionSheet: true,
         channel,
         guild: stateFromStores,

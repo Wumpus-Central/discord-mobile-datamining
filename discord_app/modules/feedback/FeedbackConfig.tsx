@@ -1,7 +1,7 @@
 // discord_app/modules/feedback/FeedbackConfig.tsx
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
-const Constants = fn(12168);
+const Constants = fn(12176);
 ({ FeedbackGroup, FeedbackType } = Constants);
 const obj = { chance: 0.2, cooldown: 86400000 };
 const obj2 = {};

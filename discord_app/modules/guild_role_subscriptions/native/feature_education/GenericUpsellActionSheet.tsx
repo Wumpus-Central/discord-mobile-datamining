@@ -26,7 +26,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
   const tmp = closure_7();
-  const bottomSheetRef1 = markAsDismissed(8724).useBottomSheetRef();
+  const bottomSheetRef1 = markAsDismissed(8725).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   const obj2 = {
     ref: bottomSheetRef,

@@ -10,8 +10,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13385).MultiAccountTokenStatus;
-let Constants = fn(13386);
+const MultiAccountTokenStatus = fn(13393).MultiAccountTokenStatus;
+let Constants = fn(13394);
 ({ MAX_ACCOUNTS: metroImportDefault, MultiAccountSwitchLocation: closure_8 } = Constants);
 Constants = fn(1071);
 ({ AnalyticEvents: closure_9, AuthStates: closure_10 } = Constants);
@@ -67,7 +67,7 @@ export default function ChooseAccount() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -127,11 +127,11 @@ export default function ChooseAccount() {
           if (value) {
             tmp2(5257).hideActionSheet();
             const obj = tmp2(5257);
-            tmp5(13388).removeAccount(closure_129_0.id);
-            const obj2 = tmp5(13388);
+            tmp5(13396).removeAccount(closure_129_0.id);
+            const obj2 = tmp5(13396);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp23) {
         c4 = tmp;
@@ -164,8 +164,8 @@ export default function ChooseAccount() {
             multiAccountUsers(1256).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
             const obj2 = multiAccountUsers(1256);
           } else {
-            closure_1_2(13388).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-            const obj = closure_1_2(13388);
+            closure_1_2(13396).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+            const obj = closure_1_2(13396);
           }
           return tmp4;
         },
@@ -186,8 +186,8 @@ export default function ChooseAccount() {
               closure_1_1(1256).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
               const obj2 = closure_1_1(1256);
             } else {
-              closure_1_2(13388).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-              const obj = closure_1_2(13388);
+              closure_1_2(13396).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+              const obj = closure_1_2(13396);
             }
             return tmp4;
           };
@@ -213,10 +213,10 @@ export default function ChooseAccount() {
         },
         children: null,
       };
-      const tmp = multiAccountUsers(17663);
+      const tmp = multiAccountUsers(17670);
       obj2.children = closure_1_11(user(1186).Icon, {
         size: user(1186).Icon.Sizes.SMALL_20,
-        source: multiAccountUsers(8625),
+        source: multiAccountUsers(8626),
         disableColor: true,
       });
       obj.trailing = closure_1_11(user(6152).PressableOpacity, obj2);
@@ -228,7 +228,7 @@ export default function ChooseAccount() {
   obj6.leading = closure_11(require("Form").FormRow.Icon, {
     themedColor: multiAccountUsers(575).colors.TEXT_LINK,
     size: require("native").Icon.Sizes.SMALL_20,
-    source: multiAccountUsers(17664),
+    source: multiAccountUsers(17671),
   });
   let intl3 = require("util").intl;
   obj6.label = intl3.string(require("util").t.bPP34Q);

@@ -30,13 +30,13 @@ export function ChannelCallSingleController(selectedParticipant) {
       return null;
     } else {
       let tmp18 = channel;
-      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10540 : 10542);
+      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10541 : 10543);
       let obj2 = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
   } else if (ParticipantTypes.USER === type) {
     let obj = { participant: selectedParticipant, channel };
-    return jsx(channel(10543), { participant: selectedParticipant, channel });
+    return jsx(channel(10544), { participant: selectedParticipant, channel });
   } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;
   } else if (ParticipantTypes.ACTIVITY === type) {

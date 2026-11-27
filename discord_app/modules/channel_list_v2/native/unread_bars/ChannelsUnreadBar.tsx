@@ -267,9 +267,9 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   if (first) {
     let ArrowSmallUpIcon = tmp7(7156).AtIcon;
   } else if ("bottom" === position) {
-    ArrowSmallUpIcon = tmp7(17400).ArrowSmallDownIcon;
+    ArrowSmallUpIcon = tmp7(17407).ArrowSmallDownIcon;
   } else {
-    ArrowSmallUpIcon = tmp7(17398).ArrowSmallUpIcon;
+    ArrowSmallUpIcon = tmp7(17405).ArrowSmallUpIcon;
   }
   const tmp4Result = nativeDefault;
   if (first) {

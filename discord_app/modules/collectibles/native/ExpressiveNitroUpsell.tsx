@@ -97,8 +97,8 @@ export default function _default(onTrackPress) {
     obj2.title = intl.string(util.t.XcOMLu);
     const intl2 = util.intl;
     obj2.description = intl2.string(util.t.JhE8nA);
-    obj.openLazy(asyncRequireImpl(11300, dependencyMap.paths), "ShopNitroUpsellPromoSheet", obj2, "stack");
-    const tmp4 = asyncRequireImpl(11300, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11301, dependencyMap.paths), "ShopNitroUpsellPromoSheet", obj2, "stack");
+    const tmp4 = asyncRequireImpl(11301, dependencyMap.paths);
   }, items);
   const callback1 = noop.useCallback(
     (children, id) =>
@@ -147,7 +147,7 @@ export default function _default(onTrackPress) {
   const obj6 = { style: tmp.nitroUpsellCta, children: null };
   obj9 = onTrackPress(1379);
   const items5 = [
-    closure_7(onTrackPress(9637).NitroWheelIcon, {
+    closure_7(onTrackPress(9638).NitroWheelIcon, {
       color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
       size: "sm",
       style: tmp.nitroUpsellIcon,

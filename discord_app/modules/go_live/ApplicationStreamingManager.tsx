@@ -34,7 +34,7 @@ let Constants = fn(6814);
 Constants = fn(1071);
 ({ ApplicationStreamDeleteReasons: closure_10, ApplicationStreamStates: closure_11 } = Constants);
 const apply = fn(12);
-apply.debounce(fn(8419).notifyStreamStart, 1000);
+apply.debounce(fn(8420).notifyStreamStart, 1000);
 let closure_12 = {};
 let closure_13 = {};
 let closure_14 = 3 * DurationsDefault.Millis.MINUTE;
@@ -67,8 +67,8 @@ const prototype = function BaseApplicationStreamingManager() {
             tmp4 = encodeStreamKeyResult !== streamKey;
           }
           if (tmp4) {
-            applyArgumentsResult(8419).stopStream(encodeStreamKeyResult, false);
-            const tmpResult = applyArgumentsResult(8419);
+            applyArgumentsResult(8420).stopStream(encodeStreamKeyResult, false);
+            const tmpResult = applyArgumentsResult(8420);
           }
           const obj = applyArgumentsResult(6816);
         });
@@ -216,8 +216,8 @@ const prototype = function BaseApplicationStreamingManager() {
                     const isStreamMarkedFullResult = authStore.isStreamMarkedFull(encodeStreamKeyResult);
                     if (!isStreamMarkedFullResult) {
                       c17 = encodeStreamKeyResult;
-                      applyArgumentsResult(8419).watchStream(streamForUser, { noFocus: true });
-                      const tmp2Result = applyArgumentsResult(8419);
+                      applyArgumentsResult(8420).watchStream(streamForUser, { noFocus: true });
+                      const tmp2Result = applyArgumentsResult(8420);
                     }
                   }
                   let obj = applyArgumentsResult(6816);
@@ -265,9 +265,9 @@ const prototype = function BaseApplicationStreamingManager() {
                         let flag2 = !isStreamMarkedFullResult;
                         if (!isStreamMarkedFullResult) {
                           c17 = encodeStreamKeyResult;
-                          applyArgumentsResult(8419).watchStream(streamForUser, { noFocus: true });
+                          applyArgumentsResult(8420).watchStream(streamForUser, { noFocus: true });
                           flag2 = true;
-                          const tmp12Result = applyArgumentsResult(8419);
+                          const tmp12Result = applyArgumentsResult(8420);
                         }
                         tmp16 = flag2;
                       }
@@ -306,8 +306,8 @@ const prototype = function BaseApplicationStreamingManager() {
                   const streamForUser1 = authStore.getStreamForUser(userId, guildId);
                   if (null != streamForUser1) {
                     if (!authStore.isStreamMarkedFull(tmp34Result.encodeStreamKey(streamForUser1))) {
-                      applyArgumentsResult(8419).watchStream(streamForUser1);
-                      const tmp34Result2 = applyArgumentsResult(8419);
+                      applyArgumentsResult(8420).watchStream(streamForUser1);
+                      const tmp34Result2 = applyArgumentsResult(8420);
                     }
                     tmp34Result = applyArgumentsResult(6816);
                   }
@@ -336,8 +336,8 @@ const prototype = function BaseApplicationStreamingManager() {
         tmp7 = region !== RTCRegionStore.getRegion(StreamRTCConnectionStore.getHostname(encodeStreamKeyResult));
       }
       if (tmp7) {
-        applyArgumentsResult(8419).changeStreamRegion(encodeStreamKeyResult, region);
-        const tmp3Result = applyArgumentsResult(8419);
+        applyArgumentsResult(8420).changeStreamRegion(encodeStreamKeyResult, region);
+        const tmp3Result = applyArgumentsResult(8420);
       }
       const obj = applyArgumentsResult(6816);
     }

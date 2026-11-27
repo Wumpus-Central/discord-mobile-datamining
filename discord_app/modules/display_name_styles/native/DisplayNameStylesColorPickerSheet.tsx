@@ -34,7 +34,7 @@ obj2.container = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(16956).SHEET_CONTENT_MAX_WIDTH };
+obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(16963).SHEET_CONTENT_MAX_WIDTH };
 let obj4 = {
   flex: 1,
   paddingTop: nativeDefault.space.PX_4,
@@ -79,7 +79,7 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const tmp8 = color !== tmp5[0] && !arr.some((item) => item.colors[0] === first);
   let obj3 = { colors: tmp5, a11yLabel: null };
   const intl = onSelectColor(1112).intl;
-  let obj = onSelectColor(8724);
+  let obj = onSelectColor(8725);
   const stringResult = intl.string(onSelectColor(1112).t.bBvAEH);
   obj3.a11yLabel = "" + stringResult + ", " + onSelectColor(1089).int2hex(tmp5[0]);
   items = [obj3, ...arr.filter((item) => item.colors[0] !== 32)];

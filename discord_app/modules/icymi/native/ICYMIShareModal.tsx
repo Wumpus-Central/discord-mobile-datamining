@@ -84,7 +84,7 @@ class ICYMIShareModal {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -131,7 +131,7 @@ class ICYMIShareModal {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -177,7 +177,7 @@ class ICYMIShareModal {
                         return obj;
                       }
                       c1 = 3;
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     } catch (tmp17) {
                       c1 = tmp;
                       throw tmp17;
@@ -198,7 +198,7 @@ class ICYMIShareModal {
             );
             tmp3(tmp2[19]).pop();
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp7) {
           c4 = tmp;
@@ -266,7 +266,7 @@ class ICYMIShareModal {
 }
 const View = fn(17).View;
 const AbortCodes = fn(1071).AbortCodes;
-const UserRowModes = fn(8944).UserRowModes;
+const UserRowModes = fn(8945).UserRowModes;
 const MessageSendLocation = fn(5048).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -320,7 +320,7 @@ export function GameShareModal(content) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -348,7 +348,7 @@ export function GameShareModal(content) {
             };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18354).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18361).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

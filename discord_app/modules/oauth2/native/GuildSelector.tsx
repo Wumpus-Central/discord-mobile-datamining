@@ -46,8 +46,8 @@ export default function GuildSelector(disabled) {
       onGuildChange(dependencyMap[6]).hideActionSheet(GuildSelector);
     };
     obj2.selectedItem = selectedGuildId;
-    obj.openLazy(asyncRequireImpl(8499, dependencyMap.paths), GuildSelector, obj2);
-    const tmp = asyncRequireImpl(8499, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(8500, dependencyMap.paths), GuildSelector, obj2);
+    const tmp = asyncRequireImpl(8500, dependencyMap.paths);
   }, items);
   let found = guilds.find((id) => id.id === selectedGuildId);
   let obj = { style: tmp.selectorGroup, children: null };

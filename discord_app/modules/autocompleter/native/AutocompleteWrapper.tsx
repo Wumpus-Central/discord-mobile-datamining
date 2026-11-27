@@ -78,7 +78,7 @@ const Constants = fn(1071);
   UpsellTypes: closure_14,
 } = Constants);
 const BOOLEAN_CHOICES = fn(7073).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(10790);
+const ApplicationCommandsConstants = fn(10791);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_16, AUTOCOMPLETE_ROW_HEIGHT: closure_17 } = ApplicationCommandsConstants);
 const ChannelAutocompleteConstants = fn(7074);
 ({
@@ -89,7 +89,7 @@ const ChannelAutocompleteConstants = fn(7074);
   GAME_MENTION_INPUT_PREFIX: closure_22,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_23,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10870).AutocompleteTypes;
+const AutocompleteTypes = fn(10871).AutocompleteTypes;
 const EmojiInteractionPoint = fn(1390).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_26, Fragment: closure_27, jsxs: closure_28 } = jsxProd);
@@ -958,9 +958,9 @@ class ACWrapper {
       () =>
         autocompleteType === AutocompleteTypes.GAME_MENTIONS
           ? () => {
-              const gameSearchSession = analyticsLocations(8955).getGameSearchSession(
-                analyticsLocations(10871).GameSearchSurface.CHAT_MENTION,
-                analyticsLocations(8956).GameSearchFilterGroup.DEFAULT,
+              const gameSearchSession = analyticsLocations(8956).getGameSearchSession(
+                analyticsLocations(10872).GameSearchSurface.CHAT_MENTION,
+                analyticsLocations(8957).GameSearchFilterGroup.DEFAULT,
               );
               return gameSearchSession.end();
             }

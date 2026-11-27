@@ -8,15 +8,15 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const VoicePanelConstants = fn(11782);
+const VoicePanelConstants = fn(11790);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(19383);
+const VoicePanelPIPConstants = fn(19399);
 ({ VoicePanelPIPModes: metroImportDefault, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
 const ParticipantTypes = fn(5693).ParticipantTypes;
-const MorphablePanelConstants = fn(11783);
+const MorphablePanelConstants = fn(11791);
 ({ MIN_PIP_TOSS_VELOCITY, PIP_WINDOW_OFFSET } = MorphablePanelConstants);
 let set = new Set();
 let items = [

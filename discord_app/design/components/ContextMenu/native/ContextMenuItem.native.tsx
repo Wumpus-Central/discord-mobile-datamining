@@ -273,7 +273,7 @@ export function ContextMenuItem(children) {
   const items11 = [c5(require("Text/Text").Text, { animated: true, variant: "body-md/medium", color: str2, children: children.label }), ];
   let tmp39Result = null != subLabel;
   if (tmp39Result) {
-    const obj9 = { variant: tmp(9068).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT, color: null, children: null };
+    const obj9 = { variant: tmp(9069).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT, color: null, children: null };
     let str3 = "text-subtle";
     if (tmp41) {
       str3 = "text-feedback-critical";

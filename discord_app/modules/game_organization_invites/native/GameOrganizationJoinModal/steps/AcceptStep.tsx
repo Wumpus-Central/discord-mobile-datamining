@@ -6,10 +6,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const GameOrganizationInviteConstants = fn(11917);
+const GameOrganizationInviteConstants = fn(11925);
 ({ GameOrganizationCharacterMode: metroImportDefault, GameOrganizationInviteAcceptStatus: closure_8 } =
   GameOrganizationInviteConstants);
-const onPress = fn(12333).closeGameOrganizationJoinModal;
+const onPress = fn(12341).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5043);
@@ -42,7 +42,7 @@ export function AcceptStep(code) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

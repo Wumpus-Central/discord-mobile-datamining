@@ -50,7 +50,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -174,7 +174,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                         closure_131_0.pendingSession = null;
                       }
                       sessionGeneration = 3;
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     }
                     obj13 = _self(tmp8[8]);
                   }
@@ -210,7 +210,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                     closure_131_0.pendingSession = null;
                   }
                   sessionGeneration = 3;
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   c5 = 3;
                   currentUser = 5;
@@ -224,7 +224,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                   closure_131_0.pendingSession = null;
                 }
                 sessionGeneration = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (4 === tmp11) {
@@ -260,7 +260,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                 closure_131_0.pendingSession = null;
               }
               sessionGeneration = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (6 === tmp11) {
             c5 = 3;
@@ -292,7 +292,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                 closure_131_0.pendingSession = null;
               }
               sessionGeneration = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           }
           c5 = 0;

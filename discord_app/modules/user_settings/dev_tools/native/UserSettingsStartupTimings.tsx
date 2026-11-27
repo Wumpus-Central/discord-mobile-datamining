@@ -78,7 +78,7 @@ export default function UserSettingsStartupTimings() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -108,11 +108,11 @@ export default function UserSettingsStartupTimings() {
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(10697)(closure_128_0);
+            closure_128_1 = tmp5(10698)(closure_128_0);
             const obj7 = { message: closure_128_1 };
-            tmp2(8690).showShareActionSheet(obj7, "Startup Timing");
+            tmp2(8691).showShareActionSheet(obj7, "Startup Timing");
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;

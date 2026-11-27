@@ -10,7 +10,7 @@ import TableRow from "../../../design/components/TableRow/native/TableRow.native
 import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
-import _mod9213 from "../../../../_runtime/metro/09213__.js";
+import _mod9214 from "../../../../_runtime/metro/09214__.js";
 import GamePlatformBadgeRowDefault from "../../games/native/GamePlatformBadgeRow.tsx";
 import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet.tsx";
 import WidgetUtils from "../WidgetUtils.tsx";
@@ -300,7 +300,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     if (!closure_5) {
       if ("" !== query.trim()) {
         const obj2 = { keys: ["label"] };
-        length = _mod9213.matchSorter(memo1, query, obj2).length;
+        length = _mod9214.matchSorter(memo1, query, obj2).length;
       }
       return length;
     }

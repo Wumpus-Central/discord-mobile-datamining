@@ -275,7 +275,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(6164).GuildsNodeType;
-const GuildsBarConstants = fn(18071);
+const GuildsBarConstants = fn(18078);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
@@ -644,7 +644,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "channel_id" });
+    state1.setStateShallow({ dragSpecs: "displayName", overSpecs: "isArray" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -843,10 +843,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(9069).ContextMenuStore;
+        const ContextMenuStore = tmp66(9070).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(9069).hideContextMenu();
-          const tmp66Result = tmp66(9069);
+          tmp66(9070).hideContextMenu();
+          const tmp66Result = tmp66(9070);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -1065,7 +1065,7 @@ export default function useGuildsBarGesture() {
   }, items4);
   let obj7 = require("../../../../../_runtime/metro/01654__.js");
   let items5 = [callback4];
-  const onFastListScrollWorklet = tmp(16684).useExternalScrollEventHandler({ id: "guilds" });
+  const onFastListScrollWorklet = tmp(16691).useExternalScrollEventHandler({ id: "guilds" });
   let items6 = [
     dragDropInProgress,
     dragRegion,

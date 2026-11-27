@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const NodeType = fn(11963).NodeType;
+const NodeType = fn(11971).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5043);
@@ -30,7 +30,7 @@ export default function SettingSegmentedControl(node) {
   settings = undefined;
   ({ defaultIndex: c0, settings } = node.node);
   let tmp = closure_11();
-  const tmp3 = settings(8486)();
+  const tmp3 = settings(8487)();
   const width = tmp3.width;
   let num = 0;
   ({ ref, onLayout } = tmp3);
@@ -41,13 +41,13 @@ export default function SettingSegmentedControl(node) {
   const memo = noop.useMemo(() => {
     items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(16026).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(16033).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(16194).getSettingTitle(id);
+      obj.label = items(16201).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);

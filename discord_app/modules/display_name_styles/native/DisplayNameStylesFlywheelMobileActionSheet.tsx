@@ -72,7 +72,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   let result = ref(2174).canUsePremiumProfileCustomization(stateFromStores);
   dependencyMap = result;
   let obj4 = ref(2174);
-  enabled2 = markAsDismissed(9152).useTryItOutMobileRefreshConfig("DisplayNameStylesFlywheelMobileActionSheet").enabled;
+  enabled2 = markAsDismissed(9153).useTryItOutMobileRefreshConfig("DisplayNameStylesFlywheelMobileActionSheet").enabled;
   const intl = markAsDismissed(1112).intl;
   const string = intl.string;
   const tmp9 = ref(3303);
@@ -137,13 +137,13 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp14Result = enabled;
   if (enabled) {
-    tmp14Result = closure_9(tmp2(19284).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp14Result = closure_9(tmp2(19300).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp14Result];
   let tmp14Result2 = !enabled;
   if (!enabled) {
     const obj10 = { source: null, style: null, resizeMode: "contain" };
-    const obj11 = { uri: tmp4(19288) };
+    const obj11 = { uri: tmp4(19304) };
     obj10.source = obj11;
     obj10.style = tmp6.image;
     tmp14Result2 = closure_9(tmp4(5730), obj10);

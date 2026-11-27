@@ -236,8 +236,8 @@ function OrbWalletContent(reopenWallet) {
   return closure_12(challengesForOrbWallet, obj5);
 }
 const View = fn(17).View;
-let closure_7 = fn(15230).OrbChallengesDisplayErrorType;
-let closure_8 = fn(16504).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_7 = fn(15237).OrbChallengesDisplayErrorType;
+let closure_8 = fn(16511).ORB_WALLET_ACTION_SHEET_KEY;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const PremiumTypes = fn(1389).PremiumTypes;
 const jsxProd = fn(21);

@@ -3,8 +3,8 @@ import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef13925 from "../../../../../_runtime/metro/13925__.js";
-import _modDef13926 from "../../../../../_runtime/metro/13926__.js";
+import _modDef13932 from "../../../../../_runtime/metro/13932__.js";
+import _modDef13933 from "../../../../../_runtime/metro/13933__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -30,9 +30,9 @@ export default function Header(style) {
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef13925;
+    let tmp2Result = _modDef13932;
   } else {
-    tmp2Result = _modDef13926;
+    tmp2Result = _modDef13933;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2)];

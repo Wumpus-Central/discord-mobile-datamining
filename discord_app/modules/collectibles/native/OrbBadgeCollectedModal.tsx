@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import BalanceWidgetPill from "../../virtual_currency/native/index.tsx";
-import _mod11256 from "../../virtual_currency/hooks/index.tsx";
+import _mod11257 from "../../virtual_currency/hooks/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -25,7 +25,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   }, items2);
   if (stateFromStores) {
     const obj3 = { source: null, style: null };
-    const obj4 = { uri: onPressViewBadge(9275) };
+    const obj4 = { uri: onPressViewBadge(9276) };
     obj3.source = obj4;
     obj3.style = tmp.background;
     let tmp9Result = closure_6(onPressViewBadge(5730), obj3);
@@ -42,11 +42,11 @@ function OrbBadgeCollectedRootScreen(modalKey) {
       pauseWhileAppInactive: true,
       paused: false,
     };
-    const obj6 = { uri: onPressViewBadge(9276) };
+    const obj6 = { uri: onPressViewBadge(9277) };
     obj5.source = obj6;
-    obj5.poster = onPressViewBadge(9275);
+    obj5.poster = onPressViewBadge(9276);
     obj5.style = tmp.background;
-    tmp9Result = closure_6(tmp2(8880).VideoComponent, obj5);
+    tmp9Result = closure_6(tmp2(8881).VideoComponent, obj5);
     tmp12 = onPressViewBadge;
     tmp13 = closure_6;
   }
@@ -56,7 +56,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   const obj8 = { source: null, style: null };
   const obj9 = { uri: null };
   const obj = modalKey(504);
-  obj9.uri = tmp12(11234);
+  obj9.uri = tmp12(11235);
   obj8.source = obj9;
   obj8.style = tmp.orbBadge;
   const items4 = [tmp13(tmp12(5730), obj8)];
@@ -164,7 +164,7 @@ export default function OrbBadgeCollectedModal(arg0) {
         headerRight() {
           return timestampProducer(BalanceWidgetPill.BalanceWidgetPill, {
             initialRenderedBalance: orbBalancePriorToPurchase,
-            balance: _mod11256.useFetchVirtualCurrencyBalance().balance,
+            balance: _mod11257.useFetchVirtualCurrencyBalance().balance,
           });
         },
         title: "",

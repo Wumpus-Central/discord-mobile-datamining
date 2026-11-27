@@ -14,7 +14,7 @@ import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import inlineStyles from "../../../../../_runtime/07946_inlineStyles.js";
 import ChatInputActionButtonDefault from "../../../chat_input/native/action_buttons/ChatInputActionButton.tsx";
 import useVoiceMessageBottomInsetDefault from "../useVoiceMessageBottomInset.tsx";
-import _modDef13646 from "../../../../../_runtime/metro/13646__.js";
+import _modDef13653 from "../../../../../_runtime/metro/13653__.js";
 import VoiceMessageChatDefault from "VoiceMessageChat.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -335,7 +335,7 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx13.__initData = tmp57;
   const animatedStyle3 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoiceMessageOverlayTsx13);
   const tmp5Result21 = require("../../../../../_runtime/metro/01654__.js");
-  const tmp14Result = importDefault(tmp3 ? 7134 : 10764);
+  const tmp14Result = importDefault(tmp3 ? 7134 : 10765);
   const items16 = [closure_38, initialAnimation, bottomInset, CHAT_INPUT_HEIGHT, 32, 8];
   _require = undefined;
   importDefault = undefined;
@@ -363,7 +363,7 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result })];
-  const obj4 = { style: null, source: _modDef13646 };
+  const obj4 = { style: null, source: _modDef13653 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
@@ -373,10 +373,10 @@ function LockPill(voiceMessageAnimationState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12958).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12959).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(12966).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12967).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1071).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12960).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12968).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let module_1654 = module_1654_mod;
@@ -626,9 +626,9 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   const bottomInset = useVoiceMessageBottomInsetDefault().bottomInset;
   let obj = require("useToken");
   if (obj2.useIsMobileRTCV2Enabled("VoiceMessageOverlay")) {
-    let SendMessageIcon = tmp(10659).WaveformIcon;
+    let SendMessageIcon = tmp(10660).WaveformIcon;
   } else {
-    SendMessageIcon = tmp(10504).MicrophoneIcon;
+    SendMessageIcon = tmp(10505).MicrophoneIcon;
   }
   obj2 = require("MobileRTCV2Experiment");
   const keyboardOpenPaddingStyle = require("FloatingChatInputContainer").useKeyboardOpenPaddingStyle();

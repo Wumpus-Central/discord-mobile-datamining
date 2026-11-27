@@ -23,7 +23,7 @@ export default function UserProfileUpsellButton(analyticsObject) {
   let analyticsLocations;
   analyticsLocations = analyticsLocations(6379)().analyticsLocations;
   const tmp = closure_10();
-  let label = analyticsObject(9135).useNitroTrialCtaOverride();
+  let label = analyticsObject(9136).useNitroTrialCtaOverride();
   items = [analyticsLocations, analyticsObject];
   const effect = noop.useEffect(() => {
     const obj2 = {
@@ -55,7 +55,7 @@ export default function UserProfileUpsellButton(analyticsObject) {
     label = intl.string(tmp3(1112).t.pj0XBN);
   }
   obj2.text = label;
-  obj2.icon = jsx(analyticsObject(9637).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
+  obj2.icon = jsx(analyticsObject(9638).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
   return jsx(analyticsObject(5641).Button, {
     onPress() {
       const obj2 = {

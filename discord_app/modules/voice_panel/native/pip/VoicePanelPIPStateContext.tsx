@@ -6,8 +6,8 @@ let size = {
   mode: "isArray",
   width: false,
   height: null,
-  containerHeight: "transparent",
-  showSecondaryPIP: null,
+  containerHeight: 0,
+  showSecondaryPIP: false,
   scale: null,
 };
 const ReanimatedHelperTypes = fn(7429);

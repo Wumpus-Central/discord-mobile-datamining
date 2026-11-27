@@ -215,7 +215,11 @@ export default function ConjureProjectList(guildId) {
     };
     ActionSheetActionCreators.showActionSheet(obj2);
   }, items4);
-  let obj4 = { latest: null, route: "Array", loading: false };
+  let obj4 = {
+    latest: null,
+    route: "Array",
+    loading: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000936698893569099,
+  };
   let obj3 = require("useConjureProjects");
   obj4.loading = new Set();
   const ref = memo1.useRef(obj4);
@@ -259,7 +263,7 @@ export default function ConjureProjectList(guildId) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

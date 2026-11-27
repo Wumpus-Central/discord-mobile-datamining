@@ -37,7 +37,7 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(10643);
+const ChannelListLayout = fn(10644);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

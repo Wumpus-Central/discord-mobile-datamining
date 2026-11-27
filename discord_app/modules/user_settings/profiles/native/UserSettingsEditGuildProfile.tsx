@@ -44,7 +44,7 @@ export default function UserSettingsEditGuildProfile(arg0) {
   const tmp4 = guild(6379);
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmp7 = guild(16063)();
+  const tmp7 = guild(16070)();
   guild = tmp7.guild;
   ({ resetPending: c2, handleSubmit: c3 } = tmp7);
   let obj = stateFromStores(504);
@@ -102,13 +102,13 @@ export default function UserSettingsEditGuildProfile(arg0) {
       const obj7 = { currentUser: stateFromStores, header };
       const _HermesInternal = HermesInternal;
       tmp14 = closure_7(hasUnsavedChanges, obj3);
-      items3[1] = closure_7(tmp2(16178), obj7, "" + stateFromStores.id + "-" + guild.id);
+      items3[1] = closure_7(tmp2(16185), obj7, "" + stateFromStores.id + "-" + guild.id);
       obj6.children = items3;
       return closure_9(tmp5(6379).AnalyticsLocationProvider, obj6);
     }
   }
   const obj8 = { children: null };
-  const items4 = [header, closure_7(guild(16175), {})];
+  const items4 = [header, closure_7(guild(16182), {})];
   obj8.children = items4;
   return closure_9(closure_8, obj8);
 }

@@ -33,7 +33,7 @@ let closure_14 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -110,7 +110,7 @@ let closure_14 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
           };
           closure_133_1(closure_133_2[11]).dispatch(obj14);
           c7 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         c7 = tmp;
@@ -302,7 +302,7 @@ export function useConjurePublishEvalForm(pending) {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

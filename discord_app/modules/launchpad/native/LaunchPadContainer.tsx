@@ -35,7 +35,7 @@ function LaunchPadOverlay(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11958);
+const LaunchPadConstants = fn(11966);
 ({ LAUNCH_PAD_SPRING_CONFIG: hasOwnProperty, LaunchPadTypes: closure_6 } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);

@@ -44,7 +44,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(9816).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(9817).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
     ChevronSmallRightIcon = tmp3(7558).ChevronSmallRightIcon;
@@ -52,7 +52,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  let ts = tmp6(18884).formatClockTime(entry.ts);
+  let ts = tmp6(18900).formatClockTime(entry.ts);
   if (ts == null) {
     ts = entry.ts;
   }

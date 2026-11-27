@@ -87,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "Add Friend Modal",
+      animate: "cancelled \u2014 an agent may not open external links",
     };
     obj12.animate = animate;
     if (null == users) {

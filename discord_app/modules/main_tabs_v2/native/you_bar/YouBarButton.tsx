@@ -94,10 +94,10 @@ class YouBarButtonIcon {
         position: "absolute",
         left: size2 - badgeSize + num3,
         top: size2 - badgeSize + num4,
-        right: "analyticsLocations",
-        bottom: "e",
-        padding: "applicationId",
-        minWidth: "Array",
+        right: "dispatch",
+        bottom: "create",
+        padding: "isArray",
+        minWidth: "isArray",
       };
       return rect;
     }, items1);
@@ -136,7 +136,7 @@ class YouBarButtonContainer {
   }
 }
 const View = fn(17).View;
-const YouBarConstants = fn(16683);
+const YouBarConstants = fn(16690);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: closure_6 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);

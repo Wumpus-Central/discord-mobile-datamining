@@ -146,12 +146,12 @@ export default function BadgeDirectoryView(arg0) {
   let isBadgeUnreadStateEnabled;
   let badgeIndicatorIds;
   let stringResult1 = dependencyMap;
-  let isBadgeManagementEnabled = targetUsername(9862).useIsBadgeManagementEnabled({ location: "BadgeDirectoryView" });
+  let isBadgeManagementEnabled = targetUsername(9863).useIsBadgeManagementEnabled({ location: "BadgeDirectoryView" });
   const tmp4 = closure_12();
   const diff = stateFromStores(1495)().width - 2 * stateFromStores(575).space.PX_16;
   let result = 3 * stateFromStores(575).space.PX_12;
   items = [tmp4.footer];
-  let obj = targetUsername(9862);
+  let obj = targetUsername(9863);
   items[1] = { paddingBottom: stateFromStores(1629)().bottom + stateFromStores(575).space.PX_16 };
   let obj2 = { paddingBottom: stateFromStores(1629)().bottom + stateFromStores(575).space.PX_16 };
   const items1 = [UserStore];
@@ -236,12 +236,12 @@ export default function BadgeDirectoryView(arg0) {
   if (!(null != targetUserId && targetUserId !== stateFromStores)) {
     someResult = stateFromStoresArray.some((has_updates) => true === has_updates.has_updates);
   }
-  isBadgeUnreadStateEnabled = targetUsername(9865).useIsBadgeUnreadStateEnabled({
+  isBadgeUnreadStateEnabled = targetUsername(9866).useIsBadgeUnreadStateEnabled({
     location: "BadgeDirectoryView",
     hasUnread: someResult,
   });
-  const tmpResult7 = targetUsername(9865);
-  badgeIndicatorIds = targetUsername(9871).useBadgeDirectoryBadgeIndicators({
+  const tmpResult7 = targetUsername(9866);
+  badgeIndicatorIds = targetUsername(9872).useBadgeDirectoryBadgeIndicators({
     badges: stateFromStoresArray,
     enabled: tmp32Result,
   }).badgeIndicatorIds;
@@ -386,5 +386,5 @@ export default function BadgeDirectoryView(arg0) {
   }
   const intl = targetUsername(1112).intl;
   formatToPlainStringResult = intl.string(targetUsername(1112).t.UqnlQF);
-  const tmpResult8 = targetUsername(9871);
+  const tmpResult8 = targetUsername(9872);
 }

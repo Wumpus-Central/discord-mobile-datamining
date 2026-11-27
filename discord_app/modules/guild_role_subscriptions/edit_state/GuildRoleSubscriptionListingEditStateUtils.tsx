@@ -54,7 +54,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -181,7 +181,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
                   items = [];
                   items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
                   obj2.roles = items;
-                  return guildId(9761).updateEmoji(obj2);
+                  return guildId(9762).updateEmoji(obj2);
                 }
               });
               closure_129_16 = closure_129_14.map((item) => {
@@ -191,11 +191,11 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const found = roles.filter((item) => item !== dependencyMap);
                   if (found.length > 0) {
                     const obj3 = { guildId, emojiId: customEmojiById.id, roles: found };
-                    let updateEmojiResult = guildId(9761).updateEmoji(obj3);
-                    const obj2 = guildId(9761);
+                    let updateEmojiResult = guildId(9762).updateEmoji(obj3);
+                    const obj2 = guildId(9762);
                   } else {
-                    updateEmojiResult = guildId(9761).deleteEmoji(guildId, customEmojiById.id);
-                    const obj = guildId(9761);
+                    updateEmojiResult = guildId(9762).deleteEmoji(guildId, customEmojiById.id);
+                    const obj = guildId(9762);
                   }
                   return updateEmojiResult;
                 }
@@ -213,7 +213,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
             return obj;
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
         subscriptionTrial = closure_130_8.getSubscriptionTrial(id);
         let tmp25 = null != trialLimit;
@@ -255,7 +255,7 @@ let closure_21 = async function _createListingFromEditState(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -414,9 +414,9 @@ let closure_21 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(16837);
+const GuildRoleSubscriptionEditStore = fn(16844);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: closure_10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(16816).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(16823).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1071);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1389).SubscriptionIntervalTypes;
@@ -716,7 +716,7 @@ export function useImage(editStateId, arg1) {
 }
 export function useApplicationId(listingId) {
   _require = listingId;
-  const f111426 = (application_id) => {
+  const f111669 = (application_id) => {
     application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
@@ -727,7 +727,7 @@ export function useApplicationId(listingId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
-  const tmp2 = f111426(5622)(() => first);
+  const tmp2 = f111669(5622)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => closure_3(c2), items1);
@@ -833,7 +833,7 @@ export function useRole(listingId, guildId) {
   }, items);
 }
 export function useRoleColor(editStateId, guildId) {
-  const tmp = roleColor(16838)(guildId, editStateId);
+  const tmp = roleColor(16845)(guildId, editStateId);
   editStateId = tmp;
   items = [tmp];
   let memo = noop.useMemo(() => {
@@ -883,7 +883,7 @@ export function useRoleColor(editStateId, guildId) {
   return items2;
 }
 export function useChannelAccessFormat(editStateId, guildId) {
-  const tmp = channelAccessFormat(16838)(guildId, editStateId);
+  const tmp = channelAccessFormat(16845)(guildId, editStateId);
   items = [tmp];
   let memo = noop.useMemo(() => {
     if (null == closure_0) {
@@ -1044,7 +1044,7 @@ export function useIntangibleBenefits(listingId) {
 }
 export function useTierEmojiIds(listingId, guildId) {
   _require = guildId;
-  const tmp = tierEmojiIds(16838)(guildId, listingId);
+  const tmp = tierEmojiIds(16845)(guildId, listingId);
   items = [EmojiStore];
   const items1 = [guildId];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
@@ -1341,7 +1341,7 @@ export function useCreateOrUpdateListingFromEditState() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1429,8 +1429,8 @@ export function useCreateOrUpdateListingFromEditState() {
                   if (null != channelBenefits) {
                     const benefits = subscriptionListing.role_benefits.benefits;
                     const benefits1 = subscriptionListing.role_benefits.benefits;
-                    const found = benefits.filter(closure_1_0(16840).isChannelBenefit);
-                    const found1 = benefits1.filter(closure_1_0(16840).isIntangibleBenefit);
+                    const found = benefits.filter(closure_1_0(16847).isChannelBenefit);
+                    const found1 = benefits1.filter(closure_1_0(16847).isIntangibleBenefit);
                     if (channelBenefits == null) {
                       channelBenefits = found;
                     }
@@ -1489,7 +1489,7 @@ export function useCreateOrUpdateListingFromEditState() {
             c4 = 0;
             closure_0(false);
             c6 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else {
             throw closure_129_8;
           }

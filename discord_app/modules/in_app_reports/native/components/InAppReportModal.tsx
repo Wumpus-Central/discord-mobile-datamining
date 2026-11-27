@@ -10,7 +10,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8197).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8198).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -70,7 +70,7 @@ export default function InAppReportModal(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ export default function InAppReportModal(arg0) {
               addOnCloseCallback(closure_2);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp32) {
           c4 = tmp;

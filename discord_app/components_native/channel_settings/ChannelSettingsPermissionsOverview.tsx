@@ -50,7 +50,7 @@ function ChannelPermissionSyncModule(channel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -69,14 +69,14 @@ function ChannelPermissionSyncModule(channel) {
               const obj8 = PermissionUtilsAll;
               const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(
                 tmp5,
-                tmp2(12118).getAppChannelBotUserId(tmp2),
+                tmp2(12126).getAppChannelBotUserId(tmp2),
               );
               closure_128_0 = syncedPermissionOverwrites;
-              const obj9 = tmp2(12118);
+              const obj9 = tmp2(12126);
               c2 = 1;
               c3 = 1;
               const obj5 = {
-                value: tmp2(8528).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                value: tmp2(8529).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                   tmp2,
                   syncedPermissionOverwrites[guild_id].deny,
                   syncedPermissionOverwrites[guild_id].allow,
@@ -101,7 +101,7 @@ function ChannelPermissionSyncModule(channel) {
               const obj3 = category(12);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -135,7 +135,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(14077).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(14084).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1112).intl;
   obj6.label = intl2.string(channel(1112).t.NVwuHq);
   obj6.onPress = callback;

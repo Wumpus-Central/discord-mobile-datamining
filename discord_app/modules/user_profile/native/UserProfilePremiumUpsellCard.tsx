@@ -45,7 +45,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(9135).useNitroTrialCtaOverride();
+  let nitroTrialCtaOverride = analyticsLocations(9136).useNitroTrialCtaOverride();
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };

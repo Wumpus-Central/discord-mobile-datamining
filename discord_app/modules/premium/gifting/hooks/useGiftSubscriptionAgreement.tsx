@@ -12,23 +12,23 @@ export default function useGiftSubscriptionAgreement(code) {
   if (code != null) {
     code = code.code;
   }
-  let isResolvingAgreement = code(11933).needsGiftSubscriptionAgreement(code);
+  let isResolvingAgreement = code(11941).needsGiftSubscriptionAgreement(code);
   const tmp3 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp3[1];
   items = [code, isResolvingAgreement];
   const effect = noop.useEffect(() => {
     closure_0 = async function _lookUpOnOpen(arg0) {
-      await closure_2_1(11928).resolveGiftCode(closure_0, {
+      await closure_2_1(11936).resolveGiftCode(closure_0, {
         withSubscriptionPlan: true,
         withGiftSubscriptionAgreement: true,
       });
       if (1 === tmp7) {
         c4 = 0;
         closure_129_0 = closure_3;
-        const result = isResolvingAgreement(11928).reportUnexpectedGiftCodeError(closure_129_0);
+        const result = isResolvingAgreement(11936).reportUnexpectedGiftCodeError(closure_129_0);
         tmp3(true);
         c6 = 3;
-        isResolvingAgreement(11928);
+        isResolvingAgreement(11936);
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;

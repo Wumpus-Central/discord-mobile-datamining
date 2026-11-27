@@ -95,7 +95,7 @@ export default function NewTermsModal() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -127,7 +127,7 @@ export default function NewTermsModal() {
             closure_128_0 = value;
             closure_129_1(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -214,15 +214,15 @@ export default function NewTermsModal() {
     const obj41 = { top };
     items3[1] = obj41;
     obj21.style = items3;
-    obj21.source = tmp2(8625);
+    obj21.source = tmp2(8626);
     obj21.color = tmp.navbarRight.tintColor;
     obj21.onPress = handleMoreActions;
     const intl9 = tmp6(1112).intl;
     obj21.accessibilityLabel = intl9.string(tmp6(1112).t["UKOtz+"]);
-    items2[2] = closure_12(tmp2(12539), obj21);
+    items2[2] = closure_12(tmp2(12547), obj21);
     obj3.children = items2;
     tmp10 = closure_13(closure_6, obj3);
-    const tmp2Result = tmp2(12539);
+    const tmp2Result = tmp2(12547);
   }
   return tmp10;
 }

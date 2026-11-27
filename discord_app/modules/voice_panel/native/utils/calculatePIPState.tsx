@@ -3,7 +3,7 @@ import VoicePanelPIPUtils from "../pip/VoicePanelPIPUtils.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 require = fn;
-const VoicePanelModes = fn(11782).VoicePanelModes;
+const VoicePanelModes = fn(11790).VoicePanelModes;
 const ParticipantTypes = fn(5693).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");

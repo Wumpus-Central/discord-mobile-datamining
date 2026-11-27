@@ -101,11 +101,11 @@ export default function WebAuthnRegisterStep() {
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const obj3 = navigation(1379);
-  const announceError = navigation(16291).useAnnounceError(tmp10);
+  const announceError = navigation(16298).useAnnounceError(tmp10);
   obj4 = { contentContainerStyle: tmp4.scrollContent, alwaysBounceVertical: false, children: null };
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj5 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_8(navigation(16292).KeyImage, {}), ,];
+  const items3 = [closure_8(navigation(16299).KeyImage, {}), ,];
   const obj6 = { style: tmp4.margin, variant: "body-md/normal", children: null };
   const intl = tmp(1112).intl;
   const string = intl.string;

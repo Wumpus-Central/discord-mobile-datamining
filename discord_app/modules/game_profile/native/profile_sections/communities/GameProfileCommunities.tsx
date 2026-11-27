@@ -28,7 +28,7 @@ let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
     padding: nativeDefault.space.PX_16,
-    maxWidth: fn(8791).MOBILE_GAME_PROFILE_MAX_WIDTH,
+    maxWidth: fn(8792).MOBILE_GAME_PROFILE_MAX_WIDTH,
     alignSelf: "center",
     width: "100%",
     gap: nativeDefault.space.PX_8,
@@ -40,7 +40,7 @@ let obj = {
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
   padding: nativeDefault.space.PX_16,
-  maxWidth: fn(8791).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8792).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
   gap: nativeDefault.space.PX_8,
@@ -112,7 +112,7 @@ let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -208,7 +208,7 @@ let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
               closure_130_7(currentlySelectedChannelId2, closure_129_0);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp63) {
           if (tmp4 === c4) {
@@ -291,7 +291,7 @@ export default function GameProfileCommunities(game) {
     const obj4 = {
       size: "sm",
       variant: "secondary",
-      icon: closure_11(tmp12(14256).LanguageIcon, { size: "sm" }),
+      icon: closure_11(tmp12(14263).LanguageIcon, { size: "sm" }),
       accessibilityLabel: null,
       onPress: null,
     };

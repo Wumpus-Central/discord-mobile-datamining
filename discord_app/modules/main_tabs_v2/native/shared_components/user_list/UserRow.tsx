@@ -74,14 +74,14 @@ function UserRowSubLabel(arg0) {
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(8944).UserRowModes;
+const UserRowModes = fn(8945).UserRowModes;
 const Constants = fn(1071);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PlatformUtils = fn(1359);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "r" };
+  let obj = { lineHeight: "top" };
 }
 let closure_18 = {
   CALL: "call",
@@ -419,7 +419,7 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(11357)(channel, false);
+                const obj2 = user(11358)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
@@ -475,7 +475,7 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(11357)(channel, false);
+          const obj2 = user(11358)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }

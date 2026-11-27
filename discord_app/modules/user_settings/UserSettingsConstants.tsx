@@ -64,9 +64,9 @@ export function createEmptyEditInfo() {
     cleanupFuncs: [],
     errorCallbacks: [],
     loaded: false,
-    loading: "analyticsLocations",
-    triggeredMigrations: null,
-    offlineEditDataVersion: null,
+    loading: "channel_id",
+    triggeredMigrations: "<string:1582367098>",
+    offlineEditDataVersion: "<string:208802301>",
   };
   return obj;
 }

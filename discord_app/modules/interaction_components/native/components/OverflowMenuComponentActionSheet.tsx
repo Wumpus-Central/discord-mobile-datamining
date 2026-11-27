@@ -10,7 +10,7 @@ function OverflowMenuSheetContent(component) {
   component = component.component;
   let obj = component(6395);
   const overflowMenuComponentActionSheetKey = obj.getOverflowMenuComponentActionSheetKey(
-    component(8824).useComponentContainerId(),
+    component(8825).useComponentContainerId(),
     component.id,
   );
   const groups = component.groups;
@@ -29,8 +29,8 @@ function OverflowMenuSheetContent(component) {
     items = [component];
     return items;
   }, items1);
-  const obj2 = component(8824);
-  const isComponentTreeLoading = component(12413).useIsComponentTreeLoading(memo, callback);
+  const obj2 = component(8825);
+  const isComponentTreeLoading = component(12421).useIsComponentTreeLoading(memo, callback);
   const obj4 = { children: null };
   const groups1 = component.groups;
   obj4.children = groups1.map((label, index) => {

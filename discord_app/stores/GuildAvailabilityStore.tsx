@@ -33,10 +33,10 @@ const prototype = GuildAvailabilityStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(GuildStore);
 };
-prototype["isUnavailable"] = function isUnavailable(id) {
-  let hasItem = null != id;
+prototype["isUnavailable"] = function isUnavailable(arg0) {
+  let hasItem = null != arg0;
   if (hasItem) {
-    hasItem = set.has(id);
+    hasItem = set.has(arg0);
   }
   return hasItem;
 };

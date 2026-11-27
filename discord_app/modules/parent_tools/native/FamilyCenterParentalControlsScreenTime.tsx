@@ -15,12 +15,12 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(10601).getScheduleRuleDateRange(rule);
-  let obj = rule(10601);
-  const obj2 = rule(10601);
+  const scheduleRuleDateRange = rule(10602).getScheduleRuleDateRange(rule);
+  let obj = rule(10602);
+  const obj2 = rule(10602);
   const obj3 = {
     label: scheduleRuleDateRange,
-    subLabel: rule(10601).formatDays(rule.days),
+    subLabel: rule(10602).formatDays(rule.days),
     trailing: null,
     arrow: null,
     onPress: null,

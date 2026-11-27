@@ -9,7 +9,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import UserSettingsOverridesStore from "../../UserSettingsOverridesStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(9555).MobileUserSettings;
+const MobileUserSettings = fn(9556).MobileUserSettings;
 const Constants = fn(1071);
 ({ HelpdeskArticles: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;

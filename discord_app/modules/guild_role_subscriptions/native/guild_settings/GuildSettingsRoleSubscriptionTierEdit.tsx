@@ -135,7 +135,7 @@ function DraftPublishPrompt(ref) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const FetchState = fn(4968).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(16816).GuildRoleSubscriptionsTierScenes;
+const GuildRoleSubscriptionsTierScenes = fn(16823).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1071).GuildSettingsSections;
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsxProd = fn(21);

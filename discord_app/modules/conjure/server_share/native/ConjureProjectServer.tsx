@@ -41,7 +41,7 @@ export default function ConjureProjectServer(projectId) {
     items3,
   );
   const obj3 = projectId(504);
-  const tmp6 = projectId(18508).useConjureProjectServerCandidates(projectId).length > 0;
+  const tmp6 = projectId(18515).useConjureProjectServerCandidates(projectId).length > 0;
   if (null != stateFromStores) {
     if (isProjectOwner(stateFromStores)) {
       let stringResult;

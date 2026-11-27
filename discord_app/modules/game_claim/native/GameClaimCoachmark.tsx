@@ -118,7 +118,7 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -136,9 +136,9 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
               v1 = 1;
               v3 = 1;
               const obj5 = {
-                value: v1(11631).redirectDeveloperPortalWithHandoffToken(
+                value: v1(11639).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(11635).LoginHandoffSource.GAME_CLAIM,
+                  v3(11643).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };
@@ -153,7 +153,7 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           v3 = tmp;

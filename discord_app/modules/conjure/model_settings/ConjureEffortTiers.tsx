@@ -8,7 +8,7 @@ require = fn;
 let closure_3 = ["thinking"];
 let closure_4 = ["fast"];
 let obj = { simple: _modDef4245.Mqb8mc, balanced: _modDef4245.zCZfA6, complex: _modDef4245["8l2atm"] };
-const CONJURE_MODEL_TIERS = fn(18559).CONJURE_MODEL_TIERS;
+const CONJURE_MODEL_TIERS = fn(18570).CONJURE_MODEL_TIERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 

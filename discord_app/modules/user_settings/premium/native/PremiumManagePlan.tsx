@@ -22,7 +22,7 @@ import PremiumSubscriptionDetails from "../../../premium/native/PremiumSubscript
 import PremiumManagementUtils from "../../../premium/native/utils/PremiumManagementUtils.tsx";
 import PremiumAccountCreditDefault from "../../../premium/native/PremiumAccountCredit.tsx";
 import PremiumNitroHomeUtils from "utils/PremiumNitroHomeUtils.tsx";
-import _modDef9638 from "../../../../../_runtime/metro/09638__.js";
+import _modDef9639 from "../../../../../_runtime/metro/09639__.js";
 import PremiumFeaturesCardDefault from "PremiumFeaturesCard.tsx";
 import useFPDurationLeftDefault from "../../../billing/hooks/useFPDurationLeft.tsx";
 import PremiumFeaturesTableDefault from "PremiumFeaturesTable.tsx";
@@ -424,7 +424,7 @@ function SubscriptionAndBillingInfo(subscription) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -462,7 +462,7 @@ function SubscriptionAndBillingInfo(subscription) {
               c3 = 0;
               closure_128_8(false);
               c4 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp24) {
             if (tmp4 === c3) {
@@ -544,7 +544,7 @@ function FractionalPremiumCredits(durationText) {
   const tmp11 = LinearGradientDefault;
   obj12.children = closure_1_28(native.Icon, {
     color: nativeDefault.unsafe_rawColors.WHITE,
-    source: _modDef9638,
+    source: _modDef9639,
     size: native.IconSizes.LARGE,
   });
   obj10.children = closure_1_28(metroImportDefault, obj12);
@@ -624,7 +624,7 @@ function FractionalPremiumCredits(durationText) {
   const intl4 = util.intl;
   obj31.children = intl4.string(util.t["B66Z+f"]);
   tmp8Result = closure_1_28(Text_Text.Text, obj31);
-  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef9638, size: native.IconSizes.LARGE };
+  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef9639, size: native.IconSizes.LARGE };
 }
 get_ActivityIndicator = fn(17);
 ({
@@ -871,8 +871,8 @@ export default function PremiumManagePlan() {
   const tmp = closure_31();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(13913).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(13913);
+  const youBarSettingsOutsideSafeAreaTop = navigation(13920).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(13920);
   navigation = navigation(1501).useNavigation();
   items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -916,9 +916,9 @@ export default function PremiumManagePlan() {
     tmp5 = SubscriptionPlanStore.isLoadedForPremiumSKUs() || SubscriptionPlanStore.isFetchingForPremiumSKUs();
   });
   const obj6 = navigation(504);
-  let isInReverseTrial = navigation(9374).useIsInReverseTrial();
-  const obj8 = navigation(9374);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13915).CountDownMessageTypes.SHORT_TIME);
+  let isInReverseTrial = navigation(9375).useIsInReverseTrial();
+  const obj8 = navigation(9375);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13922).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString =
     navigation(2174).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
@@ -1020,7 +1020,7 @@ export default function PremiumManagePlan() {
   const items9 = [tmp29Result, , , , , ,];
   if (isInReverseTrial) {
     const obj13 = { premiumType: closure_26.TIER_2, forFractionalPremium: true, hideButton: true };
-    isInReverseTrial = closure_28(tmp2(9696), obj13);
+    isInReverseTrial = closure_28(tmp2(9697), obj13);
   }
   items9[1] = isInReverseTrial;
   let tmp29Result3 = result;
@@ -1035,7 +1035,7 @@ export default function PremiumManagePlan() {
       isPremiumGroup: true,
       premiumGroupRole,
     };
-    tmp29Result3 = closure_28(tmp2(9696), obj14);
+    tmp29Result3 = closure_28(tmp2(9697), obj14);
   }
   items9[2] = tmp29Result3;
   if (tmp29Result4) {
@@ -1068,9 +1068,9 @@ export default function PremiumManagePlan() {
       },
       subscription: tmp10,
     };
-    const items10 = [closure_28(tmp2(9317), obj17)];
+    const items10 = [closure_28(tmp2(9318), obj17)];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_28(tmp2(9360), obj18);
+    items10[1] = closure_28(tmp2(9361), obj18);
     obj16.children = items10;
     tmp27Result = closure_29(closure_7, obj16);
   }

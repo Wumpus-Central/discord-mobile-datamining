@@ -24,7 +24,7 @@ function OptionDescription(option) {
               const obj = { analyticsLocations: null };
               items = [closure_1_1(6380).CHECKPOINT, closure_1_1(6380).CHECKPOINT_TRAIT];
               obj.analyticsLocations = items;
-              return closure_1_1(9101)(obj);
+              return closure_1_1(9102)(obj);
             },
             accessibilityRole: "link",
             children,

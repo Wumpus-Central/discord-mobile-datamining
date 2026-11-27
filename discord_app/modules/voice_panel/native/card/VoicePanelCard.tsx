@@ -1221,7 +1221,7 @@ function AnimatedWrapper(arg0) {
       }
     };
   } else if (isSelf) {
-    const tmp6Result20 = tmp6(19468);
+    const tmp6Result20 = tmp6(19484);
   }
   obj4.onDoubleTap = fn;
   let fn2;
@@ -1351,9 +1351,9 @@ function AnimatedWrapper(arg0) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const Pressable = get_ActivityIndicator.Pressable;
-const StreamVolumeMovedStore = fn(14947);
+const StreamVolumeMovedStore = fn(14954);
 ({ clearStreamVolumeMovedHint: closure_11, consumeStreamVolumeMovedHint: closure_12 } = StreamVolumeMovedStore);
-const VoicePanelConstants = fn(11782);
+const VoicePanelConstants = fn(11790);
 ({
   VoicePanelCTACard: map1,
   VoicePanelModes: closure_14,
@@ -1361,12 +1361,12 @@ const VoicePanelConstants = fn(11782);
   SPEAKING_PHYSICS: closure_16,
   VoicePanelCardItemType: closure_17,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19383).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11785).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11788).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19399).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11793).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1071).ApplicationStreamStates;
 const ParticipantTypes = fn(5693).ParticipantTypes;
-const SCALE_PHYSICS = fn(11783).SCALE_PHYSICS;
+const SCALE_PHYSICS = fn(11791).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_24, Fragment: closure_25, jsxs: closure_26 } = jsxProd);
 let module_1654 = module_1654_mod;
@@ -1681,8 +1681,8 @@ let closure_42 = noop.memo(function AnimatedUserCardInner(guildId) {
   let cachedSourceFromURI;
   const animatedStyle1 = require("../../../../../_runtime/metro/01654__.js").useAnimatedStyle(VoicePanelCardTsx6);
   if (null != avatarURI) {
-    cachedSourceFromURI = tmp6(11173).getCachedSourceFromURI(avatarURI);
-    const tmp6Result4 = tmp6(11173);
+    cachedSourceFromURI = tmp6(11174).getCachedSourceFromURI(avatarURI);
+    const tmp6Result4 = tmp6(11174);
   }
   const items4 = [guildId, channelId, userId, controlsSpecs];
   const callback = noop.useCallback(() => {
@@ -1819,7 +1819,7 @@ let closure_50 = {
 let closure_51 = {
   code: "(function VoicePanelCardTsx13(props,previous){let[cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,scheduleOnRN,cleanUp,id]=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{scheduleOnRN(cleanUp);}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}})",
 };
-let closure_52 = { isSelf: false, hasVideo: false, user: { id: "r" } };
+let closure_52 = { isSelf: false, hasVideo: false, user: { id: "top" } };
 let items = [
   {
     code: "(function layoutTransitionFunction_VoicePanelCardTsx14(values,physics,disableAnimation=false){let[withSpring]=this.__closure;const shouldAnimate=!disableAnimation?'respect-motion-settings':'animate-never';return{animations:{originX:withSpring(values.targetOriginX,physics,shouldAnimate),originY:withSpring(values.targetOriginY,physics,shouldAnimate),width:withSpring(values.targetWidth,physics,shouldAnimate),height:withSpring(values.targetHeight,physics,shouldAnimate)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})",
@@ -2053,13 +2053,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   if (item.type === closure_17.CTA) {
     const id3 = item.id;
     if (closure_13.NO_VIDEO_PARTICIPANTS === id3) {
-      let tmp41Result = closure_24(tmp(19498), {});
+      let tmp41Result = closure_24(tmp(19514), {});
       let tmp39 = closure_24;
     } else if (closure_13.CALLER_DISCONNECTED === id3) {
-      tmp41Result = closure_24(tmp(19499), {});
+      tmp41Result = closure_24(tmp(19515), {});
       tmp39 = closure_24;
     } else if (closure_13.NO_STAGE_SPEAKERS === id3) {
-      tmp41Result = closure_24(tmp(19500), {});
+      tmp41Result = closure_24(tmp(19516), {});
       tmp39 = closure_24;
     }
     const obj4 = {
@@ -2078,7 +2078,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
     let tmp39Result = null != tmp6;
     if (tmp39Result) {
       const obj5 = { isRinging: tmp9, participant: tmp6, label: null, layout: null };
-      const tmpResult3 = tmp(19512);
+      const tmpResult3 = tmp(19528);
       let userNick;
       if (tmp4Result13.isStableParticipantWithUser(tmp6)) {
         userNick = tmp6.userNick;
@@ -2086,10 +2086,10 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj5.label = userNick;
       obj5.layout = callback;
       tmp39Result = tmp39(tmpResult3, obj5);
-      tmp4Result13 = tmp4(19468);
+      tmp4Result13 = tmp4(19484);
     }
     items7[1] = tmp39Result;
-    let result = tmp4(19468).isStableParticipantWithUser(tmp6);
+    let result = tmp4(19484).isStableParticipantWithUser(tmp6);
     if (result) {
       const obj6 = { speakingOrPlayingSoundboard: sharedValue2, id, userId: tmp6.user.id, isSelf, layout: callback };
       result = tmp39(closure_47, obj6);
@@ -2123,7 +2123,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj7.streamId = streamId;
               obj7.isScrollVisible = derivedValue;
-              const VideoSpinnerContext = tmp4(10145).VideoSpinnerContext;
+              const VideoSpinnerContext = tmp4(10146).VideoSpinnerContext;
               obj7.videoSpinnerContext = isSelf ? VideoSpinnerContext.SELF_VIDEO : VideoSpinnerContext.REMOTE_VIDEO;
               obj7.sharedCoords = cardLayoutCoordsSubscription;
               if (isCall) {
@@ -2131,13 +2131,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj7.focusOnReady = isCall;
               obj7.layout = callback;
-              let tmp43Result = tmp43(tmp(19489), obj7);
-              const tmpResult4 = tmp(19489);
+              let tmp43Result = tmp43(tmp(19505), obj7);
+              const tmpResult4 = tmp(19505);
             }
             const obj8 = { avError: tmpResultResult, userId: user.id, style: null };
             user = StyleSheet.absoluteFill;
             obj8.style = user;
-            tmp43Result = closure_24(tmp(19501), obj8);
+            tmp43Result = closure_24(tmp(19517), obj8);
             tmp43 = closure_24;
           }
         }
@@ -2184,14 +2184,14 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp39 = closure_24;
     } else if (ParticipantTypes.ACTIVITY === type2) {
       const obj12 = { sharedVisible: sharedValue1, applicationId: tmp6.applicationId, layout: callback };
-      tmp41Result = closure_24(tmp(19502), obj12, tmp6.id);
+      tmp41Result = closure_24(tmp(19518), obj12, tmp6.id);
       tmp39 = closure_24;
     }
   }
   const obj13 = {
     isRinging: tmp9,
     avatarURI: "a",
-    avatarDecoration: "analyticsLocations",
+    avatarDecoration: "dispatch",
     layout: callback,
     layoutPhysics: memo,
     channelId,

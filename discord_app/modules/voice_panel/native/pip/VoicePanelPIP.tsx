@@ -469,7 +469,7 @@ class VoicePanelPIPTiles {
         constructor(arg0) {
           closure_0 = arg0;
           allTouches = arg0.allTouches;
-          found = allTouches.filter(/* F142846 */ function() { ... });
+          found = allTouches.filter(/* F143312 */ function() { ... });
           if (0 !== found.length) {
             tmp4 = closure_2;
             tmp5 = closure_2(found);
@@ -1131,10 +1131,10 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11782);
+const VoicePanelConstants = fn(11790);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: closure_10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
-const VoicePanelPIPConstants = fn(19383);
+const VoicePanelControlsModes = fn(11788).VoicePanelControlsModes;
+const VoicePanelPIPConstants = fn(19399);
 ({ PIP_FIRST_FRAME_DELAY_MS: closure_12, VoicePanelPIPModes: map1 } = VoicePanelPIPConstants);
 const ActivityPanelModes = fn(5669).ActivityPanelModes;
 const isLaunched = fn(6937).isLaunched;
@@ -1228,12 +1228,12 @@ function usePIPTileHandoff() {
 let closure_41 = noop.memo(function PIPWrapper(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
-  const pipHandoff = noop.useContext(transitionCleanUp(11781)).pipHandoff;
-  const mode = transitionState(11791).usePIPState().mode;
-  const obj = transitionState(11791);
-  const pIPCardsSettled = transitionState(11789).usePIPCardsSettled(pipHandoff);
-  const obj2 = transitionState(11789);
-  const pIPPanelLayoutCommitted = transitionState(11789).usePIPPanelLayoutCommitted(pipHandoff);
+  const pipHandoff = noop.useContext(transitionCleanUp(11789)).pipHandoff;
+  const mode = transitionState(11799).usePIPState().mode;
+  const obj = transitionState(11799);
+  const pIPCardsSettled = transitionState(11797).usePIPCardsSettled(pipHandoff);
+  const obj2 = transitionState(11797);
+  const pIPPanelLayoutCommitted = transitionState(11797).usePIPPanelLayoutCommitted(pipHandoff);
   items = [transitionState, pIPPanelLayoutCommitted, transitionCleanUp];
   const effect = noop.useEffect(() => {
     if (tmp) {

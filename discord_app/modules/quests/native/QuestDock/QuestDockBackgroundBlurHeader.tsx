@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const QuestDockMode = fn(6871).QuestDockMode;
-const QuestDockConstants = fn(16680);
+const QuestDockConstants = fn(16687);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({
   QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
@@ -464,7 +464,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
     obj5.children = intl2.string(tmp(1112).t.o6FLcF);
     const items17 = [closure_12(tmp(5634).Text, obj5)];
     const obj6 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp67.actionDisclosuresIcon };
-    items17[1] = closure_12(tmp(9462).CircleQuestionIcon, obj6);
+    items17[1] = closure_12(tmp(9463).CircleQuestionIcon, obj6);
     obj4.children = items17;
     obj3.children = closure_14(closure_13, obj4);
     let tmp68Result = closure_12(tmp(6152).PressableOpacity, obj3);
@@ -493,7 +493,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
         opacityAnimatedStyle: animatedStyle6,
         layoutAnimation: questDockHeaderLayoutAnimation,
       };
-      let tmp71Result = tmp71(tmp7(16787), obj10);
+      let tmp71Result = tmp71(tmp7(16794), obj10);
     }
     const items20 = [tmp71Result, ,];
     let tmp71Result2 = children;
@@ -531,7 +531,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
       let tmp74Result = !flag2;
       if (!flag2) {
         const obj17 = { children: null };
-        const items26 = [tmp68Result, tmp71(tmp7(16789), {})];
+        const items26 = [tmp68Result, tmp71(tmp7(16796), {})];
         obj17.children = items26;
         tmp74Result = closure_14(closure_13, obj17);
       }
@@ -569,7 +569,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(withPressableDis
       items29[1] = obj21;
     }
   }
-  tmp71Result = tmp71(tmp7(16752), {
+  tmp71Result = tmp71(tmp7(16759), {
     layoutAnimatedStyle: animatedStyle5,
     opacityAnimatedStyle: animatedStyle6,
     layoutAnimation: questDockHeaderLayoutAnimation,

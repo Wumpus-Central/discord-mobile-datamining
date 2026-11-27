@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../modules/haptics/HapticFeedbackTypes.tsx";
-import _modDef8859 from "../../../../../_runtime/metro/08859__.js";
+import _modDef8860 from "../../../../../_runtime/metro/08860__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -157,11 +157,11 @@ export function Slider(maxValue) {
       tmp2(arg0);
     }
   };
-  const tmp21 = _modDef8859;
+  const tmp21 = _modDef8860;
   if (tmp2Result.isThemeDark(obj.useThemeContext().theme)) {
-    let tmp2Result3 = tmp2(10399);
+    let tmp2Result3 = tmp2(10400);
   } else {
-    tmp2Result3 = tmp2(10400);
+    tmp2Result3 = tmp2(10401);
   }
   obj5.thumbImage = tmp2Result3;
   obj5.thumbSize = 1.625 * num2;

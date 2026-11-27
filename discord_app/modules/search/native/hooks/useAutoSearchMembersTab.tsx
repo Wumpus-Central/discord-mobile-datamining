@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_5 = fn(13302).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(13310).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const SearchTypes = fn(1071).SearchTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchMembersTab.tsx");
@@ -18,7 +18,7 @@ export function useAutoSearchMembersTab(searchContext, arg1) {
     if (!closure_1) {
       const debounceResult = apply.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          const guildIdFromSearchContext = closure_0(13293).getGuildIdFromSearchContext(searchContext);
+          const guildIdFromSearchContext = closure_0(13301).getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
             const channelIds = autocompleteVisible.getChannelIds(searchContext);
             let tmp8 = null;
@@ -42,10 +42,10 @@ export function useAutoSearchMembersTab(searchContext, arg1) {
               tmp12 = tmp8;
             }
             obj4.threadId = tmp12;
-            closure_1(13317).searchGuildMemberTab(obj4);
-            const obj3 = closure_1(13317);
+            closure_1(13325).searchGuildMemberTab(obj4);
+            const obj3 = closure_1(13325);
           }
-          const obj2 = closure_0(13293);
+          const obj2 = closure_0(13301);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -54,7 +54,7 @@ export function useAutoSearchMembersTab(searchContext, arg1) {
   const items1 = [searchContext];
   const effect1 = noop.useEffect(
     () => () => {
-      const result = closure_1(13317).cleanupGuildMemberTab(searchContext);
+      const result = closure_1(13325).cleanupGuildMemberTab(searchContext);
     },
     items1,
   );

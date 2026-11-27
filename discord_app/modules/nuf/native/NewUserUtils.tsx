@@ -36,7 +36,7 @@ let closure_17 = async function _shouldSkipContactSyncStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -125,7 +125,7 @@ let closure_23 = async function _getNextOnboardingStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -255,12 +255,12 @@ let closure_23 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NewUserTypes = fn(13700).NewUserTypes;
-const NotificationPermissionConstants = fn(13382);
+const NewUserTypes = fn(13707).NewUserTypes;
+const NotificationPermissionConstants = fn(13390);
 ({ EventActionLocation: closure_9, EventActionType: closure_10 } = NotificationPermissionConstants);
 const Constants = fn(1071);
 ({ PlatformTypes: closure_11, Routes: closure_12 } = Constants);
-const ContactPermissions = fn(13672).ContactPermissions;
+const ContactPermissions = fn(13679).ContactPermissions;
 let closure_14 = fn(7872).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
@@ -275,7 +275,7 @@ let closure_18 = asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ let closure_18 = asyncGeneratorStep(async () => {
             } else {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } else if (arg0 === 1) {
@@ -412,7 +412,7 @@ let closure_19 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -523,7 +523,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(10428).hasDeferredInvite,
+    shouldShowStep: fn(10429).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

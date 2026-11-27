@@ -103,7 +103,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -138,7 +138,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           } else if (1 === tmp8) {
             c4 = 0;
             closure_129_6 = closure_3;
-            const questLogger = closure_0(8381).getQuestLogger();
+            const questLogger = closure_0(8382).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_129_6);
             throw closure_129_6;
           } else if (arg0 === 1) {
@@ -159,9 +159,9 @@ export function useBountiesModalVideoAnalytics(bountyId) {
               sourceQuestContent: null,
             };
             const obj10 = {};
-            const obj9 = closure_0(8382);
-            const merged = Object.assign(closure_0(8392).getContentProperties(VIDEO_MODAL_MOBILE));
-            const merged1 = Object.assign(sourceQuestContent(8248)());
+            const obj9 = closure_0(8383);
+            const merged = Object.assign(closure_0(8393).getContentProperties(VIDEO_MODAL_MOBILE));
+            const merged1 = Object.assign(sourceQuestContent(8249)());
             obj10.impression_id = impressionId;
             obj10.video_watch_seconds = closure_129_0.video_watch_seconds;
             obj10.video_position_seconds = closure_129_0.video_position_seconds;
@@ -189,7 +189,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             obj9.trackAdContentEvent(obj8);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp35) {
           closure_3 = tmp35;

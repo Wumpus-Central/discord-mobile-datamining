@@ -6,7 +6,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(10047).useGuildIndexState;
+const useGuildIndexState = fn(10048).useGuildIndexState;
 const limit = fn(7073).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");

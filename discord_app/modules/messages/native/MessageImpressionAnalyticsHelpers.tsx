@@ -45,7 +45,7 @@ const Constants = fn(1071);
   InviteStates: closure_8,
   MessageFlags: closure_9,
 } = Constants);
-const LinkType = fn(8352).LinkType;
+const LinkType = fn(8353).LinkType;
 const InviteTypes = fn(5776).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessageImpressionAnalyticsHelpers.tsx");

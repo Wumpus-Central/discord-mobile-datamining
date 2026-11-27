@@ -104,7 +104,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(12233);
+const PollsConstants = fn(12241);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1071);
 ({ ChannelTypesSets: closure_10, Permissions: closure_11 } = Constants);
@@ -112,7 +112,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "channel_id", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "Path", localCreationAnswerId: v1.v4() };
   return obj;
 }
 export function generateLocalCreationAnswerId() {

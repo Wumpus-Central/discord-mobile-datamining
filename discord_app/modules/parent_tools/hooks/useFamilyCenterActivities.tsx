@@ -5,7 +5,7 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const TeenActionDisplayType = fn(8213).TeenActionDisplayType;
+const TeenActionDisplayType = fn(8214).TeenActionDisplayType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActivities.tsx");
 
@@ -40,7 +40,7 @@ export function useFormattedTotalForDisplayType(displayType) {
     num = 0;
   }
   if (displayType === TeenActionDisplayType.TOTAL_VOICE_MINUTES) {
-    return tmp(8218).formatTotalTime(num);
+    return tmp(8219).formatTotalTime(num);
   } else if (displayType === TeenActionDisplayType.PURCHASES) {
     const totalSpendAmount = FamilyCenterStore.getTotalSpendAmount();
     const totalSpendCurrency = FamilyCenterStore.getTotalSpendCurrency();

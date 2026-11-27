@@ -143,7 +143,7 @@ export default function AppLauncherMentionableOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(13146, dependencyMap.paths),
+      asyncRequireImpl(13154, dependencyMap.paths),
       AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY,
       {
         option,

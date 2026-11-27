@@ -519,7 +519,7 @@ export function ChannelButtons(buttons) {
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      const children1 = [closure_16(closure_1(12539), obj)];
+      const children1 = [closure_16(closure_1(12547), obj)];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -542,8 +542,8 @@ export function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(11075), obj2);
-        const tmp4Result = closure_1(11075);
+        tmp3Result = closure_16(closure_1(11076), obj2);
+        const tmp4Result = closure_1(11076);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

@@ -39,12 +39,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "Path",
-    showPip: 900,
+    showPip: "Suomi",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: null
+    currentlyDisplayedChannelId: true
   };
   return obj;
 });
@@ -284,7 +284,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "sa", rate: false, isPlaying: false, wasPipClosedByUser: "M2.99999 8H3.99999V7H2.99999V8Z" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "sa", rate: false, isPlaying: false, wasPipClosedByUser: "INTERACTION_FAILURE" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

@@ -52,7 +52,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(10047);
+let ApplicationCommandIndexStore = fn(10048);
 ({
   useContextIndexState: closure_6,
   useDiscoveryState: metroImportDefault,
@@ -70,7 +70,7 @@ let result = size.fileFinishedImporting("modules/application_commands/Applicatio
 export function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "radii", command: "id", section: "clearTimeout" };
+    return { application: "Array", command: "channel_id", section: "i" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -121,7 +121,7 @@ export function getCachedCommand(type, commandId, applicationId) {
         }
       }
     }
-    return { application: "radii", command: "id", section: "clearTimeout" };
+    return { application: "Array", command: "channel_id", section: "i" };
   }
 }
 export function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -462,7 +462,7 @@ export function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "channel_id" };
+    return { command: "displayName", application: "isArray" };
   }, items);
 }
 export function useCommandsForApplication(arg0, arg1, arg2) {

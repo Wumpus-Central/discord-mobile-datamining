@@ -48,7 +48,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,13 +106,13 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(8466).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(8466);
-  const scheduleForRecurrenceWithException = guildEvent(8466).getScheduleForRecurrenceWithException(
+  const baseScheduleForRecurrence = guildEvent(8467).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(8467);
+  const scheduleForRecurrenceWithException = guildEvent(8467).getScheduleForRecurrenceWithException(
     baseScheduleForRecurrence,
     tmp3,
   );
-  let obj2 = guildEvent(8466);
+  let obj2 = guildEvent(8467);
   [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
   [first, closure_8] = noop.useState(null);
   const tmp9 = _slicedToArray(

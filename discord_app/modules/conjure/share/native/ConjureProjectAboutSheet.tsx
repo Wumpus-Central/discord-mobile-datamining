@@ -141,7 +141,7 @@ export default function ConjureProjectAboutSheet(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -169,11 +169,11 @@ export default function ConjureProjectAboutSheet(arg0) {
             return obj5;
           } else {
             if (value) {
-              v1(5257).hideActionSheet(tmp4(12373).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+              v1(5257).hideActionSheet(tmp4(12381).CONJURE_PROJECT_ABOUT_SHEET_KEY);
               const obj = v1(5257);
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           dependencyMap = tmp;

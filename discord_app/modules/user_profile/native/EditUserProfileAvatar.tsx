@@ -135,7 +135,7 @@ export default function EditUserProfileAvatar(user) {
       }
     }
     obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
-    const tmp3 = asyncRequireImpl(16052, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(16059, dependencyMap.paths);
     if (null != guildId) {
       let avatar1;
       if (stateFromStores != null) {

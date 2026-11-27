@@ -4,8 +4,8 @@ import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import inlineStyles from "../../../../../_runtime/07946_inlineStyles.js";
 import useReferralProgramBannerDetails from "../hooks/useReferralProgramBannerDetails.tsx";
-import _modDef13897 from "../../../../../_runtime/metro/13897__.js";
-import _modDef13898 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
+import _modDef13904 from "../../../../../_runtime/metro/13904__.js";
+import _modDef13905 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -33,7 +33,7 @@ export default function ProgressWheel(arg0) {
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
   let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
-    const obj4 = { source: _modDef13897, style: tmp.glowImage };
+    const obj4 = { source: _modDef13904, style: tmp.glowImage };
     tmp9 = React4(FastImageDefault, obj4);
     const tmp4Result = FastImageDefault;
   }
@@ -72,7 +72,7 @@ export default function ProgressWheel(arg0) {
   };
   const tmp4Result3 = inlineStylesDefault;
   if (altImage == null) {
-    altImage = _modDef13898;
+    altImage = _modDef13905;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj3.children = items;

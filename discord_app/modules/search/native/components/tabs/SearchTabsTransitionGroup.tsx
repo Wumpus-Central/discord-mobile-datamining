@@ -120,7 +120,7 @@ function AnimatedTabs(cleanUp) {
     }
     combined = "(" + Tabs_Tabs.defaultCountFormatter(toLocaleString) + ")";
   }, items3);
-  const context = noop.useContext(tmp(13406).SwipeForMemberListContext);
+  const context = noop.useContext(tmp(13414).SwipeForMemberListContext);
   const items4 = [closure_8, context];
   _require = undefined;
   [tmp19, tmp20] = items4;

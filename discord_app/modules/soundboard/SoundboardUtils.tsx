@@ -108,7 +108,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -179,9 +179,9 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
               tmp23 = null;
               if (closure_130_16(closure_129_1)) {
                 (function playCustomJoinSound(sound, id) {
-                  closure_1_0(10406).playSoundLocally(id, sound);
-                  const obj = closure_1_0(10406);
-                  const result = closure_1_0(10408).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  closure_1_0(10407).playSoundLocally(id, sound);
+                  const obj = closure_1_0(10407);
+                  const result = closure_1_0(10409).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }
@@ -192,7 +192,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
         }
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp33) {
       c4 = tmp;
       throw tmp33;

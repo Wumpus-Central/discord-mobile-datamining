@@ -8,7 +8,7 @@ import MessageStore from "../../stores/MessageStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9090);
+let useChatBottomManagerUIStore = fn(9091);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 let useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
 const jsx = fn(21).jsx;
@@ -62,10 +62,10 @@ export default function JumpToPresentButton(channelId) {
     return tmp;
   });
   const obj = channelId(504);
-  const isVoicePanelMounted = channelId(10270).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(10270);
-  const isVoicePanelOpen = channelId(10270).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(10270);
+  const isVoicePanelMounted = channelId(10271).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(10271);
+  const isVoicePanelOpen = channelId(10271).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(10271);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(
     items1,
@@ -92,15 +92,15 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13225), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(13224), {
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13233), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(13232), {
       accessibilityLabel: stringResult,
-      icon: screenIndex(13225),
+      icon: screenIndex(13233),
       onPress: channelId.onJumpToPresent,
     });
-    const tmp16 = screenIndex(13224);
+    const tmp16 = screenIndex(13232);
   } else {
-    tmp12Result = jsx(tmp3(13226).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(13234).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

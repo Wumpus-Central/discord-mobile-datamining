@@ -26,7 +26,7 @@ let closure_13 = async function _importIntoProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_13 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1112).intl;
-          await tmp3(18606).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(4245).Owerd3));
+          await tmp3(18617).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(4245).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1112).intl;
@@ -280,7 +280,7 @@ let closure_15 = async function _loadConjureProjectActions(arg0) {
         obj8.label = intl8.string(tmp8(muted[10]).jYAR58);
         obj8.IconComponent = tmp3(muted[27]).EyeSlashIcon;
         obj8.action = function action() {
-          return closure_2_1(18517)(project);
+          return closure_2_1(18522)(project);
         };
         items.push(obj8);
       }
@@ -292,7 +292,7 @@ let closure_15 = async function _loadConjureProjectActions(arg0) {
         obj9.label = intl9.string(tmp8(muted[10]).mS61Dm);
         obj9.IconComponent = tmp3(muted[27]).EyeSlashIcon;
         obj9.action = function action() {
-          return closure_2_1(18607)({ project, target, action: "remove" });
+          return closure_2_1(18618)({ project, target, action: "remove" });
         };
         items.push(obj9);
       }

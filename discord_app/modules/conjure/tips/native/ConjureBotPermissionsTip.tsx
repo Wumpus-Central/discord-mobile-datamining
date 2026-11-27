@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 function BotPermissionsHint(projectId) {
   projectId = projectId.projectId;
-  dependencyMap = noop.useContext(projectId(11459).ConjurePublishActionContext);
-  let obj = { icon: projectId(10078).ShieldIcon, children: null };
+  dependencyMap = noop.useContext(projectId(11469).ConjurePublishActionContext);
+  let obj = { icon: projectId(10079).ShieldIcon, children: null };
   const intl = projectId(1112).intl;
   const obj2 = { onReview: null };
   importDefault = asyncGeneratorStep(async () => {
@@ -22,7 +22,7 @@ function BotPermissionsHint(projectId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -53,7 +53,7 @@ function BotPermissionsHint(projectId) {
           return obj;
         }
         v3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp10) {
         v3 = tmp;
         throw tmp10;
@@ -71,11 +71,11 @@ function BotPermissionsHint(projectId) {
     return applyArgumentsResult;
   };
   obj.children = intl.format(_modDef4245["0S9HY8"], obj2);
-  return jsx(ConjureTipHintDefault, { icon: projectId(10078).ShieldIcon, children: null });
+  return jsx(ConjureTipHintDefault, { icon: projectId(10079).ShieldIcon, children: null });
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(18678).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(18692).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj.render = function render(arg0, context) {
   return <BotPermissionsHint projectId={context.context.projectId} />;
 };

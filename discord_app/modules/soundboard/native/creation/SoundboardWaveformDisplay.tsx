@@ -4,7 +4,7 @@ import downsampleWaveformDefault from "../../../voice_messages/downsampleWavefor
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
-const WAVEFORM_WAVE_MAX_VALUE = fn(12959).WAVEFORM_WAVE_MAX_VALUE;
+const WAVEFORM_WAVE_MAX_VALUE = fn(12967).WAVEFORM_WAVE_MAX_VALUE;
 let jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let obj2 = {

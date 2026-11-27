@@ -8,8 +8,8 @@ import HeadphonesDenyIcon from "../../../../design/components/Icon/native/redesi
 import HeadphonesSlashIcon from "../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import MicrophoneSlashIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
-import _modDef8659 from "../../../../../_runtime/metro/08659__.js";
 import _modDef8660 from "../../../../../_runtime/metro/08660__.js";
+import _modDef8661 from "../../../../../_runtime/metro/08661__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -60,7 +60,7 @@ const createStyles = fn(5043);
 let obj = { redTint: { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }, defaultTint: null, noTint: null };
 let obj3 = { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
 obj.defaultTint = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj.noTint = { tintColor: "r" };
+obj.noTint = { tintColor: "top" };
 let closure_6 = createStyles.createStyles(obj);
 let obj4 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const memoResult = noop.memo(function MuteDeafenIcon(arg0) {
@@ -113,7 +113,7 @@ export const VideoIcon = noop.memo(function VideoIcon(state) {
   if (VoiceStateIconUtils.VideoIconState.VIDEO_DISABLED_LOCAL_AUTO === state) {
     const obj = {};
     const merged1 = Object.assign(merged);
-    obj.source = _modDef8659;
+    obj.source = _modDef8660;
     items = [merged.style, tmp2.noTint];
     obj.style = items;
     return React4(native.Icon, obj);
@@ -124,7 +124,7 @@ export const VideoIcon = noop.memo(function VideoIcon(state) {
   } else if (VoiceStateIconUtils.VideoIconState.VIDEO_ACTIVE === state) {
     const obj3 = {};
     const merged3 = Object.assign(merged);
-    obj3.source = _modDef8660;
+    obj3.source = _modDef8661;
     return React4(native.Icon, obj3);
   } else {
     GlobalUtils.assertNever(state);

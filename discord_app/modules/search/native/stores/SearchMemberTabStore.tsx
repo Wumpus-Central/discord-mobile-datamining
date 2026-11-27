@@ -158,7 +158,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(Dispatch
             searchGuildMemberTabStoreImpl.emitChange();
           }
         };
-        items = [obj2(8947).AutocompleterResultTypes.USER];
+        items = [obj2(8948).AutocompleterResultTypes.USER];
         const tmp42 = new sortByMatchScoreDefault(obj2.onAutocompleterResultsChange, items, 50);
         obj2.autocompleter = tmp42;
         const autocompleter = obj2.autocompleter;

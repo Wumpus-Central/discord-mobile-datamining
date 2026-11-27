@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9090).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(9091).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(4955).getUserCommunicationDisabledVersion;
-const Changeset = fn(8224).Changeset;
+const Changeset = fn(8225).Changeset;
 const Constants = fn(1071);
 ({
   ActivityActionTypes: closure_11,
@@ -169,7 +169,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -202,7 +202,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[19]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[16]).scrollTo(ref.current, tmp26, obj8);

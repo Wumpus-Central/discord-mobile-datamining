@@ -33,7 +33,7 @@ let closure_17 = async function _backgroundSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -273,7 +273,7 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -419,7 +419,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -648,7 +648,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -978,7 +978,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -1044,7 +1044,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             }
           }
           c12 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {

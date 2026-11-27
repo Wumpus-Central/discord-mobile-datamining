@@ -215,7 +215,7 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   );
 }
 const IOS_POINTER_STYLE = fn(5651).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(18071);
+const GuildsBarConstants = fn(18078);
 ({
   GUILD_ITEM_HIT_SLOP: hasOwnProperty,
   GUILD_ITEM_INSET_LEFT: closure_6,
@@ -395,7 +395,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   const animatedStyle = require("../../../../_runtime/metro/01654__.js").useAnimatedStyle(
     GuildsBarAnimatedItemWrapperTsx4,
   );
-  const enableHome = noop.useContext(tmp2(17750).HomeDrawerStateContext).enableHome;
+  const enableHome = noop.useContext(tmp2(17757).HomeDrawerStateContext).enableHome;
   const obj3 = require("../../../../_runtime/metro/01654__.js");
   const drawerOpen = require("useDrawerState").useDrawerOpen(enableHome);
   const items2 = [isDragTarget, dragState, num, overState, zIndex, tmp];

@@ -13,9 +13,9 @@ import PIPSpeakerStore from "PIPSpeakerStore.tsx";
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19454);
+const useExternalPipSelectedTileDefault = tmp6(19470);
 require = fn;
-const VoicePanelModes = fn(11782).VoicePanelModes;
+const VoicePanelModes = fn(11790).VoicePanelModes;
 const ActivityPanelModes = fn(5669).ActivityPanelModes;
 const asLaunched = fn(6937).asLaunched;
 let closure_12 = {
@@ -44,8 +44,8 @@ export function useControllerPIPState(channelId) {
     mode: "isArray",
     width: false,
     height: null,
-    containerHeight: "transparent",
-    showSecondaryPIP: null,
+    containerHeight: 0,
+    showSecondaryPIP: false,
     scale: sharedValue,
   });
   const obj2 = require("VoicePanelPIPScaleCache");

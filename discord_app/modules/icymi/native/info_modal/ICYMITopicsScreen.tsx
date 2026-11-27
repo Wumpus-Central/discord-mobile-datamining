@@ -83,7 +83,7 @@ function WordTopic(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(18328).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(18335).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5043);
@@ -159,7 +159,7 @@ export default function ICYMITopicsScreen() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -371,7 +371,7 @@ class ChatInputActions {
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(12960);
+const ChatInputConstants = fn(12968);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: closure_6 } = ChatInputConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);

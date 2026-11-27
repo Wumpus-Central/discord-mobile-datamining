@@ -58,7 +58,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -100,7 +100,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -119,8 +119,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                             closure_128_0 = undefined;
                             closure_128_1 = undefined;
                             if (closure_2_1) {
-                              const result = displayNameStyles(16059).saveHexagonCampaignPreviousDisplayNameStyles();
-                              const obj6 = displayNameStyles(16059);
+                              const result = displayNameStyles(16066).saveHexagonCampaignPreviousDisplayNameStyles();
+                              const obj6 = displayNameStyles(16066);
                             }
                             if (closure_1_10) {
                               closure_1_12.current = true;
@@ -145,12 +145,12 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                               };
                               return obj5;
                             } else if (closure_1_7) {
-                              const result1 = tmp41(9434).setTryItOutDisplayNameStyles(displayNameStyles);
-                              const tmp41Result = tmp41(9434);
+                              const result1 = tmp41(9435).setTryItOutDisplayNameStyles(displayNameStyles);
+                              const tmp41Result = tmp41(9435);
                             } else {
                               const obj7 = { guildId, displayNameStyles };
-                              tmp41(11946).setPendingChanges(obj7);
-                              const tmp41Result2 = tmp41(11946);
+                              tmp41(11954).setPendingChanges(obj7);
+                              const tmp41Result2 = tmp41(11954);
                             }
                           }
                         } else if (1 === tmp9) {
@@ -198,9 +198,9 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                               obj15.perks = items;
                               obj15.content = displayNameStyles(6874).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
                               obj15.contentSurface =
-                                displayNameStyles(16060).HexagonCampaignContentSurface.USER_PROFILE;
-                              const result2 = displayNameStyles(16060).trackHexagonCampaignPerkAction(obj15);
-                              const obj = displayNameStyles(16060);
+                                displayNameStyles(16067).HexagonCampaignContentSurface.USER_PROFILE;
+                              const result2 = displayNameStyles(16067).trackHexagonCampaignPerkAction(obj15);
+                              const obj = displayNameStyles(16067);
                             }
                             c3 = 0;
                             closure_1_12.current = false;
@@ -214,16 +214,16 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                         };
                         closure_2_1(1256).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj16);
                         if (closure_129_1) {
-                          const result3 = displayNameStyles(16059).markHexagonCampaignPerkApplied(
+                          const result3 = displayNameStyles(16066).markHexagonCampaignPerkApplied(
                             constants2.DISPLAY_NAME_STYLE,
                           );
-                          const obj12 = displayNameStyles(16059);
+                          const obj12 = displayNameStyles(16066);
                         }
                         if (closure_1_8 != null) {
                           closure_1_8();
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp79) {
                         closure_2 = tmp79;
                         if (tmp5 === c3) {

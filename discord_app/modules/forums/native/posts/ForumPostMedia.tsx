@@ -82,9 +82,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(12449), obj2);
+    let tmp6Result = closure_9(ref(12457), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(12449);
+    const tmp19 = ref(12457);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -100,7 +100,7 @@ function ForumPostMedia(obscureReason) {
     tmp3Result = tmp3(1379);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(8815).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(8816).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };

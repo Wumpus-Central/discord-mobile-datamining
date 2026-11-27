@@ -26,7 +26,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(8945).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(8946).getChannelIdFromDestinationId);
   found = mapped.find(found(1255).isNotNullish);
   items = [ChannelStore];
   const items1 = [found];

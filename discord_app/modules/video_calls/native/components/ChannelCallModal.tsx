@@ -54,7 +54,7 @@ class ChannelCallModal {
     return jsx(closure_30, obj);
   }
 }
-const ChannelCallStore = fn(10008);
+const ChannelCallStore = fn(10009);
 ({
   useChannelCallOrientationHandlers: metroImportDefault,
   resetChannelCallStore: closure_8,
@@ -62,8 +62,8 @@ const ChannelCallStore = fn(10008);
   setVoiceChatDrawerState: closure_10,
   useIsVoiceChatFocused: closure_11,
 } = ChannelCallStore);
-const VoiceChatDrawerState = fn(10009).VoiceChatDrawerState;
-const Constants = fn(10015);
+const VoiceChatDrawerState = fn(10010).VoiceChatDrawerState;
+const Constants = fn(10016);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -75,10 +75,10 @@ let closure_18 = noop.memo(function NavigatorContainer(arg0) {
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(10255).terminate();
-        const obj = closure_1_1(10255);
-        closure_1_1(10018).setHidden(false);
-        const obj2 = closure_1_1(10018);
+        closure_1_1(10256).terminate();
+        const obj = closure_1_1(10256);
+        closure_1_1(10019).setHidden(false);
+        const obj2 = closure_1_1(10019);
         if (!obj3.isModalOpen(closure_1_31)) {
           closure_1_8();
         }
@@ -527,7 +527,7 @@ let closure_30 = noop.memo(function SwipeableCallModal(channelId) {
     const obj15 = { channel: stateFromStores };
     items23[1] = closure_15(ChannelCallCameraPreview, obj15);
     obj12.children = items23;
-    obj11.children = closure_16(tmp(10130).VoiceChatNavigationContext.Provider, obj12);
+    obj11.children = closure_16(tmp(10131).VoiceChatNavigationContext.Provider, obj12);
     obj10.children = closure_15(tmp12(1654).View, obj11);
     obj9.children = closure_15(tmp(5303).GestureDetector, obj10);
     tmp63 = closure_15(tmp(6379).AnalyticsLocationProvider, obj9);

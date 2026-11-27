@@ -32,7 +32,7 @@ export function ChatProvisionalAccountExplainerCard(iconSize) {
       hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
     items,
   );
-  const provisionalAccountExplanationText = iconSize(13628).useProvisionalAccountExplanationText({
+  const provisionalAccountExplanationText = iconSize(13635).useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,
   });
@@ -69,12 +69,12 @@ export function UserProfileProvisionalAccountExplainerCard(iconSize) {
       hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
     items,
   );
-  const provisionalAccountExplanationText = iconSize(13628).useProvisionalAccountExplanationText({
+  const provisionalAccountExplanationText = iconSize(13635).useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,
   });
   const obj2 = { style, title: null, titleIcon: null, children: null };
-  const obj = iconSize(13628);
+  const obj = iconSize(13635);
   const intl = iconSize(1112).intl;
   obj2.title = intl.string(iconSize(1112).t.Iyka0U);
   obj2.titleIcon = closure_5(iconSize(7278).CircleErrorIcon, { size: "xs", color: "text-default" });

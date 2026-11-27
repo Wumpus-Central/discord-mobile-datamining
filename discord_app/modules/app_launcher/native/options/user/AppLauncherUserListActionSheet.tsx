@@ -17,7 +17,7 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
   };
   items = [onPressRow.query];
   obj.data = items;
-  return jsx(onPressRow(13133).AppLauncherList, {
+  return jsx(onPressRow(13141).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: null,
     renderItem(label) {

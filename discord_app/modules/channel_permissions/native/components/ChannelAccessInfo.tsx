@@ -62,7 +62,7 @@ export default function ChannelAccessInfo(guild) {
   }
   const memberIds = GuildMemberStore.getMemberIds(id);
   let obj = guild(504);
-  const existingMembers = guild(8526).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
+  const existingMembers = guild(8527).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
   let tmp8 = 0 === stateFromStoresArray.length;
   if (tmp8) {
     tmp8 = 1 === existingMembers.length;
@@ -147,18 +147,18 @@ export default function ChannelAccessInfo(guild) {
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(13454);
+    channel(13462);
     const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(7155).GroupIcon)];
     const ROLES = constants.ROLES;
-    channel(8559);
-    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(8556).ShieldUserIcon);
+    channel(8560);
+    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(8557).ShieldUserIcon);
     obj9.children = items5;
   }
   const obj10 = { children: null };
   obj3.children = closure_9(closure_10, obj9);
   const items6 = [closure_8(View, obj3)];
-  const tmp2Result = guild(8526);
-  items6[1] = closure_8(guild(1186).Icon, { source: channel(10346), size: guild(1186).Icon.Sizes.SMALL });
+  const tmp2Result = guild(8527);
+  items6[1] = closure_8(guild(1186).Icon, { source: channel(10347), size: guild(1186).Icon.Sizes.SMALL });
   obj2.children = items6;
   items2[1] = closure_9(guild(6152).PressableOpacity, obj2);
   obj10.children = items2;

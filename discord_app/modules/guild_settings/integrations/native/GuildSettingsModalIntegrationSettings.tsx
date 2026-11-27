@@ -7,7 +7,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
-import _modDef20036 from "../../../../../_runtime/metro/20036__.js";
+import _modDef20061 from "../../../../../_runtime/metro/20061__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import GuildSettingsStore from "../../GuildSettingsStore.tsx";
@@ -33,7 +33,7 @@ function ForceSyncIcon(isSyncing) {
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t["+Josox"]);
     obj.onPress = tmp;
-    const obj2 = { source: _modDef20036 };
+    const obj2 = { source: _modDef20061 };
     obj.children = timestampProducer(TableRow.TableRow.Icon, obj2);
     tmp2Result = timestampProducer(Pressables.PressableOpacity, obj);
   }
@@ -70,34 +70,34 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
-    applyArgumentsResult.handleExpireBehaviorChange = function handleExpireBehaviorChange(expire_behavior) {
+    applyArgumentsResult.handleExpireBehaviorChange = function handleExpireBehaviorChange(arg0) {
       ({ guildId, integration } = applyArgumentsResult.props);
       GuildSettingsActionCreatorsDefault.updateIntegration(
         guildId,
         integration.id,
-        expire_behavior,
+        arg0,
         integration.expire_grace_period,
         integration.enable_emoticons,
       );
     };
-    applyArgumentsResult.handleExpireGracePeriodChange = function handleExpireGracePeriodChange(expire_grace_period) {
+    applyArgumentsResult.handleExpireGracePeriodChange = function handleExpireGracePeriodChange(arg0) {
       ({ guildId, integration } = applyArgumentsResult.props);
       GuildSettingsActionCreatorsDefault.updateIntegration(
         guildId,
         integration.id,
         integration.expire_behavior,
-        expire_grace_period,
+        arg0,
         integration.enable_emoticons,
       );
     };
-    applyArgumentsResult.handleToggleEmotes = function handleToggleEmotes(enable_emoticons) {
+    applyArgumentsResult.handleToggleEmotes = function handleToggleEmotes(arg0) {
       ({ guildId, integration } = applyArgumentsResult.props);
       GuildSettingsActionCreatorsDefault.updateIntegration(
         guildId,
         integration.id,
         integration.expire_behavior,
         integration.expire_grace_period,
-        enable_emoticons,
+        arg0,
       );
     };
     applyArgumentsResult.handleSync = function handleSync() {
@@ -151,7 +151,7 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
   value = self(6178).get(integration.type);
   if (null == value) {
     const _Object = Object;
-    const values = Object.values(tmp12(20035).IntegrationExpireGracePeriodTypes);
+    const values = Object.values(tmp12(20060).IntegrationExpireGracePeriodTypes);
     const found = values.filter(function isInteger(item) {
       return Number.isInteger(item);
     });
@@ -204,11 +204,11 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
       hasIcons: false,
       children: null,
     };
-    const obj17 = { value: tmp15(20037).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
+    const obj17 = { value: tmp15(20062).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
     const intl6 = tmp15(1112).intl;
     obj17.label = intl6.string(tmp15(1112).t["6kpw4i"]);
     const items3 = [closure_6(tmp15(7253).TableRadioRow, obj17)];
-    const obj18 = { value: tmp15(20037).IntegrationExpireBehaviorTypes.KICK, label: null };
+    const obj18 = { value: tmp15(20062).IntegrationExpireBehaviorTypes.KICK, label: null };
     const intl7 = tmp15(1112).intl;
     obj18.label = intl7.string(tmp15(1112).t.fQUQIJ);
     items3[1] = closure_6(tmp15(7253).TableRadioRow, obj18);

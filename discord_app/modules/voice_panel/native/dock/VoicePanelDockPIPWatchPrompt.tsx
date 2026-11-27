@@ -21,7 +21,7 @@ function WatchPrompt(ownerId) {
   let sharedValue;
   ({ hideContent, transitionState } = ownerId);
   const tmp = closure_10();
-  const context = sharedValue.useContext(cleanUp(11781));
+  const context = sharedValue.useContext(cleanUp(11789));
   ({ channelId, guildId } = context);
   items = [UserStore];
   let items1 = [ownerId];
@@ -31,7 +31,7 @@ function WatchPrompt(ownerId) {
   closure_129_1 = streamKey;
   closure_129_2 = isConnecting;
   const name = cleanUp(6807).useName(guildId, channelId, stateFromStores);
-  const context1 = sharedValue.useContext(cleanUp(11781));
+  const context1 = sharedValue.useContext(cleanUp(11789));
   const channelId2 = context1.channelId;
   closure_129_3 = channelId2;
   const guildId2 = context1.guildId;

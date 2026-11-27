@@ -7,8 +7,8 @@ import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
 import useIsCheckpointWideDefault from "../../../useIsCheckpointWide.tsx";
-import _modDef12878 from "../../../../../../../discord_assets/assets/checkpoint/2026/voice_bg_400w.png.js";
-import _modDef12879 from "../../../../../../../discord_assets/assets/checkpoint/2026/voice_bg_halfres_static.png.js";
+import _modDef12886 from "../../../../../../../discord_assets/assets/checkpoint/2026/voice_bg_400w.png.js";
+import _modDef12887 from "../../../../../../../discord_assets/assets/checkpoint/2026/voice_bg_halfres_static.png.js";
 import CheckpointGlobalStatNumberDefault from "../../CheckpointGlobalStatNumber.tsx";
 import CheckpointCountUpStatNumberDefault from "../../CheckpointCountUpStatNumber.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
@@ -125,8 +125,8 @@ export default function CheckpointVoiceStatsScreen() {
   }
   const obj4 = { animatedUri: null, staticUri: null, style: null };
   const tmp4Result = stateFromStores1(6768);
-  obj4.animatedUri = _modDef12878;
-  obj4.staticUri = _modDef12879;
+  obj4.animatedUri = _modDef12886;
+  obj4.staticUri = _modDef12887;
   const items3 = [tmp.image];
   let tmp16 = wideText;
   if (wideText) {
@@ -161,7 +161,7 @@ export default function CheckpointVoiceStatsScreen() {
   }
   const obj11 = { style: items7, children: null };
   items7[1] = wideTitle;
-  const items8 = [closure_7(stateFromStores1(10504).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
+  const items8 = [closure_7(stateFromStores1(10505).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
   const obj13 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj12 = { size: "xs", color: CHECKPOINT_PRIMARY };
   const tmp2Result6 = CheckpointScreenDefault;

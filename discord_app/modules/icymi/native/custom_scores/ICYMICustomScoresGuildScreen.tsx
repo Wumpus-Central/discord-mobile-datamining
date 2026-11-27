@@ -192,9 +192,9 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   const items2 = [ICYMIStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items2, () => ICYMIStore.getCustomGuildScore(guildId));
   const tmp2Result = navigation(504);
-  const numberToCustomScoreResult = navigation(8922).numberToCustomScore(stateFromStores1);
+  const numberToCustomScoreResult = navigation(8923).numberToCustomScore(stateFromStores1);
   noop = numberToCustomScoreResult;
-  const tmp2Result3 = navigation(8922);
+  const tmp2Result3 = navigation(8923);
   const items3 = [ChannelListStore];
   guildChannels = navigation(504).useStateFromStoresObject(items3, () =>
     ChannelListStore.getGuild(guildId),

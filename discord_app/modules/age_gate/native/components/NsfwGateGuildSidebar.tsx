@@ -68,7 +68,7 @@ export default function NsfwGateGuildSidebar(guildId) {
     obj4.title = intl.string(tmp2(tmp3[16]).t.bAVpRR);
     const intl2 = tmp2(tmp3[16]).intl;
     const obj5 = { helpURL: stateFromStores(tmp3[17]).getArticleURL(constants2.NSFW_GUILD_GUIDELINES) };
-    obj4.body = intl2.format(tmp2(tmp3[16]).t.NQuXf0, obj5);
+    obj4.body = intl2.format(tmp2(tmp3[16]).t.YHWOSK, obj5);
     items3[1] = closure_12(tmp2(tmp3[14]).RefreshEmptyState, obj4);
     obj2.children = items3;
     tmp7 = closure_13(View, obj2);

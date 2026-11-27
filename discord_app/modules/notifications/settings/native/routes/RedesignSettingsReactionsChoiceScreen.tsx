@@ -21,8 +21,8 @@ export default noop.memo(function RedesignSettingsReactionsChoiceScreen() {
   }, items);
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
-    const obj = stackNavigation(11962);
-    items = [stackNavigation(17626).buildReactionsChoiceSettingsSection()];
+    const obj = stackNavigation(11970);
+    items = [stackNavigation(17633).buildReactionsChoiceSettingsSection()];
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);

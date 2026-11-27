@@ -9,11 +9,11 @@ import isChangelogChannelDefault from "../../../../../../changelog/utils/isChang
 import _modDef7289 from "../../../../../../../../_runtime/metro/07289__.js";
 import BotTagDefault from "../../../../../../applications/native/BotTag.tsx";
 import GuildTagDefault from "../../../../../../guild_tag/native/GuildTag.tsx";
-import _modDef9077 from "../../../../../../../../_runtime/metro/09077__.js";
+import _modDef9078 from "../../../../../../../../_runtime/metro/09078__.js";
 import UsernameWithEffectsDefault from "../../../../../../display_name_styles/native/UsernameWithEffects.tsx";
-import _modDef10672 from "../../../../../../../../_runtime/metro/10672__.js";
+import _modDef10673 from "../../../../../../../../_runtime/metro/10673__.js";
 import ActivityStatusDefault from "../../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef11490 from "../../../../../../../../_runtime/metro/11490__.js";
+import _modDef11498 from "../../../../../../../../_runtime/metro/11498__.js";
 import useMessagePreviewsDefault from "../../../../../useMessagePreviews.tsx";
 import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
 import MessagesItemChannelWaveDefault from "MessagesItemChannelWave.tsx";
@@ -25,7 +25,7 @@ function MessagesItemChannelContentIcon(selected) {
   ({ muted, favorite, ignored, blocked } = selected);
   const tmp = closure_11(selected.selected);
   if (blocked) {
-    const obj2 = { source: _modDef9077, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj2 = { source: _modDef9078, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     items = [,];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
     obj2.style = items;
@@ -37,7 +37,7 @@ function MessagesItemChannelContentIcon(selected) {
     obj3.style = items1;
     tmp2 = timestampProducer(native.Icon, obj3);
   } else if (muted) {
-    const obj4 = { source: _modDef10672, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10673, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [,];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj4.style = items2;
@@ -45,7 +45,7 @@ function MessagesItemChannelContentIcon(selected) {
   } else {
     tmp2 = null;
     if (favorite) {
-      const obj = { source: _modDef11490, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+      const obj = { source: _modDef11498, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
       const items3 = [,];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj.style = items3;
@@ -182,7 +182,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
   const tmpResult = channel(504);
-  const tmpResult3 = channel(17764);
+  const tmpResult3 = channel(17771);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;
@@ -209,7 +209,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
     if (null != channel.recipients) {
       if (channel.recipients.length > 0) {
         const obj8 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
-        const EffectDisplayType = tmp(9809).EffectDisplayType;
+        const EffectDisplayType = tmp(9810).EffectDisplayType;
         obj8.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
         obj4 = Object.assign(obj4);
         closure_6(UsernameWithEffectsDefault, obj8);
@@ -295,7 +295,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
       obj19.color = str7;
       obj19.layout = tmp(5704).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj19.muted = muted;
-      let tmp20Result7 = closure_6(tmp(10638).ChannelRowPreview, obj19);
+      let tmp20Result7 = closure_6(tmp(10639).ChannelRowPreview, obj19);
     } else if (channel.isDM()) {
       const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;

@@ -5,13 +5,13 @@ import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.t
 import MemberVerificationAlertActionCreators from "../../../guild_member_verification/native/MemberVerificationAlertActionCreators.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import _modDef13441 from "../../../../../_runtime/metro/13441__.js";
-import _modDef13442 from "../../../../../_runtime/metro/13442__.js";
+import _modDef13449 from "../../../../../_runtime/metro/13449__.js";
+import _modDef13450 from "../../../../../_runtime/metro/13450__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const TextAreaCta = fn(12960).TextAreaCta;
+const TextAreaCta = fn(12968).TextAreaCta;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
@@ -31,7 +31,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
   if (guildId(5079).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = _modDef13441;
+    let tmp8 = _modDef13449;
     const intl2 = tmp2(1112).intl;
     let stringResult = intl2.string(tmp2(1112).t.lk30cY);
     class I {
@@ -46,7 +46,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       }
     }
   } else if (tmp2(5079).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = _modDef13442;
+    tmp8 = _modDef13450;
     class I {
       constructor() {
         obj = closure_1(closure_2[10]);

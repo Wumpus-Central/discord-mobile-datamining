@@ -11,7 +11,7 @@ import DefaultDMSettingsExperiment from "../../content_and_social/DefaultDMSetti
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -21,7 +21,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(_modDef2847["7aYkh1"]);
   },
-  parent: fn(9555).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(9556).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();

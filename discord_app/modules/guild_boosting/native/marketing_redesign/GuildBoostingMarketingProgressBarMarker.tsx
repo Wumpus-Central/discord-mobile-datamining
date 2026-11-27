@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef14786 from "../../../../../_runtime/metro/14786__.js";
-import _modDef14787 from "../../../../../_runtime/metro/14787__.js";
-import _modDef14788 from "../../../../../_runtime/metro/14788__.js";
+import _modDef14792 from "../../../../../_runtime/metro/14792__.js";
+import _modDef14793 from "../../../../../_runtime/metro/14793__.js";
+import _modDef14794 from "../../../../../_runtime/metro/14794__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -85,7 +85,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     }
     return tmp18;
   } else if (isDisabled) {
-    BoostGemSlashIcon = BoostGemSlashIcon(13574).BoostGemSlashIcon;
+    BoostGemSlashIcon = BoostGemSlashIcon(13582).BoostGemSlashIcon;
     let tmp22Result = closure_6(BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
   } else {
     const obj4 = { source: obj2[tier], style: null };
@@ -111,7 +111,7 @@ const TierMarkerPositions = {
   [BoostedGuildTiers.TIER_2]: 0.6666666666666666,
   [BoostedGuildTiers.TIER_3]: 1,
 };
-let obj2 = { [TIER_1]: _modDef14786, [TIER_2]: _modDef14787, [TIER_3]: _modDef14788 };
+let obj2 = { [TIER_1]: _modDef14792, [TIER_2]: _modDef14793, [TIER_3]: _modDef14794 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
 let createStyles = fn(5043);
 let obj4 = {
@@ -275,14 +275,14 @@ export default function ProgressBarMarker(arg0) {
       tmp25Result = tier !== BoostedGuildTiers.NONE;
     }
     if (tmp25Result) {
-      const obj7 = { source: tmp2(12044), style: tmp.progressBarMarkerUnlockedIcon };
+      const obj7 = { source: tmp2(12052), style: tmp.progressBarMarkerUnlockedIcon };
       tmp25Result = closure_6(tmp2(5730), obj7);
       const tmp2Result = tmp2(5730);
     }
     const items7 = [tmp25Result];
     const obj8 = { variant: "body-xs/medium", children: null };
     const tmp5Result = tmp5(1654);
-    obj8.children = tmp5(10363).getTierName(tier, { useLevels: false });
+    obj8.children = tmp5(10364).getTierName(tier, { useLevels: false });
     items7[1] = closure_6(tmp5(5634).Text, obj8);
     obj6.children = items7;
     items5[2] = closure_7(View, obj6);

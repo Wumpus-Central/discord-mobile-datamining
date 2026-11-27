@@ -10,16 +10,16 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/usePinotMemberCoachmark.tsx");
 
 export function usePinotMemberCoachmark(channel, mobile_member_coachmark) {
-  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(11882).useIsPinotMemberCoachmarkEligible(
+  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(11890).useIsPinotMemberCoachmarkEligible(
     channel,
     mobile_member_coachmark,
   );
-  let obj = pinotPromotableChannelId(11882);
-  pinotPromotableChannelId = pinotPromotableChannelId(11877).usePinotPromotableChannelId(
+  let obj = pinotPromotableChannelId(11890);
+  pinotPromotableChannelId = pinotPromotableChannelId(11885).usePinotPromotableChannelId(
     channel,
     mobile_member_coachmark,
   );
-  const obj2 = pinotPromotableChannelId(11877);
+  const obj2 = pinotPromotableChannelId(11885);
   if (isPinotMemberCoachmarkEligible) {
     items = [tmp(4876).DismissibleContent.PINOT_MEMBER_COACHMARK];
     let items1 = items;
@@ -27,7 +27,7 @@ export function usePinotMemberCoachmark(channel, mobile_member_coachmark) {
     items1 = [];
   }
   const tmp5 = _slicedToArray(
-    pinotPromotableChannelId(9561).useSelectedDismissibleContent(items1, { bypassAutoDismiss: true }),
+    pinotPromotableChannelId(9562).useSelectedDismissibleContent(items1, { bypassAutoDismiss: true }),
     2,
   );
   dependencyMap = tmp6;

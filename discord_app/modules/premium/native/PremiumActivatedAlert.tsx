@@ -6,9 +6,8 @@ import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
-import _modDef9147 from "../../../../_runtime/metro/09147__.js";
 import _modDef9148 from "../../../../_runtime/metro/09148__.js";
-import _modDef9234 from "../../../../_runtime/metro/09234__.js";
+import _modDef9149 from "../../../../_runtime/metro/09149__.js";
 import _modDef9235 from "../../../../_runtime/metro/09235__.js";
 import _modDef9236 from "../../../../_runtime/metro/09236__.js";
 import _modDef9237 from "../../../../_runtime/metro/09237__.js";
@@ -30,6 +29,7 @@ import _modDef9252 from "../../../../_runtime/metro/09252__.js";
 import _modDef9253 from "../../../../_runtime/metro/09253__.js";
 import _modDef9254 from "../../../../_runtime/metro/09254__.js";
 import _modDef9255 from "../../../../_runtime/metro/09255__.js";
+import _modDef9256 from "../../../../_runtime/metro/09256__.js";
 import ShineAnimationDefault from "ShineAnimation.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -153,37 +153,37 @@ export default function PremiumActivatedAlert(onClose) {
   const obj7 = { style: tmp.header, children: null };
   const tmp4Result = common_AlertDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result15 = _modDef9234;
+    let tmp4Result15 = _modDef9235;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result15 = _modDef9235;
-  } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
     tmp4Result15 = _modDef9236;
-  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
+  } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
     tmp4Result15 = _modDef9237;
-  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
     tmp4Result15 = _modDef9238;
+  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result15 = _modDef9239;
   }
   items = [hasOwnProperty(FastImageDefault, { source: tmp4Result15, style: tmp.headerBackground }), , ,];
   const obj8 = { source: tmp4Result15, style: tmp.headerBackground };
   const tmp4Result14 = FastImageDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result17 = _modDef9242;
+    let tmp4Result17 = _modDef9243;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result17 = _modDef9243;
+    tmp4Result17 = _modDef9244;
   } else {
     if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
       if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
         if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-          tmp4Result17 = _modDef9245;
+          tmp4Result17 = _modDef9246;
         }
       }
     }
-    tmp4Result17 = _modDef9244;
+    tmp4Result17 = _modDef9245;
   }
   items[1] = hasOwnProperty(FastImageDefault, { source: tmp4Result17, style: tmp9.logo });
   let tmp15Result = null;
   if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-    const obj10 = { source: _modDef9255, style: tmp.logoPlusPremiumGuild };
+    const obj10 = { source: _modDef9256, style: tmp.logoPlusPremiumGuild };
     tmp15Result = hasOwnProperty(FastImageDefault, obj10);
     const tmp4Result18 = FastImageDefault;
   }
@@ -191,15 +191,15 @@ export default function PremiumActivatedAlert(onClose) {
   const obj9 = { source: tmp4Result17, style: tmp9.logo };
   const tmp4Result16 = FastImageDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result20 = _modDef9147;
+    let tmp4Result20 = _modDef9148;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result20 = _modDef9148;
+    tmp4Result20 = _modDef9149;
   } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-    tmp4Result20 = _modDef9239;
-  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
     tmp4Result20 = _modDef9240;
-  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
     tmp4Result20 = _modDef9241;
+  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result20 = _modDef9242;
   }
   const obj11 = { source: tmp4Result20, style: null };
   const items1 = [tmp10.headerImage, tmp.headerImage];
@@ -211,38 +211,38 @@ export default function PremiumActivatedAlert(onClose) {
   const tmp4Result19 = FastImageDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     if (tmp7Result.isThemeDark(tmp6)) {
-      let tmp4Result22 = _modDef9246;
+      let tmp4Result22 = _modDef9247;
     } else {
-      tmp4Result22 = _modDef9247;
+      tmp4Result22 = _modDef9248;
     }
     tmp7Result = shared;
   } else {
     if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
       if (tmp7Result5.isThemeDark(tmp6)) {
-        let tmp4Result23 = _modDef9248;
+        let tmp4Result23 = _modDef9249;
       } else {
-        tmp4Result23 = _modDef9249;
+        tmp4Result23 = _modDef9250;
       }
       let tmp4Result26 = tmp4Result23;
       tmp7Result5 = shared;
     } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
       if (tmp7Result6.isThemeDark(tmp6)) {
-        let tmp4Result24 = _modDef9250;
+        let tmp4Result24 = _modDef9251;
       } else {
-        tmp4Result24 = _modDef9251;
+        tmp4Result24 = _modDef9252;
       }
       tmp4Result26 = tmp4Result24;
       tmp7Result6 = shared;
     } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
       if (tmp7Result7.isThemeDark(tmp6)) {
-        let tmp4Result25 = _modDef9252;
+        let tmp4Result25 = _modDef9253;
       } else {
-        tmp4Result25 = _modDef9253;
+        tmp4Result25 = _modDef9254;
       }
       tmp4Result26 = tmp4Result25;
       tmp7Result7 = shared;
     } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-      tmp4Result26 = _modDef9254;
+      tmp4Result26 = _modDef9255;
     }
     const obj13 = { source: tmp4Result26, style: tmp11.animation };
     const items3 = [hasOwnProperty(tmp4Result21, obj13)];

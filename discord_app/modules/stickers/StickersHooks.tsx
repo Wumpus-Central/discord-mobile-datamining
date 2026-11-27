@@ -422,7 +422,7 @@ export function useFavoriteStickerIds() {
   return stickerIds;
 }
 export function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10813).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10814).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -430,7 +430,7 @@ export function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10813);
+  const obj = stickerIds(10814);
   items = [StickersStore];
   const items1 = [stickerIds];
   return stickerIds(504).useStateFromStoresArray(
@@ -478,7 +478,7 @@ export function useLatestFrecentStickerIds() {
   return keys;
 }
 export function useLatestFrecentStickers() {
-  const frecencySettings = keys(10813).useFrecencySettings();
+  const frecencySettings = keys(10814).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -497,7 +497,7 @@ export function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10813);
+  const obj = keys(10814);
   items = [StickersStore];
   const items1 = [keys];
   return keys(504).useStateFromStoresArray(
@@ -556,7 +556,7 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

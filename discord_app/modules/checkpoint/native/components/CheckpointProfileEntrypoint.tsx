@@ -23,7 +23,7 @@ function CheckpointProfileEntrypointRow(source) {
   const intl2 = source(1112).intl;
   obj2.subLabel = intl2.string(checkpointQAMode(3495).BFc4lY);
   const obj = source(6769);
-  obj2.icon = jsx(source(6144).TableRow.Icon, { IconComponent: source(14118).ExperimentalCheckpointIcon });
+  obj2.icon = jsx(source(6144).TableRow.Icon, { IconComponent: source(14125).ExperimentalCheckpointIcon });
   obj2.onPress = function onPress() {
     return openCheckpoint.openCheckpoint(source);
   };
@@ -31,7 +31,7 @@ function CheckpointProfileEntrypointRow(source) {
   if ("off" !== checkpointQAMode) {
     fn = () => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(15046, dependencyMap.paths),
+        asyncRequireImpl(15053, dependencyMap.paths),
         "CheckpointTestingActionSheet",
         { mode: checkpointQAMode },
       );

@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(10627).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_5 = fn(10628).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);
@@ -44,11 +44,11 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
     stringResult = intl.string(channel(1112).t["/YzI63"]);
   }
   dependencyMap = stringResult;
-  const tmp6 = guild(10266)();
+  const tmp6 = guild(10267)();
   noop = tmp6;
-  isVoicePanelOpen = channel(10270).useIsVoicePanelOpen(channel.id);
-  let obj = channel(10270);
-  handleDismissNotification = channel(10665).useInAppNotificationContext().handleDismissNotification;
+  isVoicePanelOpen = channel(10271).useIsVoicePanelOpen(channel.id);
+  let obj = channel(10271);
+  handleDismissNotification = channel(10666).useInAppNotificationContext().handleDismissNotification;
   ref = noop.useRef(false);
   items = [handleDismissNotification];
   callback = noop.useCallback((arg0) => {
@@ -81,8 +81,8 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
   }, items3);
   const obj3 = { icon: null, header: null, rightAccessory: null, children: null, onPress: null, notification: null };
   const obj4 = { style: tmp.iconContainer, children: null };
-  const obj2 = channel(10665);
-  obj4.children = ref(channel(10342).HandRequestSpeakIcon, { size: "md", color: guild(575).colors.WHITE });
+  const obj2 = channel(10666);
+  obj4.children = ref(channel(10343).HandRequestSpeakIcon, { size: "md", color: guild(575).colors.WHITE });
   obj3.icon = ref(isVoicePanelOpen, obj4);
   obj3.header = memo;
   const obj6 = { direction: "horizontal", spacing: guild(575).space.PX_8, style: tmp.actions, children: null };
@@ -130,5 +130,5 @@ export default noop.memo(function StageSpeakInviteNotification(notification) {
     callback("notification_clicked");
   };
   obj3.notification = notification;
-  return ref(channel(10675).NotificationPressable, obj3);
+  return ref(channel(10676).NotificationPressable, obj3);
 });

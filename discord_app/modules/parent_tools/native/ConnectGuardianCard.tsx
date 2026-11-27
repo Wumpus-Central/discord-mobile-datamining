@@ -8,7 +8,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(8213).FAMILY_CENTER_REQUEST_QR_CODE_URL;
+let closure_6 = fn(8214).FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5043);

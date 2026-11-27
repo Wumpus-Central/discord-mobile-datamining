@@ -49,11 +49,11 @@ export function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
 export function useEmojiPickerPremiumSearchUpsellClick(arg0) {
   let onPress;
   ({ analyticsLocations, useTier0UpsellContent } = arg0);
-  const obj = onPress(9586);
+  const obj = onPress(9587);
   const tmp = usePremiumFeatureUpsellGetNitroDefault(
     useTier0UpsellContent,
     obj.usePremiumUpsellConfig(
-      onPress(9652).getUpsellType(onPress(9597).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
+      onPress(9653).getUpsellType(onPress(9598).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
       analyticsLocations,
     ).onViewAllPerks,
     constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
@@ -77,11 +77,11 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
   let onPress;
   ({ analyticsLocations, useTier0UpsellContent } = guildId);
   const tmp = closure_12();
-  let obj = onPress(9586);
+  let obj = onPress(9587);
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(
     useTier0UpsellContent,
     obj.usePremiumUpsellConfig(
-      onPress(9652).getUpsellType(onPress(9597).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
+      onPress(9653).getUpsellType(onPress(9598).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
       analyticsLocations,
     ).onViewAllPerks,
     constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
@@ -123,7 +123,7 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
       obj2 = AnalyticsUtilsDefault.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
     }
   }, items1);
-  let obj2 = onPress(9652);
+  let obj2 = onPress(9653);
   const intl = onPress(1112).intl;
   if (guildId.useTier0UpsellContent) {
     let obj3 = { planName: tmp2(2174).getTierDisplayNameByPlanId(PREMIUM_MONTH_TIER_0.PREMIUM_MONTH_TIER_0) };
@@ -142,7 +142,7 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
     stringResult = string(t.pj0XBN);
   }
   obj4.ctaText = stringResult;
-  obj4.icon = jsx(onPress(9637).NitroWheelIcon, {
+  obj4.icon = jsx(onPress(9638).NitroWheelIcon, {
     size: "sm",
     color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
     style: tmp.nitroIcon,

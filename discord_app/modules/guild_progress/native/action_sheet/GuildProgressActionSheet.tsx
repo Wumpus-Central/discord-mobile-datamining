@@ -41,7 +41,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(13453);
+const GuildProgressConstants = fn(13461);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1071);
 ({
@@ -79,7 +79,7 @@ export default function GuildProgressActionSheet(guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -94,14 +94,14 @@ export default function GuildProgressActionSheet(guild) {
             return obj3;
           } else {
             let base64;
-            tmp5(8573).init(View);
-            const obj6 = tmp5(8573);
-            tmp2(13458).hideActionSheet(id.id);
-            const obj7 = tmp2(13458);
+            tmp5(8574).init(View);
+            const obj6 = tmp5(8574);
+            tmp2(13466).hideActionSheet(id.id);
+            const obj7 = tmp2(13466);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(8136).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(8137).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -114,11 +114,11 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            tmp5(8573).updateIcon(closure_129_5, base64);
-            const obj = tmp5(8573);
+            tmp5(8574).updateIcon(closure_129_5, base64);
+            const obj = tmp5(8574);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;

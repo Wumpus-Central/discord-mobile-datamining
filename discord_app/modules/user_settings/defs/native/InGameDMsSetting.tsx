@@ -5,13 +5,13 @@ import UserSettings from "../../UserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
   },
-  parent: fn(9555).MobileUserSettings.CONNECTED_GAMES,
+  parent: fn(9556).MobileUserSettings.CONNECTED_GAMES,
   useOptions: function useInGameDMsSettingOptions() {
     return noop.useMemo(() => {
       const obj = {

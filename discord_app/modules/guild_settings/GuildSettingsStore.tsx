@@ -72,17 +72,22 @@ function handleFormInit(type) {
     if (section === constants.SOUNDBOARD) {
       c11 = undefined;
     } else if (null != section) {
-      const obj3 = { key: "landing", name: constants.LANDING };
-      items = [obj3];
+      const obj4 = { key: "landing", name: constants.LANDING };
+      items = [obj4];
       if (section === constants.TAG_CUSTOMIZE) {
         ({ TAG: obj2.key, TAG: obj2.name } = constants);
         items.push({ key: null, name: null });
-        const obj4 = { key: null, name: null };
+        const obj5 = { key: null, name: null };
       }
-      const obj6 = { key: section, name: section };
-      items.push(obj6);
-      const obj10 = { type: "stack", routes: items };
-      c11 = obj10;
+      if (section === constants.INTEGRATION_APPLICATION) {
+        ({ INTEGRATIONS: obj3.key, INTEGRATIONS: obj3.name } = constants);
+        items.push({ key: null, name: null });
+        const obj7 = { key: null, name: null };
+      }
+      const obj12 = { key: section, name: section, params: type.sectionParams };
+      items.push(obj12);
+      const obj13 = { type: "stack", routes: items };
+      c11 = obj13;
     }
   }
 }
@@ -537,19 +542,21 @@ obj2 = {
       if (c3 !== constants.INSTANT_INVITES) {
         if (c3 !== constants.INVITES) {
           if (c3 !== constants.INTEGRATIONS) {
-            if (c3 !== constants.ROLES) {
-              if (c3 === constants.MEMBERS) {
-                c10 = getGuildEveryoneRoleId(guild);
-              } else if (c3 === constants.VANITY_URL) {
-                const vanityUrl = GuildSettingsVanityURLActionCreators.fetchVanityUrl(guild.id);
-              } else if (c3 === constants.SAFETY) {
-                if (null == c4) {
-                  let SAFETY_OVERVIEW = constants2.SAFETY_OVERVIEW;
-                } else {
-                  SAFETY_OVERVIEW = c4;
+            if (c3 !== constants.INTEGRATION_APPLICATION) {
+              if (c3 !== constants.ROLES) {
+                if (c3 === constants.MEMBERS) {
+                  c10 = getGuildEveryoneRoleId(guild);
+                } else if (c3 === constants.VANITY_URL) {
+                  const vanityUrl = GuildSettingsVanityURLActionCreators.fetchVanityUrl(guild.id);
+                } else if (c3 === constants.SAFETY) {
+                  if (null == c4) {
+                    let SAFETY_OVERVIEW = constants2.SAFETY_OVERVIEW;
+                  } else {
+                    SAFETY_OVERVIEW = c4;
+                  }
+                  obj = { type: "GUILD_SETTINGS_SAFETY_SET_SUBSECTION", subsection: SAFETY_OVERVIEW };
+                  DispatcherDefault.dispatch(obj);
                 }
-                obj = { type: "GUILD_SETTINGS_SAFETY_SET_SUBSECTION", subsection: SAFETY_OVERVIEW };
-                DispatcherDefault.dispatch(obj);
               }
             }
           }

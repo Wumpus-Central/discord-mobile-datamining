@@ -42,7 +42,7 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   const tmp = closure_7();
   items = [AuthenticationStore];
   const stateFromStores = widgetType(504).useStateFromStores(items, () => id.getId());
-  const tmp3 = stateFromStores(14566)(stateFromStores);
+  const tmp3 = stateFromStores(14573)(stateFromStores);
   dependencyMap = tmp3;
   const items1 = [tmp3, widgetType];
   const memo = noop.useMemo(() => {
@@ -65,7 +65,7 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   const intl = widgetType(1112).intl;
   obj2.dismissAccessibilityLabel = intl.string(widgetType(1112).t.rnh54p);
   obj2.returnFocusRef = widgetType.returnFocusRef;
-  const tmp4 = stateFromStores(14596);
+  const tmp4 = stateFromStores(14603);
   obj2.children = (
     <View accessibilityRole="list" style={tmp.list}>
       {memo.map((game) => (

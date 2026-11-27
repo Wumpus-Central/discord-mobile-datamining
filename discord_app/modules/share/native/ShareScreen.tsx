@@ -29,8 +29,8 @@ const ChannelRecord = fn(4896);
 ({ ChannelRecordBase: metroImportDefault, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(8943).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(8944).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(8944).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(8945).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(5043);
@@ -118,7 +118,7 @@ export default function ShareScreen(appEntryKey) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -211,7 +211,7 @@ export default function ShareScreen(appEntryKey) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "HermesInternal", done: "+95" };
+                              return { value: "HermesInternal", done: null };
                             }
                           } else {
                             try {
@@ -383,7 +383,7 @@ export default function ShareScreen(appEntryKey) {
               closure_129_6(false);
               closure_129_7.current = false;
               React = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             React = 3;

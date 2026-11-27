@@ -54,7 +54,7 @@ export default noop.memo(function MediaModalPortal(paused) {
       MediaPlayerManager.setLoopPlayback(tmp, true);
       return () => {
         loopPlayback.setLoopPlayback(portal, false);
-        muted(8852).unregisterView(portal);
+        muted(8853).unregisterView(portal);
         set.add(portal);
       };
     }

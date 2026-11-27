@@ -136,7 +136,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -298,7 +298,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c4 = tmp;

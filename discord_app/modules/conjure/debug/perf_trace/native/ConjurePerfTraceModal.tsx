@@ -18,11 +18,11 @@ function WaterfallRow(node) {
   ({ onSelect: dependencyMap, onToggle: noop, onExpandSubtree: closure_4 } = node);
   const tmp = closure_11();
   const detail = tmp;
-  const perfCategoryColors = node(18882).usePerfCategoryColors();
+  const perfCategoryColors = node(18898).usePerfCategoryColors();
   if (collapsed) {
     let ChevronSmallDownIcon = tmp2(7558).ChevronSmallRightIcon;
   } else {
-    ChevronSmallDownIcon = tmp2(9816).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp2(9817).ChevronSmallDownIcon;
   }
   if (node.failed) {
     let running = tmp.failed;
@@ -62,7 +62,7 @@ function WaterfallRow(node) {
   obj2.accessibilityState = obj3;
   const obj4 = { style: null, children: null };
   const items1 = [tmp.rowTop];
-  let obj = node(18882);
+  let obj = node(18898);
   items1[1] = { paddingLeft: node.depth * selected(575).space.PX_12 };
   obj4.style = items1;
   if (node.children.length > 0) {
@@ -134,7 +134,7 @@ function WaterfallRow(node) {
     children: node.operation,
   };
   const obj5 = { paddingLeft: node.depth * selected(575).space.PX_12 };
-  obj16.children = node(18883).perfNodeDuration(node);
+  obj16.children = node(18899).perfNodeDuration(node);
   items2[7] = tmp13(node(5634).Text, obj16);
   obj4.children = items2;
   const items4 = [closure_9(closure_6, obj4), ,];
@@ -155,8 +155,8 @@ function WaterfallRow(node) {
     const obj21 = { paddingLeft: node.depth * selected(575).space.PX_12 };
     items6[1] = obj21;
     obj20.style = items6;
-    const tmp2Result2 = tmp2(18883);
-    obj20.children = tmp2(18883)
+    const tmp2Result2 = tmp2(18899);
+    obj20.children = tmp2(18899)
       .perfNodeSections(node)
       .map((item) => {
         ({ title, rows } = item);
@@ -199,7 +199,7 @@ function WaterfallRow(node) {
         return React6(timestampProducer, obj, title);
       });
     tmp13Result6 = tmp13(closure_6, obj20);
-    const perfNodeSectionsResult = tmp2(18883).perfNodeSections(node);
+    const perfNodeSectionsResult = tmp2(18899).perfNodeSections(node);
   }
   items4[2] = tmp13Result6;
   obj2.children = items4;
@@ -304,9 +304,9 @@ function Waterfall(trace) {
   if (0 !== trace.dropped) {
     const obj10 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
     const _HermesInternal2 = HermesInternal;
-    obj10.children = "" + tmp4(18883).formatSpanCount(trace.dropped) + " not recorded";
+    obj10.children = "" + tmp4(18899).formatSpanCount(trace.dropped) + " not recorded";
     tmp8Result2 = closure_8(tmp4(5634).Text, obj10);
-    const tmp4Result = tmp4(18883);
+    const tmp4Result = tmp4(18899);
   }
   items1[3] = tmp8Result2;
   obj4.children = items1;

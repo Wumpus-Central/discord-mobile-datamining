@@ -69,7 +69,7 @@ let closure_23 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_23 = async function _saveProtos(arg0) {
           closure_1 = tmp3;
           if (!closure_2_17) {
             c5 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else {
             resetTimer(colors, false);
             if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
@@ -112,7 +112,7 @@ let closure_23 = async function _saveProtos(arg0) {
       } else if (1 === tmp7) {
         c3 = 0;
         c5 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;

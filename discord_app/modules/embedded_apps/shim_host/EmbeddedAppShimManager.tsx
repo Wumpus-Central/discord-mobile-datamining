@@ -98,7 +98,7 @@ function handleShimPipeOpen(iframeId) {
         }
       },
     };
-    obj2.host = obj2(19705).createEmbeddedAppShimHost(obj3);
+    obj2.host = obj2(19721).createEmbeddedAppShimHost(obj3);
     let muted = FramesStore.getFrameByIframeId(iframeId);
     if (null != muted) {
       let obj5 = { muted: null };
@@ -114,7 +114,7 @@ function handleShimPipeOpen(iframeId) {
     map = new Map();
     obj2.launchTimingsRequests = map;
     let result = obj.set(iframeId, obj2);
-    let obj4 = obj2(19705);
+    let obj4 = obj2(19721);
   }
 }
 function handleIFrameUnmount(id) {

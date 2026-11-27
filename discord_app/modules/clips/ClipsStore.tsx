@@ -24,7 +24,7 @@ let closure_48 = async function _migrateDefaultStorage() {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -349,7 +349,7 @@ let obj2 = {
   clipsSettings,
   hardwareClassification: null,
   hardwareClassificationVersion: 0,
-  clipsDefaultSettingsState: fn(15484).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  clipsDefaultSettingsState: fn(15491).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
   hasAutoEnabledClipsForHardware: false,
   newClipIds: [],
   hasClips: false,

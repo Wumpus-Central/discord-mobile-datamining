@@ -350,7 +350,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -378,7 +378,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
           } else if (1 === tmp7) {
             sharingOptions = 0;
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -400,7 +400,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
               const obj = tmp3(sharingOptions[11]);
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           }
           sharingOptions = 0;
@@ -469,7 +469,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       obj7.onPress = function onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         return obj.openLazy(
-          asyncRequireImpl(18505, dependencyMap.paths),
+          asyncRequireImpl(18512, dependencyMap.paths),
           ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY,
           { options: sharingOptions, value, onChange },
           "stack",

@@ -1,13 +1,15 @@
 // discord_app/modules/clips/clipPayloadUtils.tsx
+import ClipsSpeakerVolume from "ClipsSpeakerVolume.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
+require = fn;
 const ClipsConstants = fn(8131);
 ({
-  CLIPS_MAX_PARTICIPANTS: c3,
-  CLIPS_MAX_TIMELINE_EVENTS: closure_4,
-  ClipSignalTypes: hasOwnProperty,
-  GameEventType: closure_6,
-  CLIP_RUNTIME: metroImportDefault,
+  CLIPS_MAX_PARTICIPANTS: closure_4,
+  CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty,
+  ClipSignalTypes: closure_6,
+  GameEventType: metroImportDefault,
+  CLIP_RUNTIME: closure_8,
 } = ClipsConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const SpeakingFlags = fn(5855).SpeakingFlags;
@@ -45,8 +47,30 @@ export function getClipSyncTimestamp(clip) {
     return date.toISOString();
   }
 }
-export function getClipParticipantIds(users) {
-  return users.slice(0, React3);
+export function getClipParticipantIds(clip) {
+  let editMetadata = clip;
+  const users = clip.users;
+  const found = users.filter((item) => {
+    editMetadata = editMetadata.editMetadata;
+    let hasItem;
+    if (editMetadata != null) {
+      const mutedSpeakerIds = editMetadata.mutedSpeakerIds;
+      if (mutedSpeakerIds != null) {
+        hasItem = mutedSpeakerIds.includes(item);
+      }
+    }
+    let tmp3 = true === hasItem;
+    if (!tmp3) {
+      const editMetadata2 = editMetadata.editMetadata;
+      let speakerVolumes;
+      if (editMetadata2 != null) {
+        speakerVolumes = editMetadata2.speakerVolumes;
+      }
+      tmp3 = 0 === ClipsSpeakerVolume.sanitizeSpeakerVolumes(speakerVolumes)[item];
+    }
+    return !tmp3;
+  });
+  return found.slice(0, closure_4);
 }
 export { ServerClipGameEventType };
 export const ServerClipEmotionType = obj2;
@@ -69,7 +93,7 @@ export function getClipEventsTimeline(clip) {
     if (null != timestamp) {
       editMetadata = clip.editMetadata;
       if (editMetadata == null) {
-        const obj = { start: 0, end: clip.length / 1000 };
+        let obj = { start: 0, end: clip.length / 1000 };
         editMetadata = obj;
       }
       const diff = clip.decision.timestamp - clip.length;
@@ -82,17 +106,38 @@ export function getClipEventsTimeline(clip) {
         if (editMetadata != null) {
           voiceAudio = editMetadata.voiceAudio;
         }
-        let tmp2 = false !== voiceAudio;
-        if (tmp2) {
-          tmp2 = signal.signal.type === constants.SPEAKING;
+        let tmp3 = false !== voiceAudio;
+        if (tmp3) {
+          tmp3 = signal.signal.type === constants.SPEAKING;
         }
-        if (!tmp2) {
-          tmp2 = signal.signal.type === constants.GAME_EVENT;
+        if (tmp3) {
+          const userId = signal.signal.userId;
+          const editMetadata2 = tmp.editMetadata;
+          let hasItem;
+          if (editMetadata2 != null) {
+            const mutedSpeakerIds = editMetadata2.mutedSpeakerIds;
+            if (mutedSpeakerIds != null) {
+              hasItem = mutedSpeakerIds.includes(userId);
+            }
+          }
+          let tmp6 = true === hasItem;
+          if (!tmp6) {
+            const editMetadata3 = tmp.editMetadata;
+            let speakerVolumes;
+            if (editMetadata3 != null) {
+              speakerVolumes = editMetadata3.speakerVolumes;
+            }
+            tmp6 = 0 === ClipsSpeakerVolume.sanitizeSpeakerVolumes(speakerVolumes)[userId];
+          }
+          tmp3 = !tmp6;
         }
-        return tmp2;
+        if (!tmp3) {
+          tmp3 = signal.signal.type === constants.GAME_EVENT;
+        }
+        return tmp3;
       });
       const sorted = found.sort((timestamp, timestamp2) => timestamp.timestamp - timestamp2.timestamp);
-      const editMetadata2 = clip.editMetadata;
+      let editMetadata2 = clip.editMetadata;
       let voiceAudio;
       if (editMetadata2 != null) {
         voiceAudio = editMetadata2.voiceAudio;

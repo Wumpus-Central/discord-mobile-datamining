@@ -18,7 +18,7 @@ import ModalContent from "../../../design/components/Modal/native/ModalContent.n
 import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
-import _modDef12044 from "../../../../_runtime/metro/12044__.js";
+import _modDef12052 from "../../../../_runtime/metro/12052__.js";
 import FamilyCenterModalRequestRouting from "../FamilyCenterModalRequestRouting.tsx";
 import EnvelopeSpotIllustration from "../../../design/components/mana-assets/native/generated/EnvelopeSpotIllustration.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -371,7 +371,7 @@ function FamilyCenterPrereqLoading(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -522,7 +522,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   const obj3 = { style: tmp.content, children: null };
   const obj2 = navigation(563);
   const items2 = [
-    closure_11(View, { style: tmp.art, children: closure_11(navigation(12603).FamilyShieldSpotIllustration, {}) }),
+    closure_11(View, { style: tmp.art, children: closure_11(navigation(12611).FamilyShieldSpotIllustration, {}) }),
     ,
   ];
   const obj5 = {
@@ -573,7 +573,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   items4[1] = closure_11(navigation(5641).Button, obj11);
   obj9.children = items4;
   obj8.children = closure_12(navigation(6863).ButtonGroup, obj9);
-  items3[1] = closure_11(navigation(11615).ModalFooter, obj8);
+  items3[1] = closure_11(navigation(11623).ModalFooter, obj8);
   obj6.children = items3;
   return closure_12(navigation(7888).ModalScreen, obj6);
 }
@@ -686,7 +686,7 @@ function FamilyCenterPrereqMustBeAdultScreen() {
   return closure_11(FamilyCenterPrereqScreen, obj3);
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(8213);
+const FamilyCenterConstants = fn(8214);
 ({
   FAMILY_CENTER_AGE_VERIFICATION_RESUME_TIMEOUT: metroImportDefault,
   FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES: closure_8,
@@ -926,13 +926,13 @@ export default function FamilyCenterRequestModal(userId) {
     return obj;
   }, items);
   let obj = {
-    initialRouteName: userId(12590).FamilyCenterModalRequestSections.PREREQ_LOADING,
+    initialRouteName: userId(12598).FamilyCenterModalRequestSections.PREREQ_LOADING,
     screens: memo,
     headerBackTitle: null,
   };
   const intl = userId(1112).intl;
   obj.headerBackTitle = intl.string(userId(1112).t["13/7kX"]);
-  return closure_11(userId(11618).Modal, obj);
+  return closure_11(userId(11626).Modal, obj);
 }
 export { FamilyCenterModalRequestConfirm };
 export { FamilyCenterModalRequestSuccess };

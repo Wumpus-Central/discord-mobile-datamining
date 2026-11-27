@@ -6,7 +6,7 @@ import _modDef7231 from "../../../../../../_runtime/metro/07231__.js";
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
 import ProfileFrameDefault from "../ProfileFrame.tsx";
-import _modDef11170 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef11171 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,7 +28,7 @@ let obj2 = {
     borderColor: nativeDefault.colors.BORDER_NORMAL,
     borderRadius: nativeDefault.radii.xs,
   },
-  sampleProfile: { width: "100%", aspectRatio: fn(9467).SAMPLE_PROFILE_ASPECT_RATIO },
+  sampleProfile: { width: "100%", aspectRatio: fn(9468).SAMPLE_PROFILE_ASPECT_RATIO },
 };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -240,7 +240,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
     },
   };
   tmp13 = _modDef7231;
-  obj18.uri = _modDef11170;
+  obj18.uri = _modDef11171;
   obj17.source = obj18;
   obj17.style = tmp.sampleProfile;
   obj16.children = timestampProducer(FastImageDefault, obj17);

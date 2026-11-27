@@ -114,7 +114,7 @@ obj2.campaignLogoFrame = { width: 48, height: 48, alignItems: "center", justifyC
 obj2.campaignLogo = { width: 32, height: 24 };
 obj2.campaignName = {
   flex: 1,
-  fontFamily: fn(8713).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT],
+  fontFamily: fn(8714).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT],
 };
 obj2.campaignNameFallback = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj2.campaignLegal = { paddingHorizontal: 2 };

@@ -76,7 +76,7 @@ function useQuests(arg0) {
   const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   const obj4 = obj(504);
-  isEligibleForQuests = obj(9893).getIsEligibleForQuests();
+  isEligibleForQuests = obj(9894).getIsEligibleForQuests();
   const items3 = [
     obj.fetchPolicy,
     isEligibleForQuests,
@@ -881,7 +881,7 @@ function useTaskPlatformScreen(quest, questTaskDetails) {
   ];
   return items8;
 }
-const useConsoleQuestUIStore = fn(8375).useConsoleQuestUIStore;
+const useConsoleQuestUIStore = fn(8376).useConsoleQuestUIStore;
 const QuestConstants = fn(6871);
 ({
   QuestTaskPlatform: closure_14,
@@ -1341,7 +1341,7 @@ export function useConnectedConsoleLinkOnClick(quest) {
   let obj = quest(504);
   const tmp = quest;
   const tmp5 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = quest(8389).isConsoleQuest(quest);
+  let isConsoleQuestResult = quest(8390).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1349,8 +1349,8 @@ export function useConnectedConsoleLinkOnClick(quest) {
     isConsoleQuestResult = !tmp5;
   }
   c3 = isConsoleQuestResult;
-  obj2 = quest(8389);
-  closure_4 = tmp(9928).useGetQuestImpressionId();
+  obj2 = quest(8390);
+  closure_4 = tmp(9929).useGetQuestImpressionId();
   return () => {
     const obj = QuestPlatformUtils;
     if (c3) {
@@ -1443,23 +1443,23 @@ export function useQuestPreviewActions(id) {
   return noop.useMemo(
     () => ({
       handleComplete() {
-        return closure_0(9894).completeQuestPreview(id);
+        return closure_0(9895).completeQuestPreview(id);
       },
       handleProgress(random) {
-        return closure_0(9894).completeQuestPreview(id, random);
+        return closure_0(9895).completeQuestPreview(id, random);
       },
       handleResetStatusClick() {
-        return closure_0(9894).resetQuestPreviewStatus(id);
+        return closure_0(9895).resetQuestPreviewStatus(id);
       },
       handleResetDismissibilityClick() {
-        return closure_0(9894).resetQuestDismissibilityStatus(id);
+        return closure_0(9895).resetQuestDismissibilityStatus(id);
       },
       handleOverridePreviewClick(placement) {
-        return closure_0(9894).overrideQuestForPlacement(placement, id);
+        return closure_0(9895).overrideQuestForPlacement(placement, id);
       },
       handleResetHasBeenSeenClick() {
         items = [id];
-        return closure_0(9894).markAdContentUnseen(closure_0(6878).AdCreativeType.QUEST, items);
+        return closure_0(9895).markAdContentUnseen(closure_0(6878).AdCreativeType.QUEST, items);
       },
     }),
     items,
@@ -1523,7 +1523,7 @@ export function useManuallyStartConsoleQuest(questId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1615,7 +1615,7 @@ export function useWaitingForConsoleConnection(quest) {
   ({ xboxAccounts, playstationAccounts } = memo);
   const obj = accounts(504);
   const tmp3 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(8389).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(8390).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1939,8 +1939,8 @@ export function useQuestWarningTips(userStatus) {
     tmp19 = null != completedAt;
     let tmp22 = require("PlatformUtils").isWeb() && tmp17;
     if (tmp22) {
-      tmp22 = !tmp11(9930).isQuestSupportedOnWeb(userStatus);
-      const tmp11Result3 = tmp11(9930);
+      tmp22 = !tmp11(9931).isQuestSupportedOnWeb(userStatus);
+      const tmp11Result3 = tmp11(9931);
     }
     const tmp11Result = require("PlatformUtils");
     let isMacResult = require("PlatformUtils").isMac();
@@ -2413,7 +2413,7 @@ export function useFetchQuestHomeBounties(arg0) {
   }
   const previewAdCreativeIds = obj.previewAdCreativeIds;
   dependencyMap = undefined;
-  const QuestHomeBountiesFeatureGateExperiment = previewAdCreativeIds(13833).QuestHomeBountiesFeatureGateExperiment;
+  const QuestHomeBountiesFeatureGateExperiment = previewAdCreativeIds(13840).QuestHomeBountiesFeatureGateExperiment;
   const enabled = QuestHomeBountiesFeatureGateExperiment.useConfig({ location: constants2.QUEST_HOME_MOBILE }).enabled;
   [tmp2, c2] = noop.useState(enabled);
   obj2 = { location: constants2.QUEST_HOME_MOBILE };
@@ -2452,7 +2452,7 @@ export function useFetchQuestHomeBounties(arg0) {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2475,7 +2475,7 @@ export function useFetchQuestHomeBounties(arg0) {
                   c1 = 3;
                   c4 = 1;
                   const obj6 = {
-                    value: previewAdCreativeIds(13834).fetchBountyPreview(
+                    value: previewAdCreativeIds(13841).fetchBountyPreview(
                       arr,
                       previewAdCreativeIds(6874).AdPlacement.VIDEO_MODAL_MOBILE,
                     ),
@@ -2487,7 +2487,7 @@ export function useFetchQuestHomeBounties(arg0) {
               c1 = 2;
               c4 = 1;
               const obj7 = {
-                value: previewAdCreativeIds(13834).fetchQuestHomeBounties(
+                value: previewAdCreativeIds(13841).fetchQuestHomeBounties(
                   previewAdCreativeIds(6874).AdPlacement.VIDEO_MODAL_MOBILE,
                 ),
                 done: false,
@@ -2531,7 +2531,7 @@ export function useFetchQuestHomeBounties(arg0) {
               tmp34(false);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp34) {
           if (tmp4 === c3) {

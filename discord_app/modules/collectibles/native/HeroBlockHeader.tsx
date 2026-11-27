@@ -15,7 +15,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, UserSettingsSections: hasOwnProperty, VerticalGradient: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const result = 0.75 * fn(11211).COLLECTIBLES_SHOP_CARD_WIDTH;
+const result = 0.75 * fn(11212).COLLECTIBLES_SHOP_CARD_WIDTH;
 const createStyles = fn(5043);
 let obj2 = {
   heroBannerContainer: null,
@@ -82,8 +82,8 @@ export default function HeroBlockHeader(heroBlock) {
   const category = heroBlock.category;
   dependencyMap = heroBlock(1501).useNavigation();
   let obj = heroBlock(1501);
-  const analyticsContext = heroBlock(11214).useCollectiblesAnalyticsContext();
-  let obj2 = heroBlock(11214);
+  const analyticsContext = heroBlock(11215).useCollectiblesAnalyticsContext();
+  let obj2 = heroBlock(11215);
   const tmp5 = closure_10();
   const tmp4 = category(5252)();
   const token = heroBlock(5607).useToken(category(575).colors.BACKGROUND_BASE_LOW);
@@ -94,7 +94,7 @@ export default function HeroBlockHeader(heroBlock) {
   const isOrbsExclusive = category.isOrbsExclusive;
   const token1 = heroBlock(5607).useToken(category(575).colors.BACKGROUND_BASE_LOWEST);
   const obj6 = heroBlock(5607);
-  let isEligibleForQuests = heroBlock(9893).getIsEligibleForQuests();
+  let isEligibleForQuests = heroBlock(9894).getIsEligibleForQuests();
   let heroBannerUrl = heroBlock.mobileHeroUrl;
   if (heroBannerUrl == null) {
     heroBannerUrl = heroBlock.heroBannerUrl;
@@ -245,11 +245,11 @@ export default function HeroBlockHeader(heroBlock) {
     return closure_9(closure_8, obj50);
   } else {
     if (tmpResult.isThemeDark(tmp4)) {
-      let tmp3Result = tmp3(17501);
+      let tmp3Result = tmp3(17508);
     } else {
-      tmp3Result = tmp3(17502);
+      tmp3Result = tmp3(17509);
     }
     tmpResult = tmp(5050);
   }
-  const obj7 = heroBlock(9893);
+  const obj7 = heroBlock(9894);
 }

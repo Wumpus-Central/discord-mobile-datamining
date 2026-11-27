@@ -74,16 +74,16 @@ export default function ForumComposerModal(parentChannelId) {
               });
               const obj = parentChannelId(8116);
               const obj2 = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
-              const result1 = parentChannelId(10765).closeCreateForumPostModal();
+              const result1 = parentChannelId(10766).closeCreateForumPostModal();
             },
             onCancel() {
-              const result = parentChannelId(10765).closeCreateForumPostModal();
-              const obj = parentChannelId(10765);
-              threadId(8179).clearDraft(closure_1_0, DraftType.ThreadSettings);
-              const obj2 = threadId(8179);
-              threadId(8179).clearDraft(closure_1_0, DraftType.ChannelMessage);
-              const obj3 = threadId(8179);
-              threadId(10062).clearAll(closure_1_0, DraftType.ChannelMessage);
+              const result = parentChannelId(10766).closeCreateForumPostModal();
+              const obj = parentChannelId(10766);
+              threadId(8180).clearDraft(closure_1_0, DraftType.ThreadSettings);
+              const obj2 = threadId(8180);
+              threadId(8180).clearDraft(closure_1_0, DraftType.ChannelMessage);
+              const obj3 = threadId(8180);
+              threadId(10063).clearAll(closure_1_0, DraftType.ChannelMessage);
             },
           };
           showForumComposerCloseAlertDefault(obj2);
@@ -111,7 +111,7 @@ export default function ForumComposerModal(parentChannelId) {
     items3,
   );
   let obj3 = parentChannelId(504);
-  const tmp6 = threadId(10767)(parentChannelId);
+  const tmp6 = threadId(10768)(parentChannelId);
   const items4 = [ForumPostMessagesStore];
   const stateFromStores2 = parentChannelId(504).useStateFromStores(items4, () => {
     let firstMessage = null;
@@ -152,7 +152,7 @@ export default function ForumComposerModal(parentChannelId) {
             onClose: handleClose,
             isEdit,
           };
-          obj7.children = jsx(tmp2(10769), {
+          obj7.children = jsx(tmp2(10770), {
             parentChannel: stateFromStores,
             thread: stateFromStores1,
             message: stateFromStores2,

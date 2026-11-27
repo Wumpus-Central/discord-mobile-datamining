@@ -9,7 +9,7 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import SlowmodeStore from "../../stores/SlowmodeStore.tsx";
 
 require = fn;
-const SlowmodeType = fn(8350).SlowmodeType;
+const SlowmodeType = fn(8351).SlowmodeType;
 const ActivityActionTypes = fn(1071).ActivityActionTypes;
 const ChannelFlags = fn(4899).ChannelFlags;
 const size = fn(2);
@@ -162,7 +162,7 @@ export function useCreateGameInvitePost(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -31,7 +31,7 @@ export function useFormattedSKUPrice(sku) {
       const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
     }
   }, items);
-  const items1 = [stateFromStores(9104)];
+  const items1 = [stateFromStores(9105)];
   const items2 = [tmp2];
   stateFromStores = require("initialize").useStateFromStores(
     items1,

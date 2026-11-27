@@ -22,9 +22,9 @@ import StatusBarDefault from "../../../status_bar/native/components/StatusBar.an
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10545 from "../../../../../_runtime/metro/10545__.js";
 import _modDef10546 from "../../../../../_runtime/metro/10546__.js";
 import _modDef10547 from "../../../../../_runtime/metro/10547__.js";
+import _modDef10548 from "../../../../../_runtime/metro/10548__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -50,7 +50,7 @@ function HideStageChannelCallIcon(channel) {
     children: null,
   };
   let obj = channel(504);
-  obj2.source = _modDef10545;
+  obj2.source = _modDef10546;
   const intl = channel(1112).intl;
   obj2.accessibilityLabel = intl.string(channel(1112).t.cpT0Cq);
   obj2.onPress = function handleClose() {
@@ -92,7 +92,7 @@ function StageParticipantCounts(channelId) {
     ,
   ];
   const obj4 = { source: _modDef8085, size: native.Icon.Sizes.SMALL, style: tmp.icon };
-  items[2] = state(native.Icon, { source: _modDef10546, size: native.Icon.Sizes.SMALL, style: tmp.icon });
+  items[2] = state(native.Icon, { source: _modDef10547, size: native.Icon.Sizes.SMALL, style: tmp.icon });
   items[3] = state(Text_Text.Text, { variant: "body-xs/normal", children: stageParticipantsCount });
   obj3.children = items;
   return gesture(React4, obj3);

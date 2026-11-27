@@ -232,8 +232,8 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const setVisibleChannelScreen = fn(18380).setVisibleChannelScreen;
-const ONYX_BORDER_WIDTH = fn(9005).ONYX_BORDER_WIDTH;
+const setVisibleChannelScreen = fn(18387).setVisibleChannelScreen;
+const ONYX_BORDER_WIDTH = fn(9006).ONYX_BORDER_WIDTH;
 const Constants = fn(1071);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: closure_10, AnalyticsSections: closure_11 } = Constants);
 const ThemeTypes = fn(1082).ThemeTypes;

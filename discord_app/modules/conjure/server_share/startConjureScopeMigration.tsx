@@ -2,13 +2,24 @@
 import util from "../../../intl/index.native.tsx";
 import _modDef4245 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
-import openConjureProjectInBuilderDefault from "../projects/openConjureProjectInBuilder.native.tsx";
+import conjureUserMessageLimit from "../chat/conjureUserMessageLimit.tsx";
 import conjureSendToProject from "../connection/conjureSendToProject.tsx";
+import openConjureProjectInBuilderDefault from "../projects/openConjureProjectInBuilder.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ConjurePublishStatusStore from "../publish/ConjurePublishStatusStore.tsx";
 
 require = fn;
-let closure_8 = async function _sendMigrationMessage(arg0) {
+function sendConjureScopeMigrationMessage() {
+  const self = this;
+  const apply = closure_9.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_9 = async function _sendConjureScopeMigrationMessage(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -19,7 +30,7 @@ let closure_8 = async function _sendMigrationMessage(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -53,7 +64,7 @@ let closure_8 = async function _sendMigrationMessage(arg0) {
         c5 = 0;
         c6 = 2;
         c7 = 1;
-        const obj5 = { value: closure_131_0(closure_131_2[6]).sleep(1500), done: false };
+        const obj5 = { value: closure_131_0(closure_131_2[8]).sleep(1500), done: false };
         return obj5;
       } else if (2 === tmp8) {
         if (arg0 === 1) {
@@ -64,13 +75,13 @@ let closure_8 = async function _sendMigrationMessage(arg0) {
           const obj7 = { value, done: true };
           return obj7;
         } else {
-          closure_131_0(closure_131_2[7]).forgetEarlyTicket(closure_130_0);
+          closure_131_0(closure_131_2[9]).forgetEarlyTicket(closure_130_0);
           c5 = 2;
-          const obj11 = closure_131_0(closure_131_2[7]);
+          const obj11 = closure_131_0(closure_131_2[9]);
           c6 = 5;
           c7 = 1;
           const obj8 = {
-            value: closure_131_0(closure_131_2[5]).sendConjureMessageToProject(
+            value: closure_131_0(closure_131_2[7]).sendConjureMessageToProject(
               closure_130_0,
               closure_130_1,
               closure_130_2,
@@ -138,7 +149,7 @@ export default function startConjureScopeMigration(id, arg1) {
     publishState = publishStatus.publishState;
   }
   if (null != publishState) {
-    let tmp5 = "nothing_built" !== publishState;
+    let tmp6 = "nothing_built" !== publishState;
   } else {
     const prop = id.preview_supported_surfaces;
     let num;
@@ -148,8 +159,8 @@ export default function startConjureScopeMigration(id, arg1) {
     if (num == null) {
       num = 0;
     }
-    tmp5 = num > 0;
-    if (!tmp5) {
+    tmp6 = num > 0;
+    if (!tmp6) {
       const supported_surfaces = id.supported_surfaces;
       let num3;
       if (supported_surfaces != null) {
@@ -158,19 +169,49 @@ export default function startConjureScopeMigration(id, arg1) {
       if (num3 == null) {
         num3 = 0;
       }
-      tmp5 = num3 > 0;
+      tmp6 = num3 > 0;
     }
   }
   const intl = util.intl;
-  !(function sendMigrationMessage() {
-    const self = this;
-    const apply = closure_1_8.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+  const string = intl.string;
+  if (tmp6) {
+    const stringResult = string(obj[arg1]);
+    const trim = "".trim;
+    const trimmed = "".trim();
+    let combined = stringResult;
+    if ("" !== trimmed) {
+      const _HermesInternal = HermesInternal;
+      combined = "" + stringResult + "\n\n" + trimmed;
     }
-    return applyArgumentsResult;
-  })(id.id, intl.string(tmp5 ? obj : obj2[arg1]));
-  const tmp6 = tmp5 ? obj : obj2;
+    let stringResult1 = combined;
+  } else {
+    stringResult1 = string(obj2[arg1]);
+  }
+  sendConjureScopeMigrationMessage(id.id, stringResult1);
 }
+export function conjureScopeMigrationMessage(added) {
+  let str = trimmed;
+  if (trimmed === undefined) {
+    str = "";
+  }
+  const intl = util.intl;
+  const stringResult = intl.string(obj[added]);
+  trimmed = str.trim();
+  let combined = stringResult;
+  if ("" !== trimmed) {
+    const _HermesInternal = HermesInternal;
+    combined = "" + stringResult + "\n\n" + trimmed;
+  }
+  return combined;
+}
+export function conjureScopeMigrationRequestMaxLength() {
+  const values = Object.values(obj);
+  items = [
+    ...values.map((item) => {
+      const intl = util.intl;
+      return intl.string(item).length;
+    }),
+  ];
+  return conjureUserMessageLimit.CONJURE_USER_MESSAGE_MAX_LENGTH - Math.max.apply(items) - 2;
+}
+export { sendConjureScopeMigrationMessage };

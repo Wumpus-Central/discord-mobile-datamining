@@ -42,7 +42,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let size = Math.round(66.3);
 let obj = { fontId: fn(1397).DisplayNameFont.DEFAULT, effectId: fn(1398).DisplayNameEffect.SOLID, colors: [] };
-let PRIMARY_SEMIBOLD = fn(8713).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT];
+let PRIMARY_SEMIBOLD = fn(8714).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT];
 if (PRIMARY_SEMIBOLD == null) {
   PRIMARY_SEMIBOLD = fn(1082).Fonts.PRIMARY_SEMIBOLD;
 }
@@ -137,7 +137,7 @@ export default function HexagonCampaignSheet() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -166,7 +166,7 @@ export default function HexagonCampaignSheet() {
                   isThemeSynced,
                   analyticsLocations,
                 };
-                const result = stateFromStores(16609).applyHexagonCampaignPerks(obj7);
+                const result = stateFromStores(16616).applyHexagonCampaignPerks(obj7);
                 HexagonCampaignPersistedStore.current = result;
                 c3 = 2;
                 c4 = 1;
@@ -208,9 +208,9 @@ export default function HexagonCampaignSheet() {
         obj12.perks = values.filter((item) => closure_1_5[item]);
         obj12.content = stateFromStores(6874).QuestContent.AD_PERK_MODAL;
         obj12.sourceQuestContent = stateFromStores(6874).QuestContent.QUEST_HOME_MOBILE;
-        const result1 = stateFromStores(16060).trackHexagonCampaignPerkAction(obj12);
-        const obj4 = stateFromStores(16060);
-        tmp3(5257).hideActionSheet(stateFromStores(16607).HEXAGON_CAMPAIGN_SHEET_KEY);
+        const result1 = stateFromStores(16067).trackHexagonCampaignPerkAction(obj12);
+        const obj4 = stateFromStores(16067);
+        tmp3(5257).hideActionSheet(stateFromStores(16614).HEXAGON_CAMPAIGN_SHEET_KEY);
         const _Object2 = Object;
         const values2 = Object.values(closure_129_5);
         const _Boolean = Boolean;

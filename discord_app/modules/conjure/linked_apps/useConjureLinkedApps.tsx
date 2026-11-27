@@ -84,7 +84,7 @@ export default function useConjureLinkedApps(projectId, arg1) {
         } else {
           c2 = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       }
       return value;

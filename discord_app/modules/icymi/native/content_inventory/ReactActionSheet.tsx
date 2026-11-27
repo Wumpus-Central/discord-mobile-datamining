@@ -88,7 +88,7 @@ function ReactActionSheetBase(content) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -103,8 +103,8 @@ function ReactActionSheetBase(content) {
                 return obj3;
               } else {
                 closure_5(true);
-                v1(8923).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-                const obj5 = v1(8923);
+                v1(8924).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+                const obj5 = v1(8924);
                 const obj4 = {
                   itemId: tmp4.id,
                   itemType: hotwheels_gaming_activity,
@@ -115,7 +115,7 @@ function ReactActionSheetBase(content) {
                     actionDestinationType: null,
                   },
                 };
-                v1(8923).feedItemActioned(obj4);
+                v1(8924).feedItemActioned(obj4);
                 v1 = 1;
                 dependencyMap = 1;
                 const obj7 = { value: sendMessage(first1), done: false };
@@ -132,7 +132,7 @@ function ReactActionSheetBase(content) {
               closure_128_5(false);
               closure_128_8("");
               dependencyMap = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp10) {
             dependencyMap = tmp;
@@ -157,7 +157,7 @@ function ReactActionSheetBase(content) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -200,7 +200,7 @@ function ReactActionSheetBase(content) {
             } else {
               closure_1_5(false);
               c3 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp9) {
             c3 = tmp;

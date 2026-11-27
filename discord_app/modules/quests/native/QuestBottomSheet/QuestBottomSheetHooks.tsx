@@ -100,7 +100,7 @@ export function useMobileActivityPressHandler(questId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -129,10 +129,10 @@ export function useMobileActivityPressHandler(questId) {
             return obj5;
           } else {
             const obj7 = {
-              type: tmp4(9861).AdUserActionType.CLICK_INTERNAL,
+              type: tmp4(9862).AdUserActionType.CLICK_INTERNAL,
               adCreativeType: tmp4(6878).AdCreativeType.QUEST,
               adCreativeId: closure_128_0,
-              questContentCTA: tmp4(8392).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+              questContentCTA: tmp4(8393).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
               surfaceId: tmp4(6874).QuestContent.QUEST_BOTTOM_SHEET,
               sourceQuestContent: closure_128_1,
               impressionId: null,
@@ -148,9 +148,9 @@ export function useMobileActivityPressHandler(questId) {
               questContentPosition = closure_128_4.getQuestContentPosition();
             }
             obj7.questContentPosition = questContentPosition;
-            tmp4(9857).captureAdUserAction(obj7);
+            tmp4(9858).captureAdUserAction(obj7);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           dependencyMap = tmp;

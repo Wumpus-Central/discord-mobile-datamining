@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import MemberVerificationTypes from "../../guild_member_verification/MemberVerificationTypes.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef13236 from "../../../../_runtime/metro/13236__.js";
-import _modDef18089 from "../../../../_runtime/metro/18089__.js";
-import _modDef18090 from "../../../../_runtime/metro/18090__.js";
-import _modDef18091 from "../../../../_runtime/metro/18091__.js";
+import _modDef13244 from "../../../../_runtime/metro/13244__.js";
+import _modDef18096 from "../../../../_runtime/metro/18096__.js";
+import _modDef18097 from "../../../../_runtime/metro/18097__.js";
+import _modDef18098 from "../../../../_runtime/metro/18098__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -37,15 +37,15 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = closure_5();
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = _modDef18089;
+    let tmp4 = _modDef18096;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = _modDef18090;
+    tmp4 = _modDef18097;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = _modDef18091;
+    tmp4 = _modDef18098;
   } else {
     tmp4 = null;
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef13236;
+      tmp4 = _modDef13244;
     }
   }
   let tmp9 = null;

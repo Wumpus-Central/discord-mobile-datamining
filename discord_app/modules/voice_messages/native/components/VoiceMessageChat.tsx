@@ -204,8 +204,8 @@ function Duration(animationValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12958).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(12959);
+const useVoiceMessagesUIStore = fn(12966).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(12967);
 ({
   VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8,
   VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9,

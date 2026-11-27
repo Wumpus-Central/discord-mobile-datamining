@@ -10,7 +10,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const nativeDefault = tmp4(575);
 const _modDef1654 = tmp4(1654);
-const CheckpointCharacterCompositeDefault = tmp4(12636);
+const CheckpointCharacterCompositeDefault = tmp4(12644);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
 let obj = { preview: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, layer: null };

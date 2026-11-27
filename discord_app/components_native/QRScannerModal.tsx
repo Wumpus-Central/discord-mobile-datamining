@@ -24,7 +24,7 @@ function DCDQRScanner(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, requireNativeComponent } = get_ActivityIndicator);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-let closure_7 = fn(8213).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_7 = fn(8214).FAMILY_CENTER_LINK_REQUEST_REGEX;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PlatformUtils = fn(1379);
@@ -110,7 +110,7 @@ export default function QRScannerModal(showHelp) {
             ModalActionCreatorsDefault.pop();
             const tmp21Result = ModalActionCreatorsDefault;
             obj2 = { remoteAuthFingerprint: result };
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15267, dependencyMap.paths), obj2);
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15274, dependencyMap.paths), obj2);
             const tmp21Result4 = ModalActionCreatorsDefault;
           } else {
             let match;

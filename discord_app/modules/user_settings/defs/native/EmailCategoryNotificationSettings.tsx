@@ -49,7 +49,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
     obj4.onValueChange = function onValueChange(arg0) {
       return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
     };
-    obj.communication = COMMUNICATION(11962).createToggle(obj4);
+    obj.communication = COMMUNICATION(11970).createToggle(obj4);
     const SOCIAL = EmailCategories.SOCIAL;
     closure_129_0 = SOCIAL;
     const found1 = closure_6.find((category) => category.category === COMMUNICATION);
@@ -78,7 +78,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
       obj6.onValueChange = function onValueChange(arg0) {
         return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
       };
-      obj.social = tmp6(11962).createToggle(obj6);
+      obj.social = tmp6(11970).createToggle(obj6);
       const UPDATES_AND_ANNOUNCEMENTS = EmailCategories.UPDATES_AND_ANNOUNCEMENTS;
       closure_130_0 = UPDATES_AND_ANNOUNCEMENTS;
       const found2 = closure_6.find((category) => category.category === COMMUNICATION);
@@ -109,7 +109,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
         obj8.onValueChange = function onValueChange(arg0) {
           return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
         };
-        obj.updatesAndAnnouncements = tmp6(11962).createToggle(obj8);
+        obj.updatesAndAnnouncements = tmp6(11970).createToggle(obj8);
         const TIPS = EmailCategories.TIPS;
         closure_131_0 = TIPS;
         const found3 = closure_6.find((category) => category.category === COMMUNICATION);
@@ -138,7 +138,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
           obj10.onValueChange = function onValueChange(arg0) {
             return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
           };
-          obj.tips = tmp6(11962).createToggle(obj10);
+          obj.tips = tmp6(11970).createToggle(obj10);
           const RECOMMENDATIONS_AND_EVENTS = EmailCategories.RECOMMENDATIONS_AND_EVENTS;
           closure_132_0 = RECOMMENDATIONS_AND_EVENTS;
           const found4 = closure_6.find((category) => category.category === COMMUNICATION);
@@ -169,9 +169,9 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
             obj12.onValueChange = function onValueChange(arg0) {
               return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
             };
-            obj.recommendationsAndEvents = tmp6(11962).createToggle(obj12);
+            obj.recommendationsAndEvents = tmp6(11970).createToggle(obj12);
             closure_133_0 = EMAIL_NOTIFICATIONS;
-            const tmp6Result7 = tmp6(11962);
+            const tmp6Result7 = tmp6(11970);
             const obj13 = {
               useTitle() {
                 const intl = util.intl;
@@ -185,22 +185,22 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
               parent: EMAIL_NOTIFICATIONS,
               variant: "danger",
               useIsDisabled: useMarketingEmailsDisabled,
-              onPress: tmp6(17111).updateMarketingEmailSettings,
+              onPress: tmp6(17118).updateMarketingEmailSettings,
             };
-            obj.unsubscribeFromAllMarketing = tmp6(11962).createPressable(obj13);
+            obj.unsubscribeFromAllMarketing = tmp6(11970).createPressable(obj13);
             return obj;
           }
-          const tmp6Result6 = tmp6(11962);
+          const tmp6Result6 = tmp6(11970);
         }
-        const tmp6Result5 = tmp6(11962);
+        const tmp6Result5 = tmp6(11970);
       }
-      const tmp6Result = tmp6(11962);
+      const tmp6Result = tmp6(11970);
     }
-    const obj2 = COMMUNICATION(11962);
+    const obj2 = COMMUNICATION(11970);
   }
 }
-const MobileUserSettings = fn(9555).MobileUserSettings;
-const EmailSettingsConstants = fn(17112);
+const MobileUserSettings = fn(9556).MobileUserSettings;
+const EmailSettingsConstants = fn(17119);
 const EmailCategories = EmailSettingsConstants.EmailCategories;
 ({ EmailCategoriesList: closure_6, MarketingEmailCategories: metroImportDefault } = EmailSettingsConstants);
 const dependencyMap = {

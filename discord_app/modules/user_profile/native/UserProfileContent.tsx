@@ -72,7 +72,7 @@ function CustomStatusBubble(guildId) {
   let tmp7 = null;
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(9804, dependencyMap.paths),
+      asyncRequireImpl(9805, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -155,7 +155,7 @@ function RemoveGameFriendIconButton(user) {
   items = [channelId, guildId, user];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14966, dependencyMap.paths),
+      asyncRequireImpl(14973, dependencyMap.paths),
       "UserProfileGameFriendActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -327,13 +327,13 @@ function EditSection(initialTab) {
   const guildId = initialTab.guildId;
   let trackUserProfileAction;
   const tmp = trackUserProfileAction;
-  const tmp3 = trackUserProfileAction(9487)();
+  const tmp3 = trackUserProfileAction(9488)();
   trackUserProfileAction = guildId(6381).useUserProfileAnalyticsContext().trackUserProfileAction;
   const obj = guildId(6381);
   items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(9436)({ initialTab: initialTab.initialEditingTab });
-  closure_3 = trackUserProfileAction(9436)({ guild: stateFromStores });
+  dependencyMap = trackUserProfileAction(9437)({ initialTab: initialTab.initialEditingTab });
+  closure_3 = trackUserProfileAction(9437)({ guild: stateFromStores });
   const obj3 = {
     style: tmp3.primaryButtons,
     maxWidth: ACTION_SHEET_MAX_WIDTH,
@@ -342,8 +342,8 @@ function EditSection(initialTab) {
   };
   const obj2 = guildId(504);
   const obj4 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-  const tmp7 = trackUserProfileAction(14888);
-  obj4.icon = closure_19(guildId(9624).PencilIcon, { size: "sm", color: trackUserProfileAction(575).colors.WHITE });
+  const tmp7 = trackUserProfileAction(14895);
+  obj4.icon = closure_19(guildId(9625).PencilIcon, { size: "sm", color: trackUserProfileAction(575).colors.WHITE });
   if (null != stateFromStores) {
     const intl2 = tmp4(1112).intl;
     let stringResult = intl2.string(tmp4(1112).t.HmFaFB);
@@ -363,7 +363,7 @@ function EditSection(initialTab) {
   if (null != stateFromStores) {
     const obj6 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj7 = { size: "sm", color: tmp(575).colors.WHITE };
-    obj6.icon = closure_19(tmp4(9624).PencilIcon, obj7);
+    obj6.icon = closure_19(tmp4(9625).PencilIcon, obj7);
     const intl3 = tmp4(1112).intl;
     obj6.text = intl3.string(tmp4(1112).t["PKQB/H"]);
     obj6.onPress = function handleEditGuildProfile() {

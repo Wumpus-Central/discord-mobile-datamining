@@ -94,8 +94,8 @@ export default function SummaryActionSheet(summary) {
         guild_id1 = channel.guild_id;
       }
       const obj2 = { guildId: guild_id1 };
-      tmpResult.openLazy(asyncRequireImpl(12167, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-      const tmp7 = asyncRequireImpl(12167, dependencyMap.paths);
+      tmpResult.openLazy(asyncRequireImpl(12175, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+      const tmp7 = asyncRequireImpl(12175, dependencyMap.paths);
     }
   }, items);
   const items2 = [summary, channel, message];
@@ -221,7 +221,7 @@ export function openSummaryDividerActionSheet(channelId, summaryId) {
     const _HermesInternal = HermesInternal;
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { summary: findSummaryResult };
-    obj.openLazy(asyncRequireImpl(12198, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
-    const tmp5 = asyncRequireImpl(12198, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(12206, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
+    const tmp5 = asyncRequireImpl(12206, dependencyMap.paths);
   }
 }

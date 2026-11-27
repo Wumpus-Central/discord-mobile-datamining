@@ -7,7 +7,7 @@ const Constants = fn(1071);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let closure_5 = createSocketGateDefault({ cooldownMs: 1000 });
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15873);
+const CONTEXT_MENU_ICON_NAMES = fn(15880);
 obj[RPCCommands.OPEN_GAME_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_GAME_PROFILE, {
   scope: fn(5797).RPC_EMBEDDED_APP_SCOPE,
   handler(arg0) {
@@ -24,7 +24,7 @@ obj[RPCCommands.OPEN_GAME_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -52,14 +52,14 @@ obj[RPCCommands.OPEN_GAME_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
                     asyncGeneratorStep(async () => {
                       const gameId = tmp2;
                       closure_0 = tmp5;
-                      await v1(15893)({ gameId, applicationId });
+                      await v1(15900)({ gameId, applicationId });
                       closure_128_0 = value;
                       if (null != closure_128_0) {
                         if (!obj10.isGameDisabled(closure_128_0)) {
                           let appContextForIframeId = null;
                           if (null != obj.tryValidateEmbeddedAppFrame(closure_0)) {
-                            appContextForIframeId = iframeId(15894).getAppContextForIframeId(closure_129_0);
-                            iframeId(15894);
+                            appContextForIframeId = iframeId(15901).getAppContextForIframeId(closure_129_0);
+                            iframeId(15901);
                           }
                           closure_128_1 = appContextForIframeId;
                           if (null != closure_128_1) {
@@ -70,15 +70,15 @@ obj[RPCCommands.OPEN_GAME_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
                               appContext: null,
                             };
                             obj9.gameProfileModalChecks = { shouldOpenGameProfile: true, gameId: closure_128_0.id };
-                            obj9.source = iframeId(8754).GameProfileSources.Frame;
+                            obj9.source = iframeId(8755).GameProfileSources.Frame;
                             obj9.appContext = closure_128_1;
-                            v1(8749).openGameProfileModal(obj9);
-                            v1(8749);
+                            v1(8750).openGameProfileModal(obj9);
+                            v1(8750);
                           }
                           c3 = 3;
-                          obj = iframeId(15866);
+                          obj = iframeId(15873);
                         }
-                        obj10 = iframeId(8746);
+                        obj10 = iframeId(8747);
                       }
                       return { opened: false };
                     }),

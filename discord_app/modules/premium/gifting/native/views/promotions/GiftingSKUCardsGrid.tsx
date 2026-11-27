@@ -17,7 +17,7 @@ require = fn;
 function GiftingSKUCardItemPreview(arg0) {
   ({ item, isSelected } = arg0);
   const tmp = closure_18();
-  const currentUser = isSelected(9415).useCurrentUser();
+  const currentUser = isSelected(9416).useCurrentUser();
   items = [isSelected, currentUser];
   const memo = noop.useMemo(() => {
     let avatarSource;
@@ -28,19 +28,19 @@ function GiftingSKUCardItemPreview(arg0) {
   }, items);
   if (isNameplateRecord(item)) {
     const obj2 = { item, animate: isSelected };
-    let tmp8 = closure_10(currentUser(11171), obj2);
+    let tmp8 = closure_10(currentUser(11172), obj2);
   } else if (isAvatarDecorationRecord(item)) {
     const obj3 = { item, size, animate: isSelected, avatarSource: memo };
-    tmp8 = closure_10(currentUser(9417), obj3);
+    tmp8 = closure_10(currentUser(9418), obj3);
   } else if (isProfileEffectRecord(item)) {
     const obj4 = { style: tmp.profileEffect, children: null };
     const obj5 = { source: null, style: null, resizeMode: "cover" };
-    const obj6 = { uri: currentUser(11170) };
+    const obj6 = { uri: currentUser(11171) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
     const items1 = [closure_10(currentUser(5730), obj5)];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
-    items1[1] = closure_10(currentUser(9470), obj7);
+    items1[1] = closure_10(currentUser(9471), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
     const tmp19 = currentUser(5730);
@@ -54,9 +54,9 @@ function GiftingSKUCardItemPreview(arg0) {
         previewHeight,
         profileBackgroundColor: currentUser(575).colors.BACKGROUND_BASE_LOW,
       };
-      obj8.children = closure_10(currentUser(11169), obj9);
+      obj8.children = closure_10(currentUser(11170), obj9);
       tmp8 = closure_10(closure_4, obj8);
-      const tmp12 = currentUser(11169);
+      const tmp12 = currentUser(11170);
     }
   }
   return tmp8;
@@ -202,7 +202,7 @@ const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
 obj.profileEffect = rect;
-obj.sampleProfile = { aspectRatio: fn(9467).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9468).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.profileFrame = { position: "absolute", top: 0, left: 0, right: 0, height: sum, alignItems: "center" };
 const rect1 = {
   position: "absolute",

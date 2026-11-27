@@ -21,7 +21,7 @@ function CredentialList(navigation) {
   [c2, c3] = noop.useState(false);
   if (0 === credentials.length) {
     let obj2 = { style: tmp3.upsellContainer, children: null };
-    const items1 = [closure_9(tmp(16281).PasskeysSpotIllustration, { scale: 0.6 })];
+    const items1 = [closure_9(tmp(16288).PasskeysSpotIllustration, { scale: 0.6 })];
     let obj3 = { variant: "body-md/normal", style: tmp3.upsellText, children: null };
     let intl2 = tmp(1112).intl;
     obj3.children = intl2.string(tmp(1112).t.FSNwFW);
@@ -62,7 +62,7 @@ function CredentialList(navigation) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -124,7 +124,7 @@ function CredentialList(navigation) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -162,7 +162,7 @@ function CredentialList(navigation) {
                         c3 = 0;
                         setDeleting(false);
                         c4 = 3;
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } catch (tmp24) {
                       closure_2 = tmp24;

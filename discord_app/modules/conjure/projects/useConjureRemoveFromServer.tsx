@@ -78,7 +78,7 @@ export default function useConjureRemoveFromServer(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -108,7 +108,7 @@ export default function useConjureRemoveFromServer(arg0) {
               obj4.alsoRemovePreviewBot = alsoRemovePreviewBot;
               c3 = 2;
               c4 = 1;
-              const obj5 = { value: closure_0(11471).unpublishProject(projectId, obj4), done: false };
+              const obj5 = { value: closure_0(11481).unpublishProject(projectId, obj4), done: false };
               return obj5;
             }
           } else {

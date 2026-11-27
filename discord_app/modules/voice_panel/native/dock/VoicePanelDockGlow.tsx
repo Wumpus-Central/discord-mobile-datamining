@@ -19,7 +19,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
-const getDockInset = fn(11805).getDockInset;
+const getDockInset = fn(11813).getDockInset;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let items = [
