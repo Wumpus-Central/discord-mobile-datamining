@@ -1,6 +1,6 @@
-// === Module 12243: SlideoutButton ===
+// === Module 12251: SlideoutButton ===
 
-// Module 12243 (SlideoutButton)
+// Module 12251 (SlideoutButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import Pressables from "Pressables" /* 6152 */;

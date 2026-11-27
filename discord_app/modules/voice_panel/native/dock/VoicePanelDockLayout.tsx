@@ -1,7 +1,7 @@
-// === Module 11804: VoicePanelDockLayout ===
+// === Module 11812: VoicePanelDockLayout ===
 
-// Module 11804 (VoicePanelDockLayout)
-import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11807 */;
+// Module 11812 (VoicePanelDockLayout)
+import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11815 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 import VoicePanelStore from "VoicePanelStore" /* 6965 */;
@@ -9,7 +9,7 @@ import VoicePanelStore from "VoicePanelStore" /* 6965 */;
 const require = globalThis.__r;
 
 const require = fn;
-const getVoicePanelDockHeight = fn(11805).getVoicePanelDockHeight;
+const getVoicePanelDockHeight = fn(11813).getVoicePanelDockHeight;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockLayout.tsx");
 

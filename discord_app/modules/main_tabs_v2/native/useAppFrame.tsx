@@ -1,6 +1,6 @@
-// === Module 17721: useAppFrame ===
+// === Module 17728: useAppFrame ===
 
-// Module 17721 (useAppFrame)
+// Module 17728 (useAppFrame)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;

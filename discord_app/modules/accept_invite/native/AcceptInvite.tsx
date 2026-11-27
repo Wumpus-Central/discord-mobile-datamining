@@ -1,6 +1,6 @@
-// === Module 13751: AcceptInvite ===
+// === Module 13758: AcceptInvite ===
 
-// Module 13751 (AcceptInvite)
+// Module 13758 (AcceptInvite)
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
@@ -9,10 +9,10 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import useToken from "useToken" /* 5607 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import useEaseInEaseOutLayoutAnimationsDefault from "useEaseInEaseOutLayoutAnimations" /* 13752 */;
-import InviteDetailsDefault from "InviteDetails" /* 13753 */;
-import InviteErrorDefault from "InviteError" /* 13756 */;
-import _modDef13761 from "module_13761" /* 13761 */;
+import useEaseInEaseOutLayoutAnimationsDefault from "useEaseInEaseOutLayoutAnimations" /* 13759 */;
+import InviteDetailsDefault from "InviteDetails" /* 13760 */;
+import InviteErrorDefault from "InviteError" /* 13763 */;
+import _modDef13768 from "module_13768" /* 13768 */;
 import noop from "module_19" /* 19 */;
 
 const module_1654 = _mod1654;
@@ -135,7 +135,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef13761;
+    let guildSplashSource = _modDef13768;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

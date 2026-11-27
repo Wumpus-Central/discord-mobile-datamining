@@ -1,11 +1,11 @@
-// === Module 12317: build_overrides/BuildOverrideUtils ===
+// === Module 12325: build_overrides/BuildOverrideUtils ===
 
-// Module 12317 (build_overrides/BuildOverrideUtils)
+// Module 12325 (build_overrides/BuildOverrideUtils)
 import BuildOverrideUtils from "BuildOverrideUtils" /* 1376 */;
-import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 12318 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 12319 */;
+import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 12326 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 12327 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11914 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11922 */;
 
 require = fn;
 function setBuildOverrideForBranch(id) {
@@ -32,7 +32,7 @@ let closure_8 = async function _setBuildOverride(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_10 = async function _clearBuildOverride() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -165,7 +165,7 @@ let closure_11 = async function _toggleOverride(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -207,7 +207,7 @@ let closure_11 = async function _toggleOverride(arg0) {
               if (null != id1) {
                 setBuildOverrideForBranch(id1);
                 c4 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             }
             obj10 = BuildOverrideUtils;
@@ -252,7 +252,7 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

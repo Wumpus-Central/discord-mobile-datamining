@@ -1,6 +1,6 @@
-// === Module 11941: GiftModalEmojis ===
+// === Module 11949: GiftModalEmojis ===
 
-// Module 11941 (GiftModalEmojis)
+// Module 11949 (GiftModalEmojis)
 import EmojiDefault from "Emoji" /* 7488 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

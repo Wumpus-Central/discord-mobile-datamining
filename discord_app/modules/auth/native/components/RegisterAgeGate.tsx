@@ -1,9 +1,9 @@
-// === Module 17693: RegisterAgeGate ===
+// === Module 17700: RegisterAgeGate ===
 
-// Module 17693 (RegisterAgeGate)
+// Module 17700 (RegisterAgeGate)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17655 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17662 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConsentStore from "ConsentStore" /* 6841 */;
@@ -13,9 +13,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(17656);
+const RegistrationUIStore = fn(17663);
 ({ updateRegistrationOptions: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(17657);
+const RegistrationConstants = fn(17664);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: closure_10 } = RegistrationConstants);
 const AuthStates = fn(1071).AuthStates;
 const jsxProd = fn(21);

@@ -1,11 +1,11 @@
-// === Module 9998: _launchFrame ===
+// === Module 9999: _launchFrame ===
 
-// Module 9998 (_launchFrame)
+// Module 9999 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import getChannelIdForEmbeddedSurface from "getChannelIdForEmbeddedSurface" /* 6939 */;
 import createProxyTicket from "createProxyTicket" /* 7688 */;
 import leaveFrame from "leaveFrame" /* 7691 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9999 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10000 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import FramesStore from "FramesStore" /* 6936 */;
@@ -27,7 +27,7 @@ let closure_13 = async function _launchFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -281,7 +281,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

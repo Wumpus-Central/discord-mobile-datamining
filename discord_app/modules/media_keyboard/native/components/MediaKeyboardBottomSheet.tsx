@@ -1,6 +1,6 @@
-// === Module 18630: MediaKeyboardBottomSheet ===
+// === Module 18641: MediaKeyboardBottomSheet ===
 
-// Module 18630 (MediaKeyboardBottomSheet)
+// Module 18641 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -12,7 +12,7 @@ import HapticUtils from "HapticUtils" /* 5259 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5260 */;
 import BottomSheetModalDefault from "BottomSheetModal" /* 5275 */;
 import useMountEffectDefault from "useMountEffect" /* 5604 */;
-import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 13042 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 13050 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

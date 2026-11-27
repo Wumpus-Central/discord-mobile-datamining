@@ -1,6 +1,6 @@
-// === Module 11371: ActivityStatusText ===
+// === Module 11372: ActivityStatusText ===
 
-// Module 11371 (ActivityStatusText)
+// Module 11372 (ActivityStatusText)
 import Text_Text from "Text/Text" /* 5634 */;
 import noop from "module_19" /* 19 */;
 

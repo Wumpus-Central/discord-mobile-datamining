@@ -1,10 +1,10 @@
-// === Module 19863: SelectedChannelManager ===
+// === Module 19879: SelectedChannelManager ===
 
-// Module 19863 (SelectedChannelManager)
+// Module 19879 (SelectedChannelManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1098 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6797 */;
-import transitionToGuild from "transitionToGuild" /* 8600 */;
+import transitionToGuild from "transitionToGuild" /* 8601 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;

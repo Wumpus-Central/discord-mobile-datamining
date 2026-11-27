@@ -1,6 +1,6 @@
-// === Module 20086: GuildSettingsModalInstantInvites ===
+// === Module 20144: GuildSettingsModalInstantInvites ===
 
-// Module 20086 (GuildSettingsModalInstantInvites)
+// Module 20144 (GuildSettingsModalInstantInvites)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -10,17 +10,17 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257
 import Text_Text from "Text/Text" /* 5634 */;
 import TableRowIcon from "TableRowIcon" /* 6155 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7181 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 10596 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 10598 */;
-import InstantInvite from "InstantInvite" /* 11425 */;
-import _modDef14811 from "module_14811" /* 14811 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 10597 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 10599 */;
+import InstantInvite from "InstantInvite" /* 11426 */;
+import _modDef14817 from "module_14817" /* 14817 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10595 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10596 */;
 import InviteRecord from "InviteRecord" /* 7821 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8575 */;
 
 require = fn;
 function InviteSeparator() {
@@ -149,7 +149,7 @@ function GuildSettingsModalInstantInvites(invites) {
       try {
         const obj = { source: GuildAntiRaidTypes.GuildIncidentActionSources.MESSAGE, alertType: GuildAntiRaidUtils.getIncidentAlertType(stateFromStores) };
         const obj4 = { guild, analyticsData: obj };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12481, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12489, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
         closure_7(false);
       } catch (tmp17) {
         tmp2(false);

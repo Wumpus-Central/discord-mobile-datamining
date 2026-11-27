@@ -1,11 +1,11 @@
-// === Module 19492: VoicePanelUserSheet ===
+// === Module 19508: VoicePanelUserSheet ===
 
-// Module 19492 (VoicePanelUserSheet)
+// Module 19508 (VoicePanelUserSheet)
 import nativeDefault from "native" /* 575 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
-import UserProfileActivity from "UserProfileActivity" /* 14890 */;
-import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19491 */;
+import UserProfileActivity from "UserProfileActivity" /* 14897 */;
+import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19507 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
@@ -152,7 +152,7 @@ export default function VoicePanelUserSheet(userId) {
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const obj4 = channelId(504);
   const name = channelId(6807).useName(guildId, channelId, stateFromStores);
-  const live = userId(14941)(userId).live;
+  const live = userId(14948)(userId).live;
   closure_5 = tmp8;
   const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
   const effect = stateFromStores.useEffect(() => {
@@ -165,8 +165,8 @@ export default function VoicePanelUserSheet(userId) {
       if (null != stateFromStores2) {
         const avatarURL = stateFromStores.getAvatarURL(guildId, 48, false);
         if (null != avatarURL) {
-          const cachedSourceFromURI = channelId(11173).getCachedSourceFromURI(avatarURL);
-          const tmp2Result = channelId(11173);
+          const cachedSourceFromURI = channelId(11174).getCachedSourceFromURI(avatarURL);
+          const tmp2Result = channelId(11174);
         }
         const avatarDecoration = stateFromStores.avatarDecoration;
         const obj2 = { style: tmp.wrapper, children: null };
@@ -201,7 +201,7 @@ export default function VoicePanelUserSheet(userId) {
 
         ];
         const obj12 = { user: stateFromStores, channel: stateFromStores1, currentUser: stateFromStores2, style: tmp.card };
-        items6[2] = closure_10(tmp7(14944), obj12);
+        items6[2] = closure_10(tmp7(14951), obj12);
         obj2.children = items6;
         obj9.children = closure_11(stateFromStores2, obj2);
         return closure_10(channelId(5271).BottomSheet, obj9);

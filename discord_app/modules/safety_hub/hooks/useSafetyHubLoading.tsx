@@ -1,6 +1,6 @@
-// === Module 16246: useSafetyHubLoading ===
+// === Module 16253: useSafetyHubLoading ===
 
-// Module 16246 (useSafetyHubLoading)
+// Module 16253 (useSafetyHubLoading)
 import initialize from "initialize" /* 504 */;
 import SafetyHubStore from "SafetyHubStore" /* 7912 */;
 

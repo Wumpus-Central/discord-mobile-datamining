@@ -71,7 +71,7 @@ let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -99,7 +99,7 @@ let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp10) {
       c2 = tmp;
@@ -147,7 +147,7 @@ let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -181,7 +181,7 @@ let closure_24 = async function _markVersionedDismissibleContentAsDismissed(arg0
       } else {
         closure_132_20(closure_131_0, closure_131_1);
         c6 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp20) {
       c6 = tmp;
@@ -205,7 +205,7 @@ let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -242,7 +242,7 @@ let closure_25 = async function _markSnowflakeBoundDismissibleContentAsDismissed
         } else {
           closure_132_20(closure_131_0, closure_131_1);
           c6 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp23) {
         c6 = tmp;
@@ -262,7 +262,7 @@ let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -296,7 +296,7 @@ let closure_26 = async function _markTimeRecurringDismissibleContentAsDismissed(
       } else {
         closure_131_20(closure_130_0, closure_130_1);
         c5 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp19) {
       c5 = tmp;
@@ -567,7 +567,7 @@ export function isTimeRecurringDismissibleContentDismissed(id, cooldownConfig) {
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "r" };
+      return { isDismissed: false, lastDismissedAtMs: "Array" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

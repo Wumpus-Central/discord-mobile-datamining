@@ -1,8 +1,8 @@
-// === Module 17639: RedesignSettingsReactionsChoiceScreen ===
+// === Module 17646: RedesignSettingsReactionsChoiceScreen ===
 
-// Module 17639 (RedesignSettingsReactionsChoiceScreen)
+// Module 17646 (RedesignSettingsReactionsChoiceScreen)
 import _modDef3207 from "module_3207" /* 3207 */;
-import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 17632 */;
+import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 17639 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -21,8 +21,8 @@ export default noop.memo(function RedesignSettingsReactionsChoiceScreen() {
   }, items);
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
-    const obj = stackNavigation(11962);
-    items = [stackNavigation(17626).buildReactionsChoiceSettingsSection()];
+    const obj = stackNavigation(11970);
+    items = [stackNavigation(17633).buildReactionsChoiceSettingsSection()];
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);

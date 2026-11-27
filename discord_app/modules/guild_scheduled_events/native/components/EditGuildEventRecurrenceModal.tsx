@@ -1,17 +1,17 @@
-// === Module 8475: EditGuildEventRecurrenceModal ===
+// === Module 8476: EditGuildEventRecurrenceModal ===
 
-// Module 8475 (EditGuildEventRecurrenceModal)
+// Module 8476 (EditGuildEventRecurrenceModal)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2019 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import useEventExceptionDefault from "useEventException" /* 8470 */;
-import LazyAPIPromiseDefault from "LazyAPIPromise" /* 8476 */;
-import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 8477 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8479 */;
-import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8484 */;
-import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 8485 */;
-import GuildEventScheduleDefault from "GuildEventSchedule" /* 8487 */;
+import useEventExceptionDefault from "useEventException" /* 8471 */;
+import LazyAPIPromiseDefault from "LazyAPIPromise" /* 8477 */;
+import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 8478 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8480 */;
+import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8485 */;
+import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 8486 */;
+import GuildEventScheduleDefault from "GuildEventSchedule" /* 8488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -48,7 +48,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,10 +106,10 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(8466).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(8466);
-  const scheduleForRecurrenceWithException = guildEvent(8466).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
-  let obj2 = guildEvent(8466);
+  const baseScheduleForRecurrence = guildEvent(8467).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(8467);
+  const scheduleForRecurrenceWithException = guildEvent(8467).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
+  let obj2 = guildEvent(8467);
   [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
   [first, closure_8] = noop.useState(null);
   const tmp9 = _slicedToArray(LazyAPIPromiseDefault(() => {

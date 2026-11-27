@@ -1,6 +1,6 @@
-// === Module 17957: MentionsBadge ===
+// === Module 17964: MentionsBadge ===
 
-// Module 17957 (MentionsBadge)
+// Module 17964 (MentionsBadge)
 import native from "native" /* 1186 */;
 import noop from "module_19" /* 19 */;
 

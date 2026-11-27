@@ -1,6 +1,6 @@
-// === Module 14658: UserProfileApplicationWidgetHeroImage ===
+// === Module 14665: UserProfileApplicationWidgetHeroImage ===
 
-// Module 14658 (UserProfileApplicationWidgetHeroImage)
+// Module 14665 (UserProfileApplicationWidgetHeroImage)
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import _modDef7231 from "module_7231" /* 7231 */;

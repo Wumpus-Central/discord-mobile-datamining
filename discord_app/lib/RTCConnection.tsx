@@ -52,7 +52,7 @@ import ThermalUtilsDefault from "ThermalUtils" /* 6041 */;
 import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 6043 */;
 import DaveMessageValidator from "DaveMessageValidator" /* 6045 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;
-import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 15087 */;
+import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 15094 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeviceFrecencyStore from "DeviceFrecencyStore" /* 5858 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5860 */;
@@ -1741,7 +1741,7 @@ prototype["_trackSpatialAudioSessionEnded"] = function _trackSpatialAudioSession
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2289,7 +2289,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2325,7 +2325,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
             const obj = tmp2(dependencyMap[59]);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         dependencyMap = tmp;

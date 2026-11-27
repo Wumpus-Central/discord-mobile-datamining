@@ -1,11 +1,11 @@
-// === Module 12028: ChannelsAndRolesModal ===
+// === Module 12036: ChannelsAndRolesModal ===
 
-// Module 12028 (ChannelsAndRolesModal)
+// Module 12036 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11417 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 12029 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11418 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 12037 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;

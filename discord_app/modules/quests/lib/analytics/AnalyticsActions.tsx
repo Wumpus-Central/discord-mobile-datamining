@@ -1,20 +1,20 @@
-// === Module 8382: AnalyticsActions ===
+// === Module 8383: AnalyticsActions ===
 
-// Module 8382 (AnalyticsActions)
+// Module 8383 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
 import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 6795 */;
 import QuestTypes from "QuestTypes" /* 6874 */;
 import AdCreativeType from "AdCreativeType" /* 6878 */;
-import QuestDataUtils from "QuestDataUtils" /* 8361 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 8385 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 8387 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8389 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
+import QuestDataUtils from "QuestDataUtils" /* 8362 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 8386 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 8388 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8390 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8393 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8383 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8384 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1361 */;
-import QuestStore from "QuestStore" /* 8374 */;
+import QuestStore from "QuestStore" /* 8375 */;
 
 require = fn;
 function getCommonProperties(adContentId, sourceQuestContent, QUEST, shouldExtendSession) {
@@ -180,7 +180,7 @@ let closure_13 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

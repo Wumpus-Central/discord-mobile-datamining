@@ -1,6 +1,6 @@
-// === Module 19502: VoicePanelAnimatedActivityCard ===
+// === Module 19518: VoicePanelAnimatedActivityCard ===
 
-// Module 19502 (VoicePanelAnimatedActivityCard)
+// Module 19518 (VoicePanelAnimatedActivityCard)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensions from "useWindowDimensions" /* 1495 */;
 import _mod1707 from "module_1707" /* 1707 */;
@@ -8,15 +8,15 @@ import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLoc
 import native from "native" /* 5104 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 10013 */;
-import fetchShelf from "fetchShelf" /* 10039 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10192 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18447 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 10014 */;
+import fetchShelf from "fetchShelf" /* 10040 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10193 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10022 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10023 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
 require = fn;
@@ -413,27 +413,27 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj6.activityName = name;
       obj6.isActivityFocused = first1;
       const obj7 = { channel: stateFromStores, layoutMode: tmp75 };
-      obj6.children = closure_14(tmp4(10200), obj7, tmp3[0]);
-      const items27 = [closure_14(tmp4(19504), obj6), ];
+      obj6.children = closure_14(tmp4(10201), obj7, tmp3[0]);
+      const items27 = [closure_14(tmp4(19520), obj6), ];
       let tmp79Result = null;
       if (stateFromStores2) {
-        tmp79Result = closure_14(tmp4(19505), {});
+        tmp79Result = closure_14(tmp4(19521), {});
       }
       items27[1] = tmp79Result;
       obj5.children = items27;
       obj4.children = closure_15(tmp4(1654).View, obj5);
       let tmp79Result2 = closure_14(tmp8(5303).GestureDetector, obj4);
       let tmp76 = closure_14;
-      const tmp4Result2 = tmp4(19504);
+      const tmp4Result2 = tmp4(19520);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: stateFromStores1, application: first };
-      tmp79Result2 = closure_14(tmp4(19506), obj8);
+      tmp79Result2 = closure_14(tmp4(19522), obj8);
       tmp76 = closure_14;
     } else {
       tmp76 = closure_14;
       const obj10 = { gesture: memo1, children: null };
       const obj11 = { context: memo, guildId: stateFromStores.guild_id, activityItem: activityShelfItemData, locationObject: analyticsContext.location, itemDimensions: tmp2Result2[0], disableBadges: true };
-      obj10.children = closure_14(tmp4(19510), obj11);
+      obj10.children = closure_14(tmp4(19526), obj11);
       tmp79Result2 = closure_14(tmp8(5303).GestureDetector, obj10);
     }
     const obj12 = { value: tmp4Result(tmp4(6380).ACTIVITY_TILE).analyticsLocations, children: tmp79Result2 };
@@ -441,12 +441,12 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   }
   const tmp8Result18 = require("initialize");
 }
-const VoicePanelConstants = fn(11782);
+const VoicePanelConstants = fn(11790);
 ({ IS_IOS: closure_8, VoicePanelModes: closure_9 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11788).VoicePanelControlsModes;
 const ThemeTypes = fn(1071).ThemeTypes;
 let closure_12 = fn(2145).ACTIVITY_LOCKED_ASPECT_RATIO;
-const ActivityLayoutMode = fn(10191).ActivityLayoutMode;
+const ActivityLayoutMode = fn(10192).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(5043);

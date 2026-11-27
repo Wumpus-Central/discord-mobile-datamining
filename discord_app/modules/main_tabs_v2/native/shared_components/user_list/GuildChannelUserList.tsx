@@ -1,6 +1,6 @@
-// === Module 12084: GuildChannelUserList ===
+// === Module 12092: GuildChannelUserList ===
 
-// Module 12084 (GuildChannelUserList)
+// Module 12092 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1112 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
@@ -8,7 +8,7 @@ import UserUtilsDefault from "UserUtils" /* 5099 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6807 */;
 import GuildUtilsDefault from "GuildUtils" /* 6990 */;
-import sortByMatchScore from "sortByMatchScore" /* 8947 */;
+import sortByMatchScore from "sortByMatchScore" /* 8948 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelMemberStore_mod from "ChannelMemberStore" /* 7653 */;

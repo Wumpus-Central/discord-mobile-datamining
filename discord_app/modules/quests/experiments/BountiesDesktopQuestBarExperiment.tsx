@@ -1,6 +1,6 @@
-// === Module 9899: BountiesDesktopQuestBarExperiment ===
+// === Module 9900: BountiesDesktopQuestBarExperiment ===
 
-// Module 9899 (BountiesDesktopQuestBarExperiment)
+// Module 9900 (BountiesDesktopQuestBarExperiment)
 import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 

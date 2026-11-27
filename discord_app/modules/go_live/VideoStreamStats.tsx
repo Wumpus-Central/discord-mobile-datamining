@@ -1,6 +1,6 @@
-// === Module 8407: VideoStreamStats ===
+// === Module 8408: VideoStreamStats ===
 
-// Module 8407 (VideoStreamStats)
+// Module 8408 (VideoStreamStats)
 import TimeUtils from "TimeUtils" /* 5827 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6029 */;
 

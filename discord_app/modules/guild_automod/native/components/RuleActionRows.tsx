@@ -1,13 +1,13 @@
-// === Module 19952: RuleActionRows ===
+// === Module 19968: RuleActionRows ===
 
-// Module 19952 (RuleActionRows)
+// Module 19968 (RuleActionRows)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import TableRow from "TableRow" /* 6144 */;
 import FormCheckbox from "FormCheckbox" /* 7182 */;
-import getActionInfo from "getActionInfo" /* 19932 */;
+import getActionInfo from "getActionInfo" /* 19948 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
@@ -55,7 +55,7 @@ function RuleActionRow(onPress) {
   }
 }
 let closure_4 = fn(4973).GUILD_SELECTABLE_CHANNELS_KEY;
-const AutomodActionType = fn(12522).AutomodActionType;
+const AutomodActionType = fn(12530).AutomodActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);
@@ -67,7 +67,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function RuleActionRows(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
-  const availableActionTypes = rule(19926).getAvailableActionTypes(rule.triggerType);
+  const availableActionTypes = rule(19942).getAvailableActionTypes(rule.triggerType);
   let tmp3 = null;
   if (0 !== availableActionTypes.length) {
     let obj2 = { title: null, hasIcons: true, children: null };

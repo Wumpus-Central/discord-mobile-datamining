@@ -1,15 +1,15 @@
-// === Module 18490: ConjureAppIdentity ===
+// === Module 18497: ConjureAppIdentity ===
 
-// Module 18490 (ConjureAppIdentity)
+// Module 18497 (ConjureAppIdentity)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import Card from "Card" /* 6145 */;
-import ImagePickerDefault from "ImagePicker" /* 8137 */;
-import UploadIcon from "UploadIcon" /* 9702 */;
-import MagicWandIcon from "MagicWandIcon" /* 11485 */;
-import ImagePlusIcon from "ImagePlusIcon" /* 18492 */;
+import ImagePickerDefault from "ImagePicker" /* 8138 */;
+import UploadIcon from "UploadIcon" /* 9703 */;
+import MagicWandIcon from "MagicWandIcon" /* 11495 */;
+import ImagePlusIcon from "ImagePlusIcon" /* 18499 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -26,7 +26,7 @@ let closure_12 = async function _pickConjureAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ class ConjureAppIconTile {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -206,7 +206,7 @@ class ConjureAppIconTile {
           } else if (1 === tmp7) {
             c2 = 0;
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;

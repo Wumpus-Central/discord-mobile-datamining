@@ -1,19 +1,19 @@
-// === Module 19084: NewGroupDMScreen ===
+// === Module 19100: NewGroupDMScreen ===
 
-// Module 19084 (NewGroupDMScreen)
+// Module 19100 (NewGroupDMScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import ToastUtils from "ToastUtils" /* 5724 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
-import HeaderShared from "HeaderShared" /* 9004 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 12103 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19083 */;
+import HeaderShared from "HeaderShared" /* 9005 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 12111 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19099 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15245 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15252 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 import UserStore from "UserStore" /* 1387 */;
 
@@ -55,7 +55,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -127,7 +127,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -189,14 +189,14 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(12298)(closure_128_3);
+                            v3(12306)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }
                           closure_128_3 = value;
                           v3 = 3;
                           dependencyMap = 1;
-                          const obj10 = { value: id(8449).monkeyPatchCall(), done: false };
+                          const obj10 = { value: id(8450).monkeyPatchCall(), done: false };
                           return obj10;
                         }
                       } catch (tmp26) {
@@ -278,7 +278,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const UserRowModes = fn(8944).UserRowModes;
+const UserRowModes = fn(8945).UserRowModes;
 const Constants = fn(1071);
 ({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = Constants);
 const jsxProd = fn(21);
@@ -385,7 +385,7 @@ export default function NewGroupDMScreen(navigation) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -740,7 +740,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

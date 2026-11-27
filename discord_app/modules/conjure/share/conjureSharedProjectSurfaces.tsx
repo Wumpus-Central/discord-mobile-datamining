@@ -1,6 +1,6 @@
-// === Module 11996: conjureSharedProjectSurfaces ===
+// === Module 12004: conjureSharedProjectSurfaces ===
 
-// Module 11996 (conjureSharedProjectSurfaces)
+// Module 12004 (conjureSharedProjectSurfaces)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;

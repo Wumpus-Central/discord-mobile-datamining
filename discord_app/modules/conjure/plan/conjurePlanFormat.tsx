@@ -1,12 +1,13 @@
-// === Module 18782: conjurePlanFormat ===
+// === Module 18799: conjurePlanFormat ===
 
-// Module 18782 (conjurePlanFormat)
+// Module 18799 (conjurePlanFormat)
 import Constants from "Constants" /* 1071 */;
 import Server from "Server" /* 2118 */;
+import getGuildPermissionNameDefault from "getGuildPermissionName" /* 18800 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;
-let closure_3 = { READ_MESSAGES: "VIEW_CHANNEL", VIEW_GUILD_INSIGHTS: "VIEW_GUILD_ANALYTICS" };
+let closure_4 = { READ_MESSAGES: "VIEW_CHANNEL", VIEW_GUILD_INSIGHTS: "VIEW_GUILD_ANALYTICS" };
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanFormat.tsx");
 
 export function formatConjurePlanRequirementLabel(str) {
@@ -22,36 +23,26 @@ export function formatConjurePlanRequirementLabel(str) {
 }
 export function conjurePlanPermissionLabel(str, guildPermissionSpecMap) {
   let tmp2 = str;
-  if (Object.hasOwn(closure_3, str)) {
-    tmp2 = closure_3[str];
+  if (Object.hasOwn(closure_4, str)) {
+    tmp2 = closure_4[str];
   }
   let tmp4 = null;
   if (Object.hasOwn(Permissions, tmp2)) {
     tmp4 = Permissions[tmp2];
   }
-  let tmp5 = null;
   if (null != tmp4) {
-    let title;
-    if (guildPermissionSpecMap != null) {
-      const tmp8 = guildPermissionSpecMap[tmp4.toString(tmp4)];
-      if (tmp8 != null) {
-        title = tmp8.title;
-      }
-    }
-    tmp5 = title;
-  }
-  if (tmp5 == null) {
+    let sum = getGuildPermissionNameDefault(tmp4, guildPermissionSpecMap);
+  } else {
     const parts = str.split("_");
     const formatted = parts.join(" ").toLowerCase();
-    let sum = formatted;
+    sum = formatted;
     if (0 !== formatted.length) {
       const formatted1 = formatted[0].toUpperCase();
       sum = formatted1 + formatted.slice(1);
     }
-    tmp5 = sum;
     const str3 = parts.join(" ");
   }
-  return tmp5;
+  return sum;
 }
 export function conjurePlanCommandPrefix(type) {
   let str = "\u21EA /";

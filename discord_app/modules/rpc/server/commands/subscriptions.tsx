@@ -1,6 +1,6 @@
-// === Module 15921: subscriptions ===
+// === Module 15928: subscriptions ===
 
-// Module 15921 (subscriptions)
+// Module 15928 (subscriptions)
 import applyDefault from "apply" /* 12 */;
 import RPCErrorDefault from "RPCError" /* 7644 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -39,7 +39,7 @@ export default {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

@@ -1,12 +1,12 @@
-// === Module 16069: BackIconWithBadge ===
+// === Module 16076: BackIconWithBadge ===
 
-// Module 16069 (BackIconWithBadge)
+// Module 16076 (BackIconWithBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7195 */;
 import XSmallIcon from "XSmallIcon" /* 7247 */;
-import ClipView from "ClipView" /* 9420 */;
-import XLargeIcon from "XLargeIcon" /* 10761 */;
+import ClipView from "ClipView" /* 9421 */;
+import XLargeIcon from "XLargeIcon" /* 10762 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6976 */;
 

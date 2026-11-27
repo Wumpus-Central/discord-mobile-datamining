@@ -1,10 +1,10 @@
-// === Module 11559: conjureDefaultAppIcon ===
+// === Module 11567: conjureDefaultAppIcon ===
 
-// Module 11559 (conjureDefaultAppIcon)
+// Module 11567 (conjureDefaultAppIcon)
 import _modDef671 from "module_671" /* 671 */;
 import ColorUtils from "ColorUtils" /* 5040 */;
-import GuildProfileConstants from "GuildProfileConstants" /* 8726 */;
-import rawDefault from "raw" /* 9814 */;
+import GuildProfileConstants from "GuildProfileConstants" /* 8727 */;
+import rawDefault from "raw" /* 9815 */;
 import size from "module_2" /* 2 */;
 
 const BANNER_PALETTE_PRESETS = GuildProfileConstants.BANNER_PALETTE_PRESETS;

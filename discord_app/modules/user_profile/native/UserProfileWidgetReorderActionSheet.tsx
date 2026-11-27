@@ -1,14 +1,14 @@
-// === Module 16171: UserProfileWidgetReorderActionSheet ===
+// === Module 16178: UserProfileWidgetReorderActionSheet ===
 
-// Module 16171 (UserProfileWidgetReorderActionSheet)
+// Module 16178 (UserProfileWidgetReorderActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7515 */;
-import WidgetUtils from "WidgetUtils" /* 14570 */;
-import useGameCoverLayoutDefault from "useGameCoverLayout" /* 14575 */;
-import UserProfileWidgetDraggableCardDefault from "UserProfileWidgetDraggableCard" /* 14582 */;
-import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 14585 */;
-import UserProfileReorderActionSheetDefault from "UserProfileReorderActionSheet" /* 14596 */;
-import UserProfileApplicationWidgetIconDefault from "UserProfileApplicationWidgetIcon" /* 14673 */;
+import WidgetUtils from "WidgetUtils" /* 14577 */;
+import useGameCoverLayoutDefault from "useGameCoverLayout" /* 14582 */;
+import UserProfileWidgetDraggableCardDefault from "UserProfileWidgetDraggableCard" /* 14589 */;
+import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 14592 */;
+import UserProfileReorderActionSheetDefault from "UserProfileReorderActionSheet" /* 14603 */;
+import UserProfileApplicationWidgetIconDefault from "UserProfileApplicationWidgetIcon" /* 14680 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -102,9 +102,9 @@ export default function UserProfileWidgetReorderActionSheet(returnFocusRef) {
   items = [AuthenticationStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => id.getId());
   const obj = stateFromStores(504);
-  const boardWidgets = stateFromStores(14677).useBoardWidgets(stateFromStores);
+  const boardWidgets = stateFromStores(14684).useBoardWidgets(stateFromStores);
   const obj3 = { dismissAccessibilityLabel: null, returnFocusRef: null, children: null };
-  const obj2 = stateFromStores(14677);
+  const obj2 = stateFromStores(14684);
   const intl = stateFromStores(1112).intl;
   obj3.dismissAccessibilityLabel = intl.string(stateFromStores(1112).t["+uBSeT"]);
   obj3.returnFocusRef = returnFocusRef.returnFocusRef;

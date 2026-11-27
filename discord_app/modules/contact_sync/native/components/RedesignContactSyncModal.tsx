@@ -1,6 +1,6 @@
-// === Module 13679: RedesignContactSyncModal ===
+// === Module 13686: RedesignContactSyncModal ===
 
-// Module 13679 (RedesignContactSyncModal)
+// Module 13686 (RedesignContactSyncModal)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import util from "util" /* 1112 */;
@@ -11,9 +11,9 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13670 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13674 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13680 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13677 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13681 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13687 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -87,7 +87,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -117,7 +117,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               obj5.phone = tmp15;
               dependencyMap = 2;
               c3 = 1;
-              const obj7 = { value: tmp2(13678).updateDiscoverability(obj5), done: false };
+              const obj7 = { value: tmp2(13685).updateDiscoverability(obj5), done: false };
               return obj7;
             }
           } else if (1 === tmp5) {
@@ -132,7 +132,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => closure_1_1(false), 2000);
               c3 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -144,7 +144,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           }
           dependencyMap = 1;
           c3 = 1;
-          const obj9 = { value: tmp2(13670).startContactSync(closure_129_3), done: false };
+          const obj9 = { value: tmp2(13677).startContactSync(closure_129_3), done: false };
           return obj9;
         } catch (tmp2) {
           c3 = tmp;
@@ -172,7 +172,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
     if (openSettingsSheet) {
       const obj2 = { type: "Contact Sync", location: { page: "Contact Sync" } };
       AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj2);
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13681, dependencyMap.paths), "Contact Sync Info Settings");
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13688, dependencyMap.paths), "Contact Sync Info Settings");
     }
   }, items4);
   const items5 = [onNext, onComplete];
@@ -187,7 +187,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -218,8 +218,8 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             closure_128_8();
           } else {
             const obj7 = { onComplete: closure_128_2, skip: true };
-            const result = tmp4(13670).closeContactSyncModal(obj7);
-            const obj = tmp4(13670);
+            const result = tmp4(13677).closeContactSyncModal(obj7);
+            const obj = tmp4(13677);
           }
           dependencyMap = 3;
         }
@@ -277,7 +277,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   const tmp5 = closure_10();
   const name = tmp5.name;
   ({ isNameFromContactBook, error } = tmp5);
-  loading(13690)(navigation, navigateToLandingPage.navigateToLandingPage);
+  loading(13697)(navigation, navigateToLandingPage.navigateToLandingPage);
   _require = onNext(function*(arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -289,7 +289,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -308,7 +308,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
             React6(options);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: options(13670).startContactSync(options), done: false };
+            const obj5 = { value: options(13677).startContactSync(options), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -322,7 +322,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => dependencyMap(false), 2000);
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;
@@ -371,7 +371,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
     tmp12 = isNameFromContactBook;
   }
   obj3.prefilledFromContactBook = tmp12;
-  obj2.children = closure_16(loading(13692), obj3);
+  obj2.children = closure_16(loading(13699), obj3);
   return closure_16(View, obj2);
 }
 function ContactSyncSuggestionScreen(onComplete) {
@@ -557,9 +557,9 @@ class ContactSyncModal {
   }
 }
 const View = fn(17).View;
-const ContactSyncModalStore = fn(13671);
+const ContactSyncModalStore = fn(13678);
 ({ setName: closure_9, useContactSyncModalStore: closure_10, useIsOnboarding: closure_11 } = ContactSyncModalStore);
-const ContactSyncConstants = fn(13672);
+const ContactSyncConstants = fn(13679);
 ({ ContactPermissions: closure_12, ContactSyncScenes: map1 } = ContactSyncConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const NativePermissionTypes = fn(7872).NativePermissionTypes;

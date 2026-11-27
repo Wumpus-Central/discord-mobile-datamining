@@ -1,12 +1,12 @@
-// === Module 19770: MessageCodedLinkManager ===
+// === Module 19786: MessageCodedLinkManager ===
 
-// Module 19770 (MessageCodedLinkManager)
+// Module 19786 (MessageCodedLinkManager)
 import findCodedLinksDefault from "findCodedLinks" /* 5761 */;
-import resolveUserProfileCodedLinkDefault from "resolveUserProfileCodedLink" /* 19778 */;
-import resolveStorefrontCodedLinkDefault from "resolveStorefrontCodedLink" /* 19781 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19782 */;
+import resolveUserProfileCodedLinkDefault from "resolveUserProfileCodedLink" /* 19794 */;
+import resolveStorefrontCodedLinkDefault from "resolveStorefrontCodedLink" /* 19797 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19798 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 8246 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 8247 */;
 import InviteStore from "InviteStore" /* 5762 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
@@ -38,7 +38,7 @@ function resolveMessageCodedLinks(content) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -66,7 +66,7 @@ function resolveMessageCodedLinks(content) {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             } catch (tmp10) {
               c0 = tmp;
               throw tmp10;
@@ -86,7 +86,7 @@ function resolveMessageCodedLinks(content) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -114,7 +114,7 @@ function resolveMessageCodedLinks(content) {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             } catch (tmp10) {
               c0 = tmp;
               throw tmp10;
@@ -155,7 +155,7 @@ function resolveMessageCodedLinks(content) {
                                                     const obj2 = { value, done: true };
                                                     return obj2;
                                                   } else {
-                                                    return { value: "HermesInternal", done: "+95" };
+                                                    return { value: "HermesInternal", done: null };
                                                   }
                                                 } else {
                                                   try {
@@ -169,7 +169,7 @@ function resolveMessageCodedLinks(content) {
                                                         const obj3 = { value, done: true };
                                                         return obj3;
                                                       } else {
-                                                        const useGameOrganizationInviteFetch = tmp4(19780).useGameOrganizationInviteFetch;
+                                                        const useGameOrganizationInviteFetch = tmp4(19796).useGameOrganizationInviteFetch;
                                                         items = [code];
                                                         v1 = 1;
                                                         dependencyMap = 1;
@@ -184,9 +184,9 @@ function resolveMessageCodedLinks(content) {
                                                       const obj = { value, done: true };
                                                       return obj;
                                                     } else {
-                                                      v1(12368)(closure_128_0).catch(closure_1_6);
+                                                      v1(12376)(closure_128_0).catch(closure_1_6);
                                                       dependencyMap = 3;
-                                                      return { value: "HermesInternal", done: "+95" };
+                                                      return { value: "HermesInternal", done: null };
                                                     }
                                                   } catch (tmp14) {
                                                     dependencyMap = tmp;
@@ -256,7 +256,7 @@ function resolveMessageCodedLinks(content) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -284,7 +284,7 @@ function resolveMessageCodedLinks(content) {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp10) {
                   c0 = tmp;
                   throw tmp10;
@@ -304,7 +304,7 @@ function resolveMessageCodedLinks(content) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -332,7 +332,7 @@ function resolveMessageCodedLinks(content) {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp10) {
                   c0 = tmp;
                   throw tmp10;
@@ -373,7 +373,7 @@ function resolveMessageCodedLinks(content) {
                                                         const obj2 = { value, done: true };
                                                         return obj2;
                                                       } else {
-                                                        return { value: "HermesInternal", done: "+95" };
+                                                        return { value: "HermesInternal", done: null };
                                                       }
                                                     } else {
                                                       try {
@@ -387,7 +387,7 @@ function resolveMessageCodedLinks(content) {
                                                             const obj3 = { value, done: true };
                                                             return obj3;
                                                           } else {
-                                                            const useGameOrganizationInviteFetch = tmp4(19780).useGameOrganizationInviteFetch;
+                                                            const useGameOrganizationInviteFetch = tmp4(19796).useGameOrganizationInviteFetch;
                                                             items = [code];
                                                             v1 = 1;
                                                             dependencyMap = 1;
@@ -402,9 +402,9 @@ function resolveMessageCodedLinks(content) {
                                                           const obj = { value, done: true };
                                                           return obj;
                                                         } else {
-                                                          v1(12368)(closure_128_0).catch(closure_1_6);
+                                                          v1(12376)(closure_128_0).catch(closure_1_6);
                                                           dependencyMap = 3;
-                                                          return { value: "HermesInternal", done: "+95" };
+                                                          return { value: "HermesInternal", done: null };
                                                         }
                                                       } catch (tmp14) {
                                                         dependencyMap = tmp;

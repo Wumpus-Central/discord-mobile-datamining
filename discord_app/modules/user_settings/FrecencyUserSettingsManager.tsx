@@ -1,13 +1,13 @@
-// === Module 19731: FrecencyUserSettingsManager ===
+// === Module 19747: FrecencyUserSettingsManager ===
 
-// Module 19731 (FrecencyUserSettingsManager)
+// Module 19747 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1088 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4873 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 10049 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 10048 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 10050 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 10049 */;
 import EmojiStore from "EmojiStore" /* 6883 */;
 import SoundboardStore from "SoundboardStore" /* 6923 */;
 import StickersPersistedStore from "StickersPersistedStore" /* 6926 */;
@@ -71,7 +71,7 @@ let closure_23 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_23 = async function _saveProtos(arg0) {
           closure_1 = tmp3;
           if (!closure_2_17) {
             c5 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else {
             resetTimer(colors, false);
             if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
@@ -110,7 +110,7 @@ let closure_23 = async function _saveProtos(arg0) {
       } else if (1 === tmp7) {
         c3 = 0;
         c5 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;

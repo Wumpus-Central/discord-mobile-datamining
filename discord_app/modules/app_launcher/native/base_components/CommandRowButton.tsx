@@ -1,6 +1,6 @@
-// === Module 13067: CommandRowButton ===
+// === Module 13075: CommandRowButton ===
 
-// Module 13067 (CommandRowButton)
+// Module 13075 (CommandRowButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
@@ -58,7 +58,7 @@ export function useCommandRowSend(command) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -108,7 +108,7 @@ export function useCommandRowSend(command) {
           c3 = 0;
           closure_128_5(false);
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {

@@ -1,9 +1,9 @@
-// === Module 16599: BountiesBannerBackground ===
+// === Module 16606: BountiesBannerBackground ===
 
-// Module 16599 (BountiesBannerBackground)
+// Module 16606 (BountiesBannerBackground)
 import initialize from "initialize" /* 504 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
-import common_Video from "common/Video" /* 8880 */;
+import common_Video from "common/Video" /* 8881 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 

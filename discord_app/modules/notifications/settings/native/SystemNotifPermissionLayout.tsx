@@ -1,16 +1,16 @@
-// === Module 17627: SystemNotifPermissionLayout ===
+// === Module 17634: SystemNotifPermissionLayout ===
 
-// Module 17627 (SystemNotifPermissionLayout)
+// Module 17634 (SystemNotifPermissionLayout)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef3207 from "module_3207" /* 3207 */;
-import openNotificationSettingsDefault from "openNotificationSettings" /* 10281 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13383 */;
+import openNotificationSettingsDefault from "openNotificationSettings" /* 10282 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13391 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13381 */;
-import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17628 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13389 */;
+import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17635 */;
 
 require = fn;
 function SystemNotifPermissionHeader() {
@@ -128,7 +128,7 @@ function SystemNotifPermissionHeader() {
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
 let closure_10 = fn(7872).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13382);
+const NotificationPermissionConstants = fn(13390);
 ({ EventActionLocation: closure_11, EventActionType: closure_12, NotificationNudgeAnalyticsAction: map1, NotificationNudgeSurface: closure_14 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -171,15 +171,15 @@ export default function SystemNotifPermissionLayout(node) {
         closure_128_0 = value;
         if (closure_129_0) {
           if (null != closure_128_0) {
-            const result = node(13384).updateNotificationAuthorizationStatus(closure_128_0);
-            node(13384);
+            const result = node(13392).updateNotificationAuthorizationStatus(closure_128_0);
+            node(13392);
           }
           v2(true);
           c2 = 0;
         } else {
           c2 = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       }
       return value;

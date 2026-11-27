@@ -1,15 +1,15 @@
-// === Module 8828: InteractionUtils ===
+// === Module 8829: InteractionUtils ===
 
-// Module 8828 (InteractionUtils)
+// Module 8829 (InteractionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Server from "Server" /* 2118 */;
 import InteractionTypes from "InteractionTypes" /* 6400 */;
-import InteractionActionCreators from "InteractionActionCreators" /* 8829 */;
-import SkemaUtils from "SkemaUtils" /* 8830 */;
+import InteractionActionCreators from "InteractionActionCreators" /* 8830 */;
+import SkemaUtils from "SkemaUtils" /* 8831 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import InteractionStore from "InteractionStore" /* 8243 */;
+import InteractionStore from "InteractionStore" /* 8244 */;
 
 require = fn;
 let closure_10 = async function _executeMessageComponentInteraction(arg0) {
@@ -34,7 +34,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   } else if (2 === tmp7) {
     c3 = 0;
     c5 = 3;
-    return { value: "HermesInternal", done: "+95" };
+    return { value: "HermesInternal", done: null };
   } else if (3 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;

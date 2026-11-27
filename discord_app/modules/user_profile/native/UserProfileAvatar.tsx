@@ -1,9 +1,9 @@
-// === Module 9520: UserProfileAvatar ===
+// === Module 9521: UserProfileAvatar ===
 
-// Module 9520 (UserProfileAvatar)
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9487 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 9521 */;
-import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 9524 */;
+// Module 9521 (UserProfileAvatar)
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9488 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 9522 */;
+import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 9525 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

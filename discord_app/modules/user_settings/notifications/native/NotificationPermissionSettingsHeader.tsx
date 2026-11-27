@@ -1,6 +1,6 @@
-// === Module 17099: NotificationPermissionSettingsHeader ===
+// === Module 17106: NotificationPermissionSettingsHeader ===
 
-// Module 17099 (NotificationPermissionSettingsHeader)
+// Module 17106 (NotificationPermissionSettingsHeader)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: hasOwnProperty, NOOP: closure_6 } = Constants);
-const NotificationPermissionConstants = fn(13382);
+const NotificationPermissionConstants = fn(13390);
 ({ EventActionLocation: metroImportDefault, EventActionType: closure_8, NotificationNudgeAnalyticsAction: closure_9, NotificationNudgeSurface: closure_10 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/user_settings/notifications/n
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = closure_13();
-  canSeePushNotificationNudge = canSeePushNotificationNudge(13383).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(13391).useCanSeePushNotificationNudge();
   items = [canSeePushNotificationNudge];
   const effect = noop.useEffect(() => {
     if (canSeePushNotificationNudge) {
@@ -40,7 +40,7 @@ export default function NotificationPermissionSettingsHeader() {
     const obj4 = { style: tmp.cardContent, children: null };
     const obj5 = { style: tmp.iconCircle, children: null };
     const obj6 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-    obj5.children = closure_11(tmp2(11497).BellSlashIcon, obj6);
+    obj5.children = closure_11(tmp2(11505).BellSlashIcon, obj6);
     const items1 = [closure_11(View, obj5), , , ];
     const obj7 = { variant: "heading-lg/semibold", color: "text-default", children: null };
     const intl = tmp2(1112).intl;

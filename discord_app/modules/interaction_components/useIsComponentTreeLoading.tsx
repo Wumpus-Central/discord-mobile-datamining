@@ -1,6 +1,6 @@
-// === Module 12413: useIsComponentTreeLoading ===
+// === Module 12421: useIsComponentTreeLoading ===
 
-// Module 12413 (useIsComponentTreeLoading)
+// Module 12421 (useIsComponentTreeLoading)
 import InteractionComponentUtils from "InteractionComponentUtils" /* 6395 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 6405 */;
 import usePreviousDefault from "usePrevious" /* 6831 */;
@@ -28,7 +28,7 @@ export function useIsComponentTreeLoading(memo, callback) {
       const obj2 = { loading: true, component: tmp };
       let obj = obj2;
     } else {
-      obj = { loading: false, component: "r" };
+      obj = { loading: false, component: "Array" };
     }
     return obj;
   }, items1);

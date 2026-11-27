@@ -1,21 +1,21 @@
-// === Module 16793: QuestDockInsetHeaderBody ===
+// === Module 16800: QuestDockInsetHeaderBody ===
 
-// Module 16793 (QuestDockInsetHeaderBody)
+// Module 16800 (QuestDockInsetHeaderBody)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
-import QuestRewardTileDefault from "QuestRewardTile" /* 13835 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 13836 */;
-import QuestDockHooks from "QuestDockHooks" /* 16677 */;
-import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 16752 */;
-import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 16755 */;
+import QuestRewardTileDefault from "QuestRewardTile" /* 13842 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 13843 */;
+import QuestDockHooks from "QuestDockHooks" /* 16684 */;
+import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 16759 */;
+import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 16762 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(16680);
+const QuestDockConstants = fn(16687);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);

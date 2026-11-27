@@ -1,6 +1,6 @@
-// === Module 12039: OptInChannelsUtils ===
+// === Module 12047: OptInChannelsUtils ===
 
-// Module 12039 (OptInChannelsUtils)
+// Module 12047 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1098 */;
 import util from "util" /* 1112 */;
@@ -8,8 +8,8 @@ import _modDef2169 from "module_2169" /* 2169 */;
 import useChannelName from "useChannelName" /* 5659 */;
 import fuzzysearchDefault from "fuzzysearch" /* 6988 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7467 */;
-import ChannelListState from "ChannelListState" /* 8286 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 12040 */;
+import ChannelListState from "ChannelListState" /* 8287 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 12048 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7468 */;
@@ -27,7 +27,7 @@ const Constants = fn(1071);
 ({ Routes: closure_9, ChannelTypes: closure_10 } = Constants);
 const ChannelConstants = fn(4899);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(8292).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(8293).ChannelListGuildActionRow;
 const ReadStateTypes = fn(6168).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");

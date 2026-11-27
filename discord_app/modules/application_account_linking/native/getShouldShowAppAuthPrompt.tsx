@@ -1,6 +1,6 @@
-// === Module 12289: getShouldShowAppAuthPrompt ===
+// === Module 12297: getShouldShowAppAuthPrompt ===
 
-// Module 12289 (getShouldShowAppAuthPrompt)
+// Module 12297 (getShouldShowAppAuthPrompt)
 import useAuthorizationApp from "useAuthorizationApp" /* 7514 */;
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7517 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6389 */;

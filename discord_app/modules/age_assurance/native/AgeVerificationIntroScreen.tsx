@@ -1,6 +1,6 @@
-// === Module 12547: AgeVerificationIntroScreen ===
+// === Module 12555: AgeVerificationIntroScreen ===
 
-// Module 12547 (AgeVerificationIntroScreen)
+// Module 12555 (AgeVerificationIntroScreen)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6828 */;
@@ -52,7 +52,7 @@ export default function GetStartedScreen(onComplete) {
   const items1 = [closure_8(closure_5, obj5), , ];
   const obj10 = { hasIcons: true, children: null };
   const obj9 = modalSessionId(6825);
-  const ageVerificationGetStartedSteps = modalSessionId(12548).getAgeVerificationGetStartedSteps(modalSessionId);
+  const ageVerificationGetStartedSteps = modalSessionId(12556).getAgeVerificationGetStartedSteps(modalSessionId);
   obj10.children = ageVerificationGetStartedSteps.map((children, index) => {
     const description = children.description;
     const obj = { index: index + 1, tip: closure_1_7(modalSessionId(5634).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }), description: null };
@@ -62,7 +62,7 @@ export default function GetStartedScreen(onComplete) {
       tmpResult = closure_1_7(modalSessionId(5634).Text, obj2);
     }
     obj.description = tmpResult;
-    return closure_1_7(initiateAgeVerification(11837), obj, index);
+    return closure_1_7(initiateAgeVerification(11845), obj, index);
   });
   items1[1] = closure_7(modalSessionId(6140).TableRowGroup, obj10);
   const obj12 = { style: tmp.ageGroupLearnMoreContainer, children: null };
@@ -98,7 +98,7 @@ export default function GetStartedScreen(onComplete) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -127,7 +127,7 @@ export default function GetStartedScreen(onComplete) {
           return obj;
         } else {
           v3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         v3 = tmp;
@@ -135,7 +135,7 @@ export default function GetStartedScreen(onComplete) {
       }
     }
   });
-  const obj11 = modalSessionId(12548);
+  const obj11 = modalSessionId(12556);
   const obj14 = {
     handleOnHelpUrlHook() {
       const obj = AgeVerificationActionCreatorsDefault;
@@ -143,7 +143,7 @@ export default function GetStartedScreen(onComplete) {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.LEARN_MORE);
     }
   };
-  obj17.icon = closure_7(modalSessionId(12476).LinkExternalSmallIcon, { color: initiateAgeVerification(575).colors.WHITE });
+  obj17.icon = closure_7(modalSessionId(12484).LinkExternalSmallIcon, { color: initiateAgeVerification(575).colors.WHITE });
   obj17.loading = initiateAgeVerification.loading;
   obj16.children = closure_7(modalSessionId(5641).Button, obj17);
   obj15.children = closure_7(closure_5, obj16);

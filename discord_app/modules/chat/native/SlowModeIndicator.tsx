@@ -1,11 +1,11 @@
-// === Module 12981: SlowModeIndicator ===
+// === Module 12989: SlowModeIndicator ===
 
-// Module 12981 (SlowModeIndicator)
+// Module 12989 (SlowModeIndicator)
 import nativeDefault from "native" /* 575 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 8351 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 8352 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SlowmodeStore from "SlowmodeStore" /* 8350 */;
+import SlowmodeStore from "SlowmodeStore" /* 8351 */;
 
 require = fn;
 const jsxProd = fn(21);

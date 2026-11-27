@@ -1,11 +1,11 @@
-// === Module 11896: PinotMemberNoticeBar ===
+// === Module 11904: PinotMemberNoticeBar ===
 
-// Module 11896 (PinotMemberNoticeBar)
+// Module 11904 (PinotMemberNoticeBar)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import LinkingDefault from "Linking" /* 5722 */;
-import PinotAnalytics from "PinotAnalytics" /* 11891 */;
+import PinotAnalytics from "PinotAnalytics" /* 11899 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
 const createStyles = fn(5043);
 let obj2 = { underlay: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, bar: null, text: null, link: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-obj2.bar = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: fn(11897).PINOT_MEMBER_NOTICE_BORDER_WIDTH, borderBottomColor: nativeDefault.colors.INLINENOTICE_BORDER_INFO, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO };
+obj2.bar = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: fn(11905).PINOT_MEMBER_NOTICE_BORDER_WIDTH, borderBottomColor: nativeDefault.colors.INLINENOTICE_BORDER_INFO, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO };
 obj2.text = { flex: 1 };
 obj2.link = { textDecorationLine: "underline" };
 let closure_9 = createStyles.createStyles(obj2);

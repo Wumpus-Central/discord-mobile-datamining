@@ -1,9 +1,9 @@
-// === Module 8718: useGetGameForAppId ===
+// === Module 8719: useGetGameForAppId ===
 
-// Module 8718 (useGetGameForAppId)
+// Module 8719 (useGetGameForAppId)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7515 */;
-import useGame from "useGame" /* 8719 */;
+import useGame from "useGame" /* 8720 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import GameStore from "GameStore" /* 2141 */;

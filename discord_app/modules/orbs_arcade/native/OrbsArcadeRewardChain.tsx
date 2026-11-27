@@ -1,16 +1,16 @@
-// === Module 16641: OrbsArcadeRewardChain ===
+// === Module 16648: OrbsArcadeRewardChain ===
 
-// Module 16641 (OrbsArcadeRewardChain)
+// Module 16648 (OrbsArcadeRewardChain)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16629 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16630 */;
-import OrbsArcadeRewardChainCell from "OrbsArcadeRewardChainCell" /* 16642 */;
-import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16647 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 16636 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16637 */;
+import OrbsArcadeRewardChainCell from "OrbsArcadeRewardChainCell" /* 16649 */;
+import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 16654 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16628 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16635 */;
 
 const OrbsArcadeRewardChainCellDefault = OrbsArcadeRewardChainCell;
 
@@ -71,15 +71,15 @@ export default function OrbsArcadeRewardChain(game) {
   if (findLastResult == null) {
     first = memo[0];
   }
-  const tmp8 = gameState(16646)(first);
+  const tmp8 = gameState(16653)(first);
   closure_7 = tmp8;
   let type;
   if (first != null) {
     type = first.type;
   }
   NITRO_GLOW_COLOR = tmp8;
-  if (type === game(16630).OrbsArcadeRewardType.FRACTIONAL_PREMIUM) {
-    NITRO_GLOW_COLOR = tmp2(16646).NITRO_GLOW_COLOR;
+  if (type === game(16637).OrbsArcadeRewardType.FRACTIONAL_PREMIUM) {
+    NITRO_GLOW_COLOR = tmp2(16653).NITRO_GLOW_COLOR;
   }
   let obj2 = game(504);
   let tmp7 = gameState;
@@ -96,7 +96,7 @@ export default function OrbsArcadeRewardChain(game) {
   }
   obj4.focusedRewardId = id;
   obj4.grantAnimatedOnOpenRewardIds = game.grantAnimatedOnOpenRewardIds;
-  const orbsArcadeRewardChainTimeline = game(16642).useOrbsArcadeRewardChainTimeline(obj4);
+  const orbsArcadeRewardChainTimeline = game(16649).useOrbsArcadeRewardChainTimeline(obj4);
   ({ timeline: c9, getGrantAtMs: c10, getFocusRingAtMs: c11 } = orbsArcadeRewardChainTimeline);
   const items3 = [tmp8];
   const items4 = [NITRO_GLOW_COLOR];
@@ -112,7 +112,7 @@ export default function OrbsArcadeRewardChain(game) {
     obj.boxShadow = items;
     return obj;
   }, items4);
-  const tmp2Result = game(16642);
+  const tmp2Result = game(16649);
   const isThemeLightResult = game(5050).isThemeLight(obj.useThemeContext().theme);
   const items5 = [tmp.chainGlowContainer, ];
   let tmp17;

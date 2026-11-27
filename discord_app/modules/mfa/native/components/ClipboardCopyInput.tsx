@@ -1,6 +1,6 @@
-// === Module 17304: ClipboardCopyInput ===
+// === Module 17311: ClipboardCopyInput ===
 
-// Module 17304 (ClipboardCopyInput)
+// Module 17311 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2119 */;
@@ -44,7 +44,7 @@ export default function ClipboardCopyInput(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -113,7 +113,7 @@ export default function ClipboardCopyInput(arg0) {
               }
             }
             v3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp31) {
           v3 = tmp;

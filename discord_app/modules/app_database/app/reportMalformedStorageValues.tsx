@@ -1,6 +1,6 @@
-// === Module 19712: reportMalformedStorageValues ===
+// === Module 19728: reportMalformedStorageValues ===
 
-// Module 19712 (reportMalformedStorageValues)
+// Module 19728 (reportMalformedStorageValues)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import _mod4922 from "module_4922" /* 4922 */;
 import size from "module_2" /* 2 */;

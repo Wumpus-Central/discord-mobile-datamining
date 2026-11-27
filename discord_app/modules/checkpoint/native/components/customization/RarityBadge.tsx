@@ -1,13 +1,13 @@
-// === Module 12922: RarityBadge ===
+// === Module 12930: RarityBadge ===
 
-// Module 12922 (RarityBadge)
+// Module 12930 (RarityBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6397 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6765 */;
 import inlineStyles from "inlineStyles" /* 7946 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9637 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9638 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

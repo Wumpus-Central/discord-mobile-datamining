@@ -1,17 +1,17 @@
-// === Module 14777: GuildBoostingMarketingCtaBar ===
+// === Module 14783: GuildBoostingMarketingCtaBar ===
 
-// Module 14777 (GuildBoostingMarketingCtaBar)
+// Module 14783 (GuildBoostingMarketingCtaBar)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import BoostingActionCreators from "BoostingActionCreators" /* 6864 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11113 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9102 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 11114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10364 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10365 */;
 
 require = fn;
 function useBoostCountAnimatedStyles(arg0) {
@@ -100,10 +100,10 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const obj2 = guild(563);
   const tmp11 = useBoostCountAnimatedStyles(first);
   const tmp12 = useBoostCountAnimatedStyles(!first);
-  const tmp13 = first(13915);
-  const tmp13Result = first(13915)(fractionalPremiumInfo.endsAt, guild(13915).CountDownMessageTypes.LONG_TIME_LEFT);
-  const isInReverseTrial = guild(9374).useIsInReverseTrial();
-  let obj3 = guild(9374);
+  const tmp13 = first(13922);
+  const tmp13Result = first(13922)(fractionalPremiumInfo.endsAt, guild(13922).CountDownMessageTypes.LONG_TIME_LEFT);
+  const isInReverseTrial = guild(9375).useIsInReverseTrial();
+  let obj3 = guild(9375);
   const items3 = [first, memo];
   const effect = stateFromStores1.useEffect(() => {
     if (tmp) {
@@ -120,12 +120,12 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const obj4 = first(2174);
   if (premiumGroupRole === guild(1400).PremiumSubscriptionGroupRole.MEMBER) {
     const obj5 = { style: tmp.boostingUnavailablePill };
-    let tmp19 = closure_12(tmp4(13976), obj5);
+    let tmp19 = closure_12(tmp4(13983), obj5);
   } else {
     tmp19 = null;
     if (fractionalPremiumInfo.fractionalState !== FractionalPremiumStates.NONE) {
       const obj6 = { fpDurationText: tmp13Result, isInReverseTrial, style: tmp.boostingUnavailablePill };
-      tmp19 = closure_12(tmp4(13978), obj6);
+      tmp19 = closure_12(tmp4(13985), obj6);
     }
   }
   const obj7 = { onLayout, angle: 160, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, useAngle: true, style: null, children: null };
@@ -136,7 +136,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   obj7.style = tmp.gradient;
   const obj8 = { angle: 0, angleCenter: { x: 0.5, y: 0.5 }, colors: ["rgba(0, 0, 0, 0.7)", "rgba(0, 0, 0, 0)"], locations: [0.12, 0.5], useAngle: true, style: tmp.gradient, children: null };
   const tmp4Result = first(5598);
-  const items5 = [closure_12(first(14778), { guild }), , , ];
+  const items5 = [closure_12(first(14784), { guild }), , , ];
   const obj9 = { style: tmp.headerContent, children: null };
   const obj10 = { style: tmp.heading, color: "text-overlay-light", variant: "display-sm", children: null };
   const intl = guild(1112).intl;
@@ -160,10 +160,10 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   obj15.style = items8;
   const obj13 = { style: tmp.guildName, color: "text-overlay-light", variant: "body-md/semibold", children: guild.name };
   const tmp4Result4 = first(7052);
-  const items9 = [closure_12(guild(1186).Icon, { style: tmp.guildBoostCountIcon, source: first(13963), color: first(575).unsafe_rawColors.GUILD_BOOSTING_PINK, size: guild(1186).Icon.Sizes.SMALL }), ];
+  const items9 = [closure_12(guild(1186).Icon, { style: tmp.guildBoostCountIcon, source: first(13970), color: first(575).unsafe_rawColors.GUILD_BOOSTING_PINK, size: guild(1186).Icon.Sizes.SMALL }), ];
   const obj17 = { style: tmp.guildBoostCount, accessibilityRole: "header", variant: "body-sm/semibold", color: "text-overlay-light", children: null };
   const intl2 = guild(1112).intl;
-  obj17.children = intl2.format(guild(1112).t["pob/cL"], { subscriptions: first(10369)(premiumGroupRole.guild.id).total });
+  obj17.children = intl2.format(guild(1112).t["pob/cL"], { subscriptions: first(10370)(premiumGroupRole.guild.id).total });
   items9[1] = closure_12(guild(5634).Text, obj17);
   obj15.children = items9;
   const items10 = [closure_13(first(1654).View, obj15), ];
@@ -187,11 +187,11 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const items13 = [, ];
   ({ cta: arr14[0], ctaPrimary: arr14[1] } = tmp);
   obj20.styles = items13;
-  items6[4] = closure_12(first(13578), obj20);
+  items6[4] = closure_12(first(13586), obj20);
   obj9.children = items6;
   items5[1] = closure_13(memo, obj9);
-  items5[2] = closure_12(first(14781), { style: tmp.headerStars });
-  items5[3] = closure_12(first(14782), { style: tmp.headerWave });
+  items5[2] = closure_12(first(14787), { style: tmp.headerStars });
+  items5[3] = closure_12(first(14788), { style: tmp.headerWave });
   obj8.children = items5;
   obj7.children = closure_13(tmp4Result3, obj8);
   const items14 = [closure_12(tmp4Result, obj7), ];
@@ -208,7 +208,7 @@ export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
       const obj3 = { analyticsLocation: { page: constants2.PREMIUM_GUILD_USER_MODAL, section: constants3.HEADER, object: constants.BUTTON_CTA }, analyticsLocations };
       utils_openGiftModal.openGiftModal(obj3);
     };
-    const obj25 = { size: guild(1186).Icon.Sizes.SMALL, source: tmp4(14783), style: tmp.giftIcon };
+    const obj25 = { size: guild(1186).Icon.Sizes.SMALL, source: tmp4(14789), style: tmp.giftIcon };
     obj24.icon = closure_12(guild(1186).Icon, obj25);
     let obj26 = obj24;
   } else {

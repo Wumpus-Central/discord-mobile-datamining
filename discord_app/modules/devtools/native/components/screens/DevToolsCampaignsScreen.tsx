@@ -1,6 +1,6 @@
-// === Module 17342: DevToolsCampaignsScreen ===
+// === Module 17349: DevToolsCampaignsScreen ===
 
-// Module 17342 (DevToolsCampaignsScreen)
+// Module 17349 (DevToolsCampaignsScreen)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -10,9 +10,9 @@ import TableRowGroup from "TableRowGroup" /* 6140 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7047 */;
 import TextInput from "TextInput" /* 7274 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
-import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9212 */;
-import useCampaignDevTools from "useCampaignDevTools" /* 17343 */;
-import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 17346 */;
+import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9213 */;
+import useCampaignDevTools from "useCampaignDevTools" /* 17350 */;
+import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 17353 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 
 require = fn;
 function CampaignPicker() {
-  const tmp2 = loading(17343)();
+  const tmp2 = loading(17350)();
   ({ select: require, error, loading } = tmp2);
   ({ campaignsLoading, componentsLoading } = tmp2);
   ({ campaigns, selectedId, reload } = tmp2);
@@ -81,7 +81,7 @@ function CampaignPicker() {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -113,7 +113,7 @@ function CampaignPicker() {
                   const obj = disabled(dependencyMap[15]);
                 }
                 c2 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp11) {
               c2 = tmp;

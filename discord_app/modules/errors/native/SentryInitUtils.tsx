@@ -15,8 +15,8 @@ import MetaQuestUtils from "MetaQuestUtils" /* 1626 */;
 import DeviceUtils from "DeviceUtils" /* 5000 */;
 import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5812 */;
 import MetricEvents from "MetricEvents" /* 5816 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 15569 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 15570 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 15576 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 15577 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -35,7 +35,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -636,7 +636,7 @@ export function initSentry() {
             if (tmp15Result14.isAndroid()) {
               str2 = "android";
             }
-            const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35720400000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@357.4.0-2+357204", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+            const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35720500000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@357.5.0-2+357205", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
             items = [PRIMARY_DOMAIN];
             obj3.tracePropagationTargets = items;
             const items1 = [registerSpanErrorInstrumentation, , ];
@@ -667,7 +667,7 @@ export function initSentry() {
             };
             tmp15Result13.init(obj3);
             const tmp15Result16 = _mod674;
-            _mod674.setTag("buildNumber", "35720400000000");
+            _mod674.setTag("buildNumber", "35720500000000");
             const tmp15Result17 = _mod674;
             _mod674.setTag("appVersion", constants.Version);
             const tmp15Result18 = _mod674;

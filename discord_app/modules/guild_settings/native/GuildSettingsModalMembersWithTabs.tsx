@@ -1,15 +1,15 @@
-// === Module 18427: GuildSettingsModalMembersWithTabs ===
+// === Module 18434: GuildSettingsModalMembersWithTabs ===
 
-// Module 18427 (GuildSettingsModalMembersWithTabs)
+// Module 18434 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5079 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7622 */;
-import ContextMenu from "ContextMenu" /* 9067 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 18428 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 18429 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 18431 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 18436 */;
+import ContextMenu from "ContextMenu" /* 9068 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 18435 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 18436 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 18438 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 18443 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
@@ -117,7 +117,7 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: num2(8625), accessibilityLabel: null, ref: null };
+        const obj = { source: num2(8626), accessibilityLabel: null, ref: null };
         const intl = guildId(1112).intl;
         obj.accessibilityLabel = intl.string(guildId(1112).t.ogxXGq);
         obj.ref = ref.ref;

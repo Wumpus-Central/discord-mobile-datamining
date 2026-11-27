@@ -1,9 +1,9 @@
-// === Module 13138: AppLauncherTextInputOption ===
+// === Module 13146: AppLauncherTextInputOption ===
 
-// Module 13138 (AppLauncherTextInputOption)
+// Module 13146 (AppLauncherTextInputOption)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2019 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9537 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 9543 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9538 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 9544 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -117,7 +117,7 @@ export default function AppLauncherTextInputOption(initialValue) {
   const obj5 = { style: null, children: null };
   const items3 = [inputStyles.padding, tmp.content];
   obj5.style = items3;
-  const obj6 = { ref, autoFocus: false, value, style: null, selectionColor: "Array", maxLength: "off", autoComplete: null, onChangeText: null, onSelectionChange: null, onFocus: null, onBlur: null, onEndEditing: "center", textAlignVertical: "default", returnKeyType: true, multiline: null, keyboardType: null, onPressIn: -4 };
+  const obj6 = { ref, autoFocus: false, value, style: null, selectionColor: "Array", maxLength: "off", autoComplete: null, onChangeText: null, onSelectionChange: null, onFocus: null, onBlur: null, onEndEditing: "center", textAlignVertical: "default", returnKeyType: true, multiline: null, keyboardType: null, onPressIn: 383.185 };
   const items4 = [inputStyles.text, tmp.stringOptionInput];
   obj6.style = items4;
   let maxLength;

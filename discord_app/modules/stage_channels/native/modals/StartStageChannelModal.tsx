@@ -1,6 +1,6 @@
-// === Module 14329: StartStageChannelModal ===
+// === Module 14336: StartStageChannelModal ===
 
-// Module 14329 (StartStageChannelModal)
+// Module 14336 (StartStageChannelModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -14,7 +14,7 @@ import GuildIcon from "GuildIcon" /* 7052 */;
 import _modDef7444 from "module_7444" /* 7444 */;
 import HotspotStore2 from "HotspotStore" /* 7562 */;
 import Form from "Form" /* 8088 */;
-import StageSparkleDefault from "StageSparkle" /* 8627 */;
+import StageSparkleDefault from "StageSparkle" /* 8628 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -153,7 +153,7 @@ export default function StartStageChannelModal(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

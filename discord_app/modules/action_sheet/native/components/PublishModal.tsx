@@ -1,9 +1,9 @@
-// === Module 12216: PublishModal ===
+// === Module 12224: PublishModal ===
 
-// Module 12216 (PublishModal)
+// Module 12224 (PublishModal)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
-import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 12217 */;
+import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 12225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

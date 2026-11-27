@@ -1,6 +1,6 @@
-// === Module 8589: ContentInventoryTraitType ===
+// === Module 8590: ContentInventoryTraitType ===
 
-// Module 8589 (ContentInventoryTraitType)
+// Module 8590 (ContentInventoryTraitType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryTraitType.tsx");

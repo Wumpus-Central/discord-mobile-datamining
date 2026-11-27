@@ -1,14 +1,14 @@
-// === Module 16527: BountiesScrollPromptFooter ===
+// === Module 16534: BountiesScrollPromptFooter ===
 
-// Module 16527 (BountiesScrollPromptFooter)
+// Module 16534 (BountiesScrollPromptFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import timingPresets from "timingPresets" /* 5256 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9574 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16528 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 16529 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9575 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16535 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 16536 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 

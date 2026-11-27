@@ -1,6 +1,6 @@
-// === Module 17538: TwelveDaysNotice ===
+// === Module 17545: TwelveDaysNotice ===
 
-// Module 17538 (TwelveDaysNotice)
+// Module 17545 (TwelveDaysNotice)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;

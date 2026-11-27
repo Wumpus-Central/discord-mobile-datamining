@@ -7,7 +7,7 @@ import mapValuesDefault from "mapValues" /* 582 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
 import resolveThemeDefault from "resolveTheme" /* 1237 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4873 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 15572 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 15579 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;

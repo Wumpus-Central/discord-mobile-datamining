@@ -1,6 +1,6 @@
-// === Module 12064: openConversationFocusLink ===
+// === Module 12072: openConversationFocusLink ===
 
-// Module 12064 (openConversationFocusLink)
+// Module 12072 (openConversationFocusLink)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_3 = async function _openConversationFocusLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

@@ -1,13 +1,13 @@
-// === Module 18941: SmartSearchEmptyScreen ===
+// === Module 18957: SmartSearchEmptyScreen ===
 
-// Module 18941 (SmartSearchEmptyScreen)
+// Module 18957 (SmartSearchEmptyScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4469 from "module_4469" /* 4469 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5618 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import SuggestedSearchListDefault from "SuggestedSearchList" /* 18942 */;
+import SuggestedSearchListDefault from "SuggestedSearchList" /* 18958 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

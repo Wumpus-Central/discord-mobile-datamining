@@ -1,8 +1,8 @@
-// === Module 8967: getNitroMessagePrefetchKey ===
+// === Module 8968: getNitroMessagePrefetchKey ===
 
-// Module 8967 (getNitroMessagePrefetchKey)
+// Module 8968 (getNitroMessagePrefetchKey)
 import PlatformUtils from "PlatformUtils" /* 1379 */;
-import NitroFetchExperiment from "NitroFetchExperiment" /* 8968 */;
+import NitroFetchExperiment from "NitroFetchExperiment" /* 8969 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/getNitroMessagePrefetchKey.native.tsx");

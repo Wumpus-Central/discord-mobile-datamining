@@ -1,8 +1,8 @@
-// === Module 16489: PremiumTabBadgeCopy ===
+// === Module 16496: PremiumTabBadgeCopy ===
 
-// Module 16489 (PremiumTabBadgeCopy)
+// Module 16496 (PremiumTabBadgeCopy)
 import util from "util" /* 1112 */;
-import MarketingStringFormat from "MarketingStringFormat" /* 9220 */;
+import MarketingStringFormat from "MarketingStringFormat" /* 9221 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/premium/promotions/PremiumTabBadgeCopy.tsx");

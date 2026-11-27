@@ -1,9 +1,9 @@
-// === Module 18214: SecureFramesCallVerificationBottomSheet ===
+// === Module 18221: SecureFramesCallVerificationBottomSheet ===
 
-// Module 18214 (SecureFramesCallVerificationBottomSheet)
-import SecureFramesTracking from "SecureFramesTracking" /* 8683 */;
-import showShareActionSheet from "showShareActionSheet" /* 8690 */;
-import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 8704 */;
+// Module 18221 (SecureFramesCallVerificationBottomSheet)
+import SecureFramesTracking from "SecureFramesTracking" /* 8684 */;
+import showShareActionSheet from "showShareActionSheet" /* 8691 */;
+import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 8705 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 
@@ -38,7 +38,7 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   obj2.subtitle = intl2.string(channelId(1112).t["MPp7+C"]);
   const intl3 = channelId(1112).intl;
   const obj3 = { helpArticle: null };
-  obj3.helpArticle = channelId(8680).getSecureFramesHelpdeskArticle();
+  obj3.helpArticle = channelId(8681).getSecureFramesHelpdeskArticle();
   obj2.footer = intl3.format(channelId(1112).t.wKxADe, obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;

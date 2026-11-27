@@ -1,6 +1,6 @@
-// === Module 14000: PremiumSubscriptionUpsell ===
+// === Module 14007: PremiumSubscriptionUpsell ===
 
-// Module 14000 (PremiumSubscriptionUpsell)
+// Module 14007 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
@@ -12,9 +12,9 @@ import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7186 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9717 */;
-import _modDef14001 from "module_14001" /* 14001 */;
-import _modDef14002 from "module_14002" /* 14002 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9718 */;
+import _modDef14008 from "module_14008" /* 14008 */;
+import _modDef14009 from "module_14009" /* 14009 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -22,7 +22,7 @@ import UserStore from "UserStore" /* 1387 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(9126).Gradients;
+const Gradients = fn(9127).Gradients;
 const PremiumConstants = fn(1389);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: metroImportDefault, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -82,11 +82,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     tmp5Result5 = PremiumUtilsDefault;
-    obj11.source = _modDef14001;
+    obj11.source = _modDef14008;
     const items4 = [React6(FastImageDefault, obj11), , ];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const tmp5Result6 = FastImageDefault;
-    obj12.source = _modDef14002;
+    obj12.source = _modDef14009;
     items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

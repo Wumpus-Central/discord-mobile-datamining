@@ -1,13 +1,13 @@
-// === Module 10229: BaseEmbeddedAppWebView ===
+// === Module 10230: BaseEmbeddedAppWebView ===
 
-// Module 10229 (BaseEmbeddedAppWebView)
+// Module 10230 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import URLUtilsDefault from "URLUtils" /* 1380 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;
 import WebView from "WebView" /* 7896 */;
-import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10230 */;
+import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10231 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -299,7 +299,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {

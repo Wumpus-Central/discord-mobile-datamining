@@ -1,8 +1,8 @@
-// === Module 11260: OrderSigningDeferral ===
+// === Module 11261: OrderSigningDeferral ===
 
-// Module 11260 (OrderSigningDeferral)
-import Stripe3DSChallenge from "Stripe3DSChallenge" /* 11261 */;
-import StripeNextAction from "StripeNextAction" /* 11262 */;
+// Module 11261 (OrderSigningDeferral)
+import Stripe3DSChallenge from "Stripe3DSChallenge" /* 11262 */;
+import StripeNextAction from "StripeNextAction" /* 11263 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -32,7 +32,7 @@ let closure_8 = async function _performSigningDeferralAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_8 = async function _performSigningDeferralAction(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp15) {
       c1 = tmp;
       throw tmp15;

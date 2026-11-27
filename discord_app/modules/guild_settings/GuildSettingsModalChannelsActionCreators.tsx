@@ -1,6 +1,6 @@
-// === Module 17871: GuildSettingsModalChannelsActionCreators ===
+// === Module 17878: GuildSettingsModalChannelsActionCreators ===
 
-// Module 17871 (GuildSettingsModalChannelsActionCreators)
+// Module 17878 (GuildSettingsModalChannelsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

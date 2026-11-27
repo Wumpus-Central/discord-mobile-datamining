@@ -1,6 +1,6 @@
-// === Module 18093: isGuildsBarGuildLabelEqual ===
+// === Module 18100: isGuildsBarGuildLabelEqual ===
 
-// Module 18093 (isGuildsBarGuildLabelEqual)
+// Module 18100 (isGuildsBarGuildLabelEqual)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildLabelEqual.tsx");

@@ -1,21 +1,21 @@
-// === Module 18957: MediaGridPlaceholder ===
+// === Module 18973: MediaGridPlaceholder ===
 
-// Module 18957 (MediaGridPlaceholder)
+// Module 18973 (MediaGridPlaceholder)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13286 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 18956 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 18958 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13294 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 18972 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 18974 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9019);
+const SearchConstants = fn(9020);
 ({ MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: closure_6, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);

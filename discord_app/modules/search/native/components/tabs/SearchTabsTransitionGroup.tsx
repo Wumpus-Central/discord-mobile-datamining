@@ -1,9 +1,9 @@
-// === Module 19045: SearchTabsTransitionGroup ===
+// === Module 19061: SearchTabsTransitionGroup ===
 
-// Module 19045 (SearchTabsTransitionGroup)
+// Module 19061 (SearchTabsTransitionGroup)
 import _modDef1654 from "module_1654" /* 1654 */;
 import native from "native" /* 5104 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 13612 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 13619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -110,7 +110,7 @@ function AnimatedTabs(cleanUp) {
     }
     combined = "(" + Tabs_Tabs.defaultCountFormatter(toLocaleString) + ")";
   }, items3);
-  const context = noop.useContext(tmp(13406).SwipeForMemberListContext);
+  const context = noop.useContext(tmp(13414).SwipeForMemberListContext);
   const items4 = [closure_8, context];
   _require = undefined;
   [tmp19, tmp20] = items4;

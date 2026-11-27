@@ -1,6 +1,6 @@
-// === Module 14029: useResettingValue ===
+// === Module 14036: useResettingValue ===
 
-// Module 14029 (useResettingValue)
+// Module 14036 (useResettingValue)
 import useInitialValueDefault from "useInitialValue" /* 5622 */;
 import _slicedToArray from "module_32" /* 32 */;
 

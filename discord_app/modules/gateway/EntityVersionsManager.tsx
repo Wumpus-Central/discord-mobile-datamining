@@ -1,11 +1,11 @@
-// === Module 19707: EntityVersionsManager ===
+// === Module 19723: EntityVersionsManager ===
 
-// Module 19707 (EntityVersionsManager)
+// Module 19723 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 8314 */;
+import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 8315 */;
 import EmojiStore from "EmojiStore" /* 6883 */;
 import StickersStore from "StickersStore" /* 6927 */;
 import ChannelStore from "ChannelStore" /* 4892 */;

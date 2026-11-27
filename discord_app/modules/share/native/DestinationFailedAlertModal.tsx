@@ -1,6 +1,6 @@
-// === Module 14122: DestinationFailedAlertModal ===
+// === Module 14129: DestinationFailedAlertModal ===
 
-// Module 14122 (DestinationFailedAlertModal)
+// Module 14129 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -8,7 +8,7 @@ import UserUtilsDefault from "UserUtils" /* 5099 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import useChannelNameDefault from "useChannelName" /* 5659 */;
 import AlertModal from "AlertModal" /* 6052 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 9616 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 9617 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -41,7 +41,7 @@ function FailedUserRow(user) {
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: false, isVROnline: null, size: true, avatarDecoration: false, autoStatusCutout: null };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: false, isVROnline: null, size: true, avatarDecoration: 6, autoStatusCutout: null };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(11565).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11565).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5634).Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(11573).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11573).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5634).Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }

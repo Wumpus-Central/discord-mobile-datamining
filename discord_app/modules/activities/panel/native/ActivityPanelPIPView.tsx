@@ -1,18 +1,18 @@
-// === Module 19401: ActivityPanelPIPView ===
+// === Module 19417: ActivityPanelPIPView ===
 
-// Module 19401 (ActivityPanelPIPView)
+// Module 19417 (ActivityPanelPIPView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef1654 from "module_1654" /* 1654 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10200 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11786 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19399 */;
-import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19404 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10201 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11794 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 19415 */;
+import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19420 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10257 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10258 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 
@@ -326,10 +326,10 @@ const View = fn(17).View;
 const ActivityPanelConstants = fn(5669);
 const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: closure_10, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_11, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1 } = ActivityPanelConstants);
-let closure_14 = fn(19252).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_14 = fn(19268).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 let ThemeTypes = fn(1071).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11783).PIP_WINDOW_OFFSET;
-const ActivityLayoutMode = fn(10191).ActivityLayoutMode;
+const PIP_WINDOW_OFFSET = fn(11791).PIP_WINDOW_OFFSET;
+const ActivityLayoutMode = fn(10192).ActivityLayoutMode;
 let jsx = fn(21).jsx;
 let closure_19 = { duration: 300 };
 const native = fn(1186);

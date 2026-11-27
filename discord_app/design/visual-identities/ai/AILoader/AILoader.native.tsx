@@ -1,9 +1,9 @@
-// === Module 15414: AILoader ===
+// === Module 15421: AILoader ===
 
-// Module 15414 (AILoader)
+// Module 15421 (AILoader)
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
-import AIGlyphText from "AIGlyphText" /* 15416 */;
+import AIGlyphText from "AIGlyphText" /* 15423 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1654 = _mod1654;
@@ -55,7 +55,7 @@ function Slot(index) {
   return <stagger style={tmp.slot}>{null}</stagger>;
 }
 const View = fn(17).View;
-const AILoaderConstants = fn(15415);
+const AILoaderConstants = fn(15422);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_GAP_EM: closure_6, AI_LOADER_GLYPHS: metroImportDefault, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8, AI_LOADER_SLOT_COUNT: closure_9, AI_LOADER_SLOT_STAGGER_MS: closure_10, AI_LOADER_REST_FRACTION, AI_LOADER_STEP_FRACTION, AI_LOADER_TRACK_STEPS } = AILoaderConstants);
 const jsx = fn(21).jsx;
 let items = [{ code: "(function trackStepAt_AILoaderNativeTsx1(progress){let[AI_LOADER_REST_FRACTION,AI_LOADER_TRACK_STEPS,AI_LOADER_STEP_FRACTION]=this.__closure;if(progress<AI_LOADER_REST_FRACTION)return AI_LOADER_TRACK_STEPS[0];const step=Math.floor((progress-AI_LOADER_REST_FRACTION)/AI_LOADER_STEP_FRACTION)+1;return AI_LOADER_TRACK_STEPS[Math.min(step,AI_LOADER_TRACK_STEPS.length-1)];})" }, AI_LOADER_REST_FRACTION, AI_LOADER_TRACK_STEPS, AI_LOADER_STEP_FRACTION];

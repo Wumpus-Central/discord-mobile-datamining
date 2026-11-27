@@ -1,11 +1,11 @@
-// === Module 20311: BasicGuildActionCreators ===
+// === Module 20369: BasicGuildActionCreators ===
 
-// Module 20311 (BasicGuildActionCreators)
+// Module 20369 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 4914 */;
-import BasicGuildStore from "BasicGuildStore" /* 11920 */;
+import BasicGuildStore from "BasicGuildStore" /* 11928 */;
 
 require = fn;
 let closure_8 = async function _fetchBasicGuild() {
@@ -23,7 +23,7 @@ let closure_8 = async function _fetchBasicGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

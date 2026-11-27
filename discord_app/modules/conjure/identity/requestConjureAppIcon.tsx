@@ -1,6 +1,6 @@
-// === Module 18482: requestConjureAppIcon ===
+// === Module 18489: requestConjureAppIcon ===
 
-// Module 18482 (requestConjureAppIcon)
+// Module 18489 (requestConjureAppIcon)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import ConjureConnectionStore from "ConjureConnectionStore" /* 7693 */;

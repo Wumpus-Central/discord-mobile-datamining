@@ -1,17 +1,17 @@
-// === Module 8387: utils/QuestUtils ===
+// === Module 8388: utils/QuestUtils ===
 
-// Module 8387 (utils/QuestUtils)
+// Module 8388 (utils/QuestUtils)
 import StreamPermissionUtils from "StreamPermissionUtils" /* 6823 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8389 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 8390 */;
-import QuestType2 from "QuestType" /* 8391 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8390 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 8391 */;
+import QuestType2 from "QuestType" /* 8392 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8393 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GameConsoleStore from "GameConsoleStore" /* 5852 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 import VoiceStateStore from "VoiceStateStore" /* 5691 */;
-import QuestUtmStore from "QuestUtmStore" /* 8388 */;
+import QuestUtmStore from "QuestUtmStore" /* 8389 */;
 
 require = fn;
 function isSponsoredPlayQuest(quest) {

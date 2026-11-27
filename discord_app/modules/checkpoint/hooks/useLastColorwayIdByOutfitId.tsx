@@ -1,12 +1,12 @@
-// === Module 12927: useLastColorwayIdByOutfitId ===
+// === Module 12935: useLastColorwayIdByOutfitId ===
 
-// Module 12927 (useLastColorwayIdByOutfitId)
+// Module 12935 (useLastColorwayIdByOutfitId)
 import initialize from "initialize" /* 504 */;
 import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6442 */;
 import CheckpointTrait from "CheckpointTrait" /* 6443 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12620 */;
+import CheckpointStore from "CheckpointStore" /* 12628 */;
 
 require = fn;
 const size = fn(2);

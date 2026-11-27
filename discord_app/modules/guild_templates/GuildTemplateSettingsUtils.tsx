@@ -1,12 +1,12 @@
-// === Module 20090: GuildTemplateSettingsUtils ===
+// === Module 20148: GuildTemplateSettingsUtils ===
 
-// Module 20090 (GuildTemplateSettingsUtils)
+// Module 20148 (GuildTemplateSettingsUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 8246 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 8247 */;
 
 const require = globalThis.__r;
 

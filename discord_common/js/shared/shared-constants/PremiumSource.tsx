@@ -1,6 +1,6 @@
-// === Module 9218: PremiumSource ===
+// === Module 9219: PremiumSource ===
 
-// Module 9218 (PremiumSource)
+// Module 9219 (PremiumSource)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/PremiumSource.tsx");

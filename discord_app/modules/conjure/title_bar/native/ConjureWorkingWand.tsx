@@ -1,6 +1,6 @@
-// === Module 14277: ConjureWorkingWand ===
+// === Module 14284: ConjureWorkingWand ===
 
-// Module 14277 (ConjureWorkingWand)
+// Module 14284 (ConjureWorkingWand)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _mod1654 from "module_1654" /* 1654 */;

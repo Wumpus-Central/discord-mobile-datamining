@@ -1,6 +1,6 @@
-// === Module 19734: GuildOnboardingHomeManager ===
+// === Module 19750: GuildOnboardingHomeManager ===
 
-// Module 19734 (GuildOnboardingHomeManager)
+// Module 19750 (GuildOnboardingHomeManager)
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
@@ -15,7 +15,7 @@ import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7581 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8173 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8174 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
@@ -91,7 +91,7 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = asyncRequireImpl(19735, dependencyMap.paths);
+            const tmp9 = asyncRequireImpl(19751, dependencyMap.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: ConstantsIOS.ModalAnimation.FADE };
             obj2.pushLazy(tmp9, obj3, GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
@@ -117,7 +117,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -188,8 +188,8 @@ const prototype = function GuildOnboardingHomeManager() {
               tmp13 = closure_129_5.actionType === applyArgumentsResult(7582).NewMemberActionTypes.VIEW;
             }
             if (tmp13) {
-              const result = applyArgumentsResult(13232).completeNewMemberAction(closure_129_0, closure_129_1);
-              const obj = applyArgumentsResult(13232);
+              const result = applyArgumentsResult(13240).completeNewMemberAction(closure_129_0, closure_129_1);
+              const obj = applyArgumentsResult(13240);
             }
             arr = memberActions;
           }
@@ -275,7 +275,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -333,7 +333,7 @@ const prototype = function GuildOnboardingHomeManager() {
             const obj = applyArgumentsResult(tmp2[18]);
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp31) {
         c5 = tmp;
@@ -363,7 +363,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -445,7 +445,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -527,7 +527,7 @@ const prototype = function GuildOnboardingHomeManager() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

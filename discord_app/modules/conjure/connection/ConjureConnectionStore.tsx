@@ -6,13 +6,13 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 7673 */;
 import conjureChatConnection from "conjureChatConnection" /* 7713 */;
 import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 7727 */;
-import createNonce from "createNonce" /* 10070 */;
-import conjurePublishConnection from "conjurePublishConnection" /* 11461 */;
-import conjurePublishEvalConnection from "conjurePublishEvalConnection" /* 11481 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 14742 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 14745 */;
-import conjurePublishScheduleRequests from "conjurePublishScheduleRequests" /* 14749 */;
-import conjureLinkEmbeds from "conjureLinkEmbeds" /* 14761 */;
+import createNonce from "createNonce" /* 10071 */;
+import conjurePublishConnection from "conjurePublishConnection" /* 11471 */;
+import conjurePublishEvalConnection from "conjurePublishEvalConnection" /* 11491 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 14749 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 14752 */;
+import conjurePublishScheduleRequests from "conjurePublishScheduleRequests" /* 14756 */;
+import conjureLinkEmbeds from "conjureLinkEmbeds" /* 14767 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -348,7 +348,7 @@ let closure_24 = async function _openWithFreshTicket(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -398,7 +398,7 @@ let closure_24 = async function _openWithFreshTicket(arg0) {
           closure_132_6 = closure_6;
           if (closure_132_1.disposed) {
             c9 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else {
             let status;
             if (closure_132_6 != null) {
@@ -483,7 +483,7 @@ let closure_24 = async function _openWithFreshTicket(arg0) {
         }
         c7 = 0;
         c9 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp85) {
       closure_6 = tmp85;
@@ -652,21 +652,21 @@ const merged4 = Object.assign(fn(7721).liveReloadFrameHandlers);
 const merged5 = Object.assign(fn(7722).managedCopyFrameHandlers);
 const merged6 = Object.assign(fn(7723).modelSettingsFrameHandlers);
 const merged7 = Object.assign(fn(7724).previewFrameHandlers);
-const merged8 = Object.assign(fn(14748).previewAddBotPromptFrameHandlers);
-const merged9 = Object.assign(fn(11461).publishFrameHandlers);
-const merged10 = Object.assign(fn(11481).publishEvalFrameHandlers);
-const merged11 = Object.assign(fn(14749).publishScheduleFrameHandlers);
-const merged12 = Object.assign(fn(11453).remixFrameHandlers);
-const merged13 = Object.assign(fn(14751).settingsFrameHandlers);
-const merged14 = Object.assign(fn(14753).smartContextFrameHandlers);
+const merged8 = Object.assign(fn(14755).previewAddBotPromptFrameHandlers);
+const merged9 = Object.assign(fn(11471).publishFrameHandlers);
+const merged10 = Object.assign(fn(11491).publishEvalFrameHandlers);
+const merged11 = Object.assign(fn(14756).publishScheduleFrameHandlers);
+const merged12 = Object.assign(fn(11454).remixFrameHandlers);
+const merged13 = Object.assign(fn(14758).settingsFrameHandlers);
+const merged14 = Object.assign(fn(14760).smartContextFrameHandlers);
 let obj2 = {};
-const merged15 = Object.assign(fn(14754).appBuildRequestStepHandlers);
+const merged15 = Object.assign(fn(14761).appBuildRequestStepHandlers);
 const merged16 = Object.assign(fn(7713).chatStepHandlers);
 const merged17 = Object.assign(fn(7716).debugStepHandlers);
 const merged18 = Object.assign(fn(7724).previewStepHandlers);
-const merged19 = Object.assign(fn(14755).projectStepHandlers);
-const merged20 = Object.assign(fn(11461).publishStepHandlers);
-const merged21 = Object.assign(fn(14756).usageStepHandlers);
+const merged19 = Object.assign(fn(14762).projectStepHandlers);
+const merged20 = Object.assign(fn(11471).publishStepHandlers);
+const merged21 = Object.assign(fn(14763).usageStepHandlers);
 const set1 = new Set(["hello", "history", "capture_preview", "control_preview", "control_claim", "control_abort", "capture_claim", "preview_operation", "request_upstream_ticket", "host_approvals", "preview_add_bot_prompt"]);
 const map3 = new Map();
 const map4 = new Map();

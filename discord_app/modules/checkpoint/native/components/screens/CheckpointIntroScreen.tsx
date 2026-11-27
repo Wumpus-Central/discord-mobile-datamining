@@ -1,14 +1,14 @@
-// === Module 12848: CheckpointIntroScreen ===
+// === Module 12856: CheckpointIntroScreen ===
 
-// Module 12848 (CheckpointIntroScreen)
+// Module 12856 (CheckpointIntroScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import _modDef3495 from "module_3495" /* 3495 */;
-import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12849 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12850 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12851 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
+import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12857 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12858 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12859 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -127,7 +127,7 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
   let tmp20Result = !tmp8;
   if (!tmp8) {
     const obj8 = { style: tmp.globe };
-    tmp20Result = closure_11(tmp2(12853), obj8);
+    tmp20Result = closure_11(tmp2(12861), obj8);
   }
   items6[1] = tmp20Result;
   obj7.children = items6;
@@ -146,8 +146,8 @@ export default function CheckpointIntroScreen(onCharacterBottomInsetChange) {
     const obj11 = { variant: "heading-lg/medium", children: null };
     const intl2 = tmp9(1112).intl;
     obj11.children = intl2.string(tmp2(3495)["2GRr6H"]);
-    tmp20Result2 = closure_11(tmp2(12852), obj11);
-    const tmp2Result6 = tmp2(12852);
+    tmp20Result2 = closure_11(tmp2(12860), obj11);
+    const tmp2Result6 = tmp2(12860);
   }
   items9[1] = tmp20Result2;
   obj9.children = items9;

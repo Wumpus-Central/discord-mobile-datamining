@@ -1,6 +1,6 @@
-// === Module 19592: VoicePanelVoiceControlsButtons ===
+// === Module 19608: VoicePanelVoiceControlsButtons ===
 
-// Module 19592 (VoicePanelVoiceControlsButtons)
+// Module 19608 (VoicePanelVoiceControlsButtons)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
@@ -16,32 +16,32 @@ import TableRowIcon from "TableRowIcon" /* 6155 */;
 import TableRowArrow from "TableRowArrow" /* 6156 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
 import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7835 */;
-import _modDef8189 from "module_8189" /* 8189 */;
-import CallsUtils from "CallsUtils" /* 8636 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 8643 */;
-import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 8653 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10041 */;
-import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 10387 */;
-import VolumeSliderDefault from "VolumeSlider" /* 10397 */;
-import _modDef10500 from "module_10500" /* 10500 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10534 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10549 */;
-import speakOnStageDefault from "speakOnStage" /* 11754 */;
-import _modDef11829 from "module_11829" /* 11829 */;
-import SoundboardIcon from "SoundboardIcon" /* 13515 */;
-import useCanInviteMembers from "useCanInviteMembers" /* 18198 */;
-import useInviteMembersCallback from "useInviteMembersCallback" /* 18199 */;
-import _modDef18217 from "module_18217" /* 18217 */;
-import _modDef18218 from "module_18218" /* 18218 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 18226 */;
-import useHideSelfVideoDefault from "useHideSelfVideo" /* 19595 */;
-import ChannelCallUtils from "ChannelCallUtils" /* 19596 */;
+import _modDef8190 from "module_8190" /* 8190 */;
+import CallsUtils from "CallsUtils" /* 8637 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 8644 */;
+import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 8654 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10042 */;
+import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 10388 */;
+import VolumeSliderDefault from "VolumeSlider" /* 10398 */;
+import _modDef10501 from "module_10501" /* 10501 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10535 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10550 */;
+import speakOnStageDefault from "speakOnStage" /* 11762 */;
+import _modDef11837 from "module_11837" /* 11837 */;
+import SoundboardIcon from "SoundboardIcon" /* 13523 */;
+import useCanInviteMembers from "useCanInviteMembers" /* 18205 */;
+import useInviteMembersCallback from "useInviteMembersCallback" /* 18206 */;
+import _modDef18224 from "module_18224" /* 18224 */;
+import _modDef18225 from "module_18225" /* 18225 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 18233 */;
+import useHideSelfVideoDefault from "useHideSelfVideo" /* 19611 */;
+import ChannelCallUtils from "ChannelCallUtils" /* 19612 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10022 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10023 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
@@ -214,7 +214,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, PlatformTypes: closure_15 } = Constants);
-let closure_16 = fn(19593).SelfStreamAndVideoAlertType;
+let closure_16 = fn(19609).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(5855).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
@@ -224,7 +224,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/controls/Voi
 export function GameConsoles(channel) {
   channel = channel.channel;
   const connected = channel.connected;
-  const arr = connected(10508)();
+  const arr = connected(10509)();
   let tmp2 = null;
   if (!channel.isGuildStageVoice()) {
     let tmp3 = null;
@@ -243,7 +243,7 @@ export { GameConsoleAccountButton };
 export function ActivitiesButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = noop.useContext(dismissPanel(11781)).dismissPanel;
+  dismissPanel = noop.useContext(dismissPanel(11789)).dismissPanel;
   items = [dismissPanel, openTab];
   const callback = noop.useCallback(() => {
     dismissPanel();
@@ -311,7 +311,7 @@ export function DeafenSwitch() {
   items = [MediaEngineStore];
   const stateFromStores = initialize.useStateFromStores(items, () => selfDeaf.isSelfDeaf());
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef18218 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef18225 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
   obj2.value = stateFromStores;
@@ -348,7 +348,7 @@ export function InviteButton(channel) {
       tmp8 = null;
       if (channel.connected) {
         const obj2 = { onPress: tmp7, icon: null, label: null, trailing: null };
-        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef10500 };
+        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef10501 };
         obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj3);
         const intl = util.intl;
         obj2.label = intl.string(util.t["f1+QIK"]);
@@ -369,7 +369,7 @@ export function HideNonVideoParticipants(channelId) {
   }, items1);
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   const obj = channelId(504);
-  obj2.icon = closure_18(channelId(6155).TableRowIcon, { IconComponent: channelId(10639).VideoIcon, source: stateFromStores(10353) });
+  obj2.icon = closure_18(channelId(6155).TableRowIcon, { IconComponent: channelId(10640).VideoIcon, source: stateFromStores(10354) });
   const intl = channelId(1112).intl;
   obj2.accessibilityHint = intl.string(channelId(1112).t.ZMTRyc);
   obj2.value = stateFromStores;
@@ -389,14 +389,14 @@ export function HideSelfVideo() {
   let tmp6 = null;
   if (tmp3[0]) {
     let obj2 = { icon: null, value: null, onValueChange: null, label: null };
-    const obj3 = { IconComponent: tmp5(9706).UserSquareIcon };
+    const obj3 = { IconComponent: tmp5(9707).UserSquareIcon };
     obj2.icon = closure_18(tmp5(6155).TableRowIcon, obj3);
     obj2.value = !tmp4;
     obj2.onValueChange = function handleMaybeConfirmToggleSelfVideoHidden() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f134928 = () => f134928(!VIDEO);
+          const f135339 = () => f135339(!VIDEO);
           const obj2 = {
             importer() {
                   return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -424,7 +424,7 @@ export function HideSelfVideo() {
   return tmp6;
 }
 export function LeaveActivitiesButton() {
-  const obj = { icon: collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef11829 }), label: null, onPress: null };
+  const obj = { icon: collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef11837 }), label: null, onPress: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["R/FK4A"]);
   obj.onPress = function onPress() {
@@ -458,7 +458,7 @@ export function ToggleShowActivitiesDebugOverlay() {
   items = [ChannelCallLifecycleStore];
   const stateFromStores = initialize.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   const obj2 = { icon: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef8189 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef8190 });
   obj2.value = stateFromStores;
   obj2.onValueChange = function onPressShowDebugOverlayChange(visible) {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
@@ -473,7 +473,7 @@ export function VoiceSettingsButton(guildId) {
   const callback = noop.useCallback(() => {
     const result = ChannelCallConnectingScreen.showVoiceSettingsActionSheet(guildId);
   }, items);
-  const obj = { onPress: callback, icon: closure_18(guildId(6155).TableRowIcon, { IconComponent: guildId(10454).SettingsIcon, source: _modDef18217 }), label: null, subLabel: null, trailing: null };
+  const obj = { onPress: callback, icon: closure_18(guildId(6155).TableRowIcon, { IconComponent: guildId(10455).SettingsIcon, source: _modDef18224 }), label: null, subLabel: null, trailing: null };
   const intl = guildId(1112).intl;
   obj.label = intl.string(guildId(1112).t.dsXapM);
   const intl2 = guildId(1112).intl;
@@ -508,7 +508,7 @@ export function RTCDebugPanelButton() {
 export function StageButtons(channel) {
   channel = channel.channel;
   const tmp2 = useCanSpeakInChannelDefault(channel.id);
-  const obj = channel(10262);
+  const obj = channel(10263);
   items = [PermissionStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel));
   const obj2 = channel(504);
@@ -523,7 +523,7 @@ export function StageButtons(channel) {
       tmp8 = null;
       if (!isStageSpeakingDisabledForCurrentUser) {
         const obj5 = { icon: null, label: null, onPress: null };
-        const obj6 = { IconComponent: tmp3(10319).MicrophoneArrowRightIcon };
+        const obj6 = { IconComponent: tmp3(10320).MicrophoneArrowRightIcon };
         obj5.icon = closure_18(tmp3(6155).TableRowIcon, obj6);
         const intl = tmp3(1112).intl;
         obj5.label = intl.string(tmp3(1112).t["8Joh+p"]);

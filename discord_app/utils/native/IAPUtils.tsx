@@ -1,6 +1,6 @@
-// === Module 9279: IAPUtils ===
+// === Module 9280: IAPUtils ===
 
-// Module 9279 (IAPUtils)
+// Module 9280 (IAPUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -8,13 +8,13 @@ import v1 from "v1" /* 1269 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1378 */;
 import PlatformUtils2 from "PlatformUtils" /* 1379 */;
 import DeviceUtils from "DeviceUtils" /* 5000 */;
-import premium_ProductIds from "premium/ProductIds" /* 9113 */;
-import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 9300 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 9301 */;
+import premium_ProductIds from "premium/ProductIds" /* 9114 */;
+import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 9301 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 9302 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DevSettingsStore from "DevSettingsStore" /* 5637 */;
 import UserStore from "UserStore" /* 1387 */;
-import IAPStore from "IAPStore" /* 9104 */;
+import IAPStore from "IAPStore" /* 9105 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_16 = async function _makeIAPRequest() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ let closure_16 = async function _makeIAPRequest() {
               const obj6 = { requestJSONString, sku, appAccountToken: convertToUUID(currentUser.id), andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("module_9281").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("module_9282").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -141,7 +141,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("module_9281").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("module_9282").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -228,7 +228,7 @@ let closure_18 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -425,7 +425,7 @@ let closure_21 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -446,7 +446,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("module_9281").getStorefront(), done: false };
+            const obj6 = { value: require("module_9282").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -494,9 +494,9 @@ const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 let PlatformUtils = fn(1379);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(9280).default;
+  _default = fn(9281).default;
 }
-let items = [fn(9281).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(9281).ErrorCode.E_UNKNOWN];
+let items = [fn(9282).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(9282).ErrorCode.E_UNKNOWN];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
 let obj = {
@@ -595,7 +595,7 @@ if (PlatformUtils) {
   let obj5 = fn(1379);
 }
 if (PlatformUtils) {
-  obj = fn(9302).default;
+  obj = fn(9303).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();

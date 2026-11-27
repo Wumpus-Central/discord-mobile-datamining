@@ -1,23 +1,23 @@
-// === Module 19052: SearchAutocompleteStore ===
+// === Module 19068: SearchAutocompleteStore ===
 
-// Module 19052 (SearchAutocompleteStore)
+// Module 19068 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserUtilsDefault from "UserUtils" /* 5099 */;
 import _modDef5933 from "module_5933" /* 5933 */;
 import AutocompleteUtils from "AutocompleteUtils" /* 6869 */;
 import GuildUtilsDefault from "GuildUtils" /* 6990 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 8950 */;
-import SearchUtils from "SearchUtils" /* 13293 */;
-import SearchTokens from "SearchTokens" /* 13294 */;
-import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 13297 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 8951 */;
+import SearchUtils from "SearchUtils" /* 13301 */;
+import SearchTokens from "SearchTokens" /* 13302 */;
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 13305 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 import StreamerModeStore from "StreamerModeStore" /* 5100 */;
 import UserStore from "UserStore" /* 1387 */;
-import SelectedSearchContextStore from "SelectedSearchContextStore" /* 13296 */;
+import SelectedSearchContextStore from "SelectedSearchContextStore" /* 13304 */;
 
 const SearchTokensDefault = SearchTokens;
 

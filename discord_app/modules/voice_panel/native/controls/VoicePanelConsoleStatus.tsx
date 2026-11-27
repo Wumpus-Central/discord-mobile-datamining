@@ -1,14 +1,14 @@
-// === Module 19559: VoicePanelConsoleStatus ===
+// === Module 19575: VoicePanelConsoleStatus ===
 
-// Module 19559 (VoicePanelConsoleStatus)
+// Module 19575 (VoicePanelConsoleStatus)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import native from "native" /* 5104 */;
 import NativeViewDefault from "NativeView" /* 7055 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19553 */;
-import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19558 */;
-import useControlsTranslationDefault from "useControlsTranslation" /* 19560 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19569 */;
+import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19574 */;
+import useControlsTranslationDefault from "useControlsTranslation" /* 19576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -192,8 +192,8 @@ class VoicePanelConsoleStatus {
     return tmp29(tmp2(tmp3[9]).View, obj1);
   }
 }
-const EDGE_GUTTER = fn(11785).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(11780).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(11793).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(11788).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);
@@ -202,7 +202,7 @@ let obj3 = { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BOR
 obj2.blockingControlCover = { position: "absolute", bottom: 0, borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, flex: 1, height: CONTROLS_HEIGHT, overflow: "hidden" };
 const React5 = createStyles.createStyles(obj2);
 let obj5 = {};
-let merged = Object.assign(fn(11782).MODE_CHANGE_PHYSICS);
+let merged = Object.assign(fn(11790).MODE_CHANGE_PHYSICS);
 obj5.overshootClamping = true;
 let closure_10 = { code: "(function VoicePanelConsoleStatusTsx1(finished){let[shouldShow,scheduleOnRN,cleanUp]=this.__closure;if(finished&&!shouldShow.get()){scheduleOnRN(cleanUp);}})" };
 let closure_11 = { code: "(function VoicePanelConsoleStatusTsx2(){let[color,windowDimensions,EDGE_GUTTER,CONTROLS_HEIGHT,CONSOLE_STATUS_HEIGHT,withSpring,shouldShow,FADE_IN_MODE_PHYSICS,_worklet_9535056131648_init_data,scheduleOnRN,cleanUp]=this.__closure;return{backgroundColor:color,width:windowDimensions.get().width-EDGE_GUTTER*2,height:CONTROLS_HEIGHT+CONSOLE_STATUS_HEIGHT,borderRadius:32,transform:[{translateY:withSpring(shouldShow.get()?0:100,FADE_IN_MODE_PHYSICS,'respect-motion-settings',function VoicePanelConsoleStatusTsx1Factory([_worklet_9535056131648_init_data,shouldShow,scheduleOnRN,cleanUp]){const VoicePanelConsoleStatusTsx1=function(finished){if(finished&&!shouldShow.get()){scheduleOnRN(cleanUp);}};VoicePanelConsoleStatusTsx1.__closure=[shouldShow,scheduleOnRN,cleanUp];VoicePanelConsoleStatusTsx1.__workletHash=9535056131648;VoicePanelConsoleStatusTsx1.__initData=_worklet_9535056131648_init_data;return VoicePanelConsoleStatusTsx1;}([_worklet_9535056131648_init_data,shouldShow,scheduleOnRN,cleanUp]))}]};})" };

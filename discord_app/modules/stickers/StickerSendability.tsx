@@ -1,6 +1,6 @@
-// === Module 10832: StickerSendability ===
+// === Module 10833: StickerSendability ===
 
-// Module 10832 (StickerSendability)
+// Module 10833 (StickerSendability)
 import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
 import StickersUtils from "StickersUtils" /* 6779 */;

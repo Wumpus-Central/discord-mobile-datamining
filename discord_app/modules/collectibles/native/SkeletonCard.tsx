@@ -1,6 +1,6 @@
-// === Module 14220: SkeletonCard ===
+// === Module 14227: SkeletonCard ===
 
-// Module 14220 (SkeletonCard)
+// Module 14227 (SkeletonCard)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;

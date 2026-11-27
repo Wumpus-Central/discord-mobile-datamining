@@ -1,6 +1,6 @@
-// === Module 12873: CheckpointKnickKnacks ===
+// === Module 12881: CheckpointKnickKnacks ===
 
-// Module 12873 (CheckpointKnickKnacks)
+// Module 12881 (CheckpointKnickKnacks)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 

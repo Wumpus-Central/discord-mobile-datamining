@@ -1,6 +1,6 @@
-// === Module 10731: BugReportManager ===
+// === Module 10732: BugReportManager ===
 
-// Module 10731 (BugReportManager)
+// Module 10732 (BugReportManager)
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1361 */;
@@ -19,7 +19,7 @@ function showNotification(uri) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -62,7 +62,7 @@ function showNotification(uri) {
             }
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -85,7 +85,7 @@ function showNotification(uri) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -128,10 +128,10 @@ function showNotification(uri) {
             }
             closure_128_0 = tmp7;
             BUG_REPORTER = constants.BUG_REPORTER;
-            notificationDuration = tmp2(10626).getNotificationDuration(BUG_REPORTER);
-            const obj5 = tmp2(10626);
+            notificationDuration = tmp2(10627).getNotificationDuration(BUG_REPORTER);
+            const obj5 = tmp2(10627);
             const obj11 = { type: BUG_REPORTER, duration: notificationDuration, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
-            const obj6 = tmp3(10628);
+            const obj6 = tmp3(10629);
             obj11.key = tmp2(1269).v4();
             obj11.image = closure_128_0;
             uri = undefined;
@@ -146,7 +146,7 @@ function showNotification(uri) {
             obj11.inAppNotificationId = tmp2(1269).v4();
             obj6.enqueueNotification(obj11);
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -195,7 +195,7 @@ prototype["initBugReporter"] = function initBugReporter() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -252,7 +252,7 @@ prototype["initBugReporter"] = function initBugReporter() {
             })();
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         c3 = tmp;

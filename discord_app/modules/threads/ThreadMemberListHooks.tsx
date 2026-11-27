@@ -1,9 +1,9 @@
-// === Module 19019: ThreadMemberListHooks ===
+// === Module 19035: ThreadMemberListHooks ===
 
-// Module 19019 (ThreadMemberListHooks)
+// Module 19035 (ThreadMemberListHooks)
 import util from "util" /* 1112 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 12085 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 12086 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 12093 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 12094 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 4949 */;
 import ThreadMemberListStore from "ThreadMemberListStore" /* 7629 */;

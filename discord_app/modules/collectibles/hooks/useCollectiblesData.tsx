@@ -1,6 +1,6 @@
-// === Module 14458: useCollectiblesData ===
+// === Module 14465: useCollectiblesData ===
 
-// Module 14458 (useCollectiblesData)
+// Module 14465 (useCollectiblesData)
 import _slicedToArray from "module_32" /* 32 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6311 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 6329 */;

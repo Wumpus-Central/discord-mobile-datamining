@@ -1,6 +1,6 @@
-// === Module 11259: useOrderSigning ===
+// === Module 11260: useOrderSigning ===
 
-// Module 11259 (useOrderSigning)
+// Module 11260 (useOrderSigning)
 import BillingErrorDefault from "BillingError" /* 5794 */;
 import ClientBillingError2 from "ClientBillingError" /* 5808 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -74,7 +74,7 @@ export function useOrderSigning(order) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

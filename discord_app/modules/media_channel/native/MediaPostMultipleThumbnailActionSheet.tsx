@@ -1,6 +1,6 @@
-// === Module 10792: MediaPostMultipleThumbnailActionSheet ===
+// === Module 10793: MediaPostMultipleThumbnailActionSheet ===
 
-// Module 10792 (MediaPostMultipleThumbnailActionSheet)
+// Module 10793 (MediaPostMultipleThumbnailActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import noop from "module_19" /* 19 */;

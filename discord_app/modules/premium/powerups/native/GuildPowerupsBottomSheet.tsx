@@ -1,6 +1,6 @@
-// === Module 13505: GuildPowerupsBottomSheet ===
+// === Module 13513: GuildPowerupsBottomSheet ===
 
-// Module 13505 (GuildPowerupsBottomSheet)
+// Module 13513 (GuildPowerupsBottomSheet)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -11,27 +11,27 @@ import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5271 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5747 */;
-import GameServerConstants from "GameServerConstants" /* 8298 */;
-import Powerups from "Powerups" /* 8300 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8577 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13483 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13489 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13500 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13506 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13507 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 13508 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13510 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13511 */;
-import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 13513 */;
-import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 13514 */;
-import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 13522 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 13523 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 13524 */;
-import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 13529 */;
-import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 13533 */;
-import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 13535 */;
+import GameServerConstants from "GameServerConstants" /* 8299 */;
+import Powerups from "Powerups" /* 8301 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8578 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13491 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13497 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13508 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13514 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13515 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 13516 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13518 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13519 */;
+import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 13521 */;
+import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 13522 */;
+import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 13530 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 13531 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 13532 */;
+import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 13537 */;
+import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 13541 */;
+import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 13543 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 8297 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 8298 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;

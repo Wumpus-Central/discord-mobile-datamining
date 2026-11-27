@@ -1,11 +1,11 @@
-// === Module 15910: providers ===
+// === Module 15917: providers ===
 
-// Module 15910 (providers)
+// Module 15917 (providers)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7532 */;
 import RPCErrorDefault from "RPCError" /* 7644 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10218 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10219 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
 
@@ -161,7 +161,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 18677: ConjureShimmer ===
+// === Module 18691: ConjureShimmer ===
 
-// Module 18677 (ConjureShimmer)
+// Module 18691 (ConjureShimmer)
 import _modDef671 from "module_671" /* 671 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;

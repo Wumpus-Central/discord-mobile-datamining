@@ -1,6 +1,6 @@
-// === Module 11844: BlockConfirmationActionSheet ===
+// === Module 11852: BlockConfirmationActionSheet ===
 
-// Module 11844 (BlockConfirmationActionSheet)
+// Module 11852 (BlockConfirmationActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -34,7 +34,7 @@ function BlockedInformationTable() {
 }
 const View = fn(17).View;
 const UserRemediationAction = fn(7851).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11843);
+const RestrictionConfirmationConstants = fn(11851);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_11, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_12, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: map1 } = RestrictionConfirmationConstants);
 const Constants = fn(1071);
 ({ HelpdeskArticles: closure_14, AnalyticEvents: closure_15, RelationshipTypes: closure_16 } = Constants);
@@ -166,7 +166,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
   items = [channelId(6380).IGNORE_CONFIRMATION_ACTION_SHEET];
   const tmp4 = channelId(6379);
   [tmp6, c5] = noop.useState(false);
-  closure_6 = channelId(11420)();
+  closure_6 = channelId(11421)();
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   const items1 = [UserStore];
   const items2 = [userId];
@@ -219,7 +219,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
     const obj9 = { guildId: "Array", user: stateFromStores, animate: null, size: tmp7(1186).AvatarSizes.XLARGE, style: tmp.avatar };
     const items8 = [closure_18(tmp7(1186).Avatar, obj9), ];
     const obj10 = { style: tmp.avatarIconContainer, children: null };
-    const obj11 = { size: tmp7(1186).Icon.Sizes.MEDIUM, source: tmp2(9077) };
+    const obj11 = { size: tmp7(1186).Icon.Sizes.MEDIUM, source: tmp2(9078) };
     obj10.children = closure_18(tmp7(1186).Icon, obj11);
     items8[1] = closure_18(closure_6, obj10);
     obj8.children = items8;
@@ -256,7 +256,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
         AnalyticsUtilsDefault.track(constants.USER_REMEDIATION_ACTION, { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" });
         const obj2 = { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" };
         const obj3 = ActionSheetActionCreatorsDefault;
-        const tmp2 = asyncRequireImpl(11845, dependencyMap.paths);
+        const tmp2 = asyncRequireImpl(11853, dependencyMap.paths);
         obj3.openLazy(tmp2, application_id, { userId, channelId, onBlock, onSuccess, onIgnore, impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION }, "replaceTopSheet");
       };
       obj17.children = closure_18(tmp7(6144).TableRow, obj18);
@@ -287,7 +287,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -325,7 +325,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
             }
             v1(5257).hideActionSheet(closure_1_11);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp24) {
             dependencyMap = tmp;
             throw tmp24;

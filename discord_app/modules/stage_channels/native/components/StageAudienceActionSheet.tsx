@@ -1,6 +1,6 @@
-// === Module 10322: StageAudienceActionSheet ===
+// === Module 10323: StageAudienceActionSheet ===
 
-// Module 10322 (StageAudienceActionSheet)
+// Module 10323 (StageAudienceActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4375 from "module_4375" /* 4375 */;
@@ -11,8 +11,8 @@ import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7839 */;
-import useRequestToSpeakPermission from "useRequestToSpeakPermission" /* 10323 */;
-import useStageSummaryDefault from "useStageSummary" /* 10326 */;
+import useRequestToSpeakPermission from "useRequestToSpeakPermission" /* 10324 */;
+import useStageSummaryDefault from "useStageSummary" /* 10327 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -72,7 +72,7 @@ function StageAudienceActionSheetContent(channel) {
   const sortedRequestToSpeakParticipants = channel(6861).useSortedRequestToSpeakParticipants(channel.id);
   closure_129_1 = sortedRequestToSpeakParticipants;
   let obj3 = channel(6861);
-  const throttledStageAudience = channel(10324).useThrottledStageAudience(channel.id);
+  const throttledStageAudience = channel(10325).useThrottledStageAudience(channel.id);
   closure_129_2 = throttledStageAudience;
   items = [canToggleRequestToSpeak, sortedRequestToSpeakParticipants, throttledStageAudience];
   const memo = noop.useMemo(() => {

@@ -1,8 +1,8 @@
-// === Module 15457: TagGroup ===
+// === Module 15464: TagGroup ===
 
-// Module 15457 (TagGroup)
+// Module 15464 (TagGroup)
 import nativeDefault from "native" /* 575 */;
-import Tag from "Tag" /* 15460 */;
+import Tag from "Tag" /* 15467 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

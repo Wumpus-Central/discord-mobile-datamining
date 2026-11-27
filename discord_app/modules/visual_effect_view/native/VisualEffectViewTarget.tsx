@@ -1,8 +1,8 @@
-// === Module 19120: VisualEffectViewTarget ===
+// === Module 19136: VisualEffectViewTarget ===
 
-// Module 19120 (VisualEffectViewTarget)
+// Module 19136 (VisualEffectViewTarget)
 import _mod17 from "module_17" /* 17 */;
-import VisualEffectViewTargetAndroidNativeComponentDefault from "VisualEffectViewTargetAndroidNativeComponent" /* 19121 */;
+import VisualEffectViewTargetAndroidNativeComponentDefault from "VisualEffectViewTargetAndroidNativeComponent" /* 19137 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 

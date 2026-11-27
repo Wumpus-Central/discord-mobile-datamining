@@ -1,11 +1,11 @@
-// === Module 14247: GameDetectionReportModal ===
+// === Module 14254: GameDetectionReportModal ===
 
-// Module 14247 (GameDetectionReportModal)
+// Module 14254 (GameDetectionReportModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import Navigator from "Navigator" /* 7355 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8754 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8755 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -124,7 +124,7 @@ function ReportContent(applicationId) {
           }, 100);
         },
       hasIcons: null,
-      children: "VENMO_MOBILE_POLLING_TOKENIZATION_CANCELED"
+      children: "GUILD_MEMBER_UPDATE_LOCAL"
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[12]).intl;

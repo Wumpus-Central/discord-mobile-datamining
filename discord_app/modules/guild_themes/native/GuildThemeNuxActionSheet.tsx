@@ -1,6 +1,6 @@
-// === Module 17883: GuildThemeNuxActionSheet ===
+// === Module 17890: GuildThemeNuxActionSheet ===
 
-// Module 17883 (GuildThemeNuxActionSheet)
+// Module 17890 (GuildThemeNuxActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
@@ -8,7 +8,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
-import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 8295 */;
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 8296 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -45,8 +45,8 @@ export default function GuildThemeNuxActionSheet(guildId) {
   let stateFromStores;
   let callback1;
   const tmp = closure_14();
-  [tmp5, c2] = noop.useState(guildId(17884).getInitialGuildThemeNuxSelection);
-  const tmp4 = _slicedToArray(noop.useState(guildId(17884).getInitialGuildThemeNuxSelection), 2);
+  [tmp5, c2] = noop.useState(guildId(17891).getInitialGuildThemeNuxSelection);
+  const tmp4 = _slicedToArray(noop.useState(guildId(17891).getInitialGuildThemeNuxSelection), 2);
   [tmp7, c3] = noop.useState(null);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   [tmp9, c4] = noop.useState(false);
@@ -104,7 +104,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -181,7 +181,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj3.dismissAccessibilityLabel = intl2.string(guildId(1112).t.cpT0Cq);
   obj3.onDismiss = callback3;
   obj3.contentStyles = tmp.container;
-  const items7 = [closure_10(markAsDismissed(17885), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
+  const items7 = [closure_10(markAsDismissed(17892), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
   const obj4 = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl3 = tmp2(1112).intl;
   obj4.children = intl3.string(guildId(1112).t.Q9zFy9);

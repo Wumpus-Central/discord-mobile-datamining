@@ -1,6 +1,6 @@
-// === Module 11356: UserRow ===
+// === Module 11357: UserRow ===
 
-// Module 11356 (UserRow)
+// Module 11357 (UserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -15,19 +15,19 @@ import ChatIcon from "ChatIcon" /* 7137 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7186 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7850 */;
-import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 8326 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 9022 */;
-import BoostGemIcon from "BoostGemIcon" /* 9365 */;
-import XLargeIcon from "XLargeIcon" /* 10761 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 11358 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 11359 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11363 */;
-import ActionButtonDefault from "ActionButton" /* 11382 */;
-import CrownIcon from "CrownIcon" /* 11384 */;
+import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 8327 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 9023 */;
+import BoostGemIcon from "BoostGemIcon" /* 9366 */;
+import XLargeIcon from "XLargeIcon" /* 10762 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 11359 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 11360 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11364 */;
+import ActionButtonDefault from "ActionButton" /* 11383 */;
+import CrownIcon from "CrownIcon" /* 11385 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 8325 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 8326 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import PresenceStore from "PresenceStore" /* 6014 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
@@ -76,14 +76,14 @@ function UserRowSubLabel(arg0) {
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(8944).UserRowModes;
+const UserRowModes = fn(8945).UserRowModes;
 const Constants = fn(1071);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PlatformUtils = fn(1359);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "r" };
+  let obj = { lineHeight: "top" };
 }
 let closure_18 = { CALL: "call", MESSAGE: "message", ACCEPT: "accept", DECLINE: "decline", CANCEL: "cancel", ACCEPT_SUGGESTION: "accept-suggestion", IGNORE_SUGGESTION: "ignore-suggestion", TOGGLE: "toggle" };
 let createStyles = fn(5043);
@@ -335,7 +335,7 @@ export default noop.memo(function UserRow(type) {
             channel = channel.getChannel(result);
             if (null != channel) {
               user(38)(channel.isPrivate(), "must be a DM");
-              const obj2 = user(11357)(channel, false);
+              const obj2 = user(11358)(channel, false);
               if (!obj2.inCall) {
                 obj2.onPress();
               }
@@ -385,7 +385,7 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(11357)(channel, false);
+          const obj2 = user(11358)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }

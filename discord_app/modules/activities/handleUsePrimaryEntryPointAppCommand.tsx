@@ -1,7 +1,7 @@
-// === Module 12300: handleUsePrimaryEntryPointAppCommand ===
+// === Module 12308: handleUsePrimaryEntryPointAppCommand ===
 
-// Module 12300 (handleUsePrimaryEntryPointAppCommand)
-import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 10117 */;
+// Module 12308 (handleUsePrimaryEntryPointAppCommand)
+import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 10118 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -23,7 +23,7 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -115,7 +115,7 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

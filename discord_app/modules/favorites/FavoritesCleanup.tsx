@@ -1,10 +1,10 @@
-// === Module 10754: FavoritesCleanup ===
+// === Module 10755: FavoritesCleanup ===
 
-// Module 10754 (FavoritesCleanup)
+// Module 10755 (FavoritesCleanup)
 import DurationsDefault from "Durations" /* 1088 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6984 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 10755 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 10756 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -48,7 +48,7 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -76,7 +76,7 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;

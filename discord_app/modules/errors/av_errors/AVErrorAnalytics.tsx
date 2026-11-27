@@ -1,6 +1,6 @@
-// === Module 20338: AVErrorAnalytics ===
+// === Module 20396: AVErrorAnalytics ===
 
-// Module 20338 (AVErrorAnalytics)
+// Module 20396 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1373 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5049 */;
@@ -14,7 +14,7 @@ import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 import RTCRegionStore from "RTCRegionStore" /* 5942 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8403 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8404 */;
 
 const require = globalThis.__r;
 

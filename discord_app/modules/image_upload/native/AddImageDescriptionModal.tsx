@@ -1,9 +1,9 @@
-// === Module 11690: AddImageDescriptionModal ===
+// === Module 11698: AddImageDescriptionModal ===
 
-// Module 11690 (AddImageDescriptionModal)
+// Module 11698 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11417 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11418 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8124 */;
@@ -66,9 +66,9 @@ function AddDescription(id) {
           const obj2 = {};
           const merged = Object.assign(dependencyMap);
           obj2.description = ref.current;
-          id(10062).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-          const obj = id(10062);
-          id(11689).close();
+          id(10063).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+          const obj = id(10063);
+          id(11697).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});
@@ -102,7 +102,7 @@ function AddDescription(id) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const DraftType = fn(8117).DraftType;
-const maxLength = fn(11691).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+const maxLength = fn(11699).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5043);

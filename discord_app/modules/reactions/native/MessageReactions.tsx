@@ -1,6 +1,6 @@
-// === Module 14058: MessageReactions ===
+// === Module 14065: MessageReactions ===
 
-// Module 14058 (MessageReactions)
+// Module 14065 (MessageReactions)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import noop from "module_19" /* 19 */;
@@ -68,9 +68,9 @@ export default function MessageReactions(emoji) {
   if (items3.length > 0) {
     let obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst };
     let merged1 = Object.assign(merged);
-    let tmp9Result = jsx(tmp4(12242).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst });
+    let tmp9Result = jsx(tmp4(12250).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst });
   } else {
-    tmp9Result = jsx(tmp4(12242).MessageReactionsEmpty, {});
+    tmp9Result = jsx(tmp4(12250).MessageReactionsEmpty, {});
   }
   obj2.children = tmp9Result;
   return jsx(items3(6379).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations, children: null });

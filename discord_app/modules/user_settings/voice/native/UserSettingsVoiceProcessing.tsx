@@ -1,12 +1,12 @@
-// === Module 10416: UserSettingsVoiceProcessing ===
+// === Module 10417: UserSettingsVoiceProcessing ===
 
-// Module 10416 (UserSettingsVoiceProcessing)
+// Module 10417 (UserSettingsVoiceProcessing)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5996 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10417 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10418 */;
-import KrispLogoDefault from "KrispLogo" /* 10421 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10418 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10419 */;
+import KrispLogoDefault from "KrispLogo" /* 10422 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 
@@ -15,7 +15,7 @@ const Text_Text = EUNgko(5634);
 const TableRadioGroup = EUNgko(7251);
 const TableRadioRow = EUNgko(7253);
 const TableSwitchRow = EUNgko(7549);
-const UserSettingsVoice = EUNgko(10388);
+const UserSettingsVoice = EUNgko(10389);
 require = fn;
 class VoiceProcessingOptions {
   constructor() {

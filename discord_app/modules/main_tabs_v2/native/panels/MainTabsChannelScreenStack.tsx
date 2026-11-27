@@ -1,6 +1,6 @@
-// === Module 18379: MainTabsChannelScreenStack ===
+// === Module 18386: MainTabsChannelScreenStack ===
 
-// Module 18379 (MainTabsChannelScreenStack)
+// Module 18386 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
@@ -9,15 +9,15 @@ import useChatLayout from "useChatLayout" /* 5222 */;
 import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5224 */;
 import useThemeDefault from "useTheme" /* 5252 */;
 import Suspender from "Suspender" /* 6077 */;
-import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11807 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11983 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17723 */;
-import MainTabsBackgroundChat from "MainTabsBackgroundChat" /* 17725 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17726 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 18383 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 18384 */;
-import ChannelScreenFrameContainerDefault from "ChannelScreenFrameContainer" /* 18385 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 18386 */;
+import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11815 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11991 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17730 */;
+import MainTabsBackgroundChat from "MainTabsBackgroundChat" /* 17732 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17733 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 18390 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 18391 */;
+import ChannelScreenFrameContainerDefault from "ChannelScreenFrameContainer" /* 18392 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 18393 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -223,8 +223,8 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const setVisibleChannelScreen = fn(18380).setVisibleChannelScreen;
-const ONYX_BORDER_WIDTH = fn(9005).ONYX_BORDER_WIDTH;
+const setVisibleChannelScreen = fn(18387).setVisibleChannelScreen;
+const ONYX_BORDER_WIDTH = fn(9006).ONYX_BORDER_WIDTH;
 const Constants = fn(1071);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: closure_10, AnalyticsSections: closure_11 } = Constants);
 const ThemeTypes = fn(1082).ThemeTypes;

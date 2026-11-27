@@ -1,9 +1,9 @@
-// === Module 16976: EmojiAngryFaceWithHornsIcon ===
+// === Module 16983: EmojiAngryFaceWithHornsIcon ===
 
-// Module 16976 (EmojiAngryFaceWithHornsIcon)
+// Module 16983 (EmojiAngryFaceWithHornsIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5729 */;
-import _mod16977 from "module_16977" /* 16977 */;
+import _mod16984 from "module_16984" /* 16984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiAngryFaceWithHornsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16977, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16984, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

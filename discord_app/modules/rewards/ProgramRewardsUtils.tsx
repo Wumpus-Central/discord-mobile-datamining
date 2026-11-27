@@ -1,9 +1,9 @@
-// === Module 15217: ProgramRewardsUtils ===
+// === Module 15224: ProgramRewardsUtils ===
 
-// Module 15217 (ProgramRewardsUtils)
+// Module 15224 (ProgramRewardsUtils)
 import PremiumUtils from "PremiumUtils" /* 2174 */;
-import useHasXboxMonthlyOrbsPerk from "useHasXboxMonthlyOrbsPerk" /* 15218 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15219 */;
+import useHasXboxMonthlyOrbsPerk from "useHasXboxMonthlyOrbsPerk" /* 15225 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15226 */;
 import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
@@ -15,7 +15,7 @@ function canFetchXboxProgramReward() {
   return useHasXboxMonthlyOrbsPerk.hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
 }
 const PremiumTypes = fn(1389).PremiumTypes;
-const dependencyMap = { [fn(15219).RewardProgram.NITRO]: canFetchNitroProgramReward, [fn(15219).RewardProgram.XBOX]: canFetchXboxProgramReward };
+const dependencyMap = { [fn(15226).RewardProgram.NITRO]: canFetchNitroProgramReward, [fn(15226).RewardProgram.XBOX]: canFetchXboxProgramReward };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 

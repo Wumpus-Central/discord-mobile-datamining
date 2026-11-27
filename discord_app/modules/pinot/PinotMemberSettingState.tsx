@@ -1,9 +1,9 @@
-// === Module 11883: PinotMemberSettingState ===
+// === Module 11891: PinotMemberSettingState ===
 
-// Module 11883 (PinotMemberSettingState)
+// Module 11891 (PinotMemberSettingState)
 import initialize from "initialize" /* 504 */;
 import wrappers from "wrappers" /* 1226 */;
-import PinotMemberSettingStore from "PinotMemberSettingStore" /* 11884 */;
+import PinotMemberSettingStore from "PinotMemberSettingStore" /* 11892 */;
 
 require = fn;
 const UserSettingDefinitions = fn(4872);

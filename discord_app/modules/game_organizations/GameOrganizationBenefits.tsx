@@ -1,6 +1,6 @@
-// === Module 12351: GameOrganizationBenefits ===
+// === Module 12359: GameOrganizationBenefits ===
 
-// Module 12351 (GameOrganizationBenefits)
+// Module 12359 (GameOrganizationBenefits)
 import _modDef2653 from "module_2653" /* 2653 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 14776: GuildBoostingMarketingPersistentCta ===
+// === Module 14782: GuildBoostingMarketingPersistentCta ===
 
-// Module 14776 (GuildBoostingMarketingPersistentCta)
+// Module 14782 (GuildBoostingMarketingPersistentCta)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
@@ -8,7 +8,7 @@ import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import spring_spring from "spring/spring" /* 5644 */;
 import GuildIcon from "GuildIcon" /* 7052 */;
-import GuildBoostingSubscribeButtonDefault from "GuildBoostingSubscribeButton" /* 13578 */;
+import GuildBoostingSubscribeButtonDefault from "GuildBoostingSubscribeButton" /* 13586 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 

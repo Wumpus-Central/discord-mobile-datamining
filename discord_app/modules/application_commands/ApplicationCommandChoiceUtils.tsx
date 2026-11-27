@@ -1,7 +1,7 @@
-// === Module 10093: ApplicationCommandChoiceUtils ===
+// === Module 10094: ApplicationCommandChoiceUtils ===
 
-// Module 10093 (ApplicationCommandChoiceUtils)
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8181 */;
+// Module 10094 (ApplicationCommandChoiceUtils)
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8182 */;
 
 const ApplicationCommandConstants = fn(7073);
 ({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: c2 } = ApplicationCommandConstants);

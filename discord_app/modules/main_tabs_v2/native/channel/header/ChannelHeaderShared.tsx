@@ -1,6 +1,6 @@
-// === Module 11893: ChannelHeaderShared ===
+// === Module 11901: ChannelHeaderShared ===
 
-// Module 11893 (ChannelHeaderShared)
+// Module 11901 (ChannelHeaderShared)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -12,12 +12,12 @@ import useChannelName from "useChannelName" /* 5659 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import Pressables from "Pressables" /* 6152 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7096 */;
-import BotTagDefault from "BotTag" /* 8632 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 9616 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9808 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11557 */;
-import _modDef11894 from "module_11894" /* 11894 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 11895 */;
+import BotTagDefault from "BotTag" /* 8633 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 9617 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9809 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11565 */;
+import _modDef11902 from "module_11902" /* 11902 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 11903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
@@ -75,7 +75,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef11894, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef11902, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;

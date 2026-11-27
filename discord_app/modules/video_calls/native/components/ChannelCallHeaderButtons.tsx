@@ -1,14 +1,14 @@
-// === Module 10551: ChannelCallHeaderButtons ===
+// === Module 10552: ChannelCallHeaderButtons ===
 
-// Module 10551 (ChannelCallHeaderButtons)
+// Module 10552 (ChannelCallHeaderButtons)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5996 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6129 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 10011 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10329 */;
-import _modDef10552 from "module_10552" /* 10552 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 10012 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10330 */;
 import _modDef10553 from "module_10553" /* 10553 */;
+import _modDef10554 from "module_10554" /* 10554 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 
@@ -26,7 +26,7 @@ export function CameraButton() {
     const obj2 = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["t9eQ/g"]);
-    obj2.source = _modDef10552;
+    obj2.source = _modDef10553;
     obj2.onPress = function handleCamera() {
       const keys = Object.keys(closure_1_1);
       const found = keys.find((item) => item !== closure_1_0);
@@ -47,7 +47,7 @@ export function GridButton(channel) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1112).intl;
       obj.accessibilityLabel = intl.string(channel(1112).t.HK4JIu);
-      obj.source = _modDef10553;
+      obj.source = _modDef10554;
       obj.onPress = function onPress() {
         return ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
       };

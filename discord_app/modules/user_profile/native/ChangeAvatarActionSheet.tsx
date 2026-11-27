@@ -1,6 +1,6 @@
-// === Module 16052: ChangeAvatarActionSheet ===
+// === Module 16059: ChangeAvatarActionSheet ===
 
-// Module 16052 (ChangeAvatarActionSheet)
+// Module 16059 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -11,11 +11,11 @@ import useAnalyticsLocations from "useAnalyticsLocations" /* 6379 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
 import Form from "Form" /* 8088 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9637 */;
-import ProfileEditSheetNitroUpdatesExperiment from "ProfileEditSheetNitroUpdatesExperiment" /* 16033 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 16035 */;
-import ProfileEditNitroSubLabelDefault from "ProfileEditNitroSubLabel" /* 16036 */;
-import ProfileEditNitroUpsellRowDefault from "ProfileEditNitroUpsellRow" /* 16037 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9638 */;
+import ProfileEditSheetNitroUpdatesExperiment from "ProfileEditSheetNitroUpdatesExperiment" /* 16040 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 16042 */;
+import ProfileEditNitroSubLabelDefault from "ProfileEditNitroSubLabel" /* 16043 */;
+import ProfileEditNitroUpsellRowDefault from "ProfileEditNitroUpsellRow" /* 16044 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
 

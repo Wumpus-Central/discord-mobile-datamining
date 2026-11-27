@@ -1,11 +1,11 @@
-// === Module 15000: conjureServerWidgetConsent ===
+// === Module 15007: conjureServerWidgetConsent ===
 
-// Module 15000 (conjureServerWidgetConsent)
+// Module 15007 (conjureServerWidgetConsent)
 import URLUtilsDefault from "URLUtils" /* 1380 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14572 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14579 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import WidgetStore from "WidgetStore" /* 14565 */;
-import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14992 */;
+import WidgetStore from "WidgetStore" /* 14572 */;
+import ConjureServerWidgetStore from "ConjureServerWidgetStore" /* 14999 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ let closure_6 = async function _exchangeConsentCode() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -63,7 +63,7 @@ let closure_6 = async function _exchangeConsentCode() {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -92,7 +92,7 @@ let closure_8 = async function _addWidget() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ let closure_8 = async function _addWidget() {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp10) {
         c1 = tmp;
         throw tmp10;
@@ -154,7 +154,7 @@ let closure_9 = async function _exchangeAndAdd(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -273,7 +273,7 @@ let closure_9 = async function _exchangeAndAdd(arg0) {
           return obj;
         } else {
           c9 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
         c7 = 0;
         c9 = 3;
@@ -304,7 +304,7 @@ let closure_10 = async function _finishTurnOn(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

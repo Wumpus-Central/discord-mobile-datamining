@@ -1,6 +1,6 @@
-// === Module 12884: CheckpointMessagesStatsScreen ===
+// === Module 12892: CheckpointMessagesStatsScreen ===
 
-// Module 12884 (CheckpointMessagesStatsScreen)
+// Module 12892 (CheckpointMessagesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -10,17 +10,17 @@ import _modDef3495 from "module_3495" /* 3495 */;
 import CheckpointConstants from "CheckpointConstants" /* 6396 */;
 import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6768 */;
 import ChatIcon from "ChatIcon" /* 7137 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12850 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12854 */;
-import useIsCheckpointWide from "useIsCheckpointWide" /* 12860 */;
-import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12880 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12881 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12882 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12883 */;
-import _modDef12885 from "module_12885" /* 12885 */;
-import _modDef12886 from "module_12886" /* 12886 */;
-import CheckpointStore from "CheckpointStore" /* 12620 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12858 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12862 */;
+import useIsCheckpointWide from "useIsCheckpointWide" /* 12868 */;
+import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12888 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12889 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12890 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12891 */;
+import _modDef12893 from "module_12893" /* 12893 */;
+import _modDef12894 from "module_12894" /* 12894 */;
+import CheckpointStore from "CheckpointStore" /* 12628 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
@@ -107,8 +107,8 @@ export default function CheckpointMessagesStatsScreen() {
   const stringResult = intl.string(wWKySP);
   const obj7 = { animatedUri: null, staticUri: null, style: null };
   const tmp2Result = CheckpointScreenDefault;
-  obj7.animatedUri = _modDef12885;
-  obj7.staticUri = _modDef12886;
+  obj7.animatedUri = _modDef12893;
+  obj7.staticUri = _modDef12894;
   const items2 = [tmp.image, ];
   let wideImage = tmp4;
   if (tmp4) {

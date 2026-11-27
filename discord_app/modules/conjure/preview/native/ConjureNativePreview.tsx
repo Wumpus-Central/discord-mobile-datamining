@@ -1,6 +1,6 @@
-// === Module 18613: ConjureNativePreview ===
+// === Module 18624: ConjureNativePreview ===
 
-// Module 18613 (ConjureNativePreview)
+// Module 18624 (ConjureNativePreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
@@ -15,11 +15,11 @@ import conjurePreviewSurface from "conjurePreviewSurface" /* 7677 */;
 import leaveFrame from "leaveFrame" /* 7691 */;
 import ConjurePlatformUtils from "ConjurePlatformUtils" /* 7727 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9487 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9996 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 14608 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 18614 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 18615 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9488 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9997 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 14615 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 18625 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 18626 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6936 */;
@@ -271,7 +271,7 @@ function PreviewWidget(applicationId) {
   const tmp = closure_24();
   const tmp4 = UserProfileSharedStylesDefault();
   const tmp5 = useThemeDefault();
-  const obj = applicationId(9489);
+  const obj = applicationId(9490);
   items = [AuthenticationStore];
   const stateFromStores = applicationId(504).useStateFromStores(items, () => id.getId());
   const items1 = [applicationId];
@@ -414,10 +414,10 @@ function PreviewBot(projectId) {
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: tmp19, screenIndex: "conjure-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_22(previewApplicationId(11773), obj7, stateFromStores.id), ];
+    const items8 = [closure_22(previewApplicationId(11781), obj7, stateFromStores.id), ];
     let tmp30Result = null;
     if (tmp7Result4.isAndroid()) {
-      tmp30Result = closure_22(tmp7(18623).PortalKeyboardRenderer, { portal: true });
+      tmp30Result = closure_22(tmp7(18634).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp30Result;
     obj6.children = items8;
@@ -428,7 +428,7 @@ function PreviewBot(projectId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(18600);
+const conjureDesignFeedbackStore = fn(18611);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1071);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);

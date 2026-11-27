@@ -1,16 +1,16 @@
-// === Module 19425: FramePanelFocusedView ===
+// === Module 19441: FramePanelFocusedView ===
 
-// Module 19425 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9996 */;
-import FrameStackLevel from "FrameStackLevel" /* 15956 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 18619 */;
-import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 18917 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19406 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19422 */;
-import PlayableActivityFrameHeaderDefault from "PlayableActivityFrameHeader" /* 19427 */;
-import FramePanelHeaderDefault from "FramePanelHeader" /* 19429 */;
-import PlayableFrameImpressionTrackerDefault from "PlayableFrameImpressionTracker" /* 19431 */;
-import PlayableFrameBannerDefault from "PlayableFrameBanner" /* 19432 */;
+// Module 19441 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9997 */;
+import FrameStackLevel from "FrameStackLevel" /* 15963 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 18630 */;
+import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 18933 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19422 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19438 */;
+import PlayableActivityFrameHeaderDefault from "PlayableActivityFrameHeader" /* 19443 */;
+import FramePanelHeaderDefault from "FramePanelHeader" /* 19445 */;
+import PlayableFrameImpressionTrackerDefault from "PlayableFrameImpressionTracker" /* 19447 */;
+import PlayableFrameBannerDefault from "PlayableFrameBanner" /* 19448 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6936 */;
 

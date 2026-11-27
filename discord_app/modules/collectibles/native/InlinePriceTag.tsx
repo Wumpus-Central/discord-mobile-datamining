@@ -1,6 +1,6 @@
-// === Module 11297: InlinePriceTag ===
+// === Module 11298: InlinePriceTag ===
 
-// Module 11297 (InlinePriceTag)
+// Module 11298 (InlinePriceTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -10,17 +10,17 @@ import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6322 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 6323 */;
-import useCurrentUser from "useCurrentUser" /* 9415 */;
-import OrbsIcon from "OrbsIcon" /* 9465 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9637 */;
-import TagIcon from "TagIcon" /* 11077 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11245 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 11255 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 11263 */;
-import useProductDisableState from "useProductDisableState" /* 11298 */;
-import ExpressiveNitroUpsellDefault from "ExpressiveNitroUpsell" /* 11299 */;
+import useCurrentUser from "useCurrentUser" /* 9416 */;
+import OrbsIcon from "OrbsIcon" /* 9466 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9638 */;
+import TagIcon from "TagIcon" /* 11078 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11246 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 11256 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 11264 */;
+import useProductDisableState from "useProductDisableState" /* 11299 */;
+import ExpressiveNitroUpsellDefault from "ExpressiveNitroUpsell" /* 11300 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 9104 */;
+import IAPStore from "IAPStore" /* 9105 */;
 
 require = fn;
 function PriceTag(accessibilityLabel) {

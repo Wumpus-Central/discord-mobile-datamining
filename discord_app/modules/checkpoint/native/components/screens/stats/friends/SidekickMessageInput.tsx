@@ -1,12 +1,12 @@
-// === Module 12907: SidekickMessageInput ===
+// === Module 12915: SidekickMessageInput ===
 
-// Module 12907 (SidekickMessageInput)
+// Module 12915 (SidekickMessageInput)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5223 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11113 */;
-import Tracking from "Tracking" /* 12618 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 11114 */;
+import Tracking from "Tracking" /* 12626 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -54,7 +54,7 @@ export default function SidekickMessageInput(user) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

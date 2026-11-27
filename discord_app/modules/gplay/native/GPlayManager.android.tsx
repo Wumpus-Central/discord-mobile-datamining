@@ -1,17 +1,17 @@
-// === Module 9230: GPlayManager ===
+// === Module 9231: GPlayManager ===
 
-// Module 9230 (GPlayManager)
+// Module 9231 (GPlayManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5806 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9231 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9232 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GiftPromotionStore from "GiftPromotionStore" /* 9114 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 9115 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SubscriptionStore from "SubscriptionStore" /* 2179 */;
-import IAPStore from "IAPStore" /* 9104 */;
+import IAPStore from "IAPStore" /* 9105 */;
 
 require = fn;
 function handleConnectionStateUpdated(connectionState) {
@@ -55,7 +55,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -100,7 +100,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
               return obj6;
             } else if (closure_131_11.isPurchasingProduct(purchase2.productId)) {
               c7 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             } else {
               closure_130_1 = closure_131_12.getState().analyticsByProductId[purchase2.productId];
               giftOptionsForKey = closure_131_25[purchase2.productId];
@@ -150,7 +150,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
                 const obj17 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
                 closure_131_1(closure_131_2[17]).dispatch(obj17);
                 c7 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               } else {
                 c6 = 7;
                 c7 = 1;
@@ -441,7 +441,7 @@ let closure_38 = async function _executePendingDowngrade() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -570,7 +570,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -627,7 +627,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
             });
           });
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       }
     } catch (tmp24) {
@@ -662,7 +662,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -739,10 +739,10 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
 let closure_3 = ["succeededOnlyFields"];
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const PremiumPlanPurchasedStore = fn(9115);
+const PremiumPlanPurchasedStore = fn(9116);
 ({ setPaymentSuccess: metroImportDefault, showOldPaymentFlowSuccess: closure_8 } = PremiumPlanPurchasedStore);
-const useGPlayAnalyticsStore = fn(9154).useGPlayAnalyticsStore;
-let Constants = fn(9105);
+const useGPlayAnalyticsStore = fn(9155).useGPlayAnalyticsStore;
+let Constants = fn(9106);
 ({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
 Constants = fn(1071);
 ({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);
@@ -757,7 +757,7 @@ let closure_26 = null;
 let closure_27 = null;
 let closure_28 = null;
 let closure_29 = null;
-const items = [fn(9113).ProductIds.PREMIUM_TIER_2_MONTHLY];
+const items = [fn(9114).ProductIds.PREMIUM_TIER_2_MONTHLY];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gplay/native/GPlayManager.android.tsx");
 

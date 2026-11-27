@@ -1,6 +1,6 @@
-// === Module 11223: useWishlistButtonState ===
+// === Module 11224: useWishlistButtonState ===
 
-// Module 11223 (useWishlistButtonState)
+// Module 11224 (useWishlistButtonState)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -65,7 +65,7 @@ export function useWishlistButtonState(onRemoveSuccess) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

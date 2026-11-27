@@ -1,7 +1,7 @@
-// === Module 15145: StreamDrawingExperiment ===
+// === Module 15152: StreamDrawingExperiment ===
 
-// Module 15145 (StreamDrawingExperiment)
-import StreamDrawingChannel from "StreamDrawingChannel" /* 15144 */;
+// Module 15152 (StreamDrawingExperiment)
+import StreamDrawingChannel from "StreamDrawingChannel" /* 15151 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
 

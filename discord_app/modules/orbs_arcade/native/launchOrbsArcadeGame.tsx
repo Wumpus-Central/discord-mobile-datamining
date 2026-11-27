@@ -1,16 +1,16 @@
-// === Module 16655: launchOrbsArcadeGame ===
+// === Module 16662: launchOrbsArcadeGame ===
 
-// Module 16655 (launchOrbsArcadeGame)
+// Module 16662 (launchOrbsArcadeGame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6971 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16635 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16642 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import FramesStore from "FramesStore" /* 6936 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16628 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16635 */;
 
 require = fn;
 function showLaunchError() {
@@ -32,7 +32,7 @@ let closure_12 = async function _ensureEnrollment(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ let closure_13 = async function _launchGame(arg0, arg1, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -158,13 +158,13 @@ let closure_13 = async function _launchGame(arg0, arg1, arg2) {
             closure_133_0(closure_133_2[14]).leaveFrame(closure_132_9);
             closure_133_11();
             c8 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp8) {
           c6 = 0;
           closure_133_11();
           c8 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } else if (2 === tmp8) {
           if (arg0 === 1) {
             c8 = 3;
@@ -236,7 +236,7 @@ let closure_13 = async function _launchGame(arg0, arg1, arg2) {
         } else if (4 === tmp8) {
           c6 = 0;
           c8 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c8 = 3;
           throw value;
@@ -310,7 +310,7 @@ let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

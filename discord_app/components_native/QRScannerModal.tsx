@@ -1,6 +1,6 @@
-// === Module 15276: QRScannerModal ===
+// === Module 15283: QRScannerModal ===
 
-// Module 15276 (QRScannerModal)
+// Module 15283 (QRScannerModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import URLUtilsDefault from "URLUtils" /* 1380 */;
@@ -12,9 +12,9 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import _modDef7444 from "module_7444" /* 7444 */;
 import openUserSettings from "openUserSettings" /* 8109 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 12539 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 12588 */;
-import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 15277 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 12547 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 12596 */;
+import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 15284 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ function DCDQRScanner(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, requireNativeComponent } = get_ActivityIndicator);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-let closure_7 = fn(8213).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_7 = fn(8214).FAMILY_CENTER_LINK_REQUEST_REGEX;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PlatformUtils = fn(1379);
@@ -86,7 +86,7 @@ export default function QRScannerModal(showHelp) {
             ModalActionCreatorsDefault.pop();
             const tmp21Result = ModalActionCreatorsDefault;
             obj2 = { remoteAuthFingerprint: result };
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15267, dependencyMap.paths), obj2);
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15274, dependencyMap.paths), obj2);
             const tmp21Result4 = ModalActionCreatorsDefault;
           } else {
             let match;

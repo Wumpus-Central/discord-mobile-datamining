@@ -1,6 +1,6 @@
-// === Module 20006: GuildSettingsModalTieredExpressionSlots ===
+// === Module 20031: GuildSettingsModalTieredExpressionSlots ===
 
-// Module 20006 (GuildSettingsModalTieredExpressionSlots)
+// Module 20031 (GuildSettingsModalTieredExpressionSlots)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

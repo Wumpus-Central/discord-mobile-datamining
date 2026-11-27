@@ -1,6 +1,6 @@
-// === Module 16458: UserSettingsAuthedApp ===
+// === Module 16465: UserSettingsAuthedApp ===
 
-// Module 16458 (UserSettingsAuthedApp)
+// Module 16465 (UserSettingsAuthedApp)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Link from "Link" /* 1502 */;
@@ -14,8 +14,8 @@ import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7471 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7476 */;
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7517 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7812 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10000 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13592 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10001 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13600 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6389 */;
@@ -55,8 +55,8 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1071);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(11409).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11843).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(11410).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(11851).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(5043);

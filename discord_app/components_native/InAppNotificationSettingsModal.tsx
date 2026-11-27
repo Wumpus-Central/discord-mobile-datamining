@@ -1,13 +1,13 @@
-// === Module 10666: InAppNotificationSettingsModal ===
+// === Module 10667: InAppNotificationSettingsModal ===
 
-// Module 10666 (InAppNotificationSettingsModal)
+// Module 10667 (InAppNotificationSettingsModal)
 import util from "util" /* 1112 */;
 import useChannelName from "useChannelName" /* 5659 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7471 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7476 */;
 import Form from "Form" /* 8088 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10667 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10668 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;

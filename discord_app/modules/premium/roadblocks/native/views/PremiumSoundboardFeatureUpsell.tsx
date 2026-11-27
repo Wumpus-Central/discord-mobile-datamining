@@ -1,11 +1,11 @@
-// === Module 18244: PremiumSoundboardFeatureUpsell ===
+// === Module 18251: PremiumSoundboardFeatureUpsell ===
 
-// Module 18244 (PremiumSoundboardFeatureUpsell)
+// Module 18251 (PremiumSoundboardFeatureUpsell)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9597 */;
-import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9751 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9598 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9752 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

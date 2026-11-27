@@ -1,6 +1,6 @@
-// === Module 14900: isOnXbox ===
+// === Module 14907: isOnXbox ===
 
-// Module 14900 (isOnXbox)
+// Module 14907 (isOnXbox)
 import Constants from "Constants" /* 2145 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7768 */;
 import size from "module_2" /* 2 */;

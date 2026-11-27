@@ -1,6 +1,6 @@
-// === Module 10221: RPCHelpers ===
+// === Module 10222: RPCHelpers ===
 
-// Module 10221 (RPCHelpers)
+// Module 10222 (RPCHelpers)
 import applyDefault from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
@@ -11,9 +11,9 @@ import NicknameUtilsDefault from "NicknameUtils" /* 6807 */;
 import transformUserDefault from "transformUser" /* 7642 */;
 import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 7643 */;
 import RPCErrorDefault from "RPCError" /* 7644 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
-import transformMessage from "transformMessage" /* 10222 */;
-import LeakyBucketDefault from "LeakyBucket" /* 10224 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
+import transformMessage from "transformMessage" /* 10223 */;
+import LeakyBucketDefault from "LeakyBucket" /* 10225 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ApplicationRecord from "ApplicationRecord" /* 2143 */;
@@ -59,7 +59,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -184,7 +184,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -231,7 +231,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp26) {
       closure_5 = tmp26;

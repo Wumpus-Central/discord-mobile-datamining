@@ -1,8 +1,8 @@
-// === Module 14738: conjurePreviewNativeSurfaces ===
+// === Module 14745: conjurePreviewNativeSurfaces ===
 
-// Module 14738 (conjurePreviewNativeSurfaces)
+// Module 14745 (conjurePreviewNativeSurfaces)
 import RpcCommandInterception from "RpcCommandInterception" /* 7649 */;
-import requestConjureDevicePermissions from "requestConjureDevicePermissions" /* 11462 */;
+import requestConjureDevicePermissions from "requestConjureDevicePermissions" /* 11472 */;
 import FramesStore from "FramesStore" /* 6936 */;
 
 const require = globalThis.__r;
@@ -67,14 +67,14 @@ function answerFor(cmd) {
       if (obj2.hasConjurePreviewGameCapture(applicationId)) {
         if (cmd.cmd === RPCCommands.CAPTURE_SCREEN) {
           const obj3 = { result: null, answered: "returned the selected game capture" };
-          obj = obj(14739);
+          obj = obj(14746);
           conjurePreviewGameCapture = obj.readConjurePreviewGameCapture(applicationId);
           obj3.result = conjurePreviewGameCapture;
           let obj4 = obj3;
         } else {
           obj4 = { result: null, answered: "screen capture allowed for the selected game capture" };
           const obj5 = { permissions: null };
-          const prop = obj(11464).CONJURE_DEVICE_PERMISSION_NAMES;
+          const prop = obj(11474).CONJURE_DEVICE_PERMISSION_NAMES;
           obj5.permissions = prop.map((permission) => {
             if ("screen_capture" === permission) {
               const obj2 = { permission, state: "granted" };
@@ -228,8 +228,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "channel_id", answered: "<string:4023140625>" }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "channel_id", answered: "<string:4023140625>" })
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "channel_id", answered: -18.001 }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "channel_id", answered: -18.001 })
 };
 let closure_7 = {
   drain() {

@@ -1,11 +1,11 @@
-// === Module 18470: useConjurePublishReview ===
+// === Module 18477: useConjurePublishReview ===
 
-// Module 18470 (useConjurePublishReview)
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8526 */;
-import conjurePublishReview from "conjurePublishReview" /* 18464 */;
-import useConjureAppIdentityDraftDefault from "useConjureAppIdentityDraft" /* 18471 */;
-import useConjurePreviewDevicePermissionsDefault from "useConjurePreviewDevicePermissions" /* 18474 */;
-import useConjurePublishRemixDefault from "useConjurePublishRemix" /* 18475 */;
+// Module 18477 (useConjurePublishReview)
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8527 */;
+import conjurePublishReview from "conjurePublishReview" /* 18471 */;
+import useConjureAppIdentityDraftDefault from "useConjureAppIdentityDraft" /* 18478 */;
+import useConjurePreviewDevicePermissionsDefault from "useConjurePreviewDevicePermissions" /* 18481 */;
+import useConjurePublishRemixDefault from "useConjurePublishRemix" /* 18482 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7706 */;
 
 const require = globalThis.__r;
 
-const useConjureViewPlacementDefault = tmp(18481);
+const useConjureViewPlacementDefault = tmp(18488);
 require = fn;
 let isProjectOwner = fn(6934).isProjectOwner;
 const Constants = fn(1071);
@@ -40,7 +40,7 @@ export default function useConjurePublishReview(id, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -111,7 +111,7 @@ export default function useConjurePublishReview(id, arg1) {
           return { value: true, done: true };
         } else {
           const _Error = Error;
-          const error = new Error("Saving who can remix failed");
+          const error = new Error("Saving who can make a copy failed");
           throw error;
         }
         c1 = 3;
@@ -150,8 +150,8 @@ export default function useConjurePublishReview(id, arg1) {
   const trimmed = str.trim();
   let result = null;
   if (tmp15) {
-    result = tmp4(18480).conjureProjectNameError(trimmed);
-    const tmp4Result = tmp4(18480);
+    result = tmp4(18487).conjureProjectNameError(trimmed);
+    const tmp4Result = tmp4(18487);
   }
   isProjectOwner = result;
   const tmp12 = stateFromStores(saving.useState(false), 2);
@@ -179,8 +179,8 @@ export default function useConjurePublishReview(id, arg1) {
     if (appChannels == null) {
       appChannels = [];
     }
-    length = tmp4(18465).conjureViewPlacementCreatedChannels(tmp19.draft, appChannels);
-    const tmp4Result7 = tmp4(18465);
+    length = tmp4(18472).conjureViewPlacementCreatedChannels(tmp19.draft, appChannels);
+    const tmp4Result7 = tmp4(18472);
   }
   let tmp21 = null;
   if (tmp15) {

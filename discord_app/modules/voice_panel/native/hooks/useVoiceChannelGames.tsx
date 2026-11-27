@@ -1,6 +1,6 @@
-// === Module 19523: useVoiceChannelGames ===
+// === Module 19539: useVoiceChannelGames ===
 
-// Module 19523 (useVoiceChannelGames)
+// Module 19539 (useVoiceChannelGames)
 import useGameProfileObscured from "useGameProfileObscured" /* 7176 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

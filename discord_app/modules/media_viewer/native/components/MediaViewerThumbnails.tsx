@@ -1,12 +1,12 @@
-// === Module 14128: MediaViewerThumbnails ===
+// === Module 14135: MediaViewerThumbnails ===
 
-// Module 14128 (MediaViewerThumbnails)
+// Module 14135 (MediaViewerThumbnails)
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import useToken from "useToken" /* 5607 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5611 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14129 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14136 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,7 +40,7 @@ function ObscuredView(source) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const Constants = fn(8873);
+const Constants = fn(8874);
 ({ THUMBNAIL_WIDTH_MARGIN: metroImportDefault, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

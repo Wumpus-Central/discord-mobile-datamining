@@ -1,6 +1,6 @@
-// === Module 11528: ChannelTabRoutes ===
+// === Module 11536: ChannelTabRoutes ===
 
-// Module 11528 (ChannelTabRoutes)
+// Module 11536 (ChannelTabRoutes)
 import _mod1099 from "module_1099" /* 1099 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;

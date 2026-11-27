@@ -1,6 +1,6 @@
-// === Module 17643: DevWidget ===
+// === Module 17650: DevWidget ===
 
-// Module 17643 (DevWidget)
+// Module 17650 (DevWidget)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
@@ -8,12 +8,12 @@ import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import spring_spring from "spring/spring" /* 5644 */;
 import springPresets from "springPresets" /* 5645 */;
 import Pressables from "Pressables" /* 6152 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11808 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12996 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 17202 */;
-import VEVOODefault from "VEVOO" /* 17644 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11816 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13004 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 17209 */;
+import VEVOODefault from "VEVOO" /* 17651 */;
 import noop from "module_19" /* 19 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8383 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8384 */;
 
 const require = globalThis.__r;
 const _modDef1654 = _mod1654;

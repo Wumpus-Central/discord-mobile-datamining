@@ -32,7 +32,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
     }
     isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
   }
-  const tmp20 = asyncRequireImpl(14846, dependencyMap.paths);
+  const tmp20 = asyncRequireImpl(14852, dependencyMap.paths);
   const combined1 = "" + UserProfile + ignoreBlockedSpeedBump.userId;
   const obj4 = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
@@ -72,7 +72,7 @@ export function showUserProfileActionSheetPostConnection(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -150,7 +150,7 @@ export function showUserProfileActionSheetPostConnection(arg0) {
             showUserProfileActionSheet(closure_129_0);
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp37) {
         if (tmp4 === c3) {

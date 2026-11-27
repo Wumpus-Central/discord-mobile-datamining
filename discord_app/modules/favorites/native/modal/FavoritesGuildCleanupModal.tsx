@@ -1,12 +1,12 @@
-// === Module 17866: FavoritesGuildCleanupModal ===
+// === Module 17873: FavoritesGuildCleanupModal ===
 
-// Module 17866 (FavoritesGuildCleanupModal)
+// Module 17873 (FavoritesGuildCleanupModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3857 from "module_3857" /* 3857 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import TableRadioRow from "TableRadioRow" /* 7253 */;
-import Modal from "Modal" /* 11618 */;
+import Modal from "Modal" /* 11626 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ function closeCleanup() {
 }
 function CleanupScreen() {
   const tmp3 = closure_14(loading(1629)().bottom);
-  const tmp4 = loading(17867)(closeCleanup);
+  const tmp4 = loading(17874)(closeCleanup);
   _require = tmp4;
   loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };

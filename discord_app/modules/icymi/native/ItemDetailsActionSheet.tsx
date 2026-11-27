@@ -1,6 +1,6 @@
-// === Module 18309: ItemDetailsActionSheet ===
+// === Module 18316: ItemDetailsActionSheet ===
 
-// Module 18309 (ItemDetailsActionSheet)
+// Module 18316 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -10,13 +10,13 @@ import TableRow from "TableRow" /* 6144 */;
 import GuildIcon from "GuildIcon" /* 7052 */;
 import useDesignToggleDefault from "useDesignToggle" /* 7193 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
-import ICYMIUtils from "ICYMIUtils" /* 8922 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11564 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18310 */;
+import ICYMIUtils from "ICYMIUtils" /* 8923 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11572 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18317 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
-import ICYMIStore from "ICYMIStore" /* 8913 */;
+import ICYMIStore from "ICYMIStore" /* 8914 */;
 
 const GuildIconDefault = GuildIcon;
 

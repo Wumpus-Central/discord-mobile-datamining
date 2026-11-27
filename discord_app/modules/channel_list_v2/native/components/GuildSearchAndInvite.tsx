@@ -1,18 +1,18 @@
-// === Module 13244: GuildSearchAndInvite ===
+// === Module 13252: GuildSearchAndInvite ===
 
-// Module 13244 (GuildSearchAndInvite)
+// Module 13252 (GuildSearchAndInvite)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useAlertStore from "useAlertStore" /* 6048 */;
 import useStableCallbackDefault from "useStableCallback" /* 7328 */;
 import IconButton from "IconButton" /* 7944 */;
-import _modDef8609 from "module_8609" /* 8609 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10428 */;
-import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 10431 */;
-import _modDef10548 from "module_10548" /* 10548 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 13247 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13286 */;
-import useEventsButtonPropsDefault from "useEventsButtonProps" /* 13338 */;
+import _modDef8610 from "module_8610" /* 8610 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10429 */;
+import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 10432 */;
+import _modDef10549 from "module_10549" /* 10549 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 13255 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13294 */;
+import useEventsButtonPropsDefault from "useEventsButtonProps" /* 13346 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildChannelStore from "GuildChannelStore" /* 4973 */;
@@ -69,7 +69,7 @@ function GuildSearchAndInvite(guildId) {
   const memo = onInvitePress.useMemo(() => {
     let tmp = null;
     if (canInvite) {
-      const obj = { variant: "secondary", size: "sm", icon: _modDef10548, onPress: onInvitePress, onPressDisabled: handleInviteDisabledPress, accessibilityLabel: null, disabled: null, maxFontSizeMultiplier: 2 };
+      const obj = { variant: "secondary", size: "sm", icon: _modDef10549, onPress: onInvitePress, onPressDisabled: handleInviteDisabledPress, accessibilityLabel: null, disabled: null, maxFontSizeMultiplier: 2 };
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.VINpSK);
       obj.disabled = invitesDisabled;
@@ -150,8 +150,8 @@ export default noop.memo(function ConnectedGuildSearchAndInviteInner(guild) {
     const channels = GuildChannelStore.getChannels(guild.id);
     const result = instant_invite_InstantInviteUtils.handleOpenInviteActionsheet(guild, channelId, channels, constants2.GUILD_HEADER);
   });
-  const shouldShowInvitesDisabledNotif = guild(13335).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(13335);
+  const shouldShowInvitesDisabledNotif = guild(13343).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(13343);
   const tmp5 = useEventsButtonPropsDefault(guild);
   const obj3 = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
   if (flag2) {

@@ -1,10 +1,10 @@
-// === Module 19212: modal/ModalScreen ===
+// === Module 19228: modal/ModalScreen ===
 
-// Module 19212 (modal/ModalScreen)
+// Module 19228 (modal/ModalScreen)
 import nativeDefault from "native" /* 575 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 6116 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7309 */;
-import useAppFrameDefault from "useAppFrame" /* 17721 */;
+import useAppFrameDefault from "useAppFrame" /* 17728 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,8 +36,8 @@ export default function Modal(route) {
     isIpadOSResult = "modal" === params.presentation;
   }
   if (!isIpadOSResult) {
-    isIpadOSResult = modal(19213).shouldExcludeSafeAreaForModalKey(modal.key);
-    const obj2 = modal(19213);
+    isIpadOSResult = modal(19229).shouldExcludeSafeAreaForModalKey(modal.key);
+    const obj2 = modal(19229);
   }
   ({ insets, styles } = useAppFrameDefault({ enabled: !isIpadOSResult }));
   const tmp7 = closure_11(insets.left, insets.right);
@@ -79,7 +79,7 @@ export default function Modal(route) {
     }
     return currentResult;
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => modal(8249).trackAppUIViewed("ModalScreen"), []);
+  const layoutEffect = noop.useLayoutEffect(() => modal(8250).trackAppUIViewed("ModalScreen"), []);
   items = [absoluteFillObject.absoluteFillObject, , ];
   let containerWithPadding;
   if (!isIpadOSResult) {
@@ -117,7 +117,7 @@ export default function Modal(route) {
   const items4 = [closure_10(closure_6, obj7), ];
   const tmpResult = useTrackImpressionDefault;
   const tmp12Result = modal(1379);
-  items4[1] = modal(1379).isIOS() && closure_9(modal(18623).PortalKeyboardRenderer, { portal: false });
-  obj6.children = closure_10(modal(16021).SafeAreaProvider, { children: items4 });
+  items4[1] = modal(1379).isIOS() && closure_9(modal(18634).PortalKeyboardRenderer, { portal: false });
+  obj6.children = closure_10(modal(16028).SafeAreaProvider, { children: items4 });
   return closure_9(closure_6, obj6);
 };

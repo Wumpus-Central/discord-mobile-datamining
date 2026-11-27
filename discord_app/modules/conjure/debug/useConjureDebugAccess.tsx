@@ -1,6 +1,6 @@
-// === Module 18593: useConjureDebugAccess ===
+// === Module 18604: useConjureDebugAccess ===
 
-// Module 18593 (useConjureDebugAccess)
+// Module 18604 (useConjureDebugAccess)
 import UserSettings from "UserSettings" /* 4868 */;
 import size from "module_2" /* 2 */;
 

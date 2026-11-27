@@ -1,6 +1,6 @@
-// === Module 12901: CheckpointGameTimeStatsScreen ===
+// === Module 12909: CheckpointGameTimeStatsScreen ===
 
-// Module 12901 (CheckpointGameTimeStatsScreen)
+// Module 12909 (CheckpointGameTimeStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -8,18 +8,18 @@ import util from "util" /* 1112 */;
 import _modDef3495 from "module_3495" /* 3495 */;
 import CheckpointConstants from "CheckpointConstants" /* 6396 */;
 import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6768 */;
-import CalendarIcon from "CalendarIcon" /* 8608 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12850 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12854 */;
-import useIsCheckpointWide from "useIsCheckpointWide" /* 12860 */;
-import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12880 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12881 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12882 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12883 */;
-import _modDef12902 from "module_12902" /* 12902 */;
-import _modDef12903 from "module_12903" /* 12903 */;
-import CheckpointStore from "CheckpointStore" /* 12620 */;
+import CalendarIcon from "CalendarIcon" /* 8609 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12858 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12862 */;
+import useIsCheckpointWide from "useIsCheckpointWide" /* 12868 */;
+import CheckpointGlobalStatNumberDefault from "CheckpointGlobalStatNumber" /* 12888 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12889 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12890 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12891 */;
+import _modDef12910 from "module_12910" /* 12910 */;
+import _modDef12911 from "module_12911" /* 12911 */;
+import CheckpointStore from "CheckpointStore" /* 12628 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
@@ -107,8 +107,8 @@ export default function CheckpointGameTimeStatsScreen() {
   const tmp5Result = CheckpointStatsUtils;
   const obj7 = { animatedUri: null, staticUri: null, style: null };
   const tmp2Result5 = CheckpointScreenDefault;
-  obj7.animatedUri = _modDef12902;
-  obj7.staticUri = _modDef12903;
+  obj7.animatedUri = _modDef12910;
+  obj7.staticUri = _modDef12911;
   const items2 = [tmp.image, ];
   let wideImage = tmp4;
   if (tmp4) {

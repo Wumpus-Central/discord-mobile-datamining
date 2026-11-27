@@ -1,6 +1,6 @@
-// === Module 14383: useIsStickerReplyEnabled ===
+// === Module 14390: useIsStickerReplyEnabled ===
 
-// Module 14383 (useIsStickerReplyEnabled)
+// Module 14390 (useIsStickerReplyEnabled)
 import ThreadHooks from "ThreadHooks" /* 7628 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import PermissionStore from "PermissionStore" /* 4975 */;

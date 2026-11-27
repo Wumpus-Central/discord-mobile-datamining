@@ -1,10 +1,10 @@
-// === Module 17500: HeroBlockHeader ===
+// === Module 17507: HeroBlockHeader ===
 
-// Module 17500 (HeroBlockHeader)
+// Module 17507 (HeroBlockHeader)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import QuestContent from "QuestContent" /* 6876 */;
-import QuestUtils from "QuestUtils" /* 9889 */;
+import QuestUtils from "QuestUtils" /* 9890 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const Constants = fn(1071);
 ({ AnalyticEvents: closure_4, UserSettingsSections: hasOwnProperty, VerticalGradient: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const result = 0.75 * fn(11211).COLLECTIBLES_SHOP_CARD_WIDTH;
+const result = 0.75 * fn(11212).COLLECTIBLES_SHOP_CARD_WIDTH;
 const createStyles = fn(5043);
 let obj2 = { heroBannerContainer: null, heroBannerImage: { width: "100%", height: "100%", resizeMode: "cover" }, orbsBackgroundGradient: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, fadeOutGradient: { position: "absolute", bottom: 0, height: "50%", width: "100%", zIndex: 1 }, heroInfoContainer: { display: "flex", justifyContent: "center", flex: 1, minWidth: "100%", maxHeight: 240, aspectRatio: 2.2 }, innerContainer: null, heroLogoContainer: null, heroLogo: null, heroViewAllIcon: null, orbsInnerContainer: null, orbsTitle: null };
 const rect = { position: "absolute", top: 0, left: 0, width: "100%", maxHeight: 240 + result, aspectRatio: 1.4883720930232558 };
@@ -39,8 +39,8 @@ export default function HeroBlockHeader(heroBlock) {
   const category = heroBlock.category;
   dependencyMap = heroBlock(1501).useNavigation();
   let obj = heroBlock(1501);
-  const analyticsContext = heroBlock(11214).useCollectiblesAnalyticsContext();
-  let obj2 = heroBlock(11214);
+  const analyticsContext = heroBlock(11215).useCollectiblesAnalyticsContext();
+  let obj2 = heroBlock(11215);
   const tmp5 = closure_10();
   const tmp4 = category(5252)();
   const token = heroBlock(5607).useToken(category(575).colors.BACKGROUND_BASE_LOW);
@@ -51,7 +51,7 @@ export default function HeroBlockHeader(heroBlock) {
   const isOrbsExclusive = category.isOrbsExclusive;
   const token1 = heroBlock(5607).useToken(category(575).colors.BACKGROUND_BASE_LOWEST);
   const obj6 = heroBlock(5607);
-  let isEligibleForQuests = heroBlock(9893).getIsEligibleForQuests();
+  let isEligibleForQuests = heroBlock(9894).getIsEligibleForQuests();
   let heroBannerUrl = heroBlock.mobileHeroUrl;
   if (heroBannerUrl == null) {
     heroBannerUrl = heroBlock.heroBannerUrl;
@@ -176,11 +176,11 @@ export default function HeroBlockHeader(heroBlock) {
     return closure_9(closure_8, obj50);
   } else {
     if (tmpResult.isThemeDark(tmp4)) {
-      let tmp3Result = tmp3(17501);
+      let tmp3Result = tmp3(17508);
     } else {
-      tmp3Result = tmp3(17502);
+      tmp3Result = tmp3(17509);
     }
     tmpResult = tmp(5050);
   }
-  const obj7 = heroBlock(9893);
+  const obj7 = heroBlock(9894);
 };

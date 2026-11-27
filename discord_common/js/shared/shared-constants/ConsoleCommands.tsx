@@ -1,6 +1,6 @@
-// === Module 10519: ConsoleCommands ===
+// === Module 10520: ConsoleCommands ===
 
-// Module 10519 (ConsoleCommands)
+// Module 10520 (ConsoleCommands)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set(["connect_voice"]) };

@@ -1,10 +1,10 @@
-// === Module 14421: utils/ChangeLogUtils ===
+// === Module 14428: utils/ChangeLogUtils ===
 
-// Module 14421 (utils/ChangeLogUtils)
+// Module 14428 (utils/ChangeLogUtils)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import MarkupRulesUtils from "MarkupRulesUtils" /* 7178 */;
-import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 14423 */;
+import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 14430 */;
 import noop from "module_19" /* 19 */;
 import CustomMarkup from "CustomMarkup" /* 6119 */;
 
@@ -80,7 +80,7 @@ function ChangeLogParagraph(state) {
   if (Paragraph == null) {
     Paragraph = output(5634).Text;
   }
-  const result = output(14422).splitParagraphAtImages(node.content);
+  const result = output(14429).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -118,7 +118,7 @@ function ChangeLogParagraph(state) {
     }
     return tmp7;
   }
-  let obj = output(14422);
+  let obj = output(14429);
   tmp7 = <Paragraph key={state.key} variant="body-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "body-sm/normal", style: tmp.text, children: output(node.content, state) };
 }

@@ -1,12 +1,12 @@
-// === Module 12457: ForumPostMessageCount ===
+// === Module 12465: ForumPostMessageCount ===
 
-// Module 12457 (ForumPostMessageCount)
+// Module 12465 (ForumPostMessageCount)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import ChatIcon from "ChatIcon" /* 7137 */;
-import ForumHooks from "ForumHooks" /* 9027 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11710 */;
+import ForumHooks from "ForumHooks" /* 9028 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11718 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

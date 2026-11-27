@@ -1,6 +1,6 @@
-// === Module 15026: UserProfileRecentActivityCard ===
+// === Module 15033: UserProfileRecentActivityCard ===
 
-// Module 15026 (UserProfileRecentActivityCard)
+// Module 15033 (UserProfileRecentActivityCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1413 */;
@@ -13,15 +13,15 @@ import Pressables from "Pressables" /* 6152 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 8058 */;
-import utils from "utils" /* 8588 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8745 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8754 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8757 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14893 */;
-import BadgesAll from "Badges" /* 14906 */;
-import TrendingType from "TrendingType" /* 14911 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14918 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14919 */;
+import utils from "utils" /* 8589 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8746 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8755 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8758 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14900 */;
+import BadgesAll from "Badges" /* 14913 */;
+import TrendingType from "TrendingType" /* 14918 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14925 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14926 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -69,8 +69,8 @@ let obj = {
     return true;
   }
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8588).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8588).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8589).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8589).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -308,7 +308,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj7 = { title: entry.extra.activity_name };
           obj8 = obj7;
         } else {
-          obj8 = { title: "r" };
+          obj8 = { title: "top" };
         }
         tmpResult6 = ContentInventoryTypes;
       }

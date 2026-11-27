@@ -1,6 +1,6 @@
-// === Module 18576: ConjureHistoryFormat ===
+// === Module 18587: ConjureHistoryFormat ===
 
-// Module 18576 (ConjureHistoryFormat)
+// Module 18587 (ConjureHistoryFormat)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import DateUtils from "DateUtils" /* 4865 */;

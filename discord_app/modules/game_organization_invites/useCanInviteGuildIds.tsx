@@ -1,6 +1,6 @@
-// === Module 12089: useCanInviteGuildIds ===
+// === Module 12097: useCanInviteGuildIds ===
 
-// Module 12089 (useCanInviteGuildIds)
+// Module 12097 (useCanInviteGuildIds)
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import GuildRoleStore from "GuildRoleStore" /* 4949 */;

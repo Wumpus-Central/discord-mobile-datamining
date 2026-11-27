@@ -1,12 +1,12 @@
-// === Module 17812: HappeningNowAvatarStack ===
+// === Module 17819: HappeningNowAvatarStack ===
 
-// Module 17812 (HappeningNowAvatarStack)
+// Module 17819 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import spring_spring from "spring/spring" /* 5644 */;
-import ClipView from "ClipView" /* 9420 */;
+import ClipView from "ClipView" /* 9421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
@@ -16,7 +16,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(14932).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(14939).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
@@ -247,7 +247,7 @@ export function HappeningNowAvatarStack(userLimit) {
       const items14 = [tmp3.ellipsisWrapper, animatedStyle];
       obj10.style = items14;
       const obj11 = { style: tmp3.ellipsisBorder };
-      obj10.children = tmp31(tmp6(17813).TypingIndicator, obj11);
+      obj10.children = tmp31(tmp6(17820).TypingIndicator, obj11);
       tmp31Result2 = tmp31(tmp30(1654).View, obj10);
     }
     items13[1] = tmp31Result2;

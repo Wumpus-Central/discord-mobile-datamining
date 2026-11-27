@@ -1,11 +1,11 @@
-// === Module 14319: useOnConnectToConsole ===
+// === Module 14326: useOnConnectToConsole ===
 
-// Module 14319 (useOnConnectToConsole)
+// Module 14326 (useOnConnectToConsole)
 import dismissible_content from "dismissible_content" /* 4876 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5075 */;
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 7748 */;
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 7783 */;
-import beginConsoleTransfer from "beginConsoleTransfer" /* 10510 */;
+import beginConsoleTransfer from "beginConsoleTransfer" /* 10511 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

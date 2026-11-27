@@ -1,18 +1,18 @@
-// === Module 17165: ChangeLogModal ===
+// === Module 17172: ChangeLogModal ===
 
-// Module 17165 (ChangeLogModal)
+// Module 17172 (ChangeLogModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import Navigator from "Navigator" /* 7355 */;
-import openMediaModal from "openMediaModal" /* 8804 */;
-import common_VideoDefault from "common/Video" /* 8880 */;
-import _modDef10842 from "module_10842" /* 10842 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 12539 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 14418 */;
-import _modDef17166 from "module_17166" /* 17166 */;
+import openMediaModal from "openMediaModal" /* 8805 */;
+import common_VideoDefault from "common/Video" /* 8881 */;
+import _modDef10843 from "module_10843" /* 10843 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 12547 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 14425 */;
+import _modDef17173 from "module_17173" /* 17173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -274,7 +274,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      items = [closure_7(_modDef17166, obj4), ];
+      items = [closure_7(_modDef17173, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -305,7 +305,7 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10842, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1186).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10843, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1186).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
     tmp12Result = closure_7(tmp18(6152).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;

@@ -1,6 +1,6 @@
-// === Module 14327: StartEventUtils ===
+// === Module 14334: StartEventUtils ===
 
-// Module 14327 (StartEventUtils)
+// Module 14334 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -27,7 +27,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

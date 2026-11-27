@@ -1,6 +1,6 @@
-// === Module 18419: HomeWelcomeMessage ===
+// === Module 18426: HomeWelcomeMessage ===
 
-// Module 18419 (HomeWelcomeMessage)
+// Module 18426 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 575 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
 import noop from "module_19" /* 19 */;

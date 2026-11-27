@@ -1,6 +1,6 @@
-// === Module 18034: WaterwheelsDiscoverStatus ===
+// === Module 18041: WaterwheelsDiscoverStatus ===
 
-// Module 18034 (WaterwheelsDiscoverStatus)
+// Module 18041 (WaterwheelsDiscoverStatus)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2655 from "module_2655" /* 2655 */;

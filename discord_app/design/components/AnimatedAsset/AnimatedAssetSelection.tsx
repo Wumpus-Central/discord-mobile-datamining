@@ -1,6 +1,6 @@
-// === Module 17471: AnimatedAssetSelection ===
+// === Module 17478: AnimatedAssetSelection ===
 
-// Module 17471 (AnimatedAssetSelection)
+// Module 17478 (AnimatedAssetSelection)
 import size from "module_2" /* 2 */;
 
 let closure_0 = { renderer: "poster" };

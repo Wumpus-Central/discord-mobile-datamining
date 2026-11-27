@@ -1,6 +1,6 @@
-// === Module 16212: UniqueUsernamesActionCreators ===
+// === Module 16219: UniqueUsernamesActionCreators ===
 
-// Module 16212 (UniqueUsernamesActionCreators)
+// Module 16219 (UniqueUsernamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -74,7 +74,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

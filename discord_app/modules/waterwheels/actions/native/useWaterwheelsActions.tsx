@@ -1,20 +1,20 @@
-// === Module 18009: useWaterwheelsActions ===
+// === Module 18016: useWaterwheelsActions ===
 
-// Module 18009 (useWaterwheelsActions)
+// Module 18016 (useWaterwheelsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6991 */;
 import openPrivacySettingsDefault from "openPrivacySettings" /* 7880 */;
-import GameActionCreators from "GameActionCreators" /* 8720 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8932 */;
-import NotificationUtilsDefault from "NotificationUtils" /* 13389 */;
-import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 18010 */;
+import GameActionCreators from "GameActionCreators" /* 8721 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8933 */;
+import NotificationUtilsDefault from "NotificationUtils" /* 13397 */;
+import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 18017 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2141 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 4914 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13381 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13389 */;
 
 require = fn;
 function openErrorToast(text) {
@@ -41,7 +41,7 @@ let closure_16 = async function _openWaterwheelsGame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -595,7 +595,7 @@ let closure_18 = async function _requestNotifications() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -625,7 +625,7 @@ let closure_18 = async function _requestNotifications() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c0 = tmp;
       throw tmp10;
@@ -660,7 +660,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -734,7 +734,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                 }
               }
               c14 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           break;
           case 1:
@@ -763,7 +763,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -949,7 +949,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -1088,7 +1088,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -1235,7 +1235,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "HermesInternal", done: "+95" };
+                              return { value: "HermesInternal", done: null };
                             }
                           } else {
                             try {
@@ -1365,7 +1365,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                                                 const HTTP = closure_0(1285).HTTP;
                                                 const obj = { url: closure_9.GUILD_MEMBER_REQUEST_TO_JOIN(closure_1_1), rejectWithError: closure_0(1285).rejectWithMigratedError(), signal: signal.signal, timeout: null };
                                                 const obj2 = closure_0(1285);
-                                                obj.timeout = { deadline: closure_0(8925).DISCOVER_REQUEST_DEADLINE_MS };
+                                                obj.timeout = { deadline: closure_0(8926).DISCOVER_REQUEST_DEADLINE_MS };
                                                 return HTTP.get(obj);
                                               }),
                           done: false
@@ -1417,7 +1417,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: "+95" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } else {
                         try {
@@ -1584,7 +1584,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               return obj29;
             } else {
               c14 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           break;
           case 10:
@@ -1678,7 +1678,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -1871,7 +1871,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -2037,7 +2037,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               return obj60;
             } else {
               c14 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           break;
           case 21:
@@ -2218,7 +2218,7 @@ export function useWaterwheelsActions(callback) {
     if (WaterwheelsCardTypes.WaterwheelsActionType.JOIN_GUILD === type) {
       return joinWaterwheelsGuild(ref.current, type.value.guild_id, arg1, type);
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD === type) {
-      return runGuarded(() => type(8935).startLurking(type.value.guild_id, {}), () => {
+      return runGuarded(() => type(8936).startLurking(type.value.guild_id, {}), () => {
         const intl = type(1112).intl;
         return intl.string(ref(2655).d6U01J);
       });

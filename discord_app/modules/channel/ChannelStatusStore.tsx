@@ -1,6 +1,6 @@
-// === Module 8287: ChannelStatusStore ===
+// === Module 8288: ChannelStatusStore ===
 
-// Module 8287 (ChannelStatusStore)
+// Module 8288 (ChannelStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ChannelTypes from "ChannelTypes" /* 1092 */;

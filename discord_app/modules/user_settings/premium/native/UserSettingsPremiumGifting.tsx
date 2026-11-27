@@ -1,6 +1,6 @@
-// === Module 14019: UserSettingsPremiumGifting ===
+// === Module 14026: UserSettingsPremiumGifting ===
 
-// Module 14019 (UserSettingsPremiumGifting)
+// Module 14026 (UserSettingsPremiumGifting)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import GiftCodeUtils from "GiftCodeUtils" /* 5790 */;
@@ -8,11 +8,11 @@ import TableRowGroup from "TableRowGroup" /* 6140 */;
 import EntitlementActionCreators from "EntitlementActionCreators" /* 6363 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7347 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7351 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 9111 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9695 */;
-import GiftedSubscriptionUtils from "GiftedSubscriptionUtils" /* 14020 */;
-import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 14026 */;
-import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 14036 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 9112 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9696 */;
+import GiftedSubscriptionUtils from "GiftedSubscriptionUtils" /* 14027 */;
+import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 14033 */;
+import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 14043 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;

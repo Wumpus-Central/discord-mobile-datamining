@@ -1,6 +1,6 @@
-// === Module 8187: ThreadNotificationSettingsToast ===
+// === Module 8188: ThreadNotificationSettingsToast ===
 
-// Module 8187 (ThreadNotificationSettingsToast)
+// Module 8188 (ThreadNotificationSettingsToast)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import size from "module_2" /* 2 */;
 

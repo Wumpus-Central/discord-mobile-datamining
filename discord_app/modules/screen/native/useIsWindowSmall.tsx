@@ -1,6 +1,6 @@
-// === Module 9035: useIsWindowSmall ===
+// === Module 9036: useIsWindowSmall ===
 
-// Module 9035 (useIsWindowSmall)
+// Module 9036 (useIsWindowSmall)
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5223 */;
 import size from "module_2" /* 2 */;
 

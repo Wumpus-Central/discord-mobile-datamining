@@ -1,9 +1,9 @@
-// === Module 18259: NotificationCenterPermissionNudge ===
+// === Module 18266: NotificationCenterPermissionNudge ===
 
-// Module 18259 (NotificationCenterPermissionNudge)
+// Module 18266 (NotificationCenterPermissionNudge)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 17097 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 17104 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ function NotificationCenterBannerImpl(onDismiss) {
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.IMPRESSION, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
   }, []);
   let obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.iconContainer, children: closure_14(onDismiss(11497).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }) };
+  const obj2 = { style: tmp.iconContainer, children: closure_14(onDismiss(11505).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }) };
   items = [closure_14(View, obj2), , ];
   const obj4 = { style: tmp.contentContainer, children: null };
   const obj5 = { variant: "body-md/semibold", color: "text-default", children: null };
@@ -34,8 +34,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   const intl3 = onDismiss(1112).intl;
   obj9.text = intl3.string(onDismiss(1112).t.a4bgO0);
   obj9.onPress = function handlePress() {
-    const pushNotificationPermission = onDismiss(13383).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
-    const obj = onDismiss(13383);
+    const pushNotificationPermission = onDismiss(13391).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
+    const obj = onDismiss(13391);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
   };
   obj8.children = closure_14(onDismiss(5641).Button, obj9);
@@ -65,7 +65,7 @@ const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: metroImportDefault, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
-const NotificationPermissionConstants = fn(13382);
+const NotificationPermissionConstants = fn(13390);
 ({ EventActionType: closure_10, EventActionLocation: closure_11, NotificationNudgeAnalyticsAction: closure_12, NotificationNudgeSurface: map1 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

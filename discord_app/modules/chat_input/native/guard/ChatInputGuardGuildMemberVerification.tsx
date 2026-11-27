@@ -1,19 +1,19 @@
-// === Module 13440: ChatInputGuardGuildMemberVerification ===
+// === Module 13448: ChatInputGuardGuildMemberVerification ===
 
-// Module 13440 (ChatInputGuardGuildMemberVerification)
+// Module 13448 (ChatInputGuardGuildMemberVerification)
 import util from "util" /* 1112 */;
 import LottieAnimationViewDefault from "LottieAnimationView" /* 5628 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
 import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6997 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7031 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 13431 */;
-import _modDef13441 from "module_13441" /* 13441 */;
-import _modDef13442 from "module_13442" /* 13442 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13439 */;
+import _modDef13449 from "module_13449" /* 13449 */;
+import _modDef13450 from "module_13450" /* 13450 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 require = fn;
-const TextAreaCta = fn(12960).TextAreaCta;
+const TextAreaCta = fn(12968).TextAreaCta;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
@@ -30,7 +30,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
   if (guildId(5079).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = _modDef13441;
+    let tmp8 = _modDef13449;
     const intl2 = tmp2(1112).intl;
     let stringResult = intl2.string(tmp2(1112).t.lk30cY);
     class I {
@@ -45,7 +45,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       }
     }
   } else if (tmp2(5079).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = _modDef13442;
+    tmp8 = _modDef13450;
     class I {
       constructor() {
         obj = closure_1(closure_2[10]);

@@ -1,6 +1,6 @@
-// === Module 10046: EmbeddedActivitiesActionCreators ===
+// === Module 10047: EmbeddedActivitiesActionCreators ===
 
-// Module 10046 (EmbeddedActivitiesActionCreators)
+// Module 10047 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import dismissible_content from "dismissible_content" /* 4876 */;
@@ -13,7 +13,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 8420 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 8421 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -34,7 +34,7 @@ let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -291,7 +291,7 @@ let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 application = application.getApplication(arg0);
                 const result = closure_1_0(2151).supportsEmbeddedSurface(application, closure_1_0(5687).EmbeddedSurfaceType.MAIN);
                 const obj = closure_1_0(2151);
-                const result1 = closure_1_0(10108).isActivityInTextSupportedForChannel(type);
+                const result1 = closure_1_0(10109).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = result;
                 }
@@ -423,7 +423,7 @@ let closure_26 = async function _maybeSendPrimaryAppCommand(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -610,7 +610,7 @@ let closure_26 = async function _maybeSendPrimaryAppCommand(arg0) {
                     };
                   }
                 };
-                nonce(10090)(obj);
+                nonce(10091)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -710,7 +710,7 @@ let closure_28 = async function _joinEmbeddedActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1009,7 +1009,7 @@ let closure_30 = async function _uploadImageAttachment(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1125,7 +1125,7 @@ let closure_33 = async function _validateTestMode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1191,7 +1191,7 @@ let closure_34 = async function _refreshProxyTicket() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1307,7 +1307,7 @@ let closure_34 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_5 = fn(10047).getOrFetchApplicationCommandIndexForTarget;
+let closure_5 = fn(10048).getOrFetchApplicationCommandIndexForTarget;
 let closure_16 = fn(2145).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_17, AnalyticsGameOpenTypes: closure_18, ChannelTypes: closure_19, Endpoints: closure_20, PopoutWindowKeys: closure_21 } = Constants);

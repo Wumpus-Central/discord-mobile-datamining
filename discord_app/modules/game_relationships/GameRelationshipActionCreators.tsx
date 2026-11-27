@@ -1,6 +1,6 @@
-// === Module 11359: GameRelationshipActionCreators ===
+// === Module 11360: GameRelationshipActionCreators ===
 
-// Module 11359 (GameRelationshipActionCreators)
+// Module 11360 (GameRelationshipActionCreators)
 import util from "util" /* 1112 */;
 import shared from "shared" /* 5050 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5792 */;
@@ -42,7 +42,7 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

@@ -1,8 +1,8 @@
-// === Module 11898: PinotMemberNoticeHeaderArrow ===
+// === Module 11906: PinotMemberNoticeHeaderArrow ===
 
-// Module 11898 (PinotMemberNoticeHeaderArrow)
+// Module 11906 (PinotMemberNoticeHeaderArrow)
 import nativeDefault from "native" /* 575 */;
-import PinotMemberNoticeCaret from "PinotMemberNoticeCaret" /* 11897 */;
+import PinotMemberNoticeCaret from "PinotMemberNoticeCaret" /* 11905 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let closure_10 = 10 + fn(11897).PINOT_MEMBER_NOTICE_BORDER_WIDTH / 2;
+let closure_10 = 10 + fn(11905).PINOT_MEMBER_NOTICE_BORDER_WIDTH / 2;
 const createStyles = fn(5043);
 let closure_11 = createStyles.createStyles((height) => {
   const obj = { anchor: { position: "absolute", top: 0, right: 0, bottom: 0, left: 0, zIndex: 1, overflow: "visible" }, dividerUnderlay: null, outline: null };

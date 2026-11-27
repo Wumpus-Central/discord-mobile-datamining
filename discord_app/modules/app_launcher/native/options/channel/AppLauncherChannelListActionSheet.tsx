@@ -1,6 +1,6 @@
-// === Module 13157: AppLauncherChannelListActionSheet ===
+// === Module 13165: AppLauncherChannelListActionSheet ===
 
-// Module 13157 (AppLauncherChannelListActionSheet)
+// Module 13165 (AppLauncherChannelListActionSheet)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import useChannelNameDefault from "useChannelName" /* 5659 */;
@@ -8,7 +8,7 @@ import TableRow from "TableRow" /* 6144 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6869 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7096 */;
 import TextIcon3 from "TextIcon" /* 7146 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 13145 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 13153 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;

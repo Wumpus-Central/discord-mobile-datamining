@@ -1,6 +1,6 @@
-// === Module 9557: BurstReactionToggle ===
+// === Module 9558: BurstReactionToggle ===
 
-// Module 9557 (BurstReactionToggle)
+// Module 9558 (BurstReactionToggle)
 import nativeDefault from "native" /* 575 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import spring_spring from "spring/spring" /* 5644 */;
@@ -40,7 +40,7 @@ export default function BurstReactionToggle(arg0) {
     tmp7 = tmp2;
   }
   const ref = noop.useRef(null);
-  importDefault = tmp7(9558)(ref);
+  importDefault = tmp7(9559)(ref);
   closure_129_0 = undefined;
   closure_129_1 = undefined;
   closure_129_2 = undefined;

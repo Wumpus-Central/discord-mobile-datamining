@@ -1,6 +1,6 @@
-// === Module 18777: conjureOverlayPreview ===
+// === Module 18794: conjureOverlayPreview ===
 
-// Module 18777 (conjureOverlayPreview)
+// Module 18794 (conjureOverlayPreview)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;
 import size_mod from "module_2" /* 2 */;
 

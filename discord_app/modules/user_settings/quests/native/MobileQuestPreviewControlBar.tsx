@@ -1,13 +1,13 @@
-// === Module 16766: MobileQuestPreviewControlBar ===
+// === Module 16773: MobileQuestPreviewControlBar ===
 
-// Module 16766 (MobileQuestPreviewControlBar)
+// Module 16773 (MobileQuestPreviewControlBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7544 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 8374 */;
+import QuestStore from "QuestStore" /* 8375 */;
 
 require = fn;
 class MobileQuestPreviewControlBar {
@@ -97,7 +97,7 @@ class MobileQuestPreviewControlBar {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -162,7 +162,7 @@ class MobileQuestPreviewControlBar {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -227,7 +227,7 @@ class MobileQuestPreviewControlBar {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

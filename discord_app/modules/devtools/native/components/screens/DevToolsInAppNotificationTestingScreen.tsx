@@ -1,6 +1,6 @@
-// === Module 17366: DevToolsInAppNotificationTestingScreen ===
+// === Module 17373: DevToolsInAppNotificationTestingScreen ===
 
-// Module 17366 (DevToolsInAppNotificationTestingScreen)
+// Module 17373 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -8,8 +8,8 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import TableRowGroup from "TableRowGroup" /* 6140 */;
 import StickersTypes from "StickersTypes" /* 6780 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10626 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10628 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10627 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10629 */;
 import noop from "module_19" /* 19 */;
 import StickersStore from "StickersStore" /* 6927 */;
 import MessageRecord from "MessageRecord" /* 4986 */;
@@ -498,7 +498,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
         return closure_1_14(closure_1_0(6144).TableRow, {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(closure_1_0(17208).BeakerIcon, {}),
+          icon: closure_1_14(closure_1_0(17215).BeakerIcon, {}),
           onPress() {
             return closure_2_0(closure_0);
           },
@@ -518,7 +518,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
     children: items3.map((label) => closure_1_14(label(6144).TableRow, {
       label: label.label,
       subLabel: label.subLabel,
-      icon: closure_1_14(label(17208).BeakerIcon, {}),
+      icon: closure_1_14(label(17215).BeakerIcon, {}),
       onPress() {
         return label(label);
       },

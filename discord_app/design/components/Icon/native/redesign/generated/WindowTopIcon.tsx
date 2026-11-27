@@ -1,9 +1,9 @@
-// === Module 18486: WindowTopIcon ===
+// === Module 18493: WindowTopIcon ===
 
-// Module 18486 (WindowTopIcon)
+// Module 18493 (WindowTopIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5729 */;
-import _mod18487 from "module_18487" /* 18487 */;
+import _mod18494 from "module_18494" /* 18494 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function WindowTopIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18487, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18494, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

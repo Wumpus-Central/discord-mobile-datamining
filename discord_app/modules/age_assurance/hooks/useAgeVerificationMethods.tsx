@@ -1,11 +1,11 @@
-// === Module 12551: useAgeVerificationMethods ===
+// === Module 12559: useAgeVerificationMethods ===
 
-// Module 12551 (useAgeVerificationMethods)
+// Module 12559 (useAgeVerificationMethods)
 import util from "util" /* 1112 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5811 */;
 import MetricEvents from "MetricEvents" /* 5816 */;
 import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7884 */;
-import GoogleWalletExperiment from "GoogleWalletExperiment" /* 12552 */;
+import GoogleWalletExperiment from "GoogleWalletExperiment" /* 12560 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -85,7 +85,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -115,7 +115,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                     return obj;
                   } else {
                     c1 = 3;
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp5) {
                   c1 = tmp;

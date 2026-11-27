@@ -1,6 +1,6 @@
-// === Module 19533: VoicePanelDockPIPWatchPrompt ===
+// === Module 19549: VoicePanelDockPIPWatchPrompt ===
 
-// Module 19533 (VoicePanelDockPIPWatchPrompt)
+// Module 19549 (VoicePanelDockPIPWatchPrompt)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _mod1707 from "module_1707" /* 1707 */;
@@ -8,9 +8,9 @@ import native from "native" /* 5104 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import StreamActionCreators from "StreamActionCreators" /* 8419 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import VoicePanelDockActionCreators from "VoicePanelDockActionCreators" /* 19534 */;
+import StreamActionCreators from "StreamActionCreators" /* 8420 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import VoicePanelDockActionCreators from "VoicePanelDockActionCreators" /* 19550 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -23,7 +23,7 @@ function WatchPrompt(ownerId) {
   let sharedValue;
   ({ hideContent, transitionState } = ownerId);
   const tmp = closure_10();
-  const context = sharedValue.useContext(cleanUp(11781));
+  const context = sharedValue.useContext(cleanUp(11789));
   ({ channelId, guildId } = context);
   items = [UserStore];
   let items1 = [ownerId];
@@ -33,7 +33,7 @@ function WatchPrompt(ownerId) {
   closure_129_1 = streamKey;
   closure_129_2 = isConnecting;
   const name = cleanUp(6807).useName(guildId, channelId, stateFromStores);
-  const context1 = sharedValue.useContext(cleanUp(11781));
+  const context1 = sharedValue.useContext(cleanUp(11789));
   const channelId2 = context1.channelId;
   closure_129_3 = channelId2;
   const guildId2 = context1.guildId;

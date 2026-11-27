@@ -1,6 +1,6 @@
-// === Module 12804: ? ===
+// === Module 12812: ? ===
 
-// Module 12804
+// Module 12812
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_14_magical_citrine.webp.js");

@@ -1,10 +1,10 @@
-// === Module 14059: MessagePreviewReactions ===
+// === Module 14066: MessagePreviewReactions ===
 
-// Module 14059 (MessagePreviewReactions)
+// Module 14066 (MessagePreviewReactions)
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 8302 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 8305 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8936 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8303 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 8306 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8937 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -30,9 +30,9 @@ export default function MessagePreviewReactions(emoji) {
   const obj2 = { value: messageId(6379)(messageId(6380).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     const obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(12242).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
+    let tmp4Result = jsx(channelId(12250).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
   } else {
-    tmp4Result = jsx(channelId(12242).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(12250).MessageReactionsEmpty, {});
   }
   obj2.children = tmp4Result;
   return jsx(channelId(6379).AnalyticsLocationProvider, { value: messageId(6379)(messageId(6380).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });

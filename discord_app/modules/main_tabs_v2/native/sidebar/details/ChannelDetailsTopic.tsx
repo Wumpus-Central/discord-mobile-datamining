@@ -1,11 +1,11 @@
-// === Module 19061: ChannelDetailsTopic ===
+// === Module 19077: ChannelDetailsTopic ===
 
-// Module 19061 (ChannelDetailsTopic)
+// Module 19077 (ChannelDetailsTopic)
 import _modDef1654 from "module_1654" /* 1654 */;
 import UserUtilsDefault from "UserUtils" /* 5099 */;
 import ChannelUtils from "ChannelUtils" /* 6801 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 7067 */;
-import MentionPillOffset from "MentionPillOffset" /* 10652 */;
+import MentionPillOffset from "MentionPillOffset" /* 10653 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -274,7 +274,7 @@ function GroupDMChannelDetailsTopic(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(11409);
+const ChannelDetailsConstants = fn(11410);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1071).VerticalGradient;
 const jsxProd = fn(21);
@@ -284,7 +284,7 @@ let obj = { hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, 
 const PlatformUtils = fn(1379);
 let obj3 = null;
 if (!PlatformUtils.isAndroid()) {
-  obj3 = { lineHeight: "r" };
+  obj3 = { lineHeight: "top" };
 }
 let merged = Object.assign(obj3);
 obj.topicText = { paddingVertical: 5 };

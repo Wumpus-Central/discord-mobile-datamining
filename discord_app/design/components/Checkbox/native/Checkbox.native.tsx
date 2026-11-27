@@ -1,6 +1,6 @@
-// === Module 12474: Checkbox ===
+// === Module 12482: Checkbox ===
 
-// Module 12474 (Checkbox)
+// Module 12482 (Checkbox)
 import util from "util" /* 1112 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5105 */;
 import Text_Text from "Text/Text" /* 5634 */;

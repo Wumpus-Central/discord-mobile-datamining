@@ -1,12 +1,12 @@
-// === Module 14516: VoiceChannelLinkEmbed ===
+// === Module 14523: VoiceChannelLinkEmbed ===
 
-// Module 14516 (VoiceChannelLinkEmbed)
+// Module 14523 (VoiceChannelLinkEmbed)
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import useChannelName from "useChannelName" /* 5659 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7096 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12385 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12393 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;

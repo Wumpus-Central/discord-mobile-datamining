@@ -1,12 +1,12 @@
-// === Module 11681: PremiumGiftDMPurchaseSuccess ===
+// === Module 11689: PremiumGiftDMPurchaseSuccess ===
 
-// Module 11681 (PremiumGiftDMPurchaseSuccess)
+// Module 11689 (PremiumGiftDMPurchaseSuccess)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 11114 */;
-import NativeGiftContext from "NativeGiftContext" /* 11142 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 11318 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 11115 */;
+import NativeGiftContext from "NativeGiftContext" /* 11143 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 11319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

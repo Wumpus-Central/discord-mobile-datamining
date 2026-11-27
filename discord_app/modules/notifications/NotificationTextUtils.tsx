@@ -1,6 +1,6 @@
-// === Module 10603: NotificationTextUtils ===
+// === Module 10604: NotificationTextUtils ===
 
-// Module 10603 (NotificationTextUtils)
+// Module 10604 (NotificationTextUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
@@ -17,12 +17,12 @@ import AgeGateUtils from "AgeGateUtils" /* 6833 */;
 import isChannelFocused from "isChannelFocused" /* 6963 */;
 import isSystemMessageDefault from "isSystemMessage" /* 6978 */;
 import ThreadNotificationSettings from "ThreadNotificationSettings" /* 6982 */;
-import MessageParserDefault from "MessageParser" /* 8344 */;
-import IsolateString from "IsolateString" /* 8348 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8817 */;
-import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 10605 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 10606 */;
-import FocusModeUtils from "FocusModeUtils" /* 10617 */;
+import MessageParserDefault from "MessageParser" /* 8345 */;
+import IsolateString from "IsolateString" /* 8349 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8818 */;
+import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 10606 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 10607 */;
+import FocusModeUtils from "FocusModeUtils" /* 10618 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import LurkingStore from "LurkingStore" /* 4976 */;
 import MessageRequestStore from "MessageRequestStore" /* 6946 */;
@@ -38,7 +38,7 @@ import SelfPresenceStore from "SelfPresenceStore" /* 7654 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4886 */;
 import UserStore from "UserStore" /* 1387 */;
-import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 10604 */;
+import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 10605 */;
 
 const isForwardMessageDefault = isForwardMessage;
 

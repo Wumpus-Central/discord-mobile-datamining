@@ -1,13 +1,13 @@
-// === Module 16543: useBountiesModalVideoAnalytics ===
+// === Module 16550: useBountiesModalVideoAnalytics ===
 
-// Module 16543 (useBountiesModalVideoAnalytics)
+// Module 16550 (useBountiesModalVideoAnalytics)
 import MonitoringAgentDefault from "MonitoringAgent" /* 5811 */;
 import MetricEvents from "MetricEvents" /* 5816 */;
 import AdCreativeType from "AdCreativeType" /* 6878 */;
-import AnalyticsActions from "AnalyticsActions" /* 8382 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 9989 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16534 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 16545 */;
+import AnalyticsActions from "AnalyticsActions" /* 8383 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 9990 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16541 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 16552 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -98,7 +98,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           } else if (1 === tmp8) {
             c4 = 0;
             closure_129_6 = closure_3;
-            const questLogger = closure_0(8381).getQuestLogger();
+            const questLogger = closure_0(8382).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_129_6);
             throw closure_129_6;
           } else if (arg0 === 1) {
@@ -148,9 +148,9 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             closure_129_5 = value;
             const obj8 = { adContentId: closure_129_2, adCreativeType: closure_0(6878).AdCreativeType.BOUNTY, event: constants.QUEST_CONTENT_ENGAGED_VIEWED, properties: null, sourceQuestContent: null };
             const obj10 = {};
-            const obj9 = closure_0(8382);
-            const merged = Object.assign(closure_0(8392).getContentProperties(VIDEO_MODAL_MOBILE));
-            const merged1 = Object.assign(sourceQuestContent(8248)());
+            const obj9 = closure_0(8383);
+            const merged = Object.assign(closure_0(8393).getContentProperties(VIDEO_MODAL_MOBILE));
+            const merged1 = Object.assign(sourceQuestContent(8249)());
             obj10.impression_id = impressionId;
             obj10.video_watch_seconds = closure_129_0.video_watch_seconds;
             obj10.video_position_seconds = closure_129_0.video_position_seconds;
@@ -178,7 +178,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             obj9.trackAdContentEvent(obj8);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp35) {
           closure_3 = tmp35;

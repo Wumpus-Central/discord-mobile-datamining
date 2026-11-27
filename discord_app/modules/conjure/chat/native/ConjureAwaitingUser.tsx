@@ -1,6 +1,6 @@
-// === Module 18520: ConjureAwaitingUser ===
+// === Module 18525: ConjureAwaitingUser ===
 
-// Module 18520 (ConjureAwaitingUser)
+// Module 18525 (ConjureAwaitingUser)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
@@ -14,7 +14,7 @@ const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const createStyles = fn(5043);
 let obj2 = { ring: null };
-const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(18519).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
+const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(18524).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
 obj2.ring = rect;
 let closure_6 = createStyles.createStyles(obj2);
 let closure_7 = { code: "(function ConjureAwaitingUserTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };

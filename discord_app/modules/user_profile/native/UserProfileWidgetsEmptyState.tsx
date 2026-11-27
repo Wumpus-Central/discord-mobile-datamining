@@ -1,14 +1,14 @@
-// === Module 15002: UserProfileWidgetsEmptyState ===
+// === Module 15009: UserProfileWidgetsEmptyState ===
 
-// Module 15002 (UserProfileWidgetsEmptyState)
+// Module 15009 (UserProfileWidgetsEmptyState)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6382 */;
-import useAddableWidgetsDefault from "useAddableWidgets" /* 14996 */;
-import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton" /* 15003 */;
-import useApplicationWidgetAffinityDataDefault from "useApplicationWidgetAffinityData" /* 15007 */;
-import WidgetEmptyStateSuggestionUtils from "WidgetEmptyStateSuggestionUtils" /* 15010 */;
+import useAddableWidgetsDefault from "useAddableWidgets" /* 15003 */;
+import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton" /* 15010 */;
+import useApplicationWidgetAffinityDataDefault from "useApplicationWidgetAffinityData" /* 15014 */;
+import WidgetEmptyStateSuggestionUtils from "WidgetEmptyStateSuggestionUtils" /* 15017 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -65,7 +65,7 @@ export default function UserProfileWidgetsEmptyState() {
   const callback = obj2.useCallback((nativeEvent) => {
     _slicedToArray(nativeEvent.nativeEvent.layout.width);
   }, []);
-  id = tmp4(15012)();
+  id = tmp4(15019)();
   const tmp7 = _slicedToArray(noop.useState(0), 2);
   const canConjureCustomWidget = require("ConjureCustomWidget").useCanConjureCustomWidget(UserProfileWidgetsEmptyState);
   const tmp2Result = require("ConjureCustomWidget");
@@ -106,7 +106,7 @@ export default function UserProfileWidgetsEmptyState() {
     ];
     if (isConjureMobileEnabled) {
       const obj8 = { width: result, padding: PX_16 };
-      isConjureMobileEnabled = closure_10(tmp4(15014), obj8);
+      isConjureMobileEnabled = closure_10(tmp4(15021), obj8);
     }
     items4[1] = isConjureMobileEnabled;
     obj7.children = items4;
@@ -119,7 +119,7 @@ export default function UserProfileWidgetsEmptyState() {
   obj10.onPress = function onPress() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15016, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15023, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
   };
   items3[2] = closure_10(require("components/Button/Button").Button, obj10);
   obj3.children = items3;

@@ -1,6 +1,6 @@
-// === Module 16960: GummyStripesFromHue ===
+// === Module 16967: GummyStripesFromHue ===
 
-// Module 16960 (GummyStripesFromHue)
+// Module 16967 (GummyStripesFromHue)
 import _modDef1654 from "module_1654" /* 1654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

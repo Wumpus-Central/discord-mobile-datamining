@@ -1,6 +1,6 @@
-// === Module 19394: ActivityPanelUtils ===
+// === Module 19410: ActivityPanelUtils ===
 
-// Module 19394 (ActivityPanelUtils)
+// Module 19410 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
 import ChannelTypes from "ChannelTypes" /* 1092 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4964 */;

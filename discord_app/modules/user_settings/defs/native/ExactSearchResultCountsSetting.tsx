@@ -1,10 +1,10 @@
-// === Module 16934: ExactSearchResultCountsSetting ===
+// === Module 16941: ExactSearchResultCountsSetting ===
 
-// Module 16934 (ExactSearchResultCountsSetting)
+// Module 16941 (ExactSearchResultCountsSetting)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4868 */;
-import SettingsConstants from "SettingsConstants" /* 9555 */;
-import SettingBuilders from "SettingBuilders" /* 11962 */;
+import SettingsConstants from "SettingsConstants" /* 9556 */;
+import SettingBuilders from "SettingBuilders" /* 11970 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

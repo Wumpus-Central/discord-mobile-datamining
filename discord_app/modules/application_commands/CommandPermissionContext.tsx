@@ -1,6 +1,6 @@
-// === Module 10052: CommandPermissionContext ===
+// === Module 10053: CommandPermissionContext ===
 
-// Module 10052 (CommandPermissionContext)
+// Module 10053 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
 import Server from "Server" /* 2118 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7570 */;

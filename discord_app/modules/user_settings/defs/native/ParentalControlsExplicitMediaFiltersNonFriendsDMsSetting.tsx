@@ -1,11 +1,11 @@
-// === Module 17602: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting ===
+// === Module 17609: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting ===
 
-// Module 17602 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
+// Module 17609 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
 import util from "util" /* 1112 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8937 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16323 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16327 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8212 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8938 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16330 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16334 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8213 */;
 
 require = fn;
 function useObscuredContentNonFriendsDmSettingValue() {
@@ -25,7 +25,7 @@ function onObscuredContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
     const intl = selectedTeenId(1112).intl;
-    const obj = selectedTeenId(16327);
+    const obj = selectedTeenId(16334);
     const stringResult = intl.string(selectedTeenId(1112).t.GYpoAq);
     const obj3 = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
     const intl2 = selectedTeenId(1112).intl;
@@ -36,17 +36,17 @@ function onObscuredContentNonFriendsDmOnPress() {
       const result = FamilyCenterControlledSettingsUtils.updateExplicitContentSetting(selectedTeenId, { explicitContentNonFriendDm });
     };
     obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(16333).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(16333);
+    let result = selectedTeenId(16340).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(16340);
   }
 }
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
     return intl.string(util.t["Yh+HX1"]);
   },
-  parent: fn(9555).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(9556).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: useObscuredContentNonFriendsDmSettingValue,
   onPress: onObscuredContentNonFriendsDmOnPress,
   unsearchable: true

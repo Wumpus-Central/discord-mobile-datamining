@@ -1,6 +1,6 @@
-// === Module 8183: ApplicationCommandUtils ===
+// === Module 8184: ApplicationCommandUtils ===
 
-// Module 8183 (ApplicationCommandUtils)
+// Module 8184 (ApplicationCommandUtils)
 import applyDefault from "apply" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -10,7 +10,7 @@ import ChannelRecord from "ChannelRecord" /* 4896 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5695 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
 import DraftStore from "DraftStore" /* 8117 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 8184 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 8185 */;
 import ApplicationCommandConstants from "ApplicationCommandConstants" /* 7073 */;
 import Constants from "Constants" /* 1071 */;
 import BigFlagUtils from "BigFlagUtils" /* 1083 */;
@@ -122,13 +122,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F125674 */ function() { ... });
+                      mapped = choices.map(/* F126078 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F92874 */ function() { ... });
+                      mapped1 = options.map(/* F93106 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -511,9 +511,9 @@ export function getApplicationCommandOptionQueryOptions(activeOption) {
   obj.canMentionOtherGlobals = tmp5;
   return obj;
 }
-export function allChannelsSentinel(contextGuildId) {
-  const obj = IntegerDefault(contextGuildId);
-  return IntegerDefault(contextGuildId).subtract(1).toString();
+export function allChannelsSentinel(guildId) {
+  const obj = IntegerDefault(guildId);
+  return IntegerDefault(guildId).subtract(1).toString();
 }
 export function canUseApplicationCommands(can, arg1, isMultiUserDM) {
   let tmp = !arg1;

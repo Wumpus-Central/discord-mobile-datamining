@@ -1,6 +1,6 @@
-// === Module 12998: AppLauncherKeyboard ===
+// === Module 13006: AppLauncherKeyboard ===
 
-// Module 12998 (AppLauncherKeyboard)
+// Module 13006 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1499 */;
@@ -10,12 +10,12 @@ import native from "native" /* 5104 */;
 import BottomSheetModal from "BottomSheetModal" /* 5275 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11810 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 13000 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 13009 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 13010 */;
-import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 13041 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 13044 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11818 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 13008 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 13017 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 13018 */;
+import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 13049 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 13052 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12999).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(13007).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5043);
@@ -160,11 +160,11 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(12145).AppLauncherBottomSheetExpandReason.KEYBOARD;
+          let current = trackWithMetadata(12153).AppLauncherBottomSheetExpandReason.KEYBOARD;
         } else if (arg2 === trackWithMetadata(5275).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(12145).AppLauncherBottomSheetExpandReason.GESTURE;
+          current = trackWithMetadata(12153).AppLauncherBottomSheetExpandReason.GESTURE;
         } else if (arg2 !== trackWithMetadata(5275).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(12145).AppLauncherBottomSheetExpandReason.OTHER;
+          current = trackWithMetadata(12153).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
@@ -225,7 +225,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   obj8.backdropComponent = callback2;
   let tmp29 = onboardingNavigatorContent;
   if (!onboardingNavigatorContent) {
-    tmp29 = entrypoint === tmp(10089).AppLauncherEntrypoint.VOICE;
+    tmp29 = entrypoint === tmp(10090).AppLauncherEntrypoint.VOICE;
   }
   obj8.disableHeaderRoundingAnimation = tmp29;
   let onboardingRoundingView = onboardingNavigatorContent;

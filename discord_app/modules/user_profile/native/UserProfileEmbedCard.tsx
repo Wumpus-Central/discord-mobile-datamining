@@ -1,10 +1,10 @@
-// === Module 11973: UserProfileEmbedCard ===
+// === Module 11981: UserProfileEmbedCard ===
 
-// Module 11973 (UserProfileEmbedCard)
+// Module 11981 (UserProfileEmbedCard)
 import UserSettings from "UserSettings" /* 4868 */;
 import useDisplayProfile from "useDisplayProfile" /* 6162 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6807 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8821 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8822 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
 import UserStore from "UserStore" /* 1387 */;
 import UserProfileStore from "UserProfileStore" /* 6163 */;

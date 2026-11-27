@@ -1,9 +1,9 @@
-// === Module 12352: GameOrganizationBenefitIllustrations ===
+// === Module 12360: GameOrganizationBenefitIllustrations ===
 
-// Module 12352 (GameOrganizationBenefitIllustrations)
-import GuildRolesAbstractUI from "GuildRolesAbstractUI" /* 12353 */;
-import GuildChatAbstractUI from "GuildChatAbstractUI" /* 12357 */;
-import GuildInviteAbstractUI from "GuildInviteAbstractUI" /* 12361 */;
+// Module 12360 (GameOrganizationBenefitIllustrations)
+import GuildRolesAbstractUI from "GuildRolesAbstractUI" /* 12361 */;
+import GuildChatAbstractUI from "GuildChatAbstractUI" /* 12365 */;
+import GuildInviteAbstractUI from "GuildInviteAbstractUI" /* 12369 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organizations/GameOrganizationBenefitIllustrations.native.tsx");

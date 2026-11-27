@@ -1,6 +1,6 @@
-// === Module 8935: GuildDiscoveryUtils ===
+// === Module 8936: GuildDiscoveryUtils ===
 
-// Module 8935 (GuildDiscoveryUtils)
+// Module 8936 (GuildDiscoveryUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import _modDef1489 from "module_1489" /* 1489 */;
@@ -171,7 +171,7 @@ let closure_13 = async function _getDiscoverableGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -251,7 +251,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

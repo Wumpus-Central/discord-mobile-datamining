@@ -1,6 +1,6 @@
-// === Module 13408: VoicePanelDockRim ===
+// === Module 13416: VoicePanelDockRim ===
 
-// Module 13408 (VoicePanelDockRim)
+// Module 13416 (VoicePanelDockRim)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
@@ -47,6 +47,6 @@ export default noop.memo(function VoicePanelDockRim(style) {
   const items3 = [tmp.rim, style.style, animatedStyle];
   obj3.style = items3;
   const obj4 = { style: StyleSheet.absoluteFill, children: jsx(LinearGradientDefault, { style: StyleSheet.absoluteFill, colors: memo, locations: [0.08, 0.14, 0.27, 0.33, 0.67, 0.73, 0.86, 0.92], start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } }) };
-  obj3.children = jsx(tmp2(13409).VoicePanelDockRimLevel, { style: StyleSheet.absoluteFill, children: jsx(LinearGradientDefault, { style: StyleSheet.absoluteFill, colors: memo, locations: [0.08, 0.14, 0.27, 0.33, 0.67, 0.73, 0.86, 0.92], start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } }) });
+  obj3.children = jsx(tmp2(13417).VoicePanelDockRimLevel, { style: StyleSheet.absoluteFill, children: jsx(LinearGradientDefault, { style: StyleSheet.absoluteFill, colors: memo, locations: [0.08, 0.14, 0.27, 0.33, 0.67, 0.73, 0.86, 0.92], start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } }) });
   return jsx(_modDef1654.View, { style: null, pointerEvents: "none", children: null });
 });

@@ -1,17 +1,17 @@
-// === Module 8251: modules/Messages ===
+// === Module 8252: modules/Messages ===
 
-// Module 8251 (modules/Messages)
+// Module 8252 (modules/Messages)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 4921 */;
 import _mod4922 from "module_4922" /* 4922 */;
 import requireSortedDescending from "requireSortedDescending" /* 6785 */;
-import isReadableChannel from "isReadableChannel" /* 8258 */;
-import KvMessage2 from "KvMessage" /* 8261 */;
+import isReadableChannel from "isReadableChannel" /* 8259 */;
+import KvMessage2 from "KvMessage" /* 8262 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
-import SaveableChannelsStore from "SaveableChannelsStore" /* 8252 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 8253 */;
 
 require = fn;
 let closure_8 = new LoggerDefault("Messages");
@@ -140,7 +140,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -334,7 +334,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

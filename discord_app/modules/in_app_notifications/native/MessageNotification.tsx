@@ -1,18 +1,18 @@
-// === Module 10635: MessageNotification ===
+// === Module 10636: MessageNotification ===
 
-// Module 10635 (MessageNotification)
+// Module 10636 (MessageNotification)
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
 import transitionToChannel from "transitionToChannel" /* 6126 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
-import MessageParserDefault from "MessageParser" /* 8344 */;
-import MessagePreviewTextDefault from "MessagePreviewText" /* 10636 */;
+import MessageParserDefault from "MessageParser" /* 8345 */;
+import MessagePreviewTextDefault from "MessagePreviewText" /* 10637 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 require = fn;
-const InAppNotificationConstants = fn(10627);
+const InAppNotificationConstants = fn(10628);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_6 } = InAppNotificationConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
@@ -93,7 +93,7 @@ export default noop.memo(function MessageNotification(notification) {
     transitionToChannel.transitionToMessage(channel.id, message.id, { navigationReplace: true });
   }, items2);
   const items4 = [channel, parentChannel, guild, nullableMessageAuthor, handleDismissNotification];
-  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10666, dependencyMap.paths), { channelId: channel.id }, "in-app-notification-settings-modal"), items3);
+  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10667, dependencyMap.paths), { channelId: channel.id }, "in-app-notification-settings-modal"), items3);
   const memo = guild.useMemo(() => ({ type: "message", channel, parentChannel, guild, author: nullableMessageAuthor, onDismiss: handleDismissNotification }), items4);
   const obj6 = { user: message.author, guildId: null, size: null };
   const guild2 = notification.guild;

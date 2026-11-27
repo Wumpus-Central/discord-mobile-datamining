@@ -1,6 +1,6 @@
-// === Module 17144: SummaryReminderNotificationExperiment ===
+// === Module 17151: SummaryReminderNotificationExperiment ===
 
-// Module 17144 (SummaryReminderNotificationExperiment)
+// Module 17151 (SummaryReminderNotificationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 

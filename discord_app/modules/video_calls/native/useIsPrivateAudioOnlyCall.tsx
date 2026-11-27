@@ -1,6 +1,6 @@
-// === Module 10010: useIsPrivateAudioOnlyCall ===
+// === Module 10011: useIsPrivateAudioOnlyCall ===
 
-// Module 10010 (useIsPrivateAudioOnlyCall)
+// Module 10011 (useIsPrivateAudioOnlyCall)
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;

@@ -161,7 +161,7 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -210,7 +210,7 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
           closure_128_1 = value;
           closure_129_3.performRedirect(closure_128_1);
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp21) {
         c3 = tmp;
@@ -257,7 +257,7 @@ prototype["confirmPayment"] = function confirmPayment() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 10083: CommandPermissionUtils ===
+// === Module 10084: CommandPermissionUtils ===
 
-// Module 10083 (CommandPermissionUtils)
+// Module 10084 (CommandPermissionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1071 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
@@ -9,9 +9,9 @@ import ChannelRecord from "ChannelRecord" /* 4896 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5658 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5695 */;
 import ApplicationCommandConstants from "ApplicationCommandConstants" /* 7073 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8183 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 8184 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 10052 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8184 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 8185 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 10053 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import size from "module_2" /* 2 */;
 

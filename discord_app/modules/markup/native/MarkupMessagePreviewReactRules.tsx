@@ -1,16 +1,16 @@
-// === Module 10649: MarkupMessagePreviewReactRules ===
+// === Module 10650: MarkupMessagePreviewReactRules ===
 
-// Module 10649 (MarkupMessagePreviewReactRules)
+// Module 10650 (MarkupMessagePreviewReactRules)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import SpoilerDefault from "Spoiler" /* 6122 */;
 import MarkupRulesDefault from "MarkupRules" /* 7072 */;
 import MarkupRulesUtils from "MarkupRulesUtils" /* 7178 */;
 import IconSize from "IconSize" /* 7293 */;
-import ChannelListLayout from "ChannelListLayout" /* 10643 */;
-import MarkupReactGameMentionRule from "MarkupReactGameMentionRule" /* 10650 */;
-import HighlightTextDefault from "HighlightText" /* 10653 */;
-import TimestampDefault from "Timestamp" /* 10655 */;
+import ChannelListLayout from "ChannelListLayout" /* 10644 */;
+import MarkupReactGameMentionRule from "MarkupReactGameMentionRule" /* 10651 */;
+import HighlightTextDefault from "HighlightText" /* 10654 */;
+import TimestampDefault from "Timestamp" /* 10656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -162,7 +162,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(6120).AST_KEY.MENTION] = obj15;
   const obj16 = {};
   const merged13 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 6120).AST_KEY.CHANNEL_MENTION]);
-  obj16.react = num(10654).inlineChannelMentionReact;
+  obj16.react = num(10655).inlineChannelMentionReact;
   obj[num(6120).AST_KEY.CHANNEL_MENTION] = obj16;
   const obj17 = {};
   const merged14 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 6120).AST_KEY.ATTACHMENT_LINK]);
@@ -178,7 +178,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj18.react = defaultReactFn;
   obj[num(6120).AST_KEY.SOUNDBOARD] = obj18;
   obj[num(6120).AST_KEY.GUILD] = { react: defaultReactFn };
-  const obj19 = { react: num(10654).createInlineChannelReact("\u{1F4AC}") };
+  const obj19 = { react: num(10655).createInlineChannelReact("\u{1F4AC}") };
   obj[num(6120).AST_KEY.CHANNEL] = obj19;
   const obj21 = {};
   const merged16 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 6120).AST_KEY.COMMAND_MENTION]);

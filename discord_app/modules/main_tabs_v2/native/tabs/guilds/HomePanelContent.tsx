@@ -1,17 +1,17 @@
-// === Module 18070: HomePanelContent ===
+// === Module 18077: HomePanelContent ===
 
-// Module 18070 (HomePanelContent)
+// Module 18077 (HomePanelContent)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10591 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11536 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17750 */;
-import GuildsBarDefault from "GuildsBar" /* 18072 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10592 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11544 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17757 */;
+import GuildsBarDefault from "GuildsBar" /* 18079 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17744 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17751 */;
 
 const _modDef1654 = _mod1654;
 
@@ -177,7 +177,7 @@ function HomeDrawerPanelContent() {
   items7[1] = closure_9(_modDef1654.View, obj11);
   let tmp34Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp34Result2 = closure_9(tmp11(18148), {});
+    tmp34Result2 = closure_9(tmp11(18155), {});
   }
   items7[2] = tmp34Result2;
   obj10.children = items7;
@@ -187,7 +187,7 @@ function HomeDrawerPanelContent() {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1071).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(18071).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(18078).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5043);

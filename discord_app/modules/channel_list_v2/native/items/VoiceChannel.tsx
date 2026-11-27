@@ -1,14 +1,14 @@
-// === Module 17961: VoiceChannel ===
+// === Module 17968: VoiceChannel ===
 
-// Module 17961 (VoiceChannel)
+// Module 17968 (VoiceChannel)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8587 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11406 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13022 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8588 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11407 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13030 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8285 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8286 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 import ReadStateStore from "ReadStateStore" /* 6932 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;

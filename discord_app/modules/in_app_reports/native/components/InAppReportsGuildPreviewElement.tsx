@@ -1,6 +1,6 @@
-// === Module 14680: InAppReportsGuildPreviewElement ===
+// === Module 14687: InAppReportsGuildPreviewElement ===
 
-// Module 14680 (InAppReportsGuildPreviewElement)
+// Module 14687 (InAppReportsGuildPreviewElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ColorUtils from "ColorUtils" /* 5040 */;

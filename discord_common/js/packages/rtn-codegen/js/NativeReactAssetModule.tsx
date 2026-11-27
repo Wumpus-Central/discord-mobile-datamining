@@ -1,6 +1,6 @@
-// === Module 20397: NativeReactAssetModule ===
+// === Module 20455: NativeReactAssetModule ===
 
-// Module 20397 (NativeReactAssetModule)
+// Module 20455 (NativeReactAssetModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

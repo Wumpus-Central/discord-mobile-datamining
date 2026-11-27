@@ -1,6 +1,6 @@
-// === Module 9027: ForumHooks ===
+// === Module 9028: ForumHooks ===
 
-// Module 9027 (ForumHooks)
+// Module 9028 (ForumHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -8,9 +8,9 @@ import GlobalUtils from "GlobalUtils" /* 1255 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 4901 */;
 import useMessageAuthor from "useMessageAuthor" /* 6770 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7467 */;
-import ForumUtils from "ForumUtils" /* 8167 */;
-import ThreadUtils from "ThreadUtils" /* 8185 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8818 */;
+import ForumUtils from "ForumUtils" /* 8168 */;
+import ThreadUtils from "ThreadUtils" /* 8186 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8819 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 6883 */;
@@ -23,15 +23,15 @@ import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 import ReadStateStore from "ReadStateStore" /* 6932 */;
 import UserStore from "UserStore" /* 1387 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 9028 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 9029 */;
 import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8119 */;
-import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 9029 */;
+import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 9030 */;
 import ForumSearchStore from "ForumSearchStore" /* 8120 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ForumTimestampFormats = fn(8168).ForumTimestampFormats;
+const ForumTimestampFormats = fn(8169).ForumTimestampFormats;
 const Constants = fn(1071);
 ({ AnalyticsObjectTypes: closure_20, AnalyticsObjects: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(4899).ChannelFlags;

@@ -1,6 +1,6 @@
-// === Module 19058: ChannelNameHeader ===
+// === Module 19074: ChannelNameHeader ===
 
-// Module 19058 (ChannelNameHeader)
+// Module 19074 (ChannelNameHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _modDef4181 from "module_4181" /* 4181 */;
@@ -9,7 +9,7 @@ import transitionToChannel from "transitionToChannel" /* 6126 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import ChannelUtils from "ChannelUtils" /* 6801 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7096 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 9616 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 9617 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;

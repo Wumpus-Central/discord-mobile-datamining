@@ -1,17 +1,17 @@
-// === Module 13811: useCreateGameInvitePost ===
+// === Module 13818: useCreateGameInvitePost ===
 
-// Module 13811 (useCreateGameInvitePost)
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12287 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 12463 */;
+// Module 13818 (useCreateGameInvitePost)
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12295 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 12471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocalActivityStore from "LocalActivityStore" /* 7655 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7654 */;
-import SlowmodeStore from "SlowmodeStore" /* 8350 */;
+import SlowmodeStore from "SlowmodeStore" /* 8351 */;
 
 require = fn;
-const SlowmodeType = fn(8350).SlowmodeType;
+const SlowmodeType = fn(8351).SlowmodeType;
 const ActivityActionTypes = fn(1071).ActivityActionTypes;
 const ChannelFlags = fn(4899).ChannelFlags;
 const size = fn(2);
@@ -129,7 +129,7 @@ export function useCreateGameInvitePost(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

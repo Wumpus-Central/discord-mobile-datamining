@@ -1,13 +1,13 @@
-// === Module 16829: ResubscribedAlert ===
+// === Module 16836: ResubscribedAlert ===
 
-// Module 16829 (ResubscribedAlert)
+// Module 16836 (ResubscribedAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import common_AlertDefault from "common/Alert" /* 6118 */;
-import _modDef16830 from "module_16830" /* 16830 */;
+import _modDef16837 from "module_16837" /* 16837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ export default function ResubscribedAlert(onClose) {
   const obj2 = { style: tmp.body, children: null };
   const obj3 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj3.source = _modDef16830;
+  obj3.source = _modDef16837;
   obj3.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj3), React4(native.Spacer, { size: 27 }), , , ];
   const obj4 = { variant: "body-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };

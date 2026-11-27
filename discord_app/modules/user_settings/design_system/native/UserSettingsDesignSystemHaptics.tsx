@@ -1,6 +1,6 @@
-// === Module 17466: UserSettingsDesignSystemHaptics ===
+// === Module 17473: UserSettingsDesignSystemHaptics ===
 
-// Module 17466 (UserSettingsDesignSystemHaptics)
+// Module 17473 (UserSettingsDesignSystemHaptics)
 import HapticUtils from "HapticUtils" /* 5259 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5260 */;
 import Patterns from "Patterns" /* 5261 */;

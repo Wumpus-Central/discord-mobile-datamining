@@ -1,20 +1,20 @@
-// === Module 18762: BotIllocon ===
+// === Module 18779: BotIllocon ===
 
-// Module 18762 (BotIllocon)
+// Module 18779 (BotIllocon)
 import FastImageDefault from "FastImage" /* 5730 */;
 import assetHelpers from "assetHelpers" /* 7261 */;
-import _modDef18763 from "module_18763" /* 18763 */;
-import _modDef18764 from "module_18764" /* 18764 */;
-import _modDef18765 from "module_18765" /* 18765 */;
+import _modDef18780 from "module_18780" /* 18780 */;
+import _modDef18781 from "module_18781" /* 18781 */;
+import _modDef18782 from "module_18782" /* 18782 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18763 }, 3: null };
-const obj2 = { uri: _modDef18763 };
-obj[2] = { uri: _modDef18764 };
-const obj3 = { uri: _modDef18764 };
-obj[3] = { uri: _modDef18765 };
+let obj = { 1: null, 2: { uri: _modDef18780 }, 3: null };
+const obj2 = { uri: _modDef18780 };
+obj[2] = { uri: _modDef18781 };
+const obj3 = { uri: _modDef18781 };
+obj[3] = { uri: _modDef18782 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BotIllocon.native.tsx");
 

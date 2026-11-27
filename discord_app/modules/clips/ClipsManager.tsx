@@ -1,15 +1,15 @@
-// === Module 20289: clips/ClipsManager ===
+// === Module 20347: clips/ClipsManager ===
 
-// Module 20289 (clips/ClipsManager)
+// Module 20347 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import UserSettings from "UserSettings" /* 4868 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5868 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
-import isClipsEnabled from "isClipsEnabled" /* 14356 */;
-import ClipsExperiment from "ClipsExperiment" /* 14357 */;
-import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20291 */;
-import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20292 */;
+import isClipsEnabled from "isClipsEnabled" /* 14363 */;
+import ClipsExperiment from "ClipsExperiment" /* 14364 */;
+import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20349 */;
+import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20350 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -17,7 +17,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8403 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8404 */;
 import UserStore from "UserStore" /* 1387 */;
 import ClipsStore from "ClipsStore" /* 2139 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
@@ -46,7 +46,7 @@ let closure_25 = async function _getCodecSurvey() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -339,7 +339,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(clas
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -407,7 +407,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(clas
             const obj = decision(1256);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp42) {
         dependencyMap = tmp;
@@ -429,7 +429,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -459,7 +459,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
         } else {
           v1(572).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
           c2 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -544,7 +544,7 @@ prototype["updateHardwareClassification"] = function updateHardwareClassificatio
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -659,7 +659,7 @@ prototype["classifyAndApplyHardware"] = function classifyAndApplyHardware() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -744,7 +744,7 @@ prototype["classifyAndApplyHardware"] = function classifyAndApplyHardware() {
             return obj;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp35) {
         c3 = tmp;

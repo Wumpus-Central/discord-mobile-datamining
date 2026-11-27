@@ -1,9 +1,9 @@
-// === Module 17426: DesignSystemsShadowsSetting ===
+// === Module 17433: DesignSystemsShadowsSetting ===
 
-// Module 17426 (DesignSystemsShadowsSetting)
+// Module 17433 (DesignSystemsShadowsSetting)
 import Constants from "Constants" /* 1071 */;
-import SettingsConstants from "SettingsConstants" /* 9555 */;
-import SettingBuilders from "SettingBuilders" /* 11962 */;
+import SettingsConstants from "SettingsConstants" /* 9556 */;
+import SettingBuilders from "SettingBuilders" /* 11970 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

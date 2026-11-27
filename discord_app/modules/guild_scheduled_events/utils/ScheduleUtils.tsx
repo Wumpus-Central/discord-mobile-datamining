@@ -1,13 +1,13 @@
-// === Module 8466: ScheduleUtils ===
+// === Module 8467: ScheduleUtils ===
 
-// Module 8466 (ScheduleUtils)
+// Module 8467 (ScheduleUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import apply from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import DateUtils from "DateUtils" /* 4865 */;
-import m from "m" /* 8468 */;
+import m from "m" /* 8469 */;
 import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
@@ -90,16 +90,16 @@ function getValidWeekends(toDate) {
   }
   return tmp5;
 }
-const RecurrenceOptions = fn(8467).RecurrenceOptions;
+const RecurrenceOptions = fn(8468).RecurrenceOptions;
 const GuildScheduledEventsConstants = fn(4898);
 ({ GuildScheduledEventEntityTypes: hasOwnProperty, GuildScheduledEventStatus: closure_6 } = GuildScheduledEventsConstants);
-let items = [fn(8468).RRule.MO.weekday, fn(8468).RRule.TU.weekday, fn(8468).RRule.WE.weekday, fn(8468).RRule.TH.weekday, fn(8468).RRule.FR.weekday];
-let items1 = [fn(8468).RRule.SU.weekday, fn(8468).RRule.MO.weekday, fn(8468).RRule.TU.weekday, fn(8468).RRule.WE.weekday, fn(8468).RRule.TH.weekday];
-let items2 = [fn(8468).RRule.TU.weekday, fn(8468).RRule.WE.weekday, fn(8468).RRule.TH.weekday, fn(8468).RRule.FR.weekday, fn(8468).RRule.SA.weekday];
-let items3 = [fn(8468).RRule.SA.weekday, fn(8468).RRule.SU.weekday];
-const items4 = [fn(8468).RRule.FR.weekday, fn(8468).RRule.SA.weekday];
-const items5 = [fn(8468).RRule.SU.weekday, fn(8468).RRule.MO.weekday];
-const items6 = [fn(8468).RRule.SU.weekday, fn(8468).RRule.MO.weekday, fn(8468).RRule.TU.weekday, fn(8468).RRule.WE.weekday, fn(8468).RRule.TH.weekday, fn(8468).RRule.FR.weekday, fn(8468).RRule.SA.weekday];
+let items = [fn(8469).RRule.MO.weekday, fn(8469).RRule.TU.weekday, fn(8469).RRule.WE.weekday, fn(8469).RRule.TH.weekday, fn(8469).RRule.FR.weekday];
+let items1 = [fn(8469).RRule.SU.weekday, fn(8469).RRule.MO.weekday, fn(8469).RRule.TU.weekday, fn(8469).RRule.WE.weekday, fn(8469).RRule.TH.weekday];
+let items2 = [fn(8469).RRule.TU.weekday, fn(8469).RRule.WE.weekday, fn(8469).RRule.TH.weekday, fn(8469).RRule.FR.weekday, fn(8469).RRule.SA.weekday];
+let items3 = [fn(8469).RRule.SA.weekday, fn(8469).RRule.SU.weekday];
+const items4 = [fn(8469).RRule.FR.weekday, fn(8469).RRule.SA.weekday];
+const items5 = [fn(8469).RRule.SU.weekday, fn(8469).RRule.MO.weekday];
+const items6 = [fn(8469).RRule.SU.weekday, fn(8469).RRule.MO.weekday, fn(8469).RRule.TU.weekday, fn(8469).RRule.WE.weekday, fn(8469).RRule.TH.weekday, fn(8469).RRule.FR.weekday, fn(8469).RRule.SA.weekday];
 const set = new Set([0, 6]);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/ScheduleUtils.tsx");

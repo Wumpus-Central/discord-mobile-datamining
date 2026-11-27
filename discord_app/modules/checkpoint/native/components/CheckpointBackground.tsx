@@ -1,6 +1,6 @@
-// === Module 12857: CheckpointBackground ===
+// === Module 12865: CheckpointBackground ===
 
-// Module 12857 (CheckpointBackground)
+// Module 12865 (CheckpointBackground)
 import noop from "module_19" /* 19 */;
 
 let closure_3 = fn(6396).CHECKPOINT_BACKGROUND_GRADIENT;
@@ -26,7 +26,7 @@ export default function CheckpointBackground(gradientStartColor) {
   }, items);
   const items1 = [closure_5(gradientStartColor(5598), { colors: memo, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp2.background }), ];
   const obj3 = { source: null, style: null, resizeMode: "cover" };
-  const obj4 = { uri: gradientStartColor(12627) };
+  const obj4 = { uri: gradientStartColor(12635) };
   obj3.source = obj4;
   obj3.style = tmp2.background;
   items1[1] = closure_5(gradientStartColor(5730), obj3);

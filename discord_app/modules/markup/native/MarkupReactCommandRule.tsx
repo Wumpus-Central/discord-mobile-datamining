@@ -1,12 +1,12 @@
-// === Module 12142: MarkupReactCommandRule ===
+// === Module 12150: MarkupReactCommandRule ===
 
-// Module 12142 (MarkupReactCommandRule)
+// Module 12150 (MarkupReactCommandRule)
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5695 */;
 import ToastUtils from "ToastUtils" /* 5724 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 12147 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 12155 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
@@ -114,7 +114,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     const obj2 = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1112).intl;
     obj2.label = intl2.string(tmp(1112).t.oJ1Muw);
-    obj2.IconComponent = tmp(11081).IdIcon;
+    obj2.IconComponent = tmp(11082).IdIcon;
     obj2.onPress = function onPress() {
       ToastUtils.presentIdCopied();
       ClipboardUtils.copy(closure_1);
@@ -135,7 +135,7 @@ let result = size.fileFinishedImporting("modules/markup/native/MarkupReactComman
 export default function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(12145).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(12153).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,

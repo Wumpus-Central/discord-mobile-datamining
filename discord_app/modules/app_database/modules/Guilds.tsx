@@ -1,6 +1,6 @@
-// === Module 8313: Guilds ===
+// === Module 8314: Guilds ===
 
-// Module 8313 (Guilds)
+// Module 8314 (Guilds)
 import LoggerDefault from "Logger" /* 3 */;
 import GuildRecordUtilsAll from "GuildRecordUtils" /* 4906 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 4921 */;

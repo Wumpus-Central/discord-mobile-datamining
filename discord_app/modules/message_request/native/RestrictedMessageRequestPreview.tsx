@@ -1,8 +1,8 @@
-// === Module 19236: RestrictedMessageRequestPreview ===
+// === Module 19252: RestrictedMessageRequestPreview ===
 
-// Module 19236 (RestrictedMessageRequestPreview)
+// Module 19252 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 575 */;
-import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 13598 */;
+import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 13605 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -125,13 +125,13 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items9 = [closure_10(tmp2(19237), obj6), , ];
+      const items9 = [closure_10(tmp2(19253), obj6), , ];
       const obj7 = { channelId };
-      items9[1] = closure_10(tmp2(19239), obj7);
+      items9[1] = closure_10(tmp2(19255), obj7);
       let tmp19Result = null;
       if (isEmpty) {
         const obj8 = { style: tmp.emptyChat };
-        tmp19Result = closure_10(tmp2(13630), obj8);
+        tmp19Result = closure_10(tmp2(13637), obj8);
       }
       items9[2] = tmp19Result;
       obj5.children = items9;
@@ -142,7 +142,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       items11[1] = obj10;
       obj9.style = items11;
       const obj11 = { channel: stateFromStores };
-      obj9.children = closure_10(tmp2(13423), obj11);
+      obj9.children = closure_10(tmp2(13431), obj11);
       items10[1] = closure_10(isEmpty, obj9);
       obj4.children = items10;
       tmp14Result = closure_11(tmp15, obj4);

@@ -1,13 +1,13 @@
-// === Module 13243: NewBadge ===
+// === Module 13251: NewBadge ===
 
-// Module 13243 (NewBadge)
+// Module 13251 (NewBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import shared from "shared" /* 5050 */;
 import useThemeDefault from "useTheme" /* 5252 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9014 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9015 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

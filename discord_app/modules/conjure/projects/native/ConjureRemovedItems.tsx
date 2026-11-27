@@ -1,6 +1,6 @@
-// === Module 12505: ConjureRemovedItems ===
+// === Module 12513: ConjureRemovedItems ===
 
-// Module 12505 (ConjureRemovedItems)
+// Module 12513 (ConjureRemovedItems)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
@@ -12,8 +12,8 @@ import FolderIcon from "FolderIcon" /* 7140 */;
 import AppsIcon from "AppsIcon" /* 7172 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7181 */;
 import FormCheckbox from "FormCheckbox" /* 7182 */;
-import BotTagDefault from "BotTag" /* 8632 */;
-import RobotIcon from "RobotIcon" /* 12270 */;
+import BotTagDefault from "BotTag" /* 8633 */;
+import RobotIcon from "RobotIcon" /* 12278 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,7 +1,7 @@
-// === Module 10004: ActivityLaunchErrorLink ===
+// === Module 10005: ActivityLaunchErrorLink ===
 
-// Module 10004 (ActivityLaunchErrorLink)
-import IntlLink from "IntlLink" /* 10005 */;
+// Module 10005 (ActivityLaunchErrorLink)
+import IntlLink from "IntlLink" /* 10006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

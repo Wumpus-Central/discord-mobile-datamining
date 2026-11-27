@@ -1,19 +1,19 @@
-// === Module 10139: CouchSpotIllustration ===
+// === Module 10140: CouchSpotIllustration ===
 
-// Module 10139 (CouchSpotIllustration)
+// Module 10140 (CouchSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7261 */;
-import _modDef10140 from "module_10140" /* 10140 */;
 import _modDef10141 from "module_10141" /* 10141 */;
 import _modDef10142 from "module_10142" /* 10142 */;
+import _modDef10143 from "module_10143" /* 10143 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10140 }, 3: null };
-let obj2 = { uri: _modDef10140 };
-obj[2] = { uri: _modDef10141 };
-const obj3 = { uri: _modDef10141 };
-obj[3] = { uri: _modDef10142 };
+let obj = { 1: null, 2: { uri: _modDef10141 }, 3: null };
+let obj2 = { uri: _modDef10141 };
+obj[2] = { uri: _modDef10142 };
+const obj3 = { uri: _modDef10142 };
+obj[3] = { uri: _modDef10143 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CouchSpotIllustration.native.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 20276: GuildSettingsModalOfficialMessages ===
+// === Module 20334: GuildSettingsModalOfficialMessages ===
 
-// Module 20276 (GuildSettingsModalOfficialMessages)
+// Module 20334 (GuildSettingsModalOfficialMessages)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1112 */;
@@ -11,12 +11,12 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257
 import Text_Text from "Text/Text" /* 5634 */;
 import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7626 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
-import _modDef16895 from "module_16895" /* 16895 */;
+import _modDef16902 from "module_16902" /* 16902 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import GuildStore from "GuildStore" /* 4914 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8575 */;
 
 const require = globalThis.__r;
 
@@ -46,7 +46,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef671(selectedColor).alpha(refs).hex() }];
   obj4.style = items1;
   const hexResult1 = _modDef671(selectedColor).alpha(refs).hex();
-  const items2 = [application_id(native.Avatar, { source: _modDef16895 }), ];
+  const items2 = [application_id(native.Avatar, { source: _modDef16902 }), ];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = { animated: true, style: animatedStyles.textStrong, variant: "body-md/semibold", lineClamp: 1, children: null };
@@ -181,7 +181,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       _undefined2(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(18080, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(18087, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp14 = require("useMeasuredLayout")();
   const width = tmp14.width;

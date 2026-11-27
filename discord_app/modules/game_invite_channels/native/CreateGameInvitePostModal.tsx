@@ -1,6 +1,6 @@
-// === Module 13810: CreateGameInvitePostModal ===
+// === Module 13817: CreateGameInvitePostModal ===
 
-// Module 13810 (CreateGameInvitePostModal)
+// Module 13817 (CreateGameInvitePostModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
@@ -29,7 +29,7 @@ function CreateGameInvitePostContent(parentChannel) {
   items = [tags];
   const memo = noop.useMemo(() => new Set(first.map((id) => id.id)), items);
   const tmp4 = noMicTag(noop.useState(""), 2);
-  const createGameInvitePost = parentChannel(13811).useCreateGameInvitePost({
+  const createGameInvitePost = parentChannel(13818).useCreateGameInvitePost({
     parentChannel,
     description: tmp5,
     appliedTagIds: memo,
@@ -69,7 +69,7 @@ function CreateGameInvitePostContent(parentChannel) {
     const intl = util.intl;
     obj2.title = intl.string(util.t.HPu3kq);
     obj2.tags = tags;
-    obj.openLazy(asyncRequireImpl(11699, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(11707, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
   }, items2);
   const obj5 = { style: tmp.closeButton, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   let intl = parentChannel(1112).intl;
@@ -93,7 +93,7 @@ function CreateGameInvitePostContent(parentChannel) {
   obj8.placeholder = intl4.string(tags(4181)["SU/IAE"]);
   obj8.value = tmp5;
   obj8.onChange = tmp6;
-  obj8.maxLength = parentChannel(12463).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
+  obj8.maxLength = parentChannel(12471).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
   const items6 = [closure_8(parentChannel(7440).TextArea, obj8), , ];
   let tmp15Result = availableTags.length > 0;
   if (tmp15Result) {
@@ -143,7 +143,7 @@ function CreateGameInvitePostContent(parentChannel) {
   if (isSlowmodeEnabled) {
     const obj16 = { style: tmp.slowmodeRow, children: null };
     const obj17 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj16.children = closure_8(tmp2(12981), obj17);
+    obj16.children = closure_8(tmp2(12989), obj17);
     tmp15Result4 = closure_8(View, obj16);
   }
   const obj18 = { children: null };
@@ -162,7 +162,7 @@ function CreateGameInvitePostContent(parentChannel) {
   return closure_9(View, obj3);
 }
 const View = fn(17).View;
-const SlowmodeType = fn(8350).SlowmodeType;
+const SlowmodeType = fn(8351).SlowmodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 function NOOP_UPLOAD() {

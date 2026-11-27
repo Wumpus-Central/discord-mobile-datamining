@@ -1,12 +1,12 @@
-// === Module 19319: HexagonCampaignExpiringPromoSheet ===
+// === Module 19335: HexagonCampaignExpiringPromoSheet ===
 
-// Module 19319 (HexagonCampaignExpiringPromoSheet)
+// Module 19335 (HexagonCampaignExpiringPromoSheet)
 import Text_Text from "Text/Text" /* 5634 */;
 import QuestTypes from "QuestTypes" /* 6874 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9695 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16060 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8393 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9102 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9696 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16067 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ const Constants = fn(1071);
 ({ AnalyticsObjects: hasOwnProperty, AnalyticsPages: closure_6 } = Constants);
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const EXPIRING_SOON_SHEET = fn(16060).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
+const EXPIRING_SOON_SHEET = fn(16067).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignExpiringPromoSheet.tsx");
 

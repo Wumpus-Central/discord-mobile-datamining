@@ -1,9 +1,9 @@
-// === Module 8538: AppChannelApplicationActionSheet ===
+// === Module 8539: AppChannelApplicationActionSheet ===
 
-// Module 8538 (AppChannelApplicationActionSheet)
+// Module 8539 (AppChannelApplicationActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8537 */;
-import getAppChannelApplicationUnsupportedTextDefault from "getAppChannelApplicationUnsupportedText" /* 8539 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8538 */;
+import getAppChannelApplicationUnsupportedTextDefault from "getAppChannelApplicationUnsupportedText" /* 8540 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/app_channels/native/AppChanne
 export default function AppChannelApplicationActionSheet(arg0) {
   ({ selectedApplicationId, onChange } = arg0);
   ({ guildId, channelId } = arg0);
-  const options = onChange(8535).useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
+  const options = onChange(8536).useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
   items = [onChange];
   const callback = noop.useCallback((arg0) => {
     onChange(arg0);

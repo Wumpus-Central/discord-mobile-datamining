@@ -31,7 +31,7 @@ let closure_14 = async function _collectAgeSignal() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_15 = async function _performAgeCheck(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -192,7 +192,7 @@ let closure_15 = async function _performAgeCheck(arg0) {
                 c4 = 0;
                 const result4 = closure_130_0(closure_130_2[13]).trackAgeSignalReported("app_start", closure_129_1, closure_129_0);
                 c6 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
               obj17 = closure_130_0(closure_130_2[10]);
             }
@@ -337,7 +337,7 @@ function startAgeSignalReport(isColdLaunch, connection) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -385,7 +385,7 @@ function startAgeSignalReport(isColdLaunch, connection) {
                   c11 = null;
                 }
                 c5 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               } else if (mustWaitForForeground()) {
                 const obj6 = { isColdLaunch: closure_129_0, connection: closure_129_1, until: "foreground" };
                 c3 = 0;
@@ -413,7 +413,7 @@ function startAgeSignalReport(isColdLaunch, connection) {
                 c11 = null;
               }
               c5 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
             c4 = 3;
             c5 = 1;
@@ -478,7 +478,7 @@ let closure_18 = async function _settleAppStoreAgeSignalReport() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -507,7 +507,7 @@ let closure_18 = async function _settleAppStoreAgeSignalReport() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;
@@ -542,7 +542,7 @@ export function queueAppStoreAgeSignalSubmit(submitUserInitiatedAgeSignal) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -575,7 +575,7 @@ export function queueAppStoreAgeSignalSubmit(submitUserInitiatedAgeSignal) {
             c11 = null;
           }
           c2 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         c2 = tmp;
@@ -595,7 +595,7 @@ export function queueAppStoreAgeSignalSubmit(submitUserInitiatedAgeSignal) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -719,7 +719,7 @@ export function resumeAppStoreAgeSignalReport() {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -767,7 +767,7 @@ export function resumeAppStoreAgeSignalReport() {
                   c11 = null;
                 }
                 c5 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               } else if (mustWaitForForeground()) {
                 const obj6 = { isColdLaunch: closure_129_0, connection: closure_129_1, until: "foreground" };
                 c3 = 0;
@@ -795,7 +795,7 @@ export function resumeAppStoreAgeSignalReport() {
                 c11 = null;
               }
               c5 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
             c4 = 3;
             c5 = 1;

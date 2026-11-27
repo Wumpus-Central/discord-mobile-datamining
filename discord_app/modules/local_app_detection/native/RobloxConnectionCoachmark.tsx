@@ -1,6 +1,6 @@
-// === Module 19278: RobloxConnectionCoachmark ===
+// === Module 19294: RobloxConnectionCoachmark ===
 
-// Module 19278 (RobloxConnectionCoachmark)
+// Module 19294 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -18,7 +18,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
 import UserStore from "UserStore" /* 1387 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15204 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15211 */;
 
 require = fn;
 function RobloxIcon(theme) {
@@ -107,7 +107,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1112).intl;
   obj11.text = intl3.string(markAsDismissed(1112).t.ItuabN);
   const obj6 = { size: "md", color: nativeDefault.colors.ICON_MUTED, accessible: false };
-  obj11.icon = closure_13(markAsDismissed(14103).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj11.icon = closure_13(markAsDismissed(14110).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj11.onPress = function handleConnect() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -132,7 +132,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 };
 export function useShouldShowRobloxConnectionCoachmark() {
   items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(15205).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(15212).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

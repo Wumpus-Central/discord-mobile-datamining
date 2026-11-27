@@ -1,6 +1,6 @@
-// === Module 8954: GameAutocompleteActionCreators ===
+// === Module 8955: GameAutocompleteActionCreators ===
 
-// Module 8954 (GameAutocompleteActionCreators)
+// Module 8955 (GameAutocompleteActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import GameAutocompleteUtils from "GameAutocompleteUtils" /* 7175 */;
@@ -25,7 +25,7 @@ let closure_6 = async function _fetchGameAutocomplete(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

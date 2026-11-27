@@ -1,15 +1,15 @@
-// === Module 12904: CheckpointFriendsStatsScreen ===
+// === Module 12912: CheckpointFriendsStatsScreen ===
 
-// Module 12904 (CheckpointFriendsStatsScreen)
+// Module 12912 (CheckpointFriendsStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
-import CheckpointStore from "CheckpointStore" /* 12620 */;
+import CheckpointStore from "CheckpointStore" /* 12628 */;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointTransitionConstants = fn(12631);
+const CheckpointTransitionConstants = fn(12639);
 ({ CHECKPOINT_FRIENDS_CONTENT_FADE_OUT: closure_8, CHECKPOINT_SIDEKICK_CONTENT_FADE_IN: closure_9, CHECKPOINT_FRIENDS_CONTENT_FADE_IN: closure_10 } = CheckpointTransitionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -24,7 +24,7 @@ obj2.sidekick = { gap: nativeDefault.space.PX_32 };
 let obj4 = { gap: nativeDefault.space.PX_32 };
 obj2.sidekickDetails = { gap: nativeDefault.space.PX_24 };
 let obj5 = { gap: nativeDefault.space.PX_24 };
-obj2.wideContainer = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12860).CHECKPOINT_WIDE_MAX_WIDTH };
+obj2.wideContainer = { flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(12868).CHECKPOINT_WIDE_MAX_WIDTH };
 obj2.wideScenePane = { width: "50%", alignSelf: "stretch", alignItems: "center", justifyContent: "center", paddingRight: PX_32 };
 obj2.wideCopy = { width: "50%", paddingLeft: PX_32, paddingVertical: fn(6396).CHECKPOINT_NAV_HEIGHT };
 obj2.wideTransition = { position: "absolute", top: 0, left: PX_32, right: 0, bottom: 0, justifyContent: "center" };

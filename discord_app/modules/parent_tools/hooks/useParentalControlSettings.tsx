@@ -1,16 +1,16 @@
-// === Module 16323: useParentalControlSettings ===
+// === Module 16330: useParentalControlSettings ===
 
-// Module 16323 (useParentalControlSettings)
+// Module 16330 (useParentalControlSettings)
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7351 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8209 */;
-import useUserLinks from "useUserLinks" /* 8211 */;
-import useSelectedTeen from "useSelectedTeen" /* 8217 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16324 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16327 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8210 */;
+import useUserLinks from "useUserLinks" /* 8212 */;
+import useSelectedTeen from "useSelectedTeen" /* 8218 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16331 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 16334 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 8215 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 8216 */;
 
 const require = globalThis.__r;
 
@@ -110,8 +110,8 @@ export function useDefaultGuildsRestricted() {
   return controlledSetting1;
 }
 export function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(8217).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(16324).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(8218).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(16331).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -145,7 +145,7 @@ export function useParentalControlledConsent(PERSONALIZATION) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -171,10 +171,10 @@ export function useParentalControlledConsent(PERSONALIZATION) {
               items2 = [closure_0];
             }
             c4 = 1;
-            tmp3(8214).updateTeenConsents(tmp28, items1, items2);
+            tmp3(8215).updateTeenConsents(tmp28, items1, items2);
             c2 = 2;
             c5 = 1;
-            const obj3 = tmp3(8214);
+            const obj3 = tmp3(8215);
           }
         } else {
           if (1 === tmp7) {

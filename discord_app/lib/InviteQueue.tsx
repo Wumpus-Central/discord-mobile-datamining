@@ -1,9 +1,9 @@
-// === Module 10497: InviteQueue ===
+// === Module 10498: InviteQueue ===
 
-// Module 10497 (InviteQueue)
+// Module 10498 (InviteQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import Queue from "Queue" /* 6791 */;
 

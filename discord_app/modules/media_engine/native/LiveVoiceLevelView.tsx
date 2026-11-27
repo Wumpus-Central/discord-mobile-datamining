@@ -1,7 +1,7 @@
-// === Module 13412: LiveVoiceLevelView ===
+// === Module 13420: LiveVoiceLevelView ===
 
-// Module 13412 (LiveVoiceLevelView)
-import LiveVoiceLevelViewNativeComponentDefault from "LiveVoiceLevelViewNativeComponent" /* 13413 */;
+// Module 13420 (LiveVoiceLevelView)
+import LiveVoiceLevelViewNativeComponentDefault from "LiveVoiceLevelViewNativeComponent" /* 13421 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

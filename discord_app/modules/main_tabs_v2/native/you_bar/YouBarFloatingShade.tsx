@@ -1,6 +1,6 @@
-// === Module 18187: YouBarFloatingShade ===
+// === Module 18194: YouBarFloatingShade ===
 
-// Module 18187 (YouBarFloatingShade)
+// Module 18194 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
@@ -9,14 +9,14 @@ import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /*
 import useChatLayoutDefault from "useChatLayout" /* 5222 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import useToken from "useToken" /* 5607 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16686 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16693 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5067 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(16683).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(18071).GUILD_LIST_WIDTH;
+let closure_5 = fn(16690).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(18078).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5043);

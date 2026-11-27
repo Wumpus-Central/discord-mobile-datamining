@@ -1,10 +1,10 @@
-// === Module 19738: GuildRoomManager ===
+// === Module 19754: GuildRoomManager ===
 
-// Module 19738 (GuildRoomManager)
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 8422 */;
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 8447 */;
+// Module 19754 (GuildRoomManager)
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 8423 */;
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 8448 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 8424 */;
+import GuildRoomStore from "GuildRoomStore" /* 8425 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;

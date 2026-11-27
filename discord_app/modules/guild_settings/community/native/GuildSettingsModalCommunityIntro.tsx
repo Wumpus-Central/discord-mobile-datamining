@@ -1,15 +1,15 @@
-// === Module 20099: GuildSettingsModalCommunityIntro ===
+// === Module 20157: GuildSettingsModalCommunityIntro ===
 
-// Module 20099 (GuildSettingsModalCommunityIntro)
+// Module 20157 (GuildSettingsModalCommunityIntro)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import ToastUtils from "ToastUtils" /* 5724 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 20104 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8574 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 20162 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8575 */;
 
 const require = globalThis.__r;
 

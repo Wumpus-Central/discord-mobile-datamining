@@ -1,6 +1,6 @@
-// === Module 11453: conjureRemixConnection ===
+// === Module 11454: conjureRemixConnection ===
 
-// Module 11453 (conjureRemixConnection)
+// Module 11454 (conjureRemixConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 7673 */;
 import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7674 */;
@@ -19,7 +19,7 @@ let closure_5 = async function _acceptRemix(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

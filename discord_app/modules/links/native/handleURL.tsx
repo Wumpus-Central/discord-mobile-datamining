@@ -24,7 +24,7 @@ let closure_10 = async function _handleURL(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -143,7 +143,7 @@ let closure_10 = async function _handleURL(arg0) {
             }
             closure_131_5();
             c8 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else {
             closure_131_0 = closure_132_1(closure_132_2[15])(closure_131_0);
             if (obj6.test(closure_131_0)) {
@@ -197,7 +197,7 @@ let closure_10 = async function _handleURL(arg0) {
         } else if (2 === tmp8) {
           c6 = 0;
           c8 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } else {
           if (3 === tmp8) {
             if (arg0 === 1) {

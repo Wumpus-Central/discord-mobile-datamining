@@ -1,6 +1,6 @@
-// === Module 12502: KickConfirm ===
+// === Module 12510: KickConfirm ===
 
-// Module 12502 (KickConfirm)
+// Module 12510 (KickConfirm)
 import nativeDefault from "native" /* 575 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6991 */;
 import _slicedToArray from "module_32" /* 32 */;

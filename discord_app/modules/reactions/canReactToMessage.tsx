@@ -1,9 +1,9 @@
-// === Module 9551: canReactToMessage ===
+// === Module 9552: canReactToMessage ===
 
-// Module 9551 (canReactToMessage)
+// Module 9552 (canReactToMessage)
 import FlagUtils from "FlagUtils" /* 1405 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4962 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 9552 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 9553 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 6799 */;
 import PermissionStore from "PermissionStore" /* 4975 */;

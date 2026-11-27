@@ -1,6 +1,6 @@
-// === Module 18212: VoicePanelSettingsOverview ===
+// === Module 18219: VoicePanelSettingsOverview ===
 
-// Module 18212 (VoicePanelSettingsOverview)
+// Module 18219 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -17,22 +17,22 @@ import TableRowArrow from "TableRowArrow" /* 6156 */;
 import LockIcon from "LockIcon" /* 7161 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8112 */;
-import _modDef8189 from "module_8189" /* 8189 */;
-import FormComponents from "FormComponents" /* 8647 */;
-import useIsSecureFramesVerified from "useIsSecureFramesVerified" /* 8661 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8684 */;
-import showShareActionSheet from "showShareActionSheet" /* 8690 */;
-import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 8707 */;
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10271 */;
-import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 10387 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 14317 */;
-import WrenchIcon from "WrenchIcon" /* 17185 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 18210 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 18213 */;
+import _modDef8190 from "module_8190" /* 8190 */;
+import FormComponents from "FormComponents" /* 8648 */;
+import useIsSecureFramesVerified from "useIsSecureFramesVerified" /* 8662 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8685 */;
+import showShareActionSheet from "showShareActionSheet" /* 8691 */;
+import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 8708 */;
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10272 */;
+import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 10388 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 14324 */;
+import WrenchIcon from "WrenchIcon" /* 17192 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 18217 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 18220 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10022 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10023 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
@@ -132,7 +132,7 @@ function ShareActivityLogsButton() {
       const tmpResult2 = showShareActionSheet;
     }
   }, []);
-  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8189 }), label: null, trailing: null };
+  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8190 }), label: null, trailing: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
   obj.trailing = collapsedCategories(TableRowArrow.TableRowArrow, {});
@@ -145,7 +145,7 @@ function ActivityDebugToggle() {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
   }, []);
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8189 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8190 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
   obj2.value = stateFromStores;
@@ -157,7 +157,7 @@ function ActivityDebugToggle() {
 const Constants = fn(1071);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
 const isStreamParticipant = fn(5693).isStreamParticipant;
-let closure_17 = fn(8681).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+let closure_17 = fn(8682).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 const createStyles = fn(5043);
@@ -250,7 +250,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18214, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18221, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

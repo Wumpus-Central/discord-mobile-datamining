@@ -1,6 +1,6 @@
-// === Module 9934: AppStoreMetadataActionCreators ===
+// === Module 9935: AppStoreMetadataActionCreators ===
 
-// Module 9934 (AppStoreMetadataActionCreators)
+// Module 9935 (AppStoreMetadataActionCreators)
 import DurationsDefault from "Durations" /* 1088 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
@@ -65,7 +65,7 @@ export function fetchAppStoreMetadata(os) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

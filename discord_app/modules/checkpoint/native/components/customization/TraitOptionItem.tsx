@@ -1,13 +1,13 @@
-// === Module 12919: TraitOptionItem ===
+// === Module 12927: TraitOptionItem ===
 
-// Module 12919 (TraitOptionItem)
+// Module 12927 (TraitOptionItem)
 import nativeDefault from "native" /* 575 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5105 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6397 */;
 import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6444 */;
 import inlineStyles from "inlineStyles" /* 7946 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9637 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9638 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import CheckpointConstants from "CheckpointConstants" /* 6396 */;
 import jsxProd from "jsxProd" /* 21 */;

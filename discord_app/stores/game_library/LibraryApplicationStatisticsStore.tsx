@@ -1,6 +1,6 @@
-// === Module 15008: LibraryApplicationStatisticsStore ===
+// === Module 15015: LibraryApplicationStatisticsStore ===
 
-// Module 15008 (LibraryApplicationStatisticsStore)
+// Module 15015 (LibraryApplicationStatisticsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;

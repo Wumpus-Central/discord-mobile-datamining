@@ -1,6 +1,6 @@
-// === Module 14024: useGiftInventorySubscriptionsLoaded ===
+// === Module 14031: useGiftInventorySubscriptionsLoaded ===
 
-// Module 14024 (useGiftInventorySubscriptionsLoaded)
+// Module 14031 (useGiftInventorySubscriptionsLoaded)
 import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5806 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -24,7 +24,7 @@ export default function useGiftInventorySubscriptionsLoaded() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ export default function useGiftInventorySubscriptionsLoaded() {
               closure_0(closure_128_0);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           if (tmp4 === c2) {

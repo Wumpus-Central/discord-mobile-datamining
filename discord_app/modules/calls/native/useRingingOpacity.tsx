@@ -1,6 +1,6 @@
-// === Module 18224: useRingingOpacity ===
+// === Module 18231: useRingingOpacity ===
 
-// Module 18224 (useRingingOpacity)
+// Module 18231 (useRingingOpacity)
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import noop from "module_19" /* 19 */;

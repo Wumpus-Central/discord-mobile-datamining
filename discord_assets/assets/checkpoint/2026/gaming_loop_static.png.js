@@ -1,6 +1,6 @@
-// === Module 12903: ? ===
+// === Module 12911: ? ===
 
-// Module 12903
+// Module 12911
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/gaming_loop_static.png.js");

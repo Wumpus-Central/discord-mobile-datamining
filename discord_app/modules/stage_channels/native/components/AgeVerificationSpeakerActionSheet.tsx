@@ -1,6 +1,6 @@
-// === Module 10338: AgeVerificationSpeakerActionSheet ===
+// === Module 10339: AgeVerificationSpeakerActionSheet ===
 
-// Module 10338 (AgeVerificationSpeakerActionSheet)
+// Module 10339 (AgeVerificationSpeakerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;

@@ -1,6 +1,6 @@
-// === Module 18523: conjureGuildPickerSources ===
+// === Module 18528: conjureGuildPickerSources ===
 
-// Module 18523 (conjureGuildPickerSources)
+// Module 18528 (conjureGuildPickerSources)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import UserUtils from "UserUtils" /* 5099 */;
 import GuildUtilsDefault from "GuildUtils" /* 6990 */;

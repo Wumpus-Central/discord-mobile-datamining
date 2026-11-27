@@ -1,18 +1,18 @@
-// === Module 19334: LaunchPadWrapper ===
+// === Module 19350: LaunchPadWrapper ===
 
-// Module 19334 (LaunchPadWrapper)
+// Module 19350 (LaunchPadWrapper)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19336 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19352 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6, TouchableOpacity: metroImportDefault, StyleSheet: closure_8 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(11958).LaunchPadTypes;
+const LaunchPadTypes = fn(11966).LaunchPadTypes;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);

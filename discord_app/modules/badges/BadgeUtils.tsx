@@ -1,6 +1,6 @@
-// === Module 9870: BadgeUtils ===
+// === Module 9871: BadgeUtils ===
 
-// Module 9870 (BadgeUtils)
+// Module 9871 (BadgeUtils)
 import util from "util" /* 1112 */;
 import StringUtils from "StringUtils" /* 2153 */;
 import Constants from "Constants" /* 6137 */;

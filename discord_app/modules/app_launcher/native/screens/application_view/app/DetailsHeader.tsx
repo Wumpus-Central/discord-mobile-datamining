@@ -1,11 +1,11 @@
-// === Module 13110: DetailsHeader ===
+// === Module 13118: DetailsHeader ===
 
-// Module 13110 (DetailsHeader)
+// Module 13118 (DetailsHeader)
 import nativeDefault from "native" /* 575 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import timingPresets from "timingPresets" /* 5256 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 13111 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 13119 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

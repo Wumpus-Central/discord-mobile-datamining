@@ -1,14 +1,14 @@
-// === Module 18014: WaterwheelsCard ===
+// === Module 18021: WaterwheelsCard ===
 
-// Module 18014 (WaterwheelsCard)
+// Module 18021 (WaterwheelsCard)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8932 */;
-import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 18015 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8933 */;
+import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 18022 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13381 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13389 */;
 
 const require = globalThis.__r;
 
@@ -115,10 +115,10 @@ function WaterwheelsCardContent(card) {
       if (action != null) {
         type = action.type;
       }
-      if (type === tmp2(8932).WaterwheelsActionType.OPEN_CONNECTION) {
+      if (type === tmp2(8933).WaterwheelsActionType.OPEN_CONNECTION) {
         const obj12 = { style: tmp.card, children: null };
         const obj13 = { post: layout, action, onAction: handleAction };
-        obj12.children = closure_10(onAction(18016), obj13);
+        obj12.children = closure_10(onAction(18023), obj13);
         let tmp25Result = closure_10(closure_5, obj12);
       } else {
         const obj14 = { style: tmp.card, children: null };

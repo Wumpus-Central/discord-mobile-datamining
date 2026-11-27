@@ -1,10 +1,10 @@
-// === Module 13600: useUserProfileMutuals ===
+// === Module 13607: useUserProfileMutuals ===
 
-// Module 13600 (useUserProfileMutuals)
+// Module 13607 (useUserProfileMutuals)
 import apply from "apply" /* 12 */;
-import usePrevValueDefault from "usePrevValue" /* 8623 */;
+import usePrevValueDefault from "usePrevValue" /* 8624 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8322 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8323 */;
 import SortedGuildStore from "SortedGuildStore" /* 6164 */;
 import UserProfileStore from "UserProfileStore" /* 6163 */;
 

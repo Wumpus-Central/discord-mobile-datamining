@@ -1,6 +1,6 @@
-// === Module 16207: UserSettingsChangeUsername ===
+// === Module 16214: UserSettingsChangeUsername ===
 
-// Module 16207 (UserSettingsChangeUsername)
+// Module 16214 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -13,11 +13,11 @@ require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(5836).match(showHint.usernameStatus);
-  let obj = { type: showHint(16208).NameValidationState.ERROR, message: null };
+  let obj = { type: showHint(16215).NameValidationState.ERROR, message: null };
   const P = showHint(5836).P;
   obj.message = P.select();
   const str = showHint(5836);
-  const obj2 = { type: showHint(16208).NameValidationState.AVAILABLE, message: null };
+  const obj2 = { type: showHint(16215).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(5836).P;
   obj2.message = P2.select();
   const withResult = match.with(obj, (children) => closure_1_11(showHint(5634).Text, { variant: "body-xs/medium", color: "text-feedback-critical", children }));

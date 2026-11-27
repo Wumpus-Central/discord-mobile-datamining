@@ -1,6 +1,6 @@
-// === Module 14328: StartEventPlatformUtils ===
+// === Module 14335: StartEventPlatformUtils ===
 
-// Module 14328 (StartEventPlatformUtils)
+// Module 14335 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1098 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6797 */;
@@ -22,7 +22,7 @@ let closure_10 = async function _navigateToEvent(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

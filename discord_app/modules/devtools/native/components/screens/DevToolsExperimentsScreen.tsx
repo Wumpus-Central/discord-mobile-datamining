@@ -1,6 +1,6 @@
-// === Module 12390: DevToolsExperimentsScreen ===
+// === Module 12398: DevToolsExperimentsScreen ===
 
-// Module 12390 (DevToolsExperimentsScreen)
+// Module 12398 (DevToolsExperimentsScreen)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -12,7 +12,7 @@ import TableRowGroup from "TableRowGroup" /* 6140 */;
 import TableRow from "TableRow" /* 6144 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 12388 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 12396 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ExperimentStore from "ExperimentStore" /* 5660 */;

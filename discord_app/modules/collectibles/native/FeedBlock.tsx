@@ -1,13 +1,13 @@
-// === Module 17526: FeedBlock ===
+// === Module 17533: FeedBlock ===
 
-// Module 17526 (FeedBlock)
+// Module 17533 (FeedBlock)
 import initializeDefault from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11245 */;
-import uniqByDefault from "uniqBy" /* 17509 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11246 */;
+import uniqByDefault from "uniqBy" /* 17516 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
@@ -49,17 +49,17 @@ export default function _default(screen) {
   items = [memo];
   const stateFromStores = screen(504).useStateFromStores(items, () => screen(closure_2[10]).isThemeDark(memo.theme));
   let obj2 = screen(504);
-  const isInImprovedMobileShopLoading = screen(11265).useIsInImprovedMobileShopLoading();
-  const tmp5 = isInImprovedMobileShopLoading(17508)();
+  const isInImprovedMobileShopLoading = screen(11266).useIsInImprovedMobileShopLoading();
+  const tmp5 = isInImprovedMobileShopLoading(17515)();
   dependencyMap = tmp5;
-  let tmp6 = isInImprovedMobileShopLoading(17489)(feedBlock);
+  let tmp6 = isInImprovedMobileShopLoading(17496)(feedBlock);
   const shownSkuIds = tmp6.shownSkuIds;
   ({ resolvedSkuIds, isPersonalized } = tmp6);
   if (!isInImprovedMobileShopLoading) {
     resolvedSkuIds = closure_11;
   }
-  let obj3 = screen(11265);
-  collectiblesShopProducts = screen(11600).useCollectiblesShopProducts(resolvedSkuIds);
+  let obj3 = screen(11266);
+  collectiblesShopProducts = screen(11608).useCollectiblesShopProducts(resolvedSkuIds);
   const items1 = [isInImprovedMobileShopLoading, tmp5, shownSkuIds, resolvedSkuIds, collectiblesShopProducts];
   memo = shownSkuIds.useMemo(() => {
     if (isInImprovedMobileShopLoading) {
@@ -92,8 +92,8 @@ export default function _default(screen) {
     }
     return googleSkuIds;
   }, items3);
-  const tmpResult = screen(11600);
-  loadedGoogleSkuIds = isInImprovedMobileShopLoading(9269).useLoadedGoogleSkuIds(memo1);
+  const tmpResult = screen(11608);
+  loadedGoogleSkuIds = isInImprovedMobileShopLoading(9270).useLoadedGoogleSkuIds(memo1);
   const items4 = [isInImprovedMobileShopLoading, memo, loadedGoogleSkuIds];
   const memo2 = shownSkuIds.useMemo(() => {
     if (isInImprovedMobileShopLoading) {
@@ -107,16 +107,16 @@ export default function _default(screen) {
     }
     return found;
   }, items4);
-  const tmp4Result = isInImprovedMobileShopLoading(9269);
-  const tmpResult4 = screen(16593);
-  const filteredAndSortedProducts = tmpResult4.useFilteredAndSortedProducts({ products: memo2, maxProducts: screen(17489).MAX_FEED_PRODUCTS, screen });
-  let obj4 = { products: memo2, maxProducts: screen(17489).MAX_FEED_PRODUCTS, screen };
+  const tmp4Result = isInImprovedMobileShopLoading(9270);
+  const tmpResult4 = screen(16600);
+  const filteredAndSortedProducts = tmpResult4.useFilteredAndSortedProducts({ products: memo2, maxProducts: screen(17496).MAX_FEED_PRODUCTS, screen });
+  let obj4 = { products: memo2, maxProducts: screen(17496).MAX_FEED_PRODUCTS, screen };
   const items5 = [collectiblesShopProducts];
   const stateFromStores1 = screen(504).useStateFromStores(items5, () => collectiblesShopProducts.useReducedMotion);
   const tmpResult5 = screen(504);
   analyticsLocations = isInImprovedMobileShopLoading(6379)(tmp4(6380).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations;
   const tmp4Result3 = isInImprovedMobileShopLoading(6379);
-  closure_9 = screen(11214).useCollectiblesAnalyticsContext();
+  closure_9 = screen(11215).useCollectiblesAnalyticsContext();
   const intl = tmp(1112).intl;
   const string = intl.string;
   const t = tmp(1112).t;
@@ -187,12 +187,12 @@ export default function _default(screen) {
   obj7.children = items7;
   const items8 = [closure_10(resolvedSkuIds, obj7), , ];
   const obj11 = { products: filteredAndSortedProducts, loadingCardsNum: null, preferVCPrice: null, accessibilityLabel: null, disableBundleStaticBackground: null };
-  const tmpResult6 = screen(11214);
-  obj11.loadingCardsNum = screen(17489).MAX_FEED_PRODUCTS;
+  const tmpResult6 = screen(11215);
+  obj11.loadingCardsNum = screen(17496).MAX_FEED_PRODUCTS;
   obj11.preferVCPrice = preferVCPrice;
   obj11.accessibilityLabel = stringResult;
   obj11.disableBundleStaticBackground = disableBundleStaticBackground;
-  items8[1] = closure_9(isInImprovedMobileShopLoading(17521), obj11);
+  items8[1] = closure_9(isInImprovedMobileShopLoading(17528), obj11);
   const obj12 = { style: feedFooterOrbImage.feedFooter, children: null };
   const obj13 = { variant: "heading-lg/semibold", accessibilityRole: "header", children: null };
   const intl4 = tmp(1112).intl;
@@ -233,20 +233,20 @@ export default function _default(screen) {
   items9[1] = closure_9(screen(5641).Button, obj14);
   if (screen === loadedGoogleSkuIds.ORBS) {
     obj = { source: null, enableAnimation: null, resizeMode: "contain", style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-    const obj15 = { uri: tmp4(stateFromStores1 ? 17528 : 17529) };
+    const obj15 = { uri: tmp4(stateFromStores1 ? 17535 : 17536) };
     obj.source = obj15;
     obj.enableAnimation = !stateFromStores1;
     feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
     obj.style = feedFooterOrbImage;
-    const tmp25 = stateFromStores1 ? 17528 : 17529;
+    const tmp25 = stateFromStores1 ? 17535 : 17536;
   } else {
     const obj16 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     if (stateFromStores) {
-      obj16.source = tmp(17530);
+      obj16.source = tmp(17537);
       obj16.style = feedFooterOrbImage.feedFooterImage;
       let tmp24 = obj16;
     } else {
-      obj16.source = tmp(17531);
+      obj16.source = tmp(17538);
       obj16.style = feedFooterOrbImage.feedFooterImage;
       tmp24 = obj16;
     }
@@ -257,5 +257,5 @@ export default function _default(screen) {
     obj5.children = closure_10(tmp19, obj6);
     return tmp17(tmp(6379).AnalyticsLocationProvider, obj5);
   }
-  const tmp4Result4 = isInImprovedMobileShopLoading(17521);
+  const tmp4Result4 = isInImprovedMobileShopLoading(17528);
 };

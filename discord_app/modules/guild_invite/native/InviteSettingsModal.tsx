@@ -1,18 +1,18 @@
-// === Module 20280: InviteSettingsModal ===
+// === Module 20338: InviteSettingsModal ===
 
-// Module 20280 (InviteSettingsModal)
+// Module 20338 (InviteSettingsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import Navigator from "Navigator" /* 7355 */;
-import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 10435 */;
-import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 20281 */;
+import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 10436 */;
+import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 20339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 10429 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 10430 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 
@@ -72,7 +72,7 @@ function AdvancedInstantInviteScreen() {
   }, items1);
   const tmp2Result = navigation(12);
   const unmountEffect = navigation(5604).useUnmountEffect(() => {
-    channel(10435).resetSettings();
+    channel(10436).resetSettings();
   });
   const items2 = [channel];
   callback = noop.useCallback(() => {
@@ -106,31 +106,31 @@ function AdvancedInstantInviteScreen() {
     });
   }, items3);
   const callback1 = noop.useCallback((maxUses) => {
-    channel(10435).updateSettings({ maxUses });
+    channel(10436).updateSettings({ maxUses });
   }, []);
   const callback2 = noop.useCallback((maxAge) => {
-    channel(10435).updateSettings({ maxAge });
+    channel(10436).updateSettings({ maxAge });
   }, []);
   const callback3 = noop.useCallback((temporary) => {
-    channel(10435).updateSettings({ temporary });
+    channel(10436).updateSettings({ temporary });
   }, []);
   const callback4 = noop.useCallback((flags) => {
-    channel(10435).updateSettings({ flags });
+    channel(10436).updateSettings({ flags });
   }, []);
   const callback5 = noop.useCallback((roleIds) => {
-    channel(10435).updateSettings({ roleIds });
+    channel(10436).updateSettings({ roleIds });
   }, []);
   let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
   let obj5 = { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null };
   const tmp2Result2 = navigation(5604);
-  obj5.maxUsesOptions = channel(10430).getMaxUsesOptions;
+  obj5.maxUsesOptions = channel(10431).getMaxUsesOptions;
   ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
   obj5.onChangeMaxAge = callback2;
   obj5.onChangeMaxUses = callback1;
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(20282), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
+  obj4.children = jsx(channel(20340), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
   return jsx(navigation(8088).Form, { contentContainerStyle: tmp.formContainer, children: null });
 }
 const Constants = fn(1071);

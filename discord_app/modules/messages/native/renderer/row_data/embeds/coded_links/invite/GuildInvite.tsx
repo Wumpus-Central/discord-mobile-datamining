@@ -1,6 +1,6 @@
-// === Module 14499: invite/GuildInvite ===
+// === Module 14506: invite/GuildInvite ===
 
-// Module 14499 (invite/GuildInvite)
+// Module 14506 (invite/GuildInvite)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -15,18 +15,18 @@ import Constants2 from "Constants" /* 5776 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 5777 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7096 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 7833 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8227 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8739 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8821 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12385 */;
-import _modDef12386 from "module_12386" /* 12386 */;
-import _modDef12387 from "module_12387" /* 12387 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 12935 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 13759 */;
-import _modDef13760 from "module_13760" /* 13760 */;
-import GuestUtilsDefault from "GuestUtils" /* 14500 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 14501 */;
-import getHeaderTextForInvite from "getHeaderTextForInvite" /* 14502 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8228 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8740 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8822 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12393 */;
+import _modDef12394 from "module_12394" /* 12394 */;
+import _modDef12395 from "module_12395" /* 12395 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 12943 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 13766 */;
+import _modDef13767 from "module_13767" /* 13767 */;
+import GuestUtilsDefault from "GuestUtils" /* 14507 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 14508 */;
+import getHeaderTextForInvite from "getHeaderTextForInvite" /* 14509 */;
 import GuildRecord from "GuildRecord" /* 4910 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -70,7 +70,7 @@ export function createExpiredGuildInvite(author, arg1, theme) {
     tmp6 = require;
   }
   obj.headerText = str.toUpperCase();
-  obj.titleColor = tmp6(8227).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6(8228).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
   if (arg1) {
     const intl4 = tmp6(1112).intl;
     let stringResult = intl4.string(tmp6(1112).t["F/OLvL"]);
@@ -93,11 +93,11 @@ export function createExpiredGuildInvite(author, arg1, theme) {
   obj.subtitle = stringResult;
   const intl5 = tmp6(1112).intl;
   obj.titleText = intl5.string(tmp6(1112).t["Jhx/ud"]);
-  const tmp6Result = tmp6(8227);
+  const tmp6Result = tmp6(8228);
   if (tmp6Result2.isThemeDark(theme)) {
-    let tmpResult2 = _modDef12386;
+    let tmpResult2 = _modDef12394;
   } else {
-    tmpResult2 = _modDef12387;
+    tmpResult2 = _modDef12395;
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
   ({ thumbnailBackgroundColor: obj.thumbnailBackgroundColor, subtitleColor: obj.subtitleColor } = tmp3.colors);
@@ -150,7 +150,7 @@ export function createDisabledGuildInvite(invite, theme) {
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13760);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13767);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -208,9 +208,9 @@ export function createErroredGuildInvite(code, arg1, theme) {
   obj3.titleText = title;
   const tmp5Result = RowGeneratorStyleSheet;
   if (tmp5Result2.isThemeDark(theme)) {
-    let tmpResult = _modDef12386;
+    let tmpResult = _modDef12394;
   } else {
-    tmpResult = _modDef12387;
+    tmpResult = _modDef12395;
   }
   obj3.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj2.thumbnailBackgroundColor, subtitleColor: obj2.subtitleColor } = colors);

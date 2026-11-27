@@ -1,6 +1,6 @@
-// === Module 11533: PlaygroundAccessExperiment ===
+// === Module 11541: PlaygroundAccessExperiment ===
 
-// Module 11533 (PlaygroundAccessExperiment)
+// Module 11541 (PlaygroundAccessExperiment)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1387 */;
 

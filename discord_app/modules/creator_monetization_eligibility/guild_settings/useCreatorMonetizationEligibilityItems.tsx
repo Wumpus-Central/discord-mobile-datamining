@@ -1,9 +1,9 @@
-// === Module 20152: useCreatorMonetizationEligibilityItems ===
+// === Module 20210: useCreatorMonetizationEligibilityItems ===
 
-// Module 20152 (useCreatorMonetizationEligibilityItems)
+// Module 20210 (useCreatorMonetizationEligibilityItems)
 import util from "util" /* 1112 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import formatDurationFromDaysDefault from "formatDurationFromDays" /* 20155 */;
+import formatDurationFromDaysDefault from "formatDurationFromDays" /* 20213 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           tmp13();
         }
         c2 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp16) {
         c2 = tmp;
         throw tmp16;

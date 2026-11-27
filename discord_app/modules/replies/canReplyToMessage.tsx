@@ -1,9 +1,9 @@
-// === Module 12206: canReplyToMessage ===
+// === Module 12214: canReplyToMessage ===
 
-// Module 12206 (canReplyToMessage)
+// Module 12214 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1087 */;
 import ThreadHooks from "ThreadHooks" /* 7628 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8827 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 import UserStore from "UserStore" /* 1387 */;

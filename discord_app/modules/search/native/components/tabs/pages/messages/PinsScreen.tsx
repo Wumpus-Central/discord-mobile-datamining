@@ -1,13 +1,13 @@
-// === Module 19043: messages/PinsScreen ===
+// === Module 19059: messages/PinsScreen ===
 
-// Module 19043 (messages/PinsScreen)
-import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 12220 */;
-import TrackingDefault from "Tracking" /* 13313 */;
-import MessagesScreenDefault from "MessagesScreen" /* 19040 */;
+// Module 19059 (messages/PinsScreen)
+import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 12228 */;
+import TrackingDefault from "Tracking" /* 13321 */;
+import MessagesScreenDefault from "MessagesScreen" /* 19056 */;
 import noop from "module_19" /* 19 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 12221 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 12229 */;
 import SearchMessageStore from "SearchMessageStore" /* 6953 */;
-import SearchQueryStore from "SearchQueryStore" /* 13300 */;
+import SearchQueryStore from "SearchQueryStore" /* 13308 */;
 
 const require = fn;
 function InitialPinsScreen(searchContext) {
@@ -137,10 +137,10 @@ function InitialPinsScreen(searchContext) {
     ItemSeparatorComponent: null
   });
 }
-const FetchState = fn(12221).FetchState;
-const SearchConstants = fn(9019);
+const FetchState = fn(12229).FetchState;
+const SearchConstants = fn(9020);
 ({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8, SearchListItemTypes: closure_9, SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_10 } = SearchConstants);
-let closure_11 = fn(9018).SearchResultContentEntityTypes;
+let closure_11 = fn(9019).SearchResultContentEntityTypes;
 const SearchTypes = fn(1071).SearchTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);

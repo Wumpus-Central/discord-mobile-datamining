@@ -1,6 +1,6 @@
-// === Module 10020: HomeIndicator ===
+// === Module 10021: HomeIndicator ===
 
-// Module 10020 (HomeIndicator)
+// Module 10021 (HomeIndicator)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

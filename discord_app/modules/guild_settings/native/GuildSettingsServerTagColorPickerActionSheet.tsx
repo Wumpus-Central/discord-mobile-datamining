@@ -1,16 +1,16 @@
-// === Module 20027: GuildSettingsServerTagColorPickerActionSheet ===
+// === Module 20052: GuildSettingsServerTagColorPickerActionSheet ===
 
-// Module 20027 (GuildSettingsServerTagColorPickerActionSheet)
+// Module 20052 (GuildSettingsServerTagColorPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 5040 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 16041 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 16048 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8579);
+const GuildTagConstants = fn(8580);
 ({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6, GUILD_TAG_BADGE_PALETTE_PRESETS: metroImportDefault, GuildTagBadgeSize: closure_8 } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

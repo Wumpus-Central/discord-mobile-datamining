@@ -1,6 +1,6 @@
-// === Module 13861: BadgeTierGrid ===
+// === Module 13868: BadgeTierGrid ===
 
-// Module 13861 (BadgeTierGrid)
+// Module 13868 (BadgeTierGrid)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,8 +49,8 @@ export default function BadgeTierGrid(badge) {
   if (tiers == null) {
     tiers = [];
   }
-  const tmp9 = isViewingOtherUser(9773);
-  obj4.children = isViewingOtherUser(9773)(tiers, 3).map((arr) => React4(View, {
+  const tmp9 = isViewingOtherUser(9774);
+  obj4.children = isViewingOtherUser(9774)(tiers, 3).map((arr) => React4(View, {
     style: row.row,
     collapsable: false,
     children: arr.map((owned) => {
@@ -63,7 +63,7 @@ export default function BadgeTierGrid(badge) {
       if (complex_icon_static_url == null) {
         complex_icon_static_url = owned.complex_icon_static_url;
       }
-      const tierRowSubtitle = badge(9870).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
+      const tierRowSubtitle = badge(9871).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
       const intl = badge(1112).intl;
       const t = badge(1112).t;
       items = [owned.name, tierRowSubtitle, intl.string(owned ? t.sTFApF : t.uHtDcT)];
@@ -84,8 +84,8 @@ export default function BadgeTierGrid(badge) {
         }
         items1[1] = dimmedIcon;
         obj4.style = items1;
-        tmp9Result = closure_2_4(isViewingOtherUser(9856), obj4);
-        const tmp11 = isViewingOtherUser(9856);
+        tmp9Result = closure_2_4(isViewingOtherUser(9857), obj4);
+        const tmp11 = isViewingOtherUser(9857);
       }
       const items2 = [tmp9Result, , ];
       let tmp13Result = null != owned.name;

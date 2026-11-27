@@ -1,9 +1,9 @@
-// === Module 14656: ApplicationWidgetMarkupUtils ===
+// === Module 14663: ApplicationWidgetMarkupUtils ===
 
-// Module 14656 (ApplicationWidgetMarkupUtils)
+// Module 14663 (ApplicationWidgetMarkupUtils)
 import MarkupReactRulesDefault from "MarkupReactRules" /* 6121 */;
 import MarkupRulesDefault from "MarkupRules" /* 7072 */;
-import MarkupLiteralImageRuleDefault from "MarkupLiteralImageRule" /* 14657 */;
+import MarkupLiteralImageRuleDefault from "MarkupLiteralImageRule" /* 14664 */;
 import combineMarkupRules from "combineMarkupRules" /* 7071 */;
 import apply from "apply" /* 12 */;
 import MarkupParser_mod from "markup/MarkupParser" /* 7179 */;

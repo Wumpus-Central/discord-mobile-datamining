@@ -1,6 +1,6 @@
-// === Module 8499: ItemSelectorActionSheet ===
+// === Module 8500: ItemSelectorActionSheet ===
 
-// Module 8499 (ItemSelectorActionSheet)
+// Module 8500 (ItemSelectorActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import noop from "module_19" /* 19 */;

@@ -1,14 +1,14 @@
-// === Module 16066: useProfileEditorExitHandling ===
+// === Module 16073: useProfileEditorExitHandling ===
 
-// Module 16066 (useProfileEditorExitHandling)
+// Module 16073 (useProfileEditorExitHandling)
 import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7338 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 9801 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14572 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 9802 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14579 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9437 */;
-import WidgetStore from "WidgetStore" /* 14565 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9438 */;
+import WidgetStore from "WidgetStore" /* 14572 */;
 
 require = fn;
 function discardPendingChanges() {
@@ -16,7 +16,7 @@ function discardPendingChanges() {
   WidgetActionCreatorsDefault.clearPendingWidgets();
 }
 let closure_8 = fn(1081).ProfileCustomizationSubsection;
-const RootNavigatorScreen = fn(9429).RootNavigatorScreen;
+const RootNavigatorScreen = fn(9430).RootNavigatorScreen;
 const UserProfileSections = fn(6137).UserProfileSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useProfileEditorExitHandling.tsx");
@@ -35,7 +35,7 @@ export default function useProfileEditorExitHandling(location) {
     const result = _location(7338).resetAndCloseUserProfileForm();
     closure_1_6.resetState();
     const obj = _location(7338);
-    hasUnsavedChanges(14572).clearPendingWidgets();
+    hasUnsavedChanges(14579).clearPendingWidgets();
   }, []);
   items = [onSave];
   onSave = first.useCallback(onSave(function*() {

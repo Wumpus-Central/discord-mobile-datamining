@@ -1,6 +1,6 @@
-// === Module 17461: UserSettingsDesignSystemSheets ===
+// === Module 17468: UserSettingsDesignSystemSheets ===
 
-// Module 17461 (UserSettingsDesignSystemSheets)
+// Module 17468 (UserSettingsDesignSystemSheets)
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -11,8 +11,8 @@ import TextInput from "TextInput" /* 7274 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
 import ActionSheetRow from "ActionSheetRow" /* 7548 */;
-import PromoSheet from "PromoSheet" /* 10747 */;
-import _modDef17462 from "module_17462" /* 17462 */;
+import PromoSheet from "PromoSheet" /* 10748 */;
+import _modDef17469 from "module_17469" /* 17469 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function DemoActionSheet() {
   let tmp14Result = first;
   if (first) {
     const obj2 = { onPress: NOOP, label: tmp12 };
-    tmp14Result = metroImportDefault(tmp15(8507).ActionSheetHeaderPressableText, obj2);
+    tmp14Result = metroImportDefault(tmp15(8508).ActionSheetHeaderPressableText, obj2);
   }
   obj.leading = tmp14Result;
   let tmp14Result2 = tmp2;
@@ -99,7 +99,7 @@ function DemoPromoSheet() {
   const obj2 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = metroImportDefault(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef17462 };
+  obj3.src = { uri: _modDef17469 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
   return metroImportDefault(PromoSheet.PromoSheet, obj2);

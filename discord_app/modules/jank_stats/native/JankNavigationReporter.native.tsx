@@ -1,11 +1,11 @@
-// === Module 19762: JankNavigationReporter ===
+// === Module 19778: JankNavigationReporter ===
 
-// Module 19762 (JankNavigationReporter)
+// Module 19778 (JankNavigationReporter)
 import RootNavigationRef from "RootNavigationRef" /* 5220 */;
 import useChatLayout from "useChatLayout" /* 5222 */;
-import getJankScreenName from "getJankScreenName" /* 17732 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17736 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 17737 */;
+import getJankScreenName from "getJankScreenName" /* 17739 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17743 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 17744 */;
 import size from "module_2" /* 2 */;
 
 const getJankScreenNameDefault = getJankScreenName;

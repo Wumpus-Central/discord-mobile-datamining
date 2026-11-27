@@ -1,6 +1,6 @@
-// === Module 10227: BaseSocket ===
+// === Module 10228: BaseSocket ===
 
-// Module 10227 (BaseSocket)
+// Module 10228 (BaseSocket)
 import applyDefault from "apply" /* 12 */;
 import RPCErrorDefault from "RPCError" /* 7644 */;
 import Constants from "Constants" /* 1071 */;

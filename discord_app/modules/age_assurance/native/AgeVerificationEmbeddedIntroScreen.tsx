@@ -1,12 +1,12 @@
-// === Module 12550: AgeVerificationEmbeddedIntroScreen ===
+// === Module 12558: AgeVerificationEmbeddedIntroScreen ===
 
-// Module 12550 (AgeVerificationEmbeddedIntroScreen)
+// Module 12558 (AgeVerificationEmbeddedIntroScreen)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import _modDef3499 from "module_3499" /* 3499 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7870 */;
-import AgeVerificationGetStartedModal from "AgeVerificationGetStartedModal" /* 12546 */;
-import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 12551 */;
+import AgeVerificationGetStartedModal from "AgeVerificationGetStartedModal" /* 12554 */;
+import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 12559 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj6.children = items2;
   items1[1] = closure_6(navigation(6115).Stack, obj6);
   obj5.children = items1;
-  const items3 = [closure_6(navigation(6115).Stack, obj5), closure_5(navigation(12553).AgeVerificationMethodsContainer, { ageVerificationMethods: useAgeVerificationMethodsDefault({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
+  const items3 = [closure_6(navigation(6115).Stack, obj5), closure_5(navigation(12561).AgeVerificationMethodsContainer, { ageVerificationMethods: useAgeVerificationMethodsDefault({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
   obj4.children = items3;
   const items4 = [closure_6(navigation(6115).Stack, obj4), ];
   const obj11 = { variant: "body-xs/medium", color: "text-muted", style: tmp.helpLink, children: null };

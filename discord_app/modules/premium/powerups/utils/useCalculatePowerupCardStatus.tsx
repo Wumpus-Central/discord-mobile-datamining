@@ -1,12 +1,12 @@
-// === Module 13506: useCalculatePowerupCardStatus ===
+// === Module 13514: useCalculatePowerupCardStatus ===
 
-// Module 13506 (useCalculatePowerupCardStatus)
+// Module 13514 (useCalculatePowerupCardStatus)
 import util from "util" /* 1112 */;
 import _modDef2879 from "module_2879" /* 2879 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PowerupActiveStatusType = fn(8297).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(8298).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
 

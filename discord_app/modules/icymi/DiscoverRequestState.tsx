@@ -1,6 +1,6 @@
-// === Module 8920: DiscoverRequestState ===
+// === Module 8921: DiscoverRequestState ===
 
-// Module 8920 (DiscoverRequestState)
+// Module 8921 (DiscoverRequestState)
 import size from "module_2" /* 2 */;
 
 class DiscoverRequestGuard {

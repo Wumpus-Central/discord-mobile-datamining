@@ -1,11 +1,11 @@
-// === Module 9913: QuestCopyUtils ===
+// === Module 9914: QuestCopyUtils ===
 
-// Module 9913 (QuestCopyUtils)
+// Module 9914 (QuestCopyUtils)
 import util from "util" /* 1112 */;
 import AdCreativeType from "AdCreativeType" /* 6878 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
-import captureAdUserAction from "captureAdUserAction" /* 9857 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9861 */;
+import captureAdUserAction from "captureAdUserAction" /* 9858 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9862 */;
 import QuestConstants from "QuestConstants" /* 6871 */;
 import size from "module_2" /* 2 */;
 

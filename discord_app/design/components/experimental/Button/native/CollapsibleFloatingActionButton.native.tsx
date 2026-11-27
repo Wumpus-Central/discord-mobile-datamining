@@ -1,13 +1,13 @@
-// === Module 8495: CollapsibleFloatingActionButton ===
+// === Module 8496: CollapsibleFloatingActionButton ===
 
-// Module 8495 (CollapsibleFloatingActionButton)
+// Module 8496 (CollapsibleFloatingActionButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import BaseTextButton from "BaseTextButton" /* 5642 */;
 import spring_spring from "spring/spring" /* 5644 */;
 import springPresets from "springPresets" /* 5645 */;
 import ButtonConstants2 from "ButtonConstants" /* 5647 */;
-import FloatingActionButton from "FloatingActionButton" /* 8496 */;
+import FloatingActionButton from "FloatingActionButton" /* 8497 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

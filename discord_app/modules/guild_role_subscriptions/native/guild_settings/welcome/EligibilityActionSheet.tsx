@@ -1,9 +1,9 @@
-// === Module 20151: EligibilityActionSheet ===
+// === Module 20209: EligibilityActionSheet ===
 
-// Module 20151 (EligibilityActionSheet)
+// Module 20209 (EligibilityActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 20152 */;
-import EligibilityChecklistDefault from "EligibilityChecklist" /* 20156 */;
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 20210 */;
+import EligibilityChecklistDefault from "EligibilityChecklist" /* 20214 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -25,8 +25,8 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
       onEnableMFAClick() {
         closure_1_1(5257).hideActionSheet(closure_1_7);
         const obj = closure_1_1(5257);
-        closure_1_1(8573).close();
-        const obj2 = closure_1_1(8573);
+        closure_1_1(8574).close();
+        const obj2 = closure_1_1(8574);
         onRequireModeratorMFAClick(8109).openUserSettings({ screen: constants.ACCOUNT });
       },
       onRequireModeratorMFAClick() {

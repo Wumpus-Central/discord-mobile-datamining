@@ -1,21 +1,21 @@
-// === Module 10675: Notification ===
+// === Module 10676: Notification ===
 
-// Module 10675 (Notification)
+// Module 10676 (Notification)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10626 */;
-import NotificationContentDefault from "NotificationContent" /* 10676 */;
-import NotificationProgressDefault from "NotificationProgress" /* 10678 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10627 */;
+import NotificationContentDefault from "NotificationContent" /* 10677 */;
+import NotificationProgressDefault from "NotificationProgress" /* 10679 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 const _modDef1654 = _mod1654;
 
 require = fn;
-const InAppNotificationConstants = fn(10627);
+const InAppNotificationConstants = fn(10628);
 ({ MIN_SWIPE_VELOCITY: closure_4, STARTED_SWIPE_THRESHOLD: hasOwnProperty, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1071).AnalyticEvents;
 const jsxProd = fn(21);

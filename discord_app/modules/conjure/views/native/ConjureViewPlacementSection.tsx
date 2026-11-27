@@ -1,6 +1,6 @@
-// === Module 18494: ConjureViewPlacementSection ===
+// === Module 18501: ConjureViewPlacementSection ===
 
-// Module 18494 (ConjureViewPlacementSection)
+// Module 18501 (ConjureViewPlacementSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
@@ -9,7 +9,7 @@ import TrashIcon from "TrashIcon" /* 5750 */;
 import TextInput from "TextInput" /* 7274 */;
 import ConjureViewsTypes from "ConjureViewsTypes" /* 7708 */;
 import IconButton from "IconButton" /* 7944 */;
-import ChevronLargeDownIcon from "ChevronLargeDownIcon" /* 14795 */;
+import ChevronLargeDownIcon from "ChevronLargeDownIcon" /* 14801 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ function ViewPicker(label) {
   }
   const items1 = [
     label(label(5634).Text, { variant: "body-sm/medium", color: str, style: tmp.pickerLabel, children: label }),
-    label(label(9067).ContextMenu, {
+    label(label(9068).ContextMenu, {
       items: memo,
       title: label,
       enabled: !disabled,
@@ -226,7 +226,7 @@ export default function ConjureViewPlacementSection(placement) {
     const obj14 = { variant: "secondary", size: "sm", text: null, icon: null, disabled: null, onPress: null };
     const intl8 = tmp5(1112).intl;
     obj14.text = intl8.string(tmp7(4245)["3g7BVY"]);
-    obj14.icon = closure_5(tmp5(11268).PlusSmallIcon, { size: "xs" });
+    obj14.icon = closure_5(tmp5(11269).PlusSmallIcon, { size: "xs" });
     if (!disabled) {
       disabled = !placement.canAddAppChannel;
     }

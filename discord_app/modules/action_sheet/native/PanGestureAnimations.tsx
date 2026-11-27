@@ -1,6 +1,6 @@
-// === Module 13820: PanGestureAnimations ===
+// === Module 13827: PanGestureAnimations ===
 
-// Module 13820 (PanGestureAnimations)
+// Module 13827 (PanGestureAnimations)
 import native from "native" /* 1186 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;

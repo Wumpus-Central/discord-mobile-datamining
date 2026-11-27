@@ -1,6 +1,6 @@
-// === Module 13680: RedesignContactSyncDiscoverabilityFooter ===
+// === Module 13687: RedesignContactSyncDiscoverabilityFooter ===
 
-// Module 13680 (RedesignContactSyncDiscoverabilityFooter)
+// Module 13687 (RedesignContactSyncDiscoverabilityFooter)
 import jsxProd from "jsxProd" /* 21 */;
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;

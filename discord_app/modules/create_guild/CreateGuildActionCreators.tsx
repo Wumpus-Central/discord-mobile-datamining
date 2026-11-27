@@ -1,6 +1,6 @@
-// === Module 13267: create_guild/CreateGuildActionCreators ===
+// === Module 13275: create_guild/CreateGuildActionCreators ===
 
-// Module 13267 (create_guild/CreateGuildActionCreators)
+// Module 13275 (create_guild/CreateGuildActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6135 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -22,7 +22,7 @@ let closure_5 = async function _createGuildFromTemplate() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

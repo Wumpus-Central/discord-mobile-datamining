@@ -1,6 +1,6 @@
-// === Module 18788: useConjureProjectGuild ===
+// === Module 18806: useConjureProjectGuild ===
 
-// Module 18788 (useConjureProjectGuild)
+// Module 18806 (useConjureProjectGuild)
 import GuildStore from "GuildStore" /* 4914 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
 

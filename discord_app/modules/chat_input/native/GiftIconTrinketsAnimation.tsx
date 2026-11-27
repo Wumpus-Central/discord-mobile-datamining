@@ -1,12 +1,12 @@
-// === Module 13204: GiftIconTrinketsAnimation ===
+// === Module 13212: GiftIconTrinketsAnimation ===
 
-// Module 13204 (GiftIconTrinketsAnimation)
+// Module 13212 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import StringUtils from "StringUtils" /* 2153 */;
 import useToken from "useToken" /* 5607 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import DynamicRive from "DynamicRive" /* 13205 */;
+import DynamicRive from "DynamicRive" /* 13213 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 

@@ -1,6 +1,6 @@
-// === Module 16946: DisplayNameStylesEditScreen ===
+// === Module 16953: DisplayNameStylesEditScreen ===
 
-// Module 16946 (DisplayNameStylesEditScreen)
+// Module 16953 (DisplayNameStylesEditScreen)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -11,8 +11,8 @@ import _modDef1654 from "module_1654" /* 1654 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 9434 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11946 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 9435 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11954 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -394,7 +394,7 @@ export default function DisplayNameStylesEditScreen() {
     if (showCampaignFontBadge) {
       dismissCampaignFontBadge();
     }
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16950, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16957, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut });
     const obj2 = { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut };
   }, items6);
   if (stateFromStores != null) {
@@ -413,9 +413,9 @@ export default function DisplayNameStylesEditScreen() {
     if (stateFromStores != null) {
       id = stateFromStores.id;
     }
-    obj.openLazy(asyncRequireImpl(16954, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", { userId: id, selectedEffectId: first1, onSelectEffect });
+    obj.openLazy(asyncRequireImpl(16961, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", { userId: id, selectedEffectId: first1, onSelectEffect });
     const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-    const tmp3 = asyncRequireImpl(16954, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(16961, dependencyMap.paths);
   }, items7);
   const callback7 = obj10.useCallback(() => {
     if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -425,7 +425,7 @@ export default function DisplayNameStylesEditScreen() {
             return callback(navigation(isTryItOut[9]).DisplayNameEffect.GUMMY, arg0);
           }
       };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16955, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16962, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj2);
     } else {
       const openLazy = ActionSheetActionCreatorsDefault.openLazy;
       const tmp2Result = asyncRequireImpl;
@@ -437,10 +437,10 @@ export default function DisplayNameStylesEditScreen() {
                 return callback(first1, arg0);
               }
         };
-        openLazy(tmp2Result(16965, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+        openLazy(tmp2Result(16972, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
       } else {
         const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-        openLazy(tmp2Result(16967, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+        openLazy(tmp2Result(16974, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
       }
     }
   }, items8);

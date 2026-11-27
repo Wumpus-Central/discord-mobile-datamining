@@ -1,16 +1,16 @@
-// === Module 14446: GuildSpaceMusicSystemMessage ===
+// === Module 14453: GuildSpaceMusicSystemMessage ===
 
-// Module 14446 (GuildSpaceMusicSystemMessage)
+// Module 14453 (GuildSpaceMusicSystemMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6807 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8821 */;
-import _modDef10310 from "module_10310" /* 10310 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 10614 */;
-import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 10615 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12000 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14372 */;
-import createCommonMessageDefault from "createCommonMessage" /* 14373 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8822 */;
+import _modDef10311 from "module_10311" /* 10311 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 10615 */;
+import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 10616 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12008 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14379 */;
+import createCommonMessageDefault from "createCommonMessage" /* 14380 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6856 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -65,7 +65,7 @@ export function createGuildSpaceMusicSystemMessage(message) {
             const obj5 = { content: null, iconUrl: null, iconTintColor: null };
             obj2.usernameOnClick = obj6;
             obj5.content = intl.formatToParts(mobileMusicSystemMessage.message, obj2);
-            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef10310);
+            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef10311);
             obj5.iconTintColor = tmp15.iconTintColor;
             const merged1 = Object.assign(createCommonMessageDefault(message));
             return obj5;

@@ -1,9 +1,9 @@
-// === Module 10103: openFrame ===
+// === Module 10104: openFrame ===
 
-// Module 10103 (openFrame)
+// Module 10104 (openFrame)
 import router_utils from "router_utils" /* 1098 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5687 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9996 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9997 */;
 import FramesStore from "FramesStore" /* 6936 */;
 
 require = fn;

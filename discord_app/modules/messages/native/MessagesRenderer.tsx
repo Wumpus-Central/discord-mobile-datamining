@@ -1,6 +1,6 @@
-// === Module 12004: MessagesRenderer ===
+// === Module 12012: MessagesRenderer ===
 
-// Module 12004 (MessagesRenderer)
+// Module 12012 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
@@ -11,20 +11,20 @@ import CodedLink from "CodedLink" /* 5765 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 5774 */;
 import Client from "Client" /* 6784 */;
 import QuestTypes from "QuestTypes" /* 6874 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9089 */;
-import QuestActionCreators from "QuestActionCreators" /* 9894 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11980 */;
-import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11987 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 12005 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 12008 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 12010 */;
-import computeScrollData from "computeScrollData" /* 12014 */;
-import MessagesHandlers from "MessagesHandlers" /* 12018 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 12025 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12566 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12953 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 12954 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9090 */;
+import QuestActionCreators from "QuestActionCreators" /* 9895 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11988 */;
+import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11995 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 12013 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 12016 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 12018 */;
+import computeScrollData from "computeScrollData" /* 12022 */;
+import MessagesHandlers from "MessagesHandlers" /* 12026 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 12033 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12574 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12961 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 12962 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -54,9 +54,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9090).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(9091).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(4955).getUserCommunicationDisabledVersion;
-const Changeset = fn(8224).Changeset;
+const Changeset = fn(8225).Changeset;
 const Constants = fn(1071);
 ({ ActivityActionTypes: closure_11, MAX_MESSAGES_PER_CHANNEL: closure_12, MessageFlags: map1, MessageTypes: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);
@@ -131,7 +131,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -164,7 +164,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[19]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[16]).scrollTo(ref.current, tmp26, obj8);

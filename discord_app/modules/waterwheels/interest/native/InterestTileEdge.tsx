@@ -1,11 +1,11 @@
-// === Module 18047: InterestTileEdge ===
+// === Module 18054: InterestTileEdge ===
 
-// Module 18047 (InterestTileEdge)
+// Module 18054 (InterestTileEdge)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import noop from "module_19" /* 19 */;
 
-const GRID_COVER_HAIRLINE_WIDTH = fn(18030).GRID_COVER_HAIRLINE_WIDTH;
+const GRID_COVER_HAIRLINE_WIDTH = fn(18037).GRID_COVER_HAIRLINE_WIDTH;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let closure_4 = createStyles.createStyles((borderRadius) => {

@@ -1,25 +1,25 @@
-// === Module 18360: ICYMICustomStatusRow ===
+// === Module 18367: ICYMICustomStatusRow ===
 
-// Module 18360 (ICYMICustomStatusRow)
+// Module 18367 (ICYMICustomStatusRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import TrashIcon from "TrashIcon" /* 5750 */;
 import Pressables from "Pressables" /* 6152 */;
-import PencilIcon from "PencilIcon" /* 9624 */;
-import ReactionIcon from "ReactionIcon" /* 9704 */;
-import _modDef11696 from "module_11696" /* 11696 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12260 */;
+import PencilIcon from "PencilIcon" /* 9625 */;
+import ReactionIcon from "ReactionIcon" /* 9705 */;
+import _modDef11704 from "module_11704" /* 11704 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12268 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
-import ICYMIStore from "ICYMIStore" /* 8913 */;
+import ICYMIStore from "ICYMIStore" /* 8914 */;
 
 require = fn;
 function UploadPlaceholder() {
   const obj = { style: closure_13(false).uploadContainer, children: null };
-  items = [React5(native.Icon, { source: _modDef11696, size: native.IconSizes.SMALL }), ];
+  items = [React5(native.Icon, { source: _modDef11704, size: native.IconSizes.SMALL }), ];
   const obj3 = { variant: "body-md/normal", color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3UB9ad"]);
@@ -36,7 +36,7 @@ let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(18303);
+const createICYMIStyles = fn(18310);
 let closure_13 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {

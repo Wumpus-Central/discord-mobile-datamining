@@ -1,13 +1,13 @@
-// === Module 19578: VoicePanelScreenshareButton ===
+// === Module 19594: VoicePanelScreenshareButton ===
 
-// Module 19578 (VoicePanelScreenshareButton)
+// Module 19594 (VoicePanelScreenshareButton)
 import util from "util" /* 1112 */;
 import NativeViewDefault from "NativeView" /* 7055 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import useVoicePanelScreenshareToggleDefault from "useVoicePanelScreenshareToggle" /* 18200 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 19564 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19565 */;
-import MobilePhoneDenyIcon2 from "MobilePhoneDenyIcon" /* 19579 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import useVoicePanelScreenshareToggleDefault from "useVoicePanelScreenshareToggle" /* 18207 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 19580 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19581 */;
+import MobilePhoneDenyIcon2 from "MobilePhoneDenyIcon" /* 19595 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
@@ -59,9 +59,9 @@ function ScreenshareButtonInner(arg0) {
 const jsx = fn(21).jsx;
 const MetaQuestUtils = fn(1626);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13519).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13527).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18206).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18213).MobilePhoneShareIcon;
 }
 const createStyles = fn(5043);
 let closure_7 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" } });

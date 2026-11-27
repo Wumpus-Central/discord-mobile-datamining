@@ -1,14 +1,13 @@
-// === Module 10713: AttachmentPreview ===
+// === Module 10714: AttachmentPreview ===
 
-// Module 10713 (AttachmentPreview)
+// Module 10714 (AttachmentPreview)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import FileUtils from "FileUtils" /* 8132 */;
-import common_Video from "common/Video" /* 8880 */;
-import _modDef10714 from "module_10714" /* 10714 */;
+import FileUtils from "FileUtils" /* 8133 */;
+import common_Video from "common/Video" /* 8881 */;
 import _modDef10715 from "module_10715" /* 10715 */;
 import _modDef10716 from "module_10716" /* 10716 */;
 import _modDef10717 from "module_10717" /* 10717 */;
@@ -22,6 +21,7 @@ import _modDef10724 from "module_10724" /* 10724 */;
 import _modDef10725 from "module_10725" /* 10725 */;
 import _modDef10726 from "module_10726" /* 10726 */;
 import _modDef10727 from "module_10727" /* 10727 */;
+import _modDef10728 from "module_10728" /* 10728 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ class AttachmentIcon {
       }
       let tmp2 = obj4[obj.classifyFileName(obj, str)];
       if (tmp2 == null) {
-        tmp2 = _modDef10725;
+        tmp2 = _modDef10726;
       }
       return tmp2;
     }, items);
@@ -94,7 +94,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5043);
 let obj = { fileInfoAttachmentPreviewFile: { flexDirection: "row", alignItems: "center", overflow: "hidden", borderRadius: nativeDefault.radii.sm, height: 75, padding: 12, flex: 1, gap: nativeDefault.space.PX_8 }, attachmentFileIcon: { height: 32, width: 24 }, attachmentFileName: { paddingRight: 4, paddingLeft: 4, maxWidth: 136 }, videoIcon: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" } };
 const metroImportDefault = createStyles.createStyles(obj);
-let obj4 = { archive: _modDef10714, acrobat: _modDef10715, ae: _modDef10716, ai: _modDef10717, audio: _modDef10718, code: _modDef10719, document: _modDef10720, image: _modDef10721, photoshop: _modDef10722, sketch: _modDef10723, spreadsheet: _modDef10724, unknown: _modDef10725, video: _modDef10726, webcode: _modDef10727 };
+let obj4 = { archive: _modDef10715, acrobat: _modDef10716, ae: _modDef10717, ai: _modDef10718, audio: _modDef10719, code: _modDef10720, document: _modDef10721, image: _modDef10722, photoshop: _modDef10723, sketch: _modDef10724, spreadsheet: _modDef10725, unknown: _modDef10726, video: _modDef10727, webcode: _modDef10728 };
 let closure_12 = noop.memo(function ImageThumbnail(borderRadius) {
   ({ uri, width, height, style, fileName } = borderRadius);
   const size = { uri, width, height };
@@ -208,7 +208,7 @@ export default function AttachmentPreview(height) {
       const obj8 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj8.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(9946).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(9947).CirclePlayIcon;
       tmp6 = hasOwnProperty(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj8.children = tmp6;
       items[1] = hasOwnProperty(View, obj8);

@@ -1,9 +1,9 @@
-// === Module 18134: GuildsBarGeoRestrictedBadge ===
+// === Module 18141: GuildsBarGeoRestrictedBadge ===
 
-// Module 18134 (GuildsBarGeoRestrictedBadge)
+// Module 18141 (GuildsBarGeoRestrictedBadge)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import _modDef16472 from "module_16472" /* 16472 */;
+import _modDef16479 from "module_16479" /* 16479 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -23,7 +23,7 @@ export default noop.memo(function GuildsBarGeoRestrictedBadge(style) {
   const obj = { style: null, pointerEvents: "none", children: null };
   items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  const obj2 = { source: _modDef16472, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef16472, style: tmp.badgeImage });
+  const obj2 = { source: _modDef16479, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef16479, style: tmp.badgeImage });
   return <View style={null} pointerEvents="none">{null}</View>;
 });

@@ -1,6 +1,6 @@
-// === Module 12101: GroupDMConstants ===
+// === Module 12109: GroupDMConstants ===
 
-// Module 12101 (GroupDMConstants)
+// Module 12109 (GroupDMConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/group_dm/GroupDMConstants.tsx");

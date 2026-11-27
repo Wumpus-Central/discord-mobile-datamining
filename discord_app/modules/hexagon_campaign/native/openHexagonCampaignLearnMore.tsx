@@ -1,6 +1,6 @@
-// === Module 16094: openHexagonCampaignLearnMore ===
+// === Module 16101: openHexagonCampaignLearnMore ===
 
-// Module 16094 (openHexagonCampaignLearnMore)
+// Module 16101 (openHexagonCampaignLearnMore)
 import HexagonCampaignConstants from "HexagonCampaignConstants" /* 5068 */;
 import LinkingDefault from "Linking" /* 5722 */;
 import size from "module_2" /* 2 */;

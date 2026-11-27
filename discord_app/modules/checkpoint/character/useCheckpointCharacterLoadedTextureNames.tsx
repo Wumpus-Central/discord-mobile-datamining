@@ -1,6 +1,6 @@
-// === Module 12842: useCheckpointCharacterLoadedTextureNames ===
+// === Module 12850: useCheckpointCharacterLoadedTextureNames ===
 
-// Module 12842 (useCheckpointCharacterLoadedTextureNames)
+// Module 12850 (useCheckpointCharacterLoadedTextureNames)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

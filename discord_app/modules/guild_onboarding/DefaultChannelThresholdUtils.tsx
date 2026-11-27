@@ -1,6 +1,6 @@
-// === Module 8528: DefaultChannelThresholdUtils ===
+// === Module 8529: DefaultChannelThresholdUtils ===
 
-// Module 8528 (DefaultChannelThresholdUtils)
+// Module 8529 (DefaultChannelThresholdUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
 import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7454 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -19,7 +19,7 @@ let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChang
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -220,7 +220,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -785,7 +785,7 @@ prototype["getStats"] = function getStats() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1696,7 +1696,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "r" };
+        return { v: "top" };
       } else {
         items = [];
         if (!_modDef5933(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {

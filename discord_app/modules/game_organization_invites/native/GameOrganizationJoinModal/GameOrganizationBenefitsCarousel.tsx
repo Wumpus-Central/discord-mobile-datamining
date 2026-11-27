@@ -1,14 +1,14 @@
-// === Module 12350: GameOrganizationBenefitsCarousel ===
+// === Module 12358: GameOrganizationBenefitsCarousel ===
 
-// Module 12350 (GameOrganizationBenefitsCarousel)
+// Module 12358 (GameOrganizationBenefitsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import Card from "Card" /* 6145 */;
-import GameOrganizationBenefits from "GameOrganizationBenefits" /* 12351 */;
-import GameOrganizationBenefitIllustrations from "GameOrganizationBenefitIllustrations" /* 12352 */;
+import GameOrganizationBenefits from "GameOrganizationBenefits" /* 12359 */;
+import GameOrganizationBenefitIllustrations from "GameOrganizationBenefitIllustrations" /* 12360 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -80,7 +80,7 @@ function BenefitsCarousel(cardWidth) {
   };
   const tmp5 = _slicedToArray(noop.useState(0), 2);
   const tmp9 = closure_5;
-  const prop = cardWidth(12351).GAME_ORGANIZATION_BENEFITS;
+  const prop = cardWidth(12359).GAME_ORGANIZATION_BENEFITS;
   obj2.children = prop.map((key, index) => {
     const obj = { cardWidth, text: null, Illustration: null, isLast: null };
     const intl = util.intl;
@@ -93,15 +93,15 @@ function BenefitsCarousel(cardWidth) {
     obj.isLast = index === GameOrganizationBenefits.GAME_ORGANIZATION_BENEFITS.length - 1;
     return timestampProducer(BenefitCard, obj, key.key);
   });
-  obj.children = closure_6(displayNoun(9694), obj2);
+  obj.children = closure_6(displayNoun(9695), obj2);
   const children = [closure_6(closure_5, obj), ];
   let tmp10Result = null;
-  if (cardWidth(12351).GAME_ORGANIZATION_BENEFITS.length > 1) {
+  if (cardWidth(12359).GAME_ORGANIZATION_BENEFITS.length > 1) {
     tmp10Result = null;
     if (tmp6 > 0) {
       tmp10Result = null;
       if (tmp7[0] > tmp6) {
-        const obj3 = { containerStyle: tmp2.pagination, numberOfItems: tmp13(12351).GAME_ORGANIZATION_BENEFITS.length, currentIndex: tmp4 };
+        const obj3 = { containerStyle: tmp2.pagination, numberOfItems: tmp13(12359).GAME_ORGANIZATION_BENEFITS.length, currentIndex: tmp4 };
         tmp10Result = closure_6(tmp13(1186).CarouselPagination, obj3);
       }
     }

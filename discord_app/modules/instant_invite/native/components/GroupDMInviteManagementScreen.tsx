@@ -1,12 +1,12 @@
-// === Module 11424: GroupDMInviteManagementScreen ===
+// === Module 11425: GroupDMInviteManagementScreen ===
 
-// Module 11424 (GroupDMInviteManagementScreen)
+// Module 11425 (GroupDMInviteManagementScreen)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
-import InstantInviteDefault from "InstantInvite" /* 11425 */;
+import InstantInviteDefault from "InstantInvite" /* 11426 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -32,7 +32,7 @@ function GroupDMInviteManagement(channelId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -74,7 +74,7 @@ function GroupDMInviteManagement(channelId) {
             v1(closure_128_0);
             v3(false);
             v3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           v3 = tmp;
@@ -113,12 +113,12 @@ function GroupDMInviteManagement(channelId) {
   if (tmp3[0]) {
     let tmp12 = jsx(channelId(7395).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(11443), darkSource: tmp4(11444), title: null, body: null };
+    let obj2 = { lightSource: tmp4(11444), darkSource: tmp4(11445), title: null, body: null };
     const intl = channelId(1112).intl;
     obj2.title = intl.string(channelId(1112).t["+nLJkZ"]);
     const intl2 = channelId(1112).intl;
     obj2.body = intl2.string(channelId(1112).t.F53CAc);
-    tmp12 = jsx(channelId(1186).EmptyState, { lightSource: tmp4(11443), darkSource: tmp4(11444), title: null, body: null });
+    tmp12 = jsx(channelId(1186).EmptyState, { lightSource: tmp4(11444), darkSource: tmp4(11445), title: null, body: null });
   } else {
     let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
     tmp12 = jsx(channelId(7482).FlashList, { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 });

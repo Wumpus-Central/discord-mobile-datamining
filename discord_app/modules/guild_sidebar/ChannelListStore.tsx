@@ -1,12 +1,12 @@
-// === Module 8284: ChannelListStore ===
+// === Module 8285: ChannelListStore ===
 
-// Module 8284 (ChannelListStore)
+// Module 8285 (ChannelListStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4964 */;
-import ChannelListStateDefault from "ChannelListState" /* 8286 */;
+import ChannelListStateDefault from "ChannelListState" /* 8287 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import GatedChannelStore from "GatedChannelStore" /* 4947 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5775 */;
@@ -16,7 +16,7 @@ import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CategoryCollapseStore from "CategoryCollapseStore" /* 7474 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8285 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8286 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 import ReadStateStore from "ReadStateStore" /* 6932 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;

@@ -1,6 +1,6 @@
-// === Module 10386: useIsVideoMode ===
+// === Module 10387: useIsVideoMode ===
 
-// Module 10386 (useIsVideoMode)
+// Module 10387 (useIsVideoMode)
 import initialize from "initialize" /* 504 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import ChannelStore from "ChannelStore" /* 4892 */;

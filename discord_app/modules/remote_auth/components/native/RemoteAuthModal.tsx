@@ -1,6 +1,6 @@
-// === Module 15267: RemoteAuthModal ===
+// === Module 15274: RemoteAuthModal ===
 
-// Module 15267 (RemoteAuthModal)
+// Module 15274 (RemoteAuthModal)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -15,10 +15,10 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import ButtonGroup from "ButtonGroup" /* 6863 */;
 import AuthBackgroundArtDefault from "AuthBackgroundArt" /* 7040 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7047 */;
-import useEaseInEaseOutLayoutAnimationsDefault from "useEaseInEaseOutLayoutAnimations" /* 13752 */;
-import _modDef15266 from "module_15266" /* 15266 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15268 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15272 */;
+import useEaseInEaseOutLayoutAnimationsDefault from "useEaseInEaseOutLayoutAnimations" /* 13759 */;
+import _modDef15273 from "module_15273" /* 15273 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15275 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15279 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -202,7 +202,7 @@ export default function RemoteAuth(arg0) {
   const obj2 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items1;
-  obj2.source = _modDef15266;
+  obj2.source = _modDef15273;
   items[1] = metroImportDefault(FastImageDefault, obj2);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { skipEntering: true, children: null };

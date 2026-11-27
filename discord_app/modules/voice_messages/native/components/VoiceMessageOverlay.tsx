@@ -1,6 +1,6 @@
-// === Module 13645: VoiceMessageOverlay ===
+// === Module 13652: VoiceMessageOverlay ===
 
-// Module 13645 (VoiceMessageOverlay)
+// Module 13652 (VoiceMessageOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
@@ -14,10 +14,10 @@ import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
 import LegacyTokens from "LegacyTokens" /* 6868 */;
 import useRefValueDefault from "useRefValue" /* 7054 */;
 import inlineStyles from "inlineStyles" /* 7946 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13192 */;
-import useVoiceMessageBottomInsetDefault from "useVoiceMessageBottomInset" /* 13215 */;
-import _modDef13646 from "module_13646" /* 13646 */;
-import VoiceMessageChatDefault from "VoiceMessageChat" /* 13647 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13200 */;
+import useVoiceMessageBottomInsetDefault from "useVoiceMessageBottomInset" /* 13223 */;
+import _modDef13653 from "module_13653" /* 13653 */;
+import VoiceMessageChatDefault from "VoiceMessageChat" /* 13654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -275,7 +275,7 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx13.__initData = tmp57;
   const animatedStyle3 = require("module_1654").useAnimatedStyle(VoiceMessageOverlayTsx13);
   const tmp5Result21 = require("module_1654");
-  const tmp14Result = importDefault(tmp3 ? 7134 : 10764);
+  const tmp14Result = importDefault(tmp3 ? 7134 : 10765);
   const items16 = [closure_38, initialAnimation, bottomInset, CHAT_INPUT_HEIGHT, 32, 8];
   _require = undefined;
   importDefault = undefined;
@@ -303,7 +303,7 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result }), ];
-  const obj4 = { style: null, source: _modDef13646 };
+  const obj4 = { style: null, source: _modDef13653 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
@@ -313,10 +313,10 @@ function LockPill(voiceMessageAnimationState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12958).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12959).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(12966).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12967).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1071).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12960).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12968).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let module_1654 = module_1654_mod;
@@ -463,9 +463,9 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   const bottomInset = useVoiceMessageBottomInsetDefault().bottomInset;
   let obj = require("useToken");
   if (obj2.useIsMobileRTCV2Enabled("VoiceMessageOverlay")) {
-    let SendMessageIcon = tmp(10659).WaveformIcon;
+    let SendMessageIcon = tmp(10660).WaveformIcon;
   } else {
-    SendMessageIcon = tmp(10504).MicrophoneIcon;
+    SendMessageIcon = tmp(10505).MicrophoneIcon;
   }
   obj2 = require("MobileRTCV2Experiment");
   const keyboardOpenPaddingStyle = require("FloatingChatInputContainer").useKeyboardOpenPaddingStyle();

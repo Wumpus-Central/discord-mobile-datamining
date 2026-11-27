@@ -1,6 +1,6 @@
-// === Module 11758: showChannelFollowingActionSheet ===
+// === Module 11766: showChannelFollowingActionSheet ===
 
-// Module 11758 (showChannelFollowingActionSheet)
+// Module 11766 (showChannelFollowingActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ export function showChannelFollowingActionSheet(id, guildId, targetChannelId, ta
   _require = id;
   importDefault = guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(require("asyncRequireImpl")(11759, dependencyMap.paths), "NewChannelFollower." + id, {
+  obj.openLazy(require("asyncRequireImpl")(11767, dependencyMap.paths), "NewChannelFollower." + id, {
     sourceChannelId: id,
     sourceGuildId: guildId,
     targetChannelId,
@@ -64,7 +64,7 @@ export function showChannelFollowingActionSheet(id, guildId, targetChannelId, ta
             onSuccess() {
               closure_1(dependencyMap[5]).openLazy({
                 importer() {
-                  return closure_1_0(paths[4])(paths[6], paths.paths).then(/* F138628 */ function() { ... });
+                  return closure_1_0(paths[4])(paths[6], paths.paths).then(/* F139084 */ function() { ... });
                 },
                 hideActionSheet: true,
                 isDismissable: false
@@ -80,7 +80,7 @@ export function showChannelFollowingActionSheet(id, guildId, targetChannelId, ta
             importer() {
               return closure_1_0(paths[4])(paths[6], paths.paths).then((result) => {
                 closure_0 = result.default;
-                return /* F141882 */ function() { ... };
+                return /* F142349 */ function() { ... };
               });
             },
             hideActionSheet: true,

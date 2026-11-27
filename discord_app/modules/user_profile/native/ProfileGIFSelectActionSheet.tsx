@@ -1,12 +1,12 @@
-// === Module 16046: ProfileGIFSelectActionSheet ===
+// === Module 16053: ProfileGIFSelectActionSheet ===
 
-// Module 16046 (ProfileGIFSelectActionSheet)
+// Module 16053 (ProfileGIFSelectActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5271 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9637 */;
-import GIFPickerDefault from "GIFPicker" /* 10806 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9638 */;
+import GIFPickerDefault from "GIFPicker" /* 10807 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

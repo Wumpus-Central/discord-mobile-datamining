@@ -1,6 +1,6 @@
-// === Module 18221: VoicePanelDockStatusViews ===
+// === Module 18228: VoicePanelDockStatusViews ===
 
-// Module 18221 (VoicePanelDockStatusViews)
+// Module 18228 (VoicePanelDockStatusViews)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1654 from "module_1654" /* 1654 */;
@@ -8,8 +8,8 @@ import timing_timing from "timing/timing" /* 5253 */;
 import spring_spring from "spring/spring" /* 5644 */;
 import useChannelName from "useChannelName" /* 5659 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7128 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13412 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13420 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import SoundboardStore from "SoundboardStore" /* 6923 */;
@@ -25,8 +25,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-let closure_13 = fn(18220).useDockUserPlayingSoundboardId;
-const VoicePanelDockConstants = fn(11805);
+let closure_13 = fn(18227).useDockUserPlayingSoundboardId;
+const VoicePanelDockConstants = fn(11813);
 ({ DOCK_FADE_TIMING: closure_14, DOCK_TILE_RADIUS, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
@@ -184,11 +184,11 @@ export function DockChannelIcon(streaming) {
   let channelId;
   let guildId;
   const tmp = closure_19();
-  const tmp4Result = guildId(18222)(channelId(575).Shadow.SHADOW_MEDIUM);
-  const context = noop.useContext(guildId(11781));
+  const tmp4Result = guildId(18229)(channelId(575).Shadow.SHADOW_MEDIUM);
+  const context = noop.useContext(guildId(11789));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp4 = guildId(18222);
+  const tmp4 = guildId(18229);
   items = [GuildStore];
   const items1 = [guildId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
@@ -222,7 +222,7 @@ export function DockChannelIcon(streaming) {
     obj3.style = items4;
     const obj5 = { streaming, children: null };
     const obj6 = { guild: stateFromStores, size: null, style: null };
-    const tmp2Result = tmp2(18223);
+    const tmp2Result = tmp2(18230);
     obj6.size = tmp5(7052).GuildIconSizes.SMALL_32;
     obj6.style = tmp.guildIconAsset;
     obj5.children = closure_16(tmp2(7052), obj6);
@@ -240,9 +240,9 @@ export function DockChannelIcon(streaming) {
       const obj9 = { streaming, children: null };
       const obj10 = { user: stateFromStores1, guildId: "Array", size: tmp5(1186).AvatarSizes.REFRESH_MEDIUM_32 };
       obj9.children = closure_16(tmp5(1186).Avatar, obj10);
-      obj7.children = closure_16(tmp2(18223), obj9);
+      obj7.children = closure_16(tmp2(18230), obj9);
       tmp13 = closure_16(View, obj7);
-      const tmp2Result4 = tmp2(18223);
+      const tmp2Result4 = tmp2(18230);
     }
   }
   return tmp13;

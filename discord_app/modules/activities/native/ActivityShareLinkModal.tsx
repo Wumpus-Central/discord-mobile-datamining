@@ -1,15 +1,15 @@
-// === Module 15905: ActivityShareLinkModal ===
+// === Module 15912: ActivityShareLinkModal ===
 
-// Module 15905 (ActivityShareLinkModal)
+// Module 15912 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ToastUtils from "ToastUtils" /* 5724 */;
 import LinkIcon from "LinkIcon" /* 5739 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
-import formatResults from "formatResults" /* 8945 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 13092 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15904 */;
+import formatResults from "formatResults" /* 8946 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 13100 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15911 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(8944).UserRowModes;
+const UserRowModes = fn(8945).UserRowModes;
 const MessageSendLocation = fn(5048).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -100,7 +100,7 @@ export default function ActivityShareLinkModal(applicationId) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -119,7 +119,7 @@ export default function ActivityShareLinkModal(applicationId) {
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj4 = { value: Promise.all(first1.map(tmp2(8945).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj4 = { value: Promise.all(first1.map(tmp2(8946).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj4;
             } else {
               c3 = 3;
@@ -130,7 +130,7 @@ export default function ActivityShareLinkModal(applicationId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_0 = value.filter(tmp2(1255).isNotNullish);
-          closure_128_1 = tmp2(15906).resolveActivityShareMessageContent(closure_129_4, closure_129_15, closure_129_13);
+          closure_128_1 = tmp2(15913).resolveActivityShareMessageContent(closure_129_4, closure_129_15, closure_129_13);
           closure_129_7(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0) {
@@ -144,7 +144,7 @@ export default function ActivityShareLinkModal(applicationId) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -160,11 +160,11 @@ export default function ActivityShareLinkModal(applicationId) {
                     } else {
                       channel = channel.getChannel(closure_0);
                       if (null != channel) {
-                        const obj2 = closure_2_1(8244);
+                        const obj2 = closure_2_1(8245);
                         const obj6 = { location: constants.ACTIVITY_SHARE };
                         c2 = 1;
                         c1 = 1;
-                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(8344).parse(channel, c1), false, obj6), done: false };
+                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(8345).parse(channel, c1), false, obj6), done: false };
                         return obj7;
                       }
                     }
@@ -177,7 +177,7 @@ export default function ActivityShareLinkModal(applicationId) {
                     return obj;
                   }
                   c1 = 3;
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp12) {
                   c1 = tmp;
                   throw tmp12;
@@ -195,7 +195,7 @@ export default function ActivityShareLinkModal(applicationId) {
               return applyArgumentsResult;
             };
           })());
-          let obj5 = tmp2(15906);
+          let obj5 = tmp2(15913);
           let obj7 = { text: null };
           const intl = tmp2(1112).intl;
           const obj8 = { applicationName: closure_129_15.name };
@@ -203,8 +203,8 @@ export default function ActivityShareLinkModal(applicationId) {
           tmp3(5725).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
           closure_129_5(true, closure_129_8);
           let obj6 = tmp3(5725);
-          const result = tmp2(15904).closeActivityShareLinkModal();
-          const obj9 = tmp2(15904);
+          const result = tmp2(15911).closeActivityShareLinkModal();
+          const obj9 = tmp2(15911);
         }
         c3 = 3;
         let obj = { value, done: true };

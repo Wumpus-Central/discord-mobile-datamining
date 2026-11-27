@@ -1,8 +1,8 @@
-// === Module 9712: PremiumFeaturesWumpus ===
+// === Module 9713: PremiumFeaturesWumpus ===
 
-// Module 9712 (PremiumFeaturesWumpus)
-import _modDef9147 from "module_9147" /* 9147 */;
-import _modDef9149 from "module_9149" /* 9149 */;
+// Module 9713 (PremiumFeaturesWumpus)
+import _modDef9148 from "module_9148" /* 9148 */;
+import _modDef9150 from "module_9150" /* 9150 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumTypes = fn(1389).PremiumTypes;
@@ -26,14 +26,14 @@ export default function PremiumFeaturesWumpus(premiumType) {
   items = [premiumType, tmp2];
   const memo = noop.useMemo(() => {
     if (premiumType === PremiumTypes.TIER_0) {
-      const obj2 = { wumpusImageSource: _modDef9147, cloudsImageSource: importDefault(closure_1 ? 9713 : 9714) };
+      const obj2 = { wumpusImageSource: _modDef9148, cloudsImageSource: importDefault(closure_1 ? 9714 : 9715) };
     } else {
       if (closure_1) {
-        let tmp4 = 9715;
+        let tmp4 = 9716;
       } else {
-        tmp4 = 9716;
+        tmp4 = 9717;
       }
-      const obj = { wumpusImageSource: _modDef9149, cloudsImageSource: importDefault(tmp4) };
+      const obj = { wumpusImageSource: _modDef9150, cloudsImageSource: importDefault(tmp4) };
       return obj;
     }
   }, items);

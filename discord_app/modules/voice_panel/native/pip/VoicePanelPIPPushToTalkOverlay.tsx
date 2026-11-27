@@ -1,12 +1,12 @@
-// === Module 19548: VoicePanelPIPPushToTalkOverlay ===
+// === Module 19564: VoicePanelPIPPushToTalkOverlay ===
 
-// Module 19548 (VoicePanelPIPPushToTalkOverlay)
+// Module 19564 (VoicePanelPIPPushToTalkOverlay)
 import nativeDefault from "native" /* 575 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import NativeViewDefault from "NativeView" /* 7055 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10288 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10289 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
@@ -14,9 +14,9 @@ import module_1654_mod from "module_1654" /* 1654 */;
 
 const require = globalThis.__r;
 
-const _modDef19549 = tmp4(19549);
+const _modDef19565 = tmp4(19565);
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(11782).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(11790).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let module_1654 = module_1654_mod;
@@ -224,7 +224,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   const items11 = [tmp5.iconContainer, animatedStyle];
   obj8.style = items11;
   const tmpResult2 = require("module_1654");
-  obj8.children = closure_7(closure_11, { style: animatedStyle1, size: require("native").Icon.Sizes.SMALL_20, source: _modDef19549, disableColor: true });
+  obj8.children = closure_7(closure_11, { style: animatedStyle1, size: require("native").Icon.Sizes.SMALL_20, source: _modDef19565, disableColor: true });
   obj7.children = closure_7(NativeView, obj8);
   items10[1] = closure_7(require("LegacyBaseButton").GestureDetector, obj7);
   obj5.children = items10;

@@ -1,11 +1,11 @@
-// === Module 11562: ConjureCreatorByline ===
+// === Module 11570: ConjureCreatorByline ===
 
-// Module 11562 (ConjureCreatorByline)
+// Module 11570 (ConjureCreatorByline)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
-import conjureCreatorByline from "conjureCreatorByline" /* 11563 */;
+import conjureCreatorByline from "conjureCreatorByline" /* 11571 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

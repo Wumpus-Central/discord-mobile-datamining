@@ -1,11 +1,11 @@
-// === Module 18963: SearchHistoryRow ===
+// === Module 18979: SearchHistoryRow ===
 
-// Module 18963 (SearchHistoryRow)
+// Module 18979 (SearchHistoryRow)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import UserActionCreators from "UserActionCreators" /* 6134 */;
-import TrackingDefault from "Tracking" /* 13313 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13317 */;
+import TrackingDefault from "Tracking" /* 13321 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13325 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -27,7 +27,7 @@ function SearchHistoryTextRow(searchContext) {
   const searchHistoryItem = searchContext.searchHistoryItem;
   const tmp = closure_12();
   dependencyMap = tmp;
-  const onPressSearchHistoryText = searchContext(18952).useOnPressSearchHistoryText({ searchContext });
+  const onPressSearchHistoryText = searchContext(18968).useOnPressSearchHistoryText({ searchContext });
   items = [onPressSearchHistoryText, searchContext, , , ];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
   const callback = noop.useCallback(() => {
@@ -50,10 +50,10 @@ function SearchHistoryTextRow(searchContext) {
   obj3.onPress = callback;
   obj3.trailing = closure_10(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
   obj3.iconContainerStyle = tmp.textIconContainer;
-  let obj = searchContext(18952);
+  let obj = searchContext(18968);
   const obj4 = { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text };
   obj3.icon = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7407).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
-  return closure_10(searchContext(18946).SearchListRow, obj3);
+  return closure_10(searchContext(18962).SearchListRow, obj3);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;
@@ -125,7 +125,7 @@ function SearchHistoryDMRow(searchContext) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -159,7 +159,7 @@ function SearchHistoryDMRow(searchContext) {
             const result = searchHistoryItem(onPressDMItem[14]).trackSearchHistoryClicked(obj7);
             tmp5(closure_129_0, closure_129_1);
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           c4 = tmp;
@@ -287,7 +287,7 @@ function SearchHistoryGuildTextChannelRow(searchContext) {
   return tmp9Result;
 }
 const View = fn(17).View;
-const SearchHistoryItemTypes = fn(9019).SearchHistoryItemTypes;
+const SearchHistoryItemTypes = fn(9020).SearchHistoryItemTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5043);

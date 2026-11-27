@@ -1,6 +1,6 @@
-// === Module 13339: UpcomingEventsLongPressActionSheet ===
+// === Module 13347: UpcomingEventsLongPressActionSheet ===
 
-// Module 13339 (UpcomingEventsLongPressActionSheet)
+// Module 13347 (UpcomingEventsLongPressActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7467 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7471 */;
@@ -40,7 +40,7 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const items2 = [closure_7(guildId(7507).BottomSheetTitleHeader, obj3), , ];
   const obj6 = { leading: null, label: null, onPress: null };
   const tmp9 = stateFromStores1(7052);
-  obj6.leading = closure_7(guildId(1186).Icon, { source: stateFromStores1(13340) });
+  obj6.leading = closure_7(guildId(1186).Icon, { source: stateFromStores1(13348) });
   const obj8 = { text: null };
   const intl2 = guildId(1112).intl;
   obj8.text = intl2.string(guildId(1112).t.e6RscS);
@@ -51,8 +51,8 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   };
   items2[1] = closure_7(guildId(8088).FormRow, obj6);
   const obj9 = { leading: null, label: null, onPress: null };
-  const obj7 = { source: stateFromStores1(13340) };
-  obj9.leading = closure_7(guildId(1186).Icon, { source: tmp8(stateFromStores1 ? 13341 : 13342) });
+  const obj7 = { source: stateFromStores1(13348) };
+  obj9.leading = closure_7(guildId(1186).Icon, { source: tmp8(stateFromStores1 ? 13349 : 13350) });
   const intl3 = tmp2(1112).intl;
   const string = intl3.string;
   const t = tmp2(1112).t;

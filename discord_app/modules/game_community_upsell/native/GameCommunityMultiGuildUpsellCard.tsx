@@ -1,13 +1,13 @@
-// === Module 18007: GameCommunityMultiGuildUpsellCard ===
+// === Module 18014: GameCommunityMultiGuildUpsellCard ===
 
-// Module 18007 (GameCommunityMultiGuildUpsellCard)
+// Module 18014 (GameCommunityMultiGuildUpsellCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1448 */;
 import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7745 */;
 import IconButton from "IconButton" /* 7944 */;
-import transitionToGuild from "transitionToGuild" /* 8600 */;
+import transitionToGuild from "transitionToGuild" /* 8601 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -132,7 +132,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

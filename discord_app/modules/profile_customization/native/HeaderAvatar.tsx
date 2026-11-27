@@ -1,6 +1,6 @@
-// === Module 9521: HeaderAvatar ===
+// === Module 9522: HeaderAvatar ===
 
-// Module 9521 (HeaderAvatar)
+// Module 9522 (HeaderAvatar)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -50,7 +50,7 @@ export default function HeaderAvatar(animate) {
   });
   const obj4 = guildId(504);
   const tmp9 = id;
-  const tmp10 = id(9522);
+  const tmp10 = id(9523);
   const obj6 = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
@@ -72,7 +72,7 @@ export default function HeaderAvatar(animate) {
   obj7.status = tmp14;
   const items4 = [tmp4.avatarStatusStyle, statusStyle];
   obj7.statusStyle = items4;
-  obj7.streaming = tmp9(9523)(activities);
+  obj7.streaming = tmp9(9524)(activities);
   if (flag) {
     flag = !stateFromStores;
   }
@@ -83,7 +83,7 @@ export default function HeaderAvatar(animate) {
     const merged1 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj9 = { source: null };
-      obj = obj(9511);
+      obj = obj(9512);
       avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       obj9.source = avatarSource;
       obj7 = Object.assign(obj7);
@@ -99,7 +99,7 @@ export default function HeaderAvatar(animate) {
     const merged3 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj12 = { source: null };
-      const objResult = obj(9511);
+      const objResult = obj(9512);
       obj12.source = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       const merged4 = Object.assign(obj7);
       let obj13 = obj12;

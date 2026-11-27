@@ -1,11 +1,11 @@
-// === Module 20019: SoundboardSoundCreationPreview ===
+// === Module 20044: SoundboardSoundCreationPreview ===
 
-// Module 20019 (SoundboardSoundCreationPreview)
+// Module 20044 (SoundboardSoundCreationPreview)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import useToken from "useToken" /* 5607 */;
-import _modDef8886 from "module_8886" /* 8886 */;
+import _modDef8887 from "module_8887" /* 8887 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -67,7 +67,7 @@ let closure_16 = PlatformUtils.isIOS() ? (function VideoPreviewPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   ({ uri, volume, onEnd, onError } = onLoad);
   const tmp = closure_13();
-  return refs(_modDef8886, {
+  return refs(_modDef8887, {
     source: { uri },
     audioOnly: true,
     paused: false,
@@ -174,7 +174,7 @@ export default function SoundboardSoundCreationPreview(source) {
   const effect = obj.useEffect(() => {
     closure_1 = async function _load() {
       closure_1 = tmp3;
-      await closure_2_0(20011).loadSoundboardAudioPreview(c4, closure_2_0(20011).WAVEFORM_BAR_COUNT);
+      await closure_2_0(20036).loadSoundboardAudioPreview(c4, closure_2_0(20036).WAVEFORM_BAR_COUNT);
       if (1 === tmp7) {
         c2 = 0;
         if (!closure_129_0) {
@@ -297,7 +297,7 @@ export default function SoundboardSoundCreationPreview(source) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -388,7 +388,7 @@ export default function SoundboardSoundCreationPreview(source) {
                 closure_129_12(false);
               }
               c5 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           }
           c3 = 0;

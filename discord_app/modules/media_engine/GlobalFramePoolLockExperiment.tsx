@@ -1,6 +1,6 @@
-// === Module 15499: GlobalFramePoolLockExperiment ===
+// === Module 15506: GlobalFramePoolLockExperiment ===
 
-// Module 15499 (GlobalFramePoolLockExperiment)
+// Module 15506 (GlobalFramePoolLockExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1452 */;
 
 const obj = { kind: "user", name: "2025-11-global-frame-pool-lock", defaultConfig: { enabled: false }, variations: null };

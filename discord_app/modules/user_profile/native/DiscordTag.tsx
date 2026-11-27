@@ -1,9 +1,9 @@
-// === Module 8631: DiscordTag ===
+// === Module 8632: DiscordTag ===
 
-// Module 8631 (DiscordTag)
+// Module 8632 (DiscordTag)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import BotTagDefault from "BotTag" /* 8632 */;
+import BotTagDefault from "BotTag" /* 8633 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

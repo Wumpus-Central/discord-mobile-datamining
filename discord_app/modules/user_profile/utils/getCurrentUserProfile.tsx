@@ -1,6 +1,6 @@
-// === Module 9433: getCurrentUserProfile ===
+// === Module 9434: getCurrentUserProfile ===
 
-// Module 9433 (getCurrentUserProfile)
+// Module 9434 (getCurrentUserProfile)
 import UserStore from "UserStore" /* 1387 */;
 import UserProfileStore from "UserProfileStore" /* 6163 */;
 

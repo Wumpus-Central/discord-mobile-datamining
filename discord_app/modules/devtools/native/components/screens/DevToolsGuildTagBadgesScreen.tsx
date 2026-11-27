@@ -1,9 +1,9 @@
-// === Module 17341: DevToolsGuildTagBadgesScreen ===
+// === Module 17348: DevToolsGuildTagBadgesScreen ===
 
-// Module 17341 (DevToolsGuildTagBadgesScreen)
+// Module 17348 (DevToolsGuildTagBadgesScreen)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import badges_GuildBadge from "badges/GuildBadge" /* 15324 */;
+import badges_GuildBadge from "badges/GuildBadge" /* 15331 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(8579);
+const GuildTagConstants = fn(8580);
 ({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6, GUILD_TAG_BADGE_PALETTE_PRESETS, GuildTagBadgeKind } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);

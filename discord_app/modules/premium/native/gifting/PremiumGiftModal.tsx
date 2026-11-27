@@ -1,10 +1,10 @@
-// === Module 11114: PremiumGiftModal ===
+// === Module 11115: PremiumGiftModal ===
 
-// Module 11114 (PremiumGiftModal)
+// Module 11115 (PremiumGiftModal)
 import nativeDefault from "native" /* 575 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9229 */;
-import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 11141 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9230 */;
+import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 11142 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1387 */;
 require = fn;
 const jsx = fn(21).jsx;
 const PremiumGiftScreens = { PLAN_SELECT: "PremiumGiftPlanSelect", REWARD_SELECT: "GiftingSKUSelect", CUSTOMIZATION: "PremiumGiftCustomization", SUCCESS: "PremiumGiftSuccess", GIFTING_BADGE: "GiftingBadgePostPurchase" };
-let obj2 = { [PLAN_SELECT]: fn(9229).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(9229).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(9229).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(9229).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(9229).PaymentFlowStep.CONFIRM };
+let obj2 = { [PLAN_SELECT]: fn(9230).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(9230).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(9230).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(9230).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(9230).PaymentFlowStep.CONFIRM };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
 const createStyles = fn(5043);
 let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
@@ -158,7 +158,7 @@ export default function PremiumGiftModal(analyticsLocations) {
           obj2 = { analyticsLocations: null };
           items = [analyticsLocations(6380).GIFTING_BADGE_POST_PURCHASE];
           obj2.analyticsLocations = items;
-          analyticsLocation(11113).openGiftModal(obj2);
+          analyticsLocation(11114).openGiftModal(obj2);
         }
       });
     };

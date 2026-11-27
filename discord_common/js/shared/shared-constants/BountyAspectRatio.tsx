@@ -1,6 +1,6 @@
-// === Module 9902: BountyAspectRatio ===
+// === Module 9903: BountyAspectRatio ===
 
-// Module 9902 (BountyAspectRatio)
+// Module 9903 (BountyAspectRatio)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/BountyAspectRatio.tsx");

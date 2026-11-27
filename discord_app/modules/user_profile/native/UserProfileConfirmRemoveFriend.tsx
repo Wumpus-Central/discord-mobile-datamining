@@ -1,6 +1,6 @@
-// === Module 13620: UserProfileConfirmRemoveFriend ===
+// === Module 13627: UserProfileConfirmRemoveFriend ===
 
-// Module 13620 (UserProfileConfirmRemoveFriend)
+// Module 13627 (UserProfileConfirmRemoveFriend)
 import util from "util" /* 1112 */;
 import AlertModal from "AlertModal" /* 6052 */;
 import noop from "module_19" /* 19 */;

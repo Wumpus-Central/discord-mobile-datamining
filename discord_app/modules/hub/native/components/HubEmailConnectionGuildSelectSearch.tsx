@@ -1,6 +1,6 @@
-// === Module 13780: HubEmailConnectionGuildSelectSearch ===
+// === Module 13787: HubEmailConnectionGuildSelectSearch ===
 
-// Module 13780 (HubEmailConnectionGuildSelectSearch)
+// Module 13787 (HubEmailConnectionGuildSelectSearch)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -11,9 +11,9 @@ import FastImageDefault from "FastImage" /* 5730 */;
 import fuzzysearchDefault from "fuzzysearch" /* 6988 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import _mod7482 from "module_7482" /* 7482 */;
-import SearchBarNavDefault from "SearchBarNav" /* 13285 */;
-import HubActionCreatorsDefault from "HubActionCreators" /* 13768 */;
-import _modDef13781 from "module_13781" /* 13781 */;
+import SearchBarNavDefault from "SearchBarNav" /* 13293 */;
+import HubActionCreatorsDefault from "HubActionCreators" /* 13775 */;
+import _modDef13788 from "module_13788" /* 13788 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ require = fn;
 function EmptyState() {
   const tmp = closure_11();
   const obj = { style: tmp.emptyWrapper, children: null };
-  const obj2 = { style: tmp.emptyStateImage, source: _modDef13781 };
+  const obj2 = { style: tmp.emptyStateImage, source: _modDef13788 };
   items = [React5(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.emptyStateTitle, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -34,7 +34,7 @@ function EmptyState() {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13754).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13761).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const createStyles = fn(5043);
@@ -106,7 +106,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {

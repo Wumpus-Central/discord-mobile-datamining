@@ -1,13 +1,13 @@
-// === Module 18499: useConjureProjectSettingsForm ===
+// === Module 18506: useConjureProjectSettingsForm ===
 
-// Module 18499 (useConjureProjectSettingsForm)
+// Module 18506 (useConjureProjectSettingsForm)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;
-import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18505 */;
+import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 18512 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -271,7 +271,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -299,7 +299,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
         } else if (1 === tmp7) {
           sharingOptions = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -321,7 +321,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
             const obj = tmp3(sharingOptions[11]);
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         }
         sharingOptions = 0;
@@ -378,7 +378,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       obj7.disabled = tmp21;
       obj7.onPress = function onPress() {
         const obj = ActionSheetActionCreatorsDefault;
-        return obj.openLazy(asyncRequireImpl(18505, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, { options: sharingOptions, value, onChange }, "stack");
+        return obj.openLazy(asyncRequireImpl(18512, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, { options: sharingOptions, value, onChange }, "stack");
       };
       obj9.children = tmp17(tmp7(tmp3[25]).TableRow, obj7);
       tmp17Result10 = tmp17(tmp7(tmp3[19]).TableRowGroup, obj9);

@@ -1,6 +1,6 @@
-// === Module 8925: DiscoverRequestDeadline ===
+// === Module 8926: DiscoverRequestDeadline ===
 
-// Module 8925 (DiscoverRequestDeadline)
+// Module 8926 (DiscoverRequestDeadline)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _withDiscoverRequestDeadline(arg0, arg1) {
@@ -20,7 +20,7 @@ let closure_1 = async function _withDiscoverRequestDeadline(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

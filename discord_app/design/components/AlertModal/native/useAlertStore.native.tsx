@@ -74,8 +74,8 @@ export function dismissAlert(c6) {
     let obj = require("ReactBatchUpdates");
   }
 }
-export function openAlert(ConjureRemoveApp, arg1, onCloseCallback, arg3) {
-  _require = ConjureRemoveApp;
+export function openAlert(DeleteEventAlert, arg1, onCloseCallback, arg3) {
+  _require = DeleteEventAlert;
   importDefault = arg1;
   dependencyMap = onCloseCallback;
   closure_3 = arg3;

@@ -1,6 +1,6 @@
-// === Module 18314: NativeICYMIActionCreators ===
+// === Module 18321: NativeICYMIActionCreators ===
 
-// Module 18314 (NativeICYMIActionCreators)
+// Module 18321 (NativeICYMIActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -22,7 +22,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

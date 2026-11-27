@@ -1,6 +1,6 @@
-// === Module 13908: GiftCardMobileConsumptionActionSheet ===
+// === Module 13915: GiftCardMobileConsumptionActionSheet ===
 
-// Module 13908 (GiftCardMobileConsumptionActionSheet)
+// Module 13915 (GiftCardMobileConsumptionActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef2485 from "module_2485" /* 2485 */;
@@ -58,7 +58,7 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   const items2 = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items2;
   const obj3 = { spacing: nativeDefault.space.PX_16, children: null };
-  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(13909).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
+  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(13916).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
   const obj5 = { variant: "body-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1112).intl;
   obj5.children = intl.string(_modDef2485.V3DI1E);

@@ -1,6 +1,6 @@
-// === Module 18045: InterestGridReveal ===
+// === Module 18052: InterestGridReveal ===
 
-// Module 18045 (InterestGridReveal)
+// Module 18052 (InterestGridReveal)
 import _mod1654 from "module_1654" /* 1654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -211,7 +211,7 @@ function GridReveal(games) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(18030);
+const InterestGamePickerConstants = fn(18037);
 ({ GRID_COLUMNS: metroImportDefault, TILE_ASPECT_RATIO: closure_8 } = InterestGamePickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

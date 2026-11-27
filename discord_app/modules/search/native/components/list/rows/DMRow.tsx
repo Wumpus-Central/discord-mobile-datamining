@@ -1,14 +1,14 @@
-// === Module 18961: DMRow ===
+// === Module 18977: DMRow ===
 
-// Module 18961 (DMRow)
+// Module 18977 (DMRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import UserUtils from "UserUtils" /* 5099 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import _modDef8558 from "module_8558" /* 8558 */;
-import BotTagDefault from "BotTag" /* 8632 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11363 */;
-import _modDef13963 from "module_13963" /* 13963 */;
+import _modDef8559 from "module_8559" /* 8559 */;
+import BotTagDefault from "BotTag" /* 8633 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11364 */;
+import _modDef13970 from "module_13970" /* 13970 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -91,7 +91,7 @@ export default noop.memo(function DMRow(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -130,7 +130,7 @@ export default noop.memo(function DMRow(user) {
           c3 = 0;
           closure_128_8(false);
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp23) {
         closure_2 = tmp23;
@@ -163,7 +163,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8558, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8559, disableColor: true };
         obj4.children = state(native.Icon, obj5);
         tmp4Result = state(timestampProducer, obj4);
       }
@@ -171,7 +171,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13963, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13970, disableColor: true };
         obj6.children = state(native.Icon, obj7);
         tmp4Result3 = state(timestampProducer, obj6);
       }

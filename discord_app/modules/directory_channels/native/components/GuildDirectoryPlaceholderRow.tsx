@@ -1,8 +1,8 @@
-// === Module 13283: GuildDirectoryPlaceholderRow ===
+// === Module 13291: GuildDirectoryPlaceholderRow ===
 
-// Module 13283 (GuildDirectoryPlaceholderRow)
+// Module 13291 (GuildDirectoryPlaceholderRow)
 import nativeDefault from "native" /* 575 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 13284 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 13292 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

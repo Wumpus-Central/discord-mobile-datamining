@@ -1,6 +1,6 @@
-// === Module 11704: ThreadNotificationSettingsBottomSheet ===
+// === Module 11712: ThreadNotificationSettingsBottomSheet ===
 
-// Module 11704 (ThreadNotificationSettingsBottomSheet)
+// Module 11712 (ThreadNotificationSettingsBottomSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import ThreadConstants from "ThreadConstants" /* 1111 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8114 */;

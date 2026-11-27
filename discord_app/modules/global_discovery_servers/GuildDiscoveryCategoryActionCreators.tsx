@@ -1,10 +1,10 @@
-// === Module 18320: GuildDiscoveryCategoryActionCreators ===
+// === Module 18327: GuildDiscoveryCategoryActionCreators ===
 
-// Module 18320 (GuildDiscoveryCategoryActionCreators)
+// Module 18327 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18321 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18328 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ let closure_7 = async function _maybeFetchGuildDiscoveryCategories() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -130,7 +130,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -245,7 +245,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
         closure_131_1(closure_131_2[5]).dispatch(obj11);
         c5 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp36) {
       closure_4 = tmp36;

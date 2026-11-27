@@ -1,6 +1,6 @@
-// === Module 15603: SpeakerPulse ===
+// === Module 15610: SpeakerPulse ===
 
-// Module 15603 (SpeakerPulse)
+// Module 15610 (SpeakerPulse)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;

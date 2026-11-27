@@ -1,6 +1,6 @@
-// === Module 15053: WishlistCountdownExperiment ===
+// === Module 15060: WishlistCountdownExperiment ===
 
-// Module 15053 (WishlistCountdownExperiment)
+// Module 15060 (WishlistCountdownExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

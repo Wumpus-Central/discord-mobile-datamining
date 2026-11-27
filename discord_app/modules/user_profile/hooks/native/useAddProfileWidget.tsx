@@ -1,11 +1,11 @@
-// === Module 15012: useAddProfileWidget ===
+// === Module 15019: useAddProfileWidget ===
 
-// Module 15012 (useAddProfileWidget)
+// Module 15019 (useAddProfileWidget)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5219 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6382 */;
-import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9436 */;
-import WidgetUtils from "WidgetUtils" /* 14570 */;
+import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9437 */;
+import WidgetUtils from "WidgetUtils" /* 14577 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

@@ -1,9 +1,9 @@
-// === Module 13405: useEmojiSuggestionNuxCoachmark ===
+// === Module 13413: useEmojiSuggestionNuxCoachmark ===
 
-// Module 13405 (useEmojiSuggestionNuxCoachmark)
+// Module 13413 (useEmojiSuggestionNuxCoachmark)
 import util from "util" /* 1112 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12961 */;
-import useChatInputKeyboardOffsetDefault from "useChatInputKeyboardOffset" /* 13402 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12969 */;
+import useChatInputKeyboardOffsetDefault from "useChatInputKeyboardOffset" /* 13410 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

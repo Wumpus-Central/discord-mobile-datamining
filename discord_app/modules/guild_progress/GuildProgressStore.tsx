@@ -1,6 +1,6 @@
-// === Module 13459: GuildProgressStore ===
+// === Module 13467: GuildProgressStore ===
 
-// Module 13459 (GuildProgressStore)
+// Module 13467 (GuildProgressStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -23,7 +23,7 @@ function completeStep(guild_id, CHANNEL) {
   }
   return tmp;
 }
-const Steps = fn(13453).Steps;
+const Steps = fn(13461).Steps;
 const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildProgressStore extends PersistedStore {

@@ -1,6 +1,6 @@
-// === Module 16567: BountiesModalTimer ===
+// === Module 16574: BountiesModalTimer ===
 
-// Module 16567 (BountiesModalTimer)
+// Module 16574 (BountiesModalTimer)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;

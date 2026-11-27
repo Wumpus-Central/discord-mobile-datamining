@@ -1,21 +1,21 @@
-// === Module 14193: GameProfileAnnouncements ===
+// === Module 14200: GameProfileAnnouncements ===
 
-// Module 14193 (GameProfileAnnouncements)
+// Module 14200 (GameProfileAnnouncements)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import DateUtils from "DateUtils" /* 4865 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7309 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8749 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8754 */;
-import ReactionIcon from "ReactionIcon" /* 9704 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 14188 */;
-import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 14194 */;
-import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 14195 */;
-import ImageWithPlaceholder from "ImageWithPlaceholder" /* 14196 */;
-import AnnouncementMarkupDefault from "AnnouncementMarkup" /* 14198 */;
-import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 14218 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8750 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8755 */;
+import ReactionIcon from "ReactionIcon" /* 9705 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 14195 */;
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 14201 */;
+import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 14202 */;
+import ImageWithPlaceholder from "ImageWithPlaceholder" /* 14203 */;
+import AnnouncementMarkupDefault from "AnnouncementMarkup" /* 14205 */;
+import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 14225 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -329,7 +329,7 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj9.createdAt = date;
-    obj9.expiryLabel = message(14195).getPollExpiryLabel(poll);
+    obj9.expiryLabel = message(14202).getPollExpiryLabel(poll);
     obj8.children = intl2.format(message(1112).t.t0FTsH, obj9);
     obj7.children = closure_7(message(5634).Text, obj8);
     items[2] = closure_7(closure_4, obj7);
@@ -340,7 +340,7 @@ function PollAnnouncementCard(message) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(8791).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(8792).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5043);

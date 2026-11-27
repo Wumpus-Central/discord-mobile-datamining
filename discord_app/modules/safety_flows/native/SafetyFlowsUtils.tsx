@@ -1,12 +1,12 @@
-// === Module 20356: SafetyFlowsUtils ===
+// === Module 20414: SafetyFlowsUtils ===
 
-// Module 20356 (SafetyFlowsUtils)
+// Module 20414 (SafetyFlowsUtils)
 import util from "util" /* 1112 */;
 import _modDef3175 from "module_3175" /* 3175 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
-import types from "types" /* 20350 */;
-import constants from "constants" /* 20351 */;
+import types from "types" /* 20408 */;
+import constants from "constants" /* 20409 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -115,7 +115,7 @@ export function useOnTaskComplete() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ export function useOnTaskComplete() {
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           c4 = tmp;

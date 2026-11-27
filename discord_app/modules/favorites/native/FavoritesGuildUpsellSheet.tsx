@@ -1,12 +1,12 @@
-// === Module 10745: FavoritesGuildUpsellSheet ===
+// === Module 10746: FavoritesGuildUpsellSheet ===
 
-// Module 10745 (FavoritesGuildUpsellSheet)
+// Module 10746 (FavoritesGuildUpsellSheet)
 import router_utils from "router_utils" /* 1098 */;
 import _modDef3857 from "module_3857" /* 3857 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9695 */;
-import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10746 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10752 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9102 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9696 */;
+import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10747 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10753 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,18 +20,18 @@ let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuild
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(10743).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(10744).FREE_FAVORITE_LIMIT;
   }
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault().analyticsLocations;
   importDefault = noop.useCallback(() => {
-    closure_1(5257).hideActionSheet(analyticsLocations(10744).FAVORITES_UPSELL_SHEET_KEY);
+    closure_1(5257).hideActionSheet(analyticsLocations(10745).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   let obj = { title: null, description: null, illustration: null, actions: null };
   const intl = analyticsLocations(1112).intl;
   obj.title = intl.string(_modDef3857.hINqUs);
   const intl2 = analyticsLocations(1112).intl;
   obj.description = intl2.formatToPlainString(_modDef3857.D7S0Zo, { count: FREE_FAVORITE_LIMIT, maxCount: MAX_FAVORITE_CHANNELS });
-  obj.illustration = closure_6(analyticsLocations(10748).FavoritesSpotIllustration, {});
+  obj.illustration = closure_6(analyticsLocations(10749).FavoritesSpotIllustration, {});
   const obj3 = { children: null };
   const obj4 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = analyticsLocations(1112).intl;
@@ -53,5 +53,5 @@ export default function FavoritesGuildUpsellSheet(limit) {
   items[1] = closure_6(analyticsLocations(5641).Button, obj5);
   obj3.children = items;
   obj.actions = closure_7(analyticsLocations(6863).ButtonGroup, obj3);
-  return closure_6(analyticsLocations(10747).PromoSheet, obj);
+  return closure_6(analyticsLocations(10748).PromoSheet, obj);
 };

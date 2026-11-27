@@ -1,6 +1,6 @@
-// === Module 11481: conjurePublishEvalConnection ===
+// === Module 11491: conjurePublishEvalConnection ===
 
-// Module 11481 (conjurePublishEvalConnection)
+// Module 11491 (conjurePublishEvalConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import v1 from "v1" /* 1269 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 7673 */;

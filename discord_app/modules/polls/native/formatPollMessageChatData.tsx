@@ -1,8 +1,8 @@
-// === Module 14477: formatPollMessageChatData ===
+// === Module 14484: formatPollMessageChatData ===
 
-// Module 14477 (formatPollMessageChatData)
-import chat_formatPollMessageChatDataDefault from "chat/formatPollMessageChatData" /* 12234 */;
-import MarkupParsers from "MarkupParsers" /* 14417 */;
+// Module 14484 (formatPollMessageChatData)
+import chat_formatPollMessageChatDataDefault from "chat/formatPollMessageChatData" /* 12242 */;
+import MarkupParsers from "MarkupParsers" /* 14424 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/polls/native/formatPollMessageChatData.tsx");

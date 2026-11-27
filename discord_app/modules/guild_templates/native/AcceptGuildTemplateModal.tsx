@@ -1,12 +1,12 @@
-// === Module 12304: AcceptGuildTemplateModal ===
+// === Module 12312: AcceptGuildTemplateModal ===
 
-// Module 12304 (AcceptGuildTemplateModal)
+// Module 12312 (AcceptGuildTemplateModal)
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
-import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 12316 */;
+import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 12324 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 8246 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 8247 */;
 
 require = fn;
 function ConnectedAcceptGuildTemplate(code) {
@@ -24,7 +24,7 @@ function ConnectedAcceptGuildTemplate(code) {
   [first1, _slicedToArray] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
   noop = tmp7[1];
-  stateFromStores(12305)(stateFromStores);
+  stateFromStores(12313)(stateFromStores);
   let obj3 = { top: true, style: tmp.container, children: null };
   let obj4 = {
     code,
@@ -50,7 +50,7 @@ function ConnectedAcceptGuildTemplate(code) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ function ConnectedAcceptGuildTemplate(code) {
             closure_129_5(base64);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -99,7 +99,7 @@ function ConnectedAcceptGuildTemplate(code) {
       const acceptGuildTemplateResult = AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj3.children = jsx(stateFromStores(12306), {
+  obj3.children = jsx(stateFromStores(12314), {
     code,
     guildTemplate: stateFromStores,
     name,

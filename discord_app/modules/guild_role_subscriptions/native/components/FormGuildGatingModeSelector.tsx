@@ -1,6 +1,6 @@
-// === Module 20214: FormGuildGatingModeSelector ===
+// === Module 20272: FormGuildGatingModeSelector ===
 
-// Module 20214 (FormGuildGatingModeSelector)
+// Module 20272 (FormGuildGatingModeSelector)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -24,7 +24,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   const onChange = isFullServerGating.onChange;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const roleSubscriptionSettingsDisabled = isFullServerGating(20215).useRoleSubscriptionSettingsDisabled();
+  const roleSubscriptionSettingsDisabled = isFullServerGating(20273).useRoleSubscriptionSettingsDisabled();
   items = [onChange];
   const items1 = [onChange, isFullServerGating, tmp];
   const callback = noop.useCallback(() => {
@@ -52,7 +52,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
     onChange(true);
   }, items1);
   let obj3 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
-  let obj = isFullServerGating(20215);
+  let obj = isFullServerGating(20273);
   obj3.icon = isFullServerGating(7146).TextIcon;
   let intl = isFullServerGating(1112).intl;
   obj3.title = intl.string(isFullServerGating(1112).t.rXqxhF);
@@ -61,9 +61,9 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   obj3.selected = !isFullServerGating;
   obj3.onPress = callback;
   obj3.disabled = roleSubscriptionSettingsDisabled;
-  const items2 = [closure_5(onChange(20217), obj3), ];
+  const items2 = [closure_5(onChange(20275), obj3), ];
   let obj4 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
-  const tmp5 = onChange(20217);
+  const tmp5 = onChange(20275);
   obj4.icon = isFullServerGating(7322).KeyIcon;
   let intl3 = isFullServerGating(1112).intl;
   obj4.title = intl3.string(isFullServerGating(1112).t.WzC9s6);
@@ -72,7 +72,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   obj4.selected = isFullServerGating;
   obj4.onPress = callback1;
   obj4.disabled = roleSubscriptionSettingsDisabled;
-  items2[1] = closure_5(onChange(20217), obj4);
+  items2[1] = closure_5(onChange(20275), obj4);
   obj2.children = items2;
   return closure_7(View, obj2);
 };

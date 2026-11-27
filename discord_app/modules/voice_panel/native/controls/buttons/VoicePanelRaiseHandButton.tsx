@@ -1,13 +1,13 @@
-// === Module 19582: VoicePanelRaiseHandButton ===
+// === Module 19598: VoicePanelRaiseHandButton ===
 
-// Module 19582 (VoicePanelRaiseHandButton)
+// Module 19598 (VoicePanelRaiseHandButton)
 import util from "util" /* 1112 */;
-import useRaiseHandControlDefault from "useRaiseHandControl" /* 10334 */;
-import HandRequestDenyIcon from "HandRequestDenyIcon" /* 10340 */;
-import HandRequestSpeakIcon2 from "HandRequestSpeakIcon" /* 10342 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 19564 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19565 */;
+import useRaiseHandControlDefault from "useRaiseHandControl" /* 10335 */;
+import HandRequestDenyIcon from "HandRequestDenyIcon" /* 10341 */;
+import HandRequestSpeakIcon2 from "HandRequestSpeakIcon" /* 10343 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 19580 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19581 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 

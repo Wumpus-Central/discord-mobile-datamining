@@ -1,10 +1,10 @@
-// === Module 12880: CheckpointGlobalStatNumber ===
+// === Module 12888: CheckpointGlobalStatNumber ===
 
-// Module 12880 (CheckpointGlobalStatNumber)
+// Module 12888 (CheckpointGlobalStatNumber)
 import nativeDefault from "native" /* 575 */;
-import CheckpointStatNumber from "CheckpointStatNumber" /* 12851 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 12853 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12881 */;
+import CheckpointStatNumber from "CheckpointStatNumber" /* 12859 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 12861 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12889 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

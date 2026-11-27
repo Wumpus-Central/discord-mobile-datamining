@@ -1,10 +1,10 @@
-// === Module 15286: useDeviceCodeAuthorizeCallback ===
+// === Module 15293: useDeviceCodeAuthorizeCallback ===
 
-// Module 15286 (useDeviceCodeAuthorizeCallback)
+// Module 15293 (useDeviceCodeAuthorizeCallback)
 import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7532 */;
 import oauth2_actions from "oauth2/actions" /* 7738 */;
 import TwoWayLinkType from "TwoWayLinkType" /* 7765 */;
-import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15285 */;
+import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15292 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ let closure_5 = async function _createTwoWayLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -181,7 +181,7 @@ let closure_5 = async function _createTwoWayLink(arg0, arg1) {
           } else {
             c8 = 0;
             c10 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c10 = 3;
@@ -249,7 +249,7 @@ export function useDeviceCodeAuthorizeCallback(callback, callback2, callback1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

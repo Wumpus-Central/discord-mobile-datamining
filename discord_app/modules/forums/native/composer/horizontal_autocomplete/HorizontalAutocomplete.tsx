@@ -1,6 +1,6 @@
-// === Module 11074: HorizontalAutocomplete ===
+// === Module 11075: HorizontalAutocomplete ===
 
-// Module 11074 (HorizontalAutocomplete)
+// Module 11075 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -12,7 +12,7 @@ import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import RoleIconUtils from "RoleIconUtils" /* 7537 */;
 import RoleIconDefault from "RoleIcon" /* 7554 */;
-import _modDef8836 from "module_8836" /* 8836 */;
+import _modDef8837 from "module_8837" /* 8837 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import GuildRoleStore from "GuildRoleStore" /* 4949 */;
@@ -136,7 +136,7 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8836;
+      let channelIconWithGuild = _modDef8837;
     } else {
       channelIconWithGuild = tmp2(7096).getChannelIconWithGuild(channel, tmp5);
       const tmp2Result = tmp2(7096);

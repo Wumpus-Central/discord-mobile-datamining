@@ -1,12 +1,12 @@
-// === Module 15143: LocalVoiceStateManager ===
+// === Module 15150: LocalVoiceStateManager ===
 
-// Module 15143 (LocalVoiceStateManager)
+// Module 15150 (LocalVoiceStateManager)
 import FlagUtils from "FlagUtils" /* 1405 */;
 import UserSettings from "UserSettings" /* 4868 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
-import isClipsEnabled from "isClipsEnabled" /* 14356 */;
-import StreamDrawingChannel from "StreamDrawingChannel" /* 15144 */;
-import StreamDrawingExperiment from "StreamDrawingExperiment" /* 15145 */;
+import isClipsEnabled from "isClipsEnabled" /* 14363 */;
+import StreamDrawingChannel from "StreamDrawingChannel" /* 15151 */;
+import StreamDrawingExperiment from "StreamDrawingExperiment" /* 15152 */;
 import PassTheControllerStore from "PassTheControllerStore" /* 5850 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6029 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -14,7 +14,7 @@ import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 import RTCRegionStore from "RTCRegionStore" /* 5942 */;
-import StateManager from "StateManager" /* 15141 */;
+import StateManager from "StateManager" /* 15148 */;
 
 require = fn;
 const Constants = fn(1071);

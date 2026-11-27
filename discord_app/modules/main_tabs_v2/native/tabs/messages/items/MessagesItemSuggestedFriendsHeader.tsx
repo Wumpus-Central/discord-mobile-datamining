@@ -1,11 +1,11 @@
-// === Module 17826: MessagesItemSuggestedFriendsHeader ===
+// === Module 17833: MessagesItemSuggestedFriendsHeader ===
 
-// Module 17826 (MessagesItemSuggestedFriendsHeader)
+// Module 17833 (MessagesItemSuggestedFriendsHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10591 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

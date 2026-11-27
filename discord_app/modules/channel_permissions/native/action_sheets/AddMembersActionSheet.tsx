@@ -1,13 +1,13 @@
-// === Module 8554: AddMembersActionSheet ===
+// === Module 8555: AddMembersActionSheet ===
 
-// Module 8554 (AddMembersActionSheet)
+// Module 8555 (AddMembersActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
 import RegexUtilsDefault from "RegexUtils" /* 5668 */;
 import GuildUtilsDefault from "GuildUtils" /* 6990 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8526 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8527 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -402,7 +402,7 @@ export default function AddMembersActionSheet(channel) {
         }
       }
     });
-    await closure_0(8527).savePermissionUpdates(channel.id, items);
+    await closure_0(8528).savePermissionUpdates(channel.id, items);
     if (1 === tmp7) {
       dependencyMap = 0;
       c5 = 3;

@@ -1,13 +1,13 @@
-// === Module 12641: useCheckpointCompositeRevealStyle ===
+// === Module 12649: useCheckpointCompositeRevealStyle ===
 
-// Module 12641 (useCheckpointCompositeRevealStyle)
+// Module 12649 (useCheckpointCompositeRevealStyle)
 import timing_timing from "timing/timing" /* 5253 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const CheckpointTransitionConstants = fn(12631);
+const CheckpointTransitionConstants = fn(12639);
 ({ CHECKPOINT_COMPOSITE_REVEAL_DURATION_MS: c3, CHECKPOINT_COMPOSITE_REVEAL_EASING } = CheckpointTransitionConstants);
 const Easing = fn(1654).Easing;
 let items = [...CHECKPOINT_COMPOSITE_REVEAL_EASING];

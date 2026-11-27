@@ -1,6 +1,6 @@
-// === Module 10572: CallTile ===
+// === Module 10573: CallTile ===
 
-// Module 10572 (CallTile)
+// Module 10573 (CallTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
@@ -9,13 +9,13 @@ import timing_timing from "timing/timing" /* 5253 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6129 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import _modDef7773 from "module_7773" /* 7773 */;
-import RevealProvider from "RevealProvider" /* 10016 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10573 */;
-import _modDef10578 from "module_10578" /* 10578 */;
+import RevealProvider from "RevealProvider" /* 10017 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10574 */;
 import _modDef10579 from "module_10579" /* 10579 */;
 import _modDef10580 from "module_10580" /* 10580 */;
 import _modDef10581 from "module_10581" /* 10581 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 10582 */;
+import _modDef10582 from "module_10582" /* 10582 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 10583 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -45,17 +45,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef10578;
+    let tmp3 = _modDef10579;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef10579;
+      tmp3 = _modDef10580;
     } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef7773;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef10580;
-    } else if (constants2.QUEST === voicePlatform) {
       tmp3 = _modDef10581;
+    } else if (constants2.QUEST === voicePlatform) {
+      tmp3 = _modDef10582;
     }
   }
   let tmp14 = null;
@@ -157,7 +157,7 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10008);
+const ChannelCallStore = fn(10009);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
 const CallConstants = fn(5693);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);

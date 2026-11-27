@@ -1,13 +1,13 @@
-// === Module 18682: ConjureTipCallout ===
+// === Module 18696: ConjureTipCallout ===
 
-// Module 18682 (ConjureTipCallout)
+// Module 18696 (ConjureTipCallout)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import XSmallIcon from "XSmallIcon" /* 7247 */;
 import IconButton from "IconButton" /* 7944 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18519 */;
-import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 18675 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18524 */;
+import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 18689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

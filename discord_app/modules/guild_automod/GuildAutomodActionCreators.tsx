@@ -1,13 +1,13 @@
-// === Module 12527: GuildAutomodActionCreators ===
+// === Module 12535: GuildAutomodActionCreators ===
 
-// Module 12527 (GuildAutomodActionCreators)
+// Module 12535 (GuildAutomodActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
-import AutomodFeedback from "AutomodFeedback" /* 8241 */;
-import DataUtils from "DataUtils" /* 12528 */;
+import AutomodFeedback from "AutomodFeedback" /* 8242 */;
+import DataUtils from "DataUtils" /* 12536 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildRoleStore from "GuildRoleStore" /* 4949 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -132,7 +132,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -195,7 +195,7 @@ let closure_19 = async function _executeAlertAction() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -228,7 +228,7 @@ let closure_19 = async function _executeAlertAction() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp8) {
         c3 = tmp;
         throw tmp8;

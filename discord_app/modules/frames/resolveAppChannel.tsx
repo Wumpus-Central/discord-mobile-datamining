@@ -1,6 +1,6 @@
-// === Module 10104: resolveAppChannel ===
+// === Module 10105: resolveAppChannel ===
 
-// Module 10104 (resolveAppChannel)
+// Module 10105 (resolveAppChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
@@ -17,7 +17,7 @@ let closure_7 = async function _resolveAppChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

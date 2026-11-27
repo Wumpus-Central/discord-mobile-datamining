@@ -1,14 +1,14 @@
-// === Module 14094: GroupDMNitroCapCoachmark ===
+// === Module 14101: GroupDMNitroCapCoachmark ===
 
-// Module 14094 (GroupDMNitroCapCoachmark)
+// Module 14101 (GroupDMNitroCapCoachmark)
 import util from "util" /* 1112 */;
-import _modDef10548 from "module_10548" /* 10548 */;
+import _modDef10549 from "module_10549" /* 10549 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(12101).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let closure_6 = fn(12109).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -20,9 +20,9 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(12099).useGroupDMNitroAudience();
-  const obj2 = channelId(12099);
-  channelId(9561);
+  const groupDMNitroAudience = channelId(12107).useGroupDMNitroAudience();
+  const obj2 = channelId(12107);
+  channelId(9562);
   if (obj3.useConfig({ location: _location }).enabled) {
     if ("entitled" === groupDMNitroAudience) {
       items = [tmp2(4876).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
@@ -44,16 +44,16 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       };
       const intl3 = util.intl;
       obj.buttonLabel = intl3.string(util.t.yZOtoD);
-      obj.buttonIcon = _modDef10548;
+      obj.buttonIcon = _modDef10549;
       obj.onButtonPress = function onButtonPress() {
-        _location(12098)(channelId, closure_1_1);
+        _location(12106)(channelId, closure_1_1);
         dependencyMap(constants.TAKE_ACTION);
       };
       return obj;
     }, items1);
-    const coachmark = tmp2(9568).useCoachmark(ref, memo);
+    const coachmark = tmp2(9569).useCoachmark(ref, memo);
     const obj4 = { ref, collapsable: false, children: channelId.children };
     return <View ref={ref} collapsable={false}>{channelId.children}</View>;
   }
-  obj3 = _location(12102);
+  obj3 = _location(12110);
 };

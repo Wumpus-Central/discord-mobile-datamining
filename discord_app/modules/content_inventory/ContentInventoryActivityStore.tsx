@@ -1,15 +1,15 @@
-// === Module 14895: ContentInventoryActivityStore ===
+// === Module 14902: ContentInventoryActivityStore ===
 
-// Module 14895 (ContentInventoryActivityStore)
+// Module 14902 (ContentInventoryActivityStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ActivityTypes from "ActivityTypes" /* 6015 */;
-import utils from "utils" /* 8588 */;
-import matchUtils from "matchUtils" /* 8756 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8757 */;
+import utils from "utils" /* 8589 */;
+import matchUtils from "matchUtils" /* 8757 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8758 */;
 import PresenceStore from "PresenceStore" /* 6014 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8755 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8756 */;
 
 require = fn;
 function entryToKey(content) {
@@ -21,7 +21,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(8928).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(8929).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === ActivityTypes.ActivityTypes.PLAYING) {
@@ -45,7 +45,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8588);
+    tmpResult = tmp(8589);
   }
   return tmp3;
 }
@@ -111,7 +111,7 @@ function handlePresenceUpdates() {
   }
   set = new Set();
 }
-let items = [fn(8590).ContentInventoryEntryType.LISTENED_SESSION];
+let items = [fn(8591).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
 const Store = initializeDefault.Store;

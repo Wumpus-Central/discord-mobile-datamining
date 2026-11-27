@@ -1,6 +1,6 @@
-// === Module 19509: useActivityUsers ===
+// === Module 19525: useActivityUsers ===
 
-// Module 19509 (useActivityUsers)
+// Module 19525 (useActivityUsers)
 import UserStore from "UserStore" /* 1387 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 

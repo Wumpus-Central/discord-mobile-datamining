@@ -1,6 +1,6 @@
-// === Module 18625: MediaKeyboard ===
+// === Module 18636: MediaKeyboard ===
 
-// Module 18625 (MediaKeyboard)
+// Module 18636 (MediaKeyboard)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import ChatInputUtils from "ChatInputUtils" /* 5228 */;
@@ -8,14 +8,14 @@ import ThreadIcon from "ThreadIcon" /* 7139 */;
 import ImageIcon from "ImageIcon" /* 7153 */;
 import AppsIcon from "AppsIcon" /* 7172 */;
 import Upload from "Upload" /* 8126 */;
-import AttachmentIcon from "AttachmentIcon" /* 9618 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11087 */;
-import PollsIcon from "PollsIcon" /* 11090 */;
-import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 11092 */;
-import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 11094 */;
-import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 13163 */;
-import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 18628 */;
-import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 18629 */;
+import AttachmentIcon from "AttachmentIcon" /* 9619 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11088 */;
+import PollsIcon from "PollsIcon" /* 11091 */;
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 11093 */;
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 11095 */;
+import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 13171 */;
+import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 18639 */;
+import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 18640 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8124 */;
 
@@ -26,7 +26,7 @@ const MediaKeyboardConstants = fn(1625);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
 const AppLauncherRouteName = fn(1500).AppLauncherRouteName;
-const KEYBOARD_ANIMATION_CONFIG = fn(12999).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(13007).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const size = fn(2);

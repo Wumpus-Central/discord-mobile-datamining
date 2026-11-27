@@ -6,12 +6,12 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5658 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 7677 */;
-import ApplicationUtils from "ApplicationUtils" /* 10111 */;
-import PushNotificationDefault from "PushNotification" /* 10277 */;
-import restartFrames from "restartFrames" /* 14071 */;
-import conjurePreviewCall from "conjurePreviewCall" /* 14735 */;
-import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 14737 */;
-import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 14738 */;
+import ApplicationUtils from "ApplicationUtils" /* 10112 */;
+import PushNotificationDefault from "PushNotification" /* 10278 */;
+import restartFrames from "restartFrames" /* 14078 */;
+import conjurePreviewCall from "conjurePreviewCall" /* 14742 */;
+import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 14744 */;
+import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 14745 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ActionSheetStore from "ActionSheetStore" /* 5258 */;
 import AppStateStore from "AppStateStore" /* 2119 */;
@@ -233,7 +233,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -300,7 +300,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
               const obj9 = { value: { status: "unavailable" }, done: true };
               return obj9;
             } else if (null == onAccepted) {
-              let obj10 = { uploadToken: "r" };
+              let obj10 = { uploadToken: "top" };
             } else {
               c7 = 2;
               c8 = 1;
@@ -387,7 +387,7 @@ let closure_19 = async function _inspectConjurePreviewPoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -466,7 +466,7 @@ let closure_20 = async function _relayPreviewControl(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -640,7 +640,7 @@ const ConjureAppInstallSheet = "ConjureAppInstallSheet";
 let c17 = 0;
 let c18 = 0;
 let c21 = 0;
-const conjurePreviewControlLease = fn(14737);
+const conjurePreviewControlLease = fn(14744);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -743,7 +743,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(14743);
+const conjurePreviewOperationSurfaces = fn(14750);
 let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;

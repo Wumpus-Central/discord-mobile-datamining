@@ -1,6 +1,6 @@
-// === Module 19108: YouScreen ===
+// === Module 19124: YouScreen ===
 
-// Module 19108 (YouScreen)
+// Module 19124 (YouScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
@@ -9,14 +9,14 @@ import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
 import RootNavigationRef from "RootNavigationRef" /* 5220 */;
 import Pressables from "Pressables" /* 6152 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 10481 */;
-import YouBannerDecorations from "YouBannerDecorations" /* 14260 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 16069 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 10482 */;
+import YouBannerDecorations from "YouBannerDecorations" /* 14267 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 16076 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 6163 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16192 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16199 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6976 */;
 import UserStore from "UserStore" /* 1387 */;
 import module_1654_mod from "module_1654" /* 1654 */;
@@ -531,7 +531,7 @@ function UnconnectedYouScreen(isCard) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(18162);
+const YouConstants = fn(18169);
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YouConstants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
 let closure_17 = fn(1073).CollectiblesMobileShopScreen;

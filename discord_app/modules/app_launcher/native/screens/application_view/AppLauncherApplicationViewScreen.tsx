@@ -1,10 +1,10 @@
-// === Module 13087: AppLauncherApplicationViewScreen ===
+// === Module 13095: AppLauncherApplicationViewScreen ===
 
-// Module 13087 (AppLauncherApplicationViewScreen)
+// Module 13095 (AppLauncherApplicationViewScreen)
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import AppLauncherContext from "AppLauncherContext" /* 12145 */;
+import AppLauncherContext from "AppLauncherContext" /* 12153 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10047 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10048 */;
 
 const require = globalThis.__r;
 

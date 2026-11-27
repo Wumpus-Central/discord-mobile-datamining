@@ -1,17 +1,17 @@
-// === Module 16371: FamilyCenterSetting ===
+// === Module 16378: FamilyCenterSetting ===
 
-// Module 16371 (FamilyCenterSetting)
+// Module 16378 (FamilyCenterSetting)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2847 from "module_2847" /* 2847 */;
 import WarningIcon from "WarningIcon" /* 7942 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16372 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 16373 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16379 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 16380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

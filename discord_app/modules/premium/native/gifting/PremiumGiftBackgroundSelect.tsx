@@ -1,13 +1,13 @@
-// === Module 11317: PremiumGiftBackgroundSelect ===
+// === Module 11318: PremiumGiftBackgroundSelect ===
 
-// Module 11317 (PremiumGiftBackgroundSelect)
+// Module 11318 (PremiumGiftBackgroundSelect)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
-import NativeGiftContext from "NativeGiftContext" /* 11142 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 11318 */;
+import NativeGiftContext from "NativeGiftContext" /* 11143 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 11319 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

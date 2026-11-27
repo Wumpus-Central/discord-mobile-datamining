@@ -1,6 +1,6 @@
-// === Module 13121: CommandDetailsOverflowMenu ===
+// === Module 13129: CommandDetailsOverflowMenu ===
 
-// Module 13121 (CommandDetailsOverflowMenu)
+// Module 13129 (CommandDetailsOverflowMenu)
 import ToastUtils from "ToastUtils" /* 5724 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import _modDef7746 from "module_7746" /* 7746 */;
@@ -23,7 +23,7 @@ export default function CommandDetailsOverflowMenu(commandId) {
         ClipboardUtils.copy(commandId);
         ToastUtils.presentIdCopied();
       };
-      obj.IconComponent = tmp(11081).IdIcon;
+      obj.IconComponent = tmp(11082).IdIcon;
       items = [obj];
       const obj2 = {
         items,
@@ -37,7 +37,7 @@ export default function CommandDetailsOverflowMenu(commandId) {
               return jsx(commandId(7944).IconButton, { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: _modDef7746 });
             }
       };
-      return jsx(tmp(9067).ContextMenu, {
+      return jsx(tmp(9068).ContextMenu, {
         items,
         children(ref) {
               const merged = Object.assign(ref, Object.assign({ ref: 0 }));

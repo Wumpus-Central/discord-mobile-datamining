@@ -1,8 +1,8 @@
-// === Module 18465: conjureViewPlacement ===
+// === Module 18472: conjureViewPlacement ===
 
-// Module 18465 (conjureViewPlacement)
+// Module 18472 (conjureViewPlacement)
 import ConjureViewsTypes from "ConjureViewsTypes" /* 7708 */;
-import conjureAppChannelNameDefault from "conjureAppChannelName" /* 18466 */;
+import conjureAppChannelNameDefault from "conjureAppChannelName" /* 18473 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

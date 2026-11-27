@@ -1,6 +1,6 @@
-// === Module 8792: useGameProfileInvite ===
+// === Module 8793: useGameProfileInvite ===
 
-// Module 8792 (useGameProfileInvite)
+// Module 8793 (useGameProfileInvite)
 import DurationsDefault from "Durations" /* 1088 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7819 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -85,7 +85,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -123,7 +123,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw error;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp22) {
       c4 = tmp;
       throw tmp22;

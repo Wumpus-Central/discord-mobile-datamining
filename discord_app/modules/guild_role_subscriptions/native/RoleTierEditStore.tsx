@@ -1,9 +1,9 @@
-// === Module 20219: RoleTierEditStore ===
+// === Module 20277: RoleTierEditStore ===
 
-// Module 20219 (RoleTierEditStore)
+// Module 20277 (RoleTierEditStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import _mod4958 from "module_4958" /* 4958 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16823 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16830 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

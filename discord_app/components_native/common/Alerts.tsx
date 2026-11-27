@@ -1,6 +1,6 @@
-// === Module 19262: Alerts ===
+// === Module 19278: Alerts ===
 
-// Module 19262 (Alerts)
+// Module 19278 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
@@ -9,12 +9,12 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import OverlayViewDefault from "OverlayView" /* 6053 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6110 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7048 */;
-import ModalRegistryDefault from "ModalRegistry" /* 19263 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19279 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15243 */;
-import PermissionVADStore from "PermissionVADStore" /* 15832 */;
-import AlertStore from "AlertStore" /* 12023 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15250 */;
+import PermissionVADStore from "PermissionVADStore" /* 15839 */;
+import AlertStore from "AlertStore" /* 12031 */;
 
 const require = globalThis.__r;
 
@@ -261,7 +261,7 @@ let closure_18 = { code: "(function AlertsTsx3(){let[useReducedMotion,visible,wi
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_11(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "radii", renderKey: "id", props: "clearTimeout" });
+let closure_23 = Object.freeze({ renderAlert: "Array", renderKey: "channel_id", props: "i" });
 const tmp6 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -293,7 +293,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "radii", renderKey: "id", props: "clearTimeout" };
+        return { renderAlert: "Array", renderKey: "channel_id", props: "i" };
       }
     }
   });

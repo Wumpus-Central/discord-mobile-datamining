@@ -1,6 +1,6 @@
-// === Module 14325: StartEventModal ===
+// === Module 14332: StartEventModal ===
 
-// Module 14325 (StartEventModal)
+// Module 14332 (StartEventModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5634 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import Pressables from "Pressables" /* 6152 */;
 import _modDef7444 from "module_7444" /* 7444 */;
-import GuildEventCardDefault from "GuildEventCard" /* 14324 */;
+import GuildEventCardDefault from "GuildEventCard" /* 14331 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -49,7 +49,7 @@ class PreviewEventCard {
 const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(4898);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: closure_10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(8474).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(8475).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(5043);
@@ -97,7 +97,7 @@ export default function StartEventModal(event) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ export default function StartEventModal(event) {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp11) {
         c0 = tmp;
         throw tmp11;

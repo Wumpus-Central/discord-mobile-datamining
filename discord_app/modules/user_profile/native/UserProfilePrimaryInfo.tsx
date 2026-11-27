@@ -1,6 +1,6 @@
-// === Module 9807: UserProfilePrimaryInfo ===
+// === Module 9808: UserProfilePrimaryInfo ===
 
-// Module 9807 (UserProfilePrimaryInfo)
+// Module 9808 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 5099 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -9,17 +9,17 @@ import BadgeId from "BadgeId" /* 6138 */;
 import Pressables from "Pressables" /* 6152 */;
 import QuestTypes from "QuestTypes" /* 6874 */;
 import openUserSettings from "openUserSettings" /* 8109 */;
-import GuildTagUtils from "GuildTagUtils" /* 8578 */;
-import BotTagDefault from "BotTag" /* 8632 */;
-import GuildTagDefault from "GuildTag" /* 8722 */;
-import ClipView from "ClipView" /* 9420 */;
-import useBadges from "useBadges" /* 9503 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9808 */;
-import captureAdUserAction from "captureAdUserAction" /* 9857 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9861 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 9866 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 9867 */;
-import BadgeUtils from "BadgeUtils" /* 9870 */;
+import GuildTagUtils from "GuildTagUtils" /* 8579 */;
+import BotTagDefault from "BotTag" /* 8633 */;
+import GuildTagDefault from "GuildTag" /* 8723 */;
+import ClipView from "ClipView" /* 9421 */;
+import useBadges from "useBadges" /* 9504 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9809 */;
+import captureAdUserAction from "captureAdUserAction" /* 9858 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9862 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 9867 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 9868 */;
+import BadgeUtils from "BadgeUtils" /* 9871 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;
@@ -395,7 +395,7 @@ function UnreadDotCutoutLayer(showDot) {
   const items1 = [tmp.cutoutLayerFill, showDot.style];
   obj2.style = items1;
   obj.children = closure_15(closure_6, obj2);
-  return closure_15(first(9420), obj);
+  return closure_15(first(9421), obj);
 }
 class ProfileBadgeRows {
   constructor(arg0) {
@@ -827,7 +827,7 @@ const getBadgeName = fn(6137).getBadgeName;
 const Constants = fn(7557);
 ({ DIVIDER_DOT: closure_10, PROFILE_SIDE_PADDING: closure_11, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1071).UserSettingsSections;
-const GuildTagBadgeSize = fn(8579).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8580).GuildTagBadgeSize;
 const DEFAULT_PREMIUM_BADGE_ID = fn(6385).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);

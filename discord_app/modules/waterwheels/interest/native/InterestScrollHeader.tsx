@@ -1,6 +1,6 @@
-// === Module 18051: InterestScrollHeader ===
+// === Module 18058: InterestScrollHeader ===
 
-// Module 18051 (InterestScrollHeader)
+// Module 18058 (InterestScrollHeader)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;

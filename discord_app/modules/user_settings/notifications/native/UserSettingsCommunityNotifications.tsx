@@ -1,13 +1,13 @@
-// === Module 17121: UserSettingsCommunityNotifications ===
+// === Module 17128: UserSettingsCommunityNotifications ===
 
-// Module 17121 (UserSettingsCommunityNotifications)
+// Module 17128 (UserSettingsCommunityNotifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import TableRowGroup from "TableRowGroup" /* 6140 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10595 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10596 */;
 
 require = fn;
 const jsxProd = fn(21);

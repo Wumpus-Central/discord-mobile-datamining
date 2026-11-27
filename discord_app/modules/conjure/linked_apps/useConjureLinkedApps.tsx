@@ -1,6 +1,6 @@
-// === Module 18542: useConjureLinkedApps ===
+// === Module 18553: useConjureLinkedApps ===
 
-// Module 18542 (useConjureLinkedApps)
+// Module 18553 (useConjureLinkedApps)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -78,7 +78,7 @@ export default function useConjureLinkedApps(projectId, arg1) {
         } else {
           c2 = 0;
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       }
       return value;

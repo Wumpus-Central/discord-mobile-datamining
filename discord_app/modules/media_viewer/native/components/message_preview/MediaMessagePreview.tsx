@@ -1,26 +1,26 @@
-// === Module 14138: MediaMessagePreview ===
+// === Module 14145: MediaMessagePreview ===
 
-// Module 14138 (MediaMessagePreview)
+// Module 14145 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import RowGeneratorDefault from "RowGenerator" /* 8223 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8838 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9089 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 9091 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 12025 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 12158 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 14140 */;
+import RowGeneratorDefault from "RowGenerator" /* 8224 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8839 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9090 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 9092 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 12033 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 12166 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 14147 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8119 */;
 import SearchMessageStore from "SearchMessageStore" /* 6953 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import MessageStore from "MessageStore" /* 6391 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8936 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8937 */;
 
 require = fn;
 function MeasureMessage(message) {

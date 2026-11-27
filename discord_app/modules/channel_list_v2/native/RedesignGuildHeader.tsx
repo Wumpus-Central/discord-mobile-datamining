@@ -1,6 +1,6 @@
-// === Module 17859: RedesignGuildHeader ===
+// === Module 17866: RedesignGuildHeader ===
 
-// Module 17859 (RedesignGuildHeader)
+// Module 17866 (RedesignGuildHeader)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
@@ -13,13 +13,13 @@ import springPresets from "springPresets" /* 5645 */;
 import ButtonConstants from "ButtonConstants" /* 5647 */;
 import useFontScale from "useFontScale" /* 5649 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6124 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9014 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10591 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11536 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15314 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17832 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17860 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17861 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9015 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10592 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11544 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15321 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17839 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17867 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17868 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ActionSheetStore from "ActionSheetStore" /* 5258 */;
@@ -206,7 +206,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.children = items9;
     const items11 = [closure_14(closure_6, obj6), ];
     if (tmp28Result) {
-      tmp28Result = closure_13(tmp(17899), {});
+      tmp28Result = closure_13(tmp(17906), {});
     }
     items11[1] = tmp28Result;
     obj5.children = items11;

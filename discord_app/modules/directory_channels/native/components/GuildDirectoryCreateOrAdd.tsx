@@ -1,6 +1,6 @@
-// === Module 13258: GuildDirectoryCreateOrAdd ===
+// === Module 13266: GuildDirectoryCreateOrAdd ===
 
-// Module 13258 (GuildDirectoryCreateOrAdd)
+// Module 13266 (GuildDirectoryCreateOrAdd)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
@@ -8,11 +8,11 @@ import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import TableRow from "TableRow" /* 6144 */;
 import GuildIconDefault from "GuildIcon" /* 7052 */;
-import SegmentedControlState from "SegmentedControlState" /* 8616 */;
-import SegmentedControl from "SegmentedControl" /* 8617 */;
+import SegmentedControlState from "SegmentedControlState" /* 8617 */;
+import SegmentedControl from "SegmentedControl" /* 8618 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 13259 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 13267 */;
 
 const require = globalThis.__r;
 
@@ -61,7 +61,7 @@ function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6 } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(13257).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(13265).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5043);
@@ -80,7 +80,7 @@ let closure_12 = noop.memo(function GuildDirectoryEntryEditRow(guild) {
   const tmp = closure_11();
   items = [GuildDirectoryStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => GuildDirectoryStore.getDirectoryEntry(directoryChannelId, guild.id));
-  const obj2 = { label: guild.name, icon: closure_9(directoryChannelId(7052), { style: tmp.guildIcon, guild }), trailing: closure_9(directoryChannelId(13260), { entry: stateFromStores }), start, end };
+  const obj2 = { label: guild.name, icon: closure_9(directoryChannelId(7052), { style: tmp.guildIcon, guild }), trailing: closure_9(directoryChannelId(13268), { entry: stateFromStores }), start, end };
   return closure_9(guild(6144).TableRow, obj2);
 });
 let closure_13 = noop.memo(function GuildDirectoryEntryAddRow(guild) {

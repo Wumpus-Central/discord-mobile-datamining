@@ -1,6 +1,6 @@
-// === Module 9776: EmojiPickerCategoriesItem ===
+// === Module 9777: EmojiPickerCategoriesItem ===
 
-// Module 9776 (EmojiPickerCategoriesItem)
+// Module 9777 (EmojiPickerCategoriesItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
@@ -9,7 +9,7 @@ import timingPresets from "timingPresets" /* 5256 */;
 import Pressables from "Pressables" /* 6152 */;
 import GuildIcon from "GuildIcon" /* 7052 */;
 import LockIcon from "LockIcon" /* 7161 */;
-import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 9777 */;
+import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 9778 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

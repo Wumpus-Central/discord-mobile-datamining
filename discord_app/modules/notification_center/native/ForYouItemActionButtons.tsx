@@ -1,6 +1,6 @@
-// === Module 18270: ForYouItemActionButtons ===
+// === Module 18277: ForYouItemActionButtons ===
 
-// Module 18270 (ForYouItemActionButtons)
+// Module 18277 (ForYouItemActionButtons)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _mod1654 from "module_1654" /* 1654 */;
@@ -14,8 +14,8 @@ import Stack_Stack from "Stack/Stack" /* 6115 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6949 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7850 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 11358 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17771 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 11359 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17778 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -482,7 +482,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -519,7 +519,7 @@ export function useItemActionButtonPropsV2(other_user, callback, navigation, for
         closure_128_1();
         focusChatInput(closure_128_0.message_channel_id);
         navigation = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp18) {
         navigation = tmp;
         throw tmp18;

@@ -1,15 +1,15 @@
-// === Module 13383: NotificationPermissionUtil ===
+// === Module 13391: NotificationPermissionUtil ===
 
-// Module 13383 (NotificationPermissionUtil)
+// Module 13391 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7879 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13384 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 13390 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13392 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 13398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13381 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13389 */;
 
 require = fn;
 let closure_13 = async function _requestAndroidNotificationPermission() {
@@ -23,7 +23,7 @@ let closure_13 = async function _requestAndroidNotificationPermission() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -63,7 +63,7 @@ let closure_13 = async function _requestAndroidNotificationPermission() {
           return obj8;
         } else {
           c5 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
         const obj2 = closure_129_1(closure_129_2[11]);
       } else if (arg0 === 1) {
@@ -85,7 +85,7 @@ let closure_13 = async function _requestAndroidNotificationPermission() {
       }
       c3 = 0;
       c5 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp30) {
       closure_2 = tmp30;
       if (tmp4 === c3) {
@@ -108,7 +108,7 @@ let closure_14 = async function _requestPushNotificationPermission(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -194,7 +194,7 @@ let closure_15 = async function _enableProvisionalPushNotification() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -243,7 +243,7 @@ let closure_15 = async function _enableProvisionalPushNotification() {
           });
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -253,7 +253,7 @@ let closure_15 = async function _enableProvisionalPushNotification() {
 };
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_6, Platform: metroImportDefault } = get_ActivityIndicator);
-const EventActionType = fn(13382).EventActionType;
+const EventActionType = fn(13390).EventActionType;
 const AnalyticEvents = fn(1071).AnalyticEvents;
 let closure_12 = fn(7872).NotificationAuthorizationStatus;
 const size = fn(2);
@@ -293,7 +293,7 @@ export function useShowReactivationPrompt() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -324,7 +324,7 @@ export function useShowReactivationPrompt() {
               tmp4(true);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c2 = tmp;

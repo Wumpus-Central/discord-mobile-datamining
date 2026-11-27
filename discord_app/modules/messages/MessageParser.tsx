@@ -1,6 +1,6 @@
-// === Module 8344: MessageParser ===
+// === Module 8345: MessageParser ===
 
-// Module 8344 (MessageParser)
+// Module 8345 (MessageParser)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4868 */;
@@ -11,10 +11,10 @@ import useChannelName from "useChannelName" /* 5659 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6807 */;
 import MarkupRulesDefault from "MarkupRules" /* 7072 */;
 import MarkupTextRule2 from "MarkupTextRule" /* 7079 */;
-import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 8345 */;
-import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 8346 */;
-import getGuildOrPackEmojiByNameDefault from "getGuildOrPackEmojiByName" /* 8347 */;
-import IsolateString from "IsolateString" /* 8348 */;
+import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 8346 */;
+import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 8347 */;
+import getGuildOrPackEmojiByNameDefault from "getGuildOrPackEmojiByName" /* 8348 */;
+import IsolateString from "IsolateString" /* 8349 */;
 import EmojiStore from "EmojiStore" /* 6883 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6931 */;
 import ChannelStore from "ChannelStore" /* 4892 */;

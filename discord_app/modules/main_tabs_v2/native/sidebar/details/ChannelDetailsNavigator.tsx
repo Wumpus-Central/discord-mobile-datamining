@@ -1,12 +1,12 @@
-// === Module 19139: ChannelDetailsNavigator ===
+// === Module 19155: ChannelDetailsNavigator ===
 
-// Module 19139 (ChannelDetailsNavigator)
+// Module 19155 (ChannelDetailsNavigator)
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HeaderShared from "HeaderShared" /* 9004 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11684 */;
-import _modDef13812 from "module_13812" /* 13812 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 19140 */;
+import HeaderShared from "HeaderShared" /* 9005 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11692 */;
+import _modDef13819 from "module_13819" /* 13819 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 19156 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
@@ -32,19 +32,19 @@ function CreateThreadHeaderButton(channel) {
     const intl = tmp(1112).intl;
     obj2.accessibilityLabel = intl.string(tmp(1112).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef13812;
-    tmp5 = closure_9(tmp(9004).HeaderIconButton, obj2);
+    obj2.source = _modDef13819;
+    tmp5 = closure_9(tmp(9005).HeaderIconButton, obj2);
   }
   return tmp5;
 }
 const View = fn(17).View;
-const constants = fn(11409).ChannelDetailsNavigatorScreens;
+const constants = fn(11410).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const SearchNavigatorScreens = fn(18953).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(18969).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = Object.freeze({});
-const NativeStackNavigator = fn(9047);
+const NativeStackNavigator = fn(9048);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
@@ -131,7 +131,7 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
           header(arg0) {
             const obj2 = {};
             const merged = Object.assign(arg0);
-            const obj = route(9004);
+            const obj = route(9005);
             obj2.shouldHandleSafeArea = route(1379).isAndroid();
             return obj.renderHeader(obj2);
           },
@@ -169,7 +169,7 @@ export default noop.memo(function ChannelDetailsNavigator(navigation) {
         header(arg0) {
           const obj2 = {};
           const merged = Object.assign(arg0);
-          const obj = route(9004);
+          const obj = route(9005);
           obj2.shouldHandleSafeArea = route(1379).isAndroid();
           return obj.renderHeader(obj2);
         },

@@ -1,6 +1,6 @@
-// === Module 14670: refreshApplicationWidget ===
+// === Module 14677: refreshApplicationWidget ===
 
-// Module 14670 (refreshApplicationWidget)
+// Module 14677 (refreshApplicationWidget)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -22,7 +22,7 @@ export function refreshApplicationWidget(play) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

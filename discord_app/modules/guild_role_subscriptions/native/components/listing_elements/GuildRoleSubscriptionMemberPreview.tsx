@@ -1,6 +1,6 @@
-// === Module 16848: GuildRoleSubscriptionMemberPreview ===
+// === Module 16855: GuildRoleSubscriptionMemberPreview ===
 
-// Module 16848 (GuildRoleSubscriptionMemberPreview)
+// Module 16855 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1089 */;

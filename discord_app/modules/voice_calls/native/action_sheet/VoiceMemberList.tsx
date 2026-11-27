@@ -1,16 +1,16 @@
-// === Module 14339: VoiceMemberList ===
+// === Module 14346: VoiceMemberList ===
 
-// Module 14339 (VoiceMemberList)
+// Module 14346 (VoiceMemberList)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import Form from "Form" /* 8088 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 8462 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10428 */;
-import _modDef10548 from "module_10548" /* 10548 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 12098 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 14341 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 8463 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10429 */;
+import _modDef10549 from "module_10549" /* 10549 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 12106 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 14348 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -58,7 +58,7 @@ function extractKey(id) {
 function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  importDefault = isActionSheet(9753).useAnalyticsContext();
+  importDefault = isActionSheet(9754).useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
     dependencyMap = async function _onItemPress(arg0) {
@@ -72,7 +72,7 @@ function VoiceSectionRow(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -141,15 +141,15 @@ function VoiceSectionRow(arg0) {
         },
       isActionSheet
     };
-    return closure_21(tmp2(14340), obj2);
+    return closure_21(tmp2(14347), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(14341), obj3);
+    return closure_21(tmp2(14348), obj3);
   }
-  let obj = isActionSheet(9753);
+  let obj = isActionSheet(9754);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
 get_ActivityIndicator = fn(17);
@@ -180,9 +180,9 @@ let closure_26 = noop.memo(function Footer(channel) {
       const obj3 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1112).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1112).t["6Qgrev"]);
-      obj3.source = _modDef10548;
-      obj3.size = tmp4(13922).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(13922).CircularIconButton, obj3);
+      obj3.source = _modDef10549;
+      obj3.size = tmp4(13929).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(13929).CircularIconButton, obj3);
       const intl2 = tmp4(1112).intl;
       obj2.label = intl2.string(tmp4(1112).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -364,7 +364,7 @@ export default function VoiceMemberList(channel) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(14340);
+                tmp4 = tmp4(14347);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

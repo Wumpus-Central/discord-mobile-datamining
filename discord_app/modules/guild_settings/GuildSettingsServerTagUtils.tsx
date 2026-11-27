@@ -1,7 +1,7 @@
-// === Module 8577: GuildSettingsServerTagUtils ===
+// === Module 8578: GuildSettingsServerTagUtils ===
 
-// Module 8577 (GuildSettingsServerTagUtils)
-import GuildTagUtils from "GuildTagUtils" /* 8578 */;
+// Module 8578 (GuildSettingsServerTagUtils)
+import GuildTagUtils from "GuildTagUtils" /* 8579 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 

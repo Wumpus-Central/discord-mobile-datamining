@@ -1,8 +1,8 @@
-// === Module 15363: GuildBadgeButterfly ===
+// === Module 15370: GuildBadgeButterfly ===
 
-// Module 15363 (GuildBadgeButterfly)
+// Module 15370 (GuildBadgeButterfly)
 import inlineStyles from "inlineStyles" /* 7946 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15326 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15333 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

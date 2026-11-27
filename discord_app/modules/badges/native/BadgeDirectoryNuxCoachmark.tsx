@@ -1,11 +1,11 @@
-// === Module 14972: BadgeDirectoryNuxCoachmark ===
+// === Module 14979: BadgeDirectoryNuxCoachmark ===
 
-// Module 14972 (BadgeDirectoryNuxCoachmark)
+// Module 14979 (BadgeDirectoryNuxCoachmark)
 import nativeDefault from "native" /* 575 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 9856 */;
-import _modDef14973 from "module_14973" /* 14973 */;
-import _modDef14974 from "module_14974" /* 14974 */;
-import _modDef14975 from "module_14975" /* 14975 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 9857 */;
+import _modDef14980 from "module_14980" /* 14980 */;
+import _modDef14981 from "module_14981" /* 14981 */;
+import _modDef14982 from "module_14982" /* 14982 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -16,13 +16,13 @@ function NoProgressGraphic() {
   obj.style = items;
   const obj2 = { url: null, height: 44 };
   const tmp = closure_9();
-  obj2.url = _modDef14973;
+  obj2.url = _modDef14980;
   const items1 = [timestampProducer(BadgeArtImageDefault, obj2), , ];
   const obj3 = { url: null, height: 72 };
-  obj3.url = _modDef14974;
+  obj3.url = _modDef14981;
   items1[1] = timestampProducer(BadgeArtImageDefault, obj3);
   const obj4 = { url: null, height: 44 };
-  obj4.url = _modDef14975;
+  obj4.url = _modDef14982;
   items1[2] = timestampProducer(BadgeArtImageDefault, obj4);
   obj.children = items1;
   return metroImportDefault(View, obj);
@@ -33,7 +33,7 @@ function ProgressGraphic(badgeIconUrls) {
   const badgeDirectoryNuxGraphicLayout = require("BadgeDirectoryNuxGraphicUtils").getBadgeDirectoryNuxGraphicLayout(badgeIconUrls.badgeIconUrls);
   if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
     const obj2 = { style: tmp.graphicRow, children: null };
-    items = [closure_6(tmp2(14976).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(14980).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(14984).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
+    items = [closure_6(tmp2(14983).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(14987).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(14991).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
     obj2.children = items;
     return closure_7(View, obj2);
   } else {

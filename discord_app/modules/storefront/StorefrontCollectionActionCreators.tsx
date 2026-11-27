@@ -1,13 +1,13 @@
-// === Module 11606: StorefrontCollectionActionCreators ===
+// === Module 11614: StorefrontCollectionActionCreators ===
 
-// Module 11606 (StorefrontCollectionActionCreators)
+// Module 11614 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import StoreUtils from "StoreUtils" /* 5803 */;
-import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 11602 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 11605 */;
+import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 11610 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 11613 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 11280 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 11281 */;
 import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 6331 */;
 
 require = fn;
@@ -22,7 +22,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -241,7 +241,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -350,7 +350,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionPageFetchedAt <= closure_130_19) {
                         c7 = 3;
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     }
                   }
@@ -450,7 +450,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -502,7 +502,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionsAfterFetchedAt <= TWELVE_HOURS_MS) {
                         c6 = 3;
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     }
                   }
@@ -571,7 +571,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -653,7 +653,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
                       }
                     }
                     c6 = 3;
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 }
                 c4 = 1;

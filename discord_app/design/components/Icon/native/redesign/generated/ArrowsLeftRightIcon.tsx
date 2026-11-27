@@ -1,9 +1,9 @@
-// === Module 19788: ArrowsLeftRightIcon ===
+// === Module 19804: ArrowsLeftRightIcon ===
 
-// Module 19788 (ArrowsLeftRightIcon)
+// Module 19804 (ArrowsLeftRightIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5729 */;
-import _mod19789 from "module_19789" /* 19789 */;
+import _mod19805 from "module_19805" /* 19805 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ArrowsLeftRightIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19789, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19805, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

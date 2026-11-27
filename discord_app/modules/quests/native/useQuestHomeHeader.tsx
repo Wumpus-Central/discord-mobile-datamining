@@ -1,13 +1,13 @@
-// === Module 16502: useQuestHomeHeader ===
+// === Module 16509: useQuestHomeHeader ===
 
-// Module 16502 (useQuestHomeHeader)
+// Module 16509 (useQuestHomeHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import QuestsIcon from "QuestsIcon" /* 14296 */;
+import QuestsIcon from "QuestsIcon" /* 14303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,15 +28,15 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let balance;
   const tmp2 = closure_11();
   const tmp3 = balance;
-  balance = balance(9440).useFetchVirtualCurrencyBalance().balance;
-  let obj = balance(9440);
-  const orbBalanceEntrypoint = balance(16503).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
+  balance = balance(9441).useFetchVirtualCurrencyBalance().balance;
+  let obj = balance(9441);
+  const orbBalanceEntrypoint = balance(16510).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
   items = [balance, openBalanceWidgetActionSheet];
   let obj3 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     const obj4 = { balance, onPress: tmp6, showNotificationBadge: orbBalanceEntrypoint.hasUnreadUpdate };
-    isVirtualCurrencyEnabled = closure_9(tmp3(9443).BalanceWidgetPillButton, obj4);
+    isVirtualCurrencyEnabled = closure_9(tmp3(9444).BalanceWidgetPillButton, obj4);
   }
   const items1 = [isVirtualCurrencyEnabled, ];
   const merged1 = Object.assign(merged);
@@ -67,7 +67,7 @@ function FiltersButton(setSelectedSortMethod) {
   }
   items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16518, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16525, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
   }, items);
   const obj = { icon: closure_9(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, { size: "sm", color: INTERACTIVE_TEXT_DEFAULT }), size: "sm", variant: str, onPress: callback, accessibilityLabel: null, scaleAmountInPx: 4 };
   const intl = setSelectedSortMethod(tmp3[10]).intl;

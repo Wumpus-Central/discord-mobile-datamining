@@ -1,6 +1,6 @@
-// === Module 16243: SafetyHubPage ===
+// === Module 16250: SafetyHubPage ===
 
-// Module 16243 (SafetyHubPage)
+// Module 16250 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -14,10 +14,10 @@ import MetricEvents from "MetricEvents" /* 5816 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6839 */;
 import InlineNotice from "InlineNotice" /* 7941 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8083 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12541 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12544 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 16244 */;
-import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 16245 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12549 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12552 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 16251 */;
+import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 16252 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SafetyHubStore from "SafetyHubStore" /* 7912 */;
@@ -213,7 +213,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16247, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16254, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

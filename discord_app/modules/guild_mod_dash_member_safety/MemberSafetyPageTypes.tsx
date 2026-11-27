@@ -1,6 +1,6 @@
-// === Module 18428: MemberSafetyPageTypes ===
+// === Module 18435: MemberSafetyPageTypes ===
 
-// Module 18428 (MemberSafetyPageTypes)
+// Module 18435 (MemberSafetyPageTypes)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5079 */;
 import size from "module_2" /* 2 */;
 

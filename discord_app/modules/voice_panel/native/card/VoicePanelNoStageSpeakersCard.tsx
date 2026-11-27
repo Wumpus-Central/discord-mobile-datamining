@@ -1,6 +1,6 @@
-// === Module 19500: VoicePanelNoStageSpeakersCard ===
+// === Module 19516: VoicePanelNoStageSpeakersCard ===
 
-// Module 19500 (VoicePanelNoStageSpeakersCard)
+// Module 19516 (VoicePanelNoStageSpeakersCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4375 from "module_4375" /* 4375 */;

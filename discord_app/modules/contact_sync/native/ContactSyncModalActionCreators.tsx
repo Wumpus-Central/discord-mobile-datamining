@@ -1,14 +1,14 @@
-// === Module 13670: ContactSyncModalActionCreators ===
+// === Module 13677: ContactSyncModalActionCreators ===
 
-// Module 13670 (ContactSyncModalActionCreators)
+// Module 13677 (ContactSyncModalActionCreators)
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7401 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10428 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13674 */;
-import ContactSyncAnalyticsUtils from "ContactSyncAnalyticsUtils" /* 13676 */;
-import NUFActionCreators from "NUFActionCreators" /* 13699 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10429 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13681 */;
+import ContactSyncAnalyticsUtils from "ContactSyncAnalyticsUtils" /* 13683 */;
+import NUFActionCreators from "NUFActionCreators" /* 13706 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -37,7 +37,7 @@ let closure_26 = async function _handleNameInputScreenOrSuggestions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -226,7 +226,7 @@ let closure_27 = async function _handlePhoneVerificationComplete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -254,7 +254,7 @@ let closure_27 = async function _handlePhoneVerificationComplete(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c2 = tmp;
@@ -277,7 +277,7 @@ let closure_28 = async function _startContactSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -319,7 +319,7 @@ let closure_28 = async function _startContactSync(arg0) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         c1 = tmp;
@@ -339,7 +339,7 @@ let closure_29 = async function _bulkAddFriendSuggestions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -452,7 +452,7 @@ let closure_30 = async function _verifyPhone(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -531,7 +531,7 @@ function closeContactSyncModal(skip) {
     }
     const tmp16 = closure_15();
     let obj2 = { num_contacts_found: friendsFound, num_contacts_added: friendsAdded };
-    flag2(13676).trackFlowEnd(flag, obj2);
+    flag2(13683).trackFlowEnd(flag, obj2);
     if (tmp16) {
       onComplete(flag);
     } else {
@@ -540,7 +540,7 @@ function closeContactSyncModal(skip) {
         back(closure_2[17]).popWithKey(closure_1_20);
       }, 0);
     }
-    const obj3 = flag2(13676);
+    const obj3 = flag2(13683);
   } else {
     flag2 = flag;
     if (flag === undefined) {
@@ -553,8 +553,8 @@ function closeContactSyncModal(skip) {
     dependencyMap = tmp2;
     if (!back) {
       const obj4 = { num_contacts_found: friendsFound, num_contacts_added: friendsAdded };
-      flag2(13676).trackFlowEnd(flag2, obj4);
-      let obj = flag2(13676);
+      flag2(13683).trackFlowEnd(flag2, obj4);
+      let obj = flag2(13683);
     }
     if (tmp2) {
       let updateAnimation = back(6130).updateAnimation;
@@ -587,11 +587,11 @@ function closeContactSyncModal(skip) {
     }, 0);
   }
 }
-const ContactSyncModalStore = fn(13671);
+const ContactSyncModalStore = fn(13678);
 ({ setError: closure_6, setPermissionState: metroImportDefault, setSuggestions: closure_8, setPhone: closure_9, setPhoneToken: closure_10, setName: closure_11, useContactSyncModalStore: closure_12, ContactSyncModes: map1, initialize: closure_14, getIsOnboarding: closure_15 } = ContactSyncModalStore);
-const ContactSyncPersistedStore = fn(13673);
+const ContactSyncPersistedStore = fn(13680);
 ({ deleteStoredContacts: closure_16, setStoredContacts: closure_17 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(13672);
+const ContactSyncConstants = fn(13679);
 ({ ContactPermissions: closure_18, ContactSyncScenes: closure_19, CONTACT_SYNC_MODAL_KEY: closure_20 } = ContactSyncConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_21, PlatformTypes: closure_22 } = Constants);
@@ -671,8 +671,8 @@ export function openContactSyncModal(initialRoutes, FRIENDS_ADD_FRIENDS_MODAL, a
     const tmpResult = ContactSyncAnalyticsUtils;
   }
   const obj3 = { initialRoutes: initialRoutes.initialRoutes, openSettingsSheet: initialRoutes.openSettings, customLandingPage: initialRoutes.customLandingPage };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13679, dependencyMap.paths), { initialRoutes: initialRoutes.initialRoutes, openSettingsSheet: initialRoutes.openSettings, customLandingPage: initialRoutes.customLandingPage }, set).then(arg2);
-  const pushLazyResult = ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13679, dependencyMap.paths), { initialRoutes: initialRoutes.initialRoutes, openSettingsSheet: initialRoutes.openSettings, customLandingPage: initialRoutes.customLandingPage }, set);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13686, dependencyMap.paths), { initialRoutes: initialRoutes.initialRoutes, openSettingsSheet: initialRoutes.openSettings, customLandingPage: initialRoutes.customLandingPage }, set).then(arg2);
+  const pushLazyResult = ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13686, dependencyMap.paths), { initialRoutes: initialRoutes.initialRoutes, openSettingsSheet: initialRoutes.openSettings, customLandingPage: initialRoutes.customLandingPage }, set);
 }
 export function openContactSyncModalOnboarding() {
   let flag = arg0;
@@ -708,8 +708,8 @@ export function openContactSyncModalDeeplink() {
   ContactSyncAnalyticsUtils.trackFlowStart({ location: { page: "Deep Link" } });
   const tmpResult = ContactSyncAnalyticsUtils;
   const obj3 = { initialRoutes: obj.initialRoutes, openSettingsSheet: obj.openSettings, customLandingPage: obj.customLandingPage };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13679, dependencyMap.paths), { initialRoutes: obj.initialRoutes, openSettingsSheet: obj.openSettings, customLandingPage: obj.customLandingPage }, set).then(undefined);
-  const pushLazyResult = ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13679, dependencyMap.paths), { initialRoutes: obj.initialRoutes, openSettingsSheet: obj.openSettings, customLandingPage: obj.customLandingPage }, set);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13686, dependencyMap.paths), { initialRoutes: obj.initialRoutes, openSettingsSheet: obj.openSettings, customLandingPage: obj.customLandingPage }, set).then(undefined);
+  const pushLazyResult = ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13686, dependencyMap.paths), { initialRoutes: obj.initialRoutes, openSettingsSheet: obj.openSettings, customLandingPage: obj.customLandingPage }, set);
 }
 export function refreshContactSyncPermissionStatus() {
   const result = ContactSyncUtils.checkContactPermissions();

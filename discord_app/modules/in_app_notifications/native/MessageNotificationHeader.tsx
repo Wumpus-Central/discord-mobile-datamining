@@ -1,6 +1,6 @@
-// === Module 10677: MessageNotificationHeader ===
+// === Module 10678: MessageNotificationHeader ===
 
-// Module 10677 (MessageNotificationHeader)
+// Module 10678 (MessageNotificationHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ChannelTypes from "ChannelTypes" /* 1092 */;

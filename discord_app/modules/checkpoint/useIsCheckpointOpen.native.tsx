@@ -1,8 +1,8 @@
-// === Module 18154: useIsCheckpointOpen ===
+// === Module 18161: useIsCheckpointOpen ===
 
-// Module 18154 (useIsCheckpointOpen)
+// Module 18161 (useIsCheckpointOpen)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5219 */;
-import CheckpointModalConstants from "CheckpointModalConstants" /* 12626 */;
+import CheckpointModalConstants from "CheckpointModalConstants" /* 12634 */;
 import size from "module_2" /* 2 */;
 
 const CHECKPOINT_MODAL_KEY = CheckpointModalConstants.CHECKPOINT_MODAL_KEY;

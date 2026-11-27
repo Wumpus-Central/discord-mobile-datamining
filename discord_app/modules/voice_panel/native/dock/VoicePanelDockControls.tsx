@@ -1,19 +1,19 @@
-// === Module 18225: VoicePanelDockControls ===
+// === Module 18232: VoicePanelDockControls ===
 
-// Module 18225 (VoicePanelDockControls)
+// Module 18232 (VoicePanelDockControls)
 import native from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6797 */;
 import IconButton from "IconButton" /* 7944 */;
-import _modDef9025 from "module_9025" /* 9025 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 10502 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import _modDef13516 from "module_13516" /* 13516 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 18222 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 18226 */;
-import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton" /* 18246 */;
-import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 18249 */;
+import _modDef9026 from "module_9026" /* 9026 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 10503 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import _modDef13524 from "module_13524" /* 13524 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 18229 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 18233 */;
+import VoicePanelDockPTTButtonDefault from "VoicePanelDockPTTButton" /* 18253 */;
+import VoicePanelDockButtonRimDefault from "VoicePanelDockButtonRim" /* 18256 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
@@ -79,7 +79,7 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1112).intl;
   obj.accessibilityLabel = intl.string(channelId(1112).t["6vrfgt"]);
-  obj.icon = _modDef9025;
+  obj.icon = _modDef9026;
   obj.onPress = callback;
   return closure_9(channelId(7944).IconButton, obj);
 }
@@ -88,7 +88,7 @@ function DockSoundboardButton(arg0) {
   const obj = { accessibilityLabel: null, variant: "secondary", size: "sm", icon: null, onPress: null, disabled: null, accessibilityHint: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef13516;
+  obj.icon = _modDef13524;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;
@@ -99,7 +99,7 @@ const InputModes = fn(1071).InputModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5043);
-let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11805).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
+let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11813).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
 const size = fn(2);

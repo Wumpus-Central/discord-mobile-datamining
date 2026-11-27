@@ -1,8 +1,8 @@
-// === Module 16035: UserProfileUpsellButton ===
+// === Module 16042: UserProfileUpsellButton ===
 
-// Module 16035 (UserProfileUpsellButton)
+// Module 16042 (UserProfileUpsellButton)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9586 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9587 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -20,7 +20,7 @@ export default function UserProfileUpsellButton(analyticsObject) {
   let analyticsLocations;
   analyticsLocations = analyticsLocations(6379)().analyticsLocations;
   const tmp = closure_10();
-  let label = analyticsObject(9135).useNitroTrialCtaOverride();
+  let label = analyticsObject(9136).useNitroTrialCtaOverride();
   items = [analyticsLocations, analyticsObject];
   const effect = noop.useEffect(() => {
     const obj2 = { type: PremiumUpsellTypes.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON, location: { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject }, location_stack: analyticsLocations };
@@ -43,7 +43,7 @@ export default function UserProfileUpsellButton(analyticsObject) {
     label = intl.string(tmp3(1112).t.pj0XBN);
   }
   obj2.text = label;
-  obj2.icon = jsx(analyticsObject(9637).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
+  obj2.icon = jsx(analyticsObject(9638).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
   return jsx(analyticsObject(5641).Button, {
     onPress() {
       const obj2 = { initialUpsellKey: constants2.CUSTOM_PROFILES, analyticsLocation: { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject }, analyticsLocations, analyticsProperties: { type: PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL } };

@@ -1,6 +1,6 @@
-// === Module 9822: ProductCatalog ===
+// === Module 9823: ProductCatalog ===
 
-// Module 9822 (ProductCatalog)
+// Module 9823 (ProductCatalog)
 import LoggerDefault from "Logger" /* 3 */;
 import PerksStateUtils from "PerksStateUtils" /* 1393 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1388 */;

@@ -1,12 +1,12 @@
-// === Module 12375: useConjureSharedProject ===
+// === Module 12383: useConjureSharedProject ===
 
-// Module 12375 (useConjureSharedProject)
-import loadConjureSharedProjectDefault from "loadConjureSharedProject" /* 12002 */;
+// Module 12383 (useConjureSharedProject)
+import loadConjureSharedProjectDefault from "loadConjureSharedProject" /* 12010 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import UserStore from "UserStore" /* 1387 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11994 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12002 */;
 
 const require = globalThis.__r;
 

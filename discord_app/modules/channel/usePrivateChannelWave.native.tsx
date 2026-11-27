@@ -1,6 +1,6 @@
-// === Module 17765: usePrivateChannelWave ===
+// === Module 17772: usePrivateChannelWave ===
 
-// Module 17765 (usePrivateChannelWave)
+// Module 17772 (usePrivateChannelWave)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ export default function usePrivateChannelWave(id, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

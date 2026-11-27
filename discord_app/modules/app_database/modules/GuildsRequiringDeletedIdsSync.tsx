@@ -1,6 +1,6 @@
-// === Module 8314: GuildsRequiringDeletedIdsSync ===
+// === Module 8315: GuildsRequiringDeletedIdsSync ===
 
-// Module 8314 (GuildsRequiringDeletedIdsSync)
+// Module 8315 (GuildsRequiringDeletedIdsSync)
 import DatabaseDaosDefault from "DatabaseDaos" /* 4921 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -38,7 +38,7 @@ prototype["getAll"] = function getAll() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

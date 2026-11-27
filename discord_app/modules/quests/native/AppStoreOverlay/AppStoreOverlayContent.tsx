@@ -1,6 +1,6 @@
-// === Module 9932: AppStoreOverlayContent ===
+// === Module 9933: AppStoreOverlayContent ===
 
-// Module 9932 (AppStoreOverlayContent)
+// Module 9933 (AppStoreOverlayContent)
 import openURL from "openURL" /* 5718 */;
 import LinkingDefault from "Linking" /* 5722 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -89,8 +89,8 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
               if (null != rating.category_id) {
                 appStoreOverlayCategoryLabel = null;
                 if ("" !== rating.category_id) {
-                  appStoreOverlayCategoryLabel = closure_1_0(9933).getAppStoreOverlayCategoryLabel(os.os, rating.category_id);
-                  const obj3 = closure_1_0(9933);
+                  appStoreOverlayCategoryLabel = closure_1_0(9934).getAppStoreOverlayCategoryLabel(os.os, rating.category_id);
+                  const obj3 = closure_1_0(9934);
                 }
               }
               const obj4 = { type: "chart", label: null, rank: null, category: null };

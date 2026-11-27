@@ -1,8 +1,8 @@
-// === Module 19547: VoicePanelSecondaryPIPContent ===
+// === Module 19563: VoicePanelSecondaryPIPContent ===
 
-// Module 19547 (VoicePanelSecondaryPIPContent)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11536 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
+// Module 19563 (VoicePanelSecondaryPIPContent)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11544 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import FramesStore from "FramesStore" /* 6936 */;
@@ -12,14 +12,14 @@ const require = globalThis.__r;
 
 const _modDef1654 = tmp(1654);
 const isVoiceEmbeddedActivityDefault = tmp(5690);
-const EmbeddedActivityViewDefault = tmp(10200);
-const FrameRenderTargetDefault = tmp(18619);
-const getActivityContainerPIPStylesSpecDefault = tmp(19403);
+const EmbeddedActivityViewDefault = tmp(10201);
+const FrameRenderTargetDefault = tmp(18630);
+const getActivityContainerPIPStylesSpecDefault = tmp(19419);
 const require = fn;
 const ActivityPanelModes = fn(5669).ActivityPanelModes;
 const FramesConstants = fn(6937);
 ({ asLaunched: closure_8, FrameLayoutModes: closure_9, getPipOrientationLockStateForFrame: closure_10 } = FramesConstants);
-const ActivityLayoutMode = fn(10191).ActivityLayoutMode;
+const ActivityLayoutMode = fn(10192).ActivityLayoutMode;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let closure_13 = createStyles.createStyles({ activityContainer: { flex: 1 }, wrapper: { position: "absolute", left: "50%", top: "50%" } });

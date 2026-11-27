@@ -1,12 +1,12 @@
-// === Module 16032: ChangeBannerActionSheet ===
+// === Module 16039: ChangeBannerActionSheet ===
 
-// Module 16032 (ChangeBannerActionSheet)
+// Module 16039 (ChangeBannerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11946 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16038 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11954 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16045 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 6376 */;
@@ -17,8 +17,8 @@ const useAnalyticsLocations = tmp4(6379);
 const BottomSheetTitleHeader = tmp4(7507);
 const ActionSheet = tmp4(7546);
 const Form = tmp4(8088);
-const NitroWheelIcon = tmp4(9637);
-const ProfileEditSheetNitroUpdatesExperiment = tmp4(16033);
+const NitroWheelIcon = tmp4(9638);
+const ProfileEditSheetNitroUpdatesExperiment = tmp4(16040);
 require = fn;
 function ChangeBannerColorRow(arg0) {
   ({ user, showHexValue } = arg0);
@@ -77,10 +77,10 @@ function ChangeBannerColorRow(arg0) {
     obj4.label = closure_9(tmp2(8088).FormLabel, obj5);
     const obj6 = { style: tmp.selectedColor, children: null };
     const obj7 = { style: tmp.bannerColor, color: pendingAccentColor };
-    const items2 = [closure_9(tmp6(16040), obj7), , ];
+    const items2 = [closure_9(tmp6(16047), obj7), , ];
     const obj8 = { style: tmp.selectedColorHex, variant: "body-md/medium", color: "interactive-text-default", children: tmp2(1089).int2hex(pendingAccentColor) };
     items2[1] = closure_9(tmp2(5634).Text, obj8);
-    const obj9 = { style: tmp.rowArrow, size: tmp2(1186).Icon.Sizes.CUSTOM, source: tmp6(16045) };
+    const obj9 = { style: tmp.rowArrow, size: tmp2(1186).Icon.Sizes.CUSTOM, source: tmp6(16052) };
     items2[2] = closure_9(tmp2(1186).Icon, obj9);
     obj6.children = items2;
     obj4.trailing = closure_10(View, obj6);
@@ -92,7 +92,7 @@ function ChangeBannerColorRow(arg0) {
     const intl = tmp2(1112).intl;
     obj10.label = intl.string(tmp2(1112).t.xzNfPz);
     const obj11 = { style: tmp.bannerColor, color: pendingAccentColor };
-    obj10.trailing = closure_9(tmp6(16040), obj11);
+    obj10.trailing = closure_9(tmp6(16047), obj11);
     const obj12 = { text: tmp2(1089).int2hex(pendingAccentColor) };
     obj10.accessibilityValue = obj12;
     obj10.onPress = handleChangeColor;
@@ -147,7 +147,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -168,7 +168,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             const obj4 = tmp5(5257);
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp5(8136).openImagePicker(closure_1_8), done: false };
+            const obj6 = { value: tmp5(8137).openImagePicker(closure_1_8), done: false };
             return obj6;
           }
         } else if (dependencyMap === 1) {
@@ -184,11 +184,11 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           originalMd5 = closure_128_0.originalMd5;
           if (null != base64) {
             const obj8 = { assetOrigin: tmp2(7346).AssetOriginTypes.NEW_ASSET, imageUri: base64, description: "", originalAsset: "Array", originalMd5 };
-            closure_129_0(tmp2(16034).createPendingImage(obj8));
-            const obj = tmp2(16034);
+            closure_129_0(tmp2(16041).createPendingImage(obj8));
+            const obj = tmp2(16041);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp20) {
         c3 = tmp;
@@ -226,7 +226,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
       let obj = { text: null };
       const intl7 = util.intl;
       obj.text = intl7.string(util.t.TiLCgw);
-      const tmp9Result = closure_9(tmp2(16036), obj);
+      const tmp9Result = closure_9(tmp2(16043), obj);
       let obj2 = { value: analyticsLocations2, children: null };
       let obj3 = { title: null };
       const intl8 = util.intl;
@@ -289,10 +289,10 @@ export default function ChangeBannerActionSheet(isTryItOut) {
         t1.subLabel = string3(util.t.OFNrmu);
         t1.analyticsObject = constants.EDIT_PROFILE_BANNER;
         t1.skipRoadblock = tmp8;
-        closure_9(tmp2(16037), t1);
-        const tmp2Result4 = tmp2(16037);
+        closure_9(tmp2(16044), t1);
+        const tmp2Result4 = tmp2(16044);
       }
-      const tmp2Result3 = tmp2(16036);
+      const tmp2Result3 = tmp2(16043);
     } else {
       const obj11 = { value: analyticsLocations2, children: null };
       const obj12 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
@@ -346,7 +346,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
       if (!flag) {
         const obj19 = { style: tmp.upsellButton, children: null };
         const obj20 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-        obj19.children = closure_9(tmp2(16035), obj20);
+        obj19.children = closure_9(tmp2(16042), obj20);
         tmp9Result16 = closure_9(View, obj19);
       }
       const obj21 = { children: null };

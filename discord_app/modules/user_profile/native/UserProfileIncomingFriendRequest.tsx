@@ -1,6 +1,6 @@
-// === Module 15069: UserProfileIncomingFriendRequest ===
+// === Module 15076: UserProfileIncomingFriendRequest ===
 
-// Module 15069 (UserProfileIncomingFriendRequest)
+// Module 15076 (UserProfileIncomingFriendRequest)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;

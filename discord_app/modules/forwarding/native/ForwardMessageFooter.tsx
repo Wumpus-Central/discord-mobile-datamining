@@ -1,7 +1,7 @@
-// === Module 14107: ForwardMessageFooter ===
+// === Module 14114: ForwardMessageFooter ===
 
-// Module 14107 (ForwardMessageFooter)
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8179 */;
+// Module 14114 (ForwardMessageFooter)
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8180 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DraftStore from "DraftStore" /* 8117 */;

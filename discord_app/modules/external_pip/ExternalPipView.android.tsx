@@ -1,12 +1,12 @@
-// === Module 19374: ExternalPipView ===
+// === Module 19390: ExternalPipView ===
 
-// Module 19374 (ExternalPipView)
+// Module 19390 (ExternalPipView)
 import ExternalPipDefault from "ExternalPip" /* 5952 */;
-import ExternalPipAutoEnterExperiment from "ExternalPipAutoEnterExperiment" /* 19377 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 19378 */;
+import ExternalPipAutoEnterExperiment from "ExternalPipAutoEnterExperiment" /* 19393 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 19394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 8871 */;
+import AppFreezeStore from "AppFreezeStore" /* 8872 */;
 
 require = fn;
 function FreezeAfterLayoutPipView() {
@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/external_pip/ExternalPipView.
 
 export default function ExternalPipView() {
   let obj = { disabled: null };
-  const tmp = callback(19375);
+  const tmp = callback(19391);
   obj.disabled = !callback(5952).isSupported();
   const externalPipEnabled = tmp(obj).externalPipEnabled;
   closure_129_0 = undefined;

@@ -1,6 +1,6 @@
-// === Module 9270: OrderUtils ===
+// === Module 9271: OrderUtils ===
 
-// Module 9270 (OrderUtils)
+// Module 9271 (OrderUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _discardDraftOrder(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

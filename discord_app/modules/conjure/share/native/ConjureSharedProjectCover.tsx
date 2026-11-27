@@ -1,12 +1,12 @@
-// === Module 12379: ConjureSharedProjectCover ===
+// === Module 12387: ConjureSharedProjectCover ===
 
-// Module 12379 (ConjureSharedProjectCover)
+// Module 12387 (ConjureSharedProjectCover)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import PlayIcon from "PlayIcon" /* 7798 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 11556 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 11564 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

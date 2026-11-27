@@ -1,6 +1,6 @@
-// === Module 16405: FamilyCenterTopServersBottomSheet ===
+// === Module 16412: FamilyCenterTopServersBottomSheet ===
 
-// Module 16405 (FamilyCenterTopServersBottomSheet)
+// Module 16412 (FamilyCenterTopServersBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2847 from "module_2847" /* 2847 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5634 */;
 import TableRowGroup from "TableRowGroup" /* 6140 */;
 import GuildIconDefault from "GuildIcon" /* 7052 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8212 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8213 */;
 
 require = fn;
 function GuildRow(guildActivity) {
@@ -19,7 +19,7 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(8218).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(8219).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);

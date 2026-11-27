@@ -1,10 +1,10 @@
-// === Module 9007: PressableNavigatorButtonWrapper ===
+// === Module 9008: PressableNavigatorButtonWrapper ===
 
-// Module 9007 (PressableNavigatorButtonWrapper)
+// Module 9008 (PressableNavigatorButtonWrapper)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import MainTabsV2Constants from "MainTabsV2Constants" /* 9005 */;
+import MainTabsV2Constants from "MainTabsV2Constants" /* 9006 */;
 import createStyles from "createStyles" /* 5043 */;
 import size_mod from "module_2" /* 2 */;
 

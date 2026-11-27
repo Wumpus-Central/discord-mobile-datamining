@@ -1,7 +1,7 @@
-// === Module 11971: useUserProfileEmbedUsers ===
+// === Module 11979: useUserProfileEmbedUsers ===
 
-// Module 11971 (useUserProfileEmbedUsers)
-import UserProfileEmbedUsers from "UserProfileEmbedUsers" /* 11972 */;
+// Module 11979 (useUserProfileEmbedUsers)
+import UserProfileEmbedUsers from "UserProfileEmbedUsers" /* 11980 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ChannelStore from "ChannelStore" /* 4892 */;

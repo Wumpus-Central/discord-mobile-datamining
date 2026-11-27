@@ -1,11 +1,11 @@
-// === Module 10214: PostMessageTransport ===
+// === Module 10215: PostMessageTransport ===
 
-// Module 10214 (PostMessageTransport)
+// Module 10215 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1088 */;
 import RPCErrorDefault from "RPCError" /* 7644 */;
 import FrameLaunchTimingTypes from "FrameLaunchTimingTypes" /* 7685 */;
 import FrameLaunchTimingManager from "FrameLaunchTimingManager" /* 7687 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 10215 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 10216 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
@@ -159,7 +159,7 @@ class PostMessageTransport extends EventEmitter {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -320,7 +320,7 @@ class PostMessageTransport extends EventEmitter {
               logger2.info("Socket Validated: " + closure_132_7.id);
               c7 = 0;
               constants = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             } else {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
@@ -369,7 +369,7 @@ class PostMessageTransport extends EventEmitter {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -416,7 +416,7 @@ class PostMessageTransport extends EventEmitter {
               c5 = 0;
               closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             c5 = 0;
@@ -592,7 +592,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                   const obj2 = { value, done: true };
                                   return obj2;
                                 } else {
-                                  return { value: "HermesInternal", done: "+95" };
+                                  return { value: "HermesInternal", done: null };
                                 }
                               } else {
                                 try {
@@ -658,7 +658,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                         const pendingTicketRefreshes2 = tmp59.pendingTicketRefreshes;
                                         pendingTicketRefreshes2.delete(source.iframeId);
                                         c5 = 3;
-                                        return { value: "HermesInternal", done: "+95" };
+                                        return { value: "HermesInternal", done: null };
                                       }
                                     } else if (arg0 === 1) {
                                       c5 = 3;

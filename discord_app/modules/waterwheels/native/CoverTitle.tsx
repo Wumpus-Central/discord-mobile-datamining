@@ -1,6 +1,6 @@
-// === Module 18032: CoverTitle ===
+// === Module 18039: CoverTitle ===
 
-// Module 18032 (CoverTitle)
+// Module 18039 (CoverTitle)
 import Text_Text from "Text/Text" /* 5634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

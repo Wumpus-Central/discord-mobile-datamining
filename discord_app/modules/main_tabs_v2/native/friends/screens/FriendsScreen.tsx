@@ -1,6 +1,6 @@
-// === Module 19075: FriendsScreen ===
+// === Module 19091: FriendsScreen ===
 
-// Module 19075 (FriendsScreen)
+// Module 19091 (FriendsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2019 */;
@@ -8,11 +8,11 @@ import components_Button_Button from "components/Button/Button" /* 5641 */;
 import SendMessageIcon from "SendMessageIcon" /* 5741 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import TableRow from "TableRow" /* 6144 */;
-import NoResultsDefault from "NoResults" /* 11537 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16702 */;
-import _modDef18291 from "module_18291" /* 18291 */;
+import NoResultsDefault from "NoResults" /* 11545 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16709 */;
+import _modDef18298 from "module_18298" /* 18298 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 8321 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 8322 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
 
 const require = globalThis.__r;
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     items = [];
     if (tmp2) {
-      const obj = { icon: _modDef18291, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef18298, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -123,7 +123,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef18291 };
+      const obj8 = { source: _modDef18298 };
       obj7.icon = metroImportDefault(TableRow.TableRow.Icon, obj8);
       obj7.trailing = metroImportDefault(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

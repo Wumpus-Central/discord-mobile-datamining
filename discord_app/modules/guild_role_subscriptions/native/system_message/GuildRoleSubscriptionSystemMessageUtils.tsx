@@ -1,10 +1,10 @@
-// === Module 12480: system_message/GuildRoleSubscriptionSystemMessageUtils ===
+// === Module 12488: system_message/GuildRoleSubscriptionSystemMessageUtils ===
 
-// Module 12480 (system_message/GuildRoleSubscriptionSystemMessageUtils)
+// Module 12488 (system_message/GuildRoleSubscriptionSystemMessageUtils)
 import Constants from "Constants" /* 1071 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 10608 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 10609 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

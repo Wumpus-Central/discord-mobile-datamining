@@ -1,6 +1,6 @@
-// === Module 20011: SoundboardAudioNative ===
+// === Module 20036: SoundboardAudioNative ===
 
-// Module 20011 (SoundboardAudioNative)
+// Module 20036 (SoundboardAudioNative)
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import DeviceUtils from "DeviceUtils" /* 5000 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -34,7 +34,7 @@ let closure_8 = async function _checkOpusEncoderAvailable(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -107,7 +107,7 @@ let closure_11 = async function _isSoundboardSoundCreationSupported() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -206,7 +206,7 @@ export function useIsSoundboardSoundCreationSupported() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -240,7 +240,7 @@ export function useIsSoundboardSoundCreationSupported() {
               tmp2(closure_128_0);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;

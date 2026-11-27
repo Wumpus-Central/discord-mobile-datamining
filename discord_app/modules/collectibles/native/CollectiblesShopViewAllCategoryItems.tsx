@@ -1,19 +1,19 @@
-// === Module 17543: CollectiblesShopViewAllCategoryItems ===
+// === Module 17550: CollectiblesShopViewAllCategoryItems ===
 
-// Module 17543 (CollectiblesShopViewAllCategoryItems)
+// Module 17550 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import spring_spring from "spring/spring" /* 5644 */;
 import springPresets from "springPresets" /* 5645 */;
 import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 6364 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11245 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11246 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5637 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 11280 */;
-import IAPStore from "IAPStore" /* 9104 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 11281 */;
+import IAPStore from "IAPStore" /* 9105 */;
 
 require = fn;
 function CategoryItemsBySku(categorySkuId) {
@@ -220,7 +220,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj8 = { logoUrl, buttonColor: "Array", categoryName: false };
+  const obj8 = { logoUrl, buttonColor: "Array", categoryName: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000936698893569099 };
   let name;
   if (category != null) {
     name = category.name;

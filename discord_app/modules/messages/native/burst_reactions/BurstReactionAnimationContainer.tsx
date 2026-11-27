@@ -1,10 +1,10 @@
-// === Module 19259: BurstReactionAnimationContainer ===
+// === Module 19275: BurstReactionAnimationContainer ===
 
-// Module 19259 (BurstReactionAnimationContainer)
+// Module 19275 (BurstReactionAnimationContainer)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 5104 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11075 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 11076 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

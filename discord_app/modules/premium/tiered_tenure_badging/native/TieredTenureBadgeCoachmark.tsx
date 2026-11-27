@@ -1,10 +1,10 @@
-// === Module 9854: TieredTenureBadgeCoachmark ===
+// === Module 9855: TieredTenureBadgeCoachmark ===
 
-// Module 9854 (TieredTenureBadgeCoachmark)
+// Module 9855 (TieredTenureBadgeCoachmark)
 import util from "util" /* 1112 */;
 import dismissible_content from "dismissible_content" /* 4876 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 9824 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 9825 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -58,7 +58,7 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     items1 = [];
   }
   let obj = tieredTenureBadgeData(6176);
-  const tmp5 = _slicedToArray(tieredTenureBadgeData(9561).useSelectedDismissibleContent(items1), 2);
+  const tmp5 = _slicedToArray(tieredTenureBadgeData(9562).useSelectedDismissibleContent(items1), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
   const items2 = [tmp5[1], first, tieredTenureBadgeData];
@@ -83,7 +83,7 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     obj.buttonLabel = intl3.string(util.t.RzWDqY);
     return obj;
   }, items2);
-  const tmpResult3 = tieredTenureBadgeData(9561);
-  const coachmark = tieredTenureBadgeData(9568).useCoachmark(targetRef, memo);
+  const tmpResult3 = tieredTenureBadgeData(9562);
+  const coachmark = tieredTenureBadgeData(9569).useCoachmark(targetRef, memo);
   return null;
 };

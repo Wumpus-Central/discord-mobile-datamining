@@ -1,7 +1,7 @@
-// === Module 18614: useEdgeOnlySwipeExit ===
+// === Module 18625: useEdgeOnlySwipeExit ===
 
-// Module 18614 (useEdgeOnlySwipeExit)
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11807 */;
+// Module 18625 (useEdgeOnlySwipeExit)
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11815 */;
 import noop from "module_19" /* 19 */;
 
 const MainTabsNavigatorPanelContextDefault = MainTabsNavigatorPanelContext;

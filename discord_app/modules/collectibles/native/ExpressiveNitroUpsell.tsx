@@ -1,6 +1,6 @@
-// === Module 11299: ExpressiveNitroUpsell ===
+// === Module 11300: ExpressiveNitroUpsell ===
 
-// Module 11299 (ExpressiveNitroUpsell)
+// Module 11300 (ExpressiveNitroUpsell)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1112 */;
@@ -64,8 +64,8 @@ export default function _default(onTrackPress) {
     obj2.title = intl.string(util.t.XcOMLu);
     const intl2 = util.intl;
     obj2.description = intl2.string(util.t.JhE8nA);
-    obj.openLazy(asyncRequireImpl(11300, dependencyMap.paths), "ShopNitroUpsellPromoSheet", obj2, "stack");
-    const tmp4 = asyncRequireImpl(11300, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11301, dependencyMap.paths), "ShopNitroUpsellPromoSheet", obj2, "stack");
+    const tmp4 = asyncRequireImpl(11301, dependencyMap.paths);
   }, items);
   const callback1 = noop.useCallback((children, id) => metroImportDefault(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", style: strikedPrice.strikedPrice, children }, id), items1);
   let obj2 = { onPress: callback, style: tmp.nitroUpsellPill, accessibilityRole: "button", children: null };
@@ -87,7 +87,7 @@ export default function _default(onTrackPress) {
   items3[1] = closure_7(onTrackPress(5634).Text, obj5);
   const obj6 = { style: tmp.nitroUpsellCta, children: null };
   obj9 = onTrackPress(1379);
-  const items5 = [closure_7(onTrackPress(9637).NitroWheelIcon, { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, size: "sm", style: tmp.nitroUpsellIcon }), , ];
+  const items5 = [closure_7(onTrackPress(9638).NitroWheelIcon, { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, size: "sm", style: tmp.nitroUpsellIcon }), , ];
   const obj7 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, size: "sm", style: tmp.nitroUpsellIcon };
   let androidTextPadding1;
   if (tmp5Result.isAndroid()) {

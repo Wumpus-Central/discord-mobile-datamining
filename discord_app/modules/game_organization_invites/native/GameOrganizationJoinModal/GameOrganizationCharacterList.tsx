@@ -1,6 +1,6 @@
-// === Module 12337: GameOrganizationCharacterList ===
+// === Module 12345: GameOrganizationCharacterList ===
 
-// Module 12337 (GameOrganizationCharacterList)
+// Module 12345 (GameOrganizationCharacterList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2651 from "module_2651" /* 2651 */;
@@ -10,7 +10,7 @@ import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import Card from "Card" /* 6145 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7278 */;
-import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12126 */;
+import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

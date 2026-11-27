@@ -1,11 +1,11 @@
-// === Module 14465: EditAvatarDecorationSection ===
+// === Module 14472: EditAvatarDecorationSection ===
 
-// Module 14465 (EditAvatarDecorationSection)
+// Module 14472 (EditAvatarDecorationSection)
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9419 */;
-import useAvatarDecorationSections from "useAvatarDecorationSections" /* 14460 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 14466 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14467 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9420 */;
+import useAvatarDecorationSections from "useAvatarDecorationSections" /* 14467 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 14473 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14474 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,9 +15,9 @@ const AVATAR_DECORATION_SIZE = fn(1414).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5043);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14466).GUTTER_SIZE }, rowSpacer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14466).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(14466).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14473).GUTTER_SIZE }, rowSpacer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14473).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14473).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo((size) => {
   ({ items, selectedSkuId: require, setSelectedAvatarDecoration } = size);

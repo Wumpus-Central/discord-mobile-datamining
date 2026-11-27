@@ -1,6 +1,6 @@
-// === Module 9058: ConversationNavigatorUtils ===
+// === Module 9059: ConversationNavigatorUtils ===
 
-// Module 9058 (ConversationNavigatorUtils)
+// Module 9059 (ConversationNavigatorUtils)
 import RootNavigationRef from "RootNavigationRef" /* 5220 */;
 import transitionToChannel from "transitionToChannel" /* 6126 */;
 import size from "module_2" /* 2 */;

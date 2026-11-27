@@ -1,6 +1,6 @@
-// === Module 15300: RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec ===
+// === Module 15307: RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec ===
 
-// Module 15300 (RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec)
+// Module 15307 (RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import ExperimentStore from "ExperimentStore" /* 5660 */;

@@ -1,6 +1,6 @@
-// === Module 12968: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 12976: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 12968 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 12976 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 575 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4873 */;
 import dismissible_content from "dismissible_content" /* 4876 */;

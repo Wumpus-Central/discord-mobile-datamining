@@ -1,6 +1,6 @@
-// === Module 8525: CreateChannelActionCreators ===
+// === Module 8526: CreateChannelActionCreators ===
 
-// Module 8525 (CreateChannelActionCreators)
+// Module 8526 (CreateChannelActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import TypeUtils from "TypeUtils" /* 4904 */;

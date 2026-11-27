@@ -1,6 +1,6 @@
-// === Module 18518: host_approval/ConjureHostApproval ===
+// === Module 18523: host_approval/ConjureHostApproval ===
 
-// Module 18518 (host_approval/ConjureHostApproval)
+// Module 18523 (host_approval/ConjureHostApproval)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import ConjureHostApproval from "ConjureHostApproval" /* 7719 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18519 */;
-import ConjureAwaitingUser from "ConjureAwaitingUser" /* 18520 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 18524 */;
+import ConjureAwaitingUser from "ConjureAwaitingUser" /* 18525 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,21 +1,21 @@
-// === Module 13033: ApplicationDirectoryActionCreators ===
+// === Module 13041: ApplicationDirectoryActionCreators ===
 
-// Module 13033 (ApplicationDirectoryActionCreators)
+// Module 13041 (ApplicationDirectoryActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import ApplicationCollectionSurface from "ApplicationCollectionSurface" /* 13039 */;
-import ApplicationCollectionActiveState from "ApplicationCollectionActiveState" /* 13040 */;
+import ApplicationCollectionSurface from "ApplicationCollectionSurface" /* 13047 */;
+import ApplicationCollectionActiveState from "ApplicationCollectionActiveState" /* 13048 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DevSettingsStore from "DevSettingsStore" /* 5637 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1361 */;
 import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6972 */;
-import ApplicationDirectoryCategoriesStore from "ApplicationDirectoryCategoriesStore" /* 13034 */;
-import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 13035 */;
-import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 13030 */;
-import ApplicationDirectorySimilarApplicationsStore from "ApplicationDirectorySimilarApplicationsStore" /* 13036 */;
-import MyGuildApplicationsStore from "MyGuildApplicationsStore" /* 13037 */;
+import ApplicationDirectoryCategoriesStore from "ApplicationDirectoryCategoriesStore" /* 13042 */;
+import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 13043 */;
+import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 13038 */;
+import ApplicationDirectorySimilarApplicationsStore from "ApplicationDirectorySimilarApplicationsStore" /* 13044 */;
+import MyGuildApplicationsStore from "MyGuildApplicationsStore" /* 13045 */;
 
 require = fn;
 let closure_20 = async function _getEmbedApplication() {
@@ -33,7 +33,7 @@ let closure_20 = async function _getEmbedApplication() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -141,7 +141,7 @@ let closure_21 = async function _getApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -255,7 +255,7 @@ let closure_22 = async function _getCategories() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -319,7 +319,7 @@ let closure_23 = async function _getSimilarApplications(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -433,7 +433,7 @@ let closure_24 = async function _search(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -583,7 +583,7 @@ let closure_25 = async function _fetchCollections() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -727,7 +727,7 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -813,10 +813,10 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
   }
 };
 fn(6972).FetchState;
-fn(13035).FetchState;
-fn(13030).FetchState;
-fn(13036).FetchState;
-const FetchState = fn(13037).FetchState;
+fn(13043).FetchState;
+fn(13038).FetchState;
+fn(13044).FetchState;
+const FetchState = fn(13045).FetchState;
 const Endpoints = fn(1071).Endpoints;
 let c18 = 600000;
 const map = new Map();

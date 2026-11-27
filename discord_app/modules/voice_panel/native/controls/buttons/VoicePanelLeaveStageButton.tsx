@@ -1,6 +1,6 @@
-// === Module 19585: VoicePanelLeaveStageButton ===
+// === Module 19601: VoicePanelLeaveStageButton ===
 
-// Module 19585 (VoicePanelLeaveStageButton)
+// Module 19601 (VoicePanelLeaveStageButton)
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7839 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -13,13 +13,13 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/controls/b
 export default function LeaveStageButton(arg0) {
   let stateFromStores;
   ({ props, wrapperSpecs } = arg0);
-  const channelId = noop.useContext(stateFromStores(11781)).channelId;
+  const channelId = noop.useContext(stateFromStores(11789)).channelId;
   items = [ChannelStore];
   const items1 = [channelId];
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj = channelId(504);
   const tmp = stateFromStores;
-  const voicePanelButtonStyles = channelId(19564).useVoicePanelButtonStyles(wrapperSpecs);
+  const voicePanelButtonStyles = channelId(19580).useVoicePanelButtonStyles(wrapperSpecs);
   let tmp6 = null;
   if (null != stateFromStores) {
     const element = {
@@ -35,8 +35,8 @@ export default function LeaveStageButton(arg0) {
     element.accessibilityLabel = intl.string(tmp3(1112).t.ezLpY6);
     element.style = voicePanelButtonStyles.iconBg;
     const obj3 = { color: voicePanelButtonStyles.iconFill.color };
-    element.children = jsx(tmp3(10317).GroupArrowDownIcon, { color: voicePanelButtonStyles.iconFill.color });
-    tmp6 = jsx(tmp(19565), {
+    element.children = jsx(tmp3(10318).GroupArrowDownIcon, { color: voicePanelButtonStyles.iconFill.color });
+    tmp6 = jsx(tmp(19581), {
       onPress() {
           return StageChannelActionCreators.audienceAckRequestToSpeak(stateFromStores, true);
         },
@@ -45,7 +45,7 @@ export default function LeaveStageButton(arg0) {
       style: null,
       children: null
     });
-    const tmpResult = tmp(19565);
+    const tmpResult = tmp(19581);
   }
   return tmp6;
 };

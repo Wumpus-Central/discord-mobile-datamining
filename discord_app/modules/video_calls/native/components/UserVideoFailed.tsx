@@ -1,6 +1,6 @@
-// === Module 19501: UserVideoFailed ===
+// === Module 19517: UserVideoFailed ===
 
-// Module 19501 (UserVideoFailed)
+// Module 19517 (UserVideoFailed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1071 */;
@@ -10,7 +10,7 @@ import components_Button_Button from "components/Button/Button" /* 5641 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5868 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5996 */;
 import AVError from "AVError" /* 6035 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 10147 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 10148 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;

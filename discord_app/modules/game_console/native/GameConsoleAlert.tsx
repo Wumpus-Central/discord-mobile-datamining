@@ -1,6 +1,6 @@
-// === Module 10517: GameConsoleAlert ===
+// === Module 10518: GameConsoleAlert ===
 
-// Module 10517 (GameConsoleAlert)
+// Module 10518 (GameConsoleAlert)
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5852 */;
 

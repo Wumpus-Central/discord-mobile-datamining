@@ -1,6 +1,6 @@
-// === Module 19920: GuildSettingsModalModeration ===
+// === Module 19936: GuildSettingsModalModeration ===
 
-// Module 19920 (GuildSettingsModalModeration)
+// Module 19936 (GuildSettingsModalModeration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
@@ -12,11 +12,11 @@ import TableRadioRow from "TableRadioRow" /* 7253 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
 import Form from "Form" /* 8088 */;
-import useUserIsTeen from "useUserIsTeen" /* 8210 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
+import useUserIsTeen from "useUserIsTeen" /* 8211 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8574 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8575 */;
 
 require = fn;
 function GuildSettingsOwnerConfiguredContentLevel(guild) {
@@ -115,7 +115,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(16344).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(16351).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
@@ -154,7 +154,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(16344).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(16351).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);

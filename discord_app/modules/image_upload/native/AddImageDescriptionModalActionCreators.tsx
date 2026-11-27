@@ -1,6 +1,6 @@
-// === Module 11689: AddImageDescriptionModalActionCreators ===
+// === Module 11697: AddImageDescriptionModalActionCreators ===
 
-// Module 11689 (AddImageDescriptionModalActionCreators)
+// Module 11697 (AddImageDescriptionModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/image_upload/native/AddImageD
 export default {
   open(merged) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11690, dependencyMap.paths), merged, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11698, dependencyMap.paths), merged, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(ADD_IMAGE_DESCRIPTION_MODAL_KEY);

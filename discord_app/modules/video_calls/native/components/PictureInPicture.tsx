@@ -1,16 +1,16 @@
-// === Module 10024: PictureInPicture ===
+// === Module 10025: PictureInPicture ===
 
-// Module 10024 (PictureInPicture)
+// Module 10025 (PictureInPicture)
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5618 */;
 import spring_spring from "spring/spring" /* 5644 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 10025 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 10028 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 10029 */;
-import useDraggablePip from "useDraggablePip" /* 10030 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 10026 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 10029 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 10030 */;
+import useDraggablePip from "useDraggablePip" /* 10031 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const _modDef1654 = _mod1654;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const toggleFocus = fn(10008).toggleFocus;
+const toggleFocus = fn(10009).toggleFocus;
 const PictureInPicturePositions = fn(1071).PictureInPicturePositions;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);

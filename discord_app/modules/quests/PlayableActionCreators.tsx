@@ -1,6 +1,6 @@
-// === Module 16810: PlayableActionCreators ===
+// === Module 16817: PlayableActionCreators ===
 
-// Module 16810 (PlayableActionCreators)
+// Module 16817 (PlayableActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 6795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_5 = async function _claimPlayableReward(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -103,7 +103,7 @@ let closure_5 = async function _claimPlayableReward(arg0) {
         closure_133_1(closure_133_2[6]).dispatch(obj10);
         c7 = 0;
         c9 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp36) {
       closure_6 = tmp36;

@@ -1,6 +1,6 @@
-// === Module 14457: EditCollectiblesCTAButton ===
+// === Module 14464: EditCollectiblesCTAButton ===
 
-// Module 14457 (EditCollectiblesCTAButton)
+// Module 14464 (EditCollectiblesCTAButton)
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef1654 from "module_1654" /* 1654 */;
@@ -8,9 +8,9 @@ import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 11270 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 14458 */;
-import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 14459 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 11271 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 14465 */;
+import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 14466 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 

@@ -1,6 +1,6 @@
-// === Module 10281: openNotificationSettings ===
+// === Module 10282: openNotificationSettings ===
 
-// Module 10281 (openNotificationSettings)
+// Module 10282 (openNotificationSettings)
 import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7307 */;
 import size from "module_2" /* 2 */;
 

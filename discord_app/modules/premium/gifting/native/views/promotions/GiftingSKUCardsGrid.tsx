@@ -1,6 +1,6 @@
-// === Module 11673: GiftingSKUCardsGrid ===
+// === Module 11681: GiftingSKUCardsGrid ===
 
-// Module 11673 (GiftingSKUCardsGrid)
+// Module 11681 (GiftingSKUCardsGrid)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -11,15 +11,15 @@ import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import useToken from "useToken" /* 5607 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Pressables from "Pressables" /* 6152 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8708 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11611 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8709 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GiftingSKUCardItemPreview(arg0) {
   ({ item, isSelected } = arg0);
   const tmp = closure_18();
-  const currentUser = isSelected(9415).useCurrentUser();
+  const currentUser = isSelected(9416).useCurrentUser();
   items = [isSelected, currentUser];
   const memo = noop.useMemo(() => {
     let avatarSource;
@@ -30,19 +30,19 @@ function GiftingSKUCardItemPreview(arg0) {
   }, items);
   if (isNameplateRecord(item)) {
     const obj2 = { item, animate: isSelected };
-    let tmp8 = closure_10(currentUser(11171), obj2);
+    let tmp8 = closure_10(currentUser(11172), obj2);
   } else if (isAvatarDecorationRecord(item)) {
     const obj3 = { item, size, animate: isSelected, avatarSource: memo };
-    tmp8 = closure_10(currentUser(9417), obj3);
+    tmp8 = closure_10(currentUser(9418), obj3);
   } else if (isProfileEffectRecord(item)) {
     const obj4 = { style: tmp.profileEffect, children: null };
     const obj5 = { source: null, style: null, resizeMode: "cover" };
-    const obj6 = { uri: currentUser(11170) };
+    const obj6 = { uri: currentUser(11171) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
     const items1 = [closure_10(currentUser(5730), obj5), ];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
-    items1[1] = closure_10(currentUser(9470), obj7);
+    items1[1] = closure_10(currentUser(9471), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
     const tmp19 = currentUser(5730);
@@ -51,9 +51,9 @@ function GiftingSKUCardItemPreview(arg0) {
     if (isProfileFrameRecord(item)) {
       const obj8 = { style: tmp.profileFrame, children: null };
       const obj9 = { profileFrame: item, previewWidth, previewHeight, profileBackgroundColor: currentUser(575).colors.BACKGROUND_BASE_LOW };
-      obj8.children = closure_10(currentUser(11169), obj9);
+      obj8.children = closure_10(currentUser(11170), obj9);
       tmp8 = closure_10(closure_4, obj8);
-      const tmp12 = currentUser(11169);
+      const tmp12 = currentUser(11170);
     }
   }
   return tmp8;
@@ -136,7 +136,7 @@ obj.claimed = { opacity: 0.4 };
 obj.checkmark = { position: "absolute", opacity: 1, fontWeight: "bold" };
 const rect = { position: "absolute", top: -PX_12, left: 0, right: 0, overflow: "hidden", height: sum + PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.profileEffect = rect;
-obj.sampleProfile = { aspectRatio: fn(9467).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9468).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.profileFrame = { position: "absolute", top: 0, left: 0, right: 0, height: sum, alignItems: "center" };
 const rect1 = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
 obj.collectibleTextFade = rect1;

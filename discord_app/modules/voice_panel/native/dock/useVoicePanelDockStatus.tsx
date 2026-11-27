@@ -1,9 +1,9 @@
-// === Module 19461: useVoicePanelDockStatus ===
+// === Module 19477: useVoicePanelDockStatus ===
 
-// Module 19461 (useVoicePanelDockStatus)
+// Module 19477 (useVoicePanelDockStatus)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1387 */;
 import VoiceStateStore from "VoiceStateStore" /* 5691 */;
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(18220);
+const VoicePanelDockStatusStore = fn(18227);
 ({ releaseDockStatus: closure_12, initDockStatus: map1, setDockActiveSpeakers: closure_14, setDockHasStreamers: closure_15, showVoiceMoment: closure_16 } = VoicePanelDockStatusStore);
 const ParticipantTypes = fn(5693).ParticipantTypes;
 let result = fn(6925).MAX_SOUND_LENGTH_SECONDS * DurationsDefault.Millis.SECOND;

@@ -1,6 +1,6 @@
-// === Module 16219: AgeNoticeVisibility ===
+// === Module 16226: AgeNoticeVisibility ===
 
-// Module 16219 (AgeNoticeVisibility)
+// Module 16226 (AgeNoticeVisibility)
 import Server from "Server" /* 2118 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5705 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 6830 */;

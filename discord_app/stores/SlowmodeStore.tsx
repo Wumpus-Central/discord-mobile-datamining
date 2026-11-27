@@ -1,6 +1,6 @@
-// === Module 8350: SlowmodeStore ===
+// === Module 8351: SlowmodeStore ===
 
-// Module 8350 (SlowmodeStore)
+// Module 8351 (SlowmodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;

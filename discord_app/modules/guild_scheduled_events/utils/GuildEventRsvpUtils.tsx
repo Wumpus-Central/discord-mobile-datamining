@@ -1,10 +1,10 @@
-// === Module 8483: GuildEventRsvpUtils ===
+// === Module 8484: GuildEventRsvpUtils ===
 
-// Module 8483 (GuildEventRsvpUtils)
+// Module 8484 (GuildEventRsvpUtils)
 import util from "util" /* 1112 */;
-import ScheduleUtils from "ScheduleUtils" /* 8466 */;
-import useEventSchedule from "useEventSchedule" /* 8469 */;
-import useEventException from "useEventException" /* 8470 */;
+import ScheduleUtils from "ScheduleUtils" /* 8467 */;
+import useEventSchedule from "useEventSchedule" /* 8470 */;
+import useEventException from "useEventException" /* 8471 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5775 */;
 

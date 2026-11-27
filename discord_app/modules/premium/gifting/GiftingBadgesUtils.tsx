@@ -1,6 +1,6 @@
-// === Module 11156: GiftingBadgesUtils ===
+// === Module 11157: GiftingBadgesUtils ===
 
-// Module 11156 (GiftingBadgesUtils)
+// Module 11157 (GiftingBadgesUtils)
 import util from "util" /* 1112 */;
 import _modDef2943 from "module_2943" /* 2943 */;
 import BadgeId from "BadgeId" /* 6138 */;
@@ -65,7 +65,7 @@ export function useGiftingBadgeCoachmarkVariant(location) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11157).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11158).GiftingBadgeCoachmarkAudienceExperiment;
   const enabled = GiftingBadgeCoachmarkAudienceExperiment.useConfig({ location: location.location }).enabled;
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {

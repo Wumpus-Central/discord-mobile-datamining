@@ -1,6 +1,6 @@
-// === Module 15388: GuildHeaderCountsStore ===
+// === Module 15395: GuildHeaderCountsStore ===
 
-// Module 15388 (GuildHeaderCountsStore)
+// Module 15395 (GuildHeaderCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 7653 */;
@@ -56,21 +56,21 @@ const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "radii", onlineCount: "id", memberCount: "clearTimeout" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "channel_id", memberCount: "i" };
     }
     dependencyMap[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "radii", onlineCount: "id", memberCount: "clearTimeout" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "channel_id", memberCount: "i" };
     }
     dependencyMap[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "radii", onlineCount: "id", memberCount: "clearTimeout" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "channel_id", memberCount: "i" };
     }
     dependencyMap[guildId].activeChannelsCount = guildId.count;
   }

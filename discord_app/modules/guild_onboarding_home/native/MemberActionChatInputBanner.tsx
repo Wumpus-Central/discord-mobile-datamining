@@ -1,6 +1,6 @@
-// === Module 13234: MemberActionChatInputBanner ===
+// === Module 13242: MemberActionChatInputBanner ===
 
-// Module 13234 (MemberActionChatInputBanner)
+// Module 13242 (MemberActionChatInputBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -11,10 +11,10 @@ import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import Pressables from "Pressables" /* 6152 */;
 import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7582 */;
-import _modDef12315 from "module_12315" /* 12315 */;
-import _modDef13233 from "module_13233" /* 13233 */;
-import MemberActionUtils from "MemberActionUtils" /* 13235 */;
-import _modDef13236 from "module_13236" /* 13236 */;
+import _modDef12323 from "module_12323" /* 12323 */;
+import _modDef13241 from "module_13241" /* 13241 */;
+import MemberActionUtils from "MemberActionUtils" /* 13243 */;
+import _modDef13244 from "module_13244" /* 13244 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -48,7 +48,7 @@ function ChannelActionEmoji(emoji) {
   emoji = emoji.emoji;
   let id;
   const tmp = closure_15();
-  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1186).Icon, { size: id(1186).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12315 }) };
+  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1186).Icon, { size: id(1186).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12323 }) };
   const tmp6 = closure_12(View, obj);
   id = undefined;
   if (emoji != null) {
@@ -57,7 +57,7 @@ function ChannelActionEmoji(emoji) {
   if (emoji != null) {
     const name = emoji.name;
   }
-  const obj2 = { size: id(1186).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12315 };
+  const obj2 = { size: id(1186).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12323 };
   items = [EmojiStore];
   const items1 = [id];
   const stateFromStores = id(563).useStateFromStores(items, () => {
@@ -265,7 +265,7 @@ function MemberActionChatInputBanner(channel) {
         items[1] = state(View, obj3);
         let tmp6Result = c3;
         if (c3) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13236 };
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef13244 };
           tmp6Result = application_id(native.Icon, obj6);
         }
         items[2] = tmp6Result;
@@ -312,7 +312,7 @@ function MemberActionChatInputBanner(channel) {
             obj3.children = items1;
             items[1] = state(View, obj3);
             const obj7 = { style: _undefined.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef13233 };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef13241 };
             obj7.children = application_id(native.Icon, obj8);
             items[2] = application_id(View, obj7);
             obj.children = items;

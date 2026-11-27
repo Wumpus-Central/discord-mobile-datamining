@@ -1,17 +1,17 @@
-// === Module 14607: UserProfileWidgetSuggestedGames ===
+// === Module 14614: UserProfileWidgetSuggestedGames ===
 
-// Module 14607 (UserProfileWidgetSuggestedGames)
+// Module 14614 (UserProfileWidgetSuggestedGames)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14584 */;
-import GameCoverImageDefault from "GameCoverImage" /* 14586 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14591 */;
+import GameCoverImageDefault from "GameCoverImage" /* 14593 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const AccessibilityAnnouncer2 = trackUserProfileEditAction(5052);
 const UserProfileAnalyticsUtils = trackUserProfileEditAction(6382);
-const WidgetUtils = trackUserProfileEditAction(14570);
+const WidgetUtils = trackUserProfileEditAction(14577);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);

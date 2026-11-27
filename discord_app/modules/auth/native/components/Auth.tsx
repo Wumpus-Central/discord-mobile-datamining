@@ -1,6 +1,6 @@
-// === Module 17653: Auth ===
+// === Module 17660: Auth ===
 
-// Module 17653 (Auth)
+// Module 17660 (Auth)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
@@ -10,16 +10,16 @@ import useWideAuthViewDefault from "useWideAuthView" /* 7308 */;
 import WideAuthScrollContext from "WideAuthScrollContext" /* 7331 */;
 import Navigator from "Navigator" /* 7355 */;
 import StackNavigator from "StackNavigator" /* 7358 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 17654 */;
-import useShouldShowChooseAccountDefault from "useShouldShowChooseAccount" /* 17660 */;
-import RegistrationUtils from "RegistrationUtils" /* 17665 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 17708 */;
-import _mod17709 from "module_17709" /* 17709 */;
-import AuthManagerDefault from "AuthManager" /* 17710 */;
-import useOrientationLockDefault from "useOrientationLock" /* 17719 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 17661 */;
+import useShouldShowChooseAccountDefault from "useShouldShowChooseAccount" /* 17667 */;
+import RegistrationUtils from "RegistrationUtils" /* 17672 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 17715 */;
+import _mod17716 from "module_17716" /* 17716 */;
+import AuthManagerDefault from "AuthManager" /* 17717 */;
+import useOrientationLockDefault from "useOrientationLock" /* 17726 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 13385 */;
+import MultiAccountStore from "MultiAccountStore" /* 13393 */;
 
 require = fn;
 function getInitialAuthRouteStack() {
@@ -64,7 +64,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod17709;
+  obj3.backgroundImageSource = _mod17716;
   const children = [closure_9(BackgroundImageDefault, obj3), , ];
   let tmp18Result = null;
   if (tmp5) {
@@ -145,7 +145,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1071).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(17655);
+let RegistrationStepsUtils = fn(17662);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {
@@ -224,7 +224,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[25]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(8249).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(8250).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, { value: noop.useMemo(() => RegistrationUtils.getTrackRegTransition(closure_0), []), children: closure_9(NavigatorWithCaptchaHook, {}) });

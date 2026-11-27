@@ -1,6 +1,6 @@
-// === Module 19240: RestrictedMessagePreviewLayout ===
+// === Module 19256: RestrictedMessagePreviewLayout ===
 
-// Module 19240 (RestrictedMessagePreviewLayout)
+// Module 19256 (RestrictedMessagePreviewLayout)
 import native from "native" /* 1186 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 11945: useTrackCollectiblesItemTryOut ===
+// === Module 11953: useTrackCollectiblesItemTryOut ===
 
-// Module 11945 (useTrackCollectiblesItemTryOut)
+// Module 11953 (useTrackCollectiblesItemTryOut)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1071 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;

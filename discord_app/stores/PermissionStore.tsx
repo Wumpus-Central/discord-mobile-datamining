@@ -195,20 +195,20 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
         let NONE4 = PermissionUtilsAll.NONE;
       } else {
         const tmpResult = PermissionUtilsAll;
-        const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
-        NONE4 = tmpResult.applyThreadPermissions(context, tmp24, JoinedThreadsStore.hasJoined(context.id), GuildMemberStore.isCurrentUserGuest(context.guild_id));
+        const tmp26 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
+        NONE4 = tmpResult.applyThreadPermissions(context, tmp26, JoinedThreadsStore.hasJoined(context.id), GuildMemberStore.isCurrentUserGuest(context.guild_id));
         const hasJoinedResult = JoinedThreadsStore.hasJoined(context.id);
       }
       return NONE4;
     } else {
       const id2 = context.id;
-      let tmp11 = dependencyMap2[id2];
-      if (null == tmp11) {
-        const tmp15 = getUncachedChannelPermissions(id2, true);
-        dependencyMap2[id2] = tmp15;
-        tmp11 = tmp15;
+      let tmp13 = dependencyMap2[id2];
+      if (null == tmp13) {
+        const tmp17 = getUncachedChannelPermissions(id2, true);
+        dependencyMap2[id2] = tmp17;
+        tmp13 = tmp17;
       }
-      NONE = tmp11;
+      NONE = tmp13;
     }
   } else {
     if (obj.isGuildRecord(context)) {

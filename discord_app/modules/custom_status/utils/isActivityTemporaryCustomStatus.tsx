@@ -1,6 +1,6 @@
-// === Module 17795: isActivityTemporaryCustomStatus ===
+// === Module 17802: isActivityTemporaryCustomStatus ===
 
-// Module 17795 (isActivityTemporaryCustomStatus)
+// Module 17802 (isActivityTemporaryCustomStatus)
 import ActivityTypes from "ActivityTypes" /* 6015 */;
 import size from "module_2" /* 2 */;
 

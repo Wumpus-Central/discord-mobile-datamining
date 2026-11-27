@@ -1,19 +1,19 @@
-// === Module 8722: GuildTag ===
+// === Module 8723: GuildTag ===
 
-// Module 8722 (GuildTag)
+// Module 8723 (GuildTag)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import GuildTagUtils from "GuildTagUtils" /* 8578 */;
+import GuildTagUtils from "GuildTagUtils" /* 8579 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(8579).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(8580).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5043);

@@ -1,13 +1,13 @@
-// === Module 12002: loadConjureSharedProject ===
+// === Module 12010: loadConjureSharedProject ===
 
-// Module 12002 (loadConjureSharedProject)
+// Module 12010 (loadConjureSharedProject)
 import conjureProjectLink from "conjureProjectLink" /* 5787 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6971 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 7667 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11994 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12002 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -49,7 +49,7 @@ let closure_11 = async function _load(arg0, arg1, arg2) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -190,7 +190,7 @@ let closure_12 = async function _resolveStatus(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

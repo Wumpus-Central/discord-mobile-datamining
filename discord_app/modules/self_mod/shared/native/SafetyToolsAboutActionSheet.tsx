@@ -1,17 +1,17 @@
-// === Module 11870: SafetyToolsAboutActionSheet ===
+// === Module 11878: SafetyToolsAboutActionSheet ===
 
-// Module 11870 (SafetyToolsAboutActionSheet)
+// Module 11878 (SafetyToolsAboutActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11826 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11827 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11834 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11835 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11819).getSafetyToolsActionSheetKey;
+let closure_6 = fn(11827).getSafetyToolsActionSheetKey;
 let HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

@@ -1,7 +1,7 @@
-// === Module 18503: ConjureSmartContext ===
+// === Module 18510: ConjureSmartContext ===
 
-// Module 18503 (ConjureSmartContext)
-import conjureSmartContextConnection from "conjureSmartContextConnection" /* 14753 */;
+// Module 18510 (ConjureSmartContext)
+import conjureSmartContextConnection from "conjureSmartContextConnection" /* 14760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureChatStore from "ConjureChatStore" /* 7659 */;

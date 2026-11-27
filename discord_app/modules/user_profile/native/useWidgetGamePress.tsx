@@ -1,8 +1,8 @@
-// === Module 14588: useWidgetGamePress ===
+// === Module 14595: useWidgetGamePress ===
 
-// Module 14588 (useWidgetGamePress)
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8745 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8754 */;
+// Module 14595 (useWidgetGamePress)
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8746 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8755 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/native/useWidgetGamePress.tsx");

@@ -1,6 +1,6 @@
-// === Module 18053: InterestGameTray ===
+// === Module 18060: InterestGameTray ===
 
-// Module 18053 (InterestGameTray)
+// Module 18060 (InterestGameTray)
 import nativeDefault from "native" /* 575 */;
 import _modDef2655 from "module_2655" /* 2655 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -163,11 +163,11 @@ function TrayCover(game) {
   }
   obj4.pointerEvents = str;
   const tmp14Result4 = require("module_1654");
-  obj4.children = sharedValue(sum2, { style: tmp.art, children: sharedValue(tmp9(18029), { game, width: 66, imageWidth: 66, compact: true }) });
+  obj4.children = sharedValue(sum2, { style: tmp.art, children: sharedValue(tmp9(18036), { game, width: 66, imageWidth: 66, compact: true }) });
   return sharedValue(tmp9(1654).View, obj4);
 }
 const View = fn(17).View;
-const MAX_SELECTIONS = fn(18030).MAX_SELECTIONS;
+const MAX_SELECTIONS = fn(18037).MAX_SELECTIONS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;

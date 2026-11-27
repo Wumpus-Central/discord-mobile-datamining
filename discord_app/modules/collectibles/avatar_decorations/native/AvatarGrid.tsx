@@ -1,6 +1,6 @@
-// === Module 14472: AvatarGrid ===
+// === Module 14479: AvatarGrid ===
 
-// Module 14472 (AvatarGrid)
+// Module 14479 (AvatarGrid)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ function GridAvatar(user) {
   obj3.size = size;
   if (undefined !== pendingAvatarSrc) {
     const obj4 = { source: null };
-    const tmp2Result = tmp2(9511);
+    const tmp2Result = tmp2(9512);
     obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj3);
     let obj5 = obj4;

@@ -1,6 +1,6 @@
-// === Module 18605: conjureProjectActions ===
+// === Module 18616: conjureProjectActions ===
 
-// Module 18605 (conjureProjectActions)
+// Module 18616 (conjureProjectActions)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import ToastUtils from "ToastUtils" /* 5724 */;
@@ -9,8 +9,8 @@ import CopyIcon from "CopyIcon" /* 5743 */;
 import ChannelUtils from "ChannelUtils" /* 6801 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 7667 */;
-import conjureRemoveApp from "conjureRemoveApp" /* 12508 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 18607 */;
+import conjureRemoveApp from "conjureRemoveApp" /* 12516 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 18618 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1387 */;
 import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 7693 */;
@@ -28,7 +28,7 @@ let closure_13 = async function _importIntoProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -86,7 +86,7 @@ let closure_13 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1112).intl;
-          await tmp3(18606).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(4245).Owerd3));
+          await tmp3(18617).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(4245).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1112).intl;
@@ -282,7 +282,7 @@ let closure_15 = async function _loadConjureProjectActions(arg0) {
         obj8.label = intl8.string(tmp8(muted[10]).jYAR58);
         obj8.IconComponent = tmp3(muted[27]).EyeSlashIcon;
         obj8.action = function action() {
-          return closure_2_1(18517)(project);
+          return closure_2_1(18522)(project);
         };
         items.push(obj8);
       }
@@ -294,7 +294,7 @@ let closure_15 = async function _loadConjureProjectActions(arg0) {
         obj9.label = intl9.string(tmp8(muted[10]).mS61Dm);
         obj9.IconComponent = tmp3(muted[27]).EyeSlashIcon;
         obj9.action = function action() {
-          return closure_2_1(18607)({ project, target, action: "remove" });
+          return closure_2_1(18618)({ project, target, action: "remove" });
         };
         items.push(obj9);
       }

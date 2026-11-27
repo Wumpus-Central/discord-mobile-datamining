@@ -1,12 +1,12 @@
-// === Module 16230: AccountAgeGroupAdultSetting ===
+// === Module 16237: AccountAgeGroupAdultSetting ===
 
-// Module 16230 (AccountAgeGroupAdultSetting)
+// Module 16237 (AccountAgeGroupAdultSetting)
 import util from "util" /* 1112 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5705 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 6825 */;
-import SettingsConstants from "SettingsConstants" /* 9555 */;
-import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 16186 */;
-import SettingBuilders from "SettingBuilders" /* 11962 */;
+import SettingsConstants from "SettingsConstants" /* 9556 */;
+import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 16193 */;
+import SettingBuilders from "SettingBuilders" /* 11970 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

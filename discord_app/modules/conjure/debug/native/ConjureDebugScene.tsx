@@ -1,6 +1,6 @@
-// === Module 18879: ConjureDebugScene ===
+// === Module 18895: ConjureDebugScene ===
 
-// Module 18879 (ConjureDebugScene)
+// Module 18895 (ConjureDebugScene)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
@@ -8,9 +8,9 @@ import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import CopyIcon from "CopyIcon" /* 5743 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import conjureDebugConnection from "conjureDebugConnection" /* 7716 */;
-import conjureTraceRequests2 from "conjureTraceRequests" /* 18451 */;
-import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 18880 */;
-import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 18889 */;
+import conjureTraceRequests2 from "conjureTraceRequests" /* 18458 */;
+import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 18896 */;
+import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 18905 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugStore from "ConjureDebugStore" /* 7694 */;

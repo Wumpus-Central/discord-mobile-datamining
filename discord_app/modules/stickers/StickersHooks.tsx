@@ -1,14 +1,14 @@
-// === Module 10830: StickersHooks ===
+// === Module 10831: StickersHooks ===
 
-// Module 10830 (StickersHooks)
+// Module 10831 (StickersHooks)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4868 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
 import StickersUtils from "StickersUtils" /* 6779 */;
 import StickersTypes from "StickersTypes" /* 6780 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8471 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10813 */;
-import StickersActionCreators from "StickersActionCreators" /* 10831 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8472 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10814 */;
+import StickersActionCreators from "StickersActionCreators" /* 10832 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -371,7 +371,7 @@ export function useFavoriteStickerIds() {
   return stickerIds;
 }
 export function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10813).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10814).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -379,7 +379,7 @@ export function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10813);
+  const obj = stickerIds(10814);
   items = [StickersStore];
   const items1 = [stickerIds];
   return stickerIds(504).useStateFromStoresArray(items, () => {
@@ -423,7 +423,7 @@ export function useLatestFrecentStickerIds() {
   return keys;
 }
 export function useLatestFrecentStickers() {
-  const frecencySettings = keys(10813).useFrecencySettings();
+  const frecencySettings = keys(10814).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -442,7 +442,7 @@ export function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10813);
+  const obj = keys(10814);
   items = [StickersStore];
   const items1 = [keys];
   return keys(504).useStateFromStoresArray(items, () => {
@@ -491,7 +491,7 @@ export function useStickerForRenderableSticker(renderableSticker, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

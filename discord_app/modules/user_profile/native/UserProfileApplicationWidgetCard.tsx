@@ -1,8 +1,8 @@
-// === Module 14608: UserProfileApplicationWidgetCard ===
+// === Module 14615: UserProfileApplicationWidgetCard ===
 
-// Module 14608 (UserProfileApplicationWidgetCard)
+// Module 14615 (UserProfileApplicationWidgetCard)
 import nativeDefault from "native" /* 575 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 14611 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 14618 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

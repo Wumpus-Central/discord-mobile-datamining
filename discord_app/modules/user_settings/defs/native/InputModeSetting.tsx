@@ -1,18 +1,18 @@
-// === Module 16859: InputModeSetting ===
+// === Module 16866: InputModeSetting ===
 
-// Module 16859 (InputModeSetting)
+// Module 16866 (InputModeSetting)
 import util from "util" /* 1112 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 
 require = fn;
 const InputModes = fn(5855).InputModes;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["pS+K2L"]);
   },
-  parent: fn(9555).MobileUserSettings.VOICE,
+  parent: fn(9556).MobileUserSettings.VOICE,
   useTrailing: function useInputModeSettingTrailing() {
     items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
@@ -24,7 +24,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return stringResult;
   },
-  onPress: fn(10394).handleInputModePress,
+  onPress: fn(10395).handleInputModePress,
   useSearchTerms() {
     const intl = util.intl;
     items = [intl.string(util.t.nuFtHH)];

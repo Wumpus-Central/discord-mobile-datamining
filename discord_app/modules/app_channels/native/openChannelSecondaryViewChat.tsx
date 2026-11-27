@@ -1,9 +1,9 @@
-// === Module 9021: openChannelSecondaryViewChat ===
+// === Module 9022: openChannelSecondaryViewChat ===
 
-// Module 9021 (openChannelSecondaryViewChat)
+// Module 9022 (openChannelSecondaryViewChat)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import RootNavigationRef from "RootNavigationRef" /* 5220 */;
-import MessageManagerDefault from "MessageManager" /* 8966 */;
+import MessageManagerDefault from "MessageManager" /* 8967 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 10428: instant_invite/InstantInviteUtils ===
+// === Module 10429: instant_invite/InstantInviteUtils ===
 
-// Module 10428 (instant_invite/InstantInviteUtils)
+// Module 10429 (instant_invite/InstantInviteUtils)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
@@ -8,21 +8,21 @@ import ToastUtils from "ToastUtils" /* 5724 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 5763 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 5777 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8399 */;
-import DCDSendUtils from "DCDSendUtils" /* 8413 */;
-import showShareActionSheet from "showShareActionSheet" /* 8690 */;
-import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 10431 */;
-import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 10435 */;
-import openInstantInviteActionSheetDefault from "openInstantInviteActionSheet" /* 10436 */;
-import getInviteURLDefault from "getInviteURL" /* 10439 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 8246 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8400 */;
+import DCDSendUtils from "DCDSendUtils" /* 8414 */;
+import showShareActionSheet from "showShareActionSheet" /* 8691 */;
+import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 10432 */;
+import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 10436 */;
+import openInstantInviteActionSheetDefault from "openInstantInviteActionSheet" /* 10437 */;
+import getInviteURLDefault from "getInviteURL" /* 10440 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 8247 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 10429 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 10430 */;
 import GuildChannelStore from "GuildChannelStore" /* 4973 */;
 import InviteStore from "InviteStore" /* 5762 */;
 import PresenceStore from "PresenceStore" /* 6014 */;
 import UserStore from "UserStore" /* 1387 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 10433 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 10434 */;
 
 require = fn;
 function showInstantInviteActionSheet(channel, source) {
@@ -161,7 +161,7 @@ function trackOptionClicked(code, channel, COPY, _location) {
   const tmpResult = InviteCodeUtils;
 }
 const ChannelRecordBase = fn(4896).ChannelRecordBase;
-const IOS_COPY_TO_PASTEBOARD = fn(10434).IOS_COPY_TO_PASTEBOARD;
+const IOS_COPY_TO_PASTEBOARD = fn(10435).IOS_COPY_TO_PASTEBOARD;
 const Constants = fn(1071);
 ({ AnalyticEvents: map1, InviteOptionsType: closure_14, Permissions: closure_15 } = Constants);
 const size = fn(2);

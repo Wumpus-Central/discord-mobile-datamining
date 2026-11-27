@@ -1,6 +1,6 @@
-// === Module 10544: StageActionHeader ===
+// === Module 10545: StageActionHeader ===
 
-// Module 10544 (StageActionHeader)
+// Module 10545 (StageActionHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -19,23 +19,23 @@ import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks
 import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7835 */;
 import _modDef8085 from "module_8085" /* 8085 */;
 import _modDef8107 from "module_8107" /* 8107 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8449 */;
-import StatusBarDefault from "StatusBar" /* 10018 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 10311 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10329 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10428 */;
-import _modDef10545 from "module_10545" /* 10545 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8450 */;
+import StatusBarDefault from "StatusBar" /* 10019 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 10312 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10330 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10429 */;
 import _modDef10546 from "module_10546" /* 10546 */;
 import _modDef10547 from "module_10547" /* 10547 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10550 */;
-import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 10551 */;
+import _modDef10548 from "module_10548" /* 10548 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10551 */;
+import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 10552 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6976 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import StageInstanceStore from "StageInstanceStore" /* 4897 */;
-import StageMusicStore from "StageMusicStore" /* 10295 */;
+import StageMusicStore from "StageMusicStore" /* 10296 */;
 
 require = fn;
 function HideStageChannelCallIcon(channel) {
@@ -45,7 +45,7 @@ function HideStageChannelCallIcon(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let obj2 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
   let obj = channel(504);
-  obj2.source = _modDef10545;
+  obj2.source = _modDef10546;
   const intl = channel(1112).intl;
   obj2.accessibilityLabel = intl.string(channel(1112).t.cpT0Cq);
   obj2.onPress = function handleClose() {
@@ -71,7 +71,7 @@ function StageParticipantCounts(channelId) {
   const obj3 = { style: tmp.counts, pointerEvents: "none", accessible: true, accessibilityLabel: intl.formatToPlainString(_modDef4375.TdMGe4, { speakerCount: actualStageSpeakerCount, audienceCount: stageParticipantsCount }), children: null };
   items = [state(native.Icon, { source: _modDef8085, size: native.Icon.Sizes.SMALL, style: tmp.icon }), state(Text_Text.Text, { variant: "body-xs/normal", children: actualStageSpeakerCount }), , ];
   const obj4 = { source: _modDef8085, size: native.Icon.Sizes.SMALL, style: tmp.icon };
-  items[2] = state(native.Icon, { source: _modDef10546, size: native.Icon.Sizes.SMALL, style: tmp.icon });
+  items[2] = state(native.Icon, { source: _modDef10547, size: native.Icon.Sizes.SMALL, style: tmp.icon });
   items[3] = state(Text_Text.Text, { variant: "body-xs/normal", children: stageParticipantsCount });
   obj3.children = items;
   return gesture(React4, obj3);

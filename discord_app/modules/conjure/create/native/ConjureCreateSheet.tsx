@@ -1,11 +1,11 @@
-// === Module 18867: ConjureCreateSheet ===
+// === Module 18883: ConjureCreateSheet ===
 
-// Module 18867 (ConjureCreateSheet)
+// Module 18883 (ConjureCreateSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5257 */;
-import ConjureEffortPicker from "ConjureEffortPicker" /* 18556 */;
-import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 18858 */;
-import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 18870 */;
+import ConjureEffortPicker from "ConjureEffortPicker" /* 18567 */;
+import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 18874 */;
+import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 18886 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -89,7 +89,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -182,7 +182,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -221,7 +221,7 @@ export default function ConjureCreateSheet(guildId) {
           return obj;
         }
         c2 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp10) {
         c2 = tmp;
         throw tmp10;
@@ -254,7 +254,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -391,7 +391,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -414,7 +414,7 @@ export default function ConjureCreateSheet(guildId) {
               const obj7 = tmp3(5257);
               c3 = 2;
               c4 = 1;
-              const obj6 = { value: guildId(18606).pickConjureArchive(), done: false };
+              const obj6 = { value: guildId(18617).pickConjureArchive(), done: false };
               return obj6;
             }
           }
@@ -438,12 +438,12 @@ export default function ConjureCreateSheet(guildId) {
             closure_128_0 = value;
             dependencyMap = 0;
             if (null != closure_128_0) {
-              closure_128_1 = guildId(18606).describeConjureArchiveRejection(closure_128_0);
+              closure_128_1 = guildId(18617).describeConjureArchiveRejection(closure_128_0);
               if (null != closure_128_1) {
                 guildId(5724).presentError(closure_128_1);
                 const obj2 = guildId(5724);
               }
-              const obj12 = guildId(18606);
+              const obj12 = guildId(18617);
             }
             c3 = 3;
             c4 = 1;

@@ -1,6 +1,6 @@
-// === Module 8615: useInterestedEventUsers ===
+// === Module 8616: useInterestedEventUsers ===
 
-// Module 8615 (useInterestedEventUsers)
+// Module 8616 (useInterestedEventUsers)
 import _mod19 from "module_19" /* 19 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4898 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5775 */;

@@ -1,8 +1,8 @@
-// === Module 12639: useCheckpointCharacterImages ===
+// === Module 12647: useCheckpointCharacterImages ===
 
-// Module 12639 (useCheckpointCharacterImages)
+// Module 12647 (useCheckpointCharacterImages)
 import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6419 */;
-import useCompositeImagesLoadedDefault from "useCompositeImagesLoaded" /* 12640 */;
+import useCompositeImagesLoadedDefault from "useCompositeImagesLoaded" /* 12648 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,20 +1,20 @@
-// === Module 20082: GuildSettingsModalVanityURL ===
+// === Module 20140: GuildSettingsModalVanityURL ===
 
-// Module 20082 (GuildSettingsModalVanityURL)
+// Module 20140 (GuildSettingsModalVanityURL)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import TextInput from "TextInput" /* 7274 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
-import getInviteURLDefault from "getInviteURL" /* 10439 */;
-import GuildSettingsVanityURLUtils from "GuildSettingsVanityURLUtils" /* 19905 */;
-import ChangeVanityURLActionCreatorsDefault from "ChangeVanityURLActionCreators" /* 20084 */;
-import _modDef20085 from "module_20085" /* 20085 */;
+import getInviteURLDefault from "getInviteURL" /* 10440 */;
+import GuildSettingsVanityURLUtils from "GuildSettingsVanityURLUtils" /* 19921 */;
+import ChangeVanityURLActionCreatorsDefault from "ChangeVanityURLActionCreators" /* 20142 */;
+import _modDef20143 from "module_20143" /* 20143 */;
 import noop from "module_19" /* 19 */;
-import ChangeVanityURLModalStore from "ChangeVanityURLModalStore" /* 20083 */;
+import ChangeVanityURLModalStore from "ChangeVanityURLModalStore" /* 20141 */;
 import GuildStore from "GuildStore" /* 4914 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8575 */;
 
 require = fn;
 const View = fn(17).View;
@@ -183,7 +183,7 @@ prototype["render"] = function render() {
     obj5.children = items1;
     const items3 = [React6(View, obj5), ];
     const obj12 = { style: styles.center, children: null };
-    const obj13 = { source: _modDef20085, style: styles.image, resizeMode: "contain" };
+    const obj13 = { source: _modDef20143, style: styles.image, resizeMode: "contain" };
     obj12.children = React5(FastImageDefault, obj13);
     items3[1] = React5(View, obj12);
     obj4.children = items3;

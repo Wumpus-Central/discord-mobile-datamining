@@ -1,13 +1,13 @@
-// === Module 15969: MobileVoiceOverlayLifecycleManager ===
+// === Module 15976: MobileVoiceOverlayLifecycleManager ===
 
-// Module 15969 (MobileVoiceOverlayLifecycleManager)
+// Module 15976 (MobileVoiceOverlayLifecycleManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import useChannelName from "useChannelName" /* 5659 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6869 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10355 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10415 */;
-import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 15976 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10356 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10416 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 15983 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
@@ -17,21 +17,21 @@ import RelationshipStore from "RelationshipStore" /* 4985 */;
 import SpeakingStore from "SpeakingStore" /* 6852 */;
 import UserStore from "UserStore" /* 1387 */;
 import VoiceStateStore from "VoiceStateStore" /* 5691 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10389 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10390 */;
 import LifecycleManager from "LifecycleManager" /* 2122 */;
 
 require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(4973).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(15970);
-fn(15971);
-fn(15972);
-fn(15973);
+fn(15977);
+fn(15978);
+fn(15979);
+fn(15980);
 fn(7752);
-fn(14342);
-fn(15974);
-fn(15975);
+fn(14349);
+fn(15981);
+fn(15982);
 const registerAsset = fn(8108);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };

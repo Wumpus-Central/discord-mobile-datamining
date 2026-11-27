@@ -1,13 +1,13 @@
-// === Module 9470: ProfileEffect ===
+// === Module 9471: ProfileEffect ===
 
-// Module 9470 (ProfileEffect)
+// Module 9471 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
-import utils from "utils" /* 9471 */;
-import constants from "constants" /* 9472 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9473 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9476 */;
-import useProfileEffectDefault from "useProfileEffect" /* 9477 */;
+import utils from "utils" /* 9472 */;
+import constants from "constants" /* 9473 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9474 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9477 */;
+import useProfileEffectDefault from "useProfileEffect" /* 9478 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -114,7 +114,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = noop.useRef(-memo(9472).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = noop.useRef(-memo(9473).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(noop.useState([]), 2);
   noop.useRef([]);
   noop.useRef(false);
@@ -130,7 +130,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(noop.useState([]), 2);
-  const tmp9Result = memo1(9475)(noop.useCallback((arg0) => {
+  const tmp9Result = memo1(9476)(noop.useCallback((arg0) => {
     if (ref.current) {
       if (!ref3.current) {
         tmp.current = true;
@@ -156,7 +156,7 @@ function ProfileEffect(profileEffect) {
   }, items4));
   const stop = tmp9Result.stop;
   const reset = tmp9Result.reset;
-  const tmp9 = memo1(9475);
+  const tmp9 = memo1(9476);
   const items5 = [onLoad];
   const stateFromStores = memo(504).useStateFromStores(items5, () => onLoad.getState());
   noop.useRef(null);

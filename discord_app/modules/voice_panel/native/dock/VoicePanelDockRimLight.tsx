@@ -1,8 +1,8 @@
-// === Module 13409: VoicePanelDockRimLight ===
+// === Module 13417: VoicePanelDockRimLight ===
 
-// Module 13409 (VoicePanelDockRimLight)
-import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 13410 */;
-import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13412 */;
+// Module 13417 (VoicePanelDockRimLight)
+import useVoicePanelDockLevelProps from "useVoicePanelDockLevelProps" /* 13418 */;
+import LiveVoiceLevelViewDefault from "LiveVoiceLevelView" /* 13420 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

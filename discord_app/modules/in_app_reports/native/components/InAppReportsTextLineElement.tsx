@@ -1,6 +1,6 @@
-// === Module 8220: InAppReportsTextLineElement ===
+// === Module 8221: InAppReportsTextLineElement ===
 
-// Module 8220 (InAppReportsTextLineElement)
+// Module 8221 (InAppReportsTextLineElement)
 import nativeDefault from "native" /* 575 */;
 import ToastUtils from "ToastUtils" /* 5724 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
@@ -38,7 +38,7 @@ export default function TextLineElement(element) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ export default function TextLineElement(element) {
             const obj = tmp3(dependencyMap[11]);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;

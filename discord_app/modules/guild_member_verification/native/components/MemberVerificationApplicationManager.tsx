@@ -1,6 +1,6 @@
-// === Module 19740: MemberVerificationApplicationManager ===
+// === Module 19756: MemberVerificationApplicationManager ===
 
-// Module 19740 (MemberVerificationApplicationManager)
+// Module 19756 (MemberVerificationApplicationManager)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5079 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
 import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6997 */;

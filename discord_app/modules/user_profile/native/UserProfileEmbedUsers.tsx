@@ -1,8 +1,8 @@
-// === Module 11972: UserProfileEmbedUsers ===
+// === Module 11980: UserProfileEmbedUsers ===
 
-// Module 11972 (UserProfileEmbedUsers)
+// Module 11980 (UserProfileEmbedUsers)
 import CodedLink from "CodedLink" /* 5765 */;
-import UserProfileEmbedCard from "UserProfileEmbedCard" /* 11973 */;
+import UserProfileEmbedCard from "UserProfileEmbedCard" /* 11981 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

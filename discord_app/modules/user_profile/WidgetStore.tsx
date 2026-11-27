@@ -1,6 +1,6 @@
-// === Module 14565: WidgetStore ===
+// === Module 14572: WidgetStore ===
 
-// Module 14565 (WidgetStore)
+// Module 14572 (WidgetStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

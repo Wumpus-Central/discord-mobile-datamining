@@ -1,6 +1,6 @@
-// === Module 10283: FocusedControlsBottomControls ===
+// === Module 10284: FocusedControlsBottomControls ===
 
-// Module 10283 (FocusedControlsBottomControls)
+// Module 10284 (FocusedControlsBottomControls)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
@@ -11,9 +11,9 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5606 */;
-import useBottomVoiceControlsSheetWidthDefault from "useBottomVoiceControlsSheetWidth" /* 10033 */;
-import useCanShowTooltip from "useCanShowTooltip" /* 10284 */;
-import CallPTTButton from "CallPTTButton" /* 10287 */;
+import useBottomVoiceControlsSheetWidthDefault from "useBottomVoiceControlsSheetWidth" /* 10034 */;
+import useCanShowTooltip from "useCanShowTooltip" /* 10285 */;
+import CallPTTButton from "CallPTTButton" /* 10288 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 6822 */;
@@ -740,9 +740,9 @@ class FocusedControlsBottomDrawer {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, TouchableWithoutFeedback: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(10008);
+const ChannelCallStore = fn(10009);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(10009);
+const ChannelCallConstants = fn(10010);
 ({ BOX_MODE_THRESHOLD_WIDTH: closure_10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1071);
 ({ ComponentActions: closure_12, Fonts } = Constants);

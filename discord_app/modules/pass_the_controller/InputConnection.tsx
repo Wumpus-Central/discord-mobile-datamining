@@ -1,9 +1,9 @@
-// === Module 15091: InputConnection ===
+// === Module 15098: InputConnection ===
 
-// Module 15091 (InputConnection)
+// Module 15098 (InputConnection)
 import LoggerDefault from "Logger" /* 3 */;
-import DatagramEvent from "DatagramEvent" /* 15094 */;
-import InputEvent from "InputEvent" /* 15098 */;
+import DatagramEvent from "DatagramEvent" /* 15101 */;
+import InputEvent from "InputEvent" /* 15105 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 5871 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 8464: UpcomingEventNoticesStore ===
+// === Module 8465: UpcomingEventNoticesStore ===
 
-// Module 8464 (UpcomingEventNoticesStore)
+// Module 8465 (UpcomingEventNoticesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildScheduledEventUtils from "GuildScheduledEventUtils" /* 8465 */;
+import GuildScheduledEventUtils from "GuildScheduledEventUtils" /* 8466 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5775 */;
 

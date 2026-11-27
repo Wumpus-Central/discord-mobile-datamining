@@ -1,17 +1,17 @@
-// === Module 20298: ContentInventoryManager ===
+// === Module 20356: ContentInventoryManager ===
 
-// Module 20298 (ContentInventoryManager)
+// Module 20356 (ContentInventoryManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
-import ContentInventoryExperiments from "ContentInventoryExperiments" /* 15184 */;
-import ContentInventoryFeature from "ContentInventoryFeature" /* 20299 */;
+import ContentInventoryExperiments from "ContentInventoryExperiments" /* 15191 */;
+import ContentInventoryFeature from "ContentInventoryFeature" /* 20357 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
 import IdleStore from "IdleStore" /* 6796 */;
 import WindowStore from "WindowStore" /* 6957 */;
-import ContentInventoryPersistedStore from "ContentInventoryPersistedStore" /* 12615 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8755 */;
+import ContentInventoryPersistedStore from "ContentInventoryPersistedStore" /* 12623 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8756 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
@@ -173,7 +173,7 @@ let closure_24 = async function _fetchInventory(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ function handleFetchGameProfileFeed() {
     fetchInventory(obj);
   }
 }
-const ContentInventoryFeedKey = fn(8761).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8762).ContentInventoryFeedKey;
 const PlatformTypes = fn(1071).PlatformTypes;
 let closure_11 = 2 * DurationsDefault.Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;
@@ -373,7 +373,7 @@ const set = new Set();
 const map1 = new Map();
 let closure_17 = null;
 let apply = fn(12);
-let closure_18 = apply.debounce(fn(15024).postTrackToContentInventory, 3000, { trailing: true });
+let closure_18 = apply.debounce(fn(15031).postTrackToContentInventory, 3000, { trailing: true });
 const prototype = function ContentInventoryManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: handlePostConnectionOpen, CONNECTION_CLOSED: handleConnectionClosed, WINDOW_FOCUS: handleUpdatePollingState, IDLE: handleUpdatePollingState, CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: handleUpdatePollingState, CONTENT_INVENTORY_MANUAL_REFRESH: handleManualRefresh, CONTENT_INVENTORY_INBOX_STALE: handleInboxStale, SPOTIFY_NEW_TRACK: handleSpotifyNewTrack, GAME_PROFILE_OPEN: handleFetchGameProfileFeed };

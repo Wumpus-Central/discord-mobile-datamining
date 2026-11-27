@@ -1,6 +1,6 @@
-// === Module 14152: MediaModalSpoilerOverlay ===
+// === Module 14159: MediaModalSpoilerOverlay ===
 
-// Module 14152 (MediaModalSpoilerOverlay)
+// Module 14159 (MediaModalSpoilerOverlay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PlatformUtils2 from "PlatformUtils" /* 1379 */;
@@ -9,7 +9,7 @@ import useToken from "useToken" /* 5607 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5611 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 7147 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14129 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14136 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

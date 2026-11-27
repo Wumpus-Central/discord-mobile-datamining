@@ -1,16 +1,16 @@
-// === Module 12920: TraitPicker ===
+// === Module 12928: TraitPicker ===
 
-// Module 12920 (TraitPicker)
+// Module 12928 (TraitPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3495 from "module_3495" /* 3495 */;
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5223 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6765 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
-import TraitOptionListDefault from "TraitOptionList" /* 12918 */;
-import TraitOptionDetailsDefault from "TraitOptionDetails" /* 12921 */;
-import useTraitPicker from "useTraitPicker" /* 12923 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
+import TraitOptionListDefault from "TraitOptionList" /* 12926 */;
+import TraitOptionDetailsDefault from "TraitOptionDetails" /* 12929 */;
+import useTraitPicker from "useTraitPicker" /* 12931 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -145,13 +145,13 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createElement = fn(19).createElement;
 const createStyles = fn(5043);
-let obj2 = { container: { gap: fn(12918).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
-let obj3 = { gap: fn(12918).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(12918).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(12918).CONTENT_INSET };
+let obj2 = { container: { gap: fn(12926).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
+let obj3 = { gap: fn(12926).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(12926).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(12926).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(12918).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(12926).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 const React6 = createStyles.createStyles(obj2);
 const size = fn(2);

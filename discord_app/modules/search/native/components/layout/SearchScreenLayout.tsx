@@ -1,11 +1,11 @@
-// === Module 18938: SearchScreenLayout ===
+// === Module 18954: SearchScreenLayout ===
 
-// Module 18938 (SearchScreenLayout)
-import AppFreezerDefault from "AppFreezer" /* 18372 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 18939 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 19051 */;
+// Module 18954 (SearchScreenLayout)
+import AppFreezerDefault from "AppFreezer" /* 18379 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 18955 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 19067 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13300 */;
+import SearchQueryStore from "SearchQueryStore" /* 13308 */;
 
 const require = fn;
 function SearchFreezeContainer(visible) {

@@ -1,6 +1,6 @@
-// === Module 9530: EditCustomStatusWithPreview ===
+// === Module 9531: EditCustomStatusWithPreview ===
 
-// Module 9530 (EditCustomStatusWithPreview)
+// Module 9531 (EditCustomStatusWithPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -14,11 +14,11 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import Pressables from "Pressables" /* 6152 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import _modDef7303 from "module_7303" /* 7303 */;
-import setCustomStatusDefault from "setCustomStatus" /* 9534 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 9536 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9537 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 9801 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 9803 */;
+import setCustomStatusDefault from "setCustomStatus" /* 9535 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 9537 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9538 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 9802 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 9804 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -268,7 +268,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[11]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13863, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13870, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "body-sm/medium", children: tmp10(tmp7[39])(first2) };
     obj18.trailing = callback1(tmp6(tmp7[30]).Text, obj19);
@@ -306,7 +306,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(9531).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(9532).STATUS_MAX_LENGTH;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1390).EmojiIntention;
@@ -343,7 +343,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = analyticsLocations(1112).intl;
       obj.title = intl.string(analyticsLocations(1112).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(9004).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(9005).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {

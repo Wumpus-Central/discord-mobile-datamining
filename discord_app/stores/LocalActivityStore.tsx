@@ -8,7 +8,7 @@ import _modDef1344 from "module_1344" /* 1344 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import ActivityTypes from "ActivityTypes" /* 6015 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7768 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 12286 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 12294 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
@@ -20,7 +20,7 @@ import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import DetectableGameStore from "DetectableGameStore" /* 2159 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 14763 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 14769 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 import SessionsStore from "SessionsStore" /* 5853 */;
 

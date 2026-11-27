@@ -1,6 +1,6 @@
-// === Module 19913: GuildSettingsModalOverview ===
+// === Module 19929: GuildSettingsModalOverview ===
 
-// Module 19913 (GuildSettingsModalOverview)
+// Module 19929 (GuildSettingsModalOverview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
@@ -22,17 +22,17 @@ import TextArea from "TextArea" /* 7440 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
 import Form from "Form" /* 8088 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11762 */;
-import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11798 */;
-import AssetChooserDefault from "AssetChooser" /* 19917 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8574 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11770 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11806 */;
+import AssetChooserDefault from "AssetChooser" /* 19933 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5664 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
 import UserStore from "UserStore" /* 1387 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8575 */;
 
 require = fn;
 let closure_3 = fn(4910).isGuildOwnerWithRequiredMfaLevel;
@@ -138,8 +138,8 @@ class GuildSettingsModalOverview extends PureComponent {
         }
         GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelId: id });
         if (null != systemChannel !== null != id) {
-          const result = applyArgumentsResult(19914).trackServerHubToggleSetting(guild.id, applyArgumentsResult(19914).ServerHubSettingType.ALL_SYSTEM_MESSAGES, tmp);
-          const obj2 = applyArgumentsResult(19914);
+          const result = applyArgumentsResult(19930).trackServerHubToggleSetting(guild.id, applyArgumentsResult(19930).ServerHubSettingType.ALL_SYSTEM_MESSAGES, tmp);
+          const obj2 = applyArgumentsResult(19930);
         }
       };
       if (systemChannel == null) {
@@ -360,7 +360,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const intl = util.intl;
     channelName = intl.string(util.t.ibUhoa);
   }
-  const result = tmp(10608).isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
+  const result = tmp(10609).isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
   let hasFlagResult = result;
   if (!result) {
     hasFlagResult = tmp(1405).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS);
@@ -371,13 +371,13 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     hasFlagResult1 = tmp(1405).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
     const tmpResult14 = tmp(1405);
   }
-  const tmpResult = tmp(10608);
-  let result1 = tmp(19683).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  const tmpResult = tmp(10609);
+  let result1 = tmp(19699).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1405).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult16 = tmp(1405);
   }
-  const tmpResult15 = tmp(19683);
+  const tmpResult15 = tmp(19699);
   let guildSpaceExperimentEnabled = tmp(7587).getGuildSpaceExperimentEnabled(guild.id, "GuildSettingsModalOverview");
   const obj2 = { title: null, description: null, hasIcons: false, children: null };
   const intl2 = tmp(1112).intl;

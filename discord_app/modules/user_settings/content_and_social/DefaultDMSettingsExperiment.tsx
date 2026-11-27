@@ -1,6 +1,6 @@
-// === Module 17583: DefaultDMSettingsExperiment ===
+// === Module 17590: DefaultDMSettingsExperiment ===
 
-// Module 17583 (DefaultDMSettingsExperiment)
+// Module 17590 (DefaultDMSettingsExperiment)
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5705 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 6825 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 6830 */;

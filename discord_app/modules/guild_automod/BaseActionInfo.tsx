@@ -1,6 +1,6 @@
-// === Module 19933: BaseActionInfo ===
+// === Module 19949: BaseActionInfo ===
 
-// Module 19933 (BaseActionInfo)
+// Module 19949 (BaseActionInfo)
 import util from "util" /* 1112 */;
 import useChannelName from "useChannelName" /* 5659 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -8,7 +8,7 @@ import RelationshipStore from "RelationshipStore" /* 4985 */;
 import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
-const Constants = fn(12522);
+const Constants = fn(12530);
 ({ AutomodActionType: hasOwnProperty, AutomodTriggerType: closure_6 } = Constants);
 const getFriendlyDurationString = fn(4957).getFriendlyDurationString;
 const size = fn(2);

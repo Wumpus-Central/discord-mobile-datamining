@@ -1,6 +1,6 @@
-// === Module 8419: StreamActionCreators ===
+// === Module 8420: StreamActionCreators ===
 
-// Module 8419 (StreamActionCreators)
+// Module 8420 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
@@ -12,12 +12,12 @@ import ChannelUtils from "ChannelUtils" /* 6801 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 7849 */;
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 8422 */;
-import transitionToStreamDefault from "transitionToStream" /* 8448 */;
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 8423 */;
+import transitionToStreamDefault from "transitionToStream" /* 8449 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameConsoleStore from "GameConsoleStore" /* 5852 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 8420 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 8421 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 8421 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 8422 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6029 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -99,7 +99,7 @@ let closure_20 = async function _fetchStreamPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -369,7 +369,7 @@ export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(8448)(closure_1_1);
+          closure_1(8449)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);

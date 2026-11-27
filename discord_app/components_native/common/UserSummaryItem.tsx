@@ -1,6 +1,6 @@
-// === Module 10569: UserSummaryItem ===
+// === Module 10570: UserSummaryItem ===
 
-// Module 10569 (UserSummaryItem)
+// Module 10570 (UserSummaryItem)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;

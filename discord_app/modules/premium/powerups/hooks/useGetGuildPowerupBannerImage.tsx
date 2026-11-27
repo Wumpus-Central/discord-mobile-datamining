@@ -1,6 +1,6 @@
-// === Module 13507: useGetGuildPowerupBannerImage ===
+// === Module 13515: useGetGuildPowerupBannerImage ===
 
-// Module 13507 (useGetGuildPowerupBannerImage)
+// Module 13515 (useGetGuildPowerupBannerImage)
 import initialize from "initialize" /* 504 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 

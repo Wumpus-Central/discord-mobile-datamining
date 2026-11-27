@@ -1,16 +1,16 @@
-// === Module 10766: ForumComposerModal ===
+// === Module 10767: ForumComposerModal ===
 
-// Module 10766 (ForumComposerModal)
+// Module 10767 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1499 */;
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8179 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10062 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10765 */;
-import showForumComposerCloseAlertDefault from "showForumComposerCloseAlert" /* 10768 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8180 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10063 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10766 */;
+import showForumComposerCloseAlertDefault from "showForumComposerCloseAlert" /* 10769 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10274 */;
+import NativeMenuStore from "NativeMenuStore" /* 10275 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import DraftStore from "DraftStore" /* 8117 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8124 */;
@@ -71,16 +71,16 @@ export default function ForumComposerModal(parentChannelId) {
                     const result = parentChannelId(8116).maybeTrackForumNewPostDraftCreated({ guildId: stateFromStores.guild_id, channelId: stateFromStores.id });
                     const obj = parentChannelId(8116);
                     const obj2 = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
-                    const result1 = parentChannelId(10765).closeCreateForumPostModal();
+                    const result1 = parentChannelId(10766).closeCreateForumPostModal();
                   },
             onCancel() {
-                    const result = parentChannelId(10765).closeCreateForumPostModal();
-                    const obj = parentChannelId(10765);
-                    threadId(8179).clearDraft(closure_1_0, DraftType.ThreadSettings);
-                    const obj2 = threadId(8179);
-                    threadId(8179).clearDraft(closure_1_0, DraftType.ChannelMessage);
-                    const obj3 = threadId(8179);
-                    threadId(10062).clearAll(closure_1_0, DraftType.ChannelMessage);
+                    const result = parentChannelId(10766).closeCreateForumPostModal();
+                    const obj = parentChannelId(10766);
+                    threadId(8180).clearDraft(closure_1_0, DraftType.ThreadSettings);
+                    const obj2 = threadId(8180);
+                    threadId(8180).clearDraft(closure_1_0, DraftType.ChannelMessage);
+                    const obj3 = threadId(8180);
+                    threadId(10063).clearAll(closure_1_0, DraftType.ChannelMessage);
                   }
           };
           showForumComposerCloseAlertDefault(obj2);
@@ -100,7 +100,7 @@ export default function ForumComposerModal(parentChannelId) {
   const items3 = [threadId];
   const stateFromStores1 = parentChannelId(504).useStateFromStores(items2, () => ChannelStore.getChannel(threadId), items3);
   let obj3 = parentChannelId(504);
-  const tmp6 = threadId(10767)(parentChannelId);
+  const tmp6 = threadId(10768)(parentChannelId);
   const items4 = [ForumPostMessagesStore];
   const stateFromStores2 = parentChannelId(504).useStateFromStores(items4, () => {
     let firstMessage = null;
@@ -134,7 +134,7 @@ export default function ForumComposerModal(parentChannelId) {
           }
           obj7.importantForAccessibility = str;
           let obj8 = { parentChannel: stateFromStores, thread: stateFromStores1, message: stateFromStores2, threadSettingsDraft: tmp6, onClose: handleClose, isEdit };
-          obj7.children = jsx(tmp2(10769), { parentChannel: stateFromStores, thread: stateFromStores1, message: stateFromStores2, threadSettingsDraft: tmp6, onClose: handleClose, isEdit });
+          obj7.children = jsx(tmp2(10770), { parentChannel: stateFromStores, thread: stateFromStores1, message: stateFromStores2, threadSettingsDraft: tmp6, onClose: handleClose, isEdit });
           obj2.children = <isEdit style={tmp.container} importantForAccessibility={null}>{null}</isEdit>;
           tmp11Result = jsx(tmp4(6379).AnalyticsLocationProvider, { value: threadId(6379)(parentChannelId.analyticsLocations).analyticsLocations, children: null });
         } else {

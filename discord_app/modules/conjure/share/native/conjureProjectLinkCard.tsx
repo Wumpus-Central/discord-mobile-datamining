@@ -1,19 +1,19 @@
-// === Module 11995: conjureProjectLinkCard ===
+// === Module 12003: conjureProjectLinkCard ===
 
-// Module 11995 (conjureProjectLinkCard)
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9079 */;
-import ConjureMobileExperiment from "ConjureMobileExperiment" /* 11488 */;
-import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11996 */;
-import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11997 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12000 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 12001 */;
+// Module 12003 (conjureProjectLinkCard)
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9080 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 11463 */;
+import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 12004 */;
+import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 12005 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12008 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 12009 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import UserStore from "UserStore" /* 1387 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11994 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12002 */;
 
 require = fn;
 function readConjureProjectLinkCard(applicationId, ticket, memo2) {

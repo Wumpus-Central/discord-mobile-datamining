@@ -1,6 +1,6 @@
-// === Module 11538: ModalFloatingAction ===
+// === Module 11546: ModalFloatingAction ===
 
-// Module 11538 (ModalFloatingAction)
+// Module 11546 (ModalFloatingAction)
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef1654 from "module_1654" /* 1654 */;

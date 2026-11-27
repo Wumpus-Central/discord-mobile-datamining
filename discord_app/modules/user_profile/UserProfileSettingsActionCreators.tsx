@@ -1,9 +1,9 @@
-// === Module 11946: UserProfileSettingsActionCreators ===
+// === Module 11954: UserProfileSettingsActionCreators ===
 
-// Module 11946 (UserProfileSettingsActionCreators)
+// Module 11954 (UserProfileSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef5933 from "module_5933" /* 5933 */;
-import GuildTagUtils from "GuildTagUtils" /* 8578 */;
+import GuildTagUtils from "GuildTagUtils" /* 8579 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import UserStore from "UserStore" /* 1387 */;
 import UserProfileStore from "UserProfileStore" /* 6163 */;

@@ -1,6 +1,6 @@
-// === Module 9477: useProfileEffect ===
+// === Module 9478: useProfileEffect ===
 
-// Module 9477 (useProfileEffect)
+// Module 9478 (useProfileEffect)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6311 */;

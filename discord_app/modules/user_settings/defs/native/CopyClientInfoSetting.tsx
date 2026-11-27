@@ -1,6 +1,6 @@
-// === Module 17180: CopyClientInfoSetting ===
+// === Module 17187: CopyClientInfoSetting ===
 
-// Module 17180 (CopyClientInfoSetting)
+// Module 17187 (CopyClientInfoSetting)
 import util from "util" /* 1112 */;
 import DeviceUtils from "DeviceUtils" /* 5000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
@@ -10,9 +10,9 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
 import ActionSheetRow from "ActionSheetRow" /* 7548 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 8338 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12317 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11914 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 8339 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12325 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11922 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1378 */;
 
 require = fn;
@@ -159,7 +159,7 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

@@ -1,13 +1,13 @@
-// === Module 16398: FamilyCenterModalDataTooltip ===
+// === Module 16405: FamilyCenterModalDataTooltip ===
 
-// Module 16398 (FamilyCenterModalDataTooltip)
+// Module 16405 (FamilyCenterModalDataTooltip)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2847 from "module_2847" /* 2847 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8216 */;
-import Modal from "Modal" /* 11618 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8217 */;
+import Modal from "Modal" /* 11626 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -62,8 +62,8 @@ function FamilyCenterModalDataTooltipScreen() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(7137).ChatIcon, [USER_CALLED]: fn(12595).PhoneIcon, [USER_ADD]: fn(5728).FriendsIcon, [GUILD_ADD]: fn(14790).ServerGridIcon, [GUILD_INTERACTION]: fn(7139).ThreadIcon, [PURCHASES]: fn(7931).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5752).ClockIcon, [GIFTS]: fn(11307).GiftIcon };
-({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(8213).TeenActionDisplayType);
+let obj = { [USER_INTERACTION]: fn(7137).ChatIcon, [USER_CALLED]: fn(12603).PhoneIcon, [USER_ADD]: fn(5728).FriendsIcon, [GUILD_ADD]: fn(14796).ServerGridIcon, [GUILD_INTERACTION]: fn(7139).ThreadIcon, [PURCHASES]: fn(7931).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5752).ClockIcon, [GIFTS]: fn(11308).GiftIcon };
+({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(8214).TeenActionDisplayType);
 let createStyles = fn(5043);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };
 let size = { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, flexShrink: 0, marginRight: nativeDefault.space.PX_12 };

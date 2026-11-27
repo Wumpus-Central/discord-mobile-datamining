@@ -1,6 +1,6 @@
-// === Module 9694: Carousel ===
+// === Module 9695: Carousel ===
 
-// Module 9694 (Carousel)
+// Module 9695 (Carousel)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;

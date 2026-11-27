@@ -1,16 +1,16 @@
-// === Module 19574: VoicePanelDisconnectCancelButton ===
+// === Module 19590: VoicePanelDisconnectCancelButton ===
 
-// Module 19574 (VoicePanelDisconnectCancelButton)
+// Module 19590 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 575 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6129 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6797 */;
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6942 */;
 import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7835 */;
-import StreamActionCreators from "StreamActionCreators" /* 8419 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10000 */;
-import shouldShowEndStageModalDefault from "shouldShowEndStageModal" /* 10315 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19565 */;
+import StreamActionCreators from "StreamActionCreators" /* 8420 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10001 */;
+import shouldShowEndStageModalDefault from "shouldShowEndStageModal" /* 10316 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19581 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
@@ -21,7 +21,7 @@ import VoicePanelStore from "VoicePanelStore" /* 6965 */;
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11782).VoicePanelModes;
+const VoicePanelModes = fn(11790).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
 const createStyles = fn(5043);
@@ -151,11 +151,11 @@ export default function DisconnectCancelButton(props) {
     }
   }, items4);
   if (first === constants.ACTIVITY) {
-    PhoneHangUpIcon = tmp8(10313).DoorExitIcon;
+    PhoneHangUpIcon = tmp8(10314).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(19575).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(19591).ScreenXIcon;
   } else {
-    PhoneHangUpIcon = tmp8(9024).PhoneHangUpIcon;
+    PhoneHangUpIcon = tmp8(9025).PhoneHangUpIcon;
   }
   const element = { onPress: callback1, props: props.props, style: tmp.disconnectCancelBG, accessibilityLabel: null, children: null };
   let obj2 = require("module_1654");

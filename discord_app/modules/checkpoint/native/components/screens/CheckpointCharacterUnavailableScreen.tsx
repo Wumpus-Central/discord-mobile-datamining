@@ -1,11 +1,11 @@
-// === Module 12874: CheckpointCharacterUnavailableScreen ===
+// === Module 12882: CheckpointCharacterUnavailableScreen ===
 
-// Module 12874 (CheckpointCharacterUnavailableScreen)
+// Module 12882 (CheckpointCharacterUnavailableScreen)
 import util from "util" /* 1112 */;
 import _modDef3495 from "module_3495" /* 3495 */;
-import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12849 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
-import CheckpointUnavailableScreenDefault from "CheckpointUnavailableScreen" /* 12875 */;
+import useCheckpointHasUserStatsDefault from "useCheckpointHasUserStats" /* 12857 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
+import CheckpointUnavailableScreenDefault from "CheckpointUnavailableScreen" /* 12883 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 

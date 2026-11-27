@@ -1,6 +1,6 @@
-// === Module 18253: useForLaterCoachmark ===
+// === Module 18260: useForLaterCoachmark ===
 
-// Module 18253 (useForLaterCoachmark)
+// Module 18260 (useForLaterCoachmark)
 import util from "util" /* 1112 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/native/useForL
 
 export default function useForLaterCoachmark(targetRef) {
   items = [closure_6];
-  const tmp = _slicedToArray(first(9561).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const tmp = _slicedToArray(first(9562).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   first = tmp[0];
   dependencyMap = tmp3;
   const items1 = [tmp[1], first];
@@ -29,11 +29,11 @@ export default function useForLaterCoachmark(targetRef) {
       dependencyMap(constants.USER_DISMISS);
     };
     obj.renderImgComponent = function renderImgComponent() {
-      return closure_1_5(first(11744).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
+      return closure_1_5(first(11752).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
     };
     return obj;
   }, items1);
-  let obj = first(9561);
-  const coachmark = first(9568).useCoachmark(targetRef, memo);
+  let obj = first(9562);
+  const coachmark = first(9569).useCoachmark(targetRef, memo);
   return tmp[1];
 };

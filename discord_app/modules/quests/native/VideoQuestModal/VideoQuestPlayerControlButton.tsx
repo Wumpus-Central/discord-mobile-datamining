@@ -1,6 +1,6 @@
-// === Module 16556: VideoQuestPlayerControlButton ===
+// === Module 16563: VideoQuestPlayerControlButton ===
 
-// Module 16556 (VideoQuestPlayerControlButton)
+// Module 16563 (VideoQuestPlayerControlButton)
 import nativeDefault from "native" /* 575 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5611 */;
 import Pressables from "Pressables" /* 6152 */;

@@ -1,12 +1,12 @@
-// === Module 18713: ConjurePublishNotesSheet ===
+// === Module 18730: ConjurePublishNotesSheet ===
 
-// Module 18713 (ConjurePublishNotesSheet)
+// Module 18730 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5257 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11763 */;
-import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 18714 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11771 */;
+import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 18731 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -87,7 +87,7 @@ export default function ConjurePublishNotesSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

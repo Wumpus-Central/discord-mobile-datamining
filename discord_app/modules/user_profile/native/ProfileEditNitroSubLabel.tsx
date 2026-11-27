@@ -1,9 +1,9 @@
-// === Module 16036: ProfileEditNitroSubLabel ===
+// === Module 16043: ProfileEditNitroSubLabel ===
 
-// Module 16036 (ProfileEditNitroSubLabel)
+// Module 16043 (ProfileEditNitroSubLabel)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9637 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

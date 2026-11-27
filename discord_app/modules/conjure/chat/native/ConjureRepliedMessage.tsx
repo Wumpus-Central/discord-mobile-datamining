@@ -1,10 +1,10 @@
-// === Module 18686: chat/ConjureRepliedMessage ===
+// === Module 18700: chat/ConjureRepliedMessage ===
 
-// Module 18686 (chat/ConjureRepliedMessage)
+// Module 18700 (chat/ConjureRepliedMessage)
 import nativeDefault from "native" /* 575 */;
 import _modDef4245 from "module_4245" /* 4245 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 18601 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 18694 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 18612 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 18708 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,10 +12,10 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const diff = fn(18676).MESSAGE_EDGE_INSET + fn(18676).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(18676).MESSAGE_CONTENT_INSET - 4 - diff;
+const diff = fn(18690).MESSAGE_EDGE_INSET + fn(18690).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(18690).MESSAGE_CONTENT_INSET - 4 - diff;
 const createStyles = fn(5043);
-let obj2 = { root: { marginLeft: diff - fn(18676).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
+let obj2 = { root: { marginLeft: diff - fn(18690).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
 const rect = { position: "absolute", left: 0, top: 9, bottom: 0, width: diff1, borderTopWidth: 2, borderLeftWidth: 2, borderColor: nativeDefault.colors.SPINE_DEFAULT, borderTopLeftRadius: Math.round(0.25 * diff1) };
 obj2.spine = rect;
 obj2.avatar = { marginRight: 4 };
@@ -29,8 +29,8 @@ export default function ConjureRepliedMessage(replied) {
   replied = replied.replied;
   const onJump = replied.onJump;
   const tmp = closure_8();
-  const messageAuthorUser = replied(11553).useMessageAuthorUser(replied.userId);
-  const obj = replied(11553);
+  const messageAuthorUser = replied(11561).useMessageAuthorUser(replied.userId);
+  const obj = replied(11561);
   let str = replied(5099).useName(messageAuthorUser);
   if (str == null) {
     str = "";
@@ -45,7 +45,7 @@ export default function ConjureRepliedMessage(replied) {
   if (body == null) {
     body = replied.content;
   }
-  const tmp2Result = replied(18687);
+  const tmp2Result = replied(18701);
   const conjureMentionNames = tmp2Result.useConjureMentionNames(body.replace(/\s+/g, " ").trim());
   const obj3 = { style: tmp.root, onPress: onJump, disabled: null == onJump, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = tmp2(1112).intl;
@@ -55,7 +55,7 @@ export default function ConjureRepliedMessage(replied) {
   if (null != messageAuthorUser) {
     const obj5 = { style: tmp.avatar, children: null };
     const obj6 = { userId: replied.userId, size: tmp2(1186).AvatarSizes.SIZE_16 };
-    obj5.children = closure_6(tmp2(18688).ConjureUserAvatar, obj6);
+    obj5.children = closure_6(tmp2(18702).ConjureUserAvatar, obj6);
     tmp11Result = closure_6(closure_5, obj5);
   }
   items1[1] = tmp11Result;

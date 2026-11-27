@@ -1,6 +1,6 @@
-// === Module 10048: ApplicationFrecencyStore ===
+// === Module 10049: ApplicationFrecencyStore ===
 
-// Module 10048 (ApplicationFrecencyStore)
+// Module 10049 (ApplicationFrecencyStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

@@ -1,10 +1,10 @@
-// === Module 10298: SoundUtils ===
+// === Module 10299: SoundUtils ===
 
-// Module 10298 (SoundUtils)
+// Module 10299 (SoundUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import getSoundsForPackDefault from "getSoundsForPack" /* 10301 */;
-import sound_playback_SoundUtils from "sound_playback/SoundUtils" /* 10302 */;
-import SoundpackStore from "SoundpackStore" /* 10299 */;
+import getSoundsForPackDefault from "getSoundsForPack" /* 10302 */;
+import sound_playback_SoundUtils from "sound_playback/SoundUtils" /* 10303 */;
+import SoundpackStore from "SoundpackStore" /* 10300 */;
 import StreamerModeStore from "StreamerModeStore" /* 5100 */;
 
 require = fn;

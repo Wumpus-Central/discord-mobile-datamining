@@ -1,18 +1,18 @@
-// === Module 8196: InAppReportModal ===
+// === Module 8197: InAppReportModal ===
 
-// Module 8196 (InAppReportModal)
+// Module 8197 (InAppReportModal)
 import util from "util" /* 1112 */;
 import Navigator from "Navigator" /* 7355 */;
 import HeaderActionButton2 from "HeaderActionButton" /* 7751 */;
-import showReportModal from "showReportModal" /* 8193 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8195 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8218 */;
+import showReportModal from "showReportModal" /* 8194 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8196 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8219 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8197).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8198).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -72,7 +72,7 @@ export default function InAppReportModal(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -123,7 +123,7 @@ export default function InAppReportModal(arg0) {
               addOnCloseCallback(closure_2);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp32) {
           c4 = tmp;

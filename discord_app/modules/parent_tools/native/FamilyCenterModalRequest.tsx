@@ -1,6 +1,6 @@
-// === Module 12589: FamilyCenterModalRequest ===
+// === Module 12597: FamilyCenterModalRequest ===
 
-// Module 12589 (FamilyCenterModalRequest)
+// Module 12597 (FamilyCenterModalRequest)
 import _modDef38 from "module_38" /* 38 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
@@ -17,12 +17,12 @@ import NavigatorHeader2 from "NavigatorHeader" /* 7191 */;
 import _modDef7752 from "module_7752" /* 7752 */;
 import ModalScreen from "ModalScreen" /* 7888 */;
 import ModalContent from "ModalContent" /* 7890 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8214 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8216 */;
-import ModalFooter from "ModalFooter" /* 11615 */;
-import _modDef12044 from "module_12044" /* 12044 */;
-import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 12590 */;
-import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 12599 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8215 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8217 */;
+import ModalFooter from "ModalFooter" /* 11623 */;
+import _modDef12052 from "module_12052" /* 12052 */;
+import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 12598 */;
+import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 12607 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -361,7 +361,7 @@ function FamilyCenterPrereqLoading(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -481,7 +481,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   }, []);
   const obj3 = { style: tmp.content, children: null };
   const obj2 = navigation(563);
-  const items2 = [closure_11(View, { style: tmp.art, children: closure_11(navigation(12603).FamilyShieldSpotIllustration, {}) }), , ];
+  const items2 = [closure_11(View, { style: tmp.art, children: closure_11(navigation(12611).FamilyShieldSpotIllustration, {}) }), , ];
   const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl = navigation(1112).intl;
   let str;
@@ -523,7 +523,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   items4[1] = closure_11(navigation(5641).Button, obj11);
   obj9.children = items4;
   obj8.children = closure_12(navigation(6863).ButtonGroup, obj9);
-  items3[1] = closure_11(navigation(11615).ModalFooter, obj8);
+  items3[1] = closure_11(navigation(11623).ModalFooter, obj8);
   obj6.children = items3;
   return closure_12(navigation(7888).ModalScreen, obj6);
 }
@@ -627,7 +627,7 @@ function FamilyCenterPrereqMustBeAdultScreen() {
   return closure_11(FamilyCenterPrereqScreen, obj3);
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(8213);
+const FamilyCenterConstants = fn(8214);
 ({ FAMILY_CENTER_AGE_VERIFICATION_RESUME_TIMEOUT: metroImportDefault, FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES: closure_8, FamilyCenterFailureCode: closure_9, FamilyCenterIconType: closure_10 } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -771,10 +771,10 @@ export default function FamilyCenterRequestModal(userId) {
     obj[FamilyCenterModalRequestRouting.FamilyCenterModalRequestSections.ERROR] = obj11;
     return obj;
   }, items);
-  let obj = { initialRouteName: userId(12590).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
+  let obj = { initialRouteName: userId(12598).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
   const intl = userId(1112).intl;
   obj.headerBackTitle = intl.string(userId(1112).t["13/7kX"]);
-  return closure_11(userId(11618).Modal, obj);
+  return closure_11(userId(11626).Modal, obj);
 };
 export { FamilyCenterModalRequestConfirm };
 export { FamilyCenterModalRequestSuccess };

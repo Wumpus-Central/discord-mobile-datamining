@@ -1,13 +1,13 @@
-// === Module 14431: ReferralSystemMessage ===
+// === Module 14438: ReferralSystemMessage ===
 
-// Module 14431 (ReferralSystemMessage)
+// Module 14438 (ReferralSystemMessage)
 import nativeDefault from "native" /* 575 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8821 */;
-import _modDef9638 from "module_9638" /* 9638 */;
-import createCommonMessageDefault from "createCommonMessage" /* 14373 */;
-import ReferralTrialEmbedRedesign from "ReferralTrialEmbedRedesign" /* 14432 */;
-import ReferralTrialEmbed from "ReferralTrialEmbed" /* 14434 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 9141 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8822 */;
+import _modDef9639 from "module_9639" /* 9639 */;
+import createCommonMessageDefault from "createCommonMessage" /* 14380 */;
+import ReferralTrialEmbedRedesign from "ReferralTrialEmbedRedesign" /* 14439 */;
+import ReferralTrialEmbed from "ReferralTrialEmbed" /* 14441 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 9142 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -38,7 +38,7 @@ export function createReferralSystemMessage(message) {
         const merged = Object.assign(createCommonMessageDefault(message));
         obj2.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = closure_5(theme);
-        obj2.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9638);
+        obj2.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9639);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj2;
       }
@@ -52,7 +52,7 @@ export function createReferralSystemMessage(message) {
         const merged1 = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = closure_5(theme);
-        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9638);
+        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9639);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;

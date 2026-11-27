@@ -1,6 +1,6 @@
-// === Module 17884: GuildThemeNuxUtils ===
+// === Module 17891: GuildThemeNuxUtils ===
 
-// Module 17884 (GuildThemeNuxUtils)
+// Module 17891 (GuildThemeNuxUtils)
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4873 */;
 import Client from "Client" /* 6784 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -18,7 +18,7 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
         return obj;
       } else {
         c5 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp14) {
       c5 = tmp;

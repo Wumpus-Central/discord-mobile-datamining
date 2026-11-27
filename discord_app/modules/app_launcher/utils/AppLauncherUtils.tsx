@@ -1,6 +1,6 @@
-// === Module 10087: AppLauncherUtils ===
+// === Module 10088: AppLauncherUtils ===
 
-// Module 10087 (AppLauncherUtils)
+// Module 10088 (AppLauncherUtils)
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
@@ -9,14 +9,14 @@ import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2151 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5687 */;
 import getPlatformDefault from "getPlatform" /* 5694 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6973 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8183 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10089 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10099 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8184 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10090 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10100 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10047 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 10048 */;
 import ApplicationRecord from "ApplicationRecord" /* 2143 */;
-import AppLauncherStore from "AppLauncherStore" /* 10088 */;
+import AppLauncherStore from "AppLauncherStore" /* 10089 */;
 
 const require = globalThis.__r;
 
@@ -169,7 +169,7 @@ export function executeAppLauncherCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -237,7 +237,7 @@ export function executeAppLauncherCommand(arg0) {
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;

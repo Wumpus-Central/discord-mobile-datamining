@@ -1,15 +1,15 @@
-// === Module 9072: ConversationListScreen ===
+// === Module 9073: ConversationListScreen ===
 
-// Module 9072 (ConversationListScreen)
+// Module 9073 (ConversationListScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9043 */;
-import ConversationListItemDefault from "ConversationListItem" /* 9073 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9044 */;
+import ConversationListItemDefault from "ConversationListItem" /* 9074 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 8302 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8303 */;
 
 const require = globalThis.__r;
 
@@ -112,7 +112,7 @@ export default function ConversationListScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

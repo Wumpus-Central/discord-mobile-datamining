@@ -1,6 +1,6 @@
-// === Module 8193: showReportModal ===
+// === Module 8194: showReportModal ===
 
-// Module 8193 (showReportModal)
+// Module 8194 (showReportModal)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_5 = async function _showReportModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

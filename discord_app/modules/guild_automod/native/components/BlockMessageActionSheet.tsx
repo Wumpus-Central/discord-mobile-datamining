@@ -1,6 +1,6 @@
-// === Module 19954: BlockMessageActionSheet ===
+// === Module 19970: BlockMessageActionSheet ===
 
-// Module 19954 (BlockMessageActionSheet)
+// Module 19970 (BlockMessageActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(12522);
+const Constants = fn(12530);
 ({ AutomodActionType: hasOwnProperty, MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);

@@ -1,6 +1,6 @@
-// === Module 13613: TabItem ===
+// === Module 13620: TabItem ===
 
-// Module 13613 (TabItem)
+// Module 13620 (TabItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
@@ -171,7 +171,7 @@ export function TabItem(arg0) {
       str = "neutral";
     }
     const obj6 = { variant: str };
-    obj5.children = closure_5(tmp3(9456).IndicatorDot, obj6);
+    obj5.children = closure_5(tmp3(9457).IndicatorDot, obj6);
     tmp14Result2 = closure_5(closure_4, obj5);
   }
   items3[2] = tmp14Result2;

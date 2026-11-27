@@ -1,6 +1,6 @@
-// === Module 8351: SlowmodeUtils ===
+// === Module 8352: SlowmodeUtils ===
 
-// Module 8351 (SlowmodeUtils)
+// Module 8352 (SlowmodeUtils)
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
 import _modDef2169 from "module_2169" /* 2169 */;

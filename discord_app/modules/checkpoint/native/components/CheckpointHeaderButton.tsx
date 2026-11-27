@@ -1,6 +1,6 @@
-// === Module 12646: CheckpointHeaderButton ===
+// === Module 12654: CheckpointHeaderButton ===
 
-// Module 12646 (CheckpointHeaderButton)
+// Module 12654 (CheckpointHeaderButton)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

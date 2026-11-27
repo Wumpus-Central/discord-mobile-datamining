@@ -1,17 +1,17 @@
-// === Module 13999: GuildBoostingGuildList ===
+// === Module 14006: GuildBoostingGuildList ===
 
-// Module 13999 (GuildBoostingGuildList)
+// Module 14006 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useThemeDefault from "useTheme" /* 5252 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import GuildIconDefault from "GuildIcon" /* 7052 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7347 */;
-import transitionToGuild from "transitionToGuild" /* 8600 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 10369 */;
-import _modDef10855 from "module_10855" /* 10855 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 12539 */;
-import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 13968 */;
+import transitionToGuild from "transitionToGuild" /* 8601 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 10370 */;
+import _modDef10856 from "module_10856" /* 10856 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 12547 */;
+import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 13975 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import SortedGuildStore from "SortedGuildStore" /* 6164 */;
@@ -50,7 +50,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj6 = { style: tmp.subscriptionInfo, children: null };
     const obj7 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
     const tmp2Result3 = GuildIconDefault;
-    obj7.source = _modDef10855;
+    obj7.source = _modDef10856;
     obj7.style = tmp.premiumGuildImage;
     const items3 = [closure_7(FastImageDefault, obj7), ];
     const obj8 = { variant: "body-xs/medium", children: null };

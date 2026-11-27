@@ -1,10 +1,10 @@
-// === Module 16670: OrbsArcadeGameContextMenu ===
+// === Module 16677: OrbsArcadeGameContextMenu ===
 
-// Module 16670 (OrbsArcadeGameContextMenu)
+// Module 16677 (OrbsArcadeGameContextMenu)
 import util from "util" /* 1112 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 9462 */;
-import RefreshIcon from "RefreshIcon" /* 14077 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16635 */;
+import CircleQuestionIcon from "CircleQuestionIcon" /* 9463 */;
+import RefreshIcon from "RefreshIcon" /* 14084 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16642 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -55,9 +55,9 @@ export default function OrbsArcadeGameContextMenu(game) {
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      const result = game(16638).trackOrbsArcadeCtaClicked(id, game(16638).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE, game(16638).OrbsArcadeCtaLocation.GAME_TILE, surface);
-      const obj = game(16638);
-      const result1 = game(16639).openOrbsArcadeInfoSheet(id.id, surface);
+      const result = game(16645).trackOrbsArcadeCtaClicked(id, game(16645).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE, game(16645).OrbsArcadeCtaLocation.GAME_TILE, surface);
+      const obj = game(16645);
+      const result1 = game(16646).openOrbsArcadeInfoSheet(id.id, surface);
     };
     items = [obj];
     return items;
@@ -89,7 +89,7 @@ export default function OrbsArcadeGameContextMenu(game) {
   } else {
     items4 = [memo];
   }
-  return jsx(game(9067).ContextMenu, {
+  return jsx(game(9068).ContextMenu, {
     items: items4,
     triggerOnTap: true,
     children(ref) {

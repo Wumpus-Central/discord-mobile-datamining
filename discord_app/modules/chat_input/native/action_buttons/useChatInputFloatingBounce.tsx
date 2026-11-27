@@ -1,6 +1,6 @@
-// === Module 13200: useChatInputFloatingBounce ===
+// === Module 13208: useChatInputFloatingBounce ===
 
-// Module 13200 (useChatInputFloatingBounce)
+// Module 13208 (useChatInputFloatingBounce)
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import timing_timing from "timing/timing" /* 5253 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const ChatInputConstants = fn(12960);
+const ChatInputConstants = fn(12968);
 ({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: closure_6, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: metroImportDefault } = ChatInputConstants);
 let closure_8 = { code: "(function useChatInputFloatingBounceTsx1(finished){let[scheduleOnRN,setEnterFinished]=this.__closure;if(finished===true){scheduleOnRN(setEnterFinished,true);}})" };
 let closure_9 = { code: "(function useChatInputFloatingBounceTsx2(finished){let[scheduleOnRN,handleExitFinished]=this.__closure;if(finished===true){scheduleOnRN(handleExitFinished);}})" };

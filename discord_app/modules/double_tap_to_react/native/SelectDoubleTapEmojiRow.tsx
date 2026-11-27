@@ -1,11 +1,11 @@
-// === Module 13347: SelectDoubleTapEmojiRow ===
+// === Module 13355: SelectDoubleTapEmojiRow ===
 
-// Module 13347 (SelectDoubleTapEmojiRow)
+// Module 13355 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5625 */;
 import EmojiDefault from "Emoji" /* 7488 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9537 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9538 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 

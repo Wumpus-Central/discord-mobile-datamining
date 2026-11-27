@@ -1,6 +1,6 @@
-// === Module 20060: GuildSettingsRoleItem ===
+// === Module 20118: GuildSettingsRoleItem ===
 
-// Module 20060 (GuildSettingsRoleItem)
+// Module 20118 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 575 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6991 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -111,7 +111,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -127,7 +127,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    const obj6 = { value: tmp2(12054).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    const obj6 = { value: tmp2(12062).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj6;
                   }
                 } else if (arg0 === 1) {
@@ -140,7 +140,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                 }
                 GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                 c2 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               } catch (tmp16) {
                 c2 = tmp;
                 throw tmp16;
@@ -251,7 +251,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
     }
     let tmp23Result = null;
     if (null != prop) {
-      const obj23 = { size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_9722"), "aria-label": null, style: null };
+      const obj23 = { size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_9723"), "aria-label": null, style: null };
       const intl6 = tmp5(onMoveUp[11]).intl;
       obj23["aria-label"] = intl6.string(tmp5(onMoveUp[11]).t.a2Ak8b);
       obj23.style = tmp4.sparkleIcon;

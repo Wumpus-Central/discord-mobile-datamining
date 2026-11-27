@@ -1,10 +1,10 @@
-// === Module 10293: GuildScheduledEventPrompts ===
+// === Module 10294: GuildScheduledEventPrompts ===
 
-// Module 10293 (GuildScheduledEventPrompts)
+// Module 10294 (GuildScheduledEventPrompts)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Form from "Form" /* 8088 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8473 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8474 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export function ScheduleEventPrompt(isLive) {
       onPress: function handleScheduleEvent() {
           const result = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(closure_1_0, { channel });
         },
-      iconSource: channel(8609),
+      iconSource: channel(8610),
       iconStyle: tmp.promptIconStyle,
       completed: isLive.isLive,
       title: null,
@@ -47,7 +47,7 @@ export function ScheduleEventPrompt(isLive) {
       onPress: function handleScheduleEvent() {
           const result = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(closure_1_0, { channel });
         },
-      iconSource: channel(8609),
+      iconSource: channel(8610),
       iconStyle: tmp.promptIconStyle,
       completed: isLive.isLive,
       title: null,
@@ -69,7 +69,7 @@ export function StartEventPrompt(event) {
       onPress: function handleStartEvent() {
           const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
         },
-      iconSource: recurrenceId(8606),
+      iconSource: recurrenceId(8607),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -91,7 +91,7 @@ export function StartEventPrompt(event) {
       onPress: function handleStartEvent() {
           const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
         },
-      iconSource: recurrenceId(8606),
+      iconSource: recurrenceId(8607),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,

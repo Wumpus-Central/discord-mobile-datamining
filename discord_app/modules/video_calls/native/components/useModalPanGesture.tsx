@@ -1,6 +1,6 @@
-// === Module 13832: useModalPanGesture ===
+// === Module 13839: useModalPanGesture ===
 
-// Module 13832 (useModalPanGesture)
+// Module 13839 (useModalPanGesture)
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;

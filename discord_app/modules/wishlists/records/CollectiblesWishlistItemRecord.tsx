@@ -1,13 +1,13 @@
-// === Module 11119: CollectiblesWishlistItemRecord ===
+// === Module 11120: CollectiblesWishlistItemRecord ===
 
-// Module 11119 (CollectiblesWishlistItemRecord)
+// Module 11120 (CollectiblesWishlistItemRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 2113 */;
 import AvatarDecorationRecord from "AvatarDecorationRecord" /* 6316 */;
 import NameplateRecord from "NameplateRecord" /* 2111 */;
 import ProfileEffectRecord from "ProfileEffectRecord" /* 6317 */;
 import ProfileFrameRecord from "ProfileFrameRecord" /* 6318 */;
 import SKURecord from "SKURecord" /* 2167 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 11118 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 11119 */;
 
 require = fn;
 function createCollectiblesItemFromServerResponse(collectibles_item) {

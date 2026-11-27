@@ -1,6 +1,6 @@
-// === Module 12138: GameOrganizationInviteSendActionCreators ===
+// === Module 12146: GameOrganizationInviteSendActionCreators ===
 
-// Module 12138 (GameOrganizationInviteSendActionCreators)
+// Module 12146 (GameOrganizationInviteSendActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -25,7 +25,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -127,8 +127,8 @@ export default {
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj8 = closure_1(8244);
-              const obj7 = { content: closure_1(12139)(closure_129_1), tts: false, invalidEmojis: [], validNonShortcutEmojis: [] };
+              const obj8 = closure_1(8245);
+              const obj7 = { content: closure_1(12147)(closure_129_1), tts: false, invalidEmojis: [], validNonShortcutEmojis: [] };
               const obj9 = { location: constants.GAME_ORGANIZATION_INVITE };
               dependencyMap = 2;
               c3 = 1;
@@ -144,7 +144,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           c3 = tmp;

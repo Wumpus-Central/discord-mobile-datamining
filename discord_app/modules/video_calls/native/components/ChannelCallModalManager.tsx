@@ -1,7 +1,7 @@
-// === Module 10255: ChannelCallModalManager ===
+// === Module 10256: ChannelCallModalManager ===
 
-// Module 10255 (ChannelCallModalManager)
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8449 */;
+// Module 10256 (ChannelCallModalManager)
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8450 */;
 import UserStore from "UserStore" /* 1387 */;
 import VoiceStateStore from "VoiceStateStore" /* 5691 */;
 import LifecycleManager from "LifecycleManager" /* 2122 */;

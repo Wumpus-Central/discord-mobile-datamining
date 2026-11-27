@@ -1,10 +1,10 @@
-// === Module 14990: ConjureServerWidgetUpsell ===
+// === Module 14997: ConjureServerWidgetUpsell ===
 
-// Module 14990 (ConjureServerWidgetUpsell)
+// Module 14997 (ConjureServerWidgetUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useConjureServerWidgetUpsell from "useConjureServerWidgetUpsell" /* 14991 */;
-import turnOnConjureServerWidgetDefault from "turnOnConjureServerWidget" /* 14999 */;
+import useConjureServerWidgetUpsell from "useConjureServerWidgetUpsell" /* 14998 */;
+import turnOnConjureServerWidgetDefault from "turnOnConjureServerWidget" /* 15006 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
 
@@ -13,7 +13,7 @@ function ServerWidgetUpsellCard(cardStyle) {
   ({ userId, widget } = cardStyle);
   ({ guildId, onDismiss } = cardStyle);
   const tmp = closure_7();
-  const conjureServerWidgetUpsellDetails = widget(14991).useConjureServerWidgetUpsellDetails(userId, widget, guildId);
+  const conjureServerWidgetUpsellDetails = widget(14998).useConjureServerWidgetUpsellDetails(userId, widget, guildId);
   if (null == conjureServerWidgetUpsellDetails) {
     return null;
   } else {
@@ -37,7 +37,7 @@ function ServerWidgetUpsellCard(cardStyle) {
     let tmp10Result = null;
     if (null != creator) {
       const obj10 = { creator, guildId };
-      tmp10Result = closure_5(onDismiss(11562), obj10);
+      tmp10Result = closure_5(onDismiss(11570), obj10);
     }
     items1[2] = tmp10Result;
     obj5.children = items1;
@@ -63,10 +63,10 @@ function ServerWidgetUpsellCard(cardStyle) {
     const obj14 = { style: tmp.container, children: null };
     const tmp11 = onDismiss(7052);
     const obj15 = { userId, widget, cardStyle: cardStyle.cardStyle, rendererProps, footer: closure_6(View, obj2) };
-    obj14.children = closure_5(onDismiss(14608), obj15);
+    obj14.children = closure_5(onDismiss(14615), obj15);
     return closure_5(View, obj14);
   }
-  const obj = widget(14991);
+  const obj = widget(14998);
 }
 function ServerWidgetUpsellForUser(userId) {
   userId = userId.userId;

@@ -1,10 +1,10 @@
-// === Module 10777: UploaderBase ===
+// === Module 10778: UploaderBase ===
 
-// Module 10777 (UploaderBase)
+// Module 10778 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8134 */;
-import UploadTargets from "UploadTargets" /* 8157 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8135 */;
+import UploadTargets from "UploadTargets" /* 8158 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -114,7 +114,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -381,7 +381,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

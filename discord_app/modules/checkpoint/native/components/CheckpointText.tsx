@@ -1,8 +1,8 @@
-// === Module 12852: CheckpointText ===
+// === Module 12860: CheckpointText ===
 
-// Module 12852 (CheckpointText)
+// Module 12860 (CheckpointText)
 import Text_Text from "Text/Text" /* 5634 */;
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12670 */;
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12678 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 18171: FocusModeOptionsActionSheet ===
+// === Module 18178: FocusModeOptionsActionSheet ===
 
-// Module 18171 (FocusModeOptionsActionSheet)
+// Module 18178 (FocusModeOptionsActionSheet)
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
 import noop from "module_19" /* 19 */;
@@ -91,7 +91,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/
 
 export default function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
-  const focusModeEnabled = onSelect(10617).useFocusModeEnabled();
+  const focusModeEnabled = onSelect(10618).useFocusModeEnabled();
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = onSelect(1112).intl;
   obj2.title = intl.string(onSelect(1112).t["sNX1E+"]);

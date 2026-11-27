@@ -1,6 +1,6 @@
-// === Module 13866: UserProfileAboutMeCard ===
+// === Module 13873: UserProfileAboutMeCard ===
 
-// Module 13866 (UserProfileAboutMeCard)
+// Module 13873 (UserProfileAboutMeCard)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -13,9 +13,9 @@ import UserProfileAnalyticsContext from "UserProfileAnalyticsContext" /* 6381 */
 import GuildIconDefault from "GuildIcon" /* 7052 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7556 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7812 */;
-import BioTextDefault from "BioText" /* 13867 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 13868 */;
-import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 13870 */;
+import BioTextDefault from "BioText" /* 13874 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 13875 */;
+import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 13877 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
@@ -141,7 +141,7 @@ function MemberJoinDates(userId) {
   const obj8 = { style: null, children: null };
   const items4 = [tmp.memberJoinDates, { columnGap }];
   obj8.style = items4;
-  const obj9 = { themeType, icon: closure_11(userId(11654).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  const obj9 = { themeType, icon: closure_11(userId(11662).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1112).intl;
   obj9.accessibilityLabel = intl2.formatToPlainString(userId(1112).t["9t7w53"], { date: createdAtDate });
   obj9.children = createdAtDate;

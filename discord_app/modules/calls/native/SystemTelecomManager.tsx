@@ -1,6 +1,6 @@
-// === Module 15843: SystemTelecomManager ===
+// === Module 15850: SystemTelecomManager ===
 
-// Module 15843 (SystemTelecomManager)
+// Module 15850 (SystemTelecomManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -14,9 +14,9 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6797 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 7849 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10356 */;
-import SystemTelecomPlatform from "SystemTelecomPlatform" /* 15845 */;
-import SystemTelecomUtils from "SystemTelecomUtils" /* 15846 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10357 */;
+import SystemTelecomPlatform from "SystemTelecomPlatform" /* 15852 */;
+import SystemTelecomUtils from "SystemTelecomUtils" /* 15853 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
@@ -29,7 +29,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 import UserStore from "UserStore" /* 1387 */;
 import VoiceStateStore from "VoiceStateStore" /* 5691 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5854 */;
-import NativeSystemTelecomModule from "NativeSystemTelecomModule" /* 15844 */;
+import NativeSystemTelecomModule from "NativeSystemTelecomModule" /* 15851 */;
 import LifecycleManager from "LifecycleManager" /* 2122 */;
 
 require = fn;
@@ -161,7 +161,7 @@ class SystemTelecomManager {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -309,7 +309,7 @@ class SystemTelecomManager {
       }
     };
     obj.handleSessionStart = function handleSessionStart() {
-      obj = obj(15845);
+      obj = obj(15852);
       obj.flushCallPushToken();
     };
     obj.handleConnectionOpen = function handleConnectionOpen(user) {
@@ -417,7 +417,7 @@ class SystemTelecomManager {
       const item = voiceStates.forEach((channelId) => {
         channelId = channelId.channelId;
         ({ guildId, userId, sessionId, selfVideo } = channelId);
-        obj = obj(15846);
+        obj = obj(15853);
         if (obj.isSystemTelecomEnabledForChannel(guildId, channelId)) {
           if (null != channelId) {
             if (userId === currentUserId.currentUserId) {
@@ -560,7 +560,7 @@ prototype["startCall"] = function startCall(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -584,21 +584,21 @@ prototype["startCall"] = function startCall(arg0) {
                 const result = self.updateActiveCallStatus();
                 const obj9 = tmp5(1269);
                 const _HermesInternal = HermesInternal;
-                tmp29(10356).setRequestedBy("call:" + obj6.uuid);
-                const obj10 = tmp29(10356);
+                tmp29(10357).setRequestedBy("call:" + obj6.uuid);
+                const obj10 = tmp29(10357);
                 if (obj11.isSystemTelecomEnabled()) {
-                  const obj2 = tmp3(15844);
+                  const obj2 = tmp3(15851);
                   ({ uuid, handle } = obj6);
                   const tmp42Result = tmp5(5659);
                   const startOutgoingCallResult = obj2.startOutgoingCall(uuid, handle, tmp5(5659).computeChannelName(obj6.channel, UserStore, RelationshipStore), obj6.video);
-                  tmp3(15844).setCallMuted(obj6.uuid, obj6.muted);
+                  tmp3(15851).setCallMuted(obj6.uuid, obj6.muted);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
                   const obj7 = { value: startOutgoingCallResult, done: false };
                   return obj7;
                 }
-                obj11 = tmp5(15846);
+                obj11 = tmp5(15853);
               }
             }
           }

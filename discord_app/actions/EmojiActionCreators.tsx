@@ -1,6 +1,6 @@
-// === Module 9761: EmojiActionCreators ===
+// === Module 9762: EmojiActionCreators ===
 
-// Module 9761 (EmojiActionCreators)
+// Module 9762 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import wrappers from "wrappers" /* 1226 */;
@@ -30,7 +30,7 @@ let closure_11 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

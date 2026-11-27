@@ -1,6 +1,6 @@
-// === Module 11754: speakOnStage ===
+// === Module 11762: speakOnStage ===
 
-// Module 11754 (speakOnStage)
+// Module 11762 (speakOnStage)
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6828 */;
 import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6854 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7839 */;

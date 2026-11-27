@@ -1,6 +1,6 @@
-// === Module 8929: ForumPostMediaUtils ===
+// === Module 8930: ForumPostMediaUtils ===
 
-// Module 8929 (ForumPostMediaUtils)
+// Module 8930 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;

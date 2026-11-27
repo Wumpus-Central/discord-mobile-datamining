@@ -1,20 +1,20 @@
-// === Module 17964: StageVoiceChannel ===
+// === Module 17971: StageVoiceChannel ===
 
-// Module 17964 (StageVoiceChannel)
+// Module 17971 (StageVoiceChannel)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2019 */;
 import useChannelNameDefault from "useChannelName" /* 5659 */;
 import StageMediaHooks from "StageMediaHooks" /* 6811 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7031 */;
 import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 7125 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8449 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11406 */;
-import ChannelItemDefault from "ChannelItem" /* 17844 */;
-import VoiceUsersDefault from "VoiceUsers" /* 17849 */;
-import ChannelInfoDefault from "ChannelInfo" /* 17954 */;
-import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 17965 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8450 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11407 */;
+import ChannelItemDefault from "ChannelItem" /* 17851 */;
+import VoiceUsersDefault from "VoiceUsers" /* 17856 */;
+import ChannelInfoDefault from "ChannelInfo" /* 17961 */;
+import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 17972 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8285 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8286 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 import ReadStateStore from "ReadStateStore" /* 6932 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
@@ -71,11 +71,11 @@ export default noop.memo(function StageVoiceChannel(channel) {
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
   const tmp2Result = channel(6861);
-  const isConnectedToVoiceChannel = channel(10012).useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(10013).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  const tmp2Result2 = channel(10012);
+  const tmp2Result2 = channel(10013);
   const intl = tmp2(1112).intl;
   const tmp5Result = ChannelItemDefault;
   if (null != channel.userLimit) {

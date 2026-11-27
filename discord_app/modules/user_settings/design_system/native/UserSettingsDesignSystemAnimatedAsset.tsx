@@ -1,13 +1,13 @@
-// === Module 17468: UserSettingsDesignSystemAnimatedAsset ===
+// === Module 17475: UserSettingsDesignSystemAnimatedAsset ===
 
-// Module 17468 (UserSettingsDesignSystemAnimatedAsset)
+// Module 17475 (UserSettingsDesignSystemAnimatedAsset)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import TableRadioGroup from "TableRadioGroup" /* 7251 */;
 import TableRadioRow from "TableRadioRow" /* 7253 */;
-import valuesAll from "values" /* 17469 */;
+import valuesAll from "values" /* 17476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -196,7 +196,7 @@ function AnimationPlayground(arg0) {
         _undefined2(false);
         closure_1_0(arg0);
       };
-      obj.openLazy(asyncRequireImpl(17470, dependencyMap.paths), sheetKey, obj2);
+      obj.openLazy(asyncRequireImpl(17477, dependencyMap.paths), sheetKey, obj2);
     };
     obj12.children = closure_7(require("TableRow").TableRow, obj13);
     items4[3] = closure_7(require("TableRowGroup").TableRowGroup, obj12);
@@ -295,9 +295,9 @@ let c10 = "Asset default";
 let c11 = "UserSettingsDesignSystemAnimatedAssetPicker";
 let closure_12 = { "100%": "100%", "75%": "75%", "50%": "50%" };
 let closure_13 = { "Fill the width": {}, "Width 50%": { width: "50%" }, "Width 200": { width: 200 }, "Height 120": { height: 120 }, "300 × 300": { width: 300, height: 300 }, "340 × 120": { width: 340, height: 120 } };
-let closure_14 = { "Asset's own": "id", "1/1": "t", "16/9": "includes", "4/3": "t", "9/16": "ao" };
+let closure_14 = { "Asset's own": "id", "1/1": null, "16/9": null, "4/3": null, "9/16": null };
 let items = ["Asset default", "center", "top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right"];
-let obj = { "Asset default": "id", Transparent: null, "Opaque #5865f2": null, "Translucent #5865f280": null, "Translucent red #ff000080": null, "Token: background base low": nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { "Asset default": "id", Transparent: false, "Opaque #5865f2": false, "Translucent #5865f280": false, "Translucent red #ff000080": false, "Token: background base low": nativeDefault.colors.BACKGROUND_BASE_LOW };
 const createStyles = fn(5043);
 let obj3 = { container: { padding: nativeDefault.space.PX_16 }, stage: null, greyStage: null, measure: null, boxEdge: null };
 let obj4 = { padding: nativeDefault.space.PX_16 };

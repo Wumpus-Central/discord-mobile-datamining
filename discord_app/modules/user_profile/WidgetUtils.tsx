@@ -1,19 +1,19 @@
-// === Module 14570: WidgetUtils ===
+// === Module 14577: WidgetUtils ===
 
-// Module 14570 (WidgetUtils)
+// Module 14577 (WidgetUtils)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
 import utils from "utils" /* 5672 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6171 */;
 import GameWidgetLimits from "GameWidgetLimits" /* 6173 */;
 import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 6175 */;
-import useGame2 from "useGame" /* 8719 */;
-import WidgetGameTag from "WidgetGameTag" /* 14560 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14572 */;
+import useGame2 from "useGame" /* 8720 */;
+import WidgetGameTag from "WidgetGameTag" /* 14567 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 14579 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1387 */;
 import UserProfileStore from "UserProfileStore" /* 6163 */;
-import WidgetStore from "WidgetStore" /* 14565 */;
+import WidgetStore from "WidgetStore" /* 14572 */;
 
 require = fn;
 function getCurrentWidgets() {
@@ -140,7 +140,7 @@ function reorderMovableWidgets(isBoardWidget, arg1, arg2) {
   }
 }
 const WIDGET_TITLES_BY_TYPE = fn(6172).WIDGET_TITLES_BY_TYPE;
-let closure_8 = fn(14571).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_8 = fn(14578).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

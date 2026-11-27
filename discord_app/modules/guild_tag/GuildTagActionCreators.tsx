@@ -1,6 +1,6 @@
-// === Module 15322: GuildTagActionCreators ===
+// === Module 15329: GuildTagActionCreators ===
 
-// Module 15322 (GuildTagActionCreators)
+// Module 15329 (GuildTagActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -21,7 +21,7 @@ let closure_6 = async function _adoptGuildIdentity() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,11 +1,11 @@
-// === Module 18293: ForYouUnreadClearedState ===
+// === Module 18300: ForYouUnreadClearedState ===
 
-// Module 18293 (ForYouUnreadClearedState)
+// Module 18300 (ForYouUnreadClearedState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import _modDef11104 from "module_11104" /* 11104 */;
+import _modDef11105 from "module_11105" /* 11105 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ const result = size.fileFinishedImporting("modules/notification_center/native/Fo
 export function ForYouUnreadClearedState() {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef11104, style: tmp.icon, color: tmp.icon.color }), ];
+  items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef11105, style: tmp.icon, color: tmp.icon.color }), ];
   const obj4 = { children: null };
   const obj5 = { color: "mobile-text-heading-primary", variant: "body-md/semibold", style: tmp.headerText, children: null };
   const intl = util.intl;

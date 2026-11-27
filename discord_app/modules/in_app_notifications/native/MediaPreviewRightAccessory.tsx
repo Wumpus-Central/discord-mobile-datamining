@@ -1,6 +1,6 @@
-// === Module 10679: MediaPreviewRightAccessory ===
+// === Module 10680: MediaPreviewRightAccessory ===
 
-// Module 10679 (MediaPreviewRightAccessory)
+// Module 10680 (MediaPreviewRightAccessory)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -12,16 +12,16 @@ import FastImageDefault from "FastImage" /* 5730 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 7147 */;
 import EyeIcon from "EyeIcon" /* 7290 */;
 import PlayIcon from "PlayIcon" /* 7798 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8810 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8811 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8816 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8837 */;
-import common_VideoDefault from "common/Video" /* 8880 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8937 */;
-import ClipView from "ClipView" /* 9420 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 10658 */;
-import useContentHarmTypes from "useContentHarmTypes" /* 10680 */;
-import StickerDefault from "Sticker" /* 10681 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8811 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8812 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8817 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8838 */;
+import common_VideoDefault from "common/Video" /* 8881 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8938 */;
+import ClipView from "ClipView" /* 9421 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 10659 */;
+import useContentHarmTypes from "useContentHarmTypes" /* 10681 */;
+import StickerDefault from "Sticker" /* 10682 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
@@ -281,7 +281,7 @@ createStyles = fn(5043);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
 createStyles = fn(5043);
 let obj11 = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(10627).RIGHT_ACCESSORY_LEFT_MARGIN } });
+let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(10628).RIGHT_ACCESSORY_LEFT_MARGIN } });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 

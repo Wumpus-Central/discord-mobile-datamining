@@ -1,6 +1,6 @@
-// === Module 11470: conjureVoiceChannelPin ===
+// === Module 11480: conjureVoiceChannelPin ===
 
-// Module 11470 (conjureVoiceChannelPin)
+// Module 11480 (conjureVoiceChannelPin)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 7673 */;
 import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 8112 */;
@@ -36,7 +36,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

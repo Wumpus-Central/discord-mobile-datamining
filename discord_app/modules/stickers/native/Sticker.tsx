@@ -1,13 +1,13 @@
-// === Module 10681: Sticker ===
+// === Module 10682: Sticker ===
 
-// Module 10681 (Sticker)
+// Module 10682 (Sticker)
 import util from "util" /* 1112 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import StickersUtils from "StickersUtils" /* 6779 */;
 import StickersTypes from "StickersTypes" /* 6780 */;
 import _modDef7489 from "module_7489" /* 7489 */;
 import _modDef7490 from "module_7490" /* 7490 */;
-import NativeLottieView from "NativeLottieView" /* 10682 */;
+import NativeLottieView from "NativeLottieView" /* 10683 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 

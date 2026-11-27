@@ -1,20 +1,20 @@
-// === Module 17579: SafetyGuildSettingDirectMessages ===
+// === Module 17586: SafetyGuildSettingDirectMessages ===
 
-// Module 17579 (SafetyGuildSettingDirectMessages)
+// Module 17586 (SafetyGuildSettingDirectMessages)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4868 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;
 import common_AlertDefault from "common/Alert" /* 6118 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16323 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 17574 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 17580 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16330 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 17581 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 17587 */;
 import GuildStore from "GuildStore" /* 4914 */;
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(17571);
+const UserSettingsSafetySelectedGuildStore = fn(17578);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11963).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11962);
+let closure_6 = fn(11971).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11970);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -52,7 +52,7 @@ const toggle = SettingBuilders.createToggle({
       return stringResult;
     }
   },
-  parent: fn(9555).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9556).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const RestrictedGuildIds = UserSettings.RestrictedGuildIds;

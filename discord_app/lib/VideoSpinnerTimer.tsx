@@ -1,6 +1,6 @@
-// === Module 10145: VideoSpinnerTimer ===
+// === Module 10146: VideoSpinnerTimer ===
 
-// Module 10145 (VideoSpinnerTimer)
+// Module 10146 (VideoSpinnerTimer)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import TimeUtils from "TimeUtils" /* 5827 */;

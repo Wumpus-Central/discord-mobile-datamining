@@ -1,14 +1,14 @@
-// === Module 11169: ProfileFrameSamplePreview ===
+// === Module 11170: ProfileFrameSamplePreview ===
 
-// Module 11169 (ProfileFrameSamplePreview)
+// Module 11170 (ProfileFrameSamplePreview)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5607 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import _modDef7231 from "module_7231" /* 7231 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 9496 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 9504 */;
-import ProfileFrameDefault from "ProfileFrame" /* 9505 */;
-import _modDef11170 from "module_11170" /* 11170 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 9497 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 9505 */;
+import ProfileFrameDefault from "ProfileFrame" /* 9506 */;
+import _modDef11171 from "module_11171" /* 11171 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const UserProfileThemeTypes = fn(7557).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);
-let obj2 = { profileFrameContainer: { flex: 1 }, profileContainer: { flex: 1, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.xs }, sampleProfile: { width: "100%", aspectRatio: fn(9467).SAMPLE_PROFILE_ASPECT_RATIO } };
+let obj2 = { profileFrameContainer: { flex: 1 }, profileContainer: { flex: 1, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.xs }, sampleProfile: { width: "100%", aspectRatio: fn(9468).SAMPLE_PROFILE_ASPECT_RATIO } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx");
@@ -73,7 +73,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   const obj8 = { style: { position: "absolute", top: overflowTop, bottom: overflowBottom, right: 0, width: overflowHorizontal, backgroundColor: "black" } };
   const obj9 = { style: { position: "absolute", top: overflowTop - xs, left: overflowHorizontal - xs, width: 2 * xs, height: 2 * xs, borderRadius: xs, backgroundColor: "black" } };
   tmp13 = _modDef7231;
-  obj18.uri = _modDef11170;
+  obj18.uri = _modDef11171;
   obj17.source = obj18;
   obj17.style = tmp.sampleProfile;
   obj16.children = timestampProducer(FastImageDefault, obj17);

@@ -1,6 +1,6 @@
-// === Module 14770: getPreviousSafeRouteForNsfwReturn ===
+// === Module 14776: getPreviousSafeRouteForNsfwReturn ===
 
-// Module 14770 (getPreviousSafeRouteForNsfwReturn)
+// Module 14776 (getPreviousSafeRouteForNsfwReturn)
 import AgeGateUtils from "AgeGateUtils" /* 6833 */;
 import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6849 */;
 import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6964 */;

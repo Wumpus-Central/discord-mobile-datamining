@@ -1,6 +1,6 @@
-// === Module 8417: VoiceEngineStreamingManager ===
+// === Module 8418: VoiceEngineStreamingManager ===
 
-// Module 8417 (VoiceEngineStreamingManager)
+// Module 8418 (VoiceEngineStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -11,10 +11,10 @@ import useWindowDimensions from "useWindowDimensions" /* 1495 */;
 import inject from "inject" /* 2134 */;
 import UserSettings from "UserSettings" /* 4868 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
-import AndroidStopAndPauseVideoExperimentDefault from "AndroidStopAndPauseVideoExperiment" /* 8418 */;
-import StreamActionCreators from "StreamActionCreators" /* 8419 */;
-import PushNotificationDefault from "PushNotification" /* 10277 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 10354 */;
+import AndroidStopAndPauseVideoExperimentDefault from "AndroidStopAndPauseVideoExperiment" /* 8419 */;
+import StreamActionCreators from "StreamActionCreators" /* 8420 */;
+import PushNotificationDefault from "PushNotification" /* 10278 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 10355 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -48,7 +48,7 @@ let closure_18 = async function _handleThumbnailUpload() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -161,7 +161,7 @@ prototype["_initialize"] = function _initialize() {
     const currentAppIntent = authStore.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(8419).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(8420).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = authStore.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
         const tmp2Result = closure_1(6129);
@@ -182,7 +182,7 @@ prototype["_initialize"] = function _initialize() {
         }
         const tmp9Result = tmp9(6816);
       }
-      const obj3 = currentUserActiveStream(8419);
+      const obj3 = currentUserActiveStream(8420);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");

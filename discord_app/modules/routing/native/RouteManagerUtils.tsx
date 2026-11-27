@@ -1,6 +1,6 @@
-// === Module 13821: RouteManagerUtils ===
+// === Module 13828: RouteManagerUtils ===
 
-// Module 13821 (RouteManagerUtils)
+// Module 13828 (RouteManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1098 */;
@@ -11,11 +11,11 @@ import Client from "Client" /* 6784 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6797 */;
 import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 6967 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6991 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8449 */;
-import MemoryRouter from "MemoryRouter" /* 13822 */;
-import DefaultRouteActionCreators from "DefaultRouteActionCreators" /* 13827 */;
-import RouteManagerDefault from "RouteManager" /* 13828 */;
-import conjureRouteRewriterDefault from "conjureRouteRewriter" /* 13831 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8450 */;
+import MemoryRouter from "MemoryRouter" /* 13829 */;
+import DefaultRouteActionCreators from "DefaultRouteActionCreators" /* 13834 */;
+import RouteManagerDefault from "RouteManager" /* 13835 */;
+import conjureRouteRewriterDefault from "conjureRouteRewriter" /* 13838 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import DefaultRouteStore from "DefaultRouteStore" /* 5080 */;
@@ -109,7 +109,7 @@ function saveLastNonVoiceRouteListener(pathname) {
   const obj2 = { path: items, strict: false, exact: false };
 }
 function updateSelectedChannelListener(location, arg1) {
-  const matchPathResult = channel2(13822).matchPath(location.pathname, { path: items, strict: false, exact: false });
+  const matchPathResult = channel2(13829).matchPath(location.pathname, { path: items, strict: false, exact: false });
   let params;
   if (matchPathResult != null) {
     params = matchPathResult.params;
@@ -147,29 +147,29 @@ function updateSelectedChannelListener(location, arg1) {
         isGuildVoiceResult = isGuildStageVoiceResult;
       }
       if (isGuildVoiceResult) {
-        const obj22 = ModalActionCreatorsDefault;
-        obj22.popWithKey(tmp(8449).getVoiceChannelKey(channel.id));
-        const tmpResult = tmp(8449);
+        const obj24 = ModalActionCreatorsDefault;
+        obj24.popWithKey(tmp(8450).getVoiceChannelKey(channel.id));
+        const tmpResult = tmp(8450);
       }
       guild = GuildActionCreatorsDefault.selectGuild(guildId);
       const obj6 = { guildId, channelId, messageId, jumpType, skipMessageFetch: tmp5, opensChannel: null, isAppStartupNavigation: null };
-      let tmp46 = null != channelId;
-      if (tmp46) {
-        tmp46 = true !== location.navigationReplace || true === location.openChannel;
-        const tmp47 = true !== location.navigationReplace || true === location.openChannel;
+      let tmp54 = null != channelId;
+      if (tmp54) {
+        tmp54 = true !== location.navigationReplace || true === location.openChannel;
+        const tmp55 = true !== location.navigationReplace || true === location.openChannel;
       }
-      obj6.opensChannel = tmp46;
-      let tmp48 = true === location.isAppStartupNavigation;
-      if (tmp48) {
-        tmp48 = "POP" !== arg1;
+      obj6.opensChannel = tmp54;
+      let tmp56 = true === location.isAppStartupNavigation;
+      if (tmp56) {
+        tmp56 = "POP" !== arg1;
       }
-      obj6.isAppStartupNavigation = tmp48;
+      obj6.isAppStartupNavigation = tmp56;
       const channel1 = SelectedChannelActionCreatorsDefault.selectChannel(obj6);
-      if (tmp50) {
-        const result = tmp(9021).presentChannelSecondaryViewChat(guildId, channelId);
-        const tmpResult6 = tmp(9021);
+      if (tmp58) {
+        const result = tmp(9022).presentChannelSecondaryViewChat(guildId, channelId);
+        const tmpResult6 = tmp(9022);
       }
-      tmp50 = null != messageId && null != guildId && null != channelId && hasSecondaryViewChatDefault(channelId);
+      tmp58 = null != messageId && null != guildId && null != channelId && hasSecondaryViewChatDefault(channelId);
     }
   }
   channel2 = ChannelStore.getChannel(voiceChannelId2);
@@ -210,45 +210,45 @@ function updateSelectedChannelListener(location, arg1) {
     isGuildStageVoiceResult1 = SelectedChannelStore.getVoiceChannelId() === channel2.id;
   }
   if (isGuildStageVoiceResult1) {
-    isGuildStageVoiceResult1 = !tmp(10271).isStageUnifiedCall(channel2, "RouteManagerUtils");
-    const tmpResult7 = tmp(10271);
+    isGuildStageVoiceResult1 = !tmp(10272).isStageUnifiedCall(channel2, "RouteManagerUtils");
+    const tmpResult7 = tmp(10272);
   }
   if (isGuildStageVoiceResult1) {
     const guild1 = GuildActionCreatorsDefault.selectGuild(voiceGuildId2);
-    const obj12 = { guildId: voiceGuildId2, channelId: voiceChannelId2, messageId: voiceMessageId2, jumpType, isAppStartupNavigation: null };
-    let tmp19 = true === location.isAppStartupNavigation;
-    if (tmp19) {
-      tmp19 = "POP" !== arg1;
+    const obj10 = { guildId: voiceGuildId2, channelId: voiceChannelId2, messageId: voiceMessageId2, jumpType, isAppStartupNavigation: null };
+    let tmp23 = true === location.isAppStartupNavigation;
+    if (tmp23) {
+      tmp23 = "POP" !== arg1;
     }
-    obj12.isAppStartupNavigation = tmp19;
-    const channel3 = SelectedChannelActionCreatorsDefault.selectChannel(obj12);
+    obj10.isAppStartupNavigation = tmp23;
+    const channel3 = SelectedChannelActionCreatorsDefault.selectChannel(obj10);
   }
-  const obj = channel2(13822);
+  const obj = channel2(13829);
   const obj2 = { path: items, strict: false, exact: false };
   const obj4 = { match: matchPathResult, location };
   const tmpResult8 = channel2(5219);
   if (!tmpResult8.isModalOpen(tmpResult9.getVoiceChannelKey(channel2.id))) {
-    const obj15 = ModalActionCreatorsDefault;
-    obj15.popAboveKey(tmp(8449).getVoiceChannelKey(channel2.id));
-    const tmpResult10 = tmp(8449);
+    const obj16 = ModalActionCreatorsDefault;
+    obj16.popAboveKey(tmp(8450).getVoiceChannelKey(channel2.id));
+    const tmpResult10 = tmp(8450);
     DispatcherDefault.wait(() => {
       PrivateChannelCallUtils.openGuildVoiceModal(channel2);
     });
   }
-  tmpResult9 = channel2(8449);
-  if (tmp24) {
+  tmpResult9 = channel2(8450);
+  if (tmp28) {
     if (isGuildStageVoiceResult1) {
       setVoiceChatDrawerState(channel2.id, VoiceChatDrawerState.OPEN);
     } else {
       ChannelRTCActionCreatorsDefault.updateChatOpen(channel2.id, true);
     }
-    if (tmp30) {
-      const obj19 = ChannelRTCActionCreatorsDefault;
-      const result1 = obj19.jumpToVoiceChannelMessage(voiceGuildId2, voiceChannelId2, voiceMessageId2, jumpType);
+    if (tmp34) {
+      const obj20 = ChannelRTCActionCreatorsDefault;
+      const result1 = obj20.jumpToVoiceChannelMessage(voiceGuildId2, voiceChannelId2, voiceMessageId2, jumpType);
     }
-    tmp30 = null != voiceGuildId2 && null != voiceChannelId2 && null != voiceMessageId2;
+    tmp34 = null != voiceGuildId2 && null != voiceChannelId2 && null != voiceMessageId2;
   }
-  tmp24 = channel2.isGuildVoice() && null != voiceMessageId2 || channel2.isGuildStageVoice();
+  tmp28 = channel2.isGuildVoice() && null != voiceMessageId2 || channel2.isGuildStageVoice();
 }
 function extractParams(arg0) {
   ({ match, location: _location } = arg0);
@@ -280,12 +280,12 @@ function logRouteChange(pathname) {
   logger.log("Navigated to: " + pathname.pathname);
 }
 let closure_3 = ["channelId", "guildId"];
-const setVoiceChatDrawerState = fn(10008).setVoiceChatDrawerState;
+const setVoiceChatDrawerState = fn(10009).setVoiceChatDrawerState;
 let closure_6 = fn(4896).isGuildSelectableChannelType;
 const Constants = fn(1071);
 ({ ME: closure_11, Routes } = Constants);
 const ChannelTypes = Constants.ChannelTypes;
-const VoiceChatDrawerState = fn(10009).VoiceChatDrawerState;
+const VoiceChatDrawerState = fn(10010).VoiceChatDrawerState;
 const logger = new LoggerDefault("RouteUtils");
 let c16 = false;
 const RouteParam = fn(5094).RouteParam;

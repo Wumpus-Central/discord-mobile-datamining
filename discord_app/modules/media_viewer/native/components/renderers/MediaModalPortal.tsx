@@ -1,7 +1,7 @@
-// === Module 8850: MediaModalPortal ===
+// === Module 8851: MediaModalPortal ===
 
-// Module 8850 (MediaModalPortal)
-import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 8851 */;
+// Module 8851 (MediaModalPortal)
+import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 8852 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -56,7 +56,7 @@ export default noop.memo(function MediaModalPortal(paused) {
       MediaPlayerManager.setLoopPlayback(tmp, true);
       return () => {
         loopPlayback.setLoopPlayback(portal, false);
-        muted(8852).unregisterView(portal);
+        muted(8853).unregisterView(portal);
         set.add(portal);
       };
     }

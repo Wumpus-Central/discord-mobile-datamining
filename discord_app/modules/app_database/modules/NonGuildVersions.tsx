@@ -1,6 +1,6 @@
-// === Module 8319: NonGuildVersions ===
+// === Module 8320: NonGuildVersions ===
 
-// Module 8319 (NonGuildVersions)
+// Module 8320 (NonGuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1088 */;
@@ -67,7 +67,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -159,7 +159,7 @@ obj.actions = {
     return obj3.handleConnectionOpen(arg0, arg1);
   }
 };
-const isCacheEnabled = fn(8312);
+const isCacheEnabled = fn(8313);
 if (isCacheEnabled.isCacheEnabled()) {
   SelectedGuildStore.addChangeListener(applyDefault.throttle(() => {
     const databaseResult = DatabaseDaosDefault.database();

@@ -1,6 +1,6 @@
-// === Module 10767: useGetThreadDraftSettings ===
+// === Module 10768: useGetThreadDraftSettings ===
 
-// Module 10767 (useGetThreadDraftSettings)
+// Module 10768 (useGetThreadDraftSettings)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DraftStore from "DraftStore" /* 8117 */;
 

@@ -1,6 +1,6 @@
-// === Module 16059: HexagonActionCreators ===
+// === Module 16066: HexagonActionCreators ===
 
-// Module 16059 (HexagonActionCreators)
+// Module 16066 (HexagonActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
@@ -31,7 +31,7 @@ let closure_9 = async function _enrollInHexagonCampaign() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_9 = async function _enrollInHexagonCampaign() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -80,7 +80,7 @@ let closure_11 = async function _enrollAndWaitForHexagonCampaignPerk(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -192,7 +192,7 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

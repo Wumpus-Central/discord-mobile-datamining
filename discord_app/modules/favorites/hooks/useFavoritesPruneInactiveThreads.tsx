@@ -1,6 +1,6 @@
-// === Module 18062: useFavoritesPruneInactiveThreads ===
+// === Module 18069: useFavoritesPruneInactiveThreads ===
 
-// Module 18062 (useFavoritesPruneInactiveThreads)
+// Module 18069 (useFavoritesPruneInactiveThreads)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
@@ -29,7 +29,7 @@ export default function useFavoritesPruneInactiveThreads() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -52,7 +52,7 @@ export default function useFavoritesPruneInactiveThreads() {
           } else if (1 === tmp6) {
             c2 = 0;
             v3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
@@ -64,7 +64,7 @@ export default function useFavoritesPruneInactiveThreads() {
           } else {
             c2 = 0;
             v3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           if (tmp3 === c2) {

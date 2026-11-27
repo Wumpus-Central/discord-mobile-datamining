@@ -1,11 +1,11 @@
-// === Module 12155: NsfwServerInviteWarningVariant ===
+// === Module 12163: NsfwServerInviteWarningVariant ===
 
-// Module 12155 (NsfwServerInviteWarningVariant)
+// Module 12163 (NsfwServerInviteWarningVariant)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 6825 */;
 import getAgeNoticeWarningDescriptions from "getAgeNoticeWarningDescriptions" /* 6835 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 12156 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 12164 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;

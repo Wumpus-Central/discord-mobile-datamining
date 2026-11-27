@@ -1,11 +1,11 @@
-// === Module 12034: useBatchUpdateSelectOption ===
+// === Module 12042: useBatchUpdateSelectOption ===
 
-// Module 12034 (useBatchUpdateSelectOption)
+// Module 12042 (useBatchUpdateSelectOption)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7460 */;
-import OptInOnboardingUtils from "OptInOnboardingUtils" /* 12035 */;
+import OptInOnboardingUtils from "OptInOnboardingUtils" /* 12043 */;
 import noop from "module_19" /* 19 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7455 */;

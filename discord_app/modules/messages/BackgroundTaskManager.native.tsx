@@ -1,9 +1,9 @@
-// === Module 10778: BackgroundTaskManager ===
+// === Module 10779: BackgroundTaskManager ===
 
-// Module 10778 (BackgroundTaskManager)
+// Module 10779 (BackgroundTaskManager)
 import PlatformUtils2 from "PlatformUtils" /* 1379 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10355 */;
-import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 10779 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10356 */;
+import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 10780 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -54,7 +54,7 @@ function backgroundify(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

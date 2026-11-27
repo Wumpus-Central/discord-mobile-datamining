@@ -1,12 +1,12 @@
-// === Module 11421: IconUploader ===
+// === Module 11422: IconUploader ===
 
-// Module 11421 (IconUploader)
+// Module 11422 (IconUploader)
 import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1413 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import Pressables from "Pressables" /* 6152 */;
 import GuildIcon from "GuildIcon" /* 7052 */;
-import _modDef11422 from "module_11422" /* 11422 */;
+import _modDef11423 from "module_11423" /* 11423 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,7 +49,7 @@ export default function IconUploader(disabled) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -124,7 +124,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp8, ];
   let tmp17 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef11422 };
+    let obj5 = { style: tmp.uploadIcon, source: _modDef11423 };
     tmp17 = closure_7(FastImageDefault, obj5);
   }
   items1[1] = tmp17;

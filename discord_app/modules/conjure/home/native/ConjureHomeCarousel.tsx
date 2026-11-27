@@ -1,16 +1,16 @@
-// === Module 18842: ConjureHomeCarousel ===
+// === Module 18858: ConjureHomeCarousel ===
 
-// Module 18842 (ConjureHomeCarousel)
+// Module 18858 (ConjureHomeCarousel)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtils from "AvatarUtils" /* 1413 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8486 */;
-import LocalSvgDefault from "LocalSvg" /* 16515 */;
-import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 18845 */;
-import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt" /* 18846 */;
-import conjureHomeInspirationEntries from "conjureHomeInspirationEntries" /* 18854 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8487 */;
+import LocalSvgDefault from "LocalSvg" /* 16522 */;
+import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 18861 */;
+import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt" /* 18862 */;
+import conjureHomeInspirationEntries from "conjureHomeInspirationEntries" /* 18870 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import AppStateStore from "AppStateStore" /* 2119 */;
@@ -28,7 +28,7 @@ let closure_10 = 240 + nativeDefault.space.PX_24;
 const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
-let obj = { games: fn(7756).GameControllerIcon, apps: fn(7172).AppsIcon, profile_widget: fn(18843).WidgetsIcon, overlay_widget: fn(13356).ScreenIcon, automod: fn(10078).ShieldIcon, chat_bot: fn(12270).RobotIcon };
+let obj = { games: fn(7756).GameControllerIcon, apps: fn(7172).AppsIcon, profile_widget: fn(18859).WidgetsIcon, overlay_widget: fn(13364).ScreenIcon, automod: fn(10079).ShieldIcon, chat_bot: fn(12278).RobotIcon };
 const createStyles = fn(5043);
 let obj2 = { carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" }, item: null, promptRow: null, avatar: null, bubble: null, card: null, thumbnail: null, footer: null, categoryIcon: null, footerText: null };
 const rect = { position: "absolute", top: 0, left: 0, width: 240, gap: nativeDefault.space.PX_12 };

@@ -1,6 +1,6 @@
-// === Module 16106: UserProfileEditTheme ===
+// === Module 16113: UserProfileEditTheme ===
 
-// Module 16106 (UserProfileEditTheme)
+// Module 16113 (UserProfileEditTheme)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
@@ -75,7 +75,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl2 = onProfileThemeColorsChanged(tmp3[11]).intl;
         obj5.accessibilityLabel = intl2.string(onProfileThemeColorsChanged(tmp3[11]).t["+1H47t"]);
         obj5.onPress = function handleOverflowMenuPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16108, dependencyMap.paths), "Profile Theme", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16115, dependencyMap.paths), "Profile Theme", {
             onResetTheme() {
               return onChangeColors([null, null]);
             }

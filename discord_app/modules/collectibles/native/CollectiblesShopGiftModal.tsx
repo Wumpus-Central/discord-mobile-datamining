@@ -1,15 +1,15 @@
-// === Module 11310: CollectiblesShopGiftModal ===
+// === Module 11311: CollectiblesShopGiftModal ===
 
-// Module 11310 (CollectiblesShopGiftModal)
+// Module 11311 (CollectiblesShopGiftModal)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import Navigator from "Navigator" /* 7355 */;
-import openGiftModal from "openGiftModal" /* 11309 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11572 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 11575 */;
-import generated_NoResults from "generated/NoResults" /* 11596 */;
+import openGiftModal from "openGiftModal" /* 11310 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11580 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 11583 */;
+import generated_NoResults from "generated/NoResults" /* 11604 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6311 */;
 
@@ -122,7 +122,7 @@ export default function CollectiblesShopGiftModal(skuId) {
   const stateFromStores = skuId(504).useStateFromStores(items, () => CollectiblesCategoryStore.getProduct(skuId), items1);
   const obj = skuId(504);
   const items2 = [];
-  const obj2 = skuId(11600);
+  const obj2 = skuId(11608);
   const obj3 = { needsCategory: false, seedCategoryStore: true, shouldFetchProduct: null == stateFromStores };
   const tmp5 = skuId1;
   const tmp6 = skuId1(6379);
@@ -143,8 +143,8 @@ export default function CollectiblesShopGiftModal(skuId) {
       const obj6 = { onDismiss: onGiftModalDismiss, title: null };
       const intl = tmp2(1112).intl;
       obj6.title = intl.string(tmp2(1112).t["JCFN/y"]);
-      tmp15Result = jsx(tmp5(11607), { onDismiss: onGiftModalDismiss, title: null });
-      const tmp5Result = tmp5(11607);
+      tmp15Result = jsx(tmp5(11615), { onDismiss: onGiftModalDismiss, title: null });
+      const tmp5Result = tmp5(11615);
     }
     tmp2Result = tmp2(2186);
   }

@@ -1,6 +1,6 @@
-// === Module 13615: SegmentedControlPages ===
+// === Module 13622: SegmentedControlPages ===
 
-// Module 13615 (SegmentedControlPages)
+// Module 13622 (SegmentedControlPages)
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
 import _slicedToArray from "module_32" /* 32 */;

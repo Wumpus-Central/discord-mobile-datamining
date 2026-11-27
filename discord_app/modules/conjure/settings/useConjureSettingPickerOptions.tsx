@@ -1,6 +1,6 @@
-// === Module 18522: useConjureSettingPickerOptions ===
+// === Module 18527: useConjureSettingPickerOptions ===
 
-// Module 18522 (useConjureSettingPickerOptions)
+// Module 18527 (useConjureSettingPickerOptions)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;
 import ConjureUtils from "ConjureUtils" /* 7602 */;
 import _slicedToArray from "module_32" /* 32 */;

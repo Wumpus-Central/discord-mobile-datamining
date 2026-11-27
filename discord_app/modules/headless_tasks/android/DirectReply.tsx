@@ -1,6 +1,6 @@
-// === Module 20429: DirectReply ===
+// === Module 20487: DirectReply ===
 
-// Module 20429 (DirectReply)
+// Module 20487 (DirectReply)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -29,7 +29,7 @@ export default (arg0) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -75,7 +75,7 @@ export default (arg0) => {
               }
               closure_0(true);
               c4 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp20) {
             c4 = tmp;

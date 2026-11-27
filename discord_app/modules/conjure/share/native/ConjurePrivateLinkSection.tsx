@@ -1,6 +1,6 @@
-// === Module 18563: ConjurePrivateLinkSection ===
+// === Module 18574: ConjurePrivateLinkSection ===
 
-// Module 18563 (ConjurePrivateLinkSection)
+// Module 18574 (ConjurePrivateLinkSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
@@ -10,8 +10,8 @@ import ToastUtils from "ToastUtils" /* 5724 */;
 import useAlertStore from "useAlertStore" /* 6048 */;
 import AlertModal from "AlertModal" /* 6052 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
-import showShareActionSheet from "showShareActionSheet" /* 8690 */;
-import conjureShareLinkMaxAges from "conjureShareLinkMaxAges" /* 18564 */;
+import showShareActionSheet from "showShareActionSheet" /* 8691 */;
+import conjureShareLinkMaxAges from "conjureShareLinkMaxAges" /* 18575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -37,7 +37,7 @@ export default function ConjurePrivateLinkSection(project) {
   first1 = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  [value, dependencyMap] = noop.useState(project(18564).CONJURE_SHARE_LINK_DEFAULT_MAX_AGE);
+  [value, dependencyMap] = noop.useState(project(18575).CONJURE_SHARE_LINK_DEFAULT_MAX_AGE);
   [first1, _slicedToArray] = noop.useState(null);
   const tmp = closure_10();
   [tmp9, c5] = noop.useState(false);
@@ -49,7 +49,7 @@ export default function ConjurePrivateLinkSection(project) {
   const callback = noop.useCallback(first1(function*() {
     _undefined(true);
     closure_6(false);
-    yield closure_0(18565).mintConjureShareLink(project.id, first);
+    yield closure_0(18576).mintConjureShareLink(project.id, first);
     if (1 === tmp7) {
       dependencyMap = 0;
       closure_129_6(true);
@@ -60,7 +60,7 @@ export default function ConjurePrivateLinkSection(project) {
       throw value;
     } else if (arg0 !== 2) {
       closure_128_0 = value;
-      closure_129_4(tmp3(18566)(closure_129_0.application_id, closure_129_0.name, closure_128_0));
+      closure_129_4(tmp3(18577)(closure_129_0.application_id, closure_129_0.name, closure_128_0));
       dependencyMap = 0;
     }
     return value;
@@ -74,7 +74,7 @@ export default function ConjurePrivateLinkSection(project) {
       const obj7 = { text: null, icon: null, iconColor: "icon-feedback-critical" };
       const intl = tmp3(1112).intl;
       obj7.text = intl.string(v2(4245)["5lL390"]);
-      obj7.icon = tmp3(14077).RefreshIcon;
+      obj7.icon = tmp3(14084).RefreshIcon;
       v2(5725).open("CONJURE_PRIVATE_LINK_RESET", obj7);
       closure_128_5(false);
       c3 = 3;
@@ -87,7 +87,7 @@ export default function ConjurePrivateLinkSection(project) {
       const obj9 = { text: null, icon: null };
       const intl2 = tmp3(1112).intl;
       obj9.text = intl2.string(v2(4245).w9w1Zh);
-      obj9.icon = tmp3(14077).RefreshIcon;
+      obj9.icon = tmp3(14084).RefreshIcon;
       v2(5725).open("CONJURE_PRIVATE_LINK_RESET", obj9);
       dependencyMap = 0;
       v2(5725);
@@ -103,14 +103,14 @@ export default function ConjurePrivateLinkSection(project) {
     obj2.title = intl.string(_modDef4245.eMlOXz);
     const prop = conjureShareLinkMaxAges.CONJURE_SHARE_LINK_MAX_AGES;
     obj2.options = prop.map((value) => {
-      const obj = { value, label: project(18564).conjureShareLinkMaxAgeLabel(value) };
+      const obj = { value, label: project(18575).conjureShareLinkMaxAgeLabel(value) };
       return obj;
     });
     obj2.value = value;
     obj2.onChange = function onChange(arg0) {
       return dependencyMap(arg0);
     };
-    obj.openLazy(asyncRequireImpl(18567, dependencyMap.paths), "ConjurePrivateLinkMaxAge", obj2, "stack");
+    obj.openLazy(asyncRequireImpl(18578, dependencyMap.paths), "ConjurePrivateLinkMaxAge", obj2, "stack");
   }, items2);
   const items4 = [first1];
   const callback3 = noop.useCallback(() => {
@@ -158,7 +158,7 @@ export default function ConjurePrivateLinkSection(project) {
   obj2.label = intl3.string(value(4245).eMlOXz);
   let obj4 = { text: null };
   let obj3 = { IconComponent: project(5752).ClockIcon };
-  obj4.text = project(18564).conjureShareLinkMaxAgeLabel(value);
+  obj4.text = project(18575).conjureShareLinkMaxAgeLabel(value);
   obj2.trailing = callback1(project(6144).TableRow.TrailingText, obj4);
   let tmp21 = tmp9;
   if (!tmp9) {
@@ -168,8 +168,8 @@ export default function ConjurePrivateLinkSection(project) {
   obj2.onPress = callback2;
   const items6 = [callback1(project(6144).TableRow, obj2), , , ];
   const obj6 = { icon: null, label: null, disabled: null, onPress: null };
-  let obj5 = project(18564);
-  obj6.icon = callback1(project(6155).TableRowIcon, { IconComponent: project(18568).LinkPlusIcon });
+  let obj5 = project(18575);
+  obj6.icon = callback1(project(6155).TableRowIcon, { IconComponent: project(18579).LinkPlusIcon });
   let intl4 = tmp2(1112).intl;
   obj6.label = intl4.string(value(4245).wELODD);
   let tmp22 = tmp9;
@@ -191,7 +191,7 @@ export default function ConjurePrivateLinkSection(project) {
     obj9.onPress = callback4;
     const items7 = [tmp20(tmp2(6144).TableRow, obj9), ];
     const obj11 = { icon: null, label: null, onPress: null };
-    const obj12 = { IconComponent: tmp2(12871).ShareIcon };
+    const obj12 = { IconComponent: tmp2(12879).ShareIcon };
     obj11.icon = tmp20(tmp2(6155).TableRowIcon, obj12);
     const intl6 = tmp2(1112).intl;
     obj11.label = intl6.string(tmp2(1112).t.RDE0Sc);
@@ -204,7 +204,7 @@ export default function ConjurePrivateLinkSection(project) {
   let tmp20Result = null;
   if (project.isOwner) {
     const obj13 = { icon: null, variant: "danger", label: null, disabled: null, onPress: null };
-    const obj14 = { IconComponent: tmp2(14077).RefreshIcon, variant: "danger" };
+    const obj14 = { IconComponent: tmp2(14084).RefreshIcon, variant: "danger" };
     obj13.icon = tmp20(tmp2(6155).TableRowIcon, obj14);
     const intl7 = tmp2(1112).intl;
     obj13.label = intl7.string(tmp19(4245).oq0hBy);

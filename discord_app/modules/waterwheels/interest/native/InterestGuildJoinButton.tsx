@@ -1,9 +1,9 @@
-// === Module 18025: InterestGuildJoinButton ===
+// === Module 18032: InterestGuildJoinButton ===
 
-// Module 18025 (InterestGuildJoinButton)
+// Module 18032 (InterestGuildJoinButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef2655 from "module_2655" /* 2655 */;
-import useGetIsMountedDefault from "useGetIsMounted" /* 9513 */;
+import useGetIsMountedDefault from "useGetIsMounted" /* 9514 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -40,7 +40,7 @@ export default function InterestGuildJoinButton(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

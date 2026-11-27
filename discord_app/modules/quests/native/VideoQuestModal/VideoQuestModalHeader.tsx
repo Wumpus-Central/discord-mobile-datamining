@@ -1,13 +1,13 @@
-// === Module 16744: VideoQuestModalHeader ===
+// === Module 16751: VideoQuestModalHeader ===
 
-// Module 16744 (VideoQuestModalHeader)
+// Module 16751 (VideoQuestModalHeader)
 import nativeDefault from "native" /* 575 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8389 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8390 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const useVideoQuestUIStore = fn(8376).useVideoQuestUIStore;
+const useVideoQuestUIStore = fn(8377).useVideoQuestUIStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5043);
@@ -28,9 +28,9 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = closure_7();
-  quest = quest(16719).useVideoQuestModalContext().quest;
-  let obj = quest(16719);
-  const questTaskDetails = quest(9892).useQuestTaskDetails(quest);
+  quest = quest(16726).useVideoQuestModalContext().quest;
+  let obj = quest(16726);
+  const questTaskDetails = quest(9893).useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
     if (tmp == null) {
@@ -47,8 +47,8 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     completedAt = userStatus.completedAt;
   }
   if (null == completedAt) {
-    const videoQuestProgressRemainingAccessibilityLabel = tmp3(9989).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
-    const tmp3Result = tmp3(9989);
+    const videoQuestProgressRemainingAccessibilityLabel = tmp3(9990).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
+    const tmp3Result = tmp3(9990);
   }
   const obj3 = { style: null, children: null };
   items = [tmp2.videoContentHeaderWrapper, style];
@@ -77,7 +77,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj7.children = gamePublisher;
   items1[1] = closure_5(quest(5634).Text, obj7);
   obj4.children = items1;
-  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(16740), { iconColor: closeButtonIconColor, onClose })];
+  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(16747), { iconColor: closeButtonIconColor, onClose })];
   obj3.children = items2;
   return closure_6(View, obj3);
 };

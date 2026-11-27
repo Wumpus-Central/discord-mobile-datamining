@@ -1,6 +1,6 @@
-// === Module 9762: useEmojiAndSource ===
+// === Module 9763: useEmojiAndSource ===
 
-// Module 9762 (useEmojiAndSource)
+// Module 9763 (useEmojiAndSource)
 import EmojiTypes from "EmojiTypes" /* 4992 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -103,7 +103,7 @@ export function useEmojiAndSource(emojiId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -157,7 +157,7 @@ export function useEmojiAndSource(emojiId) {
             current();
           }
           v3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp34) {
           v3 = tmp;
           throw tmp34;

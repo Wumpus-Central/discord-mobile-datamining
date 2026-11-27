@@ -1,10 +1,10 @@
-// === Module 17552: updatePersistentCodesEnabled ===
+// === Module 17559: updatePersistentCodesEnabled ===
 
-// Module 17552 (updatePersistentCodesEnabled)
+// Module 17559 (updatePersistentCodesEnabled)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 8680 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8684 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 8681 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8685 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -37,7 +37,7 @@ let closure_10 = async function _savePersistentCodesEnabled() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -125,7 +125,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -198,7 +198,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -233,7 +233,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp7) {
                   c0 = tmp;
@@ -264,7 +264,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
         throw value;
       } else if (arg0 !== 2) {
         c1 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } else {
         c1 = 3;
         let obj = { value, done: true };
@@ -276,7 +276,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(8681).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(8682).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1071).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");

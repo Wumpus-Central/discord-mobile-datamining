@@ -1,12 +1,12 @@
-// === Module 18139: GuildsBarCreateJoinButton ===
+// === Module 18146: GuildsBarCreateJoinButton ===
 
-// Module 18139 (GuildsBarCreateJoinButton)
+// Module 18146 (GuildsBarCreateJoinButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 13095 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18083 */;
-import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 18140 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 13103 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18090 */;
+import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 18147 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
@@ -25,7 +25,7 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

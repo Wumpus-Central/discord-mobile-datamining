@@ -1,6 +1,6 @@
-// === Module 12795: ? ===
+// === Module 12803: ? ===
 
-// Module 12795
+// Module 12803
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_12_mech_ultraviolet.webp.js");

@@ -1,6 +1,6 @@
-// === Module 13237: DoubleTapToReactChatInputBanner ===
+// === Module 13245: DoubleTapToReactChatInputBanner ===
 
-// Module 13237 (DoubleTapToReactChatInputBanner)
+// Module 13245 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -15,8 +15,8 @@ import Pressables from "Pressables" /* 6152 */;
 import usePreviousDefault from "usePrevious" /* 6831 */;
 import XSmallIcon from "XSmallIcon" /* 7247 */;
 import EmojiDefault from "Emoji" /* 7488 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 9552 */;
-import renderChannelBadge from "renderChannelBadge" /* 13238 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 9553 */;
+import renderChannelBadge from "renderChannelBadge" /* 13246 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -152,7 +152,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13346, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13354, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     _undefined2(ContentDismissActionType.TAKE_ACTION);
   }, items4);
   const callback2 = obj.useCallback(() => {

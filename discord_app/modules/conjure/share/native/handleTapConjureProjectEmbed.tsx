@@ -1,12 +1,12 @@
-// === Module 12371: handleTapConjureProjectEmbed ===
+// === Module 12379: handleTapConjureProjectEmbed ===
 
-// Module 12371 (handleTapConjureProjectEmbed)
-import openFrameDefault from "openFrame" /* 10103 */;
-import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11997 */;
-import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12372 */;
+// Module 12379 (handleTapConjureProjectEmbed)
+import openFrameDefault from "openFrame" /* 10104 */;
+import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 12005 */;
+import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 12380 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11994 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12002 */;
 
 const require = fn;
 function runConjureSharedProjectCoverAction(applicationId, arg1, channelId) {
@@ -69,7 +69,7 @@ let closure_9 = async function _handleTapConjureProjectEmbed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

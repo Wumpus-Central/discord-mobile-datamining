@@ -1,11 +1,11 @@
-// === Module 17384: PhoenixSettingsScreen ===
+// === Module 17391: PhoenixSettingsScreen ===
 
-// Module 17384 (PhoenixSettingsScreen)
+// Module 17391 (PhoenixSettingsScreen)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9695 */;
-import switchToPhoenix from "switchToPhoenix" /* 17385 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9102 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9696 */;
+import switchToPhoenix from "switchToPhoenix" /* 17392 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -42,8 +42,8 @@ export default function PhoenixSettingsScreen() {
     items = [closure_0.content, { paddingBottom: bottom + nativeDefault.space.PX_16 }];
     return items;
   }, items);
-  const requiresNitro = bottom(17378).useConfig({ location: "PhoenixSettingsScreen" }, { autoTrackExposure: false }).requiresNitro;
-  let obj2 = bottom(17378);
+  const requiresNitro = bottom(17385).useConfig({ location: "PhoenixSettingsScreen" }, { autoTrackExposure: false }).requiresNitro;
+  let obj2 = bottom(17385);
   const items1 = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => closure_0(dependencyMap[22]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2));
   let obj3 = require("initialize");
@@ -61,7 +61,7 @@ export default function PhoenixSettingsScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -100,7 +100,7 @@ export default function PhoenixSettingsScreen() {
           c4 = 0;
           v2(false);
           c5 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp22) {
         closure_3 = tmp22;
@@ -151,7 +151,7 @@ export default function PhoenixSettingsScreen() {
     } else {
       obj7 = { variant: "primary", icon: null, text: null, loading: null, onPress: null };
       const obj8 = { size: "sm", color: tmp2(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-      obj7.icon = closure_10(tmp5(14303).FireIcon, obj8);
+      obj7.icon = closure_10(tmp5(14310).FireIcon, obj8);
       const intl5 = tmp5(1112).intl;
       obj7.text = intl5.string(tmp2(4729).vVxb4Y);
       obj7.loading = tmp9;
@@ -163,7 +163,7 @@ export default function PhoenixSettingsScreen() {
     obj5.title = string(tmp2Result.y9iUhJ);
     const intl2 = tmp5(1112).intl;
     obj5.body = intl2.string(tmp2(4729)["4AA4MK"]);
-    const obj9 = { variant: "expressive", icon: tmp2(9638), text: null, onPress: null };
+    const obj9 = { variant: "expressive", icon: tmp2(9639), text: null, onPress: null };
     const intl3 = tmp5(1112).intl;
     obj9.text = intl3.string(tmp2(4729).SdwcaZ);
     obj9.onPress = openNitroUpgrade;

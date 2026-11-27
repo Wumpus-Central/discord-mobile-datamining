@@ -1,10 +1,10 @@
-// === Module 12923: useTraitPicker ===
+// === Module 12931: useTraitPicker ===
 
-// Module 12923 (useTraitPicker)
-import CheckpointActionCreators from "CheckpointActionCreators" /* 12628 */;
-import useTraitPickerSelection from "useTraitPickerSelection" /* 12924 */;
-import useTraitPickerOptions from "useTraitPickerOptions" /* 12925 */;
-import useAutoSelectTraitOption from "useAutoSelectTraitOption" /* 12926 */;
+// Module 12931 (useTraitPicker)
+import CheckpointActionCreators from "CheckpointActionCreators" /* 12636 */;
+import useTraitPickerSelection from "useTraitPickerSelection" /* 12932 */;
+import useTraitPickerOptions from "useTraitPickerOptions" /* 12933 */;
+import useAutoSelectTraitOption from "useAutoSelectTraitOption" /* 12934 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

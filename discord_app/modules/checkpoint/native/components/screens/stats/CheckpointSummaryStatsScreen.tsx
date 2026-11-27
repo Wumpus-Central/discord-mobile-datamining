@@ -1,6 +1,6 @@
-// === Module 12912: CheckpointSummaryStatsScreen ===
+// === Module 12920: CheckpointSummaryStatsScreen ===
 
-// Module 12912 (CheckpointSummaryStatsScreen)
+// Module 12920 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -16,18 +16,18 @@ import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6768 */;
 import GuildIcon from "GuildIcon" /* 7052 */;
 import EmojiDefault from "Emoji" /* 7488 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 8058 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8486 */;
-import FlagIcon from "FlagIcon" /* 9790 */;
-import CheckpointScreen from "CheckpointScreen" /* 12850 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12851 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12860 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12882 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12888 */;
-import CheckpointRecapCard from "CheckpointRecapCard" /* 12913 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8487 */;
+import FlagIcon from "FlagIcon" /* 9791 */;
+import CheckpointScreen from "CheckpointScreen" /* 12858 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12859 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12868 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12890 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12896 */;
+import CheckpointRecapCard from "CheckpointRecapCard" /* 12921 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
-import CheckpointStore from "CheckpointStore" /* 12620 */;
+import CheckpointStore from "CheckpointStore" /* 12628 */;
 
 const GuildIconDefault = GuildIcon;
 const CheckpointScreenDefault = CheckpointScreen;

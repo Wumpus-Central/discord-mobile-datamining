@@ -1,10 +1,10 @@
-// === Module 8621: GuildEventRecurrences ===
+// === Module 8622: GuildEventRecurrences ===
 
-// Module 8621 (GuildEventRecurrences)
+// Module 8622 (GuildEventRecurrences)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 8622 */;
-import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 8624 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 8623 */;
+import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 8625 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

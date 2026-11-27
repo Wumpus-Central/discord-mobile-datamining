@@ -1,9 +1,9 @@
-// === Module 19156: VoiceChannelAppActionSheet ===
+// === Module 19172: VoiceChannelAppActionSheet ===
 
-// Module 19156 (VoiceChannelAppActionSheet)
+// Module 19172 (VoiceChannelAppActionSheet)
 import _modDef4343 from "module_4343" /* 4343 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
-import VoiceChannelAppIconDefault from "VoiceChannelAppIcon" /* 19155 */;
+import VoiceChannelAppIconDefault from "VoiceChannelAppIcon" /* 19171 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/voice_channel_apps/native/Voi
 
 export default function VoiceChannelAppActionSheet(guildId) {
   ({ selectedApplicationId, onChange } = guildId);
-  const voiceChannelAppSettingOptions = onChange(19153).useVoiceChannelAppSettingOptions(guildId.guildId, selectedApplicationId);
+  const voiceChannelAppSettingOptions = onChange(19169).useVoiceChannelAppSettingOptions(guildId.guildId, selectedApplicationId);
   ({ options, listState } = voiceChannelAppSettingOptions);
   items = [onChange];
   const callback = noop.useCallback((arg0) => {

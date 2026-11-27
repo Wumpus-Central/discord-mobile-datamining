@@ -1,8 +1,8 @@
-// === Module 8649: VoiceStateIconUtils ===
+// === Module 8650: VoiceStateIconUtils ===
 
-// Module 8649 (VoiceStateIconUtils)
+// Module 8650 (VoiceStateIconUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import useLocalSelfMuteDeaf from "useLocalSelfMuteDeaf" /* 8650 */;
+import useLocalSelfMuteDeaf from "useLocalSelfMuteDeaf" /* 8651 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 import VoiceStateStore from "VoiceStateStore" /* 5691 */;
 

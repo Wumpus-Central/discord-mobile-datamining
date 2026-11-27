@@ -1,17 +1,17 @@
-// === Module 10354: useScreenshareUtils ===
+// === Module 10355: useScreenshareUtils ===
 
-// Module 10354 (useScreenshareUtils)
+// Module 10355 (useScreenshareUtils)
 import util from "util" /* 1112 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1626 */;
 import inject from "inject" /* 2134 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5996 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
-import StreamActionCreators from "StreamActionCreators" /* 8419 */;
-import CallsUtils from "CallsUtils" /* 8636 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 10350 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10355 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10374 */;
+import StreamActionCreators from "StreamActionCreators" /* 8420 */;
+import CallsUtils from "CallsUtils" /* 8637 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 10351 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10356 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10375 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
@@ -97,7 +97,7 @@ export default function useScreenshareUtils(arg0) {
         if (tmp11) {
           if (flag) {
             let fn = function l() {
-              return closure_0(10358).showMobileGoLiveActionSheet(closure_1);
+              return closure_0(10359).showMobileGoLiveActionSheet(closure_1);
             };
           } else {
             fn = tmp14;
@@ -113,17 +113,17 @@ export default function useScreenshareUtils(arg0) {
           const obj = closure_0(6035);
           obj.reportAVError({ type: closure_0(6035).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
           const obj2 = { type: closure_0(6035).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-          const result = closure_0(8636).showMinOSScreenshareRequirementAlert();
+          const result = closure_0(8637).showMinOSScreenshareRequirementAlert();
         };
       }
       obj.onPress = fn;
       if (obj2.isMetaQuest()) {
-        importDefault(tmp ? 10379 : 10380);
+        importDefault(tmp ? 10380 : 10381);
       } else {
         if (showMobileGoLiveUpsell) {
-          let tmp20 = 10381;
+          let tmp20 = 10382;
         } else {
-          tmp20 = tmp ? 10382 : 10381;
+          tmp20 = tmp ? 10383 : 10382;
         }
         obj.imgSource = importDefault(tmp20);
         return obj;
@@ -159,7 +159,7 @@ export function getStreamPressHandler(analyticsLocations) {
     if (hasPermission) {
       if (showMobileGoLiveUpsell) {
         let fn = function l() {
-          return closure_0(10358).showMobileGoLiveActionSheet(closure_1);
+          return closure_0(10359).showMobileGoLiveActionSheet(closure_1);
         };
       } else {
         fn = tmp;
@@ -175,7 +175,7 @@ export function getStreamPressHandler(analyticsLocations) {
       const obj = closure_0(6035);
       obj.reportAVError({ type: closure_0(6035).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
       const obj2 = { type: closure_0(6035).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-      const result = closure_0(8636).showMinOSScreenshareRequirementAlert();
+      const result = closure_0(8637).showMinOSScreenshareRequirementAlert();
     };
   }
   return fn;

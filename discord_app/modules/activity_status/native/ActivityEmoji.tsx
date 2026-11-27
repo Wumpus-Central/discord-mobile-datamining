@@ -1,6 +1,6 @@
-// === Module 11381: ActivityEmoji ===
+// === Module 11382: ActivityEmoji ===
 
-// Module 11381 (ActivityEmoji)
+// Module 11382 (ActivityEmoji)
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import EmojiDefault from "Emoji" /* 7488 */;
 import noop from "module_19" /* 19 */;
@@ -60,7 +60,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(9704).ReactionIcon;
+    ReactionIcon = ReactionIcon(9705).ReactionIcon;
     const obj = { style, size: "sm" };
     <ReactionIcon style={style} size="sm" />;
   } else {

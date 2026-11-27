@@ -1,6 +1,6 @@
-// === Module 8842: useHeroColors ===
+// === Module 8843: useHeroColors ===
 
-// Module 8842 (useHeroColors)
+// Module 8843 (useHeroColors)
 import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import tinycolorDefault from "tinycolor" /* 6321 */;
@@ -21,8 +21,8 @@ export default function useHeroColors(pendingAvatarSrc) {
   const items1 = [ThemeStore];
   const stateFromStores1 = first(504).useStateFromStores(items1, () => theme.theme);
   let obj2 = first(504);
-  const fallbackHeroColor = first(8843).getFallbackHeroColor(stateFromStores1, stateFromStores);
-  let obj3 = first(8843);
+  const fallbackHeroColor = first(8844).getFallbackHeroColor(stateFromStores1, stateFromStores);
+  let obj3 = first(8844);
   let tmp4 = _slicedToArray(first(6369).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
   first = tmp4[0];
   closure_1 = tmp6;
@@ -77,7 +77,7 @@ export default function useHeroColors(pendingAvatarSrc) {
   }, items2);
 };
 export function getHeroColors(game_name) {
-  const fallbackHeroColor = num(8843).getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
+  const fallbackHeroColor = num(8844).getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
   num = 1;
   if (AccessibilityStore.desaturateUserColors) {
     num = AccessibilityStore.saturation;
@@ -99,7 +99,7 @@ export function getHeroColors(game_name) {
     items = [fallbackHeroColor, fallbackHeroColor];
     mapped = items;
   }
-  let obj = num(8843);
+  let obj = num(8844);
   [tmp7, tmp8] = mapped;
   const tmp6 = _slicedToArray(mapped, 2);
   const hex2intResult = num(1089).hex2int(tmp7);

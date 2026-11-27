@@ -1,8 +1,8 @@
-// === Module 14956: UserProfileNote ===
+// === Module 14963: UserProfileNote ===
 
-// Module 14956 (UserProfileNote)
+// Module 14963 (UserProfileNote)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
-import openEditNoteModalDefault from "openEditNoteModal" /* 14959 */;
+import openEditNoteModalDefault from "openEditNoteModal" /* 14966 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

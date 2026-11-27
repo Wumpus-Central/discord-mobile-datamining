@@ -1,6 +1,6 @@
-// === Module 11569: UsersLegendList ===
+// === Module 11577: UsersLegendList ===
 
-// Module 11569 (UsersLegendList)
+// Module 11577 (UsersLegendList)
 import BottomSheetModal from "BottomSheetModal" /* 5275 */;
 import FastestListItemTypeDefault from "FastestListItemType" /* 7420 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -284,5 +284,5 @@ export default noop.memo(function UsersLegendList(insetStart) {
   obj4.sharedValues = memo;
   obj4.stickyHeaderIndices = memo1.stickyHeaderIndices;
   obj4.style = style;
-  return renderListHeader(tmp3(11570).AnimatedLegendList, obj4);
+  return renderListHeader(tmp3(11578).AnimatedLegendList, obj4);
 });

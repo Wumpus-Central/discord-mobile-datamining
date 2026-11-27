@@ -1,6 +1,6 @@
-// === Module 16743: QuestContextMenu ===
+// === Module 16750: QuestContextMenu ===
 
-// Module 16743 (QuestContextMenu)
+// Module 16750 (QuestContextMenu)
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
@@ -11,19 +11,19 @@ import AdCreativeType from "AdCreativeType" /* 6878 */;
 import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 7186 */;
 import _modDef7746 from "module_7746" /* 7746 */;
 import IconButton from "IconButton" /* 7944 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
-import captureAdUserAction from "captureAdUserAction" /* 9857 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9861 */;
-import QuestUtils from "QuestUtils" /* 9889 */;
-import QuestActionCreators from "QuestActionCreators" /* 9894 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9913 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9930 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 12476 */;
-import _modDef16669 from "module_16669" /* 16669 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 16699 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8393 */;
+import captureAdUserAction from "captureAdUserAction" /* 9858 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9862 */;
+import QuestUtils from "QuestUtils" /* 9890 */;
+import QuestActionCreators from "QuestActionCreators" /* 9895 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9914 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9931 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 12484 */;
+import _modDef16676 from "module_16676" /* 16676 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 16706 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 8374 */;
+import QuestStore from "QuestStore" /* 8375 */;
 
 require = fn;
 function renderDefaultButton(ref) {
@@ -133,7 +133,7 @@ export default noop.memo(function QuestContextMenu(children) {
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef16669;
+    obj2.iconSource = _modDef16676;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

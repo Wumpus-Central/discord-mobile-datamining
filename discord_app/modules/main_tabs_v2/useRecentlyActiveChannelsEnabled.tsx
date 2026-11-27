@@ -1,6 +1,6 @@
-// === Module 8294: useRecentlyActiveChannelsEnabled ===
+// === Module 8295: useRecentlyActiveChannelsEnabled ===
 
-// Module 8294 (useRecentlyActiveChannelsEnabled)
+// Module 8295 (useRecentlyActiveChannelsEnabled)
 import useDesignToggleDefault from "useDesignToggle" /* 7193 */;
 import DesignTogglesStore from "DesignTogglesStore" /* 7194 */;
 

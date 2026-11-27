@@ -1,6 +1,6 @@
-// === Module 19152: useVoiceChannelApp ===
+// === Module 19168: useVoiceChannelApp ===
 
-// Module 19152 (useVoiceChannelApp)
+// Module 19168 (useVoiceChannelApp)
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 

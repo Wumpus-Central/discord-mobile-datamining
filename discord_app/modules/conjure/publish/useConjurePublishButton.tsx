@@ -1,9 +1,9 @@
-// === Module 18462: useConjurePublishButton ===
+// === Module 18469: useConjurePublishButton ===
 
-// Module 18462 (useConjurePublishButton)
+// Module 18469 (useConjurePublishButton)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 11459 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 11469 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

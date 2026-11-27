@@ -1,9 +1,9 @@
-// === Module 11495: MessageRequestActionCreators ===
+// === Module 11503: MessageRequestActionCreators ===
 
-// Module 11495 (MessageRequestActionCreators)
+// Module 11503 (MessageRequestActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6839 */;
-import MessageRequestTypes from "MessageRequestTypes" /* 11496 */;
+import MessageRequestTypes from "MessageRequestTypes" /* 11504 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -56,7 +56,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
         const obj7 = { type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC", channelId: closure_129_0 };
         closure_130_1(closure_130_2[4]).dispatch(obj7);
         c4 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp12) {
       c4 = tmp;

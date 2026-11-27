@@ -1,6 +1,6 @@
-// === Module 13020: useActivityShelfItem ===
+// === Module 13028: useActivityShelfItem ===
 
-// Module 13020 (useActivityShelfItem)
+// Module 13028 (useActivityShelfItem)
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import Server from "Server" /* 2118 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4964 */;
@@ -8,12 +8,12 @@ import getPlatformDefault from "getPlatform" /* 5694 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6973 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7515 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10000 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10192 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10193 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10251 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 13021 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13022 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10001 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10193 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10194 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10252 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 13029 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13030 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 
@@ -97,7 +97,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -147,7 +147,7 @@ function useOnActivityItemSelected(arg0) {
               }
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp22) {
           dependencyMap = tmp;
@@ -167,7 +167,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -230,7 +230,7 @@ function useOnActivityItemSelected(arg0) {
             return obj;
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp24) {
           dependencyMap = tmp;
           throw tmp24;

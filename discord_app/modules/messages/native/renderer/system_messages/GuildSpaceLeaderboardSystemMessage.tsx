@@ -1,16 +1,16 @@
-// === Module 14445: GuildSpaceLeaderboardSystemMessage ===
+// === Module 14452: GuildSpaceLeaderboardSystemMessage ===
 
-// Module 14445 (GuildSpaceLeaderboardSystemMessage)
+// Module 14452 (GuildSpaceLeaderboardSystemMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4963 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6807 */;
-import _modDef8800 from "module_8800" /* 8800 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8821 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 10616 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12000 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14372 */;
-import createCommonMessageDefault from "createCommonMessage" /* 14373 */;
+import _modDef8801 from "module_8801" /* 8801 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8822 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 10617 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12008 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14379 */;
+import createCommonMessageDefault from "createCommonMessage" /* 14380 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import UserStore from "UserStore" /* 1387 */;
 
@@ -103,7 +103,7 @@ export function createGuildSpaceLeaderboardSystemMessage(theme) {
           obj4.previousUsernameOnClick = tmp22Result2Result;
           obj7.content = intl.formatToParts(mobileLeaderboardSystemMessage.message, obj4);
           const tmp22Result3 = formatUsernameOnClickDefault;
-          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8800);
+          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8801);
           obj7.iconTintColor = tmp13.iconTintColor;
           const merged1 = Object.assign(createCommonMessageDefault(theme));
           return obj7;

@@ -1,6 +1,6 @@
-// === Module 15940: AuthCommandsFactory ===
+// === Module 15947: AuthCommandsFactory ===
 
-// Module 15940 (AuthCommandsFactory)
+// Module 15947 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import RPCErrorDefault from "RPCError" /* 7644 */;
@@ -9,7 +9,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ApplicationRecord from "ApplicationRecord" /* 2143 */;
 import UserStore from "UserStore" /* 1387 */;
-import LeakyBucket from "LeakyBucket" /* 10224 */;
+import LeakyBucket from "LeakyBucket" /* 10225 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -375,7 +375,7 @@ let closure_20 = async function _authenticate(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

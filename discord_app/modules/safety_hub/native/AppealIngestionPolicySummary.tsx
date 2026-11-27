@@ -1,6 +1,6 @@
-// === Module 12574: AppealIngestionPolicySummary ===
+// === Module 12582: AppealIngestionPolicySummary ===
 
-// Module 12574 (AppealIngestionPolicySummary)
+// Module 12582 (AppealIngestionPolicySummary)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ColorUtils from "ColorUtils" /* 5040 */;

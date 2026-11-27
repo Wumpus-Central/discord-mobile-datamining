@@ -1,13 +1,13 @@
-// === Module 14408: StageRaiseHandSystemMessage ===
+// === Module 14415: StageRaiseHandSystemMessage ===
 
-// Module 14408 (StageRaiseHandSystemMessage)
+// Module 14415 (StageRaiseHandSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1112 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6803 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12000 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14372 */;
-import createCommonMessageDefault from "createCommonMessage" /* 14373 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12008 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14379 */;
+import createCommonMessageDefault from "createCommonMessage" /* 14380 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6812 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import PermissionStore from "PermissionStore" /* 4975 */;

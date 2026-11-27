@@ -1,10 +1,10 @@
-// === Module 10394: UserSettingsVoiceInputOptions ===
+// === Module 10395: UserSettingsVoiceInputOptions ===
 
-// Module 10394 (UserSettingsVoiceInputOptions)
+// Module 10395 (UserSettingsVoiceInputOptions)
 import util from "util" /* 1112 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5996 */;
 import showSimpleActionSheet from "showSimpleActionSheet" /* 7543 */;
-import VoiceSensitivityDefault from "VoiceSensitivity" /* 10395 */;
+import VoiceSensitivityDefault from "VoiceSensitivity" /* 10396 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 
@@ -95,6 +95,6 @@ export default function UserSettingsVoiceInputOptions() {
   }
   items1[1] = tmp4Result;
   obj2.children = items1;
-  return closure_8(inputMode(10388).UserSettingsTableRowGroup, obj2);
+  return closure_8(inputMode(10389).UserSettingsTableRowGroup, obj2);
 };
 export { handleInputModePress };

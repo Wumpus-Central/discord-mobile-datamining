@@ -1,6 +1,6 @@
-// === Module 15313: MobileNativeUpdateUtils ===
+// === Module 15320: MobileNativeUpdateUtils ===
 
-// Module 15313 (MobileNativeUpdateUtils)
+// Module 15320 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
@@ -20,7 +20,7 @@ let closure_5 = async function _checkForNewerBuild() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

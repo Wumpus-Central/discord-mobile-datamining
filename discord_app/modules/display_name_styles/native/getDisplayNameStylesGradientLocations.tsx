@@ -1,6 +1,6 @@
-// === Module 16966: getDisplayNameStylesGradientLocations ===
+// === Module 16973: getDisplayNameStylesGradientLocations ===
 
-// Module 16966 (getDisplayNameStylesGradientLocations)
+// Module 16973 (getDisplayNameStylesGradientLocations)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1396 */;
 import size from "module_2" /* 2 */;

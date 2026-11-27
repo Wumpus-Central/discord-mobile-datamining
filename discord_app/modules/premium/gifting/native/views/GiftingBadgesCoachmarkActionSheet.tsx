@@ -1,6 +1,6 @@
-// === Module 19289: GiftingBadgesCoachmarkActionSheet ===
+// === Module 19305: GiftingBadgesCoachmarkActionSheet ===
 
-// Module 19289 (GiftingBadgesCoachmarkActionSheet)
+// Module 19305 (GiftingBadgesCoachmarkActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef2943 from "module_2943" /* 2943 */;
@@ -9,9 +9,9 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257
 import FastImageDefault from "FastImage" /* 5730 */;
 import BadgeId from "BadgeId" /* 6138 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11113 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11158 */;
-import _modDef19290 from "module_19290" /* 19290 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 11114 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11159 */;
+import _modDef19306 from "module_19306" /* 19306 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;
 
@@ -20,7 +20,7 @@ function HasBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ currentTier, giftCount } = markAsDismissed);
   const tmp = closure_9();
-  const giftingBadgeTierIconUrl = markAsDismissed(11156).getGiftingBadgeTierIconUrl(currentTier);
+  const giftingBadgeTierIconUrl = markAsDismissed(11157).getGiftingBadgeTierIconUrl(currentTier);
   items = [markAsDismissed];
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
@@ -100,7 +100,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
   const obj4 = { source: null, style: null };
-  const obj5 = { uri: _modDef19290 };
+  const obj5 = { uri: _modDef19306 };
   obj4.source = obj5;
   obj4.style = tmp.newBadgeImage;
   obj3.children = closure_7(FastImageDefault, obj4);
@@ -120,7 +120,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1112).intl;
   obj10.text = intl3.string(_modDef2943.DZnomS);
-  obj10.icon = closure_7(markAsDismissed(11307).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj10.icon = closure_7(markAsDismissed(11308).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj10.onPress = callback;
   obj9.children = closure_7(markAsDismissed(5641).Button, obj10);
   items2[2] = closure_7(View, obj9);

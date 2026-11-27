@@ -1,21 +1,21 @@
-// === Module 19542: VoicePanelPIP ===
+// === Module 19558: VoicePanelPIP ===
 
-// Module 19542 (VoicePanelPIP)
+// Module 19558 (VoicePanelPIP)
 import util from "util" /* 1112 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4964 */;
 import native from "native" /* 5104 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import ExternalPipDefault from "ExternalPip" /* 5952 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9996 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10046 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11786 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11789 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 11791 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19382 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19451 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19459 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9997 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10047 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11794 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11797 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 11799 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19398 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 19467 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 19475 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import FramesStore from "FramesStore" /* 6936 */;
@@ -471,7 +471,7 @@ class VoicePanelPIPTiles {
         constructor(arg0) {
           closure_0 = arg0;
           allTouches = arg0.allTouches;
-          found = allTouches.filter(/* F142846 */ function() { ... });
+          found = allTouches.filter(/* F143312 */ function() { ... });
           if (0 !== found.length) {
             tmp4 = closure_2;
             tmp5 = closure_2(found);
@@ -1133,10 +1133,10 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11782);
+const VoicePanelConstants = fn(11790);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: closure_10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11780).VoicePanelControlsModes;
-const VoicePanelPIPConstants = fn(19383);
+const VoicePanelControlsModes = fn(11788).VoicePanelControlsModes;
+const VoicePanelPIPConstants = fn(19399);
 ({ PIP_FIRST_FRAME_DELAY_MS: closure_12, VoicePanelPIPModes: map1 } = VoicePanelPIPConstants);
 const ActivityPanelModes = fn(5669).ActivityPanelModes;
 const isLaunched = fn(6937).isLaunched;
@@ -1230,12 +1230,12 @@ function usePIPTileHandoff() {
 let closure_41 = noop.memo(function PIPWrapper(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
-  const pipHandoff = noop.useContext(transitionCleanUp(11781)).pipHandoff;
-  const mode = transitionState(11791).usePIPState().mode;
-  const obj = transitionState(11791);
-  const pIPCardsSettled = transitionState(11789).usePIPCardsSettled(pipHandoff);
-  const obj2 = transitionState(11789);
-  const pIPPanelLayoutCommitted = transitionState(11789).usePIPPanelLayoutCommitted(pipHandoff);
+  const pipHandoff = noop.useContext(transitionCleanUp(11789)).pipHandoff;
+  const mode = transitionState(11799).usePIPState().mode;
+  const obj = transitionState(11799);
+  const pIPCardsSettled = transitionState(11797).usePIPCardsSettled(pipHandoff);
+  const obj2 = transitionState(11797);
+  const pIPPanelLayoutCommitted = transitionState(11797).usePIPPanelLayoutCommitted(pipHandoff);
   items = [transitionState, pIPPanelLayoutCommitted, transitionCleanUp];
   const effect = noop.useEffect(() => {
     if (tmp) {

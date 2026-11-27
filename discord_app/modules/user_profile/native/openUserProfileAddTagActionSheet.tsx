@@ -1,6 +1,6 @@
-// === Module 14594: openUserProfileAddTagActionSheet ===
+// === Module 14601: openUserProfileAddTagActionSheet ===
 
-// Module 14594 (openUserProfileAddTagActionSheet)
+// Module 14601 (openUserProfileAddTagActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 6051 */;
@@ -18,6 +18,6 @@ export default function openUserProfileAddTagActionSheet(widgetEdited) {
   const obj = UserProfileAnalyticsUtils;
   const result = obj.trackUserProfileEditAction({ userId: AuthenticationStore.getId(), action: constants.PRESS_ADD_TAG, widgetEdited: widgetEdited.widgetType });
   const obj2 = { userId: AuthenticationStore.getId(), action: constants.PRESS_ADD_TAG, widgetEdited: widgetEdited.widgetType };
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14595, dependencyMap.paths), UserProfileAddTagActionSheet, widgetEdited);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14602, dependencyMap.paths), UserProfileAddTagActionSheet, widgetEdited);
 };
 export const USER_PROFILE_ADD_TAG_ACTION_SHEET_KEY = "UserProfileAddTagActionSheet";

@@ -1,6 +1,6 @@
-// === Module 17726: useMainTabsPanelsGesture ===
+// === Module 17733: useMainTabsPanelsGesture ===
 
-// Module 17726 (useMainTabsPanelsGesture)
+// Module 17733 (useMainTabsPanelsGesture)
 import PlatformUtils2 from "PlatformUtils" /* 1379 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
@@ -8,17 +8,17 @@ import _mod1707 from "module_1707" /* 1707 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import timingPresets from "timingPresets" /* 5256 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11959 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11967 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const LaunchPadGestureRefContextDefault = tmp(17728);
+const LaunchPadGestureRefContextDefault = tmp(17735);
 require = fn;
-const LaunchPadTypes = fn(11958).LaunchPadTypes;
+const LaunchPadTypes = fn(11966).LaunchPadTypes;
 let PlatformUtils = fn(1379);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(17727);
+const PanelsConfig = fn(17734);
 let closure_6 = PlatformUtils ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
 let closure_7 = { code: "(function useMainTabsPanelsGestureTsx1(width){let[isDragging,translateX,IS_ANDROID,withTiming,timingInstant,isFoldChange,timingStandard]=this.__closure;if(isDragging.get())return;if(translateX.get()===0)return;if(IS_ANDROID){translateX.set(withTiming(width,timingInstant,'animate-always'));}else{translateX.set(isFoldChange?withTiming(width,timingStandard,'respect-motion-settings'):width);}})" };
 let closure_8 = { code: "(function handleAnimationFinish_useMainTabsPanelsGestureTsx2(finished){let[onVisibilityChange,scheduleOnRN,show]=this.__closure;if(!finished)return;if(onVisibilityChange!=null){scheduleOnRN(onVisibilityChange,show);}})" };

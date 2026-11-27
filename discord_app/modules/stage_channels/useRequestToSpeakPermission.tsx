@@ -1,6 +1,6 @@
-// === Module 10323: useRequestToSpeakPermission ===
+// === Module 10324: useRequestToSpeakPermission ===
 
-// Module 10323 (useRequestToSpeakPermission)
+// Module 10324 (useRequestToSpeakPermission)
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7839 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

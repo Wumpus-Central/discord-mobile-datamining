@@ -1,22 +1,22 @@
-// === Module 12374: ConjureProjectAboutSheet ===
+// === Module 12382: ConjureProjectAboutSheet ===
 
-// Module 12374 (ConjureProjectAboutSheet)
+// Module 12382 (ConjureProjectAboutSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8486 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 11556 */;
-import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 11562 */;
-import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11996 */;
-import openConjureProjectAboutSheet from "openConjureProjectAboutSheet" /* 12373 */;
-import useConjureSharedProjectDefault from "useConjureSharedProject" /* 12375 */;
-import useConjureSharedProjectCoverActionDefault from "useConjureSharedProjectCoverAction" /* 12376 */;
-import ConjureSharedProjectCoverDefault from "ConjureSharedProjectCover" /* 12379 */;
-import useConjureProjectCreator from "useConjureProjectCreator" /* 12380 */;
-import openConjureSharedProjectRemixSheetDefault from "openConjureSharedProjectRemixSheet" /* 12382 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8487 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 11564 */;
+import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 11570 */;
+import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 12004 */;
+import openConjureProjectAboutSheet from "openConjureProjectAboutSheet" /* 12381 */;
+import useConjureSharedProjectDefault from "useConjureSharedProject" /* 12383 */;
+import useConjureSharedProjectCoverActionDefault from "useConjureSharedProjectCoverAction" /* 12384 */;
+import ConjureSharedProjectCoverDefault from "ConjureSharedProjectCover" /* 12387 */;
+import useConjureProjectCreator from "useConjureProjectCreator" /* 12388 */;
+import openConjureSharedProjectRemixSheetDefault from "openConjureSharedProjectRemixSheet" /* 12390 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -133,7 +133,7 @@ export default function ConjureProjectAboutSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -161,11 +161,11 @@ export default function ConjureProjectAboutSheet(arg0) {
           return obj5;
         } else {
           if (value) {
-            v1(5257).hideActionSheet(tmp4(12373).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+            v1(5257).hideActionSheet(tmp4(12381).CONJURE_PROJECT_ABOUT_SHEET_KEY);
             const obj = v1(5257);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         dependencyMap = tmp;

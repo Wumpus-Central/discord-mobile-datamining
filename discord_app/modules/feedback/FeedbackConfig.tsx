@@ -1,9 +1,9 @@
-// === Module 19716: FeedbackConfig ===
+// === Module 19732: FeedbackConfig ===
 
-// Module 19716 (FeedbackConfig)
+// Module 19732 (FeedbackConfig)
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 
-const Constants = fn(12168);
+const Constants = fn(12176);
 ({ FeedbackGroup, FeedbackType } = Constants);
 const obj = { chance: 0.2, cooldown: 86400000 };
 const obj2 = {};

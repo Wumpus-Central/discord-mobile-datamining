@@ -1,9 +1,9 @@
-// === Module 8357: appMessageEmbedTrackingConfig ===
+// === Module 8358: appMessageEmbedTrackingConfig ===
 
-// Module 8357 (appMessageEmbedTrackingConfig)
+// Module 8358 (appMessageEmbedTrackingConfig)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const LinkType = fn(8352).LinkType;
+const LinkType = fn(8353).LinkType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 

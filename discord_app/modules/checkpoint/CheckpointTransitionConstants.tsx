@@ -1,6 +1,6 @@
-// === Module 12631: CheckpointTransitionConstants ===
+// === Module 12639: CheckpointTransitionConstants ===
 
-// Module 12631 (CheckpointTransitionConstants)
+// Module 12639 (CheckpointTransitionConstants)
 import size from "module_2" /* 2 */;
 
 const obj = { delay: 0, duration: 350 };

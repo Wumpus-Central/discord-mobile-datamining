@@ -1,16 +1,16 @@
-// === Module 16967: DisplayNameStylesColorPickerSheet ===
+// === Module 16974: DisplayNameStylesColorPickerSheet ===
 
-// Module 16967 (DisplayNameStylesColorPickerSheet)
+// Module 16974 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef3303 from "module_3303" /* 3303 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
-import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 9812 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16038 */;
-import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader" /* 16952 */;
-import useColorPresetsWithA11yLabelsDefault from "useColorPresetsWithA11yLabels" /* 16957 */;
-import DisplayNameStylesCustomColorButtonDefault from "DisplayNameStylesCustomColorButton" /* 16961 */;
+import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 9813 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16045 */;
+import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader" /* 16959 */;
+import useColorPresetsWithA11yLabelsDefault from "useColorPresetsWithA11yLabels" /* 16964 */;
+import DisplayNameStylesCustomColorButtonDefault from "DisplayNameStylesCustomColorButton" /* 16968 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ const createStyles = fn(5043);
 let obj2 = { sheetBackground: { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg }, container: null, contentContainer: null, presetGrid: null, presetColor: null, presetColorSelected: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
 obj2.container = { flex: 1, paddingTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(16956).SHEET_CONTENT_MAX_WIDTH };
+obj2.contentContainer = { alignSelf: "center", width: "100%", maxWidth: fn(16963).SHEET_CONTENT_MAX_WIDTH };
 let obj4 = { flex: 1, paddingTop: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.presetGrid = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", columnGap: nativeDefault.space.PX_24, rowGap: nativeDefault.space.PX_20, marginBottom: nativeDefault.space.PX_20 };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 2, borderColor: "transparent" };
@@ -50,7 +50,7 @@ export default function DisplayNameStylesColorPickerSheet(arg0) {
   const tmp8 = color !== tmp5[0] && !arr.some((item) => item.colors[0] === first);
   let obj3 = { colors: tmp5, a11yLabel: null };
   const intl = onSelectColor(1112).intl;
-  let obj = onSelectColor(8724);
+  let obj = onSelectColor(8725);
   const stringResult = intl.string(onSelectColor(1112).t.bBvAEH);
   obj3.a11yLabel = "" + stringResult + ", " + onSelectColor(1089).int2hex(tmp5[0]);
   items = [obj3, ...arr.filter((item) => item.colors[0] !== 32)];

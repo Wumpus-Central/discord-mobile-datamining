@@ -1,10 +1,10 @@
-// === Module 10802: ExpressionPicker ===
+// === Module 10803: ExpressionPicker ===
 
-// Module 10802 (ExpressionPicker)
+// Module 10803 (ExpressionPicker)
 import nativeDefault from "native" /* 575 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 9543 */;
-import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 9583 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 9544 */;
+import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 9584 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

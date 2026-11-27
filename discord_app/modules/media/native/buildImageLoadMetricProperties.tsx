@@ -1,6 +1,6 @@
-// === Module 19760: buildImageLoadMetricProperties ===
+// === Module 19776: buildImageLoadMetricProperties ===
 
-// Module 19760 (buildImageLoadMetricProperties)
+// Module 19776 (buildImageLoadMetricProperties)
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

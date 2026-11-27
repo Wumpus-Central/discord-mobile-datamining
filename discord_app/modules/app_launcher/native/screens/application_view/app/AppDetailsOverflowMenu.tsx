@@ -1,6 +1,6 @@
-// === Module 13093: AppDetailsOverflowMenu ===
+// === Module 13101: AppDetailsOverflowMenu ===
 
-// Module 13093 (AppDetailsOverflowMenu)
+// Module 13101 (AppDetailsOverflowMenu)
 import ToastUtils from "ToastUtils" /* 5724 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import noop from "module_19" /* 19 */;
@@ -13,10 +13,10 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/a
 export default function AppDetailsOverflowMenu(application) {
   application = application.application;
   const onAddAppMenuClick = application.onAddAppMenuClick;
-  dependencyMap = application(10087).getInstallAppProps(application);
-  let obj = application(10087);
-  const tmp3 = onAddAppMenuClick(13094);
-  let tmp3Result = tmp3(application(10087).getInstallableApplication(application));
+  dependencyMap = application(10088).getInstallAppProps(application);
+  let obj = application(10088);
+  const tmp3 = onAddAppMenuClick(13102);
+  let tmp3Result = tmp3(application(10088).getInstallableApplication(application));
   if (tmp3Result) {
     tmp3Result = null != onAddAppMenuClick;
   }
@@ -28,7 +28,7 @@ export default function AppDetailsOverflowMenu(application) {
     obj3.action = function action() {
       return onAddAppMenuClick({ installAppProps });
     };
-    obj3.IconComponent = tmp(13095).CirclePlusIcon;
+    obj3.IconComponent = tmp(13103).CirclePlusIcon;
     items.push(obj3);
   }
   const DeveloperMode = tmp(4868).DeveloperMode;
@@ -40,7 +40,7 @@ export default function AppDetailsOverflowMenu(application) {
       ClipboardUtils.copy(application.id);
       ToastUtils.presentIdCopied();
     };
-    obj4.IconComponent = tmp(11081).IdIcon;
+    obj4.IconComponent = tmp(11082).IdIcon;
     items.push(obj4);
   }
   let tmp8 = null;
@@ -57,7 +57,7 @@ export default function AppDetailsOverflowMenu(application) {
           return jsx(application(installAppProps[11]).IconButton, { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: onAddAppMenuClick(installAppProps[12]) });
         }
     };
-    tmp8 = jsx(tmp(9067).ContextMenu, {
+    tmp8 = jsx(tmp(9068).ContextMenu, {
       items,
       children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));

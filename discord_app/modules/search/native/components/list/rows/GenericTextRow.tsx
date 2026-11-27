@@ -1,8 +1,8 @@
-// === Module 18994: GenericTextRow ===
+// === Module 19010: GenericTextRow ===
 
-// Module 18994 (GenericTextRow)
+// Module 19010 (GenericTextRow)
 import Text_Text from "Text/Text" /* 5634 */;
-import SearchListRow from "SearchListRow" /* 18946 */;
+import SearchListRow from "SearchListRow" /* 18962 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ export default noop.memo(function GenericTextRow(text) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -61,7 +61,7 @@ export default noop.memo(function GenericTextRow(text) {
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp7) {
         c0 = tmp;

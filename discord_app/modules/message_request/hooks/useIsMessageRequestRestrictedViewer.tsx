@@ -1,6 +1,6 @@
-// === Module 13424: useIsMessageRequestRestrictedViewer ===
+// === Module 13432: useIsMessageRequestRestrictedViewer ===
 
-// Module 13424 (useIsMessageRequestRestrictedViewer)
+// Module 13432 (useIsMessageRequestRestrictedViewer)
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5713 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 6825 */;
 import size from "module_2" /* 2 */;

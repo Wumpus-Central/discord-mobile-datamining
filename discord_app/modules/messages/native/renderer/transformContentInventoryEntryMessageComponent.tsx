@@ -1,6 +1,6 @@
-// === Module 8841: transformContentInventoryEntryMessageComponent ===
+// === Module 8842: transformContentInventoryEntryMessageComponent ===
 
-// Module 8841 (transformContentInventoryEntryMessageComponent)
+// Module 8842 (transformContentInventoryEntryMessageComponent)
 import _mod17 from "module_17" /* 17 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
@@ -13,13 +13,13 @@ import _modDef7101 from "module_7101" /* 7101 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7651 */;
 import _modDef7757 from "module_7757" /* 7757 */;
 import _modDef8059 from "module_8059" /* 8059 */;
-import utils from "utils" /* 8588 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8589 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8590 */;
-import _modDef8800 from "module_8800" /* 8800 */;
-import useHeroColors from "useHeroColors" /* 8842 */;
-import _modDef8844 from "module_8844" /* 8844 */;
+import utils from "utils" /* 8589 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8590 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8591 */;
+import _modDef8801 from "module_8801" /* 8801 */;
+import useHeroColors from "useHeroColors" /* 8843 */;
 import _modDef8845 from "module_8845" /* 8845 */;
+import _modDef8846 from "module_8846" /* 8846 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -87,7 +87,7 @@ export function transformToRowGeneratedContentInventoryEntryComponent(component)
             const obj3 = { text: sum };
             items2.push(obj3);
           }
-          const obj4 = { imageUrl: tmp45, title: contentInventoryEntry.extra.media_title, subtitles: items2, gradientColors: tmp47, platformIconUrl: Image.resolveAssetSource(_modDef8844).uri };
+          const obj4 = { imageUrl: tmp45, title: contentInventoryEntry.extra.media_title, subtitles: items2, gradientColors: tmp47, platformIconUrl: Image.resolveAssetSource(_modDef8845).uri };
           tmp49 = obj4;
           const obj33 = /\w+ (\d+), \w+ (\d+)/;
         }
@@ -114,9 +114,9 @@ export function transformToRowGeneratedContentInventoryEntryComponent(component)
               const items4 = [];
               const intl = util.intl;
               const obj5 = { count };
-              const obj6 = { badgeUrl: Image.resolveAssetSource(_modDef8800).uri, text: intl.formatToPlainString(util.t.HtifnG, obj5) };
+              const obj6 = { badgeUrl: Image.resolveAssetSource(_modDef8801).uri, text: intl.formatToPlainString(util.t.HtifnG, obj5) };
               items4.push(obj6);
-              const obj7 = { imageUrl: image_url2, title: contentInventoryEntry.extra.artist.name, subtitles: items4, gradientColors: items3, platformIconUrl: Image.resolveAssetSource(_modDef8845).uri };
+              const obj7 = { imageUrl: image_url2, title: contentInventoryEntry.extra.artist.name, subtitles: items4, gradientColors: items3, platformIconUrl: Image.resolveAssetSource(_modDef8846).uri };
               tmp30 = obj7;
               const formatToPlainStringResult1 = intl.formatToPlainString(util.t.HtifnG, obj5);
             }
@@ -150,7 +150,7 @@ export function transformToRowGeneratedContentInventoryEntryComponent(component)
             const items6 = [obj9];
             obj8.subtitles = items6;
             obj8.gradientColors = items5;
-            obj8.platformIconUrl = Image.resolveAssetSource(_modDef8845).uri;
+            obj8.platformIconUrl = Image.resolveAssetSource(_modDef8846).uri;
             tmp25 = obj8;
             const tmpResult41 = ColorUtils;
           }
@@ -260,7 +260,7 @@ export function transformToRowGeneratedContentInventoryEntryComponent(component)
           const _HermesInternal2 = HermesInternal;
           const obj18 = { badgeUrl: null, text: null };
           const combined = "" + intl2.string(util.t["/50eHi"]) + " - " + intl3.formatToPlainString(util.t.C0AxoR, obj17);
-          obj18.badgeUrl = Image.resolveAssetSource(_modDef8800).uri;
+          obj18.badgeUrl = Image.resolveAssetSource(_modDef8801).uri;
           obj18.text = combined;
           items10.push(obj18);
           const stringResult = intl2.string(util.t["/50eHi"]);

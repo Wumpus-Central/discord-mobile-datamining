@@ -1,10 +1,11 @@
-// === Module 11451: useConjureRemixDestination ===
+// === Module 11452: useConjureRemixDestination ===
 
-// Module 11451 (useConjureRemixDestination)
+// Module 11452 (useConjureRemixDestination)
 import ConjureUtils from "ConjureUtils" /* 7602 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;
+import PermissionStore from "PermissionStore" /* 4975 */;
 import SortedGuildStore from "SortedGuildStore" /* 6164 */;
 
 const require = globalThis.__r;
@@ -14,11 +15,13 @@ const library = "library";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/remix/useConjureRemixDestination.tsx");
 
-export default function useConjureRemixDestination(arg0, arg1) {
+export default function useConjureRemixDestination(install_scope, arg1, arg2) {
   _require = arg1;
-  [first, obj2.setDestination] = noop.useState(arg0);
-  items = [SortedGuildStore, GuildStore];
-  const items1 = [arg1];
+  dependencyMap = arg2;
+  const tmp = first(noop.useState(null), 2);
+  first = tmp[0];
+  items = [SortedGuildStore, GuildStore, PermissionStore, require("ApexExperiment").ApexExperimentStore];
+  const items1 = [arg2];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     items = [];
     const flattenedGuildIds = SortedGuildStore.getFlattenedGuildIds();
@@ -28,7 +31,7 @@ export default function useConjureRemixDestination(arg0, arg1) {
       let result = null != guild;
       if (result) {
         let obj = ConjureUtils;
-        result = obj.isConjureGuildEligible(tmp6, closure_0);
+        result = obj.canStartConjureProject(tmp6, closure_1);
       }
       if (result) {
         let arr = items.push(tmp6);
@@ -37,27 +40,44 @@ export default function useConjureRemixDestination(arg0, arg1) {
     }
     return items;
   }, items1);
-  let tmp4 = null;
-  if (first !== library) {
+  if (null != first) {
     let found = stateFromStoresArray.find((id) => id.id === first);
-    if (found == null) {
-      found = stateFromStoresArray[0];
-    }
-    if (found == null) {
-      found = null;
-    }
-    tmp4 = found;
   }
-  const obj2 = { guilds: stateFromStoresArray, destination: null, destinationGuild: null, setDestination: null };
+  let tmp6 = null;
+  if ("guild" === install_scope.install_scope) {
+    let found1 = stateFromStoresArray.find((id) => id.id === closure_0);
+    if (found1 == null) {
+      found1 = stateFromStoresArray[0];
+    }
+    if (found1 == null) {
+      found1 = null;
+    }
+    tmp6 = found1;
+  }
+  let tmp9 = null;
+  if (first !== library) {
+    if (found == null) {
+      found = tmp6;
+    }
+    tmp9 = found;
+  }
   let id;
-  if (tmp4 != null) {
-    id = tmp4.id;
+  if (tmp9 != null) {
+    id = tmp9.id;
   }
   if (id == null) {
-    id = library;
+    id = null;
   }
-  obj2.destination = id;
-  obj2.destinationGuild = tmp4;
+  const obj2 = { guilds: stateFromStoresArray, destination: null, destinationGuild: null, changesType: null, setDestination: null };
+  let tmp11 = id;
+  if (id == null) {
+    tmp11 = library;
+  }
+  obj2.destination = tmp11;
+  obj2.destinationGuild = tmp9;
+  let obj = require("initialize");
+  obj2.changesType = require("ConjureRemix").conjureCopyChangesType(install_scope, id);
+  obj2.setDestination = tmp[1];
   return obj2;
 };
 export const CONJURE_REMIX_LIBRARY = "library";

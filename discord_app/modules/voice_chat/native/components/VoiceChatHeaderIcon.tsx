@@ -1,12 +1,12 @@
-// === Module 10499: VoiceChatHeaderIcon ===
+// === Module 10500: VoiceChatHeaderIcon ===
 
-// Module 10499 (VoiceChatHeaderIcon)
+// Module 10500 (VoiceChatHeaderIcon)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import native2 from "native" /* 5104 */;
 import Pressables from "Pressables" /* 6152 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10329 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10330 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6932 */;
 

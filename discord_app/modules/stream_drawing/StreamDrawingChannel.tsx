@@ -1,6 +1,6 @@
-// === Module 15144: StreamDrawingChannel ===
+// === Module 15151: StreamDrawingChannel ===
 
-// Module 15144 (StreamDrawingChannel)
+// Module 15151 (StreamDrawingChannel)
 import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;

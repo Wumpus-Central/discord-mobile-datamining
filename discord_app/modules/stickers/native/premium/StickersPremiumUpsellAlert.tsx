@@ -1,18 +1,18 @@
-// === Module 10853: StickersPremiumUpsellAlert ===
+// === Module 10854: StickersPremiumUpsellAlert ===
 
-// Module 10853 (StickersPremiumUpsellAlert)
+// Module 10854 (StickersPremiumUpsellAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Pressables from "Pressables" /* 6152 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
-import _modDef10854 from "module_10854" /* 10854 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9102 */;
 import _modDef10855 from "module_10855" /* 10855 */;
 import _modDef10856 from "module_10856" /* 10856 */;
+import _modDef10857 from "module_10857" /* 10857 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 9104 */;
+import IAPStore from "IAPStore" /* 9105 */;
 
 require = fn;
 function PerkRow(perk) {
@@ -39,7 +39,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef10854,
+    icon: _modDef10855,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -50,7 +50,7 @@ let items = [
 
 ];
 let obj = {
-  icon: _modDef10854,
+  icon: _modDef10855,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -58,21 +58,21 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE
 };
 items[1] = {
-  icon: _modDef10855,
+  icon: _modDef10856,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 let obj2 = {
-  icon: _modDef10855,
+  icon: _modDef10856,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 items[2] = {
-  icon: _modDef10856,
+  icon: _modDef10857,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -82,7 +82,7 @@ items[2] = {
 const createStyles = fn(5043);
 let obj5 = { alert: { paddingTop: 18 }, shortHeightAlert: { height: 500 }, content: { alignItems: "center" }, closeContainer: { flexDirection: "row-reverse", width: "100%", marginBottom: 16 }, description: { textAlign: "center", lineHeight: 20 }, perks: null, perkRow: null, lastPerkRow: null, perkIcon: null, perkText: null, imageHeader: null };
 let obj3 = {
-  icon: _modDef10856,
+  icon: _modDef10857,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -110,7 +110,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
       const obj = analyticsLocations(dependencyMap[14]);
     }
   }, []);
-  const tmp5 = analyticsLocations(9697)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(9698)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
@@ -156,7 +156,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   };
   const obj6 = { source: null, style: null };
   const obj4 = { source: analyticsLocations(7752) };
-  obj6.source = analyticsLocations(10857);
+  obj6.source = analyticsLocations(10858);
   obj6.style = tmp.imageHeader;
   const items2 = [closure_13(analyticsLocations(5730), obj6), , ];
   const obj7 = { style: tmp.description, variant: "body-md/medium", children: null };

@@ -1,11 +1,11 @@
-// === Module 15378: GameOrganizationInviteRow ===
+// === Module 15385: GameOrganizationInviteRow ===
 
-// Module 15378 (GameOrganizationInviteRow)
+// Module 15385 (GameOrganizationInviteRow)
 import native from "native" /* 1186 */;
 import UserUtilsDefault from "UserUtils" /* 5099 */;
 import TableRow from "TableRow" /* 6144 */;
-import DiscordTagDefault from "DiscordTag" /* 8631 */;
-import InviteButtonDefault from "InviteButton" /* 10498 */;
+import DiscordTagDefault from "DiscordTag" /* 8632 */;
+import InviteButtonDefault from "InviteButton" /* 10499 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

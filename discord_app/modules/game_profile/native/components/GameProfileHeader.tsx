@@ -1,16 +1,16 @@
-// === Module 8793: GameProfileHeader ===
+// === Module 8794: GameProfileHeader ===
 
-// Module 8793 (GameProfileHeader)
+// Module 8794 (GameProfileHeader)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import SKUUtils from "SKUUtils" /* 8794 */;
-import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 8795 */;
-import GameCoverArt from "GameCoverArt" /* 8796 */;
-import GameProfileRankPillDefault from "GameProfileRankPill" /* 8798 */;
-import _modDef8801 from "module_8801" /* 8801 */;
+import SKUUtils from "SKUUtils" /* 8795 */;
+import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 8796 */;
+import GameCoverArt from "GameCoverArt" /* 8797 */;
+import GameProfileRankPillDefault from "GameProfileRankPill" /* 8799 */;
+import _modDef8802 from "module_8802" /* 8802 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1654 = _mod1654;
@@ -18,7 +18,7 @@ const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(8791);
+const GameProfileConstants = fn(8792);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -123,7 +123,7 @@ export default function GameProfileHeader(arg0) {
   const items10 = [timestampProducer(Text_Text.Text, obj14), ];
   let tmp15Result3 = game.id === hasOwnProperty;
   if (tmp15Result3) {
-    const obj15 = { source: _modDef8801, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj15 = { source: _modDef8802, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp15Result3 = timestampProducer(FastImageDefault, obj15);
     const tmp9Result2 = FastImageDefault;
   }

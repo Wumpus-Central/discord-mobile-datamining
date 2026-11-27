@@ -1,6 +1,6 @@
-// === Module 9888: badgeDetailsCtas ===
+// === Module 9889: badgeDetailsCtas ===
 
-// Module 9888 (badgeDetailsCtas)
+// Module 9889 (badgeDetailsCtas)
 import Constants from "Constants" /* 1071 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1073 */;
 import util from "util" /* 1112 */;
@@ -12,9 +12,9 @@ import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import QuestContent from "QuestContent" /* 6876 */;
 import openUserSettings from "openUserSettings" /* 8109 */;
-import QuestUtils from "QuestUtils" /* 9889 */;
-import QuestsEligibility from "QuestsEligibility" /* 9893 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11113 */;
+import QuestUtils from "QuestUtils" /* 9890 */;
+import QuestsEligibility from "QuestsEligibility" /* 9894 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 11114 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;

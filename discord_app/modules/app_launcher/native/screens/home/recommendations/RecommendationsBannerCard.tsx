@@ -1,12 +1,12 @@
-// === Module 13053: RecommendationsBannerCard ===
+// === Module 13061: RecommendationsBannerCard ===
 
-// Module 13053 (RecommendationsBannerCard)
+// Module 13061 (RecommendationsBannerCard)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 13019 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 13048 */;
-import RecommendationsBannerDefault from "RecommendationsBanner" /* 13054 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 13027 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 13056 */;
+import RecommendationsBannerDefault from "RecommendationsBanner" /* 13062 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -39,10 +39,10 @@ export default function RecommendationsBannerCard(application) {
   }
   const tmp = closure_8();
   if (!showsPromoted) {
-    showsPromoted = application(10087).isPromotedApplication(application);
-    const obj = application(10087);
+    showsPromoted = application(10088).isPromotedApplication(application);
+    const obj = application(10088);
   }
-  const shelfBadgeTypeIfActive = application(10087).getShelfBadgeTypeIfActive(application);
+  const shelfBadgeTypeIfActive = application(10088).getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
   if (bot != null) {
@@ -60,11 +60,11 @@ export default function RecommendationsBannerCard(application) {
     }
     maybeFetchUserProfileDefault(id);
   }, items);
-  const obj2 = application(10087);
+  const obj2 = application(10088);
   const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true });
   if (isLandscape) {
     const obj5 = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result2 = closure_6(tmp4(13045).BaseAppRow, obj5);
+    let tmp12Result2 = closure_6(tmp4(13053).BaseAppRow, obj5);
   } else {
     const items1 = [tmp.container, , ];
     let num = 8;
@@ -85,7 +85,7 @@ export default function RecommendationsBannerCard(application) {
     const obj9 = { style: tmp.banner, children: null };
     const obj10 = { applicationBot: application.bot, isActivity: null, applicationId: null, applicationIcon: null, overrideImageUrl: null };
     const tmp10Result = RecommendationsBannerDefault;
-    obj10.isActivity = tmp4(10087).isActivityApp(application);
+    obj10.isActivity = tmp4(10088).isActivityApp(application);
     ({ id: obj8.applicationId, icon } = application);
     obj10.applicationIcon = icon;
     obj10.overrideImageUrl = application.overrideImageUrl;
@@ -130,7 +130,7 @@ export default function RecommendationsBannerCard(application) {
     items4[1] = closure_7(View, obj15);
     obj7.children = items4;
     tmp12Result2 = closure_7(tmp4(6152).PressableOpacity, obj7);
-    const tmp4Result = tmp4(10087);
+    const tmp4Result = tmp4(10088);
   }
   return tmp12Result2;
 };

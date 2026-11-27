@@ -1,7 +1,7 @@
-// === Module 17926: handleFavoritesGuildAddSuggestedChannel ===
+// === Module 17933: handleFavoritesGuildAddSuggestedChannel ===
 
-// Module 17926 (handleFavoritesGuildAddSuggestedChannel)
-import formatResults from "formatResults" /* 8945 */;
+// Module 17933 (handleFavoritesGuildAddSuggestedChannel)
+import formatResults from "formatResults" /* 8946 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
           return obj;
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp18) {
       c4 = tmp;

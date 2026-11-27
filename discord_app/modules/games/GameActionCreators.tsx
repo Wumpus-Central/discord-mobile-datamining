@@ -1,6 +1,6 @@
-// === Module 8720: GameActionCreators ===
+// === Module 8721: GameActionCreators ===
 
-// Module 8720 (GameActionCreators)
+// Module 8721 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameStore from "GameStore" /* 2141 */;
@@ -87,7 +87,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         v3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp10) {
       v3 = tmp;

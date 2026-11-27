@@ -1,9 +1,9 @@
-// === Module 11877: useIsChannelPinotPromotable ===
+// === Module 11885: useIsChannelPinotPromotable ===
 
-// Module 11877 (useIsChannelPinotPromotable)
+// Module 11885 (useIsChannelPinotPromotable)
 import Constants from "Constants" /* 1071 */;
 import ChannelRecord from "ChannelRecord" /* 4896 */;
-import PinotEligibility from "PinotEligibility" /* 8550 */;
+import PinotEligibility from "PinotEligibility" /* 8551 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildRoleStore from "GuildRoleStore" /* 4949 */;
 import GuildStore from "GuildStore" /* 4914 */;

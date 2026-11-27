@@ -1,12 +1,12 @@
-// === Module 16040: ColorBlock ===
+// === Module 16047: ColorBlock ===
 
-// Module 16040 (ColorBlock)
+// Module 16047 (ColorBlock)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import native from "native" /* 1186 */;
 import ColorUtils from "ColorUtils" /* 5040 */;
 import Pressables from "Pressables" /* 6152 */;
-import _modDef12044 from "module_12044" /* 12044 */;
+import _modDef12052 from "module_12052" /* 12052 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default noop.memo((color) => {
       obj2.children = null;
       let tmp10Result1 = jsx(Pressables.PressableOpacity, obj2);
     } else {
-      const obj5 = { source: _modDef12044, color: null };
+      const obj5 = { source: _modDef12052, color: null };
       if (v < 0.5) {
         unsafe_rawColors = nativeDefault.unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
@@ -56,7 +56,7 @@ export default noop.memo((color) => {
         BLACK2 = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj5.color = BLACK2;
-      jsx(native.Icon, { source: _modDef12044, color: null });
+      jsx(native.Icon, { source: _modDef12052, color: null });
     }
     const tmp2Result5 = utils_ColorUtils;
   } else {
@@ -69,14 +69,14 @@ export default noop.memo((color) => {
       obj6.children = null;
       tmp10Result1 = <View {...obj6} />;
     } else {
-      const obj8 = { source: _modDef12044, color: null };
+      const obj8 = { source: _modDef12052, color: null };
       if (v < 0.5) {
         let BLACK = nativeDefault.unsafe_rawColors.WHITE;
       } else {
         BLACK = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj8.color = BLACK;
-      jsx(native.Icon, { source: _modDef12044, color: null });
+      jsx(native.Icon, { source: _modDef12052, color: null });
     }
     const tmp2Result6 = utils_ColorUtils;
   }

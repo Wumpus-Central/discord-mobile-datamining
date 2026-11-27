@@ -1,16 +1,16 @@
-// === Module 18129: CheckpointGuildsBarEntrypoint ===
+// === Module 18136: CheckpointGuildsBarEntrypoint ===
 
-// Module 18129 (CheckpointGuildsBarEntrypoint)
+// Module 18136 (CheckpointGuildsBarEntrypoint)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3495 from "module_3495" /* 3495 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18083 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 18095 */;
-import _modDef18130 from "module_18130" /* 18130 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 18090 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 18102 */;
+import _modDef18137 from "module_18137" /* 18137 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18074 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18081 */;
 
 const require = globalThis.__r;
 
@@ -27,7 +27,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const CHECKPOINT_PRIMARY = fn(6396).CHECKPOINT_PRIMARY;
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
-const GUILD_ITEM_INSET_LEFT = fn(18071).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(18078).GUILD_ITEM_INSET_LEFT;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const colors = ["#000000", "rgba(0, 0, 0, 0.5)", "#000000"];
@@ -139,7 +139,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
     const intl2 = util.intl;
     obj.description = intl2.string(_modDef3495.BFc4lY);
     obj.visible = !isModalOpen;
-    obj.graphic = { type: "image", src: _modDef18130, aspectRatio: "16/9" };
+    obj.graphic = { type: "image", src: _modDef18137, aspectRatio: "16/9" };
     obj.onDismiss = function onDismiss() {
       return _undefined(constants.USER_DISMISS);
     };
@@ -156,7 +156,7 @@ export default noop.memo(function CheckpointGuildsBarEntrypoint(markAsDismissed)
   const callback2 = obj3.useCallback(() => {
     coachmark(false);
   }, items8);
-  const obj8 = { selected: false, circle: false, unread: false, styles: memo, overState: "y", config: memo1, label: "voice_activity_default", expandedChildren: "default", children: "systemMessages" };
+  const obj8 = { selected: false, circle: false, unread: false, styles: memo, overState: "y", config: memo1, label: null, expandedChildren: "\u{1F9CF}\u200D\u2642\uFE0F", children: true };
   const tmpResult2 = require("useCoachmark");
   let intl = tmp(1112).intl;
   obj8.label = intl.string(_modDef3495["8hclXY"]);

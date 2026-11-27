@@ -1,8 +1,8 @@
-// === Module 12336: MultiCharacterContent ===
+// === Module 12344: MultiCharacterContent ===
 
-// Module 12336 (MultiCharacterContent)
+// Module 12344 (MultiCharacterContent)
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7047 */;
-import GameOrganizationCharacterListDefault from "GameOrganizationCharacterList" /* 12337 */;
+import GameOrganizationCharacterListDefault from "GameOrganizationCharacterList" /* 12345 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

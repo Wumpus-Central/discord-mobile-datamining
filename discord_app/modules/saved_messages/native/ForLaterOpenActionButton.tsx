@@ -1,17 +1,17 @@
-// === Module 18254: ForLaterOpenActionButton ===
+// === Module 18261: ForLaterOpenActionButton ===
 
-// Module 18254 (ForLaterOpenActionButton)
+// Module 18261 (ForLaterOpenActionButton)
 import nativeDefault from "native" /* 575 */;
 import useThemeDefault from "useTheme" /* 5252 */;
 import useToken from "useToken" /* 5607 */;
 import ButtonHooks from "ButtonHooks" /* 5648 */;
 import ClockIcon from "ClockIcon" /* 5752 */;
-import ClipViewDefault from "ClipView" /* 9420 */;
-import showForLaterModal from "showForLaterModal" /* 11713 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 11714 */;
-import BookmarkIcon2 from "BookmarkIcon" /* 11726 */;
+import ClipViewDefault from "ClipView" /* 9421 */;
+import showForLaterModal from "showForLaterModal" /* 11721 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11722 */;
+import BookmarkIcon2 from "BookmarkIcon" /* 11734 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11718 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11726 */;
 
 require = fn;
 function BadgedIcon(arg0) {
@@ -51,10 +51,10 @@ function BadgedIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const point = { shape: fn(9420).CutoutShape.Circle, x: fn(14275).ICON_SIZE.sm - 7, y: fn(14275).ICON_SIZE.sm - 8, size: 10 };
+const point = { shape: fn(9421).CutoutShape.Circle, x: fn(14282).ICON_SIZE.sm - 7, y: fn(14282).ICON_SIZE.sm - 8, size: 10 };
 const createStyles = fn(5043);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(14275).ICON_SIZE.sm, height: fn(14275).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(14282).ICON_SIZE.sm, height: fn(14282).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;
@@ -65,7 +65,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/native/ForLate
 export default function ForLaterActionButton(ref) {
   const type = ref.type;
   const onOpen = ref.onOpen;
-  const tmp3 = type === type(11714).SavedMessageSortTypes.REMINDER;
+  const tmp3 = type === type(11722).SavedMessageSortTypes.REMINDER;
   dependencyMap = tmp3;
   items = [SavedMessagesStore];
   const items1 = [tmp3];

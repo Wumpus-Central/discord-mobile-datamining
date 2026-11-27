@@ -1,6 +1,6 @@
-// === Module 18580: ConjureVersionRestoreConfirm ===
+// === Module 18591: ConjureVersionRestoreConfirm ===
 
-// Module 18580 (ConjureVersionRestoreConfirm)
+// Module 18591 (ConjureVersionRestoreConfirm)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import useAlertStore from "useAlertStore" /* 6048 */;

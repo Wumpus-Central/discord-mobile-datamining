@@ -1,6 +1,6 @@
-// === Module 14467: CollectiblesEditUserProfileListItems ===
+// === Module 14474: CollectiblesEditUserProfileListItems ===
 
-// Module 14467 (CollectiblesEditUserProfileListItems)
+// Module 14474 (CollectiblesEditUserProfileListItems)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -13,9 +13,9 @@ import Text_Text from "Text/Text" /* 5634 */;
 import Pressables from "Pressables" /* 6152 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 6323 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 11224 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 14458 */;
-import _modDef14468 from "module_14468" /* 14468 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 11225 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 14465 */;
+import _modDef14475 from "module_14475" /* 14475 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
 
@@ -79,7 +79,7 @@ export function EditCollectiblesListItemNone(asDefault) {
   const tmp = closure_9();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  items = [metroImportDefault(native.Icon, { source: _modDef14468, size: native.IconSizes.LARGE }), ];
+  items = [metroImportDefault(native.Icon, { source: _modDef14475, size: native.IconSizes.LARGE }), ];
   const obj3 = { variant: "body-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
   const string = intl.string;
@@ -111,12 +111,12 @@ export function EditCollectiblesListItemShop(analyticsSource) {
     }, items)
   };
   const merged1 = Object.assign(merged);
-  const items1 = [closure_7(analyticsSource(1186).Icon, { source: analyticsLocations(14469), size: analyticsSource(1186).IconSizes.LARGE }), , ];
+  const items1 = [closure_7(analyticsSource(1186).Icon, { source: analyticsLocations(14476), size: analyticsSource(1186).IconSizes.LARGE }), , ];
   const obj3 = { variant: "body-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1112).intl;
   obj3.children = intl.string(analyticsSource(1112).t.pWG4ze);
   items1[1] = closure_7(analyticsSource(5634).Text, obj3);
-  items1[2] = closure_7(analyticsSource(11224).NewBadge, { style: tmp2.newIcon });
+  items1[2] = closure_7(analyticsSource(11225).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);
 }

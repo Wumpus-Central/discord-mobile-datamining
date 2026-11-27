@@ -1,6 +1,6 @@
-// === Module 11981: MessageViewTrackingManager ===
+// === Module 11989: MessageViewTrackingManager ===
 
-// Module 11981 (MessageViewTrackingManager)
+// Module 11989 (MessageViewTrackingManager)
 import Constants from "Constants" /* 1071 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;

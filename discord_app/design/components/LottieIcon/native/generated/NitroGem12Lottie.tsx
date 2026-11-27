@@ -1,8 +1,8 @@
-// === Module 15444: NitroGem12Lottie ===
+// === Module 15451: NitroGem12Lottie ===
 
-// Module 15444 (NitroGem12Lottie)
-import LottieIcon from "LottieIcon" /* 9448 */;
-import _mod15445 from "module_15445" /* 15445 */;
+// Module 15451 (NitroGem12Lottie)
+import LottieIcon from "LottieIcon" /* 9449 */;
+import _mod15452 from "module_15452" /* 15452 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,5 +15,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 export function NitroGem12Lottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod15445, animation: "all", ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod15452, animation: "all", ref: ref.ref, layers, markers: items });
 }

@@ -1,6 +1,6 @@
-// === Module 9502: RecentAvatarUtils ===
+// === Module 9503: RecentAvatarUtils ===
 
-// Module 9502 (RecentAvatarUtils)
+// Module 9503 (RecentAvatarUtils)
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;

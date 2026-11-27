@@ -1,8 +1,8 @@
-// === Module 11255: useVirtualCurrencyData ===
+// === Module 11256: useVirtualCurrencyData ===
 
-// Module 11255 (useVirtualCurrencyData)
+// Module 11256 (useVirtualCurrencyData)
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6322 */;
-import _mod11256 from "module_11256" /* 11256 */;
+import _mod11257 from "module_11257" /* 11257 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/hooks/use
 export function useVirtualCurrencyData(product, canUseShopDiscountsResult) {
   const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount: canUseShopDiscountsResult });
   const obj2 = { product, hasShopDiscount: canUseShopDiscountsResult };
-  const balance = _mod11256.useFetchVirtualCurrencyBalance().balance;
+  const balance = _mod11257.useFetchVirtualCurrencyBalance().balance;
   items = [productOrbPrice, balance];
   return {
     price: productOrbPrice,

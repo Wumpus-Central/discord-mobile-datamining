@@ -1,6 +1,6 @@
-// === Module 13346: DoubleTapToReactActionSheet ===
+// === Module 13354: DoubleTapToReactActionSheet ===
 
-// Module 13346 (DoubleTapToReactActionSheet)
+// Module 13354 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import _mod1654 from "module_1654" /* 1654 */;
@@ -9,7 +9,7 @@ import UserSettings from "UserSettings" /* 4868 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4989 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import spring_spring from "spring/spring" /* 5644 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9549 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9550 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -321,7 +321,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -361,7 +361,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
         c3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp24) {
         c3 = tmp;
         throw tmp24;

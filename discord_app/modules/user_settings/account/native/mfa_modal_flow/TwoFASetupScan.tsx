@@ -1,6 +1,6 @@
-// === Module 16265: TwoFASetupScan ===
+// === Module 16272: TwoFASetupScan ===
 
-// Module 16265 (TwoFASetupScan)
+// Module 16272 (TwoFASetupScan)
 import nativeDefault from "native" /* 575 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -25,7 +25,7 @@ export default function TwoFASetupScan(totpSecret) {
     closure_1(true);
     ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
-  const twoFASetupStyles = totpSecret(16263).useTwoFASetupStyles();
+  const twoFASetupStyles = totpSecret(16270).useTwoFASetupStyles();
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { style: null, children: null };
   const items1 = [, ];
@@ -58,5 +58,5 @@ export default function TwoFASetupScan(totpSecret) {
   items2[3] = closure_4(totpSecret(6152).PressableOpacity, obj5);
   obj2.children = items2;
   obj7.children = closure_5(totpSecret(7480).SafeAreaPaddingView, obj2);
-  return closure_4(totpSecret(16259).TwoFASetupModalScreen, obj7);
+  return closure_4(totpSecret(16266).TwoFASetupModalScreen, obj7);
 };

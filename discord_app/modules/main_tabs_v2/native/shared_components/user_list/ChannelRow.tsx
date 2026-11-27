@@ -1,6 +1,6 @@
-// === Module 11405: ChannelRow ===
+// === Module 11406: ChannelRow ===
 
-// Module 11405 (ChannelRow)
+// Module 11406 (ChannelRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import DateUtils from "DateUtils" /* 4865 */;
@@ -9,9 +9,9 @@ import Text_Text from "Text/Text" /* 5634 */;
 import useChannelName from "useChannelName" /* 5659 */;
 import TextIcon2 from "TextIcon" /* 7146 */;
 import ForumIcon from "ForumIcon" /* 7154 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8587 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11406 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11565 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8588 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11407 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11573 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -21,7 +21,7 @@ import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
 const View = fn(17).View;
-let UserRowModes = fn(8944).UserRowModes;
+let UserRowModes = fn(8945).UserRowModes;
 const ReadStateTypes = fn(6168).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

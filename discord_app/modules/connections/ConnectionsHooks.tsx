@@ -1,6 +1,6 @@
-// === Module 8276: ConnectionsHooks ===
+// === Module 8277: ConnectionsHooks ===
 
-// Module 8276 (ConnectionsHooks)
+// Module 8277 (ConnectionsHooks)
 import applyDefault from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import PlatformsDefault from "Platforms" /* 6178 */;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1071);
 ({ ACTIVITY_PLATFORM_TYPES: metroImportDefault, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(8277).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(8278).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -134,7 +134,7 @@ export function useEmptyStatePlatforms() {
   closure_129_0 = false;
   items = [UserStore];
   closure_129_1 = fn(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const PlayStationVoiceExperiment = fn(8279).PlayStationVoiceExperiment;
+  const PlayStationVoiceExperiment = fn(8280).PlayStationVoiceExperiment;
   closure_129_2 = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   fn = (dependencyMap) => {
     if (dependencyMap.type === PlatformTypes.PLAYSTATION_STAGING) {

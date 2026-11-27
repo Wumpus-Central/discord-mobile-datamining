@@ -1,21 +1,21 @@
-// === Module 19136: YouExpiringTrialOfferCard ===
+// === Module 19152: YouExpiringTrialOfferCard ===
 
-// Module 19136 (YouExpiringTrialOfferCard)
+// Module 19152 (YouExpiringTrialOfferCard)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
-import useCountdownDefault from "useCountdown" /* 9133 */;
-import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 19137 */;
+import useCountdownDefault from "useCountdown" /* 9134 */;
+import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 19153 */;
 import noop from "module_19" /* 19 */;
-import NoticeStore from "NoticeStore" /* 15212 */;
+import NoticeStore from "NoticeStore" /* 15219 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, HelpdeskArticles: metroImportDefault, HorizontalGradient: closure_8, NoticeTypes: closure_9 } = Constants);
-const Gradients = fn(9126).Gradients;
+const Gradients = fn(9127).Gradients;
 let closure_11 = fn(1389).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
@@ -38,9 +38,9 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   items = [shouldShowExpiringTrialOfferCard];
   const stateFromStores = navigateToPremium(563).useStateFromStores(items, () => shouldShowExpiringTrialOfferCard.getNoticeType());
   let obj2 = navigateToPremium(563);
-  const premiumTrialOffer = navigateToPremium(9136).usePremiumTrialOffer();
+  const premiumTrialOffer = navigateToPremium(9137).usePremiumTrialOffer();
   let num = 0;
-  let obj3 = navigateToPremium(9136);
+  let obj3 = navigateToPremium(9137);
   if (null != premiumTrialOffer) {
     num = 0;
     if (null != premiumTrialOffer.expiresAt) {
@@ -49,7 +49,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const time = useCountdownDefault(num, closure_15);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(19135).useShouldShowExpiringTrialOfferCard();
+  shouldShowExpiringTrialOfferCard = navigateToPremium(19151).useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
     let tmp = shouldShowExpiringTrialOfferCard;
@@ -164,5 +164,5 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   } else {
     return null;
   }
-  const tmp4Result = navigateToPremium(19135);
+  const tmp4Result = navigateToPremium(19151);
 };

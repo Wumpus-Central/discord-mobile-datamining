@@ -1,6 +1,6 @@
-// === Module 12667: useCheckpointCharacterExit ===
+// === Module 12675: useCheckpointCharacterExit ===
 
-// Module 12667 (useCheckpointCharacterExit)
+// Module 12675 (useCheckpointCharacterExit)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -8,7 +8,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 const require = globalThis.__r;
 
 const require = fn;
-const CheckpointTransitionConstants = fn(12631);
+const CheckpointTransitionConstants = fn(12639);
 ({ CHECKPOINT_CHARACTER_EXIT_TEXTURE_TIMEOUT_MS: closure_6, CHECKPOINT_CHARACTER_EXIT_ZOOM_DURATION_MS: metroImportDefault } = CheckpointTransitionConstants);
 const constants = { NONE: "none", LOADING_TEXTURES: "loading_textures", BEAMING: "beaming" };
 const size = fn(2);

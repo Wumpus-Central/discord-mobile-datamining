@@ -13,11 +13,11 @@ import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6013 */;
 import QuestContent from "QuestContent" /* 6876 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7604 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7819 */;
-import activityBookmarkUtils from "activityBookmarkUtils" /* 8354 */;
-import QuestUtils from "QuestUtils" /* 9889 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11645 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12071 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12291 */;
+import activityBookmarkUtils from "activityBookmarkUtils" /* 8355 */;
+import QuestUtils from "QuestUtils" /* 9890 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11653 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12079 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12299 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
@@ -59,7 +59,7 @@ let closure_18 = async function _openInviteModal() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -88,7 +88,7 @@ let closure_18 = async function _openInviteModal() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         c2 = tmp;
@@ -113,7 +113,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -249,7 +249,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
           return obj;
         }
         c7 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp66) {
         c7 = tmp;
         throw tmp66;
@@ -306,7 +306,7 @@ export default function getOnClick(assetURL) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "channel_id" };
+            result = { applicationId: "displayName", skuId: "isArray" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -402,7 +402,7 @@ export default function getOnClick(assetURL) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14712, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(14719, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;
@@ -489,7 +489,7 @@ export default function getOnClick(assetURL) {
           return true;
         };
       }
-      tmp2Result = tmp2(9893);
+      tmp2Result = tmp2(9894);
     }
   }
   if (null != findCodedLinkResult) {
@@ -601,7 +601,7 @@ export default function getOnClick(assetURL) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(8839);
+    tmp2Result4 = tmp2(8840);
   }
   const tmp2Result3 = require("LinkUtils");
 };

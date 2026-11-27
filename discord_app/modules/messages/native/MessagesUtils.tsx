@@ -1,6 +1,6 @@
-// === Module 9089: messages/MessagesUtils ===
+// === Module 9090: messages/MessagesUtils ===
 
-// Module 9089 (messages/MessagesUtils)
+// Module 9090 (messages/MessagesUtils)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
@@ -31,20 +31,20 @@ import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 712
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8114 */;
 import Tracking from "Tracking" /* 8116 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8183 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8816 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 9091 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9092 */;
-import QuestActionCreators from "QuestActionCreators" /* 9894 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 10614 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11980 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 12008 */;
-import computeScrollData from "computeScrollData" /* 12014 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 14062 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8184 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8817 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 9092 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9093 */;
+import QuestActionCreators from "QuestActionCreators" /* 9895 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 10615 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11988 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 12016 */;
+import computeScrollData from "computeScrollData" /* 12022 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 14069 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 8301 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 8302 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 6799 */;
@@ -122,7 +122,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -157,7 +157,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 const findMessageIndexResult = findMessageIndex(SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id));
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -211,8 +211,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9090).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8224);
+let closure_5 = fn(9091).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8225);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_17, MessageEmbedTypes: closure_18, MessageTypes: closure_19, Permissions: closure_20, MAX_MESSAGES_PER_CHANNEL: closure_21 } = Constants);

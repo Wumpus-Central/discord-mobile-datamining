@@ -1,13 +1,13 @@
-// === Module 14067: IconActionButton ===
+// === Module 14074: IconActionButton ===
 
-// Module 14067 (IconActionButton)
+// Module 14074 (IconActionButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import useFontScale from "useFontScale" /* 5649 */;
 import Pressables from "Pressables" /* 6152 */;
-import shared_components_Badge from "shared_components/Badge" /* 9010 */;
+import shared_components_Badge from "shared_components/Badge" /* 9011 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

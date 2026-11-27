@@ -1,6 +1,6 @@
-// === Module 16050: EditUserProfileAvatar ===
+// === Module 16057: EditUserProfileAvatar ===
 
-// Module 16050 (EditUserProfileAvatar)
+// Module 16057 (EditUserProfileAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 6375 */;
@@ -129,7 +129,7 @@ export default function EditUserProfileAvatar(user) {
       }
     }
     obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
-    const tmp3 = asyncRequireImpl(16052, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(16059, dependencyMap.paths);
     if (null != guildId) {
       let avatar1;
       if (stateFromStores != null) {

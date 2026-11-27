@@ -1,6 +1,6 @@
-// === Module 19129: useProfileCoachmarkPosition ===
+// === Module 19145: useProfileCoachmarkPosition ===
 
-// Module 19129 (useProfileCoachmarkPosition)
+// Module 19145 (useProfileCoachmarkPosition)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;

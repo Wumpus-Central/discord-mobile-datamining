@@ -1,6 +1,6 @@
-// === Module 10084: isApplicationAgeRestricted ===
+// === Module 10085: isApplicationAgeRestricted ===
 
-// Module 10084 (isApplicationAgeRestricted)
+// Module 10085 (isApplicationAgeRestricted)
 import utils from "utils" /* 5672 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 

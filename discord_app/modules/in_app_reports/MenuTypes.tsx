@@ -1,6 +1,6 @@
-// === Module 8192: MenuTypes ===
+// === Module 8193: MenuTypes ===
 
-// Module 8192 (MenuTypes)
+// Module 8193 (MenuTypes)
 import MediaTakedownRegulation from "MediaTakedownRegulation" /* 5712 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 15078: usePrivateChannelCall ===
+// === Module 15085: usePrivateChannelCall ===
 
-// Module 15078 (usePrivateChannelCall)
+// Module 15085 (usePrivateChannelCall)
 import util from "util" /* 1112 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 11357 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 11358 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -62,7 +62,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -104,14 +104,14 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           isPrivateResult = channel.isPrivate();
         }
         if (isPrivateResult) {
-          tmp3(11357)(channel, closure_129_1).onPress();
-          const obj3 = tmp3(11357)(channel, closure_129_1);
+          tmp3(11358)(channel, closure_129_1).onPress();
+          const obj3 = tmp3(11358)(channel, closure_129_1);
         }
         if (closure_129_2 != null) {
           closure_129_2();
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp25) {
         c3 = tmp;
         throw tmp25;

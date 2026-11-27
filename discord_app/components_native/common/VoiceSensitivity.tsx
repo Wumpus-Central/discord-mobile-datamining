@@ -1,6 +1,6 @@
-// === Module 10395: VoiceSensitivity ===
+// === Module 10396: VoiceSensitivity ===
 
-// Module 10395 (VoiceSensitivity)
+// Module 10396 (VoiceSensitivity)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
@@ -100,7 +100,7 @@ export default function VoiceSensitivity(auto) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -137,7 +137,7 @@ export default function VoiceSensitivity(auto) {
               mediaEngine.on(auto(5868).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c2 = tmp;

@@ -1,6 +1,6 @@
-// === Module 19835: AppStoreConsentReinstatement ===
+// === Module 19851: AppStoreConsentReinstatement ===
 
-// Module 19835 (AppStoreConsentReinstatement)
+// Module 19851 (AppStoreConsentReinstatement)
 import LoggerDefault from "Logger" /* 3 */;
 import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 8062 */;
 import AppStoreConsentReinstateEndpointExperiment from "AppStoreConsentReinstateEndpointExperiment" /* 8067 */;
@@ -90,7 +90,7 @@ let closure_9 = async function _settleAppStoreConsentReinstatement() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -165,7 +165,7 @@ let closure_9 = async function _settleAppStoreConsentReinstatement() {
                                             const obj2 = { value, done: true };
                                             return obj2;
                                           } else {
-                                            return { value: "HermesInternal", done: "+95" };
+                                            return { value: "HermesInternal", done: null };
                                           }
                                         } else {
                                           try {
@@ -218,7 +218,7 @@ let closure_9 = async function _settleAppStoreConsentReinstatement() {
                                                 return obj;
                                               }
                                               c3 = 3;
-                                              return { value: "HermesInternal", done: "+95" };
+                                              return { value: "HermesInternal", done: null };
                                             }
                                           } catch (tmp15) {
                                             c3 = tmp;
@@ -353,7 +353,7 @@ export function beginAppStoreConsentReinstatement() {
                   let obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -384,7 +384,7 @@ export function beginAppStoreConsentReinstatement() {
                                       const obj2 = { value, done: true };
                                       return obj2;
                                     } else {
-                                      return { value: "HermesInternal", done: "+95" };
+                                      return { value: "HermesInternal", done: null };
                                     }
                                   } else {
                                     try {

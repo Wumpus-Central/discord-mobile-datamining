@@ -1,6 +1,6 @@
-// === Module 14288: ConjureProjectGroupList ===
+// === Module 14295: ConjureProjectGroupList ===
 
-// Module 14288 (ConjureProjectGroupList)
+// Module 14295 (ConjureProjectGroupList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2019 */;
@@ -13,13 +13,13 @@ import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndic
 import GuildIcon from "GuildIcon" /* 7052 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7558 */;
 import conjureServerProject from "conjureServerProject" /* 7575 */;
-import native from "native" /* 8489 */;
-import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 9816 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11487 */;
-import useConjureProjectGroupsDefault from "useConjureProjectGroups" /* 14280 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 14287 */;
-import openConjureProject from "openConjureProject" /* 14289 */;
-import useConjureProjectGroupState from "useConjureProjectGroupState" /* 14291 */;
+import native from "native" /* 8490 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 9817 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11462 */;
+import useConjureProjectGroupsDefault from "useConjureProjectGroups" /* 14287 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 14294 */;
+import openConjureProject from "openConjureProject" /* 14296 */;
+import useConjureProjectGroupState from "useConjureProjectGroupState" /* 14298 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7706 */;
@@ -190,8 +190,8 @@ let closure_15 = noop.memo(function ProjectRow(project) {
     hideServer = false;
   }
   let tmp = closure_11();
-  const conjureHomeProjectState = project(14270).useConjureHomeProjectState(project.id);
-  let obj = project(14270);
+  const conjureHomeProjectState = project(14277).useConjureHomeProjectState(project.id);
+  let obj = project(14277);
   items = [ConjurePublishStatusStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(items, () => {
@@ -206,11 +206,11 @@ let closure_15 = noop.memo(function ProjectRow(project) {
     return publishState;
   }, items1);
   let obj2 = project(504);
-  let result = project(14270).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
-  let obj3 = project(14270);
-  let result1 = project(14270).conjureProjectLastActivityTime(project);
-  let obj4 = project(14270);
-  const conjureProjectShareTargetDetails = project(14290).useConjureProjectShareTargetDetails(project);
+  let result = project(14277).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
+  let obj3 = project(14277);
+  let result1 = project(14277).conjureProjectLastActivityTime(project);
+  let obj4 = project(14277);
+  const conjureProjectShareTargetDetails = project(14297).useConjureProjectShareTargetDetails(project);
   if (!hideServer) {
     let tmp11 = conjureProjectShareTargetDetails;
   } else {
@@ -249,7 +249,7 @@ let closure_15 = noop.memo(function ProjectRow(project) {
         stringResult2 = intl2.string(_modDef4245.poYQxw);
       }
       label = stringResult2;
-      tmp2Result = tmp2(14290);
+      tmp2Result = tmp2(14297);
     }
     items2[1] = label;
     items2[2] = stringResult;
@@ -290,7 +290,7 @@ let closure_15 = noop.memo(function ProjectRow(project) {
         } else {
           const obj11 = { style: tmp.userIconWrapper, children: null };
           const obj12 = { size: "xxs", color: nativeDefault.colors.TEXT_SUBTLE };
-          obj11.children = closure_8(tmp2(12409).UserIcon, obj12);
+          obj11.children = closure_8(tmp2(12417).UserIcon, obj12);
           tmp28Result4 = closure_8(View, obj11);
         }
         items4[1] = tmp28Result4;
@@ -343,7 +343,7 @@ let closure_15 = noop.memo(function ProjectRow(project) {
     tmp41 = stringResult1;
   }
   tmp45Result = tmp41;
-  const obj5 = project(14290);
+  const obj5 = project(14297);
 });
 size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectGroupList.tsx");
@@ -408,7 +408,7 @@ export default function ConjureProjectGroupList(query) {
     const items2 = [closure_8(tmp5(6140).TableRowGroup, obj11), ];
     let tmp18Result = null;
     if (collaborating.length > 0) {
-      const obj12 = { groupKey: tmp5(14293).CONJURE_COLLABORATING_GROUP_KEY, title: null, projects: null, forceExpanded: null };
+      const obj12 = { groupKey: tmp5(14300).CONJURE_COLLABORATING_GROUP_KEY, title: null, projects: null, forceExpanded: null };
       const intl6 = tmp5(1112).intl;
       obj12.title = intl6.string(_modDef4245.dOfCq0);
       obj12.projects = collaborating;

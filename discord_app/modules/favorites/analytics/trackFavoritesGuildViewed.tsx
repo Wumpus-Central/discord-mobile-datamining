@@ -1,9 +1,9 @@
-// === Module 19070: trackFavoritesGuildViewed ===
+// === Module 19086: trackFavoritesGuildViewed ===
 
-// Module 19070 (trackFavoritesGuildViewed)
+// Module 19086 (trackFavoritesGuildViewed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 2109 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10752 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10753 */;
 import UserStore from "UserStore" /* 1387 */;
 import FavoriteStore from "FavoriteStore" /* 4895 */;
 

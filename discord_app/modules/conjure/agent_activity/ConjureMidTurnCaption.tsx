@@ -1,6 +1,6 @@
-// === Module 18769: ConjureMidTurnCaption ===
+// === Module 18786: ConjureMidTurnCaption ===
 
-// Module 18769 (ConjureMidTurnCaption)
+// Module 18786 (ConjureMidTurnCaption)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import size from "module_2" /* 2 */;

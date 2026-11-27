@@ -1,6 +1,6 @@
-// === Module 11611: useFetchCollectiblesProduct ===
+// === Module 11619: useFetchCollectiblesProduct ===
 
-// Module 11611 (useFetchCollectiblesProduct)
+// Module 11619 (useFetchCollectiblesProduct)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
 import _slicedToArray from "module_32" /* 32 */;
 import SKUStore from "SKUStore" /* 6360 */;

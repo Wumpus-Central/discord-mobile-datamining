@@ -1,12 +1,12 @@
-// === Module 8247: MessageRoundtripTrackerStore ===
+// === Module 8248: MessageRoundtripTrackerStore ===
 
-// Module 8247 (MessageRoundtripTrackerStore)
+// Module 8248 (MessageRoundtripTrackerStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import NetStats from "NetStats" /* 6793 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8248 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8249 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5664 */;
 import NetworkStore from "NetworkStore" /* 5981 */;

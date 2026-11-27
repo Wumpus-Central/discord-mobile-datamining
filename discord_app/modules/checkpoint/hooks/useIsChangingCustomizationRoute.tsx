@@ -1,12 +1,12 @@
-// === Module 12653: useIsChangingCustomizationRoute ===
+// === Module 12661: useIsChangingCustomizationRoute ===
 
-// Module 12653 (useIsChangingCustomizationRoute)
+// Module 12661 (useIsChangingCustomizationRoute)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
 const require = fn;
-let closure_5 = fn(12631).CHECKPOINT_CHARACTER_STAGE_FADE;
+let closure_5 = fn(12639).CHECKPOINT_CHARACTER_STAGE_FADE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/hooks/useIsChangingCustomizationRoute.tsx");
 

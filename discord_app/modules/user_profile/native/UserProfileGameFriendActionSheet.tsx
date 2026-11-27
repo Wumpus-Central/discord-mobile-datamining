@@ -1,9 +1,9 @@
-// === Module 14966: UserProfileGameFriendActionSheet ===
+// === Module 14973: UserProfileGameFriendActionSheet ===
 
-// Module 14966 (UserProfileGameFriendActionSheet)
+// Module 14973 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13618 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13625 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -87,7 +87,7 @@ export default function UserProfileGameFriendActionSheet(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

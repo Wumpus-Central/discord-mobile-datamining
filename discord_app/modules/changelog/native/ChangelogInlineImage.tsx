@@ -1,13 +1,13 @@
-// === Module 14423: ChangelogInlineImage ===
+// === Module 14430: ChangelogInlineImage ===
 
-// Module 14423 (ChangelogInlineImage)
+// Module 14430 (ChangelogInlineImage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import UserSettings from "UserSettings" /* 4868 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import GifTagDefault from "GifTag" /* 9519 */;
-import ChangelogImageUtils from "ChangelogImageUtils" /* 14422 */;
+import GifTagDefault from "GifTag" /* 9520 */;
+import ChangelogImageUtils from "ChangelogImageUtils" /* 14429 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

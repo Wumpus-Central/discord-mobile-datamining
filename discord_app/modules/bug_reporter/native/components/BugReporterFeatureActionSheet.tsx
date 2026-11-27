@@ -1,6 +1,6 @@
-// === Module 10728: BugReporterFeatureActionSheet ===
+// === Module 10729: BugReporterFeatureActionSheet ===
 
-// Module 10728 (BugReporterFeatureActionSheet)
+// Module 10729 (BugReporterFeatureActionSheet)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
@@ -31,11 +31,11 @@ let closure_10 = noop.memo(function BugReporterFeature(item) {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  const obj = { start, end, value: item(10692).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
-  const obj2 = item(10692);
-  const featureId = item(10692).getFeatureId(item);
-  const obj3 = item(10692);
-  obj.legacyCompat_selected = featureId === item(10692).getFeatureId(feature);
+  const obj = { start, end, value: item(10693).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
+  const obj2 = item(10693);
+  const featureId = item(10693).getFeatureId(item);
+  const obj3 = item(10693);
+  obj.legacyCompat_selected = featureId === item(10693).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();

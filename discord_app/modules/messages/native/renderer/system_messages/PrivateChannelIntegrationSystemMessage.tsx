@@ -1,11 +1,11 @@
-// === Module 14410: PrivateChannelIntegrationSystemMessage ===
+// === Module 14417: PrivateChannelIntegrationSystemMessage ===
 
-// Module 14410 (PrivateChannelIntegrationSystemMessage)
+// Module 14417 (PrivateChannelIntegrationSystemMessage)
 import Constants from "Constants" /* 1071 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 10612 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12000 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14372 */;
-import createCommonMessageDefault from "createCommonMessage" /* 14373 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 10613 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12008 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14379 */;
+import createCommonMessageDefault from "createCommonMessage" /* 14380 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;

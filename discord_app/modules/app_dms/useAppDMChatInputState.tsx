@@ -1,6 +1,6 @@
-// === Module 14084: useAppDMChatInputState ===
+// === Module 14091: useAppDMChatInputState ===
 
-// Module 14084 (useAppDMChatInputState)
+// Module 14091 (useAppDMChatInputState)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import ApplicationRecord from "ApplicationRecord" /* 2143 */;
 import UserStore from "UserStore" /* 1387 */;
 
 const require = fn;
-const useQueryState = fn(10047).useQueryState;
+const useQueryState = fn(10048).useQueryState;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1071).EMPTY_STRING_SNOWFLAKE_ID;
 let items = [fn(2118).ApplicationCommandType.PRIMARY_ENTRY_POINT, fn(2118).ApplicationCommandType.CHAT, fn(2118).ApplicationCommandType.MESSAGE, fn(2118).ApplicationCommandType.USER];
 const size = fn(2);

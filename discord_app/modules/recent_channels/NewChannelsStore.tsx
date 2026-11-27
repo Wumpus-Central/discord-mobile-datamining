@@ -1,6 +1,6 @@
-// === Module 8290: NewChannelsStore ===
+// === Module 8291: NewChannelsStore ===
 
-// Module 8290 (NewChannelsStore)
+// Module 8291 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

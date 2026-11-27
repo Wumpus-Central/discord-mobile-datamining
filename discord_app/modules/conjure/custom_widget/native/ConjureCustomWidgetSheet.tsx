@@ -1,6 +1,6 @@
-// === Module 15015: ConjureCustomWidgetSheet ===
+// === Module 15022: ConjureCustomWidgetSheet ===
 
-// Module 15015 (ConjureCustomWidgetSheet)
+// Module 15022 (ConjureCustomWidgetSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -40,10 +40,10 @@ export default function ConjureCustomWidgetSheet() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -54,8 +54,8 @@ export default function ConjureCustomWidgetSheet() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             value = tmp8;
             closure_128_0 = undefined;
@@ -72,13 +72,13 @@ export default function ConjureCustomWidgetSheet() {
                   c3 = 2;
                   c4 = 3;
                   c5 = 1;
-                  const obj6 = { value: value(tmp74[11]).createProject({}), done: false };
+                  const obj6 = { value: value(tmp59[11]).createProject({}), done: false };
                   return obj6;
                 }
               }
             } else {
-              const intl = value(tmp74[9]).intl;
-              dependencyMap(intl.string(tmp4(tmp74[10]).AuyDIq));
+              const intl = value(tmp59[9]).intl;
+              dependencyMap(intl.string(tmp4(tmp59[10]).AuyDIq));
             }
             c5 = 3;
           }
@@ -86,14 +86,14 @@ export default function ConjureCustomWidgetSheet() {
           c3 = 0;
           closure_129_4.current = false;
           closure_129_3(false);
-          throw tmp74;
+          throw tmp59;
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            closure_128_2 = tmp74;
+            closure_128_2 = tmp59;
             if (null == closure_128_1) {
-              closure_129_2(value(tmp74[14]).getConjureCreateErrorMessage(closure_128_2));
-              const obj3 = value(tmp74[14]);
+              closure_129_2(value(tmp59[14]).getConjureCreateErrorMessage(closure_128_2));
+              const obj2 = value(tmp59[14]);
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -103,32 +103,32 @@ export default function ConjureCustomWidgetSheet() {
             closure_129_4.current = false;
             closure_129_3(false);
             c5 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            const obj = { value, done: true };
+            return obj;
           } else {
             closure_128_1 = value;
             closure_1_7(closure_128_1);
-            closure_1_8(closure_128_1, value(tmp74[12]).composeConjureCustomWidgetPrompt(closure_128_0));
-            tmp4(tmp74[13])(closure_128_1, { entryPoint: "create" });
+            closure_1_8(closure_128_1, value(tmp59[12]).composeConjureCustomWidgetPrompt(closure_128_0));
+            tmp4(tmp59[13])(closure_128_1, { entryPoint: "create" });
             c3 = 1;
-            const obj = value(tmp74[12]);
+            const obj8 = value(tmp59[12]);
           }
           c3 = 0;
           closure_129_4.current = false;
           closure_129_3(false);
         }
-        tmp4(tmp74[13])(closure_128_1, { entryPoint: "create" });
+        tmp4(tmp59[13])(closure_128_1, { entryPoint: "create" });
         c3 = 0;
         closure_129_4.current = false;
         closure_129_3(false);
         c5 = 3;
-        const obj8 = { value: undefined, done: true };
-        return obj8;
-      } catch (tmp74) {
+        const obj7 = { value: undefined, done: true };
+        return obj7;
+      } catch (tmp59) {
         if (tmp5 === c3) {
           c5 = tmp3;
-          throw tmp74;
-        } else if (tmp2 === tmp76) {
+          throw tmp59;
+        } else if (tmp2 === tmp61) {
           c4 = tmp2;
         } else {
           c4 = tmp;
@@ -142,7 +142,7 @@ export default function ConjureCustomWidgetSheet() {
   obj2.title = intl.string(_modDef4245.yI85oV);
   obj.header = closure_9(value(7507).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.body, children: null };
-  let obj4 = { label: null, placeholder: null, description: null, errorMessage: null, value: null, onChange: null, maxLength: null, disabled: null };
+  const obj4 = { label: null, placeholder: null, description: null, errorMessage: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = value(1112).intl;
   obj4.label = intl2.string(_modDef4245["09BSx3"]);
   const intl3 = value(1112).intl;
@@ -152,10 +152,10 @@ export default function ConjureCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(15013).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(15020).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
   const items1 = [closure_9(value(7440).TextArea, obj4), ];
-  const obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
+  let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
   const intl5 = tmp12(1112).intl;
   obj5.text = intl5.string(_modDef4245.MDZXiK);
   obj5.onPress = callback1;

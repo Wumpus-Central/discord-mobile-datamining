@@ -1,6 +1,6 @@
-// === Module 9174: tab_gradient_colors ===
+// === Module 9175: tab_gradient_colors ===
 
-// Module 9174 (tab_gradient_colors)
+// Module 9175 (tab_gradient_colors)
 import _mod1196 from "module_1196" /* 1196 */;
 import _slicedToArray from "module_32" /* 32 */;
 

@@ -1,15 +1,15 @@
-// === Module 10276: GlobalStageChannelStatus ===
+// === Module 10277: GlobalStageChannelStatus ===
 
-// Module 10276 (GlobalStageChannelStatus)
+// Module 10277 (GlobalStageChannelStatus)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useMountEffectDefault from "useMountEffect" /* 5604 */;
 import useChannelNameDefault from "useChannelName" /* 5659 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7839 */;
-import StatusBarDefault from "StatusBar" /* 10018 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10041 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10266 */;
-import PushNotificationDefault from "PushNotification" /* 10277 */;
+import StatusBarDefault from "StatusBar" /* 10019 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10042 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10267 */;
+import PushNotificationDefault from "PushNotification" /* 10278 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ class StageChannelRaiseHandAck {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

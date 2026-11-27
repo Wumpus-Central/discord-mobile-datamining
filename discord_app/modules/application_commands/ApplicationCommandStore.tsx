@@ -1,9 +1,9 @@
-// === Module 8182: ApplicationCommandStore ===
+// === Module 8183: ApplicationCommandStore ===
 
-// Module 8182 (ApplicationCommandStore)
+// Module 8183 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8183 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8184 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6952 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;

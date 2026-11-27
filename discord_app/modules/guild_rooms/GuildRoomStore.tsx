@@ -1,9 +1,9 @@
-// === Module 8424: GuildRoomStore ===
+// === Module 8425: GuildRoomStore ===
 
-// Module 8424 (GuildRoomStore)
+// Module 8425 (GuildRoomStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 8425 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 8426 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;

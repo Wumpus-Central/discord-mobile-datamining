@@ -1,9 +1,9 @@
-// === Module 11943: NameplatePreview ===
+// === Module 11951: NameplatePreview ===
 
-// Module 11943 (NameplatePreview)
+// Module 11951 (NameplatePreview)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 9511 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 9512 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;

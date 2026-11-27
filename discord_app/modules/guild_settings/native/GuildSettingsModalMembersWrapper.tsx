@@ -1,6 +1,6 @@
-// === Module 20092: GuildSettingsModalMembersWrapper ===
+// === Module 20150: GuildSettingsModalMembersWrapper ===
 
-// Module 20092 (GuildSettingsModalMembersWrapper)
+// Module 20150 (GuildSettingsModalMembersWrapper)
 import canReviewGuildMemberApplications from "canReviewGuildMemberApplications" /* 7621 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,5 +11,5 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSe
 
 export default noop.memo(function GuildSettingsModalMembersWrapper(guildId) {
   guildId = guildId.guildId;
-  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 18427 : 18429), { guildId });
+  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 18434 : 18436), { guildId });
 });

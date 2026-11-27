@@ -1,12 +1,12 @@
-// === Module 20040: GuildSettingsModalSecurity ===
+// === Module 20098: GuildSettingsModalSecurity ===
 
-// Module 20040 (GuildSettingsModalSecurity)
+// Module 20098 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 575 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8574 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import UserStore from "UserStore" /* 1387 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8575 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -100,7 +100,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   const obj10 = { style: tmp.center, children: null };
   const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  obj11.source = stateFromStores(16270);
+  obj11.source = stateFromStores(16277);
   obj11.style = tmp.image;
   const items6 = [closure_12(stateFromStores(5730), obj11), ];
   const obj12 = { style: tmp.infoWrapper, children: null };

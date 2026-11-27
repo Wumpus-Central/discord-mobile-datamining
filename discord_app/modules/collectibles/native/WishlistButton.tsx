@@ -1,12 +1,12 @@
-// === Module 11228: WishlistButton ===
+// === Module 11229: WishlistButton ===
 
-// Module 11228 (WishlistButton)
+// Module 11229 (WishlistButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import native from "native" /* 5104 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 11218 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 11219 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

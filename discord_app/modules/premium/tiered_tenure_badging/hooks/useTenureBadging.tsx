@@ -1,10 +1,10 @@
-// === Module 9850: useTenureBadging ===
+// === Module 9851: useTenureBadging ===
 
-// Module 9850 (useTenureBadging)
+// Module 9851 (useTenureBadging)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 6176 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 9851 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 9852 */;
 import UserProfileStore from "UserProfileStore" /* 6163 */;
 import UserStore from "UserStore" /* 1387 */;
 import SubscriptionStore from "SubscriptionStore" /* 2179 */;

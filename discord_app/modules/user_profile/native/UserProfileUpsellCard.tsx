@@ -1,6 +1,6 @@
-// === Module 16104: UserProfileUpsellCard ===
+// === Module 16111: UserProfileUpsellCard ===
 
-// Module 16104 (UserProfileUpsellCard)
+// Module 16111 (UserProfileUpsellCard)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(9126).Gradients;
+const Gradients = fn(9127).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);
@@ -42,7 +42,7 @@ export default function UserProfileUpsellCard(headerText) {
   if (null != headerText) {
     const obj3 = { style: tmp.titleContainer, children: null };
     const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const items3 = [closure_6(tmp3(9637).NitroWheelIcon, obj4), ];
+    const items3 = [closure_6(tmp3(9638).NitroWheelIcon, obj4), ];
     const obj5 = { variant: "heading-xs/semibold", children: headerText };
     items3[1] = closure_6(tmp3(5634).Text, obj5);
     obj3.children = items3;

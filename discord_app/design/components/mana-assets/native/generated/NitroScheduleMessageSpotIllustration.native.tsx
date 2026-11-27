@@ -1,19 +1,19 @@
-// === Module 9644: NitroScheduleMessageSpotIllustration ===
+// === Module 9645: NitroScheduleMessageSpotIllustration ===
 
-// Module 9644 (NitroScheduleMessageSpotIllustration)
+// Module 9645 (NitroScheduleMessageSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7261 */;
-import _modDef9645 from "module_9645" /* 9645 */;
 import _modDef9646 from "module_9646" /* 9646 */;
 import _modDef9647 from "module_9647" /* 9647 */;
+import _modDef9648 from "module_9648" /* 9648 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9645 }, 3: null };
-let obj2 = { uri: _modDef9645 };
-obj[2] = { uri: _modDef9646 };
-const obj3 = { uri: _modDef9646 };
-obj[3] = { uri: _modDef9647 };
+let obj = { 1: null, 2: { uri: _modDef9646 }, 3: null };
+let obj2 = { uri: _modDef9646 };
+obj[2] = { uri: _modDef9647 };
+const obj3 = { uri: _modDef9647 };
+obj[3] = { uri: _modDef9648 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroScheduleMessageSpotIllustration.native.tsx");
 

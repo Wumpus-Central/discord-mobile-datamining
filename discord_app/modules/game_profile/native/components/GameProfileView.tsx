@@ -1,23 +1,23 @@
-// === Module 8790: GameProfileView ===
+// === Module 8791: GameProfileView ===
 
-// Module 8790 (GameProfileView)
+// Module 8791 (GameProfileView)
 import nativeDefault from "native" /* 575 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import useGameProfileInvite from "useGameProfileInvite" /* 8792 */;
-import GameProfileHeaderDefault from "GameProfileHeader" /* 8793 */;
-import GameProfileMediaDefault from "GameProfileMedia" /* 8802 */;
-import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 14168 */;
-import GameProfileReviewsDefault from "GameProfileReviews" /* 14169 */;
-import GameProfileSummaryDefault from "GameProfileSummary" /* 14183 */;
-import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 14186 */;
-import GameProfileCommunityDefault from "GameProfileCommunity" /* 14190 */;
-import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 14193 */;
-import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 14219 */;
-import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 14222 */;
-import GameProfileDetailsDefault from "GameProfileDetails" /* 14225 */;
-import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 14245 */;
-import GameProfileReportButtonDefault from "GameProfileReportButton" /* 14246 */;
+import useGameProfileInvite from "useGameProfileInvite" /* 8793 */;
+import GameProfileHeaderDefault from "GameProfileHeader" /* 8794 */;
+import GameProfileMediaDefault from "GameProfileMedia" /* 8803 */;
+import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 14175 */;
+import GameProfileReviewsDefault from "GameProfileReviews" /* 14176 */;
+import GameProfileSummaryDefault from "GameProfileSummary" /* 14190 */;
+import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 14193 */;
+import GameProfileCommunityDefault from "GameProfileCommunity" /* 14197 */;
+import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 14200 */;
+import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 14226 */;
+import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 14229 */;
+import GameProfileDetailsDefault from "GameProfileDetails" /* 14232 */;
+import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 14252 */;
+import GameProfileReportButtonDefault from "GameProfileReportButton" /* 14253 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -29,8 +29,8 @@ const jsxProd = fn(21);
 const createStyles = fn(5043);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 }, body: null, buttonsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 };
-obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(8791).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
-let obj4 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(8791).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(8792).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+let obj4 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(8792).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
 obj2.buttonsContainer = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

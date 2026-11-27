@@ -1,9 +1,9 @@
-// === Module 12275: SpotifyUtils ===
+// === Module 12283: SpotifyUtils ===
 
-// Module 12275 (SpotifyUtils)
+// Module 12283 (SpotifyUtils)
 import DurationsDefault from "Durations" /* 1088 */;
 import SpotifyActionCreators from "SpotifyActionCreators" /* 7633 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 12276 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 12284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import SpotifyProtocolStore from "SpotifyProtocolStore" /* 7634 */;
@@ -30,7 +30,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

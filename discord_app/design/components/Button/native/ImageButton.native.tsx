@@ -1,6 +1,6 @@
-// === Module 10492: ImageButton ===
+// === Module 10493: ImageButton ===
 
-// Module 10492 (ImageButton)
+// Module 10493 (ImageButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import Text_Text from "Text/Text" /* 5634 */;

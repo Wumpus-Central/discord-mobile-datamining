@@ -1,11 +1,11 @@
-// === Module 9771: ExpressionGuildDetails ===
+// === Module 9772: ExpressionGuildDetails ===
 
-// Module 9771 (ExpressionGuildDetails)
+// Module 9772 (ExpressionGuildDetails)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import GuildIconDefault from "GuildIcon" /* 7052 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 9770 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9771 */;
 import noop from "module_19" /* 19 */;
 
 const GuildBadgeDefault = tmp10(7056);

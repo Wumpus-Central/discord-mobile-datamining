@@ -1,6 +1,6 @@
-// === Module 8950: UserSearchManager ===
+// === Module 8951: UserSearchManager ===
 
-// Module 8950 (UserSearchManager)
+// Module 8951 (UserSearchManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import Constants from "Constants" /* 1071 */;
@@ -9,7 +9,7 @@ import GlobalUtils from "GlobalUtils" /* 1255 */;
 import FlagUtilsAll from "FlagUtils" /* 1405 */;
 import ChannelRecord from "ChannelRecord" /* 4896 */;
 import UserUtilsDefault from "UserUtils" /* 5099 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 8951 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 8952 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;

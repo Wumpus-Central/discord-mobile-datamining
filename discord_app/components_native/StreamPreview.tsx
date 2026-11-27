@@ -1,14 +1,14 @@
-// === Module 10574: StreamPreview ===
+// === Module 10575: StreamPreview ===
 
-// Module 10574 (StreamPreview)
+// Module 10575 (StreamPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import Pressables from "Pressables" /* 6152 */;
-import _modDef10575 from "module_10575" /* 10575 */;
 import _modDef10576 from "module_10576" /* 10576 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10577 */;
+import _modDef10577 from "module_10577" /* 10577 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10578 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
@@ -38,9 +38,9 @@ DefaultFallback.prototype["render"] = function render() {
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   const tmp6 = FastImageDefault;
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp4Result = _modDef10575;
+    let tmp4Result = _modDef10576;
   } else {
-    tmp4Result = _modDef10576;
+    tmp4Result = _modDef10577;
   }
   obj2.source = tmp4Result;
   obj.children = hasOwnProperty(tmp6, obj2);

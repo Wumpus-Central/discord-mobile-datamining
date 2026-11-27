@@ -1,11 +1,11 @@
-// === Module 13687: ContactSyncLandingOnboardingRedesign ===
+// === Module 13694: ContactSyncLandingOnboardingRedesign ===
 
-// Module 13687 (ContactSyncLandingOnboardingRedesign)
+// Module 13694 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13680 */;
-import _modDef13688 from "module_13688" /* 13688 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 13689 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13687 */;
+import _modDef13695 from "module_13695" /* 13695 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 13696 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -82,7 +82,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
             closure_128_0();
           }
           c2 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         c2 = tmp;
@@ -90,7 +90,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13688 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13695 };
   const items1 = [closure_7(FastImageDefault, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/semibold", children: null };
   const intl = onNext(1112).intl;

@@ -1,6 +1,6 @@
-// === Module 14035: copyGiftCode ===
+// === Module 14042: copyGiftCode ===
 
-// Module 14035 (copyGiftCode)
+// Module 14042 (copyGiftCode)
 import GiftCodeUtils from "GiftCodeUtils" /* 5790 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

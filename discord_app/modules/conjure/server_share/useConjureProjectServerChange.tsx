@@ -1,9 +1,9 @@
-// === Module 18508: useConjureProjectServerChange ===
+// === Module 18515: useConjureProjectServerChange ===
 
-// Module 18508 (useConjureProjectServerChange)
+// Module 18515 (useConjureProjectServerChange)
 import conjureServerProject from "conjureServerProject" /* 7575 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 7667 */;
-import conjureChangeRows from "conjureChangeRows" /* 18510 */;
+import conjureChangeRows from "conjureChangeRows" /* 18517 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -117,7 +117,7 @@ export default function useConjureProjectServerChange(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

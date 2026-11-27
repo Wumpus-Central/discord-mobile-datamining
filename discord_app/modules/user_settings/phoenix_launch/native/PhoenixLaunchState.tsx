@@ -1,9 +1,9 @@
-// === Module 17380: PhoenixLaunchState ===
+// === Module 17387: PhoenixLaunchState ===
 
-// Module 17380 (PhoenixLaunchState)
+// Module 17387 (PhoenixLaunchState)
 import LoggerDefault from "Logger" /* 3 */;
-import NativePhoenixLaunchModuleDefault from "NativePhoenixLaunchModule" /* 17381 */;
-import LaunchClient2 from "LaunchClient" /* 17382 */;
+import NativePhoenixLaunchModuleDefault from "NativePhoenixLaunchModule" /* 17388 */;
+import LaunchClient2 from "LaunchClient" /* 17389 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ let closure_8 = async function _readPhoenixLaunchState() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_11 = async function _setShouldLaunchPhoenix(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

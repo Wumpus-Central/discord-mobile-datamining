@@ -1,8 +1,8 @@
-// === Module 12560: ClassificationMessageEvidence ===
+// === Module 12568: ClassificationMessageEvidence ===
 
-// Module 12560 (ClassificationMessageEvidence)
-import RowGeneratorDefault from "RowGenerator" /* 8223 */;
-import openMediaModal from "openMediaModal" /* 8804 */;
+// Module 12568 (ClassificationMessageEvidence)
+import RowGeneratorDefault from "RowGenerator" /* 8224 */;
+import openMediaModal from "openMediaModal" /* 8805 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
@@ -39,10 +39,10 @@ export default function ClassificationEvidence(arg0) {
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
   if (obj3.useStateFromStores(items1, () => ref(5050).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(12561));
+    let assetSource = resolveAssetSource(tmp11(12569));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(12562));
+    assetSource = resolveAssetSource(tmp11(12570));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -196,7 +196,7 @@ export default function ClassificationEvidence(arg0) {
     first2 = attachments.filter((filename) => ref(6403).isVideoFile(filename.filename));
     obj5.children = first2.map((uri, index) => {
       closure_0 = uri;
-      return closure_1_18(first(8881), {
+      return closure_1_18(first(8882), {
         source: { uri: uri.url },
         onLoad(arg0) {
           closure_0 = arg0;
@@ -219,9 +219,9 @@ export default function ClassificationEvidence(arg0) {
     let obj10 = obj4;
   } else {
     const obj6 = { ref, onTapImage: callback, inverted: false };
-    const items9 = [closure_18(tmp13(12563), obj6), ];
+    const items9 = [closure_18(tmp13(12571), obj6), ];
     const obj7 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
-    const tmp13Result = tmp13(9080);
+    const tmp13Result = tmp13(9081);
     const obj8 = { id: first2.id, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
     const _Date = Date;
     const tmpResult2 = tmp(6393);

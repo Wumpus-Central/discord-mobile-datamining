@@ -1,13 +1,13 @@
-// === Module 17614: NotifyFriendsOnCustomStatusUpdateSetting ===
+// === Module 17621: NotifyFriendsOnCustomStatusUpdateSetting ===
 
-// Module 17614 (NotifyFriendsOnCustomStatusUpdateSetting)
+// Module 17621 (NotifyFriendsOnCustomStatusUpdateSetting)
 import util from "util" /* 1112 */;
 import _modDef3047 from "module_3047" /* 3047 */;
 import UserSettings from "UserSettings" /* 4868 */;
-import SettingsConstants from "SettingsConstants" /* 9555 */;
-import NotifyFriendsOnCustomStatusUpdateUtils from "NotifyFriendsOnCustomStatusUpdateUtils" /* 17615 */;
-import NotifyFriendsOnCustomStatusUpdateExperiment from "NotifyFriendsOnCustomStatusUpdateExperiment" /* 17616 */;
-import SettingBuilders from "SettingBuilders" /* 11962 */;
+import SettingsConstants from "SettingsConstants" /* 9556 */;
+import NotifyFriendsOnCustomStatusUpdateUtils from "NotifyFriendsOnCustomStatusUpdateUtils" /* 17622 */;
+import NotifyFriendsOnCustomStatusUpdateExperiment from "NotifyFriendsOnCustomStatusUpdateExperiment" /* 17623 */;
+import SettingBuilders from "SettingBuilders" /* 11970 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

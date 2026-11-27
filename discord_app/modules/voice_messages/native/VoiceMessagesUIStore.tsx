@@ -1,11 +1,11 @@
-// === Module 12958: VoiceMessagesUIStore ===
+// === Module 12966: VoiceMessagesUIStore ===
 
-// Module 12958 (VoiceMessagesUIStore)
+// Module 12966 (VoiceMessagesUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import spring_spring from "spring/spring" /* 5644 */;
 import springPresets from "springPresets" /* 5645 */;
-import VoiceMessageConstants from "VoiceMessageConstants" /* 12959 */;
+import VoiceMessageConstants from "VoiceMessageConstants" /* 12967 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 12404: ComponentEmojiIcon ===
+// === Module 12412: ComponentEmojiIcon ===
 
-// Module 12404 (ComponentEmojiIcon)
+// Module 12412 (ComponentEmojiIcon)
 import nativeDefault from "native" /* 575 */;
 import EmojiDefault from "Emoji" /* 7488 */;
 import noop from "module_19" /* 19 */;

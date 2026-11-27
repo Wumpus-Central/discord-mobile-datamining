@@ -1,6 +1,6 @@
-// === Module 19491: VoicePanelUserActionCreators ===
+// === Module 19507: VoicePanelUserActionCreators ===
 
-// Module 19491 (VoicePanelUserActionCreators)
+// Module 19507 (VoicePanelUserActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import size from "module_2" /* 2 */;
@@ -13,5 +13,5 @@ export function closeVoicePanelUserActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(VoicePanelUserActionSheet);
 }
 export function openVoicePanelUserActionSheet(c1, c2, c0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19492, dependencyMap.paths), VoicePanelUserActionSheet, { guildId: importDefault, channelId: dependencyMap, userId: _require });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19508, dependencyMap.paths), VoicePanelUserActionSheet, { guildId: importDefault, channelId: dependencyMap, userId: _require });
 }

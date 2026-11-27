@@ -1,6 +1,6 @@
-// === Module 10633: InAppMessageSoundsStore ===
+// === Module 10634: InAppMessageSoundsStore ===
 
-// Module 10633 (InAppMessageSoundsStore)
+// Module 10634 (InAppMessageSoundsStore)
 import Storage2 from "Storage" /* 510 */;
 import _mod4958 from "module_4958" /* 4958 */;
 import identity from "module_1258" /* 1258 */;

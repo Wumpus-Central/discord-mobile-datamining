@@ -1,15 +1,15 @@
-// === Module 19327: useHexagonCampaignExpirySheetEligibility ===
+// === Module 19343: useHexagonCampaignExpirySheetEligibility ===
 
-// Module 19327 (useHexagonCampaignExpirySheetEligibility)
+// Module 19343 (useHexagonCampaignExpirySheetEligibility)
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5071 */;
-import restoreHexagonCampaignPerks from "restoreHexagonCampaignPerks" /* 16616 */;
+import restoreHexagonCampaignPerks from "restoreHexagonCampaignPerks" /* 16623 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5067 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 import UserStore from "UserStore" /* 1387 */;
-import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15830 */;
+import HexagonCampaignPersistedStore from "HexagonCampaignPersistedStore" /* 15837 */;
 
 require = fn;
 const HexagonCampaignConstants = fn(5068);

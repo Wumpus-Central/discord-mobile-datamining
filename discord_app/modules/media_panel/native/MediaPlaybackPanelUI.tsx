@@ -1,6 +1,6 @@
-// === Module 19607: MediaPlaybackPanelUI ===
+// === Module 19623: MediaPlaybackPanelUI ===
 
-// Module 19607 (MediaPlaybackPanelUI)
+// Module 19623 (MediaPlaybackPanelUI)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
@@ -10,25 +10,25 @@ import timingPresets from "timingPresets" /* 5256 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import LayerScope from "LayerScope" /* 5621 */;
 import spring_spring from "spring/spring" /* 5644 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9795 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11786 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 19402 */;
-import useMorphablePanelGesture from "useMorphablePanelGesture" /* 19404 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 19606 */;
-import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 19608 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9796 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11794 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 19418 */;
+import useMorphablePanelGesture from "useMorphablePanelGesture" /* 19420 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 19622 */;
+import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 19624 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10257 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10258 */;
 
 const _modDef1654 = _mod1654;
 const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(15984);
+const MediaPlaybackPanelConstants = fn(15991);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: metroImportDefault, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(11783).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(11782).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(11791).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(11790).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 const obj2 = { wrapperAnimationPresets: { opacity: 0 }, wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 }, mask: null, maskElevation: null, maskEmptyElevation: null, content: null };

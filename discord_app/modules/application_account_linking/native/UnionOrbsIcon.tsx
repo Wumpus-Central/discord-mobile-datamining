@@ -1,10 +1,10 @@
-// === Module 19317: UnionOrbsIcon ===
+// === Module 19333: UnionOrbsIcon ===
 
-// Module 19317 (UnionOrbsIcon)
+// Module 19333 (UnionOrbsIcon)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
-import _modDef17528 from "module_17528" /* 17528 */;
+import _modDef17535 from "module_17535" /* 17535 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export function UnionOrbsIcon() {
   const obj = { direction: "horizontal", align: "center", spacing: 4, style: tmp.container, children: null };
   items = [React4(View, { style: tmp.dot }), , ];
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef17528 };
+  const obj4 = { uri: _modDef17535 };
   obj3.source = obj4;
   obj3.style = tmp.orb;
   items[1] = React4(FastImageDefault, obj3);

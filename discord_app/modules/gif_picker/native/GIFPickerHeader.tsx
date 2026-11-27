@@ -1,6 +1,6 @@
-// === Module 10816: GIFPickerHeader ===
+// === Module 10817: GIFPickerHeader ===
 
-// Module 10816 (GIFPickerHeader)
+// Module 10817 (GIFPickerHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import timing_timing from "timing/timing" /* 5253 */;
@@ -8,8 +8,8 @@ import timingPresets from "timingPresets" /* 5256 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Pressables from "Pressables" /* 6152 */;
 import Search_SearchBar from "Search/SearchBar" /* 7406 */;
-import GifProvider from "GifProvider" /* 10809 */;
-import ChevronLargeLeftIcon from "ChevronLargeLeftIcon" /* 10817 */;
+import GifProvider from "GifProvider" /* 10810 */;
+import ChevronLargeLeftIcon from "ChevronLargeLeftIcon" /* 10818 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -138,8 +138,8 @@ const jsxProd = fn(21);
 const createStyles = fn(5043);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_8 }, headerContainer: null, header: null, favoritesSearch: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
-obj.headerContainer = { flexDirection: "row", justifyContent: "space-between", gap: fn(10811).GIF_PICKER_GUTTER_SPACING };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10811).GIF_PICKER_GUTTER_SPACING };
+obj.headerContainer = { flexDirection: "row", justifyContent: "space-between", gap: fn(10812).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10812).GIF_PICKER_GUTTER_SPACING };
 obj.header = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(7295).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj.favoritesSearch = { position: "absolute", top: 0, end: 0, overflow: "hidden" };
 let closure_10 = createStyles.createStyles(obj);

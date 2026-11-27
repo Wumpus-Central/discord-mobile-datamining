@@ -1,19 +1,19 @@
-// === Module 20251: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 20309: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 20251 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 20309 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import TableRowGroup from "TableRowGroup" /* 6140 */;
-import FormStylesDefault from "FormStyles" /* 20220 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20222 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 20230 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 20252 */;
+import FormStylesDefault from "FormStyles" /* 20278 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20280 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 20288 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 20310 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 20219 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 20277 */;
 
 require = fn;
 const View = fn(17).View;
@@ -53,7 +53,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
           c3 = 0;
           closure_128_1(false);
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp22) {
         closure_2 = tmp22;

@@ -1,6 +1,6 @@
-// === Module 17424: UserSettingsDesignSystemAlertModal ===
+// === Module 17431: UserSettingsDesignSystemAlertModal ===
 
-// Module 17424 (UserSettingsDesignSystemAlertModal)
+// Module 17431 (UserSettingsDesignSystemAlertModal)
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import useAlertStore from "useAlertStore" /* 6048 */;
 import AlertModal from "AlertModal" /* 6052 */;
@@ -20,7 +20,7 @@ function DemoModal() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -49,7 +49,7 @@ function DemoModal() {
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         c0 = tmp;

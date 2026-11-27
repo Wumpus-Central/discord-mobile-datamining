@@ -1,6 +1,6 @@
-// === Module 12290: startAuthorizationNoHook ===
+// === Module 12298: startAuthorizationNoHook ===
 
-// Module 12290 (startAuthorizationNoHook)
+// Module 12298 (startAuthorizationNoHook)
 import LinkingDefault from "Linking" /* 5722 */;
 import useAuthorizationApp from "useAuthorizationApp" /* 7514 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

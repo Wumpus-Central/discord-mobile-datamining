@@ -1,6 +1,6 @@
-// === Module 14998: UserProfileAddableWidgetTypes ===
+// === Module 15005: UserProfileAddableWidgetTypes ===
 
-// Module 14998 (UserProfileAddableWidgetTypes)
+// Module 15005 (UserProfileAddableWidgetTypes)
 import WidgetType from "WidgetType" /* 6170 */;
 import size from "module_2" /* 2 */;
 

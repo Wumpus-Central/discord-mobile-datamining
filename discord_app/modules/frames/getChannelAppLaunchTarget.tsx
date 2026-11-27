@@ -1,6 +1,6 @@
-// === Module 17950: getChannelAppLaunchTarget ===
+// === Module 17957: getChannelAppLaunchTarget ===
 
-// Module 17950 (getChannelAppLaunchTarget)
+// Module 17957 (getChannelAppLaunchTarget)
 import getURLForApplicationDefault from "getURLForApplication" /* 5684 */;
 import AgeGateUtils from "AgeGateUtils" /* 6833 */;
 import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6849 */;

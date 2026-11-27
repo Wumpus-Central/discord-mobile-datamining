@@ -1,6 +1,6 @@
-// === Module 16063: useGuildProfileEditForm ===
+// === Module 16070: useGuildProfileEditForm ===
 
-// Module 16063 (useGuildProfileEditForm)
+// Module 16070 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -114,7 +114,7 @@ export default function useGuildProfileEditForm() {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -143,15 +143,15 @@ export default function useGuildProfileEditForm() {
               if (!closure_15) {
                 if (null != stateFromStores) {
                   const obj5 = { pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles };
-                  const guildMemberChangesForUpdateRequest = stateFromStores(9432).getGuildMemberChangesForUpdateRequest(obj5);
+                  const guildMemberChangesForUpdateRequest = stateFromStores(9433).getGuildMemberChangesForUpdateRequest(obj5);
                   closure_131_0 = guildMemberChangesForUpdateRequest;
-                  const obj21 = stateFromStores(9432);
+                  const obj21 = stateFromStores(9433);
                   const obj7 = { pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame };
                   let id;
                   if (selectedGuild != null) {
                     id = selectedGuild.id;
                   }
-                  profileChangesForUpdateRequest = stateFromStores(9432).getProfileChangesForUpdateRequest(obj7, id);
+                  profileChangesForUpdateRequest = stateFromStores(9433).getProfileChangesForUpdateRequest(obj7, id);
                   let id1;
                   if (selectedGuild != null) {
                     id1 = selectedGuild.id;
@@ -181,7 +181,7 @@ export default function useGuildProfileEditForm() {
                     }
                     c5 = 1;
                     c6 = 1;
-                    const obj8 = { value: stateFromStores(9439).saveGuildIdentityChanges(id2, guildMemberChangesForUpdateRequest), done: false };
+                    const obj8 = { value: stateFromStores(9440).saveGuildIdentityChanges(id2, guildMemberChangesForUpdateRequest), done: false };
                     return obj8;
                   } else {
                     const _Object2 = Object;
@@ -194,15 +194,15 @@ export default function useGuildProfileEditForm() {
                       }
                       c5 = 2;
                       c6 = 1;
-                      const obj12 = { value: stateFromStores(9434).saveProfileChanges(closure_131_8, id3, bannerOriginalMd5), done: false };
+                      const obj12 = { value: stateFromStores(9435).saveProfileChanges(closure_131_8, id3, bannerOriginalMd5), done: false };
                       return obj12;
                     }
                   }
-                  const obj23 = stateFromStores(9432);
+                  const obj23 = stateFromStores(9433);
                 }
               }
               c6 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -231,9 +231,9 @@ export default function useGuildProfileEditForm() {
                   items = [constants.DISPLAY_NAME_STYLE];
                   obj17.perks = items;
                   obj17.content = stateFromStores(6874).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                  obj17.contentSurface = stateFromStores(16060).HexagonCampaignContentSurface.GUILD_PROFILE;
-                  const result2 = stateFromStores(16060).trackHexagonCampaignPerkAction(obj17);
-                  const obj6 = stateFromStores(16060);
+                  obj17.contentSurface = stateFromStores(16067).HexagonCampaignContentSurface.GUILD_PROFILE;
+                  const result2 = stateFromStores(16067).trackHexagonCampaignPerkAction(obj17);
+                  const obj6 = stateFromStores(16067);
                 }
               } else {
                 let avatar;
@@ -251,9 +251,9 @@ export default function useGuildProfileEditForm() {
                     const intl = stateFromStores(1112).intl;
                     stateFromStores = intl.string(stateFromStores(1112).t.s35OuK);
                   }
-                  const result3 = stateFromStores(16061).showGenericGuildProfileUpdateFailureToast(stateFromStores);
+                  const result3 = stateFromStores(16068).showGenericGuildProfileUpdateFailureToast(stateFromStores);
                   closure_131_4 = true;
-                  const obj19 = stateFromStores(16061);
+                  const obj19 = stateFromStores(16068);
                 }
               }
               let tmp61 = closure_131_3;
@@ -287,9 +287,9 @@ export default function useGuildProfileEditForm() {
               const aPIError1 = new stateFromStores(5792).APIError(closure_131_9);
               firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
               if (null != firstFieldErrorMessage2) {
-                const result4 = stateFromStores(16061).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
+                const result4 = stateFromStores(16068).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
                 closure_131_4 = true;
-                const obj2 = stateFromStores(16061);
+                const obj2 = stateFromStores(16068);
               }
             }
             let tmp24 = closure_131_3;
@@ -312,8 +312,8 @@ export default function useGuildProfileEditForm() {
           }
           if (!tmp82) {
             const intl2 = stateFromStores(1112).intl;
-            const result5 = stateFromStores(16061).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1112).t.s35OuK));
-            const obj11 = stateFromStores(16061);
+            const result5 = stateFromStores(16068).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1112).t.s35OuK));
+            const obj11 = stateFromStores(16068);
           }
           if (closure_131_3) {
             closure_132_13.delay();

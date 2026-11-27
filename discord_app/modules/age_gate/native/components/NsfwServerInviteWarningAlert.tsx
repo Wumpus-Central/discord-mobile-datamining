@@ -1,6 +1,6 @@
-// === Module 12154: NsfwServerInviteWarningAlert ===
+// === Module 12162: NsfwServerInviteWarningAlert ===
 
-// Module 12154 (NsfwServerInviteWarningAlert)
+// Module 12162 (NsfwServerInviteWarningAlert)
 import useAlertStore from "useAlertStore" /* 6048 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6828 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7870 */;

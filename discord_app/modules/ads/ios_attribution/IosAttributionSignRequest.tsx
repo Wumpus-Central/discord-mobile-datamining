@@ -1,6 +1,6 @@
-// === Module 9988: IosAttributionSignRequest ===
+// === Module 9989: IosAttributionSignRequest ===
 
-// Module 9988 (IosAttributionSignRequest)
+// Module 9989 (IosAttributionSignRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

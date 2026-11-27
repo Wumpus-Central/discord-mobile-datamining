@@ -1,6 +1,6 @@
-// === Module 18248: useIsConnectedToVoiceChannel ===
+// === Module 18255: useIsConnectedToVoiceChannel ===
 
-// Module 18248 (useIsConnectedToVoiceChannel)
+// Module 18255 (useIsConnectedToVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 import VoiceStateStore from "VoiceStateStore" /* 5691 */;

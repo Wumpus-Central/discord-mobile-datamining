@@ -1,6 +1,6 @@
-// === Module 8403: StreamRTCConnectionStore ===
+// === Module 8404: StreamRTCConnectionStore ===
 
-// Module 8403 (StreamRTCConnectionStore)
+// Module 8404 (StreamRTCConnectionStore)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -8,8 +8,8 @@ import PlatformUtils from "PlatformUtils" /* 1379 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5868 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
 import canSpectateDefault from "canSpectate" /* 6851 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8399 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 8404 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8400 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 8405 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;

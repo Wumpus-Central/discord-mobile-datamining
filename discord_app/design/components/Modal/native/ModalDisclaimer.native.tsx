@@ -1,6 +1,6 @@
-// === Module 15479: ModalDisclaimer ===
+// === Module 15486: ModalDisclaimer ===
 
-// Module 15479 (ModalDisclaimer)
+// Module 15486 (ModalDisclaimer)
 import Text_Text from "Text/Text" /* 5634 */;
 import noop from "module_19" /* 19 */;
 

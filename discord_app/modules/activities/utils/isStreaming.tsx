@@ -1,6 +1,6 @@
-// === Module 9523: isStreaming ===
+// === Module 9524: isStreaming ===
 
-// Module 9523 (isStreaming)
+// Module 9524 (isStreaming)
 import Constants from "Constants" /* 2145 */;
 import ActivityTypes from "ActivityTypes" /* 6015 */;
 import size from "module_2" /* 2 */;

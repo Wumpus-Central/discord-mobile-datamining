@@ -1,9 +1,9 @@
-// === Module 16229: handleOpenUnconfirmedAgeGroupSupportArticle ===
+// === Module 16236: handleOpenUnconfirmedAgeGroupSupportArticle ===
 
-// Module 16229 (handleOpenUnconfirmedAgeGroupSupportArticle)
+// Module 16236 (handleOpenUnconfirmedAgeGroupSupportArticle)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7870 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 10002 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 10003 */;
 
 const AgeNoticeConstants = fn(6836);
 ({ AGE_NOTICE_AGE_GROUP_SUPPORT_ARTICLE_IDS_BY_COUNTRY: c3, AGE_NOTICE_DEFAULT_ARTICLE_ID: closure_4 } = AgeNoticeConstants);

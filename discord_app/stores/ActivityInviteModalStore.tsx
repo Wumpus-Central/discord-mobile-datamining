@@ -1,10 +1,10 @@
-// === Module 15234: ActivityInviteModalStore ===
+// === Module 15241: ActivityInviteModalStore ===
 
-// Module 15234 (ActivityInviteModalStore)
+// Module 15241 (ActivityInviteModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
-import sortByMatchScore from "sortByMatchScore" /* 8947 */;
+import sortByMatchScore from "sortByMatchScore" /* 8948 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import LocalActivityStore from "LocalActivityStore" /* 7655 */;
@@ -138,7 +138,7 @@ function handleLocalActivityUpdate() {
 }
 const Constants = fn(1071);
 ({ ChannelTypes: closure_11, ActivityActionTypes: closure_12 } = Constants);
-let items = [fn(8947).AutocompleterResultTypes.TEXT_CHANNEL, fn(8947).AutocompleterResultTypes.GROUP_DM, fn(8947).AutocompleterResultTypes.USER];
+let items = [fn(8948).AutocompleterResultTypes.TEXT_CHANNEL, fn(8948).AutocompleterResultTypes.GROUP_DM, fn(8948).AutocompleterResultTypes.USER];
 let c14 = null;
 let c15 = null;
 items = [];
@@ -269,8 +269,8 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
       const userId = channelId.userId;
       if (null != channelId) {
         const obj2 = { channelId, type: constants.JOIN, activity, location: "Channel Text Area - Invite to Join Modal" };
-        let obj = userId(11966);
-        userId(11966).sendActivityInvite(obj2).then(() => {
+        let obj = userId(11974);
+        userId(11974).sendActivityInvite(obj2).then(() => {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = channelId;
           mapped = mapped.map((type) => {
@@ -286,10 +286,10 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           closure_18 = withSameGameSection(mapped);
           activityInviteModalStoreClass.emitChange();
         });
-        const sendActivityInviteResult = userId(11966).sendActivityInvite(obj2);
+        const sendActivityInviteResult = userId(11974).sendActivityInvite(obj2);
       } else if (null != userId) {
         const obj4 = { userId, type: constants.JOIN, activity, location: "Channel Text Area - Invite to Join Modal" };
-        const result = userId(11966).sendActivityInviteUser(obj4);
+        const result = userId(11974).sendActivityInviteUser(obj4);
         result.then(() => {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = userId;
@@ -306,7 +306,7 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           closure_18 = withSameGameSection(mapped);
           activityInviteModalStoreClass.emitChange();
         });
-        const obj3 = userId(11966);
+        const obj3 = userId(11974);
       }
       return false;
     }

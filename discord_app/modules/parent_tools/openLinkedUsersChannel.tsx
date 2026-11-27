@@ -1,6 +1,6 @@
-// === Module 9157: openLinkedUsersChannel ===
+// === Module 9158: openLinkedUsersChannel ===
 
-// Module 9157 (openLinkedUsersChannel)
+// Module 9158 (openLinkedUsersChannel)
 import transitionToChannel from "transitionToChannel" /* 6126 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

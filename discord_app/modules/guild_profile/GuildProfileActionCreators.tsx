@@ -1,6 +1,6 @@
-// === Module 8544: GuildProfileActionCreators ===
+// === Module 8545: GuildProfileActionCreators ===
 
-// Module 8544 (GuildProfileActionCreators)
+// Module 8545 (GuildProfileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5792 */;
@@ -8,7 +8,7 @@ import GuildProfileBuilders from "GuildProfileBuilders" /* 7012 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5077 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
-import GuildProfileStore from "GuildProfileStore" /* 8542 */;
+import GuildProfileStore from "GuildProfileStore" /* 8543 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ let closure_10 = async function _fetchGuildTopGames() {
   closure_129_0 = value;
   return closure_130_0(closure_130_2[7]).buildTopGamesFromServer(closure_129_0.body.top_games);
 };
-const GuildProfileFetchStatus = fn(8542).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(8543).GuildProfileFetchStatus;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 10550: useMyCurrentStageChannelRole ===
+// === Module 10551: useMyCurrentStageChannelRole ===
 
-// Module 10550 (useMyCurrentStageChannelRole)
+// Module 10551 (useMyCurrentStageChannelRole)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6853 */;

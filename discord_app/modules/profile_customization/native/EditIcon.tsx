@@ -1,8 +1,8 @@
-// === Module 16054: EditIcon ===
+// === Module 16061: EditIcon ===
 
-// Module 16054 (EditIcon)
+// Module 16061 (EditIcon)
 import nativeDefault from "native" /* 575 */;
-import PencilIcon from "PencilIcon" /* 9624 */;
+import PencilIcon from "PencilIcon" /* 9625 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

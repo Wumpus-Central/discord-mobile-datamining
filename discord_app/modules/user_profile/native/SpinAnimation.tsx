@@ -1,6 +1,6 @@
-// === Module 16053: SpinAnimation ===
+// === Module 16060: SpinAnimation ===
 
-// Module 16053 (SpinAnimation)
+// Module 16060 (SpinAnimation)
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import noop from "module_19" /* 19 */;

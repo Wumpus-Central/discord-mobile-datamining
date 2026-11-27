@@ -1,6 +1,6 @@
-// === Module 18645: conjurePendingPlan ===
+// === Module 18660: conjurePendingPlan ===
 
-// Module 18645 (conjurePendingPlan)
+// Module 18660 (conjurePendingPlan)
 import conjureChatTurns from "conjureChatTurns" /* 7660 */;
 import size from "module_2" /* 2 */;
 

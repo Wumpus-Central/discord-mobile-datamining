@@ -1,6 +1,6 @@
-// === Module 10690: BugReporterModal ===
+// === Module 10691: BugReporterModal ===
 
-// Module 10690 (BugReporterModal)
+// Module 10691 (BugReporterModal)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
@@ -18,7 +18,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
-import BugReportStore from "BugReportStore" /* 10689 */;
+import BugReportStore from "BugReportStore" /* 10690 */;
 import n from "module_671" /* 671 */;
 
 require = fn;
@@ -64,7 +64,7 @@ class BugCreateScreen {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -188,7 +188,7 @@ class BugCreateScreen {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -242,7 +242,7 @@ class BugCreateScreen {
               });
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           c3 = tmp;
@@ -383,7 +383,7 @@ class BugCreateScreen {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -415,7 +415,7 @@ class BugCreateScreen {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: "+95" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -501,7 +501,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        const obj11 = { value: closure_2_0(10692).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        const obj11 = { value: closure_2_0(10693).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj11;
                       } catch (tmp46) {
                         c6 = tmp;
@@ -544,7 +544,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(10691).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(10692).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -679,7 +679,7 @@ class BugCreateScreen {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -712,7 +712,7 @@ class BugCreateScreen {
               closure_128_0 = value;
               closure_1_18(closure_128_0);
               c3 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp13) {
             c3 = tmp;
@@ -893,7 +893,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10728, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10729, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;

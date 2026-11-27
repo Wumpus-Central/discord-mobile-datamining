@@ -1,15 +1,15 @@
-// === Module 14136: MediaModalOverlayFooter ===
+// === Module 14143: MediaModalOverlayFooter ===
 
-// Module 14136 (MediaModalOverlayFooter)
+// Module 14143 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 12007 */;
-import useMediaModalFooterBackgroundDefault from "useMediaModalFooterBackground" /* 14137 */;
-import MediaMessagePreviewDefault from "MediaMessagePreview" /* 14138 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 12015 */;
+import useMediaModalFooterBackgroundDefault from "useMediaModalFooterBackground" /* 14144 */;
+import MediaMessagePreviewDefault from "MediaMessagePreview" /* 14145 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "analyticsLocations" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "analyticsLocations" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "top" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 let items = [{ code: "(function clamp_MediaModalOverlayFooterTsx1(value,min,max){return Math.max(Math.min(value,max),min);})" }];
@@ -684,7 +684,7 @@ export function MediaModalOverlayFooter(channelId) {
     const items28 = [animatedStyle1, tmp.thumbnailsContainer];
     obj13.style = items28;
     const obj14 = { syncer };
-    obj13.children = tmp81(tmp53(14128), obj14);
+    obj13.children = tmp81(tmp53(14135), obj14);
     tmp81Result = tmp81(tmp53(1654).View, obj13);
   }
   const rect = { bottom: true, left: true, right: true, children: null };

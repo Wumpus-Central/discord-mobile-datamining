@@ -1,10 +1,10 @@
-// === Module 15959: userPopout ===
+// === Module 15966: userPopout ===
 
-// Module 15959 (userPopout)
+// Module 15966 (userPopout)
 import Constants from "Constants" /* 1071 */;
 import Constants2 from "Constants" /* 5797 */;
-import commands_userProfile from "commands/userProfile" /* 15923 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15873 */;
+import commands_userProfile from "commands/userProfile" /* 15930 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15880 */;
 import size from "module_2" /* 2 */;
 
 const RPCCommands = Constants.RPCCommands;

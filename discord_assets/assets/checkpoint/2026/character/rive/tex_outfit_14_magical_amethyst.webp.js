@@ -1,6 +1,6 @@
-// === Module 12803: ? ===
+// === Module 12811: ? ===
 
-// Module 12803
+// Module 12811
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_14_magical_amethyst.webp.js");

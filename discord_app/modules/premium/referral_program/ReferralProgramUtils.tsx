@@ -1,6 +1,6 @@
-// === Module 13916: ReferralProgramUtils ===
+// === Module 13923: ReferralProgramUtils ===
 
-// Module 13916 (ReferralProgramUtils)
+// Module 13923 (ReferralProgramUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import util from "util" /* 1112 */;
@@ -8,7 +8,7 @@ import dismissible_content from "dismissible_content" /* 4876 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4877 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5075 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 9141 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 9142 */;
 
 require = fn;
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
@@ -77,8 +77,8 @@ export function markReferralProgramPopoverSeen(promotionId) {
   }
 }
 export function useIsReferralProgramPopoverShowable() {
-  let isEligibleSenderForReferralProgram = stateFromStores1(9370).useIsEligibleSenderForReferralProgram(false);
-  let obj = stateFromStores1(9370);
+  let isEligibleSenderForReferralProgram = stateFromStores1(9371).useIsEligibleSenderForReferralProgram(false);
+  let obj = stateFromStores1(9371);
   items = [ReferralTrialStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => ReferralTrialStore.getReferralsRemaining());
   const obj2 = stateFromStores1(504);

@@ -1,10 +1,10 @@
-// === Module 12460: ForumPostContainer ===
+// === Module 12468: ForumPostContainer ===
 
-// Module 12460 (ForumPostContainer)
+// Module 12468 (ForumPostContainer)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import Card from "Card" /* 6145 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10736 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10737 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

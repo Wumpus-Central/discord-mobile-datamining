@@ -1,6 +1,6 @@
-// === Module 11998: conjureSharedProjectHome ===
+// === Module 12006: conjureSharedProjectHome ===
 
-// Module 11998 (conjureSharedProjectHome)
+// Module 12006 (conjureSharedProjectHome)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;
 import GuildStore from "GuildStore" /* 4914 */;
 

@@ -1,15 +1,15 @@
-// === Module 16278: AccountSmsBackupSetting ===
+// === Module 16285: AccountSmsBackupSetting ===
 
-// Module 16278 (AccountSmsBackupSetting)
+// Module 16285 (AccountSmsBackupSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import PhoneActionCreators from "PhoneActionCreators" /* 7401 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 16267 */;
-import account_MFAUtils from "account/MFAUtils" /* 16272 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 16275 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 16274 */;
+import account_MFAUtils from "account/MFAUtils" /* 16279 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 16282 */;
 import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
@@ -52,13 +52,13 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     const tmp5 = asyncRequireImpl(7398, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uHAJ5v);
   },
-  parent: fn(9555).MobileUserSettings.ACCOUNT,
+  parent: fn(9556).MobileUserSettings.ACCOUNT,
   useIsDisabled: function useAccountSMSBackupSettingIsDisabled() {
     items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -98,7 +98,7 @@ const toggle = SettingBuilders.createToggle({
     }
     return sMSBackupDisabledMessage;
   },
-  usePredicate: fn(16185).useIsTOTPEnabled
+  usePredicate: fn(16192).useIsTOTPEnabled
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

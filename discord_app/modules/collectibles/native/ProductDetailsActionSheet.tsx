@@ -1,15 +1,15 @@
-// === Module 11271: ProductDetailsActionSheet ===
+// === Module 11272: ProductDetailsActionSheet ===
 
-// Module 11271 (ProductDetailsActionSheet)
+// Module 11272 (ProductDetailsActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5271 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6322 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 11214 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11245 */;
-import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 11622 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 11215 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11246 */;
+import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 11630 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6311 */;
@@ -399,12 +399,12 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   const initialVariantIndex = skuId.initialVariantIndex;
   let ref1;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  const collectiblesShopProduct = skuId(11600).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
+  const collectiblesShopProduct = skuId(11608).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  let obj = skuId(11600);
-  const getOrFetchPurchases = skuId(11149).useGetOrFetchPurchases();
+  let obj = skuId(11608);
+  const getOrFetchPurchases = skuId(11150).useGetOrFetchPurchases();
   items = [product];
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
   const obj3 = closure_6(() => {
@@ -416,10 +416,10 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     }
     return googleSkuIds;
   }, items);
-  const obj2 = skuId(11149);
+  const obj2 = skuId(11150);
   const tmp5 = initialVariantIndex;
-  initialVariantIndex(9269).useLoadedGoogleSkuIds(obj3);
-  const obj4 = initialVariantIndex(9269);
+  initialVariantIndex(9270).useLoadedGoogleSkuIds(obj3);
+  const obj4 = initialVariantIndex(9270);
   const everyResult = obj3.every((item) => set.has(item));
   ref1 = ref1.useRef(null);
   const items1 = [product, skuId, initialVariantIndex];
@@ -458,7 +458,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     }
   }
   if ("error" === state) {
-    const obj7 = { Illustration: tmp(11596).NoResults, body: null, children: null };
+    const obj7 = { Illustration: tmp(11604).NoResults, body: null, children: null };
     const intl = tmp(1112).intl;
     obj7.body = intl.string(tmp(1112).t.eAn6z2);
     const obj8 = { text: null, onPress: null };
@@ -470,7 +470,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     tmp10 = closure_14;
   } else {
     tmp10 = closure_14;
-    tmp11 = closure_14(tmp5(11636), {});
+    tmp11 = closure_14(tmp5(11644), {});
   }
   ref = ref1.useRef(null);
 }

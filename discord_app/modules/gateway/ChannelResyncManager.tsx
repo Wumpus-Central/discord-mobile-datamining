@@ -1,10 +1,10 @@
-// === Module 19677: ChannelResyncManager ===
+// === Module 19693: ChannelResyncManager ===
 
-// Module 19677 (ChannelResyncManager)
+// Module 19693 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8315 */;
+import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8316 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -127,7 +127,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -274,7 +274,7 @@ let closure_24 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c4 = tmp;

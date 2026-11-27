@@ -1,10 +1,10 @@
-// === Module 14752: conjureSettingValues ===
+// === Module 14759: conjureSettingValues ===
 
-// Module 14752 (conjureSettingValues)
+// Module 14759 (conjureSettingValues)
 import _slicedToArray from "module_32" /* 32 */;
 
-function conjureSettingSubmitValue(found, num) {
-  if ("number" === found.type) {
+function conjureSettingSubmitValue(def2, num) {
+  if ("number" === def2.type) {
     if (typeof num === "number") {
       return num;
     } else {
@@ -24,9 +24,9 @@ function conjureSettingSubmitValue(found, num) {
       }
       const str6 = String(num);
     }
-  } else if (true === found.multiple) {
+  } else if (true === def2.multiple) {
     const _Array = Array;
-    found = num;
+    let found = num;
     if (!Array.isArray(num)) {
       const _String = String;
       const parts = String(num).split(/[\s,]+/);
@@ -35,7 +35,7 @@ function conjureSettingSubmitValue(found, num) {
     }
     if (0 === found.length) {
       items = null;
-      if ("game" === found.type) {
+      if ("game" === def2.type) {
         const _Array2 = Array;
         items = null;
         if (Array.isArray(num)) {
@@ -90,15 +90,15 @@ export function conjureSettingBaseline(type, arg1) {
   }
   return tmp;
 }
-export function conjureSettingDraftKey(per_server, serverId) {
-  if (true === per_server.per_server) {
+export function conjureSettingDraftKey(def2, serverId) {
+  if (true === def2.per_server) {
     if (null != serverId) {
       const _HermesInternal = HermesInternal;
-      let key = "" + serverId + ":" + per_server.key;
+      let key = "" + serverId + ":" + def2.key;
     }
     return key;
   }
-  key = per_server.key;
+  key = def2.key;
 }
 export function conjureSettingStoredValue(stateFromStores, per_server, serverId) {
   if (true !== per_server.per_server) {
@@ -120,6 +120,25 @@ export function conjureSettingStoredValue(stateFromStores, per_server, serverId)
     tmp3 = tmp4;
   }
   return tmp3;
+}
+export function conjureSettingAnyStoredValue(server_values, found) {
+  if (true === found.per_server) {
+    server_values = server_values.server_values;
+    if (server_values == null) {
+      server_values = {};
+    }
+    const values = Object.values(server_values);
+    let mapped = values.map((item) => item[key.key]);
+  } else {
+    mapped = [server_values.values[found.key]];
+  }
+  return mapped.find((item) => {
+    let tmp = null != item;
+    if (tmp) {
+      tmp = "" !== item;
+    }
+    return tmp;
+  });
 }
 export function conjureSettingValuesSubmission(stateFromStores, arg1) {
   _slicedToArray = stateFromStores;

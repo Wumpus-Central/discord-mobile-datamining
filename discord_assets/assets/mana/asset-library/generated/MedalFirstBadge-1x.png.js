@@ -1,6 +1,6 @@
-// === Module 11392: ? ===
+// === Module 11393: ? ===
 
-// Module 11392
+// Module 11393
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-1x.png.js");

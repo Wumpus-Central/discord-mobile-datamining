@@ -1,6 +1,6 @@
-// === Module 18263: NotificationCenterItemsActions ===
+// === Module 18270: NotificationCenterItemsActions ===
 
-// Module 18263 (NotificationCenterItemsActions)
+// Module 18270 (NotificationCenterItemsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
@@ -22,7 +22,7 @@ let closure_6 = async function _fetchNotificationCenterItems(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -228,7 +228,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -287,7 +287,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         } else {
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp19) {
         closure_3 = tmp19;

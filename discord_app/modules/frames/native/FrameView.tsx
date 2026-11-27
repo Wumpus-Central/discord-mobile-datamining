@@ -1,12 +1,12 @@
-// === Module 19367: FrameView ===
+// === Module 19383: FrameView ===
 
-// Module 19367 (FrameView)
+// Module 19383 (FrameView)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
 import leaveFrame from "leaveFrame" /* 7691 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 15954 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 19368 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 15961 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 19384 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;

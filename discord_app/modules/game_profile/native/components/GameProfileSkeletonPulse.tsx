@@ -1,6 +1,6 @@
-// === Module 14189: GameProfileSkeletonPulse ===
+// === Module 14196: GameProfileSkeletonPulse ===
 
-// Module 14189 (GameProfileSkeletonPulse)
+// Module 14196 (GameProfileSkeletonPulse)
 import initialize from "initialize" /* 504 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 19793: AddAvatarModalConstants ===
+// === Module 19809: AddAvatarModalConstants ===
 
-// Module 19793 (AddAvatarModalConstants)
+// Module 19809 (AddAvatarModalConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/avatar/native/components/AddAvatarModalConstants.tsx");

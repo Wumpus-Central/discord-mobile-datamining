@@ -1,18 +1,18 @@
-// === Module 17484: CollectiblesShopV2 ===
+// === Module 17491: CollectiblesShopV2 ===
 
-// Module 17484 (CollectiblesShopV2)
+// Module 17491 (CollectiblesShopV2)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2186 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
 import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 6364 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9269 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11245 */;
-import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 11265 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 11603 */;
-import takeWhileDefault from "takeWhile" /* 17491 */;
-import ShopCategory from "ShopCategory" /* 17495 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 17497 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9270 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 11246 */;
+import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 11266 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 11611 */;
+import takeWhileDefault from "takeWhile" /* 17498 */;
+import ShopCategory from "ShopCategory" /* 17502 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 17504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5637 */;

@@ -1,15 +1,15 @@
-// === Module 15075: UserProfileContactButtons ===
+// === Module 15082: UserProfileContactButtons ===
 
-// Module 15075 (UserProfileContactButtons)
+// Module 15082 (UserProfileContactButtons)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7850 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 12147 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13618 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 14085 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 12155 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13625 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 14092 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
 
@@ -47,8 +47,8 @@ function FriendRequestButton(user) {
   dependencyMap = { location: newestAnalyticsLocation };
   let obj = user(6381);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(14967).useGameFriendsForUser(user.id);
-  const tmp3Result = user(14967);
+  const gameFriendsForUser = user(14974).useGameFriendsForUser(user.id);
+  const tmp3Result = user(14974);
   items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
@@ -61,7 +61,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(15076).UserClockIcon;
+          let UserPlusIcon = tmp3(15083).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(5733).UserPlusIcon;
         }

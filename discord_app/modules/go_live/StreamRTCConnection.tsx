@@ -1,6 +1,6 @@
-// === Module 8404: StreamRTCConnection ===
+// === Module 8405: StreamRTCConnection ===
 
-// Module 8404 (StreamRTCConnection)
+// Module 8405 (StreamRTCConnection)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
@@ -10,18 +10,18 @@ import BaseConnectionEvent from "BaseConnectionEvent" /* 5868 */;
 import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5970 */;
 import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 6030 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
-import SoundshareStatsAggregatorDefault from "SoundshareStatsAggregator" /* 8406 */;
-import VideoStreamStatsDefault from "VideoStreamStats" /* 8407 */;
-import combineFragmentVideoStatsDefault from "combineFragmentVideoStats" /* 8408 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 8409 */;
-import getSoundshareAnalyticsContextDefault from "getSoundshareAnalyticsContext" /* 8415 */;
-import getStreamSourceMetadataDefault from "getStreamSourceMetadata" /* 8416 */;
+import SoundshareStatsAggregatorDefault from "SoundshareStatsAggregator" /* 8407 */;
+import VideoStreamStatsDefault from "VideoStreamStats" /* 8408 */;
+import combineFragmentVideoStatsDefault from "combineFragmentVideoStats" /* 8409 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 8410 */;
+import getSoundshareAnalyticsContextDefault from "getSoundshareAnalyticsContext" /* 8416 */;
+import getStreamSourceMetadataDefault from "getStreamSourceMetadata" /* 8417 */;
 import ClipsStore from "ClipsStore" /* 2139 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6029 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
-import HookErrorStore from "HookErrorStore" /* 8405 */;
+import HookErrorStore from "HookErrorStore" /* 8406 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 import NetworkStore from "NetworkStore" /* 5981 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
@@ -348,10 +348,10 @@ prototype["initializeEvents"] = function initializeEvents() {
               desktopSource1 = goLiveSource.desktopSource;
             }
             const obj2 = {};
-            const merged = Object.assign(self(8415)(desktopSource1));
+            const merged = Object.assign(self(8416)(desktopSource1));
             const merged1 = Object.assign(closure_1_1.getSoundshareAnalyticsProperties());
             obj.track(constants.SOUNDSHARE_ATTACHED, obj2);
-            const tmp6 = self(8415);
+            const tmp6 = self(8416);
           }
         });
       }
@@ -382,14 +382,14 @@ prototype["initializeEvents"] = function initializeEvents() {
               desktopSource1 = goLiveSource.desktopSource;
             }
             const obj = {};
-            const merged = Object.assign(self(8415)(desktopSource1));
+            const merged = Object.assign(self(8416)(desktopSource1));
             const merged1 = Object.assign(closure_1_1.getSoundshareAnalyticsProperties());
             obj3.track(constants.SOUNDSHARE_TRANSMITTING, obj);
             if (null != hookError.getHookError(constants2.SOUND)) {
               self(572).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" });
               const tmp13Result = self(572);
             }
-            const tmp16 = self(8415);
+            const tmp16 = self(8416);
           }
         });
       }

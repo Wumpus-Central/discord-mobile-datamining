@@ -1,13 +1,13 @@
-// === Module 18137: GuildsBarItemEmptyNUX ===
+// === Module 18144: GuildsBarItemEmptyNUX ===
 
-// Module 18137 (GuildsBarItemEmptyNUX)
+// Module 18144 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import NativeViewDefault from "NativeView" /* 7055 */;
-import transitionToGuild from "transitionToGuild" /* 8600 */;
-import _modDef8801 from "module_8801" /* 8801 */;
-import usePressabilityDefault from "usePressability" /* 18084 */;
+import transitionToGuild from "transitionToGuild" /* 8601 */;
+import _modDef8802 from "module_8802" /* 8802 */;
+import usePressabilityDefault from "usePressability" /* 18091 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
 
@@ -19,10 +19,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(18071);
+const GuildsBarConstants = fn(18078);
 ({ GUILD_ITEM_HIT_SLOP: metroImportDefault, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1071).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(9429).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(9430).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5043);
@@ -96,7 +96,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
   const obj11 = { style: tmp5.icon, source: null, resizeMode: "contain" };
   const obj7 = require("module_1654");
   const obj8 = { onPress: handlePress };
-  obj11.source = _modDef8801;
+  obj11.source = _modDef8802;
   items6[1] = closure_11(FastImageDefault, obj11);
   const obj12 = { style: tmp5.guildIndicator, children: closure_11(require("GuildsBarAnimatedItemWrapper").UnreadIndicator, { selected: true === stateFromStores }) };
   items6[2] = closure_11(closure_5, obj12);
@@ -117,7 +117,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
     const intl2 = tmp(1112).intl;
     obj17.children = intl2.string(tmp(1112).t["3S2xmm"]);
     obj16.title = closure_11(tmp(5634).Text, obj17);
-    obj15.children = closure_11(tmp(18095).HomeDrawerSharedItem, obj16);
+    obj15.children = closure_11(tmp(18102).HomeDrawerSharedItem, obj16);
     tmp21Result = closure_11(tmp3(7055), obj15);
     const tmp3Result4 = tmp3(7055);
   }

@@ -1,6 +1,6 @@
-// === Module 18055: GuildsEmpty ===
+// === Module 18062: GuildsEmpty ===
 
-// Module 18055 (GuildsEmpty)
+// Module 18062 (GuildsEmpty)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import FavoritesUtils from "FavoritesUtils" /* 4917 */;
@@ -8,8 +8,8 @@ import getInitialNavigationState from "getInitialNavigationState" /* 5221 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13703 */;
-import CheersSpotIllustration from "CheersSpotIllustration" /* 18056 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13710 */;
+import CheersSpotIllustration from "CheersSpotIllustration" /* 18063 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -188,8 +188,8 @@ export default noop.memo(function GuildsEmpty(arg0) {
     }
   }, items1);
   const tmp7 = selectedGuildId(6116);
-  const isScreenLandscape = navigation(10042).useIsScreenLandscape();
-  navigation(16686);
+  const isScreenLandscape = navigation(10043).useIsScreenLandscape();
+  navigation(16693);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };

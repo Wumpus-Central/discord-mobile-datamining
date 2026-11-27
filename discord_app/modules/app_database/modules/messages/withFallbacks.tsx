@@ -1,9 +1,9 @@
-// === Module 8260: withFallbacks ===
+// === Module 8261: withFallbacks ===
 
-// Module 8260 (withFallbacks)
-import ExtendedMemoryLru from "ExtendedMemoryLru" /* 8254 */;
-import isReadableChannel from "isReadableChannel" /* 8258 */;
-import isLimitedChannel from "isLimitedChannel" /* 8259 */;
+// Module 8261 (withFallbacks)
+import ExtendedMemoryLru from "ExtendedMemoryLru" /* 8255 */;
+import isReadableChannel from "isReadableChannel" /* 8259 */;
+import isLimitedChannel from "isLimitedChannel" /* 8260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import SortedGuildStore from "SortedGuildStore" /* 6164 */;

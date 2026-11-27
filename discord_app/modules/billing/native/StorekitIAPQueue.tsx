@@ -1,6 +1,6 @@
-// === Module 9300: StorekitIAPQueue ===
+// === Module 9301: StorekitIAPQueue ===
 
-// Module 9300 (StorekitIAPQueue)
+// Module 9301 (StorekitIAPQueue)
 import utils_PriceUtils from "utils/PriceUtils" /* 6326 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -139,7 +139,7 @@ prototype["processQueue"] = function processQueue() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

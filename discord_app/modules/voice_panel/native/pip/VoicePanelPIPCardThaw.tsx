@@ -1,6 +1,6 @@
-// === Module 11790: VoicePanelPIPCardThaw ===
+// === Module 11798: VoicePanelPIPCardThaw ===
 
-// Module 11790 (VoicePanelPIPCardThaw)
+// Module 11798 (VoicePanelPIPCardThaw)
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import noop from "module_19" /* 19 */;

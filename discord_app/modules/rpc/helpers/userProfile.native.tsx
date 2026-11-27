@@ -1,6 +1,6 @@
-// === Module 15925: userProfile ===
+// === Module 15932: userProfile ===
 
-// Module 15925 (userProfile)
+// Module 15932 (userProfile)
 import showUserProfileActionSheet from "showUserProfileActionSheet" /* 6133 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ActionSheetStore from "ActionSheetStore" /* 5258 */;
@@ -27,7 +27,7 @@ export function openUserProfile(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

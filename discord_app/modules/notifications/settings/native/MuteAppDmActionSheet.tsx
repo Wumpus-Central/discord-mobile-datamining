@@ -1,13 +1,13 @@
-// === Module 13596: MuteAppDmActionSheet ===
+// === Module 13603: MuteAppDmActionSheet ===
 
-// Module 13596 (MuteAppDmActionSheet)
+// Module 13603 (MuteAppDmActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7471 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7476 */;
-import BellSlashIcon from "BellSlashIcon" /* 11497 */;
+import BellSlashIcon from "BellSlashIcon" /* 11505 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function MuteAppDMActionSheet(channel) {
   channel = channel.channel;
   let obj = { startExpanded: true, children: null };
   let obj2 = { style: tmp.content, children: null };
-  let obj3 = { style: tmp.iconContainer, children: closure_4(View, { style: tmp.iconBackground, "aria-hidden": true, children: closure_4(channel(8597).BellIcon, { size: "md", color: "interactive-text-default" }) }) };
+  let obj3 = { style: tmp.iconContainer, children: closure_4(View, { style: tmp.iconBackground, "aria-hidden": true, children: closure_4(channel(8598).BellIcon, { size: "md", color: "interactive-text-default" }) }) };
   items = [closure_4(View, obj3), , , , ];
   let obj5 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
   let intl = channel(1112).intl;

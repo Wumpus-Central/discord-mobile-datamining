@@ -1,6 +1,6 @@
-// === Module 11822: useIsMessageRequest ===
+// === Module 11830: useIsMessageRequest ===
 
-// Module 11822 (useIsMessageRequest)
+// Module 11830 (useIsMessageRequest)
 import MessageRequestStore from "MessageRequestStore" /* 6946 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6947 */;
 

@@ -1,13 +1,13 @@
-// === Module 19749: InteractionModalManager ===
+// === Module 19765: InteractionModalManager ===
 
-// Module 19749 (InteractionModalManager)
+// Module 19765 (InteractionModalManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 15982 */;
-import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 19751 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 19754 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 15989 */;
+import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 19767 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 19770 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import InteractionStore from "InteractionStore" /* 8243 */;
+import InteractionStore from "InteractionStore" /* 8244 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 let require = fn;
@@ -22,7 +22,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
           let obj = closure_130_1(closure_130_2[9]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp19) {
       c4 = tmp;

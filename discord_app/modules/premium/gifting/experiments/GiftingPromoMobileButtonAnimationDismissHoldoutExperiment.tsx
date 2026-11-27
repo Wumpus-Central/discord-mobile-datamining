@@ -1,6 +1,6 @@
-// === Module 13202: GiftingPromoMobileButtonAnimationDismissHoldoutExperiment ===
+// === Module 13210: GiftingPromoMobileButtonAnimationDismissHoldoutExperiment ===
 
-// Module 13202 (GiftingPromoMobileButtonAnimationDismissHoldoutExperiment)
+// Module 13210 (GiftingPromoMobileButtonAnimationDismissHoldoutExperiment)
 import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 

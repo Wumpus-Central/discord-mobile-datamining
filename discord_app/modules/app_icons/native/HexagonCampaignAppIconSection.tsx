@@ -1,12 +1,12 @@
-// === Module 17151: HexagonCampaignAppIconSection ===
+// === Module 17158: HexagonCampaignAppIconSection ===
 
-// Module 17151 (HexagonCampaignAppIconSection)
+// Module 17158 (HexagonCampaignAppIconSection)
 import nativeDefault from "native" /* 575 */;
 import _modDef4663 from "module_4663" /* 4663 */;
 import AppIconTypes from "AppIconTypes" /* 5069 */;
-import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16092 */;
-import HexagonCampaignDaysLeftBadgeDefault from "HexagonCampaignDaysLeftBadge" /* 16098 */;
-import AppIconDefault from "AppIcon" /* 16617 */;
+import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16099 */;
+import HexagonCampaignDaysLeftBadgeDefault from "HexagonCampaignDaysLeftBadge" /* 16105 */;
+import AppIconDefault from "AppIcon" /* 16624 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,9 +40,9 @@ export default function HexagonCampaignAppIconSection(isPending) {
   const tmp = closure_11();
   const hexagonCampaignPerkAvailability = onSelect(5073).useHexagonCampaignPerkAvailability(constants.APP_ICON, "HexagonCampaignAppIconSection");
   const obj = onSelect(5073);
-  const trackHexagonCampaignContentViewed = onSelect(16060).useTrackHexagonCampaignContentViewed(onSelect(6874).QuestContent.APP_ICON_SETTINGS, onSelect(16060).HexagonCampaignContentSurface.APP_ICON_PICKER, true);
+  const trackHexagonCampaignContentViewed = onSelect(16067).useTrackHexagonCampaignContentViewed(onSelect(6874).QuestContent.APP_ICON_SETTINGS, onSelect(16067).HexagonCampaignContentSurface.APP_ICON_PICKER, true);
   const tmp7 = isPending.currentAppIcon === onSelect(5069).LimitedTimeAppIconIds.HEXAGON;
-  const obj2 = onSelect(16060);
+  const obj2 = onSelect(16067);
   const radioA11yNative = onSelect(5105).useRadioA11yNative({ selected: tmp7, busy: flag });
   const intl = onSelect(1112).intl;
   const stringResult = intl.string(_modDef4663.JC4Pii);
@@ -62,7 +62,7 @@ export default function HexagonCampaignAppIconSection(isPending) {
   items[1] = tmp14Result;
   obj6.children = items;
   const items1 = [closure_10(closure_4, obj6), ];
-  const obj9 = { theme: onSelect(16091).ThemeTypes.DARK, children: null };
+  const obj9 = { theme: onSelect(16098).ThemeTypes.DARK, children: null };
   const obj10 = {
     onPress() {
       return onSelect(AppIconTypes.LimitedTimeAppIconIds.HEXAGON);
@@ -97,7 +97,7 @@ export default function HexagonCampaignAppIconSection(isPending) {
     nonPremiumEndDate,
     premiumEndDate,
     learnMoreHook(children, arg1) {
-      return closure_1_9(onSelect(5634).Text, { variant: "body-xs/medium", color: "text-link", accessibilityRole: "link", onPress: onSelect(16094).openHexagonCampaignLearnMore, children }, arg1);
+      return closure_1_9(onSelect(5634).Text, { variant: "body-xs/medium", color: "text-link", accessibilityRole: "link", onPress: onSelect(16101).openHexagonCampaignLearnMore, children }, arg1);
     }
   });
   obj16.children = closure_9(onSelect(5634).Text, obj17);

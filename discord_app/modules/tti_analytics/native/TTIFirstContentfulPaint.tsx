@@ -1,9 +1,9 @@
-// === Module 12571: TTIFirstContentfulPaint ===
+// === Module 12579: TTIFirstContentfulPaint ===
 
-// Module 12571 (TTIFirstContentfulPaint)
+// Module 12579 (TTIFirstContentfulPaint)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import RootNavigationRef from "RootNavigationRef" /* 5220 */;
-import PostTTIScheduler from "PostTTIScheduler" /* 8330 */;
+import PostTTIScheduler from "PostTTIScheduler" /* 8331 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,5 +26,5 @@ export function TTIFirstContentfulPaint(checkFocusedScreen) {
     firstContentfulPaint.record(nativeEvent.nativeEvent.timestamp);
     PostTTIScheduler.notifyAboutTTI();
   }, items);
-  return jsx(checkFocusedScreen(12572).TTIMeasurementView, { onMeasurement });
+  return jsx(checkFocusedScreen(12580).TTIMeasurementView, { onMeasurement });
 }

@@ -1,13 +1,13 @@
-// === Module 17809: HappeningNowCardActivitySubtitle ===
+// === Module 17816: HappeningNowCardActivitySubtitle ===
 
-// Module 17809 (HappeningNowCardActivitySubtitle)
+// Module 17816 (HappeningNowCardActivitySubtitle)
 import util from "util" /* 1112 */;
 import useChannelNameDefault from "useChannelName" /* 5659 */;
 import ActivityTypes from "ActivityTypes" /* 6015 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8587 */;
-import isStreamingDefault from "isStreaming" /* 9523 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11377 */;
-import HappeningNowCard from "HappeningNowCard" /* 16908 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8588 */;
+import isStreamingDefault from "isStreaming" /* 9524 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11378 */;
+import HappeningNowCard from "HappeningNowCard" /* 16915 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
@@ -31,7 +31,7 @@ export function HappeningNowVoiceCardSubtitle(voiceState) {
     const obj3 = { channel: stateFromStores };
     tmp8 = getChannelA11yLabelDefault(obj3);
   }
-  obj2.children = jsx(voiceState(16908).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
+  obj2.children = jsx(voiceState(16915).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
   return <View style={tmp.cardDetails}>{null}</View>;
 }
 export function HappeningNowActivityCardSubtitle(activity) {

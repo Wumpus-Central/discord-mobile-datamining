@@ -1,6 +1,6 @@
-// === Module 19174: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 19190: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 19174 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 19190 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 575 */;
 import PermissionUtils from "PermissionUtils" /* 4980 */;
 import noop from "module_19" /* 19 */;
@@ -114,7 +114,10 @@ export default noop.memo(function ChannelSettingsPermissionsOverrideCheckbox(per
   if (disabled === undefined) {
     disabled = false;
   }
-  const onValueChange = permissionTitle.onValueChange;
+  ({ onValueChange: dependencyMap, states } = permissionTitle);
+  if (states === undefined) {
+    states = items;
+  }
   const tmp = closure_9();
   const styles = tmp;
   items = [tmp.ternaryCheckBox, ];
@@ -130,21 +133,21 @@ export default noop.memo(function ChannelSettingsPermissionsOverrideCheckbox(per
   }
   obj.pointerEvents = str;
   obj.accessibilityLabel = permissionTitle;
-  obj.children = items.map((type, index) => {
+  obj.children = states.map((type, index) => {
     permissionTitle = type;
     const obj = { permissionTitle, type, selected: closure_1 === type, styles, hitSlop: null, onPress: null };
     if (0 === index) {
       let tmp4 = closure_1_6;
     } else {
-      tmp4 = index === length.length - 1 ? closure_1_8 : closure_1_7;
+      tmp4 = index === tmp3 - 1 ? closure_1_8 : closure_1_7;
     }
     obj.hitSlop = tmp4;
     obj.onPress = function onPress() {
-      if (onValueChange != null) {
+      if (dependencyMap != null) {
         tmp(closure_0);
       }
     };
     return <OverrideOption key={"checkbox-" + index} permissionTitle={permissionTitle} type={type} selected={closure_1 === type} styles={styles} hitSlop={null} onPress={null} />;
   });
-  return <closure_4 style={items} pointerEvents={null} accessibilityRole="radiogroup" accessibilityLabel={null}>{null}</closure_4>;
+  return <styles style={items} pointerEvents={null} accessibilityRole="radiogroup" accessibilityLabel={null}>{null}</styles>;
 });

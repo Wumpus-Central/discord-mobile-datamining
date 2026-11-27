@@ -1,6 +1,6 @@
-// === Module 18022: InterestGuildProfileSheet ===
+// === Module 18029: InterestGuildProfileSheet ===
 
-// Module 18022 (InterestGuildProfileSheet)
+// Module 18029 (InterestGuildProfileSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
@@ -10,8 +10,8 @@ import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5271 */;
 import BottomSheetModal from "BottomSheetModal" /* 5275 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5606 */;
-import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 8725 */;
-import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 18025 */;
+import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 8726 */;
+import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 18032 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -51,11 +51,11 @@ export default function InterestGuildProfileSheet(guildId) {
   let obj = guildId(5607);
   const token = guildId(5607).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   let obj2 = guildId(5607);
-  const bottomSheetRef1 = guildId(8724).useBottomSheetRef();
+  const bottomSheetRef1 = guildId(8725).useBottomSheetRef();
   const bottomSheetRef = bottomSheetRef1.bottomSheetRef;
   const bottomSheetClose = bottomSheetRef1.bottomSheetClose;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  const obj3 = guildId(8724);
+  const obj3 = guildId(8725);
   [tmp7, c9] = noop.useState(0);
   const tmp6 = _slicedToArray(noop.useState(0), 2);
   [tmp9, c10] = noop.useState(0);
@@ -66,7 +66,7 @@ export default function InterestGuildProfileSheet(guildId) {
   }
   obj6.footerHeight = sum;
   obj6.safeAreaBottom = bottom;
-  interestGuildProfileSheetLayout = guildId(18023).getInterestGuildProfileSheetLayout(obj6);
+  interestGuildProfileSheetLayout = guildId(18030).getInterestGuildProfileSheetLayout(obj6);
   closure_12 = c9(bottom, interestGuildProfileSheetLayout.reservedBottom);
   onLayout = noop.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.height);

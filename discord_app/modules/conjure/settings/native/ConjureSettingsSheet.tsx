@@ -1,6 +1,6 @@
-// === Module 18498: ConjureSettingsSheet ===
+// === Module 18505: ConjureSettingsSheet ===
 
-// Module 18498 (ConjureSettingsSheet)
+// Module 18505 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5257 */;
@@ -37,25 +37,34 @@ class ConjureSettingsSheet {
     closure_13 = undefined;
     saving = undefined;
     canSave = undefined;
+    tmp = closure_1;
+    stringResult = closure_2;
     ({ guildId, initialTab, scopeKeys, note, notifyAgent, onSaved, isPreview } = global);
+    tmp3 = closure_1(closure_2[12])();
+    height = tmp3.height;
+    num = 0;
+    ({ ref, onLayout } = tmp3);
+    tmp4 = closure_16;
+    if (undefined !== height) {
+      num = height;
+    }
+    tmp4Result = tmp4(num);
     obj = closure_5;
-    tmp = closure_16();
-    ref = closure_5.useRef(null);
-    closure_1 = ref;
-    tmp3 = projectId;
-    obj27 = closure_2;
-    obj3 = projectId(closure_2[12]);
+    ref1 = closure_5.useRef(null);
+    closure_1 = ref1;
+    intl = projectId;
+    obj2 = projectId(stringResult[13]);
     items = [];
     items[0] = closure_11;
     items1 = [];
     items1[0] = projectId;
-    stateFromStores = obj3.useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
-    obj4 = projectId(closure_2[12]);
+    stateFromStores = obj2.useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
+    obj3 = projectId(stringResult[13]);
     items2 = [];
     items2[0] = isScoped;
     items3 = [];
     items3[0] = projectId;
-    stateFromStores1 = obj4.useStateFromStores(items2, () => {
+    stateFromStores1 = obj3.useStateFromStores(items2, () => {
       const modelSettings = ConjureModelSettingsStore.getModelSettings(projectId);
       let tierSettings;
       if (modelSettings != null) {
@@ -64,57 +73,56 @@ class ConjureSettingsSheet {
       return null != tierSettings;
     }, items3);
     closure_2 = stateFromStores1;
-    obj5 = projectId(closure_2[12]);
+    obj4 = projectId(stringResult[13]);
     items4 = [];
     items4[0] = closure_7;
     items5 = [];
     items5[0] = projectId;
-    tmp7 = null != stateFromStores;
-    stateFromStores2 = obj5.useStateFromStores(items4, () => "open" === ConjureConnectionStore.getConnState(projectId), items5);
-    if (tmp7) {
-      tmp8 = closure_10;
-      tmp7 = closure_10(stateFromStores);
+    tmp10 = null != stateFromStores;
+    stateFromStores2 = obj4.useStateFromStores(items4, () => "open" === ConjureConnectionStore.getConnState(projectId), items5);
+    if (tmp10) {
+      tmp11 = closure_10;
+      tmp10 = closure_10(stateFromStores);
     }
-    closure_3 = tmp7;
-    tmp9 = null != stateFromStores;
-    if (tmp9) {
-      tmp10 = closure_9;
-      tmp9 = closure_9(stateFromStores);
+    closure_3 = tmp10;
+    tmp12 = null != stateFromStores;
+    if (tmp12) {
+      tmp13 = closure_9;
+      tmp12 = closure_9(stateFromStores);
     }
-    closure_4 = tmp9;
-    tmp11 = closure_1;
+    closure_4 = tmp12;
     guild_id = undefined;
-    tmp12 = closure_1(obj27[13]);
+    tmpResult = tmp(stringResult[14]);
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
     if (guild_id == null) {
       guild_id = guildId;
     }
-    obj1 = { readOnly: !tmp7 };
-    tmp12Result = tmp12(projectId, guild_id, obj1);
-    closure_5 = tmp12Result;
-    tmp15 = tmp11(obj27[14])({ projectId, scopeKeys, note, notifyAgent, onSaved, isPreview });
-    closure_6 = tmp15;
-    tmp16 = tmp11(obj27[15])(projectId, tmp9);
-    tmp17 = tmp16.callers.length > 0 || tmp16.targets.length > 0;
-    closure_7 = tmp17;
-    isScoped = tmp15.isScoped;
-    loaded = tmp15.loaded;
+    obj1 = { readOnly: !tmp10 };
+    tmp14Result = tmpResult(projectId, guild_id, obj1);
+    closure_5 = tmp14Result;
+    tmp17 = tmp(stringResult[15])({ projectId, scopeKeys, note, notifyAgent, onSaved, isPreview });
+    closure_6 = tmp17;
+    tmp18 = tmp(stringResult[16])(projectId, tmp12);
+    tmp19 = tmp18.callers.length > 0 || tmp18.targets.length > 0;
+    closure_7 = tmp19;
+    isScoped = tmp17.isScoped;
+    loaded = tmp17.loaded;
     if (loaded) {
-      tmp18 = tmp15.valueCount > 0 || 0 === tmp15.secretCount;
-      loaded = tmp18;
+      tmp20 = tmp17.valueCount > 0 || 0 === tmp17.secretCount;
+      loaded = tmp20;
     }
     closure_9 = loaded;
-    tmp19 = tmp15.secretCount > 0;
-    closure_10 = tmp19;
+    tmp21 = tmp17.secretCount > 0;
+    closure_10 = tmp21;
     items6 = [, , , , , ];
-    items6[0] = tmp9;
-    items6[1] = tmp17;
+    items6[0] = tmp12;
+    items6[1] = tmp19;
     items6[2] = stateFromStores1;
-    items6[3] = tmp7;
+    items6[3] = tmp10;
     items6[4] = loaded;
-    items6[5] = tmp19;
+    items6[5] = tmp21;
     memo = obj.useMemo(() => {
       let tmp2 = closure_3;
       if (!closure_3) {
@@ -142,11 +150,11 @@ class ConjureSettingsSheet {
       return items;
     }, items6);
     closure_11 = memo;
-    tmp20 = closure_4(obj.useState(null), 2);
-    tmp21 = tmp20[1];
-    closure_12 = tmp21;
+    tmp22 = closure_4(obj.useState(null), 2);
+    tmp23 = tmp22[1];
+    closure_12 = tmp23;
     items7 = [, ];
-    items7[0] = tmp20[0];
+    items7[0] = tmp22[0];
     items7[1] = initialTab;
     found = items7.find((item) => {
       let hasItem = null != item;
@@ -159,15 +167,15 @@ class ConjureSettingsSheet {
       found = memo[0];
     }
     closure_13 = found;
-    saving = tmp7;
-    if (tmp7) {
-      saving = tmp12Result.saving;
+    saving = tmp10;
+    if (tmp10) {
+      saving = tmp14Result.saving;
     }
     if (!saving) {
-      saving = tmp15.saving;
+      saving = tmp17.saving;
     }
-    hasItem = tmp7;
-    if (!tmp7) {
+    hasItem = tmp10;
+    if (!tmp10) {
       hasItem = isScoped;
     }
     if (!hasItem) {
@@ -178,27 +186,27 @@ class ConjureSettingsSheet {
       str2 = "secrets";
       hasItem = memo.includes("secrets");
     }
-    canSave = tmp15.canSave;
+    canSave = tmp17.canSave;
     if (!canSave) {
       canSave2 = !isScoped;
       if (!isScoped) {
-        canSave2 = tmp7;
+        canSave2 = tmp10;
       }
       if (canSave2) {
-        canSave2 = tmp12Result.canSave;
+        canSave2 = tmp14Result.canSave;
       }
       canSave = canSave2;
     }
     items8 = [, , , , , , , ];
-    items8[0] = tmp15;
+    items8[0] = tmp17;
     items8[1] = canSave;
-    items8[2] = tmp7;
-    items8[3] = tmp12Result;
+    items8[2] = tmp10;
+    items8[3] = tmp14Result;
     items8[4] = saving;
     items8[5] = isScoped;
     items8[6] = found;
     items8[7] = memo;
-    tmp25 = closure_12;
+    tmp27 = closure_12;
     callback = obj.useCallback(closure_3(async () => {
       if (c3 === 2) {
         c3 = 3;
@@ -210,7 +218,7 @@ class ConjureSettingsSheet {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -234,7 +242,10 @@ class ConjureSettingsSheet {
                 if (!saving) {
                   let validateResult = null;
                   if (canSave.canSave) {
-                    validateResult = canSave.validate();
+                    validateResult = null;
+                    if (!isScoped) {
+                      validateResult = canSave.validate();
+                    }
                   }
                   if (null == validateResult) {
                     let submitResult = null;
@@ -291,21 +302,44 @@ class ConjureSettingsSheet {
             }
           }
           closure_129_12(closure_128_2);
-        } catch (tmp31) {
+        } catch (tmp32) {
           c3 = tmp;
-          throw tmp31;
+          throw tmp32;
         }
       }
     }), items8);
-    obj17 = { ref, startExpanded: true, keyboardShouldPersistTaps: "always", dismissAccessibilityLabel: null, header: null, children: null };
-    intl = tmp3(obj27[17]).intl;
-    obj17.dismissAccessibilityLabel = intl.string(tmp11(obj27[8]).bA4VU5);
-    intl2 = tmp3(obj27[17]).intl;
-    tmp11Result = tmp11(obj27[8]);
-    obj18 = { title: intl2.string(isScoped ? tmp11Result["jZjP+I"] : tmp11Result.I2XSKe), trailing: null };
-    obj19 = {
+    intl2 = intl(stringResult[18]).intl;
+    if (isScoped) {
+      A7dQd9 = tmp(stringResult[8]).A7dQd9;
+    } else {
+      A7dQd9 = intl(stringResult[18]).t["R3BPH+"];
+    }
+    obj21 = { text: intl2.string(A7dQd9), variant: "primary", loading: saving, disabled: !canSave, onPress: callback };
+    tmp27Result = tmp27(intl(stringResult[17]).Button, obj21);
+    obj22 = { ref: ref1, startExpanded: true, keyboardShouldPersistTaps: "always", dismissAccessibilityLabel: null, header: null, footer: null, children: null };
+    intl3 = intl(stringResult[18]).intl;
+    obj22.dismissAccessibilityLabel = intl3.string(tmp(stringResult[8]).bA4VU5);
+    if (isScoped) {
+      intlResult = intl(stringResult[21]);
+      name = undefined;
+      if (stateFromStores != null) {
+        name = stateFromStores.name;
+      }
+      conjureSetupTitleResult = intlResult.conjureSetupTitle(name);
+    } else {
+      intl4 = intl(stringResult[18]).intl;
+      conjureSetupTitleResult = intl4.string(tmp(stringResult[8]).I2XSKe);
+    }
+    obj23 = { title: conjureSetupTitleResult, subtitle: null, trailing: null };
+    formatToPlainStringResult = undefined;
+    if (null != tmp17.progress) {
+      intl5 = intl(stringResult[18]).intl;
+      formatToPlainStringResult = intl5.formatToPlainString(tmp(stringResult[8]).hoevP8, tmp17.progress);
+    }
+    obj23.subtitle = formatToPlainStringResult;
+    obj24 = {
       onPress() {
-            const current = ref.current;
+            const current = ref1.current;
             let closeActionSheetResult;
             if (current != null) {
               closeActionSheetResult = current.closeActionSheet();
@@ -313,136 +347,159 @@ class ConjureSettingsSheet {
             return closeActionSheetResult;
           }
     };
-    obj18.trailing = tmp25(tmp3(obj27[19]).ActionSheetCloseButton, obj19);
-    obj17.header = tmp25(tmp3(obj27[18]).BottomSheetTitleHeader, obj18);
-    tmp27 = closure_13;
-    obj20 = { style: tmp.container, children: null };
-    tmp25Result = null;
-    tmp28 = closure_6;
+    obj23.trailing = tmp27(intl(stringResult[22]).ActionSheetCloseButton, obj24);
+    obj22.header = tmp27(intl(stringResult[20]).BottomSheetTitleHeader, obj23);
+    tmp34Result = undefined;
+    if (isScoped) {
+      obj25 = { style: null, ref: null, onLayout: null, children: null };
+      obj25.style = tmp4Result.footer;
+      obj25.ref = ref;
+      obj25.onLayout = onLayout;
+      tmp27Result1 = null;
+      tmp34 = closure_13;
+      tmp35 = closure_6;
+      if (null != tmp17.status) {
+        str3 = "text-muted";
+        if (tmp17.statusIsError) {
+          str3 = "text-feedback-critical";
+        }
+        obj26 = { variant: "body-xs/normal", color: null, lineClamp: null, accessibilityLabel: null, accessibilityLiveRegion: "polite", children: null };
+        obj26.color = str3;
+        obj26.lineClamp = intl(stringResult[21]).SETUP_STATUS_MAX_LINES;
+        ({ status: obj12.accessibilityLabel, status: obj12.children } = tmp17);
+        tmp27Result1 = tmp27(intl(stringResult[23]).Text, obj26);
+      }
+      items9 = [, ];
+      items9[0] = tmp27Result1;
+      obj27 = { bottom: true, children: null };
+      obj27.children = tmp27Result;
+      items9[1] = tmp27(intl(stringResult[24]).SafeAreaPaddingView, obj27);
+      obj25.children = items9;
+      tmp34Result = tmp34(tmp35, obj25);
+    }
+    obj22.footer = tmp34Result;
+    tmp37 = closure_13;
+    obj28 = { style: tmp4Result.container, children: null };
+    tmp27Result2 = null;
+    tmp38 = closure_6;
     if (!isScoped) {
-      num = 1;
-      tmp25Result = null;
+      num2 = 1;
+      tmp27Result2 = null;
       if (memo.length > 1) {
-        tmp25Result = null;
+        tmp27Result2 = null;
         if (null != found) {
-          tmp30 = SettingsTabStrip;
-          obj21 = { tabs: null, selected: null, onSelect: null };
-          obj21.tabs = memo;
-          obj21.selected = found;
-          obj21.onSelect = tmp21;
-          str3 = ",";
-          tmp25Result = tmp25(SettingsTabStrip, obj21, memo.join(","));
+          tmp40 = SettingsTabStrip;
+          obj29 = { tabs: null, selected: null, onSelect: null };
+          obj29.tabs = memo;
+          obj29.selected = found;
+          obj29.onSelect = tmp23;
+          str4 = ",";
+          tmp27Result2 = tmp27(SettingsTabStrip, obj29, memo.join(","));
         }
       }
     }
-    items9 = [, , , , , , , , ];
-    items9[0] = tmp25Result;
+    items10 = [, , , , , , , , ];
+    items10[0] = tmp27Result2;
     if (isScoped) {
-      fields = tmp15.fields;
+      fields = tmp17.fields;
     } else {
-      str4 = "app";
+      str5 = "app";
       fields = null;
     }
-    items9[1] = fields;
-    tmp27Result = null;
+    items10[1] = fields;
+    tmp37Result = null;
     if (!isScoped) {
-      str5 = "project";
-      tmp27Result = null;
+      str6 = "project";
+      tmp37Result = null;
       if ("project" === found) {
-        obj22 = { spacing: null, children: null };
-        obj22.spacing = tmp11(obj27[10]).space.PX_24;
-        items10 = [, ];
-        items10[0] = tmp12Result.fields;
-        obj23 = { projectId: null, canEdit: null };
-        obj23.projectId = projectId;
-        obj23.canEdit = tmp9;
-        items10[1] = tmp25(tmp11(obj27[21]), obj23, projectId);
-        obj22.children = items10;
-        tmp27Result = tmp27(tmp3(obj27[20]).Stack, obj22);
+        obj30 = { spacing: null, children: null };
+        obj30.spacing = tmp(stringResult[10]).space.PX_24;
+        items11 = [, ];
+        items11[0] = tmp14Result.fields;
+        obj31 = { projectId: null, canEdit: null };
+        obj31.projectId = projectId;
+        obj31.canEdit = tmp12;
+        items11[1] = tmp27(tmp(stringResult[26]), obj31, projectId);
+        obj30.children = items11;
+        tmp37Result = tmp37(intl(stringResult[25]).Stack, obj30);
       }
     }
-    items9[2] = tmp27Result;
-    tmp25Result1 = null;
+    items10[2] = tmp37Result;
+    tmp27Result3 = null;
     if (!isScoped) {
-      str6 = "linked";
-      tmp25Result1 = null;
+      str7 = "linked";
+      tmp27Result3 = null;
       if ("linked" === found) {
-        obj24 = { linkedApps: null, onOpenSettings: null };
-        obj24.linkedApps = tmp16;
-        tmp34 = openLinkedAppSettings;
-        obj24.onOpenSettings = openLinkedAppSettings;
-        tmp25Result1 = tmp25(tmp11(obj27[22]), obj24);
+        obj32 = { linkedApps: null, onOpenSettings: null };
+        obj32.linkedApps = tmp18;
+        tmp44 = openLinkedAppSettings;
+        obj32.onOpenSettings = openLinkedAppSettings;
+        tmp27Result3 = tmp27(tmp(stringResult[27]), obj32);
       }
     }
-    items9[3] = tmp25Result1;
+    items10[3] = tmp27Result3;
     experimentalFields = null;
     if (!isScoped) {
-      str7 = "experimental";
+      str8 = "experimental";
       experimentalFields = null;
       if ("experimental" === found) {
-        experimentalFields = tmp12Result.experimentalFields;
+        experimentalFields = tmp14Result.experimentalFields;
       }
     }
-    items9[4] = experimentalFields;
+    items10[4] = experimentalFields;
     secretFields = null;
     if (!isScoped) {
-      str8 = "secrets";
+      str9 = "secrets";
       secretFields = null;
       if ("secrets" === found) {
-        secretFields = tmp15.secretFields;
+        secretFields = tmp17.secretFields;
       }
     }
-    items9[5] = secretFields;
-    tmp25Result2 = null;
+    items10[5] = secretFields;
+    tmp27Result4 = null;
     if (!isScoped) {
-      str9 = "model";
-      tmp25Result2 = null;
+      str10 = "model";
+      tmp27Result4 = null;
       if ("model" === found) {
-        obj25 = { projectId: null };
-        obj25.projectId = projectId;
-        tmp25Result2 = tmp25(tmp3(obj27[23]).ConjureModelSettingsContent, obj25);
+        obj33 = { projectId: null };
+        obj33.projectId = projectId;
+        tmp27Result4 = tmp27(intl(stringResult[28]).ConjureModelSettingsContent, obj33);
       }
     }
-    items9[6] = tmp25Result2;
-    tmp38 = null;
+    items10[6] = tmp27Result4;
+    tmp48 = null;
     if (!isScoped) {
-      tmp38 = null;
+      tmp48 = null;
       if (null == found) {
         if (stateFromStores2) {
-          obj26 = { variant: "body-sm/normal", color: "text-muted", children: null };
-          intl3 = tmp3(obj27[17]).intl;
-          obj26.children = intl3.string(tmp11(obj27[8]).lJJayk);
-          tmp25Result3 = tmp25(tmp3(obj27[24]).Text, obj26);
+          obj34 = { variant: "body-sm/normal", color: "text-muted", children: null };
+          intl = intl(stringResult[18]).intl;
+          stringResult = intl.string(tmp(stringResult[8]).lJJayk);
+          obj34.children = stringResult;
+          tmp27Result5 = tmp27(intl(stringResult[23]).Text, obj34);
         } else {
-          tmp25Result3 = tmp25(tmp3(obj27[25]).ActivityIndicator, {});
+          tmp27Result5 = tmp27(intl(stringResult[29]).ActivityIndicator, {});
         }
-        tmp40 = tmp25Result3;
+        tmp50 = tmp27Result5;
       }
     }
-    items9[7] = tmp38;
-    tmp41 = null;
-    if (hasItem) {
-      str10 = "linked";
-      if ("linked" === found) {
-        tmp41 = null;
+    items10[7] = tmp48;
+    tmp51 = null;
+    if (!isScoped) {
+      tmp51 = null;
+      if (hasItem) {
+        str11 = "linked";
+        if ("linked" !== found) {
+          tmp51 = tmp27Result;
+        } else {
+          tmp51 = null;
+        }
       }
-      intl4 = tmp3(obj27[17]).intl;
-      if (isScoped) {
-        A7dQd9 = tmp11(obj27[8]).A7dQd9;
-      } else {
-        A7dQd9 = tmp3(obj27[17]).t["R3BPH+"];
-      }
-      obj27 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
-      obj27.text = intl4.string(A7dQd9);
-      obj27.loading = saving;
-      obj27.disabled = !canSave;
-      obj27.onPress = callback;
-      tmp25Result4 = tmp25(tmp3(obj27[26]).Button, obj27);
     }
-    items9[8] = tmp41;
-    obj20.children = items9;
-    obj17.children = tmp27(tmp28, obj20);
-    return tmp25(tmp3(obj27[16]).ActionSheet, obj17);
+    items10[8] = tmp51;
+    obj28.children = items10;
+    obj22.children = tmp37(tmp38, obj28);
+    return tmp27(intl(stringResult[19]).ActionSheet, obj22);
   }
 }
 function SettingsTabStrip(tabs) {
@@ -460,11 +517,11 @@ function SettingsTabStrip(tabs) {
   items = [tabs];
   const memo = noop.useMemo(() => tabs.map((id) => {
     obj = { id, label: null, page: null };
-    const intl = tabs(index[17]).intl;
+    const intl = tabs(index[18]).intl;
     obj.label = intl.string(closure_1_15[id]);
     return obj;
   }), items);
-  obj = tabs(index[28]);
+  obj = tabs(index[30]);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: num,
@@ -486,10 +543,10 @@ function SettingsTabStrip(tabs) {
   const obj3 = { ref, onLayout, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp8Result = closure_12(tmp4(tmp[29]).Tabs, obj4);
+    let tmp8Result = closure_12(tmp4(tmp[31]).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp8Result = closure_12(tmp4(tmp[30]).SegmentedControl, obj5);
+    tmp8Result = closure_12(tmp4(tmp[32]).SegmentedControl, obj5);
   }
   obj3.children = tmp8Result;
   return closure_12(View, obj3);
@@ -503,8 +560,12 @@ const jsxProd = fn(21);
 const ConjureSettingsSheet = "ConjureSettingsSheet";
 let obj = { project: _modDef4245.W0eQfN, app: _modDef4245.lFaJYF, secrets: _modDef4245.vDpCPU, model: _modDef4245.Rs3qc9, linked: _modDef4245.fBEHdq, experimental: _modDef4245["0Pe9uw"] };
 const createStyles = fn(5043);
-let obj3 = { container: { gap: nativeDefault.space.PX_16 } };
-const value = createStyles.createStyles(obj3);
+let closure_16 = createStyles.createStyles((paddingBottom) => {
+  obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom }, footer: null };
+  const obj2 = { gap: nativeDefault.space.PX_16, paddingBottom };
+  obj.footer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
+  return obj;
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/native/ConjureSettingsSheet.tsx");
 

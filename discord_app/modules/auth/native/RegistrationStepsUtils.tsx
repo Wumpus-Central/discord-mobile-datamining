@@ -1,25 +1,25 @@
-// === Module 17655: RegistrationStepsUtils ===
+// === Module 17662: RegistrationStepsUtils ===
 
-// Module 17655 (RegistrationStepsUtils)
+// Module 17662 (RegistrationStepsUtils)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
 import Link from "Link" /* 1502 */;
 import LoginDefault from "Login" /* 7305 */;
-import WelcomeDefault from "Welcome" /* 17658 */;
-import RegistrationUtils from "RegistrationUtils" /* 17665 */;
-import RegisterIdentity from "RegisterIdentity" /* 17666 */;
-import auth_register from "auth/register" /* 17668 */;
-import RegisterDisplayNameDefault from "RegisterDisplayName" /* 17678 */;
-import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 17679 */;
-import components_VerifyPhoneDefault from "components/VerifyPhone" /* 17685 */;
-import components_MFADefault from "components/MFA" /* 17687 */;
-import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 17688 */;
-import ExternalLinkDefault from "ExternalLink" /* 17692 */;
-import RegisterAgeGateDefault from "RegisterAgeGate" /* 17693 */;
-import AgeGateUnderageDefault from "AgeGateUnderage" /* 17699 */;
-import CompanionRemoteAuth from "CompanionRemoteAuth" /* 17700 */;
+import WelcomeDefault from "Welcome" /* 17665 */;
+import RegistrationUtils from "RegistrationUtils" /* 17672 */;
+import RegisterIdentity from "RegisterIdentity" /* 17673 */;
+import auth_register from "auth/register" /* 17675 */;
+import RegisterDisplayNameDefault from "RegisterDisplayName" /* 17685 */;
+import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 17686 */;
+import components_VerifyPhoneDefault from "components/VerifyPhone" /* 17692 */;
+import components_MFADefault from "components/MFA" /* 17694 */;
+import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 17695 */;
+import ExternalLinkDefault from "ExternalLink" /* 17699 */;
+import RegisterAgeGateDefault from "RegisterAgeGate" /* 17700 */;
+import AgeGateUnderageDefault from "AgeGateUnderage" /* 17706 */;
+import CompanionRemoteAuth from "CompanionRemoteAuth" /* 17707 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16211 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16218 */;
 
 require = fn;
 function headerTitle() {
@@ -44,7 +44,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp12) {
       c3 = tmp;
       throw tmp12;
@@ -105,21 +105,21 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   closure_131_2 = closure_2;
   const result = UniqueUsernamesStore.registrationUsernameSuggestion();
   const registrationOptions = state2.getState().registrationOptions;
-  let tmp37 = null;
+  let tmp49 = null;
   if (!obj10.isNullOrEmpty(result)) {
-    tmp37 = registrationOptions.username === result;
+    tmp49 = registrationOptions.username === result;
   }
-  const obj6 = {};
+  const obj5 = {};
   const merged = Object.assign(registrationOptions);
-  obj6.usedUsernameSuggestion = tmp37;
-  closure_131_3 = obj6;
+  obj5.usedUsernameSuggestion = tmp49;
+  closure_131_3 = obj5;
   state = state.getState();
   if (state.required) {
-    obj6.promoEmailConsent = state;
+    obj5.promoEmailConsent = state;
   }
   metroImportDefault(true);
   timestampProducer({});
-  await auth_register.registerFull(obj6);
+  await auth_register.registerFull(obj5);
   if (1 === tmp7) {
     c6 = 0;
     closure_131_6 = closure_5;
@@ -135,7 +135,7 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
       closure_132_0(closure_132_2[28]);
     } else {
       c8 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else if (arg0 === 1) {
     c8 = 3;
@@ -149,9 +149,9 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   return value;
 };
 const usePromoEmailConsentStore = fn(6840).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(17656);
+const RegistrationUIStore = fn(17663);
 ({ setRegistrationErrors: closure_6, setSubmitting: metroImportDefault, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17657);
+const RegistrationConstants = fn(17664);
 ({ authStateToRegisterTransitionStep: closure_10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1071).AuthStates;
 const jsx = fn(21).jsx;

@@ -1,12 +1,12 @@
-// === Module 15223: handleBlockedOrIgnoredUserVoiceChannelJoin ===
+// === Module 15230: handleBlockedOrIgnoredUserVoiceChannelJoin ===
 
-// Module 15223 (handleBlockedOrIgnoredUserVoiceChannelJoin)
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 15225 */;
+// Module 15230 (handleBlockedOrIgnoredUserVoiceChannelJoin)
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 15232 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 
 require = fn;
-let closure_4 = fn(15224).userBlockedWarningInCooldown;
+let closure_4 = fn(15231).userBlockedWarningInCooldown;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/shared_space_warnings/handleBlockedOrIgnoredUserVoiceChannelJoin.tsx");
 

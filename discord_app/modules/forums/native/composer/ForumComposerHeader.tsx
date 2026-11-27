@@ -1,6 +1,6 @@
-// === Module 10793: ForumComposerHeader ===
+// === Module 10794: ForumComposerHeader ===
 
-// Module 10793 (ForumComposerHeader)
+// Module 10794 (ForumComposerHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;

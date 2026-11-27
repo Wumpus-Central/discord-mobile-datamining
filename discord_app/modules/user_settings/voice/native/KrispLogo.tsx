@@ -1,6 +1,6 @@
-// === Module 10421: KrispLogo ===
+// === Module 10422: KrispLogo ===
 
-// Module 10421 (KrispLogo)
+// Module 10422 (KrispLogo)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -8,8 +8,8 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import shared from "shared" /* 5050 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import LinkingDefault from "Linking" /* 5722 */;
-import _modDef10422 from "module_10422" /* 10422 */;
 import _modDef10423 from "module_10423" /* 10423 */;
+import _modDef10424 from "module_10424" /* 10424 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
@@ -39,10 +39,10 @@ export default function KrispLogo() {
   items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef10422;
+    let tmp4Result = _modDef10423;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef10423;
+    tmp4Result = _modDef10424;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };

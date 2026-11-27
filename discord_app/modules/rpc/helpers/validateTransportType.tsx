@@ -1,6 +1,6 @@
-// === Module 15916: validateTransportType ===
+// === Module 15923: validateTransportType ===
 
-// Module 15916 (validateTransportType)
+// Module 15923 (validateTransportType)
 import Constants from "Constants" /* 1071 */;
 import Constants2 from "Constants" /* 5797 */;
 import RPCErrorDefault from "RPCError" /* 7644 */;

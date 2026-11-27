@@ -1,9 +1,9 @@
-// === Module 10549: GroupPlusIcon ===
+// === Module 10550: GroupPlusIcon ===
 
-// Module 10549 (GroupPlusIcon)
+// Module 10550 (GroupPlusIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5729 */;
-import _mod10548 from "module_10548" /* 10548 */;
+import _mod10549 from "module_10549" /* 10549 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function GroupPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10548, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10549, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

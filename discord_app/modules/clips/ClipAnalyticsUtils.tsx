@@ -1,6 +1,6 @@
-// === Module 8402: ClipAnalyticsUtils ===
+// === Module 8403: ClipAnalyticsUtils ===
 
-// Module 8402 (ClipAnalyticsUtils)
+// Module 8403 (ClipAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef5933 from "module_5933" /* 5933 */;
 import VideoQualityStats from "VideoQualityStats" /* 6038 */;
@@ -8,7 +8,7 @@ import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6029 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8403 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8404 */;
 import ClipsStore from "ClipsStore" /* 2139 */;
 
 require = fn;

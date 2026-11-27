@@ -1,13 +1,13 @@
-// === Module 17756: MessageRequestsButton ===
+// === Module 17763: MessageRequestsButton ===
 
-// Module 17756 (MessageRequestsButton)
+// Module 17763 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import IconButton from "IconButton" /* 7944 */;
-import _modDef10485 from "module_10485" /* 10485 */;
-import IconActionButton from "IconActionButton" /* 14067 */;
-import _mod17757 from "module_17757" /* 17757 */;
+import _modDef10486 from "module_10486" /* 10486 */;
+import IconActionButton from "IconActionButton" /* 14074 */;
+import _mod17764 from "module_17764" /* 17764 */;
 import noop from "module_19" /* 19 */;
 import MessageRequestStore from "MessageRequestStore" /* 6946 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6947 */;
@@ -32,7 +32,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return metroImportDefault(_mod17757.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return metroImportDefault(_mod17764.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -82,7 +82,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj3.children = items2;
     return React5(View, obj3);
   } else {
-    const obj6 = { source: _modDef10485, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj6 = { source: _modDef10486, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
     const intl = util.intl;
     obj6.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str2;

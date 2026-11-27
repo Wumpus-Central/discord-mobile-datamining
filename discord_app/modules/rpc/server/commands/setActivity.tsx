@@ -1,6 +1,6 @@
-// === Module 15912: setActivity ===
+// === Module 15919: setActivity ===
 
-// Module 15912 (setActivity)
+// Module 15919 (setActivity)
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -18,7 +18,7 @@ let closure_13 = ["1402418171662569542"];
 let items = [, , ];
 ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15873);
+const CONTEXT_MENU_ICON_NAMES = fn(15880);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 let items1 = [fn(5781).OAuth2Scopes.RPC, fn(5781).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
@@ -39,7 +39,7 @@ obj3.handler = function handler(isSocketConnected) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {

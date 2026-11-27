@@ -1,6 +1,6 @@
-// === Module 16701: QuestDisclosureModalInner ===
+// === Module 16708: QuestDisclosureModalInner ===
 
-// Module 16701 (QuestDisclosureModalInner)
+// Module 16708 (QuestDisclosureModalInner)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1071 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -38,18 +38,18 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
-    obj.icon = closure_6(tmp2(11445).ServerIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(11446).ServerIcon, { size: "xs" });
     const intl4 = tmp2(1112).intl;
     obj.text = intl4.string(tmp2(1112).t["2bL0wT"]);
     items = [obj];
     let tmp6 = closure_6;
     items1 = items;
   } else {
-    obj.icon = closure_6(tmp2(8546).GlobeEarthIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(8547).GlobeEarthIcon, { size: "xs" });
     const intl = tmp2(1112).intl;
     obj.text = intl.string(tmp2(1112).t.xQSdPv);
     items1 = [obj, , ];
-    const obj2 = { icon: closure_6(tmp2(12409).UserIcon, { size: "xs" }), text: null };
+    const obj2 = { icon: closure_6(tmp2(12417).UserIcon, { size: "xs" }), text: null };
     const intl2 = tmp2(1112).intl;
     obj2.text = intl2.string(tmp2(1112).t.mYt7hQ);
     items1[1] = obj2;

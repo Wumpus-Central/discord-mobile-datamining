@@ -1,16 +1,16 @@
-// === Module 14248: GameProfileCommunities ===
+// === Module 14255: GameProfileCommunities ===
 
-// Module 14248 (GameProfileCommunities)
+// Module 14255 (GameProfileCommunities)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4906 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5257 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8749 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8754 */;
-import GameProfileNavTypes from "GameProfileNavTypes" /* 8786 */;
-import useGameProfileCommunitiesDefault from "useGameProfileCommunities" /* 14249 */;
-import useGameProfileCommunitiesLocaleFilterDefault from "useGameProfileCommunitiesLocaleFilter" /* 14252 */;
-import GameProfileCommunitiesLocaleFilterActionSheet from "GameProfileCommunitiesLocaleFilterActionSheet" /* 14254 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8750 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8755 */;
+import GameProfileNavTypes from "GameProfileNavTypes" /* 8787 */;
+import useGameProfileCommunitiesDefault from "useGameProfileCommunities" /* 14256 */;
+import useGameProfileCommunitiesLocaleFilterDefault from "useGameProfileCommunitiesLocaleFilter" /* 14259 */;
+import GameProfileCommunitiesLocaleFilterActionSheet from "GameProfileCommunitiesLocaleFilterActionSheet" /* 14261 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -26,8 +26,8 @@ const isStaticChannelRoute = fn(4899).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5043);
-let obj = { container: { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(8791).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 }, header: null, heading: null, list: null };
-let obj3 = { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(8791).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 };
+let obj = { container: { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(8792).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 }, header: null, heading: null, list: null };
+let obj3 = { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(8792).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 };
 obj.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_8 };
 obj.heading = { flexShrink: 1 };
 let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_8 };
@@ -70,7 +70,7 @@ let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -161,7 +161,7 @@ let closure_14 = noop.memo(function GameProfileCommunityCard(gameId) {
             closure_130_7(currentlySelectedChannelId2, closure_129_0);
           }
           c6 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp63) {
         if (tmp4 === c4) {
@@ -217,7 +217,7 @@ export default function GameProfileCommunities(game) {
   obj3.children = intl.string(game(1112).t.r6bvTh);
   const items1 = [closure_11(game(5634).Heading, obj3), ];
   if (showLocaleFilter) {
-    const obj4 = { size: "sm", variant: "secondary", icon: closure_11(tmp12(14256).LanguageIcon, { size: "sm" }), accessibilityLabel: null, onPress: null };
+    const obj4 = { size: "sm", variant: "secondary", icon: closure_11(tmp12(14263).LanguageIcon, { size: "sm" }), accessibilityLabel: null, onPress: null };
     const intl2 = tmp12(1112).intl;
     obj4.accessibilityLabel = intl2.string(tmp12(1112).t.OlOHDH);
     obj4.onPress = callback;

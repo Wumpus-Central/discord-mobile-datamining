@@ -9,7 +9,7 @@ import HTTPUtils from "HTTPUtils" /* 1285 */;
 import InlineUploaderDefault from "InlineUploader" /* 7339 */;
 import Upload2 from "Upload" /* 8126 */;
 import UploadPlatform from "UploadPlatform" /* 8127 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8134 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8135 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -452,7 +452,7 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -548,7 +548,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -591,7 +591,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -725,7 +725,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                       return obj;
                     } else {
                       c6 = 3;
-                      return { value: "HermesInternal", done: "+95" };
+                      return { value: "HermesInternal", done: null };
                     }
                     c3 = 0;
                     c6 = 3;
@@ -869,7 +869,7 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -941,7 +941,7 @@ prototype["upload"] = function upload() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -997,10 +997,10 @@ prototype["upload"] = function upload() {
                               str2 = "jxr";
                             }
                             str = str2;
-                            obj16 = v0(8155);
+                            obj16 = v0(8156);
                           }
                           tmp151 = str;
-                          obj15 = v0(8155);
+                          obj15 = v0(8156);
                         }
                       }
                     }
@@ -1029,11 +1029,11 @@ prototype["upload"] = function upload() {
                           return obj7;
                         } else {
                           if ("heic" === closure_132_1) {
-                            let heicMimeTypeResult = v0(8155).heicMimeType(closure_133_0.item.file);
-                            const obj20 = v0(8155);
+                            let heicMimeTypeResult = v0(8156).heicMimeType(closure_133_0.item.file);
+                            const obj20 = v0(8156);
                           } else {
-                            heicMimeTypeResult = v0(8155).jxrMimeType(closure_133_0.item.file);
-                            const obj19 = v0(8155);
+                            heicMimeTypeResult = v0(8156).jxrMimeType(closure_133_0.item.file);
+                            const obj19 = v0(8156);
                           }
                           closure_133_0.mimeType = heicMimeTypeResult;
                         }
@@ -1055,7 +1055,7 @@ prototype["upload"] = function upload() {
                         }
                       }
                     }
-                    const uploadPayload = v0(8156).default.getUploadPayload(closure_133_0);
+                    const uploadPayload = v0(8157).default.getUploadPayload(closure_133_0);
                     c8 = 6;
                     c9 = 1;
                     c9 = 3;
@@ -1170,7 +1170,7 @@ prototype["upload"] = function upload() {
               return obj21;
             } else {
               closure_132_5 = value;
-              uploadTarget = v0(8157).getUploadTarget(closure_133_0.item.target);
+              uploadTarget = v0(8158).getUploadTarget(closure_133_0.item.target);
               if (null != closure_132_5.filename) {
                 if ("" !== closure_132_5.filename) {
                   const currentSize2 = closure_133_0.currentSize;
@@ -1337,7 +1337,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1393,7 +1393,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj7 = { value: self, done: true };
               return obj7;
             }
-            obj16 = size(8157);
+            obj16 = size(8158);
           }
         } else {
           if (1 === tmp5) {
@@ -1546,7 +1546,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1582,7 +1582,7 @@ CloudUpload["tryConvertToJpeg"] = function tryConvertToJpeg(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1748,7 +1748,7 @@ prototype["delete"] = function delete() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1762,7 +1762,7 @@ prototype["delete"] = function delete() {
             const obj4 = { value, done: true };
             return obj4;
           } else if (null != self.uploadedFilename) {
-            const uploadTarget = v3(8157).getUploadTarget(self.item.target);
+            const uploadTarget = v3(8158).getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
             const HTTP = v3(1285).HTTP;
@@ -1823,7 +1823,7 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

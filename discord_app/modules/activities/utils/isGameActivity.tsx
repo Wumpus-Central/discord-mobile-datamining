@@ -1,6 +1,6 @@
-// === Module 11372: isGameActivity ===
+// === Module 11373: isGameActivity ===
 
-// Module 11372 (isGameActivity)
+// Module 11373 (isGameActivity)
 import ActivityTypes from "ActivityTypes" /* 6015 */;
 import size from "module_2" /* 2 */;
 

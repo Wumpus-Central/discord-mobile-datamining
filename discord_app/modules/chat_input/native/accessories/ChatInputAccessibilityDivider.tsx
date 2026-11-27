@@ -1,6 +1,6 @@
-// === Module 13219: ChatInputAccessibilityDivider ===
+// === Module 13227: ChatInputAccessibilityDivider ===
 
-// Module 13219 (ChatInputAccessibilityDivider)
+// Module 13227 (ChatInputAccessibilityDivider)
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import noop from "module_19" /* 19 */;

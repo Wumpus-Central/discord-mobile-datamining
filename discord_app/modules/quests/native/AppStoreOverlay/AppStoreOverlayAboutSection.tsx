@@ -1,8 +1,8 @@
-// === Module 9949: AppStoreOverlayAboutSection ===
+// === Module 9950: AppStoreOverlayAboutSection ===
 
-// Module 9949 (AppStoreOverlayAboutSection)
+// Module 9950 (AppStoreOverlayAboutSection)
 import nativeDefault from "native" /* 575 */;
-import findTextStart from "findTextStart" /* 9950 */;
+import findTextStart from "findTextStart" /* 9951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

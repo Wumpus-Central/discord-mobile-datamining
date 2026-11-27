@@ -8,11 +8,11 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import SessionUtils from "SessionUtils" /* 8386 */;
-import SessionForegroundUtils2 from "SessionForegroundUtils" /* 9897 */;
-import SessionRouteUtils2 from "SessionRouteUtils" /* 14837 */;
-import MonotonicClock from "MonotonicClock" /* 14838 */;
-import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 14840 */;
+import SessionUtils from "SessionUtils" /* 8387 */;
+import SessionForegroundUtils2 from "SessionForegroundUtils" /* 9898 */;
+import SessionRouteUtils2 from "SessionRouteUtils" /* 14843 */;
+import MonotonicClock from "MonotonicClock" /* 14844 */;
+import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 14846 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -41,7 +41,7 @@ let closure_26 = async function _trackHeartbeat() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -240,7 +240,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -279,7 +279,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
           }
         }
         c3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp16) {
       c3 = tmp;
@@ -365,7 +365,7 @@ let closure_39 = async function _getSession() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -523,9 +523,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(9897);
+const SessionForegroundUtils = fn(9898);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(14837);
+const SessionRouteUtils = fn(14843);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

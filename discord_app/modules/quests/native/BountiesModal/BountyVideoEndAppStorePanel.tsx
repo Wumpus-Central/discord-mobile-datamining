@@ -1,6 +1,6 @@
-// === Module 16577: BountyVideoEndAppStorePanel ===
+// === Module 16584: BountyVideoEndAppStorePanel ===
 
-// Module 16577 (BountyVideoEndAppStorePanel)
+// Module 16584 (BountyVideoEndAppStorePanel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
@@ -10,8 +10,8 @@ import timing_timing from "timing/timing" /* 5253 */;
 import timingPresets from "timingPresets" /* 5256 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import openURLDefault from "openURL" /* 5718 */;
-import AnalyticsActions from "AnalyticsActions" /* 8382 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 9932 */;
+import AnalyticsActions from "AnalyticsActions" /* 8383 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 9933 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
@@ -181,7 +181,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5043);
 let obj2 = { root: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 10 }, panel: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, overflow: "hidden", flexDirection: "column" }, headerBar: { zIndex: 1 }, headerGestureTarget: { position: "absolute", top: 0, left: 0, right: 0, height: 48, zIndex: 2 }, scrollBody: { flex: 1, minHeight: 0 }, scrollContent: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, overflow: "hidden", flexDirection: "column" };
-obj2.scrollContent = { paddingBottom: fn(9937).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+obj2.scrollContent = { paddingBottom: fn(9938).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { code: "(function BountyVideoEndAppStorePanelTsx1(){let[interpolate,revealProgress,sheetHeight,Extrapolation]=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};})" };
 let closure_11 = { code: "(function BountyVideoEndAppStorePanelTsx2(){let[dragStartProgress,revealProgress]=this.__closure;dragStartProgress.set(revealProgress.get());})" };

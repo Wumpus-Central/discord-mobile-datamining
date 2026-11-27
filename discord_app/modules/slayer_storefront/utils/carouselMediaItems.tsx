@@ -1,6 +1,6 @@
-// === Module 11648: carouselMediaItems ===
+// === Module 11656: carouselMediaItems ===
 
-// Module 11648 (carouselMediaItems)
+// Module 11656 (carouselMediaItems)
 import StoreUtils from "StoreUtils" /* 5803 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7588 */;
 import size from "module_2" /* 2 */;

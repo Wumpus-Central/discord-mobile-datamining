@@ -1,6 +1,6 @@
-// === Module 10126: showActivitiesInvalidPermissionsAlert ===
+// === Module 10127: showActivitiesInvalidPermissionsAlert ===
 
-// Module 10126 (showActivitiesInvalidPermissionsAlert)
+// Module 10127 (showActivitiesInvalidPermissionsAlert)
 import util from "util" /* 1112 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;
 import size from "module_2" /* 2 */;

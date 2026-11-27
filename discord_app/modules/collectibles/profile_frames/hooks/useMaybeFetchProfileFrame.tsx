@@ -1,9 +1,9 @@
-// === Module 9490: useMaybeFetchProfileFrame ===
+// === Module 9491: useMaybeFetchProfileFrame ===
 
-// Module 9490 (useMaybeFetchProfileFrame)
+// Module 9491 (useMaybeFetchProfileFrame)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
-import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 9491 */;
-import useProfileFrameDefault from "useProfileFrame" /* 9501 */;
+import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 9492 */;
+import useProfileFrameDefault from "useProfileFrame" /* 9502 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

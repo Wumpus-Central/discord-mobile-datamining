@@ -1,6 +1,6 @@
-// === Module 12242: MessageReactionsContent ===
+// === Module 12250: MessageReactionsContent ===
 
-// Module 12242 (MessageReactionsContent)
+// Module 12250 (MessageReactionsContent)
 import applyDefault from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -23,16 +23,16 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 61
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import FastListDefault from "FastList" /* 7428 */;
 import EmojiDefault from "Emoji" /* 7488 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 9091 */;
-import generated_NoResults from "generated/NoResults" /* 11596 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 11708 */;
-import SwipeableFastListDefault from "SwipeableFastList" /* 12247 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 9092 */;
+import generated_NoResults from "generated/NoResults" /* 11604 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 11716 */;
+import SwipeableFastListDefault from "SwipeableFastList" /* 12255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 12232 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 12240 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 
 const ReactionActionCreatorsAll = ReactionActionCreators;
@@ -204,13 +204,13 @@ function EmojiOptionsButton(channelId) {
   items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(12244)(stateFromStores);
+  const tmp3 = messageId(12252)(stateFromStores);
   const canRemoveReactions = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
   const obj2 = {
     onPress: noop.useCallback(() => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12245, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", { channelId, messageId, reaction, canRemoveReactions }, "replaceTopSheet");
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12253, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", { channelId, messageId, reaction, canRemoveReactions }, "replaceTopSheet");
     }, items2),
     style: tmp.emojiOptionsButton,
     children: null
@@ -251,10 +251,10 @@ function ReactionTabs(setReactionSelectedIndex) {
     }
   };
   ({ tab: obj2.tabStyle, tabActive: obj2.tabStyleActive, tabSelected: obj2.tabStyleSelected } = tmp);
-  items = [closure_17(setReactionSelectedIndex(12246), obj3), closure_17(setReactionSelectedIndex(8094), { outer: true }), ];
+  items = [closure_17(setReactionSelectedIndex(12254), obj3), closure_17(setReactionSelectedIndex(8094), { outer: true }), ];
   const obj4 = { style: tmp.removeButtonContainer, children: null };
   const obj6 = { style: tmp.emojiTextIdentifier, variant: "body-sm/medium", color: "text-default", children: null };
-  const tmp2 = setReactionSelectedIndex(12246);
+  const tmp2 = setReactionSelectedIndex(12254);
   obj6.children = reactionSelectedIndex(4987).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
   const items1 = [closure_17(reactionSelectedIndex(5634).Text, obj6), ];
   const merged = Object.assign(setReactionSelectedIndex);

@@ -1,6 +1,6 @@
-// === Module 9442: VirtualCurrencyActionCreators ===
+// === Module 9443: VirtualCurrencyActionCreators ===
 
-// Module 9442 (VirtualCurrencyActionCreators)
+// Module 9443 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
@@ -29,7 +29,7 @@ let closure_8 = async function _fetchVirtualCurrencyBalance() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -110,7 +110,7 @@ let closure_9 = async function _fetchVirtualCurrencyTotalRedeemed() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -191,7 +191,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -287,7 +287,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           tmp68(closure_129_13);
         }
         c6 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;

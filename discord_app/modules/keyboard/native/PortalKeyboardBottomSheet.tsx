@@ -1,6 +1,6 @@
-// === Module 13041: PortalKeyboardBottomSheet ===
+// === Module 13049: PortalKeyboardBottomSheet ===
 
-// Module 13041 (PortalKeyboardBottomSheet)
+// Module 13049 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
@@ -11,12 +11,12 @@ import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5273 */;
 import BottomSheetModal from "BottomSheetModal" /* 5275 */;
 import useMountEffectDefault from "useMountEffect" /* 5604 */;
 import isChannelFocused from "isChannelFocused" /* 6963 */;
-import native from "native" /* 8489 */;
-import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 13042 */;
-import useAndroidOrientationSheetResyncDefault from "useAndroidOrientationSheetResync" /* 13043 */;
+import native from "native" /* 8490 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 13050 */;
+import useAndroidOrientationSheetResyncDefault from "useAndroidOrientationSheetResync" /* 13051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10274 */;
+import NativeMenuStore from "NativeMenuStore" /* 10275 */;
 
 const require = globalThis.__r;
 const BottomSheetModalDefault = BottomSheetModal;
@@ -50,7 +50,7 @@ const PlatformUtils = fn(1379);
 let closure_9 = PlatformUtils.isIOS();
 const createStyles = fn(5043);
 let obj3 = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
-let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8489).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8489).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8490).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8490).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
 obj3.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
 obj3.headerContainerScreenReaderEnabled = { marginBottom: -nativeDefault.space.PX_8 };
@@ -378,7 +378,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   obj7.activeOffsetY = [-10, 10];
   let num = 0;
   if (rendersHandle) {
-    num = tmp6(8489).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
+    num = tmp6(8490).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
   }
   obj7.handleHeight = num;
   let merged = Object.assign(tmp5);
@@ -408,7 +408,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   }
   if (tmp51Result) {
     const obj9 = { animatedSheetIndex: animatedIndex };
-    tmp51Result = tmp51(tmp3(9579), obj9);
+    tmp51Result = tmp51(tmp3(9580), obj9);
   }
   items19[1] = tmp51Result;
   items19[2] = closure_7(require("NavScrim").NavScrim, {});

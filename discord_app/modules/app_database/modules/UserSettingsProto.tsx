@@ -1,6 +1,6 @@
-// === Module 8263: UserSettingsProto ===
+// === Module 8264: UserSettingsProto ===
 
-// Module 8263 (UserSettingsProto)
+// Module 8264 (UserSettingsProto)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -76,7 +76,7 @@ prototype["getAll"] = function getAll(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {

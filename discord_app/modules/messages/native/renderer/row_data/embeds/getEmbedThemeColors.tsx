@@ -1,6 +1,6 @@
-// === Module 12385: getEmbedThemeColors ===
+// === Module 12393: getEmbedThemeColors ===
 
-// Module 12385 (getEmbedThemeColors)
+// Module 12393 (getEmbedThemeColors)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 5040 */;
 import shared from "shared" /* 5050 */;

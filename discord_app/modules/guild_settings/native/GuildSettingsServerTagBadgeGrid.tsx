@@ -1,17 +1,17 @@
-// === Module 20028: GuildSettingsServerTagBadgeGrid ===
+// === Module 20053: GuildSettingsServerTagBadgeGrid ===
 
-// Module 20028 (GuildSettingsServerTagBadgeGrid)
+// Module 20053 (GuildSettingsServerTagBadgeGrid)
 import nativeDefault from "native" /* 575 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13466 */;
-import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 20029 */;
-import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 20030 */;
-import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 20031 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13474 */;
+import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 20054 */;
+import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 20055 */;
+import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 20056 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(8579).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8580).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5043);
@@ -52,7 +52,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
         children: null
       };
       size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-      obj.children = closure_1_7(guildId(15324).GuildBadge, size);
+      obj.children = closure_1_7(guildId(15331).GuildBadge, size);
       return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
     })
   });
@@ -67,7 +67,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     const substr = lockedBadges.slice(0, 10);
     obj5.children = substr.map((badge) => {
       size = { badge: badge.kind, width: 21, height: 21 };
-      return closure_1_7(guildId(15324).GuildBadge, size, badge.kind);
+      return closure_1_7(guildId(15331).GuildBadge, size, badge.kind);
     });
     const items2 = [closure_7(closure_5, obj5), , ];
     const obj6 = { variant: "body-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };

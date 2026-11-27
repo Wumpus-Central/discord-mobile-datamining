@@ -1,10 +1,10 @@
-// === Module 12291: GamesActionCreators ===
+// === Module 12299: GamesActionCreators ===
 
-// Module 12291 (GamesActionCreators)
+// Module 12299 (GamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import LinkingDefault from "Linking" /* 5722 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 12292 */;
-import fetchDetectableGamesDefault from "fetchDetectableGames" /* 12293 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 12300 */;
+import fetchDetectableGamesDefault from "fetchDetectableGames" /* 12301 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -105,7 +105,7 @@ function fetchJoinSecret(applicationId, arg1) {
 }
 const Constants = fn(1071);
 ({ Endpoints: closure_4, DiscordConnectDeeplinks: hasOwnProperty, WebBrowserType: closure_6, ActivityFlags: metroImportDefault } = Constants);
-const ActivityIntent = fn(10191).ActivityIntent;
+const ActivityIntent = fn(10192).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
@@ -152,7 +152,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

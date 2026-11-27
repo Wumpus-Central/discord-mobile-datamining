@@ -1,8 +1,8 @@
-// === Module 11989: socialLayerStorefrontEmbedPrice ===
+// === Module 11997: socialLayerStorefrontEmbedPrice ===
 
-// Module 11989 (socialLayerStorefrontEmbedPrice)
-import IAPStoreDefault from "IAPStore" /* 9104 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9231 */;
+// Module 11997 (socialLayerStorefrontEmbedPrice)
+import IAPStoreDefault from "IAPStore" /* 9105 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9232 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SKUStore from "SKUStore" /* 6360 */;

@@ -1,14 +1,14 @@
-// === Module 18469: ConjurePublishSheet ===
+// === Module 18476: ConjurePublishSheet ===
 
-// Module 18469 (ConjurePublishSheet)
+// Module 18476 (ConjurePublishSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import GuildIcon from "GuildIcon" /* 7052 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 11459 */;
-import showConjurePublishSheet from "showConjurePublishSheet" /* 18468 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 11469 */;
+import showConjurePublishSheet from "showConjurePublishSheet" /* 18475 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;
@@ -48,7 +48,7 @@ function PublishSheetBody(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -125,7 +125,7 @@ function PublishSheetBody(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -158,7 +158,7 @@ function PublishSheetBody(project) {
             v1(entryPoint[18])(closure_128_0.id);
           }
           entryPoint = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         entryPoint = tmp;
@@ -177,7 +177,7 @@ function PublishSheetBody(project) {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -211,7 +211,7 @@ function PublishSheetBody(project) {
           }
           if (!current) {
             c2 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           } else {
             hidePublishSheet();
             const appChannelsPrivate = closure_128_3.appChannelsPrivate;

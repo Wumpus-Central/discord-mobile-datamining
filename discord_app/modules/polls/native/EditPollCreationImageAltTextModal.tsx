@@ -1,15 +1,15 @@
-// === Module 13181: EditPollCreationImageAltTextModal ===
+// === Module 13189: EditPollCreationImageAltTextModal ===
 
-// Module 13181 (EditPollCreationImageAltTextModal)
+// Module 13189 (EditPollCreationImageAltTextModal)
 import nativeDefault from "native" /* 575 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 13180 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 13188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MAX_POLL_ANSWER_LENGTH = fn(12233).MAX_POLL_ANSWER_LENGTH;
+const MAX_POLL_ANSWER_LENGTH = fn(12241).MAX_POLL_ANSWER_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5043);
@@ -31,7 +31,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   imageSize = imageSize.imageSize;
   value = undefined;
   const tmp = closure_10();
-  const tmp4 = value(13178)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+  const tmp4 = value(13186)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
   const upload = tmp4.upload;
   let str;
   if (upload != null) {
@@ -51,7 +51,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   }, items);
   const obj2 = { top: true, style: tmp.container, children: null };
   const obj3 = { style: tmp.header, children: null };
-  const obj4 = { onPress: onSave(13180).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const obj4 = { onPress: onSave(13188).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = onSave(1112).intl;
   obj4.accessibilityLabel = intl.string(onSave(1112).t.cpT0Cq);
   obj4.children = closure_8(onSave(1186).Icon, { source: value(7752) });
@@ -79,7 +79,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   const tmp2Result = value(7048);
   const intl4 = onSave(1112).intl;
   obj13.children = intl4.string(onSave(1112).t["/2Gnoa"]);
-  items4[1] = closure_8(value(13182), obj13);
+  items4[1] = closure_8(value(13190), obj13);
   const obj14 = { showTopContainer: false, showBorder: false, multiline: false, value, onChange: tmp5[1], clearButtonVisibility: onSave(1186).ClearButtonVisibility.WITH_CONTENT, style: tmp.textInput, textContentType: "none", maxLength: MAX_POLL_ANSWER_LENGTH, autoFocus: true, autoCorrect: true, accessibilityLabel: null };
   const intl5 = onSave(1112).intl;
   obj14.accessibilityLabel = intl5.string(onSave(1112).t["/2Gnoa"]);

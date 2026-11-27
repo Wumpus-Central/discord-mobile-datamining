@@ -1,6 +1,6 @@
-// === Module 17103: SystemNotificationsSetting ===
+// === Module 17110: SystemNotificationsSetting ===
 
-// Module 17103 (SystemNotificationsSetting)
+// Module 17110 (SystemNotificationsSetting)
 import util from "util" /* 1112 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_8 = async function _handleEnableSystemNotification() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -80,15 +80,15 @@ let closure_8 = async function _handleEnableSystemNotification() {
 };
 const AnalyticEvents = fn(1071).AnalyticEvents;
 let closure_5 = fn(7872).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13382);
+const NotificationPermissionConstants = fn(13390);
 ({ EventActionType: closure_6, EventActionLocation: metroImportDefault } = NotificationPermissionConstants);
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(9555).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(9556).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_8.apply;

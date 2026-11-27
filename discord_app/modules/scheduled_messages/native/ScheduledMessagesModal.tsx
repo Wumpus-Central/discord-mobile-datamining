@@ -1,6 +1,6 @@
-// === Module 9611: ScheduledMessagesModal ===
+// === Module 9612: ScheduledMessagesModal ===
 
-// Module 9611 (ScheduledMessagesModal)
+// Module 9612 (ScheduledMessagesModal)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import util from "util" /* 1112 */;
@@ -9,15 +9,15 @@ import spring_spring from "spring/spring" /* 5644 */;
 import springPresets from "springPresets" /* 5645 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import HeaderShared from "HeaderShared" /* 9004 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9586 */;
-import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 9613 */;
-import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 9614 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9633 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 9634 */;
+import HeaderShared from "HeaderShared" /* 9005 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9587 */;
+import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 9614 */;
+import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 9615 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9634 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 9635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ScheduledMessageStore from "ScheduledMessageStore" /* 9612 */;
+import ScheduledMessageStore from "ScheduledMessageStore" /* 9613 */;
 
 const require = globalThis.__r;
 
@@ -122,7 +122,7 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
 const View = fn(17).View;
 const AnalyticsPages = fn(1071).AnalyticsPages;
 const PremiumTypes = fn(1389).PremiumTypes;
-const premiumMax = fn(9596).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(9597).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];

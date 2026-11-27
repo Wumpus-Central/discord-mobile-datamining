@@ -1,8 +1,8 @@
-// === Module 12378: useConjureSharedProjectAppChannel ===
+// === Module 12386: useConjureSharedProjectAppChannel ===
 
-// Module 12378 (useConjureSharedProjectAppChannel)
-import conjureSharedProjectHome from "conjureSharedProjectHome" /* 11998 */;
-import findLoadedAppChannelDefault from "findLoadedAppChannel" /* 11999 */;
+// Module 12386 (useConjureSharedProjectAppChannel)
+import conjureSharedProjectHome from "conjureSharedProjectHome" /* 12006 */;
+import findLoadedAppChannelDefault from "findLoadedAppChannel" /* 12007 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;

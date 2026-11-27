@@ -1,6 +1,6 @@
-// === Module 18068: FavoritesGuildSidebarHeader ===
+// === Module 18075: FavoritesGuildSidebarHeader ===
 
-// Module 18068 (FavoritesGuildSidebarHeader)
+// Module 18075 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3857 from "module_3857" /* 3857 */;
@@ -9,7 +9,7 @@ import Stack_Stack from "Stack/Stack" /* 6115 */;
 import ChatIcon from "ChatIcon" /* 7137 */;
 import TextIcon from "TextIcon" /* 7146 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 7167 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11520 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11528 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,7 +58,7 @@ function PlaceholderRows() {
   return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(17924).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17931).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5043);

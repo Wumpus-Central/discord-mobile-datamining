@@ -1,6 +1,6 @@
-// === Module 19167: ChannelSettingsPermissionsOverview ===
+// === Module 19183: ChannelSettingsPermissionsOverview ===
 
-// Module 19167 (ChannelSettingsPermissionsOverview)
+// Module 19183 (ChannelSettingsPermissionsOverview)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -8,10 +8,10 @@ import Server from "Server" /* 2118 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
 import TableRow from "TableRow" /* 6144 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
-import RoleLabel from "RoleLabel" /* 10797 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11436 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 16924 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19168 */;
+import RoleLabel from "RoleLabel" /* 10798 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11437 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 16931 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19184 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -52,7 +52,7 @@ function ChannelPermissionSyncModule(channel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -69,12 +69,12 @@ function ChannelPermissionSyncModule(channel) {
               closure_128_0 = undefined;
               const guild_id = tmp5.guild_id;
               const obj8 = PermissionUtilsAll;
-              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(12118).getAppChannelBotUserId(tmp2));
+              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(12126).getAppChannelBotUserId(tmp2));
               closure_128_0 = syncedPermissionOverwrites;
-              const obj9 = tmp2(12118);
+              const obj9 = tmp2(12126);
               c2 = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(8528).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
+              const obj5 = { value: tmp2(8529).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -93,7 +93,7 @@ function ChannelPermissionSyncModule(channel) {
               const obj3 = category(12);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -127,7 +127,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(14077).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(14084).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1112).intl;
   obj6.label = intl2.string(channel(1112).t.NVwuHq);
   obj6.onPress = callback;

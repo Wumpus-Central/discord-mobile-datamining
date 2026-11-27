@@ -1,6 +1,6 @@
-// === Module 20141: GuildSettingsAnalyticsCard ===
+// === Module 20199: GuildSettingsAnalyticsCard ===
 
-// Module 20141 (GuildSettingsAnalyticsCard)
+// Module 20199 (GuildSettingsAnalyticsCard)
 import nativeDefault from "native" /* 575 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import noop from "module_19" /* 19 */;
@@ -64,7 +64,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       const obj7 = { size: "xxs", color: description(575).colors.TEXT_FEEDBACK_POSITIVE, accessible: true, accessibilityLabel: null };
       const intl2 = tmp4(1112).intl;
       obj7.accessibilityLabel = intl2.string(tmp4(1112).t["8mcccd"]);
-      tmp7Result3 = closure_6(tmp4(11903).ArrowLargeUpIcon, obj7);
+      tmp7Result3 = closure_6(tmp4(11911).ArrowLargeUpIcon, obj7);
     }
     const items3 = [tmp7Result3, , ];
     let tmp7Result4 = null;
@@ -72,7 +72,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       const obj8 = { size: "xxs", color: description(575).colors.TEXT_FEEDBACK_CRITICAL, accessible: true, accessibilityLabel: null };
       const intl3 = tmp4(1112).intl;
       obj8.accessibilityLabel = intl3.string(tmp4(1112).t.NLl6Q3);
-      tmp7Result4 = closure_6(tmp4(20142).ArrowLargeDownIcon, obj8);
+      tmp7Result4 = closure_6(tmp4(20200).ArrowLargeDownIcon, obj8);
     }
     items3[1] = tmp7Result4;
     const obj9 = { variant: "body-xs/normal", color: "text-subtle", children: subtext };

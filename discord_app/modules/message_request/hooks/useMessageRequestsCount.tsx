@@ -1,6 +1,6 @@
-// === Module 19225: useMessageRequestsCount ===
+// === Module 19241: useMessageRequestsCount ===
 
-// Module 19225 (useMessageRequestsCount)
+// Module 19241 (useMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
 import MessageRequestStore from "MessageRequestStore" /* 6946 */;
 

@@ -1,12 +1,12 @@
-// === Module 8302: ChannelConversationsStore ===
+// === Module 8303: ChannelConversationsStore ===
 
-// Module 8302 (ChannelConversationsStore)
+// Module 8303 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1455 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 6393 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 8303 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 8304 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
@@ -461,7 +461,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     set = undefined;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(8304).mapConversation);
+      const mapped = rawConversations.map(set(8305).mapConversation);
       const found = mapped.filter(set(1255).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

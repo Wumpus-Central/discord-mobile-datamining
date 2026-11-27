@@ -1,6 +1,6 @@
-// === Module 16407: FamilyCenterActivityRow ===
+// === Module 16414: FamilyCenterActivityRow ===
 
-// Module 16407 (FamilyCenterActivityRow)
+// Module 16414 (FamilyCenterActivityRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
@@ -8,17 +8,17 @@ import _modDef2847 from "module_2847" /* 2847 */;
 import UserUtilsDefault from "UserUtils" /* 5099 */;
 import GuildIconDefault from "GuildIcon" /* 7052 */;
 import GuildBadgeDefault from "GuildBadge" /* 7056 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8218 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 16408 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16411 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 16412 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8219 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 16415 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16418 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 16419 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8212 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8213 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(8213).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(8214).ACTION_TO_TEXT;
 const GuildFeatures = fn(1071).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -55,7 +55,7 @@ const memoResult = noop.memo((action) => {
     const tmp3Result2 = UserUtilsDefault;
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj7.children = tmp6(8218).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    obj7.children = tmp6(8219).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
     items2[1] = closure_8(tmp6(5634).Text, obj7);
     obj5.children = items2;
     items1[1] = closure_9(View, obj5);

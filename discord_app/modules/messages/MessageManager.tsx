@@ -1,6 +1,6 @@
-// === Module 8966: MessageManager ===
+// === Module 8967: MessageManager ===
 
-// Module 8966 (MessageManager)
+// Module 8967 (MessageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -13,10 +13,10 @@ import ChannelMessagesDefault from "ChannelMessages" /* 6782 */;
 import Client from "Client" /* 6784 */;
 import SidebarActionTypes from "SidebarActionTypes" /* 6954 */;
 import isChangelogChannelDefault from "isChangelogChannel" /* 6983 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
-import getNitroMessagePrefetchKey from "getNitroMessagePrefetchKey" /* 8967 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 8997 */;
-import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 8998 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
+import getNitroMessagePrefetchKey from "getNitroMessagePrefetchKey" /* 8968 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 8998 */;
+import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 8999 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;

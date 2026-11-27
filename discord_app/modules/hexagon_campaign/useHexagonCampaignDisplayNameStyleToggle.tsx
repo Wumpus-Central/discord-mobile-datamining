@@ -1,9 +1,9 @@
-// === Module 16097: useHexagonCampaignDisplayNameStyleToggle ===
+// === Module 16104: useHexagonCampaignDisplayNameStyleToggle ===
 
-// Module 16097 (useHexagonCampaignDisplayNameStyleToggle)
+// Module 16104 (useHexagonCampaignDisplayNameStyleToggle)
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5071 */;
 import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6771 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11946 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11954 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -66,7 +66,7 @@ export function useHexagonCampaignDisplayNameStyleToggle(user, showEnrollmentErr
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

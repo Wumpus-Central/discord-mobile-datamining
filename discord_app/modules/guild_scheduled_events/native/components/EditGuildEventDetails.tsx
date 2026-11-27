@@ -1,12 +1,12 @@
-// === Module 8584: EditGuildEventDetails ===
+// === Module 8585: EditGuildEventDetails ===
 
-// Module 8584 (EditGuildEventDetails)
+// Module 8585 (EditGuildEventDetails)
 import util from "util" /* 1112 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2019 */;
 import _modDef2169 from "module_2169" /* 2169 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
-import ScheduleUtils from "ScheduleUtils" /* 8466 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8479 */;
+import ScheduleUtils from "ScheduleUtils" /* 8467 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

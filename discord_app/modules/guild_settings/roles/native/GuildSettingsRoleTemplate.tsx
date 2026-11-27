@@ -1,6 +1,6 @@
-// === Module 20051: GuildSettingsRoleTemplate ===
+// === Module 20109: GuildSettingsRoleTemplate ===
 
-// Module 20051 (GuildSettingsRoleTemplate)
+// Module 20109 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -8,9 +8,9 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7309 */;
-import _modDef8859 from "module_8859" /* 8859 */;
-import PaginationDefault from "Pagination" /* 11176 */;
-import _modDef12044 from "module_12044" /* 12044 */;
+import _modDef8860 from "module_8860" /* 8860 */;
+import PaginationDefault from "Pagination" /* 11177 */;
+import _modDef12052 from "module_12052" /* 12052 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: closure_6 } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(20047);
+const GuildSettingsRoleConstants = fn(20105);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: closure_10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
@@ -141,7 +141,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
   const values = Object.values(closure_10);
   let obj3 = { ref, style: tmp.container, children: null };
   let obj4 = { style: tmp.sliderContainer, children: null };
-  let obj5 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(_modDef8859, { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" }) };
+  let obj5 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(_modDef8860, { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" }) };
   const items4 = [closure_14(ref1, obj5), ];
   let obj2 = require("useIsScreenReaderEnabled");
   let obj6 = { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" };
@@ -206,7 +206,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
         const obj4 = { style: _undefined3.templateSubtitle, variant: "body-sm/medium", children: item.description() };
         obj8.children = item.contents().map((children, index) => {
           const obj = { style: c3.templateContent, children: null };
-          items = [gesture(native.Icon, { source: _modDef12044, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), gesture(Text_Text.Text, { style: c3.templateContentText, variant: "body-sm/medium", children })];
+          items = [gesture(native.Icon, { source: _modDef12052, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), gesture(Text_Text.Text, { style: c3.templateContentText, variant: "body-sm/medium", children })];
           obj.children = items;
           return colors(hasOwnProperty, obj, "" + item.key + "_content_" + index);
         });

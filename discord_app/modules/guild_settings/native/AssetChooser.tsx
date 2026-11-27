@@ -1,13 +1,13 @@
-// === Module 19917: AssetChooser ===
+// === Module 19933: AssetChooser ===
 
-// Module 19917 (AssetChooser)
+// Module 19933 (AssetChooser)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import Pressables from "Pressables" /* 6152 */;
-import _modDef19918 from "module_19918" /* 19918 */;
-import _modDef19919 from "module_19919" /* 19919 */;
+import _modDef19934 from "module_19934" /* 19934 */;
+import _modDef19935 from "module_19935" /* 19935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,7 +48,7 @@ class AssetChooser extends PureComponent {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ class AssetChooser extends PureComponent {
               }
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;
@@ -137,13 +137,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef19918;
+    tmp9Result = _modDef19934;
   }
   items = [metroImportDefault(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef19919 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef19935 };
     obj4.children = metroImportDefault(FastImageDefault, obj5);
     tmp5Result = metroImportDefault(React4, obj4);
     const tmp9Result2 = FastImageDefault;

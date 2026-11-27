@@ -1,6 +1,6 @@
-// === Module 12859: CheckpointWelcomeScreen ===
+// === Module 12867: CheckpointWelcomeScreen ===
 
-// Module 12859 (CheckpointWelcomeScreen)
+// Module 12867 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -9,11 +9,11 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import _modDef3463 from "module_3463" /* 3463 */;
 import _modDef3495 from "module_3495" /* 3495 */;
 import UserUtils from "UserUtils" /* 5099 */;
-import CheckpointScreen from "CheckpointScreen" /* 12850 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12860 */;
-import CheckpointNavigationControls from "CheckpointNavigationControls" /* 12861 */;
-import TextWritingAnimation from "TextWritingAnimation" /* 12872 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 12873 */;
+import CheckpointScreen from "CheckpointScreen" /* 12858 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12868 */;
+import CheckpointNavigationControls from "CheckpointNavigationControls" /* 12869 */;
+import TextWritingAnimation from "TextWritingAnimation" /* 12880 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 12881 */;
 import UserStore from "UserStore" /* 1387 */;
 import CheckpointConstants from "CheckpointConstants" /* 6396 */;
 import jsxProd from "jsxProd" /* 21 */;

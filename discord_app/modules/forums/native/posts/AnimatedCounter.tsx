@@ -1,11 +1,11 @@
-// === Module 11710: AnimatedCounter ===
+// === Module 11718: AnimatedCounter ===
 
-// Module 11710 (AnimatedCounter)
+// Module 11718 (AnimatedCounter)
 import _modDef38 from "module_38" /* 38 */;
 import native from "native" /* 5104 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import springPresets from "springPresets" /* 5645 */;
-import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11711 */;
+import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11719 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

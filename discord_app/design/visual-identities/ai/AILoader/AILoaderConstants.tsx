@@ -1,6 +1,6 @@
-// === Module 15415: AILoaderConstants ===
+// === Module 15422: AILoaderConstants ===
 
-// Module 15415 (AILoaderConstants)
+// Module 15422 (AILoaderConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/visual-identities/ai/AILoader/AILoaderConstants.tsx");

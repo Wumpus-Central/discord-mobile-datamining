@@ -1,6 +1,6 @@
-// === Module 17162: UploadIntlDataSetting ===
+// === Module 17169: UploadIntlDataSetting ===
 
-// Module 17162 (UploadIntlDataSetting)
+// Module 17169 (UploadIntlDataSetting)
 import AssetJsonUtils from "AssetJsonUtils" /* 1116 */;
 import _mod1150 from "module_1150" /* 1150 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
@@ -18,7 +18,7 @@ let closure_10 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -131,7 +131,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -253,13 +253,13 @@ const Constants = fn(1071);
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_9 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(12427).FileUpIcon,
+  IconComponent: fn(12435).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_11.apply;
@@ -270,7 +270,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16349).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16356).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useUploadIntlDataTrailing() {
     let tmp = null;
     if (closure_9().isUploading) {

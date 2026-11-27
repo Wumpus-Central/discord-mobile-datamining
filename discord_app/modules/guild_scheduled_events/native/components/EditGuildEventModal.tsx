@@ -1,15 +1,15 @@
-// === Module 8514: EditGuildEventModal ===
+// === Module 8515: EditGuildEventModal ===
 
-// Module 8514 (EditGuildEventModal)
+// Module 8515 (EditGuildEventModal)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2019 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8478 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8479 */;
-import EntityUtils from "EntityUtils" /* 8480 */;
-import useGetEventChannelsByType from "useGetEventChannelsByType" /* 8515 */;
-import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 8516 */;
-import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 8584 */;
-import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 8585 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8479 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8480 */;
+import EntityUtils from "EntityUtils" /* 8481 */;
+import useGetEventChannelsByType from "useGetEventChannelsByType" /* 8516 */;
+import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 8517 */;
+import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 8585 */;
+import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 8586 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -47,7 +47,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
           return obj;
         } else if (null == value) {
           c2 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } else {
           if (!closure_128_5) {
             const AccessibilityAnnouncer = tmp4(5052).AccessibilityAnnouncer;

@@ -1,6 +1,6 @@
-// === Module 12319: BundleUpdater ===
+// === Module 12327: BundleUpdater ===
 
-// Module 12319 (BundleUpdater)
+// Module 12327 (BundleUpdater)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
@@ -62,7 +62,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

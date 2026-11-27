@@ -1,6 +1,6 @@
-// === Module 18106: HomeDrawerGuildVoiceState ===
+// === Module 18113: HomeDrawerGuildVoiceState ===
 
-// Module 18106 (HomeDrawerGuildVoiceState)
+// Module 18113 (HomeDrawerGuildVoiceState)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -8,8 +8,8 @@ import native from "native" /* 1186 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10577 */;
-import AvatarPile from "AvatarPile" /* 14930 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10578 */;
+import AvatarPile from "AvatarPile" /* 14937 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4973 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;

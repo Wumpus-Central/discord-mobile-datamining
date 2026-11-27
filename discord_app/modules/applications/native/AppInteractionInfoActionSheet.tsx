@@ -1,6 +1,6 @@
-// === Module 12254: AppInteractionInfoActionSheet ===
+// === Module 12262: AppInteractionInfoActionSheet ===
 
-// Module 12254 (AppInteractionInfoActionSheet)
+// Module 12262 (AppInteractionInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;

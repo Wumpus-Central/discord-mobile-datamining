@@ -1,6 +1,6 @@
-// === Module 17338: DevToolsGuildPowerupsScreen ===
+// === Module 17345: DevToolsGuildPowerupsScreen ===
 
-// Module 17338 (DevToolsGuildPowerupsScreen)
+// Module 17345 (DevToolsGuildPowerupsScreen)
 import nativeDefault from "native" /* 575 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
@@ -8,12 +8,12 @@ import _modDef2169 from "module_2169" /* 2169 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4873 */;
 import dismissible_content from "dismissible_content" /* 4876 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
-import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 13481 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17241 */;
+import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 13489 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17248 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13552 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13560 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
 
@@ -39,7 +39,7 @@ let closure_21 = async function _setWarningBoosts(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -83,7 +83,7 @@ let closure_21 = async function _setWarningBoosts(arg0) {
         const obj = closure_132_0(closure_132_2[14]);
         const guildBoostEntitlements = closure_132_0(closure_132_2[15]).fetchGuildBoostEntitlements(closure_131_0, true);
         c6 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp20) {
       c6 = tmp;
@@ -102,7 +102,7 @@ let closure_22 = async function _sendPowerupsSystemMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_22 = async function _sendPowerupsSystemMessage(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -164,7 +164,7 @@ function GuildDCSwitchRow(dc) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(17339);
+const DevToolsGuildPowerupsConstants = fn(17346);
 ({ GUILD_DCS: closure_11, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, getGuildDCString: closure_14, getUserDCString: closure_15 } = DevToolsGuildPowerupsConstants);
 const Endpoints = fn(1071).Endpoints;
 const jsxProd = fn(21);

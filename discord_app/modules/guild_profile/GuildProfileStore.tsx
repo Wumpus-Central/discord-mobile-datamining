@@ -1,6 +1,6 @@
-// === Module 8542: GuildProfileStore ===
+// === Module 8543: GuildProfileStore ===
 
-// Module 8542 (GuildProfileStore)
+// Module 8543 (GuildProfileStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

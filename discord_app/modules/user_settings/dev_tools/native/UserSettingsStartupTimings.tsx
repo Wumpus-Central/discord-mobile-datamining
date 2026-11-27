@@ -1,14 +1,14 @@
-// === Module 17190: UserSettingsStartupTimings ===
+// === Module 17197: UserSettingsStartupTimings ===
 
-// Module 17190 (UserSettingsStartupTimings)
+// Module 17197 (UserSettingsStartupTimings)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import TableRowGroup from "TableRowGroup" /* 6140 */;
 import TableRow from "TableRow" /* 6144 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7181 */;
-import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 10697 */;
-import ShareIcon from "ShareIcon" /* 12871 */;
+import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 10698 */;
+import ShareIcon from "ShareIcon" /* 12879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -75,7 +75,7 @@ export default function UserSettingsStartupTimings() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -105,11 +105,11 @@ export default function UserSettingsStartupTimings() {
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(10697)(closure_128_0);
+          closure_128_1 = tmp5(10698)(closure_128_0);
           const obj7 = { message: closure_128_1 };
-          tmp2(8690).showShareActionSheet(obj7, "Startup Timing");
+          tmp2(8691).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;

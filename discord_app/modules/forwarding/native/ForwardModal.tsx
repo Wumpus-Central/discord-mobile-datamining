@@ -1,6 +1,6 @@
-// === Module 8942: ForwardModal ===
+// === Module 8943: ForwardModal ===
 
-// Module 8942 (ForwardModal)
+// Module 8943 (ForwardModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
@@ -10,26 +10,26 @@ import LinkIcon from "LinkIcon" /* 5739 */;
 import ChannelUtils from "ChannelUtils" /* 6801 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 8939 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 8940 */;
-import formatResults from "formatResults" /* 8945 */;
-import ForwardDestinationUtils from "ForwardDestinationUtils" /* 8962 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 8940 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 8941 */;
+import formatResults from "formatResults" /* 8946 */;
+import ForwardDestinationUtils from "ForwardDestinationUtils" /* 8963 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 8302 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 8305 */;
-import ICYMIStore from "ICYMIStore" /* 8913 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8303 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 8306 */;
+import ICYMIStore from "ICYMIStore" /* 8914 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import MessageStore from "MessageStore" /* 6391 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8936 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8937 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(8943).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(8944).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(8944).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(8945).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5043);
@@ -169,7 +169,7 @@ export default function ForwardModal(message) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(6048).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(8965), {
+                    closure_1_0(6048).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(8966), {
                       onConfirm() {
                         return closure_0(true);
                       },

@@ -1,6 +1,6 @@
-// === Module 10789: autocompleter/AutocompleteUtils ===
+// === Module 10790: autocompleter/AutocompleteUtils ===
 
-// Module 10789 (autocompleter/AutocompleteUtils)
+// Module 10790 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 5099 */;
 import useChannelName from "useChannelName" /* 5659 */;
@@ -19,7 +19,7 @@ function AutocompleteFormDivider() {
 let closure_3 = fn(4896).isGuildSelectableChannelType;
 const Constants = fn(1071);
 ({ AutoCompleteResultTypes: metroImportDefault, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10790);
+const ApplicationCommandsConstants = fn(10791);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: closure_10 } = ApplicationCommandsConstants);
 const ChannelAutocompleteConstants = fn(7074);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);

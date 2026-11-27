@@ -1,15 +1,15 @@
-// === Module 19277: GiftingPromotionCoachmark ===
+// === Module 19293: GiftingPromotionCoachmark ===
 
-// Module 19277 (GiftingPromotionCoachmark)
+// Module 19293 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import usePreviousDefault from "usePrevious" /* 6831 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11113 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 11114 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
-import PromotionsStore from "PromotionsStore" /* 9162 */;
+import PromotionsStore from "PromotionsStore" /* 9163 */;
 
 require = fn;
 const View = fn(17).View;
@@ -46,10 +46,10 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(11162).useThemeAndReducedMotionAwareAssetUrl(asset);
-  const GiftPromotionReminderExperiment = markAsDismissed(11151).GiftPromotionReminderExperiment;
+  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(11163).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const GiftPromotionReminderExperiment = markAsDismissed(11152).GiftPromotionReminderExperiment;
   let enabled = GiftPromotionReminderExperiment.useConfig({ location: "GiftingPromotionCoachmarkActionSheet" }).enabled;
-  let obj2 = markAsDismissed(11162);
+  let obj2 = markAsDismissed(11163);
   const items1 = [PromotionsStore];
   const stateFromStores1 = markAsDismissed(504).useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
   const tmp2Result = markAsDismissed(504);
@@ -57,7 +57,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(11163).useTickingFormattedLimitedOfferTimeLeft(endDate);
+  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(11164).useTickingFormattedLimitedOfferTimeLeft(endDate);
   importDefault = tmp10;
   const tmp12 = usePreviousDefault(null != stateFromStores1);
   dependencyMap = tmp12;
@@ -80,7 +80,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items2);
-  const tmp2Result2 = markAsDismissed(11163);
+  const tmp2Result2 = markAsDismissed(11164);
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GIFTING_PROMOTION_COACHMARK).analyticsLocations;
   const items3 = [analyticsLocations, markAsDismissed];
   let tmp19Result2 = null;
@@ -108,7 +108,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     }
     if (enabled) {
       const obj7 = { text: tickingFormattedLimitedOfferTimeLeft, style: tmp.countdownBadge };
-      enabled = closure_11(tmp11(11174), obj7);
+      enabled = closure_11(tmp11(11175), obj7);
     }
     items4[1] = enabled;
     const obj8 = { style: tmp.textContainer, children: null };
@@ -120,7 +120,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     items4[2] = closure_12(closure_4, obj8);
     const obj11 = { grow: true, icon: null, text: null, onPress: null };
     const obj12 = { size: "sm", color: tmp11(575).colors.WHITE };
-    obj11.icon = closure_11(markAsDismissed(11307).GiftIcon, obj12);
+    obj11.icon = closure_11(markAsDismissed(11308).GiftIcon, obj12);
     const intl = markAsDismissed(1112).intl;
     obj11.text = intl.string(markAsDismissed(1112).t.Ve9Ge6);
     obj11.onPress = tmp17;

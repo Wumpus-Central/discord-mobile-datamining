@@ -1,6 +1,6 @@
-// === Module 13510: GuildPowerupsImage ===
+// === Module 13518: GuildPowerupsImage ===
 
-// Module 13510 (GuildPowerupsImage)
+// Module 13518 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;

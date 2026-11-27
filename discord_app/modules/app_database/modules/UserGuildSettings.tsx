@@ -1,6 +1,6 @@
-// === Module 8265: UserGuildSettings ===
+// === Module 8266: UserGuildSettings ===
 
-// Module 8265 (UserGuildSettings)
+// Module 8266 (UserGuildSettings)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 4921 */;

@@ -1,21 +1,21 @@
-// === Module 16603: QuestHomeOrbShopCarousel ===
+// === Module 16610: QuestHomeOrbShopCarousel ===
 
-// Module 16603 (QuestHomeOrbShopCarousel)
+// Module 16610 (QuestHomeOrbShopCarousel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import AnalyticsActions from "AnalyticsActions" /* 8382 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 11214 */;
-import SkeletonCardDefault from "SkeletonCard" /* 14220 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16590 */;
-import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 16604 */;
+import AnalyticsActions from "AnalyticsActions" /* 8383 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8393 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 11215 */;
+import SkeletonCardDefault from "SkeletonCard" /* 14227 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16597 */;
+import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 16611 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
-import BountyStore from "BountyStore" /* 8373 */;
-import QuestStore from "QuestStore" /* 8374 */;
+import BountyStore from "BountyStore" /* 8374 */;
+import QuestStore from "QuestStore" /* 8375 */;
 
 require = fn;
 function ListEdgeSpacer(width) {
@@ -101,7 +101,7 @@ const jsxProd = fn(21);
 const PX_20 = nativeDefault.space.PX_20;
 const PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-const data = Array.from({ length: fn(16590).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const data = Array.from({ length: fn(16597).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
 const createStyles = fn(5043);
 let closure_18 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };

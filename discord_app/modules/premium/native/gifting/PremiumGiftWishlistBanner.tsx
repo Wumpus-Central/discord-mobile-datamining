@@ -1,10 +1,10 @@
-// === Module 11210: PremiumGiftWishlistBanner ===
+// === Module 11211: PremiumGiftWishlistBanner ===
 
-// Module 11210 (PremiumGiftWishlistBanner)
+// Module 11211 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 11644 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 11652 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -116,7 +116,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

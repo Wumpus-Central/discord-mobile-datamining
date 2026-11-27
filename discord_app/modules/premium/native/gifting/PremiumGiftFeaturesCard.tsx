@@ -1,6 +1,6 @@
-// === Module 11159: PremiumGiftFeaturesCard ===
+// === Module 11160: PremiumGiftFeaturesCard ===
 
-// Module 11159 (PremiumGiftFeaturesCard)
+// Module 11160 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -11,21 +11,21 @@ import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import ClockIcon from "ClockIcon" /* 5752 */;
 import TextStylesDefault from "TextStyles" /* 6822 */;
-import MarketingSurfaceType from "MarketingSurfaceType" /* 9166 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9701 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9708 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9710 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9712 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9717 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11151 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 11160 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 11161 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 11162 */;
-import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 11163 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 11164 */;
-import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 11174 */;
+import MarketingSurfaceType from "MarketingSurfaceType" /* 9167 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9702 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9709 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9711 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9713 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9718 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11152 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 11161 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 11162 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 11163 */;
+import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 11164 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 11165 */;
+import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 11175 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9162 */;
+import PromotionsStore from "PromotionsStore" /* 9163 */;
 
 require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {

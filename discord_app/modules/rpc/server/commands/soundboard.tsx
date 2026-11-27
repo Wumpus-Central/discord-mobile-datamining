@@ -1,8 +1,8 @@
-// === Module 15929: soundboard ===
+// === Module 15936: soundboard ===
 
-// Module 15929 (soundboard)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10218 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 10406 */;
+// Module 15936 (soundboard)
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10219 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 10407 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SoundboardStore from "SoundboardStore" /* 6923 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -53,7 +53,7 @@ obj4.handler = function handler(args) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ obj4.handler = function handler(args) {
             closure_128_3 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(10406).maybeFetchSoundboardSounds(), done: false };
+            const obj5 = { value: tmp2(10407).maybeFetchSoundboardSounds(), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -86,14 +86,14 @@ obj4.handler = function handler(args) {
         } else {
           currentUser2 = currentUser.getCurrentUser();
           sound2 = sound.getSound(closure_129_0, closure_129_1);
-          closure_128_2 = tmp5(10411)();
+          closure_128_2 = tmp5(10412)();
           let result = null != sound2;
           if (result) {
             result = null != currentUser2;
           }
           if (result) {
-            result = tmp2(10404).canUseSoundboardSound(currentUser2, sound2, closure_128_2);
-            const obj = tmp2(10404);
+            result = tmp2(10405).canUseSoundboardSound(currentUser2, sound2, closure_128_2);
+            const obj = tmp2(10405);
           }
           closure_128_3 = result;
           if (null == closure_128_2) {
@@ -101,14 +101,14 @@ obj4.handler = function handler(args) {
             const tmp52 = new tmp5(7644)(obj8, "Invalid Channel.");
             throw tmp52;
           } else if (closure_128_3) {
-            if (tmp5(10413)(closure_128_2)) {
+            if (tmp5(10414)(closure_128_2)) {
               if (null != sound2) {
                 items = [tmp5(6380).RPC];
-                tmp2(10404).playSound(sound2, closure_128_2.id, items);
-                const obj4 = tmp2(10404);
+                tmp2(10405).playSound(sound2, closure_128_2.id, items);
+                const obj4 = tmp2(10405);
               }
               c3 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             } else {
               const obj9 = { errorCode: constants.INVALID_PERMISSIONS };
               const tmp32 = new tmp5(7644)(obj9, "Invalid Permissions.");

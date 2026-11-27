@@ -1,8 +1,8 @@
-// === Module 18663: conjureLiveBehindTip ===
+// === Module 18678: conjureLiveBehindTip ===
 
-// Module 18663 (conjureLiveBehindTip)
-import conjurePublishCard from "conjurePublishCard" /* 18636 */;
-import conjureTipImpressions from "conjureTipImpressions" /* 18664 */;
+// Module 18678 (conjureLiveBehindTip)
+import conjurePublishCard from "conjurePublishCard" /* 18647 */;
+import conjureTipImpressions from "conjureTipImpressions" /* 18679 */;
 import size from "module_2" /* 2 */;
 
 function resolveLiveBehindTip(draftHasText) {

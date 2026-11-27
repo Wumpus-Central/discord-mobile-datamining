@@ -1,13 +1,13 @@
-// === Module 18005: MobileGameCommunitiesActionCreators ===
+// === Module 18012: MobileGameCommunitiesActionCreators ===
 
-// Module 18005 (MobileGameCommunitiesActionCreators)
+// Module 18012 (MobileGameCommunitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import _modDef1489 from "module_1489" /* 1489 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15204 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17245 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15211 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17252 */;
 
 require = fn;
 let closure_7 = async function _fetchDetectedGameCommunities() {
@@ -21,7 +21,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
         const obj7 = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds, gameIds: closure_128_0 };
         closure_129_1(closure_129_2[8]).dispatch(obj7);
         c3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp14) {
       c3 = tmp;
@@ -107,7 +107,7 @@ let closure_8 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -151,7 +151,7 @@ let closure_8 = asyncGeneratorStep(async () => {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;

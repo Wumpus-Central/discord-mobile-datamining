@@ -1,6 +1,6 @@
-// === Module 8617: SegmentedControl ===
+// === Module 8618: SegmentedControl ===
 
-// Module 8617 (SegmentedControl)
+// Module 8618 (SegmentedControl)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

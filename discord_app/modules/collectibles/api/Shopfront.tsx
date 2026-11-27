@@ -1,6 +1,6 @@
-// === Module 16591: Shopfront ===
+// === Module 16598: Shopfront ===
 
-// Module 16591 (Shopfront)
+// Module 16598 (Shopfront)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _search(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

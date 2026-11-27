@@ -1,13 +1,13 @@
-// === Module 18072: GuildsBar ===
+// === Module 18079: GuildsBar ===
 
-// Module 18072 (GuildsBar)
+// Module 18079 (GuildsBar)
 import NativeViewDefault from "NativeView" /* 7055 */;
 import FastListDefault from "FastList" /* 7428 */;
-import StartupProfilerDefault from "StartupProfiler" /* 12003 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 17902 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 18073 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 18081 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 18147 */;
+import StartupProfilerDefault from "StartupProfiler" /* 12011 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 17909 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 18080 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 18088 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 18154 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -80,7 +80,7 @@ export default noop.memo(function GuildsBar(enableHome) {
   }, items1);
   let obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(12003).Profiles.Guilds;
+  obj.profile = fastListRef(12011).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp10 = StartupProfilerDefault;

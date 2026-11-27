@@ -1,6 +1,6 @@
-// === Module 14582: UserProfileWidgetDraggableCard ===
+// === Module 14589: UserProfileWidgetDraggableCard ===
 
-// Module 14582 (UserProfileWidgetDraggableCard)
+// Module 14589 (UserProfileWidgetDraggableCard)
 import nativeDefault from "native" /* 575 */;
 import Card from "Card" /* 6145 */;
 import UserProfileCardTitleDefault from "UserProfileCardTitle" /* 7559 */;

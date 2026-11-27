@@ -1,12 +1,12 @@
-// === Module 14785: GuildBoostingMarketingProgressBarMarker ===
+// === Module 14791: GuildBoostingMarketingProgressBarMarker ===
 
-// Module 14785 (GuildBoostingMarketingProgressBarMarker)
+// Module 14791 (GuildBoostingMarketingProgressBarMarker)
 import nativeDefault from "native" /* 575 */;
 import useThemeDefault from "useTheme" /* 5252 */;
 import spring_spring from "spring/spring" /* 5644 */;
-import _modDef14786 from "module_14786" /* 14786 */;
-import _modDef14787 from "module_14787" /* 14787 */;
-import _modDef14788 from "module_14788" /* 14788 */;
+import _modDef14792 from "module_14792" /* 14792 */;
+import _modDef14793 from "module_14793" /* 14793 */;
+import _modDef14794 from "module_14794" /* 14794 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -87,7 +87,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     }
     return tmp18;
   } else if (isDisabled) {
-    BoostGemSlashIcon = BoostGemSlashIcon(13574).BoostGemSlashIcon;
+    BoostGemSlashIcon = BoostGemSlashIcon(13582).BoostGemSlashIcon;
     let tmp22Result = closure_6(BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
   } else {
     const obj4 = { source: obj2[tier], style: null };
@@ -106,7 +106,7 @@ const BoostedGuildTiers = fn(1071).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const TierMarkerPositions = { [BoostedGuildTiers.NONE]: 0, [BoostedGuildTiers.TIER_1]: 0.3333333333333333, [BoostedGuildTiers.TIER_2]: 0.6666666666666666, [BoostedGuildTiers.TIER_3]: 1 };
-let obj2 = { [TIER_1]: _modDef14786, [TIER_2]: _modDef14787, [TIER_3]: _modDef14788 };
+let obj2 = { [TIER_1]: _modDef14792, [TIER_2]: _modDef14793, [TIER_3]: _modDef14794 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
 let createStyles = fn(5043);
 let obj4 = { progressBarMarkerInnerCircle: { width: 17.5, height: 17.5, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }, progressBarMarkerInnerCircleBackground: { width: "100%", height: "100%", borderRadius: 17.5, position: "absolute" }, progressBarMarkerInnerCircleIcon: { width: 16, height: 16 }, progressBarMarkerInnerCircleIconUnlocked: null };
@@ -217,14 +217,14 @@ export default function ProgressBarMarker(arg0) {
       tmp25Result = tier !== BoostedGuildTiers.NONE;
     }
     if (tmp25Result) {
-      const obj7 = { source: tmp2(12044), style: tmp.progressBarMarkerUnlockedIcon };
+      const obj7 = { source: tmp2(12052), style: tmp.progressBarMarkerUnlockedIcon };
       tmp25Result = closure_6(tmp2(5730), obj7);
       const tmp2Result = tmp2(5730);
     }
     const items7 = [tmp25Result, ];
     const obj8 = { variant: "body-xs/medium", children: null };
     const tmp5Result = tmp5(1654);
-    obj8.children = tmp5(10363).getTierName(tier, { useLevels: false });
+    obj8.children = tmp5(10364).getTierName(tier, { useLevels: false });
     items7[1] = closure_6(tmp5(5634).Text, obj8);
     obj6.children = items7;
     items5[2] = closure_7(View, obj6);

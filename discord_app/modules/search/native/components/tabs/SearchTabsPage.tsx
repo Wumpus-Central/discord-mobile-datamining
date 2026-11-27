@@ -1,19 +1,19 @@
-// === Module 18949: SearchTabsPage ===
+// === Module 18965: SearchTabsPage ===
 
-// Module 18949 (SearchTabsPage)
+// Module 18965 (SearchTabsPage)
 import _modDef38 from "module_38" /* 38 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8619 */;
-import GuildNSFWDefault from "GuildNSFW" /* 11777 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 11779 */;
-import RecentScreenDefault from "RecentScreen" /* 18950 */;
-import PeopleScreenDefault from "PeopleScreen" /* 19014 */;
-import MembersScreenDefault from "MembersScreen" /* 19016 */;
-import ChannelsScreenDefault from "ChannelsScreen" /* 19022 */;
-import MediaScreenDefault from "MediaScreen" /* 19023 */;
-import FilesScreenDefault from "FilesScreen" /* 19031 */;
-import LinksScreenDefault from "LinksScreen" /* 19033 */;
-import MessagesScreenDefault from "MessagesScreen" /* 19040 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 19043 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8620 */;
+import GuildNSFWDefault from "GuildNSFW" /* 11785 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 11787 */;
+import RecentScreenDefault from "RecentScreen" /* 18966 */;
+import PeopleScreenDefault from "PeopleScreen" /* 19030 */;
+import MembersScreenDefault from "MembersScreen" /* 19032 */;
+import ChannelsScreenDefault from "ChannelsScreen" /* 19038 */;
+import MediaScreenDefault from "MediaScreen" /* 19039 */;
+import FilesScreenDefault from "FilesScreen" /* 19047 */;
+import LinksScreenDefault from "LinksScreen" /* 19049 */;
+import MessagesScreenDefault from "MessagesScreen" /* 19056 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 19059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -75,7 +75,7 @@ function SearchTabsPage(selectMediaTab) {
       return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
     } else if (SearchTabs.THREADS === tab) {
       const obj12 = { searchContext };
-      return jsx(searchContext(19034).SearchTabsThreadScreen, { searchContext });
+      return jsx(searchContext(19050).SearchTabsThreadScreen, { searchContext });
     } else if (SearchTabs.MESSAGES === tab) {
       const obj26 = { tab, searchContext, isFocused };
       return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });
@@ -91,7 +91,7 @@ function SearchTabsPage(selectMediaTab) {
   const obj2 = searchContext(6849);
 }
 const View = fn(17).View;
-const SearchTabs = fn(9019).SearchTabs;
+const SearchTabs = fn(9020).SearchTabs;
 const SearchTypes = fn(1071).SearchTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);

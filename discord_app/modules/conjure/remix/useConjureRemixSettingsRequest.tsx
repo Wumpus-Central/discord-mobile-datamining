@@ -1,46 +1,54 @@
-// === Module 18668: useConjureRemixSettingsRequest ===
+// === Module 18683: useConjureRemixSettingsRequest ===
 
-// Module 18668 (useConjureRemixSettingsRequest)
-import conjureSettingsRequest from "conjureSettingsRequest" /* 18669 */;
+// Module 18683 (useConjureRemixSettingsRequest)
+import conjureSetupAsk from "conjureSetupAsk" /* 18655 */;
+import conjureRemixSettingsRequest from "conjureRemixSettingsRequest" /* 18657 */;
+import noop from "module_19" /* 19 */;
 import ConjureSettingsStore from "ConjureSettingsStore" /* 7710 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/conjure/remix/useConjureRemixSettingsRequest.tsx");
+const result = size.fileFinishedImporting("modules/conjure/remix/useConjureRemixSettingsRequest.tsx");
 
-export default function useConjureRemixSettingsRequest(arg0, type) {
-  _require = arg0;
-  type = undefined;
-  if (type != null) {
-    type = type.type;
-  }
-  let settings_keys;
-  if ("remixed" === type) {
-    settings_keys = type.settings_keys;
-  }
-  items = [ConjureSettingsStore];
-  const items1 = [settings_keys, arg0];
-  let tmp5 = null;
-  if (obj.useStateFromStores(items, () => {
-    let result = null != settings_keys;
-    if (result) {
-      result = settings_keys.length > 0;
+export default function useConjureRemixSettingsRequest(projectId, arg1, askId) {
+  _require = projectId;
+  dependencyMap = arg1;
+  noop = askId;
+  items = [arg1];
+  const memo = noop.useMemo(() => conjureRemixSettingsRequest.conjureRemixSettingsRequest(closure_1), items);
+  const conjureSettingsAskSource = require("conjureSettingsAsks").useConjureSettingsAskSource(projectId, memo, askId);
+  const saved = conjureSettingsAskSource.saved;
+  const superseded = conjureSettingsAskSource.superseded;
+  let obj = require("conjureSettingsAsks");
+  const items1 = [memo];
+  const items2 = [memo, askId, projectId, saved, superseded];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => {
+    const settings = ConjureSettingsStore.getSettings(closure_0);
+    let status = null;
+    if (null != memo) {
+      status = null;
+      if (null != closure_2) {
+        status = null;
+        if (null != settings) {
+          const obj2 = { kind: "settings", request: tmp2, askId: tmp4, saved, superseded };
+          status = conjureSetupAsk.conjureSetupAskState(obj2, settings).status;
+        }
+      }
     }
-    if (result) {
-      const obj2 = { keys: settings_keys };
-      result = conjureSettingsRequest.conjureSettingsRequestBlocks(obj2, ConjureSettingsStore.getSettings(closure_0));
+    return status;
+  }, items2);
+  const items3 = [memo, stateFromStores];
+  return noop.useMemo(() => {
+    let tmp2 = null;
+    if (null != memo) {
+      tmp2 = null;
+      if (null != stateFromStores) {
+        const obj = { request: tmp, open: "open" === tmp3 };
+        tmp2 = obj;
+      }
     }
-    return result;
-  }, items1)) {
-    tmp5 = null;
-    if (null != settings_keys) {
-      let obj2 = { keys: settings_keys, note: null };
-      const intl = require("util").intl;
-      obj2.note = intl.string(settings_keys(4245).F2yVHg);
-      tmp5 = obj2;
-    }
-  }
-  return tmp5;
+    return tmp2;
+  }, items3);
 };

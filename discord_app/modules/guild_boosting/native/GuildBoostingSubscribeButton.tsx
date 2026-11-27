@@ -1,10 +1,10 @@
-// === Module 13578: GuildBoostingSubscribeButton ===
+// === Module 13586: GuildBoostingSubscribeButton ===
 
-// Module 13578 (GuildBoostingSubscribeButton)
-import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 13528 */;
+// Module 13586 (GuildBoostingSubscribeButton)
+import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 13536 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10364 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10365 */;
 
 require = fn;
 let closure_14 = async function _handleBoostPress() {
@@ -21,7 +21,7 @@ let closure_14 = async function _handleBoostPress() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ let closure_14 = async function _handleBoostPress() {
         } else {
           closure_131_0(closure_131_2[10]).closeApplyBoostModal();
           c5 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         c5 = tmp;

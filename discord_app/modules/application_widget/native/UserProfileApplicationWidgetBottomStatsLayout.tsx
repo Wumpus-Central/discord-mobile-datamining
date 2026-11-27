@@ -1,9 +1,9 @@
-// === Module 14660: UserProfileApplicationWidgetBottomStatsLayout ===
+// === Module 14667: UserProfileApplicationWidgetBottomStatsLayout ===
 
-// Module 14660 (UserProfileApplicationWidgetBottomStatsLayout)
+// Module 14667 (UserProfileApplicationWidgetBottomStatsLayout)
 import nativeDefault from "native" /* 575 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 14611 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 14654 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 14618 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 14661 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ export default function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
         } else {
           tmp5Result = null;
           if ("skeleton" === iter.label.status) {
-            tmp5Result = React3(Text(14655).TextSkeleton, { variant: "body-xs/normal", widthChars: 6 });
+            tmp5Result = React3(Text(14662).TextSkeleton, { variant: "body-xs/normal", widthChars: 6 });
           }
         }
         items[1] = tmp5Result;

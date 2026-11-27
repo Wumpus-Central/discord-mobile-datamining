@@ -1,13 +1,13 @@
-// === Module 13954: Footer ===
+// === Module 13961: Footer ===
 
-// Module 13954 (Footer)
+// Module 13961 (Footer)
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13955 */;
-import _modDef13956 from "module_13956" /* 13956 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13962 */;
+import _modDef13963 from "module_13963" /* 13963 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,7 +46,7 @@ export default function Footer(showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13956 });
+  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13963 });
   obj.children = items2;
   return timestampProducer(View, obj);
 };

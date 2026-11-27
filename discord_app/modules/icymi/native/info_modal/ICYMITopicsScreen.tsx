@@ -1,6 +1,6 @@
-// === Module 18327: ICYMITopicsScreen ===
+// === Module 18334: ICYMITopicsScreen ===
 
-// Module 18327 (ICYMITopicsScreen)
+// Module 18334 (ICYMITopicsScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5105 */;
@@ -8,22 +8,22 @@ import components_Button_Button from "components/Button/Button" /* 5641 */;
 import BookCheckIcon from "BookCheckIcon" /* 7141 */;
 import ForumIcon from "ForumIcon" /* 7154 */;
 import GameControllerIcon from "GameControllerIcon" /* 7756 */;
-import FoodIcon from "FoodIcon" /* 9782 */;
-import BicycleIcon from "BicycleIcon" /* 9784 */;
-import MusicIcon from "MusicIcon" /* 10309 */;
-import TvIcon from "TvIcon" /* 11369 */;
-import PencilSparkleIcon from "PencilSparkleIcon" /* 11694 */;
-import RobotIcon from "RobotIcon" /* 12270 */;
-import MedalIcon from "MedalIcon" /* 12397 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 12597 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 15835 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 16873 */;
-import ScienceIcon from "ScienceIcon" /* 18329 */;
-import PaintbrushThinIcon from "PaintbrushThinIcon" /* 18330 */;
+import FoodIcon from "FoodIcon" /* 9783 */;
+import BicycleIcon from "BicycleIcon" /* 9785 */;
+import MusicIcon from "MusicIcon" /* 10310 */;
+import TvIcon from "TvIcon" /* 11370 */;
+import PencilSparkleIcon from "PencilSparkleIcon" /* 11702 */;
+import RobotIcon from "RobotIcon" /* 12278 */;
+import MedalIcon from "MedalIcon" /* 12405 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 12605 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 15842 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 16880 */;
+import ScienceIcon from "ScienceIcon" /* 18336 */;
+import PaintbrushThinIcon from "PaintbrushThinIcon" /* 18337 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18321 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 18328 */;
 
 require = fn;
 function WordTopic(categoryid) {
@@ -78,7 +78,7 @@ function WordTopic(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(18328).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(18335).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5043);
@@ -119,7 +119,7 @@ export default function ICYMITopicsScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

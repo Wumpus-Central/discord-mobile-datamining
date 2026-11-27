@@ -8,7 +8,7 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 4901 */;
 import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 4903 */;
 import Tracking from "Tracking" /* 8116 */;
-import ForumUtils from "ForumUtils" /* 8167 */;
+import ForumUtils from "ForumUtils" /* 8168 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import ReadStateStore from "ReadStateStore" /* 6932 */;

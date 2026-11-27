@@ -1,7 +1,7 @@
-// === Module 10244: useWebViewPlatformProps ===
+// === Module 10245: useWebViewPlatformProps ===
 
-// Module 10244 (useWebViewPlatformProps)
-import createEmbeddedAppFrameScript from "createEmbeddedAppFrameScript" /* 10245 */;
+// Module 10245 (useWebViewPlatformProps)
+import createEmbeddedAppFrameScript from "createEmbeddedAppFrameScript" /* 10246 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/native/webview/useWebViewPlatformProps.android.tsx");

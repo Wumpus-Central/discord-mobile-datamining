@@ -1,9 +1,9 @@
-// === Module 18386: StandaloneChannelScreen ===
+// === Module 18393: StandaloneChannelScreen ===
 
-// Module 18386 (StandaloneChannelScreen)
+// Module 18393 (StandaloneChannelScreen)
 import nativeDefault from "native" /* 575 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5219 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9006 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9007 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
@@ -129,7 +129,7 @@ function Header(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const MainTabsV2Constants = fn(9005);
+const MainTabsV2Constants = fn(9006);
 ({ ONYX_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_6 } = MainTabsV2Constants);
 const Constants = fn(1071);
 ({ ChannelTypes: metroImportDefault, EMPTY_STRING_SNOWFLAKE_ID: closure_8, ME: closure_9, ThemeTypes: closure_10 } = Constants);

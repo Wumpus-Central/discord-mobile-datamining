@@ -1,6 +1,6 @@
-// === Module 9692: PremiumFeatureUtils ===
+// === Module 9693: PremiumFeatureUtils ===
 
-// Module 9692 (PremiumFeatureUtils)
+// Module 9693 (PremiumFeatureUtils)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2109 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1388 */;
 

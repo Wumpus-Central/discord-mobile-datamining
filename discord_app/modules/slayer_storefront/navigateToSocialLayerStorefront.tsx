@@ -1,9 +1,9 @@
-// === Module 9407: navigateToSocialLayerStorefront ===
+// === Module 9408: navigateToSocialLayerStorefront ===
 
-// Module 9407 (navigateToSocialLayerStorefront)
+// Module 9408 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1098 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7588 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 9408 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 9409 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7590 */;
@@ -30,7 +30,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
               }
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } else if (2 === tmp5) {

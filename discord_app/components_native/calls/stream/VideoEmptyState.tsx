@@ -1,10 +1,10 @@
-// === Module 10138: VideoEmptyState ===
+// === Module 10139: VideoEmptyState ===
 
-// Module 10138 (VideoEmptyState)
+// Module 10139 (VideoEmptyState)
 import nativeDefault from "native" /* 575 */;
 import useMountEffectDefault from "useMountEffect" /* 5604 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6816 */;
-import StreamActionCreators from "StreamActionCreators" /* 8419 */;
+import StreamActionCreators from "StreamActionCreators" /* 8420 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
@@ -32,7 +32,7 @@ export default function VideoEmptyState(style) {
   if (obj.STREAM_ENDED === type) {
     let tmp10 = !removeSplashImage;
     if (!removeSplashImage) {
-      let obj2 = { style: tmp2.placeholderImage, children: closure_5(stream(10139).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }) };
+      let obj2 = { style: tmp2.placeholderImage, children: closure_5(stream(10140).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }) };
       tmp10 = closure_5(View, obj2);
     }
     let obj3 = { children: null };

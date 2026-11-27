@@ -1,6 +1,6 @@
-// === Module 13036: ApplicationDirectorySimilarApplicationsStore ===
+// === Module 13044: ApplicationDirectorySimilarApplicationsStore ===
 
-// Module 13036 (ApplicationDirectorySimilarApplicationsStore)
+// Module 13044 (ApplicationDirectorySimilarApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1455 */;

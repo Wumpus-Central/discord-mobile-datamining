@@ -1,12 +1,12 @@
-// === Module 13120: AppLauncherCommandViewHeader ===
+// === Module 13128: AppLauncherCommandViewHeader ===
 
-// Module 13120 (AppLauncherCommandViewHeader)
+// Module 13128 (AppLauncherCommandViewHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import useAvatarColorDefault from "useAvatarColor" /* 6369 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 13014 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 13091 */;
-import CommandDetailsOverflowMenuDefault from "CommandDetailsOverflowMenu" /* 13121 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 13022 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 13099 */;
+import CommandDetailsOverflowMenuDefault from "CommandDetailsOverflowMenu" /* 13129 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,11 +17,11 @@ const AppLauncherNativeConstants = fn(1500);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = fn(13091).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(13099).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 let closure_8 = sum - 56;
 const createStyles = fn(5043);
 let obj2 = { headerContainer: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", position: "absolute", top: -16, left: 0, right: 0, padding: DEFAULT_CONTENT_PADDING, zIndex: 1 }, loadingHeaderContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, overflowMenuContainer: null, appIconMask: null, appIcon: null, loadingIcon: null, appSmallName: null, icon: null, headerBannerOverlay: null };
-let size = { width: fn(13091).BACK_BUTTON_SIZE, height: fn(13091).BACK_BUTTON_SIZE };
+let size = { width: fn(13099).BACK_BUTTON_SIZE, height: fn(13099).BACK_BUTTON_SIZE };
 obj2.overflowMenuContainer = size;
 const rect = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: AppLauncherNativeConstants.SCREEN_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xl + 4 };
 obj2.appIconMask = rect;

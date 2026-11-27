@@ -1,11 +1,11 @@
-// === Module 19138: UserProfileYourFriendsCard ===
+// === Module 19154: UserProfileYourFriendsCard ===
 
-// Module 19138 (UserProfileYourFriendsCard)
+// Module 19154 (UserProfileYourFriendsCard)
 import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8322 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8323 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
 import UserStore from "UserStore" /* 1387 */;
 
@@ -40,7 +40,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
   let obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(10446).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(10447).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

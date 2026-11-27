@@ -1,6 +1,6 @@
-// === Module 12544: AutomatedUnderageAppealModalActionCreators ===
+// === Module 12552: AutomatedUnderageAppealModalActionCreators ===
 
-// Module 12544 (AutomatedUnderageAppealModalActionCreators)
+// Module 12552 (AutomatedUnderageAppealModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 let obj = {
   open(classificationId, onClose) {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12545, dependencyMap.paths), React4, { classificationId, onClose });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12553, dependencyMap.paths), React4, { classificationId, onClose });
   },
   openV2(classificationId, onClose) {
     _require = classificationId;
@@ -37,7 +37,7 @@ let obj = {
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -85,12 +85,12 @@ let obj = {
                       },
                       onComplete() {
                         closure_0 = dependencyMap;
-                        closure_2_0(12541).resetAgeCheckStatus();
-                        obj = closure_2_0(12541);
+                        closure_2_0(12549).resetAgeCheckStatus();
+                        obj = closure_2_0(12549);
                         closure_2_1(572).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
                         const obj2 = closure_2_1(572);
                         closure_2_1(572).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
-                        const timerId = setTimeout(/* F143075 */ function() { ... }, closure_2_5);
+                        const timerId = setTimeout(/* F143541 */ function() { ... }, closure_2_5);
                       }
                     });
                   }), obj8, closure_1_6);
@@ -105,7 +105,7 @@ let obj = {
           }
         })();
       }
-      tmp4Result = tmp4(12543);
+      tmp4Result = tmp4(12551);
     }
     obj2 = require("SafetyHubUtils");
     ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {

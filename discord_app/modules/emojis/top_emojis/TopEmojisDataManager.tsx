@@ -1,7 +1,7 @@
-// === Module 19698: TopEmojisDataManager ===
+// === Module 19714: TopEmojisDataManager ===
 
-// Module 19698 (TopEmojisDataManager)
-import TopEmojisUtils from "TopEmojisUtils" /* 9543 */;
+// Module 19714 (TopEmojisDataManager)
+import TopEmojisUtils from "TopEmojisUtils" /* 9544 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 

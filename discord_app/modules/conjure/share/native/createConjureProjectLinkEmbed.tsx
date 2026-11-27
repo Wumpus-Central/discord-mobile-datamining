@@ -1,17 +1,17 @@
-// === Module 14524: createConjureProjectLinkEmbed ===
+// === Module 14531: createConjureProjectLinkEmbed ===
 
-// Module 14524 (createConjureProjectLinkEmbed)
+// Module 14531 (createConjureProjectLinkEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
-import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 11559 */;
-import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 11995 */;
-import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 11996 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12385 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 12935 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12937 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 14368 */;
+import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 11567 */;
+import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 12003 */;
+import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 12004 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12393 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 12943 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12945 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 14375 */;
 import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
 

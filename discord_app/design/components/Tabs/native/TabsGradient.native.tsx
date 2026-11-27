@@ -1,6 +1,6 @@
-// === Module 13799: TabsGradient ===
+// === Module 13806: TabsGradient ===
 
-// Module 13799 (TabsGradient)
+// Module 13806 (TabsGradient)
 import _mod1654 from "module_1654" /* 1654 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import spring_spring from "spring/spring" /* 5644 */;

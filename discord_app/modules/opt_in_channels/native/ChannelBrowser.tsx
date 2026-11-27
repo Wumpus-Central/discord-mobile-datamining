@@ -1,12 +1,12 @@
-// === Module 12036: ChannelBrowser ===
+// === Module 12044: ChannelBrowser ===
 
-// Module 12036 (ChannelBrowser)
+// Module 12044 (ChannelBrowser)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import MarkupInlineChannelMentionRules from "MarkupInlineChannelMentionRules" /* 10654 */;
+import MarkupInlineChannelMentionRules from "MarkupInlineChannelMentionRules" /* 10655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 8290 */;
+import NewChannelsStore from "NewChannelsStore" /* 8291 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7468 */;
 import GuildChannelStore from "GuildChannelStore" /* 4973 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -46,7 +46,7 @@ if (PlatformUtils) {
   obj.channelMention = obj3;
   let obj4 = { react: fn(7178).smartOutput };
   obj.guild = obj4;
-  let obj5 = { react: fn(10654).inlineChannelReact };
+  let obj5 = { react: fn(10655).inlineChannelReact };
   obj.channel = obj5;
   let parseTopic = MarkupUtils.reactParserFor(obj);
 } else {

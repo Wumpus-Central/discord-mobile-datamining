@@ -1,9 +1,9 @@
-// === Module 11736: BellZIcon ===
+// === Module 11744: BellZIcon ===
 
-// Module 11736 (BellZIcon)
+// Module 11744 (BellZIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5729 */;
-import _mod11737 from "module_11737" /* 11737 */;
+import _mod11745 from "module_11745" /* 11745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BellZIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11737, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11745, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

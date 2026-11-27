@@ -1,7 +1,7 @@
-// === Module 18990: MarkupSearchResultLinkPreviewReactRules ===
+// === Module 19006: MarkupSearchResultLinkPreviewReactRules ===
 
-// Module 18990 (MarkupSearchResultLinkPreviewReactRules)
-import MarkupMessagePreviewReactRules from "MarkupMessagePreviewReactRules" /* 10649 */;
+// Module 19006 (MarkupSearchResultLinkPreviewReactRules)
+import MarkupMessagePreviewReactRules from "MarkupMessagePreviewReactRules" /* 10650 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");

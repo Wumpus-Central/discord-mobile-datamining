@@ -1,6 +1,6 @@
-// === Module 20278: NotificationSettingsModal ===
+// === Module 20336: NotificationSettingsModal ===
 
-// Module 20278 (NotificationSettingsModal)
+// Module 20336 (NotificationSettingsModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -25,17 +25,17 @@ import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7471 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7476 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
 import Form2 from "Form" /* 8088 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10668 */;
-import MutedUntilTextDefault from "MutedUntilText" /* 10673 */;
-import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10674 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 13792 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10669 */;
+import MutedUntilTextDefault from "MutedUntilText" /* 10674 */;
+import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10675 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 13799 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7468 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5664 */;
 import GuildStore from "GuildStore" /* 4914 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 19891 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 19907 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -62,8 +62,8 @@ function ConnectedNotificationSettings(guildId) {
     return tmp;
   }), items1);
   const obj2 = guildId(504);
-  shouldUseNewNotificationSystem = guildId(10674).useShouldUseNewNotificationSystem("NotificationSettingsModalNative");
-  const obj3 = guildId(10674);
+  shouldUseNewNotificationSystem = guildId(10675).useShouldUseNewNotificationSystem("NotificationSettingsModalNative");
+  const obj3 = guildId(10675);
   const items2 = [UserGuildSettingsStore];
   const items3 = [shouldUseNewNotificationSystem, memo, tmp3.channelOverrides];
   const obj5 = { children: null };
@@ -133,8 +133,8 @@ class NotificationSettings extends PureComponent {
         const _HermesInternal = HermesInternal;
         const tmpResult2 = ActionSheetActionCreatorsDefault;
         const obj2 = { guildId };
-        tmpResult2.openLazy(asyncRequireImpl(10669, dependencyMap.paths), "muteSettings" + guildId, obj2);
-        const tmp7 = asyncRequireImpl(10669, dependencyMap.paths);
+        tmpResult2.openLazy(asyncRequireImpl(10670, dependencyMap.paths), "muteSettings" + guildId, obj2);
+        const tmp7 = asyncRequireImpl(10670, dependencyMap.paths);
       }
     };
     applyArgumentsResult.handleToggleChange = function handleToggleChange(mobile_push, arg1, NotificationLabel) {
@@ -367,7 +367,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
   items = [closure_1_29(tmp6(6140).TableRowGroup, obj3, "mute"), ];
   let tmp10Result = null;
   if (muted) {
-    const obj5 = { muteConfig: props.muteConfig, type: tmp6(10673).MuteSettingType.SERVER };
+    const obj5 = { muteConfig: props.muteConfig, type: tmp6(10674).MuteSettingType.SERVER };
     tmp10Result = closure_1_29(MutedUntilTextDefault, obj5, "muted-until");
   }
   items[1] = tmp10Result;
@@ -504,7 +504,7 @@ export default function NotificationSettingsModal() {
     obj4.title = intl2.string(util.t.s7vIQT);
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.render = function render(guildId, navigation) {
-      return closure_1_29(closure_1_1(20279), { guildId: guildId.guildId, navigation });
+      return closure_1_29(closure_1_1(20337), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj4;
     const obj6 = { headerLeft: null, title: null, render: null };
@@ -512,7 +512,7 @@ export default function NotificationSettingsModal() {
     const intl3 = util.intl;
     obj6.title = intl3.string(util.t.h850Ss);
     obj6.render = function render(channelId) {
-      return closure_1_29(closure_1_1(10667), { channelId: channelId.channelId });
+      return closure_1_29(closure_1_1(10668), { channelId: channelId.channelId });
     };
     obj[constants.CHANNEL_OVERRIDE] = obj6;
     return obj;

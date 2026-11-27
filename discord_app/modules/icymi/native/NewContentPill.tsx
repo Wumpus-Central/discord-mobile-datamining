@@ -1,14 +1,14 @@
-// === Module 18371: NewContentPill ===
+// === Module 18378: NewContentPill ===
 
-// Module 18371 (NewContentPill)
+// Module 18378 (NewContentPill)
 import nativeDefault from "native" /* 575 */;
 import useThemeDefault from "useTheme" /* 5252 */;
 import GuildIcon from "GuildIcon" /* 7052 */;
-import ClipView from "ClipView" /* 9420 */;
+import ClipView from "ClipView" /* 9421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;
-import ICYMIStore from "ICYMIStore" /* 8913 */;
+import ICYMIStore from "ICYMIStore" /* 8914 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -189,7 +189,7 @@ export default function NewContentPill(onPress) {
     obj5.style = items11;
     obj5.animatedProps = animatedProps;
     const obj6 = { onPress: callback, style: tmp.container, children: null };
-    const items12 = [first2(tmp2(17398).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ];
+    const items12 = [first2(tmp2(17405).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ];
     const obj7 = { style: { marginLeft: 4 }, variant: "heading-sm/semibold", color: "interactive-text-active", children: null };
     const intl = tmp2(1112).intl;
     obj7.children = intl.string(tmp2(1112).t["4Nl0Rl"]);
@@ -213,7 +213,7 @@ export default function NewContentPill(onPress) {
       tmp36(tmp27, unsafe_rawColors);
       const tmp29 = tmp2(5050).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
     } else {
-      const items14 = [tmp36(tmp2(17398).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
+      const items14 = [tmp36(tmp2(17405).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
       const substr = stateFromStoresArray1.slice(0, stateFromStoresArray1.length - 1);
       items14[1] = substr.map((guild, index) => {
         let num = 4;

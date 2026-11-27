@@ -1,10 +1,10 @@
-// === Module 14091: useActivityStatusLabel ===
+// === Module 14098: useActivityStatusLabel ===
 
-// Module 14091 (useActivityStatusLabel)
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11365 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11366 */;
-import isGameActivityDefault from "isGameActivity" /* 11372 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 11374 */;
+// Module 14098 (useActivityStatusLabel)
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11366 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11367 */;
+import isGameActivityDefault from "isGameActivity" /* 11373 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 11375 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
@@ -13,7 +13,7 @@ import RelationshipStore from "RelationshipStore" /* 4985 */;
 import VoiceStateStore from "VoiceStateStore" /* 5691 */;
 
 const util = v0wJXSh(1112);
-const VoiceActivityStatus = v0wJXSh(11379);
+const VoiceActivityStatus = v0wJXSh(11380);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/useActivityStatusLabel.tsx");

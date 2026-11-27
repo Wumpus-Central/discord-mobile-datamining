@@ -1,12 +1,12 @@
-// === Module 19191: IconLabelBlock ===
+// === Module 19207: IconLabelBlock ===
 
-// Module 19191 (IconLabelBlock)
+// Module 19207 (IconLabelBlock)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import shared from "shared" /* 5050 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import IconUploaderDefault from "IconUploader" /* 11421 */;
+import IconUploaderDefault from "IconUploader" /* 11422 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

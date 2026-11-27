@@ -1,6 +1,6 @@
-// === Module 11083: ImageCarousel ===
+// === Module 11084: ImageCarousel ===
 
-// Module 11083 (ImageCarousel)
+// Module 11084 (ImageCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -11,10 +11,10 @@ import spring_spring from "spring/spring" /* 5644 */;
 import Pressables from "Pressables" /* 6152 */;
 import _modDef7303 from "module_7303" /* 7303 */;
 import Upload from "Upload" /* 8126 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10062 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10713 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 11085 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11087 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10063 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 10714 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 11086 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11088 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8124 */;
 
@@ -330,7 +330,7 @@ class ImageCarouselRow {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const DraftType = fn(8117).DraftType;
-const ImageCarouselConstants = fn(11084);
+const ImageCarouselConstants = fn(11085);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;

@@ -1,19 +1,19 @@
-// === Module 19284: DisplayNameStylesV2AbstractUI ===
+// === Module 19300: DisplayNameStylesV2AbstractUI ===
 
-// Module 19284 (DisplayNameStylesV2AbstractUI)
+// Module 19300 (DisplayNameStylesV2AbstractUI)
 import assetHelpers from "assetHelpers" /* 7261 */;
-import _modDef19285 from "module_19285" /* 19285 */;
-import _modDef19286 from "module_19286" /* 19286 */;
-import _modDef19287 from "module_19287" /* 19287 */;
+import _modDef19301 from "module_19301" /* 19301 */;
+import _modDef19302 from "module_19302" /* 19302 */;
+import _modDef19303 from "module_19303" /* 19303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19285 }, 3: null };
-let obj2 = { uri: _modDef19285 };
-obj[2] = { uri: _modDef19286 };
-const obj3 = { uri: _modDef19286 };
-obj[3] = { uri: _modDef19287 };
+let obj = { 1: null, 2: { uri: _modDef19301 }, 3: null };
+let obj2 = { uri: _modDef19301 };
+obj[2] = { uri: _modDef19302 };
+const obj3 = { uri: _modDef19302 };
+obj[3] = { uri: _modDef19303 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameStylesV2AbstractUI.native.tsx");
 

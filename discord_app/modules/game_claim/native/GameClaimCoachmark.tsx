@@ -1,6 +1,6 @@
-// === Module 17912: GameClaimCoachmark ===
+// === Module 17919: GameClaimCoachmark ===
 
-// Module 17912 (GameClaimCoachmark)
+// Module 17919 (GameClaimCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -10,10 +10,10 @@ import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6124 */;
 import Card from "Card" /* 6145 */;
 import Pressables from "Pressables" /* 6152 */;
 import XSmallIcon from "XSmallIcon" /* 7247 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 12476 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14584 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 17913 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 17914 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 12484 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14591 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 17920 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 17921 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -105,7 +105,7 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -122,7 +122,7 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
               require(constants2.TAKE_ACTION);
               v1 = 1;
               v3 = 1;
-              const obj5 = { value: v1(11631).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(11635).LoginHandoffSource.GAME_CLAIM), done: false };
+              const obj5 = { value: v1(11639).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(11643).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -134,7 +134,7 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           v3 = tmp;

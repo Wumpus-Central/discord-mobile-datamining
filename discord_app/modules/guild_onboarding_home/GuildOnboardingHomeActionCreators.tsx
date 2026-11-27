@@ -1,6 +1,6 @@
-// === Module 13232: GuildOnboardingHomeActionCreators ===
+// === Module 13240: GuildOnboardingHomeActionCreators ===
 
-// Module 13232 (GuildOnboardingHomeActionCreators)
+// Module 13240 (GuildOnboardingHomeActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -10,7 +10,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 4948 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7581 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8173 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8174 */;
 
 require = fn;
 let closure_10 = async function _fetchGuildHomeSettings() {
@@ -47,7 +47,7 @@ let closure_11 = async function _fetchNewMemberActions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

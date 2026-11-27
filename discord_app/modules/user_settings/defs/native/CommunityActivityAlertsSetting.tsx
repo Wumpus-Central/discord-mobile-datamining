@@ -1,19 +1,19 @@
-// === Module 17120: CommunityActivityAlertsSetting ===
+// === Module 17127: CommunityActivityAlertsSetting ===
 
-// Module 17120 (CommunityActivityAlertsSetting)
+// Module 17127 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import _modDef3207 from "module_3207" /* 3207 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10595 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10596 */;
 
 require = fn;
-let SettingBuilders = fn(11962);
+let SettingBuilders = fn(11970);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
   },
-  parent: fn(9555).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(9556).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["0PhAOH"]);
@@ -29,7 +29,7 @@ const route = SettingBuilders.createRoute({
     }
   }
 });
-SettingBuilders = fn(11962);
+SettingBuilders = fn(11970);
 const obj4 = {};
 const merged = Object.assign(route);
 obj4.useTitle = function useTitle() {
@@ -40,7 +40,7 @@ obj4.useDescription = function useDescription() {
   const intl = util.intl;
   return intl.string(_modDef3207["5g09KR"]);
 };
-obj4.parent = fn(17102).MobileNotifSettings.NOTIF_CATEGORY_SERVERS;
+obj4.parent = fn(17109).MobileNotifSettings.NOTIF_CATEGORY_SERVERS;
 const route1 = SettingBuilders.createRoute(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");

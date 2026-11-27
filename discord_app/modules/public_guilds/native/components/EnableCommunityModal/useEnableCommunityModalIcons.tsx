@@ -1,6 +1,6 @@
-// === Module 20109: useEnableCommunityModalIcons ===
+// === Module 20167: useEnableCommunityModalIcons ===
 
-// Module 20109 (useEnableCommunityModalIcons)
+// Module 20167 (useEnableCommunityModalIcons)
 import useThemeDefault from "useTheme" /* 5252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,9 +19,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = require("module_20110");
+      let tmpResult = require("module_20168");
     } else {
-      tmpResult = require("module_20111");
+      tmpResult = require("module_20169");
     }
     return tmpResult;
   },
@@ -36,9 +36,9 @@ Object.defineProperty(prototype, "channelSetup", {
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = require("module_20116");
+      let tmpResult = require("module_20174");
     } else {
-      tmpResult = require("module_20117");
+      tmpResult = require("module_20175");
     }
     return tmpResult;
   },

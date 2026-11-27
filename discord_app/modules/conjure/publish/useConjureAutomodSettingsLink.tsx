@@ -1,9 +1,9 @@
-// === Module 18711: useConjureAutomodSettingsLink ===
+// === Module 18728: useConjureAutomodSettingsLink ===
 
-// Module 18711 (useConjureAutomodSettingsLink)
+// Module 18728 (useConjureAutomodSettingsLink)
 import _modDef4245 from "module_4245" /* 4245 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6935 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8574 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;

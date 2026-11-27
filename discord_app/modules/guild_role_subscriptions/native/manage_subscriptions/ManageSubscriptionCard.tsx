@@ -1,6 +1,6 @@
-// === Module 16827: ManageSubscriptionCard ===
+// === Module 16834: ManageSubscriptionCard ===
 
-// Module 16827 (ManageSubscriptionCard)
+// Module 16834 (ManageSubscriptionCard)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
 import util from "util" /* 1112 */;
@@ -10,9 +10,9 @@ import LinkingDefault from "Linking" /* 5722 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
 import Pressables from "Pressables" /* 6152 */;
 import GuildIconDefault from "GuildIcon" /* 7052 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9816 */;
-import FormSeparatorDefault from "FormSeparator" /* 16828 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16832 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9817 */;
+import FormSeparatorDefault from "FormSeparator" /* 16835 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16839 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -108,7 +108,7 @@ function CardBody(isTrial) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

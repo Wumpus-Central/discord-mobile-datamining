@@ -1,10 +1,10 @@
-// === Module 18995: SearchListSection ===
+// === Module 19011: SearchListSection ===
 
-// Module 18995 (SearchListSection)
+// Module 19011 (SearchListSection)
 import Text_Text from "Text/Text" /* 5634 */;
 import Pressables from "Pressables" /* 6152 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7558 */;
-import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 9816 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 9817 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,8 +12,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const createStyles = fn(5043);
-let closure_5 = createStyles.createStyles({ section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(9019).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } });
-let obj = { section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(9019).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } };
+let closure_5 = createStyles.createStyles({ section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(9020).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } });
+let obj = { section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(9020).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
 

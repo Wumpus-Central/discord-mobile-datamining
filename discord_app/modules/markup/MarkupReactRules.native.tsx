@@ -20,12 +20,12 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import MarkupRulesUtils from "MarkupRulesUtils" /* 7178 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
-import MarkupInlineChannelMentionRules2 from "MarkupInlineChannelMentionRules" /* 10654 */;
-import TimestampDefault from "Timestamp" /* 10655 */;
-import openStaticChannelRouteDefault from "openStaticChannelRoute" /* 12027 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 12066 */;
-import showEmojiActionSheetDefault from "showEmojiActionSheet" /* 12141 */;
-import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 12142 */;
+import MarkupInlineChannelMentionRules2 from "MarkupInlineChannelMentionRules" /* 10655 */;
+import TimestampDefault from "Timestamp" /* 10656 */;
+import openStaticChannelRouteDefault from "openStaticChannelRoute" /* 12035 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 12074 */;
+import showEmojiActionSheetDefault from "showEmojiActionSheet" /* 12149 */;
+import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 12150 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -49,7 +49,7 @@ class MarkupText {
     tmp3 = closure_0;
     tmp4 = closure_2;
     if (closure_3.useContext(closure_0(closure_2[10]).SpoilerHiddenContext)) {
-      obj = { style: null, onPress: "analyticsLocations", onLongPress: "displayName", accessibilityRole: "View" };
+      obj = { style: null, onPress: "__workletHash", onLongPress: "to", accessibilityRole: "skuId" };
       items = [, ];
       items[0] = merged.style;
       tmp5 = closure_14;
@@ -106,7 +106,7 @@ function MarkupLink(arg0) {
               return LinkingDefault.openURL(formatResult);
             },
           trusted() {
-              return node(12150).isLinkTrusted(formatResult);
+              return node(12158).isLinkTrusted(formatResult);
             }
         };
         node(7812).handleClick(obj);
@@ -222,13 +222,13 @@ function MarkupMention(styles) {
           const obj5 = ActionSheetActionCreatorsDefault;
           const obj3 = { guildId: null, roleId: null, channelId: null };
           ({ guildId: obj6.guildId, roleId: obj6.roleId, channelId: obj6.channelId } = node);
-          obj5.openLazy(asyncRequireImpl(12083, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
+          obj5.openLazy(asyncRequireImpl(12091, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
         }
       }
       if ("@everyone" === node.roleName) {
         if (null != node.guildId) {
           const obj2 = ActionSheetActionCreatorsDefault;
-          const tmp12 = asyncRequireImpl(12083, dependencyMap.paths);
+          const tmp12 = asyncRequireImpl(12091, dependencyMap.paths);
           const obj8 = { guildId: node.guildId, roleId: SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(node.guildId), channelId: node.channelId };
           obj2.openLazy(tmp12, "RoleMembersActionSheet", obj8, "stack");
         }
@@ -522,7 +522,7 @@ function MarkupChannelMention(state) {
       size = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
     }
     obj6.style = size;
-    obj6.source = node(12045);
+    obj6.source = node(12053);
     obj6.size = tmp4(1186).Icon.Sizes.CUSTOM;
     closure_12(tmp4(1186).ThemedIcon, obj6);
   }
@@ -532,7 +532,7 @@ function MarkupStaticRouteLink(state) {
   const node = state.node;
   ({ output, styles, variants } = state);
   let tmp = closure_16();
-  let SignPostIcon = state(15082).SignPostIcon;
+  let SignPostIcon = state(15089).SignPostIcon;
   const channelId = node.channelId;
   if (StaticChannelId.GUILD_HOME !== channelId) {
     if (StaticChannelId.SERVER_GUIDE !== channelId) {
@@ -543,7 +543,7 @@ function MarkupStaticRouteLink(state) {
           }
         }
       }
-      SignPostIcon = tmp2(15084).ChannelListMagnifyingGlassIcon;
+      SignPostIcon = tmp2(15091).ChannelListMagnifyingGlassIcon;
     }
     let str = "button";
     if (state.noStyleAndInteraction) {
@@ -613,7 +613,7 @@ function MarkupStaticRouteLink(state) {
     }
     const tmp2Result = tmp2(7178);
   }
-  SignPostIcon = tmp2(15082).SignPostIcon;
+  SignPostIcon = tmp2(15089).SignPostIcon;
 }
 function MarkupAttachmentLink(state) {
   state = state.state;
@@ -629,7 +629,7 @@ function MarkupAttachmentLink(state) {
     str2 = "body-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15086), size: null };
+  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15093), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1186).Icon.Sizes.EXTRA_SMALL_10;
@@ -727,7 +727,7 @@ const obj12 = { fontFamily: Fonts.CODE_BOLD, color: nativeDefault.colors.TEXT_DE
 obj6.blockQuote = { borderLeftWidth: 4, borderLeftColor: nativeDefault.colors.SPINE_DEFAULT, paddingLeft: 8 };
 let closure_16 = createStyles.createStyles(obj6);
 let c17 = "  ";
-const MarkupInlineChannelMentionRules = fn(10654);
+const MarkupInlineChannelMentionRules = fn(10655);
 let closure_28 = MarkupInlineChannelMentionRules.createInlineChannelReact();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/MarkupReactRules.native.tsx");
@@ -911,7 +911,7 @@ export default function createRules() {
                 accessibilityLabel: surrogate.content,
                 onPress(stopPropagation) {
                         stopPropagation.stopPropagation();
-                        obj2(12141)({ surrogate: children, content: surrogate.content });
+                        obj2(12149)({ surrogate: children, content: surrogate.content });
                       },
                 children
               };
@@ -1161,7 +1161,7 @@ export default function createRules() {
           let combined = "<@$" + gameId.gameId + ">";
         } else {
           const obj = { node: gameId, state: insideSpoiler };
-          combined = closure_1_12(obj2(10650), obj, insideSpoiler.key);
+          combined = closure_1_12(obj2(10651), obj, insideSpoiler.key);
         }
         return combined;
       }
@@ -1374,4 +1374,4 @@ export function plainSpoilerRenderer(content) {
   }
   return str;
 }
-export const createFetchingGameMentionRule = fn(10650).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(10651).createFetchingGameMentionRule;

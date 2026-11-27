@@ -1,6 +1,6 @@
-// === Module 14598: UserProfileWidgetGameReorderGrid ===
+// === Module 14605: UserProfileWidgetGameReorderGrid ===
 
-// Module 14598 (UserProfileWidgetGameReorderGrid)
+// Module 14605 (UserProfileWidgetGameReorderGrid)
 import util from "util" /* 1112 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
@@ -10,8 +10,8 @@ import timingPresets from "timingPresets" /* 5256 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import useStableCallbackDefault from "useStableCallback" /* 7328 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11536 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14584 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11544 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14591 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

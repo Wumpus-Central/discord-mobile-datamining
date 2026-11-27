@@ -1,9 +1,9 @@
-// === Module 15065: AddToWishlistItemCard ===
+// === Module 15072: AddToWishlistItemCard ===
 
-// Module 15065 (AddToWishlistItemCard)
+// Module 15072 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 575 */;
-import SKUPreviewDefault from "SKUPreview" /* 11165 */;
-import HeartOutlineIcon from "HeartOutlineIcon" /* 11229 */;
+import SKUPreviewDefault from "SKUPreview" /* 11166 */;
+import HeartOutlineIcon from "HeartOutlineIcon" /* 11230 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ export default function AddToWishlistItemCard(sku) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

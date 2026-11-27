@@ -1,7 +1,7 @@
-// === Module 18596: useConjureConnectActions ===
+// === Module 18607: useConjureConnectActions ===
 
-// Module 18596 (useConjureConnectActions)
-import conjureExternalConnections from "conjureExternalConnections" /* 18573 */;
+// Module 18607 (useConjureConnectActions)
+import conjureExternalConnections from "conjureExternalConnections" /* 18584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ export function useConjureConnectActions(projectId, presentError) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -54,7 +54,7 @@ export function useConjureConnectActions(projectId, presentError) {
                 closure_128_0 = undefined;
                 c2 = 1;
                 c3 = 1;
-                const obj6 = { value: type(18572).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
+                const obj6 = { value: type(18583).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
                 return obj6;
               }
             } else if (arg0 === 1) {
@@ -81,7 +81,7 @@ export function useConjureConnectActions(projectId, presentError) {
                 stringResult = intl.string(presentError(4245).POxkSh);
               }
               closure_1(stringResult);
-              obj3 = type(18573);
+              obj3 = type(18584);
             }
           } catch (tmp34) {
             c3 = tmp;
@@ -90,7 +90,7 @@ export function useConjureConnectActions(projectId, presentError) {
         }
       };
       if (null != projectId) {
-        const result = projectId(18573).beginExternalAuthorization(ref.current, type.type);
+        const result = projectId(18584).beginExternalAuthorization(ref.current, type.type);
         if (null != result) {
           ref.current = result;
           dependencyMap(result);
@@ -115,7 +115,7 @@ export function useConjureConnectActions(projectId, presentError) {
             return applyArgumentsResult;
           })();
         }
-        let obj = projectId(18573);
+        let obj = projectId(18584);
       }
     }, items)
   };

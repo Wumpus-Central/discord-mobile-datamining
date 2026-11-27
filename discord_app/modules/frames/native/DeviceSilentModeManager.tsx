@@ -1,8 +1,8 @@
-// === Module 19690: DeviceSilentModeManager ===
+// === Module 19706: DeviceSilentModeManager ===
 
-// Module 19690 (DeviceSilentModeManager)
+// Module 19706 (DeviceSilentModeManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import NativeDeviceSilentModeModuleDefault from "NativeDeviceSilentModeModule" /* 19691 */;
+import NativeDeviceSilentModeModuleDefault from "NativeDeviceSilentModeModule" /* 19707 */;
 import FramesStore from "FramesStore" /* 6936 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 

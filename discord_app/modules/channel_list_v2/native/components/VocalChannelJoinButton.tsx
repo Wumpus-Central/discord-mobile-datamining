@@ -1,6 +1,6 @@
-// === Module 13240: VocalChannelJoinButton ===
+// === Module 13248: VocalChannelJoinButton ===
 
-// Module 13240 (VocalChannelJoinButton)
+// Module 13248 (VocalChannelJoinButton)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
@@ -57,12 +57,12 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
     small = false;
   }
   let VJlc0S = dependencyMap;
-  const tmp = voiceStates(9014)();
+  const tmp = voiceStates(9015)();
   const tmp2 = voiceStates(5252)();
   let joinButtonText = closure_11(tmp, channel(5050).isThemeLight(tmp2));
   const obj = channel(5050);
-  const isConnectedToVoiceChannel = channel(10012).useIsConnectedToVoiceChannel(channel);
-  const obj2 = channel(10012);
+  const isConnectedToVoiceChannel = channel(10013).useIsConnectedToVoiceChannel(channel);
+  const obj2 = channel(10013);
   items = [PermissionStore];
   const stateFromStores = channel(563).useStateFromStores(items, () => !PermissionStore.can(constants.CONNECT, channel));
   const obj3 = channel(563);
@@ -87,9 +87,9 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
     tmp12 = tmp8;
   }
   const tmp3Result = channel(563);
-  const connectedUserLimit = channel(13241).useConnectedUserLimit({ channel, video: tmp12 });
-  const tmp3Result3 = channel(13241);
-  let connectedUserLimitFormatted = channel(13241).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  const connectedUserLimit = channel(13249).useConnectedUserLimit({ channel, video: tmp12 });
+  const tmp3Result3 = channel(13249);
+  let connectedUserLimitFormatted = channel(13249).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;
@@ -158,5 +158,5 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result4 = channel(13241);
+  const tmp3Result4 = channel(13249);
 });

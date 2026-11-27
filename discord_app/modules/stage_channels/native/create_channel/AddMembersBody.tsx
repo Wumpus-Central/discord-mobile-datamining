@@ -1,6 +1,6 @@
-// === Module 8570: AddMembersBody ===
+// === Module 8571: AddMembersBody ===
 
-// Module 8570 (AddMembersBody)
+// Module 8571 (AddMembersBody)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
@@ -8,7 +8,7 @@ import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5052 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import RegexUtilsDefault from "RegexUtils" /* 5668 */;
 import GuildUtilsDefault from "GuildUtils" /* 6990 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8526 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8527 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -189,7 +189,7 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(8560), obj10);
+  obj9.children = closure_16(pendingAdditions(8561), obj10);
   const items5 = [closure_16(closure_7, obj9), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
@@ -212,7 +212,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(8565).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(8566).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1112).intl;
         const obj17 = { query: str };
@@ -227,7 +227,7 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }
   const obj19 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
-  const tmp4Result = pendingAdditions(8560);
+  const tmp4Result = pendingAdditions(8561);
   obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(575).space.PX_16, paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5618)(obj).insets.bottom };
   obj19.renderItem = function renderItem(item) {
     item = item.item;

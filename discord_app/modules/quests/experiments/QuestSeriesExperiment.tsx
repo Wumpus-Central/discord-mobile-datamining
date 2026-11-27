@@ -1,6 +1,6 @@
-// === Module 9922: QuestSeriesExperiment ===
+// === Module 9923: QuestSeriesExperiment ===
 
-// Module 9922 (QuestSeriesExperiment)
+// Module 9923 (QuestSeriesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 

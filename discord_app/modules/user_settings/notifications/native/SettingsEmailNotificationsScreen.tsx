@@ -1,16 +1,16 @@
-// === Module 17109: SettingsEmailNotificationsScreen ===
+// === Module 17116: SettingsEmailNotificationsScreen ===
 
-// Module 17109 (SettingsEmailNotificationsScreen)
+// Module 17116 (SettingsEmailNotificationsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3207 from "module_3207" /* 3207 */;
-import SettingBuilders from "SettingBuilders" /* 11962 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 17111 */;
+import SettingBuilders from "SettingBuilders" /* 11970 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 17118 */;
 import noop from "module_19" /* 19 */;
-import EmailSettingsStore from "EmailSettingsStore" /* 15229 */;
+import EmailSettingsStore from "EmailSettingsStore" /* 15236 */;
 
 require = fn;
-const MobileUserSettings = fn(9555).MobileUserSettings;
+const MobileUserSettings = fn(9556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let obj = { notice: { padding: nativeDefault.space.PX_16 } };

@@ -1,10 +1,10 @@
-// === Module 10153: StreamQualityLiveIndicator ===
+// === Module 10154: StreamQualityLiveIndicator ===
 
-// Module 10153 (StreamQualityLiveIndicator)
+// Module 10154 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9695 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9102 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9696 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

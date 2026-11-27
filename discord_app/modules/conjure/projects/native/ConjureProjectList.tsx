@@ -1,6 +1,6 @@
-// === Module 18863: ConjureProjectList ===
+// === Module 18879: ConjureProjectList ===
 
-// Module 18863 (ConjureProjectList)
+// Module 18879 (ConjureProjectList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
@@ -9,12 +9,12 @@ import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import TableRowGroup from "TableRowGroup" /* 6140 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 7667 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 11450 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 14287 */;
-import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 17940 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 18452 */;
-import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 18610 */;
-import ConjureCreateSheet from "ConjureCreateSheet" /* 18867 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 11451 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 14294 */;
+import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 17947 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 18459 */;
+import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 18621 */;
+import ConjureCreateSheet from "ConjureCreateSheet" /* 18883 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -158,7 +158,7 @@ export default function ConjureProjectList(guildId) {
     const obj2 = { key: ConjureRemixSheet.CONJURE_REMIX_SHEET_KEY, content: closure_2_11(ConjureRemixSheetDefault, { project, currentGuildId, onRemixed: memo1 }) };
     ActionSheetActionCreators.showActionSheet(obj2);
   }, items4);
-  let obj4 = { latest: null, route: "Array", loading: false };
+  let obj4 = { latest: null, route: "Array", loading: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000936698893569099 };
   let obj3 = require("useConjureProjects");
   obj4.loading = new Set();
   const ref = memo1.useRef(obj4);
@@ -202,7 +202,7 @@ export default function ConjureProjectList(guildId) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

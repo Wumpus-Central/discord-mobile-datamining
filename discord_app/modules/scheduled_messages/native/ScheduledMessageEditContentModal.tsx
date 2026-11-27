@@ -1,13 +1,13 @@
-// === Module 9639: ScheduledMessageEditContentModal ===
+// === Module 9640: ScheduledMessageEditContentModal ===
 
-// Module 9639 (ScheduledMessageEditContentModal)
+// Module 9640 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Pressables from "Pressables" /* 6152 */;
-import MessageParserDefault from "MessageParser" /* 8344 */;
-import HeaderShared from "HeaderShared" /* 9004 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9609 */;
+import MessageParserDefault from "MessageParser" /* 8345 */;
+import HeaderShared from "HeaderShared" /* 9005 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9610 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,11 +70,11 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj5 = v1(8344);
+            const obj5 = v1(8345);
             const obj4 = { content: obj5.parse(stateFromStores, first).content, flags: scheduledMessage.createArgs.flags };
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(9608).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
+            const obj7 = { value: tmp4(9609).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -90,7 +90,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             const arr = v1(6130);
           }
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

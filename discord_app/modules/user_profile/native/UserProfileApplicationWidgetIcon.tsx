@@ -1,6 +1,6 @@
-// === Module 14673: UserProfileApplicationWidgetIcon ===
+// === Module 14680: UserProfileApplicationWidgetIcon ===
 
-// Module 14673 (UserProfileApplicationWidgetIcon)
+// Module 14680 (UserProfileApplicationWidgetIcon)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5730 */;

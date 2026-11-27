@@ -1,14 +1,14 @@
-// === Module 18411: GuildFeedBanner ===
+// === Module 18418: GuildFeedBanner ===
 
-// Module 18411 (GuildFeedBanner)
+// Module 18418 (GuildFeedBanner)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import timingPresets from "timingPresets" /* 5256 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 15386 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 15393 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 15385 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 15392 */;
 import GuildStore from "GuildStore" /* 4914 */;
 
 require = fn;
@@ -156,13 +156,13 @@ function GuildFeedBanner(guild) {
                   const obj2 = { text: null, icon: null };
                   const intl = _undefined(1112).intl;
                   obj2.text = intl.string(_undefined(1112).t.O8lDI2);
-                  obj2.icon = _undefined(11889).ExperimentalWebIcon;
+                  obj2.icon = _undefined(11897).ExperimentalWebIcon;
                   sharedValue(5725).open("DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO", obj2);
                 },
           children: null
         };
         const obj18 = { size: "custom", color: tmp8(575).colors.BADGE_INVERTED_BACKGROUND, secondaryColor: tmp8(575).colors.BADGE_INVERTED_TEXT, style: tmp.publicIcon };
-        const items13 = [closure_10(tmp2(8736).ExperimentalWebBadgeIcon, obj18), ];
+        const items13 = [closure_10(tmp2(8737).ExperimentalWebBadgeIcon, obj18), ];
         const obj19 = { variant: "body-xs/medium", color: "text-default", children: null };
         let intl = tmp2(1112).intl;
         obj19.children = intl.string(tmp2(1112).t["B/vjCu"]);
@@ -200,16 +200,16 @@ function GuildFeedBanner(guild) {
     return closure_11(tmp18, obj4);
   } else {
     if (tmp2Result6.isThemeDark(tmp10)) {
-      let tmp8Result2 = tmp8(18413);
+      let tmp8Result2 = tmp8(18420);
     } else {
-      tmp8Result2 = tmp8(18414);
+      tmp8Result2 = tmp8(18421);
     }
     tmp2Result6 = tmp2(5050);
   }
   const tmp2Result5 = require("useDrawerWidth");
 }
 const View = fn(17).View;
-const GuildFeedConstants = fn(18412);
+const GuildFeedConstants = fn(18419);
 const GUILD_FEED_CARD_MARGIN_HORIZONTAL = GuildFeedConstants.GUILD_FEED_CARD_MARGIN_HORIZONTAL;
 let closure_8 = GuildFeedConstants.GUILD_FEED_MIN_BANNER_HEIGHT;
 const GuildFeatures = fn(1071).GuildFeatures;

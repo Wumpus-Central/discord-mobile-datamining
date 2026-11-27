@@ -1,6 +1,6 @@
-// === Module 8702: SecureFramesCode ===
+// === Module 8703: SecureFramesCode ===
 
-// Module 8702 (SecureFramesCode)
+// Module 8703 (SecureFramesCode)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import noop from "module_19" /* 19 */;

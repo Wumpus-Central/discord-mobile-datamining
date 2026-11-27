@@ -1,6 +1,6 @@
-// === Module 15040: UserProfileConnections ===
+// === Module 15047: UserProfileConnections ===
 
-// Module 15040 (UserProfileConnections)
+// Module 15047 (UserProfileConnections)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native2 from "native" /* 1186 */;
@@ -15,10 +15,10 @@ import TableRow from "TableRow" /* 6144 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7556 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7812 */;
-import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 12056 */;
-import _modDef12061 from "module_12061" /* 12061 */;
-import _modDef12062 from "module_12062" /* 12062 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 15044 */;
+import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 12064 */;
+import _modDef12069 from "module_12069" /* 12069 */;
+import _modDef12070 from "module_12070" /* 12070 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 15051 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import StreamerModeStore from "StreamerModeStore" /* 5100 */;
@@ -40,10 +40,10 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef12061, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef12069, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     items = [application_id(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef12062, color: WHITE };
+    const obj5 = { source: _modDef12070, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = application_id(native2.Icon, obj5);
     obj3.children = items;
@@ -402,7 +402,7 @@ export function UserProfileAccountConnectionsCard(userId) {
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(15041)(userId));
+  ({ connections, appIdentities } = theme(15048)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {

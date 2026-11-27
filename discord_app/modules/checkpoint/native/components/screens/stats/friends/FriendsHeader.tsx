@@ -1,6 +1,6 @@
-// === Module 12910: FriendsHeader ===
+// === Module 12918: FriendsHeader ===
 
-// Module 12910 (FriendsHeader)
+// Module 12918 (FriendsHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -8,8 +8,8 @@ import _modDef3463 from "module_3463" /* 3463 */;
 import _modDef3495 from "module_3495" /* 3495 */;
 import FriendsIcon from "FriendsIcon" /* 5728 */;
 import CheckpointConstants from "CheckpointConstants" /* 6396 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12888 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12896 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;

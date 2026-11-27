@@ -1,6 +1,6 @@
-// === Module 8912: MediaShareActions ===
+// === Module 8913: MediaShareActions ===
 
-// Module 8912 (MediaShareActions)
+// Module 8913 (MediaShareActions)
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import useChatLayout from "useChatLayout" /* 5222 */;
@@ -15,19 +15,19 @@ import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
 import ActionSheetRow from "ActionSheetRow" /* 7548 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7812 */;
-import showShareActionSheet from "showShareActionSheet" /* 8690 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8806 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8810 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 8939 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 9000 */;
-import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11734 */;
-import ShareIcon from "ShareIcon" /* 12871 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 14103 */;
+import showShareActionSheet from "showShareActionSheet" /* 8691 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8807 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8811 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 8940 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 9001 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11742 */;
+import ShareIcon from "ShareIcon" /* 12879 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 14110 */;
 import noop from "module_19" /* 19 */;
-import ICYMIStore from "ICYMIStore" /* 8913 */;
+import ICYMIStore from "ICYMIStore" /* 8914 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import MessageStore from "MessageStore" /* 6391 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8936 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8937 */;
 
 require = fn;
 function useMediaShareActions(source) {
@@ -124,7 +124,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = source.attachmentId;
         if (null != attachmentId) {
-          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "emoji" };
+          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "custom" };
           const obj4 = { onlyAttachmentIds: null };
           items = [attachmentId];
           obj4.onlyAttachmentIds = items;
@@ -132,7 +132,7 @@ function useMediaShareActions(source) {
           ForwardModalUtils.openForwardModal(obj3);
         }
       } else {
-        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "emoji" };
+        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "custom" };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
         obj7.onlyEmbedIndices = items1;
@@ -162,7 +162,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12223, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12231, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;

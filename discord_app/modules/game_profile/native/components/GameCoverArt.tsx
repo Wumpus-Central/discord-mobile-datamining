@@ -1,11 +1,11 @@
-// === Module 8796: GameCoverArt ===
+// === Module 8797: GameCoverArt ===
 
-// Module 8796 (GameCoverArt)
+// Module 8797 (GameCoverArt)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import useGameArtworkDefault from "useGameArtwork" /* 8797 */;
+import useGameArtworkDefault from "useGameArtwork" /* 8798 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

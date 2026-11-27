@@ -1,6 +1,6 @@
-// === Module 10009: ChannelCallConstants ===
+// === Module 10010: ChannelCallConstants ===
 
-// Module 10009 (ChannelCallConstants)
+// Module 10010 (ChannelCallConstants)
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;
 

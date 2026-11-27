@@ -1,6 +1,6 @@
-// === Module 8572: StageChannelAgeVerificationNoticeForEvent ===
+// === Module 8573: StageChannelAgeVerificationNoticeForEvent ===
 
-// Module 8572 (StageChannelAgeVerificationNoticeForEvent)
+// Module 8573 (StageChannelAgeVerificationNoticeForEvent)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6854 */;

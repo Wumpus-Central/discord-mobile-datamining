@@ -1,6 +1,6 @@
-// === Module 14762: StageChannelSelfRichPresenceStore ===
+// === Module 14768: StageChannelSelfRichPresenceStore ===
 
-// Module 14762 (StageChannelSelfRichPresenceStore)
+// Module 14768 (StageChannelSelfRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1344 from "module_1344" /* 1344 */;
@@ -9,7 +9,7 @@ import useChannelName from "useChannelName" /* 5659 */;
 import ActivityTypes2 from "ActivityTypes" /* 6015 */;
 import StageMediaHooks from "StageMediaHooks" /* 6811 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6855 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11378 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 11379 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;

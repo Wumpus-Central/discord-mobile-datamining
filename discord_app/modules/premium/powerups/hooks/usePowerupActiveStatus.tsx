@@ -1,16 +1,16 @@
-// === Module 13489: usePowerupActiveStatus ===
+// === Module 13497: usePowerupActiveStatus ===
 
-// Module 13489 (usePowerupActiveStatus)
+// Module 13497 (usePowerupActiveStatus)
 import GuildStore from "GuildStore" /* 4914 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 8296 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 8297 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(8297);
+const GuildPowerupsConstants = fn(8298);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: closure_4, PowerupActiveStatusType: hasOwnProperty, POWERUPS_INCLUDED_IN_LEVEL: closure_6, BOOSTING_TIER_TO_LEVEL_SKU_ID: metroImportDefault } = GuildPowerupsConstants);
 const GuildFeatures = fn(1071).GuildFeatures;
-let closure_9 = fn(8298).GAME_SERVER_POWERUP_SKU_ID;
+let closure_9 = fn(8299).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/usePowerupActiveStatus.tsx");
 
@@ -114,7 +114,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
     }
   });
   if (mapped.length <= 0) {
-    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "text" };
+    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "isArray" };
     let first = obj3;
   } else {
     first = mapped[0];

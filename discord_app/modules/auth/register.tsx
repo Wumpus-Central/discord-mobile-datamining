@@ -1,6 +1,6 @@
-// === Module 17668: auth/register ===
+// === Module 17675: auth/register ===
 
-// Module 17668 (auth/register)
+// Module 17675 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
@@ -8,9 +8,9 @@ import _modDef2169 from "module_2169" /* 2169 */;
 import APIErrorDefault from "APIError" /* 5793 */;
 import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5809 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6135 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 17670 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 17671 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 17672 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 17677 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 17678 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 17679 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -30,7 +30,7 @@ let closure_11 = async function _scorePassword() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -104,7 +104,7 @@ let closure_12 = async function _registerPhone(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -278,7 +278,7 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(17669);
+const ParentalConsentStore = fn(17676);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_6, AnalyticsSections: metroImportDefault, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1096);

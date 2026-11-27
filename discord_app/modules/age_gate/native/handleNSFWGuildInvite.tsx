@@ -1,22 +1,24 @@
-// === Module 12152: handleNSFWGuildInvite ===
+// === Module 12160: handleNSFWGuildInvite ===
 
-// Module 12152 (handleNSFWGuildInvite)
+// Module 12160 (handleNSFWGuildInvite)
 import Constants from "Constants" /* 1071 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import GuildRecord from "GuildRecord" /* 4910 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5705 */;
 import AgeNoticeConstants from "AgeNoticeConstants" /* 6836 */;
 import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6837 */;
-import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 12153 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 12154 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7570 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 12161 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 12162 */;
 import GuildStore from "GuildStore" /* 4914 */;
+import UserStore from "UserStore" /* 1387 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 const isGuildLurker = GuildRecord.isGuildLurker;
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
-let closure_5 = AgeNoticeConstants.AGE_NOTICE_NSFW_SERVER_LOCATION;
+let closure_6 = AgeNoticeConstants.AGE_NOTICE_NSFW_SERVER_LOCATION;
 const items = [, ];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -56,29 +58,41 @@ export function handleNSFWGuildInvite(invite, arg1) {
   }
   if (set.has(nsfw_level)) {
     const guild1 = GuildStore.getGuild(id);
-    if (obj.isIOS()) {
-      let tmp10 = null != guild1;
-      if (tmp10) {
-        tmp10 = !isGuildLurker(guild1);
-      }
-      let flag6 = !tmp10;
-      if (!tmp10) {
-        const result = NsfwGateGuildAlert.showNsfwGateGuildAlert(id);
-        flag6 = true;
-        if (onCancel != null) {
-          onCancel();
-          flag6 = true;
+    const currentUser = UserStore.getCurrentUser();
+    let nsfwAllowed;
+    if (currentUser != null) {
+      nsfwAllowed = currentUser.nsfwAllowed;
+    }
+    let viewNsfwGuildsOrDefault = true === nsfwAllowed;
+    if (viewNsfwGuildsOrDefault) {
+      viewNsfwGuildsOrDefault = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();
+    }
+    if (obj2.isIOS()) {
+      if (!viewNsfwGuildsOrDefault) {
+        let tmp14 = null != guild1;
+        if (tmp14) {
+          tmp14 = !isGuildLurker(guild1);
         }
-        const tmp6Result = NsfwGateGuildAlert;
+        let flag3 = !tmp14;
+        if (!tmp14) {
+          const result = NsfwGateGuildAlert.showNsfwGateGuildAlert(id);
+          flag3 = true;
+          if (onCancel != null) {
+            onCancel();
+            flag3 = true;
+          }
+          const tmp12Result = NsfwGateGuildAlert;
+        }
+        return flag3;
       }
-      return flag6;
-    } else if (null != guild1) {
+    }
+    if (null != guild1) {
       return false;
     } else {
-      if (tmp6Result4.hasAgeGatedFeatures()) {
-        if (tmp6Result5.isAgeNoticeEnabled(closure_5)) {
+      if (tmp12Result4.hasAgeGatedFeatures()) {
+        if (tmp12Result5.isAgeNoticeEnabled(closure_6)) {
           c2 = false;
-          const obj2 = {
+          const obj3 = {
             onConfirm() {
                       c2 = true;
                       require();
@@ -91,18 +105,18 @@ export function handleNSFWGuildInvite(invite, arg1) {
                       }
                     }
           };
-          const result1 = NsfwServerInviteWarningAlert.showNsfwServerInviteWarningAlert(obj2);
+          const result1 = NsfwServerInviteWarningAlert.showNsfwServerInviteWarningAlert(obj3);
           return true;
         } else {
           return false;
         }
-        tmp6Result5 = AgeNoticeExperiment;
+        tmp12Result5 = AgeNoticeExperiment;
       } else {
         return false;
       }
-      tmp6Result4 = RegionalFeatureConfigUtils;
+      tmp12Result4 = RegionalFeatureConfigUtils;
     }
-    obj = PlatformUtils;
+    obj2 = PlatformUtils;
   } else {
     return false;
   }

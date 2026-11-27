@@ -1,6 +1,6 @@
-// === Module 8167: ForumUtils ===
+// === Module 8168: ForumUtils ===
 
-// Module 8167 (ForumUtils)
+// Module 8168 (ForumUtils)
 import util from "util" /* 1112 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 4901 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -14,7 +14,7 @@ function getCreationDefaultFormatter() {
   time.month = intl.string(util.t["nBNJ/L"]);
   return time;
 }
-const ForumTimestampFormats = fn(8168).ForumTimestampFormats;
+const ForumTimestampFormats = fn(8169).ForumTimestampFormats;
 const ChannelFlags = fn(4899).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumUtils.tsx");

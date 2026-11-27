@@ -1,6 +1,6 @@
-// === Module 11529: TabsExperiment ===
+// === Module 11537: TabsExperiment ===
 
-// Module 11529 (TabsExperiment)
+// Module 11537 (TabsExperiment)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
 import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;

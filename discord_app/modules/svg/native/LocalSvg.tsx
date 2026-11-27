@@ -1,6 +1,6 @@
-// === Module 16515: LocalSvg ===
+// === Module 16522: LocalSvg ===
 
-// Module 16515 (LocalSvg)
+// Module 16522 (LocalSvg)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -29,7 +29,7 @@ export default function LocalSvg(asset) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -63,7 +63,7 @@ export default function LocalSvg(asset) {
               tmp5(closure_128_0);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp16) {
           c3 = tmp;

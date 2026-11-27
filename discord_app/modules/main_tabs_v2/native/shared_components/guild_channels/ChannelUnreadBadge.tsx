@@ -1,9 +1,9 @@
-// === Module 17761: ChannelUnreadBadge ===
+// === Module 17768: ChannelUnreadBadge ===
 
-// Module 17761 (ChannelUnreadBadge)
+// Module 17768 (ChannelUnreadBadge)
 import useFontScale from "useFontScale" /* 5649 */;
-import shared_components_Badge from "shared_components/Badge" /* 9010 */;
-import ChannelListLayout from "ChannelListLayout" /* 10643 */;
+import shared_components_Badge from "shared_components/Badge" /* 9011 */;
+import ChannelListLayout from "ChannelListLayout" /* 10644 */;
 import noop from "module_19" /* 19 */;
 
 const shared_components_BadgeDefault = shared_components_Badge;

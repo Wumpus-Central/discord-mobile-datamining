@@ -1,6 +1,6 @@
-// === Module 9411: ProductPurchaseSuccessModal ===
+// === Module 9412: ProductPurchaseSuccessModal ===
 
-// Module 9411 (ProductPurchaseSuccessModal)
+// Module 9412 (ProductPurchaseSuccessModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _mod1654 from "module_1654" /* 1654 */;
@@ -11,8 +11,8 @@ import spring_spring from "spring/spring" /* 5644 */;
 import tinycolorDefault from "tinycolor" /* 6321 */;
 import _mod7198 from "module_7198" /* 7198 */;
 import XSmallIcon from "XSmallIcon" /* 7247 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 9410 */;
-import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 9412 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 9411 */;
+import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 9413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
@@ -367,7 +367,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj8 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
       const obj9 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp40(tmp2(9443).BalanceWidgetPill, obj9);
+      showOrbBalancePill = tmp40(tmp2(9444).BalanceWidgetPill, obj9);
     }
     obj8.children = showOrbBalancePill;
     const items11 = [tmp40(closure_7, obj8), ];
@@ -396,24 +396,24 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
         ({ firstAvatarDecoration: obj31.deco, firstProfileEffect: obj31.pfx, firstNameplate: obj31.nameplate } = shopProductItems);
         obj14.previewAssets = product.previewAssets;
         obj14.targetSize = tmp34;
-        tmp39Result = tmp39(tmp4(9466), obj14);
+        tmp39Result = tmp39(tmp4(9467), obj14);
       }
       obj13.children = tmp39Result;
       let tmp39Result2 = tmp39(closure_7, obj13);
     } else if (tmp2(2113).CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj15 = { item: _slicedToArray(product.items, 1)[0], size: avatarDecorationSize, avatarSource, animate: !stateFromStores };
-      tmp39Result2 = tmp39(tmp4(9417), obj15);
+      tmp39Result2 = tmp39(tmp4(9418), obj15);
     } else if (tmp2(2113).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj16 = { user: currentUser, profileEffect: product.items[0] };
-      tmp39Result2 = tmp39(tmp4(9483), obj16);
+      tmp39Result2 = tmp39(tmp4(9484), obj16);
     } else if (tmp2(2113).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj17 = { user: currentUser, profileFrame: product.items[0] };
-      tmp39Result2 = tmp39(tmp4(11287), obj17);
+      tmp39Result2 = tmp39(tmp4(11288), obj17);
     } else {
       tmp39Result2 = null;
       if (tmp2(2113).CollectiblesItemType.NAMEPLATE === type) {
         const obj18 = { user: currentUser, nameplate: product.items[0], animate: true };
-        tmp39Result2 = tmp39(tmp2(11943).NameplatePreview, obj18);
+        tmp39Result2 = tmp39(tmp2(11951).NameplatePreview, obj18);
       }
     }
     obj12.children = tmp39Result2;

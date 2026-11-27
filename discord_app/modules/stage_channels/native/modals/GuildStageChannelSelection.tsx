@@ -1,6 +1,6 @@
-// === Module 14332: GuildStageChannelSelection ===
+// === Module 14339: GuildStageChannelSelection ===
 
-// Module 14332 (GuildStageChannelSelection)
+// Module 14339 (GuildStageChannelSelection)
 import util from "util" /* 1112 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2019 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
@@ -45,7 +45,7 @@ export default function GuildStageChannelSelection(channel) {
       id = channel.id;
     }
     obj3.selectedItem = id;
-    obj2.openLazy(asyncRequireImpl(8499, dependencyMap.paths), "SelectUpdatesChannel", obj3);
+    obj2.openLazy(asyncRequireImpl(8500, dependencyMap.paths), "SelectUpdatesChannel", obj3);
   }
   function renderChannelHook(children, key) {
     return jsx(channel(handleSelectChannel[12]).Text, { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children }, key);

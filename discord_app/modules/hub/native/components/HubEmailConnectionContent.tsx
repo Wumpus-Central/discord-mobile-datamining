@@ -1,6 +1,6 @@
-// === Module 13766: HubEmailConnectionContent ===
+// === Module 13773: HubEmailConnectionContent ===
 
-// Module 13766 (HubEmailConnectionContent)
+// Module 13773 (HubEmailConnectionContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -8,8 +8,8 @@ import useNavigation from "useNavigation" /* 1501 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5057 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 13762 */;
-import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 13769 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 13769 */;
+import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 13776 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const HubConstants = fn(13754);
+const HubConstants = fn(13761);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: closure_10 } = HubConstants);
 const MarketingURLs = fn(1071).MarketingURLs;
 const jsxProd = fn(21);
@@ -66,7 +66,7 @@ export default function HubEmailConnectionContent(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

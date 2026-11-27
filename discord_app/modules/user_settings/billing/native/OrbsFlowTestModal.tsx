@@ -1,6 +1,6 @@
-// === Module 17330: OrbsFlowTestModal ===
+// === Module 17337: OrbsFlowTestModal ===
 
-// Module 17330 (OrbsFlowTestModal)
+// Module 17337 (OrbsFlowTestModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
@@ -8,10 +8,10 @@ import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAwar
 import LayerScope from "LayerScope" /* 5621 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
-import HeaderShared from "HeaderShared" /* 9004 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11418 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17331 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 17334 */;
+import HeaderShared from "HeaderShared" /* 9005 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11419 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17338 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 17341 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -85,7 +85,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(9047);
+const NativeStackNavigator = fn(9048);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5043);
 let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, title: null, balancePillContainer: null };

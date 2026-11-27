@@ -1,12 +1,12 @@
-// === Module 11669: SocialLayerStorefrontWishlistItemCard ===
+// === Module 11677: SocialLayerStorefrontWishlistItemCard ===
 
-// Module 11669 (SocialLayerStorefrontWishlistItemCard)
+// Module 11677 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 11172 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 11173 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import SentGiftsStore from "SentGiftsStore" /* 11667 */;
+import SentGiftsStore from "SentGiftsStore" /* 11675 */;
 
 const require = fn;
 const jsxProd = fn(21);

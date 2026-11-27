@@ -1,6 +1,6 @@
-// === Module 15470: ToastContainer ===
+// === Module 15477: ToastContainer ===
 
-// Module 15470 (ToastContainer)
+// Module 15477 (ToastContainer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import TransitionGroup_TransitionGroup from "TransitionGroup/TransitionGroup" /* 5109 */;
@@ -165,7 +165,7 @@ function AnimatedToast(cleanUp) {
   let items4 = [tmp.toast, "top" === position ? tmp.toastTop : tmp.toastBottom, animatedStyle];
   obj6.style = items4;
   const merged = Object.assign(entry.toast);
-  obj6.children = jsx(tmp2(15466).Toast, {});
+  obj6.children = jsx(tmp2(15473).Toast, {});
   return jsx(_modDef1654.View, obj6);
 }
 function getItemKey(key) {

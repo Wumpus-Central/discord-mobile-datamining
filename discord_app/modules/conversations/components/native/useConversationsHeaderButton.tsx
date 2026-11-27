@@ -1,12 +1,12 @@
-// === Module 9037: useConversationsHeaderButton ===
+// === Module 9038: useConversationsHeaderButton ===
 
-// Module 9037 (useConversationsHeaderButton)
+// Module 9038 (useConversationsHeaderButton)
 import util from "util" /* 1112 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 9040 */;
-import PaperIcon from "PaperIcon" /* 9044 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9041 */;
+import PaperIcon from "PaperIcon" /* 9045 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 8302 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8303 */;
 
 const require = globalThis.__r;
 
@@ -47,7 +47,7 @@ export function useConversationsHeaderButton(channel) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

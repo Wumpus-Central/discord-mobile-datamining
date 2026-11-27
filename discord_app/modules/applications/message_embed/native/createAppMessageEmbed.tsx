@@ -1,6 +1,6 @@
-// === Module 12934: createAppMessageEmbed ===
+// === Module 12942: createAppMessageEmbed ===
 
-// Module 12934 (createAppMessageEmbed)
+// Module 12942 (createAppMessageEmbed)
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import URLUtilsDefault from "URLUtils" /* 1380 */;
@@ -13,16 +13,16 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6971 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7651 */;
-import activityBookmarkUtils from "activityBookmarkUtils" /* 8354 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 10086 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 10087 */;
-import ApplicationUtils from "ApplicationUtils" /* 10111 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12291 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12385 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12936 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12937 */;
-import getPlayInContext from "getPlayInContext" /* 12938 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12939 */;
+import activityBookmarkUtils from "activityBookmarkUtils" /* 8355 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 10087 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 10088 */;
+import ApplicationUtils from "ApplicationUtils" /* 10112 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12299 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12393 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12944 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12945 */;
+import getPlayInContext from "getPlayInContext" /* 12946 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12947 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1387 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7652 */;
@@ -31,7 +31,7 @@ import ApplicationStore from "ApplicationStore" /* 2165 */;
 require = fn;
 const FetchState = fn(7652).FetchState;
 const AppLauncherRouteName = fn(1500).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(12935).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(12943).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);

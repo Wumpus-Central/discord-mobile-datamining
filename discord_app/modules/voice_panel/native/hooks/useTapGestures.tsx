@@ -1,6 +1,6 @@
-// === Module 19495: useTapGestures ===
+// === Module 19511: useTapGestures ===
 
-// Module 19495 (useTapGestures)
+// Module 19511 (useTapGestures)
 import _mod1707 from "module_1707" /* 1707 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useTap
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11781)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11789)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   closure_4 = tmp2;

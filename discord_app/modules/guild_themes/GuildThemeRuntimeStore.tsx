@@ -1,12 +1,12 @@
-// === Module 8295: GuildThemeRuntimeStore ===
+// === Module 8296: GuildThemeRuntimeStore ===
 
-// Module 8295 (GuildThemeRuntimeStore)
+// Module 8296 (GuildThemeRuntimeStore)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import guildThemeSerialization from "guildThemeSerialization" /* 4913 */;
-import Powerups from "Powerups" /* 8300 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 8296 */;
+import Powerups from "Powerups" /* 8301 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 8297 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
 

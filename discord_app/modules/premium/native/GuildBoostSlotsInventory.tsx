@@ -1,6 +1,6 @@
-// === Module 13962: GuildBoostSlotsInventory ===
+// === Module 13969: GuildBoostSlotsInventory ===
 
-// Module 13962 (GuildBoostSlotsInventory)
+// Module 13969 (GuildBoostSlotsInventory)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
@@ -11,13 +11,13 @@ import FastImageDefault from "FastImage" /* 5730 */;
 import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 5806 */;
 import BoostingActionCreators from "BoostingActionCreators" /* 6864 */;
 import GuildIcon from "GuildIcon" /* 7052 */;
-import useCountdownDefault from "useCountdown" /* 9133 */;
-import _modDef13963 from "module_13963" /* 13963 */;
-import SubscriptionPlaceholderPattern from "SubscriptionPlaceholderPattern" /* 13964 */;
+import useCountdownDefault from "useCountdown" /* 9134 */;
+import _modDef13970 from "module_13970" /* 13970 */;
+import SubscriptionPlaceholderPattern from "SubscriptionPlaceholderPattern" /* 13971 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 import GuildStore from "GuildStore" /* 4914 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10364 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 10365 */;
 import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 import TextStyles from "TextStyles" /* 6822 */;
 
@@ -195,7 +195,7 @@ function BoostedGuildInfo(guild) {
     const items1 = [refs(Text_Text.Text, obj5), ];
     const obj6 = { style: tmp.guildInfoRowBottom, children: null };
     const obj7 = { source: null, style: null };
-    obj7.source = _modDef13963;
+    obj7.source = _modDef13970;
     obj7.style = tmp.guildInfoRowIcon;
     const items2 = [refs(FastImageDefault, obj7), ];
     const obj8 = { style: tmp.guildInfoSubscriptionCount, variant: "body-xs/semibold", color: "interactive-text-active", children: null };
@@ -250,7 +250,7 @@ function BoostedGuild(arg0) {
     tmp11Result = closure_10(View, obj8);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_10(guildBoostSlots(13968), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_10(guildBoostSlots(13975), { guild: stateFromStores, theme: stateFromStores1 });
   obj6.children = items3;
   const items4 = [closure_11(View, obj6), closure_10(BoostedGuildInfo, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length })];
   obj5.children = items4;
@@ -300,7 +300,7 @@ export default function GuildBoostSlotsInventory() {
   const tmp = closure_13();
   const effect = noop.useEffect(() => {
     const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
-    const guildBoostSlots = valueResult(10366).fetchGuildBoostSlots();
+    const guildBoostSlots = valueResult(10367).fetchGuildBoostSlots();
   }, []);
   items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());

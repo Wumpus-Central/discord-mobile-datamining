@@ -1,11 +1,11 @@
-// === Module 15462: ContextMenuItem ===
+// === Module 15469: ContextMenuItem ===
 
-// Module 15462 (ContextMenuItem)
+// Module 15469 (ContextMenuItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import IconDefault from "Icon" /* 5643 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9068 */;
-import ContextMenuState from "ContextMenuState" /* 9069 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9069 */;
+import ContextMenuState from "ContextMenuState" /* 9070 */;
 import noop from "module_19" /* 19 */;
 import module_1654 from "module_1654" /* 1654 */;
 
@@ -275,7 +275,7 @@ export function ContextMenuItem(children) {
   const items11 = [c5(require("Text/Text").Text, { animated: true, variant: "body-md/medium", color: str2, children: children.label }), ];
   let tmp39Result = null != subLabel;
   if (tmp39Result) {
-    const obj9 = { variant: tmp(9068).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT, color: null, children: null };
+    const obj9 = { variant: tmp(9069).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT, color: null, children: null };
     let str3 = "text-subtle";
     if (tmp41) {
       str3 = "text-feedback-critical";

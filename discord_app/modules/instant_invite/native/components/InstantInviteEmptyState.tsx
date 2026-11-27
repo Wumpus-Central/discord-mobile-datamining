@@ -1,12 +1,12 @@
-// === Module 10452: InstantInviteEmptyState ===
+// === Module 10453: InstantInviteEmptyState ===
 
-// Module 10452 (InstantInviteEmptyState)
+// Module 10453 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 575 */;
 import FreeFormTextInputDefault from "FreeFormTextInput" /* 7302 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 10430 */;
-import _modDef10453 from "module_10453" /* 10453 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 10431 */;
+import _modDef10454 from "module_10454" /* 10454 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 10429 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 10430 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -28,7 +28,7 @@ export default function InstantInviteEmptyState(link) {
   items = [CreateInviteModalStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef10453, title: null, body: null };
+  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef10454, title: null, body: null };
   const intl = stateFromStores(1112).intl;
   obj3.title = intl.string(stateFromStores(1112).t.tQc0l8);
   const intl2 = stateFromStores(1112).intl;
@@ -49,7 +49,7 @@ export default function InstantInviteEmptyState(link) {
   obj6.accessibilityLabel = intl3.string(stateFromStores(1112).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(10454).SettingsIcon, {});
+  obj6.children = closure_5(stateFromStores(10455).SettingsIcon, {});
   items2[1] = closure_5(stateFromStores(6152).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);

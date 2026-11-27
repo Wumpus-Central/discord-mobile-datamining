@@ -1,20 +1,20 @@
-// === Module 18738: CatIllocon ===
+// === Module 18755: CatIllocon ===
 
-// Module 18738 (CatIllocon)
+// Module 18755 (CatIllocon)
 import FastImageDefault from "FastImage" /* 5730 */;
 import assetHelpers from "assetHelpers" /* 7261 */;
-import _modDef18739 from "module_18739" /* 18739 */;
-import _modDef18740 from "module_18740" /* 18740 */;
-import _modDef18741 from "module_18741" /* 18741 */;
+import _modDef18756 from "module_18756" /* 18756 */;
+import _modDef18757 from "module_18757" /* 18757 */;
+import _modDef18758 from "module_18758" /* 18758 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18739 }, 3: null };
-const obj2 = { uri: _modDef18739 };
-obj[2] = { uri: _modDef18740 };
-const obj3 = { uri: _modDef18740 };
-obj[3] = { uri: _modDef18741 };
+let obj = { 1: null, 2: { uri: _modDef18756 }, 3: null };
+const obj2 = { uri: _modDef18756 };
+obj[2] = { uri: _modDef18757 };
+const obj3 = { uri: _modDef18757 };
+obj[3] = { uri: _modDef18758 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CatIllocon.native.tsx");
 

@@ -1,14 +1,14 @@
-// === Module 16228: AgeNoticeAgeGroupHeader ===
+// === Module 16235: AgeNoticeAgeGroupHeader ===
 
-// Module 16228 (AgeNoticeAgeGroupHeader)
+// Module 16235 (AgeNoticeAgeGroupHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3531 from "module_3531" /* 3531 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7870 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 12156 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16229 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 12164 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -106,13 +106,13 @@ let closure_10 = createStyles.createStyles(obj2);
 let items = [fn(4876).DismissibleContent.TINY_BRONCO_NOTICE];
 let closure_12 = [];
 let obj6 = {};
-obj6[fn(12156).AgeGroupState.ADULT] = _modDef3531["8TWztV"];
-obj6[fn(12156).AgeGroupState.TEEN] = _modDef3531.qSkhZH;
-obj6[fn(12156).AgeGroupState.UNVERIFIED] = _modDef3531.vGxRDB;
+obj6[fn(12164).AgeGroupState.ADULT] = _modDef3531["8TWztV"];
+obj6[fn(12164).AgeGroupState.TEEN] = _modDef3531.qSkhZH;
+obj6[fn(12164).AgeGroupState.UNVERIFIED] = _modDef3531.vGxRDB;
 let obj7 = {};
-obj7[fn(12156).AgeGroupState.ADULT] = _modDef3531.t5QjmQ;
-obj7[fn(12156).AgeGroupState.TEEN] = _modDef3531["41MDhK"];
-obj7[fn(12156).AgeGroupState.UNVERIFIED] = _modDef3531.m95jW8;
+obj7[fn(12164).AgeGroupState.ADULT] = _modDef3531.t5QjmQ;
+obj7[fn(12164).AgeGroupState.TEEN] = _modDef3531["41MDhK"];
+obj7[fn(12164).AgeGroupState.UNVERIFIED] = _modDef3531.m95jW8;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/AgeNoticeAgeGroupHeader.tsx");
 

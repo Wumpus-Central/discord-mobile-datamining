@@ -1,10 +1,10 @@
-// === Module 18544: ConjurePublishScheduleSection ===
+// === Module 18555: ConjurePublishScheduleSection ===
 
-// Module 18544 (ConjurePublishScheduleSection)
+// Module 18555 (ConjurePublishScheduleSection)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import AlertModal from "AlertModal" /* 6052 */;
-import useConjurePublishScheduleDefault from "useConjurePublishSchedule" /* 18545 */;
+import useConjurePublishScheduleDefault from "useConjurePublishSchedule" /* 18556 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ export default function ConjurePublishScheduleSection(projectId) {
         obj5.children = intl3.string(tmp(4245).ubcNP7);
         const items1 = [closure_3(tmp7(5634).Text, obj5), ];
         const obj6 = { spacing: tmp(575).space.PX_8, children: null };
-        const result = tmp7(18546).publishScheduleDetails(tmp3.saved);
+        const result = tmp7(18557).publishScheduleDetails(tmp3.saved);
         const items2 = [result.map((children, index) => closure_1_3(projectId(dependencyMap[5]).Text, { variant: "body-sm/normal", children }, index)), ];
         const obj7 = { variant: "secondary", text: null, disabled: null, onPress: null };
         const intl4 = tmp7(1112).intl;
@@ -73,7 +73,7 @@ export default function ConjurePublishScheduleSection(projectId) {
         items1[1] = closure_4(tmp7(6115).Stack, obj6);
         obj4.children = items1;
         tmp6Result = closure_4(closure_5, obj4);
-        const tmp7Result = tmp7(18546);
+        const tmp7Result = tmp7(18557);
       }
     }
     items[2] = tmp6Result;

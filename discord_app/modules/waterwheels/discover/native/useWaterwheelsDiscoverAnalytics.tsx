@@ -1,11 +1,11 @@
-// === Module 18019: useWaterwheelsDiscoverAnalytics ===
+// === Module 18026: useWaterwheelsDiscoverAnalytics ===
 
-// Module 18019 (useWaterwheelsDiscoverAnalytics)
+// Module 18026 (useWaterwheelsDiscoverAnalytics)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8932 */;
-import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 18010 */;
-import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 18018 */;
-import WaterwheelsDiscoverAnalytics from "WaterwheelsDiscoverAnalytics" /* 18021 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8933 */;
+import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 18017 */;
+import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 18025 */;
+import WaterwheelsDiscoverAnalytics from "WaterwheelsDiscoverAnalytics" /* 18028 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

@@ -1,13 +1,13 @@
-// === Module 14223: useSimilarGames ===
+// === Module 14230: useSimilarGames ===
 
-// Module 14223 (useSimilarGames)
-import useGameArtwork from "useGameArtwork" /* 8797 */;
-import GameProfileVisibilityUtils from "GameProfileVisibilityUtils" /* 14224 */;
+// Module 14230 (useSimilarGames)
+import useGameArtwork from "useGameArtwork" /* 8798 */;
+import GameProfileVisibilityUtils from "GameProfileVisibilityUtils" /* 14231 */;
 import GameStore from "GameStore" /* 2141 */;
 import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
-fn(14217).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+fn(14224).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 let closure_5 = [];
 const similarGames = [];
 const size = fn(2);
@@ -18,7 +18,7 @@ export default function useSimilarGames(arg0) {
   if (tmp) {
     tmp = !set.has(arg0);
   }
-  const similarGameIds = data(14216).useSimilarGameIds(arg0, tmp);
+  const similarGameIds = data(14223).useSimilarGameIds(arg0, tmp);
   ({ data, isLoading, error } = similarGameIds);
   if (!tmp) {
     let tmp6 = closure_5;
@@ -26,9 +26,9 @@ export default function useSimilarGames(arg0) {
     tmp6 = data;
   }
   data = tmp6;
-  const obj = data(14216);
-  const games = data(8719).useGames(tmp6);
-  const tmp3Result = data(8719);
+  const obj = data(14223);
+  const games = data(8720).useGames(tmp6);
+  const tmp3Result = data(8720);
   items = [GameStore];
   const items1 = [tmp6];
   const stateFromStores = data(504).useStateFromStores(items, () => data.some((item) => null == game.getGame(item) && !game.hasNoData(item) && !game.didFetchingFail(item)), items1);

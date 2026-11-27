@@ -1,16 +1,16 @@
-// === Module 10771: ReportToModUtils ===
+// === Module 10772: ReportToModUtils ===
 
-// Module 10771 (ReportToModUtils)
+// Module 10772 (ReportToModUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1083 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4980 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7622 */;
 import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7624 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 8293 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8811 */;
-import HarmTypeConfiguration from "HarmTypeConfiguration" /* 8814 */;
-import SelfModUtils from "SelfModUtils" /* 8938 */;
-import ReportUtils from "ReportUtils" /* 10773 */;
-import ForumChannelTypes from "ForumChannelTypes" /* 10774 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 8294 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8812 */;
+import HarmTypeConfiguration from "HarmTypeConfiguration" /* 8815 */;
+import SelfModUtils from "SelfModUtils" /* 8939 */;
+import ReportUtils from "ReportUtils" /* 10774 */;
+import ForumChannelTypes from "ForumChannelTypes" /* 10775 */;
 import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8119 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -18,7 +18,7 @@ import MessageStore from "MessageStore" /* 6391 */;
 import UserStore from "UserStore" /* 1387 */;
 
 require = fn;
-const ReportToModPermissions = fn(10772).ReportToModPermissions;
+const ReportToModPermissions = fn(10773).ReportToModPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 

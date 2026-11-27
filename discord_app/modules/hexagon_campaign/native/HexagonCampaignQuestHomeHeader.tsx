@@ -1,12 +1,12 @@
-// === Module 16606: HexagonCampaignQuestHomeHeader ===
+// === Module 16613: HexagonCampaignQuestHomeHeader ===
 
-// Module 16606 (HexagonCampaignQuestHomeHeader)
+// Module 16613 (HexagonCampaignQuestHomeHeader)
 import nativeDefault from "native" /* 575 */;
 import QuestTypes from "QuestTypes" /* 6874 */;
 import AdCreativeType from "AdCreativeType" /* 6878 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8248 */;
-import AnalyticsActions from "AnalyticsActions" /* 8382 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8249 */;
+import AnalyticsActions from "AnalyticsActions" /* 8383 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8393 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,13 +67,13 @@ export default function HexagonCampaignQuestHomeHeader() {
   if (isHexagonCampaignQuestHomeHeaderEnabled) {
     let obj4 = { style: tmp.container, children: null };
     const obj5 = { style: tmp.banner, children: null };
-    const obj6 = { source: tmp5(16621), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
+    const obj6 = { source: tmp5(16628), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
     const items2 = [closure_8(tmp5(5730), obj6), , , ];
     const obj7 = { colors: memo, locations: [0.716, 0.823, 1], style: absoluteFill.absoluteFill, pointerEvents: "none" };
     items2[1] = closure_8(tmp5(5598), obj7);
     const obj8 = { source: null, style: null, resizeMode: "contain", accessible: false };
     const tmp5Result = tmp5(5730);
-    obj8.source = tmp5(16622);
+    obj8.source = tmp5(16629);
     obj8.style = tmp.logo;
     items2[2] = closure_8(tmp5(5730), obj8);
     const obj9 = { style: tmp.sponsoredTag, children: null };
@@ -86,7 +86,7 @@ export default function HexagonCampaignQuestHomeHeader() {
     const items3 = [closure_9(closure_5, obj5), ];
     const obj11 = { style: tmp.cardShadow, children: null };
     const obj12 = { style: tmp.card, children: null };
-    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(16623).BundleAbstractUI, { accessible: false }) };
+    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(16630).BundleAbstractUI, { accessible: false }) };
     const items4 = [closure_8(closure_5, obj13), ];
     const obj14 = { direction: "vertical", spacing: tmp5(575).space.PX_12, style: tmp.cardContent, children: null };
     const obj15 = { direction: "vertical", spacing: tmp5(575).space.PX_8, children: null };
@@ -105,7 +105,7 @@ export default function HexagonCampaignQuestHomeHeader() {
     const intl4 = tmp2(1112).intl;
     const obj20 = {
       learnMoreHook(children, arg1) {
-          return closure_1_8(isHexagonCampaignQuestHomeHeaderEnabled(5634).Text, { variant: "body-xs/medium", color: "text-link", accessibilityRole: "link", onPress: isHexagonCampaignQuestHomeHeaderEnabled(16094).openHexagonCampaignLearnMore, children }, arg1);
+          return closure_1_8(isHexagonCampaignQuestHomeHeaderEnabled(5634).Text, { variant: "body-xs/medium", color: "text-link", accessibilityRole: "link", onPress: isHexagonCampaignQuestHomeHeaderEnabled(16101).openHexagonCampaignLearnMore, children }, arg1);
         }
     };
     obj19.children = intl4.format(tmp5(4663).uL0TOA, obj20);

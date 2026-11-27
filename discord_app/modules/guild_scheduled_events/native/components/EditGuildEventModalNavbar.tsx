@@ -1,13 +1,13 @@
-// === Module 8484: EditGuildEventModalNavbar ===
+// === Module 8485: EditGuildEventModalNavbar ===
 
-// Module 8484 (EditGuildEventModalNavbar)
+// Module 8485 (EditGuildEventModalNavbar)
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7480 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
 import _modDef7752 from "module_7752" /* 7752 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8479 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

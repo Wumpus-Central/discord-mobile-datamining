@@ -1,6 +1,6 @@
-// === Module 10259: ModeratorOverlayState ===
+// === Module 10260: ModeratorOverlayState ===
 
-// Module 10259 (ModeratorOverlayState)
+// Module 10260 (ModeratorOverlayState)
 import _mod4958 from "module_4958" /* 4958 */;
 import identity from "module_1258" /* 1258 */;
 import size from "module_2" /* 2 */;

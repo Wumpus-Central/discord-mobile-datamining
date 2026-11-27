@@ -1,6 +1,6 @@
-// === Module 17318: DevToolsRevenuePlaygroundScreen ===
+// === Module 17325: DevToolsRevenuePlaygroundScreen ===
 
-// Module 17318 (DevToolsRevenuePlaygroundScreen)
+// Module 17325 (DevToolsRevenuePlaygroundScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -12,14 +12,14 @@ import TableRowArrow from "TableRowArrow" /* 6156 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7544 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9116 */;
-import IAPUtils from "IAPUtils" /* 9279 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 12319 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9117 */;
+import IAPUtils from "IAPUtils" /* 9280 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 12327 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 12019 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8322 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 12027 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8323 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
@@ -198,7 +198,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -653,7 +653,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(9136).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(9137).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -667,7 +667,7 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17319, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17326, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   };
@@ -686,7 +686,7 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17319, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17326, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   });

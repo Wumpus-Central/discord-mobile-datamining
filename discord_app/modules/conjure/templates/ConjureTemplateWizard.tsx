@@ -1,10 +1,10 @@
-// === Module 18873: ConjureTemplateWizard ===
+// === Module 18889: ConjureTemplateWizard ===
 
-// Module 18873 (ConjureTemplateWizard)
+// Module 18889 (ConjureTemplateWizard)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import ConjureUtils from "ConjureUtils" /* 7602 */;
-import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 18874 */;
+import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 18890 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -28,7 +28,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

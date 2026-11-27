@@ -1,6 +1,6 @@
-// === Module 18223: VoicePanelDockBadgedIcon ===
+// === Module 18230: VoicePanelDockBadgedIcon ===
 
-// Module 18223 (VoicePanelDockBadgedIcon)
+// Module 18230 (VoicePanelDockBadgedIcon)
 import _mod1707 from "module_1707" /* 1707 */;
 import native from "native" /* 5104 */;
 import timing_timing from "timing/timing" /* 5253 */;
@@ -54,7 +54,7 @@ function StreamBadge(progress) {
   obj.children = tmp3Result;
   return closure_5(state(cleanUp[10]).View, obj);
 }
-const VoicePanelDockConstants = fn(11805);
+const VoicePanelDockConstants = fn(11813);
 ({ DOCK_FADE_TIMING: closure_4, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -64,7 +64,7 @@ const sum2 = fn(1186).BADGE_SIZE + 4;
 let closure_9 = sum2 / 2;
 let closure_10 = sum + fn(1186).BADGE_SIZE / 2;
 let closure_11 = sum1 + fn(1186).BADGE_SIZE / 2;
-const GuildsBarActivityIndicator = fn(18117);
+const GuildsBarActivityIndicator = fn(18124);
 const mediaIcon = GuildsBarActivityIndicator.getMediaIcon({ audio: false, video: false, screenshare: true, isCurrentUserConnected: true });
 const createStyles = fn(5043);
 let obj3 = { clip: null, badge: null, badgeIndicator: null };

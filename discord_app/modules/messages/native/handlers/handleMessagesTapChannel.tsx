@@ -1,7 +1,7 @@
-// === Module 12026: handleMessagesTapChannel ===
+// === Module 12034: handleMessagesTapChannel ===
 
-// Module 12026 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 8935 */;
+// Module 12034 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 8936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -35,7 +35,7 @@ let closure_15 = async function _maybeStartLurking(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -115,7 +115,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
             closure_130_1(closure_130_3[11])({ guildId, staticRoute: channelId, itemId: messageId, navigationReplace: closure_129_1 });
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       }
       if (null != messageId) {
@@ -135,7 +135,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
                 if (closure_129_7.type === closure_130_10.GUILD_STAGE_VOICE) {
                   if (!closure_130_9.can(closure_130_12.CONNECT, closure_129_7)) {
                     c4 = 3;
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 }
                 if (closure_129_3 != null) {
@@ -202,7 +202,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
       return { value, done: true };
     } else if (value) {
       c4 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else if (3 === tmp5) {
     if (arg0 === 1) {
@@ -243,7 +243,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
       return { value, done: true };
     } else if (value) {
       c4 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else if (arg0 === 1) {
     c4 = 3;

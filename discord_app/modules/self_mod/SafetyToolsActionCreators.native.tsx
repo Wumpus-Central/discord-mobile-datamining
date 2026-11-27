@@ -1,8 +1,8 @@
-// === Module 11852: SafetyToolsActionCreators ===
+// === Module 11860: SafetyToolsActionCreators ===
 
-// Module 11852 (SafetyToolsActionCreators)
+// Module 11860 (SafetyToolsActionCreators)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
-import Constants from "Constants" /* 11819 */;
+import Constants from "Constants" /* 11827 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/self_mod/SafetyToolsActionCre
 export function openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType) {
   const tmp = closure_3(channelId);
   _require = tmp;
-  ActionSheetActionCreatorsDefault.openLazy(require("asyncRequireImpl")(11853, dependencyMap.paths), tmp, {
+  ActionSheetActionCreatorsDefault.openLazy(require("asyncRequireImpl")(11861, dependencyMap.paths), tmp, {
     channelId,
     warningId,
     warningType,

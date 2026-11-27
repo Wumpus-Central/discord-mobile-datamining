@@ -1,6 +1,6 @@
-// === Module 8493: InputButton ===
+// === Module 8494: InputButton ===
 
-// Module 8493 (InputButton)
+// Module 8494 (InputButton)
 import nativeDefault from "native" /* 575 */;
 import BaseTextButton from "BaseTextButton" /* 5642 */;
 import ButtonConstants from "ButtonConstants" /* 5647 */;

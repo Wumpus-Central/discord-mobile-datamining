@@ -1,6 +1,6 @@
-// === Module 9634: NitroLimitUpsellBar ===
+// === Module 9635: NitroLimitUpsellBar ===
 
-// Module 9634 (NitroLimitUpsellBar)
+// Module 9635 (NitroLimitUpsellBar)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import WarningIcon from "WarningIcon" /* 7942 */;
-import _modDef9635 from "module_9635" /* 9635 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9636 */;
+import _modDef9636 from "module_9636" /* 9636 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9637 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5043 */;
 import size from "module_2" /* 2 */;
@@ -30,7 +30,7 @@ export default function NitroLimitUpsellBar(isAtLimit) {
     let tmp4Result = React4(WarningIcon.WarningIcon, obj2);
     let tmp9 = React4;
   } else {
-    const obj3 = { source: _modDef9635, style: tmp.icon };
+    const obj3 = { source: _modDef9636, style: tmp.icon };
     tmp4Result = React4(FastImageDefault, obj3);
     tmp9 = React4;
   }

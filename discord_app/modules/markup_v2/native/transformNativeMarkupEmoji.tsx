@@ -1,6 +1,6 @@
-// === Module 14209: transformNativeMarkupEmoji ===
+// === Module 14216: transformNativeMarkupEmoji ===
 
-// Module 14209 (transformNativeMarkupEmoji)
+// Module 14216 (transformNativeMarkupEmoji)
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4989 */;
 import MarkupTypes from "MarkupTypes" /* 6120 */;

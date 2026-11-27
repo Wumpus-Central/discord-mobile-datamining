@@ -1,8 +1,8 @@
-// === Module 15428: YouTabLottie ===
+// === Module 15435: YouTabLottie ===
 
-// Module 15428 (YouTabLottie)
-import LottieIcon from "LottieIcon" /* 9448 */;
-import _mod15429 from "module_15429" /* 15429 */;
+// Module 15435 (YouTabLottie)
+import LottieIcon from "LottieIcon" /* 9449 */;
+import _mod15436 from "module_15436" /* 15436 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,5 +15,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 export function YouTabLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod15429, animation: "all", ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod15436, animation: "all", ref: ref.ref, layers, markers: items });
 }

@@ -1,19 +1,19 @@
-// === Module 17402: BuildOverrideActiveSetting ===
+// === Module 17409: BuildOverrideActiveSetting ===
 
-// Module 17402 (BuildOverrideActiveSetting)
+// Module 17409 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import _modDef2356 from "module_2356" /* 2356 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import IconButton from "IconButton" /* 7944 */;
-import SettingsIcon from "SettingsIcon" /* 10454 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12317 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16349 */;
-import openBuildOverridesSettings from "openBuildOverridesSettings" /* 17207 */;
-import DevToolsContent from "DevToolsContent" /* 17396 */;
+import SettingsIcon from "SettingsIcon" /* 10455 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12325 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16356 */;
+import openBuildOverridesSettings from "openBuildOverridesSettings" /* 17214 */;
+import DevToolsContent from "DevToolsContent" /* 17403 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11914 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11922 */;
 
 require = fn;
 function handleBuildOverrideActivePress() {
@@ -21,14 +21,14 @@ function handleBuildOverrideActivePress() {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const obj2 = {
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef2356.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(14077).RefreshIcon,
+  IconComponent: fn(14084).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {
@@ -89,7 +89,7 @@ export default SettingBuilders.createStatic({
     return intl.string(_modDef2356.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(14077).RefreshIcon,
+  IconComponent: fn(14084).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {

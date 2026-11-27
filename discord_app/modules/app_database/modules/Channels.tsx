@@ -1,6 +1,6 @@
-// === Module 8310: Channels ===
+// === Module 8311: Channels ===
 
-// Module 8310 (Channels)
+// Module 8311 (Channels)
 import ChannelRecord from "ChannelRecord" /* 4896 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 4921 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

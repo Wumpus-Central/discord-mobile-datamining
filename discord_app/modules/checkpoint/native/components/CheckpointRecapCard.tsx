@@ -1,14 +1,14 @@
-// === Module 12913: CheckpointRecapCard ===
+// === Module 12921: CheckpointRecapCard ===
 
-// Module 12913 (CheckpointRecapCard)
+// Module 12921 (CheckpointRecapCard)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6764 */;
-import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 12634 */;
-import useCheckpointCharacterImagesDefault from "useCheckpointCharacterImages" /* 12639 */;
-import useCheckpointCompositeRevealStyleDefault from "useCheckpointCompositeRevealStyle" /* 12641 */;
-import CheckpointShareCardYearDefault from "CheckpointShareCardYear" /* 12642 */;
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12670 */;
+import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 12642 */;
+import useCheckpointCharacterImagesDefault from "useCheckpointCharacterImages" /* 12647 */;
+import useCheckpointCompositeRevealStyleDefault from "useCheckpointCompositeRevealStyle" /* 12649 */;
+import CheckpointShareCardYearDefault from "CheckpointShareCardYear" /* 12650 */;
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12678 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,8 +52,8 @@ export default function CheckpointRecapCard(character) {
   const obj3 = character(6422);
   const obj6 = { path: null, x: null, color: null };
   const tmpResult = CheckpointCardFrameDefault;
-  obj6.path = character(12642).YEAR_PATH;
-  obj6.x = 200 - character(12642).YEAR_WIDTH;
+  obj6.path = character(12650).YEAR_PATH;
+  obj6.x = 200 - character(12650).YEAR_WIDTH;
   obj6.color = obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor;
   obj5.children = jsx(CheckpointShareCardYearDefault, { path: null, x: null, color: null });
   obj4.children = <tmpResult images={tmp3} cardColorPalette={characterCardColorPalette} canvasWidth={200} canvasHeight={268} scale={bound} clydeSize={28} characterLayout={rect}>{null}</tmpResult>;

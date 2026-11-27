@@ -1,6 +1,6 @@
-// === Module 17445: UserSettingsDesignSystemStack ===
+// === Module 17452: UserSettingsDesignSystemStack ===
 
-// Module 17445 (UserSettingsDesignSystemStack)
+// Module 17452 (UserSettingsDesignSystemStack)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;

@@ -1,8 +1,8 @@
-// === Module 20016: SoundboardSoundEditModalRootScreen ===
+// === Module 20041: SoundboardSoundEditModalRootScreen ===
 
-// Module 20016 (SoundboardSoundEditModalRootScreen)
+// Module 20041 (SoundboardSoundEditModalRootScreen)
 import nativeDefault from "native" /* 575 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9537 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9538 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -83,7 +83,7 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
               obj5.localSource = tmp90;
               obj5.durationMs = durationMs;
               obj5.trim = trim;
-              ref.current = emojiId(20010).createSoundboardSound(obj5);
+              ref.current = emojiId(20035).createSoundboardSound(obj5);
               c6 = 3;
               c7 = 1;
               const obj8 = { value: ref.current, done: false };
@@ -102,7 +102,7 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
               obj9.emojiName = emojiName;
               c6 = 4;
               c7 = 1;
-              const obj10 = { value: emojiId(10406).updateSound(obj9), done: false };
+              const obj10 = { value: emojiId(10407).updateSound(obj9), done: false };
               return obj10;
             }
           }
@@ -166,7 +166,7 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
             closure_131_3();
           }
           c7 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp78) {
         closure_4 = tmp78;
@@ -243,7 +243,7 @@ export default function SoundboardSoundEditModalRootScreen(localSource) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         while (true) {

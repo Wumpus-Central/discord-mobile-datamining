@@ -1,6 +1,6 @@
-// === Module 16127: UserPrimaryGuildListBottomSheet ===
+// === Module 16134: UserPrimaryGuildListBottomSheet ===
 
-// Module 16127 (UserPrimaryGuildListBottomSheet)
+// Module 16134 (UserPrimaryGuildListBottomSheet)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -9,13 +9,13 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import GuildIconDefault from "GuildIcon" /* 7052 */;
 import Form from "Form" /* 8088 */;
-import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14313 */;
+import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14320 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8579).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8580).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5043);
@@ -48,8 +48,8 @@ let closure_11 = noop.memo(function Item(item) {
     if (profile != null) {
       badge = profile.badge;
     }
-    guildTagBadgeUrl = item(8578).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-    let obj = item(8578);
+    guildTagBadgeUrl = item(8579).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+    let obj = item(8579);
   }
   const radioA11yNative = item(5105).useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
@@ -100,7 +100,7 @@ let closure_11 = noop.memo(function Item(item) {
     obj10.guildTag = tag;
     obj10.guildBadge = guildTagBadgeUrl;
     obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_7(tmp7(8722).BaseGuildTagChiplet, obj10);
+    tmp10Result2 = closure_7(tmp7(8723).BaseGuildTagChiplet, obj10);
   }
   items = [tmp10Result2, closure_7(item(7254).FormRadio, { selected })];
   obj5.children = items;

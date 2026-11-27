@@ -1,9 +1,9 @@
-// === Module 16031: useOpenChangeBannerActionSheet ===
+// === Module 16038: useOpenChangeBannerActionSheet ===
 
-// Module 16031 (useOpenChangeBannerActionSheet)
+// Module 16038 (useOpenChangeBannerActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 9434 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 9435 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ export default function useOpenChangeBannerActionSheet(user) {
       obj3.guildId = guildId;
       obj2.openLazy(user(analyticsLocations[3])(analyticsLocations[6], analyticsLocations.paths), "Select GIF Banner", obj3);
     };
-    obj.openLazy(asyncRequireImpl(16032, dependencyMap.paths), "Change Banner", obj2);
-    const tmp3 = asyncRequireImpl(16032, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(16039, dependencyMap.paths), "Change Banner", obj2);
+    const tmp3 = asyncRequireImpl(16039, dependencyMap.paths);
   }, items);
 };

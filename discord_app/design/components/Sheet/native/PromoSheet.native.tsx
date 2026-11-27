@@ -1,6 +1,6 @@
-// === Module 10747: PromoSheet ===
+// === Module 10748: PromoSheet ===
 
-// Module 10747 (PromoSheet)
+// Module 10748 (PromoSheet)
 import nativeDefault from "native" /* 575 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ export function PromoSheet(arg0) {
     const obj2 = {};
     const merged1 = Object.assign(graphic);
     obj2.style = tmp2.graphic;
-    let tmp4Result = closure_7(gradientColor(9578).Graphic, obj2);
+    let tmp4Result = closure_7(gradientColor(9579).Graphic, obj2);
   } else {
     tmp4Result = null;
     if (null != illustration) {

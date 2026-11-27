@@ -1,6 +1,6 @@
-// === Module 17470: UserSettingsDesignSystemAnimatedAssetPicker ===
+// === Module 17477: UserSettingsDesignSystemAnimatedAssetPicker ===
 
-// Module 17470 (UserSettingsDesignSystemAnimatedAssetPicker)
+// Module 17477 (UserSettingsDesignSystemAnimatedAssetPicker)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import _slicedToArray from "module_32" /* 32 */;

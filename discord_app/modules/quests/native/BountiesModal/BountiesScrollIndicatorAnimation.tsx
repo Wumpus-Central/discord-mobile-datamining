@@ -1,6 +1,6 @@
-// === Module 16563: BountiesScrollIndicatorAnimation ===
+// === Module 16570: BountiesScrollIndicatorAnimation ===
 
-// Module 16563 (BountiesScrollIndicatorAnimation)
+// Module 16570 (BountiesScrollIndicatorAnimation)
 import nativeDefault from "native" /* 575 */;
 import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 5172 */;
 import useToken from "useToken" /* 5607 */;

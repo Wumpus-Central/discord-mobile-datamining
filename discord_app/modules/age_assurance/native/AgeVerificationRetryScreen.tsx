@@ -1,6 +1,6 @@
-// === Module 12549: AgeVerificationRetryScreen ===
+// === Module 12557: AgeVerificationRetryScreen ===
 
-// Module 12549 (AgeVerificationRetryScreen)
+// Module 12557 (AgeVerificationRetryScreen)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6828 */;
@@ -55,7 +55,7 @@ export default function GetStartedScreen(modalSessionId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ export default function GetStartedScreen(modalSessionId) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c0 = tmp;

@@ -1,13 +1,13 @@
-// === Module 12925: useTraitPickerOptions ===
+// === Module 12933: useTraitPickerOptions ===
 
-// Module 12925 (useTraitPickerOptions)
+// Module 12933 (useTraitPickerOptions)
 import util from "util" /* 1112 */;
 import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6397 */;
 import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6444 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6765 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
-import CheckpointStore from "CheckpointStore" /* 12620 */;
+import CheckpointStore from "CheckpointStore" /* 12628 */;
 
 require = fn;
 const size = fn(2);

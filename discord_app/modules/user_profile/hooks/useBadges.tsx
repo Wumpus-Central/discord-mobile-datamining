@@ -1,6 +1,6 @@
-// === Module 9503: useBadges ===
+// === Module 9504: useBadges ===
 
-// Module 9503 (useBadges)
+// Module 9504 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4868 */;

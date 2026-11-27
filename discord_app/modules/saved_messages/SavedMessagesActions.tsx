@@ -1,9 +1,9 @@
-// === Module 11721: SavedMessagesActions ===
+// === Module 11729: SavedMessagesActions ===
 
-// Module 11721 (SavedMessagesActions)
+// Module 11729 (SavedMessagesActions)
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11718 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11726 */;
 
 require = fn;
 let closure_6 = async function _upsertSavedMessage() {
@@ -47,7 +47,7 @@ let closure_11 = async function _fetchBookmarks() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

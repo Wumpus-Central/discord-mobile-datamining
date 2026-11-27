@@ -1,6 +1,6 @@
-// === Module 16789: QuestDockHeaderSeparator ===
+// === Module 16796: QuestDockHeaderSeparator ===
 
-// Module 16789 (QuestDockHeaderSeparator)
+// Module 16796 (QuestDockHeaderSeparator)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

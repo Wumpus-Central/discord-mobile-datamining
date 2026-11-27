@@ -1,6 +1,6 @@
-// === Module 14846: UserProfileActionSheet ===
+// === Module 14852: UserProfileActionSheet ===
 
-// Module 14846 (UserProfileActionSheet)
+// Module 14852 (UserProfileActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import isChangelogUserDefault from "isChangelogUser" /* 4944 */;
@@ -10,10 +10,10 @@ import UserActionCreators from "UserActionCreators" /* 6134 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import openUserSettings from "openUserSettings" /* 8109 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 9496 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 9504 */;
-import ProfileFrameDefault from "ProfileFrame" /* 9505 */;
-import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 14851 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 9497 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 9505 */;
+import ProfileFrameDefault from "ProfileFrame" /* 9506 */;
+import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 14857 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;

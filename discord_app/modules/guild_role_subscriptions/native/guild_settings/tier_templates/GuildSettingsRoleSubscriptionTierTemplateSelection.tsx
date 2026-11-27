@@ -1,16 +1,16 @@
-// === Module 20268: GuildSettingsRoleSubscriptionTierTemplateSelection ===
+// === Module 20326: GuildSettingsRoleSubscriptionTierTemplateSelection ===
 
-// Module 20268 (GuildSettingsRoleSubscriptionTierTemplateSelection)
+// Module 20326 (GuildSettingsRoleSubscriptionTierTemplateSelection)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16824 */;
-import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 20228 */;
-import GuildRoleSubscriptionTierTemplatePreviewCardDefault from "GuildRoleSubscriptionTierTemplatePreviewCard" /* 20269 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16831 */;
+import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 20286 */;
+import GuildRoleSubscriptionTierTemplatePreviewCardDefault from "GuildRoleSubscriptionTierTemplatePreviewCard" /* 20327 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 16843 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 16850 */;
 
 require = fn;
 function TierTemplatesRenderer(groupListingId) {
@@ -42,7 +42,7 @@ function TierTemplatesRenderer(groupListingId) {
           obj.style = size;
           return closure_1_13(closure_1_8, obj);
         };
-        obj3.snapToInterval = guildId(20269).CARD_WIDTH + PX_16;
+        obj3.snapToInterval = guildId(20327).CARD_WIDTH + PX_16;
         obj3.renderItem = function renderItem(template) {
           return state(GuildRoleSubscriptionTierTemplatePreviewCardDefault, { template: template.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
         };
@@ -176,7 +176,7 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, TouchableOpacity: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
-const usePriceTiers = fn(20219).usePriceTiers;
+const usePriceTiers = fn(20277).usePriceTiers;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);

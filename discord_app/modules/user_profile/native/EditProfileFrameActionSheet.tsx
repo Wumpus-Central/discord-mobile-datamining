@@ -1,13 +1,13 @@
-// === Module 16116: EditProfileFrameActionSheet ===
+// === Module 16123: EditProfileFrameActionSheet ===
 
-// Module 16116 (EditProfileFrameActionSheet)
+// Module 16123 (EditProfileFrameActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 6309 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import useShopProductItems from "useShopProductItems" /* 9431 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11946 */;
-import EditProfileFrameSection from "EditProfileFrameSection" /* 16118 */;
+import useShopProductItems from "useShopProductItems" /* 9432 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 11954 */;
+import EditProfileFrameSection from "EditProfileFrameSection" /* 16125 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 6329 */;
@@ -106,7 +106,7 @@ function ProfileFrameSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(14458)(previewSkuId);
+  const tmp2 = purchase(14465)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -130,7 +130,7 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11287), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
+  const items1 = [closure_9(purchase(11288), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;

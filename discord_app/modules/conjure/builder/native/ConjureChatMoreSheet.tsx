@@ -1,6 +1,6 @@
-// === Module 18599: ConjureChatMoreSheet ===
+// === Module 18610: ConjureChatMoreSheet ===
 
-// Module 18599 (ConjureChatMoreSheet)
+// Module 18610 (ConjureChatMoreSheet)
 import _modDef4245 from "module_4245" /* 4245 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import noop from "module_19" /* 19 */;
@@ -40,7 +40,7 @@ function MoreRow(row) {
     return jsx(row(6144).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 }
-const conjureDesignFeedbackStore = fn(18600);
+const conjureDesignFeedbackStore = fn(18611);
 ({ enterConjureDesignFeedback: c3, exitConjureDesignFeedback: closure_4, useConjureDesignFeedback: hasOwnProperty } = conjureDesignFeedbackStore);
 const jsx = fn(21).jsx;
 const ConjureChatMoreSheet = "ConjureChatMoreSheet";
@@ -53,8 +53,8 @@ export default function ConjureChatMoreSheet(canAnnotate) {
   const id = merged.project.id;
   const isConjureProjectMuted = id(7670).useIsConjureProjectMuted(id);
   const obj = id(7670);
-  const conjureControlActive = id(14737).useConjureControlActive(id);
-  const obj2 = id(14737);
+  const conjureControlActive = id(14744).useConjureControlActive(id);
+  const obj2 = id(14744);
   const obj4 = {};
   const merged1 = Object.assign(merged);
   obj4.muted = isConjureProjectMuted;
@@ -74,7 +74,7 @@ export default function ConjureChatMoreSheet(canAnnotate) {
     tmp = obj5;
   }
   obj4.annotate = tmp;
-  const result = id(18602).conjureChatMoreSections(obj4);
+  const result = id(18613).conjureChatMoreSections(obj4);
   const obj6 = { dismissAccessibilityLabel: null, children: null };
   const intl = tmp3(1112).intl;
   obj6.dismissAccessibilityLabel = intl.string(_modDef4245.OsD9T0);

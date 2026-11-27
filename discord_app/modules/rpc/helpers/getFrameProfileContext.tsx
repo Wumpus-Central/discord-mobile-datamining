@@ -1,6 +1,6 @@
-// === Module 15924: getFrameProfileContext ===
+// === Module 15931: getFrameProfileContext ===
 
-// Module 15924 (getFrameProfileContext)
+// Module 15931 (getFrameProfileContext)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5687 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6939 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 7677 */;

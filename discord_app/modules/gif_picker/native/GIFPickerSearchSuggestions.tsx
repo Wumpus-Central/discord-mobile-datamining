@@ -1,9 +1,9 @@
-// === Module 10815: GIFPickerSearchSuggestions ===
+// === Module 10816: GIFPickerSearchSuggestions ===
 
-// Module 10815 (GIFPickerSearchSuggestions)
+// Module 10816 (GIFPickerSearchSuggestions)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10807 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10808 */;
 
 const require = fn;
 const View = fn(17).View;

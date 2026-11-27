@@ -1,6 +1,6 @@
-// === Module 19037: ThreadBrowserRowSubtext ===
+// === Module 19053: ThreadBrowserRowSubtext ===
 
-// Module 19037 (ThreadBrowserRowSubtext)
+// Module 19053 (ThreadBrowserRowSubtext)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
@@ -9,8 +9,8 @@ import Text_Text from "Text/Text" /* 5634 */;
 import useMessageAuthorDefault from "useMessageAuthor" /* 6770 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6991 */;
 import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 7077 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8818 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9079 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8819 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9080 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
@@ -26,8 +26,8 @@ function MessageContent(arg0) {
   let roleStyle;
   const tmp = closure_13();
   items = [message.author.id];
-  const subscribeGuildMembers = message(12464).useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
-  let obj = message(12464);
+  const subscribeGuildMembers = message(12472).useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
+  let obj = message(12472);
   const items1 = [UserStore];
   const stateFromStores = message(504).useStateFromStores(items1, () => {
     let author = UserStore.getUser(message.author.id);
@@ -43,9 +43,9 @@ function MessageContent(arg0) {
   ({ nick: c2, colorString: c3, colorStrings: c4 } = useMessageAuthorDefault(message));
   let tmp4 = useMessageAuthorDefault(message);
   const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
-  const timestampString = message(8185).getTimestampString(extractTimestampResult);
-  const obj5 = message(8185);
-  const timestampAccessibilityLabel = message(8185).getTimestampAccessibilityLabel(extractTimestampResult);
+  const timestampString = message(8186).getTimestampString(extractTimestampResult);
+  const obj5 = message(8186);
+  const timestampAccessibilityLabel = message(8186).getTimestampAccessibilityLabel(extractTimestampResult);
   roleStyle = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
   const obj7 = { user: stateFromStores, timestamp: timestampString, accessibilityLabel: timestampAccessibilityLabel, children: null };
   const obj8 = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, variant: "body-sm/medium", color: "text-default", children: null };
@@ -240,7 +240,7 @@ export function ThreadSubtext(thread) {
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => ThreadMessageStore.getMostRecentMessage(id), items1);
   const obj = id(504);
-  const lastMessageTimestamp = id(8185).useLastMessageTimestamp(thread);
+  const lastMessageTimestamp = id(8186).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
@@ -249,9 +249,9 @@ export function ThreadSubtext(thread) {
       }
     }
   }
-  const obj2 = id(8185);
-  const timestampString = id(8185).getTimestampString(lastMessageTimestamp);
-  const tmpResult = id(8185);
-  const tmpResult2 = id(8185);
-  return closure_9(closure_14, { thread, timestamp: timestampString, accessibilityLabel: id(8185).getTimestampAccessibilityLabel(lastMessageTimestamp) });
+  const obj2 = id(8186);
+  const timestampString = id(8186).getTimestampString(lastMessageTimestamp);
+  const tmpResult = id(8186);
+  const tmpResult2 = id(8186);
+  return closure_9(closure_14, { thread, timestamp: timestampString, accessibilityLabel: id(8186).getTimestampAccessibilityLabel(lastMessageTimestamp) });
 }

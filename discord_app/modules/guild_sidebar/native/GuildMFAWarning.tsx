@@ -1,6 +1,6 @@
-// === Module 17921: GuildMFAWarning ===
+// === Module 17928: GuildMFAWarning ===
 
-// Module 17921 (GuildMFAWarning)
+// Module 17928 (GuildMFAWarning)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 6124 */;
 import Pressables from "Pressables" /* 6152 */;
-import _modDef17922 from "module_17922" /* 17922 */;
+import _modDef17929 from "module_17929" /* 17929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ let closure_9 = async function _handlePress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_9 = async function _handlePress() {
         closure_128_0 = value.default;
         closure_129_1(closure_129_2[9]).openURL(closure_128_0.getArticleURL(closure_129_4.SETTING_UP_TWO_FACTOR));
         c3 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp17) {
       c3 = tmp;
@@ -90,7 +90,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFA
 export default function GuildMFAWarning() {
   const tmp = closure_7();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef17922 };
+  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef17929 };
   items = [hasOwnProperty(FastImageDefault, obj2), ];
   const obj3 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl = util.intl;

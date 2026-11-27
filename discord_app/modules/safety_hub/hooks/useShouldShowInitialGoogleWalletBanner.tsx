@@ -1,6 +1,6 @@
-// === Module 16245: useShouldShowInitialGoogleWalletBanner ===
+// === Module 16252: useShouldShowInitialGoogleWalletBanner ===
 
-// Module 16245 (useShouldShowInitialGoogleWalletBanner)
+// Module 16252 (useShouldShowInitialGoogleWalletBanner)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -47,7 +47,7 @@ export function useShouldShowInitialGoogleWalletBanner() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

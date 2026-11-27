@@ -1,6 +1,6 @@
-// === Module 18152: useCheckpointRelaunchCoachmark ===
+// === Module 18159: useCheckpointRelaunchCoachmark ===
 
-// Module 18152 (useCheckpointRelaunchCoachmark)
+// Module 18159 (useCheckpointRelaunchCoachmark)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointRelaunchCoachmark.tsx");
 
-export const useIsCheckpointRelaunchCoachmarkEligible = fn(18153).useIsCheckpointRelaunchCoachmarkEligible;
+export const useIsCheckpointRelaunchCoachmarkEligible = fn(18160).useIsCheckpointRelaunchCoachmarkEligible;
 export function useCheckpointRelaunchCoachmarkProps(visibleContent) {
   visibleContent = visibleContent.visibleContent;
   const markAsDismissed = visibleContent.markAsDismissed;
@@ -37,7 +37,7 @@ export function useCheckpointRelaunchCoachmarkProps(visibleContent) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -53,7 +53,7 @@ export function useCheckpointRelaunchCoachmarkProps(visibleContent) {
             } else {
               v1 = 1;
               c2 = 1;
-              const obj5 = { value: tmp4(12625).openCheckpoint(tmp4(18153).CHECKPOINT_RELAUNCH_COACHMARK_SOURCE), done: false };
+              const obj5 = { value: tmp4(12633).openCheckpoint(tmp4(18160).CHECKPOINT_RELAUNCH_COACHMARK_SOURCE), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -68,7 +68,7 @@ export function useCheckpointRelaunchCoachmarkProps(visibleContent) {
               v1(constants.TAKE_ACTION);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           c2 = tmp;

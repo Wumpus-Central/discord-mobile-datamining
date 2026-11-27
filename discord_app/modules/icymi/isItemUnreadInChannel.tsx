@@ -1,6 +1,6 @@
-// === Module 8919: isItemUnreadInChannel ===
+// === Module 8920: isItemUnreadInChannel ===
 
-// Module 8919 (isItemUnreadInChannel)
+// Module 8920 (isItemUnreadInChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ReadStateStore from "ReadStateStore" /* 6932 */;
 

@@ -1,15 +1,15 @@
-// === Module 17928: GuildRoleSubscriptionsChannelLongPressActionSheet ===
+// === Module 17935: GuildRoleSubscriptionsChannelLongPressActionSheet ===
 
-// Module 17928 (GuildRoleSubscriptionsChannelLongPressActionSheet)
+// Module 17935 (GuildRoleSubscriptionsChannelLongPressActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
 import Form from "Form" /* 8088 */;
-import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 11491 */;
-import _modDef13818 from "module_13818" /* 13818 */;
-import _modDef17828 from "module_17828" /* 17828 */;
+import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 11499 */;
+import _modDef13825 from "module_13825" /* 13825 */;
+import _modDef17835 from "module_17835" /* 17835 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,14 +31,14 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   const obj2 = { leading: null, title: null };
   const obj3 = { style: closure_7().headerIcon, children: null };
   const tmp = closure_7();
-  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef13818 });
+  obj3.children = closure_5(native.Icon, { disableColor: true, source: _modDef13825 });
   obj2.leading = closure_5(View, obj3);
   const intl = util.intl;
   obj2.title = intl.string(util.t["KzCF/6"]);
   items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ];
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj4 = { disableColor: true, source: _modDef13818 };
-  obj5.leading = closure_5(native.Icon, { source: _modDef17828 });
+  const obj4 = { disableColor: true, source: _modDef13825 };
+  obj5.leading = closure_5(native.Icon, { source: _modDef17835 });
   const obj7 = { text: null };
   const intl2 = util.intl;
   obj7.text = intl2.string(util.t.WqhZss);

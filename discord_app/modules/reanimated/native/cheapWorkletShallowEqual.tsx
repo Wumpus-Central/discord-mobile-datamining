@@ -1,6 +1,6 @@
-// === Module 9795: cheapWorkletShallowEqual ===
+// === Module 9796: cheapWorkletShallowEqual ===
 
-// Module 9795 (cheapWorkletShallowEqual)
+// Module 9796 (cheapWorkletShallowEqual)
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function cheapWorkletShallowEqual_cheapWorkletShallowEqualTsx1(a,b){if(a===b)return true;if(a==null||b==null)return false;for(const key in a){if(a[key]!==b[key])return false;}return true;})" }];

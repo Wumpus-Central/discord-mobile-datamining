@@ -1,6 +1,6 @@
-// === Module 18598: conjureAdminUnpublish ===
+// === Module 18609: conjureAdminUnpublish ===
 
-// Module 18598 (conjureAdminUnpublish)
+// Module 18609 (conjureAdminUnpublish)
 import conjureAppInServer from "conjureAppInServer" /* 7692 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -71,7 +71,7 @@ let closure_13 = async function _loadConjureAdminUnpublishLookup(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_13 = async function _loadConjureAdminUnpublishLookup(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;

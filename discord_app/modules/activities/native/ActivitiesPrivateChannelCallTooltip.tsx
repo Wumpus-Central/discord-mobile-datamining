@@ -1,6 +1,6 @@
-// === Module 13819: ActivitiesPrivateChannelCallTooltip ===
+// === Module 13826: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 13819 (ActivitiesPrivateChannelCallTooltip)
+// Module 13826 (ActivitiesPrivateChannelCallTooltip)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;

@@ -1,19 +1,19 @@
-// === Module 16674: QuestHooks ===
+// === Module 16681: QuestHooks ===
 
-// Module 16674 (QuestHooks)
+// Module 16681 (QuestHooks)
 import QuestTypes from "QuestTypes" /* 6874 */;
 import AdCreativeType from "AdCreativeType" /* 6878 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6971 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8389 */;
-import AssetUtils from "AssetUtils" /* 9903 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 16706 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8390 */;
+import AssetUtils from "AssetUtils" /* 9904 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 16713 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 5258 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import BountyStore from "BountyStore" /* 8373 */;
-import QuestStore from "QuestStore" /* 8374 */;
-import PlayableStore from "PlayableStore" /* 16675 */;
+import BountyStore from "BountyStore" /* 8374 */;
+import QuestStore from "QuestStore" /* 8375 */;
+import PlayableStore from "PlayableStore" /* 16682 */;
 
 const require = globalThis.__r;
 
@@ -31,8 +31,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(8361).isDismissed(questDockQuest.userStatus, tmp(6874).QuestContent.QUEST_BAR_MOBILE);
-    const tmpResult = tmp(8361);
+    isDismissedResult = tmp(8362).isDismissed(questDockQuest.userStatus, tmp(6874).QuestContent.QUEST_BAR_MOBILE);
+    const tmpResult = tmp(8362);
   }
   let claimedAt;
   if (questDockQuest != null) {
@@ -279,7 +279,7 @@ export function useMobileActivityQuest(quest) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -314,7 +314,7 @@ export function useMobileActivityQuest(quest) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp12) {
           c0 = tmp;
           throw tmp12;

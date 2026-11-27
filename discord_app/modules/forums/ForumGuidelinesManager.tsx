@@ -1,6 +1,6 @@
-// === Module 10796: ForumGuidelinesManager ===
+// === Module 10797: ForumGuidelinesManager ===
 
-// Module 10796 (ForumGuidelinesManager)
+// Module 10797 (ForumGuidelinesManager)
 import Storage2 from "Storage" /* 510 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 

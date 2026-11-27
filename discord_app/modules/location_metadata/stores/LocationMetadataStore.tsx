@@ -1,6 +1,6 @@
-// === Module 10002: LocationMetadataStore ===
+// === Module 10003: LocationMetadataStore ===
 
-// Module 10002 (LocationMetadataStore)
+// Module 10003 (LocationMetadataStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import CountryCodeUtils from "CountryCodeUtils" /* 5707 */;

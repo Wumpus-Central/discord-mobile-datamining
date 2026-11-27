@@ -1,6 +1,6 @@
-// === Module 13663: HubProgressBarUtils ===
+// === Module 13670: HubProgressBarUtils ===
 
-// Module 13663 (HubProgressBarUtils)
+// Module 13670 (HubProgressBarUtils)
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
@@ -9,7 +9,7 @@ import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(10441).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(10442).HUB_PROGRESS_STEP_ORDER;
 const PlatformTypes = fn(1071).PlatformTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");

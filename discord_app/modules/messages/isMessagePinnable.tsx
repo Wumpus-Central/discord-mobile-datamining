@@ -1,6 +1,6 @@
-// === Module 12210: isMessagePinnable ===
+// === Module 12218: isMessagePinnable ===
 
-// Module 12210 (isMessagePinnable)
+// Module 12218 (isMessagePinnable)
 import isSystemMessageDefault from "isSystemMessage" /* 6978 */;
 import ThreadHooks from "ThreadHooks" /* 7628 */;
 import PermissionStore from "PermissionStore" /* 4975 */;

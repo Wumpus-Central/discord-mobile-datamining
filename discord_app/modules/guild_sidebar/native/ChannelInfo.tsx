@@ -1,16 +1,16 @@
-// === Module 17954: ChannelInfo ===
+// === Module 17961: ChannelInfo ===
 
-// Module 17954 (ChannelInfo)
+// Module 17961 (ChannelInfo)
 import StageMediaHooks from "StageMediaHooks" /* 6811 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13022 */;
-import Badges from "Badges" /* 14906 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17846 */;
-import showChannelBadgeDefault from "showChannelBadge" /* 17955 */;
-import ChannelBadgeDefault from "ChannelBadge" /* 17956 */;
-import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 17959 */;
-import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 17960 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13030 */;
+import Badges from "Badges" /* 14913 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17853 */;
+import showChannelBadgeDefault from "showChannelBadge" /* 17962 */;
+import ChannelBadgeDefault from "ChannelBadge" /* 17963 */;
+import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 17966 */;
+import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 17967 */;
 import noop from "module_19" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 8290 */;
+import NewChannelsStore from "NewChannelsStore" /* 8291 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 import ReadStateStore from "ReadStateStore" /* 6932 */;
@@ -46,7 +46,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj3.video = hasVideo;
     obj3.channel = channel;
-    let tmp6Result = jsx(tmp(17847).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
+    let tmp6Result = jsx(tmp(17854).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
   } else {
     const obj4 = { channel };
     tmp6Result = <DurationInfo channel={channel} />;
@@ -82,7 +82,7 @@ export default function ChannelInfo(channel) {
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const tmp5 = useEmbeddedAppsForChannelDefault(channel);
   const obj = channel(504);
-  const postsWithUnreadsCount = channel(9027).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
+  const postsWithUnreadsCount = channel(9028).useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     const obj3 = { mentionCount: mentionsCount, isMentionLowImportance: stateFromStoresObject.isMentionLowImportance, isNewChannel, postsWithUnreadsCount: null, muted: null };
     let tmp18 = null;
@@ -115,7 +115,7 @@ export default function ChannelInfo(channel) {
           const obj4 = { embeddedApps: tmp5, muted };
           tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });
         }
-        tmpResult2 = tmp(17958);
+        tmpResult2 = tmp(17965);
       }
     }
     if (null != isSubscriptionGated) {

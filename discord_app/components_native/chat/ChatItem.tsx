@@ -1,14 +1,14 @@
-// === Module 9080: ChatItem ===
+// === Module 9081: ChatItem ===
 
-// Module 9080 (ChatItem)
+// Module 9081 (ChatItem)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import MessageTypes2 from "MessageTypes" /* 1087 */;
 import isSystemMessageDefault from "isSystemMessage" /* 6978 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8838 */;
-import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 9081 */;
-import MessageViewNativeComponent from "MessageViewNativeComponent" /* 9082 */;
-import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 9083 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8839 */;
+import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 9082 */;
+import MessageViewNativeComponent from "MessageViewNativeComponent" /* 9083 */;
+import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 9084 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -41,7 +41,7 @@ function DCDChatItem(message) {
 }
 const View = fn(17).View;
 const MessageTypes = fn(1071).MessageTypes;
-const RowGeneratorConstants = fn(8224);
+const RowGeneratorConstants = fn(8225);
 ({ RowType: closure_8, Changeset: closure_9 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -195,6 +195,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 };
-export const DCDMessageView = fn(9082).default;
-export const DCDSystemMessageView = fn(9083).default;
-export const DCDAutoModerationSystemMessageView = fn(9081).default;
+export const DCDMessageView = fn(9083).default;
+export const DCDSystemMessageView = fn(9084).default;
+export const DCDAutoModerationSystemMessageView = fn(9082).default;

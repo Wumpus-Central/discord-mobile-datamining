@@ -1,12 +1,12 @@
-// === Module 19316: BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 19332: BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 19316 (BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet)
+// Module 19332 (BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet)
 import _modDef3757 from "module_3757" /* 3757 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import IncentivizedAccountLinkConfirmationPromoSheetDefault from "IncentivizedAccountLinkConfirmationPromoSheet" /* 19309 */;
+import IncentivizedAccountLinkConfirmationPromoSheetDefault from "IncentivizedAccountLinkConfirmationPromoSheet" /* 19325 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_account_linking/native/BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet.tsx");
 
 export default function BloonsTDBattlesIncentivizedAccountLinkConfirmationBottomSheet() {
-  const bloonsTDBattlesUpsellExperiment = analyticsLocations(19314).bloonsTDBattlesUpsellExperiment;
+  const bloonsTDBattlesUpsellExperiment = analyticsLocations(19330).bloonsTDBattlesUpsellExperiment;
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.ACTION_SHEET).analyticsLocations;
   let obj = { title: null, description: null, actions: null };
   const intl = analyticsLocations(1112).intl;

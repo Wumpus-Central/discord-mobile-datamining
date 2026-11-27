@@ -1,17 +1,17 @@
-// === Module 12256: EmojiRow ===
+// === Module 12264: EmojiRow ===
 
-// Module 12256 (EmojiRow)
+// Module 12264 (EmojiRow)
 import ReactionUtils from "ReactionUtils" /* 4987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import useToken from "useToken" /* 5607 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 9091 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9092 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9548 */;
-import useEmojisForReactionRow from "useEmojisForReactionRow" /* 12257 */;
-import EmojiReactionRowButton from "EmojiReactionRowButton" /* 12258 */;
-import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 12259 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 9092 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9093 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9549 */;
+import useEmojisForReactionRow from "useEmojisForReactionRow" /* 12265 */;
+import EmojiReactionRowButton from "EmojiReactionRowButton" /* 12266 */;
+import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 12267 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

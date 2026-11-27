@@ -1,12 +1,12 @@
-// === Module 11305: ProductDetailsActionSheetVariants ===
+// === Module 11306: ProductDetailsActionSheetVariants ===
 
-// Module 11305 (ProductDetailsActionSheetVariants)
+// Module 11306 (ProductDetailsActionSheetVariants)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Pressables from "Pressables" /* 6152 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7491 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 11231 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 11267 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 11232 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 11268 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

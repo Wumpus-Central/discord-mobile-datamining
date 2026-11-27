@@ -1,6 +1,6 @@
-// === Module 18506: ConjureDownstreamUpdatesSwitch ===
+// === Module 18513: ConjureDownstreamUpdatesSwitch ===
 
-// Module 18506 (ConjureDownstreamUpdatesSwitch)
+// Module 18513 (ConjureDownstreamUpdatesSwitch)
 import nativeDefault from "native" /* 575 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import conjureManagedCopyConnection from "conjureManagedCopyConnection" /* 7722 */;
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/conjure/managed_copy/native/C
 export default function ConjureDownstreamUpdatesSwitch(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_8();
-  const conjureDownstreamUpdates = projectId(18473).useConjureDownstreamUpdates(projectId);
+  const conjureDownstreamUpdates = projectId(18480).useConjureDownstreamUpdates(projectId);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
   [][0] = projectId;

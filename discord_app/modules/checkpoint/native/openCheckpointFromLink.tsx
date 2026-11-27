@@ -1,9 +1,9 @@
-// === Module 15481: openCheckpointFromLink ===
+// === Module 15488: openCheckpointFromLink ===
 
-// Module 15481 (openCheckpointFromLink)
+// Module 15488 (openCheckpointFromLink)
 import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 5847 */;
 import CheckpointExperiments from "CheckpointExperiments" /* 6769 */;
-import openCheckpoint from "openCheckpoint" /* 12625 */;
+import openCheckpoint from "openCheckpoint" /* 12633 */;
 import size from "module_2" /* 2 */;
 
 PostConnectionCallbackStore.addPostConnectionCallback;

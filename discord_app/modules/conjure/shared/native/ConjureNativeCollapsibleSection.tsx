@@ -1,10 +1,10 @@
-// === Module 18771: ConjureNativeCollapsibleSection ===
+// === Module 18788: ConjureNativeCollapsibleSection ===
 
-// Module 18771 (ConjureNativeCollapsibleSection)
+// Module 18788 (ConjureNativeCollapsibleSection)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7558 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9816 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9817 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -68,7 +68,7 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
         obj5.onPress = onToggleExpanded;
         const obj7 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
         obj5.children = React4(ChevronSmallRightIcon, obj7);
-        tmp9Result = React4(tmp4(8489).PressableScale, obj5);
+        tmp9Result = React4(tmp4(8490).PressableScale, obj5);
       }
     }
     items1[1] = tmp9Result;

@@ -1,6 +1,6 @@
-// === Module 15897: invites ===
+// === Module 15904: invites ===
 
-// Module 15897 (invites)
+// Module 15904 (invites)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -10,7 +10,7 @@ const InstantInviteSources = fn(1071).InstantInviteSources;
 const Constants = fn(1082);
 ({ RPCCommands, RPCErrors: closure_6 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15873);
+const CONTEXT_MENU_ICON_NAMES = fn(15880);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 const items = [fn(5781).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(5781).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
@@ -30,7 +30,7 @@ obj3.handler = function handler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -57,10 +57,10 @@ obj3.handler = function handler(arg0) {
                 throw rPCError1;
               } else {
                 const kind = connectedActivityLocation.kind;
-                if (tmp3(10106).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
-                  if (tmp3(10106).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
-                    if (tmp3(10106).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
-                      if (tmp3(10106).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
+                if (tmp3(10107).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
+                  if (tmp3(10107).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
+                    if (tmp3(10107).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
+                      if (tmp3(10107).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
                         const obj8 = { errorCode: constants2.NO_ELIGIBLE_ACTIVITY };
                         const rPCError2 = new tmp3(7645).RPCError(obj8, "Unsupported activity location");
                         throw rPCError2;
@@ -83,11 +83,11 @@ obj3.handler = function handler(arg0) {
                   obj11.inviteAnalyticsMetadata = obj12;
                   dependencyMap = 2;
                   connectedActivityLocation = 1;
-                  const obj13 = { value: tmp3(10046).sendEmbeddedActivityInviteUser(obj11), done: false };
+                  const obj13 = { value: tmp3(10047).sendEmbeddedActivityInviteUser(obj11), done: false };
                   return obj13;
                 }
-                channel = tmp3(15898).validateOpenInviteDialog(tmp68).channel;
-                const obj5 = tmp3(15898);
+                channel = tmp3(15905).validateOpenInviteDialog(tmp68).channel;
+                const obj5 = tmp3(15905);
               }
             }
           }
@@ -107,7 +107,7 @@ obj3.handler = function handler(arg0) {
         } else {
           c2 = 0;
           connectedActivityLocation = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp61) {
         if (tmp4 === c2) {

@@ -1,8 +1,8 @@
-// === Module 15006: UserProfileApplicationWidgetPreview ===
+// === Module 15013: UserProfileApplicationWidgetPreview ===
 
-// Module 15006 (UserProfileApplicationWidgetPreview)
+// Module 15013 (UserProfileApplicationWidgetPreview)
 import nativeDefault from "native" /* 575 */;
-import useApplicationWidgetLayoutRendererPropsDefault from "useApplicationWidgetLayoutRendererProps" /* 14663 */;
+import useApplicationWidgetLayoutRendererPropsDefault from "useApplicationWidgetLayoutRendererProps" /* 14670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -114,7 +114,7 @@ export default function UserProfileApplicationWidgetPreview(applicationId) {
     }
     if (tmp23Result) {
       const obj16 = { style: tmp.imageSkeleton };
-      tmp23Result = closure_7(tmp8(14655).ImageSkeleton, obj16);
+      tmp23Result = closure_7(tmp8(14662).ImageSkeleton, obj16);
     }
     const items7 = [tmp23Result, ];
     let tmp23Result5 = null != resultResult;
@@ -122,7 +122,7 @@ export default function UserProfileApplicationWidgetPreview(applicationId) {
       const obj17 = { style: tmp.heroImage, onLayout: callback, children: null };
       if (tmp23Result4) {
         const size = { media: resultResult.media, width: tmp3, height: tmp5, fillContainer: true };
-        tmp23Result4 = closure_7(tmp11(14658), size);
+        tmp23Result4 = closure_7(tmp11(14665), size);
       }
       obj17.children = tmp23Result4;
       tmp23Result5 = closure_7(View, obj17);
@@ -141,7 +141,7 @@ export default function UserProfileApplicationWidgetPreview(applicationId) {
       let tmp23Result6 = closure_7(tmp11(5730), obj20);
     } else {
       const obj22 = { style: tmp.containedImageSkeleton };
-      tmp23Result6 = closure_7(tmp8(14655).ImageSkeleton, obj22);
+      tmp23Result6 = closure_7(tmp8(14662).ImageSkeleton, obj22);
     }
     obj19.children = tmp23Result6;
     tmp23Result7 = closure_7(View, obj19);

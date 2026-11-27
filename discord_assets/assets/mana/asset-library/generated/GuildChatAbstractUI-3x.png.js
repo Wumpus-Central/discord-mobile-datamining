@@ -1,6 +1,6 @@
-// === Module 12360: ? ===
+// === Module 12368: ? ===
 
-// Module 12360
+// Module 12368
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GuildChatAbstractUI-3x.png.js");

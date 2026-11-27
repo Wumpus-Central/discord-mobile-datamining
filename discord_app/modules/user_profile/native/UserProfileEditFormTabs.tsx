@@ -1,21 +1,21 @@
-// === Module 16169: UserProfileEditFormTabs ===
+// === Module 16176: UserProfileEditFormTabs ===
 
-// Module 16169 (UserProfileEditFormTabs)
+// Module 16176 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import ChatInputUtils from "ChatInputUtils" /* 5228 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6171 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8486 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9487 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14557 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15002 */;
-import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15066 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16168 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16170 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8487 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 9488 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14564 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15009 */;
+import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15073 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16175 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16177 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9437 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9438 */;
 
 const require = globalThis.__r;
 
@@ -123,7 +123,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   const tmp6Result = tmp6(first.useState(num2), 2);
   first = tmp6Result[0];
   absoluteFill = tmp6Result[1];
-  arr5 = tmp15(14566)(userId);
+  arr5 = tmp15(14573)(userId);
   closure_7 = tmp20;
   const items5 = [arr5];
   const memo = first.useMemo(() => arr5.filter(UserProfileGameWidgetTypes.isGameWidget), items5);

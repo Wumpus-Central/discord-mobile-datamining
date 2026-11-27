@@ -1,6 +1,6 @@
-// === Module 10329: ChannelCallNavigatorIcon ===
+// === Module 10330: ChannelCallNavigatorIcon ===
 
-// Module 10329 (ChannelCallNavigatorIcon)
+// Module 10330 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5611 */;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const resetFocusTimer = fn(10008).resetFocusTimer;
+const resetFocusTimer = fn(10009).resetFocusTimer;
 const Constants = fn(1071);
 ({ ThemeTypes: closure_6, Fonts } = Constants);
 const jsxProd = fn(21);

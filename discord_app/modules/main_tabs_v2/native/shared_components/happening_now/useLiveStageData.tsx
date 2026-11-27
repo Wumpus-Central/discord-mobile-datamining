@@ -1,6 +1,6 @@
-// === Module 17801: useLiveStageData ===
+// === Module 17808: useLiveStageData ===
 
-// Module 17801 (useLiveStageData)
+// Module 17808 (useLiveStageData)
 import applyDefault from "apply" /* 12 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6855 */;
 import noop from "module_19" /* 19 */;

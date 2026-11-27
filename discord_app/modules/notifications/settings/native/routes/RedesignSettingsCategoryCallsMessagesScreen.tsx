@@ -1,9 +1,9 @@
-// === Module 17634: RedesignSettingsCategoryCallsMessagesScreen ===
+// === Module 17641: RedesignSettingsCategoryCallsMessagesScreen ===
 
-// Module 17634 (RedesignSettingsCategoryCallsMessagesScreen)
-import SettingBuilders from "SettingBuilders" /* 11962 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17626 */;
-import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 17627 */;
+// Module 17641 (RedesignSettingsCategoryCallsMessagesScreen)
+import SettingBuilders from "SettingBuilders" /* 11970 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17633 */;
+import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 17634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

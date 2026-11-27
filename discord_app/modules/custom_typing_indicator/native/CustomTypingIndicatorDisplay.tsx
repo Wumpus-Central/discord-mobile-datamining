@@ -1,10 +1,10 @@
-// === Module 12977: CustomTypingIndicatorDisplay ===
+// === Module 12985: CustomTypingIndicatorDisplay ===
 
-// Module 12977 (CustomTypingIndicatorDisplay)
+// Module 12985 (CustomTypingIndicatorDisplay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12965 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 12978 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12973 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 12986 */;
 import noop from "module_19" /* 19 */;
 
 const Text_Text = tmp3(5634);

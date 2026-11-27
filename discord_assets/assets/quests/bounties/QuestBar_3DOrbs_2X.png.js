@@ -1,6 +1,6 @@
-// === Module 16783: ? ===
+// === Module 16790: ? ===
 
-// Module 16783
+// Module 16790
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js");

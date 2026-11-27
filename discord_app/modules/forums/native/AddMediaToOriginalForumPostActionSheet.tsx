@@ -1,11 +1,11 @@
-// === Module 12436: AddMediaToOriginalForumPostActionSheet ===
+// === Module 12444: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 12436 (AddMediaToOriginalForumPostActionSheet)
+// Module 12444 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import Tracking from "Tracking" /* 8116 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8136 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8137 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ let closure_16 = async function _upload2(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -72,18 +72,18 @@ let closure_16 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(8132).maxFileSize(id.id);
-            const obj = closure_0(8132);
-            const effectiveUploadLimit = closure_0(8147).getEffectiveUploadLimit(maxFileSizeResult);
+            const maxFileSizeResult = closure_0(8133).maxFileSize(id.id);
+            const obj = closure_0(8133);
+            const effectiveUploadLimit = closure_0(8148).getEffectiveUploadLimit(maxFileSizeResult);
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
               closure_1(5257).hideActionSheet();
               const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(10065)(obj4);
+              closure_1(10066)(obj4);
               const obj3 = closure_1(5257);
             }
-            const obj2 = closure_0(8147);
+            const obj2 = closure_0(8148);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
@@ -91,8 +91,8 @@ let closure_16 = async function _upload2(arg0) {
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(10062).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(10062);
+            closure_1(10063).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(10063);
             closure_1(5257).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);

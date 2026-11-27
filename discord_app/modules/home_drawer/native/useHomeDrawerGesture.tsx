@@ -1,6 +1,6 @@
-// === Module 17750: useHomeDrawerGesture ===
+// === Module 17757: useHomeDrawerGesture ===
 
-// Module 17750 (useHomeDrawerGesture)
+// Module 17757 (useHomeDrawerGesture)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _mod1654 from "module_1654" /* 1654 */;
@@ -10,22 +10,22 @@ import useChatLayoutDefault from "useChatLayout" /* 5222 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11959 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17745 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11967 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17752 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17744 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17751 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17751 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17758 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(17744).computeMaxX;
+let computeMaxX = fn(17751).computeMaxX;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const GestureConstants = fn(11806);
+const GestureConstants = fn(11814);
 ({ FLING_MIN_DISTANCE: closure_9, FLING_MIN_VELOCITY: closure_10, PULL_GESTURE_ACTIVATION_DISTANCE: closure_11, PULL_GESTURE_RESISTANCE } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(11958).LaunchPadTypes;
+const LaunchPadTypes = fn(11966).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let closure_18 = 48 + result;

@@ -1,8 +1,8 @@
-// === Module 9616: GroupDMAvatar ===
+// === Module 9617: GroupDMAvatar ===
 
-// Module 9616 (GroupDMAvatar)
+// Module 9617 (GroupDMAvatar)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import ClipView from "ClipView" /* 9420 */;
+import ClipView from "ClipView" /* 9421 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
 
@@ -70,7 +70,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj11);
     items3 = [, ];
     items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
-    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Add Friend Modal" };
+    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "cancelled \u2014 an agent may not open external links" };
     obj12.animate = animate;
     if (null == users) {
       obj13 = { source: null };

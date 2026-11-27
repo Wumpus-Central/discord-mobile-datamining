@@ -1,6 +1,6 @@
-// === Module 11994: ConjureSharedProjectStore ===
+// === Module 12002: ConjureSharedProjectStore ===
 
-// Module 11994 (ConjureSharedProjectStore)
+// Module 12002 (ConjureSharedProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectLink from "conjureProjectLink" /* 5787 */;

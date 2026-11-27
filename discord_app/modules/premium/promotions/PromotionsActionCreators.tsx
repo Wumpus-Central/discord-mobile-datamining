@@ -1,14 +1,14 @@
-// === Module 9400: PromotionsActionCreators ===
+// === Module 9401: PromotionsActionCreators ===
 
-// Module 9400 (PromotionsActionCreators)
+// Module 9401 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import wrappers from "wrappers" /* 1226 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9216 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 9217 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import UserStore from "UserStore" /* 1387 */;
-import PromotionsStore from "PromotionsStore" /* 9162 */;
+import PromotionsStore from "PromotionsStore" /* 9163 */;
 
 require = fn;
 function fetchActivePromotions() {
@@ -110,7 +110,7 @@ let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

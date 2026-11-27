@@ -1,6 +1,6 @@
-// === Module 17658: Welcome ===
+// === Module 17665: Welcome ===
 
-// Module 17658 (Welcome)
+// Module 17665 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 575 */;
@@ -12,18 +12,18 @@ import UserUtilsDefault from "UserUtils" /* 5099 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7309 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8249 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 13659 */;
-import _modDef14513 from "module_14513" /* 14513 */;
-import _mod15266 from "module_15266" /* 15266 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17655 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8250 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 13666 */;
+import _modDef14520 from "module_14520" /* 14520 */;
+import _mod15273 from "module_15273" /* 15273 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17662 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 17659 */;
+import AgeGateStore from "AgeGateStore" /* 17666 */;
 import ExperimentStore from "ExperimentStore" /* 5660 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 8246 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 8247 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import InviteStore from "InviteStore" /* 5762 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 10433 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 10434 */;
 
 const require = globalThis.__r;
 
@@ -89,7 +89,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef14513 };
+  const obj2 = { source: _modDef14520 };
   const items1 = [closure_1_19(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "body-sm/medium", color: "text-subtle", children: null };
@@ -111,7 +111,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15266 }), , ];
+  items = [closure_1_19(FastImageDefault, { style: tmp4.logo, source: _mod15273 }), , ];
   const obj4 = { style: tmp4.header, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   let num = 2;
   if (tmp3) {

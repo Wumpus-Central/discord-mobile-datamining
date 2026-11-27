@@ -1,11 +1,11 @@
-// === Module 12461: ForumPostList ===
+// === Module 12469: ForumPostList ===
 
-// Module 12461 (ForumPostList)
-import ForumTagHooks from "ForumTagHooks" /* 10770 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12441 */;
-import ForumPostAppliedTags from "ForumPostAppliedTags" /* 12451 */;
-import ForumPostListBodyDefault from "ForumPostListBody" /* 12462 */;
-import ForumPostListFooterDefault from "ForumPostListFooter" /* 12467 */;
+// Module 12469 (ForumPostList)
+import ForumTagHooks from "ForumTagHooks" /* 10771 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12449 */;
+import ForumPostAppliedTags from "ForumPostAppliedTags" /* 12459 */;
+import ForumPostListBodyDefault from "ForumPostListBody" /* 12470 */;
+import ForumPostListFooterDefault from "ForumPostListFooter" /* 12475 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,12 +1,12 @@
-// === Module 9031: ForumActionCreators ===
+// === Module 9032: ForumActionCreators ===
 
-// Module 9031 (ForumActionCreators)
+// Module 9032 (ForumActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9032 */;
-import ForumChannelSeenManager from "ForumChannelSeenManager" /* 9033 */;
-import AnalyticsFeedItemSeenManager from "AnalyticsFeedItemSeenManager" /* 9034 */;
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9033 */;
+import ForumChannelSeenManager from "ForumChannelSeenManager" /* 9034 */;
+import AnalyticsFeedItemSeenManager from "AnalyticsFeedItemSeenManager" /* 9035 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -31,7 +31,7 @@ let closure_7 = async function _withErrorHandling(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

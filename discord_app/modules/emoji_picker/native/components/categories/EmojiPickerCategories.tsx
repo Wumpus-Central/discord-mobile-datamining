@@ -1,14 +1,14 @@
-// === Module 9775: EmojiPickerCategories ===
+// === Module 9776: EmojiPickerCategories ===
 
-// Module 9775 (EmojiPickerCategories)
+// Module 9776 (EmojiPickerCategories)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5260 */;
 import FastestListDefault from "FastestList" /* 7411 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9776 */;
-import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 9792 */;
-import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 9793 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9777 */;
+import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 9793 */;
+import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 9794 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -321,7 +321,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   let tmp37Result = null;
   if (null != firstUnicodeCategory) {
     const obj7 = { blockRef: sharedValue, category: firstUnicodeCategory, categoryIndex: firstUnicodeCategoryIndex, onPress: callback4, style: tmp.item };
-    tmp37Result = tmp37(tmp34(9794), obj7);
+    tmp37Result = tmp37(tmp34(9795), obj7);
   }
   items18[1] = tmp37Result;
   let tmp37Result2 = null;
@@ -329,7 +329,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const obj8 = { style: null, iconStyle: null, onBackspace: null };
     ({ item: obj10.style, keyboardItem: obj10.iconStyle } = tmp);
     obj8.onBackspace = onBackspace;
-    tmp37Result2 = tmp37(tmp34(9796), obj8);
+    tmp37Result2 = tmp37(tmp34(9797), obj8);
   }
   items18[2] = tmp37Result2;
   obj4.children = ref(ref, { children: items18 });

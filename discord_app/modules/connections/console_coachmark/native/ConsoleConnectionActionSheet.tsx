@@ -1,6 +1,6 @@
-// === Module 19113: ConsoleConnectionActionSheet ===
+// === Module 19129: ConsoleConnectionActionSheet ===
 
-// Module 19113 (ConsoleConnectionActionSheet)
+// Module 19129 (ConsoleConnectionActionSheet)
 import util from "util" /* 1112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import TableRowGroup from "TableRowGroup" /* 6140 */;
@@ -10,8 +10,8 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 7748 */;
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 7783 */;
-import XboxNeutralIcon from "XboxNeutralIcon" /* 8783 */;
-import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 14226 */;
+import XboxNeutralIcon from "XboxNeutralIcon" /* 8784 */;
+import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 14233 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ function connectXbox() {
 const PlatformTypes = fn(1071).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(19114).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
+let items = [fn(19130).CONSOLE_CONNECTION_COACHMARK_ANALYTICS_LOCATION];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/console_coachmark/native/ConsoleConnectionActionSheet.tsx");
 

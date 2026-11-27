@@ -1,14 +1,14 @@
-// === Module 12924: useTraitPickerSelection ===
+// === Module 12932: useTraitPickerSelection ===
 
-// Module 12924 (useTraitPickerSelection)
+// Module 12932 (useTraitPickerSelection)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2109 */;
 import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6442 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6765 */;
-import Tracking from "Tracking" /* 12618 */;
-import useTraitPickerOptions from "useTraitPickerOptions" /* 12925 */;
+import Tracking from "Tracking" /* 12626 */;
+import useTraitPickerOptions from "useTraitPickerOptions" /* 12933 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
-import CheckpointStore from "CheckpointStore" /* 12620 */;
+import CheckpointStore from "CheckpointStore" /* 12628 */;
 
 require = fn;
 const size = fn(2);

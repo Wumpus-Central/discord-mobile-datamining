@@ -1,6 +1,6 @@
-// === Module 16250: SafetyHubViolationsContainer ===
+// === Module 16257: SafetyHubViolationsContainer ===
 
-// Module 16250 (SafetyHubViolationsContainer)
+// Module 16257 (SafetyHubViolationsContainer)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -10,10 +10,10 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 7885 */;
 import SafetyHubModels from "SafetyHubModels" /* 7887 */;
 import WarningIcon from "WarningIcon" /* 7942 */;
-import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 9816 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 12539 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12540 */;
-import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 14055 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 9817 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 12547 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12548 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 14062 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 7912 */;
@@ -159,7 +159,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12537, dependencyMap.paths), { classificationId: id, source: React5.StandingTab });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12545, dependencyMap.paths), { classificationId: id, source: React5.StandingTab });
     },
     children: null
   };

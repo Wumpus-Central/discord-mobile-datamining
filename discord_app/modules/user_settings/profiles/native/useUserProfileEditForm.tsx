@@ -1,13 +1,13 @@
-// === Module 16058: useUserProfileEditForm ===
+// === Module 16065: useUserProfileEditForm ===
 
-// Module 16058 (useUserProfileEditForm)
+// Module 16065 (useUserProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 6376 */;
 import UserProfileStore from "UserProfileStore" /* 6163 */;
-import WidgetStore from "WidgetStore" /* 14565 */;
+import WidgetStore from "WidgetStore" /* 14572 */;
 import UserStore from "UserStore" /* 1387 */;
 
 const require = fn;
@@ -50,7 +50,7 @@ export default function useUserProfileEditForm() {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       c13 = 2;
@@ -69,7 +69,7 @@ export default function useUserProfileEditForm() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

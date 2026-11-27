@@ -1,9 +1,9 @@
-// === Module 15194: FriendGroupsStore ===
+// === Module 15201: FriendGroupsStore ===
 
-// Module 15194 (FriendGroupsStore)
+// Module 15201 (FriendGroupsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8322 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8323 */;
 import ConsentStore from "ConsentStore" /* 6841 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
 import UserStore from "UserStore" /* 1387 */;

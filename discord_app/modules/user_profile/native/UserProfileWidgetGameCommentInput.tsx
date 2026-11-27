@@ -1,8 +1,8 @@
-// === Module 14589: UserProfileWidgetGameCommentInput ===
+// === Module 14596: UserProfileWidgetGameCommentInput ===
 
-// Module 14589 (UserProfileWidgetGameCommentInput)
+// Module 14596 (UserProfileWidgetGameCommentInput)
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6382 */;
-import WidgetUtils from "WidgetUtils" /* 14570 */;
+import WidgetUtils from "WidgetUtils" /* 14577 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

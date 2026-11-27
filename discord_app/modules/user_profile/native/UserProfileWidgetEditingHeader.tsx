@@ -1,6 +1,6 @@
-// === Module 16170: UserProfileWidgetEditingHeader ===
+// === Module 16177: UserProfileWidgetEditingHeader ===
 
-// Module 16170 (UserProfileWidgetEditingHeader)
+// Module 16177 (UserProfileWidgetEditingHeader)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
@@ -31,24 +31,24 @@ export default function UserProfileWidgetEditingHeader() {
   obj4.children = intl.string(stateFromStores(1112).t.OYlggR);
   const items1 = [closure_7(stateFromStores(5634).Heading, obj4), , ];
   const obj5 = { size: "sm", variant: "secondary", icon: null, text: null, onPress: null };
-  let obj2 = stateFromStores(14677);
-  obj5.icon = closure_7(stateFromStores(11268).PlusSmallIcon, { size: "xs", color: ref(575).colors.ICON_DEFAULT });
+  let obj2 = stateFromStores(14684);
+  obj5.icon = closure_7(stateFromStores(11269).PlusSmallIcon, { size: "xs", color: ref(575).colors.ICON_DEFAULT });
   const intl2 = stateFromStores(1112).intl;
   obj5.text = intl2.string(stateFromStores(1112).t["lBG2s/"]);
   obj5.onPress = function onPress() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId: stateFromStores, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId: stateFromStores, action: constants.PRESS_ADD_WIDGET };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15016, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15023, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
   };
   items1[1] = closure_7(stateFromStores(5641).Button, obj5);
   const obj7 = { ref, size: "sm", variant: "secondary", icon: null, accessibilityLabel: null, disabled: null, onPress: null };
   const obj6 = { size: "xs", color: ref(575).colors.ICON_DEFAULT };
-  obj7.icon = closure_7(stateFromStores(13117).ArrowsUpDownIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT });
+  obj7.icon = closure_7(stateFromStores(13125).ArrowsUpDownIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT });
   const intl3 = stateFromStores(1112).intl;
   obj7.accessibilityLabel = intl3.string(stateFromStores(1112).t.tm1WHd);
   obj7.disabled = obj2.useBoardWidgets(stateFromStores).length < 2;
   obj7.onPress = function onPress() {
-    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16171, dependencyMap.paths), "UserProfileWidgetReorderActionSheet", { returnFocusRef: ref });
+    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16178, dependencyMap.paths), "UserProfileWidgetReorderActionSheet", { returnFocusRef: ref });
   };
   items1[2] = closure_7(stateFromStores(7944).IconButton, obj7);
   obj3.children = items1;

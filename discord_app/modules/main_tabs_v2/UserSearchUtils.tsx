@@ -1,9 +1,9 @@
-// === Module 8324: UserSearchUtils ===
+// === Module 8325: UserSearchUtils ===
 
-// Module 8324 (UserSearchUtils)
+// Module 8325 (UserSearchUtils)
 import StringUtils from "StringUtils" /* 2153 */;
 import UserUtilsDefault from "UserUtils" /* 5099 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 8325 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 8326 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
 

@@ -1,19 +1,19 @@
-// === Module 11165: SKUPreview ===
+// === Module 11166: SKUPreview ===
 
-// Module 11165 (SKUPreview)
+// Module 11166 (SKUPreview)
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2113 */;
 import ThemeAwareNitroWishlistingWumpusRive from "ThemeAwareNitroWishlistingWumpusRive" /* 5204 */;
 import useToken from "useToken" /* 5607 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9417 */;
-import useShopProductItems from "useShopProductItems" /* 9431 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 9466 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9468 */;
-import WishlistItemCardBase from "WishlistItemCardBase" /* 11166 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 11169 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 11171 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 11172 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9418 */;
+import useShopProductItems from "useShopProductItems" /* 9432 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 9467 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9469 */;
+import WishlistItemCardBase from "WishlistItemCardBase" /* 11167 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 11170 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 11172 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 11173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -129,7 +129,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(11166).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(11167).DEFAULT_ITEM_SIZE;
   }
   items = [sku];
   const memo = noop.useMemo(() => closure_5(sku), items);
@@ -204,7 +204,7 @@ const React5 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(11166).DEFAULT_ITEM_SIZE, height: fn(11166).DEFAULT_ITEM_SIZE };
+let size = { width: fn(11167).DEFAULT_ITEM_SIZE, height: fn(11167).DEFAULT_ITEM_SIZE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 

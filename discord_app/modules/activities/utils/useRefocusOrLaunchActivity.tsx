@@ -1,6 +1,6 @@
-// === Module 9995: useRefocusOrLaunchActivity ===
+// === Module 9996: useRefocusOrLaunchActivity ===
 
-// Module 9995 (useRefocusOrLaunchActivity)
+// Module 9996 (useRefocusOrLaunchActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6936 */;
@@ -36,7 +36,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

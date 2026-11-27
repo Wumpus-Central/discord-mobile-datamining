@@ -1,6 +1,6 @@
-// === Module 13019: EntityBorderAppIcon ===
+// === Module 13027: EntityBorderAppIcon ===
 
-// Module 13019 (EntityBorderAppIcon)
+// Module 13027 (EntityBorderAppIcon)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;

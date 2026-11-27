@@ -1,16 +1,16 @@
-// === Module 9401: PromotionUtils ===
+// === Module 9402: PromotionUtils ===
 
-// Module 9401 (PromotionUtils)
+// Module 9402 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import dismissible_content from "dismissible_content" /* 4876 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4877 */;
-import constants from "constants" /* 9211 */;
+import constants from "constants" /* 9212 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import PromotionRecord from "PromotionRecord" /* 9163 */;
-import PromotionsStore from "PromotionsStore" /* 9162 */;
+import PromotionRecord from "PromotionRecord" /* 9164 */;
+import PromotionsStore from "PromotionsStore" /* 9163 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -27,7 +27,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

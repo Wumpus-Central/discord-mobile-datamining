@@ -1,12 +1,12 @@
-// === Module 11595: GiftingBadgeLevelUpProgress ===
+// === Module 11603: GiftingBadgeLevelUpProgress ===
 
-// Module 11595 (GiftingBadgeLevelUpProgress)
+// Module 11603 (GiftingBadgeLevelUpProgress)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2943 from "module_2943" /* 2943 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11156 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11158 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11157 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11159 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 18237: SoundboardHooks ===
+// === Module 18244: SoundboardHooks ===
 
-// Module 18237 (SoundboardHooks)
+// Module 18244 (SoundboardHooks)
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 
 require = fn;
-const SoundboardStyleConstants = fn(18230);
+const SoundboardStyleConstants = fn(18237);
 ({ SOUNDS_PER_ROW: closure_6, SOUND_ROW_PADDING: metroImportDefault } = SoundboardStyleConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
@@ -36,7 +36,7 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -55,7 +55,7 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
               const obj2 = shouldFetch(5163);
               c1 = 1;
               c0 = 1;
-              const obj6 = { value: shouldFetch(10406).maybeFetchSoundboardSounds(), done: false };
+              const obj6 = { value: shouldFetch(10407).maybeFetchSoundboardSounds(), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -67,7 +67,7 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp8) {
           c0 = tmp;
           throw tmp8;

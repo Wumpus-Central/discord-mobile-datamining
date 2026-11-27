@@ -1,8 +1,8 @@
-// === Module 18705: useConjureVoiceChannelPin ===
+// === Module 18720: useConjureVoiceChannelPin ===
 
-// Module 18705 (useConjureVoiceChannelPin)
+// Module 18720 (useConjureVoiceChannelPin)
 import useChannelName from "useChannelName" /* 5659 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11470 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11480 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -109,7 +109,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

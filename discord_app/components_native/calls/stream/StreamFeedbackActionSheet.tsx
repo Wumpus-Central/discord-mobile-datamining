@@ -1,19 +1,19 @@
-// === Module 19717: StreamFeedbackActionSheet ===
+// === Module 19733: StreamFeedbackActionSheet ===
 
-// Module 19717 (StreamFeedbackActionSheet)
+// Module 19733 (StreamFeedbackActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ToastUtils from "ToastUtils" /* 5724 */;
-import FeedbackUtils from "FeedbackUtils" /* 12171 */;
-import trackStreamProblemDefault from "trackStreamProblem" /* 19600 */;
-import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 19719 */;
+import FeedbackUtils from "FeedbackUtils" /* 12179 */;
+import trackStreamProblemDefault from "trackStreamProblem" /* 19616 */;
+import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 19735 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const Constants = fn(12168);
+const Constants = fn(12176);
 ({ FeedbackCategory: hasOwnProperty, FeedbackType: closure_6, StreamFeedbackOption: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -22,8 +22,8 @@ const result = size.fileFinishedImporting("components_native/calls/stream/Stream
 export default function StreamFeedbackActionSheet(stream) {
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
-  dependencyMap = stream(8399).useGetStreamApplication(stream);
-  let obj = stream(8399);
+  dependencyMap = stream(8400).useGetStreamApplication(stream);
+  let obj = stream(8400);
   items = [AuthenticationStore];
   const stateFromStores = stream(504).useStateFromStores(items, () => AuthenticationStore.getId() === stream.ownerId);
   const intl = stream(1112).intl;
@@ -46,13 +46,13 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl5 = tmp(1112).intl;
   obj3.problemsHeader = intl5.string(stream(1112).t["6Y1t5P"]);
   const stringResult1 = intl2.string(stream(1112).t["0uxA2V"]);
-  obj3.problemOptions = stream(12171).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  obj3.problemOptions = stream(12179).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   let obj4 = { value: constants2.FREEFORM, label: null };
   const intl6 = tmp(1112).intl;
   obj4.label = intl6.string(stream(1112).t.emlT91);
   obj3.freeformConfig = obj4;
   let obj5 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
-  const tmpResult = stream(12171);
+  const tmpResult = stream(12179);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
@@ -116,7 +116,7 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19720, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19736, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
           const obj7 = { mediaSessionId: null, rtcConnectionId: null };
           const tmp22Result = ActionSheetActionCreatorsDefault;
         }
@@ -125,5 +125,5 @@ export default function StreamFeedbackActionSheet(stream) {
       ToastUtils.presentFeedbackSent();
     }
   };
-  return jsx(tmp10(19718), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
+  return jsx(tmp10(19734), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
 };

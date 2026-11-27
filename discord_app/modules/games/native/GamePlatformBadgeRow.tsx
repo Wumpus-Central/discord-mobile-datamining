@@ -1,17 +1,17 @@
-// === Module 13354: GamePlatformBadgeRow ===
+// === Module 13362: GamePlatformBadgeRow ===
 
-// Module 13354 (GamePlatformBadgeRow)
+// Module 13362 (GamePlatformBadgeRow)
 import nativeDefault from "native" /* 575 */;
-import GamePlatformBadges from "GamePlatformBadges" /* 13358 */;
+import GamePlatformBadges from "GamePlatformBadges" /* 13366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(13355).GamePlatformAvailability.DESKTOP] = fn(13356).ScreenIcon;
-obj[fn(13355).GamePlatformAvailability.MOBILE] = fn(7324).MobilePhoneIcon;
-obj[fn(13355).GamePlatformAvailability.CONSOLE] = fn(7756).GameControllerIcon;
-obj[fn(13355).GamePlatformAvailability.ROBLOX] = fn(8773).RobloxNeutralIcon;
+obj[fn(13363).GamePlatformAvailability.DESKTOP] = fn(13364).ScreenIcon;
+obj[fn(13363).GamePlatformAvailability.MOBILE] = fn(7324).MobilePhoneIcon;
+obj[fn(13363).GamePlatformAvailability.CONSOLE] = fn(7756).GameControllerIcon;
+obj[fn(13363).GamePlatformAvailability.ROBLOX] = fn(8774).RobloxNeutralIcon;
 const createStyles = fn(5043);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const size = fn(2);

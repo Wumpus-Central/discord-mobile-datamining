@@ -1,11 +1,11 @@
-// === Module 8788: ObscuredSurface ===
+// === Module 8789: ObscuredSurface ===
 
-// Module 8788 (ObscuredSurface)
+// Module 8789 (ObscuredSurface)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 7147 */;
-import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8789 */;
+import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8790 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,14 +1,14 @@
-// === Module 17499: HeroBlock ===
+// === Module 17506: HeroBlock ===
 
-// Module 17499 (HeroBlock)
+// Module 17506 (HeroBlock)
 import nativeDefault from "native" /* 575 */;
-import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 11211 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 11214 */;
-import SkeletonCardDefault from "SkeletonCard" /* 14220 */;
-import OrbsArcadeExperiment2 from "OrbsArcadeExperiment" /* 16634 */;
-import HeroBlockHeaderDefault from "HeroBlockHeader" /* 17500 */;
-import HeroBlockOrbsArcadeHeaderDefault from "HeroBlockOrbsArcadeHeader" /* 17503 */;
-import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 17518 */;
+import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 11212 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 11215 */;
+import SkeletonCardDefault from "SkeletonCard" /* 14227 */;
+import OrbsArcadeExperiment2 from "OrbsArcadeExperiment" /* 16641 */;
+import HeroBlockHeaderDefault from "HeroBlockHeader" /* 17507 */;
+import HeroBlockOrbsArcadeHeaderDefault from "HeroBlockOrbsArcadeHeader" /* 17510 */;
+import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 17525 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6311 */;
 

@@ -1,21 +1,21 @@
-// === Module 13226: VoicePanelChatView ===
+// === Module 13234: VoicePanelChatView ===
 
-// Module 13226 (VoicePanelChatView)
+// Module 13234 (VoicePanelChatView)
 import util from "util" /* 1112 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6129 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10591 */;
-import _modDef10762 from "module_10762" /* 10762 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13224 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10592 */;
+import _modDef10763 from "module_10763" /* 10763 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 13232 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1654 = _mod1654;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(11780).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(11788).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1071);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
@@ -52,7 +52,7 @@ const memoResult = noop.memo(function VoicePanelDismissChatButton() {
   const obj = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5MstTl"]);
-  obj.icon = _modDef10762;
+  obj.icon = _modDef10763;
   obj.onPress = callback;
   return timestampProducer(ChatFloatingNavButtonDefault, obj);
 });

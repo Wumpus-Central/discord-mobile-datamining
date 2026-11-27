@@ -1,12 +1,12 @@
-// === Module 8243: InteractionStore ===
+// === Module 8244: InteractionStore ===
 
-// Module 8243 (InteractionStore)
+// Module 8244 (InteractionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import InteractionTypes from "InteractionTypes" /* 6400 */;
 import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6401 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;

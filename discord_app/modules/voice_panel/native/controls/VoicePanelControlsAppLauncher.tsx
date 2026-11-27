@@ -1,20 +1,20 @@
-// === Module 19603: VoicePanelControlsAppLauncher ===
+// === Module 19619: VoicePanelControlsAppLauncher ===
 
-// Module 19603 (VoicePanelControlsAppLauncher)
+// Module 19619 (VoicePanelControlsAppLauncher)
 import _modDef38 from "module_38" /* 38 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import _modDef1654 from "module_1654" /* 1654 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8619 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 13044 */;
-import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 13228 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8620 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 13052 */;
+import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 13236 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsConstants = fn(11780);
+const VoicePanelControlsConstants = fn(11788);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1071).ComponentActions;
 const jsxProd = fn(21);

@@ -1,6 +1,6 @@
-// === Module 9519: GifTag ===
+// === Module 9520: GifTag ===
 
-// Module 9519 (GifTag)
+// Module 9520 (GifTag)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;

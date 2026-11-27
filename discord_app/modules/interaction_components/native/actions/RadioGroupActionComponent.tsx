@@ -1,6 +1,6 @@
-// === Module 12471: RadioGroupActionComponent ===
+// === Module 12479: RadioGroupActionComponent ===
 
-// Module 12471 (RadioGroupActionComponent)
+// Module 12479 (RadioGroupActionComponent)
 import _modDef1654 from "module_1654" /* 1654 */;
 import noop from "module_19" /* 19 */;
 

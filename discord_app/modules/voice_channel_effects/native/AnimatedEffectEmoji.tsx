@@ -1,6 +1,6 @@
-// === Module 10189: AnimatedEffectEmoji ===
+// === Module 10190: AnimatedEffectEmoji ===
 
-// Module 10189 (AnimatedEffectEmoji)
+// Module 10190 (AnimatedEffectEmoji)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1088 */;
 import native from "native" /* 1186 */;
@@ -128,12 +128,12 @@ export default function AnimatedEffectEmoji(onComplete) {
     const obj3 = { style: tmp.voiceChannelEffectEmoji, children: null };
     const obj4 = { url: null, surrogates: null };
     let tmp2Result = tmp2(1186);
-    obj4.url = tmp2(10159).getEffectUrl(emoji);
+    obj4.url = tmp2(10160).getEffectUrl(emoji);
     obj4.surrogates = emoji.name;
     obj3.children = <Emoji url={null} surrogates={null} />;
     obj2.children = <c4 style={tmp.voiceChannelEffectEmoji}>{null}</c4>;
     tmp16Result = jsx(_modDef1654.View, { style: null, children: null });
-    const tmp2Result2 = tmp2(10159);
+    const tmp2Result2 = tmp2(10160);
   }
   return tmp16Result;
 };

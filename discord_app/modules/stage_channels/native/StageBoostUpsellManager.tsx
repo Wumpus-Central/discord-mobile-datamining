@@ -1,11 +1,11 @@
-// === Module 19870: StageBoostUpsellManager ===
+// === Module 19886: StageBoostUpsellManager ===
 
-// Module 19870 (StageBoostUpsellManager)
+// Module 19886 (StageBoostUpsellManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 4900 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import StageMediaHooks from "StageMediaHooks" /* 6811 */;
-import useChannelVideoLimit from "useChannelVideoLimit" /* 8639 */;
+import useChannelVideoLimit from "useChannelVideoLimit" /* 8640 */;
 import ActionSheetStore from "ActionSheetStore" /* 5258 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import PermissionStore from "PermissionStore" /* 4975 */;

@@ -1,6 +1,6 @@
-// === Module 11553: conjureMessageAuthors ===
+// === Module 11561: conjureMessageAuthors ===
 
-// Module 11553 (conjureMessageAuthors)
+// Module 11561 (conjureMessageAuthors)
 import UserActionCreatorsAll from "UserActionCreators" /* 6134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

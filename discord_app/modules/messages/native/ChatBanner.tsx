@@ -1,6 +1,6 @@
-// === Module 11908: ChatBanner ===
+// === Module 11916: ChatBanner ===
 
-// Module 11908 (ChatBanner)
+// Module 11916 (ChatBanner)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -8,8 +8,8 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7467 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7470 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8114 */;
-import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 11910 */;
-import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11911 */;
+import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 11918 */;
+import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11919 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
 import ReadStateStore from "ReadStateStore" /* 6932 */;
@@ -195,7 +195,7 @@ function NewMessagesChatBar(channel) {
       obj5.onPress = function onPress() {
         return ReadStateActionCreators.ack(channel.id, { section: constants4.NEW_MESSAGES_BANNER, object: constants2.MARK_CHANNEL_AS_READ_BUTTON, objectType: constants.ACK_MANUAL });
       };
-      XSmallBoldIcon = XSmallBoldIcon(11912).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(11920).XSmallBoldIcon;
       const obj6 = { size: "sm", color: null };
       WHITE = nativeDefault.colors.WHITE;
       obj6.color = WHITE;
@@ -210,7 +210,7 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11909).ChatOverlays;
+const ChatOverlays = fn(11917).ChatOverlays;
 const Constants = fn(1071);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticEvents: closure_10, AnalyticsSections: closure_11 } = Constants);
 const jsxProd = fn(21);

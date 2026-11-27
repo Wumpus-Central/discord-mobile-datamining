@@ -1,12 +1,12 @@
-// === Module 8478: GuildScheduledEventsActionCreators ===
+// === Module 8479: GuildScheduledEventsActionCreators ===
 
-// Module 8478 (GuildScheduledEventsActionCreators)
+// Module 8479 (GuildScheduledEventsActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1098 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6797 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8479 */;
-import guildEventEmbedFetchQueue from "guildEventEmbedFetchQueue" /* 8482 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8480 */;
+import guildEventEmbedFetchQueue from "guildEventEmbedFetchQueue" /* 8483 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5775 */;
@@ -150,7 +150,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -189,7 +189,7 @@ export default {
             const obj7 = { type: "GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS", guildScheduledEventUsers: body, guildId: closure_129_0 };
             tmp2(572).dispatch(obj7);
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -214,7 +214,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -294,7 +294,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -330,7 +330,7 @@ export default {
                 return obj9;
               } else {
                 rsvp = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (1 === tmp7) {
@@ -383,7 +383,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -492,7 +492,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

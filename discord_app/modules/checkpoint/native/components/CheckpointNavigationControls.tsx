@@ -1,6 +1,6 @@
-// === Module 12861: CheckpointNavigationControls ===
+// === Module 12869: CheckpointNavigationControls ===
 
-// Module 12861 (CheckpointNavigationControls)
+// Module 12869 (CheckpointNavigationControls)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -8,20 +8,20 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef3495 from "module_3495" /* 3495 */;
 import useToken from "useToken" /* 5607 */;
 import CheckpointCardColors from "CheckpointCardColors" /* 6422 */;
-import RetryIcon from "RetryIcon" /* 10685 */;
-import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 11428 */;
-import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 12669 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12860 */;
-import useCheckpointPressSoundDefault from "useCheckpointPressSound" /* 12862 */;
-import _modDef12863 from "module_12863" /* 12863 */;
-import CheckpointButton from "CheckpointButton" /* 12864 */;
-import _modDef12866 from "module_12866" /* 12866 */;
-import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 12867 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 12870 */;
-import ShareIcon from "ShareIcon" /* 12871 */;
+import RetryIcon from "RetryIcon" /* 10686 */;
+import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 11429 */;
+import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 12677 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12868 */;
+import useCheckpointPressSoundDefault from "useCheckpointPressSound" /* 12870 */;
+import _modDef12871 from "module_12871" /* 12871 */;
+import CheckpointButton from "CheckpointButton" /* 12872 */;
+import _modDef12874 from "module_12874" /* 12874 */;
+import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 12875 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 12878 */;
+import ShareIcon from "ShareIcon" /* 12879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CheckpointStore from "CheckpointStore" /* 12620 */;
+import CheckpointStore from "CheckpointStore" /* 12628 */;
 
 require = fn;
 function handleHomeControlsLayout(height) {
@@ -31,7 +31,7 @@ function HomeControls(onStart) {
   const tmp = closure_16();
   _require = tmp;
   const tmp4 = useIsCheckpointWideDefault();
-  let obj = { source: _modDef12863, onPress: onStart.onStart };
+  let obj = { source: _modDef12871, onPress: onStart.onStart };
   items = [tmp.homeControls, ];
   let wideHomeControls = tmp4;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
@@ -103,7 +103,7 @@ function BackButton(disabled) {
   }
   const obj2 = { source: null, onPress: null, disabled: null };
   obj = useToken;
-  obj2.source = _modDef12866;
+  obj2.source = _modDef12874;
   obj2.onPress = disabled.onPress;
   obj2.disabled = flag;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj2));
@@ -120,7 +120,7 @@ function ReplayButton(arg0) {
   ({ onPress, color, style } = arg0);
   const obj = { source: null, onPress: null };
   const tmp = closure_16();
-  obj.source = _modDef12863;
+  obj.source = _modDef12871;
   obj.onPress = onPress;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
   const obj2 = { onPressIn, onPress: onPressWithSound, accessibilityLabel: null, style: null, children: null };
@@ -140,7 +140,7 @@ function NextButton(disabled) {
   }
   const obj2 = { source: null, onPress: null, disabled: null };
   obj = useToken;
-  obj2.source = _modDef12863;
+  obj2.source = _modDef12871;
   obj2.onPress = onPress;
   obj2.disabled = disabled;
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj2));
@@ -155,7 +155,7 @@ function NextButton(disabled) {
 }
 function DoneButton(onPress) {
   const tmp = closure_16();
-  const obj = { source: _modDef12863, onPress: onPress.onPress };
+  const obj = { source: _modDef12871, onPress: onPress.onPress };
   ({ onPressIn, onPressWithSound } = useCheckpointPressSoundDefault(obj));
   const obj2 = { onPressIn, onPress: onPressWithSound, accessibilityLabel: null, style: null, children: null };
   const intl = util.intl;
@@ -186,7 +186,7 @@ function FinalizeCharacterSaveButton(blockedTrait) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -204,7 +204,7 @@ function FinalizeCharacterSaveButton(blockedTrait) {
             const obj3 = tmp4(6442);
             c1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(12628).completeCheckpoint(characterFromTraits), done: false };
+            const obj6 = { value: tmp4(12636).completeCheckpoint(characterFromTraits), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -325,7 +325,7 @@ function RouteControls(arg0) {
   let checkpointRouteBlockedTrait;
   ({ isLastRoute, onSave, onReplay, onShare } = arg0);
   const tmp = closure_16();
-  const tmp4 = checkpointRouteBlockedTrait(12664)();
+  const tmp4 = checkpointRouteBlockedTrait(12672)();
   checkpointRouteBlockedTrait = onNext(6765).getCheckpointRouteBlockedTrait(activeRoute, tmp4);
   if (null != checkpointRouteBlockedTrait) {
     const nitroLockedMessage = onNext(6765).getNitroLockedMessage(checkpointRouteBlockedTrait);
@@ -380,7 +380,7 @@ get_ActivityIndicator = fn(17);
 const CheckpointConstants = fn(6396);
 ({ CHECKPOINT_CONTROL_ICON_SIZE, CHECKPOINT_PRIMARY } = CheckpointConstants);
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_WIDE_HOME_START_GAP } = CheckpointConstants);
-const CheckpointTransitionConstants = fn(12631);
+const CheckpointTransitionConstants = fn(12639);
 ({ CHECKPOINT_CHARACTER_PAGE_FADE_OUT: closure_8, CHECKPOINT_STATS_FADE_IN: closure_9 } = CheckpointTransitionConstants);
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);

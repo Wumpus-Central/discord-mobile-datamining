@@ -1,6 +1,6 @@
-// === Module 12469: ForumPostPlaceholder ===
+// === Module 12477: ForumPostPlaceholder ===
 
-// Module 12469 (ForumPostPlaceholder)
+// Module 12477 (ForumPostPlaceholder)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;

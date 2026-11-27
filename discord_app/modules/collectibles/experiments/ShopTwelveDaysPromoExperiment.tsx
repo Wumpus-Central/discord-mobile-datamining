@@ -1,6 +1,6 @@
-// === Module 17539: ShopTwelveDaysPromoExperiment ===
+// === Module 17546: ShopTwelveDaysPromoExperiment ===
 
-// Module 17539 (ShopTwelveDaysPromoExperiment)
+// Module 17546 (ShopTwelveDaysPromoExperiment)
 import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 

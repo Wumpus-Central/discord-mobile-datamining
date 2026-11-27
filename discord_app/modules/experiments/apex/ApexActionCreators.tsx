@@ -1,6 +1,6 @@
-// === Module 11978: ApexActionCreators ===
+// === Module 11986: ApexActionCreators ===
 
-// Module 11978 (ApexActionCreators)
+// Module 11986 (ApexActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import apex_ApexTypes from "apex/ApexTypes" /* 1454 */;
@@ -57,7 +57,7 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -146,7 +146,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

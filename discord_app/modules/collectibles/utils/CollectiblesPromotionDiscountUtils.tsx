@@ -1,6 +1,6 @@
-// === Module 11254: CollectiblesPromotionDiscountUtils ===
+// === Module 11255: CollectiblesPromotionDiscountUtils ===
 
-// Module 11254 (CollectiblesPromotionDiscountUtils)
+// Module 11255 (CollectiblesPromotionDiscountUtils)
 import StorefrontTypes from "StorefrontTypes" /* 7595 */;
 import size from "module_2" /* 2 */;
 

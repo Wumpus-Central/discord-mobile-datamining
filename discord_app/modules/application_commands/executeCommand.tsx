@@ -1,21 +1,21 @@
-// === Module 10090: executeCommand ===
+// === Module 10091: executeCommand ===
 
-// Module 10090 (executeCommand)
+// Module 10091 (executeCommand)
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5695 */;
 import UserActionCreatorsAll from "UserActionCreators" /* 6134 */;
 import MessageQueue from "MessageQueue" /* 6790 */;
 import UploadUtils from "UploadUtils" /* 8128 */;
-import FileUtils from "FileUtils" /* 8132 */;
-import UploadLimits from "UploadLimits" /* 8147 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8829 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10095 */;
+import FileUtils from "FileUtils" /* 8133 */;
+import UploadLimits from "UploadLimits" /* 8148 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8830 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10096 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmojiStore from "EmojiStore" /* 6883 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8124 */;
 import UserStore from "UserStore" /* 1387 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8182 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8183 */;
 
 const MessageQueueDefault = MessageQueue;
 
@@ -36,7 +36,7 @@ let closure_16 = async function _executeCommand(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -658,7 +658,7 @@ let closure_17 = async function _retryCommandMessage(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -723,8 +723,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     message = { applicationId, channelId: id, guildId: id1, data: tmp, nonce: null, attachments: null, maxSizeCallback: null, analytics_location: null, sectionName: null, source: null };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(10070).createNonce();
-      let obj2 = onMessageSuccess(10070);
+      nonce = onMessageSuccess(10071).createNonce();
+      let obj2 = onMessageSuccess(10071);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -832,7 +832,7 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1015,7 +1015,7 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -1100,7 +1100,7 @@ let closure_24 = async function _stageAttachments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1131,10 +1131,10 @@ let closure_24 = async function _stageAttachments(arg0) {
             }
             const intl = closure_0(1112).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(8829);
-            obj2.maxSize = closure_0(8132).sizeString(dependencyMap);
+            const obj = closure_2(8830);
+            obj2.maxSize = closure_0(8133).sizeString(dependencyMap);
             obj.setFailed(closure_1_1, constants.ENTITY_TOO_LARGE, intl.formatToPlainString(closure_0(1112).t.fxEKdS, obj2));
-            const obj3 = closure_0(8132);
+            const obj3 = closure_0(8133);
           };
           const obj11 = UploadLimits;
           effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));

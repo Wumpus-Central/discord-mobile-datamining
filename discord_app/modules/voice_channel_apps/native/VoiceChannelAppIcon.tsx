@@ -1,9 +1,9 @@
-// === Module 19155: VoiceChannelAppIcon ===
+// === Module 19171: VoiceChannelAppIcon ===
 
-// Module 19155 (VoiceChannelAppIcon)
+// Module 19171 (VoiceChannelAppIcon)
 import nativeDefault from "native" /* 575 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8537 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11557 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8538 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11565 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

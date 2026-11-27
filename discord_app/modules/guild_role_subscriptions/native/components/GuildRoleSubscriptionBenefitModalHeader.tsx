@@ -1,13 +1,13 @@
-// === Module 20244: GuildRoleSubscriptionBenefitModalHeader ===
+// === Module 20302: GuildRoleSubscriptionBenefitModalHeader ===
 
-// Module 20244 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 20302 (GuildRoleSubscriptionBenefitModalHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7480 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 12539 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16836 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 12547 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16843 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

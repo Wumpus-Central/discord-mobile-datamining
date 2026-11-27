@@ -1,6 +1,6 @@
-// === Module 8368: v2/Video ===
+// === Module 8369: v2/Video ===
 
-// Module 8368 (v2/Video)
+// Module 8369 (v2/Video)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/Video.tsx");

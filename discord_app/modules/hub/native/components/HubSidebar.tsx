@@ -1,11 +1,11 @@
-// === Module 17933: HubSidebar ===
+// === Module 17940: HubSidebar ===
 
-// Module 17933 (HubSidebar)
+// Module 17940 (HubSidebar)
 import nativeDefault from "native" /* 575 */;
 import transitionToChannel from "transitionToChannel" /* 6126 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10428 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13255 */;
-import BaseChannelItem from "BaseChannelItem" /* 13343 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10429 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13263 */;
+import BaseChannelItem from "BaseChannelItem" /* 13351 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4973 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
@@ -26,8 +26,8 @@ function HubItem(arg0) {
   }
   const obj = { style: closure_9().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = closure_9();
-  obj.name = metroImportDefault(tmp5(13343).BaseChannelName, { name: label, mode: DEFAULT });
-  obj.icon = metroImportDefault(tmp5(13343).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj.name = metroImportDefault(tmp5(13351).BaseChannelName, { name: label, mode: DEFAULT });
+  obj.icon = metroImportDefault(tmp5(13351).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     const obj2 = { value: unreadCount };
@@ -64,7 +64,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(17934);
+  guild(17941);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -73,8 +73,8 @@ export default function HubSidebar(guild) {
     }
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
-    const items4 = [closure_7(stateFromStores(17935), obj5), , , ];
-    const obj6 = { active: stateFromStores1, IconComponent: tmp(17218).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
+    const items4 = [closure_7(stateFromStores(17942), obj5), , , ];
+    const obj6 = { active: stateFromStores1, IconComponent: tmp(17225).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
     const intl = tmp(1112).intl;
     obj6.label = intl.string(tmp(1112).t.K50GHd);
     obj6.handleItemClick = function handleItemClick() {
@@ -82,7 +82,7 @@ export default function HubSidebar(guild) {
     };
     obj6.unreadCount = tmp7;
     items4[1] = closure_7(HubItem, obj6);
-    const obj7 = { IconComponent: tmp(13792).PlusMediumIcon, label: null, handleItemClick: null };
+    const obj7 = { IconComponent: tmp(13799).PlusMediumIcon, label: null, handleItemClick: null };
     const intl2 = tmp(1112).intl;
     obj7.label = intl2.string(tmp(1112).t.emRpdS);
     obj7.handleItemClick = function handleItemClick() {

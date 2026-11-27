@@ -1,10 +1,10 @@
-// === Module 19915: editorUtils ===
+// === Module 19931: editorUtils ===
 
-// Module 19915 (editorUtils)
+// Module 19931 (editorUtils)
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5792 */;
 import GuildSpaceTypes from "GuildSpaceTypes" /* 7586 */;
-import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 19916 */;
+import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 19932 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

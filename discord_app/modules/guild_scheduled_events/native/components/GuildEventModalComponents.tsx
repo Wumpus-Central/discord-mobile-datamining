@@ -1,6 +1,6 @@
-// === Module 8488: GuildEventModalComponents ===
+// === Module 8489: GuildEventModalComponents ===
 
-// Module 8488 (GuildEventModalComponents)
+// Module 8489 (GuildEventModalComponents)
 import util from "util" /* 1112 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2019 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
@@ -12,11 +12,11 @@ import TableRadioRow from "TableRadioRow" /* 7253 */;
 import TextInput from "TextInput" /* 7274 */;
 import TextArea from "TextArea" /* 7440 */;
 import _modDef8107 from "module_8107" /* 8107 */;
-import ScheduleUtils from "ScheduleUtils" /* 8466 */;
-import useGuildsUserCanStartStageIn from "useGuildsUserCanStartStageIn" /* 8501 */;
-import _modDef8502 from "module_8502" /* 8502 */;
+import ScheduleUtils from "ScheduleUtils" /* 8467 */;
+import useGuildsUserCanStartStageIn from "useGuildsUserCanStartStageIn" /* 8502 */;
 import _modDef8503 from "module_8503" /* 8503 */;
-import LocationIcon from "LocationIcon" /* 8504 */;
+import _modDef8504 from "module_8504" /* 8504 */;
+import LocationIcon from "LocationIcon" /* 8505 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -68,7 +68,7 @@ export function GuildEventRecurrence(startDate) {
   const tmp = closure_13();
   items = [recurrenceRule, startDate];
   dependencyMap = recurrenceOptions.useMemo(() => ScheduleUtils.recurrenceRuleToOption(startDate, recurrenceRule), items);
-  recurrenceOptions = startDate(8466).getRecurrenceOptions(startDate);
+  recurrenceOptions = startDate(8467).getRecurrenceOptions(startDate);
   const found = recurrenceOptions.find((value) => value.value === closure_3);
   let label;
   if (found != null) {
@@ -94,7 +94,7 @@ export function GuildEventRecurrence(startDate) {
         recurrenceRule(closure_3[12]).hideActionSheet();
       };
       obj3.selectedItem = selectedItem;
-      obj2.openLazy(asyncRequireImpl(8499, dependencyMap.paths), "SelectRecurrenceOption", obj3);
+      obj2.openLazy(asyncRequireImpl(8500, dependencyMap.paths), "SelectRecurrenceOption", obj3);
     },
     text: null,
     value: null,
@@ -106,11 +106,11 @@ export function GuildEventRecurrence(startDate) {
   const intl2 = tmp2(1112).intl;
   obj5.text = intl2.string(startDate(1112).t["59TVxL"]);
   obj5.value = label;
-  obj5.icon = recurrenceRule(8500);
+  obj5.icon = recurrenceRule(8501);
   const intl3 = tmp2(1112).intl;
   obj5.accessibilityLabel = intl3.string(startDate(1112).t["59TVxL"]);
   obj5.accessibilityHint = label;
-  items1[1] = closure_11(startDate(8489).InputButton, obj5);
+  items1[1] = closure_11(startDate(8490).InputButton, obj5);
   obj2.children = items1;
   return closure_12(View, obj2);
 }
@@ -124,7 +124,7 @@ export function GuildEventEntityTypeSelection(arg0) {
   obj2.value = constants.VOICE;
   const intl2 = util.intl;
   obj2.description = intl2.string(util.t["EV//4f"]);
-  obj2.icon = _modDef8502;
+  obj2.icon = _modDef8503;
   obj2.IconComponent = VoiceNormalIcon.VoiceNormalIcon;
   obj2.disabled = disabled;
   items = [obj2, ];
@@ -134,7 +134,7 @@ export function GuildEventEntityTypeSelection(arg0) {
   obj3.value = constants.EXTERNAL;
   const intl4 = util.intl;
   obj3.description = intl4.string(util.t.DYxrHm);
-  obj3.icon = _modDef8503;
+  obj3.icon = _modDef8504;
   obj3.IconComponent = LocationIcon.LocationIcon;
   obj3.disabled = disabled;
   items[1] = obj3;
@@ -210,7 +210,7 @@ export function GuildEventDatetime(dateLabel) {
   const obj4 = { style: tmp5.dateInput, children: null };
   items = [closure_11(time(5634).Text, { style: tmp5.formHeader, variant: "body-sm/semibold", color: "text-subtle", children: dateLabel }), ];
   time = "date";
-  items[1] = closure_11(time(8489).InputButton, {
+  items[1] = closure_11(time(8490).InputButton, {
     text: dateLabel,
     value: date.format("MMM Do YYYY"),
     () => {
@@ -299,7 +299,7 @@ export function GuildEventDatetime(dateLabel) {
   };
   const obj8 = { style: tmp5.formHeader, variant: "body-sm/semibold", color: "text-subtle", children: timeLabel };
   time = "time";
-  items2[1] = closure_11(time(8489).InputButton, {
+  items2[1] = closure_11(time(8490).InputButton, {
     text: timeLabel,
     value: date.format("LT"),
     () => {

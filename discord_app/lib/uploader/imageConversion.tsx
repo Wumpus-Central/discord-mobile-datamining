@@ -1,6 +1,6 @@
-// === Module 8163: imageConversion ===
+// === Module 8164: imageConversion ===
 
-// Module 8163 (imageConversion)
+// Module 8164 (imageConversion)
 import LoggerDefault from "Logger" /* 3 */;
 import MediaTypes from "MediaTypes" /* 6402 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -38,7 +38,7 @@ let closure_10 = async function _convertViaSysimg(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -253,7 +253,7 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -328,7 +328,7 @@ let closure_4 = new LoggerDefault("ImageConversion");
 const ImageConversionFailureReason = { NATIVE_MODULE_UNAVAILABLE: "native_module_unavailable", PLATFORM_UNSUPPORTED: "platform_unsupported", SIZE_LIMIT_EXCEEDED: "size_limit_exceeded", CONVERSION_FAILED: "conversion_failed", UNKNOWN_ERROR: "unknown_error" };
 let obj2 = {
   label: "heic",
-  matches: fn(8155).isHeicFile,
+  matches: fn(8156).isHeicFile,
   canConvert(canConvertHeic) {
     return canConvertHeic.canConvertHeic();
   },
@@ -337,7 +337,7 @@ let obj2 = {
 };
 let obj3 = {
   label: "jxr",
-  matches: fn(8155).isJxrFile,
+  matches: fn(8156).isJxrFile,
   canConvert(canConvertJxr) {
     return canConvertJxr.canConvertJxr();
   },
@@ -348,7 +348,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/imageConversion.tsx");
 
 export { ImageConversionFailureReason };
-export const renameToJpegExtension = fn(8155).renameToJpegExtension;
+export const renameToJpegExtension = fn(8156).renameToJpegExtension;
 export { maybeConvertHeicToJpeg };
 export { maybeConvertJxrToJpeg };
 export function convertFileToJpeg() {

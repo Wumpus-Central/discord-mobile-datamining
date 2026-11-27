@@ -1,9 +1,9 @@
-// === Module 8701: useSecureFramesUserVerifiedKeysCount ===
+// === Module 8702: useSecureFramesUserVerifiedKeysCount ===
 
-// Module 8701 (useSecureFramesUserVerifiedKeysCount)
-import _mod8665 from "module_8665" /* 8665 */;
+// Module 8702 (useSecureFramesUserVerifiedKeysCount)
+import _mod8666 from "module_8666" /* 8666 */;
 import noop from "module_19" /* 19 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 8664 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 8665 */;
 
 require = fn;
 const size = fn(2);
@@ -20,7 +20,7 @@ export function useSecureFramesUserVerifiedKeysCount(userId) {
     } else {
       const _Uint8Array = Uint8Array;
       const uint8Array = new Uint8Array(keyToOmit);
-      return _mod8665.serializeKey(uint8Array);
+      return _mod8666.serializeKey(uint8Array);
     }
   }, items);
   const items1 = [VerifiedKeyStore];

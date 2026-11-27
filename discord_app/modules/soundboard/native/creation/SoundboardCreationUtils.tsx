@@ -1,6 +1,6 @@
-// === Module 20010: SoundboardCreationUtils ===
+// === Module 20035: SoundboardCreationUtils ===
 
-// Module 20010 (SoundboardCreationUtils)
+// Module 20035 (SoundboardCreationUtils)
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
@@ -44,7 +44,7 @@ let closure_9 = async function _pickSoundboardSoundFile() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -389,7 +389,7 @@ export function showAddSoundboardSoundOptions(guildId) {
   const intl2 = require("util").intl;
   obj4.label = intl2.string(require("util").t["/VJ/Sp"]);
   obj4.onPress = function onPress() {
-    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20012, dependencyMap.paths), "SoundboardRecordSoundActionSheet", { guildId, analyticsSource: "guild_settings_record" });
+    return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20037, dependencyMap.paths), "SoundboardRecordSoundActionSheet", { guildId, analyticsSource: "guild_settings_record" });
   };
   items = [obj4, ];
   let obj5 = { label: null, onPress: null };
@@ -406,7 +406,7 @@ export function showAddSoundboardSoundOptions(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -441,7 +441,7 @@ export function showAddSoundboardSoundOptions(guildId) {
             tmp5(c2[15])(obj);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;

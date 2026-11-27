@@ -1,6 +1,6 @@
-// === Module 10850: StickerOptionsActionSheet ===
+// === Module 10851: StickerOptionsActionSheet ===
 
-// Module 10850 (StickerOptionsActionSheet)
+// Module 10851 (StickerOptionsActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ToastUtils from "ToastUtils" /* 5724 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;

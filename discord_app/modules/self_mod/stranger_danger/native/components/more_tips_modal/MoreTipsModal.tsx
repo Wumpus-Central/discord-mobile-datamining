@@ -1,6 +1,6 @@
-// === Module 11831: MoreTipsModal ===
+// === Module 11839: MoreTipsModal ===
 
-// Module 11831 (MoreTipsModal)
+// Module 11839 (MoreTipsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -9,11 +9,11 @@ import MonitoringAgentDefault from "MonitoringAgent" /* 5811 */;
 import MetricEvents from "MetricEvents" /* 5816 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
 import _modDef7752 from "module_7752" /* 7752 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11826 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11832 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11838 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11834 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11840 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11846 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11408 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11409 */;
 
 require = fn;
 function MoreTipsModalScreen(learnMore) {

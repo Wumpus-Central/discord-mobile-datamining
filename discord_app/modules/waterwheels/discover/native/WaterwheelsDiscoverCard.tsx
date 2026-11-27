@@ -1,6 +1,6 @@
-// === Module 18027: WaterwheelsDiscoverCard ===
+// === Module 18034: WaterwheelsDiscoverCard ===
 
-// Module 18027 (WaterwheelsDiscoverCard)
+// Module 18034 (WaterwheelsDiscoverCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2655 from "module_2655" /* 2655 */;
@@ -8,14 +8,14 @@ import GuildRecordUtils from "GuildRecordUtils" /* 4906 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import GameControllerIcon from "GameControllerIcon" /* 7756 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 8735 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8932 */;
-import ServerIcon from "ServerIcon" /* 11445 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 17747 */;
-import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 18015 */;
-import WaterwheelsPostCardDefault from "WaterwheelsPostCard" /* 18016 */;
-import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 18017 */;
-import selectDiscoverServerAction from "selectDiscoverServerAction" /* 18028 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 8736 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 8933 */;
+import ServerIcon from "ServerIcon" /* 11446 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 17754 */;
+import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 18022 */;
+import WaterwheelsPostCardDefault from "WaterwheelsPostCard" /* 18023 */;
+import WaterwheelsSectionLabelDefault from "WaterwheelsSectionLabel" /* 18024 */;
+import selectDiscoverServerAction from "selectDiscoverServerAction" /* 18035 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2141 */;
@@ -94,9 +94,9 @@ function ServerIdentity(server) {
   let tmp14Result5 = null;
   if (null != result) {
     const obj12 = { guild: result, style: tmp4.badge };
-    tmp14Result5 = tmp14(onAction(8735), obj12);
+    tmp14Result5 = tmp14(onAction(8736), obj12);
   }
-  const tmp25 = stateFromStores === server(8932).WaterwheelsActionType.OPEN_GUILD;
+  const tmp25 = stateFromStores === server(8933).WaterwheelsActionType.OPEN_GUILD;
   items5[1] = tmp14Result5;
   let tmp14Result6 = null;
   if (tmp25) {
@@ -502,7 +502,7 @@ function GamePoster(game) {
     const obj = { type: WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GAME, value: { game_id: game.gameId } };
     return onAction(obj, "identity");
   };
-  const obj4 = { style: tmp.posterClip, children: closure_11(game(18029).GameCoverFromURLs, { gameId: game.gameId, name: game.name, coverUrl: game.coverUrl, iconGame: stateFromStores, width: 114, aspectRatio: 0.6909090909090909 }) };
+  const obj4 = { style: tmp.posterClip, children: closure_11(game(18036).GameCoverFromURLs, { gameId: game.gameId, name: game.name, coverUrl: game.coverUrl, iconGame: stateFromStores, width: 114, aspectRatio: 0.6909090909090909 }) };
   const items3 = [closure_11(closure_7, obj4), closure_11(closure_7, { pointerEvents: "none", style: tmp.posterBorder }), ];
   let tmp9Result = null;
   if (null != game.l30Rank) {
@@ -513,7 +513,7 @@ function GamePoster(game) {
     const obj10 = { rank: game.l30Rank };
     obj9.text = intl3.formatToPlainString(tmp2(1112).t.UA6RoE, obj10);
     obj8.type = obj9;
-    obj8.icon = tmp2(14303).FireIcon;
+    obj8.icon = tmp2(14310).FireIcon;
     obj7.children = closure_11(tmp2(6159).Badge, obj8);
     tmp9Result = closure_11(closure_7, obj7);
   }

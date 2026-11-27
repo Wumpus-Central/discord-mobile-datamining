@@ -1,71 +1,96 @@
-// === Module 19981: GuildSettingsModalIntegrationsApps ===
+// === Module 20006: GuildSettingsModalIntegrationsApps ===
 
-// Module 19981 (GuildSettingsModalIntegrationsApps)
-import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1112 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
-import FastImageDefault from "FastImage" /* 5730 */;
-import TableRowGroup from "TableRowGroup" /* 6140 */;
-import TableRow from "TableRow" /* 6144 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6158 */;
+// Module 20006 (GuildSettingsModalIntegrationsApps)
 import noop from "module_19" /* 19 */;
+import ApplicationSubscriptionsStore from "ApplicationSubscriptionsStore" /* 19996 */;
 
-require = fn;
-let jsx = fn(21).jsx;
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(5043);
-let obj2 = { icon: null };
-let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.xs };
-obj2.icon = size;
-let closure_4 = createStyles.createStyles(obj2);
-size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_settings/integrations/native/GuildSettingsModalIntegrationsApps.tsx");
+let closure_6 = createStyles.createStyles({ name: { flexShrink: 1 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_settings/integrations/native/GuildSettingsModalIntegrationsApps.tsx");
 
-export default function GuildSettingsModalIntegrationsApps(title) {
-  ({ apps, removableApplicationIds: require, onRemove: importDefault, renderIcon: dependencyMap } = title);
-  let text;
-  jsx = text();
-  let intl = util.intl;
-  text = intl.string(util.t.N86XcP);
-  return jsx(TableRowGroup.TableRowGroup, {
-    title: title.title,
+export default function GuildSettingsModalIntegrationsApps(guildId) {
+  guildId = guildId.guildId;
+  const apps = guildId.apps;
+  ({ commandSections: dependencyMap, webhookApplicationIds: ApplicationSubscriptionsStore, onPress: closure_4, renderIcon: closure_5 } = guildId);
+  let name;
+  name = name();
+  const variant = guildId(5607).useToken(apps(575).modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+  let obj = guildId(5607);
+  const color = guildId(5607).useToken(apps(575).modules.mobile.TABLE_ROW_LABEL_COLOR);
+  let obj2 = guildId(5607);
+  items = [ApplicationSubscriptionsStore];
+  let items1 = [apps, guildId];
+  closure_9 = guildId(504).useStateFromStoresArray(items, () => {
+    const found = apps.filter((application) => set.getApplicationEntitlementsForGuild(application.application.id, guildId).length > 0);
+    return found.map((application) => application.application.id);
+  }, items1);
+  let obj3 = guildId(504);
+  return closure_4(guildId(6140).TableRowGroup, {
+    title: guildId.title,
     hasIcons: true,
-    children: apps.map((application) => {
-      closure_0 = application;
-      application = application.application;
-      let tmp;
-      if (dependencyMap != null) {
-        tmp = dependencyMap(application);
+    children: apps.map((integrationId) => {
+      closure_0 = integrationId;
+      ({ application, integration } = integrationId);
+      const integrationHasBotResult = guildId(20007).integrationHasBot(application, integration);
+      const hasItem = set.has(application.id);
+      const obj = guildId(20007);
+      const result = guildId(20007).integrationHasCommands(application, integration, closure_2);
+      let tmp6;
+      if (closure_5 != null) {
+        tmp6 = closure_5(application);
       }
-      if (tmp == null) {
-        const obj = { source: null, style: null };
-        const tmp5 = FastImageDefault;
-        ({ id: obj3.id, icon: obj3.icon } = application);
-        obj.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null, size: 24 });
-        obj.style = closure_3.icon;
-        tmp = closure_3(tmp5, obj);
-        const obj5 = { id: null, icon: null, size: 24 };
+      if (tmp6 == null) {
+        const obj3 = { application };
+        tmp6 = closure_1_4(apps(8538), obj3);
       }
-      if (null != closure_0) {
-        if (!obj4.includes(application.id)) {
-          const obj6 = { label: application.name, subLabel: null, icon: null };
-          const intl = util.intl;
-          obj6.subLabel = intl.string(util.t.xRCMqx);
-          obj6.icon = tmp;
-          let tmp15 = closure_3(TableRow.TableRow, obj6, application.integrationId);
-        }
-        return tmp15;
+      if (closure_9.includes(application.id)) {
+        const obj4 = { direction: "horizontal", align: "center", spacing: apps(575).space.PX_4, children: null };
+        const obj5 = { variant, color, lineClamp: 1, style: name.name, children: application.name };
+        items = [closure_1_4(guildId(5634).Text, obj5), ];
+        const obj6 = { size: "xs", color: apps(575).colors.ICON_SUBTLE };
+        items[1] = closure_1_4(guildId(16825).TicketIcon, obj6);
+        obj4.children = items;
+        name = closure_1_5(guildId(6115).Stack, obj4);
+      } else {
+        name = application.name;
       }
-      const obj7 = {
-        label: application.name,
-        icon: tmp,
-        trailing: closure_3(TableRowTrailingText.TableRowTrailingText, { text }),
-        onPress() {
-          return importDefault(closure_0);
-        }
-      };
-      tmp15 = closure_3(TableRow.TableRow, obj7, application.integrationId);
-      const obj11 = { text };
-      obj4 = closure_0;
+      const obj7 = { label: name, subLabel: null, icon: null, trailing: null, arrow: true, onPress: null };
+      const obj2 = guildId(20007);
+      obj7.subLabel = guildId(20007).getIntegrationAddedLabel(integration);
+      obj7.icon = tmp6;
+      if (!integrationHasBotResult) {
+        obj7.trailing = tmp16Result;
+        obj7.onPress = function onPress() {
+          return closure_2_4(closure_0);
+        };
+        return closure_1_4(guildId(6144).TableRow, obj7, integrationId.integrationId);
+      }
+      const obj8 = { direction: "horizontal", align: "center", spacing: apps(575).space.PX_8, children: null };
+      let tmp9Result = null;
+      if (integrationHasBotResult) {
+        const obj9 = { size: "sm", color: apps(575).colors.ICON_SUBTLE };
+        tmp9Result = closure_1_4(guildId(12278).RobotIcon, obj9);
+      }
+      const items1 = [tmp9Result, , ];
+      let tmp9Result3 = null;
+      if (hasItem) {
+        const obj10 = { size: "sm", color: apps(575).colors.ICON_SUBTLE };
+        tmp9Result3 = closure_1_4(guildId(19070).WebhookIcon, obj10);
+      }
+      items1[1] = tmp9Result3;
+      let tmp9Result4 = null;
+      if (result) {
+        const obj11 = { size: "sm", color: apps(575).colors.ICON_SUBTLE };
+        tmp9Result4 = closure_1_4(guildId(12151).SlashBoxIcon, obj11);
+      }
+      items1[2] = tmp9Result4;
+      obj8.children = items1;
+      const tmpResult = guildId(20007);
+      tmp16Result = closure_1_5(guildId(6115).Stack, obj8);
     })
   });
 };

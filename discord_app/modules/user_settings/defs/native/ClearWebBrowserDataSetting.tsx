@@ -1,6 +1,6 @@
-// === Module 17093: ClearWebBrowserDataSetting ===
+// === Module 17100: ClearWebBrowserDataSetting ===
 
-// Module 17093 (ClearWebBrowserDataSetting)
+// Module 17100 (ClearWebBrowserDataSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1091 */;
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
@@ -8,13 +8,13 @@ import BrowserManager from "BrowserManager" /* 5754 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.HNqvOh);
   },
-  parent: fn(9555).MobileUserSettings.WEB_BROWSER,
+  parent: fn(9556).MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
     const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };
@@ -35,7 +35,7 @@ const pressable = SettingBuilders.createPressable({
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ const pressable = SettingBuilders.createPressable({
             obj7.text = intl.string(tmp4(1112).t["zaEQz+"]);
             v1(5725).open("web-browser-data-cleared", obj7);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp7) {
           dependencyMap = tmp;

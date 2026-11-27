@@ -1,6 +1,6 @@
-// === Module 10863: StickerPickerListEmptyState ===
+// === Module 10864: StickerPickerListEmptyState ===
 
-// Module 10863 (StickerPickerListEmptyState)
+// Module 10864 (StickerPickerListEmptyState)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
   items = [insetBottom, insetTop];
   const memo = noop.useMemo(() => ({ marginBottom: insetBottom + EXPRESSION_FOOTER_HEIGHT, marginTop: insetTop, flex: 1 }), items);
   const tmp = closure_7();
-  const modalDismissGuardRefreshControl = insetTop(9744).useModalDismissGuardRefreshControl();
+  const modalDismissGuardRefreshControl = insetTop(9745).useModalDismissGuardRefreshControl();
   if (inActionSheet) {
     let BottomSheetScrollView = insetTop(5275).BottomSheetScrollView;
   } else {
@@ -39,7 +39,7 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
   const intl = insetTop(1112).intl;
   obj5.body = intl.string(insetTop(1112).t.jyiGfc);
   ({ emptyStateBody: obj3.bodyStyle, emptyStateContainer: obj3.containerStyle, emptyStateImage: obj3.imageStyle } = tmp);
-  obj5.source = insetBottom(10864);
+  obj5.source = insetBottom(10865);
   obj5.titleStyle = { marginBottom: 0 };
   obj2.children = jsx(insetTop(1186).RefreshEmptyState, { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null });
   return <BottomSheetScrollView contentContainerStyle={memo} keyboardShouldPersistTaps="always" refreshControl={null}>{null}</BottomSheetScrollView>;

@@ -1,11 +1,11 @@
-// === Module 11716: ForLaterModal ===
+// === Module 11724: ForLaterModal ===
 
-// Module 11716 (ForLaterModal)
+// Module 11724 (ForLaterModal)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
-import HeaderShared from "HeaderShared" /* 9004 */;
-import ForLaterScreenDefault from "ForLaterScreen" /* 11717 */;
+import HeaderShared from "HeaderShared" /* 9005 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 11725 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

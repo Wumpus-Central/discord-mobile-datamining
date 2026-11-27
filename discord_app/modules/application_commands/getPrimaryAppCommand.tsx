@@ -1,14 +1,14 @@
-// === Module 10109: getPrimaryAppCommand ===
+// === Module 10110: getPrimaryAppCommand ===
 
-// Module 10109 (getPrimaryAppCommand)
+// Module 10110 (getPrimaryAppCommand)
 import Server from "Server" /* 2118 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5658 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 10051 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 10053 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 10052 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 10054 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 10047 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 10048 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -98,7 +98,7 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
   obj.commandTypes = items;
   return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, { placeholderCount: 1, scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(10047);
+let ApplicationCommandIndexStore = fn(10048);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: closure_6 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";

@@ -1,8 +1,8 @@
-// === Module 15064: AddToWishlistGrid ===
+// === Module 15071: AddToWishlistGrid ===
 
-// Module 15064 (AddToWishlistGrid)
-import WishlistAnalyticsContext from "WishlistAnalyticsContext" /* 15063 */;
-import AddToWishlistItemCardDefault from "AddToWishlistItemCard" /* 15065 */;
+// Module 15071 (AddToWishlistGrid)
+import WishlistAnalyticsContext from "WishlistAnalyticsContext" /* 15070 */;
+import AddToWishlistItemCardDefault from "AddToWishlistItemCard" /* 15072 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

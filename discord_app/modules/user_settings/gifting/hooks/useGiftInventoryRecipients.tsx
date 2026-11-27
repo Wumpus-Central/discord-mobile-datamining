@@ -1,8 +1,8 @@
-// === Module 14023: useGiftInventoryRecipients ===
+// === Module 14030: useGiftInventoryRecipients ===
 
-// Module 14023 (useGiftInventoryRecipients)
+// Module 14030 (useGiftInventoryRecipients)
 import UserActionCreators from "UserActionCreators" /* 6134 */;
-import GiftedSubscriptionUtils from "GiftedSubscriptionUtils" /* 14020 */;
+import GiftedSubscriptionUtils from "GiftedSubscriptionUtils" /* 14027 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;

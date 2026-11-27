@@ -1,6 +1,6 @@
-// === Module 9514: VideoBackgroundManager ===
+// === Module 9515: VideoBackgroundManager ===
 
-// Module 9514 (VideoBackgroundManager)
+// Module 9515 (VideoBackgroundManager)
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 

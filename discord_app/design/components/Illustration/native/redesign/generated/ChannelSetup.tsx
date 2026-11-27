@@ -1,9 +1,9 @@
-// === Module 20112: ChannelSetup ===
+// === Module 20170: ChannelSetup ===
 
-// Module 20112 (ChannelSetup)
+// Module 20170 (ChannelSetup)
 import shared from "shared" /* 5050 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import _mod8566 from "module_8566" /* 8566 */;
+import _mod8567 from "module_8567" /* 8567 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,55 +14,55 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/ChannelSetup.tsx");
 
 export function getChannelSetupSource(theme) {
-  return _mod8566.getIllustrationSource(theme, {
+  return _mod8567.getIllustrationSource(theme, {
     dark() {
-      return require("module_20113");
+      return require("module_20171");
     },
     darker() {
-      return require("module_20114");
+      return require("module_20172");
     },
     light() {
-      return require("module_20115");
+      return require("module_20173");
     }
   });
 }
 export function useChannelSetupSource() {
   const obj = shared;
-  return _mod8566.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8567.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_20113");
+      return require("module_20171");
     },
     darker() {
-      return require("module_20114");
+      return require("module_20172");
     },
     light() {
-      return require("module_20115");
+      return require("module_20173");
     }
   });
 }
 export function ChannelSetup(arg0) {
   const obj = shared;
-  const illustrationSource = _mod8566.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8567.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_20113");
+      return require("module_20171");
     },
     darker() {
-      return require("module_20114");
+      return require("module_20172");
     },
     light() {
-      return require("module_20115");
+      return require("module_20173");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_20113");
+      return require("module_20171");
     },
     darker() {
-      return require("module_20114");
+      return require("module_20172");
     },
     light() {
-      return require("module_20115");
+      return require("module_20173");
     }
   };
   const merged = Object.assign(arg0);

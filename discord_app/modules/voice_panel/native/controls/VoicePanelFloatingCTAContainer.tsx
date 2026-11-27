@@ -1,17 +1,17 @@
-// === Module 19557: VoicePanelFloatingCTAContainer ===
+// === Module 19573: VoicePanelFloatingCTAContainer ===
 
-// Module 19557 (VoicePanelFloatingCTAContainer)
+// Module 19573 (VoicePanelFloatingCTAContainer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import native from "native" /* 5104 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import RowButton from "RowButton" /* 8090 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11536 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13153 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19439 */;
-import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 19442 */;
-import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19558 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11544 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 13161 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19455 */;
+import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 19458 */;
+import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -181,8 +181,8 @@ class VoicePanelFloatingCTAContainer {
     return tmp27(tmp2(tmp3[19]).View, obj1);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(11782).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11785).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(11790).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11793).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1082).ThemeTypes;
 let jsx = fn(21).jsx;
 const createStyles = fn(5043);

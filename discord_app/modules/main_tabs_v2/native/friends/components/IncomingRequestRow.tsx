@@ -1,10 +1,10 @@
-// === Module 19089: IncomingRequestRow ===
+// === Module 19105: IncomingRequestRow ===
 
-// Module 19089 (IncomingRequestRow)
+// Module 19105 (IncomingRequestRow)
 import util from "util" /* 1112 */;
 import UserUtilsDefault from "UserUtils" /* 5099 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13627 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17771 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13634 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17778 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
@@ -116,7 +116,7 @@ function IncomingGameFriendRequestRow(arg0) {
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow user={user} applicationId={application.id} accessibilityLabel={null} acceptedRequestLabel={null} acceptedRequestAccessibilityLabel={null} acceptRequestAccessibilityLabel={null} ignoreRequestAccessibilityLabel={null} />;
 }
-const UserRowModes = fn(8944).UserRowModes;
+const UserRowModes = fn(8945).UserRowModes;
 const RelationshipTypes = fn(1071).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };

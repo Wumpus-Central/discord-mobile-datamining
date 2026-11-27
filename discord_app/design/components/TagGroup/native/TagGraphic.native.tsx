@@ -1,9 +1,9 @@
-// === Module 15461: TagGraphic ===
+// === Module 15468: TagGraphic ===
 
-// Module 15461 (TagGraphic)
+// Module 15468 (TagGraphic)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import TagGroupTypes from "TagGroupTypes" /* 15458 */;
+import TagGroupTypes from "TagGroupTypes" /* 15465 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

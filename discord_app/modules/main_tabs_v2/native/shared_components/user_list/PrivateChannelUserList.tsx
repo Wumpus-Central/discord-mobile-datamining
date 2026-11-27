@@ -1,12 +1,12 @@
-// === Module 13152: PrivateChannelUserList ===
+// === Module 13160: PrivateChannelUserList ===
 
-// Module 13152 (PrivateChannelUserList)
+// Module 13160 (PrivateChannelUserList)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9637 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 13154 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9638 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 13162 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;

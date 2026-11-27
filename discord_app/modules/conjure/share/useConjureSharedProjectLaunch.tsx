@@ -1,7 +1,7 @@
-// === Module 12377: useConjureSharedProjectLaunch ===
+// === Module 12385: useConjureSharedProjectLaunch ===
 
-// Module 12377 (useConjureSharedProjectLaunch)
-import conjureSharedProjectHome from "conjureSharedProjectHome" /* 11998 */;
+// Module 12385 (useConjureSharedProjectLaunch)
+import conjureSharedProjectHome from "conjureSharedProjectHome" /* 12006 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -54,7 +54,7 @@ export default function useConjureSharedProjectLaunch(arg0, arg1, guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

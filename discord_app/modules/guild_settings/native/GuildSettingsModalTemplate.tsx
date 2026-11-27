@@ -1,6 +1,6 @@
-// === Module 20089: GuildSettingsModalTemplate ===
+// === Module 20147: GuildSettingsModalTemplate ===
 
-// Module 20089 (GuildSettingsModalTemplate)
+// Module 20147 (GuildSettingsModalTemplate)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -15,9 +15,9 @@ import CircleXIcon2 from "CircleXIcon" /* 7284 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7525 */;
 import ClipboardUtils from "ClipboardUtils" /* 7538 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
-import native from "native" /* 8489 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12303 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 20090 */;
+import native from "native" /* 8490 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12311 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 20148 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -169,7 +169,7 @@ function TemplateForm(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(12303);
+                const obj2 = guildTemplate(12311);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -467,7 +467,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(20091)(guildTemplate.code);
+  const tmp3 = guildTemplate(20149)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

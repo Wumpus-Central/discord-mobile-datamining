@@ -1,9 +1,9 @@
-// === Module 19208: ContextMenuCommandNavigator ===
+// === Module 19224: ContextMenuCommandNavigator ===
 
-// Module 19208 (ContextMenuCommandNavigator)
+// Module 19224 (ContextMenuCommandNavigator)
 import nativeDefault from "native" /* 575 */;
-import HeaderShared from "HeaderShared" /* 9004 */;
-import AppFrameContainerDefault from "AppFrameContainer" /* 19106 */;
+import HeaderShared from "HeaderShared" /* 9005 */;
+import AppFrameContainerDefault from "AppFrameContainer" /* 19122 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9047);
+const NativeStackNavigator = fn(9048);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5043);
 let obj3 = { content: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/application_commands/native/C
 
 export default function ContextMenuCommandNavigator() {
   _require = closure_7();
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(8249).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(8250).trackAppUIViewed(), []);
   importDefault = require("Navigator").useAccessibilityNativeStackOptions();
   let obj2 = { children: null };
   let obj3 = {
@@ -57,7 +57,7 @@ export default function ContextMenuCommandNavigator() {
   obj5.title = intl.string(require("util").t.PHjkRE);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(19209).default;
+    return closure_0(19225).default;
   };
   items = [
     closure_4(Screen, obj4),
@@ -72,7 +72,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(19211).default;
+        return closure_0(19227).default;
       }
     })
   ];

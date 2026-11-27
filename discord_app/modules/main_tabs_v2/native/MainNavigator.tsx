@@ -1,20 +1,20 @@
-// === Module 17650: MainNavigator ===
+// === Module 17657: MainNavigator ===
 
-// Module 17650 (MainNavigator)
+// Module 17657 (MainNavigator)
 import PlatformUtils2 from "PlatformUtils" /* 1379 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1499 */;
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;
 import ChatInputUtils from "ChatInputUtils" /* 5228 */;
-import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 10273 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11418 */;
-import StartupProfiler from "StartupProfiler" /* 12003 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15477 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17652 */;
-import AutoAnalytics from "AutoAnalytics" /* 19067 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 19120 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 19332 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 19363 */;
-import AppComponents from "AppComponents" /* 19365 */;
+import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 10274 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11419 */;
+import StartupProfiler from "StartupProfiler" /* 12011 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15484 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17659 */;
+import AutoAnalytics from "AutoAnalytics" /* 19083 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 19136 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 19348 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 19379 */;
+import AppComponents from "AppComponents" /* 19381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -83,7 +83,7 @@ function getOrbsArcadeGameComponent() {
   return require("OrbsArcadeGameScreen").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(17651).StackNavigationAnimationSettings;
+let closure_7 = fn(17658).StackNavigationAnimationSettings;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -133,9 +133,9 @@ function getChannelScreen() {
       }
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(9004).renderHeader };
+      const obj = { headerShown: true, header: styles(9005).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(9004).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(9005).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -200,7 +200,7 @@ export default noop.memo(function StackNavigator() {
               if (closure_1_15) {
                 str = "default";
               }
-              const merged = Object.assign(animation(9004).getDefaultStackHeaderProps(navigation.navigation));
+              const merged = Object.assign(animation(9005).getDefaultStackHeaderProps(navigation.navigation));
               const merged1 = Object.assign(animation2);
               return { orientation: str, headerShown: false };
             },
@@ -249,9 +249,9 @@ export default noop.memo(function StackNavigator() {
               }
             },
             options(arg0) {
-              const obj = { headerShown: true, header: styles(9004).renderHeader };
+              const obj = { headerShown: true, header: styles(9005).renderHeader };
               ({ navigation, route } = arg0);
-              const merged = Object.assign(styles(9004).getDefaultChannelStackHeaderProps(navigation, route));
+              const merged = Object.assign(styles(9005).getDefaultChannelStackHeaderProps(navigation, route));
               const merged1 = Object.assign(animation2);
               obj.animation = animation;
               return obj;
@@ -269,7 +269,7 @@ export default noop.memo(function StackNavigator() {
         name: "conversations",
         getComponent: getConversationsComponent,
         options() {
-          return stateFromStores(11418)();
+          return stateFromStores(11419)();
         }
       }),
     ,
@@ -289,7 +289,7 @@ export default noop.memo(function StackNavigator() {
       name: "channel-secondary-view-chat",
       getComponent: getChannelSecondaryViewChatComponent,
       options() {
-        return stateFromStores(11418)();
+        return stateFromStores(11419)();
       },
       listeners: { beforeRemove: resetChatKeyboard }
     };
@@ -349,7 +349,7 @@ export default noop.memo(function StackNavigator() {
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(stateFromStores(11418)({ presentation: str }));
+        const merged = Object.assign(stateFromStores(11419)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -411,7 +411,7 @@ export default noop.memo(function StackNavigator() {
             if (closure_1_15) {
               str = "default";
             }
-            const merged = Object.assign(animation(9004).getDefaultStackHeaderProps(navigation.navigation));
+            const merged = Object.assign(animation(9005).getDefaultStackHeaderProps(navigation.navigation));
             const merged1 = Object.assign(animation2);
             return { orientation: str, headerShown: false };
           },
@@ -460,9 +460,9 @@ export default noop.memo(function StackNavigator() {
             }
           },
           options(arg0) {
-            const obj = { headerShown: true, header: styles(9004).renderHeader };
+            const obj = { headerShown: true, header: styles(9005).renderHeader };
             ({ navigation, route } = arg0);
-            const merged = Object.assign(styles(9004).getDefaultChannelStackHeaderProps(navigation, route));
+            const merged = Object.assign(styles(9005).getDefaultChannelStackHeaderProps(navigation, route));
             const merged1 = Object.assign(animation2);
             obj.animation = animation;
             return obj;
@@ -480,7 +480,7 @@ export default noop.memo(function StackNavigator() {
       name: "conversations",
       getComponent: getConversationsComponent,
       options() {
-        return stateFromStores(11418)();
+        return stateFromStores(11419)();
       }
     };
     const obj9 = { beforeRemove: resetChatKeyboard };
@@ -501,7 +501,7 @@ export default noop.memo(function StackNavigator() {
     items1[9] = refs(closure_16.Screen, {
       name: "settings",
       options() {
-        const tmp2 = stateFromStores(11418);
+        const tmp2 = stateFromStores(11419);
         let obj2;
         if (obj.isIpadOS()) {
           if (!tmp3Result.isDuo()) {
@@ -521,13 +521,13 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(11418)({ lockOrientation: false });
+        return stateFromStores(11419)({ lockOrientation: false });
       }
     });
     const obj19 = {
       name: "settings",
       options() {
-        const tmp2 = stateFromStores(11418);
+        const tmp2 = stateFromStores(11419);
         let obj2;
         if (obj.isIpadOS()) {
           if (!tmp3Result.isDuo()) {
@@ -547,7 +547,7 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(11418)({ lockOrientation: false });
+        return stateFromStores(11419)({ lockOrientation: false });
       }
     };
     tmp5Result = PlatformUtils2;
@@ -582,7 +582,7 @@ export default noop.memo(function StackNavigator() {
           }
           str2 = str3;
         }
-        const merged = Object.assign(stateFromStores(11418)({ presentation: str2 }));
+        const merged = Object.assign(stateFromStores(11419)({ presentation: str2 }));
         return obj;
       },
       getComponent: getModalComponent

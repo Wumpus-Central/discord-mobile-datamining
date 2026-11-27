@@ -1,6 +1,6 @@
-// === Module 13343: BaseChannelItem ===
+// === Module 13351: BaseChannelItem ===
 
-// Module 13343 (BaseChannelItem)
+// Module 13351 (BaseChannelItem)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
@@ -130,9 +130,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(13345);
+      let AnimatedPressableHighlight = hideIcon(13353);
     } else {
-      AnimatedPressableHighlight = mode(8489).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8490).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -147,8 +147,8 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(13344), obj3);
-    const tmp9 = hideIcon(13344);
+    closure_8(hideIcon(13352), obj3);
+    const tmp9 = hideIcon(13352);
   }
 };
 export const ChannelModes = obj2;

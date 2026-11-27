@@ -1,7 +1,7 @@
-// === Module 20286: VoicePanelManager ===
+// === Module 20344: VoicePanelManager ===
 
-// Module 20286 (VoicePanelManager)
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10271 */;
+// Module 20344 (VoicePanelManager)
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10272 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 import VoicePanelStore from "VoicePanelStore" /* 6965 */;

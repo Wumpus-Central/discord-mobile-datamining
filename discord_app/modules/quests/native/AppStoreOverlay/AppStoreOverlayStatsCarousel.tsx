@@ -1,15 +1,15 @@
-// === Module 9938: AppStoreOverlayStatsCarousel ===
+// === Module 9939: AppStoreOverlayStatsCarousel ===
 
-// Module 9938 (AppStoreOverlayStatsCarousel)
+// Module 9939 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import AnalyticsActions from "AnalyticsActions" /* 8382 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 9939 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 9940 */;
+import AnalyticsActions from "AnalyticsActions" /* 8383 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8393 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 9940 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 9941 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

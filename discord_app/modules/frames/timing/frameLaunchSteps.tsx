@@ -29,7 +29,7 @@ export function loadLaunchCSP(span, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -62,7 +62,7 @@ export function loadLaunchCSP(span, arg1) {
           closure_129_1 = value;
           closure_129_0.setStatus(closure_2_7[closure_129_1]);
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c4 = tmp;
@@ -106,7 +106,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -140,7 +140,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
             closure_129_0.setStatus(closure_0(7685).StepStatus.PREFETCHED);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c4 = tmp;
@@ -160,7 +160,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -193,7 +193,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
           closure_129_1 = value;
           closure_129_0.setStatus(closure_2_7[closure_129_1]);
           c4 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c4 = tmp;
@@ -226,7 +226,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -259,7 +259,7 @@ export function prefetchFrameLaunch(CONJURE_PREVIEW_PREFETCH, applicationId, con
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c1 = tmp;

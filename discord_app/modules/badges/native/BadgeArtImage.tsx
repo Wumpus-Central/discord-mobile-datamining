@@ -1,6 +1,6 @@
-// === Module 9856: BadgeArtImage ===
+// === Module 9857: BadgeArtImage ===
 
-// Module 9856 (BadgeArtImage)
+// Module 9857 (BadgeArtImage)
 import DurationsDefault from "Durations" /* 1088 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import TimeUtils from "TimeUtils" /* 5827 */;
@@ -53,7 +53,7 @@ function SvgArt(url) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

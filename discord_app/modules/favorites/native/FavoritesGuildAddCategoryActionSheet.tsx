@@ -1,9 +1,9 @@
-// === Module 17878: FavoritesGuildAddCategoryActionSheet ===
+// === Module 17885: FavoritesGuildAddCategoryActionSheet ===
 
-// Module 17878 (FavoritesGuildAddCategoryActionSheet)
+// Module 17885 (FavoritesGuildAddCategoryActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5257 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10741 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10742 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

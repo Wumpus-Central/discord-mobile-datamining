@@ -1,13 +1,13 @@
-// === Module 19643: AcceptInviteManager ===
+// === Module 19659: AcceptInviteManager ===
 
-// Module 19643 (AcceptInviteManager)
+// Module 19659 (AcceptInviteManager)
 import router_utils from "router_utils" /* 1098 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 5774 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 14192 */;
-import FriendInviteUtils from "FriendInviteUtils" /* 19645 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 14199 */;
+import FriendInviteUtils from "FriendInviteUtils" /* 19661 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
@@ -17,7 +17,7 @@ import PermissionStore from "PermissionStore" /* 4975 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(8333).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(8334).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1071);
 ({ InviteStates: closure_10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
@@ -135,7 +135,7 @@ const prototype = function AcceptInviteManager() {
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           const obj4 = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19644, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19660, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
           flag = false;
         }
       }

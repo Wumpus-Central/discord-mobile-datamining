@@ -1,12 +1,12 @@
-// === Module 18356: ReactActionSheet ===
+// === Module 18363: ReactActionSheet ===
 
-// Module 18356 (ReactActionSheet)
+// Module 18363 (ReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5625 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8923 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9537 */;
-import ICYMIContext from "ICYMIContext" /* 18304 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8924 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9538 */;
+import ICYMIContext from "ICYMIContext" /* 18311 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -75,7 +75,7 @@ function ReactActionSheetBase(content) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -90,10 +90,10 @@ function ReactActionSheetBase(content) {
               return obj3;
             } else {
               closure_5(true);
-              v1(8923).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8923);
+              v1(8924).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(8924);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8923).feedItemActioned(obj4);
+              v1(8924).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };
@@ -110,7 +110,7 @@ function ReactActionSheetBase(content) {
             closure_128_5(false);
             closure_128_8("");
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -133,7 +133,7 @@ function ReactActionSheetBase(content) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -167,7 +167,7 @@ function ReactActionSheetBase(content) {
             } else {
               closure_1_5(false);
               c3 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp9) {
             c3 = tmp;

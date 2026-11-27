@@ -1,6 +1,6 @@
-// === Module 10234: EmbeddedAppShimExperiment ===
+// === Module 10235: EmbeddedAppShimExperiment ===
 
-// Module 10234 (EmbeddedAppShimExperiment)
+// Module 10235 (EmbeddedAppShimExperiment)
 import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 

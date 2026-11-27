@@ -1,13 +1,13 @@
-// === Module 11988: SocialLayerStorefrontEmbedStore ===
+// === Module 11996: SocialLayerStorefrontEmbedStore ===
 
-// Module 11988 (SocialLayerStorefrontEmbedStore)
+// Module 11996 (SocialLayerStorefrontEmbedStore)
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11989 */;
+import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 11997 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserProfileStore from "UserProfileStore" /* 6163 */;
-import WishlistStore from "WishlistStore" /* 11116 */;
+import WishlistStore from "WishlistStore" /* 11117 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SKUStore from "SKUStore" /* 6360 */;
 

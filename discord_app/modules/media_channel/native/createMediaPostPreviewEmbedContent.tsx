@@ -1,6 +1,6 @@
-// === Module 14546: createMediaPostPreviewEmbedContent ===
+// === Module 14553: createMediaPostPreviewEmbedContent ===
 
-// Module 14546 (createMediaPostPreviewEmbedContent)
+// Module 14553 (createMediaPostPreviewEmbedContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import LinkUtils from "LinkUtils" /* 5666 */;
@@ -9,10 +9,10 @@ import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 6804 */;
 import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 6805 */;
 import MediaFormatParamUtils from "MediaFormatParamUtils" /* 6806 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 6825 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8937 */;
-import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11921 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12000 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14372 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8938 */;
+import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11929 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 12008 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 14379 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import DevSettingsStore from "DevSettingsStore" /* 5637 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -92,7 +92,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj5 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
-              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(14547)).uri;
+              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(14554)).uri;
               obj5.footer = formatToPartsResult;
               obj5.ctaButtonColor = tmp11;
               return obj5;

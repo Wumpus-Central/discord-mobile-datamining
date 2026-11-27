@@ -1,11 +1,11 @@
-// === Module 10397: VolumeSlider ===
+// === Module 10398: VolumeSlider ===
 
-// Module 10397 (VolumeSlider)
+// Module 10398 (VolumeSlider)
 import util from "util" /* 1112 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6004 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 7167 */;
-import Slider from "Slider" /* 10398 */;
-import VoiceXIcon from "VoiceXIcon" /* 10401 */;
+import Slider from "Slider" /* 10399 */;
+import VoiceXIcon from "VoiceXIcon" /* 10402 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

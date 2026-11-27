@@ -1,6 +1,6 @@
-// === Module 12344: ? ===
+// === Module 12352: ? ===
 
-// Module 12344
+// Module 12352
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HighFiveSpotIllustration-2x.png.js");

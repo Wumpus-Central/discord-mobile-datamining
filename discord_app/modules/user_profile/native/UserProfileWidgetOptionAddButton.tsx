@@ -1,13 +1,13 @@
-// === Module 15003: UserProfileWidgetOptionAddButton ===
+// === Module 15010: UserProfileWidgetOptionAddButton ===
 
-// Module 15003 (UserProfileWidgetOptionAddButton)
+// Module 15010 (UserProfileWidgetOptionAddButton)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 13095 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14584 */;
-import AddWidgetButtonConfig from "AddWidgetButtonConfig" /* 15004 */;
-import UserProfileApplicationWidgetPreviewDefault from "UserProfileApplicationWidgetPreview" /* 15006 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 13103 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14591 */;
+import AddWidgetButtonConfig from "AddWidgetButtonConfig" /* 15011 */;
+import UserProfileApplicationWidgetPreviewDefault from "UserProfileApplicationWidgetPreview" /* 15013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

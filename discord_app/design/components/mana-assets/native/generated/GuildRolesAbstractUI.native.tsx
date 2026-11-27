@@ -1,19 +1,19 @@
-// === Module 12353: GuildRolesAbstractUI ===
+// === Module 12361: GuildRolesAbstractUI ===
 
-// Module 12353 (GuildRolesAbstractUI)
+// Module 12361 (GuildRolesAbstractUI)
 import assetHelpers from "assetHelpers" /* 7261 */;
-import _modDef12354 from "module_12354" /* 12354 */;
-import _modDef12355 from "module_12355" /* 12355 */;
-import _modDef12356 from "module_12356" /* 12356 */;
+import _modDef12362 from "module_12362" /* 12362 */;
+import _modDef12363 from "module_12363" /* 12363 */;
+import _modDef12364 from "module_12364" /* 12364 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12354 }, 3: null };
-let obj2 = { uri: _modDef12354 };
-obj[2] = { uri: _modDef12355 };
-const obj3 = { uri: _modDef12355 };
-obj[3] = { uri: _modDef12356 };
+let obj = { 1: null, 2: { uri: _modDef12362 }, 3: null };
+let obj2 = { uri: _modDef12362 };
+obj[2] = { uri: _modDef12363 };
+const obj3 = { uri: _modDef12363 };
+obj[3] = { uri: _modDef12364 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GuildRolesAbstractUI.native.tsx");
 

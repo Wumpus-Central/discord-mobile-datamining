@@ -1,6 +1,6 @@
-// === Module 9763: CustomEmojiContent ===
+// === Module 9764: CustomEmojiContent ===
 
-// Module 9763 (CustomEmojiContent)
+// Module 9764 (CustomEmojiContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -10,11 +10,11 @@ import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 4997 *
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import openUserSettings from "openUserSettings" /* 8109 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9761 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9765 */;
-import StarIcon from "StarIcon" /* 9767 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 9770 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9102 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9762 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9766 */;
+import StarIcon from "StarIcon" /* 9768 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9771 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4998 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5076 */;
@@ -208,7 +208,7 @@ export default function CustomEmojiContent(emojiNode) {
     if (sourceType !== isFavoriteEmoji.PACK) {
       const obj17 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9769, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9770, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
       }
       const intl4 = tmp2(nonce[27]).intl;
       obj17.accessibilityLabel = intl4.string(tmp2(nonce[27]).t.PdRCRg);

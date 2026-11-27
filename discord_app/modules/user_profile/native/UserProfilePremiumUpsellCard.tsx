@@ -1,14 +1,14 @@
-// === Module 16173: UserProfilePremiumUpsellCard ===
+// === Module 16180: UserProfilePremiumUpsellCard ===
 
-// Module 16173 (UserProfilePremiumUpsellCard)
+// Module 16180 (UserProfilePremiumUpsellCard)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7347 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9695 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16104 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9102 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9696 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16111 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(9135).useNitroTrialCtaOverride();
+  let nitroTrialCtaOverride = analyticsLocations(9136).useNitroTrialCtaOverride();
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };

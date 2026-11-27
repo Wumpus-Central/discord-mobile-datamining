@@ -1,6 +1,6 @@
-// === Module 11123: WishlistActionCreators ===
+// === Module 11124: WishlistActionCreators ===
 
-// Module 11123 (WishlistActionCreators)
+// Module 11124 (WishlistActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1359 */;
@@ -10,7 +10,7 @@ import UserProfileStore from "UserProfileStore" /* 6163 */;
 import UserStore from "UserStore" /* 1387 */;
 import BillingInfoStore from "BillingInfoStore" /* 2175 */;
 import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7589 */;
-import WishlistRecord from "WishlistRecord" /* 11117 */;
+import WishlistRecord from "WishlistRecord" /* 11118 */;
 
 require = fn;
 function extraWishlistParams() {
@@ -44,7 +44,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(11117).getWishlistSkuIds;
+const getWishlistSkuIds = fn(11118).getWishlistSkuIds;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);
@@ -114,7 +114,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -243,7 +243,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -341,7 +341,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

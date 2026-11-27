@@ -14,7 +14,7 @@ class DaveRecipientTracker {
       TimeStampProducer = closure_0(closure_1[0]).TimeStampProducer;
     }
     merged = Object.assign({ mode: "none", modeSince: 0, summary: null, hasGroup: false, recipients: null, newestRoster: null, resetSinceInstall: false, voiceStateUsers: null, connectedUsers: null, everPresent: null, openLingers: null, prepared: null, prepareSeq: 0, submitted: null, earlyExecutes: null });
-    merged[2] = { encryptedDuration: 0, mirrorUncertainCount: 0, lingerCount: 0, lingerTotalDuration: 0, lingerMaxDuration: 0, lingerMaxCause: "channel_id" };
+    merged[2] = { encryptedDuration: 0, mirrorUncertainCount: 0, lingerCount: 0, lingerTotalDuration: 0, lingerMaxDuration: 0, lingerMaxCause: "__workletHash" };
     set = new Set();
     merged[4] = set;
     set1 = new Set();

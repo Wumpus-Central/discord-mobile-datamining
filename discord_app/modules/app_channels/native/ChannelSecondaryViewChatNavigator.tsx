@@ -1,12 +1,12 @@
-// === Module 19204: ChannelSecondaryViewChatNavigator ===
+// === Module 19220: ChannelSecondaryViewChatNavigator ===
 
-// Module 19204 (ChannelSecondaryViewChatNavigator)
+// Module 19220 (ChannelSecondaryViewChatNavigator)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
-import HeaderShared from "HeaderShared" /* 9004 */;
-import ChannelContainer from "ChannelContainer" /* 10592 */;
-import ChatViewDefault from "ChatView" /* 11773 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 18623 */;
+import HeaderShared from "HeaderShared" /* 9005 */;
+import ChannelContainer from "ChannelContainer" /* 10593 */;
+import ChatViewDefault from "ChatView" /* 11781 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 18634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function ChannelSecondaryViewChatScreen(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9047);
+const NativeStackNavigator = fn(9048);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5043);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };

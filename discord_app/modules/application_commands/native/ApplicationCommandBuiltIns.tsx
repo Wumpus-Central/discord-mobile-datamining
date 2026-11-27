@@ -1,8 +1,8 @@
-// === Module 10057: application_commands/ApplicationCommandBuiltIns ===
+// === Module 10058: application_commands/ApplicationCommandBuiltIns ===
 
-// Module 10057 (application_commands/ApplicationCommandBuiltIns)
+// Module 10058 (application_commands/ApplicationCommandBuiltIns)
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
 import UserStore from "UserStore" /* 1387 */;
 
@@ -60,8 +60,8 @@ obj.execute = function execute(arg0, channel) {
         MessageActionCreatorsDefault.sendBotMessage(channel.id, intl.string(require("util").t["YOsuT/"]));
       }
     };
-    const result = channel(10058).openLeaveGroupDMConfirmationAlert(obj6);
-    const tmp4Result = channel(10058);
+    const result = channel(10059).openLeaveGroupDMConfirmationAlert(obj6);
+    const tmp4Result = channel(10059);
   }
 };
 const items = [obj];

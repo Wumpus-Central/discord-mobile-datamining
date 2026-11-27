@@ -1,6 +1,6 @@
-// === Module 14748: conjurePreviewAddBotPromptConnection ===
+// === Module 14755: conjurePreviewAddBotPromptConnection ===
 
-// Module 14748 (conjurePreviewAddBotPromptConnection)
+// Module 14755 (conjurePreviewAddBotPromptConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 7673 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6934 */;

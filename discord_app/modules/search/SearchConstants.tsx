@@ -1,6 +1,6 @@
-// === Module 9019: SearchConstants ===
+// === Module 9020: SearchConstants ===
 
-// Module 9019 (SearchConstants)
+// Module 9020 (SearchConstants)
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5704 */;
 import Constants from "Constants" /* 1071 */;
 import size from "module_2" /* 2 */;

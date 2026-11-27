@@ -1,6 +1,6 @@
-// === Module 18117: GuildsBarActivityIndicator ===
+// === Module 18124: GuildsBarActivityIndicator ===
 
-// Module 18117 (GuildsBarActivityIndicator)
+// Module 18124 (GuildsBarActivityIndicator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import useToken from "useToken" /* 5607 */;
@@ -10,32 +10,32 @@ import StageIcon from "StageIcon" /* 7163 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 7167 */;
 import AppsIcon from "AppsIcon" /* 7172 */;
 import _modDef8107 from "module_8107" /* 8107 */;
-import _modDef8606 from "module_8606" /* 8606 */;
-import CalendarIcon from "CalendarIcon" /* 8608 */;
-import VideoIcon from "VideoIcon" /* 10639 */;
-import ScreenIcon from "ScreenIcon" /* 13356 */;
-import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 18116 */;
-import _modDef18118 from "module_18118" /* 18118 */;
-import _modDef18119 from "module_18119" /* 18119 */;
-import _modDef18120 from "module_18120" /* 18120 */;
+import _modDef8607 from "module_8607" /* 8607 */;
+import CalendarIcon from "CalendarIcon" /* 8609 */;
+import VideoIcon from "VideoIcon" /* 10640 */;
+import ScreenIcon from "ScreenIcon" /* 13364 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 18123 */;
+import _modDef18125 from "module_18125" /* 18125 */;
+import _modDef18126 from "module_18126" /* 18126 */;
+import _modDef18127 from "module_18127" /* 18127 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef8606 };
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef8607 };
     let tmp6 = obj2;
   } else if (tmp4) {
     const obj3 = { icon: StageIcon.StageIcon, source: _modDef8107 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18118 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18125 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18119 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18126 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18120 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18127 };
     tmp6 = obj6;
   } else {
     tmp6 = null;

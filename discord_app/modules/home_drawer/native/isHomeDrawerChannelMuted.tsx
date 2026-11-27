@@ -1,6 +1,6 @@
-// === Module 18104: isHomeDrawerChannelMuted ===
+// === Module 18111: isHomeDrawerChannelMuted ===
 
-// Module 18104 (isHomeDrawerChannelMuted)
+// Module 18111 (isHomeDrawerChannelMuted)
 import initialize from "initialize" /* 504 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4977 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6167 */;

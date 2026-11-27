@@ -1,11 +1,11 @@
-// === Module 16020: ThemedStatusBar ===
+// === Module 16027: ThemedStatusBar ===
 
-// Module 16020 (ThemedStatusBar)
+// Module 16027 (ThemedStatusBar)
 import initialize from "initialize" /* 504 */;
 import shared from "shared" /* 5050 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5219 */;
-import StatusBarDefault from "StatusBar" /* 10018 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 10267 */;
+import StatusBarDefault from "StatusBar" /* 10019 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 10268 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

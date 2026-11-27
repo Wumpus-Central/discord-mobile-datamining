@@ -1,17 +1,17 @@
-// === Module 8627: StageSparkle ===
+// === Module 8628: StageSparkle ===
 
-// Module 8627 (StageSparkle)
+// Module 8628 (StageSparkle)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 5104 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import _modDef8628 from "module_8628" /* 8628 */;
+import _modDef8629 from "module_8629" /* 8629 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function StageSparkleInner(style) {
   ({ IconComponent, icon } = style);
   if (icon === undefined) {
-    icon = _modDef8628;
+    icon = _modDef8629;
   }
   const tmp3 = closure_6();
   const obj = { style: null, children: null };
@@ -29,7 +29,7 @@ function StageSparkleInner(style) {
   }
   obj2.children = tmp6Result;
   const items1 = [React4(View, obj2), ];
-  const obj5 = { style: tmp3.sparkles, source: tmp10(8629) };
+  const obj5 = { style: tmp3.sparkles, source: tmp10(8630) };
   items1[1] = React4(tmp10(5730), obj5);
   obj.children = items1;
   return hasOwnProperty(View, obj);

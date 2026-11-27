@@ -1,6 +1,6 @@
-// === Module 11100: MediaKeyboardItem ===
+// === Module 11101: MediaKeyboardItem ===
 
-// Module 11100 (MediaKeyboardItem)
+// Module 11101 (MediaKeyboardItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -9,9 +9,9 @@ import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import ImageIcon from "ImageIcon" /* 7153 */;
-import AttachmentIcon from "AttachmentIcon" /* 9618 */;
-import _modDef10842 from "module_10842" /* 10842 */;
-import CameraIcon from "CameraIcon" /* 11105 */;
+import AttachmentIcon from "AttachmentIcon" /* 9619 */;
+import _modDef10843 from "module_10843" /* 10843 */;
+import CameraIcon from "CameraIcon" /* 11106 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8124 */;
 
@@ -24,7 +24,7 @@ function NewCaption(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.labelContainer, style];
   obj.style = items;
-  const items1 = [React6(native.Icon, { source: _modDef10842, style: tmp.icon }), React6(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "body-xs/semibold", children: label })];
+  const items1 = [React6(native.Icon, { source: _modDef10843, style: tmp.icon }), React6(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "body-xs/semibold", children: label })];
   obj.children = items1;
   return refs(React4, obj);
 }
@@ -333,7 +333,7 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(11101);
+const DeviceConstants = fn(11102);
 ({ ALAssetsType: metroImportDefault, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

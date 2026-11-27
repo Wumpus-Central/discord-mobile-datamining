@@ -1,8 +1,8 @@
-// === Module 19980: useConjureServerApplicationIds ===
+// === Module 19998: useConjureServerApplicationIds ===
 
-// Module 19980 (useConjureServerApplicationIds)
+// Module 19998 (useConjureServerApplicationIds)
 import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6969 */;
-import prefetchConjureApplicationDefault from "prefetchConjureApplication" /* 11561 */;
+import prefetchConjureApplicationDefault from "prefetchConjureApplication" /* 11569 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 

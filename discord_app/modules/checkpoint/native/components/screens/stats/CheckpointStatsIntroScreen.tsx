@@ -1,10 +1,10 @@
-// === Module 12876: CheckpointStatsIntroScreen ===
+// === Module 12884: CheckpointStatsIntroScreen ===
 
-// Module 12876 (CheckpointStatsIntroScreen)
+// Module 12884 (CheckpointStatsIntroScreen)
 import nativeDefault from "native" /* 575 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12850 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
-import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12860 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12858 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
+import useIsCheckpointWideDefault from "useIsCheckpointWide" /* 12868 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

@@ -1,6 +1,6 @@
-// === Module 14330: LiveStageNotificationsUtils ===
+// === Module 14337: LiveStageNotificationsUtils ===
 
-// Module 14330 (LiveStageNotificationsUtils)
+// Module 14337 (LiveStageNotificationsUtils)
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5664 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 

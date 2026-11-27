@@ -1,6 +1,6 @@
-// === Module 11172: SlayerStorefrontItemCard ===
+// === Module 11173: SlayerStorefrontItemCard ===
 
-// Module 11172 (SlayerStorefrontItemCard)
+// Module 11173 (SlayerStorefrontItemCard)
 import nativeDefault from "native" /* 575 */;
 import tinycolorDefault from "tinycolor" /* 6321 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7588 */;

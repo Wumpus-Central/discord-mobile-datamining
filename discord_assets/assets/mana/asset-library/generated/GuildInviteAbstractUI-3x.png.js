@@ -1,6 +1,6 @@
-// === Module 12364: ? ===
+// === Module 12372: ? ===
 
-// Module 12364
+// Module 12372
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GuildInviteAbstractUI-3x.png.js");

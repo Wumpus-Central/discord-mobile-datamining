@@ -1,9 +1,9 @@
-// === Module 15102: InputGuest ===
+// === Module 15109: InputGuest ===
 
-// Module 15102 (InputGuest)
+// Module 15109 (InputGuest)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import InputEvent from "InputEvent" /* 15098 */;
+import InputEvent from "InputEvent" /* 15105 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -131,7 +131,7 @@ prototype["_captureMouse"] = function _captureMouse() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

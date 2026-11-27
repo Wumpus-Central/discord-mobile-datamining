@@ -1,6 +1,6 @@
-// === Module 14868: useSheetDismissPointerEvents ===
+// === Module 14874: useSheetDismissPointerEvents ===
 
-// Module 14868 (useSheetDismissPointerEvents)
+// Module 14874 (useSheetDismissPointerEvents)
 import _mod1654 from "module_1654" /* 1654 */;
 import BottomSheetModal from "BottomSheetModal" /* 5275 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;

@@ -1,11 +1,11 @@
-// === Module 19505: ActivitiesDebugOverlay ===
+// === Module 19521: ActivitiesDebugOverlay ===
 
-// Module 19505 (ActivitiesDebugOverlay)
+// Module 19521 (ActivitiesDebugOverlay)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import useThermalStateDefault from "useThermalState" /* 15870 */;
-import ThermalStates from "ThermalStates" /* 15871 */;
+import useThermalStateDefault from "useThermalState" /* 15877 */;
+import ThermalStates from "ThermalStates" /* 15878 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

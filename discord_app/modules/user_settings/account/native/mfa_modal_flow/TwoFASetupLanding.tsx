@@ -1,13 +1,13 @@
-// === Module 16262: TwoFASetupLanding ===
+// === Module 16269: TwoFASetupLanding ===
 
-// Module 16262 (TwoFASetupLanding)
+// Module 16269 (TwoFASetupLanding)
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7480 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 16259 */;
-import TwoFASetupStyles from "TwoFASetupStyles" /* 16263 */;
-import _modDef16264 from "module_16264" /* 16264 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 16266 */;
+import TwoFASetupStyles from "TwoFASetupStyles" /* 16270 */;
+import _modDef16271 from "module_16271" /* 16271 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default function TwoFASetupLanding() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
   const obj5 = { source: null, style: null };
-  obj5.source = _modDef16264;
+  obj5.source = _modDef16271;
   obj5.style = tmp.authIcon;
   items = [React4(FastImageDefault, obj5), , ];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };

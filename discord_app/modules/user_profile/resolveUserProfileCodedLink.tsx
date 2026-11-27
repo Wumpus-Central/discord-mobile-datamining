@@ -1,6 +1,6 @@
-// === Module 19778: resolveUserProfileCodedLink ===
+// === Module 19794: resolveUserProfileCodedLink ===
 
-// Module 19778 (resolveUserProfileCodedLink)
+// Module 19794 (resolveUserProfileCodedLink)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
@@ -17,13 +17,13 @@ export default function resolveUserProfileCodedLink(arg0, arg1) {
   }
   let guild_id;
   if (flag) {
-    let isUserProfileEmbedRenderingMobileEnabled = tmp(11974).getIsUserProfileEmbedRenderingMobileEnabled(MessageCodedLinkManager);
+    let isUserProfileEmbedRenderingMobileEnabled = tmp(11982).getIsUserProfileEmbedRenderingMobileEnabled(MessageCodedLinkManager);
     let tmp6 = tmp;
-    const tmpResult = tmp(11974);
+    const tmpResult = tmp(11982);
   } else {
-    isUserProfileEmbedRenderingMobileEnabled = tmp(19779).getIsUserProfileEmbedRenderingEnabled(MessageCodedLinkManager);
+    isUserProfileEmbedRenderingMobileEnabled = tmp(19795).getIsUserProfileEmbedRenderingEnabled(MessageCodedLinkManager);
     tmp6 = tmp;
-    const tmpResult2 = tmp(19779);
+    const tmpResult2 = tmp(19795);
   }
   if (isUserProfileEmbedRenderingMobileEnabled) {
     let tmp10;
@@ -36,7 +36,7 @@ export default function resolveUserProfileCodedLink(arg0, arg1) {
       tmp10 = guild_id;
     }
     guild_id = tmp10;
-    const result = tmp6(19771).queueMessageLinkFetch(asyncGeneratorStep(async () => {
+    const result = tmp6(19787).queueMessageLinkFetch(asyncGeneratorStep(async () => {
       c2 = 1;
       await v2(c2[5])(closure_0, undefined, { guildId: guild_id, withMutualGuilds: true, withMutualFriends: true });
       if (1 === tmp6) {
@@ -51,6 +51,6 @@ export default function resolveUserProfileCodedLink(arg0, arg1) {
       c2 = 0;
       return value;
     }));
-    const tmp6Result = tmp6(19771);
+    const tmp6Result = tmp6(19787);
   }
 };

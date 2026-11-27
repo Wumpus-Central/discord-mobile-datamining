@@ -1,14 +1,14 @@
-// === Module 20243: ChannelSelectorActionSheet ===
+// === Module 20301: ChannelSelectorActionSheet ===
 
-// Module 20243 (ChannelSelectorActionSheet)
+// Module 20301 (ChannelSelectorActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import useChannelName from "useChannelName" /* 5659 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
-import useCreateChannelSubmit from "useCreateChannelSubmit" /* 8524 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8529 */;
+import useCreateChannelSubmit from "useCreateChannelSubmit" /* 8525 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8530 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -25,7 +25,7 @@ function ChannelRow(channel) {
   ({ selected, guild, start, end } = channel);
   let str = onChannelSelected(5659)(channel);
   items = [onChannelSelected, channel];
-  const channelIconComponentOrDefault = channel(16853).getChannelIconComponentOrDefault(channel, guild);
+  const channelIconComponentOrDefault = channel(16860).getChannelIconComponentOrDefault(channel, guild);
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onChannelSelected(channel);
@@ -125,7 +125,7 @@ export default function ChannelSelectorActionSheet(guildId) {
   if (!hideCreateChannel) {
     const obj7 = { style: tmp.createChannelRow, children: null };
     const obj8 = { start: true, end: true, icon: null, label: null, onPress: null };
-    const obj9 = { IconComponent: tmp6(13792).PlusMediumIcon };
+    const obj9 = { IconComponent: tmp6(13799).PlusMediumIcon };
     obj8.icon = closure_13(tmp6(6144).TableRow.Icon, obj9);
     const intl3 = tmp6(1112).intl;
     obj8.label = intl3.string(tmp6(1112).t.d7AN7W);
@@ -142,7 +142,7 @@ export default function ChannelSelectorActionSheet(guildId) {
         }
         const obj = onChannelSelected(dependencyMap[30]);
       };
-      obj2.pushLazy(asyncRequireImpl(8521, dependencyMap.paths), obj3, CreateChannelModalActionCreatorsDefault.CREATE_CHANNEL_MODAL_KEY);
+      obj2.pushLazy(asyncRequireImpl(8522, dependencyMap.paths), obj3, CreateChannelModalActionCreatorsDefault.CREATE_CHANNEL_MODAL_KEY);
     };
     obj7.children = closure_13(tmp6(6144).TableRow, obj8);
     tmp9Result = closure_13(tmp10, obj7);

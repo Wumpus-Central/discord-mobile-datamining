@@ -1,12 +1,12 @@
-// === Module 9794: EmojiPickerCategoriesUnicodeShortcutItem ===
+// === Module 9795: EmojiPickerCategoriesUnicodeShortcutItem ===
 
-// Module 9794 (EmojiPickerCategoriesUnicodeShortcutItem)
+// Module 9795 (EmojiPickerCategoriesUnicodeShortcutItem)
 import util from "util" /* 1112 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import Pressables from "Pressables" /* 6152 */;
-import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 9777 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9795 */;
+import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 9778 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9796 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

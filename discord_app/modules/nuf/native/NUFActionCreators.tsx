@@ -1,12 +1,12 @@
-// === Module 13699: NUFActionCreators ===
+// === Module 13706: NUFActionCreators ===
 
-// Module 13699 (NUFActionCreators)
+// Module 13706 (NUFActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13674 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 13678 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 13782 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13785 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13681 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 13685 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 13789 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13792 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7462 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -28,7 +28,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -86,7 +86,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp25) {
         c3 = tmp;
@@ -95,9 +95,9 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(13671);
+const ContactSyncModalStore = fn(13678);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: closure_6, useContactSyncModalStore: metroImportDefault } = ContactSyncModalStore);
-let closure_10 = fn(13700).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(13707).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1071).PlatformTypes;
 let closure_12 = fn(7335).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 8555: ChannelOverwritesItem ===
+// === Module 8556: ChannelOverwritesItem ===
 
-// Module 8555 (ChannelOverwritesItem)
+// Module 8556 (ChannelOverwritesItem)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5105 */;
@@ -8,10 +8,10 @@ import Text_Text from "Text/Text" /* 5634 */;
 import AlertModal from "AlertModal" /* 6052 */;
 import TableRow from "TableRow" /* 6144 */;
 import FormCheckbox from "FormCheckbox" /* 7182 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8526 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8556 */;
-import _modDef8558 from "module_8558" /* 8558 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8527 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8557 */;
 import _modDef8559 from "module_8559" /* 8559 */;
+import _modDef8560 from "module_8560" /* 8560 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
 
@@ -94,7 +94,7 @@ function MemberItem(arg0) {
   const items1 = [metroImportDefault(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8558, disableColor: true, style: tmp.ownerIcon };
+    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8559, disableColor: true, style: tmp.ownerIcon };
     tmp4Result = metroImportDefault(native.Icon, obj3);
   }
   items1[1] = tmp4Result;
@@ -127,7 +127,7 @@ function EmptyRoleItem(item) {
   item = item.item;
   const obj = { icon: null, label: null };
   const tmp = closure_9();
-  obj.icon = metroImportDefault(native.Icon, { source: _modDef8559, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
+  obj.icon = metroImportDefault(native.Icon, { source: _modDef8560, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
   obj.label = item.name;
   return metroImportDefault(TableRow.TableRow, obj);
 }

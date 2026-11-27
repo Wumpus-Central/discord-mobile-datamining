@@ -1,7 +1,7 @@
-// === Module 8553: useIsPinotNewChannelPrivate ===
+// === Module 8554: useIsPinotNewChannelPrivate ===
 
-// Module 8553 (useIsPinotNewChannelPrivate)
-import PinotEligibility from "PinotEligibility" /* 8550 */;
+// Module 8554 (useIsPinotNewChannelPrivate)
+import PinotEligibility from "PinotEligibility" /* 8551 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildRoleStore from "GuildRoleStore" /* 4949 */;
 import GuildStore from "GuildStore" /* 4914 */;

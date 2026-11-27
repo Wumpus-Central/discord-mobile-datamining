@@ -1,21 +1,21 @@
-// === Module 19066: AccountSwitcherRail ===
+// === Module 19082: AccountSwitcherRail ===
 
-// Module 19066 (AccountSwitcherRail)
+// Module 19082 (AccountSwitcherRail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import SettingsIcon from "SettingsIcon" /* 10454 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13388 */;
-import openManageAccountsModalDefault from "openManageAccountsModal" /* 18166 */;
+import SettingsIcon from "SettingsIcon" /* 10455 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13396 */;
+import openManageAccountsModalDefault from "openManageAccountsModal" /* 18173 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import StreamerModeStore from "StreamerModeStore" /* 5100 */;
 import UserStore from "UserStore" /* 1387 */;
-import MultiAccountStore from "MultiAccountStore" /* 13385 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15104 */;
+import MultiAccountStore from "MultiAccountStore" /* 13393 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 15111 */;
 
 const CircleInformationIcon = CheckmarkSmallIcon(5747);
 const CheckmarkSmallIcon2 = CheckmarkSmallIcon(7491);
@@ -231,8 +231,8 @@ function AccountSwitcherRailContent() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(13385).MultiAccountTokenStatus;
-let Constants = fn(13386);
+const MultiAccountTokenStatus = fn(13393).MultiAccountTokenStatus;
+let Constants = fn(13394);
 ({ MAX_ACCOUNTS: map1, MultiAccountSwitchLocation: closure_14 } = Constants);
 Constants = fn(1071);
 ({ AnalyticEvents: closure_15, AuthStates: closure_16 } = Constants);

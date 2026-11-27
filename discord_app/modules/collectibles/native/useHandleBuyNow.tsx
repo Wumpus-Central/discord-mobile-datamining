@@ -1,6 +1,6 @@
-// === Module 11630: useHandleBuyNow ===
+// === Module 11638: useHandleBuyNow ===
 
-// Module 11630 (useHandleBuyNow)
+// Module 11638 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -26,7 +26,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -57,9 +57,9 @@ function useHandleBuyNow(product) {
           v1(5257).hideAllActionSheets();
           const obj = v1(5257);
           const obj8 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_2 };
-          v1(9410).open(obj8);
+          v1(9411).open(obj8);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -69,7 +69,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(11577)({
+  const tmp3 = onBuySettled(11585)({
     product,
     analyticsLocations,
     onPurchaseComplete() {
@@ -107,7 +107,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

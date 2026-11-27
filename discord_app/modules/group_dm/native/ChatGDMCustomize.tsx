@@ -1,6 +1,6 @@
-// === Module 11419: ChatGDMCustomize ===
+// === Module 11420: ChatGDMCustomize ===
 
-// Module 11419 (ChatGDMCustomize)
+// Module 11420 (ChatGDMCustomize)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -138,7 +138,7 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

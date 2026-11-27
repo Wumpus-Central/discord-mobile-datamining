@@ -1,13 +1,13 @@
-// === Module 12335: GameOrganizationInviteSummary ===
+// === Module 12343: GameOrganizationInviteSummary ===
 
-// Module 12335 (GameOrganizationInviteSummary)
+// Module 12343 (GameOrganizationInviteSummary)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2651 from "module_2651" /* 2651 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import GroupIcon from "GroupIcon" /* 7155 */;
-import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12126 */;
+import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

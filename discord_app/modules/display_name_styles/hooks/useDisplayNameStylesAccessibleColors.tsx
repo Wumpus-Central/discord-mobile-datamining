@@ -1,6 +1,6 @@
-// === Module 9810: useDisplayNameStylesAccessibleColors ===
+// === Module 9811: useDisplayNameStylesAccessibleColors ===
 
-// Module 9810 (useDisplayNameStylesAccessibleColors)
+// Module 9811 (useDisplayNameStylesAccessibleColors)
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1395 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;

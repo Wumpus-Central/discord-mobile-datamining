@@ -1,8 +1,8 @@
-// === Module 18665: useConjureTipContext ===
+// === Module 18680: useConjureTipContext ===
 
-// Module 18665 (useConjureTipContext)
-import conjureTipImpressions from "conjureTipImpressions" /* 18664 */;
-import conjureTipDismissals from "conjureTipDismissals" /* 18670 */;
+// Module 18680 (useConjureTipContext)
+import conjureTipImpressions from "conjureTipImpressions" /* 18679 */;
+import conjureTipDismissals from "conjureTipDismissals" /* 18684 */;
 import UserStore from "UserStore" /* 1387 */;
 import ConjureSettingsStore from "ConjureSettingsStore" /* 7710 */;
 
@@ -79,8 +79,13 @@ export default function useConjureTipContext(projectId, arr, draftHasText, onAsk
   if (id1 == null) {
     id1 = id;
   }
-  let num2;
+  let id2;
   const tmp4Result15 = require("conjureTipTurn");
+  if (atResult != null) {
+    id2 = atResult.id;
+  }
+  const tmpResultResult = tmp(stateFromStores[7])(projectId, projectEvent1, id2);
+  let num2;
   if (projectEvent1 != null) {
     const settings_keys = projectEvent1.settings_keys;
     if (settings_keys != null) {
@@ -90,7 +95,7 @@ export default function useConjureTipContext(projectId, arr, draftHasText, onAsk
   if (num2 == null) {
     num2 = 0;
   }
-  const tmp17 = tmp(stateFromStores[7])(projectId, projectEvent1);
+  let tmpResult = tmp(stateFromStores[7]);
   const items1 = [num2];
   const items2 = [num2, projectId];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
@@ -117,7 +122,11 @@ export default function useConjureTipContext(projectId, arr, draftHasText, onAsk
     const tmp4Result21 = tmp4(tmp2[9]);
   }
   if (!hasRunningTurnResult) {
-    hasRunningTurnResult = null != tmp17;
+    let open;
+    if (tmpResultResult != null) {
+      open = tmpResultResult.open;
+    }
+    hasRunningTurnResult = true === open;
   }
   if (!hasRunningTurnResult) {
     hasRunningTurnResult = stateFromStores1;

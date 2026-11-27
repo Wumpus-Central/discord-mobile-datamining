@@ -1,17 +1,17 @@
-// === Module 15393: GuildActionSheetGameProfileButton ===
+// === Module 15400: GuildActionSheetGameProfileButton ===
 
-// Module 15393 (GuildActionSheetGameProfileButton)
+// Module 15400 (GuildActionSheetGameProfileButton)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import _modDef7757 from "module_7757" /* 7757 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8745 */;
-import GuildActionSheetAnalyticsUtils from "GuildActionSheetAnalyticsUtils" /* 15391 */;
-import GuildActionSheetTypes from "GuildActionSheetTypes" /* 15392 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8746 */;
+import GuildActionSheetAnalyticsUtils from "GuildActionSheetAnalyticsUtils" /* 15398 */;
+import GuildActionSheetTypes from "GuildActionSheetTypes" /* 15399 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GameProfileButton(applicationId) {
   const guildId = applicationId.guildId;
-  let obj = { applicationId: applicationId.applicationId, source: guildId(8754).GameProfileSources.GuildActionSheet, trackEntryPointImpression: true };
+  let obj = { applicationId: applicationId.applicationId, source: guildId(8755).GameProfileSources.GuildActionSheet, trackEntryPointImpression: true };
   const tmp3Result = useOpenGameProfileModalDefault(obj, {
     onOpened(gameId) {
       const obj = GuildActionSheetAnalyticsUtils;

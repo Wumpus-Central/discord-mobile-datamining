@@ -1,6 +1,6 @@
-// === Module 14564: UserProfileAddGameActionSheet ===
+// === Module 14571: UserProfileAddGameActionSheet ===
 
-// Module 14564 (UserProfileAddGameActionSheet)
+// Module 14571 (UserProfileAddGameActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2152 */;
@@ -12,14 +12,14 @@ import TableRow from "TableRow" /* 6144 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 6171 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 6382 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 8058 */;
-import _mod9213 from "module_9213" /* 9213 */;
-import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13354 */;
-import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 14563 */;
-import WidgetUtils from "WidgetUtils" /* 14570 */;
+import _mod9214 from "module_9214" /* 9214 */;
+import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13362 */;
+import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 14570 */;
+import WidgetUtils from "WidgetUtils" /* 14577 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import WidgetStore from "WidgetStore" /* 14565 */;
+import WidgetStore from "WidgetStore" /* 14572 */;
 
 require = fn;
 const View = fn(17).View;
@@ -270,7 +270,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     if (!closure_5) {
       if ("" !== query.trim()) {
         const obj2 = { keys: ["label"] };
-        length = _mod9213.matchSorter(memo1, query, obj2).length;
+        length = _mod9214.matchSorter(memo1, query, obj2).length;
       }
       return length;
     }

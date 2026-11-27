@@ -1,6 +1,6 @@
-// === Module 12892: CheckpointTruncatedText ===
+// === Module 12900: CheckpointTruncatedText ===
 
-// Module 12892 (CheckpointTruncatedText)
+// Module 12900 (CheckpointTruncatedText)
 import Text_Text from "Text/Text" /* 5634 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import _slicedToArray from "module_32" /* 32 */;

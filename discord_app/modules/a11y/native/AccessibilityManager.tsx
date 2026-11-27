@@ -1,13 +1,13 @@
-// === Module 15837: AccessibilityManager ===
+// === Module 15844: AccessibilityManager ===
 
-// Module 15837 (AccessibilityManager)
+// Module 15844 (AccessibilityManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import ThemeActionCreators from "ThemeActionCreators" /* 5103 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11786 */;
-import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 15838 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 15839 */;
-import updateSaturation from "updateSaturation" /* 15841 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11794 */;
+import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 15845 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 15846 */;
+import updateSaturation from "updateSaturation" /* 15848 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
@@ -56,7 +56,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -89,7 +89,7 @@ export default {
             closure_128_0 = value;
             const result = closure_129_0.updateScreenReaderEnabled(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;

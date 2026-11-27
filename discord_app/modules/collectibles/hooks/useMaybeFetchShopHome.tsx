@@ -1,6 +1,6 @@
-// === Module 17486: useMaybeFetchShopHome ===
+// === Module 17493: useMaybeFetchShopHome ===
 
-// Module 17486 (useMaybeFetchShopHome)
+// Module 17493 (useMaybeFetchShopHome)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
 import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 6357 */;
 import _slicedToArray from "module_32" /* 32 */;

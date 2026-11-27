@@ -1,6 +1,6 @@
-// === Module 15087: E2eLatencyMeasurementExperiment ===
+// === Module 15094: E2eLatencyMeasurementExperiment ===
 
-// Module 15087 (E2eLatencyMeasurementExperiment)
+// Module 15094 (E2eLatencyMeasurementExperiment)
 import ApexExperiment from "ApexExperiment" /* 1451 */;
 import size from "module_2" /* 2 */;
 

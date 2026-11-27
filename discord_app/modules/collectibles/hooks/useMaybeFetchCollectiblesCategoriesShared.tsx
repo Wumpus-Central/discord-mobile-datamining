@@ -1,6 +1,6 @@
-// === Module 9427: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 9428: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 9427 (useMaybeFetchCollectiblesCategoriesShared)
+// Module 9428 (useMaybeFetchCollectiblesCategoriesShared)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6310 */;
 import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 6357 */;
 import _slicedToArray from "module_32" /* 32 */;

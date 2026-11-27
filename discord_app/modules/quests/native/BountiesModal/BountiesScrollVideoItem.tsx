@@ -1,15 +1,15 @@
-// === Module 16533: BountiesScrollVideoItem ===
+// === Module 16540: BountiesScrollVideoItem ===
 
-// Module 16533 (BountiesScrollVideoItem)
+// Module 16540 (BountiesScrollVideoItem)
 import QuestContent from "QuestContent" /* 6876 */;
 import AdCreativeType from "AdCreativeType" /* 6878 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13842 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16534 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13849 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16541 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9441 */;
-import BountyStore from "BountyStore" /* 8373 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9442 */;
+import BountyStore from "BountyStore" /* 8374 */;
 
 require = fn;
 function BountiesScrollVideoItemInner(bounty) {
@@ -124,7 +124,7 @@ function BountiesScrollVideoItemInner(bounty) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -179,7 +179,7 @@ function BountiesScrollVideoItemInner(bounty) {
             });
           }
           c5 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -310,7 +310,7 @@ export function BountiesScrollVideoItem(bounty) {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(13842).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(13849).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(6878).AdCreativeType.BOUNTY,
     questContent: bounty(6876).QuestContent.VIDEO_MODAL_MOBILE,

@@ -1,13 +1,13 @@
-// === Module 10265: FocusedControls ===
+// === Module 10266: FocusedControls ===
 
-// Module 10265 (FocusedControls)
+// Module 10266 (FocusedControls)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7480 */;
 import inlineStyles from "inlineStyles" /* 7946 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10266 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10267 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -114,7 +114,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   const globalStatusIndicatorHeightSharedValue = require("GlobalStatusIndicator").useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
   let obj2 = require("GlobalStatusIndicator");
   let reveal = noop.useContext(require("RevealProvider").RevealContext).reveal;
-  const tmp6 = analyticsLocations(10266)();
+  const tmp6 = analyticsLocations(10267)();
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   if (!reveal) {
     reveal = forceReveal;
@@ -180,7 +180,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   const animatedStyle = require("module_1654").useAnimatedStyle(FocusedControlsTsx5);
   const tmpResult4 = require("module_1654");
   analyticsLocations = analyticsLocations(6379)(tmp5(6380).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  dependencyMap = tmp5(10193)();
+  dependencyMap = tmp5(10194)();
   if (containerStyle == null) {
     containerStyle = absoluteFill.absoluteFill;
   }
@@ -225,7 +225,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
         reveal,
         children
       };
-      tmp27Result = closure_7(tmp5(10283), obj5);
+      tmp27Result = closure_7(tmp5(10284), obj5);
     }
   }
   items7[2] = tmp27Result;

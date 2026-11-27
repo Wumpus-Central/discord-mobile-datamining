@@ -1,17 +1,17 @@
-// === Module 17625: RedesignSettingsNotificationScreen ===
+// === Module 17632: RedesignSettingsNotificationScreen ===
 
-// Module 17625 (RedesignSettingsNotificationScreen)
+// Module 17632 (RedesignSettingsNotificationScreen)
 import util from "util" /* 1112 */;
 import _modDef3207 from "module_3207" /* 3207 */;
 import useMountEffectDefault from "useMountEffect" /* 5604 */;
-import SettingBuilders from "SettingBuilders" /* 11962 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17626 */;
-import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 17627 */;
+import SettingBuilders from "SettingBuilders" /* 11970 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17633 */;
+import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 17634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(17096).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(9555).MobileUserSettings;
+let closure_4 = fn(17103).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(9556).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx");

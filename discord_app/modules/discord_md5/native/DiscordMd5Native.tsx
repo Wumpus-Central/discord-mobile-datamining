@@ -1,6 +1,6 @@
-// === Module 8143: DiscordMd5Native ===
+// === Module 8144: DiscordMd5Native ===
 
-// Module 8143 (DiscordMd5Native)
+// Module 8144 (DiscordMd5Native)
 import NativeFileModuleDefault from "NativeFileModule" /* 1148 */;
 import DiscordMd5 from "DiscordMd5" /* 7340 */;
 

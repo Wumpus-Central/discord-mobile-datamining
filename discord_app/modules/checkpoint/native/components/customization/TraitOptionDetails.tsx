@@ -1,10 +1,10 @@
-// === Module 12921: TraitOptionDetails ===
+// === Module 12929: TraitOptionDetails ===
 
-// Module 12921 (TraitOptionDetails)
+// Module 12929 (TraitOptionDetails)
 import nativeDefault from "native" /* 575 */;
 import _modDef3495 from "module_3495" /* 3495 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import RarityBadgeDefault from "RarityBadge" /* 12922 */;
+import RarityBadgeDefault from "RarityBadge" /* 12930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function OptionDescription(option) {
               const obj = { analyticsLocations: null };
               items = [closure_1_1(6380).CHECKPOINT, closure_1_1(6380).CHECKPOINT_TRAIT];
               obj.analyticsLocations = items;
-              return closure_1_1(9101)(obj);
+              return closure_1_1(9102)(obj);
             },
             accessibilityRole: "link",
             children

@@ -1,12 +1,12 @@
-// === Module 9417: AvatarDecorationSampleV2 ===
+// === Module 9418: AvatarDecorationSampleV2 ===
 
-// Module 9417 (AvatarDecorationSampleV2)
+// Module 9418 (AvatarDecorationSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2113 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import _modDef9418 from "module_9418" /* 9418 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9419 */;
+import _modDef9419 from "module_9419" /* 9419 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9420 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef9418;
+    avatarSource = _modDef9419;
   }
   const obj2 = { children: null };
   obj.source = avatarSource;

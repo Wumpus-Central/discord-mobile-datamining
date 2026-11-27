@@ -1,12 +1,12 @@
-// === Module 12531: AutomodQuarantineUtils ===
+// === Module 12539: AutomodQuarantineUtils ===
 
-// Module 12531 (AutomodQuarantineUtils)
+// Module 12539 (AutomodQuarantineUtils)
 import util from "util" /* 1112 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4981 */;
 import openUserSettings2 from "openUserSettings" /* 8109 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9439 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9440 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9437 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9438 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import GuildStore from "GuildStore" /* 4914 */;
@@ -45,7 +45,7 @@ export function useGuildAutomodProfileQuarantineErrors(id) {
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "Array", bio: "channel_id" };
+    const obj = { nick: "displayName", bio: "isArray" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

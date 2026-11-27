@@ -1,12 +1,12 @@
-// === Module 20032: GuildSettingsServerTagColorGrid ===
+// === Module 20057: GuildSettingsServerTagColorGrid ===
 
-// Module 20032 (GuildSettingsServerTagColorGrid)
+// Module 20057 (GuildSettingsServerTagColorGrid)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8579);
+const GuildTagConstants = fn(8580);
 ({ GUILD_TAG_BADGE_PALETTE_PRESETS: closure_4, GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: hasOwnProperty, GuildTagBadgeSize: closure_6 } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);

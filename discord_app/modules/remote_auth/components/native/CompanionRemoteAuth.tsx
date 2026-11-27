@@ -1,6 +1,6 @@
-// === Module 17700: CompanionRemoteAuth ===
+// === Module 17707: CompanionRemoteAuth ===
 
-// Module 17700 (CompanionRemoteAuth)
+// Module 17707 (CompanionRemoteAuth)
 import util from "util" /* 1112 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6047 */;
 import noop from "module_19" /* 19 */;

@@ -1,16 +1,16 @@
-// === Module 11095: MediaKeyboardList ===
+// === Module 11096: MediaKeyboardList ===
 
-// Module 11095 (MediaKeyboardList)
+// Module 11096 (MediaKeyboardList)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7879 */;
 import openPrivacySettingsDefault from "openPrivacySettings" /* 7880 */;
-import DeviceMediaDefault from "DeviceMedia" /* 11096 */;
-import MediaKeyboardItem from "MediaKeyboardItem" /* 11100 */;
-import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 11107 */;
-import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 11109 */;
+import DeviceMediaDefault from "DeviceMedia" /* 11097 */;
+import MediaKeyboardItem from "MediaKeyboardItem" /* 11101 */;
+import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 11108 */;
+import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 11110 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DimensionsStore from "DimensionsStore" /* 1496 */;
@@ -217,8 +217,8 @@ export default noop.memo(function MediaKeyboardList(channel) {
   const animatedReaction1 = require("module_1654").useAnimatedReaction(MediaKeyboardListTsx1, MediaKeyboardListTsx2);
   const tmp9Result5 = require("module_1654");
   if (flag) {
-    flag = tmp9(8138).isImageCaptureIntentSupported();
-    const tmp9Result6 = tmp9(8138);
+    flag = tmp9(8139).isImageCaptureIntentSupported();
+    const tmp9Result6 = tmp9(8139);
   }
   let num;
   if (assets != null) {
@@ -351,7 +351,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
     obj8.onScroll = callback;
     const intl = tmp9(1112).intl;
     obj8.accessibilityLabel = intl.string(tmp9(1112).t.XONG6A);
-    obj8.footerSize = tmp9(11107).FOOTER_HEIGHT;
+    obj8.footerSize = tmp9(11108).FOOTER_HEIGHT;
     obj8.renderFooter = callback4;
     obj8.chunkBase = minimum;
     let prop;

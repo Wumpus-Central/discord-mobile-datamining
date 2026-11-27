@@ -1,7 +1,7 @@
-// === Module 19743: HolidayEventsConfig ===
+// === Module 19759: HolidayEventsConfig ===
 
-// Module 19743 (HolidayEventsConfig)
-import HolidayRingtoneExperimentDefault from "HolidayRingtoneExperiment" /* 19744 */;
+// Module 19759 (HolidayEventsConfig)
+import HolidayRingtoneExperimentDefault from "HolidayRingtoneExperiment" /* 19760 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");
@@ -17,7 +17,7 @@ export default {
   startTimeMs: 1797267600000,
   endTimeMs: 1799082000000,
   isDesktopOnly: true,
-  soundpack: fn(10300).Soundpacks.WINTER_HOLIDAY,
+  soundpack: fn(10301).Soundpacks.WINTER_HOLIDAY,
   soundpackLabel: fn(1112).t.Z5OQNp,
   coachmarkDismissibleContent: fn(4876).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2026
 };

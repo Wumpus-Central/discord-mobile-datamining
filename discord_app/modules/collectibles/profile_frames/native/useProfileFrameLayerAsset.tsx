@@ -1,6 +1,6 @@
-// === Module 9507: useProfileFrameLayerAsset ===
+// === Module 9508: useProfileFrameLayerAsset ===
 
-// Module 9507 (useProfileFrameLayerAsset)
+// Module 9508 (useProfileFrameLayerAsset)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

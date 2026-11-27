@@ -1,11 +1,11 @@
-// === Module 13414: EmojiSuggestionBarSmall ===
+// === Module 13422: EmojiSuggestionBarSmall ===
 
-// Module 13414 (EmojiSuggestionBarSmall)
+// Module 13422 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 9732 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9754 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13397 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 9733 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9755 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13405 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -74,7 +74,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   });
 }
 const jsx = fn(21).jsx;
-const sum = fn(9540).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(9541).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 let closure_6 = sum + nativeDefault.space.PX_8;
 const createStyles = fn(5043);

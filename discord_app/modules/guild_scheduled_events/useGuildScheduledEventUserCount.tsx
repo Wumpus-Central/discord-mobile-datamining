@@ -1,8 +1,8 @@
-// === Module 8603: useGuildScheduledEventUserCount ===
+// === Module 8604: useGuildScheduledEventUserCount ===
 
-// Module 8603 (useGuildScheduledEventUserCount)
+// Module 8604 (useGuildScheduledEventUserCount)
 import _mod19 from "module_19" /* 19 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8604 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8605 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 5775 */;
 import size from "module_2" /* 2 */;
 

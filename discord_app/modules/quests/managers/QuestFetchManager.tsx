@@ -1,14 +1,14 @@
-// === Module 20301: QuestFetchManager ===
+// === Module 20359: QuestFetchManager ===
 
-// Module 20301 (QuestFetchManager)
+// Module 20359 (QuestFetchManager)
 import DurationsDefault from "Durations" /* 1088 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import DiscordAppStateDefault from "DiscordAppState" /* 6962 */;
-import QuestsEligibility from "QuestsEligibility" /* 9893 */;
-import QuestActionCreators from "QuestActionCreators" /* 9894 */;
+import QuestsEligibility from "QuestsEligibility" /* 9894 */;
+import QuestActionCreators from "QuestActionCreators" /* 9895 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 8374 */;
+import QuestStore from "QuestStore" /* 8375 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 require = fn;
@@ -52,7 +52,7 @@ class QuestFetchManager extends tmp2 {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -70,7 +70,7 @@ class QuestFetchManager extends tmp2 {
                 lastFetchAttemptedAt._fetch("post_connect_recurring");
               }
               c0 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp7) {
             c0 = tmp;

@@ -1,6 +1,6 @@
-// === Module 11508: closeFramePopout ===
+// === Module 11516: closeFramePopout ===
 
-// Module 11508 (closeFramePopout)
+// Module 11516 (closeFramePopout)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/closeFramePopout.native.tsx");

@@ -1,13 +1,13 @@
-// === Module 12447: ForumPostMedia ===
+// === Module 12455: ForumPostMedia ===
 
-// Module 12447 (ForumPostMedia)
+// Module 12455 (ForumPostMedia)
 import nativeDefault from "native" /* 575 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1494 */;
 import UserSettings from "UserSettings" /* 4868 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5611 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 12448 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12450 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 12456 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12458 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
@@ -79,9 +79,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(12449), obj2);
+    let tmp6Result = closure_9(ref(12457), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(12449);
+    const tmp19 = ref(12457);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -97,7 +97,7 @@ function ForumPostMedia(obscureReason) {
     tmp3Result = tmp3(1379);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(8815).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(8816).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };

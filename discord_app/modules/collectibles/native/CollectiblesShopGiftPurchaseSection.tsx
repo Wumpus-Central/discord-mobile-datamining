@@ -1,6 +1,6 @@
-// === Module 11575: CollectiblesShopGiftPurchaseSection ===
+// === Module 11583: CollectiblesShopGiftPurchaseSection ===
 
-// Module 11575 (CollectiblesShopGiftPurchaseSection)
+// Module 11583 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
@@ -14,7 +14,7 @@ import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(9118).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(9119).useNativeCheckoutStore;
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
 const PremiumConstants = fn(1389);
@@ -176,7 +176,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

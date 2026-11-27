@@ -1,8 +1,8 @@
-// === Module 15839: AccessibilityPreferencesSharedValue ===
+// === Module 15846: AccessibilityPreferencesSharedValue ===
 
-// Module 15839 (AccessibilityPreferencesSharedValue)
+// Module 15846 (AccessibilityPreferencesSharedValue)
 import AccessibilityConstants from "AccessibilityConstants" /* 1363 */;
-import native from "native" /* 15404 */;
+import native from "native" /* 15411 */;
 import size from "module_2" /* 2 */;
 
 const AccessibilityFeatureFlags = AccessibilityConstants.AccessibilityFeatureFlags;

@@ -1,6 +1,6 @@
-// === Module 17994: GameClaimCoachmarkExperiment ===
+// === Module 18001: GameClaimCoachmarkExperiment ===
 
-// Module 17994 (GameClaimCoachmarkExperiment)
+// Module 18001 (GameClaimCoachmarkExperiment)
 import createExperiment from "module_6044" /* 6044 */;
 import size from "module_2" /* 2 */;
 

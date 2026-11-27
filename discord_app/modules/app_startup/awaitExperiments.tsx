@@ -1,7 +1,7 @@
-// === Module 15625: awaitExperiments ===
+// === Module 15632: awaitExperiments ===
 
-// Module 15625 (awaitExperiments)
-import Future from "Future" /* 10050 */;
+// Module 15632 (awaitExperiments)
+import Future from "Future" /* 10051 */;
 import size from "module_2" /* 2 */;
 
 const future = new Future.Future();

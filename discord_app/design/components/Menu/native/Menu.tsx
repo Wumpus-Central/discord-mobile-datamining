@@ -1,6 +1,6 @@
-// === Module 15406: Menu ===
+// === Module 15413: Menu ===
 
-// Module 15406 (Menu)
+// Module 15413 (Menu)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
@@ -13,7 +13,7 @@ import timing_timing from "timing/timing" /* 5253 */;
 import spring_spring from "spring/spring" /* 5644 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6110 */;
-import PassthroughTouchViewDefault from "PassthroughTouchView" /* 15409 */;
+import PassthroughTouchViewDefault from "PassthroughTouchView" /* 15416 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1071).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25 };
-let obj = { duration: 250, easing: fn(15407).STANDARD_EASING };
+let obj = { duration: 250, easing: fn(15414).STANDARD_EASING };
 const createStyles = fn(5043);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};
@@ -147,7 +147,7 @@ export function Menu(toggleButtonRef) {
   const items4 = [menuClose, callback1];
   const memo = obj.useMemo(() => ({ menuClose, menuDismiss: callback1 }), items4);
   const obj3 = require("module_1654");
-  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(15408).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(15415).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
   if ("left" === position) {
     let str2 = "column";
   } else {

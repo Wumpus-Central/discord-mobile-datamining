@@ -1,6 +1,6 @@
-// === Module 12153: NsfwGateGuildAlert ===
+// === Module 12161: NsfwGateGuildAlert ===
 
-// Module 12153 (NsfwGateGuildAlert)
+// Module 12161 (NsfwGateGuildAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import useAlertStore from "useAlertStore" /* 6048 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7570 */;
@@ -45,7 +45,7 @@ class NsfwGateGuildAlert {
     intl = guildId(closure_2[9]).intl;
     obj.title = intl.string(guildId(closure_2[9]).t.JqfHGt);
     intl2 = guildId(closure_2[9]).intl;
-    obj.content = intl2.string(guildId(closure_2[9]).t.EdXn1A);
+    obj.content = intl2.string(guildId(closure_2[9]).t["24d90k"]);
     obj1 = { text: null, onPress: null };
     intl3 = guildId(closure_2[9]).intl;
     obj1.text = intl3.string(guildId(closure_2[9]).t.wi6hPV);

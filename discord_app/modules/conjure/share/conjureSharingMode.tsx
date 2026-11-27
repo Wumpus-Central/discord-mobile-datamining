@@ -1,7 +1,7 @@
-// === Module 18478: conjureSharingMode ===
+// === Module 18485: conjureSharingMode ===
 
-// Module 18478 (conjureSharingMode)
-import conjureSharingFlags from "conjureSharingFlags" /* 18479 */;
+// Module 18485 (conjureSharingMode)
+import conjureSharingFlags from "conjureSharingFlags" /* 18486 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/share/conjureSharingMode.tsx");

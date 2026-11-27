@@ -1,6 +1,6 @@
-// === Module 12845: useCheckpointCharacterOutfitPreload ===
+// === Module 12853: useCheckpointCharacterOutfitPreload ===
 
-// Module 12845 (useCheckpointCharacterOutfitPreload)
+// Module 12853 (useCheckpointCharacterOutfitPreload)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

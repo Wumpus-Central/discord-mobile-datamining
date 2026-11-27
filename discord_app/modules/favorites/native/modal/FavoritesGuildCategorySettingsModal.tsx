@@ -1,11 +1,11 @@
-// === Module 17840: FavoritesGuildCategorySettingsModal ===
+// === Module 17847: FavoritesGuildCategorySettingsModal ===
 
-// Module 17840 (FavoritesGuildCategorySettingsModal)
+// Module 17847 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10741 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10742 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 4895 */;
@@ -132,12 +132,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(11415)().onGoBack;
+  onGoBack = onGoBack(11416)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1112).intl;
   obj.title = intl.string(categoryId(1112).t["/uELTj"]);
   obj.render = function render() {
     return React5(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(11417), obj);
+  return closure_8(onGoBack(11418), obj);
 };

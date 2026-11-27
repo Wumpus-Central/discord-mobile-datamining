@@ -1,6 +1,6 @@
-// === Module 15038: UserProfilePrivacyNotice ===
+// === Module 15045: UserProfilePrivacyNotice ===
 
-// Module 15038 (UserProfilePrivacyNotice)
+// Module 15045 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 5634 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5747 */;
 import Pressables from "Pressables" /* 6152 */;
 import XSmallIcon from "XSmallIcon" /* 7247 */;
-import useUserIsTeen from "useUserIsTeen" /* 8210 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9561 */;
+import useUserIsTeen from "useUserIsTeen" /* 8211 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9562 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 8421: ApplicationStreamPreviewStore ===
+// === Module 8422: ApplicationStreamPreviewStore ===
 
-// Module 8421 (ApplicationStreamPreviewStore)
+// Module 8422 (ApplicationStreamPreviewStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

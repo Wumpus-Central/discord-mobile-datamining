@@ -1,13 +1,13 @@
-// === Module 18179: YouBarAvatar ===
+// === Module 18186: YouBarAvatar ===
 
-// Module 18179 (YouBarAvatar)
+// Module 18186 (YouBarAvatar)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import _mod1707 from "module_1707" /* 1707 */;
 import native2 from "native" /* 5104 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
-import ClipView from "ClipView" /* 9420 */;
+import ClipView from "ClipView" /* 9421 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -206,8 +206,8 @@ function YouBarAvatarLarge(transitionState) {
     size2 = { width: YOU_BAR_AVATAR_LARGE_PX, height: YOU_BAR_AVATAR_LARGE_PX, borderRadius: YOU_BAR_AVATAR_LARGE_PX / 2, backgroundColor: token };
     obj6.style = size2;
     obj5.children = closure_22(c6, obj6);
-    const items8 = [closure_22(tmp35(9420), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "result" };
+    const items8 = [closure_22(tmp35(9421), obj5), , , ];
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: 0 };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }
@@ -218,7 +218,7 @@ function YouBarAvatarLarge(transitionState) {
     obj7.statusStyle = rect;
     items8[1] = closure_22(tmp2(1186).Avatar, obj7);
     let mapped;
-    const tmp35Result = tmp35(9420);
+    const tmp35Result = tmp35(9421);
     const tmp44 = c6;
     if (memo != null) {
       const nativeCutouts1 = memo.nativeCutouts;
@@ -239,30 +239,30 @@ function YouBarAvatarLarge(transitionState) {
     const size4 = { width: YOU_BAR_AVATAR_LARGE_PX + 2, height: YOU_BAR_AVATAR_LARGE_PX + 2, borderRadius: (YOU_BAR_AVATAR_LARGE_PX + 2) / 2, borderWidth: 1, borderColor: tmp38 };
     obj9.style = size4;
     obj8.children = closure_22(tmp44, obj9);
-    items8[2] = closure_22(tmp35(9420), obj8);
+    items8[2] = closure_22(tmp35(9421), obj8);
     let tmp41Result = null != avatarDecoration;
     if (tmp41Result) {
       const obj10 = { size: null, avatarDecoration: null, decorationStyle: null, animate: null, cutout: null };
-      const tmp35Result4 = tmp35(9419);
-      obj10.size = tmp2(14455).getDecorationSizeForAvatarSize(tmp45);
+      const tmp35Result4 = tmp35(9420);
+      obj10.size = tmp2(14462).getDecorationSizeForAvatarSize(tmp45);
       obj10.avatarDecoration = avatarDecoration;
       const rect1 = { position: "absolute", top: null, left: null };
-      const tmp2Result20 = tmp2(14455);
-      rect1.top = -tmp2(14455).getDecorationSizeForAvatarSize(tmp45) - YOU_BAR_AVATAR_LARGE_PX / 2;
-      const tmp2Result21 = tmp2(14455);
-      rect1.left = -tmp2(14455).getDecorationSizeForAvatarSize(tmp45) - YOU_BAR_AVATAR_LARGE_PX / 2;
+      const tmp2Result20 = tmp2(14462);
+      rect1.top = -tmp2(14462).getDecorationSizeForAvatarSize(tmp45) - YOU_BAR_AVATAR_LARGE_PX / 2;
+      const tmp2Result21 = tmp2(14462);
+      rect1.left = -tmp2(14462).getDecorationSizeForAvatarSize(tmp45) - YOU_BAR_AVATAR_LARGE_PX / 2;
       obj10.decorationStyle = rect1;
       obj10.animate = stateFromStores1 && "always";
-      const tmp2Result22 = tmp2(14455);
-      const tmp2Result23 = tmp2(14455);
-      obj10.cutout = tmp2Result23.getDecorationCutoutForAvatarCutout(memo, (tmp2(14455).getDecorationSizeForAvatarSize(tmp45) - YOU_BAR_AVATAR_LARGE_PX) / 2);
+      const tmp2Result22 = tmp2(14462);
+      const tmp2Result23 = tmp2(14462);
+      obj10.cutout = tmp2Result23.getDecorationCutoutForAvatarCutout(memo, (tmp2(14462).getDecorationSizeForAvatarSize(tmp45) - YOU_BAR_AVATAR_LARGE_PX) / 2);
       tmp41Result = closure_22(tmp35Result4, obj10, avatarDecoration.asset);
-      const tmp2Result24 = tmp2(14455);
+      const tmp2Result24 = tmp2(14462);
     }
     items8[3] = tmp41Result;
     obj4.children = items8;
     tmp40Result = closure_23(tmp35(1654).View, obj4);
-    const tmp35Result3 = tmp35(9420);
+    const tmp35Result3 = tmp35(9421);
   }
   return tmp40Result;
 }
@@ -372,7 +372,7 @@ function YouBarAvatar(transitionState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
-const YouBarConstants = fn(16683);
+const YouBarConstants = fn(16690);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_11, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT } = YouBarConstants);
 ({ YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING } = YouBarConstants);
 ({ YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX } = YouBarConstants);
@@ -452,7 +452,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -483,7 +483,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
           value.openUserSettings();
           closure_128_2(false);
           paths = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         paths = tmp;

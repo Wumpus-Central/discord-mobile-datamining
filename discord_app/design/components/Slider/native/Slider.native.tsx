@@ -1,10 +1,10 @@
-// === Module 10398: Slider ===
+// === Module 10399: Slider ===
 
-// Module 10398 (Slider)
+// Module 10399 (Slider)
 import nativeDefault from "native" /* 575 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5260 */;
-import _modDef8859 from "module_8859" /* 8859 */;
+import _modDef8860 from "module_8860" /* 8860 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -131,11 +131,11 @@ export function Slider(maxValue) {
       tmp2(arg0);
     }
   };
-  const tmp21 = _modDef8859;
+  const tmp21 = _modDef8860;
   if (tmp2Result.isThemeDark(obj.useThemeContext().theme)) {
-    let tmp2Result3 = tmp2(10399);
+    let tmp2Result3 = tmp2(10400);
   } else {
-    tmp2Result3 = tmp2(10400);
+    tmp2Result3 = tmp2(10401);
   }
   obj5.thumbImage = tmp2Result3;
   obj5.thumbSize = 1.625 * num2;

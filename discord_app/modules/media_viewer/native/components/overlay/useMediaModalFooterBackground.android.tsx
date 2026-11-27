@@ -1,6 +1,6 @@
-// === Module 14137: useMediaModalFooterBackground ===
+// === Module 14144: useMediaModalFooterBackground ===
 
-// Module 14137 (useMediaModalFooterBackground)
+// Module 14144 (useMediaModalFooterBackground)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useToken from "useToken" /* 5607 */;

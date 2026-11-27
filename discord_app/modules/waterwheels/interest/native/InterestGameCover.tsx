@@ -1,7 +1,7 @@
-// === Module 18054: InterestGameCover ===
+// === Module 18061: InterestGameCover ===
 
-// Module 18054 (InterestGameCover)
-import GameCoverDefault from "GameCover" /* 18029 */;
+// Module 18061 (InterestGameCover)
+import GameCoverDefault from "GameCover" /* 18036 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 10196: handleJoinEmbeddedActivity ===
+// === Module 10197: handleJoinEmbeddedActivity ===
 
-// Module 10196 (handleJoinEmbeddedActivity)
+// Module 10197 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -22,7 +22,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

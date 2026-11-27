@@ -1,6 +1,6 @@
-// === Module 20076: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 20134: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 20076 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 20134 (GuildSettingsRoleEditConnectionConfiguration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -13,8 +13,8 @@ import TableRow from "TableRow" /* 6144 */;
 import Pressables from "Pressables" /* 6152 */;
 import PlatformsDefault from "Platforms" /* 6178 */;
 import XSmallIcon from "XSmallIcon" /* 7247 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 12043 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 20077 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 12051 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 20135 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -175,7 +175,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(20077).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(20135).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -183,9 +183,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(20077);
-  const tmpResult = metadataField(20077);
-  str1 = metadataField(20077).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(20135);
+  const tmpResult = metadataField(20135);
+  str1 = metadataField(20135).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -299,7 +299,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
     };
     return onInputValueChange(metadataField(7549).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(20077).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(20135).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);

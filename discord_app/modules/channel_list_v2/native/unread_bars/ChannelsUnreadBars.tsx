@@ -1,12 +1,12 @@
-// === Module 17903: ChannelsUnreadBars ===
+// === Module 17910: ChannelsUnreadBars ===
 
-// Module 17903 (ChannelsUnreadBars)
+// Module 17910 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5260 */;
 import useFontScale from "useFontScale" /* 5649 */;
 import FastList from "FastList" /* 7428 */;
-import ChannelListState from "ChannelListState" /* 8286 */;
+import ChannelListState from "ChannelListState" /* 8287 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;

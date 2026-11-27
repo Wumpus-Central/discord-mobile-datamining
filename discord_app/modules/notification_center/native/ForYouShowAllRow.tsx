@@ -1,6 +1,6 @@
-// === Module 18292: ForYouShowAllRow ===
+// === Module 18299: ForYouShowAllRow ===
 
-// Module 18292 (ForYouShowAllRow)
+// Module 18299 (ForYouShowAllRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -10,10 +10,10 @@ import Text_Text from "Text/Text" /* 5634 */;
 import useFontScale from "useFontScale" /* 5649 */;
 import Pressables from "Pressables" /* 6152 */;
 import _modDef7500 from "module_7500" /* 7500 */;
-import ChannelListLayout from "ChannelListLayout" /* 10643 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 15480 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 18287 */;
-import ChannelWrapper from "ChannelWrapper" /* 18288 */;
+import ChannelListLayout from "ChannelListLayout" /* 10644 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 15487 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 18294 */;
+import ChannelWrapper from "ChannelWrapper" /* 18295 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ function ForYouShowAllRow(panelVariant) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1071).AnalyticEvents;
-const Sections = fn(13694).Sections;
+const Sections = fn(13701).Sections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5043);
@@ -104,7 +104,7 @@ export function ForYouSuggestedFriendShowAllRow(suggestedFriends) {
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: false };
+        const obj = { user: user.user, guildId: "Array", size: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000936698893569099 };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;

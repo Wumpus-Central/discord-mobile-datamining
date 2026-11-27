@@ -1,15 +1,15 @@
-// === Module 16227: SettingsAgeGroupScreen ===
+// === Module 16234: SettingsAgeGroupScreen ===
 
-// Module 16227 (SettingsAgeGroupScreen)
+// Module 16234 (SettingsAgeGroupScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import _modDef3499 from "module_3499" /* 3499 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7870 */;
-import SettingBuilders from "SettingBuilders" /* 11962 */;
-import SettingLayoutDefault from "SettingLayout" /* 16190 */;
-import AgeNoticeAgeGroupHeader2 from "AgeNoticeAgeGroupHeader" /* 16228 */;
+import SettingBuilders from "SettingBuilders" /* 11970 */;
+import SettingLayoutDefault from "SettingLayout" /* 16197 */;
+import AgeNoticeAgeGroupHeader2 from "AgeNoticeAgeGroupHeader" /* 16235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ function SettingsAgeGroupHeader() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(9555).MobileUserSettings;
+const MobileUserSettings = fn(9556).MobileUserSettings;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -42,7 +42,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(16186).useIsAgeNoticeSettingsEnabled();
+  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(16193).useIsAgeNoticeSettingsEnabled();
   items = [isAgeNoticeSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };

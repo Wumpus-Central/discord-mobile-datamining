@@ -1,7 +1,7 @@
-// === Module 20023: GuildSettingsModalSoundboardSoundInfoActionSheet ===
+// === Module 20048: GuildSettingsModalSoundboardSoundInfoActionSheet ===
 
-// Module 20023 (GuildSettingsModalSoundboardSoundInfoActionSheet)
-import showSoundboardSoundEditModalDefault from "showSoundboardSoundEditModal" /* 20014 */;
+// Module 20048 (GuildSettingsModalSoundboardSoundInfoActionSheet)
+import showSoundboardSoundEditModalDefault from "showSoundboardSoundEditModal" /* 20039 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ export default noop.memo(function GuildSettingsModalSoundboardSoundInfoActionShe
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

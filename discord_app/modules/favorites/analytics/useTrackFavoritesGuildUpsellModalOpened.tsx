@@ -1,6 +1,6 @@
-// === Module 10746: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10747: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 10746 (useTrackFavoritesGuildUpsellModalOpened)
+// Module 10747 (useTrackFavoritesGuildUpsellModalOpened)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;

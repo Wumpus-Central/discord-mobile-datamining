@@ -1,13 +1,13 @@
-// === Module 14944: UserProfileVoiceSettings ===
+// === Module 14951: UserProfileVoiceSettings ===
 
-// Module 14944 (UserProfileVoiceSettings)
+// Module 14951 (UserProfileVoiceSettings)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5996 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6004 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8684 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13618 */;
-import completeStreamVolumeMovedTutorialDefault from "completeStreamVolumeMovedTutorial" /* 14948 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8685 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13625 */;
+import completeStreamVolumeMovedTutorialDefault from "completeStreamVolumeMovedTutorial" /* 14955 */;
 import noop from "module_19" /* 19 */;
 import SoundboardStore from "SoundboardStore" /* 6923 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
@@ -280,9 +280,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(8657).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(8658).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10504).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10505).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;

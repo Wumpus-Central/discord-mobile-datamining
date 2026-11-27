@@ -1,15 +1,15 @@
-// === Module 15320: ServerTagPreviewActionSheet ===
+// === Module 15327: ServerTagPreviewActionSheet ===
 
-// Module 15320 (ServerTagPreviewActionSheet)
+// Module 15327 (ServerTagPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8544 */;
-import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 15321 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8545 */;
+import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 15328 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(8542).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(8543).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/ServerT
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_8();
-  const guildProfile1 = guildId(8543).useGuildProfile(guildId);
+  const guildProfile1 = guildId(8544).useGuildProfile(guildId);
   let guildProfile = guildProfile1.guildProfile;
   items = [guildId];
   const effect = noop.useEffect(() => {

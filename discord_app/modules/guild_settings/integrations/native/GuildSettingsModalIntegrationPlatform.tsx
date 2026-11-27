@@ -1,6 +1,6 @@
-// === Module 20038: GuildSettingsModalIntegrationPlatform ===
+// === Module 20063: GuildSettingsModalIntegrationPlatform ===
 
-// Module 20038 (GuildSettingsModalIntegrationPlatform)
+// Module 20063 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1413 */;
@@ -15,11 +15,11 @@ import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import TableSwitchRow from "TableSwitchRow" /* 7549 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
 import openUserSettings from "openUserSettings" /* 8109 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
-import IntegrationTypes from "IntegrationTypes" /* 19949 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 19979 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8574 */;
+import IntegrationTypes from "IntegrationTypes" /* 19965 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 19995 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8575 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

@@ -1,10 +1,10 @@
-// === Module 12629: useCheckpointGuildsBarEntrypoint ===
+// === Module 12637: useCheckpointGuildsBarEntrypoint ===
 
-// Module 12629 (useCheckpointGuildsBarEntrypoint)
+// Module 12637 (useCheckpointGuildsBarEntrypoint)
 import dismissible_content from "dismissible_content" /* 4876 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5075 */;
 import CheckpointExperiments from "CheckpointExperiments" /* 6769 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9561 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9562 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

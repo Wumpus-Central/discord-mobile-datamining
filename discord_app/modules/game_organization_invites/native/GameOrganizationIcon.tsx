@@ -1,6 +1,6 @@
-// === Module 12126: GameOrganizationIcon ===
+// === Module 12134: GameOrganizationIcon ===
 
-// Module 12126 (GameOrganizationIcon)
+// Module 12134 (GameOrganizationIcon)
 import nativeDefault from "native" /* 575 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 2157 */;
 import FastImageDefault from "FastImage" /* 5730 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-let obj = { guild: fn(12127).GuildFallbackAbstractUI, character: fn(12131).CharacterFallbackAbstractUI };
+let obj = { guild: fn(12135).GuildFallbackAbstractUI, character: fn(12139).CharacterFallbackAbstractUI };
 const createStyles = fn(5043);
 let closure_8 = createStyles.createStyles((width, borderRadius) => {
   obj = { icon: null };

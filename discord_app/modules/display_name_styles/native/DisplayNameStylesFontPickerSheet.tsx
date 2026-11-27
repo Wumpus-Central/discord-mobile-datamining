@@ -1,6 +1,6 @@
-// === Module 16950: DisplayNameStylesFontPickerSheet ===
+// === Module 16957: DisplayNameStylesFontPickerSheet ===
 
-// Module 16950 (DisplayNameStylesFontPickerSheet)
+// Module 16957 (DisplayNameStylesFontPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
@@ -38,7 +38,7 @@ let obj8 = { height: 64, flexDirection: "row", alignItems: "center", gap: native
 obj2.campaignCardSelected = { borderColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND };
 obj2.campaignLogoFrame = { width: 48, height: 48, alignItems: "center", justifyContent: "center" };
 obj2.campaignLogo = { width: 32, height: 24 };
-obj2.campaignName = { flex: 1, fontFamily: fn(8713).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT] };
+obj2.campaignName = { flex: 1, fontFamily: fn(8714).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT] };
 obj2.campaignNameFallback = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj2.campaignLegal = { paddingHorizontal: 2 };
 const size1 = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8, width: nativeDefault.space.PX_8, height: nativeDefault.space.PX_8, borderRadius: nativeDefault.space.PX_8 / 2, backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND, shadowColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND, shadowRadius: nativeDefault.space.PX_4, shadowOpacity: 1, elevation: 4 };

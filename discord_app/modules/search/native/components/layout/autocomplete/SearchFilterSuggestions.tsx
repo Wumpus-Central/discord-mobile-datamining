@@ -1,11 +1,11 @@
-// === Module 18932: SearchFilterSuggestions ===
+// === Module 18948: SearchFilterSuggestions ===
 
-// Module 18932 (SearchFilterSuggestions)
+// Module 18948 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import native from "native" /* 5104 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13286 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 18933 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13294 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 18949 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -126,7 +126,7 @@ function AnimatedEnterExitContainer(state) {
   return jsx(_modDef1654.View, { style, children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9018).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9019).SearchFilterAddLocations;
 let jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let obj = { card: null };

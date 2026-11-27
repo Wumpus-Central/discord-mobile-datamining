@@ -1,6 +1,6 @@
-// === Module 19132: NitroBadgeUnhiddenCoachmark ===
+// === Module 19148: NitroBadgeUnhiddenCoachmark ===
 
-// Module 19132 (NitroBadgeUnhiddenCoachmark)
+// Module 19148 (NitroBadgeUnhiddenCoachmark)
 import util from "util" /* 1112 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/NitroBadg
 export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
   ({ targetRef, visible } = markAsDismissed);
   markAsDismissed = markAsDismissed.markAsDismissed;
-  const tmp = markAsDismissed(19129)(targetRef, visible);
+  const tmp = markAsDismissed(19145)(targetRef, visible);
   dependencyMap = tmp;
   items = [visible, tmp, markAsDismissed];
   const memo = noop.useMemo(() => {
@@ -36,6 +36,6 @@ export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
     };
     return obj;
   }, items);
-  const coachmark = visible(9568).useCoachmark(targetRef, memo);
+  const coachmark = visible(9569).useCoachmark(targetRef, memo);
   return null;
 };

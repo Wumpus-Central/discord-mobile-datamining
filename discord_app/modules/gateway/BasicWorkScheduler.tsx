@@ -1,10 +1,10 @@
-// === Module 15113: BasicWorkScheduler ===
+// === Module 15120: BasicWorkScheduler ===
 
-// Module 15113 (BasicWorkScheduler)
+// Module 15120 (BasicWorkScheduler)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import WorkSchedulerTelemetry from "WorkSchedulerTelemetry" /* 15114 */;
-import DispatcherWorkConstants from "DispatcherWorkConstants" /* 15111 */;
+import WorkSchedulerTelemetry from "WorkSchedulerTelemetry" /* 15121 */;
+import DispatcherWorkConstants from "DispatcherWorkConstants" /* 15118 */;
 import size from "module_2" /* 2 */;
 
 ({ MAX_DISPATCHER_FLUSH_DEADLINE_TRIES: c3, DISPATCHER_STANDARD_TIMEOUT_MS: closure_4, DISPATCHER_IDEAL_TIME_LIMIT_MS: hasOwnProperty, DISPATCHER_LONG_TIMEOUT_MS: closure_6 } = DispatcherWorkConstants);
@@ -142,10 +142,10 @@ prototype["requestWorkTimeout"] = function requestWorkTimeout(flush, arg1) {
   self._workCallbackFn = flush;
   if (!self.hasWorkScheduled) {
     let telemetry = self.telemetry;
-    telemetry.time(self(15114).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
+    telemetry.time(self(15121).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
     if (self._nextDispatchTimeout === closure_6) {
       const telemetry2 = self.telemetry;
-      telemetry2.track(tmp(15114).WorkSchedulerTelemetryEvent.LONGER_DISPATCH);
+      telemetry2.track(tmp(15121).WorkSchedulerTelemetryEvent.LONGER_DISPATCH);
     }
     if (flag) {
       self._queueIdleCallback();

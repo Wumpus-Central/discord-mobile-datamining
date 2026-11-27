@@ -1,12 +1,12 @@
-// === Module 9615: ForLaterCardHeader ===
+// === Module 9616: ForLaterCardHeader ===
 
-// Module 9615 (ForLaterCardHeader)
+// Module 9616 (ForLaterCardHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import useChannelNameDefault from "useChannelName" /* 5659 */;
 import GuildIconDefault from "GuildIcon" /* 7052 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7558 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 9616 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 9617 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5043 */;

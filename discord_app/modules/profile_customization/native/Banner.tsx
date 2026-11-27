@@ -1,6 +1,6 @@
-// === Module 9518: Banner ===
+// === Module 9519: Banner ===
 
-// Module 9518 (Banner)
+// Module 9519 (Banner)
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import noop from "module_19" /* 19 */;

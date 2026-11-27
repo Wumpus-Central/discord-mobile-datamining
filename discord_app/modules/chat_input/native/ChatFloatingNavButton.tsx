@@ -1,6 +1,6 @@
-// === Module 13224: ChatFloatingNavButton ===
+// === Module 13232: ChatFloatingNavButton ===
 
-// Module 13224 (ChatFloatingNavButton)
+// Module 13232 (ChatFloatingNavButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import useToken from "useToken" /* 5607 */;

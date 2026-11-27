@@ -1,12 +1,12 @@
-// === Module 12840: useCheckpointCharacterPreloadedTextureNames ===
+// === Module 12848: useCheckpointCharacterPreloadedTextureNames ===
 
-// Module 12840 (useCheckpointCharacterPreloadedTextureNames)
+// Module 12848 (useCheckpointCharacterPreloadedTextureNames)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const set = new Set();
 const obj = {};
-const items = [fn(12841).WIREFRAME_TEXTURE];
+const items = [fn(12849).WIREFRAME_TEXTURE];
 obj[fn(6767).CheckpointCharacterStage.FINALIZE] = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/character/useCheckpointCharacterPreloadedTextureNames.tsx");

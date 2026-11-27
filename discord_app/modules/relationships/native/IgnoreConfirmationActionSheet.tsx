@@ -1,6 +1,6 @@
-// === Module 11845: IgnoreConfirmationActionSheet ===
+// === Module 11853: IgnoreConfirmationActionSheet ===
 
-// Module 11845 (IgnoreConfirmationActionSheet)
+// Module 11853 (IgnoreConfirmationActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -32,7 +32,7 @@ function IgnoredInformationTable() {
 }
 const View = fn(17).View;
 const UserRemediationAction = fn(7851).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11843);
+const RestrictionConfirmationConstants = fn(11851);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: closure_10 } = RestrictionConfirmationConstants);
 const Constants = fn(1071);
 ({ AnalyticEvents: closure_11, HelpdeskArticles: closure_12 } = Constants);
@@ -228,7 +228,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     const intl3 = tmp7(1112).intl;
     obj17.title = intl3.string(tmp7(1112).t["1v01gh"]);
     const obj18 = { icon: null, label: null, variant: "danger", subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
-    const obj19 = { size: tmp7(1186).Icon.Sizes.MEDIUM, source: tmp4(9077), color: tmp.destructiveIcon.color };
+    const obj19 = { size: tmp7(1186).Icon.Sizes.MEDIUM, source: tmp4(9078), color: tmp.destructiveIcon.color };
     obj18.icon = closure_13(tmp7(1186).Icon, obj19);
     const intl4 = tmp7(1112).intl;
     obj18.label = intl4.string(tmp7(1112).t.bwxY30);
@@ -242,7 +242,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       AnalyticsUtilsDefault.track(constants.USER_REMEDIATION_ACTION, { action: UserRemediationAction.GOTO_BLOCK, location: "user-profile-context-menu" });
       const obj2 = { action: UserRemediationAction.GOTO_BLOCK, location: "user-profile-context-menu" };
       const obj3 = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(11844, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(11852, dependencyMap.paths);
       obj3.openLazy(tmp2, React6, { userId, channelId, onBlock, onIgnore, onSuccess, impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION }, "replaceTopSheet");
     };
     obj17.children = closure_13(tmp7(6144).TableRow, obj18);

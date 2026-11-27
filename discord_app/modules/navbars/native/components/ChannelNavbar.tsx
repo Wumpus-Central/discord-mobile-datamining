@@ -1,6 +1,6 @@
-// === Module 13813: ChannelNavbar ===
+// === Module 13820: ChannelNavbar ===
 
-// Module 13813 (ChannelNavbar)
+// Module 13820 (ChannelNavbar)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -12,8 +12,8 @@ import Text_Text from "Text/Text" /* 5634 */;
 import useChannelName from "useChannelName" /* 5659 */;
 import Pressables from "Pressables" /* 6152 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7096 */;
-import isStreamingDefault from "isStreaming" /* 9523 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11363 */;
+import isStreamingDefault from "isStreaming" /* 9524 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11364 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -420,7 +420,7 @@ export function ChannelButtons(buttons) {
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      const children1 = [closure_16(closure_1(12539), obj), ];
+      const children1 = [closure_16(closure_1(12547), obj), ];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -440,8 +440,8 @@ export function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(11075), obj2);
-        const tmp4Result = closure_1(11075);
+        tmp3Result = closure_16(closure_1(11076), obj2);
+        const tmp4Result = closure_1(11076);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

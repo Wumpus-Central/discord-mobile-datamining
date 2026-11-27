@@ -1,6 +1,6 @@
-// === Module 8537: TableRowApplicationIcon ===
+// === Module 8538: TableRowApplicationIcon ===
 
-// Module 8537 (TableRowApplicationIcon)
+// Module 8538 (TableRowApplicationIcon)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import FastImageDefault from "FastImage" /* 5730 */;

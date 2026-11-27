@@ -1,13 +1,13 @@
-// === Module 11155: GiftingBadgeInfoActionSheet ===
+// === Module 11156: GiftingBadgeInfoActionSheet ===
 
-// Module 11155 (GiftingBadgeInfoActionSheet)
+// Module 11156 (GiftingBadgeInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef2943 from "module_2943" /* 2943 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11156 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11158 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11157 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11159 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;

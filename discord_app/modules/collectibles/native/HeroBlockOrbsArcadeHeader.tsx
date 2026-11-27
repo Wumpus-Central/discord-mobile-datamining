@@ -1,6 +1,6 @@
-// === Module 17503: HeroBlockOrbsArcadeHeader ===
+// === Module 17510: HeroBlockOrbsArcadeHeader ===
 
-// Module 17503 (HeroBlockOrbsArcadeHeader)
+// Module 17510 (HeroBlockOrbsArcadeHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import shared from "shared" /* 5050 */;
@@ -10,8 +10,8 @@ import useToken from "useToken" /* 5607 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import QuestContent from "QuestContent" /* 6876 */;
 import inlineStyles from "inlineStyles" /* 7946 */;
-import QuestUtils from "QuestUtils" /* 9889 */;
-import _modDef17504 from "module_17504" /* 17504 */;
+import QuestUtils from "QuestUtils" /* 9890 */;
+import _modDef17511 from "module_17511" /* 17511 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -219,7 +219,7 @@ function HeroBlockOrbsArcadeHeaderContent(bleedsOntoPage) {
   const obj22 = { source: null, style: null, accessible: false };
   const obj23 = { uri: null };
   const tmp2Result2 = require("useFontScale");
-  obj23.uri = require("module_17505");
+  obj23.uri = require("module_17512");
   obj22.source = obj23;
   obj22.style = tmp.image;
   tmp25Result = closure_10(require("FastImage"), obj22);
@@ -227,15 +227,15 @@ function HeroBlockOrbsArcadeHeaderContent(bleedsOntoPage) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestHomeSection = fn(9890).QuestHomeSection;
+const QuestHomeSection = fn(9891).QuestHomeSection;
 const Constants = fn(1071);
 ({ ThemeTypes: closure_8, VerticalGradient: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = 289;
 const PX_16 = nativeDefault.space.PX_16;
-const AssetUtils = fn(9903);
-const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef17504);
+const AssetUtils = fn(9904);
+const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef17511);
 const PX_48 = nativeDefault.space.PX_48;
 const ellipse = { cx: 85.5, cy: 267.5, rx: 329, ry: 217, rotation: 63 };
 const ellipse2 = { cx: 67, cy: 231, rx: 185, ry: 155 };

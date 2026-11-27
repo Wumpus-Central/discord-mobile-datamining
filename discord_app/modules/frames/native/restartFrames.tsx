@@ -1,7 +1,7 @@
-// === Module 14071: restartFrames ===
+// === Module 14078: restartFrames ===
 
-// Module 14071 (restartFrames)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9996 */;
+// Module 14078 (restartFrames)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9997 */;
 import FramesStore from "FramesStore" /* 6936 */;
 
 function restartFrame(frame) {

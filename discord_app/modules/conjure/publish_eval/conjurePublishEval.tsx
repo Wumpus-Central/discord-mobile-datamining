@@ -1,10 +1,10 @@
-// === Module 11477: conjurePublishEval ===
+// === Module 11487: conjurePublishEval ===
 
-// Module 11477 (conjurePublishEval)
+// Module 11487 (conjurePublishEval)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
-import ConjurePublishEvalTypes from "ConjurePublishEvalTypes" /* 11480 */;
+import ConjurePublishEvalTypes from "ConjurePublishEvalTypes" /* 11490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -12,8 +12,8 @@ import GuildStore from "GuildStore" /* 4914 */;
 import UserStore from "UserStore" /* 1387 */;
 import ConjureChatStore from "ConjureChatStore" /* 7659 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7706 */;
-import ConjurePublishEvalCooldownStore from "ConjurePublishEvalCooldownStore" /* 11478 */;
-import ConjurePublishEvalStore from "ConjurePublishEvalStore" /* 11479 */;
+import ConjurePublishEvalCooldownStore from "ConjurePublishEvalCooldownStore" /* 11488 */;
+import ConjurePublishEvalStore from "ConjurePublishEvalStore" /* 11489 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ let closure_14 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -93,7 +93,7 @@ let closure_14 = async function _submitConjurePublishEval(arg0, arg1, arg2) {
           const obj14 = { type: "CONJURE_PUBLISH_EVAL_SUBMITTED", userId: closure_132_0.userId, projectId: closure_132_0.projectId, publishTurnId: closure_132_0.publishTurnId, stored: closure_132_1.ok };
           closure_133_1(closure_133_2[11]).dispatch(obj14);
           c7 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp32) {
         c7 = tmp;
@@ -270,7 +270,7 @@ export function useConjurePublishEvalForm(pending) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

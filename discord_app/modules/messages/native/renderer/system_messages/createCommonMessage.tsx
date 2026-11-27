@@ -1,14 +1,14 @@
-// === Module 14373: createCommonMessage ===
+// === Module 14380: createCommonMessage ===
 
-// Module 14373 (createCommonMessage)
+// Module 14380 (createCommonMessage)
 import nativeDefault from "native" /* 575 */;
 import DateUtils from "DateUtils" /* 4865 */;
 import ColorUtils from "ColorUtils" /* 5040 */;
 import shared from "shared" /* 5050 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8821 */;
-import _modDef9625 from "module_9625" /* 9625 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 12607 */;
-import _modDef14374 from "module_14374" /* 14374 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8822 */;
+import _modDef9626 from "module_9626" /* 9626 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 12615 */;
+import _modDef14381 from "module_14381" /* 14381 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
 require = fn;
@@ -36,8 +36,8 @@ export default function createCommonMessage(reactions) {
   obj.dark = shared.isThemeDark(theme);
   obj.highlightColor = tmp.highlightColor;
   obj.reactions = reactions.reactions;
-  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14374);
-  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9625);
+  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14381);
+  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9626);
   obj.accessibilityActions = MessageAccessibilityActions.createMessageAccessibilityActions(message, channel);
   return obj;
 };

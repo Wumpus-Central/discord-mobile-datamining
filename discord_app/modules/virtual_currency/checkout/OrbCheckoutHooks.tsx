@@ -1,8 +1,8 @@
-// === Module 11610: OrbCheckoutHooks ===
+// === Module 11618: OrbCheckoutHooks ===
 
-// Module 11610 (OrbCheckoutHooks)
+// Module 11618 (OrbCheckoutHooks)
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6322 */;
-import useRedeemVirtualCurrency from "useRedeemVirtualCurrency" /* 11258 */;
+import useRedeemVirtualCurrency from "useRedeemVirtualCurrency" /* 11259 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
 import SKUStore from "SKUStore" /* 6360 */;

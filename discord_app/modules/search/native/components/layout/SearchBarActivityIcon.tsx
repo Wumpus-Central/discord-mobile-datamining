@@ -1,19 +1,19 @@
-// === Module 18931: SearchBarActivityIcon ===
+// === Module 18947: SearchBarActivityIcon ===
 
-// Module 18931 (SearchBarActivityIcon)
+// Module 18947 (SearchBarActivityIcon)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
-import SearchUtils from "SearchUtils" /* 13293 */;
+import SearchUtils from "SearchUtils" /* 13301 */;
 import noop from "module_19" /* 19 */;
 import SearchMessageStore from "SearchMessageStore" /* 6953 */;
-import SearchQueryStore from "SearchQueryStore" /* 13300 */;
+import SearchQueryStore from "SearchQueryStore" /* 13308 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(9019).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(9020).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5043);

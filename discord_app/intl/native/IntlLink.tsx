@@ -1,6 +1,6 @@
-// === Module 10005: IntlLink ===
+// === Module 10006: IntlLink ===
 
-// Module 10005 (IntlLink)
+// Module 10006 (IntlLink)
 import nativeDefault from "native" /* 575 */;
 import _modDef2069 from "module_2069" /* 2069 */;
 import LinkingDefault from "Linking" /* 5722 */;

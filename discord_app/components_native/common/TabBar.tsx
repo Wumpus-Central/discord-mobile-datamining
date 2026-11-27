@@ -1,6 +1,6 @@
-// === Module 12246: TabBar ===
+// === Module 12254: TabBar ===
 
-// Module 12246 (TabBar)
+// Module 12254 (TabBar)
 import nativeDefault from "native" /* 575 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import _mod7482 from "module_7482" /* 7482 */;

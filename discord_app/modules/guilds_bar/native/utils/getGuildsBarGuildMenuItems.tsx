@@ -1,8 +1,8 @@
-// === Module 18075: getGuildsBarGuildMenuItems ===
+// === Module 18082: getGuildsBarGuildMenuItems ===
 
-// Module 18075 (getGuildsBarGuildMenuItems)
+// Module 18082 (getGuildsBarGuildMenuItems)
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7476 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15314 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15321 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 4914 */;
 
@@ -30,7 +30,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -60,7 +60,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
             items = [closure_128_0];
             value.default(items, constants.GUILD_LIST);
             paths = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           paths = tmp;

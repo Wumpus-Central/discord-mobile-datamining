@@ -1,6 +1,6 @@
-// === Module 15243: PermissionSpeakStore ===
+// === Module 15250: PermissionSpeakStore ===
 
-// Module 15243 (PermissionSpeakStore)
+// Module 15250 (PermissionSpeakStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

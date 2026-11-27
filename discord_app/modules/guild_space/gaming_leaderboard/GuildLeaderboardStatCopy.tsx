@@ -1,6 +1,6 @@
-// === Module 11390: GuildLeaderboardStatCopy ===
+// === Module 11391: GuildLeaderboardStatCopy ===
 
-// Module 11390 (GuildLeaderboardStatCopy)
+// Module 11391 (GuildLeaderboardStatCopy)
 import util from "util" /* 1112 */;
 import _modDef2719 from "module_2719" /* 2719 */;
 import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4963 */;

@@ -1,9 +1,9 @@
-// === Module 12096: getInvitableGameOrganizationsFullState ===
+// === Module 12104: getInvitableGameOrganizationsFullState ===
 
-// Module 12096 (getInvitableGameOrganizationsFullState)
+// Module 12104 (getInvitableGameOrganizationsFullState)
 import util from "util" /* 1112 */;
 import _modDef2651 from "module_2651" /* 2651 */;
-import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12097 */;
+import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12105 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

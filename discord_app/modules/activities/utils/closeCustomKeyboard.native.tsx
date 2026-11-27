@@ -1,6 +1,6 @@
-// === Module 10197: closeCustomKeyboard ===
+// === Module 10198: closeCustomKeyboard ===
 
-// Module 10197 (closeCustomKeyboard)
+// Module 10198 (closeCustomKeyboard)
 import ChatInputUtils from "ChatInputUtils" /* 5228 */;
 import size from "module_2" /* 2 */;
 

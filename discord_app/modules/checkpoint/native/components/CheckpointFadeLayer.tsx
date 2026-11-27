@@ -1,10 +1,10 @@
-// === Module 12669: CheckpointFadeLayer ===
+// === Module 12677: CheckpointFadeLayer ===
 
-// Module 12669 (CheckpointFadeLayer)
+// Module 12677 (CheckpointFadeLayer)
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
 import useStableCallbackDefault from "useStableCallback" /* 7328 */;
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12670 */;
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 12678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -258,7 +258,7 @@ export default function CheckpointFadeLayer(visible) {
       currentWhen = children;
     }
     obj5.children = currentWhen;
-    obj3.children = stateFromStores(tmp11(12670).Provider, obj5);
+    obj3.children = stateFromStores(tmp11(12678).Provider, obj5);
     let tmp27Result = tmp27(tmp11(1654).View, obj3);
   } else {
     tmp27Result = null;

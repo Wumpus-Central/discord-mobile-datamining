@@ -1,6 +1,6 @@
-// === Module 16879: SettingsAppearanceThemePickerScreen ===
+// === Module 16886: SettingsAppearanceThemePickerScreen ===
 
-// Module 16879 (SettingsAppearanceThemePickerScreen)
+// Module 16886 (SettingsAppearanceThemePickerScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
@@ -13,17 +13,17 @@ import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import QuestTypes from "QuestTypes" /* 6874 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7047 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8486 */;
-import StatusBarDefault from "StatusBar" /* 10018 */;
-import ThemeDarkIcon from "ThemeDarkIcon" /* 11750 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16059 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16060 */;
-import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 16611 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16612 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16613 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 16880 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 16882 */;
-import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 16902 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8487 */;
+import StatusBarDefault from "StatusBar" /* 10019 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 11758 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 16066 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16067 */;
+import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 16618 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 16619 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16620 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 16887 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 16889 */;
+import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 16909 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -375,7 +375,7 @@ function ThemePicker(defaultIndex) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -478,7 +478,7 @@ function ThemePicker(defaultIndex) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -518,7 +518,7 @@ function ThemePicker(defaultIndex) {
                 callback(tmp12);
                 close();
                 c2 = 3;
-                return { value: "HermesInternal", done: "+95" };
+                return { value: "HermesInternal", done: null };
               }
             }
           }
@@ -577,7 +577,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -681,7 +681,7 @@ function ThemePicker(defaultIndex) {
           }
           const obj = { theme: tmp4, children: null };
           const obj2 = { navigation };
-          obj.children = obj4(dependencyMap(9011), obj2);
+          obj.children = obj4(dependencyMap(9012), obj2);
           return obj4(closure_0(5104).ThemeContextProvider, obj);
         } else {
           return null;
@@ -744,7 +744,7 @@ function ThemePicker(defaultIndex) {
   }
   if ("nitro" === themeSelector) {
     const obj5 = { themes: mobileThemes, currentThemeIndex: themeIndex, isPreview, isSynced, defaultIndex, deviceWidth: rounded, animatedStyles: obj4, hasOnyxNux, onThemeSelected: callback4 };
-    let tmp62 = obj4(tmp6(16884), obj5);
+    let tmp62 = obj4(tmp6(16891), obj5);
     let tmp63 = obj4;
   } else {
     let tmp58;
@@ -758,7 +758,7 @@ function ThemePicker(defaultIndex) {
     let obj6 = { style: tmp.segmentedControlContainer, ref, onLayout, children: null };
     let obj7 = { theme: tmp58, children: null };
     let obj8 = { variant: "experimental_Large", state: segmentedControlState };
-    obj7.children = obj4(tmp3(8617).SegmentedControl, obj8);
+    obj7.children = obj4(tmp3(8618).SegmentedControl, obj8);
     const items15 = [obj4(tmp3(5104).ThemeContextProvider, obj7), ];
     const obj9 = { animated: true, variant: "body-xs/medium", style: null, children: null };
     const items16 = [obj4.headerSecondary, tmp.textCentered];
@@ -788,7 +788,7 @@ function ThemePicker(defaultIndex) {
     }
     _undefined(str);
   }, items17);
-  const memo3 = obj2.useMemo(tmp6(16890), []);
+  const memo3 = obj2.useMemo(tmp6(16897), []);
   const obj10 = { themes: mobileThemes, themeIndex, animatedStyles: obj4, data: memo3, useGradientBackground: "nitro" === themeSelector, isNitroLocked: null };
   let result = tmp14;
   const tmp3Result15 = require("useNavigatorBackPressHandler");
@@ -811,7 +811,7 @@ function ThemePicker(defaultIndex) {
   let tmp63Result2 = null;
   if ("nitro" === themeSelector) {
     const obj12 = { themes: mobileThemes, themeIndex, isDimmed: true };
-    tmp63Result2 = tmp63(tmp6(16911), obj12);
+    tmp63Result2 = tmp63(tmp6(16918), obj12);
   }
   const items19 = [tmp63Result2, ];
   const items20 = [tmp.container, , ];

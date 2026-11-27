@@ -1,6 +1,6 @@
-// === Module 8571: EditGuildEventStepHeader ===
+// === Module 8572: EditGuildEventStepHeader ===
 
-// Module 8571 (EditGuildEventStepHeader)
+// Module 8572 (EditGuildEventStepHeader)
 import Text_Text from "Text/Text" /* 5634 */;
 import noop from "module_19" /* 19 */;
 

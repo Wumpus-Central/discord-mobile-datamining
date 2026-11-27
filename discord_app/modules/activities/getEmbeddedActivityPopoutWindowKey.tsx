@@ -1,9 +1,9 @@
-// === Module 15900: getEmbeddedActivityPopoutWindowKey ===
+// === Module 15907: getEmbeddedActivityPopoutWindowKey ===
 
-// Module 15900 (getEmbeddedActivityPopoutWindowKey)
+// Module 15907 (getEmbeddedActivityPopoutWindowKey)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4964 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 8420 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 8421 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 
 require = fn;

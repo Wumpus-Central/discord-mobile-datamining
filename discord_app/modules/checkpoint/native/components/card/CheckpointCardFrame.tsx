@@ -1,12 +1,12 @@
-// === Module 12634: CheckpointCardFrame ===
+// === Module 12642: CheckpointCardFrame ===
 
-// Module 12634 (CheckpointCardFrame)
+// Module 12642 (CheckpointCardFrame)
 import nativeDefault from "native" /* 575 */;
 import CheckpointCardColors from "CheckpointCardColors" /* 6422 */;
 import inlineStyles from "inlineStyles" /* 7946 */;
-import ClydeIcon from "ClydeIcon" /* 11654 */;
-import _modDef12635 from "module_12635" /* 12635 */;
-import CheckpointCharacterCompositeDefault from "CheckpointCharacterComposite" /* 12636 */;
+import ClydeIcon from "ClydeIcon" /* 11662 */;
+import _modDef12643 from "module_12643" /* 12643 */;
+import CheckpointCharacterCompositeDefault from "CheckpointCharacterComposite" /* 12644 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -106,7 +106,7 @@ export default function CheckpointCardFrame(canvasHeight) {
     const obj9 = { rotation: 180, origin: null, children: null };
     const _HermesInternal4 = HermesInternal;
     obj9.origin = "" + x + width / 2 + ", " + c10 + c12 / 2;
-    const size3 = { href: _modDef12635, x, y: c10 - 0.4348 * c12, width, height: 1.4348 * c12, preserveAspectRatio: "none" };
+    const size3 = { href: _modDef12643, x, y: c10 - 0.4348 * c12, width, height: 1.4348 * c12, preserveAspectRatio: "none" };
     obj9.children = timestampProducer(inlineStyles.Image, size3);
     obj8.children = timestampProducer(inlineStyles.G, obj9);
     items8[1] = timestampProducer(inlineStyles.G, obj8);
@@ -133,7 +133,7 @@ export default function CheckpointCardFrame(canvasHeight) {
     const obj13 = { rotation: 180, origin: null, children: null };
     const _HermesInternal7 = HermesInternal;
     obj13.origin = "" + styles.x + styles.width / 2 + ", " + styles.y + styles.height / 2;
-    const obj14 = { href: _modDef12635 };
+    const obj14 = { href: _modDef12643 };
     const merged = Object.assign(styles);
     obj14.opacity = 0.5;
     obj14.preserveAspectRatio = "xMidYMid slice";
@@ -158,7 +158,7 @@ export default function CheckpointCardFrame(canvasHeight) {
     obj16.children = timestampProducer(inlineStyles.Rect, size7);
     obj15.children = timestampProducer(inlineStyles.ClipPath, obj16);
     const items13 = [timestampProducer(inlineStyles.Defs, obj15), ];
-    const size8 = { href: _modDef12635, width: canvasWidth, height: num, preserveAspectRatio: "xMidYMid slice", clipPath: null };
+    const size8 = { href: _modDef12643, width: canvasWidth, height: num, preserveAspectRatio: "xMidYMid slice", clipPath: null };
     const _HermesInternal = HermesInternal;
     size8.clipPath = "url(#" + id + ")";
     items13[1] = timestampProducer(inlineStyles.Image, size8);

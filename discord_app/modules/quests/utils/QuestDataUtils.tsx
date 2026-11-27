@@ -1,15 +1,15 @@
-// === Module 8361: QuestDataUtils ===
+// === Module 8362: QuestDataUtils ===
 
-// Module 8361 (QuestDataUtils)
+// Module 8362 (QuestDataUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import QuestTypes from "QuestTypes" /* 6874 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 8363 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 8380 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8362 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 8364 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 8381 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8363 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import BountyStore from "BountyStore" /* 8373 */;
-import QuestStore from "QuestStore" /* 8374 */;
+import BountyStore from "BountyStore" /* 8374 */;
+import QuestStore from "QuestStore" /* 8375 */;
 
 require = fn;
 function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) {

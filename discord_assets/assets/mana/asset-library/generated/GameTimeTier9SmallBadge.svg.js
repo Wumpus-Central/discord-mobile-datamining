@@ -1,6 +1,6 @@
-// === Module 14973: ? ===
+// === Module 14980: ? ===
 
-// Module 14973
+// Module 14980
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameTimeTier9SmallBadge.svg.js");

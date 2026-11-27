@@ -1,6 +1,6 @@
-// === Module 14398: getRoleIcon ===
+// === Module 14405: getRoleIcon ===
 
-// Module 14398 (getRoleIcon)
+// Module 14405 (getRoleIcon)
 import util from "util" /* 1112 */;
 import useRoleIconProps from "useRoleIconProps" /* 7536 */;
 import size from "module_2" /* 2 */;

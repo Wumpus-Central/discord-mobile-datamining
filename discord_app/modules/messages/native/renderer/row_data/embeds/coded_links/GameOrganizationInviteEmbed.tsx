@@ -1,25 +1,25 @@
-// === Module 14525: GameOrganizationInviteEmbed ===
+// === Module 14532: GameOrganizationInviteEmbed ===
 
-// Module 14525 (GameOrganizationInviteEmbed)
+// Module 14532 (GameOrganizationInviteEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef2651 from "module_2651" /* 2651 */;
 import ColorUtils from "ColorUtils" /* 5040 */;
 import _modDef7102 from "module_7102" /* 7102 */;
 import _modDef7437 from "module_7437" /* 7437 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8227 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8821 */;
-import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12097 */;
-import _modDef12129 from "module_12129" /* 12129 */;
-import canGoToGameOrganizationGuildDefault from "canGoToGameOrganizationGuild" /* 12322 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12385 */;
-import getGameOrganizationInviteCtaStateDefault from "getGameOrganizationInviteCtaState" /* 14526 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11916 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8228 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8822 */;
+import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12105 */;
+import _modDef12137 from "module_12137" /* 12137 */;
+import canGoToGameOrganizationGuildDefault from "canGoToGameOrganizationGuild" /* 12330 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 12393 */;
+import getGameOrganizationInviteCtaStateDefault from "getGameOrganizationInviteCtaState" /* 14533 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11924 */;
 import GuildStore from "GuildStore" /* 4914 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(12935).CodedLinkExtendedType;
-const constants = fn(11917).GameOrganizationInviteStates;
+const CodedLinkExtendedType = fn(12943).CodedLinkExtendedType;
+const constants = fn(11925).GameOrganizationInviteStates;
 const InviteTypes = fn(5776).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx");
@@ -80,7 +80,7 @@ export function createGameOrganizationInviteEmbed(code, theme, id1) {
       obj6.headerText = intl6.formatToPlainString(_modDef2651["jKi+kc"], obj7);
       ({ name: obj13.titleText, iconUrl } = organization);
       if (iconUrl == null) {
-        iconUrl = _modDef12129;
+        iconUrl = _modDef12137;
       }
       obj6.thumbnailUrl = iconUrl;
       obj6.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

@@ -1,6 +1,6 @@
-// === Module 9640: useMessageMaxLength ===
+// === Module 9641: useMessageMaxLength ===
 
-// Module 9640 (useMessageMaxLength)
+// Module 9641 (useMessageMaxLength)
 import initialize from "initialize" /* 504 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
 import UserStore from "UserStore" /* 1387 */;

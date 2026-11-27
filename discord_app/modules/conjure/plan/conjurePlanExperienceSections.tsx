@@ -1,10 +1,10 @@
-// === Module 18790: conjurePlanExperienceSections ===
+// === Module 18808: conjurePlanExperienceSections ===
 
-// Module 18790 (conjurePlanExperienceSections)
+// Module 18808 (conjurePlanExperienceSections)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 18782 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18791 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 18799 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18809 */;
 import size from "module_2" /* 2 */;
 
 let obj = { frame: _modDef4245.Z2bt4u, bot: _modDef4245.EbvC13, commands: _modDef4245.EbvC13, automod: _modDef4245.tiMvei };
@@ -143,7 +143,7 @@ export function conjurePlanRequirementGroups(proposal, guild) {
       return conjurePlanFormat.conjurePlanPermissionLabel(arg0, guildPermissionSpecMap);
     }
   };
-  items[1] = { key: "intents", caption: _modDef4245["7TKfpj"], names: proposal.privileged_intents, label: guildPermissionSpecMap(18782).formatConjurePlanRequirementLabel };
+  items[1] = { key: "intents", caption: _modDef4245["7TKfpj"], names: proposal.privileged_intents, label: guildPermissionSpecMap(18799).formatConjurePlanRequirementLabel };
   return items.flatMap((names) => {
     names = names.names;
     if (null != names) {

@@ -1,12 +1,12 @@
-// === Module 18160: useYouBarAccessibilityLabel ===
+// === Module 18167: useYouBarAccessibilityLabel ===
 
-// Module 18160 (useYouBarAccessibilityLabel)
+// Module 18167 (useYouBarAccessibilityLabel)
 import util from "util" /* 1112 */;
 import UserUtils from "UserUtils" /* 5099 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11365 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11366 */;
-import isGameActivityDefault from "isGameActivity" /* 11372 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 11374 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11366 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11367 */;
+import isGameActivityDefault from "isGameActivity" /* 11373 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 11375 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import PermissionStore from "PermissionStore" /* 4975 */;

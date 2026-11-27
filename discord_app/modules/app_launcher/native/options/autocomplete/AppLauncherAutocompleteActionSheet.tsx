@@ -1,6 +1,6 @@
-// === Module 13137: AppLauncherAutocompleteActionSheet ===
+// === Module 13145: AppLauncherAutocompleteActionSheet ===
 
-// Module 13137 (AppLauncherAutocompleteActionSheet)
+// Module 13145 (AppLauncherAutocompleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -9,11 +9,11 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257
 import Text_Text from "Text/Text" /* 5634 */;
 import _mod5836 from "module_5836" /* 5836 */;
 import TableRow from "TableRow" /* 6144 */;
-import executeCommandDefault from "executeCommand" /* 10090 */;
-import _modDef13134 from "module_13134" /* 13134 */;
+import executeCommandDefault from "executeCommand" /* 10091 */;
+import _modDef13142 from "module_13142" /* 13142 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8181 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8182 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import apply from "apply" /* 12 */;
 
@@ -126,7 +126,7 @@ function Item(arg0) {
   }).exhaustive();
 }
 function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef13134, darkSource: _modDef13134, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef13142, darkSource: _modDef13142, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
   return React6(native.EmptyState, obj);

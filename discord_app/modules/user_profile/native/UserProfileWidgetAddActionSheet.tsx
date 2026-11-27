@@ -1,6 +1,6 @@
-// === Module 15016: UserProfileWidgetAddActionSheet ===
+// === Module 15023: UserProfileWidgetAddActionSheet ===
 
-// Module 15016 (UserProfileWidgetAddActionSheet)
+// Module 15023 (UserProfileWidgetAddActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
@@ -8,15 +8,15 @@ import _modDef4245 from "module_4245" /* 4245 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import BottomSheetModal from "BottomSheetModal" /* 5275 */;
 import Text_Text from "Text/Text" /* 5634 */;
-import ConjureMobileExperiment from "ConjureMobileExperiment" /* 11488 */;
-import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers" /* 14993 */;
-import turnOnConjureServerWidgetDefault from "turnOnConjureServerWidget" /* 14999 */;
-import UserProfileWidgetOptionAddButtonDefault from "UserProfileWidgetOptionAddButton" /* 15003 */;
-import useAddProfileWidgetDefault from "useAddProfileWidget" /* 15012 */;
-import ConjureCustomWidget from "ConjureCustomWidget" /* 15013 */;
-import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton" /* 15014 */;
-import useStableAddableWidgetsDefault from "useStableAddableWidgets" /* 15017 */;
-import UserProfileAddableWidgetCategories from "UserProfileAddableWidgetCategories" /* 15018 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 11463 */;
+import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers" /* 15000 */;
+import turnOnConjureServerWidgetDefault from "turnOnConjureServerWidget" /* 15006 */;
+import UserProfileWidgetOptionAddButtonDefault from "UserProfileWidgetOptionAddButton" /* 15010 */;
+import useAddProfileWidgetDefault from "useAddProfileWidget" /* 15019 */;
+import ConjureCustomWidget from "ConjureCustomWidget" /* 15020 */;
+import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton" /* 15021 */;
+import useStableAddableWidgetsDefault from "useStableAddableWidgets" /* 15024 */;
+import UserProfileAddableWidgetCategories from "UserProfileAddableWidgetCategories" /* 15025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -102,7 +102,7 @@ function ServerWidgetOptionRow(widget) {
   }
   const obj2 = { icon: null, label: null, subLabel: null, onPress: null };
   const obj = widget(7515);
-  obj2.icon = closure_6(widget(6144).TableRow.Icon, { IconComponent: widget(13095).CirclePlusIcon });
+  obj2.icon = closure_6(widget(6144).TableRow.Icon, { IconComponent: widget(13103).CirclePlusIcon });
   obj2.label = str;
   const intl = tmp(1112).intl;
   obj2.subLabel = intl.formatToPlainString(_modDef4245.ZZywee, { applicationName: str });

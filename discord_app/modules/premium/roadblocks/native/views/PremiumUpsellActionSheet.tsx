@@ -1,6 +1,6 @@
-// === Module 9595: PremiumUpsellActionSheet ===
+// === Module 9596: PremiumUpsellActionSheet ===
 
-// Module 9595 (PremiumUpsellActionSheet)
+// Module 9596 (PremiumUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PremiumUtils from "PremiumUtils" /* 2174 */;
@@ -8,7 +8,7 @@ import ChatInputUtils from "ChatInputUtils" /* 5228 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9594 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9595 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import ThemeStore from "ThemeStore" /* 1191 */;
@@ -58,7 +58,7 @@ const PremiumConstants = fn(1389);
 const Constants = fn(1071);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
 const ApplicationStreamFPS = fn(5943).ApplicationStreamFPS;
-const premiumMax = fn(9596).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(9597).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
 const createStyles = fn(5043);

@@ -1,6 +1,6 @@
-// === Module 12823: ? ===
+// === Module 12831: ? ===
 
-// Module 12823
+// Module 12831
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wearable_03_angelWings.webp.js");

@@ -1,6 +1,6 @@
-// === Module 18715: ConjurePatchNotesChannel ===
+// === Module 18732: ConjurePatchNotesChannel ===
 
-// Module 18715 (ConjurePatchNotesChannel)
+// Module 18732 (ConjurePatchNotesChannel)
 import Storage3 from "Storage" /* 510 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;

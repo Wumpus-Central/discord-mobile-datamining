@@ -1,10 +1,10 @@
-// === Module 18515: openConjureMakePersonalAlert ===
+// === Module 18520: openConjureMakePersonalAlert ===
 
-// Module 18515 (openConjureMakePersonalAlert)
+// Module 18520 (openConjureMakePersonalAlert)
 import _modDef4245 from "module_4245" /* 4245 */;
 import useAlertStore from "useAlertStore" /* 6048 */;
-import ConjureChangeListDefault from "ConjureChangeList" /* 18514 */;
-import useConjureMakePersonalDefault from "useConjureMakePersonal" /* 18516 */;
+import ConjureChangeListDefault from "ConjureChangeList" /* 18519 */;
+import useConjureMakePersonalDefault from "useConjureMakePersonal" /* 18521 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ function ConjureMakePersonalAlert(project) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -61,7 +61,7 @@ function ConjureMakePersonalAlert(project) {
             const obj7 = { text: closure_128_0, variant: "success" };
             tmp5(5725).open("CONJURE_MADE_PERSONAL", obj7);
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         }
       } catch (tmp19) {

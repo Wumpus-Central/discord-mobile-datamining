@@ -1,23 +1,23 @@
-// === Module 12899: CheckpointGamesStatsScreen ===
+// === Module 12907: CheckpointGamesStatsScreen ===
 
-// Module 12899 (CheckpointGamesStatsScreen)
+// Module 12907 (CheckpointGamesStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef3495 from "module_3495" /* 3495 */;
-import CheckpointScreen from "CheckpointScreen" /* 12850 */;
-import CheckpointTextDefault from "CheckpointText" /* 12852 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12854 */;
-import _modDef12855 from "module_12855" /* 12855 */;
-import _modDef12856 from "module_12856" /* 12856 */;
-import useIsCheckpointWide from "useIsCheckpointWide" /* 12860 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12881 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12882 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12888 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 12890 */;
-import CheckpointGameCard from "CheckpointGameCard" /* 12900 */;
+import CheckpointScreen from "CheckpointScreen" /* 12858 */;
+import CheckpointTextDefault from "CheckpointText" /* 12860 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12862 */;
+import _modDef12863 from "module_12863" /* 12863 */;
+import _modDef12864 from "module_12864" /* 12864 */;
+import useIsCheckpointWide from "useIsCheckpointWide" /* 12868 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12889 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 12890 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 12896 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12898 */;
+import CheckpointGameCard from "CheckpointGameCard" /* 12908 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointStore from "CheckpointStore" /* 12620 */;
+import CheckpointStore from "CheckpointStore" /* 12628 */;
 import CheckpointConstants from "CheckpointConstants" /* 6396 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5043 */;
@@ -138,7 +138,7 @@ function GlobalGames(gameStats) {
   obj.containerStyle = items;
   let obj2 = { style: tmp.header, children: null };
   let obj3 = { style: tmp.globalHeading, children: null };
-  let obj4 = { animatedUri: _modDef12855, staticUri: _modDef12856, style: tmp.globe };
+  let obj4 = { animatedUri: _modDef12863, staticUri: _modDef12864, style: tmp.globe };
   let items1 = [closure_8(CheckpointApngPlayerDefault, obj4), ];
   const obj5 = { isStepHeading: true, children: null };
   let intl = gameStats(1112).intl;

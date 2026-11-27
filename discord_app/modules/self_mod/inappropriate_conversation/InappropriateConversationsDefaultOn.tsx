@@ -1,6 +1,6 @@
-// === Module 11515: InappropriateConversationsDefaultOn ===
+// === Module 11523: InappropriateConversationsDefaultOn ===
 
-// Module 11515 (InappropriateConversationsDefaultOn)
+// Module 11523 (InappropriateConversationsDefaultOn)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1452 */;
 
 const tmp2 = apex_ApexExperimentDefault({ name: "2026-04-inappropriate-conversations-default-on", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

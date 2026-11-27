@@ -1,14 +1,14 @@
-// === Module 10129: PictureInPictureVideo ===
+// === Module 10130: PictureInPictureVideo ===
 
-// Module 10129 (PictureInPictureVideo)
+// Module 10130 (PictureInPictureVideo)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6129 */;
-import transitionToActivityDefault from "transitionToActivity" /* 10007 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 10025 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 10028 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 10029 */;
+import transitionToActivityDefault from "transitionToActivity" /* 10008 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 10026 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 10029 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 10030 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
@@ -17,7 +17,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2132 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
 import SpeakingStore from "SpeakingStore" /* 6852 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10022 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10023 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -27,7 +27,7 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10008);
+const ChannelCallStore = fn(10009);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
 const ParticipantTypes = fn(5693).ParticipantTypes;
 const jsxProd = fn(21);

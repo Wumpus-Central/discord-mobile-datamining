@@ -1,6 +1,6 @@
-// === Module 20246: GuildRoleSubscriptionEmojiEditorModal ===
+// === Module 20304: GuildRoleSubscriptionEmojiEditorModal ===
 
-// Module 20246 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 20304 (GuildRoleSubscriptionEmojiEditorModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;

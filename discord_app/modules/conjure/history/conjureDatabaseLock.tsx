@@ -1,6 +1,6 @@
-// === Module 18578: conjureDatabaseLock ===
+// === Module 18589: conjureDatabaseLock ===
 
-// Module 18578 (conjureDatabaseLock)
+// Module 18589 (conjureDatabaseLock)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ let closure_6 = async function _withConjureDatabaseLock(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

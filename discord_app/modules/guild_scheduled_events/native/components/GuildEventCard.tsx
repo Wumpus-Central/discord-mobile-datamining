@@ -1,9 +1,9 @@
-// === Module 14324: GuildEventCard ===
+// === Module 14331: GuildEventCard ===
 
-// Module 14324 (GuildEventCard)
+// Module 14331 (GuildEventCard)
 import nativeDefault from "native" /* 575 */;
 import ButtonGroup from "ButtonGroup" /* 6863 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 8592 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 8593 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 

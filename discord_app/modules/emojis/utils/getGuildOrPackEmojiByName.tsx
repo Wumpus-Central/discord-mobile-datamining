@@ -1,6 +1,6 @@
-// === Module 8347: getGuildOrPackEmojiByName ===
+// === Module 8348: getGuildOrPackEmojiByName ===
 
-// Module 8347 (getGuildOrPackEmojiByName)
+// Module 8348 (getGuildOrPackEmojiByName)
 import EmojiTypes from "EmojiTypes" /* 4992 */;
 import size from "module_2" /* 2 */;
 

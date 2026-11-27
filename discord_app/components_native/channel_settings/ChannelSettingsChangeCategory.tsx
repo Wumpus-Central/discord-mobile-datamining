@@ -1,6 +1,6 @@
-// === Module 19193: ChannelSettingsChangeCategory ===
+// === Module 19209: ChannelSettingsChangeCategory ===
 
-// Module 19193 (ChannelSettingsChangeCategory)
+// Module 19209 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
@@ -286,7 +286,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1501).useNavigation();
   const obj2 = channelId(1501);
-  const appChannelBotUserId = channelId(12118).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(12126).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

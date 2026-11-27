@@ -1,6 +1,6 @@
-// === Module 19784: MetricKitManager ===
+// === Module 19800: MetricKitManager ===
 
-// Module 19784 (MetricKitManager)
+// Module 19800 (MetricKitManager)
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7475 */;
 
 class MetricKitManager extends tmp2 {

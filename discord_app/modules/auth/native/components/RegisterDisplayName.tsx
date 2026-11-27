@@ -1,19 +1,19 @@
-// === Module 17678: RegisterDisplayName ===
+// === Module 17685: RegisterDisplayName ===
 
-// Module 17678 (RegisterDisplayName)
+// Module 17685 (RegisterDisplayName)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16211 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16218 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(17656);
+const RegistrationUIStore = fn(17663);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17657);
+const RegistrationConstants = fn(17664);
 ({ RegisterTransitionSteps: closure_10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -86,7 +86,7 @@ export default function RegisterDisplayName() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -120,7 +120,7 @@ export default function RegisterDisplayName() {
               }
               const result = globalName(str[15]).handleNextOrSubmitRegistration(globalName(str[16]).AuthStates.REGISTER_DISPLAY_NAME, globalName, context);
               c3 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c3 = 3;

@@ -1,6 +1,6 @@
-// === Module 15556: KeybindModKeys ===
+// === Module 15563: KeybindModKeys ===
 
-// Module 15556 (KeybindModKeys)
+// Module 15563 (KeybindModKeys)
 import PlatformUtils_mod from "PlatformUtils" /* 1379 */;
 import size from "module_2" /* 2 */;
 

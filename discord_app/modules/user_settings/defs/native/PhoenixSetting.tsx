@@ -1,15 +1,15 @@
-// === Module 17377: PhoenixSetting ===
+// === Module 17384: PhoenixSetting ===
 
-// Module 17377 (PhoenixSetting)
+// Module 17384 (PhoenixSetting)
 import jsxProd from "jsxProd" /* 21 */;
 import Constants from "Constants" /* 1071 */;
 import util from "util" /* 1112 */;
 import _modDef4729 from "module_4729" /* 4729 */;
 import Badge from "Badge" /* 6159 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9637 */;
-import FireIcon from "FireIcon" /* 14303 */;
-import PhoenixEntrypoint from "PhoenixEntrypoint" /* 17379 */;
-import SettingBuilders from "SettingBuilders" /* 11962 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9638 */;
+import FireIcon from "FireIcon" /* 14310 */;
+import PhoenixEntrypoint from "PhoenixEntrypoint" /* 17386 */;
+import SettingBuilders from "SettingBuilders" /* 11970 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

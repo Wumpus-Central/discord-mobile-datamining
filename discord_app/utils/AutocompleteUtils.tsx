@@ -18,8 +18,8 @@ import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScor
 import GuildUtilsDefault from "GuildUtils" /* 6990 */;
 import isSoundValidDefault from "isSoundValid" /* 7087 */;
 import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7580 */;
-import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 12029 */;
-import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 14771 */;
+import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 12037 */;
+import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 14777 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmojiStore from "EmojiStore" /* 6883 */;
 import SoundboardStore from "SoundboardStore" /* 6923 */;
@@ -1915,7 +1915,7 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(10832);
+              obj2 = flag(10833);
             }
           });
         });

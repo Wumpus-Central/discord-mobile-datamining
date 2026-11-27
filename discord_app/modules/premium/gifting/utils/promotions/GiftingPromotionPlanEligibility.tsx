@@ -1,6 +1,6 @@
-// === Module 11150: GiftingPromotionPlanEligibility ===
+// === Module 11151: GiftingPromotionPlanEligibility ===
 
-// Module 11150 (GiftingPromotionPlanEligibility)
+// Module 11151 (GiftingPromotionPlanEligibility)
 import PremiumConstants from "PremiumConstants" /* 1389 */;
 import size from "module_2" /* 2 */;
 

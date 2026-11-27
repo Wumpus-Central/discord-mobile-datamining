@@ -1,6 +1,6 @@
-// === Module 17191: UserSettingsPushNotificationLogs ===
+// === Module 17198: UserSettingsPushNotificationLogs ===
 
-// Module 17191 (UserSettingsPushNotificationLogs)
+// Module 17198 (UserSettingsPushNotificationLogs)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -50,7 +50,7 @@ export default function UserSettingsPushNotificationLogs() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -83,7 +83,7 @@ export default function UserSettingsPushNotificationLogs() {
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -155,7 +155,7 @@ export default function UserSettingsPushNotificationLogs() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -172,7 +172,7 @@ export default function UserSettingsPushNotificationLogs() {
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp5(10695)(), done: false };
+            const obj4 = { value: tmp5(10696)(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -184,10 +184,10 @@ export default function UserSettingsPushNotificationLogs() {
           return obj5;
         } else {
           closure_128_0 = value;
-          const obj6 = { message: tmp5(10696)(closure_128_0, false) };
-          tmp2(8690).showShareActionSheet(obj6, "push-notification-logs");
+          const obj6 = { message: tmp5(10697)(closure_128_0, false) };
+          tmp2(8691).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;
@@ -195,7 +195,7 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj3.children = closure_7(defaultValue(12871).ShareIcon, {});
+  obj3.children = closure_7(defaultValue(12879).ShareIcon, {});
   items1[1] = closure_7(defaultValue(6152).PressableOpacity, obj3);
   obj2.children = items1;
   let items2 = [closure_8(View, obj2), ];

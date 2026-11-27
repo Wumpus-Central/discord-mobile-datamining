@@ -1,6 +1,6 @@
-// === Module 15961: unavailableCommand ===
+// === Module 15968: unavailableCommand ===
 
-// Module 15961 (unavailableCommand)
+// Module 15968 (unavailableCommand)
 import Constants from "Constants" /* 1071 */;
 import RPCErrorDefault from "RPCError" /* 7644 */;
 import size from "module_2" /* 2 */;

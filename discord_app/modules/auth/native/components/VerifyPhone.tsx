@@ -1,7 +1,7 @@
-// === Module 17685: components/VerifyPhone ===
+// === Module 17692: components/VerifyPhone ===
 
-// Module 17685 (components/VerifyPhone)
-import RegistrationBailoutButtonDefault from "RegistrationBailoutButton" /* 17686 */;
+// Module 17692 (components/VerifyPhone)
+import RegistrationBailoutButtonDefault from "RegistrationBailoutButton" /* 17693 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,8 +9,8 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-let closure_6 = fn(17656).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(17657);
+let closure_6 = fn(17663).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(17664);
 ({ authStateToRegisterTransitionStep: metroImportDefault, RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const Links = fn(1071).Links;
 const jsx = fn(21).jsx;
@@ -33,7 +33,7 @@ export default function VerifyPhone(phone) {
   closure_7 = noop.useRef(false);
   const context = noop.useContext(require("Auth").TrackRegistrationContext);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  onPhoneTokenReceived(17674)(closure_7(sourceState));
+  onPhoneTokenReceived(17681)(closure_7(sourceState));
   items = [context];
   const effect = noop.useEffect(() => {
     if (_undefined()) {
@@ -108,7 +108,7 @@ export default function VerifyPhone(phone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -139,7 +139,7 @@ export default function VerifyPhone(phone) {
         } else {
           _undefined(false);
           c3 = 3;
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c3 = tmp;
@@ -169,7 +169,7 @@ export default function VerifyPhone(phone) {
     return tmp2;
   }, items3);
   let obj = { title, description, error: tmp3, onCodeEntered, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
-  const tmp7 = onPhoneTokenReceived(17674);
+  const tmp7 = onPhoneTokenReceived(17681);
   obj.codeType = require("CodeField").CodeType.NUMERIC;
   obj.footer = memo;
   obj.disabled = tmp5;

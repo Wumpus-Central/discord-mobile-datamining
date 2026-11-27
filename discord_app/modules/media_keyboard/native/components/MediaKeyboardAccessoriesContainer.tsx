@@ -1,9 +1,9 @@
-// === Module 18628: MediaKeyboardAccessoriesContainer ===
+// === Module 18639: MediaKeyboardAccessoriesContainer ===
 
-// Module 18628 (MediaKeyboardAccessoriesContainer)
+// Module 18639 (MediaKeyboardAccessoriesContainer)
 import _modDef1654 from "module_1654" /* 1654 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10274 */;
+import NativeMenuStore from "NativeMenuStore" /* 10275 */;
 
 const require = globalThis.__r;
 

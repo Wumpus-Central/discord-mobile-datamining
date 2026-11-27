@@ -1,11 +1,11 @@
-// === Module 19996: GuildSettingsModalStickers ===
+// === Module 20021: GuildSettingsModalStickers ===
 
-// Module 19996 (GuildSettingsModalStickers)
+// Module 20021 (GuildSettingsModalStickers)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
-import GuildBoostingUtils2 from "GuildBoostingUtils" /* 10363 */;
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 20000 */;
-import showGuildSettingsModalStickerInfoActionSheet from "showGuildSettingsModalStickerInfoActionSheet" /* 20007 */;
+import GuildBoostingUtils2 from "GuildBoostingUtils" /* 10364 */;
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 20025 */;
+import showGuildSettingsModalStickerInfoActionSheet from "showGuildSettingsModalStickerInfoActionSheet" /* 20032 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
@@ -25,28 +25,28 @@ const jsxProd = fn(21);
 let obj = { tier: BoostedGuildTiers.NONE, title: null, numSlots: null };
 let intl = fn(1112).intl;
 obj.title = intl.string(fn(1112).t.tfVXhP);
-let GuildBoostingUtils = fn(10363);
+let GuildBoostingUtils = fn(10364);
 obj.numSlots = GuildBoostingUtils.getIncrementalStickerCountForTier(BoostedGuildTiers.NONE);
 let items = [obj, , , ];
 let obj2 = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null, numSlots: null };
 let intl2 = fn(1112).intl;
 obj2.title = intl2.string(fn(1112).t.nzXtaS);
-obj2.IconComponent = fn(19997).BoostGemOutlineIcon;
-GuildBoostingUtils = fn(10363);
+obj2.IconComponent = fn(20022).BoostGemOutlineIcon;
+GuildBoostingUtils = fn(10364);
 obj2.numSlots = GuildBoostingUtils.getIncrementalStickerCountForTier(BoostedGuildTiers.TIER_1);
 items[1] = obj2;
 let obj4 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null, numSlots: null };
 let intl3 = fn(1112).intl;
 obj4.title = intl3.string(fn(1112).t["h33/uW"]);
-obj4.IconComponent = fn(9365).BoostGemIcon;
-GuildBoostingUtils = fn(10363);
+obj4.IconComponent = fn(9366).BoostGemIcon;
+GuildBoostingUtils = fn(10364);
 obj4.numSlots = GuildBoostingUtils.getIncrementalStickerCountForTier(BoostedGuildTiers.TIER_2);
 items[2] = obj4;
 let obj6 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null, numSlots: null };
 const intl4 = fn(1112).intl;
 obj6.title = intl4.string(fn(1112).t.BfF6ED);
-obj6.IconComponent = fn(13986).BoostTier3Icon;
-GuildBoostingUtils = fn(10363);
+obj6.IconComponent = fn(13993).BoostTier3Icon;
+GuildBoostingUtils = fn(10364);
 obj6.numSlots = GuildBoostingUtils.getIncrementalStickerCountForTier(BoostedGuildTiers.TIER_3);
 items[3] = obj6;
 const createStyles = fn(5043);

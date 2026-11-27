@@ -1,6 +1,6 @@
-// === Module 18913: ConjureFrameUpdateStore ===
+// === Module 18929: ConjureFrameUpdateStore ===
 
-// Module 18913 (ConjureFrameUpdateStore)
+// Module 18929 (ConjureFrameUpdateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FramesStore from "FramesStore" /* 6936 */;

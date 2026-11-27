@@ -1,6 +1,6 @@
-// === Module 19769: LoginRequiredActionManager ===
+// === Module 19785: LoginRequiredActionManager ===
 
-// Module 19769 (LoginRequiredActionManager)
+// Module 19785 (LoginRequiredActionManager)
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6839 */;
 import UserStore from "UserStore" /* 1387 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4885 */;

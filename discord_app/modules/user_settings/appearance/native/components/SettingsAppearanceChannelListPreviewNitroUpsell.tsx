@@ -1,14 +1,14 @@
-// === Module 16914: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 16921: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 16914 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 16921 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9101 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9574 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9695 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9102 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9575 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9696 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import module_1654 from "module_1654" /* 1654 */;

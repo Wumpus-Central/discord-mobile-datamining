@@ -1,9 +1,9 @@
-// === Module 9358: SubscriptionAccountHoldNotice ===
+// === Module 9359: SubscriptionAccountHoldNotice ===
 
-// Module 9358 (SubscriptionAccountHoldNotice)
+// Module 9359 (SubscriptionAccountHoldNotice)
 import nativeDefault from "native" /* 575 */;
 import PremiumUtils from "PremiumUtils" /* 2174 */;
-import _modDef9359 from "module_9359" /* 9359 */;
+import _modDef9360 from "module_9360" /* 9360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
   if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { style: tmp.textContainer, children: null };
-    const obj3 = { size: subscription(1186).IconSizes.MEDIUM, style: tmp.icon, source: _modDef9359 };
+    const obj3 = { size: subscription(1186).IconSizes.MEDIUM, style: tmp.icon, source: _modDef9360 };
     items = [closure_6(subscription(1186).Icon, obj3), ];
     const obj4 = { style: tmp.text, variant: "body-sm/medium", children: null };
     const intl = subscription(1112).intl;

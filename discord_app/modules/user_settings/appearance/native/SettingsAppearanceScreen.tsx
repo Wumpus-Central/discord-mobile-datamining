@@ -1,9 +1,9 @@
-// === Module 16875: SettingsAppearanceScreen ===
+// === Module 16882: SettingsAppearanceScreen ===
 
-// Module 16875 (SettingsAppearanceScreen)
+// Module 16882 (SettingsAppearanceScreen)
 import util from "util" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
-import HeaderShared from "HeaderShared" /* 9004 */;
+import HeaderShared from "HeaderShared" /* 9005 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5067 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1192 */;
@@ -12,9 +12,9 @@ import ThemeStore from "ThemeStore" /* 1191 */;
 const require = globalThis.__r;
 
 require = fn;
-const FontScaleStore = fn(16876);
+const FontScaleStore = fn(16883);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: metroImportDefault, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(9555).MobileUserSettings;
+const MobileUserSettings = fn(9556).MobileUserSettings;
 const HelpdeskArticles = fn(1071).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -23,8 +23,8 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 export default noop.memo(function SettingsAppearanceScreen() {
   nativeStackNavigation(5604)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(16877).fetchUserCustomThemes();
-      const obj = closure_0(16877);
+      const userCustomThemes = closure_0(16884).fetchUserCustomThemes();
+      const obj = closure_0(16884);
     }
   });
   items = [ThemeStore, ClientThemesBackgroundStore];
@@ -52,7 +52,7 @@ export default noop.memo(function SettingsAppearanceScreen() {
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "r" });
+          nativeStackNavigation.setOptions({ headerRight: "top" });
         }
       }
       const obj2 = { headerRight: null };
@@ -95,7 +95,7 @@ export default noop.memo(function SettingsAppearanceScreen() {
     obj7.settings = items5;
     const intl3 = closure_0(1112).intl;
     const obj8 = { helpCenterLink: null };
-    const obj = closure_0(11962);
+    const obj = closure_0(11970);
     obj8.helpCenterLink = nativeStackNavigation(2188).getArticleURL(constants2.FAVORITES_GUILD);
     obj7.subLabel = intl3.format(nativeStackNavigation(3857).GR2KOG, obj8);
     items1[4] = obj7;
@@ -119,5 +119,5 @@ export default noop.memo(function SettingsAppearanceScreen() {
     return obj.createList(obj2);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(16190), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(16197), { node }, "" + theme + "-" + gradientPresetId);
 });

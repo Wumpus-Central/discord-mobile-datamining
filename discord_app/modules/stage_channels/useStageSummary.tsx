@@ -1,6 +1,6 @@
-// === Module 10326: useStageSummary ===
+// === Module 10327: useStageSummary ===
 
-// Module 10326 (useStageSummary)
+// Module 10327 (useStageSummary)
 import util from "util" /* 1112 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6855 */;
 import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6861 */;

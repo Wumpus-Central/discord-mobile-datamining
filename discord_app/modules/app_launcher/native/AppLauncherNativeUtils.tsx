@@ -1,16 +1,16 @@
-// === Module 13014: AppLauncherNativeUtils ===
+// === Module 13022: AppLauncherNativeUtils ===
 
-// Module 13014 (AppLauncherNativeUtils)
+// Module 13022 (AppLauncherNativeUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
 import _modDef2108 from "module_2108" /* 2108 */;
 import Server from "Server" /* 2118 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5695 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6013 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 8180 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8183 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 10087 */;
-import FrecencySection from "FrecencySection" /* 13015 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 8181 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8184 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 10088 */;
+import FrecencySection from "FrecencySection" /* 13023 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import UserStore from "UserStore" /* 1387 */;

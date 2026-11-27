@@ -1,19 +1,19 @@
-// === Module 17087: TimestampHourCycleSetting ===
+// === Module 17094: TimestampHourCycleSetting ===
 
-// Module 17087 (TimestampHourCycleSetting)
+// Module 17094 (TimestampHourCycleSetting)
 import util from "util" /* 1112 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1195 */;
 import UserSettings from "UserSettings" /* 4868 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11962);
+const SettingBuilders = fn(11970);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(9555).MobileUserSettings.APPEARANCE,
+  parent: fn(9556).MobileUserSettings.APPEARANCE,
   useValue: fn(4868).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;

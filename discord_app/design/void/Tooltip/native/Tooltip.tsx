@@ -1,6 +1,6 @@
-// === Module 15589: Tooltip/Tooltip ===
+// === Module 15596: Tooltip/Tooltip ===
 
-// Module 15589 (Tooltip/Tooltip)
+// Module 15596 (Tooltip/Tooltip)
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import noop from "module_19" /* 19 */;

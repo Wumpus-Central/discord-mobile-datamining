@@ -1,10 +1,10 @@
-// === Module 11827: ChannelSafetyWarningsActionCreators ===
+// === Module 11835: ChannelSafetyWarningsActionCreators ===
 
-// Module 11827 (ChannelSafetyWarningsActionCreators)
+// Module 11835 (ChannelSafetyWarningsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1071 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11408 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11409 */;
 import size from "module_2" /* 2 */;
 
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;

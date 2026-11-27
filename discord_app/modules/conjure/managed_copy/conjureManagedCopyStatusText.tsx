@@ -1,6 +1,6 @@
-// === Module 18489: conjureManagedCopyStatusText ===
+// === Module 18496: conjureManagedCopyStatusText ===
 
-// Module 18489 (conjureManagedCopyStatusText)
+// Module 18496 (conjureManagedCopyStatusText)
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import DateUtils from "DateUtils" /* 4865 */;

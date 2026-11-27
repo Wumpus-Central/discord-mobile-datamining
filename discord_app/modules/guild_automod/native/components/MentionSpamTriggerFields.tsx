@@ -1,13 +1,13 @@
-// === Module 19942: MentionSpamTriggerFields ===
+// === Module 19958: MentionSpamTriggerFields ===
 
-// Module 19942 (MentionSpamTriggerFields)
-import AutomodRuleUtils from "AutomodRuleUtils" /* 19925 */;
+// Module 19958 (MentionSpamTriggerFields)
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19941 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(12522);
+const Constants = fn(12530);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -22,10 +22,10 @@ export default function MentionSpamTriggerFields(rule) {
   noop = undefined;
   ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
   const tmp = closure_9();
-  let hasMentionRaidLimitAccess = rule(18794).useHasMentionRaidLimitAccess(rule.guildId);
+  let hasMentionRaidLimitAccess = rule(18812).useHasMentionRaidLimitAccess(rule.guildId);
   const intl = rule(1112).intl;
   const stringResult = intl.string(rule(1112).t["s/26oQ"]);
-  let obj = rule(18794);
+  let obj = rule(18812);
   [tmp7, c3] = noop.useState(true);
   let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
   const intl2 = rule(1112).intl;

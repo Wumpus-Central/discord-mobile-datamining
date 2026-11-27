@@ -1,14 +1,14 @@
-// === Module 14287: ConjureProjectIcon ===
+// === Module 14294: ConjureProjectIcon ===
 
-// Module 14287 (ConjureProjectIcon)
+// Module 14294 (ConjureProjectIcon)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import AvatarUtils from "AvatarUtils" /* 1413 */;
 import useToken from "useToken" /* 5607 */;
 import FastImageDefault from "FastImage" /* 5730 */;
-import MagicWandIcon from "MagicWandIcon" /* 11485 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11557 */;
-import useConjureProjectIcon from "useConjureProjectIcon" /* 11560 */;
+import MagicWandIcon from "MagicWandIcon" /* 11495 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11565 */;
+import useConjureProjectIcon from "useConjureProjectIcon" /* 11568 */;
 import noop from "module_19" /* 19 */;
 
 const useConjureProjectIconDefault = useConjureProjectIcon;

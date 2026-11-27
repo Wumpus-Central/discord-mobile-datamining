@@ -1,6 +1,6 @@
-// === Module 18196: VoicePanelDock ===
+// === Module 18203: VoicePanelDock ===
 
-// Module 18196 (VoicePanelDock)
+// Module 18203 (VoicePanelDock)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _mod1654 from "module_1654" /* 1654 */;
@@ -9,15 +9,15 @@ import timing_timing from "timing/timing" /* 5253 */;
 import HapticUtils from "HapticUtils" /* 5259 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import ExternalPipDefault from "ExternalPip" /* 5952 */;
-import ContextMenu from "ContextMenu" /* 9067 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9068 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11786 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11812 */;
-import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 18195 */;
-import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 18197 */;
-import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 18219 */;
-import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 18225 */;
+import ContextMenu from "ContextMenu" /* 9068 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9069 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11794 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11820 */;
+import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 18202 */;
+import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 18204 */;
+import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 18226 */;
+import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 18232 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 
@@ -77,10 +77,10 @@ function DockPressTargetGuard(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11782).VoicePanelModes;
-const VoicePanelDockConstants = fn(11805);
+const VoicePanelModes = fn(11790).VoicePanelModes;
+const VoicePanelDockConstants = fn(11813);
 ({ DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_8, DOCK_PULL_SNAP_DISTANCE: closure_9, DOCK_PULL_SNAP_GIVE: closure_10, DOCK_TAP_MAX_MOVEMENT: closure_11, getDockInset: closure_12, DOCK_DRAG_HANDLE_TOP, DOCK_DRAG_HANDLE_WIDTH, DOCK_GAP, DOCK_PADDING_TOP, DOCK_ROW_HEIGHT } = VoicePanelDockConstants);
-const GestureConstants = fn(11806);
+const GestureConstants = fn(11814);
 ({ FLING_MIN_DISTANCE: map1, FLING_MIN_VELOCITY: closure_14, PULL_GESTURE_ACTIVATION_DISTANCE: closure_15, PULL_GESTURE_RESISTANCE: closure_16, PULL_GESTURE_SNAP_TIMING: closure_17, PULL_GESTURE_UNSNAP_TIMING: closure_18 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);

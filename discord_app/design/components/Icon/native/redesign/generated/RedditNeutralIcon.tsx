@@ -1,9 +1,9 @@
-// === Module 14237: RedditNeutralIcon ===
+// === Module 14244: RedditNeutralIcon ===
 
-// Module 14237 (RedditNeutralIcon)
+// Module 14244 (RedditNeutralIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5729 */;
-import _mod14238 from "module_14238" /* 14238 */;
+import _mod14245 from "module_14245" /* 14245 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function RedditNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14238, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14245, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

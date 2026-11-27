@@ -1,20 +1,20 @@
-// === Module 10559: StageChannelCallList ===
+// === Module 10560: StageChannelCallList ===
 
-// Module 10559 (StageChannelCallList)
+// Module 10560 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6855 */;
-import SpeakerTile from "SpeakerTile" /* 10561 */;
-import StageSectionHeaderDefault from "StageSectionHeader" /* 10568 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10569 */;
-import StageGridRowDefault from "StageGridRow" /* 10570 */;
-import AudienceGridRowDefault from "AudienceGridRow" /* 10583 */;
+import SpeakerTile from "SpeakerTile" /* 10562 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 10569 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10570 */;
+import StageGridRowDefault from "StageGridRow" /* 10571 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 10584 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StageChannelListStore = fn(10560);
+const StageChannelListStore = fn(10561);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: closure_6 } = StageChannelListStore);
 const MAX_AUDIENCE_ROW_LIMIT = fn(6800).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
@@ -285,10 +285,10 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  const throttleDurationForChannel = width(10324).useThrottleDurationForChannel(channel.id);
+  const throttleDurationForChannel = width(10325).useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1495)().width;
-  let obj = width(10324);
-  isScreenLandscape = width(10042).useIsScreenLandscape();
+  let obj = width(10325);
+  isScreenLandscape = width(10043).useIsScreenLandscape();
   items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
     let num = 3;
@@ -302,7 +302,7 @@ export default function StageChannelCallList(channel) {
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj2 = width(10042);
-  const tmp4 = _slicedToArray(width(10324).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const obj2 = width(10043);
+  const tmp4 = _slicedToArray(width(10325).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
 };

@@ -1,6 +1,6 @@
-// === Module 14326: useStartEvent ===
+// === Module 14333: useStartEvent ===
 
-// Module 14326 (useStartEvent)
+// Module 14333 (useStartEvent)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ export default function useStartEvent() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -86,7 +86,7 @@ export default function useStartEvent() {
               c6 = 1;
               c7 = 3;
               c8 = 1;
-              const obj7 = { value: closure_1(14327).preStartEventActions(closure_131_0, closure_131_3), done: false };
+              const obj7 = { value: closure_1(14334).preStartEventActions(closure_131_0, closure_131_3), done: false };
               return obj7;
             }
           } else {
@@ -111,7 +111,7 @@ export default function useStartEvent() {
               } else {
                 c7 = 4;
                 c8 = 1;
-                const obj10 = { value: closure_1(14327).setEventAsActive(closure_131_0, closure_131_1), done: false };
+                const obj10 = { value: closure_1(14334).setEventAsActive(closure_131_0, closure_131_1), done: false };
                 return obj10;
               }
             } else if (4 === tmp7) {
@@ -126,7 +126,7 @@ export default function useStartEvent() {
               } else {
                 c7 = 5;
                 c8 = 1;
-                const obj13 = { value: closure_0(14328).navigateToEvent(closure_131_0, closure_131_2), done: false };
+                const obj13 = { value: closure_0(14335).navigateToEvent(closure_131_0, closure_131_2), done: false };
                 return obj13;
               }
             } else if (5 === tmp7) {
@@ -141,7 +141,7 @@ export default function useStartEvent() {
               } else {
                 c7 = 6;
                 c8 = 1;
-                const obj15 = { value: closure_0(14328).postStartActions(closure_131_0, closure_131_2), done: false };
+                const obj15 = { value: closure_0(14335).postStartActions(closure_131_0, closure_131_2), done: false };
                 return obj15;
               }
             } else if (arg0 === 1) {

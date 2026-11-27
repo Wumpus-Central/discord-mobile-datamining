@@ -1,7 +1,7 @@
-// === Module 11409: ChannelDetailsConstants ===
+// === Module 11410: ChannelDetailsConstants ===
 
-// Module 11409 (ChannelDetailsConstants)
-import SearchConstants from "SearchConstants" /* 9019 */;
+// Module 11410 (ChannelDetailsConstants)
+import SearchConstants from "SearchConstants" /* 9020 */;
 import size from "module_2" /* 2 */;
 
 const sum = SearchConstants.SEARCH_BAR_HEIGHT + 40;

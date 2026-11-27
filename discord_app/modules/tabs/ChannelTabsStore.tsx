@@ -1,6 +1,6 @@
-// === Module 11527: ChannelTabsStore ===
+// === Module 11535: ChannelTabsStore ===
 
-// Module 11527 (ChannelTabsStore)
+// Module 11535 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FrecencyDefault from "Frecency" /* 5859 */;
@@ -65,7 +65,7 @@ function createTab(routeTabForLocation, arg1) {
     items[HermesBuiltin.arraySpread(mapped, 0)] = routeTabForLocation;
     let substr1 = items.slice(-11);
   } else {
-    handleChannelSelect(11528);
+    handleChannelSelect(11536);
     substr1 = mapped;
   }
   const obj2 = { id: null };
@@ -92,8 +92,8 @@ function navigateTo(routeTabForLocation1) {
       const found = tabs.find((id) => id.id === id);
       let tmp5 = null != found;
       if (tmp5) {
-        tmp5 = !handleChannelSelect(11528).isSameTabLocation(found, routeTabForLocation1);
-        const obj = handleChannelSelect(11528);
+        tmp5 = !handleChannelSelect(11536).isSameTabLocation(found, routeTabForLocation1);
+        const obj = handleChannelSelect(11536);
       }
       if (!tmp5) {
         return tmp5;
@@ -132,7 +132,7 @@ function navigateTo(routeTabForLocation1) {
           });
         }
         closure_129_0 = routeTabForLocation1;
-        const found1 = tabs.find((item) => handleChannelSelect(11528).isSameTabLocation(item, closure_0));
+        const found1 = tabs.find((item) => handleChannelSelect(11536).isSameTabLocation(item, closure_0));
         if (null != found1) {
           ({ id: c15, id } = found1);
         } else {
@@ -198,7 +198,7 @@ function initializeTabs() {
   if (c17) {
     if (0 === tabs.length) {
       const _window2 = window;
-      let routeTabForLocation = routeTabForLocation1(11528).getRouteTabForLocation(window.location);
+      let routeTabForLocation = routeTabForLocation1(11536).getRouteTabForLocation(window.location);
       if (null == routeTabForLocation) {
         const currentlySelectedChannelId = SelectedChannelStore.getCurrentlySelectedChannelId();
         let tmp40 = null;
@@ -225,7 +225,7 @@ function initializeTabs() {
         flag3 = true;
       }
       let tmp32 = flag3;
-      const obj7 = routeTabForLocation1(11528);
+      const obj7 = routeTabForLocation1(11536);
     } else {
       tmp32 = trimToMaxTabs();
     }
@@ -234,7 +234,7 @@ function initializeTabs() {
     c17 = true;
     const tmp2 = trimToMaxTabs();
     const _window = window;
-    routeTabForLocation1 = routeTabForLocation1(11528).getRouteTabForLocation(window.location);
+    routeTabForLocation1 = routeTabForLocation1(11536).getRouteTabForLocation(window.location);
     if (null == routeTabForLocation1) {
       const currentlySelectedChannelId1 = SelectedChannelStore.getCurrentlySelectedChannelId();
       let tmp10 = null;
@@ -254,8 +254,8 @@ function initializeTabs() {
     }
     if (routeTabForLocation1 == null) {
       const obj4 = { pathname: DefaultRouteStore.defaultRoute };
-      routeTabForLocation1 = tmp3(11528).getRouteTabForLocation(obj4);
-      const tmp3Result = tmp3(11528);
+      routeTabForLocation1 = tmp3(11536).getRouteTabForLocation(obj4);
+      const tmp3Result = tmp3(11536);
     }
     let flag2 = false;
     if (null != routeTabForLocation1) {
@@ -313,7 +313,7 @@ function initializeTabs() {
           });
           flag2 = true;
         }
-        tmp3Result2 = tmp3(11528);
+        tmp3Result2 = tmp3(11536);
       }
     }
     if (!flag2) {
@@ -582,7 +582,7 @@ prototype["initialize"] = function initialize(tabs) {
     return obj;
   })(openedChannels));
   pruneOpenedChannels();
-  tabsExperimentEnabled = handleChannelSelect(11529).getTabsExperimentEnabled("ChannelTabsStore.initialize");
+  tabsExperimentEnabled = handleChannelSelect(11537).getTabsExperimentEnabled("ChannelTabsStore.initialize");
   if (tabsExperimentEnabled !== tabsExperimentEnabled) {
     if (tabsExperimentEnabled) {
       tabsExperimentEnabled = c16;
@@ -591,7 +591,7 @@ prototype["initialize"] = function initialize(tabs) {
       initializeTabs();
     }
   }
-  let obj = handleChannelSelect(11529);
+  let obj = handleChannelSelect(11537);
 };
 prototype["getState"] = function getState() {
   const obj = {};
@@ -1178,7 +1178,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
   CHANNEL_DELETE: handleChannelDelete,
   CONNECTION_OPEN: function handleConnectionOpen() {
     c16 = true;
-    tabsExperimentEnabled = handleChannelSelect(11529).getTabsExperimentEnabled("ChannelTabsStore.handleConnectionOpen");
+    tabsExperimentEnabled = handleChannelSelect(11537).getTabsExperimentEnabled("ChannelTabsStore.handleConnectionOpen");
     let flag = tabsExperimentEnabled !== tabsExperimentEnabled;
     if (flag) {
       if (tabsExperimentEnabled) {

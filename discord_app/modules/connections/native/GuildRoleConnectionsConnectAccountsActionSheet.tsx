@@ -1,6 +1,6 @@
-// === Module 12042: GuildRoleConnectionsConnectAccountsActionSheet ===
+// === Module 12050: GuildRoleConnectionsConnectAccountsActionSheet ===
 
-// Module 12042 (GuildRoleConnectionsConnectAccountsActionSheet)
+// Module 12050 (GuildRoleConnectionsConnectAccountsActionSheet)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -26,12 +26,12 @@ import GuildActionCreatorsDefault from "GuildActionCreators" /* 6991 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7096 */;
 import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7532 */;
 import openUserSettings from "openUserSettings" /* 8109 */;
-import BotTagDefault from "BotTag" /* 8632 */;
-import _modDef12044 from "module_12044" /* 12044 */;
-import _modDef12045 from "module_12045" /* 12045 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 12046 */;
-import _modDef12049 from "module_12049" /* 12049 */;
-import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 12054 */;
+import BotTagDefault from "BotTag" /* 8633 */;
+import _modDef12052 from "module_12052" /* 12052 */;
+import _modDef12053 from "module_12053" /* 12053 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 12054 */;
+import _modDef12057 from "module_12057" /* 12057 */;
+import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 12062 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -453,7 +453,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef12044, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef12052, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1186).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
@@ -463,7 +463,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp22Result = closure_1_29(tmp15(5634).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef12045, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef12053, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1186).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
@@ -586,7 +586,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
           },
         children: null
       };
-      const obj17 = { source: _modDef12049, size: tmp15(1186).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
+      const obj17 = { source: _modDef12057, size: tmp15(1186).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
       obj16.children = tmp24(tmp15(1186).Icon, obj17);
       tmp24Result8 = tmp24(c7, obj16);
     }
@@ -782,7 +782,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -811,7 +811,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           c0 = tmp;
@@ -1072,7 +1072,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 const obj2 = { default: closure_1_40 };
                 const obj4 = { role, guildId, initialAttemptedPlatformType: platformType, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
                 let tmp7 = null;
-                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(12050).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
+                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(12058).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
                 }
@@ -1080,7 +1080,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(12050);
+                const obj3 = platformType(12058);
               },
               overrideUrl: null
             };

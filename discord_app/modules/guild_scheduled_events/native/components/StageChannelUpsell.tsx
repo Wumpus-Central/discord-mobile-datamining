@@ -1,6 +1,6 @@
-// === Module 8518: StageChannelUpsell ===
+// === Module 8519: StageChannelUpsell ===
 
-// Module 8518 (StageChannelUpsell)
+// Module 8519 (StageChannelUpsell)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -12,15 +12,15 @@ import FastImageDefault from "FastImage" /* 5730 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import Pressables from "Pressables" /* 6152 */;
 import _modDef7752 from "module_7752" /* 7752 */;
-import _modDef8520 from "module_8520" /* 8520 */;
+import _modDef8521 from "module_8521" /* 8521 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const createChannelRecord = fn(4896).createChannelRecord;
-let closure_6 = fn(8519).useStageChannelUpsellCardStore;
-let closure_7 = fn(8474).CREATE_GUILD_EVENT_MODAL_KEY;
+let closure_6 = fn(8520).useStageChannelUpsellCardStore;
+let closure_7 = fn(8475).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1071).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -43,7 +43,7 @@ export default function StageChannelUpsell(arg0) {
     let obj3 = { source: _modDef7752 };
     obj2.children = closure_9(native.Icon, obj3);
     items = [closure_9(Pressables.PressableOpacity, obj2), , , , , ];
-    const obj4 = { source: _modDef8520, style: tmp.image };
+    const obj4 = { source: _modDef8521, style: tmp.image };
     items[1] = closure_9(FastImageDefault, obj4);
     const obj5 = { style: tmp.header, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -68,7 +68,7 @@ export default function StageChannelUpsell(arg0) {
     obj10.text = intl4.string(util.t["X/3SyA"]);
     obj10.onPress = function handleCreateChannel() {
       ModalActionCreatorsDefault.popWithKey(closure_7);
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8521, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8522, dependencyMap.paths), {
         guildId,
         channelType: ChannelTypes.GUILD_STAGE_VOICE,
         onChannelCreated(id) {

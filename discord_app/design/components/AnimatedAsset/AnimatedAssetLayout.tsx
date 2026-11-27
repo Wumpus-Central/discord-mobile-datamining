@@ -1,6 +1,6 @@
-// === Module 17472: AnimatedAssetLayout ===
+// === Module 17479: AnimatedAssetLayout ===
 
-// Module 17472 (AnimatedAssetLayout)
+// Module 17479 (AnimatedAssetLayout)
 import size from "module_2" /* 2 */;
 
 function getAnimatedAssetBox(padColor) {

@@ -1,6 +1,6 @@
-// === Module 8600: transitionToGuild ===
+// === Module 8601: transitionToGuild ===
 
-// Module 8600 (transitionToGuild)
+// Module 8601 (transitionToGuild)
 import router_utils from "router_utils" /* 1098 */;
 import getGuildTransitionRoute from "getGuildTransitionRoute" /* 7573 */;
 import _slicedToArray from "module_32" /* 32 */;

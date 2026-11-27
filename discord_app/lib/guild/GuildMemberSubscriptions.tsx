@@ -1,6 +1,6 @@
-// === Module 14768: GuildMemberSubscriptions ===
+// === Module 14774: GuildMemberSubscriptions ===
 
-// Module 14768 (GuildMemberSubscriptions)
+// Module 14774 (GuildMemberSubscriptions)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;

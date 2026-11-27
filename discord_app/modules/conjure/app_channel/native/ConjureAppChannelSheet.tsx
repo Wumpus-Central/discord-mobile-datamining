@@ -1,6 +1,6 @@
-// === Module 14100: ConjureAppChannelSheet ===
+// === Module 14107: ConjureAppChannelSheet ===
 
-// Module 14100 (ConjureAppChannelSheet)
+// Module 14107 (ConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5257 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -8,12 +8,12 @@ import useChannelNameDefault from "useChannelName" /* 5659 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import useAppChannelApplication from "useAppChannelApplication" /* 7603 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8112 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10428 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 11450 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11487 */;
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14098 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10429 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 11451 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11462 */;
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14105 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14097 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14104 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 

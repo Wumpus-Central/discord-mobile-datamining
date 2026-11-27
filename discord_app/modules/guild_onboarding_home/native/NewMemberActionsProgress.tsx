@@ -1,12 +1,12 @@
-// === Module 17932: NewMemberActionsProgress ===
+// === Module 17939: NewMemberActionsProgress ===
 
-// Module 17932 (NewMemberActionsProgress)
+// Module 17939 (NewMemberActionsProgress)
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7581 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8173 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8174 */;
 
 const require = fn;
 function ProgressBar(percent) {

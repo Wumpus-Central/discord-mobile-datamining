@@ -1,6 +1,6 @@
-// === Module 20078: SelectConnectionActionSheet ===
+// === Module 20136: SelectConnectionActionSheet ===
 
-// Module 20078 (SelectConnectionActionSheet)
+// Module 20136 (SelectConnectionActionSheet)
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
 import useThemeDefault from "useTheme" /* 5252 */;
@@ -11,10 +11,10 @@ import TableRow from "TableRow" /* 6144 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7480 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 8276 */;
-import SegmentedControlState from "SegmentedControlState" /* 8616 */;
-import SegmentedControl from "SegmentedControl" /* 8617 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 12043 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 8277 */;
+import SegmentedControlState from "SegmentedControlState" /* 8617 */;
+import SegmentedControl from "SegmentedControl" /* 8618 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 12051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

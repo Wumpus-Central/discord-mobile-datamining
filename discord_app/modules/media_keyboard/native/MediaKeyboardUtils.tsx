@@ -1,6 +1,6 @@
-// === Module 11087: MediaKeyboardUtils ===
+// === Module 11088: MediaKeyboardUtils ===
 
-// Module 11087 (MediaKeyboardUtils)
+// Module 11088 (MediaKeyboardUtils)
 import applyDefault from "apply" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
@@ -9,11 +9,11 @@ import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7873 */;
 import Upload from "Upload" /* 8126 */;
 import UploadPlatform from "UploadPlatform" /* 8127 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8134 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8136 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10062 */;
-import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 11088 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11684 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8135 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8137 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 10063 */;
+import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 11089 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11692 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1193 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -63,7 +63,7 @@ let closure_23 = async function _handleAttachFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -141,7 +141,7 @@ let closure_23 = async function _handleAttachFile(arg0) {
                                     if (name2 == null) {
                                       c1 = undefined;
                                     }
-                                    yield closure_0(8136).getImageDimensionsIfMissing(uri, undefined, undefined, c1);
+                                    yield closure_0(8137).getImageDimensionsIfMissing(uri, undefined, undefined, c1);
                                     closure_132_2 = value;
                                     const width = closure_132_2.width;
                                     const height = closure_132_2.height;
@@ -289,8 +289,8 @@ function handleCameraDialog(arg0) {
       _undefined2();
       const obj = InteractionModal(1256);
       const obj7 = { mediaType: "mixed", includeBase64: false, quality: null, videoQuality: "high", saveToPhotos: null, skipProcessing: true };
-      let obj3 = InteractionModal(8137);
-      obj7.quality = _undefined(8136).getImageCompressionQuality();
+      let obj3 = InteractionModal(8138);
+      obj7.quality = _undefined(8137).getImageCompressionQuality();
       obj7.saveToPhotos = UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
       obj3.launchCamera(obj7, (didCancel) => {
         if (didCancel.didCancel) {
@@ -352,7 +352,7 @@ function handleCameraDialog(arg0) {
           }
         }
       });
-      const obj5 = _undefined(8136);
+      const obj5 = _undefined(8137);
     }
   });
 }
@@ -399,13 +399,13 @@ function handleViewAllDialog(arg0) {
                         const assets = didCancel.assets;
                         let someResult;
                         if (assets != null) {
-                          someResult = assets.some((item) => origin(8134).doesImageMatchUpload(item, origin));
+                          someResult = assets.some((item) => origin(8135).doesImageMatchUpload(item, origin));
                         }
                         tmp2 = someResult;
                       }
                       if (!tmp2) {
-                        c1(10062).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                        const obj = c1(10062);
+                        c1(10063).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                        const obj = c1(10063);
                       }
                     });
                   }
@@ -596,8 +596,8 @@ function showSimpleMediaKeyboard(channel) {
           _undefined2();
           const obj = InteractionModal(1256);
           const obj7 = { mediaType: "mixed", includeBase64: false, quality: null, videoQuality: "high", saveToPhotos: null, skipProcessing: true };
-          let obj3 = InteractionModal(8137);
-          obj7.quality = _undefined(8136).getImageCompressionQuality();
+          let obj3 = InteractionModal(8138);
+          obj7.quality = _undefined(8137).getImageCompressionQuality();
           obj7.saveToPhotos = UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
           obj3.launchCamera(obj7, (didCancel) => {
             if (didCancel.didCancel) {
@@ -659,7 +659,7 @@ function showSimpleMediaKeyboard(channel) {
               }
             }
           });
-          const obj5 = _undefined(8136);
+          const obj5 = _undefined(8137);
         }
       });
     },
@@ -760,13 +760,13 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F141836 */ function() { ... });
+                              someResult = assets.some(/* F142300 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }
                           if (!tmp2) {
-                            c1(10062).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                            const obj = c1(10062);
+                            c1(10063).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                            const obj = c1(10063);
                           }
                         });
                       }
@@ -970,8 +970,8 @@ function showSimpleMediaKeyboard(channel) {
           _undefined2();
           const obj = InteractionModal(1256);
           const obj7 = { mediaType: "mixed", includeBase64: false, quality: null, videoQuality: "high", saveToPhotos: null, skipProcessing: true };
-          let obj3 = InteractionModal(8137);
-          obj7.quality = _undefined(8136).getImageCompressionQuality();
+          let obj3 = InteractionModal(8138);
+          obj7.quality = _undefined(8137).getImageCompressionQuality();
           obj7.saveToPhotos = UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
           obj3.launchCamera(obj7, (didCancel) => {
             if (didCancel.didCancel) {
@@ -1033,7 +1033,7 @@ function showSimpleMediaKeyboard(channel) {
               }
             }
           });
-          const obj5 = _undefined(8136);
+          const obj5 = _undefined(8137);
         }
       });
     },
@@ -1134,13 +1134,13 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F141836 */ function() { ... });
+                              someResult = assets.some(/* F142300 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }
                           if (!tmp2) {
-                            c1(10062).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                            const obj = c1(10062);
+                            c1(10063).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                            const obj = c1(10063);
                           }
                         });
                       }

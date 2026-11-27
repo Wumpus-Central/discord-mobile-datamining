@@ -1,6 +1,6 @@
-// === Module 19531: VoiceControlsToggleNuxActionSheet ===
+// === Module 19547: VoiceControlsToggleNuxActionSheet ===
 
-// Module 19531 (VoiceControlsToggleNuxActionSheet)
+// Module 19547 (VoiceControlsToggleNuxActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

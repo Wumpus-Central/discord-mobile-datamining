@@ -8,8 +8,8 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8086 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8449 */;
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10271 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8450 */;
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 10272 */;
 import VoicePanelStore from "VoicePanelStore" /* 6965 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function openStageChannel(channel) {
       const tmpResult = PrivateChannelCallUtils;
       if (!tmpResult2.isModalOpen(voiceChannelKey)) {
         const obj3 = { channel };
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10014, dependencyMap.paths), obj3, voiceChannelKey);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10015, dependencyMap.paths), obj3, voiceChannelKey);
       }
       tmpResult2 = NavigationRouteUtils;
     }
@@ -54,7 +54,7 @@ export function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
   ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8087, dependencyMap.paths), metroImportDefault, { channelId, onOpenRTCDebugOverlay });
 }
 export function openEndStageModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14698, dependencyMap.paths), React5, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14705, dependencyMap.paths), React5, { channel });
 }
 export { openStageChannel };
 export function showPlatformUserProfile(arg0) {

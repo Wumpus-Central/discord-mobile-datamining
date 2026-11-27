@@ -1,10 +1,10 @@
-// === Module 8516: EditGuildEventWhere ===
+// === Module 8517: EditGuildEventWhere ===
 
-// Module 8516 (EditGuildEventWhere)
+// Module 8517 (EditGuildEventWhere)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2019 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8479 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8573 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8480 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -113,7 +113,7 @@ export default function EditGuildEventWhere(guild) {
               const error1 = new Error(intl2.string(guild(1112).t.q91szp));
               throw error1;
             }
-            obj = guild(8480);
+            obj = guild(8481);
           }
           if (null == tmp) {
             if (entityType !== constants.EXTERNAL) {

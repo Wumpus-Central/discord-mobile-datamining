@@ -1,6 +1,6 @@
-// === Module 10116: confirmActivityLaunchChecks ===
+// === Module 10117: confirmActivityLaunchChecks ===
 
-// Module 10116 (confirmActivityLaunchChecks)
+// Module 10117 (confirmActivityLaunchChecks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
@@ -27,7 +27,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -92,7 +92,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
         obj7.locationKind = closure_131_3;
         closure_132_1(closure_132_2[6]).dispatch(obj7);
         c8 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c8 = 3;
         throw value;
@@ -129,7 +129,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -177,7 +177,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(10120)(tmp, channel, () => {
+                  shouldClosePopout(10121)(tmp, channel, () => {
                     const result = closure_0(c2[10]).leaveEmbeddedActivity({ location: value.location, applicationId: closure_2_0.id, shouldClosePopout });
                     closure_0(true);
                   }, () => closure_0(false));
@@ -222,7 +222,7 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

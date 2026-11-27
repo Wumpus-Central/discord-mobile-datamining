@@ -1,6 +1,6 @@
-// === Module 8521: CreateChannelModal ===
+// === Module 8522: CreateChannelModal ===
 
-// Module 8521 (CreateChannelModal)
+// Module 8522 (CreateChannelModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import native from "native" /* 1186 */;
@@ -15,8 +15,8 @@ import NavigatorHeader from "NavigatorHeader" /* 7191 */;
 import FormRadio from "FormRadio" /* 7254 */;
 import HeaderActionButton from "HeaderActionButton" /* 7751 */;
 import Form from "Form" /* 8088 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8529 */;
-import sanitizeChannelNameDefault from "sanitizeChannelName" /* 8532 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8530 */;
+import sanitizeChannelNameDefault from "sanitizeChannelName" /* 8533 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;

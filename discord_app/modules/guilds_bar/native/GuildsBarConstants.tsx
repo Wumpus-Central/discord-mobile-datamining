@@ -1,6 +1,6 @@
-// === Module 18071: GuildsBarConstants ===
+// === Module 18078: GuildsBarConstants ===
 
-// Module 18071 (GuildsBarConstants)
+// Module 18078 (GuildsBarConstants)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5607 */;
 import size from "module_2" /* 2 */;

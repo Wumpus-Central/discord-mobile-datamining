@@ -1,17 +1,17 @@
-// === Module 10829: StickerPicker ===
+// === Module 10830: StickerPicker ===
 
-// Module 10829 (StickerPicker)
+// Module 10830 (StickerPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5725 */;
 import StickersUtils from "StickersUtils" /* 6779 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9586 */;
-import StickerSendability from "StickerSendability" /* 10832 */;
-import StickersSearchUtils from "StickersSearchUtils" /* 10838 */;
-import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 10839 */;
-import showStickerDetailActionSheet from "showStickerDetailActionSheet" /* 10848 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9587 */;
+import StickerSendability from "StickerSendability" /* 10833 */;
+import StickersSearchUtils from "StickersSearchUtils" /* 10839 */;
+import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 10840 */;
+import showStickerDetailActionSheet from "showStickerDetailActionSheet" /* 10849 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
@@ -40,10 +40,10 @@ export default noop.memo(function StickerPicker(channel) {
   noop = undefined;
   ({ bottomSheetRef, bottomSheetIndex, paddingTop, stickerFormats, inPortalKeyboard } = channel);
   let tmp = closure_17();
-  const fetchStickerPacks = channel(10830).useFetchStickerPacks();
-  let obj = channel(10830);
-  const stickerCategories = channel(10833).useStickerCategories(channel);
-  let obj2 = channel(10833);
+  const fetchStickerPacks = channel(10831).useFetchStickerPacks();
+  let obj = channel(10831);
+  const stickerCategories = channel(10834).useStickerCategories(channel);
+  let obj2 = channel(10834);
   items = [StickersStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => StickersStore.hasLoadedStickerPacks);
   const tmp6 = analyticsLocations(noop.useState(0), 2);
@@ -54,7 +54,7 @@ export default noop.memo(function StickerPicker(channel) {
   [tmp11, c4] = analyticsLocations(noop.useState(null), 2);
   const tmp10 = analyticsLocations(noop.useState(null), 2);
   let items1 = [channel];
-  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10804)({ hasCategories: true }));
+  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10805)({ hasCategories: true }));
   const items2 = [, ];
   ({ id: arr4[0], guild_id: arr4[1] } = channel);
   const callback = noop.useCallback((arg0) => {
@@ -162,21 +162,21 @@ export default noop.memo(function StickerPicker(channel) {
   if (stateFromStores) {
     if (0 === stickerCategories.length) {
       let obj8 = { style: tmp.emptyState, children: null };
-      tmp = closure_15(tmp8(10858), {});
+      tmp = closure_15(tmp8(10859), {});
       obj8.children = tmp;
       let tmp18Result2 = closure_15(closure_5, obj8);
     } else {
       let obj9 = { bottomSheetRef, bottomSheetIndex, setCategoryIndex: tmp7, onPressSticker: callback1, onLongPressStickerDetail: callback3, insetBottom: safeAreaBottomKeyboardAware, insetTop: paddingTop, channel, stickerFormats, searchResults: tmp11, inPortalKeyboard };
-      tmp18Result2 = closure_15(tmp8(10859), obj9);
+      tmp18Result2 = closure_15(tmp8(10860), obj9);
     }
   } else {
     const obj10 = { animating: true, size: "large", style: tmp.loadingIndicator };
     items6[1] = closure_15(closure_6, obj10);
     const obj11 = { categories: stickerCategories, categoryIndex: tmp6[0], style: safeAreaStyle };
-    items6[2] = closure_15(tmp8(10865), obj11);
+    items6[2] = closure_15(tmp8(10866), obj11);
     obj5.children = items6;
     obj4.children = closure_16(closure_5, obj5);
     return closure_15(channel(6379).AnalyticsLocationProvider, obj4);
   }
-  const tmp12 = onPressSticker(10804)({ hasCategories: true });
+  const tmp12 = onPressSticker(10805)({ hasCategories: true });
 });

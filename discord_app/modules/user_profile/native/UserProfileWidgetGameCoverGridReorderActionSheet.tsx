@@ -1,12 +1,12 @@
-// === Module 14597: UserProfileWidgetGameCoverGridReorderActionSheet ===
+// === Module 14604: UserProfileWidgetGameCoverGridReorderActionSheet ===
 
-// Module 14597 (UserProfileWidgetGameCoverGridReorderActionSheet)
+// Module 14604 (UserProfileWidgetGameCoverGridReorderActionSheet)
 import nativeDefault from "native" /* 575 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import DragHandle from "DragHandle" /* 6147 */;
-import WidgetUtils from "WidgetUtils" /* 14570 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14584 */;
-import GameCoverImageDefault from "GameCoverImage" /* 14586 */;
+import WidgetUtils from "WidgetUtils" /* 14577 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 14591 */;
+import GameCoverImageDefault from "GameCoverImage" /* 14593 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

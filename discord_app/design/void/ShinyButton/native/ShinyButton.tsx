@@ -1,6 +1,6 @@
-// === Module 15574: ShinyButton/ShinyButton ===
+// === Module 15581: ShinyButton/ShinyButton ===
 
-// Module 15574 (ShinyButton/ShinyButton)
+// Module 15581 (ShinyButton/ShinyButton)
 import Button_ButtonDefault from "Button/Button" /* 1189 */;
 import _modDef1654 from "module_1654" /* 1654 */;
 import _slicedToArray from "module_32" /* 32 */;

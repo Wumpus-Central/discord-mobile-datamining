@@ -1,6 +1,6 @@
-// === Module 9067: ContextMenu ===
+// === Module 9068: ContextMenu ===
 
-// Module 9067 (ContextMenu)
+// Module 9068 (ContextMenu)
 import util from "util" /* 1112 */;
 import PlatformUtils2 from "PlatformUtils" /* 1379 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1495 */;
@@ -10,9 +10,9 @@ import HapticUtils from "HapticUtils" /* 5259 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5273 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6109 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9068 */;
-import ContextMenuState from "ContextMenuState" /* 9069 */;
-import UID from "UID" /* 9070 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9069 */;
+import ContextMenuState from "ContextMenuState" /* 9070 */;
+import UID from "UID" /* 9071 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -123,7 +123,7 @@ export function ContextMenu(triggerOnLongPress) {
   let dividerIndexes = memo.dividerIndexes;
   c13 = dividerIndexes;
   let tmpResult = require("module_1654");
-  const scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(tmp(9068).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT);
+  const scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(tmp(9069).CONTEXT_MENU_ITEM_SUB_LABEL_VARIANT);
   c14 = scaledTextLineHeight;
   let items4 = [items3, scaledTextLineHeight];
   const memo1 = noop.useMemo(() => {
@@ -183,9 +183,9 @@ export function ContextMenu(triggerOnLongPress) {
   const tmpResult10 = require("useFontScale");
   const isContextMenuActive = require("ContextMenuState").useIsContextMenuActive(contextMenuState);
   const tmpResult11 = require("ContextMenuState");
-  let result = (tmp(9068).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9068).CONTEXT_MENU_ITEM_PADDING) * fontScale;
-  let result1 = 2 * tmp(9068).CONTEXT_MENU_ITEM_PADDING;
-  const sharedValue1 = require("module_1654").useSharedValue(Math.max(result + result1, tmp(9068).CONTEXT_MENU_ITEM_BASE_HEIGHT));
+  let result = (tmp(9069).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9069).CONTEXT_MENU_ITEM_PADDING) * fontScale;
+  let result1 = 2 * tmp(9069).CONTEXT_MENU_ITEM_PADDING;
+  const sharedValue1 = require("module_1654").useSharedValue(Math.max(result + result1, tmp(9069).CONTEXT_MENU_ITEM_BASE_HEIGHT));
   obj3.useRef(items3);
   let items5 = [isContextMenuActive, contextMenuState];
   const layoutEffect = obj3.useLayoutEffect(() => {

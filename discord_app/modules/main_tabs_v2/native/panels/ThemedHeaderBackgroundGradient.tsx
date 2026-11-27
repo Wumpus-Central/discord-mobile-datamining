@@ -1,6 +1,6 @@
-// === Module 18378: ThemedHeaderBackgroundGradient ===
+// === Module 18385: ThemedHeaderBackgroundGradient ===
 
-// Module 18378 (ThemedHeaderBackgroundGradient)
+// Module 18385 (ThemedHeaderBackgroundGradient)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;

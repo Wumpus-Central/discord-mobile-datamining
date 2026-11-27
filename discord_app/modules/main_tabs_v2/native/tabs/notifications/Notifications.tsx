@@ -1,6 +1,6 @@
-// === Module 18252: notifications/Notifications ===
+// === Module 18259: notifications/Notifications ===
 
-// Module 18252 (notifications/Notifications)
+// Module 18259 (notifications/Notifications)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import native from "native" /* 5104 */;
@@ -11,16 +11,16 @@ import useAnalyticsLocations from "useAnalyticsLocations" /* 6379 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6380 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 7197 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7309 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10591 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12571 */;
-import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 13797 */;
-import useAppFrameDefault from "useAppFrame" /* 17721 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17741 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 18253 */;
-import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 18254 */;
-import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 18255 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 18259 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 18260 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10592 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12579 */;
+import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 13804 */;
+import useAppFrameDefault from "useAppFrame" /* 17728 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17748 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 18260 */;
+import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 18261 */;
+import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 18262 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 18266 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 18267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -145,7 +145,7 @@ class ThemedNotifications {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(9429).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(9430).YouBarNavigatorScreens;
 const ContentDismissActionType = fn(4889).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -183,18 +183,18 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1112).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1112).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(16069).LeftBackIconWithBadge, {});
+    obj3.children = closure_7(tmp11(16076).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp11(6152).PressableOpacity, obj3), , ];
     const obj4 = { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp11(1112).intl;
     obj4.children = intl2.string(tmp11(1112).t.HcoRu0);
     items1[1] = closure_7(tmp11(5634).Text, obj4);
     const obj5 = { style: tmp.actionButtons, children: null };
-    const obj6 = { ref, type: tmp11(11714).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
+    const obj6 = { ref, type: tmp11(11722).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
     const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj6), , ];
     const obj7 = { type: null, onOpen: null };
     const tmp2Result = ForLaterOpenActionButtonDefault;
-    obj7.type = tmp11(11714).SavedMessageSortTypes.REMINDER;
+    obj7.type = tmp11(11722).SavedMessageSortTypes.REMINDER;
     obj7.onOpen = callback;
     items2[1] = closure_7(ForLaterOpenActionButtonDefault, obj7);
     items2[2] = closure_7(NotificationCenterActionButtonDefault, {});

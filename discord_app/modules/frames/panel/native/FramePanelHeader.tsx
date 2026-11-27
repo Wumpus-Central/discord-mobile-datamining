@@ -1,14 +1,14 @@
-// === Module 19429: FramePanelHeader ===
+// === Module 19445: FramePanelHeader ===
 
-// Module 19429 (FramePanelHeader)
+// Module 19445 (FramePanelHeader)
 import initialize from "initialize" /* 504 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7515 */;
-import ActivityPanelHeader from "ActivityPanelHeader" /* 19407 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 19409 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19413 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19414 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19422 */;
-import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 19430 */;
+import ActivityPanelHeader from "ActivityPanelHeader" /* 19423 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 19425 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19429 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19430 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19438 */;
+import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 19446 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6936 */;

@@ -1,12 +1,12 @@
-// === Module 18355: useReplyActions ===
+// === Module 18362: useReplyActions ===
 
-// Module 18355 (useReplyActions)
+// Module 18362 (useReplyActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5625 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8590 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8923 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9537 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8591 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8924 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9538 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -74,7 +74,7 @@ export function useReplyActions(content) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -229,7 +229,7 @@ export function useReplyActions(content) {
         const obj3 = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18356, dependencyMap.paths), "ReactActionSheet", obj5);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18363, dependencyMap.paths), "ReactActionSheet", obj5);
       }
     }, items6);
     obj2.openEmojiPicker = callback2;

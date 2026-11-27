@@ -1,6 +1,6 @@
-// === Module 16518: QuestHomeSortingFilteringBottomSheet ===
+// === Module 16525: QuestHomeSortingFilteringBottomSheet ===
 
-// Module 16518 (QuestHomeSortingFilteringBottomSheet)
+// Module 16525 (QuestHomeSortingFilteringBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import shared from "shared" /* 5050 */;
@@ -143,7 +143,7 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(9913).getFilterTypeText(item.filter),
+          label: onSortMethodChange(9914).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },

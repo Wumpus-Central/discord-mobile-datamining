@@ -1,6 +1,6 @@
-// === Module 17474: UserSettingsDesignSystemDragHandle ===
+// === Module 17481: UserSettingsDesignSystemDragHandle ===
 
-// Module 17474 (UserSettingsDesignSystemDragHandle)
+// Module 17481 (UserSettingsDesignSystemDragHandle)
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5598 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -9,7 +9,7 @@ import TableRowGroup from "TableRowGroup" /* 6140 */;
 import TableRow from "TableRow" /* 6144 */;
 import Card from "Card" /* 6145 */;
 import DragHandle from "DragHandle" /* 6147 */;
-import SettingsIcon from "SettingsIcon" /* 10454 */;
+import SettingsIcon from "SettingsIcon" /* 10455 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

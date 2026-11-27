@@ -1,6 +1,6 @@
-// === Module 20068: EnhancedRoleColorsSelectStyleModal ===
+// === Module 20126: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 20068 (EnhancedRoleColorsSelectStyleModal)
+// Module 20126 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1082 */;
 import util from "util" /* 1112 */;
@@ -12,13 +12,13 @@ import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5271 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 7077 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7507 */;
-import RowGeneratorDefault from "RowGenerator" /* 8223 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9079 */;
-import _modDef11748 from "module_11748" /* 11748 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 20047 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20048 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20050 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 20069 */;
+import RowGeneratorDefault from "RowGenerator" /* 8224 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9080 */;
+import _modDef11756 from "module_11756" /* 11756 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 20105 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20106 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20108 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 20127 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5043 */;
@@ -117,7 +117,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef11748;
+              message.message.avatarURL = _modDef11756;
             }
           }),
 

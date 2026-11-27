@@ -1,11 +1,11 @@
-// === Module 11555: ConjureAppChannelSheetHeader ===
+// === Module 11563: ConjureAppChannelSheetHeader ===
 
-// Module 11555 (ConjureAppChannelSheetHeader)
+// Module 11563 (ConjureAppChannelSheetHeader)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 11556 */;
-import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 11562 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 11564 */;
+import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 11570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

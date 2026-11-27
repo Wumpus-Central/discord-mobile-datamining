@@ -1,9 +1,9 @@
-// === Module 10827: AnalyticsIcon ===
+// === Module 10828: AnalyticsIcon ===
 
-// Module 10827 (AnalyticsIcon)
+// Module 10828 (AnalyticsIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5729 */;
-import _mod10828 from "module_10828" /* 10828 */;
+import _mod10829 from "module_10829" /* 10829 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function AnalyticsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10828, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10829, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

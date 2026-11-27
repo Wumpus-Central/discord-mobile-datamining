@@ -1,11 +1,11 @@
-// === Module 14581: UserProfileWidgetGameDetailsReorderActionSheet ===
+// === Module 14588: UserProfileWidgetGameDetailsReorderActionSheet ===
 
-// Module 14581 (UserProfileWidgetGameDetailsReorderActionSheet)
+// Module 14588 (UserProfileWidgetGameDetailsReorderActionSheet)
 import nativeDefault from "native" /* 575 */;
-import WidgetUtils from "WidgetUtils" /* 14570 */;
-import useGameCoverLayoutDefault from "useGameCoverLayout" /* 14575 */;
-import UserProfileWidgetDraggableCardDefault from "UserProfileWidgetDraggableCard" /* 14582 */;
-import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 14583 */;
+import WidgetUtils from "WidgetUtils" /* 14577 */;
+import useGameCoverLayoutDefault from "useGameCoverLayout" /* 14582 */;
+import UserProfileWidgetDraggableCardDefault from "UserProfileWidgetDraggableCard" /* 14589 */;
+import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 14590 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -36,7 +36,7 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   const tmp = closure_7();
   items = [AuthenticationStore];
   const stateFromStores = widgetType(504).useStateFromStores(items, () => id.getId());
-  const tmp3 = stateFromStores(14566)(stateFromStores);
+  const tmp3 = stateFromStores(14573)(stateFromStores);
   dependencyMap = tmp3;
   const items1 = [tmp3, widgetType];
   const memo = noop.useMemo(() => {
@@ -59,7 +59,7 @@ export default function UserProfileWidgetGameDetailsReorderActionSheet(widgetTyp
   const intl = widgetType(1112).intl;
   obj2.dismissAccessibilityLabel = intl.string(widgetType(1112).t.rnh54p);
   obj2.returnFocusRef = widgetType.returnFocusRef;
-  const tmp4 = stateFromStores(14596);
+  const tmp4 = stateFromStores(14603);
   obj2.children = <View accessibilityRole="list" style={tmp.list}>{memo.map((game) => <closure_8 key={game.gameId} userId={stateFromStores} game={game} />)}</View>;
   return <tmp4 dismissAccessibilityLabel={null} returnFocusRef={null}>{null}</tmp4>;
 };

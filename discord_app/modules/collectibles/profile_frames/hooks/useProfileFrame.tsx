@@ -1,6 +1,6 @@
-// === Module 9501: useProfileFrame ===
+// === Module 9502: useProfileFrame ===
 
-// Module 9501 (useProfileFrame)
+// Module 9502 (useProfileFrame)
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6311 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 6329 */;
 

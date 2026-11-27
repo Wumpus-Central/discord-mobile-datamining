@@ -1,13 +1,13 @@
-// === Module 18488: ConjureManagedCopyStatus ===
+// === Module 18495: ConjureManagedCopyStatus ===
 
-// Module 18488 (ConjureManagedCopyStatus)
+// Module 18495 (ConjureManagedCopyStatus)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef4245 from "module_4245" /* 4245 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
-import useConjureManagedCopy from "useConjureManagedCopy" /* 18473 */;
-import conjureManagedCopyStatusText from "conjureManagedCopyStatusText" /* 18489 */;
+import useConjureManagedCopy from "useConjureManagedCopy" /* 18480 */;
+import conjureManagedCopyStatusText from "conjureManagedCopyStatusText" /* 18496 */;
 import noop from "module_19" /* 19 */;
 
 const useConjureManagedCopyDefault = useConjureManagedCopy;

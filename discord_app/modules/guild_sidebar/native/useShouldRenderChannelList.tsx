@@ -1,11 +1,11 @@
-// === Module 17988: useShouldRenderChannelList ===
+// === Module 17995: useShouldRenderChannelList ===
 
-// Module 17988 (useShouldRenderChannelList)
+// Module 17995 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import RootNavigationRef from "RootNavigationRef" /* 5220 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 8250 */;
+import CacheStore from "CacheStore" /* 8251 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5849 */;
 
 require = fn;

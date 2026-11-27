@@ -1,15 +1,15 @@
-// === Module 10001: activityLaunchErrorUtils ===
+// === Module 10002: activityLaunchErrorUtils ===
 
-// Module 10001 (activityLaunchErrorUtils)
+// Module 10002 (activityLaunchErrorUtils)
 import util from "util" /* 1112 */;
 import UserSettings from "UserSettings" /* 4868 */;
 import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6399 */;
 import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 7684 */;
-import InteractionUtils from "InteractionUtils" /* 8828 */;
-import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10003 */;
+import InteractionUtils from "InteractionUtils" /* 8829 */;
+import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10004 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 10002 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 10003 */;
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5686 */;
 
 require = fn;
@@ -24,7 +24,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 13857: BadgeSocialComparison ===
+// === Module 13864: BadgeSocialComparison ===
 
-// Module 13857 (BadgeSocialComparison)
+// Module 13864 (BadgeSocialComparison)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import _modDef1654 from "module_1654" /* 1654 */;
@@ -8,9 +8,9 @@ import StringUtils from "StringUtils" /* 2153 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import BadgeId from "BadgeId" /* 6138 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 9856 */;
-import BadgeUtils from "BadgeUtils" /* 9870 */;
-import BadgeUnit from "BadgeUnit" /* 13858 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 9857 */;
+import BadgeUtils from "BadgeUtils" /* 9871 */;
+import BadgeUnit from "BadgeUnit" /* 13865 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1387 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;

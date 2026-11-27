@@ -1,6 +1,6 @@
-// === Module 18551: ConjureLinkedAppConnector ===
+// === Module 18562: ConjureLinkedAppConnector ===
 
-// Module 18551 (ConjureLinkedAppConnector)
+// Module 18562 (ConjureLinkedAppConnector)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
@@ -97,7 +97,7 @@ export default function ConjureLinkedAppConnector(flow) {
   if ("gets" === flow) {
     let obj6 = { style: tmp.headStart, children: null };
     let obj7 = { size: "xxs", color: nativeDefault.colors.ICON_MUTED };
-    obj6.children = closure_6(tmp2(18552).ChevronSmallLeftIcon, obj7);
+    obj6.children = closure_6(tmp2(18563).ChevronSmallLeftIcon, obj7);
     let tmp15Result = closure_6(closure_4, obj6);
   } else {
     tmp15Result = null;

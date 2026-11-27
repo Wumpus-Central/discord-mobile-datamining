@@ -1,11 +1,11 @@
-// === Module 20119: ChannelSetupScreen ===
+// === Module 20177: ChannelSetupScreen ===
 
-// Module 20119 (ChannelSetupScreen)
+// Module 20177 (ChannelSetupScreen)
 import util from "util" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8574 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8575 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import GuildChannelStore from "GuildChannelStore" /* 4973 */;
 import RelationshipStore from "RelationshipStore" /* 4985 */;
@@ -14,7 +14,7 @@ import UserStore from "UserStore" /* 1387 */;
 require = fn;
 const View = fn(17).View;
 let closure_8 = fn(4973).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(8576).CREATE_NEW_CHANNEL_VALUE;
+const CREATE_NEW_CHANNEL_VALUE = fn(8577).CREATE_NEW_CHANNEL_VALUE;
 const ChannelTypes = fn(1071).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
@@ -25,8 +25,8 @@ export default function ChannelSetupScreen() {
   const ref = noop.useRef(null);
   const token = guild(5607).useToken(callback(575).modules.mobile.TABLE_ROW_PADDING);
   let obj2 = guild(5607);
-  const enableCommunitySharedStyles = guild(20108).useEnableCommunitySharedStyles();
-  let obj3 = guild(20108);
+  const enableCommunitySharedStyles = guild(20166).useEnableCommunitySharedStyles();
+  let obj3 = guild(20166);
   items = [GuildSettingsStore];
   guild = guild(504).useStateFromStoresObject(items, () => props.getProps()).guild;
   const obj4 = guild(504);
@@ -94,8 +94,8 @@ export default function ChannelSetupScreen() {
         items = [obj3, ...callback()];
         obj2.items = items;
         obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-          callback(8573).updateGuild({ rulesChannelId });
-          const obj = callback(8573);
+          callback(8574).updateGuild({ rulesChannelId });
+          const obj = callback(8574);
           const obj2 = { rulesChannelId };
           callback(5257).hideActionSheet();
         };
@@ -107,7 +107,7 @@ export default function ChannelSetupScreen() {
           rulesChannelId = null;
         }
         obj2.selectedItem = rulesChannelId;
-        obj.openLazy(asyncRequireImpl(8499, dependencyMap.paths), "SelectRulesChannel", obj2);
+        obj.openLazy(asyncRequireImpl(8500, dependencyMap.paths), "SelectRulesChannel", obj2);
       }, items3);
       if (guild != null) {
         prop = guild.publicUpdatesChannelId;
@@ -124,8 +124,8 @@ export default function ChannelSetupScreen() {
         items = [obj3, ...callback()];
         obj2.items = items;
         obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-          callback(8573).updateGuild({ publicUpdatesChannelId });
-          const obj = callback(8573);
+          callback(8574).updateGuild({ publicUpdatesChannelId });
+          const obj = callback(8574);
           const obj2 = { publicUpdatesChannelId };
           callback(5257).hideActionSheet();
         };
@@ -137,15 +137,15 @@ export default function ChannelSetupScreen() {
           prop = null;
         }
         obj2.selectedItem = prop;
-        obj.openLazy(asyncRequireImpl(8499, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+        obj.openLazy(asyncRequireImpl(8500, dependencyMap.paths), "SelectUpdatesChannel", obj2);
       }, items4);
-      const obj6 = { headerRef: ref, disableNextStep: false, currentStep: tmp2(20106).EnableCommunityModalSteps.STEP_2, children: null };
+      const obj6 = { headerRef: ref, disableNextStep: false, currentStep: tmp2(20164).EnableCommunityModalSteps.STEP_2, children: null };
       const obj7 = { style: enableCommunitySharedStyles.content, children: null };
       const obj8 = { ref, accessibilityRole: "header", variant: "body-md/semibold", color: "text-subtle", children: null };
       const intl4 = tmp2(1112).intl;
       obj8.children = intl4.formatToPlainString(tmp2(1112).t.tInpJj, { number: 2, total: 3 });
       const items5 = [closure_13(tmp2(5634).Text, obj8), , , ];
-      const obj9 = { resizeMode: "contain", source: tmp4(20109)().channelSetup };
+      const obj9 = { resizeMode: "contain", source: tmp4(20167)().channelSetup };
       items5[1] = closure_13(tmp4(5730), obj9);
       const obj10 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
       const intl5 = tmp2(1112).intl;
@@ -210,7 +210,7 @@ export default function ChannelSetupScreen() {
       obj12.children = items7;
       items6[1] = closure_14(tmp2(6115).Stack, obj12);
       obj6.children = items6;
-      return closure_14(tmp2(20106).EnableCommunityModalScreen, obj6);
+      return closure_14(tmp2(20164).EnableCommunityModalScreen, obj6);
     } else {
       let prop3;
       if (guild != null) {

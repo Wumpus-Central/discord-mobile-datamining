@@ -1,6 +1,6 @@
-// === Module 12865: CheckpointPressable ===
+// === Module 12873: CheckpointPressable ===
 
-// Module 12865 (CheckpointPressable)
+// Module 12873 (CheckpointPressable)
 import nativeDefault from "native" /* 575 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import CheckpointConstants from "CheckpointConstants" /* 6396 */;

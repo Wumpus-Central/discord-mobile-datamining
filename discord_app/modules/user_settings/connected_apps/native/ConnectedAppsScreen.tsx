@@ -1,6 +1,6 @@
-// === Module 16449: ConnectedAppsScreen ===
+// === Module 16456: ConnectedAppsScreen ===
 
-// Module 16449 (ConnectedAppsScreen)
+// Module 16456 (ConnectedAppsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtils from "AvatarUtils" /* 1413 */;
@@ -8,10 +8,10 @@ import shared from "shared" /* 5050 */;
 import useThemeDefault from "useTheme" /* 5252 */;
 import FastImageDefault from "FastImage" /* 5730 */;
 import Card from "Card" /* 6145 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 15042 */;
-import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity" /* 16450 */;
-import ConnectedAccountDefault from "ConnectedAccount" /* 16451 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16460 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 15049 */;
+import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity" /* 16457 */;
+import ConnectedAccountDefault from "ConnectedAccount" /* 16458 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16467 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6389 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -99,7 +99,7 @@ function ConnectionsSection(onAdd) {
                     accessibilityLabel: accessibilityLabel.name,
                     onPress() {
                       closure_1(7747)({ platformType: type, location: constants.CONNECTIONS_EMPTY_STATE });
-                      const result = type(16459).trackEmptyStateCardClicked({ platformType: type });
+                      const result = type(16466).trackEmptyStateCardClicked({ platformType: type });
                     },
                     children: null
                   };
@@ -154,9 +154,9 @@ let result = size.fileFinishedImporting("modules/user_settings/connected_apps/na
 
 export default function ConnectedAppsScreen() {
   const tmp = closure_14();
-  const authorizedApps = apps(16460).useAuthorizedApps();
+  const authorizedApps = apps(16467).useAuthorizedApps();
   apps = authorizedApps.apps;
-  let obj = apps(16460);
+  let obj = apps(16467);
   const stackNavigation = apps(1501).useStackNavigation();
   items = [stackNavigation];
   const callback = noop.useCallback(() => {
@@ -174,10 +174,10 @@ export default function ConnectedAppsScreen() {
   items1[1] = { paddingBottom: stackNavigation(1629)().bottom + stackNavigation(575).space.PX_24 };
   obj3.contentContainerStyle = items1;
   const obj5 = { children: null };
-  const items2 = [closure_11(ConnectionsSection, { onAdd: callback }), closure_11(apps(16460).AuthorizedAppsHeader, {})];
+  const items2 = [closure_11(ConnectionsSection, { onAdd: callback }), closure_11(apps(16467).AuthorizedAppsHeader, {})];
   obj5.children = items2;
   obj3.ListHeaderComponent = closure_12(closure_13, obj5);
-  obj3.ListEmptyComponent = closure_11(apps(16460).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
+  obj3.ListEmptyComponent = closure_11(apps(16467).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
   obj3.data = apps;
   obj3.renderItem = function renderItem(app) {
     const index = app.index;

@@ -1,6 +1,6 @@
-// === Module 15882: ActivitySessionAnalytics ===
+// === Module 15889: ActivitySessionAnalytics ===
 
-// Module 15882 (ActivitySessionAnalytics)
+// Module 15889 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import v1 from "v1" /* 1269 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
@@ -9,20 +9,20 @@ import MonitoringAgentDefault from "MonitoringAgent" /* 5811 */;
 import MetricEvents from "MetricEvents" /* 5816 */;
 import ThermalUtilsDefault from "ThermalUtils" /* 6041 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6973 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 9992 */;
-import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10001 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 10052 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 10105 */;
-import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 10106 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 10118 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 9993 */;
+import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10002 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 10053 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 10106 */;
+import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 10107 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 10119 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6933 */;
-import QuestStore from "QuestStore" /* 8374 */;
+import QuestStore from "QuestStore" /* 8375 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5851 */;
 import UserStore from "UserStore" /* 1387 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 15883 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 15890 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 
 require = fn;
@@ -106,7 +106,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

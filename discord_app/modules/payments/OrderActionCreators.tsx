@@ -104,7 +104,7 @@ let closure_13 = async function _signOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -224,7 +224,7 @@ let closure_14 = async function _getOrder(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -311,7 +311,7 @@ let closure_16 = async function _fetchOrderEntitlements(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -380,7 +380,7 @@ let closure_18 = async function _fetchOrderEntitlementsWithRetry(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -427,7 +427,7 @@ let closure_18 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: "+95" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -477,7 +477,7 @@ let closure_18 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                   } else {
                     closure_129_1 = value;
                     c3 = 3;
-                    return { value: "HermesInternal", done: "+95" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp16) {
                   c3 = tmp;

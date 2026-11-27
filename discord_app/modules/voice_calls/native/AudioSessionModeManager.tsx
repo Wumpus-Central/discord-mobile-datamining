@@ -1,7 +1,7 @@
-// === Module 19662: AudioSessionModeManager ===
+// === Module 19678: AudioSessionModeManager ===
 
-// Module 19662 (AudioSessionModeManager)
-import VoicePermissionManager from "VoicePermissionManager" /* 19663 */;
+// Module 19678 (AudioSessionModeManager)
+import VoicePermissionManager from "VoicePermissionManager" /* 19679 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6853 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6813 */;

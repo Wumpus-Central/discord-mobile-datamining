@@ -1,25 +1,25 @@
-// === Module 10388: UserSettingsVoice ===
+// === Module 10389: UserSettingsVoice ===
 
-// Module 10388 (UserSettingsVoice)
+// Module 10389 (UserSettingsVoice)
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import Stack_Stack from "Stack/Stack" /* 6115 */;
 import TableRowGroup from "TableRowGroup" /* 6140 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7480 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10391 */;
-import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 10392 */;
-import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 10394 */;
-import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 10396 */;
-import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 10403 */;
-import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 10414 */;
-import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 10416 */;
-import VideoBackgroundOptionsRadioGroupDefault from "VideoBackgroundOptionsRadioGroup" /* 10424 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10392 */;
+import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 10393 */;
+import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 10395 */;
+import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 10397 */;
+import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 10404 */;
+import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 10415 */;
+import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 10417 */;
+import VideoBackgroundOptionsRadioGroupDefault from "VideoBackgroundOptionsRadioGroup" /* 10425 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(10389).isMobileOverlaySupported;
-const guideURL = fn(10390).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(10390).isMobileOverlaySupported;
+const guideURL = fn(10391).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5043);

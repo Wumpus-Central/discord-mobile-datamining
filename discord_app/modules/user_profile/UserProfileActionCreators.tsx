@@ -1,6 +1,6 @@
-// === Module 9434: UserProfileActionCreators ===
+// === Module 9435: UserProfileActionCreators ===
 
-// Module 9434 (UserProfileActionCreators)
+// Module 9435 (UserProfileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import util from "util" /* 1112 */;
@@ -9,8 +9,8 @@ import HTTPUtils from "HTTPUtils" /* 1285 */;
 import shared from "shared" /* 5050 */;
 import InlineUploaderDefault from "InlineUploader" /* 7339 */;
 import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 7343 */;
-import MessageParserDefault from "MessageParser" /* 8344 */;
-import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 9435 */;
+import MessageParserDefault from "MessageParser" /* 8345 */;
+import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 9436 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1387 */;
 
@@ -26,7 +26,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
             c9 = 1;
           } else {
             c9 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         }
       } else if (1 === tmp7) {

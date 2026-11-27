@@ -1,9 +1,9 @@
-// === Module 12259: DoubleTapEmojiEditNudge ===
+// === Module 12267: DoubleTapEmojiEditNudge ===
 
-// Module 12259 (DoubleTapEmojiEditNudge)
+// Module 12267 (DoubleTapEmojiEditNudge)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9549 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9550 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
@@ -52,7 +52,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -89,9 +89,9 @@ function DoubleTapEmojiEditNudgeInner(location) {
               return obj16;
             } else {
               const obj17 = { emoji: closure_129_0 };
-              const result = _location(9556).showDoubleTapEmojiUpdatedToast(obj17);
+              const result = _location(9557).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp12) {
             c4 = tmp;
@@ -110,7 +110,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
       }
       return applyArgumentsResult;
     };
-    let result = _location(9537).openEmojiPickerActionSheet(obj2, "stack");
+    let result = _location(9538).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
   let obj4 = { color: "text-subtle", variant: "body-sm/normal", children: null };
   const intl = _location(1112).intl;

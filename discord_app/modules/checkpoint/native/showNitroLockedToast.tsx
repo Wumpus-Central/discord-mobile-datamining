@@ -1,6 +1,6 @@
-// === Module 12870: showNitroLockedToast ===
+// === Module 12878: showNitroLockedToast ===
 
-// Module 12870 (showNitroLockedToast)
+// Module 12878 (showNitroLockedToast)
 import ToastUtils from "ToastUtils" /* 5724 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6765 */;
 import size from "module_2" /* 2 */;

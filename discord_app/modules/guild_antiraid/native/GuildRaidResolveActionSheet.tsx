@@ -1,13 +1,13 @@
-// === Module 12520: GuildRaidResolveActionSheet ===
+// === Module 12528: GuildRaidResolveActionSheet ===
 
-// Module 12520 (GuildRaidResolveActionSheet)
+// Module 12528 (GuildRaidResolveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
 import components_Button_Button from "components/Button/Button" /* 5641 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7048 */;
 import ActionSheet from "ActionSheet" /* 7546 */;
-import AutomodFeedback from "AutomodFeedback" /* 8241 */;
+import AutomodFeedback from "AutomodFeedback" /* 8242 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -53,7 +53,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

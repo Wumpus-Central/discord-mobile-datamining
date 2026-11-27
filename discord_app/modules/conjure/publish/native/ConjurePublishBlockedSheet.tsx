@@ -1,6 +1,6 @@
-// === Module 11468: ConjurePublishBlockedSheet ===
+// === Module 11478: ConjurePublishBlockedSheet ===
 
-// Module 11468 (ConjurePublishBlockedSheet)
+// Module 11478 (ConjurePublishBlockedSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5257 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ function ConjurePublishBlockedSheet(onConfirm) {
   ({ reason, message } = onConfirm);
   const tmp = closure_7();
   const tmp2 = onConfirm;
-  const conjurePublishBlockedCopy = onConfirm(11469).getConjurePublishBlockedCopy(reason, message);
+  const conjurePublishBlockedCopy = onConfirm(11479).getConjurePublishBlockedCopy(reason, message);
   const obj2 = { header: closure_4(onConfirm(7507).BottomSheetTitleHeader, { title: conjurePublishBlockedCopy.title }), children: null };
   const obj4 = { style: tmp.content, children: null };
   items = [

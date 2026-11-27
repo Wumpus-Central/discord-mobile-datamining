@@ -1,6 +1,6 @@
-// === Module 13218: ChatInputScrimGradient ===
+// === Module 13226: ChatInputScrimGradient ===
 
-// Module 13218 (ChatInputScrimGradient)
+// Module 13226 (ChatInputScrimGradient)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1089 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5213 */;

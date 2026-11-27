@@ -1,8 +1,8 @@
-// === Module 9426: ? ===
+// === Module 9427: ? ===
 
-// Module 9426
+// Module 9427
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 9427 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 9428 */;
 import DevSettingsStore from "DevSettingsStore" /* 5637 */;
 
 require = fn;

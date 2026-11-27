@@ -1,6 +1,6 @@
-// === Module 18342: ICYMIShared ===
+// === Module 18349: ICYMIShared ===
 
-// Module 18342 (ICYMIShared)
+// Module 18349 (ICYMIShared)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import PlatformUtils from "PlatformUtils" /* 1379 */;
@@ -14,11 +14,11 @@ import MarkupUtilsDefault from "MarkupUtils" /* 7067 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7467 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7604 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7847 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8244 */;
-import ICYMIUtils from "ICYMIUtils" /* 8922 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8923 */;
-import ClipView from "ClipView" /* 9420 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 18343 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8245 */;
+import ICYMIUtils from "ICYMIUtils" /* 8923 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8924 */;
+import ClipView from "ClipView" /* 9421 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 18350 */;
 import noop from "module_19" /* 19 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 8123 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -150,7 +150,7 @@ const Constants = fn(1071);
 ({ AnalyticsObjects: closure_10, AnalyticsObjectTypes: closure_11, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(18303);
+const createICYMIStyles = fn(18310);
 let guild = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {

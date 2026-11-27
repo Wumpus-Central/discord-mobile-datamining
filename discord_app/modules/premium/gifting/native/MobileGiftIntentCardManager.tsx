@@ -1,15 +1,15 @@
-// === Module 19846: MobileGiftIntentCardManager ===
+// === Module 19862: MobileGiftIntentCardManager ===
 
-// Module 19846 (MobileGiftIntentCardManager)
+// Module 19862 (MobileGiftIntentCardManager)
 import ChannelTypes from "ChannelTypes" /* 1092 */;
 import Timers from "Timers" /* 4887 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 10446 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8322 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 10447 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8323 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import MessageStore from "MessageStore" /* 6391 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4946 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 12019 */;
-import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 19847 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 12027 */;
+import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 19863 */;
 
 require = fn;
 const PremiumConstants = fn(1389);
@@ -30,9 +30,9 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
       if (id === SelectedChannelStore.getChannelId()) {
         if (MessageStore.isReady(id)) {
           if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, found, constants.SEND_MESSAGE)) {
-            const result = tmp(11152).logMessageGiftIntentShown(found);
+            const result = tmp(11153).logMessageGiftIntentShown(found);
             const userAffinity = self.getUserAffinity(found);
-            const tmpResult = tmp(11152);
+            const tmpResult = tmp(11153);
             const obj = { name: tmp(1264).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION, type: tmp(1264).ImpressionTypes.VIEW, properties: null };
             const obj2 = { gift_intent_type: constants2.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
             let dmProbability;

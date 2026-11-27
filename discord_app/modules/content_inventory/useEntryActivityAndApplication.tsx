@@ -1,9 +1,9 @@
-// === Module 14894: useEntryActivityAndApplication ===
+// === Module 14901: useEntryActivityAndApplication ===
 
-// Module 14894 (useEntryActivityAndApplication)
+// Module 14901 (useEntryActivityAndApplication)
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4891 */;
-import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 14895 */;
+import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 14902 */;
 
 const require = globalThis.__r;
 

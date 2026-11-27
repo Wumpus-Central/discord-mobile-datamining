@@ -1,6 +1,6 @@
-// === Module 9874: BadgeDetailsSheet ===
+// === Module 9875: BadgeDetailsSheet ===
 
-// Module 9874 (BadgeDetailsSheet)
+// Module 9875 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 575 */;
 import _mod1654 from "module_1654" /* 1654 */;
 import timing_timing from "timing/timing" /* 5253 */;
@@ -8,16 +8,16 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257
 import Text_Text from "Text/Text" /* 5634 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5747 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 6388 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 9866 */;
-import BadgeUtils from "BadgeUtils" /* 9870 */;
-import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 9871 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 9873 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 9867 */;
+import BadgeUtils from "BadgeUtils" /* 9871 */;
+import useBadgeDirectoryBadgeIndicators from "useBadgeDirectoryBadgeIndicators" /* 9872 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 9874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 import UserStore from "UserStore" /* 1387 */;
-import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 9872 */;
+import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 9873 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 6383 */;
 
 const _modDef1654 = _mod1654;
@@ -773,7 +773,7 @@ export default function BadgeDetailsSheet(badgeId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -803,7 +803,7 @@ export default function BadgeDetailsSheet(badgeId) {
           } else {
             closure_1_6(true);
             c2 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           c2 = tmp;

@@ -1,6 +1,6 @@
-// === Module 12198: SummaryActionSheet ===
+// === Module 12206: SummaryActionSheet ===
 
-// Module 12198 (SummaryActionSheet)
+// Module 12206 (SummaryActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1098 */;
@@ -11,12 +11,12 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5257
 import ToastUtils from "ToastUtils" /* 5724 */;
 import ChannelUtils from "ChannelUtils" /* 6801 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8114 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8179 */;
-import showShareActionSheet from "showShareActionSheet" /* 8690 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8180 */;
+import showShareActionSheet from "showShareActionSheet" /* 8691 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
 import MessageStore from "MessageStore" /* 6391 */;
-import SummaryStore from "SummaryStore" /* 11796 */;
+import SummaryStore from "SummaryStore" /* 11804 */;
 
 require = fn;
 const View = fn(17).View;
@@ -72,8 +72,8 @@ export default function SummaryActionSheet(summary) {
         guild_id1 = channel.guild_id;
       }
       const obj2 = { guildId: guild_id1 };
-      tmpResult.openLazy(asyncRequireImpl(12167, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-      const tmp7 = asyncRequireImpl(12167, dependencyMap.paths);
+      tmpResult.openLazy(asyncRequireImpl(12175, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+      const tmp7 = asyncRequireImpl(12175, dependencyMap.paths);
     }
   }, items);
   const items2 = [summary, channel, message];
@@ -182,7 +182,7 @@ export function openSummaryDividerActionSheet(channelId, summaryId) {
     const _HermesInternal = HermesInternal;
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { summary: findSummaryResult };
-    obj.openLazy(asyncRequireImpl(12198, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
-    const tmp5 = asyncRequireImpl(12198, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(12206, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
+    const tmp5 = asyncRequireImpl(12206, dependencyMap.paths);
   }
 }

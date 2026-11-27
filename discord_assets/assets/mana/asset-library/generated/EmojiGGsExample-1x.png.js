@@ -1,6 +1,6 @@
-// === Module 12976: ? ===
+// === Module 12984: ? ===
 
-// Module 12976
+// Module 12984
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiGGsExample-1x.png.js");

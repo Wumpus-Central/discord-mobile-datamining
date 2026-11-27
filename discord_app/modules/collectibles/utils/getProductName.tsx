@@ -1,6 +1,6 @@
-// === Module 11264: getProductName ===
+// === Module 11265: getProductName ===
 
-// Module 11264 (getProductName)
+// Module 11265 (getProductName)
 import util from "util" /* 1112 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2113 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6322 */;

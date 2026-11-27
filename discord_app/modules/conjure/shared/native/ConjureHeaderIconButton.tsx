@@ -1,7 +1,7 @@
-// === Module 18610: ConjureHeaderIconButton ===
+// === Module 18621: ConjureHeaderIconButton ===
 
-// Module 18610 (ConjureHeaderIconButton)
-import ClipView from "ClipView" /* 9420 */;
+// Module 18621 (ConjureHeaderIconButton)
+import ClipView from "ClipView" /* 9421 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;

@@ -1,9 +1,9 @@
-// === Module 16792: useQuestDockAcceptQuest ===
+// === Module 16799: useQuestDockAcceptQuest ===
 
-// Module 16792 (useQuestDockAcceptQuest)
+// Module 16799 (useQuestDockAcceptQuest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 8374 */;
+import QuestStore from "QuestStore" /* 8375 */;
 
 const require = globalThis.__r;
 

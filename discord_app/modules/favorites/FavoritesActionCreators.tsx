@@ -1,6 +1,6 @@
-// === Module 10741: FavoritesActionCreators ===
+// === Module 10742: FavoritesActionCreators ===
 
-// Module 10741 (FavoritesActionCreators)
+// Module 10742 (FavoritesActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import router_utils from "router_utils" /* 1098 */;
@@ -12,9 +12,9 @@ import dismissible_content from "dismissible_content" /* 4876 */;
 import FavoritesUtils from "FavoritesUtils" /* 4917 */;
 import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5702 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6046 */;
-import FavoritesHooks from "FavoritesHooks" /* 10742 */;
-import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10744 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10752 */;
+import FavoritesHooks from "FavoritesHooks" /* 10743 */;
+import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10745 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10753 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -262,7 +262,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -373,7 +373,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                                   let tmp43 = closure_2_26(favoriteChannels.favoriteChannels);
                                   let tmp46 = closure_2_27(favoriteChannels.favoriteChannels, tmp7);
                                   flag = true;
-                                  let obj3 = closure_0(10752);
+                                  let obj3 = closure_0(10753);
                                   let type;
                                   if (tmp31 != null) {
                                     type = tmp31.type;
@@ -393,7 +393,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                                 if (flag) {
                                   let BoolValue = closure_0(1226).BoolValue;
                                   favoriteChannels.guildVisible = BoolValue.create({ value: true });
-                                  let obj4 = closure_0(10752);
+                                  let obj4 = closure_0(10753);
                                   let str = "auto";
                                   let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                                 }
@@ -531,7 +531,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -549,7 +549,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
           let _Set = Set;
           const obj4 = {
             update(favoriteChannels) {
-                      const favoritesCleanupCandidates = favoriteChannels(10754).getFavoritesCleanupCandidates(favoriteChannels);
+                      const favoritesCleanupCandidates = favoriteChannels(10755).getFavoritesCleanupCandidates(favoriteChannels);
                       const found = favoritesCleanupCandidates.filter((id) => {
                         let hasItem = set.has(id.id);
                         if (hasItem) {
@@ -567,12 +567,12 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
                           favoriteChannels = arg0.favoriteChannels;
                           let id = item10015.id;
                           delete tmp2[tmp];
-                          let obj2 = favoriteChannels(10752);
+                          let obj2 = favoriteChannels(10753);
                           let result = obj2.trackFavoritesGuildRemoveFromFavorites(item10015.type, closure_1_28(arg0.favoriteChannels));
                           continue;
                         }
                       }
-                      const obj = favoriteChannels(10754);
+                      const obj = favoriteChannels(10755);
                     }
           };
           c3 = 1;
@@ -589,7 +589,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp13) {
       c2 = tmp;
@@ -611,7 +611,7 @@ let closure_44 = async function _pruneInactiveFavoriteThreads() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -693,7 +693,7 @@ let closure_44 = async function _pruneInactiveFavoriteThreads() {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp27) {
       c3 = tmp;
       throw tmp27;
@@ -711,7 +711,7 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -741,7 +741,7 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                             const obj2 = { limit: tmp5, canUpsell: false };
                             let tmp6 = obj2;
                           } else {
-                            const favoritesLimits = closure_0(10742).getFavoritesLimits();
+                            const favoritesLimits = closure_0(10743).getFavoritesLimits();
                             ({ favoriteLimit, canUpsellFavoriteLimit } = favoritesLimits);
                             tmp6 = null;
                             if (closure_0(1195).FavoriteChannelType.CATEGORY !== closure_0(1195).FavoriteChannelType.CATEGORY) {
@@ -752,12 +752,12 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                               }
                               tmp4Result = closure_1(12);
                             }
-                            const tmpResult = closure_0(10742);
+                            const tmpResult = closure_0(10743);
                           }
                           if (null != tmp6) {
                             const limit = tmp6.limit;
                             if (tmp6.canUpsell) {
-                              closure_1(10744)(limit);
+                              closure_1(10745)(limit);
                             } else {
                               const obj4 = { title: null, body: null };
                               const intl = closure_0(1112).intl;
@@ -825,7 +825,7 @@ let closure_47 = async function _autoAddJoinedThreadToFavorites(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -893,7 +893,7 @@ let closure_47 = async function _autoAddJoinedThreadToFavorites(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "HermesInternal", done: "+95" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp16) {
       c2 = tmp;
       throw tmp16;
@@ -1068,7 +1068,7 @@ export function setFavoritesAutoAddJoinedThreads(autoAdd) {
               tmp10(6046).show(obj);
               const tmp10Result2 = tmp10(6046);
             }
-            str = tmp10(10744)(CATEGORY);
+            str = tmp10(10745)(CATEGORY);
             obj5 = applyDefault;
           }
         }

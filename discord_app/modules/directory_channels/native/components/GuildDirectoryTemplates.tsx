@@ -1,8 +1,8 @@
-// === Module 13270: GuildDirectoryTemplates ===
+// === Module 13278: GuildDirectoryTemplates ===
 
-// Module 13270 (GuildDirectoryTemplates)
+// Module 13278 (GuildDirectoryTemplates)
 import native from "native" /* 1186 */;
-import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 13272 */;
+import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 13280 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -26,9 +26,9 @@ class GuildTemplatesItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(13252);
+const GuildDirectoryConstants = fn(13260);
 ({ getHubGuildTemplatesMap: closure_6, HubGuildTemplateId: metroImportDefault } = GuildDirectoryConstants);
-const GuildDirectoryCreate = fn(13257).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(13265).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5043);

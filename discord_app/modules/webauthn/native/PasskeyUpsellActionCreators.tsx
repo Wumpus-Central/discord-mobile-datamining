@@ -1,6 +1,6 @@
-// === Module 17308: PasskeyUpsellActionCreators ===
+// === Module 17315: PasskeyUpsellActionCreators ===
 
-// Module 17308 (PasskeyUpsellActionCreators)
+// Module 17315 (PasskeyUpsellActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2120 */;
 import dismissible_content from "dismissible_content" /* 4876 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4877 */;
@@ -22,7 +22,7 @@ export default {
     obj = DismissibleContentUnsafeUtils;
   },
   openPasskeyUpsellPromoSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17309, dependencyMap.paths), PASSKEY_UPSELL_KEY);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17316, dependencyMap.paths), PASSKEY_UPSELL_KEY);
   },
   closePasskeyUpsellPromoSheet() {
     ActionSheetActionCreatorsDefault.hideActionSheet(PASSKEY_UPSELL_KEY);

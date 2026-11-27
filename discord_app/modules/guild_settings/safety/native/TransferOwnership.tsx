@@ -1,6 +1,6 @@
-// === Module 12500: TransferOwnership ===
+// === Module 12508: TransferOwnership ===
 
-// Module 12500 (TransferOwnership)
+// Module 12508 (TransferOwnership)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1186 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1387 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const TransferOwnershipConstants = fn(12499);
+const TransferOwnershipConstants = fn(12507);
 ({ TransferOwnershipModalScenes: closure_9, TransferOwnershipVerificationTypes: closure_10 } = TransferOwnershipConstants);
 const NOOP = fn(1071).NOOP;
 const jsxProd = fn(21);
@@ -53,7 +53,7 @@ export default function TransferOwnership(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -72,7 +72,7 @@ export default function TransferOwnership(guild) {
               if (null != mfaEnabled.email) {
                 v1 = 1;
                 dependencyMap = 1;
-                const obj6 = { value: v1(8573).sendTransferOwnershipPincode(user.id), done: false };
+                const obj6 = { value: v1(8574).sendTransferOwnershipPincode(user.id), done: false };
                 return obj6;
               }
             }
@@ -80,16 +80,16 @@ export default function TransferOwnership(guild) {
             if (mfaEnabled.mfaEnabled) {
               MFA = constants2.MFA;
             }
-            const obj4 = v1(8573);
-            v1(8573).transferOwnership(user.id, id.id, MFA).then(() => {
-              v1(12497).close();
-              const obj = v1(12497);
-              v1(8573).close();
-              const obj2 = v1(8573);
+            const obj4 = v1(8574);
+            v1(8574).transferOwnership(user.id, id.id, MFA).then(() => {
+              v1(12505).close();
+              const obj = v1(12505);
+              v1(8574).close();
+              const obj2 = v1(8574);
               const result = closure_1_0(5724).showTransferOwnershipSuccess();
             }, NOOP);
             dependencyMap = 3;
-            const transferOwnershipResult = v1(8573).transferOwnership(user.id, id.id, MFA);
+            const transferOwnershipResult = v1(8574).transferOwnership(user.id, id.id, MFA);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
@@ -161,7 +161,7 @@ export default function TransferOwnership(guild) {
   const obj9 = { source: null, style: null };
   const obj7 = { paddingTop: toUser(575).space.PX_16, paddingHorizontal: token };
   const tmp12 = c7;
-  obj9.source = toUser(12501);
+  obj9.source = toUser(12509);
   obj9.style = tmp5.arrow;
   const items1 = [closure_12(toUser(5730), obj9), , , ];
   const obj10 = { style: tmp5.avatarsWrapper, children: null };

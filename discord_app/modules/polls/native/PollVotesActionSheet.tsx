@@ -1,6 +1,6 @@
-// === Module 12229: PollVotesActionSheet ===
+// === Module 12237: PollVotesActionSheet ===
 
-// Module 12229 (PollVotesActionSheet)
+// Module 12237 (PollVotesActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1413 */;
@@ -12,11 +12,11 @@ import FastImageDefault from "FastImage" /* 5730 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 6133 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 7067 */;
 import EmojiDefault from "Emoji" /* 7488 */;
-import PollTextUtils from "PollTextUtils" /* 12230 */;
-import PollsUtils from "PollsUtils" /* 12231 */;
-import chat_formatPollMessageChatData from "chat/formatPollMessageChatData" /* 12234 */;
-import _modDef12251 from "module_12251" /* 12251 */;
-import _modDef12252 from "module_12252" /* 12252 */;
+import PollTextUtils from "PollTextUtils" /* 12238 */;
+import PollsUtils from "PollsUtils" /* 12239 */;
+import chat_formatPollMessageChatData from "chat/formatPollMessageChatData" /* 12242 */;
+import _modDef12259 from "module_12259" /* 12259 */;
+import _modDef12260 from "module_12260" /* 12260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -152,7 +152,7 @@ function PollVotesHeader(message) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -243,7 +243,7 @@ function PollVotesHeader(message) {
               }
               closure_129_6.current = true;
               v3 = 3;
-              return { value: "HermesInternal", done: "+95" };
+              return { value: "HermesInternal", done: null };
             }
           }
           const current2 = closure_129_4.current;
@@ -396,9 +396,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12251;
+    let tmp2Result = _modDef12259;
   } else {
-    tmp2Result = _modDef12252;
+    tmp2Result = _modDef12260;
   }
   obj2.source = tmp2Result;
   items = [state(tmp8, obj2), , ];

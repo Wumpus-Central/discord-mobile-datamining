@@ -1,8 +1,8 @@
-// === Module 15093: DatagramConnection ===
+// === Module 15100: DatagramConnection ===
 
-// Module 15093 (DatagramConnection)
+// Module 15100 (DatagramConnection)
 import RTCConnectionEvent from "RTCConnectionEvent" /* 5960 */;
-import DatagramEvent from "DatagramEvent" /* 15094 */;
+import DatagramEvent from "DatagramEvent" /* 15101 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 5871 */;
 
 require = fn;

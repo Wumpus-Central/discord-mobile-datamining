@@ -1,6 +1,6 @@
-// === Module 13853: useBadgeColor ===
+// === Module 13860: useBadgeColor ===
 
-// Module 13853 (useBadgeColor)
+// Module 13860 (useBadgeColor)
 import nativeDefault from "native" /* 575 */;
 import privDefault from "priv" /* 1455 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -32,7 +32,7 @@ export function useBadgeColor(rasterUrl) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: "+95" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -56,7 +56,7 @@ export function useBadgeColor(rasterUrl) {
               const obj4 = {
                 value: promiseDeduper.one(uri, asyncGeneratorStep(async () => {
                           closure_3 = tmp2;
-                          const tmp14 = value(13854);
+                          const tmp14 = value(13861);
                           const pickBadgeColor = tmp14.pickBadgeColor;
                           await pickBadgeColor(2024).getDominantColors({ uri });
                           const tmp8 = pickBadgeColor(value);
@@ -90,7 +90,7 @@ export function useBadgeColor(rasterUrl) {
               closure_1(closure_129_0);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp23) {
           if (tmp4 === c3) {

@@ -1,6 +1,6 @@
-// === Module 14769: GuildThreadSubscriptions ===
+// === Module 14775: GuildThreadSubscriptions ===
 
-// Module 14769 (GuildThreadSubscriptions)
+// Module 14775 (GuildThreadSubscriptions)
 import privDefault from "priv" /* 1455 */;
 import size from "module_2" /* 2 */;
 

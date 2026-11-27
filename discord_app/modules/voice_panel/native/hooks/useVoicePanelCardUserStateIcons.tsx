@@ -1,11 +1,11 @@
-// === Module 19470: useVoicePanelCardUserStateIcons ===
+// === Module 19486: useVoicePanelCardUserStateIcons ===
 
-// Module 19470 (useVoicePanelCardUserStateIcons)
-import VoiceStateIconUtils from "VoiceStateIconUtils" /* 8649 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10391 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10534 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11781 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19439 */;
+// Module 19486 (useVoicePanelCardUserStateIcons)
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 8650 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10392 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10535 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11789 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19455 */;
 import noop from "module_19" /* 19 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6853 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -172,7 +172,7 @@ export default function useVoicePanelCardUserStateIcons(type, id, guildId) {
             muteDeafenIconState: tmp19,
             withLeftMargin: items1.length > 0,
             onPress() {
-                    if (closure_0(8649).MuteDeafenIconState.DEAFENED_SERVER === muteDeafenIconState) {
+                    if (closure_0(8650).MuteDeafenIconState.DEAFENED_SERVER === muteDeafenIconState) {
                       const _HermesInternal4 = HermesInternal;
                       const obj2 = { text: null };
                       const combined = "" + id + "-status";
@@ -180,7 +180,7 @@ export default function useVoicePanelCardUserStateIcons(type, id, guildId) {
                       obj2.text = intl4.string(closure_0(1112).t.btxSdB);
                       closure_1(5725).open(combined, obj2);
                       const obj7 = closure_1(5725);
-                    } else if (closure_0(8649).MuteDeafenIconState.DEAFENED === muteDeafenIconState) {
+                    } else if (closure_0(8650).MuteDeafenIconState.DEAFENED === muteDeafenIconState) {
                       const _HermesInternal3 = HermesInternal;
                       const obj4 = { text: null };
                       const combined1 = "" + id + "-status";
@@ -188,7 +188,7 @@ export default function useVoicePanelCardUserStateIcons(type, id, guildId) {
                       obj4.text = intl3.string(closure_0(1112).t.NjmiOL);
                       closure_1(5725).open(combined1, obj4);
                       const obj5 = closure_1(5725);
-                    } else if (closure_0(8649).MuteDeafenIconState.MUTED_SERVER === muteDeafenIconState) {
+                    } else if (closure_0(8650).MuteDeafenIconState.MUTED_SERVER === muteDeafenIconState) {
                       const _HermesInternal2 = HermesInternal;
                       const obj6 = { text: null };
                       const combined2 = "" + id + "-status";
@@ -196,7 +196,7 @@ export default function useVoicePanelCardUserStateIcons(type, id, guildId) {
                       obj6.text = intl2.string(closure_0(1112).t.uLddbQ);
                       closure_1(5725).open(combined2, obj6);
                       const obj3 = closure_1(5725);
-                    } else if (closure_0(8649).MuteDeafenIconState.MUTED_LOCAL === muteDeafenIconState) {
+                    } else if (closure_0(8650).MuteDeafenIconState.MUTED_LOCAL === muteDeafenIconState) {
                       const _HermesInternal = HermesInternal;
                       const obj8 = { text: null };
                       const combined3 = "" + id + "-status";
@@ -204,7 +204,7 @@ export default function useVoicePanelCardUserStateIcons(type, id, guildId) {
                       obj8.text = intl.string(closure_0(1112).t.Q8Uzof);
                       closure_1(5725).open(combined3, obj8);
                       const obj = closure_1(5725);
-                    } else if (closure_0(8649).MuteDeafenIconState.MUTED === muteDeafenIconState) {
+                    } else if (closure_0(8650).MuteDeafenIconState.MUTED === muteDeafenIconState) {
                       const _HermesInternal5 = HermesInternal;
                       const obj10 = { text: null };
                       const combined4 = "" + id + "-status";

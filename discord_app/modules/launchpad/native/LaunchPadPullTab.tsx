@@ -1,23 +1,23 @@
-// === Module 19337: LaunchPadPullTab ===
+// === Module 19353: LaunchPadPullTab ===
 
-// Module 19337 (LaunchPadPullTab)
+// Module 19353 (LaunchPadPullTab)
 import nativeDefault from "native" /* 575 */;
 import _modDef1654 from "module_1654" /* 1654 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12996 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18447 */;
-import showLaunchPadDefault from "showLaunchPad" /* 19258 */;
-import useLaunchPadPullTabMinimizedDefault from "useLaunchPadPullTabMinimized" /* 19338 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13004 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 18454 */;
+import showLaunchPadDefault from "showLaunchPad" /* 19274 */;
+import useLaunchPadPullTabMinimizedDefault from "useLaunchPadPullTabMinimized" /* 19354 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(11958);
+const LaunchPadConstants = fn(11966);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({ LAUNCH_PAD_PULL_TAB_HIT_SLOP: metroImportDefault, LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_9, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: closure_10, LAUNCH_PAD_PULL_TAB_WIDTH, LAUNCH_PAD_SPRING_CONFIG: closure_11 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(12960).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12968).CHAT_INPUT_HEIGHT;
 let jsx = fn(21).jsx;
 const createStyles = fn(5043);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };

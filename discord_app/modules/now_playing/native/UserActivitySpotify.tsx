@@ -1,11 +1,11 @@
-// === Module 12274: UserActivitySpotify ===
+// === Module 12282: UserActivitySpotify ===
 
-// Module 12274 (UserActivitySpotify)
+// Module 12282 (UserActivitySpotify)
 import native from "native" /* 1186 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1378 */;
 import LinkingDefault from "Linking" /* 5722 */;
-import _modDef8845 from "module_8845" /* 8845 */;
+import _modDef8846 from "module_8846" /* 8846 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -242,7 +242,7 @@ export function openAlbum(activity, id) {
 export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
-  let obj2 = { icon: closure_9(activity(5641).Button.Icon, { source: _modDef8845 }), text: null, size: "sm", onPress: null, grow: true };
+  let obj2 = { icon: closure_9(activity(5641).Button.Icon, { source: _modDef8846 }), text: null, size: "sm", onPress: null, grow: true };
   const intl = activity(1112).intl;
   obj2.text = intl.formatToPlainString(activity(1112).t.LEgD7t, { platform: activity.name });
   obj2.onPress = function handlePress() {

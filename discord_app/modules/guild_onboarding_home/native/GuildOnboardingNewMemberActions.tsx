@@ -1,9 +1,9 @@
-// === Module 18420: GuildOnboardingNewMemberActions ===
+// === Module 18427: GuildOnboardingNewMemberActions ===
 
-// Module 18420 (GuildOnboardingNewMemberActions)
+// Module 18427 (GuildOnboardingNewMemberActions)
 import nativeDefault from "native" /* 575 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13232 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13240 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 6883 */;
 import ChannelStore from "ChannelStore" /* 4892 */;
@@ -11,7 +11,7 @@ import GuildMemberStore from "GuildMemberStore" /* 4955 */;
 import GuildStore from "GuildStore" /* 4914 */;
 import PermissionStore from "PermissionStore" /* 4975 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7581 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8173 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8174 */;
 
 require = fn;
 function MemberActionRow(icon) {

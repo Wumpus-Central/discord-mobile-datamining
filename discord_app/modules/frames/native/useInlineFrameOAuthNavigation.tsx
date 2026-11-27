@@ -1,6 +1,6 @@
-// === Module 18616: useInlineFrameOAuthNavigation ===
+// === Module 18627: useInlineFrameOAuthNavigation ===
 
-// Module 18616 (useInlineFrameOAuthNavigation)
+// Module 18627 (useInlineFrameOAuthNavigation)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1107 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -10,7 +10,7 @@ import FramesStore from "FramesStore" /* 6936 */;
 require = fn;
 const isLaunched = fn(6937).isLaunched;
 const ComponentActions = fn(1071).ComponentActions;
-let closure_8 = fn(10112).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_8 = fn(10113).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 
@@ -49,7 +49,7 @@ export default function useInlineFrameOAuthNavigation(arg0) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "HermesInternal", done: "+95" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

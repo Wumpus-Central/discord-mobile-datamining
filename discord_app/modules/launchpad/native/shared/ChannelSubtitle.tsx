@@ -1,9 +1,9 @@
-// === Module 19354: ChannelSubtitle ===
+// === Module 19370: ChannelSubtitle ===
 
-// Module 19354 (ChannelSubtitle)
+// Module 19370 (ChannelSubtitle)
 import Text_Text from "Text/Text" /* 5634 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10648 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18972 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10649 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 8997: AttachmentUrlUtils ===
+// === Module 8998: AttachmentUrlUtils ===
 
-// Module 8997 (AttachmentUrlUtils)
+// Module 8998 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1088 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import URLUtilsDefault from "URLUtils" /* 1380 */;
@@ -233,7 +233,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: "+95" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 19242: RestrictedBlockedMessageGroup ===
+// === Module 19258: RestrictedBlockedMessageGroup ===
 
-// Module 19242 (RestrictedBlockedMessageGroup)
+// Module 19258 (RestrictedBlockedMessageGroup)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1112 */;
 import Text_Text from "Text/Text" /* 5634 */;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5043);
-let obj2 = { toggle: { marginLeft: fn(19240).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
+let obj2 = { toggle: { marginLeft: fn(19256).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");

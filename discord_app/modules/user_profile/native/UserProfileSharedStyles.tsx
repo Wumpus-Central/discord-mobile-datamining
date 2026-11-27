@@ -1,6 +1,6 @@
-// === Module 9487: UserProfileSharedStyles ===
+// === Module 9488: UserProfileSharedStyles ===
 
-// Module 9487 (UserProfileSharedStyles)
+// Module 9488 (UserProfileSharedStyles)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 7557 */;
 import createStyles from "createStyles" /* 5043 */;

@@ -1,11 +1,11 @@
-// === Module 16564: BountiesModalAdvertiserCta ===
+// === Module 16571: BountiesModalAdvertiserCta ===
 
-// Module 16564 (BountiesModalAdvertiserCta)
+// Module 16571 (BountiesModalAdvertiserCta)
 import QuestContent from "QuestContent" /* 6876 */;
 import AdCreativeType from "AdCreativeType" /* 6878 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8392 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9574 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9930 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8393 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9575 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9931 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5044 */;
 
@@ -79,8 +79,8 @@ export default function BountiesModalAdvertiserCta(visible) {
   visible = visible.visible;
   let merged = Object.assign(visible, Object.assign({ visible: 0 }));
   let animatedStyle;
-  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(16528).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
-  let obj = animatedStyle(16528);
+  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(16535).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
+  let obj = animatedStyle(16535);
   items = [c4];
   let num = 0;
   const stateFromStores = animatedStyle(504).useStateFromStores(items, () => _undefined2.useReducedMotion);
@@ -121,7 +121,7 @@ export default function BountiesModalAdvertiserCta(visible) {
     return <BountiesModalAdvertiserCtaContent />;
   }, items3);
   const tmp2Result = animatedStyle(1654);
-  const tmp2Result2 = animatedStyle(16529);
+  const tmp2Result2 = animatedStyle(16536);
   const visibilityTransition = tmp2Result2.useVisibilityTransition({ visible, entranceTiming: animatedStyle(5256).timingStandard, exitTiming: animatedStyle(5256).timingFast });
   let shouldRender = visibilityTransition.shouldRender;
   if (isBountiesModalTransitionsRefactorEnabled) {

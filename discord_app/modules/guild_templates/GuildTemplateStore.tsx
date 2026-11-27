@@ -1,6 +1,6 @@
-// === Module 8246: GuildTemplateStore ===
+// === Module 8247: GuildTemplateStore ===
 
-// Module 8246 (GuildTemplateStore)
+// Module 8247 (GuildTemplateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import createResolvedGuildTemplateDefault from "createResolvedGuildTemplate" /* 7866 */;
