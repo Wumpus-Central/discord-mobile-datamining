@@ -1,15 +1,15 @@
 // === Module 11056: ? ===
 
 // Module 11056
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10886 */;
-import _mod11048 from "module_11048" /* 11048 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10887 */;
+import _mod11049 from "module_11049" /* 11049 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENTimeUnitLaterFormatParser = require;
+const ENTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,14 +29,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(" + _mod11048.TIME_UNITS_PATTERN + ")\\s{0,5}(?:dopo|pi\u00F9 tardi|da adesso|avanti|oltre|a seguire)(?=(?:\\W|$))", "i");
-const regExp1 = new RegExp("(" + _mod11048.TIME_UNITS_PATTERN + ")(dopo|pi\u00F9 tardi)(?=(?:\\W|$))", "i");
-class ENTimeUnitLaterFormatParser {
+const regExp = new RegExp("(" + _mod11049.TIME_UNITS_PATTERN + ")\\s{0,5}(?:fa|prima|precedente)(?=(?:\\W|$))", "i");
+const regExp1 = new RegExp("(" + _mod11049.TIME_UNITS_PATTERN + ")\\s{0,5}fa(?=(?:\\W|$))", "i");
+class ENTimeUnitAgoFormatParser {
   constructor(arg0) {
     self = this;
-    tmp = c2(this, ENTimeUnitLaterFormatParser);
+    tmp = c2(this, ENTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitLaterFormatParser);
+    obj = closure_4(ENTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -50,7 +50,7 @@ class ENTimeUnitLaterFormatParser {
     return tmp3Result;
   }
 }
-_inherits(ENTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,10 +62,11 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ENTimeUnitLaterFormatParser(10882).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, ENTimeUnitLaterFormatParser(11048).parseDuration(arg1[1]));
+      const parseDurationResult = ENTimeUnitAgoFormatParser(11049).parseDuration(arg1[1]);
+      const ParsingComponents = ENTimeUnitAgoFormatParser(10883).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, ENTimeUnitAgoFormatParser(10882).reverseDuration(ENTimeUnitAgoFormatParser(11049).parseDuration(arg1[1])));
     }
   }
 ];
 
-export default _createClass(ENTimeUnitLaterFormatParser, items);
+export default _createClass(ENTimeUnitAgoFormatParser, items);

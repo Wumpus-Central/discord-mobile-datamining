@@ -1,94 +1,113 @@
 // === Module 9963: ? ===
 
 // Module 9963
-import cloneNode from "cloneNode" /* 9959 */;
-import replaceQuotes2 from "replaceQuotes" /* 9964 */;
+import _mod9964 from "module_9964" /* 9964 */;
+import _mod9971 from "module_9971" /* 9971 */;
+import _mod9972 from "module_9972" /* 9972 */;
+import find from "find" /* 9973 */;
+import combineFuncs from "combineFuncs" /* 9974 */;
+import compareDocumentPosition from "compareDocumentPosition" /* 9975 */;
+import _mod9976 from "module_9976" /* 9976 */;
 
 const require = globalThis.__r;
 
-let fn = this;
+const self = this;
+let self2 = this;
 if (this) {
-  fn = this.__importDefault;
+  self2 = self.__createBinding;
 }
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-function getOuterHTML(arg0, arg1) {
-  return replaceQuotes.default(arg0, arg1);
-}
-function getText(name) {
-  if (Array.isArray(name)) {
-    const mapped = name.map(getText);
-    let str = mapped.join("");
-  } else if (cloneNode.isTag(name)) {
-    let str2 = "\n";
-    if ("br" !== name.name) {
-      str2 = getText(name.children);
-    }
-    str = str2;
-  } else if (cloneNode.isCDATA(name)) {
-    str = getText(name.children);
-  } else {
-    str = "";
-    if (cloneNode.isText(name)) {
-      str = name.data;
-    }
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
   }
-  return str;
-}
-function textContent(elementsByTagName) {
-  if (Array.isArray(elementsByTagName)) {
-    const mapped = elementsByTagName.map(textContent);
-    return mapped.join("");
-  } else {
-    if (cloneNode.hasChildren(elementsByTagName)) {
-      if (!cloneNode.isComment(elementsByTagName)) {
-        return textContent(elementsByTagName.children);
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
       }
-    }
-    let str = "";
-    if (cloneNode.isText(elementsByTagName)) {
-      str = elementsByTagName.data;
-    }
-    return str;
+    };
   }
+  const _Object2 = Object;
+  exports.isTag = undefined;
+  exports.isCDATA = undefined;
+  exports.isText = undefined;
+  exports.isComment = undefined;
+  exports.isDocument = undefined;
+  exports.hasChildren = undefined;
+  fn(_mod9964, exports);
+  fn(_mod9971, exports);
+  fn(_mod9972, exports);
+  fn(find, exports);
+  fn(combineFuncs, exports);
+  fn(compareDocumentPosition, exports);
+  fn(_mod9976, exports);
+  const _Object3 = Object;
+  let obj = {
+    enumerable: true,
+    get() {
+        return require("cloneNode").isTag;
+      }
+  };
+  Object.defineProperty(exports, "isTag", obj);
+  const _Object4 = Object;
+  const obj2 = {
+    enumerable: true,
+    get() {
+        return require("cloneNode").isCDATA;
+      }
+  };
+  Object.defineProperty(exports, "isCDATA", obj2);
+  const _Object5 = Object;
+  const obj3 = {
+    enumerable: true,
+    get() {
+        return require("cloneNode").isText;
+      }
+  };
+  Object.defineProperty(exports, "isText", obj3);
+  const _Object6 = Object;
+  const obj4 = {
+    enumerable: true,
+    get() {
+        return require("cloneNode").isComment;
+      }
+  };
+  Object.defineProperty(exports, "isComment", obj4);
+  const _Object7 = Object;
+  const obj5 = {
+    enumerable: true,
+    get() {
+        return require("cloneNode").isDocument;
+      }
+  };
+  Object.defineProperty(exports, "isDocument", obj5);
+  const _Object8 = Object;
+  const obj6 = {
+    enumerable: true,
+    get() {
+        return require("cloneNode").hasChildren;
+      }
+  };
+  Object.defineProperty(exports, "hasChildren", obj6);
+} else {
+  let _Object = Object;
 }
-function innerText(children) {
-  if (Array.isArray(children)) {
-    const mapped = children.map(innerText);
-    return mapped.join("");
-  } else {
-    if (cloneNode.hasChildren(children)) {
-      return innerText(children.children);
-    }
-    let str = "";
-    if (cloneNode.isText(children)) {
-      str = children.data;
-    }
-    return str;
-  }
-}
-const replaceQuotes = fn(replaceQuotes2);
-
-export { getOuterHTML };
-export function getInnerHTML(children, arg1) {
-  _require = arg1;
-  let str = "";
-  if (require("cloneNode").hasChildren(children)) {
-    children = children.children;
-    const mapped = children.map((item) => replaceQuotes.default(item, closure_0));
-    str = mapped.join("");
-  }
-  return str;
-}
-export { getText };
-export { textContent };
-export { innerText };

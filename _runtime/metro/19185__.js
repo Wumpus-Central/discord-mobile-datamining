@@ -1,7 +1,16 @@
 // === Module 19185: ? ===
 
 // Module 19185
-import registerAsset from "module_1118" /* 1118 */;
+import _mod7914 from "module_7914" /* 7914 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b83c9486cfaf14d2dd0ad9edbe75c34d", name: "WebhookPlusIcon", type: "png" });
+export default _mod7914((arg0, arg1, arg2) => {
+  let num = 1;
+  if (arg2) {
+    num = 0;
+  }
+  arg0[num].push(arg1);
+}, () => {
+  items = [[], []];
+  return items;
+});

@@ -1,67 +1,49 @@
 // === Module 15706: ? ===
 
 // Module 15706
-import e from "e" /* 1158 */;
-import calendars from "calendars" /* 15707 */;
-import hourCycles from "hourCycles" /* 15708 */;
-import timezones from "timezones" /* 15709 */;
-import weekData from "weekData" /* 15710 */;
+import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 15707 */;
+import compareKV from "compareKV" /* 15708 */;
+import likelySubtags from "likelySubtags" /* 15711 */;
+import _mod15712 from "module_15712" /* 15712 */;
+import e_mod from "e" /* 1158 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
 
-export function getCalendarPreferenceDataForRegion(region) {
-  let str = null;
-  if (region) {
-    str = region.toUpperCase();
-  }
-  if (!str) {
-    str = "";
-  }
-  return calendars.calendars[str] || calendars.calendars["001"].map((item) => {
-    let str = "gregory";
-    if ("gregorian" !== item) {
-      let str2 = "islamicc";
-      if ("islamic-civil" !== item) {
-        str2 = item;
-      }
-      str = str2;
-    }
-    return str;
-  });
-}
-export function getHourCyclesPreferenceDataForLocaleOrRegion(locale, region) {
-  const formatted = locale.toLowerCase();
-  let str = "";
-  if (region) {
-    str = region.toUpperCase();
-  }
-  let v001 = hourCycles.hourCycles[formatted] || hourCycles.hourCycles[str];
-  if (!v001) {
-    const concat = "".concat;
-    v001 = hourCycles.hourCycles["".concat("", formatted, "-001")];
-  }
-  if (!v001) {
-    v001 = hourCycles.hourCycles["001"];
-  }
-  return e.__spreadArray([], v001, true);
-}
-export function getTimeZonePreferenceForRegion(region) {
-  const formatted = region.toLowerCase();
-  items = [];
-  if (timezones.timezones[formatted]) {
-    return e.__spreadArray(items, timezones.timezones[formatted], true);
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod15712, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
   } else {
-    return items;
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
+    }
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_15710").parseUnicodeLocaleId(arr3[num3])));
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
   }
+  return items;
 }
-export function getWeekDataForRegion(region) {
-  let str = "";
-  if (region) {
-    str = region.toUpperCase();
-  }
-  if (!str) {
-    str = "001";
-  }
-  return weekData.weekData[str] || weekData.weekData["001"];
-}
+export const isStructurallyValidLanguageTag = require("module_15710").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("module_15710").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("module_15710").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("module_15710").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("module_15710").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("module_15710").parseUnicodeLocaleId;

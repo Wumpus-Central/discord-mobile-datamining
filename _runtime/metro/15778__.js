@@ -1,101 +1,44 @@
 // === Module 15778: ? ===
 
 // Module 15778
-let c0 = false;
+import _mod15743 from "module_15743" /* 15743 */;
+import _mod15765 from "module_15765" /* 15765 */;
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(15737)(arg0);
-    const tmp4 = closure_0(15779)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(15783)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod15765(arg1)) {
+          tmp11Result = _mod15743;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
         }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
       }
     }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(15737)(arg0);
-    const tmp4 = closure_0(15779)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(15783)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
-    }
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
+}
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
 };
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
+
+export default isForced;

@@ -1,21 +1,15 @@
 // === Module 15770: ? ===
 
 // Module 15770
-let propertyIsEnumerable = {}.propertyIsEnumerable;
-if (!getOwnPropertyDescriptor) {
-  if (getOwnPropertyDescriptor) {
-    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
-      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
-      return tmp && tmp.enumerable;
-    };
-  }
-  arg5.f = propertyIsEnumerable;
-} else {
-  const call = propertyIsEnumerable.call;
-  if (typeof call === "unknown") {
-    let propertyIsEnumerableResult = propertyIsEnumerable(1);
+import _mod15765 from "module_15765" /* 15765 */;
+import _mod15771 from "module_15771" /* 15771 */;
+
+
+export default (arg0) => {
+  if (_mod15765(arg0)) {
+    return arg0;
   } else {
-    propertyIsEnumerableResult = call(obj, 1);
+    const tmp6 = new TypeError(_mod15771(arg0) + " is not a function");
+    throw tmp6;
   }
-  obj = { 1: 2 };
-}
+};

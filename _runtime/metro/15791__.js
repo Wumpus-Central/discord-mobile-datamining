@@ -1,13 +1,14 @@
 // === Module 15791: ? ===
 
 // Module 15791
-import _mod15739 from "module_15739" /* 15739 */;
-import _mod15748 from "module_15748" /* 15748 */;
-import all from "module_15758" /* 15758 */;
+import _mod15764 from "module_15764" /* 15764 */;
 
-let closure_0 = _mod15739(Function.toString);
-if (!all(_mod15748.inspectSource)) {
-  _mod15748.inspectSource = (arg0) => closure_0(arg0);
-}
 
-export default _mod15748.inspectSource;
+export default (arg0) => {
+  if (_mod15764(arg0)) {
+    return arg0;
+  } else {
+    const tmp5 = new TypeError(String(arg0) + " is not an object");
+    throw tmp5;
+  }
+};

@@ -1,7 +1,14 @@
 // === Module 15542: ? ===
 
 // Module 15542
-import _mod15541 from "module_15541" /* 15541 */;
+import _mod15540 from "module_15540" /* 15540 */;
 
 
-export default (arg0, arg1, arg2) => _mod15541(arg0, arg1, ">", arg2);
+export default (arg0, arg1, arg2) => {
+  try {
+    const tmp7 = new _mod15540(arg1, arg2);
+    return tmp7.test(arg0);
+  } catch (err) {
+    return false;
+  }
+};

@@ -1,11 +1,14 @@
 // === Module 15764: ? ===
 
 // Module 15764
+import _mod15765 from "module_15765" /* 15765 */;
 
-export default (arg0) => {
-  try {
-    return String(arg0);
-  } catch (err) {
-    return "Object";
+
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = _mod15765(obj);
   }
+  return tmp2;
 };

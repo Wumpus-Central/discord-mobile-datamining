@@ -1,23 +1,18 @@
 // === Module 15512: ? ===
 
 // Module 15512
-import _mod15504 from "module_15504" /* 15504 */;
+let closure_0 = Object.freeze({ loose: true });
+let closure_1 = Object.freeze({});
 
-
-export default (version, pre, major2, major2, major22) => {
-  let tmp = major22;
-  let tmp2 = major2;
-  if (typeof major2 === "string") {
-    tmp = major2;
-    tmp2 = major2;
-  }
-  try {
-    if (version instanceof _mod15504) {
-      version = version.version;
+export default (arg0) => {
+  let tmp = arg0;
+  if (arg0) {
+    if (typeof tmp !== "object") {
+      tmp = closure_0;
     }
-    const tmp72 = new _mod15504(version, tmp3);
-    return tmp72.inc(pre, tmp2, tmp).version;
-  } catch (err) {
-    return null;
+    let tmp2 = tmp;
+  } else {
+    tmp2 = closure_1;
   }
+  return tmp2;
 };

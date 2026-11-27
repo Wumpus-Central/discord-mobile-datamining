@@ -1,9 +1,9 @@
 // === Module 14648: ? ===
 
 // Module 14648
-import sourceShape from "sourceShape" /* 14622 */;
-import _mod14638 from "module_14638" /* 14638 */;
-import _mod14647 from "module_14647" /* 14647 */;
+import _mod14649 from "module_14649" /* 14649 */;
+
+const require = globalThis.__r;
 
 const self = this;
 let self2 = this;
@@ -56,85 +56,49 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.input = function input(arg0) {
-      return _mod14647.visit(arg0, {
-        pipe(_zod) {
-          const def = _zod._zod.def;
-          const traits = def.in._zod.traits;
-          if (traits.has("$ZodTransform")) {
-            ({ out, checks } = def);
-            length = undefined;
-            if (checks != null) {
-              length = checks.length;
-            }
-            let cloneResult = out;
-            if (length) {
-              const def2 = out._zod.def;
-              let checks1 = def2.checks;
-              if (checks1 == null) {
-                checks1 = [];
-              }
-              const obj = { checks: null };
-              items = [];
-              HermesBuiltin.arraySpread(checks, HermesBuiltin.arraySpread(checks1, 0));
-              obj.checks = items;
-              cloneResult = sourceShape.clone(out, sourceShape.mergeDefs(def2, obj), { parent: true });
-            }
-            let _in = cloneResult;
-          } else {
-            _in = def.in;
+    exports.parse = undefined;
+    exports.parseAsync = undefined;
+    exports.safeParse = undefined;
+    exports.safeParseAsync = undefined;
+    exports.validate = undefined;
+    exports.validateAsync = undefined;
+    exports.encode = undefined;
+    exports.decode = undefined;
+    exports.encodeAsync = undefined;
+    exports.decodeAsync = undefined;
+    exports.safeEncode = undefined;
+    exports.safeDecode = undefined;
+    exports.safeEncodeAsync = undefined;
+    exports.safeDecodeAsync = undefined;
+    const fnResult = fn(require("module_14627"));
+    exports.parse = fnResult._parse(_mod14649.ZodRealError);
+    exports.parseAsync = fnResult._parseAsync(_mod14649.ZodRealError);
+    exports.safeParse = fnResult._safeParse(_mod14649.ZodRealError);
+    exports.safeParseAsync = fnResult._safeParseAsync(_mod14649.ZodRealError);
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+            return require("module_14627").validate;
           }
-          return _in;
-        },
-        default(_zod, arg1) {
-          let optionalResult = _zod;
-          if (arg1) {
-            optionalResult = closure_1_5.optional(_zod._zod.def.innerType);
-          }
-          return optionalResult;
-        },
-        catch(_zod, arg1) {
-          let innerType = _zod;
-          if (arg1) {
-            innerType = _zod._zod.def.innerType;
-          }
-          return innerType;
-        }
-      });
     };
-    exports.output = function output(arg0) {
-      return _mod14647.visit(arg0, {
-        pipe(_zod) {
-          ({ out, checks } = _zod._zod.def);
-          length = undefined;
-          if (checks != null) {
-            length = checks.length;
+    Object.defineProperty(exports, "validate", obj);
+    const _Object5 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+            return require("module_14627").validateAsync;
           }
-          let cloneResult = out;
-          if (length) {
-            const def = out._zod.def;
-            let checks1 = def.checks;
-            if (checks1 == null) {
-              checks1 = [];
-            }
-            const obj = { checks: null };
-            items = [];
-            HermesBuiltin.arraySpread(checks, HermesBuiltin.arraySpread(checks1, 0));
-            obj.checks = items;
-            cloneResult = sourceShape.clone(out, sourceShape.mergeDefs(def, obj), { parent: true });
-          }
-          return cloneResult;
-        },
-        prefault(_zod, arg1) {
-          let innerType = _zod;
-          if (arg1) {
-            innerType = _zod._zod.def.innerType;
-          }
-          return innerType;
-        }
-      });
     };
-    let closure_5 = fn(_mod14638);
+    Object.defineProperty(exports, "validateAsync", obj2);
+    exports.encode = fnResult._encode(_mod14649.ZodRealError);
+    exports.decode = fnResult._decode(_mod14649.ZodRealError);
+    exports.encodeAsync = fnResult._encodeAsync(_mod14649.ZodRealError);
+    exports.decodeAsync = fnResult._decodeAsync(_mod14649.ZodRealError);
+    exports.safeEncode = fnResult._safeEncode(_mod14649.ZodRealError);
+    exports.safeDecode = fnResult._safeDecode(_mod14649.ZodRealError);
+    exports.safeEncodeAsync = fnResult._safeEncodeAsync(_mod14649.ZodRealError);
+    exports.safeDecodeAsync = fnResult._safeDecodeAsync(_mod14649.ZodRealError);
     (() => {
       let tmp = exports;
       const ownPropertyNames = Object.getOwnPropertyNames(exports);

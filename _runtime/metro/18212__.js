@@ -1,0 +1,7 @@
+// === Module 18212: ? ===
+
+// Module 18212
+import registerAsset from "module_1118" /* 1118 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "7130af78aa8ba064d8c79243ff2e60a2", name: "MobilePhoneXIcon", type: "png" });

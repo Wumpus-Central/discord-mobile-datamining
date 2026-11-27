@@ -1,0 +1,73 @@
+// === Module 15793: ? ===
+
+// Module 15793
+import _mod15742 from "module_15742" /* 15742 */;
+import text from "text" /* 15751 */;
+import _mod15774 from "module_15774" /* 15774 */;
+import _mod15791 from "module_15791" /* 15791 */;
+import _mod15794 from "module_15794" /* 15794 */;
+
+const enumerable = "enumerable";
+const configurable = "configurable";
+const writable = "writable";
+if (_mod15742) {
+  if (_mod15794) {
+    defineProperty = function defineProperty(fn, arg1, value) {
+      _mod15791(fn);
+      const tmp2 = text(arg1);
+      _mod15791(value);
+      let tmp4 = value;
+      if (typeof fn === "function") {
+        tmp4 = value;
+        if ("prototype" === tmp2) {
+          tmp4 = value;
+          if ("value" in value) {
+            tmp4 = value;
+            if (writable in value) {
+              tmp4 = value;
+              if (!value[writable]) {
+                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
+                let tmp8 = tmp7;
+                if (tmp7) {
+                  tmp8 = tmp7[writable];
+                }
+                tmp4 = value;
+                if (tmp8) {
+                  fn[tmp2] = value.value;
+                  const obj = { configurable: configurable in value ? value[configurable] : tmp7[configurable], enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable], writable: false };
+                }
+              }
+            }
+          }
+        }
+      }
+      return defineProperty(fn, tmp2, tmp4);
+    };
+  }
+  let defineProperty2 = defineProperty;
+} else {
+  defineProperty2 = function defineProperty(arg0, arg1, value) {
+    _mod15791(arg0);
+    const tmp2 = text(arg1);
+    _mod15791(value);
+    if (!_mod15774) {
+      if (!("get" in value)) {
+        if (!("set" in value)) {
+          if ("value" in value) {
+            arg0[tmp2] = value.value;
+          }
+          return arg0;
+        }
+      }
+      const tmp8 = new TypeError("Accessors not supported");
+      throw tmp8;
+    } else {
+      try {
+        return defineProperty(arg0, tmp2, value);
+      } catch (err) {
+      }
+    }
+  };
+}
+
+export const f = defineProperty2;

@@ -4,4 +4,4 @@
 import registerAsset from "module_1118" /* 1118 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "04a2168426a5392d149f48315e795b77", name: "ic_crown_16px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b5a936051680509c0100afebb2debea8", name: "ShieldUserIcon", type: "png" });

@@ -1,14 +1,11 @@
 // === Module 15762: ? ===
 
 // Module 15762
-import _mod15743 from "module_15743" /* 15743 */;
+import _mod15746 from "module_15746" /* 15746 */;
 import _mod15763 from "module_15763" /* 15763 */;
 
+let closure_2 = _mod15746({}.hasOwnProperty);
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod15743(arg0[arg1])) {
-    tmp4 = _mod15763(tmp);
-  }
-  return tmp4;
-};
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod15763(arg0), arg1);
+});

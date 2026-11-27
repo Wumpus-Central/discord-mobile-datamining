@@ -1,42 +1,36 @@
 // === Module 8908: ? ===
 
 // Module 8908
-import colorPropType from "colorPropType" /* 8892 */;
-import _mod8899 from "module_8899" /* 8899 */;
+import colorPropType from "colorPropType" /* 8893 */;
+import _mod8895 from "module_8895" /* 8895 */;
+import _mod8909 from "module_8909" /* 8909 */;
+import flattenStyle from "module_8898" /* 8898 */;
 import emptyFunction_mod from "module_5084" /* 5084 */;
-import "module_5084";
 
-const obj = {};
-const module_8899 = Object.assign(_mod8899);
-obj.color = colorPropType;
-obj.fontFamily = emptyFunction.string;
-obj.fontSize = emptyFunction.number;
+const obj = { ellipsizeMode: null, numberOfLines: null, textBreakStrategy: null, onLayout: null, onPress: null, onLongPress: null, pressRetentionOffset: null, selectable: null, selectionColor: null, suppressHighlighting: null, style: null, testID: null, nativeID: null, allowFontScaling: null, maxFontSizeMultiplier: null, accessible: null, adjustsFontSizeToFit: null, minimumFontScale: null, disabled: null, dataDetectorType: null };
+const module_8909 = flattenStyle(_mod8909);
 let emptyFunction = emptyFunction_mod;
-obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
+obj.ellipsizeMode = emptyFunction.oneOf(["head", "middle", "tail", "clip"]);
+obj.numberOfLines = emptyFunction.number;
 let emptyFunction = emptyFunction_mod;
-obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
+obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
+obj.onLayout = emptyFunction.func;
+obj.onPress = emptyFunction.func;
+obj.onLongPress = emptyFunction.func;
+obj.pressRetentionOffset = _mod8895;
+obj.selectable = emptyFunction.bool;
+obj.selectionColor = colorPropType;
+obj.suppressHighlighting = emptyFunction.bool;
+obj.style = module_8909;
+obj.testID = emptyFunction.string;
+obj.nativeID = emptyFunction.string;
+obj.allowFontScaling = emptyFunction.bool;
+obj.maxFontSizeMultiplier = emptyFunction.number;
+obj.accessible = emptyFunction.bool;
+obj.adjustsFontSizeToFit = emptyFunction.bool;
+obj.minimumFontScale = emptyFunction.number;
+obj.disabled = emptyFunction.bool;
 let emptyFunction = emptyFunction_mod;
-obj.fontVariant = emptyFunction.arrayOf(emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]));
-let emptyFunction = emptyFunction_mod;
-const size = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(size);
-obj.textShadowRadius = emptyFunction.number;
-obj.textShadowColor = colorPropType;
-obj.letterSpacing = emptyFunction.number;
-obj.lineHeight = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
-let emptyFunction = emptyFunction_mod;
-obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
-obj.includeFontPadding = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
-obj.textDecorationColor = colorPropType;
-let emptyFunction = emptyFunction_mod;
-obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
-let emptyFunction = emptyFunction_mod;
-obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
+obj.dataDetectorType = emptyFunction.oneOf(["phoneNumber", "link", "email", "none", "all"]);
 
 export default obj;

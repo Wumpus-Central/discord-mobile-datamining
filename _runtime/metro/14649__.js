@@ -1,8 +1,8 @@
 // === Module 14649: ? ===
 
 // Module 14649
-import _mod14620 from "module_14620" /* 14620 */;
-import _mod14638 from "module_14638" /* 14638 */;
+import _mod14627 from "module_14627" /* 14627 */;
+import sourceShape from "sourceShape" /* 14629 */;
 
 const self = this;
 let self2 = this;
@@ -54,24 +54,126 @@ if (self2) {
         return obj;
       };
     }
-    const _Object3 = Object;
-    exports.string = function string(zodLazy) {
-      return closure_3._coercedString(closure_4.ZodString, zodLazy);
-    };
-    exports.number = function number(zodLazy) {
-      return closure_3._coercedNumber(closure_4.ZodNumber, zodLazy);
-    };
-    exports.boolean = function boolean(zodLazy) {
-      return closure_3._coercedBoolean(closure_4.ZodBoolean, zodLazy);
-    };
-    exports.bigint = function bigint(zodLazy) {
-      return closure_3._coercedBigint(closure_4.ZodBigInt, zodLazy);
-    };
-    exports.date = function date(zodLazy) {
-      return closure_3._coercedDate(closure_4.ZodDate, zodLazy);
-    };
-    let closure_3 = fn(_mod14620);
-    let closure_4 = fn(_mod14638);
+    let _Object3 = Object;
+    exports.ZodError = undefined;
+    exports.ZodRealError = undefined;
+    const fnResult = fn(_mod14627);
+    let hasOwnProperty = fnResult;
+    let closure_6 = fn(sourceShape);
+    const _WeakSet = WeakSet;
+    let _Object4 = Object;
+    let items = [Object.prototype, ];
+    const _Error = Error;
+    items[1] = Error.prototype;
+    const weakSet = new WeakSet(items);
+    function initializer(arg0, arg1) {
+      const $ZodError = _mod14627.$ZodError;
+      $ZodError.init(arg0, arg1);
+      arg0.name = "ZodError";
+      const prototypeOf = Object.getPrototypeOf(arg0);
+      if (!weakSet.has(prototypeOf)) {
+        weakSet.add(prototypeOf);
+        let addIssues = "format";
+        let f107089 = (arg0) => {
+          closure_0 = arg0;
+          return (arg0) => closure_2_5.formatError(closure_0, arg0);
+        };
+        const _Object = Object;
+        const obj2 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              const tmp = f107089(this);
+              Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
+              return tmp;
+            },
+          set(value) {
+              Object.defineProperty(this, addIssues, { value, configurable: true, writable: true });
+            }
+        };
+        Object.defineProperty(prototypeOf, "format", obj2);
+        addIssues = "flatten";
+        f107089 = (arg0) => {
+          closure_0 = arg0;
+          return (arg0) => closure_2_5.flattenError(closure_0, arg0);
+        };
+        const _Object2 = Object;
+        const obj3 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              const tmp = f107089(this);
+              Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
+              return tmp;
+            },
+          set(value) {
+              Object.defineProperty(this, addIssues, { value, configurable: true, writable: true });
+            }
+        };
+        Object.defineProperty(prototypeOf, "flatten", obj3);
+        addIssues = "addIssue";
+        f107089 = (arg0) => {
+          closure_0 = arg0;
+          return (arg0) => {
+            const issues = closure_0.issues;
+            issues.push(arg0);
+            closure_0.message = JSON.stringify(closure_0.issues, closure_2_6.jsonStringifyReplacer, 2);
+          };
+        };
+        const _Object3 = Object;
+        const obj4 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              const tmp = f107089(this);
+              Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
+              return tmp;
+            },
+          set(value) {
+              Object.defineProperty(this, addIssues, { value, configurable: true, writable: true });
+            }
+        };
+        Object.defineProperty(prototypeOf, "addIssue", obj4);
+        addIssues = "addIssues";
+        f107089 = (arg0) => {
+          closure_0 = arg0;
+          return (arg0) => {
+            const issues = closure_0.issues;
+            items = [...arg0];
+            issues.push.apply(items);
+            closure_0.message = JSON.stringify(closure_0.issues, closure_2_6.jsonStringifyReplacer, 2);
+          };
+        };
+        const _Object4 = Object;
+        const obj5 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              const tmp = f107089(this);
+              Object.defineProperty(this, addIssues, { value: tmp, configurable: true, writable: true });
+              return tmp;
+            },
+          set(value) {
+              Object.defineProperty(this, addIssues, { value, configurable: true, writable: true });
+            }
+        };
+        Object.defineProperty(prototypeOf, "addIssues", obj5);
+        const _Object5 = Object;
+        const obj6 = {
+          configurable: true,
+          enumerable: false,
+          get() {
+              return 0 === this.issues.length;
+            }
+        };
+        Object.defineProperty(prototypeOf, "isEmpty", obj6);
+      }
+    }
+    exports.ZodError = fnResult.$constructor("ZodError", initializer);
+    let obj = { Parent: null };
+    const _Error2 = Error;
+    obj.Parent = Error;
+    exports.ZodRealError = fnResult.$constructor("ZodError", initializer, undefined, obj);
     (() => {
       let tmp = exports;
       const ownPropertyNames = Object.getOwnPropertyNames(exports);
