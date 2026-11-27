@@ -1,11 +1,12 @@
 // _runtime/metro/15742__.js
 import _mod15743 from "15743__.js";
 
-export default (arg0) => {
-  if (_mod15743(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
-};
+export default !_mod15743(
+  () =>
+    7 !==
+    Object.defineProperty({}, 1, {
+      get() {
+        return 7;
+      },
+    })[1],
+);

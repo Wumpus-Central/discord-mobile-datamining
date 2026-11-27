@@ -1,19 +1,10 @@
 // _runtime/metro/09226__.js
-import _mod19 from "00019__.js";
-import _modDef9227 from "09227__.js";
+import _slicedToArray from "00032__.js";
 
-const useRef = _mod19.useRef;
-let closure_3 = [];
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
 
-export default function useStableMemo(fn, items) {
-  const tmp = useRef();
-  const tmp2 = useRef(closure_3);
-  if (tmp2.current === closure_3) {
-    tmp.current = fn();
-    tmp2.current = items;
-  } else if (!_modDef9227(items, tmp2.current)) {
-    tmp.current = fn();
-    tmp2.current = items;
-  }
-  return tmp.current;
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return duration(() => closure_0({}), []);
 }

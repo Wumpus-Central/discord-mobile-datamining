@@ -1,11 +1,4 @@
 // _runtime/metro/15536__.js
-import _mod15533 from "15533__.js";
+import _mod15525 from "15525__.js";
 
-export default (arg0, arg1) => {
-  const tmp = new _mod15533(arg0, arg1);
-  return new _mod15533(arg0, arg1).set.map((arr) => {
-    const mapped = arr.map((value) => value.value);
-    const str = mapped.join(" ");
-    return mapped.join(" ").trim().split(" ");
-  });
-};
+export default (arg0, arg1, arg2) => _mod15525(arg0, arg1, arg2) <= 0;

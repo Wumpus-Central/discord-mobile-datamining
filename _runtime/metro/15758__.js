@@ -1,19 +1,32 @@
 // _runtime/metro/15758__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
+import _mod15739 from "15739__.js";
+import _mod15743 from "15743__.js";
+import _mod15759 from "15759__.js";
+
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod15743(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod15739.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+    }
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = _mod15759;
       }
-      return tmp;
-    };
-  }
-  module.exports = fn;
+      if (tmp2Result) {
+        tmp2Result = _mod15759 < 41;
+      }
+      tmp5 = tmp2Result;
+    }
+    return tmp5;
+  });
 }
-fn = (fn) => typeof fn === "function";
+
+export default prop;

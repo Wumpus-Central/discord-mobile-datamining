@@ -1,40 +1,11 @@
 // _runtime/metro/08895__.js
-import _mod8896 from "08896__.js";
-import _mod8904 from "08904__.js";
-import flattenStyle from "08897__.js";
-import "module_5084";
-import emptyFunction_mod from "05084__.js";
+import emptyFunction from "05084__.js";
 
-const obj = {};
-const module_8896 = Object.assign(_mod8896);
-obj.style = flattenStyle(_mod8904);
-let emptyFunction = emptyFunction_mod;
-const obj2 = { uri: emptyFunction.string, headers: null };
-let emptyFunction = emptyFunction_mod;
-obj2.headers = emptyFunction.objectOf(emptyFunction.string);
-const items = [emptyFunction.shape(obj2), emptyFunction.number];
-let emptyFunction = emptyFunction_mod;
-const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
-let emptyFunction = emptyFunction_mod;
-size.headers = emptyFunction.objectOf(emptyFunction.string);
-items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
-obj.source = emptyFunction.oneOfType(items);
-obj.blurRadius = emptyFunction.number;
-obj.defaultSource = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
-obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
-obj.progressiveRenderingEnabled = emptyFunction.bool;
-obj.fadeDuration = emptyFunction.number;
-obj.internal_analyticTag = emptyFunction.string;
-obj.onLoadStart = emptyFunction.func;
-obj.onError = emptyFunction.func;
-obj.onLoad = emptyFunction.func;
-obj.onLoadEnd = emptyFunction.func;
-obj.testID = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
-let emptyFunction = emptyFunction_mod;
-obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
+const rect = {
+  top: emptyFunction.number,
+  left: emptyFunction.number,
+  bottom: emptyFunction.number,
+  right: emptyFunction.number,
+};
 
-export default obj;
+export default emptyFunction.shape(rect);

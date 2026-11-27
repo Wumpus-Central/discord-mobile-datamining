@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 24,
-  height: 24,
-  scales: [1, 3],
-  hash: "a7612bc39c46be7d197676beec9cb4bf",
-  name: "ic_browse_channel",
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  width: 64,
+  height: 64,
+  scales: [1, 2, 3],
+  hash: "2d232c4ffc7aee7f8419734bdb63af83",
+  name: "screenshare",
   type: "png",
 });

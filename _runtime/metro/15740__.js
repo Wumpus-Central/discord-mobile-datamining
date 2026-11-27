@@ -1,12 +1,12 @@
 // _runtime/metro/15740__.js
-import _mod15736 from "15736__.js";
+import _mod15739 from "15739__.js";
 
-export default !_mod15736(() => {
-  const fn = () => {};
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod15739, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod15739[tmp2] = tmp;
   }
-  return hasOwnPropertyResult;
-});
+};

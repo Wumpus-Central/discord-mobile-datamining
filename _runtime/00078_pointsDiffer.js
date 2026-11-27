@@ -1,5 +1,5 @@
 // _runtime/00078_pointsDiffer.js
-let closure_0 = { x: "Array", y: "channel_id" };
+let closure_0 = { x: "displayName", y: "isArray" };
 
 export default function pointsDiffer(arg0, arg1) {
   let point = arg0;

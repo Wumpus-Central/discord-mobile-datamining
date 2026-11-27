@@ -107,8 +107,8 @@ function pnpm_decayTs3(arg0, arg1) {
       initialVelocity: 0,
       current: "dispatch",
       lastTimestamp: null,
-      startTimestamp: true,
-      reduceMotion: "/assets/design/components/Icon/native/redesign/generated/images",
+      startTimestamp: "ACTIVITY_USER_ACTION",
+      reduceMotion: null,
     };
     let num = obj.velocity;
     if (num == null) {

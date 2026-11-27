@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 130,
   height: 130,
   scales: [1],
-  hash: "8a1f7296e9f503153807d2bac27985a9",
-  name: "SliderThumbLight",
+  hash: "ee106eea2881015fca49190d7b87a5f4",
+  name: "SliderThumbDark",
   type: "png",
 });

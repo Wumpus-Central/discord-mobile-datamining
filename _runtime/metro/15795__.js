@@ -1,15 +1,11 @@
 // _runtime/metro/15795__.js
-import _mod15747 from "15747__.js";
-import sum from "../15754_sum.js";
+import _mod15742 from "15742__.js";
+import _mod15776 from "15776__.js";
+import _mod15793 from "15793__.js";
 
-let closure_2 = _mod15747("keys");
-
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = sum(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
-  }
-  return tmp2;
-};
+export default _mod15742
+  ? (arg0, arg1, arg2) => _mod15793.f(arg0, arg1, _mod15776(1, arg2))
+  : (arg0, arg1, arg2) => {
+      arg0[arg1] = arg2;
+      return arg0;
+    };

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1, 2, 3],
-  hash: "bb061f50f0c26bcf1817896eee7a9443",
-  name: "ic_raised_hand_list",
+  hash: "a9e66a93023e2550ab4df6fac50c261a",
+  name: "ic_move_to_speaker",
   type: "png",
 });

@@ -469,7 +469,7 @@ let items = [
                   upload.__dispatch("loadstart", obj9);
                 }
               }
-              obj2 = { data: "Array", contentType: "channel_id" };
+              obj2 = { data: "displayName", contentType: "isArray" };
             } else {
               self.__dispatch("loadstart");
               const _setTimeout = setTimeout;

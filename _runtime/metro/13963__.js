@@ -3,11 +3,11 @@ import registerAsset from "01118__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 98,
+  height: 88,
   scales: [2, 3],
-  hash: "3b34529117c1d3db6d78cba92e0c94bb",
-  name: "member_list_badge_16px",
+  hash: "e786e2db9ac41808374260a48d3a5876",
+  name: "img_marketing_frog",
   type: "png",
 });

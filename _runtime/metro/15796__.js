@@ -1,40 +1,45 @@
 // _runtime/metro/15796__.js
-import _mod15735 from "15735__.js";
-import _mod15736 from "15736__.js";
-import _mod15738 from "15738__.js";
-import _mod15739 from "15739__.js";
-import _mod15756 from "15756__.js";
+import _mod15740 from "15740__.js";
 import _mod15765 from "15765__.js";
-import _mod15785 from "15785__.js";
+import _mod15793 from "15793__.js";
 import _mod15797 from "15797__.js";
 
-let closure_4 = _mod15739([].concat);
-if (!assign) {
-  assign = function assign(arg0, arg1) {
-    const tmp = _mod15756(arg0);
-    const f = _mod15785.f;
-    for (let num = 1; length > num; num = num + 1) {
-      let tmp5 = _mod15738(arguments[num]);
-      if (f) {
-        let tmp8 = _mod15797(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
-      } else {
-        arr = _mod15797(tmp5);
-      }
-      let length2 = arr.length;
-      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
-        let tmp9 = arr[num2];
-        let tmp12 = _mod15735;
-        if (tmp12) {
-          tmp12 = !_mod15765(tmp2, tmp5, tmp9);
-        }
-        if (!tmp12) {
-          tmp[tmp9] = tmp5[tmp9];
-        }
-      }
+export default (arg0, arg1, value, arg3) => {
+  let obj = arg3;
+  if (!arg3) {
+    obj = {};
+  }
+  let flag = obj.enumerable;
+  let name = arg1;
+  if (undefined !== obj.name) {
+    name = obj.name;
+  }
+  if (_mod15765(value)) {
+    _mod15797(value, name, obj);
+  }
+  if (obj.global) {
+    if (flag) {
+      arg0[arg1] = value;
+    } else {
+      _mod15740(arg1, value);
     }
-    return tmp;
-  };
-}
-
-export default assign;
+  } else {
+    try {
+      if (obj.unsafe) {
+        if (arg0[arg1]) {
+          flag = true;
+        }
+      } else {
+        delete tmp[tmp2];
+      }
+      if (flag) {
+        arg0[arg1] = value;
+      } else {
+        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
+        _mod15793.f(arg0, arg1, obj2);
+        const tmp3Result = _mod15793;
+      }
+    } catch (err) {}
+  }
+  return arg0;
+};

@@ -1,11 +1,14 @@
 // _runtime/metro/15757__.js
-import _mod15758 from "15758__.js";
+import prop_mod from "15758__.js";
 
-export default (obj) => {
-  if (typeof obj === "object") {
-    let tmp2 = null !== obj;
-  } else {
-    tmp2 = _mod15758(obj);
-  }
-  return tmp2;
-};
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
+
+export default prop;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "856ae0fb80fb3c5e7cc40888f4bebb2b",
-  name: "YoutubeNeutralIcon",
+  hash: "32771d83b99e21d6b5e0c30976058344",
+  name: "TiktokNeutralIcon",
   type: "png",
 });

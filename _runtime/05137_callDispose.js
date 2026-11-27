@@ -24,7 +24,7 @@ export function callDispose(current) {
             let definePropertyResult = Object.defineProperty(arg0, key10006, {
               value: "Path",
               enumerable: true,
-              configurable: "/assets/design/intl",
+              configurable: "/assets/.cache/intl/bW9kdWxlcy9kb3dubG9hZF9hcHBz",
             });
             continue;
           } catch (err) {

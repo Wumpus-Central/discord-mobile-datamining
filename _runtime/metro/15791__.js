@@ -1,11 +1,11 @@
 // _runtime/metro/15791__.js
-import _mod15739 from "15739__.js";
-import _mod15748 from "15748__.js";
-import all from "15758__.js";
+import _mod15764 from "15764__.js";
 
-let closure_0 = _mod15739(Function.toString);
-if (!all(_mod15748.inspectSource)) {
-  _mod15748.inspectSource = (arg0) => closure_0(arg0);
-}
-
-export default _mod15748.inspectSource;
+export default (arg0) => {
+  if (_mod15764(arg0)) {
+    return arg0;
+  } else {
+    const tmp5 = new TypeError(String(arg0) + " is not an object");
+    throw tmp5;
+  }
+};

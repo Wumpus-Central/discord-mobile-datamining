@@ -1,19 +1,12 @@
 // _runtime/metro/15770__.js
-let propertyIsEnumerable = {}.propertyIsEnumerable;
-if (!getOwnPropertyDescriptor) {
-  if (getOwnPropertyDescriptor) {
-    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
-      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
-      return tmp && tmp.enumerable;
-    };
-  }
-  arg5.f = propertyIsEnumerable;
-} else {
-  const call = propertyIsEnumerable.call;
-  if (typeof call === "unknown") {
-    let propertyIsEnumerableResult = propertyIsEnumerable(1);
+import _mod15765 from "15765__.js";
+import _mod15771 from "15771__.js";
+
+export default (arg0) => {
+  if (_mod15765(arg0)) {
+    return arg0;
   } else {
-    propertyIsEnumerableResult = call(obj, 1);
+    const tmp6 = new TypeError(_mod15771(arg0) + " is not a function");
+    throw tmp6;
   }
-  obj = { 1: 2 };
-}
+};

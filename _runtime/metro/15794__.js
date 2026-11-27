@@ -1,12 +1,6 @@
 // _runtime/metro/15794__.js
-import _mod15732 from "15732__.js";
-import all from "15758__.js";
+import _mod15742 from "15742__.js";
+import _mod15743 from "15743__.js";
 
-let _moduleResult = all(_mod15732.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod15732.WeakMap));
-  const obj = /native code/;
-}
-
-export default _moduleResult;
+export default _mod15742 &&
+  _mod15743(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);

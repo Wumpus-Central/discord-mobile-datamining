@@ -1,11 +1,19 @@
 // _runtime/metro/15510__.js
-import _mod15503 from "15503__.js";
+import _mod15511 from "15511__.js";
 
 export default (arg0, arg1) => {
-  const tmp = _mod15503(arg0, arg1);
-  let version = null;
-  if (tmp) {
-    version = tmp.version;
+  if (arg0 instanceof _mod15511) {
+    return arg0;
+  } else {
+    try {
+      const tmp8 = new _mod15511(arg0, arg1);
+      return tmp8;
+    } catch (tmp10) {
+      if (tmp) {
+        throw tmp10;
+      } else {
+        return null;
+      }
+    }
   }
-  return version;
 };
